@@ -42,6 +42,7 @@ config.py: config.py.in
 	sed						\
                 -e s!\@BINDIR\@!$(bindir)!		\
                 -e s!\@SBINDIR\@!$(sbindir)!		\
+                -e s!\@LIBEXECDIR\@!$(libexecdir)!		\
                 -e s!\@PKGDATADIR\@!$(pkgdatadir)!	\
                 -e s!\@SYSCONFDIR\@!$(sysconfdir)!	\
                 < $< > $@

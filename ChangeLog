@@ -1,3 +1,9 @@
+Thu Feb 10 11:22:18 CET 2005 Daniel Veillard <veillard@redhat.com>
+
+	* admin-tool/Makefile.am lib/Makefile.am lib/config.py.in:
+	  moving sabayon-session and sabayon-monitor to @libexecdir@
+	  since they should not be launched directly
+
 Thu Feb 10 10:57:20 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* TODO: docs and man page

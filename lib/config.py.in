@@ -25,8 +25,8 @@ PROFILESDIR = "@SYSCONFDIR@/desktop-profiles"
 
 DEFAULT_PATH = "/usr/local/bin:/usr/bin:/bin:/usr/X11R6/bin"
 
-SESSION_TOOL_PATH = "@SBINDIR@/sabayon-session"
-MONITOR_TOOL_ARGV = [ "@SBINDIR@/sabayon-monitor" ]
+SESSION_TOOL_PATH = "@LIBEXECDIR@/sabayon-session"
+MONITOR_TOOL_ARGV = [ "@LIBEXECDIR@/sabayon-monitor" ]
 XNEST_ARGV        = [ "/usr/X11R6/bin/Xnest", "-terminate", "-audit", "0", "-name", "Xnest", "-nolisten", "tcp" ]
 SESSION_ARGV      = [ "/etc/X11/xdm/Xsession", "gnome" ]
 
