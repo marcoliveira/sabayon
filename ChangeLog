@@ -1,5 +1,13 @@
 2005-03-15  Mark McLoughlin  <markmc@redhat.com>
 
+	Partial fix for bug #170280
+
+	* admin-tool/monitorwindow.py: just print a traceback
+	if commit_change() fails and continue committing remaining
+	changes.
+
+2005-03-15  Mark McLoughlin  <markmc@redhat.com>
+
 	* lib/storage.py: fix minor problems with Will's patch.
 
 2005-03-14  William Lachance <wrlach@gmail.com>

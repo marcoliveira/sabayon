@@ -102,7 +102,10 @@ class ProfileMonitorWindow:
 
             if not ignore:
                 dprint ("Committing: %s, mandatory = %s" % (change.get_id (), mandatory))
-                change.get_source ().commit_change (change, mandatory)
+                try:
+                    change.get_source ().commit_change (change, mandatory)
+                except:
+                    util.print_exception ()
                 
             iter = self.changes_model.iter_next (iter)
         
