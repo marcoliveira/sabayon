@@ -19,7 +19,57 @@
 #
 
 import os
+import sys
 import pwd
+
+(
+    DEBUG_USERPROFILE,
+    DEBUG_STORAGE,
+    DEBUG_PROTOSESSION,
+    DEBUG_GCONFSOURCE,
+    DEBUG_PANELDELEGATE,
+    DEBUG_FILESSOURCE,
+    DEBUG_MOZILLASOURCE
+) = range (7)
+
+debug_modules = {
+    DEBUG_USERPROFILE   : ("user-profile",   False),
+    DEBUG_STORAGE       : ("storage",        False),
+    DEBUG_PROTOSESSION  : ("proto-session",  False),
+    DEBUG_GCONFSOURCE   : ("gconf-source",   False),
+    DEBUG_PANELDELEGATE : ("panel-delegate", False),
+    DEBUG_FILESSOURCE   : ("files-source",   False),
+    DEBUG_MOZILLASOURCE : ("mozilla-source", False)
+}
+
+def init_debug_modules ():
+    debug_value = os.getenv ("SABAYON_DEBUG")
+    if not debug_value:
+        return
+
+    if debug_value == "help":
+        print "Valid options for the SABAYON_DEBUG environment variable are:\n"
+        print "    all"
+        for module in debug_modules:
+            print "    %s" % debug_modules[module][0]
+        sys.exit (1)
+    elif debug_value == "all":
+        for module in debug_modules:
+            debug_modules[module] = (debug_modules[module][0], True)
+    else:
+        for key in debug_value.split (":"):
+            for module in debug_modules:
+                if debug_modules[module][0] == key:
+                    debug_modules[module] = (key, True)
+                    break
+
+init_debug_modules ()
+
+def debug_print (module, fmt, *args):
+    assert debug_modules.has_key(module)
+    if not debug_modules[module][1]:
+        return
+    print "%s: %s" % (debug_modules[module][0], fmt % args)
 
 class GeneralError (Exception):
     def __init__ (self, msg):

@@ -28,7 +28,8 @@ import tempfile
 import shutil
 import util
 
-verbose = 0
+def dprint(fmt, *args):
+    util.debug_print(util.DEBUG_STORAGE, fmt, args)
 
 class ProfileStorageException(Exception):
     def __init__(self, value):
@@ -40,8 +41,7 @@ class ProfileStorageException(Exception):
 
 class ProfileStorage:
     def __init__ (self, filename):
-        if verbose:
-	    print "init", filename
+        dprint("init %s", filename)
         self.exists = False
 	self.installed = False
 	self.doc = None
@@ -67,8 +67,7 @@ class ProfileStorage:
 		                                  filename)
 		self.__read_metadata()
 	    else:
-		if verbose:
-		    print "New profile %s" % filename
+                dprint("New profile %s", filename)
 	        self.doc = libxml2.newDoc("1.0")
 		root = self.doc.newChild(None, "metadata", None)
 		common = root.newChild(None, "common", None)
@@ -210,8 +209,7 @@ class ProfileStorage:
     # to commit the change to the target file.
     #
     def add_file(self, file, handler, description):
-	if verbose:
-	    print "add_file %s" % (file)
+        dprint("add_file %s", file)
 	if self.filelist == None:
 	    self.__read_filelist()
 	if not file in self.filelist:
@@ -223,8 +221,7 @@ class ProfileStorage:
     # Returns 0 if this succeeded and -1 otherwise
     #
     def delete_file(self, file):
-	if verbose:
-	    print "delete_file(%s)" % (file)
+        dprint("delete_file(%s)", file)
 	if file in self.filelist:
 	    self.filelist.delete(file)
 	    self.__delete_file_metadata(file)
@@ -260,8 +257,7 @@ class ProfileStorage:
 		    raise ProfileStorageException("Cannot install %s since %s is not a directory" % (target, tardir))
 		try:
 		    os.makedirs(tardir)
-		    if verbose:
-			print "created directory %s" % tardir
+                    dprint("created directory %s", tardir)
 		except:
 		    raise ProfileStorageException("Cannot create directory %s" % (tardir))
             if os.path.exists(tardir) and not os.access(tardir, os.W_OK):
@@ -273,11 +269,10 @@ class ProfileStorage:
 	    target = self.__get_abs_filename(file)
 	    tardir = os.path.dirname(target)
 	    data = self.zipfile.read(file)
-	    if verbose:
-		if os.path.exists(target):
-		    print "Overwriting %s" % target
-		else:
-		    print "Creating %s" % target
+            if os.path.exists(target):
+                dprint("Overwriting %s", target)
+            else:
+                dprint("Creating %s", target)
 	    try:
 		f = open(target, "w");
 		f.write(data)
@@ -375,8 +370,7 @@ class ProfileStorage:
 	    try:
 	        self.zipfile.close()
 		os.rename(self.filename, bak)
-	        if verbose:
-		    print "Saved old version as %s" % (bak)
+                dprint("Saved old version as %s", bak)
 	    except:
 	        raise ProfileStorageException("Failed to save backup as %s" %
 		                              (bak))
@@ -397,8 +391,7 @@ class ProfileStorage:
 	    for (file, data) in identical:
 		self.zipfile.writestr(file, data)
 	    for (file, data) in modified:
-		if verbose:
-		    print "Updating %s" % (file)
+                dprint("Updating %s", file)
 		self.zipfile.writestr(file, data)
 		res.append(self.__get_file_info(file))
         else:
@@ -420,8 +413,7 @@ class ProfileStorage:
 		if os.path.exists(target):
 		    try:
 			data = open(target, "r").read()
-			if verbose:
-			    print "Updating %s" % (file)
+                        dprint("Updating %s", file)
 			self.zipfile.writestr(file, data)
 			res.append(self.__get_file_info(file))
 		    except:
