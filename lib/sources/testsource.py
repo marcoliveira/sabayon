@@ -35,7 +35,7 @@ gobject.type_register (TestChange)
 
 class TestDelegate (userprofile.SourceDelegate):
     def __init__ (self, source):
-        userprofile.SourceDelegate.__init__ (self, source, "/foo")
+        userprofile.SourceDelegate.__init__ (self, "test", source, "/foo")
 
     def handle_change (self, change):
         if change.get_id () == "/foo/bar1":
@@ -46,9 +46,9 @@ def get_test_delegate (source):
     return TestDelegate (source)
 
 class TestSource (userprofile.ProfileSource):
-    def __init__ (self, profile_storage):
+    def __init__ (self, storage):
         userprofile.ProfileSource.__init__ (self, "test", "get_test_delegate")
-        self.profile_storage = profile_storage
+        self.storage = storage
 
     def commit_change (self, change):
         pass
@@ -67,5 +67,5 @@ class TestSource (userprofile.ProfileSource):
 
 gobject.type_register (TestSource)
     
-def get_source (profile_storage):
-    return TestSource (profile_storage)
+def get_source (storage):
+    return TestSource (storage)

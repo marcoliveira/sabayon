@@ -60,9 +60,9 @@ class MozillaChange (userprofile.ProfileChange):
 gobject.type_register (MozillaChange)
 
 class MozillaSource (userprofile.ProfileSource):
-    def __init__ (self, profile_storage):
+    def __init__ (self, storage):
         userprofile.ProfileSource.__init__ (self, "Mozilla")
-        self.profile_storage = profile_storage
+        self.storage = storage
 
         self.ini_file = GetProfileIniFile()
         dprint("ini file = %s" % self.ini_file)
@@ -135,8 +135,8 @@ class MozillaSource (userprofile.ProfileSource):
 
 gobject.type_register (MozillaSource)
     
-def get_source (profile_storage):
-    return MozillaSource (profile_storage)
+def get_source (storage):
+    return MozillaSource (storage)
 
 #-----------------------------------------------------------------------------
 

@@ -54,30 +54,10 @@ class FilesChange (userprofile.ProfileChange):
 
 gobject.type_register (FilesChange)
 
-def _safe_copy_file (file, srcdir, dstdir, force = False):
-    """Copies @file in @srcdir to @dstdir, ensuring that all the
-    parent directories of @file are created in @dstdir. @force
-    specifies whether the copy should continue if existing
-    files/directories are present.
-    """
-    #
-    # FIXME: lots of error conditions being ignored here
-    #
-    dir = dstdir + "/" + os.path.dirname (file)
-    if not os.access (dir, os.F_OK):
-        os.makedirs (dir)
-
-    src = srcdir + "/" + file
-    dst = dstdir + "/" + file
-
-    if not os.path.exists (dst) or force:
-        dprint ("Copying '%s' to '%s'" % (src, dst))
-        shutil.copyfile (src, dst)
-    
 class FilesSource (userprofile.ProfileSource):
-    def __init__ (self, profile_storage):
+    def __init__ (self, storage):
         userprofile.ProfileSource.__init__ (self, "Files")
-        self.profile_storage = profile_storage
+        self.storage = storage
         self.home_dir = util.get_home_dir ()
         self.monitor = dirmonitor.DirectoryMonitor (self.home_dir,
                                                     self.__handle_monitor_event)
@@ -96,21 +76,19 @@ class FilesSource (userprofile.ProfileSource):
         if userprofile.ProfileSource.commit_change (self, change, mandatory):
             return
 
-        # FIXME: What about DELETED events ?
-
         dprint ("Commiting '%s' (mandatory = %s)" % (change.rel_path, mandatory))
-                    
-        _safe_copy_file (change.rel_path,
-                         self.home_dir,
-                         self.profile_storage.get_install_path (),
-                         True)
-
-        if mandatory:
-            metadata = "mandatory"
-        else:
-            metadata = "default"
-
-        self.profile_storage.add_file (change.rel_path, self.name, metadata)
+        
+        if change.event == dirmonitor.CREATED or \
+           change.event == dirmonitor.CHANGED:
+            self.storage.add (change.rel_path,
+                              self.home_dir,
+                              self.name,
+                              { "mandatory" : True })
+        elif change.event == dirmonitor.DELETED:
+            try:
+                self.storage.remove (change.rel_path)
+            except:
+                pass
         
     def start_monitoring (self):
         self.monitor.start ()
@@ -121,26 +99,23 @@ class FilesSource (userprofile.ProfileSource):
     def sync_changes (self):
         # Nothing to do here
         pass
+
+    def __apply_foreach (self, source, path):
+        attributes = self.storage.get_attributes (path)
+        if attributes.has_key ("mandatory"):
+            mandatory = bool (attributes ["mandatory"])
+        else:
+            mandatory = False
+
+        self.storage.extract (path, self.home_dir, mandatory)
     
     def apply (self):
-        for (file, handler, description) in self.profile_storage.info_all ():
-            if handler != self.name:
-                continue
-            
-            if description == "mandatory":
-                mandatory = True
-            else:
-                mandatory = False
-            
-            _safe_copy_file (file,
-                             self.profile_storage.get_install_path (),
-                             self.home_dir,
-                             mandatory)
+        self.storage.foreach (self.__apply_foreach, source = self.name)
 
 gobject.type_register (FilesSource)
     
-def get_source (profile_storage):
-    return FilesSource (profile_storage)
+def get_source (storage):
+    return FilesSource (storage)
 
 #
 # Unit tests
@@ -148,6 +123,8 @@ def get_source (profile_storage):
 def run_unit_tests ():
     import gobject
     import tempfile
+
+    storage.running_unit_tests = True
 
     real_homedir = util.get_home_dir ()
     
@@ -166,25 +143,22 @@ def run_unit_tests ():
         return True
     timeout = gobject.timeout_add (60 * 1000, should_not_be_reached)
     
-    profile_storage = storage.ProfileStorage ("FileTest.zip")
-    profile_storage.install ()
-    source = get_source (profile_storage)
+    store = storage.ProfileStorage ("FileTest")
+    source = get_source (store)
     source.connect ("changed", handle_change, main_loop)
     source.start_monitoring ()
 
-    os.makedirs (temp_path + "/foobar/foo/bar/foo/bar")
+    os.makedirs (os.path.join (temp_path, "foobar/foo/bar/foo/bar"))
     
-    f = file (temp_path + "/foobar/foo/bar/foo/bar" + "/foo", "w")
+    f = file (os.path.join (temp_path, "foobar/foo/bar/foo/bar", "foo"), "w")
     f.close ()
     
     main_loop.run ()
 
     source.stop_monitoring ()
 
-    assert os.access (profile_storage.get_install_path () + "/foobar/foo/bar/foo/bar" + "/foo", os.F_OK)
-
-    profile_storage.update_all ("")
-    profile_storage.uninstall ()
+    store.save ()
+    assert os.path.exists ("FileTest.zip")
 
     shutil.rmtree (temp_path, True)
 
@@ -194,19 +168,12 @@ def run_unit_tests ():
                                   prefix = ".test-filesprofile-")
     util.set_home_dir_for_unit_tests (temp_path)
     
-    profile_storage = storage.ProfileStorage ("FileTest.zip")
-    profile_storage.install ()
-
-    assert os.access (profile_storage.get_install_path () + "/foobar/foo/bar/foo/bar" + "/foo", os.F_OK)
-    
-    source = get_source (profile_storage)
+    source = get_source (storage.ProfileStorage ("FileTest"))
     source.apply ()
     
     assert os.access (temp_path + "/foobar/foo/bar/foo/bar" + "/foo", os.F_OK)
     
     shutil.rmtree (temp_path, True)
-
-    profile_storage.uninstall ()
 
     os.remove ("FileTest.zip")
     if os.path.exists ("FileTest.zip.bak"):
@@ -214,3 +181,4 @@ def run_unit_tests ():
     
     util.set_home_dir_for_unit_tests (None)
 
+    storage.running_unit_tests = False

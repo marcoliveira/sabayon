@@ -241,38 +241,32 @@ class UserProfile (gobject.GObject):
         "changed" : (gobject.SIGNAL_RUN_LAST, gobject.TYPE_NONE, (ProfileChange, ))
         }
 
-    def __init__ (self, profile_file):
+    def __init__ (self, profile_name):
         """Construct a UserProfile
 
-	profile_file: path to the file containing the user settings,
-	it may not exist yet
+	profile_name: name of the profile to be loaded
         module_path: optional path from which configuration modules
         should be loaded
         """
         gobject.GObject.__init__ (self)
 
-        dprint ("Constructing profile from %s" % profile_file)
+        dprint ("Constructing profile from %s" % profile_name)
 
-        self.profile_file = profile_file
+        self.profile_name = profile_name
 
         #
 	# Open the user settings packages and try to install them
 	#
-	self.profile_storage = storage.ProfileStorage (profile_file)
-        self.profile_storage.install ()
+	self.storage = storage.ProfileStorage (profile_name)
         
         module_loader = get_module_loader ()
         
         self.sources = []
-        self.sources = module_loader.construct_objects ("get_source",
-                                                        self.profile_storage)
+        self.sources = module_loader.construct_objects ("get_source", self.storage)
         dprint ("%d sources loaded:" % len (self.sources))
         for source in self.sources:
             dprint ("  %s" % source.get_name ())
             source.connect ("changed", self.__handle_source_changed)
-
-    def __del__ (self):
-        self.profile_storage.uninstall ()
 
     def __handle_source_changed (self, source, change):
         self.emit ("changed", change)
@@ -294,7 +288,7 @@ class UserProfile (gobject.GObject):
         dprint ("Syncing all committed changes to disk")
         for s in self.sources:
             s.sync_changes ()
-        self.profile_storage.update_all ("")
+        self.storage.save ()
 
     def apply (self):
         """Apply profile to the current user's environment."""
@@ -322,7 +316,7 @@ def run_unit_tests ():
 
     class LocalTestDelegate (SourceDelegate):
         def __init__ (self, source):
-            SourceDelegate.__init__ (self, source, "/bar")
+            SourceDelegate.__init__ (self, "local", source, "/bar")
         def handle_change (self, change):
             if change.get_id () == "/bar/foo1":
                 return True

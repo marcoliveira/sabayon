@@ -362,7 +362,7 @@ def run_unit_tests ():
 
     # Set up the client
     def handle_notify (client, cnx_id, entry, source):
-        source.emit_change (gconfsource.GConfChange (source, entry))
+        source.emit_change (gconfsource.GConfChange (source, entry.key, entry.value))
     client.add_dir (PANEL_KEY_BASE + "", gconf.CLIENT_PRELOAD_RECURSIVE)
     notify_id = client.notify_add (PANEL_KEY_BASE + "", handle_notify, source)
 

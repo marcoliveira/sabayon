@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 #
 # Copyright (C) 2005 Red Hat, Inc.
 #
@@ -17,480 +18,1082 @@
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #
 
-import zipfile
-import os
+import sys
 import os.path
-import libxml2
+import errno
 import time
 import socket
-import sys
-import tempfile
 import shutil
+import tempfile
+import zipfile
+import libxml2
 import util
+from config import *
 
-def dprint(fmt, *args):
-    util.debug_print(util.DEBUG_STORAGE, fmt % args)
+running_unit_tests = False
 
-class ProfileStorageException(Exception):
-    def __init__(self, value):
-        Exception.__init__(self)
-        self.value = value
+def dprint (fmt, *args):
+    util.debug_print (util.DEBUG_STORAGE, fmt % args)
 
-    def __str__(self):
-        return repr(self.value)
-
-class ProfileStorage:
-    def __init__ (self, filename):
-        dprint("init %s", filename)
-        self.exists = False
-	self.installed = False
-	self.doc = None
-	self.zipfile = None
-	self.filename = filename
-	self.filelist = None
-        self.install_path = None
-        
-        if filename != None:
-	    try:
-	        os.stat(filename)
-		self.exists = True
-	    except:
-	        pass
-	    if self.exists:
-	        if not zipfile.is_zipfile(filename):
-	            raise ProfileStorageException("%s is not a storage file" %
-		                                  filename)
-		try:
-		    self.zipfile = zipfile.ZipFile(filename, "a")
-		except:
-	            raise ProfileStorageException("Failed to read file %s" %
-		                                  filename)
-		self.__read_metadata()
-	    else:
-                dprint("New profile %s", filename)
-	        self.doc = libxml2.newDoc("1.0")
-		root = self.doc.newChild(None, "metadata", None)
-		common = root.newChild(None, "common", None)
-		files = root.newChild(None, "files", None)
-
-    def __del__(self):
-        if self.doc != None:
-	    self.doc.freeDoc()
-	    self.doc = None
-	if self.zipfile != None:
-	    self.zipfile.close()
-	    self.zipfile = None
-
-    def __read_metadata(self):
-        if self.doc != None or self.zipfile == None:
-	    return
-
-        try:
-	    metadata = self.zipfile.read("metadata")
-	    doc = libxml2.readMemory(metadata, len(metadata), "metadata",
-	                             None, libxml2.XML_PARSE_NOBLANKS)
-	except:
-	    raise ProfileStorageException("Failed to get metadata of %s" %
-					  self.filename)
-	root = doc.getRootElement()
-	if root == None or root.name != "metadata":
-	    doc.freeDoc()
-	    raise ProfileStorageException("Broken metadata section in %s" %
-					  self.filename)
-        self.doc = doc
+def copy_tree (dst_base, src_base, dst_name, src_name = None, overwrite = False):
+    if src_name is None:
+        src_name = dst_name
     
-    def __update_metadata(self, log):
-        try:
-	    common = self.doc.xpathEval("/metadata/common")[0]
-	except:
-	    root = self.doc.getRootElement()
-	    common = root.newChild(None, "common", None)
-	try:
-	    changelogs = common.xpathEval("changelogs")[0]
-	except:
-	    changelogs = common.newChild(None, "changelogs", None)
-	if log == None:
-	    return
+    try:
+        os.mkdir (os.path.join (dst_base, dst_name))
+    except OSError, err:
+        if err.errno != errno.EEXIST:
+            raise err
 
-	changelog = changelogs.children
-	if changelog == None:
-	    nlog = changelogs.newChild(None, "created", log)
-	else:
-	    nlog = self.doc.newDocNode(None, "changelog", log)
-	    changelog.addPrevSibling(nlog)
-	nlog.setProp("date", time.ctime(time.time()))
-	nlog.setProp("user", util.get_user_name())
-	nlog.setProp("host", socket.gethostname())
+    for f in os.listdir (os.path.join (src_base, src_name)):
+        src_path = os.path.join (src_base, src_name, f)
 
-    def __update_file_metadata(self, file, log, handler = None,
-                            description = None):
-        try:
-	    files = self.doc.xpathEval("/metadata/files")[0]
-	except:
-	    root = self.doc.getRootElement()
-	    files = root.newChild(None, "files", None)
-	try:
-	    fil = files.xpathEval("file[@name='%s']" % (file))[0]
-	except:
-	    fil = files.newChild(None, "file", None)
-	    fil.setProp("name", file)
-	if handler != None:
-	    fil.setProp("handler", handler)
-	if description != None:
-	    try:
-		desc = fil.xpathEval("description")[0]
-		desc.setContent(description)
-	    except:
-		fil.newChild(None, "description", description)
-	if log == None:
-	    return
+        if os.path.isdir (src_path):
+            copy_tree (dst_base,
+                       src_base,
+                       os.path.join (dst_name, f),
+                       os.path.join (src_name, f))
+        else:
+            dst_path = os.path.join (dst_base, dst_name, f)
+            if overwrite or not os.path.exists (dst_path):
+                shutil.copy2 (src_path, dst_path)
 
-	try:
-	    changelogs = fil.xpathEval("changelogs")[0]
-	except:
-	    changelogs = fil.newChild(None, "changelogs", None)
-	changelog = changelogs.children
-	if changelog == None:
-	    nlog = changelogs.newChild(None, "created", log)
-	else:
-	    nlog = self.doc.newDocNode(None, "changelog", log)
-	    changelog.addPrevSibling(nlog)
-	nlog.setProp("date", time.ctime(time.time()))
-	nlog.setProp("user", util.get_user_name())
-	nlog.setProp("host", socket.gethostname())
-	    
-    def __delete_file_metadata(self, file):
-        try:
-	    file = self.doc.xpathEval("/metadata/files/file[@name='%s']" %
-	                               (file))[0]
-	    file.unlinkNode()
-	    file.freeNode()
-	except:
-	    pass
-
-    def __get_metadata_handler(self, file):
-        try:
-	    handler = self.doc.xpathEval(
-	       "string(/metadata/files/file[@name='%s']/@handler)" % file)
-	except:
-	    handler = ""
-	return handler
-
-    def __get_metadata_description(self, file):
-        try:
-	    description = self.doc.xpathEval(
-	       "string(/metadata/files/file[@name='%s']/description)" % file)
-	except:
-	    description = ""
-	return description
-
-    def __get_file_info(self, file):
-        return (file,
-                self.__get_metadata_handler(file),
-                self.__get_metadata_description(file))
-
-    def __read_filelist(self):
-        if self.filelist != None:
-	    return self.filelist
-	self.filelist = []
-        if self.zipfile != None:
-	    for info in self.zipfile.infolist():
-	        if info.filename != 'metadata':
-		    if not info.filename in self.filelist:
-			self.filelist.append(info.filename)
-	return self.filelist
+class ProfileStorageException (Exception):
+    pass
         
-    def __get_abs_filename(self, path):
-        return os.path.join(os.path.abspath(self.install_path), path)
+class ProfileStorage:
+    """An encapsulation of all the files which make up the
+    contents of a profile.
+
+    The files are stored in a ZIP file with metadata. In
+    order to add/extract files to the profile, they are first
+    copied to/from a temporary directory which is then zipped.
+    Note, though, that the fact that its a ZIP file and the
+    fact that there is a temporary directory are both
+    implementation details and not exposed in the API.
+
+    Profile files are stored in /etc/desktop-profiles.
+
+    Each file or directory in the profile has metadata
+    associated with it - the "source" of the file/directory
+    and a set of arbitrary key value pairs which that source
+    may interpret.
+
+    The profile also contains a revision history, allowing
+    you to revert to a previous version of a given file
+    or a previous version of the profile itself.
+    """
+    
+    def __init__ (self, name):
+        """Create a ProfileStorage.
+
+        @name: the name of the profile - translates to
+        /etc/desktop-profiles/$(name).zip.
+        """
+        self.name = name
+
+        if not running_unit_tests:
+            self.path = os.path.join (PROFILESDIR, self.name + ".zip")
+        else:
+            self.path = self.name + ".zip"
+            
+        self.metadata         = None
+        self.zip              = None
+        self.temp_path        = None
+        self.revisions_path   = None
+        self.unsaved_revision = None
+
+        dprint ("Creating profile '%s' from '%s'", self.name, self.path)
+
+    def __del__ (self):
+        if self.temp_path:
+            shutil.rmtree (self.temp_path)
+        self.temp_path = None
+        self.revisions_path = None
         
-    #
-    # Add an entry to the archive, set up the metadata
-    # This won't write the change, use update_all() or update()
-    # to commit the change to the target file.
-    #
-    def add_file(self, file, handler, description):
-        dprint("add_file '%s' with description '%s' and handler '%s'",
-               file, description, handler)
-	if self.filelist == None:
-	    self.__read_filelist()
-	if not file in self.filelist:
-	    self.filelist.append(file)
-	self.__update_file_metadata(file, None, handler, description)
+        if self.metadata:
+            self.metadata.freeDoc ()
+        self.metadata = None
+            
+        if self.zip:
+            self.zip.close ()
+        self.zip = None
+                                                                
+    def __read_metadata (self):
+        if self.metadata:
+            return
 
-    #
-    # Remove an entry from the archive, cleans up the associated metadata too
-    # Returns 0 if this succeeded and -1 otherwise
-    #
-    def delete_file(self, file):
-        dprint("delete_file(%s)", file)
-	if file in self.filelist:
-	    self.filelist.remove(file)
-	    self.__delete_file_metadata(file)
-	    return 0
-	return -1
+        if not os.path.exists (self.path):
+            dprint ("Profile file '%s' doesn't exist" % self.path)
+            self.metadata = libxml2.newDoc ("1.0")
+            root = self.metadata.newChild (None, "metadata", None)
+            root.newChild (None, "profile_revisions", None)
+            root.newChild (None, "directories", None)
+            root.newChild (None, "files", None)
+            return
 
+        dprint ("Reading metadata from '%s'" % self.path)
+            
+        try:
+            self.zip = zipfile.ZipFile (self.path, "r")
+        except:
+            raise ProfileStorageException ("Failed to read file '%s': %s" %
+                                           (self.path, sys.exc_info()[1]))
 
-    #
-    # Install the archive into a temporary directory
-    # Returns the list of tupples (absolute file path, handler name)
-    #
-    def install(self):
-        if self.installed:
+        try:
+            blob = self.zip.read ("metadata")
+            doc = libxml2.readMemory (blob, len (blob),
+                                      "metadata",
+                                      None,
+                                      libxml2.XML_PARSE_NOBLANKS)
+        except:
+            raise ProfileStorageException ("Failed to read metadata from '%s': %s" %
+                                           (self.path, sys.exc_info()[1]))
+        
+        root = doc.getRootElement ()
+        if not root or root.name != "metadata":
+            doc.freeDoc ()
+            raise ProfileStorageException ("Invalid metadata section in '%s': %s" %
+                                           (self.path, sys.exc_info()[1]))
+            
+        self.metadata = doc
+
+        if len (root.xpathEval ("profile_revisions")) == 0:
+            root.newChild (None, "profile_revisions", None)
+        if len (root.xpathEval ("directories")) == 0:
+            root.newChild (None, "directories", None)
+        if len (root.xpathEval ("files")) == 0:
+            root.newChild (None, "files", None)
+
+    def __get_profile_revisions (self):
+        assert self.metadata
+        revisions = []
+        for profile_revision in self.metadata.xpathEval ("/metadata/profile_revisions/profile_revision"):
+            revisions.append (profile_revision.prop ("id"))
+        return revisions
+    
+    def __get_current_profile_revision (self):
+        assert self.metadata
+        return self.metadata.xpathEval ("string(/metadata/profile_revisions/@current)")
+
+    def __get_profile_revision_node (self, profile_revision):
+        assert self.metadata
+        nodes = self.metadata.xpathEval ("/metadata/profile_revisions/profile_revision[@id='%s']" % profile_revision)
+        if not len (nodes):
+            return None
+        return nodes[0]
+
+    def __get_profile_revision_item (self, revision, path):
+        assert self.metadata
+        nodes = self.metadata.xpathEval ("/metadata/profile_revisions/profile_revision[@id='%s']/item[@path='%s']" %
+                                         (revision, path))
+        if not len (nodes):
+            return None
+        return nodes[0]
+    
+    def __get_profile_revision_items (self, revision):
+        assert self.metadata
+        return self.metadata.xpathEval ("/metadata/profile_revisions/profile_revision[@id='%s']/item" % revision)
+
+    def __get_file_revision_node (self, path, revision):
+        assert self.metadata
+        nodes = self.metadata.xpathEval ("/metadata/files/file[@path='%s']/revisions/revision[@id='%s']" %
+                                         (path, revision))
+        if not len (nodes):
+            return None
+        return nodes[0]
+    
+    def __get_directory_revision_node (self, path, revision):
+        assert self.metadata
+        nodes = self.metadata.xpathEval ("/metadata/directories/directory[@path='%s']/revisions/revision[@id='%s']" %
+                                         (path, revision))
+        if not len (nodes):
+            return None
+        return nodes[0]
+
+    def __get_file_revisions (self, path):
+        assert self.metadata
+        revisions = []
+        for revision in self.metadata.xpathEval ("/metadata/files/file[@path='%s']/revisions/revision" % path):
+            revisions.append (revision.prop ("id"))
+        return revisions
+    
+    def __get_directory_revisions (self, path):
+        assert self.metadata
+        revisions = []
+        for revision in self.metadata.xpathEval ("/metadata/directories/directory[@path='%s']/revisions/revision" % path):
+            revisions.append (revision.prop ("id"))
+        return revisions
+
+    def __get_revision_source (self, revision_node):
+        return revision_node.xpathEval ("string (source)")
+
+    def __get_revision_attributes (self, revision_node):
+        attributes = {}
+        for node in revision_node.xpathEval ("attributes/attribute"):
+            attributes[node.prop ("name")]  = node.prop ("value")
+        return attributes
+
+    def __create_new_profile_revision (self):
+        assert self.metadata
+        assert not self.unsaved_revision
+
+        profile_revisions = self.metadata.xpathEval ("/metadata/profile_revisions")[0]
+        
+        current_revision = self.__get_current_profile_revision ()
+        if current_revision:
+            current_node = self.__get_profile_revision_node (current_revision)
+            new_revision = str (int (current_revision) + 1)
+        else:
+            current_node = None
+            new_revision = "1"
+            
+        if current_node:
+            revision_node = current_node.copyNode (extended = 1)
+            current_node.addPrevSibling (revision_node)
+        else:
+            revision_node = profile_revisions.newChild (None, "profile_revision", None)
+            
+        revision_node.setProp ("id",   new_revision)
+        revision_node.setProp ("date", time.ctime (time.time ()))
+        revision_node.setProp ("user", util.get_user_name ())
+        revision_node.setProp ("host", socket.gethostname ())
+
+        profile_revisions.setProp ("current", new_revision)
+
+        return new_revision
+
+    def __create_new_file_or_dir_revision (self, file_or_dir_node, source, attributes):
+        # Ensure the revisions node exists
+        nodes = file_or_dir_node.xpathEval ("revisions")
+        if len (nodes):
+            revisions_node = nodes[0]
+        else:
+            revisions_node = file_or_dir_node.newChild (None, "revisions", None)
+
+        # Find a new revision id
+        old_revision_id = 0
+        for node in revisions_node.xpathEval ("revision"):
+            i = int (node.prop ("id"))
+            if i > old_revision_id:
+                old_revision_id = i
+        revision_id = str (old_revision_id + 1)
+        if old_revision_id:
+            old_revision_id = str (old_revision_id)
+        else:
+            old_revision_id = None
+
+        # Create a new revision node
+        if revisions_node.children:
+            revision_node = self.metadata.newDocNode (None, "revision", None)
+            revisions_node.children.addPrevSibling (revision_node)
+        else:
+            revision_node = revisions_node.newChild (None, "revision", None)
+
+        # Set properties
+        revision_node.setProp ("id",   revision_id)
+        revision_node.setProp ("date", time.ctime (time.time ()))
+        revision_node.setProp ("user", util.get_user_name ())
+        revision_node.setProp ("host", socket.gethostname ())
+
+        # Set source and attributes
+        revision_node.newChild (None, "source", source)
+        
+        attributes_node = revision_node.newChild (None, "attributes", None)
+        if attributes:
+            for name in attributes:
+                attribute_node = attributes_node.newChild (None, "attribute", None)
+                attribute_node.setProp ("name",  str (name))
+                attribute_node.setProp ("value", str (attributes[name]))
+
+        return (revision_id, old_revision_id)
+
+    def __create_new_file_revision (self, path, source, attributes):
+        assert self.metadata
+
+        files_node = self.metadata.xpathEval ("/metadata/files")[0]
+        
+        # Ensure the file node exists
+        nodes = files_node.xpathEval ("file[@path='%s']" % path)
+        if len (nodes):
+            file_node = nodes[0]
+        else:
+            file_node = files_node.newChild (None, "file", None)
+            file_node.setProp ("path", path)
+
+        return self.__create_new_file_or_dir_revision (file_node, source, attributes)
+
+    def __create_new_directory_revision (self, path, source, attributes):
+        assert self.metadata
+
+        files_node = self.metadata.xpathEval ("/metadata/directories")[0]
+        
+        # Ensure the directory node exists
+        nodes = files_node.xpathEval ("directory[@path='%s']" % path)
+        if len (nodes):
+            directory_node = nodes[0]
+        else:
+            directory_node = files_node.newChild (None, "directory", None)
+            directory_node.setProp ("path", path)
+
+        return self.__create_new_file_or_dir_revision (directory_node, source, attributes)
+
+    def __add_profile_revision_item (self, profile_revision, path, type, revision):
+        assert self.metadata
+
+        profile_revision_node = self.metadata.xpathEval ("/metadata/profile_revisions/profile_revision[@id='%s']" %
+                                                         profile_revision)[0]
+
+        nodes = profile_revision_node.xpathEval ("item[@path='%s']" % path)
+        if len (nodes):
+            item_node = nodes[0]
+        else:
+            item_node = profile_revision_node.newChild (None, "item", None)
+            item_node.setProp ("path", path)
+
+        item_node.setProp ("type", type)
+        item_node.setProp ("revision", revision)
+
+    def __item_revision_is_current (self, path, type, revision):
+        assert self.metadata
+
+        current_profile_revision = self.__get_current_profile_revision ()
+
+        return self.metadata.xpathEval ("boolean(/metadata/profile_revisions/profile_revision[@id='%s']"
+                                        "/item[@path='%s' and @type='%s' and @revision='%s'])" %
+                                        (current_profile_revision, path, type, revision))
+        
+    def __unpack (self):
+        self.__read_metadata ()
+
+        if self.temp_path:
             return
         
-        self.install_path = tempfile.mkdtemp(prefix = "sabayon-temp-storage-")
+        self.temp_path = tempfile.mkdtemp (prefix = "sabayon-profile-storage-")
+        self.revisions_path = os.path.join (self.temp_path, "%revisions%")
 
-        if not self.exists or not self.zipfile:
-            self.installed = True
-            return [] # Nothing to install
-	
-	res = []
-	#
-	# Try to walk first though all the paths to make sure everything
-	# can be installed and not half of it
-	# TODO: check for filesystem space left on the device.
-	#
-        for file in self.__read_filelist():
-	    target = self.__get_abs_filename(file)
-	    tardir = os.path.dirname(target)
-	    if not os.path.isdir(tardir):
-	        if os.path.exists(tardir):
-		    raise ProfileStorageException("Cannot install %s since %s is not a directory" % (target, tardir))
-		try:
-		    os.makedirs(tardir)
-                    dprint("created directory %s", tardir)
-		except:
-		    raise ProfileStorageException("Cannot create directory %s" % (tardir))
-            if os.path.exists(tardir) and not os.access(tardir, os.W_OK):
-		raise ProfileStorageException("Directory %s is not writable" % (tardir))
-            if os.path.exists(target) and not os.access(target, os.W_OK):
-		raise ProfileStorageException("File %s is not writable" % (target))
-	
-	for file in self.__read_filelist():
-	    target = self.__get_abs_filename(file)
-	    tardir = os.path.dirname(target)
-	    data = self.zipfile.read(file)
-            if os.path.exists(target):
-                dprint("Overwriting %s", target)
-            else:
-                dprint("Creating %s", target)
-	    try:
-		f = open(target, "w");
-		f.write(data)
-		f.close()
-	    except:
-		raise ProfileStorageException("Failed to write to %s" % (target))
-	    res.append(self.__get_file_info(file))
-	    
-	self.installed = True
-        return res
+        dprint ("Unpacking '%s' in '%s'" % (self.path, self.temp_path))
 
-    def uninstall(self):
-        if self.installed:
-            shutil.rmtree(self.install_path)
-            self.install_path = None
-            self.installed = False
-
-    def get_install_path(self):
-        return self.install_path
-
-    #
-    # Provides the list of entries in the archive along with some metadata
-    # TODO: refine the metadata
-    #
-    def info_all(self):
-        res = []
-        for file in self.__read_filelist():
-	    res.append(self.__get_file_info(file))
-
-	return res
-	    
-    #
-    # Update the archive from the temporary install path
-    # log is a string detailing the update
-    # If the profile was installed and some file are now missing they
-    # will be removed from the archive.
-    # If some file from the profile are not readable they will be skipped and
-    # will show in the result with a 'failed' handler.
-    # Returns the list of tupples (file, handler name) remaining
-    # and updated in the archive
-    #
-    # FIXME: does this make any sense at all if its not installed ?
-    #
-    def update_all(self, log):
-        res = []
-        deleted = []
-	identical = []
-        modified = []
-	errors = 0
-
-        #
-	# Get first the list of resources modified, identical or deleted
-	#
-        if self.installed:
-	    for file in self.__read_filelist():
-		target = self.__get_abs_filename(file)
-		if os.path.exists(target):
-		    try:
-			olddata = self.zipfile.read(file)
-                    except:
-                        olddata = None
-                    
-                    try:
-			data = open(target, "r").read()
-			if not olddata or olddata != data:
-			    modified.append((file, data))
-			else:
-			    identical.append((file, data))
-		    except:
-		        errors = errors + 1
-			res.append((file, 'error'))
-		else:
-		    deleted.append(file)
-		    res.append((file, 'deleted'))
-
-
-        #
-	# Update the local metadata
-	#
-        self.__update_metadata(log)
-	for i in modified:
-	    file = i[0];
-	    self.__update_file_metadata(file, log)
-	for i in identical:
-	    file = i[0];
-	    self.__update_file_metadata(file, None)
-	for file in deleted:
-	    self.__delete_file_metadata(file)
-
-        #
-	# Preserve the old package if present
-	#
-        if self.zipfile:
-	    bak = self.filename + ".bak"
-	    try:
-	        self.zipfile.close()
-		os.rename(self.filename, bak)
-                dprint("Saved old version as %s", bak)
-	    except:
-	        raise ProfileStorageException("Failed to save backup as %s" %
-		                              (bak))
-	    try:
-		self.zipfile = zipfile.ZipFile(self.filename, "w")
-	    except:
-		os.rename(bak, self.filename)
-		raise ProfileStorageException("Failed to write file %s" %
-					      self.filename)
-	    try:
-		self.zipfile.writestr('metadata', self.doc.serialize(format=1))
-	    except:
-		os.rename(bak, self.filename)
-		raise ProfileStorageException("Failed to write %s metadata" %
-					      self.filename)
-	        
-        if self.zipfile:
-	    for (file, data) in identical:
-		self.zipfile.writestr(file, data)
-	    for (file, data) in modified:
-                dprint("Updating %s", file)
-		self.zipfile.writestr(file, data)
-		res.append(self.__get_file_info(file))
-        else:
-	    if self.zipfile != None:
-	        self.zipfile.close()
-	    try:
-		self.zipfile = zipfile.ZipFile(self.filename, "w")
-	    except:
-		raise ProfileStorageException("Failed to write file %s" %
-					      self.filename)
-	    try:
-		self.zipfile.writestr('metadata', self.doc.serialize(format=1))
-	    except:
-		raise ProfileStorageException("Failed to write %s metadata" %
-					      self.filename)
-	    
-	    for file in self.__read_filelist():
-		target = self.__get_abs_filename(file)
-		if os.path.exists(target):
-		    try:
-			data = open(target, "r").read()
-                        dprint("Updating %s", file)
-			self.zipfile.writestr(file, data)
-			res.append(self.__get_file_info(file))
-		    except:
-			res.append(self.__get_file_info(file))
-		else:
-		    res.append((file, 'missing'))
-        #
-	# Flush and reopen if further work is needed.
-	#
-	self.zipfile.close()
-	self.zipfile = zipfile.ZipFile(self.filename, "a")
-        return res
+        if not self.zip:
+            os.mkdir (self.revisions_path)
+            return
         
-def run_unit_tests():
-    #
-    # First test create a new config file from scratch
-    #
-    if os.path.exists("storage-test.zip"):
-        os.remove("storage-test.zip")
+        for info in self.zip.infolist ():
+            if info.filename == "metadata":
+                continue
+            
+            dest_path = os.path.join (self.temp_path, info.filename)
+            dest_dir  = os.path.join (self.temp_path, os.path.dirname (info.filename))
 
-    prof = ProfileStorage('storage-test.zip');
-    prof.install ()
-    open(prof.get_install_path() + "/config1.test", "w").write("new test file 1")
-    open(prof.get_install_path() + "/config2.test", "w").write("new test file 2")
-    prof.add_file('config1.test', "Foo Handler", "First config test file")
-    prof.add_file('config2.test', "Bar Handler", "Second config test file")
-    list = prof.update_all("first save");
-    prof.uninstall()
+            if not os.path.exists (dest_dir):
+                os.makedirs (dest_dir)
+                                                           
+            # It sucks that we lose file permissions, mtime etc. with ZIP
+            file (dest_path, "w").write (self.zip.read (info.filename))
 
-    assert os.path.exists("storage-test.zip")
+        if not os.path.exists (self.revisions_path):
+            os.mkdir (self.revisions_path)
 
-    #
-    # Second test install an existing profile, modify one resource
-    # and update it
-    #
-    prof = ProfileStorage('storage-test.zip');
-    list = prof.install()
+    def __foreach_revision (self, node, type, callback, user_data):
+        path = node.prop ("path")
+        for revision in node.xpathEval ("revisions/revision"):
+            revision_id = revision.prop ("id")
+            callback (path,
+                      revision_id,
+                      self.__item_revision_is_current (path, type, revision_id),
+                      type == "directory",
+                      user_data)
 
-    assert os.path.exists(prof.get_install_path() + "/config1.test")
-    assert os.path.exists(prof.get_install_path() + "/config2.test")
+    def __foreach_all (self, callback, user_data):
+        for file_node in self.metadata.xpathEval ("/metadata/files/file"):
+            self.__foreach_revision (file_node, "file", callback, user_data)
+        for directory_node in self.metadata.xpathEval ("/metadata/directories/directory"):
+            self.__foreach_revision (directory_node, "directory", callback, user_data)
 
-    (name, handler, description) = list[0]
-    assert name == "config1.test"
-    assert handler == "Foo Handler"
-    assert description == "First config test file"
+    def copy (self, name):
+        """Create a new ProfileStorage object, copying the
+        contents of this profile to the new profile.
+
+        @name: the name of the new profile.
+
+        Return value: a #ProfileStorage object.
+        """
+        if os.path.isfile (self.path) and zipfile.is_zipfile (self.path):
+            new_path = os.path.join (PROFILESDIR, name + ".zip")
+            try:
+                shutil.copyfile (self.path, new_path)
+            except:
+                dprint ("Failed to copy profile from '%s' to '%s': %s" % \
+                        (self.path, new_path, sys.exc_info()[1]))
+        
+        return ProfileStorage (name)
+
+    def add (self, path, src_dir, source, attributes = None):
+        """Add a new - or update an existing - file or directory
+        to the profile. If @path is a directory, then the contents
+        of the directory will be recursively saved in the profile.
+
+        @path: the relative path of the file or directory.
+        @src_dir: the directory (which @path is relative to) from
+        which the file or directory contents should be copied to
+        the profile.
+        @source: the name of the #ProfileSource with which the file
+        or directory is associated.
+        @attributes: a varargs list of arbitrary key/value pairs
+        (specific to @source) which should be saved.
+        """
+        dprint ("Adding '%s' from %s:%s" % (path, source, src_dir))
+        
+        self.__unpack ()
+
+        src_path = os.path.join (src_dir, path)
+        dst_path = os.path.join (self.temp_path, path)
+
+        if not os.path.exists (src_path):
+            raise ProfileStorageException ("Cannot add non-existant file '%s'")
+        
+        if not self.unsaved_revision:
+            self.unsaved_revision = self.__create_new_profile_revision ()
+            
+        if os.path.isdir (src_path):
+            (new_revision, old_revision) = self.__create_new_directory_revision (path, source, attributes)
+            needs_copying = self.__item_revision_is_current (path, "directory", old_revision)
+            self.__add_profile_revision_item (self.unsaved_revision, path, "directory", new_revision)
+
+            if old_revision and needs_copying:
+                dprint ("Retaining old revision of '%s' at '%s'",
+                        path, os.path.join (self.revisions_path, path, old_revision))
+                os.renames (os.path.join (self.temp_path, path),
+                            os.path.join (self.revisions_path, path, old_revision))
+            
+            copy_tree (self.temp_path, src_dir, path)
+        else:
+            (new_revision, old_revision) = self.__create_new_file_revision (path, source, attributes)
+            needs_copying = self.__item_revision_is_current (path, "file", old_revision)
+            self.__add_profile_revision_item (self.unsaved_revision, path, "file", new_revision)
+            
+            if old_revision and needs_copying:
+                dprint ("Retaining old revision of '%s' at '%s'",
+                        path, os.path.join (self.revisions_path, path, old_revision))
+                os.renames (os.path.join (self.temp_path, path),
+                            os.path.join (self.revisions_path, path, old_revision))
+
+            dirname = os.path.dirname (dst_path)
+            if not os.path.exists (dirname):
+                os.makedirs (dirname)
+            shutil.copy2 (src_path, dst_path)
+
+    def remove (self, path):
+        """Remove a file or directory from the profile.
+
+        @path: the relative path of the file or directory. This is
+        the same path used with ProfileStorage::add().
+        """
+        dprint ("Removing '%s' profile" % path)
+
+        self.__unpack ()
+        
+        if not self.unsaved_revision:
+            self.unsaved_revision = self.__create_new_profile_revision ()
+
+        item_node = self.__get_profile_revision_item (self.unsaved_revision, path)
+        if not item_node:
+            return
+
+        item_type     = item_node.prop ("type")
+        item_revision = item_node.prop ("revision")
+
+        item_node.unlinkNode ()
+        item_node.freeNode ()
+        
+        os.renames (os.path.join (self.temp_path, path),
+                    os.path.join (self.revisions_path, path, item_revision))
+
+    def extract (self, path, dst_dir, overwrite = False, revision = None):
+        """Extract a file or directory from the profile.
+
+        @path: the relative path of the file or directory to extract.
+        This is the same path used with ProfileStorage::add().
+        @dst_dir: the directory to which the file or directory specified
+        by @path should be extracted. Any subdirectories of @dst_dir
+        specified by @path will be created.
+        @revision: an (optional) revision identifier which specifies
+        the revision of the file or directory which should be extracted.
+        The revision identifier must have been returned from
+        ProfileStorage::get_revisions() and may be a profile or file
+        revision.
+        """
+        dprint ("Extracting '%s' to '%s', revision %s" % (path, dst_dir, revision))
+        
+        self.__unpack ()
+
+        if not revision:
+            profile_revision = self.__get_current_profile_revision ()
+            if not profile_revision:
+                raise ProfileStorageException ("No current revision")
+            
+            item = self.__get_profile_revision_item (profile_revision, path)
+            if not item:
+                raise ProfileStorageException ("'%s' does not exist in profile revision '%s'" %
+                                               (path, profile_revision))
+
+            item_type     = item.prop ("type")
+            item_revision = item.prop ("revision")
+        else:
+            (item_type, item_revision) = revision.split (":")
+
+            if item_type == "profile":
+                item = self.__get_profile_revision_item (item_revision, path)
+                if not item:
+                    raise ProfileStorageException ("'%s' does not exist in profile revision '%s'" %
+                                                   (path, item_revision))
+
+                item_type     = item.prop ("type")
+                item_revision = item.prop ("revision")
+
+        if self.__item_revision_is_current (path, item_type, item_revision):
+            if item_type == "directory":
+                copy_tree (dst_dir, self.temp_path, path, None, overwrite)
+            else:
+                dst_path = os.path.join (dst_dir, path)
+                if overwrite or not os.path.exists (dst_path):
+                    dirname = os.path.dirname (dst_path)
+                    if not os.path.exists (dirname):
+                        os.makedirs (dirname)
+                    shutil.copy2 (os.path.join (self.temp_path, path), dst_path)
+        else:
+            if item_type == "directory":
+                copy_tree (dst_dir,
+                           os.path.join (self.revisions_path, path),
+                           path,
+                           item_revision,
+                           overwrite)
+            else:
+                dst_path = os.path.join (dst_dir, path)
+                if overwrite or not os.path.exists (dst_path):
+                    dirname = os.path.dirname (dst_path)
+                    if not os.path.exists (dirname):
+                        os.makedirs (dirname)
+                    shutil.copy2 (os.path.join (self.revisions_path, path, item_revision), dst_path)
+
+    def list (self, source = None, profile_revision = None):
+        """List the current contents of the profile.
+
+        @source: an (optional) identifier of the source whose
+        files should be listed. This is identifier as @source
+        passed to ProfileStorage::add().
+        @profile_revision: specify the profile revision whose contents
+        should be listed. Defaults to the current revision.
+
+        Return value: a list of (@source, @path) tuples.
+        """
+        def listify (source, path, retval):
+            retval.append ((source, path))
+
+        retval = []
+        self.foreach (listify, retval, source, profile_revision)
+
+        return retval
+
+    def foreach (self, callback, user_data = None, source = None, profile_revision = None):
+        """Iterate over the contents of the profile:
+
+        @callback: an function or method of which takes 
+        at least two arguments - @source and @path. If @callback
+        is a method, the object which the method is associated
+        will be the first parameter. If @user_data is passed,
+        then it will be the final parameter to the callback.
+        @user_data: an (optional) parameter to pass to @callback.
+        @source: an (optional) identifier of the source whose
+        files should be listed.
+        @profile_revision: an (optional) profile revision from
+        which the files should be listed. Defaults to the current
+        revision.
+        """
+        self.__read_metadata ()
+
+        if not profile_revision:
+            profile_revision = self.__get_current_profile_revision ()
+        else:
+            if not profile_revision.startswith ("profile:"):
+                raise ProfileStorageException ("Not a valid profile revision")
+            profile_revision = profile_revision[len ("profile:"):]
+        
+        if not profile_revision:
+            return
+
+        for item in self.__get_profile_revision_items (profile_revision):
+            item_path     = item.prop ("path")
+            item_type     = item.prop ("type")
+            item_revision = item.prop ("revision")
+
+            if item_type == "file":
+                revision_node = self.__get_file_revision_node (item_path, item_revision)
+            elif item_type == "directory":
+                revision_node = self.__get_directory_revision_node (item_path, item_revision)
+            else:
+                dprint ("Unknown item type '%s' for path '%s' in revision '%s'" %
+                        (item_type, item_path, item_revision))
+                continue
+
+            if not revision_node:
+                dprint ("No revision '%s' for %s '%s" % (item_revision, item_type, item_path))
+                continue
+
+            item_source = self.__get_revision_source (revision_node)
+            if not item_source:
+                dprint ("No source associated with item '%s'" % item_path)
+                continue
+
+            if source and source != item_source:
+                continue
+
+            if not user_data is None:
+                callback (item_source, item_path, user_data)
+            else:
+                callback (item_source, item_path)
+
+    def save (self):
+        """Save the contents of the profile to
+        /etc/desktop-profiles/$(name).zip.
+        """
+        if not self.temp_path:
+            dprint ("No changes to profile '%s' need saving" % self.name)
+            return
+
+        def failsafe_rename (src, dst):
+            try:
+                os.rename (src, dst)
+            except:
+                pass
+
+        if os.path.exists (self.path):
+            backup = self.path + ".bak"
+            failsafe_rename (self.path, backup)
+        else:
+            backup = None
+        
+        dprint ("Writing contents of profile to '%s'" % self.path)
+        
+        try:
+            save_zip = zipfile.ZipFile (self.path, "w")
+
+            save_zip.writestr ("metadata", self.metadata.serialize (format = 1))
+            self.unsaved_revision = None
+
+            def zip_directory (save_zip, dir, rel, name = None):
+                if name is None:
+                    name = rel
+                for f in os.listdir (dir):
+                    path = os.path.join (dir, f)
+                    if os.path.isdir (path):
+                        zip_directory (save_zip,
+                                       path,
+                                       os.path.join (rel, f),
+                                       os.path.join (name, f))
+                    elif os.path.isfile (path):
+                        save_zip.write (path, os.path.join (name, f))
+        
+            def zip_foreach (path, revision, is_current, is_directory, data):
+                (save_zip, temp_path, revisions_path) = data
+
+                if is_current:
+                    abs_path = os.path.join (temp_path, path)
+                    if is_directory:
+                        zip_directory (save_zip, abs_path, path)
+                    else:
+                        save_zip.write (abs_path, path)
+                else:
+                    abs_path = os.path.join (revisions_path, path, revision)
+                    name = os.path.join ("%revisions%", path, revision)
+                    if is_directory:
+                        zip_directory (save_zip, abs_path, path, name)
+                    else:
+                        save_zip.write (abs_path, name)
+
+            self.__foreach_all (zip_foreach, (save_zip, self.temp_path, self.revisions_path))
+
+            save_zip.close ()
+        except:
+            if backup:
+                failsafe_rename (backup, self.path)
+            raise
+        
+        shutil.rmtree (self.temp_path)
+        self.temp_path = None
+        self.revisions_path = None
+        
+        self.zip = zipfile.ZipFile (self.path, "r")
+
+    def get_attributes (self, path, revision = None):
+        """Return the attributes associated with a file or directory
+        from the profile.
+
+        @path: the relative path of the file or directory to look up.
+        This is the same path used with ProfileStorage::add().
+        @revision: the profile or file/directory revision identifier
+        with which to look up.
+
+        Return value: a dictionary containing the key/value pairs
+        passed to ProfileStorage::add().
+        """
+        self.__read_metadata ()
+
+        if not revision:
+            profile_revision = self.__get_current_profile_revision ()
+            if not profile_revision:
+                return {}
+            
+            item = self.__get_profile_revision_item (profile_revision, path)
+            if not item:
+                return {}
+
+            item_type     = item.prop ("type")
+            item_revision = item.prop ("revision")
+        else:
+            (item_type, item_revision) = revision.split (":")
+
+            if item_type == "profile":
+                item = self.__get_profile_revision_item (item_revision, path)
+                if not item:
+                    return {}
+
+                item_type     = item.prop ("type")
+                item_revision = item.prop ("revision")
+
+        revision_node = None
+        if item_type == "file":
+            revision_node = self.__get_file_revision_node (path, item_revision)
+        elif item_type == "directory":
+            revision_node = self.__get_directory_revision_node (path, item_revision)
+
+        if revision_node == None:
+            return {}
+
+        return self.__get_revision_attributes (revision_node)
+
+    def get_revisions (self, path = None):
+        """Retrieve the list of profile revisions or the list of
+        revisions of a given file or directory.
+        
+        @path: the relative path of the file or directory to look up.
+        This is the same path used with ProfileStorage::add().
+
+        Return value: a list of revision identifiers for the profile
+        or file/directory in chronological order.
+        """
+        self.__read_metadata ()
+
+        revisions = []
+        if not path:
+            for profile_revision in self.__get_profile_revisions ():
+                revisions.append ("profile:%s" % profile_revision)
+        else:
+            for file_revision in self.__get_file_revisions (path):
+                revisions.append ("file:%s" % file_revision)
+            for directory_revision in self.__get_directory_revisions (path):
+                revisions.append ("directory:%s" % directory_revision)
+
+        return revisions
+
+#
+# Unit tests
+#
+def run_unit_tests ():
+    # Make ProfileStorage look in the current dir for profiles
+    global running_unit_tests
+    running_unit_tests = True
+
+    # Remove cruft
+    if os.path.exists ("storage-test.zip"):
+        os.remove ("storage-test.zip")
+
+    # Create temporary dir for test
+    temp_dir = tempfile.mkdtemp (prefix = "storage-test-")
+
+    # Create profile
+    profile = ProfileStorage ("storage-test")
+
+    # Create two test files in the temporary dir
+    os.mkdir (os.path.join (temp_dir, "t"))
+    open (os.path.join (temp_dir, "t/config1.test"), "w").write ("new test file 1")
+    open (os.path.join (temp_dir, "config2.test"), "w").write ("new test file 2")
+
+    # Add the two test files to the profile
+    profile.add ("t/config1.test", temp_dir, "TestSource1", { "foo-attr1" : "foo" , "bar-attr1" : 1 })
+    profile.add ("config2.test", temp_dir, "TestSource2", { "foo-attr2" : "foo" , "bar-attr2" : 2 })
+
+    # Create a test directory with some files
+    os.makedirs (os.path.join (temp_dir, "foobar/foo/bar/foo/bar"))
+    open (os.path.join (temp_dir, "foobar/foo/bar/foo/bar/%gconf.xml"), "w").write ("new test file 3")
+    open (os.path.join (temp_dir, "foobar/foo/bar/foo.txt"), "w").write ("new test file 4")
+    open (os.path.join (temp_dir, "foobar/foo/bar.txt"), "w").write ("new test file 5")
+    open (os.path.join (temp_dir, "foobar/foo.txt"), "w").write ("new test file 6")
+
+    # Add the test directory to the profile
+    profile.add ("foobar", temp_dir, "TestSource3", { "foo-attr3" : "foo" , "bar-attr3" : 3 })
     
-    (name, handler, description) = list[1]
-    assert name == "config2.test"
-    assert handler == "Bar Handler"
-    assert description == "Second config test file"
+    # Save the profile (first revision)
+    profile.save ()
+    assert os.path.exists ("storage-test.zip")
     
-    file = prof.get_install_path() + '/' + name
-    f = open(file, "w")
-    f.write(time.ctime(time.time()))
-    f.close()
-	    
-    list = prof.update_all("first test update")
-    
-    (name, handler, description) = list[0]
-    assert name == "config2.test"
-    assert handler == "Bar Handler"
-    assert description == "Second config test file"
-    
-    open(prof.get_install_path() + "/config3.test", "w").write("new test file 3")
-    prof.add_file('config3.test', "Blaa Handler", "Third config test file")
-    list = prof.update_all("second test update")
-    
-    (name, handler, description) = list[0]
-    assert name == "config3.test"
-    assert handler == "Blaa Handler"
-    assert description == "Third config test file"
+    # Add one of the test files again to get a new revision
+    open (os.path.join (temp_dir, "t/config1.test"), "w").write ("new test file 99")
+    profile.add ("t/config1.test", temp_dir, "TestSource99", { "foo-attr99" : "foo" , "bar-attr99" : 99 })
 
-    prof.uninstall()
+    # Remove one of the test files
+    profile.remove ("config2.test")
     
-    os.remove("storage-test.zip")
-    os.remove("storage-test.zip.bak")
+    # Add the test directory again to get a new revision
+    open (os.path.join (temp_dir, "foobar/foo/bar/foo/bar/%gconf.xml"), "w").write ("new test file 2005")
+    open (os.path.join (temp_dir, "foobar/foo/bar/foo.txt"), "w").write ("new test file 2005")
+    open (os.path.join (temp_dir, "foobar/foo/bar.txt"), "w").write ("new test file 2005")
+    open (os.path.join (temp_dir, "foobar/foo.txt"), "w").write ("new test file 2005")
+    profile.add ("foobar", temp_dir, "TestSource2005", { "foo-attr2005" : "foo" , "bar-attr2005" : 2005 })
 
-if __name__ == '__main__':
-    run_unit_tests()
+    # Add another directory
+    os.makedirs (os.path.join (temp_dir, "blaas/are/nice"))
+    open (os.path.join (temp_dir, "blaas/are/nice/foo.txt"), "w").write ("blaas are nice")
+    profile.add ("blaas", temp_dir, "Waterford", { "nice" : True, "with-butter" : "but of course" })
+    
+    # Remove temporary dir
+    shutil.rmtree (temp_dir)
+    
+    # Save the profile (second revision)
+    os.remove ("storage-test.zip")
+    profile.save ()
+    assert os.path.exists ("storage-test.zip")
+
+    # Create temporary dir again
+    temp_dir = tempfile.mkdtemp (prefix = "storage-test-")
+    
+    # Now, re-open
+    profile = ProfileStorage ("storage-test")
+
+    # Remove a directory
+    profile.remove ("blaas")
+
+    # Re-add one of the files
+    open (os.path.join (temp_dir, "config2.test"), "w").write ("I'm back, yes its me!")
+    profile.add ("config2.test", temp_dir, "TestSource2")
+
+    # Save the profile (third revision)
+    os.remove ("storage-test.zip")
+    profile.save ()
+    assert os.path.exists ("storage-test.zip")
+
+    # Remove temp dir again
+    shutil.rmtree (temp_dir)
+
+    # Now, re-open and validate
+    profile = ProfileStorage ("storage-test")
+
+    # We should have three revisions, we saved thrice
+    profile_revisions = profile.get_revisions ()
+    assert len (profile_revisions) == 3
+    assert profile_revisions[0] == "profile:3"
+    assert profile_revisions[1] == "profile:2"
+    assert profile_revisions[2] == "profile:1"
+
+    # Verify the latest revision
+    l = profile.list ()
+    assert len (l) == 3
+
+    (source, path) = l[0]
+    assert source == "TestSource99"
+    assert path == "t/config1.test"
+    attributes = profile.get_attributes (path)
+    assert len (attributes) == 2
+    assert attributes.has_key ("foo-attr99")
+    assert attributes["foo-attr99"] == "foo"
+    assert attributes.has_key ("bar-attr99")
+    assert attributes["bar-attr99"] == "99"
+    revisions = profile.get_revisions (path)
+    assert len (revisions) == 2
+    assert revisions[0] == "file:2"
+    assert revisions[1] == "file:1"
+
+    (source, path) = l[1]
+    assert source == "TestSource2005"
+    assert path == "foobar"
+    attributes = profile.get_attributes (path)
+    assert len (attributes) == 2
+    assert attributes.has_key ("foo-attr2005")
+    assert attributes["foo-attr2005"] == "foo"
+    assert attributes.has_key ("bar-attr2005")
+    assert attributes["bar-attr2005"] == "2005"
+    revisions = profile.get_revisions (path)
+    assert len (revisions) == 2
+    assert revisions[0] == "directory:2"
+    assert revisions[1] == "directory:1"
+
+    (source, path) = l[2]
+    assert source == "TestSource2"
+    assert path == "config2.test"
+    attributes = profile.get_attributes (path)
+    assert len (attributes) == 0
+    revisions = profile.get_revisions (path)
+    assert len (revisions) == 2
+    assert revisions[0] == "file:2"
+    assert revisions[1] == "file:1"
+    
+    # Create temporary dir for extraction
+    temp_dir = tempfile.mkdtemp (prefix = "storage-test-")
+
+    # Extract each of the files/directories
+    for (source, path) in l:
+        profile.extract (path, temp_dir)
+
+    # Verify their contents
+    assert os.path.isfile (os.path.join (temp_dir, "t/config1.test"))
+    assert file (os.path.join (temp_dir, "t/config1.test")).read () == "new test file 99"
+    assert os.path.isfile (os.path.join (temp_dir, "config2.test"))
+    assert file (os.path.join (temp_dir, "config2.test")).read () == "I'm back, yes its me!"
+    assert os.path.isfile (os.path.join (temp_dir, "foobar/foo/bar/foo/bar/%gconf.xml"))
+    assert file (os.path.join (temp_dir, "foobar/foo/bar/foo/bar/%gconf.xml")).read () == "new test file 2005"
+    assert os.path.isfile (os.path.join (temp_dir, "foobar/foo/bar/foo.txt"))
+    assert file (os.path.join (temp_dir, "foobar/foo/bar/foo.txt")).read () == "new test file 2005"
+    assert os.path.isfile (os.path.join (temp_dir, "foobar/foo/bar.txt"))
+    assert file (os.path.join (temp_dir, "foobar/foo/bar.txt")).read () == "new test file 2005"
+    assert os.path.isfile (os.path.join (temp_dir, "foobar/foo.txt"))
+    assert file (os.path.join (temp_dir, "foobar/foo.txt")).read () == "new test file 2005"
+    
+    # Remove temporary extraction dir
+    shutil.rmtree (temp_dir)
+
+
+    # Verify the second revision
+    l = profile.list (profile_revision = profile_revisions[1])
+    assert len (l) == 3
+
+    (source, path) = l[0]
+    assert source == "TestSource99"
+    assert path == "t/config1.test"
+    attributes = profile.get_attributes (path, profile_revisions[1])
+    assert len (attributes) == 2
+    assert attributes.has_key ("foo-attr99")
+    assert attributes["foo-attr99"] == "foo"
+    assert attributes.has_key ("bar-attr99")
+    assert attributes["bar-attr99"] == "99"
+    revisions = profile.get_revisions (path)
+    assert len (revisions) == 2
+    assert revisions[0] == "file:2"
+    assert revisions[1] == "file:1"
+
+    # Try using one of the file revisions
+    attributes = profile.get_attributes (path, revisions[1])
+    assert len (attributes) == 2
+    assert attributes.has_key ("foo-attr1")
+    assert attributes["foo-attr1"] == "foo"
+    assert attributes.has_key ("bar-attr1")
+    assert attributes["bar-attr1"] == "1"
+    
+    (source, path) = l[1]
+    assert source == "TestSource2005"
+    assert path == "foobar"
+    attributes = profile.get_attributes (path, profile_revisions[1])
+    assert len (attributes) == 2
+    assert attributes.has_key ("foo-attr2005")
+    assert attributes["foo-attr2005"] == "foo"
+    assert attributes.has_key ("bar-attr2005")
+    assert attributes["bar-attr2005"] == "2005"
+    
+    (source, path) = l[2]
+    assert source == "Waterford"
+    assert path == "blaas"
+    attributes = profile.get_attributes (path, profile_revisions[1])
+    assert len (attributes) == 2
+    assert attributes.has_key ("with-butter")
+    assert attributes["with-butter"] == "but of course"
+    assert attributes.has_key ("nice")
+    assert attributes["nice"] == "True"
+    revisions = profile.get_revisions (path)
+    assert len (revisions) == 1
+    assert revisions[0] == "directory:1"
+
+    # Create temporary dir for extraction
+    temp_dir = tempfile.mkdtemp (prefix = "storage-test-")
+
+    # Extract each of the files/directories
+    for (source, path) in l:
+        profile.extract (path, temp_dir, revision = profile_revisions[1])
+
+    # Verify their contents
+    assert os.path.isfile (os.path.join (temp_dir, "t/config1.test"))
+    assert file (os.path.join (temp_dir, "t/config1.test")).read () == "new test file 99"
+    assert os.path.isfile (os.path.join (temp_dir, "foobar/foo/bar/foo/bar/%gconf.xml"))
+    assert file (os.path.join (temp_dir, "foobar/foo/bar/foo/bar/%gconf.xml")).read () == "new test file 2005"
+    assert os.path.isfile (os.path.join (temp_dir, "foobar/foo/bar/foo.txt"))
+    assert file (os.path.join (temp_dir, "foobar/foo/bar/foo.txt")).read () == "new test file 2005"
+    assert os.path.isfile (os.path.join (temp_dir, "foobar/foo/bar.txt"))
+    assert file (os.path.join (temp_dir, "foobar/foo/bar.txt")).read () == "new test file 2005"
+    assert os.path.isfile (os.path.join (temp_dir, "foobar/foo.txt"))
+    assert file (os.path.join (temp_dir, "foobar/foo.txt")).read () == "new test file 2005"
+    assert os.path.isfile (os.path.join (temp_dir, "blaas/are/nice/foo.txt"))
+    assert file (os.path.join (temp_dir, "blaas/are/nice/foo.txt")).read () == "blaas are nice"
+    
+    # Remove temporary extraction dir
+    shutil.rmtree (temp_dir)
+
+    
+    # Verify the first revision
+    l = profile.list (profile_revision = profile_revisions[2])
+    assert len (l) == 3
+
+    (source, path) = l[0]
+    assert source == "TestSource1"
+    assert path == "t/config1.test"
+    attributes = profile.get_attributes (path, profile_revisions[2])
+    assert len (attributes) == 2
+    assert attributes.has_key ("foo-attr1")
+    assert attributes["foo-attr1"] == "foo"
+    assert attributes.has_key ("bar-attr1")
+    assert attributes["bar-attr1"] == "1"
+    
+    (source, path) = l[1]
+    assert source == "TestSource2"
+    assert path == "config2.test"
+    attributes = profile.get_attributes (path, profile_revisions[2])
+    assert len (attributes) == 2
+    assert attributes.has_key ("foo-attr2")
+    assert attributes["foo-attr2"] == "foo"
+    assert attributes.has_key ("bar-attr2")
+    assert attributes["bar-attr2"] == "2"
+    
+    (source, path) = l[2]
+    assert source == "TestSource3"
+    assert path == "foobar"
+    attributes = profile.get_attributes (path, profile_revisions[2])
+    assert len (attributes) == 2
+    assert attributes.has_key ("foo-attr3")
+    assert attributes["foo-attr3"] == "foo"
+    assert attributes.has_key ("bar-attr3")
+    assert attributes["bar-attr3"] == "3"
+
+    # Create temporary dir for extraction
+    temp_dir = tempfile.mkdtemp (prefix = "storage-test-")
+
+    # Extract each of the files/directories
+    for (source, path) in l:
+        profile.extract (path, temp_dir, revision = profile_revisions[2])
+
+    # Verify their contents
+    assert os.path.isfile (os.path.join (temp_dir, "t/config1.test"))
+    assert file (os.path.join (temp_dir, "t/config1.test")).read () == "new test file 1"
+    assert os.path.isfile (os.path.join (temp_dir, "config2.test"))
+    assert file (os.path.join (temp_dir, "config2.test")).read () == "new test file 2"
+    assert os.path.isfile (os.path.join (temp_dir, "foobar/foo/bar/foo/bar/%gconf.xml"))
+    assert file (os.path.join (temp_dir, "foobar/foo/bar/foo/bar/%gconf.xml")).read () == "new test file 3"
+    assert os.path.isfile (os.path.join (temp_dir, "foobar/foo/bar/foo.txt"))
+    assert file (os.path.join (temp_dir, "foobar/foo/bar/foo.txt")).read () == "new test file 4"
+    assert os.path.isfile (os.path.join (temp_dir, "foobar/foo/bar.txt"))
+    assert file (os.path.join (temp_dir, "foobar/foo/bar.txt")).read () == "new test file 5"
+    assert os.path.isfile (os.path.join (temp_dir, "foobar/foo.txt"))
+    assert file (os.path.join (temp_dir, "foobar/foo.txt")).read () == "new test file 6"
+    
+    # Remove temporary extraction dir
+    shutil.rmtree (temp_dir)
+    
+    os.remove ("storage-test.zip")
+    
+    running_unit_tests = False

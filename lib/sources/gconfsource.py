@@ -92,17 +92,15 @@ gobject.type_register (GConfChange)
 class GConfSource (userprofile.ProfileSource):
     """GConf user profile source."""
     
-    def __init__ (self, profile_storage):
+    def __init__ (self, storage):
         """Construct a GConfSource
 
-        profile_storage: storage object
-	path to commit changes to - defaults
-        are strored in .gconf.xml.defaults and mandatory
-        changes are stored in .gconf.xml.mandatory
+        @storage: storage object
         """
         userprofile.ProfileSource.__init__ (self, "GConf", "get_gconf_delegate")
 
-        self.profile_storage  = profile_storage
+        self.storage          = storage
+        self.home_dir         = util.get_home_dir ()
         self.client           = None
         self.notify_id        = 0
         self.defaults_client  = None
@@ -117,17 +115,13 @@ class GConfSource (userprofile.ProfileSource):
         """
         if not mandatory:
             if not self.defaults_client:
-                (client, address) = get_client_and_address_for_path (
-                               self.profile_storage.get_install_path () +
-                               "/.gconf.xml.defaults")
+                (client, address) = get_client_and_address_for_path (os.path.join (self.home_dir, ".gconf.xml.defaults"))
                 self.defaults_client = client
                 self.defaults_address = address
             return (self.defaults_client, self.defaults_address)
         else:
             if not self.mandatory_client:
-                (client, address) = get_client_and_address_for_path (
-                               self.profile_storage.get_install_path () +
-                               "/.gconf.xml.mandatory")
+                (client, address) = get_client_and_address_for_path (os.path.join (self.home_dir, ".gconf.xml.mandatory"))
                 self.mandatory_client = client
                 self.mandatory_address = address
             return (self.mandatory_client, self.mandatory_address)
@@ -186,27 +180,8 @@ class GConfSource (userprofile.ProfileSource):
         os.system ("gconftool-2 --shutdown")
         time.sleep (1)
 
-        # Clear all files from the ProfileStorage
-        files = self.profile_storage.info_all ()
-        for (file, handler, metadata) in files:
-            if handler != self.name:
-                continue
-            self.profile_storage.delete_file (file)
-
-        # Re-add all files again
-        def add_all_files_in_dir (source, profile_storage, dir):
-            path = os.path.join (os.path.abspath (profile_storage.get_install_path ()), dir)
-            if os.path.exists (path):
-                for file in os.listdir (path):
-                    if os.path.isdir (os.path.join (path, file)):
-                        add_all_files_in_dir (source,
-                                              profile_storage,
-                                              os.path.join (dir, file))
-                    elif file == "%gconf.xml" or file == "%gconf-tree.xml":
-                        profile_storage.add_file (os.path.join (dir, file), source.name, None)
-
-        add_all_files_in_dir (self, self.profile_storage, ".gconf.xml.defaults")
-        add_all_files_in_dir (self, self.profile_storage, ".gconf.xml.mandatory")
+        self.storage.add (".gconf.xml.defaults", self.home_dir, self.name)
+        self.storage.add (".gconf.xml.mandatory", self.home_dir, self.name)
 
     def apply (self):
         """Apply the profile by writing the default and mandatory
@@ -220,60 +195,36 @@ class GConfSource (userprofile.ProfileSource):
         xml:readwrite:$(HOME)/.gconf
         include $(HOME)/.gconf.path.defaults
         """
-        def apply_gconf_source (install_path, home_dir, path_file, source):
-            
-            def write_path_file (filename, source):
-                """Write a GConf path file. First try writing to a
-                temporary file and move it over the original. Failing
-                that, write directly to the original.
-                """
-                dprint ("Writing GConf path file with '%s' to '%s'" % (source, filename))
-                temp = filename + ".new"
-                try:
-                    f = file (temp, "w")
-                except:
-                    temp = None
-                    f = file (filename, "w")
+        def write_path_file (filename, source):
+            """Write a GConf path file. First try writing to a
+            temporary file and move it over the original. Failing
+            that, write directly to the original.
+            """
+            dprint ("Writing GConf path file with '%s' to '%s'" % (source, filename))
+            temp = filename + ".new"
+            try:
+                f = file (temp, "w")
+            except:
+                temp = None
+                f = file (filename, "w")
 
-                try:
-                    f.write (source + "\n")
-                    f.close ()
-                except:
-                    if temp != None:
-                        os.remove (temp)
-                    raise
-
+            try:
+                f.write (source + "\n")
+                f.close ()
+            except:
                 if temp != None:
-                    os.rename (temp, filename)
+                    os.remove (temp)
+                raise
 
-            def copy_tree (src, dst):
-                for file in os.listdir (src):
-                    src_path = os.path.join (src, file)
-                    dst_path = os.path.join (dst, file)
+            if temp != None:
+                os.rename (temp, filename)
 
-                    if os.path.isdir (src_path):
-                        os.mkdir (dst_path)
-                        copy_tree (src_path, dst_path)
-                    else:
-                        shutil.copy2 (src_path, dst_path)
-
-            src_path = os.path.join (install_path, source)
-            dst_path = os.path.join (home_dir, source)
-            if os.path.exists (src_path):
-                dprint ("Copying GConf database from '%s' to '%s'", src_path, dst_path)
-                os.mkdir (dst_path)
-                copy_tree (src_path, dst_path)
-            write_path_file (os.path.join (home_dir, path_file),
-                             "xml:readonly:" + dst_path)
-
-        apply_gconf_source (self.profile_storage.get_install_path (),
-                            util.get_home_dir (),
-                            ".gconf.path.defaults",
-                            ".gconf.xml.defaults")
-        apply_gconf_source (self.profile_storage.get_install_path (),
-                            util.get_home_dir (),
-                            ".gconf.path.mandatory",
-                            ".gconf.xml.mandatory")
+        self.storage.extract (".gconf.xml.defaults", self.home_dir, True)
+        write_path_file (os.path.join (self.home_dir, ".gconf.path.defaults"),
+                         "xml:readonly:" + os.path.join (self.home_dir, ".gconf.xml.defaults"))
+        self.storage.extract (".gconf.xml.mandatory", self.home_dir, True)
+        write_path_file (os.path.join (self.home_dir, ".gconf.path.mandatory"),
+                         "xml:readonly:" + os.path.join (self.home_dir, ".gconf.xml.mandatory"))
 
         # FIXME: perhaps just kill -HUP it? It would really just be better
         #        if we could guarantee that there wasn't a gconfd already
@@ -283,19 +234,18 @@ class GConfSource (userprofile.ProfileSource):
 
 gobject.type_register (GConfSource)
 
-def get_source (profile_storage):
-    return GConfSource (profile_storage)
+def get_source (storage):
+    return GConfSource (storage)
 
 #
 # Unit tests
 #
 def run_unit_tests ():
+    storage.running_unit_tests = True
+    
     main_loop = gobject.MainLoop ()
 
-    profile_storage = storage.ProfileStorage ("GConfTest.zip")
-    profile_storage.install ()
-    
-    source = get_source (profile_storage)
+    source = get_source (storage.ProfileStorage ("GConfTest"))
 
     # Remove any stale path files
     try:
@@ -342,6 +292,7 @@ def run_unit_tests ():
     poll (main_loop)
     
     source.stop_monitoring ()
+    source.client = gconf.client_get_default ()
     
     assert len (changes) == 4
     assert changes[3].key == "/tmp/test-gconfprofile/t3"
@@ -357,10 +308,6 @@ def run_unit_tests ():
     os.system ("gconftool-2 --recursive-unset /tmp/test-gconfprofile")
     
     source.sync_changes ()
-
-    assert os.access (profile_storage.get_install_path () + "/.gconf.xml.defaults/tmp/test-gconfprofile/%gconf.xml", os.F_OK)
-    assert os.access (profile_storage.get_install_path () + "/.gconf.xml.mandatory/tmp/test-gconfprofile/%gconf.xml", os.F_OK)
-
     source.apply ()
 
     assert os.access (util.get_home_dir () + "/.gconf.path.defaults", os.F_OK)
@@ -393,5 +340,4 @@ def run_unit_tests ():
     os.remove (util.get_home_dir () + "/.gconf.path.defaults")
     os.remove (util.get_home_dir () + "/.gconf.path.mandatory")
 
-    profile_storage.uninstall ()
-
+    storage.running_unit_tests = False

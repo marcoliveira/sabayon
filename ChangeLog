@@ -1,3 +1,26 @@
+2005-02-25  Mark McLoughlin  <markmc@redhat.com>
+
+	This commit breaks any existing profiles. The metadata
+	format has changed.
+
+	Also, the code in admin-tool still needs to be fixed
+	up to made work with this stuff. All the unit tests
+	pass, though.
+
+	* lib/storage.py: substantially re-work to add revision
+	history and make the API more useful.
+
+	* lib/sources/filessource.py,
+	  lib/sources/gconfsource.py,
+	  lib/sources/mozillasource.py,
+	  lib/sources/paneldelegate.py,
+	  lib/sources/testsource.py,
+	  lib/userprofile.py: Fixup to use the new ProfileStorage
+	API.
+	
+	* lib/config.py.in: add .gconf.xml.defaults and
+	.gconf.xml.mandatory to the list of dirs to ignore.
+	
 Tue Feb 22 03:10:20 CET 2005 William Lachance <wlach@nit.ca>
 
 	* autogen.sh configure.ac: Properly check for xnest #168124
