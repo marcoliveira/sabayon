@@ -20,10 +20,15 @@
 
 import os
 import errno
+import gobject
 import gtk
 import gtk.glade
 import storage
+import protosession
 from config import *
+
+def _get_profile_path_for_name (profile_name):
+    return PROFILESDIR + "/" + profile_name + ".zip"
 
 class ProfilesModel (gtk.ListStore):
     (
@@ -167,18 +172,38 @@ class ProfilesDialog:
         if profile_name:
             self.__create_new_profile (profile_name, base_profile)
 
+    def __get_selected_profile (self):
+        (model, row) = self.profiles_list.get_selection ().get_selected ()
+        if not row:
+            return None
+        return model[row][ProfilesModel.COLUMN_NAME]
+
     def __edit_button_clicked (self, button):
-        print "Edit"
+        profile_name = self.__get_selected_profile ()
+        if profile_name:
+            self.dialog.set_sensitive (False)
+                
+            main_loop = gobject.MainLoop ()
+            def handle_session_finished (session, main_loop):
+                main_loop.quit ()
+
+            session = protosession.ProtoSession ("protouser",
+                                                 _get_profile_path_for_name (profile_name))
+            session.connect ("finished", handle_session_finished, main_loop)
+            session.start ()
+
+            main_loop.run ()
+            
+            self.dialog.set_sensitive (True)
 
     def __delete_button_clicked (self, button):
-        (model, row) = self.profiles_list.get_selection ().get_selected ()
-        if row:
-            profile_name = model[row][ProfilesModel.COLUMN_NAME]
-            os.remove (PROFILESDIR + "/" + profile_name + ".zip")
-        self.profiles_model.reload ()
+        profile_name = self.__get_selected_profile ()
+        if profile_name:
+            os.remove (_get_profile_path_for_name (profile_name))
+            self.profiles_model.reload ()
 
     def __create_new_profile (self, profile_name, base_profile):
-        profile_storage = storage.ProfileStorage (PROFILESDIR + "/" + profile_name + ".zip")
+        profile_storage = storage.ProfileStorage (_get_profile_path_for_name (profile_name))
         profile_storage.update_all ("")
         
         self.profiles_model.reload ()
@@ -190,9 +215,9 @@ class ProfilesDialog:
             iter = self.profiles_model.iter_next (iter)
 
     def __profile_selection_changed (self, selection):
-        (model, row) = self.profiles_list.get_selection ().get_selected ()
-        self.edit_button.set_sensitive (row != None)
-        self.delete_button.set_sensitive (row != None)
+        profile_name = self.__get_selected_profile ()
+        self.edit_button.set_sensitive (profile_name != None)
+        self.delete_button.set_sensitive (profile_name != None)
 
 if __name__ == "__main__":
     dialog = ProfilesDialog ()
