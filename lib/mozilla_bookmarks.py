@@ -18,6 +18,9 @@
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #
 
+# XXX - TODO:
+# add support for DD tags
+
 import sys
 import time
 import os
@@ -34,8 +37,9 @@ except:
 debug = 0
 indent = '    '
 
-TYPE_FOLDER = 1
-TYPE_BOOKMARK = 2
+TYPE_FOLDER     = 1
+TYPE_BOOKMARK   = 2
+TYPE_FOLDER_END = 3
 
 tag_info_dict = {
     'dt' : {'implicit_close_event' : ['begin'],
@@ -113,15 +117,18 @@ class BookmarkFolder:
         self.attrs = {}
         self.folders = []
         self.bookmarks = []
+        self.entries = []
 
     def add_folder(self, name):
         folder = BookmarkFolder(name, self)
         self.folders.append(folder)
+        self.entries.append(folder)
         return folder
 
     def add_bookmark(self, name):
         bookmark = Bookmark(self, name)
         self.bookmarks.append(bookmark)
+        self.entries.append(bookmark)
         return bookmark
 
     def set_attr(self, name, value):
@@ -149,11 +156,21 @@ class BookmarkFolder:
             return join.join(path)
         
     def _traverse(self, visit_func, path, data):
-        visit_func(self, path, data)
+        assert isinstance(self, BookmarkFolder)
+
+        # XXX - why is causing double visits?
+        #visit_func(self, TYPE_FOLDER, path, data)
         path.append(self)
-        for folder in self.folders:
-            folder._traverse(visit_func, path, data)
+        for entry in self.entries:
+            if isinstance(entry, BookmarkFolder):
+                visit_func(entry, TYPE_FOLDER, path, data)
+                entry._traverse(visit_func, path, data)
+            elif isinstance(entry, Bookmark):
+                visit_func(entry, TYPE_BOOKMARK, path, data)
+            else:
+                raise ValueError
         path.pop()
+        visit_func(self, TYPE_FOLDER_END, path, data)
 
     def traverse(self, visit_func, data=None):
         path = []
@@ -163,10 +180,10 @@ class BookmarkFolder:
     def find_bookmark(self, name):
         result = []
 
-        def visit(folder, path, data):
-            for bookmark in folder.bookmarks:
-                if bookmark.name == name:
-                    result.append(bookmark)
+        def visit(entry, type, path, data):
+            if type == TYPE_BOOKMARK:
+                if entry.name == name:
+                    result.append(entry)
 
         self.traverse(visit)
         return result
@@ -174,10 +191,10 @@ class BookmarkFolder:
     def convert_to_dict(self):
         result = {}
 
-        def visit(folder, path, data):
-            for bookmark in folder.bookmarks:
-                bookmark_path = bookmark.path_as_names(" -> ")
-                bookmark_url = bookmark.url()
+        def visit(entry, type, path, data):
+            if type == TYPE_BOOKMARK:
+                bookmark_path = entry.path_as_names(" -> ")
+                bookmark_url = entry.url()
                 result[bookmark_path] = bookmark_url
 
         self.traverse(visit)
@@ -205,27 +222,27 @@ class BookmarkFolder:
 <DL><p>
 ''' % (config.PACKAGE, config.VERSION, time.time()))
 
-        def visit(folder, path, data):
+        def visit(entry, type, path, data):
             indent = "    "
-            folder_path = folder.path()
-            level = len(folder.path())
-            fd.write("%s<DT><H3" % (indent*level))
-            for attr, value in folder.attrs.items():
-                if not filter_attr(attr, exclude_attrs):
-                    fd.write(" %s=\"%s\"" % (attr, value))
-            fd.write(">%s</H3>\n" % (folder.name))
-            fd.write("%s<DL><p>\n" % (indent*level))
+            level = len(path)
 
-            level += 1
-            for bookmark in folder.bookmarks:
-                fd.write("%s<DT><A" % (indent*level))
-                for attr, value in bookmark.attrs.items():
+            if type == TYPE_FOLDER:
+                fd.write("%s<DT><H3" % (indent*level))
+                for attr, value in entry.attrs.items():
                     if not filter_attr(attr, exclude_attrs):
                         fd.write(" %s=\"%s\"" % (attr, value))
-                fd.write(">%s</A>\n" % (bookmark.name))
-
-            level -= 1
-            fd.write("%s</DL><p>\n" % (indent*level))
+                fd.write(">%s</H3>\n" % (entry.name))
+                fd.write("%s<DL><p>\n" % (indent*level))
+            elif type == TYPE_BOOKMARK:
+                fd.write("%s<DT><A" % (indent*level))
+                for attr, value in entry.attrs.items():
+                    if not filter_attr(attr, exclude_attrs):
+                        fd.write(" %s=\"%s\"" % (attr, value))
+                fd.write(">%s</A>\n" % (entry.name))
+            elif type == TYPE_FOLDER_END:
+                fd.write("%s</DL><p>\n" % (indent*level))
+            else:
+                raise ValueError
 
         self.traverse(visit)
         fd.close()
@@ -357,20 +374,23 @@ class BookmarkHTMLParser(HTMLParser):
         tag.data = tag.data + data
 
 # -----------------------
-def visit(folder, path, data=None):
+def visit(entry, type, path, data=None):
     max_len = 80
-    path = folder.path()
     level = len(path)-1
-    print "%sFolder: %s(%s) path = [%s]" % (indent*level,
-                                            folder.name[0:max_len],
-                                            data, folder.path_as_names(" -> "))
-    for attr, value in folder.attrs.items():
-        print "%sAttr: %s = %s" % (indent*(level+1), attr, value[0:max_len])
 
-    for bookmark in folder.bookmarks:
-        print "%sBookmark: %s" % (indent*(level+1), bookmark.name[0:max_len])
-        for attr, value in bookmark.attrs.items():
-            print "%sAttr: %s = %s" % (indent*(level+2), attr, value[0:max_len])
+    if type == TYPE_FOLDER:
+        print "%sFolder: %s(%s) path = [%s]" % (indent*level,
+                                                entry.name[0:max_len],
+                                                data, entry.path_as_names(" -> "))
+    elif type == TYPE_BOOKMARK:
+        print "%sBookmark: %s" % (indent*(level), entry.name[0:max_len])
+    elif type == TYPE_FOLDER_END:
+        pass
+    else:
+        raise ValueError
+
+    for attr, value in entry.attrs.items():
+        print "%sAttr: %s = %s" % (indent*(level+1), attr, value[0:max_len])
 
 # -----------------------
 
@@ -390,8 +410,8 @@ if __name__ == "__main__":
             for bm in bm_list:
                 print "found bookmark %s url=%s" % (bm.name, bm.get_attr("href"))
                 print "path = %s" % bm.path_as_names(" -> ")
-            else:
-                print "%s not found" % bm_name
+        else:
+            print "%s not found" % bm_name
 
     if False:
         bm_file.folder_root.traverse(visit)
@@ -400,10 +420,10 @@ if __name__ == "__main__":
         bm_dict   = bm_file.folder_root.convert_to_dict()
         bm_dict_1 = bm_file_1.folder_root.convert_to_dict()
 
-        dc = DictCompare(bm_dict, bm_dict_1)
+        dc = util.DictCompare(bm_dict, bm_dict_1)
         dc.compare()
         cs = dc.get_change_set('a', 'b')
-        dump_change_set(cs)
+        util.dump_change_set(cs)
 
     if True:
         bm_file.folder_root.write("tmp_bookmarks.html", exclude_attrs=exclude_attrs)

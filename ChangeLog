@@ -1,5 +1,16 @@
 2005-03-31  John Dennis  <jdennis@redhat.com>
 
+	* lib/util.py
+	* lib/mozilla_bookmarks.py
+	* lib/sources/mozillasource.py
+
+	Fix traversal order problem, traversal order is now identical to
+	originial bookmark order.
+
+	Move DictCompare from mozillasource.py to util.py so it can be shared.
+	
+2005-03-31  John Dennis  <jdennis@redhat.com>
+
 	* lib/mozilla_bookmarks.py
 	* lib/sources/mozillasource.py
 
