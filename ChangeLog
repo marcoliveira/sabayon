@@ -1,3 +1,38 @@
+2005-03-15  John Dennis  <jdennis@redhat.com>
+
+	* Expand mozilla functionality. The MozillaChange class has more
+	info. An individual pref in a javascript file is now its own
+	class. We now recognize the different javascript pref functions
+	and record them. We now have two new functions for writing a
+	javascript pref file. More get_* functions for various
+	classes. commit_changes now respect mandatory flag and cache
+	committed preferences for later processing. The default profiles
+	prefs.js is now added to the profile (but I'm not sure thats the
+	right thing to do, but it had to exist for testing, I'll revisit
+	this). apply now knows the difference between javascript
+	preference files and other files. apply now merges javascript
+	prefs into the default profile's prefs.js respecting the mandatory
+	flag. 
+
+	Issues: What to do with multiple firefox profiles? At the moment
+	we only apply to the default firefox profile. Perhaps the apply
+	should occur for all firefox profiles, not just the default. By
+	the same token should the recorded preferences be the union of all
+	changed profiles or just the default? If its the union which one
+	wins when there is an overlap? There may be ordering problems with
+	the apply, the profiles.ini file should exist first, and then the
+	prefs.js file, before merging occurs. Nothing at the moment
+	enforces this ordering (we've been lucky). Should we take
+	advantage of the user.js file instead of merging into prefs.js? We
+	sometimes fail to recognize there is a profiles.ini file which
+	controls many important functions. If we don't know its there we
+	fail to recognize files we need to watch because that file defines
+	where profiles live. At the moment I think this is due to ordering
+	relationship between class creation (one place we look for the
+	file), the apply extraction of that file, and the subsequent file
+	monitoring. Probably fix is to create the profiles ini object
+	after apply extraction of the file.
+
 2005-03-15  Mark McLoughlin  <markmc@redhat.com>
 
 	* admin-tool/sabayon-apply.py: add some commented out
