@@ -62,15 +62,12 @@ class ProfileChangesModel (gtk.ListStore):
 
 class ProfileMonitorWindow:
     #
-    # profile_path is the path to the directory where config files
-    #              will be stored
     # profile_file is the path to the current profile to load/save
     #              it may not exist
     #
-    def __init__ (self, profile_path, profile_file):
-        self.profile_path = profile_path
+    def __init__ (self, profile_file):
         self.profile_file = profile_file
-        self.profile = userprofile.UserProfile (profile_path, profile_file)
+        self.profile = userprofile.UserProfile (profile_file)
         
         glade_file = GLADEDIR + '/' + "sabayon.glade"
         self.xml = gtk.glade.XML (glade_file, "monitor_window")

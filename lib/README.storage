@@ -6,20 +6,20 @@
 packages, i.e. containers for files with configuration options.
 
  The main interfaces are the following:
-   - ProfileStorage(filename, directory):
+   - ProfileStorage(filename):
      opens or create an object containing configuration options.
      If the file pointed to by filename does not exist, then it is
      assumed a new package is to be created.
-   - ProfileStorage.install([directory]):
-     assuming this is not a new package, the configuration options
-     contained in the package are installed, by default from the
-     home of the curent user, or from the directory passed as an
-     optional argument.
+   - ProfileStorage.install():
+     creates a temporary install directory (see get_install_path())
+     and installs the configuration options contained in the package
      This is as much as possible implemented as an atomic operation
      to avoid half applied options in case of errors.
+   - ProfileStorage.uninstall():
+     removes the temporary install directory
    - ProfileStorage.add_file(file, handler, description):
      Add a file to the list of configuration, the file should be a
-     relative path from the home directory. If the file is already
+     relative path from the install path. If the file is already
      present in the archive, it will just update the metadata with
      the handler and the description for the file. The handler is the
      name of the configuration manager, or the empty string if if is a
@@ -33,8 +33,9 @@ packages, i.e. containers for files with configuration options.
      Commit the changes to all the entries in the package, it will update
      only modified files, adding the associated log in the metadata
      This is as much as possible implemented as an atomic operation
-   - ProfileStorage.get_directory():
-     return the current directory used by a storage object
+   - ProfileStorage.get_install_path():
+     return the temporary install path created by install() where files
+     may be copied to before calling add_file() and update_all()
 
  Missing interfaces TBD:
    - metadata extractions routines: per file, or common

@@ -107,13 +107,13 @@ class GConfSource (userprofile.ProfileSource):
         if not mandatory:
             if not self.defaults_client:
                 self.defaults_client = get_client_for_path (
-		               self.profile_storage.get_directory() +
+		               self.profile_storage.get_install_path () +
 			       "/.gconf.xml.defaults")
             return self.defaults_client
         else:
             if not self.mandatory_client:
                 self.mandatory_client = get_client_for_path (
-		               self.profile_storage.get_directory() +
+		               self.profile_storage.get_install_path () +
 			       "/.gconf.xml.mandatory")
             return self.mandatory_client
 
@@ -198,11 +198,11 @@ class GConfSource (userprofile.ProfileSource):
 
         write_path_file (util.get_home_dir () + "/.gconf.path.defaults",
                          "xml:readonly:" +
-			 self.profile_storage.get_directory() +
+			 self.profile_storage.get_install_path () +
 			 "/.gconf.xml.defaults")
         write_path_file (util.get_home_dir () + "/.gconf.path.mandatory",
                          "xml:readonly:" +
-			 self.profile_storage.get_directory() +
+			 self.profile_storage.get_install_path () +
 			 "/.gconf.xml.mandatory")
 
 gobject.type_register (GConfSource)
@@ -219,13 +219,9 @@ def run_unit_tests ():
     
     main_loop = gobject.MainLoop ()
 
-    temp_path = tempfile.mkdtemp (prefix = "test-gconfprofile-")
-
-    profile_storage = storage.ProfileStorage("GConfTest.zip", temp_path)
-    try:
-	profile_storage.install()
-    except:
-        pass
+    profile_storage = storage.ProfileStorage ("GConfTest.zip")
+    profile_storage.install ()
+    
     source = get_source (profile_storage)
 
     # Remove any stale path files
@@ -289,8 +285,8 @@ def run_unit_tests ():
     
     source.sync_changes ()
 
-    assert os.access (temp_path + "/.gconf.xml.defaults/tmp/test-gconfprofile/%gconf.xml", os.F_OK)
-    assert os.access (temp_path + "/.gconf.xml.mandatory/tmp/test-gconfprofile/%gconf.xml", os.F_OK)
+    assert os.access (profile_storage.get_install_path () + "/.gconf.xml.defaults/tmp/test-gconfprofile/%gconf.xml", os.F_OK)
+    assert os.access (profile_storage.get_install_path () + "/.gconf.xml.mandatory/tmp/test-gconfprofile/%gconf.xml", os.F_OK)
 
     source.apply ()
 
@@ -323,5 +319,6 @@ def run_unit_tests ():
 
     os.remove (util.get_home_dir () + "/.gconf.path.defaults")
     os.remove (util.get_home_dir () + "/.gconf.path.mandatory")
-    
-    shutil.rmtree (temp_path, True)
+
+    profile_storage.uninstall ()
+

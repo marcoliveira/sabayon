@@ -79,7 +79,7 @@ class FilesSource (userprofile.ProfileSource):
 
         _safe_copy_file (rel_path,
                          self.home_dir,
-                         self.profile_storage.get_directory (),
+                         self.profile_storage.get_install_path (),
                          True)
 
         if mandatory:
@@ -110,7 +110,7 @@ class FilesSource (userprofile.ProfileSource):
                 mandatory = False
             
             _safe_copy_file (file,
-                             self.profile_storage.get_directory (),
+                             self.profile_storage.get_install_path (),
                              self.home_dir,
                              mandatory)
 
@@ -130,8 +130,6 @@ def run_unit_tests ():
     
     temp_path = tempfile.mkdtemp (dir = real_homedir,
                                   prefix = ".test-filesprofile-")
-    profile_path = tempfile.mkdtemp (prefix = "test-filesprofile-")
-
     util.set_home_dir_for_unit_tests (temp_path)
 
     def handle_change (source, change, data):
@@ -149,11 +147,8 @@ def run_unit_tests ():
         return True
     timeout = gobject.timeout_add (60 * 1000, should_not_be_reached)
     
-    profile_storage = storage.ProfileStorage ("FileTest.zip", profile_path)
-    try:
-	profile_storage.install ()
-    except:
-        pass
+    profile_storage = storage.ProfileStorage ("FileTest.zip")
+    profile_storage.install ()
     source = get_source (profile_storage)
     source.connect ("changed", handle_change, (temp_path, main_loop))
     source.start_monitoring ()
@@ -167,27 +162,23 @@ def run_unit_tests ():
 
     source.stop_monitoring ()
 
-    assert os.access (profile_path + "/foobar/foo/bar/foo/bar" + "/foo", os.F_OK)
+    assert os.access (profile_storage.get_install_path () + "/foobar/foo/bar/foo/bar" + "/foo", os.F_OK)
 
     profile_storage.update_all ("")
+    profile_storage.uninstall ()
 
     shutil.rmtree (temp_path, True)
-    shutil.rmtree (profile_path, True)
 
     gobject.source_remove (timeout)
 
     temp_path = tempfile.mkdtemp (dir = real_homedir,
                                   prefix = ".test-filesprofile-")
-    profile_path = tempfile.mkdtemp (prefix = "test-filesprofile-")
     util.set_home_dir_for_unit_tests (temp_path)
     
-    profile_storage = storage.ProfileStorage ("FileTest.zip", profile_path)
-    try:
-	profile_storage.install ()
-    except:
-        pass
+    profile_storage = storage.ProfileStorage ("FileTest.zip")
+    profile_storage.install ()
 
-    assert os.access (profile_path + "/foobar/foo/bar/foo/bar" + "/foo", os.F_OK)
+    assert os.access (profile_storage.get_install_path () + "/foobar/foo/bar/foo/bar" + "/foo", os.F_OK)
     
     source = get_source (profile_storage)
     source.apply ()
@@ -195,7 +186,8 @@ def run_unit_tests ():
     assert os.access (temp_path + "/foobar/foo/bar/foo/bar" + "/foo", os.F_OK)
     
     shutil.rmtree (temp_path, True)
-    shutil.rmtree (profile_path, True)
+
+    profile_storage.uninstall ()
 
     os.remove ("FileTest.zip")
     if os.path.exists ("FileTest.zip.bak"):

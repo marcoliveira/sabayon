@@ -24,7 +24,8 @@ import libxml2
 import time
 import socket
 import sys
-
+import tempfile
+import shutil
 import util
 
 verbose = 0
@@ -38,24 +39,24 @@ class ProfileStorageException(Exception):
         return repr(self.value)
 
 class ProfileStorage:
-    def __init__ (self, filename, directory):
+    def __init__ (self, filename):
         if verbose:
 	    print "init", filename
-        self.exists = 0
-	self.modified = 0
-	self.installed = 0
+        self.exists = False
+	self.installed = False
 	self.doc = None
 	self.zipfile = None
 	self.filename = filename
 	self.filelist = None
-	self.directory = directory
+        self.install_path = None
+        
         if filename != None:
 	    try:
 	        os.stat(filename)
-		self.exists = 1
+		self.exists = True
 	    except:
 	        pass
-	    if self.exists == 1:
+	    if self.exists:
 	        if not zipfile.is_zipfile(filename):
 	            raise ProfileStorageException("%s is not a storage file" %
 		                                  filename)
@@ -200,8 +201,8 @@ class ProfileStorage:
 			self.filelist.append(info.filename)
 	return self.filelist
         
-    def __get_abs_filename(self, directory, path):
-        return os.path.join(os.path.abspath(directory), path)
+    def __get_abs_filename(self, path):
+        return os.path.join(os.path.abspath(self.install_path), path)
         
     #
     # Add an entry to the archive, set up the metadata
@@ -232,17 +233,17 @@ class ProfileStorage:
 
 
     #
-    # Install the archive, accepts an optional directory path (otherwise
-    # it will use the default directory)
+    # Install the archive into a temporary directory
     # Returns the list of tupples (absolute file path, handler name)
     #
-    def install(self, directory = None):
-        if directory == None:
-	    directory = self.directory
-	else:
-	    self.directory = directory
-	    
-        if self.exists != 1 or self.zipfile == None:
+    def install(self):
+        if self.installed:
+            return
+        
+        self.install_path = tempfile.mkdtemp(prefix = ".profile-storage-%s-" % util.get_user_name())
+
+        if not self.exists or not self.zipfile:
+            self.installed = True
             return [] # Nothing to install
 	
 	res = []
@@ -252,7 +253,7 @@ class ProfileStorage:
 	# TODO: check for filesystem space left on the device.
 	#
         for file in self.__read_filelist():
-	    target = self.__get_abs_filename(directory, file)
+	    target = self.__get_abs_filename(file)
 	    tardir = os.path.dirname(target)
 	    if not os.path.isdir(tardir):
 	        if os.path.exists(tardir):
@@ -269,7 +270,7 @@ class ProfileStorage:
 		raise ProfileStorageException("File %s is not writable" % (target))
 	
 	for file in self.__read_filelist():
-	    target = self.__get_abs_filename(directory, file)
+	    target = self.__get_abs_filename(file)
 	    tardir = os.path.dirname(target)
 	    data = self.zipfile.read(file)
 	    if verbose:
@@ -285,11 +286,17 @@ class ProfileStorage:
 		raise ProfileStorageException("Failed to write to %s" % (target))
 	    res.append(self.__get_file_info(file))
 	    
-	self.installed = 1
-        return res     
+	self.installed = True
+        return res
 
-    def get_directory(self):
-        return self.directory
+    def uninstall(self):
+        if self.installed:
+            shutil.rmtree(self.install_path)
+            self.install_path = None
+            self.installed = False
+
+    def get_install_path(self):
+        return self.install_path
 
     #
     # Provides the list of entries in the archive along with some metadata
@@ -303,8 +310,7 @@ class ProfileStorage:
 	return res
 	    
     #
-    # Update the archive, accepts an optional directory path (otherwise
-    # it will use the default directory)
+    # Update the archive from the temporary install path
     # log is a string detailing the update
     # If the profile was installed and some file are now missing they
     # will be removed from the archive.
@@ -313,10 +319,9 @@ class ProfileStorage:
     # Returns the list of tupples (file, handler name) remaining
     # and updated in the archive
     #
-    def update_all(self, log, directory = None):
-        if directory == None:
-	    directory = self.directory
-
+    # FIXME: does this make any sense at all if its not installed ?
+    #
+    def update_all(self, log):
         res = []
         deleted = []
 	identical = []
@@ -328,7 +333,7 @@ class ProfileStorage:
 	#
         if self.installed:
 	    for file in self.__read_filelist():
-		target = self.__get_abs_filename(directory, file)
+		target = self.__get_abs_filename(file)
 		if os.path.exists(target):
 		    try:
 			olddata = self.zipfile.read(file)
@@ -365,7 +370,7 @@ class ProfileStorage:
         #
 	# Preserve the old package if present
 	#
-        if self.installed:
+        if self.zipfile:
 	    bak = self.filename + ".bak"
 	    try:
 	        self.zipfile.close()
@@ -388,7 +393,7 @@ class ProfileStorage:
 		raise ProfileStorageException("Failed to write %s metadata" %
 					      self.filename)
 	        
-        if self.installed:
+        if self.zipfile:
 	    for (file, data) in identical:
 		self.zipfile.writestr(file, data)
 	    for (file, data) in modified:
@@ -411,7 +416,7 @@ class ProfileStorage:
 					      self.filename)
 	    
 	    for file in self.__read_filelist():
-		target = self.__get_abs_filename(directory, file)
+		target = self.__get_abs_filename(file)
 		if os.path.exists(target):
 		    try:
 			data = open(target, "r").read()
@@ -431,39 +436,32 @@ class ProfileStorage:
         return res
         
 def run_unit_tests():
-    import tempfile
-    import shutil
-    
     #
     # First test create a new config file from scratch
     #
-
     if os.path.exists("storage-test.zip"):
         os.remove("storage-test.zip")
 
-    temp_path = tempfile.mkdtemp(prefix = ".test-storage-")
-    
-    prof = ProfileStorage('storage-test.zip', temp_path);
-    open(temp_path + "/config1.test", "w").write("new test file 1")
-    open(temp_path + "/config2.test", "w").write("new test file 2")
+    prof = ProfileStorage('storage-test.zip');
+    prof.install ()
+    open(prof.get_install_path() + "/config1.test", "w").write("new test file 1")
+    open(prof.get_install_path() + "/config2.test", "w").write("new test file 2")
     prof.add_file('config1.test', "Foo Handler", "First config test file")
     prof.add_file('config2.test', "Bar Handler", "Second config test file")
     list = prof.update_all("first save");
+    prof.uninstall()
 
     assert os.path.exists("storage-test.zip")
-
-    shutil.rmtree(temp_path)
-    temp_path = tempfile.mkdtemp(prefix = ".test-storage-")
 
     #
     # Second test install an existing profile, modify one resource
     # and update it
     #
-    prof = ProfileStorage('storage-test.zip', temp_path);
+    prof = ProfileStorage('storage-test.zip');
     list = prof.install()
 
-    assert os.path.exists(temp_path + "/config1.test")
-    assert os.path.exists(temp_path + "/config2.test")
+    assert os.path.exists(prof.get_install_path() + "/config1.test")
+    assert os.path.exists(prof.get_install_path() + "/config2.test")
 
     (name, handler, description) = list[0]
     assert name == "config1.test"
@@ -475,7 +473,7 @@ def run_unit_tests():
     assert handler == "Bar Handler"
     assert description == "Second config test file"
     
-    file = temp_path + '/' + name
+    file = prof.get_install_path() + '/' + name
     f = open(file, "w")
     f.write(time.ctime(time.time()))
     f.close()
@@ -487,7 +485,7 @@ def run_unit_tests():
     assert handler == "Bar Handler"
     assert description == "Second config test file"
     
-    open(temp_path + "/config3.test", "w").write("new test file 3")
+    open(prof.get_install_path() + "/config3.test", "w").write("new test file 3")
     prof.add_file('config3.test', "Blaa Handler", "Third config test file")
     list = prof.update_all("second test update")
     
@@ -495,11 +493,11 @@ def run_unit_tests():
     assert name == "config3.test"
     assert handler == "Blaa Handler"
     assert description == "Third config test file"
+
+    prof.uninstall()
     
     os.remove("storage-test.zip")
     os.remove("storage-test.zip.bak")
-
-    shutil.rmtree(temp_path)
 
 if __name__ == '__main__':
     run_unit_tests()

@@ -234,11 +234,9 @@ class UserProfile (gobject.GObject):
         "changed" : (gobject.SIGNAL_RUN_LAST, gobject.TYPE_NONE, (ProfileChange, ))
         }
 
-    def __init__ (self, profile_path, profile_file):
+    def __init__ (self, profile_file):
         """Construct a UserProfile
 
-        profile_path: temporary path to which configuration sources
-        should commit changes.
 	profile_file: path to the file containing the user settings,
 	it may not exist yet
         module_path: optional path from which configuration modules
@@ -246,13 +244,12 @@ class UserProfile (gobject.GObject):
         """
         gobject.GObject.__init__ (self)
 
-        self.profile_path = profile_path
         self.profile_file = profile_file
 
         #
 	# Open the user settings packages and try to install them
 	#
-	self.profile_storage = storage.ProfileStorage (profile_file, profile_path)
+	self.profile_storage = storage.ProfileStorage (profile_file)
         self.profile_storage.install ()
         
         module_loader = get_module_loader ()
@@ -262,6 +259,9 @@ class UserProfile (gobject.GObject):
                                                         self.profile_storage)
         for source in self.sources:
             source.connect ("changed", self.__handle_source_changed)
+
+    def __del__ (self):
+        self.profile_storage.uninstall ()
 
     def __handle_source_changed (self, source, change):
         self.emit ("changed", change)
@@ -317,8 +317,7 @@ def run_unit_tests ():
         def __init__ (self):
             ProfileSource.__init__ (self, "local")
 
-    profile = UserProfile ("/tmp/foo", "/tmp/foo-storage")
-    assert profile.profile_path == "/tmp/foo"
+    profile = UserProfile ("/tmp/foo-storage")
     assert len (profile.sources) > 0
 
     testsource = None

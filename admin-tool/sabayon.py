@@ -24,14 +24,12 @@ import gtk
 import monitorwindow
 
 if __name__ == '__main__':
-    profile_path = tempfile.mkdtemp (prefix = "test-profile-")
-
     if len (sys.argv) > 1:
         profile_file = sys.argv[1]
     else:
         profile_file = "test-profile.zip"
 
-    monitorwindow.ProfileMonitorWindow (profile_path, profile_file)
+    monitorwindow.ProfileMonitorWindow (profile_file)
 
     gtk.main ()
 
