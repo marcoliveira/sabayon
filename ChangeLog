@@ -1,3 +1,24 @@
+2005-01-25  Mark McLoughlin  <mark@skynet.ie>
+
+	* lib/userprofile.py: introduce the concept of a
+	"delegate" - a helper class to give a higher level
+	interpretation of some changes from a given source.
+	
+	* lib/sources/paneldelegate.py: an implementation
+	of the helper class for the panel's config - so, e.g.,
+	when you added an applet you get "applet added" rather
+	than a whole bunch of GConf keys changed.
+	
+	* lib/sources/Makefile.am: add paneldelegate.py.
+	
+	* lib/sources/filessource.py,
+	  lib/sources/gconfsource.py,
+	  lib/sources/mozillasource.py: update.
+	
+	* lib/unittests.py,
+	  lib/sources/testsource.py: hook up some more unit
+	tests.
+	
 2005-01-24  Mark McLoughlin  <mark@skynet.ie>
 
 	* lib/storage-modules/: rename to lib/sources -

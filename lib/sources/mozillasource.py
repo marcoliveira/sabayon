@@ -40,7 +40,7 @@ gobject.type_register (MozillaChange)
 
 class MozillaSource (userprofile.ProfileSource):
     def __init__ (self, profile_path):
-        userprofile.ProfileSource.__init__ (self, "mozilla")
+        userprofile.ProfileSource.__init__ (self, "Mozilla")
         self.profile_path = profile_path
         self.verbose = True
 

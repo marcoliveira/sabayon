@@ -72,7 +72,7 @@ gobject.type_register (GConfChange)
 class GConfSource (userprofile.ProfileSource):
     """GConf user profile source."""
     
-    def __init__ (self, profile_storage, source_name):
+    def __init__ (self, profile_storage):
         """Construct a GConfSource
 
         profile_storage: storage object
@@ -80,7 +80,7 @@ class GConfSource (userprofile.ProfileSource):
         are strored in .gconf.xml.defaults and mandatory
         changes are stored in .gconf.xml.mandatory
         """
-        userprofile.ProfileSource.__init__ (self, source_name)
+        userprofile.ProfileSource.__init__ (self, "GConf", "get_gconf_delegate")
 
         self.profile_storage  = profile_storage
         self.client           = gconf.client_get_default ()
@@ -208,7 +208,7 @@ class GConfSource (userprofile.ProfileSource):
 gobject.type_register (GConfSource)
 
 def get_source (profile_storage):
-    return GConfSource (profile_storage, "GConf")
+    return GConfSource (profile_storage)
 
 #
 # Unit tests

@@ -24,6 +24,78 @@ import gobject
 from config import *
 import storage
 
+class ModuleLoader:
+    """Loads all python modules from a directory allows objects
+    to be constructed from said modules using specific constructors
+    for each object type."""
+    
+    def __init__ (self, module_path):
+        """Construct a ModuleLoader and will load all available
+        python modules from @module_path.
+        """
+        self.module_path = module_path
+        self.modules = []
+        self.__load_modules ()
+
+    def __load_module (self, module):
+        """Load a python module named @module."""
+        cmd = "import " + module
+        try:
+            exec (cmd)
+        except:
+            print "Failed to import module '%s': %s" % (module, sys.exc_type)
+            return
+        self.modules.append (module)
+        
+    def __load_modules (self):
+        """Load all available modules from self.module_path."""
+        sys.path.append (self.module_path)
+        for file in os.listdir (self.module_path):
+            if file[0] == '.':
+                continue
+            if file[-3:] != ".py":
+                continue
+            self.__load_module (file[:-3])
+
+    def __construct_object (self, module, constructor, arg):
+        """Construct an object by invoking a function named @constructor,
+        with @arg as an argument, in the module called @module.
+        """
+        cmd = ("import %s\nif %s.__dict__.has_key ('%s'):"
+               "ret = %s.%s (arg)") % (module, module, constructor, module, constructor)
+        try:
+            exec (cmd)
+        except:
+            print "Failed to invoke function '%s.%s': %s" % (module, constructor, sys.exc_type)
+            return None
+
+        try:
+            ret = ret
+        except NameError:
+            return None
+        return ret
+    
+    def construct_objects (self, constructor, arg):
+        """Construct and return a list of objects by invoking a function
+        named @constructor, with @arg as an argument, in each of the
+        python modules in self.module_path which contain a function
+        by that name.
+        """
+        objects = []
+        for module in self.modules:
+            o = self.__construct_object (module, constructor, arg)
+            if o != None:
+                objects.append (o)
+        return objects
+
+module_loader = None
+def get_module_loader ():
+    """Return a singleton ModuleLoader object."""
+    global module_loader
+    if module_loader == None:
+        module_loader = ModuleLoader (MODULEPATH)
+    return module_loader
+            
 class ProfileChange (gobject.GObject):
     """Abstract base class for encapsulating profile changes."""
     
@@ -57,6 +129,30 @@ class ProfileChange (gobject.GObject):
 
 gobject.type_register (ProfileChange)
 
+class SourceDelegate:
+    """An abstract base class for helper classes which can be used
+    to intercept and modify changes from a given configuration
+    source."""
+    
+    def __init__ (self, source, namespace_section, change_class):
+        """Construct a SourceDelegate object.
+
+        @source: the ProfileSource whose changes the delegate wishes
+        to inspect.
+        @namepsace_section: the section of @source's configuration
+        namespace that the delegate wishes to inspect.
+        """
+        self.source = source
+        self.namespace_section = namespace_section
+        self.change_class = change_class
+
+    def handle_change (self, change):
+        """Inspect a ProfileChange. Return #True if the change should
+        not be passed on any further (i.e. #True == 'handled') and
+        return #False if the change should be passed on unmodified.
+        """
+        raise Exception ("Not implemented")
+
 class ProfileSource (gobject.GObject):
     """An abstract base class which each configuration source must
     implement."""
@@ -65,16 +161,31 @@ class ProfileSource (gobject.GObject):
         "changed" : (gobject.SIGNAL_RUN_LAST, gobject.TYPE_NONE, (ProfileChange, ))
         }
 
-    def __init__ (self, source_name):
+    def __init__ (self, source_name, delegate_constructor = None):
         """Construct a ProfileSource object."""
         gobject.GObject.__init__ (self)
         self.name = source_name
+        
+        module_loader = get_module_loader ()
 
+        self.delegates = []
+        if delegate_constructor:
+            self.delegates = module_loader.construct_objects (delegate_constructor, self)
+    
     def get_name (self):
         """Returns the configuration source's name."""
         return self.name
 
     def emit_change (self, change):
+        """Pass @change to all register delegates for this source and
+        emit a 'changed' signal with @change if none of the delegates
+        return #True.
+        """
+        for delegate in self.delegates:
+            if not change.get_name ().startswith (delegate.namespace_section):
+                continue
+            if delegate.handle_change (change):
+                return
         self.emit ("changed", change)
         
     def commit_change (self, change, mandatory = False):
@@ -83,6 +194,16 @@ class ProfileSource (gobject.GObject):
         mandatory: whether the change should be committed such
         that it overrides the user's value.
         """
+        #
+        # FIXME:
+        #   Need to handle changes that originated from
+        #   a delegate here e.g.
+        # for delegate in self.delegates:
+        #     if isinstance (change, delegate.change_class):
+        #         delegate.commit_change (change, mandatory)
+        #         return
+        # self.really_commit_change (change, mandatory)
+        #
         raise Exception ("Not Implemented")
 
     def start_monitoring (self):
@@ -110,7 +231,7 @@ class UserProfile (gobject.GObject):
         "changed" : (gobject.SIGNAL_RUN_LAST, gobject.TYPE_NONE, (ProfileChange, ))
         }
 
-    def __init__ (self, profile_path, profile_file, module_path = MODULEPATH):
+    def __init__ (self, profile_path, profile_file):
         """Construct a UserProfile
 
         profile_path: temporary path to which configuration sources
@@ -124,58 +245,29 @@ class UserProfile (gobject.GObject):
 
         self.profile_path = profile_path
         self.profile_file = profile_file
-        self.module_path  = module_path
 
         #
 	# Open the user settings packages and try to install them
 	#
-	self.profile_storage = storage.ProfileStorage(profile_file)
+	self.profile_storage = storage.ProfileStorage (profile_file)
 	try:
-	    profile_storage.install(profile_path)
+	    profile_storage.install (profile_path)
 	except:
 	    # FIXME: the file doesn't exist or there is a problem this
 	    #        should be reported at the UI level
 	    pass
         
+        module_loader = get_module_loader ()
+        
         self.sources = []
-        self.__load_sources (self.module_path)
+        self.sources = module_loader.construct_objects ("get_source",
+                                                        self.profile_storage)
+        for source in self.sources:
+            source.connect ("changed", self.__handle_source_changed)
 
     def __handle_source_changed (self, source, change):
         self.emit ("changed", change)
 
-    def __load_source (self, module_name):
-        """Load a configuration module named module_name. The module
-        should have a toplevel function 'get_source' returns
-        an object which sub-classes ProfileSource.
-
-        module_name: the configuration sources's name.
-        """
-        cmd = ("import %s\nif %s.__dict__.has_key ('get_source'):"
-               "source = %s.get_source (self.profile_storage)") % (module_name, module_name, module_name)
-        try:
-            exec (cmd)
-        except:
-            print "Failed to import module '%s': %s" % (module_name, sys.exc_type)
-            return
-
-        try:
-            source = source
-        except NameError:
-            return
-
-        source.connect ("changed", self.__handle_source_changed)
-        self.sources.append (source)
-        
-    def __load_sources (self, module_path):
-        """Load all available configuration modules from module_path."""
-        sys.path.append (module_path)
-        for file in os.listdir (module_path):
-            if file[0] == '.':
-                continue
-            if file[-3:] != ".py":
-                continue
-            self.__load_source (file[:-3])
-        
     def start_monitoring (self):
         """Start monitoring for configuration changes."""
         for s in self.sources:
@@ -207,12 +299,26 @@ def run_unit_tests ():
             ProfileChange.__init__ (self, source)
             self.key = key
             self.value = value
+        def get_name (self):
+            return self.key
+        def get_type (self):
+            return ""
+        def get_value (self):
+            return self.value
+
+    class LocalTestDelegate (SourceDelegate):
+        def __init__ (self, source):
+            SourceDelegate.__init__ (self, source, "/bar")
+        def handle_change (self, change):
+            if change.get_name () == "/bar/foo1":
+                return True
+            return False
 
     class LocalTestSource (ProfileSource):
         def __init__ (self):
             ProfileSource.__init__ (self, "local")
 
-    profile = UserProfile ("/tmp/foo", "./sources")
+    profile = UserProfile ("/tmp/foo", "/tmp/foo-storage")
     assert profile.profile_path == "/tmp/foo"
     assert len (profile.sources) > 0
 
@@ -222,6 +328,7 @@ def run_unit_tests ():
             testsource = source
             break;
     assert testsource != None
+    assert len (testsource.delegates) == 1
 
     localsource = LocalTestSource ()
     profile.sources.append (localsource)
@@ -230,18 +337,24 @@ def run_unit_tests ():
     localsource.connect ("changed", handle_source_changed, profile)
     assert len (profile.sources) > 1
 
+    localdelegate = LocalTestDelegate (localsource)
+    localsource.delegates.append (localdelegate)
+
     global n_signals
     n_signals = 0
     def handle_changed (profile, change):
         global n_signals
         n_signals += 1
-    
     profile.connect ("changed", handle_changed)
 
-    localsource.emit_change (LocalTestChange (localsource, "foo", "1"))
-    localsource.emit_change (LocalTestChange (localsource, "foo", "2"))
+    # Only foo2 and foo3 should get through
+    localsource.emit_change (LocalTestChange (localsource, "/bar/foo1", "1"))
+    localsource.emit_change (LocalTestChange (localsource, "/bar/foo2", "2"))
+    localsource.emit_change (LocalTestChange (localsource, "/bar/foo3", "3"))
 
-    testsource.emit_change (testsource.get_test_change ("bar", "1"))
-    testsource.emit_change (testsource.get_test_change ("bar", "2"))
+    # Only bar2 and bar3 should get through
+    testsource.emit_change (testsource.get_test_change ("/foo/bar1", "1"))
+    testsource.emit_change (testsource.get_test_change ("/foo/bar2", "2"))
+    testsource.emit_change (testsource.get_test_change ("/foo/bar3", "3"))
 
     assert n_signals == 4

@@ -28,17 +28,29 @@ class TestChange (userprofile.ProfileChange):
         self.value = value
 
     def get_name (self):
-        return ""
+        return self.key
     def get_type (self):
         return ""
     def get_value (self):
-        return ""
+        return self.value
 
 gobject.type_register (TestChange)
 
+class TestDelegate (userprofile.SourceDelegate):
+    def __init__ (self, source):
+        userprofile.SourceDelegate.__init__ (self, source, "/foo")
+
+    def handle_change (self, change):
+        if change.get_name () == "/foo/bar1":
+            return True
+        return False
+
+def get_test_delegate (source):
+    return TestDelegate (source)
+
 class TestSource (userprofile.ProfileSource):
     def __init__ (self, profile_storage):
-        userprofile.ProfileSource.__init__ (self, "test")
+        userprofile.ProfileSource.__init__ (self, "test", "get_test_delegate")
         self.profile_storage = profile_storage
 
     def commit_change (self, change):

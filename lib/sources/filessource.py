@@ -61,8 +61,8 @@ def _safe_copy_file (file, srcdir, dstdir, force = False):
                      dstdir + "/" + file)
     
 class FilesSource (userprofile.ProfileSource):
-    def __init__ (self, profile_storage, source_name):
-        userprofile.ProfileSource.__init__ (self, source_name)
+    def __init__ (self, profile_storage):
+        userprofile.ProfileSource.__init__ (self, "Files")
         self.profile_storage = profile_storage
         self.home_dir = util.get_home_dir ()
         self.monitor = dirmonitor.DirectoryMonitor (self.home_dir,
@@ -105,7 +105,7 @@ class FilesSource (userprofile.ProfileSource):
 gobject.type_register (FilesSource)
     
 def get_source (profile_storage):
-    return FilesSource (profile_storage, "Files")
+    return FilesSource (profile_storage)
 
 #
 # Unit tests

@@ -39,11 +39,19 @@ if __name__ == "__main__":
     import gconfsource
     gconfsource.run_unit_tests ()
 
+    print "Running paneldelegate tests (ignore WARNINGs)"
+    import paneldelegate
+    paneldelegate.run_unit_tests ()
+
     sys.path.remove ("sources")
     
     print "Running userprofile tests"
     import userprofile
     userprofile.run_unit_tests ()
+
+    print "Running storage tests"
+    import storage
+    storage.run_unit_tests ()
 
     print "Success!"
     
