@@ -23,6 +23,7 @@ Requires: gnome-python2-gconf >= %{gnome_python2_version}
 Requires: xorg-x11-Xnest
 Requires: shadow-utils
 
+BuildRequires: gettext-devel
 BuildRequires: desktop-file-utils
 
 Requires(post):  shadow-utils
@@ -51,6 +52,7 @@ echo 'include "$(HOME)/.gconf.path.mandatory"' > $RPM_BUILD_ROOT%{_sysconfdir}/g
 
 desktop-file-install --vendor gnome --delete-original		\
   --dir $RPM_BUILD_ROOT%{_datadir}/applications			\
+  --add-category X-Fedora-Extra					\
   $RPM_BUILD_ROOT%{_datadir}/applications/%{name}.desktop
 
 %find_lang sabayon
@@ -100,6 +102,10 @@ fi
 %ghost %{python_sitelib}/%{name}/sources/*.pyo
 
 %changelog
+* Fri Mar 18 2005 Mark McLoughlin <markmc@redhat.com> - 0.16-2
+- BuildRequires: gettext-devel
+- Add X-Fedora-Extra to .desktop file
+
 * Wed Mar 16 2005 Mark McLoughlin <markmc@redhat.com>
 - Various changes to bring in line with Fedora package guidelines
 
