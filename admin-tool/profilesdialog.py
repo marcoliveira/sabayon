@@ -128,6 +128,8 @@ class ProfilesDialog:
 
         self.profiles_list = self.xml.get_widget ("profiles_list")
         self.__setup_profiles_list ()
+        
+        self.profiles_list.connect ("key-press-event", self.__handle_key_press)
 
         self.new_button = self.xml.get_widget ("new_button")
         self.__fix_button_align (self.new_button)
@@ -249,11 +251,19 @@ class ProfilesDialog:
         if profile_name:
             editorwindow.ProfileEditorWindow (profile_name, self.dialog)
 
-    def __delete_button_clicked (self, button):
+    def __delete_currently_selected (self):
         profile_name = self.__get_selected_profile ()
         if profile_name:
+            dprint ("Deleting '%s'", profile_name)
             os.remove (_get_profile_path_for_name (profile_name))
             self.profiles_model.reload ()
+
+    def __delete_button_clicked (self, button):
+        self.__delete_currently_selected ()
+
+    def __handle_key_press (self, profiles_list, event):
+        if event.keyval in (gtk.keysyms.Delete, gtk.keysyms.KP_Delete):
+            self.__delete_currently_selected ()
 
     def __create_new_profile (self, profile_name, base_profile):
         if base_profile:

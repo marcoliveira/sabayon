@@ -38,8 +38,11 @@ class ProfileModel (gtk.ListStore):
         gtk.ListStore.__init__ (self, str)
 
         self.storage = storage
+        self.reload ()
 
-        for (source, name) in storage.list ():
+    def reload (self):
+        self.clear ()
+        for (source, name) in self.storage.list ():
             row = self.prepend ()
             self.set (row,
                       self.COLUMN_NAME, name)
@@ -58,11 +61,17 @@ class ProfileEditorWindow:
         self.treeview = self.xml.get_widget ("profile_treeview")
         self.__setup_treeview ()
 
+        self.treeview.connect ("key-press-event", self.__handle_key_press)
+
         self.save_item = self.xml.get_widget ("save_item")
         self.save_item.connect ("activate", self.__handle_save)
         
         self.close_item = self.xml.get_widget ("close_item")
         self.close_item.connect ("activate", self.__handle_close)
+
+        self.delete_item = self.xml.get_widget ("delete_item")
+        self.delete_item.connect ("activate", self.__handle_delete)
+        self.delete_item.set_sensitive (False)
 
         self.clear_history_item = self.xml.get_widget ("clear_history_item")
         self.clear_history_item.connect ("activate", self.__handle_clear_history)
@@ -72,16 +81,33 @@ class ProfileEditorWindow:
 
         self.window.set_transient_for (parent_window)
         self.window.show ()
+
+    def __delete_currently_selected (self):
+        (model, row) = self.treeview.get_selection ().get_selected ()
+        if not row:
+            return
+    
+        dprint ("Deleting '%s'", model[row][ProfileModel.COLUMN_NAME])
+
+        self.storage.remove (model[row][ProfileModel.COLUMN_NAME])
+        self.profile_model.reload ()
+
+    def __handle_key_press (self, treeview, event):
+        if event.keyval in (gtk.keysyms.Delete, gtk.keysyms.KP_Delete):
+            self.__delete_currently_selected ()
         
     def __handle_save (self, item):
         self.storage.save ()
 
-    def __handle_clear_history (self, item):
-        self.storage.clear_revisions ()
-    
     def __handle_close (self, item):
         # FIXME: are you sure really, really want to close without saving ?
         self.window.destroy ()
+
+    def __handle_delete (self, item):
+        self.__delete_currently_selected ()
+        
+    def __handle_clear_history (self, item):
+        self.storage.clear_revisions ()
 
     def __handle_about (self, item):
         aboutdialog.show_about_dialog (self.window)
@@ -102,5 +128,10 @@ class ProfileEditorWindow:
 
     def __treeview_selection_changed (self, selection):
         (model, row) = selection.get_selected ()
-        if row:
-            dprint ("Selected: %s" % model[row][ProfileModel.COLUMN_NAME])
+        if not row:
+            self.delete_item.set_sensitive (False)
+            return
+
+        dprint ("Selected '%s'", model[row][ProfileModel.COLUMN_NAME])
+
+        self.delete_item.set_sensitive (True)

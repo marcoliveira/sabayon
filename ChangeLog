@@ -1,5 +1,19 @@
 2005-03-03  Mark McLoughlin  <markmc@redhat.com>
 
+	* admin-tool/sabayon.glade: add a "Delete" menu item.
+	
+	* admin-tool/editorwindow.py:
+	(ProfileModel.reload): implement reloading the model.
+	(ProfileEditorWindow.__handle_key_press),
+	(ProfileEditorWindow.__handle_delete): hook up the
+	delete key and menu item.
+	
+	* admin-tool/profilesdialog.py:
+	(ProfilesDialog.__handle_key_press): hook up the
+	delete key.
+
+2005-03-03  Mark McLoughlin  <markmc@redhat.com>
+
 	* admin-tool/sabayon.glade: add a "Clear History"
 	menu item.
 	
