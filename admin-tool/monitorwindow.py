@@ -78,34 +78,80 @@ class ProfileMonitorWindow:
 
         self.window = self.xml.get_widget ("monitor_window")
         self.window.connect ("destroy", gtk.main_quit)
+        self.window.set_icon_name ("sabayon")
         
         self.treeview = self.xml.get_widget ("changes_treeview")
         self.__setup_treeview ()
 
-        self.commit_item = self.xml.get_widget ("commit_item")
-        self.commit_item.connect ("activate", self.__handle_commit)
-        
         self.save_item = self.xml.get_widget ("save_item")
         self.save_item.connect ("activate", self.__handle_save)
         
         self.quit_item = self.xml.get_widget ("quit_item")
         self.quit_item.connect ("activate", self.__handle_quit)
 
-        self.window.show ()
+        self.about_item = self.xml.get_widget ("about_item")
+        self.about_item.connect ("activate", self.__handle_about)
 
-    def __handle_commit (self, item):
-        (model, row) = self.treeview.get_selection ().get_selected ()
-        if row:
-            change = model[row][ProfileChangesModel.COLUMN_CHANGE]
-            mandatory = model[row][ProfileChangesModel.COLUMN_MANDATORY]
-            dprint ("Committing: %s, mandatory = %s" % (change.get_name (), mandatory))
-            change.get_source ().commit_change (change, mandatory)
+        self.window.show ()
+        
+        self.about = None
+
+    #
+    # FIXME: commit all items marked for committing when saving
+    #
+    # def __handle_commit (self, item):
+    #     (model, row) = self.treeview.get_selection ().get_selected ()
+    #     if row:
+    #         change = model[row][ProfileChangesModel.COLUMN_CHANGE]
+    #         mandatory = model[row][ProfileChangesModel.COLUMN_MANDATORY]
+    #         dprint ("Committing: %s, mandatory = %s" % (change.get_name (), mandatory))
+    #         change.get_source ().commit_change (change, mandatory)
     
     def __handle_save (self, item):
         self.profile.sync_changes ()
     
     def __handle_quit (self, item):
         self.window.destroy ()
+
+    def __handle_about (self, item):
+        if self.about:
+            self.about.show ()
+            return
+
+        authors = [
+            "Daniel Veillard <veillard@redhat.com>",
+            "John Dennis <jdennis@redhat.com>",
+            "Mark McLoughlin <markmc@redhat.com>"
+        ]
+
+        self.about = gtk.AboutDialog ()
+        
+        self.about.set_transient_for (self.window)
+        self.about.set_destroy_with_parent (True)
+        self.about.set_icon_name ("sabayon")
+
+        self.about.set_name           ("Sabayon")
+        self.about.set_version        (VERSION)
+        self.about.set_copyright      ("(C) 2005 Red Hat, Inc.")
+        self.about.set_website        ("http://www.gnome.org/projects/sabayon")
+        self.about.set_comments       ("Program to establish and edit profiles for users")
+        self.about.set_authors        (authors)
+        self.about.set_logo_icon_name ("sabayon")
+
+        # FIXME:
+        # self.about.set_documenters        (documenters)
+        # self.about.set_translator_credits (translators)
+
+        def handle_delete (about, event):
+            about.hide ()
+            return True
+        self.about.connect ("delete-event", handle_delete)
+
+        def handle_response (about, response):
+            about.hide ()
+        self.about.connect ("response", handle_response)
+
+        self.about.show ()
 
     def __on_mandatory_toggled (self, toggle, path):
         iter = self.changes_model.get_iter_from_string (path)

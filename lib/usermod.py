@@ -33,6 +33,12 @@ def set_shell (username, shell):
     dprint ("Executing %s" % argv)
     os.spawnv (os.P_WAIT, argv[0], argv)
 
+#
+# FIXME:
+#  we're fairly screwed if there's another gamin, gconfd-2
+#  or whatever already running when we do this. We probably
+#  should just shut them down.
+#
 def set_homedir (username, homedir):
     argv = USERMOD_ARGV + [ "-d", homedir, username ]
     dprint ("Executing %s" % argv)

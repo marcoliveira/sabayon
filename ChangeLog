@@ -1,5 +1,19 @@
 2005-02-16  Mark McLoughlin  <markmc@redhat.com>
 
+	* admin-tool/sabayon.glade: add an about menu item.
+	
+	* admin-tool/monitorwindow.py: hook up the about
+	dialog.
+	
+	* admin-tool/profilesdialog.py: set the window icon.
+	
+	* lib/Makefile.am, lib/config.py.in: add VERSION to
+	the config.
+	
+	* lib/usermod.py: add a FIXME.
+
+2005-02-16  Mark McLoughlin  <markmc@redhat.com>
+
 	* admin-tool/profilesdialog.py: hook up "Base on" by
 	just copying the profile we're basing the new one on.
 

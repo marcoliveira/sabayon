@@ -72,6 +72,7 @@ class NewProfileDialog:
         self.dialog = self.xml.get_widget ("new_profile_dialog")
         self.dialog.connect ("destroy", gtk.main_quit)
         self.dialog.set_default_response (gtk.RESPONSE_ACCEPT)
+        self.dialog.set_icon_name ("sabayon")
 
         self.create_button = self.xml.get_widget ("new_profile_create_button")
         self.create_button.set_sensitive (False)
