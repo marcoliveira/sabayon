@@ -129,23 +129,25 @@ class ProfileMonitorWindow:
             "Mark McLoughlin <markmc@redhat.com>"
         ]
 
+        # documenters = [
+        # ]
+
         self.about = gtk.AboutDialog ()
         
         self.about.set_transient_for (self.window)
         self.about.set_destroy_with_parent (True)
         self.about.set_icon_name ("sabayon")
 
-        self.about.set_name           ("Sabayon")
-        self.about.set_version        (VERSION)
-        self.about.set_copyright      ("(C) 2005 Red Hat, Inc.")
-        self.about.set_website        ("http://www.gnome.org/projects/sabayon")
-        self.about.set_comments       (_("Program to establish and edit profiles for users"))
-        self.about.set_authors        (authors)
-        self.about.set_logo_icon_name ("sabayon")
+        self.about.set_name               ("Sabayon")
+        self.about.set_version            (VERSION)
+        self.about.set_copyright          ("(C) 2005 Red Hat, Inc.")
+        self.about.set_website            ("http://www.gnome.org/projects/sabayon")
+        self.about.set_comments           (_("Program to establish and edit profiles for users"))
+        self.about.set_authors            (authors)
+        self.about.set_logo_icon_name     ("sabayon")
+        self.about.set_translator_credits (_("translator-credits"))
 
-        # FIXME:
         # self.about.set_documenters        (documenters)
-        # self.about.set_translator_credits (translators)
 
         def handle_delete (about, event):
             about.hide ()
