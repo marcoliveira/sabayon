@@ -9,7 +9,8 @@ EXTRA_DIST =			\
 	intltool-merge.in	\
 	intltool-update.in	\
 	sabayon.spec.in		\
-	sabayon.spec
+	sabayon.spec		\
+	ISSUES
 
 DISTCLEANFILES =		\
 	intltool-extract	\
@@ -26,4 +27,4 @@ sabayon.spec: sabayon.spec.in Makefile
                 < $< > $@
 	
 rpm: sabayon.spec dist
-	@(rpmbuild -ba sabayon.spec)
+	@(rpmbuild -ta sabayon-$(PACKAGE_VERSION).tar.gz)
