@@ -25,6 +25,7 @@ install-exec-local:
 	install -m 0755 $(srcdir)/sabayon-monitor $(DESTDIR)$(libexecdir)
 	install -m 0755 $(srcdir)/sabayon-session $(DESTDIR)$(libexecdir)
 	mkdir -p $(DESTDIR)$(pkgdatadir)/
+	mkdir -p $(DESTDIR)$(sysconfdir)/desktop-profiles/
 	for f in $(PYTHON_FILES); do \
 	  install -m 0644 $(srcdir)/$$f $(DESTDIR)$(pkgdatadir)/ ; \
 	done
@@ -37,6 +38,7 @@ uninstall-local:
 	rm -f $(DESTDIR)$(libexecdir)/sabayon-session
 	rmdir $(DESTDIR)$(sbindir)/
 	rmdir $(DESTDIR)$(libexecdir)/
+	rmdir $(DESTDIR)$(sysconfdir)/desktop-profiles/
 
 pycheck:
 	pychecker -F $(top_srcdir)/pycheckrc $(PYTHON_FILES)

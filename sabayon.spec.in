@@ -1,0 +1,61 @@
+Summary: Tool to maintain user profiles in a GNOME desktop.
+Name: sabayon
+Version: @VERSION@
+Release: 1
+License: GPL
+Group: System/Configuration/Other
+Source: sabayon-%{version}.tar.gz
+BuildRoot: %{_tmppath}/%{name}-%{version}-root
+Requires: python 
+Requires: gamin-python
+Requires: pygtk2 >= 2.5.3-2
+Requires: gnome-python2-gconf >= 2.6.0-5
+Requires: xorg-x11-Xnest
+BuildRequires: python 
+URL: http://xmlsoft.org/
+Prefix: %{_prefix}
+Docdir: %{_docdir}
+
+%description
+Sabayon is a tool to help sysadmins and user change and maintain the
+default behaviour of the GNOME desktop.
+
+
+%prep
+%setup -q
+
+%build
+%configure
+make
+gzip -9 ChangeLog
+
+%install
+rm -fr %{buildroot}
+
+%makeinstall
+
+%clean
+rm -fr %{buildroot}
+
+%post
+/usr/sbin/useradd -c "Sabayon user" -d /var/sabayon -g nobody -s /sbin/nologin sabayon >/dev/null 2>&1 || /bin/true
+
+%preun
+userdel -r sabayon >/dev/null 2>&1 || /bin/true
+  
+%files
+%defattr(-, root, root)
+
+%doc AUTHORS ChangeLog.gz NEWS README TODO
+%{_datadir}/%{name}/*.py*
+%{_datadir}/%{name}/sources/*.py*
+%{_datadir}/%{name}/glade/sabayon.glade
+%{_sbindir}/%{name}
+%{_libexecdir}/%{name}-monitor
+%{_libexecdir}/%{name}-session
+%{_sysconfdir}/desktop-profiles
+
+%changelog
+* Wed Feb  9 2005 Daniel Veillard <veillard@redhat.com>
+- initial version
+

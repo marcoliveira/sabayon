@@ -1,3 +1,12 @@
+Thu Feb 10 12:49:53 CET 2005 Daniel Veillard <veillard@redhat.com>
+
+	* lib/Makefile.am: cosmetic cleanup
+	* admin-tool/Makefile.am: making sure the desktop-profiles dir
+	  is created
+	* admin-tool/profilesdialog.py: renamed user to sabayon from protouser
+	* Makefile.am sabayon.spec.in: added make rpm target as it's far
+	  more convenient right now
+
 Thu Feb 10 12:05:38 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* lib/Makefile.am: make sure we clean up and rebuild config.py
