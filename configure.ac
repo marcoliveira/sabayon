@@ -56,7 +56,7 @@ AM_GLIB_GNU_GETTEXT
 AC_CONFIG_FILES([
 Makefile
 lib/Makefile
-lib/storage-modules/Makefile
+lib/sources/Makefile
 admin-tool/Makefile
 po/Makefile.in
 ])

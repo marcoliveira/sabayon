@@ -29,7 +29,7 @@ if __name__ == "__main__":
     import dirmonitor
     dirmonitor.run_unit_tests ()
     
-    sys.path.append ("storage-modules")
+    sys.path.append ("sources")
     
     print "Running filessource tests"
     import filessource
@@ -39,7 +39,7 @@ if __name__ == "__main__":
     import gconfsource
     gconfsource.run_unit_tests ()
 
-    sys.path.remove ("storage-modules")
+    sys.path.remove ("sources")
     
     print "Running userprofile tests"
     import userprofile

@@ -37,13 +37,13 @@ except:
 try:
     MODULEPATH = os.environ["MODULEPATH"]
 except:
-    if os.path.exists ("./storage-modules"):
-        MODULEPATH = "./storage-modules"
-    elif os.path.exists ("lib/storage-modules"):
-        MODULEPATH = "./lib/storage-modules/"
-    elif os.path.exists ("../lib/storage-modules"):
-        MODULEPATH = "../lib/storage-modules/"
-    elif os.path.exists (PKGDATADIR + "/storage-modules"):
-        MODULEPATH = PKGDATADIR + "/storage-modules/"
+    if os.path.exists ("./sources"):
+        MODULEPATH = "./sources"
+    elif os.path.exists ("lib/sources"):
+        MODULEPATH = "./lib/sources/"
+    elif os.path.exists ("../lib/sources"):
+        MODULEPATH = "../lib/sources/"
+    elif os.path.exists (PKGDATADIR + "/sources"):
+        MODULEPATH = PKGDATADIR + "/sources/"
     else:
-        MODULEPATH = "./storage-modules"
+        MODULEPATH = "./sources"

@@ -1,4 +1,4 @@
-SUBDIRS = storage-modules
+SUBDIRS = sources
 
 PYTHON_FILES =				\
 	userprofile.py			\
@@ -27,7 +27,7 @@ uninstall-local:
 
 pycheck:
 	pychecker -F $(top_srcdir)/pycheckrc $(PYTHON_FILES) $(NOINST_PYTHON_FILES)
-	(cd storage-modules; make pycheck)
+	(cd sources; make pycheck)
 
 clean:
 	rm -f *.pyo *.pyc

@@ -11,14 +11,14 @@ EXTRA_DIST =				\
 	$(NOINST_PYTHON_FILES)
 
 install-exec-local:
-	mkdir -p $(DESTDIR)$(pkgdatadir)/storage-modules/
+	mkdir -p $(DESTDIR)$(pkgdatadir)/sources/
 	for f in $(PYTHON_FILES); do \
-	  install -m 0644 $(srcdir)/$$f $(DESTDIR)$(pkgdatadir)/storage-modules/ ; \
+	  install -m 0644 $(srcdir)/$$f $(DESTDIR)$(pkgdatadir)/sources/ ; \
 	done
 
 uninstall-local:
-	rm -f $(DESTDIR)$(pkgdatadir)/storage-modules/*.py
-	rmdir $(DESTDIR)$(pkgdatadir)/storage-modules
+	rm -f $(DESTDIR)$(pkgdatadir)/sources/*.py
+	rmdir $(DESTDIR)$(pkgdatadir)/sources
 
 pycheck:
 	pychecker -F $(top_srcdir)/pycheckrc $(PYTHON_FILES) $(NOINST_PYTHON_FILES)

@@ -212,7 +212,7 @@ def run_unit_tests ():
         def __init__ (self):
             ProfileSource.__init__ (self, "local")
 
-    profile = UserProfile ("/tmp/foo", "./storage-modules")
+    profile = UserProfile ("/tmp/foo", "./sources")
     assert profile.profile_path == "/tmp/foo"
     assert len (profile.sources) > 0
 
