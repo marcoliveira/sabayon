@@ -1,3 +1,16 @@
+2005-03-07  Mark McLoughlin  <markmc@redhat.com>
+
+	This commit changes the metadata format again.
+
+	* lib/storage.py: save a timestamp rather than date
+	string for each revision.
+	
+	* admin-tool/editorwindow.py: format the timestamp
+	according to the locale.
+	
+	* lib/util.py:
+	(init_gettext): call setlocale()
+
 Mon Mar  7 16:08:23 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* doc/Makefile.am: added validation of output pages on rebuild
@@ -18,7 +31,7 @@ Mon Mar  7 15:45:12 CET 2005 Daniel Veillard <veillard@redhat.com>
 	  content of the boxes on the left is contained in the stylesheet,
 	  but they should stll be easy to maintain.
 
-2005-03-07  Mark McLoughlin  <mark@skynet.ie>
+2005-03-07  Mark McLoughlin  <markmc@redhat.com>
 
 	* admin-tool/editorwindow.py: add a combo to allow
 	selecting the profile revision.

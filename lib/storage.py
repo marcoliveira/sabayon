@@ -176,7 +176,7 @@ class ProfileStorage:
         revisions = []
         for profile_revision in metadata.xpathEval ("/metadata/profile_revisions/profile_revision"):
             revisions.append ((profile_revision.prop ("id"),
-                               profile_revision.prop ("date")))
+                               profile_revision.prop ("timestamp")))
         return revisions
     
     def __get_current_profile_revision (self, metadata = None):
@@ -237,7 +237,7 @@ class ProfileStorage:
         revisions = []
         for revision in metadata.xpathEval ("/metadata/files/file[@path='%s']/revisions/revision" % path):
             revisions.append ((revision.prop ("id"),
-                               revision.prop ("date")))
+                               revision.prop ("timestamp")))
         return revisions
     
     def __get_directory_revisions (self, path, metadata = None):
@@ -247,7 +247,7 @@ class ProfileStorage:
         revisions = []
         for revision in metadata.xpathEval ("/metadata/directories/directory[@path='%s']/revisions/revision" % path):
             revisions.append ((revision.prop ("id"),
-                               revision.prop ("date")))
+                               revision.prop ("timestamp")))
         return revisions
 
     def __get_revision_source (self, revision_node):
@@ -280,10 +280,10 @@ class ProfileStorage:
         else:
             revision_node = profile_revisions.newChild (None, "profile_revision", None)
             
-        revision_node.setProp ("id",   new_revision)
-        revision_node.setProp ("date", time.ctime (time.time ()))
-        revision_node.setProp ("user", util.get_user_name ())
-        revision_node.setProp ("host", socket.gethostname ())
+        revision_node.setProp ("id",        new_revision)
+        revision_node.setProp ("timestamp", str (int (time.time ())))
+        revision_node.setProp ("user",      util.get_user_name ())
+        revision_node.setProp ("host",      socket.gethostname ())
 
         profile_revisions.setProp ("current", new_revision)
 
@@ -317,10 +317,10 @@ class ProfileStorage:
             revision_node = revisions_node.newChild (None, "revision", None)
 
         # Set properties
-        revision_node.setProp ("id",   revision_id)
-        revision_node.setProp ("date", time.ctime (time.time ()))
-        revision_node.setProp ("user", util.get_user_name ())
-        revision_node.setProp ("host", socket.gethostname ())
+        revision_node.setProp ("id",        revision_id)
+        revision_node.setProp ("timestamp", time.ctime (time.time ()))
+        revision_node.setProp ("user",      util.get_user_name ())
+        revision_node.setProp ("host",      socket.gethostname ())
 
         # Set source and attributes
         revision_node.newChild (None, "source", source)
@@ -854,20 +854,20 @@ class ProfileStorage:
         @path: the relative path of the file or directory to look up.
         This is the same path used with ProfileStorage::add().
 
-        Return value: a list of revision identifiers and dates for the
-        profile or file/directory in chronological order.
+        Return value: a list of revision identifiers and timestamps
+        for the profile or file/directory in chronological order.
         """
         self.__read_metadata ()
 
         revisions = []
         if not path:
-            for (revision, date) in self.__get_profile_revisions ():
-                revisions.append (("profile:%s" % revision, date))
+            for (revision, timestamp) in self.__get_profile_revisions ():
+                revisions.append (("profile:%s" % revision, timestamp))
         else:
-            for (revision, date) in self.__get_file_revisions (path):
-                revisions.append (("file:%s" % revision, date))
-            for (revision, date) in self.__get_directory_revisions (path):
-                revisions.append (("directory:%s" % revision, date))
+            for (revision, timestamp) in self.__get_file_revisions (path):
+                revisions.append (("file:%s" % revision, timestamp))
+            for (revision, timestamp) in self.__get_directory_revisions (path):
+                revisions.append (("directory:%s" % revision, timestamp))
 
         return revisions
 

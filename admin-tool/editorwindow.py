@@ -25,6 +25,7 @@ import util
 import aboutdialog
 import saveconfirm
 import time
+import locale
 from config import *
 
 _ui_string = '''
@@ -84,6 +85,7 @@ class RevisionsModel (gtk.ListStore):
 
         self.storage = storage
         self.path = path
+        self.time_format = locale.nl_langinfo (locale.D_T_FMT)
         self.reload ()
 
     def reload (self):
@@ -91,10 +93,11 @@ class RevisionsModel (gtk.ListStore):
         iter = None
         revisions = self.storage.get_revisions (self.path)
         revisions.reverse ()
-        for (revision, date) in revisions:
+        for (revision, timestamp) in revisions:
             self.set (self.prepend (),
                       self.COLUMN_REVISION, revision,
-                      self.COLUMN_DATE,     date)
+                      self.COLUMN_DATE,     time.strftime (self.time_format,
+                                                           time.localtime (float (timestamp))))
 
 class ProfileEditorWindow:
     def __init__ (self, profile_name, parent_window):

@@ -23,6 +23,7 @@ import os.path
 import sys
 import pwd
 import gettext
+import locale
 from config import *
 
 (
@@ -127,6 +128,7 @@ def init_gettext ():
     util.init_gettext() at the entry point to any script and you'll
     be able to use _() to mark strings for translation.
     """
+    locale.setlocale (locale.LC_ALL, "")
     gettext.install (PACKAGE, os.path.join (DATADIR, "locale"))
 
 def run_unit_tests ():
