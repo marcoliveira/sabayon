@@ -62,6 +62,10 @@ class UserDatabase:
 	if self.doc == None:
 	    self.doc = libxml2.parseDoc(defaultConf);
 
+    def __del__ (self):
+        if self.doc != None:
+	    self.doc.freeDoc()
+
     def get_profile (self, username):
         """Look up the profile for a given username.
 
@@ -74,8 +78,8 @@ class UserDatabase:
         """
 	try:
 	    query = "/profiles/user[@name='%s']" % username
-	    user = self.doc.xpathEval(query)[1]
-	    profile = user.getProp("profile");
+	    user = self.doc.xpathEval(query)[0]
+	    profile = user.prop("profile")
 	except:
 	    profile = None
 	if profile is None or profile == "":
@@ -117,7 +121,7 @@ class UserDatabase:
 	try:
 	    query = "/profiles/user[@name='%s']" % username
 	    user = self.doc.xpathEval(query)[0]
-	    oldprofile = user.getProp("profile")
+	    oldprofile = user.prop("profile")
 	    if oldprofile != profile:
 	        user.setProp("profile", profile)
 		self.modified = 1
@@ -205,7 +209,12 @@ def run_unit_tests ():
         print "get_profile failed to return a value"
     if res[-28:] != "/desktop-profiles/groupA.zip":
         print "get_profile returned a wrong value, expected groupA.zip got", res
-    db.set_profile("localuser", "groupA")
+    db.set_profile("localuser", "groupB")
+    res = db.get_profile("localuser")
+    if res is None:
+        print "get_profile failed to return a value"
+    if res[-28:] != "/desktop-profiles/groupB.zip":
+        print "get_profile returned a wrong value, expected groupB.zip got", res
         
 
 if __name__ == "__main__":
