@@ -253,12 +253,7 @@ class UserProfile (gobject.GObject):
 	# Open the user settings packages and try to install them
 	#
 	self.profile_storage = storage.ProfileStorage (profile_file, profile_path)
-	try:
-	    profile_storage.install ()
-	except:
-	    # FIXME: the file doesn't exist or there is a problem this
-	    #        should be reported at the UI level
-	    pass
+        self.profile_storage.install ()
         
         module_loader = get_module_loader ()
         

@@ -243,8 +243,7 @@ class ProfileStorage:
 	    self.directory = directory
 	    
         if self.exists != 1 or self.zipfile == None:
-	    raise ProfileStorageException("Cannot install package %s" %
-					  self.filename)
+            return [] # Nothing to install
 	
 	res = []
 	#

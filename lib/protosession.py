@@ -13,6 +13,7 @@ import struct
 import tempfile
 import gobject
 import util
+import userprofile
 
 # FIXME: move to config.py
 XNEST_ARGV = [ "/usr/X11R6/bin/Xnest", "-terminate", "-audit", "0", "-name", "Xnest", "-nolisten", "tcp" ]
@@ -46,12 +47,14 @@ class ProtoSession (gobject.GObject):
         "finished" : (gobject.SIGNAL_RUN_LAST, gobject.TYPE_NONE, ())
         }
     
-    def __init__ (self, username):
+    def __init__ (self, username, profile_file, profile_path):
         gobject.GObject.__init__ (self)
         assert os.geteuid () == 0
         
         self.username = username
-        
+        self.profile_file = profile_file
+        self.profile_path = profile_path
+
         self.usr1_pipe_r = 0
         self.usr1_pipe_w = 0
         
@@ -415,9 +418,16 @@ class ProtoSession (gobject.GObject):
         
         self.__open_x_connection (self.display_name, self.session_xauth_file)
 
+        os.chown (self.profile_path, self.user_pw.pw_uid, self.user_pw.pw_uid)
+
         self.session_pid = os.fork ()
         if self.session_pid == 0: # Child process
             new_environ = self.__prepare_to_run_as_user ()
+
+            dprint ("Applying profile %s using temp dir %s" % (self.profile_file, self.profile_path))
+            
+            profile = userprofile.UserProfile (self.profile_path, self.profile_file)
+            profile.apply ()
 
             dprint ("Executing %s" % SESSION_ARGV)
     
@@ -465,11 +475,10 @@ class ProtoSession (gobject.GObject):
         return False
 
     def start (self):
+        # Get an X server going
         self.__start_xnest ()
 
-        # FIXME: need to apply profile before starting session
-        
-        # At this point, we should be able to connect to Xnest
+        # Start the session as the prototype user
         self.__start_session ()
 
     def force_quit (self):
@@ -483,16 +492,32 @@ gobject.type_register (ProtoSession)
 # Unit tests
 #
 def run_unit_tests ():
+    import tempfile
+    import shutil
+
+    profile_file = "protosession-test.zip"
+    if os.path.exists (profile_file):
+        os.remove (profile_file)
+
+    profile_path = tempfile.mkdtemp (prefix = ".test-protsession-")
+                                        
     main_loop = gobject.MainLoop ()
 
     def handle_session_finished (session, main_loop):
         main_loop.quit ()
     
-    session = ProtoSession ("protouser")
+    session = ProtoSession ("protouser", profile_file, profile_path)
     session.connect ("finished", handle_session_finished, main_loop)
     session.start ()
 
     main_loop.run ()
+
+    if os.path.exists (profile_file):
+        os.remove (profile_file)
+    if os.path.exists (profile_file + ".bak"):
+        os.remove (profile_file + ".bak")
+    
+    shutil.rmtree (profile_path)
 
 if __name__ == "__main__":
     if os.geteuid () == 0:

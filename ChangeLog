@@ -1,5 +1,16 @@
 2005-02-02  Mark McLoughlin  <mark@skynet.ie>
 
+	* lib/protosession.py: apply the profile before
+	launching the session.
+	
+	* lib/storage.py: don't throw an exception if asked
+	to install when the profile doesn't yet exist.
+	
+	* lib/userprofile.py: don't ignore exceptions from
+	ProfileStorage.install()
+
+2005-02-02  Mark McLoughlin  <mark@skynet.ie>
+
 	* lib/storage.py: test adding a new file after
 	installing.
 
