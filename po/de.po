@@ -9,40 +9,165 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-02-28 20:14+0100\n"
-"PO-Revision-Date: 2005-02-28 18:43+0100\n"
+"POT-Creation-Date: 2005-03-26 22:36+0100\n"
+"PO-Revision-Date: 2005-03-28 22:36+0100\n"
 "Last-Translator: Hendrik Richter <hendrik@gnome-de.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../admin-tool/monitorwindow.py:142
+#: ../admin-tool/aboutdialog.py:63
 msgid "Program to establish and edit profiles for users"
 msgstr "Program zum Einrichten und Bearbeiten von Benutzerprofilen"
 
-#: ../admin-tool/monitorwindow.py:186
-msgid "Ignore"
-msgstr "Ignorieren"
+#: ../admin-tool/aboutdialog.py:66
+msgid "translator-credits"
+msgstr ""
+"Frank Arnold <frank@scirocco-5v-turbo.de>\n"
+"Hendrik Richter <hendrik@gnome-de.org>"
 
-#: ../admin-tool/monitorwindow.py:193
-msgid "Mandatory"
-msgstr "Notwendig"
+#: ../admin-tool/editorwindow.py:124 ../admin-tool/fileviewer.py:29
+#: ../admin-tool/gconfviewer.py:87 ../admin-tool/sabayon.glade.h:1
+#: ../admin-tool/userswindow.py:70 ../lib/protosession.py:332
+msgid "All Your Settings Are Belong To Us"
+msgstr "Alle Einstellungen gehören hierher"
 
-#: ../admin-tool/monitorwindow.py:198
+#: ../admin-tool/editorwindow.py:227 ../admin-tool/sabayon.glade.h:7
+msgid "_Profile"
+msgstr "_Profil"
+
+#: ../admin-tool/editorwindow.py:228
+msgid "_Save"
+msgstr "_Speichern"
+
+#: ../admin-tool/editorwindow.py:228
+msgid "Save profile"
+msgstr "Profil speichern"
+
+#: ../admin-tool/editorwindow.py:229
+msgid "_Close"
+msgstr "S_chließen"
+
+#: ../admin-tool/editorwindow.py:229
+msgid "Close the current window"
+msgstr "Dieses Fenster schließen"
+
+#: ../admin-tool/editorwindow.py:230
+msgid "_Edit"
+msgstr "_Bearbeiten"
+
+#: ../admin-tool/editorwindow.py:231
+msgid "_Delete"
+msgstr "_Löschen"
+
+#: ../admin-tool/editorwindow.py:231
+msgid "Delete item"
+msgstr "Eintrag löschen"
+
+#: ../admin-tool/editorwindow.py:232
+msgid "C_lear History"
+msgstr "Chronik _leeren"
+
+#: ../admin-tool/editorwindow.py:232
+msgid "Clear revision history"
+msgstr "Änderungsprotokoll leeren"
+
+#: ../admin-tool/editorwindow.py:233 ../admin-tool/sabayon.glade.h:6
+msgid "_Help"
+msgstr "_Hilfe"
+
+#: ../admin-tool/editorwindow.py:234
+msgid "_About"
+msgstr "_Info"
+
+#: ../admin-tool/editorwindow.py:234
+msgid "About Sabayon"
+msgstr "Info zu Sabayon"
+
+#: ../admin-tool/editorwindow.py:265
+msgid "_Version:"
+msgstr "_Version:"
+
+#: ../admin-tool/editorwindow.py:320 ../admin-tool/monitorwindow.py:158
 msgid "Description"
 msgstr "Beschreibung"
 
-#: ../admin-tool/profilesdialog.py:173
+#: ../admin-tool/editorwindow.py:331
+msgid "Version"
+msgstr "Version"
+
+#: ../admin-tool/editorwindow.py:361 ../lib/sources/gconfsource.py:106
+msgid "GConf"
+msgstr "GConf"
+
+#: ../admin-tool/editorwindow.py:365 ../lib/sources/filessource.py:67
+msgid "Files"
+msgstr "Dateien"
+
+#: ../admin-tool/gconfviewer.py:58 ../admin-tool/gconfviewer.py:77
+msgid "<no type>"
+msgstr "<kein Typ>"
+
+#: ../admin-tool/gconfviewer.py:59
+msgid "<no value>"
+msgstr "<kein Wert>"
+
+#: ../admin-tool/gconfviewer.py:63
+msgid "string"
+msgstr "Zeichenkette"
+
+#: ../admin-tool/gconfviewer.py:65
+msgid "integer"
+msgstr "Ganzzahl"
+
+#: ../admin-tool/gconfviewer.py:67
+msgid "float"
+msgstr "Gleitkomma"
+
+#: ../admin-tool/gconfviewer.py:69
+msgid "boolean"
+msgstr "Wahrheitswert"
+
+#: ../admin-tool/gconfviewer.py:71
+msgid "schema"
+msgstr "Schema"
+
+#: ../admin-tool/gconfviewer.py:73
+msgid "list"
+msgstr "Liste"
+
+#: ../admin-tool/gconfviewer.py:75
+msgid "pair"
+msgstr "Paar"
+
+#: ../admin-tool/gconfviewer.py:111 ../admin-tool/profilesdialog.py:180
 msgid "Name"
 msgstr "Name"
 
-#: ../admin-tool/profilesdialog.py:205
+#: ../admin-tool/gconfviewer.py:116
+msgid "Type"
+msgstr "Typ"
+
+#: ../admin-tool/gconfviewer.py:121
+msgid "Value"
+msgstr "Wert"
+
+#: ../admin-tool/monitorwindow.py:146
+msgid "Ignore"
+msgstr "Ignorieren"
+
+#: ../admin-tool/monitorwindow.py:153
+msgid "Mandatory"
+msgstr "Notwendig"
+
+#: ../admin-tool/profilesdialog.py:212
 #, python-format
 msgid "User account '%s' was not found"
 msgstr "Benutzer »%s« konnte nicht gefunden werden"
 
-#: ../admin-tool/profilesdialog.py:206
+#: ../admin-tool/profilesdialog.py:213
 #, python-format
 msgid ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
@@ -53,6 +178,30 @@ msgstr ""
 "funktionieren. Bitte versuchen Sie es erneut, nachdem Sie diesen Benutzer "
 "erstellt haben (beispielsweise unter Verwendung des »adduser«-Befehls)."
 
+#: ../admin-tool/sabayon-apply:34
+#, c-format
+msgid "No profile for user '%s' found\n"
+msgstr "Es konnte kein Profil für Benutzer »%s« gefunden werden\n"
+
+#: ../admin-tool/sabayon-apply:39
+#, c-format
+msgid "Usage: %s [<profile-name>]\n"
+msgstr "Benutzung: %s [<Profilname>]\n"
+
+#: ../admin-tool/sabayon-monitor:29
+#, c-format
+msgid "Usage: %s <profile-name>\n"
+msgstr "Benutzung: %s <Profilname>\n"
+
+#: ../admin-tool/sabayon-session:32
+msgid "Your account does not have permissions to run sabayon-session."
+msgstr "Ihr Benutzerkonto ist nicht berechtigt »sabayon-session« auszuführen."
+
+#: ../admin-tool/sabayon-session:36
+#, c-format
+msgid "Usage: %s <username> <profile-file>\n"
+msgstr "Benutzung: %s <Benutzername> <Profildatei>\n"
+
 #: ../admin-tool/sabayon.desktop.in.h:1
 msgid "Desktop User Profiles"
 msgstr "Desktop-Benutzerprofile"
@@ -60,10 +209,6 @@ msgstr "Desktop-Benutzerprofile"
 #: ../admin-tool/sabayon.desktop.in.h:2
 msgid "Establish and Edit Profiles for Users"
 msgstr "Einrichten und Bearbeiten von Benutzerprofilen"
-
-#: ../admin-tool/sabayon.glade.h:1
-msgid "All Your Settings Are Belong To Us"
-msgstr "Alle Einstellungen gehören hierher"
 
 #: ../admin-tool/sabayon.glade.h:2
 msgid "C_reate"
@@ -81,24 +226,16 @@ msgstr "Profil_name:"
 msgid "_Base on:"
 msgstr "_Basierend auf:"
 
-#: ../admin-tool/sabayon.glade.h:6
-msgid "_Help"
-msgstr "_Hilfe"
-
-#: ../admin-tool/sabayon.glade.h:7
-msgid "_Profile"
-msgstr "_Profil"
-
 #: ../admin-tool/sabayon.glade.h:8
 msgid "_Profiles:"
 msgstr "_Profile:"
 
-#: ../admin-tool/sabayon.py:34
-#, python-format
+#: ../admin-tool/sabayon:35
+#, c-format
 msgid "Your account does not have permissions to run %s"
 msgstr "Ihr Benutzerkonto ist nicht berechtigt »%s« auszuführen"
 
-#: ../admin-tool/sabayon.py:35
+#: ../admin-tool/sabayon:36
 msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
@@ -106,24 +243,104 @@ msgstr ""
 "Zum Starten dieses Programms sind Administratorrechte notwendig, da es in "
 "der Lage ist Systemdateien zu ändern."
 
-#: ../admin-tool/sabayon-apply.py:37
-#, python-format
-msgid "Usage: %s [<profile-file>]\n"
-msgstr "Benutzung: %s [<Profildatei>]\n"
+#: ../admin-tool/saveconfirm.py:36
+msgid "Close _Without Saving"
+msgstr "_Nicht speichern"
 
-#: ../admin-tool/sabayon-monitor.py:28
+#: ../admin-tool/saveconfirm.py:43
 #, python-format
-msgid "Usage: %s <profile-file>\n"
-msgstr "Benutzung: %s <Profildatei>\n"
+msgid "Save changes to profile \"%s\" before closing?"
+msgstr "Änderungen am Profil »%s« vor dem Schließen speichern?"
 
-#: ../admin-tool/sabayon-session.py:31
-msgid "Your account does not have permissions to run sabayon-session."
-msgstr "Ihr Benutzerkonto ist nicht berechtigt »sabayon-session« auszuführen."
-
-#: ../admin-tool/sabayon-session.py:35
+#: ../admin-tool/saveconfirm.py:47
 #, python-format
-msgid "Usage: %s <username> <profile-file>\n"
-msgstr "Benutzung: %s <Benutzername> <Profildatei>\n"
+msgid ""
+"If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld seconds will be permanently "
+"lost."
+msgstr[0] ""
+"Falls Sie sie nicht speichern, gehen in der letzten %ld Sekunde vorgenommene "
+"Änderungen unwiderruflich verloren."
+msgstr[1] ""
+"Falls Sie sie nicht speichern, gehen in den letzten %ld Sekunden vorgenommene "
+"Änderungen unwiderruflich verloren."
+
+#: ../admin-tool/saveconfirm.py:53
+msgid ""
+"If you don't save, changes from the last minute will be permanently lost."
+msgstr ""
+"Falls Sie sie nicht speichern, gehen in der letzten Minute vorgenommene "
+"Änderungen unwiderruflich verloren."
+
+#: ../admin-tool/saveconfirm.py:57
+#, python-format
+msgid ""
+"If you don't save, changes from the last minute and %ld second will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last minute and %ld seconds will be "
+"permanently lost."
+msgstr[0] ""
+"Falls Sie sie nicht speichern, gehen in der letzten Minute und %ld Sekunde "
+"vorgenommene Änderungen unwiderruflich verloren."
+msgstr[1] ""
+"Falls Sie sie nicht speichern, gehen in der letzten Minute und %ld Sekunden "
+"vorgenommene Änderungen unwiderruflich verloren."
+
+#: ../admin-tool/saveconfirm.py:64
+#, python-format
+msgid ""
+"If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld minutes will be permanently "
+"lost."
+msgstr[0] ""
+"Falls Sie sie nicht speichern, gehen in der letzten %ld Minute vorgenommene "
+"Änderungen unwiderruflich verloren."
+msgstr[1] ""
+"Falls Sie sie nicht speicerhn, gehen in den letzten %ld Minuten vorgenommene "
+"Änderungen unwiderruflich verloren."
+
+#: ../admin-tool/saveconfirm.py:73 ../admin-tool/saveconfirm.py:83
+#, python-format
+msgid "If you don't save, changes from the last hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] ""
+"Falls Sie sie nicht speichern, gehen in der letzten Stunde vorgenommene "
+"Änderungen unwiderruflich verloren."
+msgstr[1] ""
+"Falls Sie sie nicht speichern, gehen in den letzten %d Stunden vorgenommene "
+"Änderungen unwiderruflich verloren."
+
+#: ../admin-tool/saveconfirm.py:76
+#, python-format
+msgid ""
+"If you don't save, changes from the last hour and %d minute will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last hour and %d minutes will be "
+"permanently lost."
+msgstr[0] ""
+"Falls Sie sie nicht speichern, gehen in der letzten Stunde und %d Minute "
+"vorgenommene Änderungen unwiderruflich verloren."
+msgstr[1] ""
+"Falls Sie sie nicht speichern, gehen in der letzten Stunde und %d Minuten "
+"vorgenommene Änderungen unwiderruflich verloren."
+
+#: ../admin-tool/userswindow.py:42 ../admin-tool/userswindow.py:60
+#: ../admin-tool/userswindow.py:122
+msgid "None"
+msgstr "Keins"
+
+#: ../admin-tool/userswindow.py:99
+msgid "User"
+msgstr "Benutzer"
+
+#: ../admin-tool/userswindow.py:111
+msgid "Profile"
+msgstr "Profil"
 
 #: ../lib/dirmonitor.py:138
 #, python-format
@@ -154,46 +371,211 @@ msgstr ""
 msgid "Unable to find a free X display"
 msgstr "Es konnte kein freies Anzeigegerät für X gefunden werden"
 
-#: ../lib/protosession.py:374
+#: ../lib/protosession.py:376
 msgid "Failed to start Xnest: timed out waiting for USR1 signal"
 msgstr ""
 "Xnest konnte nicht gestartet werden: Zeitüberschreitung beim Warten auf USR1-"
 "Signal"
 
-#: ../lib/protosession.py:376
+#: ../lib/protosession.py:378
 msgid "Failed to start Xnest: died during startup"
 msgstr "Xnest konnte nicht gestartet werden: Beim Starten abgestürzt"
 
-#: ../lib/storage.py:140
+#: ../lib/sources/filessource.py:57
+#, python-format
+msgid "File '%s' created"
+msgstr "Datei »%s« erstellt"
+
+#: ../lib/sources/filessource.py:59
+#, python-format
+msgid "File '%s' deleted"
+msgstr "Datei »%s« gelöscht"
+
+#: ../lib/sources/filessource.py:61
+#, python-format
+msgid "File '%s' changed"
+msgstr "Datei »%s« geändert"
+
+#: ../lib/sources/filessource.py:85
+msgid "Applications menu"
+msgstr "Anwendungen-Menü"
+
+#: ../lib/sources/filessource.py:87
+msgid "Preferences menu"
+msgstr "Einstellungen-Menü"
+
+#: ../lib/sources/filessource.py:89
+msgid "Server Settings menu"
+msgstr "Serververwaltung-Menü"
+
+#: ../lib/sources/filessource.py:91
+msgid "System Settings menu"
+msgstr "Systemverwaltung-Menü"
+
+#: ../lib/sources/filessource.py:93
+msgid "Start Here menu"
+msgstr "Hier starten-Menü"
+
+#: ../lib/sources/gconfsource.py:78
+#, python-format
+msgid "GConf key '%s' unset"
+msgstr "GConf-Schlüssel »%s« zurückgesetzt"
+
+#: ../lib/sources/gconfsource.py:80
+#, python-format
+msgid "GConf key '%s' set to string '%s'"
+msgstr "GConf-Schlüssel »%s« auf Zeichenkette »%s« gesetzt"
+
+#: ../lib/sources/gconfsource.py:82
+#, python-format
+msgid "GConf key '%s' set to integer '%s'"
+msgstr "GConf-Schlüssel »%s« auf Ganzzahl »%s« gesetzt"
+
+#: ../lib/sources/gconfsource.py:84
+#, python-format
+msgid "GConf key '%s' set to float '%s'"
+msgstr "GConf-Schlüssel »%s« auf Gleitkomma »%s« gesetzt"
+
+#: ../lib/sources/gconfsource.py:86
+#, python-format
+msgid "GConf key '%s' set to boolean '%s'"
+msgstr "GConf-Schlüssel »%s« auf Wahrheitswert »%s« gesetzt"
+
+#: ../lib/sources/gconfsource.py:88
+#, python-format
+msgid "GConf key '%s' set to schema '%s'"
+msgstr "GConf-Schlüssel »%s« auf Schema »%s« gesetzt"
+
+#: ../lib/sources/gconfsource.py:90
+#, python-format
+msgid "GConf key '%s' set to list '%s'"
+msgstr "GConf-Schlüssel »%s« auf Liste »%s« gesetzt"
+
+#: ../lib/sources/gconfsource.py:92
+#, python-format
+msgid "GConf key '%s' set to pair '%s'"
+msgstr "GConf-Schlüssel »%s« auf Paar »%s« gesetzt"
+
+#: ../lib/sources/gconfsource.py:94
+#, python-format
+msgid "GConf key '%s' set to '%s'"
+msgstr "GConf-Schlüssel »%s« auf »%s« gesetzt"
+
+#: ../lib/sources/gconfsource.py:117
+msgid "Default GConf settings"
+msgstr "Vorgegebene GConf-Einstellungen"
+
+#: ../lib/sources/gconfsource.py:119
+msgid "Mandatory GConf settings"
+msgstr "Notwendige GConf-Einstellungen"
+
+#: ../lib/sources/mozillasource.py:109
+#, python-format
+msgid "Mozilla key '%s' set to '%s'"
+msgstr "Mozilla-Schlüssel »%s« auf »%s« gesetzt"
+
+#: ../lib/sources/mozillasource.py:111
+#, python-format
+msgid "Mozilla key '%s' unset"
+msgstr "Mozilla-Schlüssel »%s« zurückgesetzt"
+
+#: ../lib/sources/mozillasource.py:113
+#, python-format
+msgid "Mozilla key '%s' changed to '%s'"
+msgstr "Mozilla-Schlüssel »%s« auf »%s« geändert"
+
+#: ../lib/sources/mozillasource.py:122
+msgid "Firefox"
+msgstr "Firefox"
+
+#: ../lib/sources/mozillasource.py:391
+#, python-format
+msgid "File Not Found (%s)"
+msgstr "Datei konnte nicht gefunden werden (%s)"
+
+#: ../lib/sources/mozillasource.py:839
+#, python-format
+msgid "duplicate name(%s) in section %s"
+msgstr "doppelter Name (%s) in Sektion %s"
+
+#: ../lib/sources/mozillasource.py:848
+#, python-format
+msgid "redundant default in section %s"
+msgstr "überzähliger Vorgabewert in Sektion %s"
+
+#: ../lib/sources/mozillasource.py:865
+msgid "no default profile"
+msgstr "kein Standardprofil"
+
+#: ../lib/sources/mozillasource.py:977
+#, python-format
+msgid "No such profile ini file: %s"
+msgstr "Profil-INI-Datei existiert nicht: %s"
+
+#: ../lib/sources/paneldelegate.py:53
+#, python-format
+msgid "Panel '%s' added"
+msgstr "Panel »%s« hinzugefügt"
+
+#: ../lib/sources/paneldelegate.py:59
+#, python-format
+msgid "Panel '%s' removed"
+msgstr "Panel »%s« entfernt"
+
+#: ../lib/sources/paneldelegate.py:65
+#, python-format
+msgid "Panel applet '%s' added"
+msgstr "Panel-Applet »%s« hinzugefügt"
+
+#: ../lib/sources/paneldelegate.py:71
+#, python-format
+msgid "Panel applet '%s' removed"
+msgstr "Panel-Applet »%s« entfernt"
+
+#: ../lib/sources/paneldelegate.py:77
+#, python-format
+msgid "Panel object '%s' added"
+msgstr "Panel-Objekt »%s« hinzugefügt"
+
+#: ../lib/sources/paneldelegate.py:83
+#, python-format
+msgid "Panel object '%s' removed"
+msgstr "Panel-Objekt »%s« entfernt"
+
+#: ../lib/sources/paneldelegate.py:118
+msgid "Panel"
+msgstr "Panel"
+
+#: ../lib/storage.py:144
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "Datei »%s« konnte nicht gelesen werden: %s"
 
-#: ../lib/storage.py:150
+#: ../lib/storage.py:154
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "Metadaten von »%s« konnten nicht gelesen werden: %s"
 
-#: ../lib/storage.py:156
+#: ../lib/storage.py:160
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "Ungültige Metadaten-Sektion in »%s«: %s"
 
-#: ../lib/storage.py:453
+#: ../lib/storage.py:516
 #, python-format
-msgid "Cannot add non-existant file '%s'"
+msgid "Cannot add non-existent file '%s'"
 msgstr "Nicht-existierende Datei »%s« konnte nicht hinzugefügt werden"
 
-#: ../lib/storage.py:533
+#: ../lib/storage.py:606
 msgid "No current revision"
 msgstr "Keine aktuelle Revision"
 
-#: ../lib/storage.py:537 ../lib/storage.py:548
+#: ../lib/storage.py:610 ../lib/storage.py:621
 #, python-format
 msgid "'%s' does not exist in profile revision '%s'"
 msgstr "»%s« ist in der Revision »%s« des Profils nicht vorhanden"
 
-#: ../lib/storage.py:619
+#: ../lib/storage.py:693
 msgid "Not a valid profile revision"
 msgstr "Keine gültige Revision des Profils"
 
@@ -215,7 +597,31 @@ msgstr "%s Tests werden ausgeführt (%s)"
 msgid "Success!"
 msgstr "Erfolgreich!"
 
-#: ../lib/util.py:105
+#: ../lib/userdb.py:140
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "%s konnte nicht zum Schreiben geöffnet werden"
+
+#: ../lib/userdb.py:153
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "Benutzer-Datenbank konnte nicht in %s gespeichert werden"
+
+#: ../lib/userdb.py:177
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "Datei %s ist keine Profilkonfiguration"
+
+#: ../lib/userdb.py:185
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "Benutzer %s konnte der Profilkonfiguration nicht hinzugefügt werden"
+
+#: ../lib/userdb.py:216
+msgid "Failed to get the user list"
+msgstr "Benutzerliste konnte nicht gelesen werden"
+
+#: ../lib/util.py:116
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -223,7 +629,7 @@ msgstr ""
 "Persönlicher Order konnte nicht gefunden werden: nicht in /etc/passwd "
 "gesetzt und kein Wert in Umgebungsvariable $HOME"
 
-#: ../lib/util.py:118
+#: ../lib/util.py:129
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
@@ -231,156 +637,11 @@ msgstr ""
 "Benutzername konnte nicht gefunden werden: nicht in /etc/passwd gesetzt und "
 "kein Wert in Umgebungsvariable $USER"
 
-#: ../lib/sources/filessource.py:49
-#, python-format
-msgid "File '%s' created"
-msgstr "Datei »%s« erstellt"
+#~ msgid "default path (%s) does not exist"
+#~ msgstr "Standardpfad (%s) existiert nicht"
 
-#: ../lib/sources/filessource.py:51
-#, python-format
-msgid "File '%s' deleted"
-msgstr "Datei »%s« gelöscht"
-
-#: ../lib/sources/filessource.py:53
-#, python-format
-msgid "File '%s' changed"
-msgstr "Datei »%s« geändert"
-
-#: ../lib/sources/filessource.py:59
-msgid "Files"
-msgstr "Dateien"
-
-#: ../lib/sources/gconfsource.py:72
-#, python-format
-msgid "GConf key '%s' unset"
-msgstr "GConf-Schlüssel »%s« zurückgesetzt"
-
-#: ../lib/sources/gconfsource.py:74
-#, python-format
-msgid "GConf key '%s' set to string '%s'"
-msgstr "GConf-Schlüssel »%s« auf Zeichenkette »%s« gesetzt"
-
-#: ../lib/sources/gconfsource.py:76
-#, python-format
-msgid "GConf key '%s' set to integer '%s'"
-msgstr "GConf-Schlüssel »%s« auf Ganzzahl »%s« gesetzt"
-
-#: ../lib/sources/gconfsource.py:78
-#, python-format
-msgid "GConf key '%s' set to float '%s'"
-msgstr "GConf-Schlüssel »%s« auf Gleitkomma »%s« gesetzt"
-
-#: ../lib/sources/gconfsource.py:80
-#, python-format
-msgid "GConf key '%s' set to boolean '%s'"
-msgstr "GConf-Schlüssel »%s« auf Wahrheitswert »%s« gesetzt"
-
-#: ../lib/sources/gconfsource.py:82
-#, python-format
-msgid "GConf key '%s' set to schema '%s'"
-msgstr "GConf-Schlüssel »%s« auf Schema »%s« gesetzt"
-
-#: ../lib/sources/gconfsource.py:84
-#, python-format
-msgid "GConf key '%s' set to list '%s'"
-msgstr "GConf-Schlüssel »%s« auf Liste »%s« gesetzt"
-
-#: ../lib/sources/gconfsource.py:86
-#, python-format
-msgid "GConf key '%s' set to pair '%s'"
-msgstr "GConf-Schlüssel »%s« auf Paar »%s« gesetzt"
-
-#: ../lib/sources/gconfsource.py:88
-#, python-format
-msgid "GConf key '%s' set to '%s'"
-msgstr "GConf-Schlüssel »%s« auf »%s« gesetzt"
-
-#: ../lib/sources/gconfsource.py:100
-msgid "GConf"
-msgstr "GConf"
-
-#: ../lib/sources/mozillasource.py:54
-#, python-format
-msgid "Mozilla key '%s' set to '%s'"
-msgstr "Mozilla-Schlüssel »%s« auf »%s« gesetzt"
-
-#: ../lib/sources/mozillasource.py:56
-#, python-format
-msgid "Mozilla key '%s' unset"
-msgstr "Mozilla-Schlüssel »%s« zurückgesetzt"
-
-#: ../lib/sources/mozillasource.py:58
-#, python-format
-msgid "Mozilla key '%s' changed to '%s'"
-msgstr "Mozilla-Schlüssel »%s« auf »%s« geändert"
-
-#: ../lib/sources/mozillasource.py:160
-#, python-format
-msgid "File Not Found (%s)"
-msgstr "Datei konnte nicht gefunden werden (%s)"
-
-#: ../lib/sources/mozillasource.py:370
-#, python-format
-msgid "duplicate name (%s) in section %s"
-msgstr "doppelter Name (%s) in Sektion %s"
-
-#: ../lib/sources/mozillasource.py:377
-#, python-format
-msgid "redundant default in section %s"
-msgstr "überzähliger Vorgabewert in Sektion %s"
-
-#: ../lib/sources/mozillasource.py:392
-msgid "no default profile"
-msgstr "kein Standardprofil"
-
-#: ../lib/sources/mozillasource.py:396
-#, python-format
-msgid "default path (%s) does not exist"
-msgstr "Standardpfad (%s) existiert nicht"
-
-#: ../lib/sources/mozillasource.py:398
-#, python-format
-msgid "default path (%s) is not a directory"
-msgstr "Standardpfad (%s) ist kein Verzeichnis"
-
-#: ../lib/sources/mozillasource.py:494
-#, python-format
-msgid "No such profile ini file: %s"
-msgstr "Profil-INI-Datei existiert nicht: %s"
-
-#: ../lib/sources/paneldelegate.py:47
-#, python-format
-msgid "Panel '%s' added"
-msgstr "Panel »%s« hinzugefügt"
-
-#: ../lib/sources/paneldelegate.py:53
-#, python-format
-msgid "Panel '%s' removed"
-msgstr "Panel »%s« entfernt"
-
-#: ../lib/sources/paneldelegate.py:59
-#, python-format
-msgid "Panel applet '%s' added"
-msgstr "Panel-Applet »%s« hinzugefügt"
-
-#: ../lib/sources/paneldelegate.py:65
-#, python-format
-msgid "Panel applet '%s' removed"
-msgstr "Panel-Applet »%s« entfernt"
-
-#: ../lib/sources/paneldelegate.py:71
-#, python-format
-msgid "Panel object '%s' added"
-msgstr "Panel-Objekt »%s« hinzugefügt"
-
-#: ../lib/sources/paneldelegate.py:77
-#, python-format
-msgid "Panel object '%s' removed"
-msgstr "Panel-Objekt »%s« entfernt"
-
-#: ../lib/sources/paneldelegate.py:112
-msgid "Panel"
-msgstr "Panel"
+#~ msgid "default path (%s) is not a directory"
+#~ msgstr "Standardpfad (%s) ist kein Verzeichnis"
 
 #~ msgid "*"
 #~ msgstr "*"
