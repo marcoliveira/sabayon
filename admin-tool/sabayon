@@ -22,7 +22,8 @@ if __name__ == '__main__':
     import os
     import sys
     import gtk
-    import util
+
+    from sabayon import util
 
     util.init_gettext ()
 
@@ -38,7 +39,7 @@ if __name__ == '__main__':
         errordialog.destroy ()
         sys.exit (1)
                         
-    import profilesdialog
+    from sabayon import profilesdialog
     
     dialog = profilesdialog.ProfilesDialog ()
 

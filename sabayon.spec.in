@@ -1,3 +1,9 @@
+%define pygtk2_version 2.5.3-2
+%define gnome_python2_version 2.6.0-5
+
+%define pyver %(python -c 'import sys ; print sys.version[:3]')
+%{!?python_sitelib: %define python_sitelib %(%{__python} -c "from distutils.sysconfig import get_python_lib; print get_pytho\n_lib()")}
+
 Name:    sabayon
 Version: @VERSION@
 Release: 1
@@ -10,14 +16,17 @@ Source:  sabayon-%{version}.tar.gz
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
-Requires: python
+Requires: python-abi = %{pyver}
 Requires: gamin-python
-Requires: pygtk2 >= 2.5.3-2
-Requires: gnome-python2-gconf >= 2.6.0-5
+Requires: pygtk2 >= %{pygtk2_version}
+Requires: gnome-python2-gconf >= %{gnome_python2_version}
 Requires: xorg-x11-Xnest
 Requires: shadow-utils
 
-BuildRequires: python
+BuildRequires: desktop-file-utils
+
+Requires(post):  shadow-utils
+Requires(preun): shadow-utils
 
 %description
 Sabayon is a tool to help sysadmins and user change and maintain the
@@ -32,7 +41,7 @@ make %{?_smp_mflags}
 gzip -9 ChangeLog
 
 %install
-rm -fr %{buildroot}
+rm -rf $RPM_BUILD_ROOT
 
 %makeinstall PAM_PREFIX=$RPM_BUILD_ROOT%{_sysconfdir}
 
@@ -47,7 +56,7 @@ desktop-file-install --vendor gnome --delete-original		\
 %find_lang sabayon
 
 %clean
-rm -fr %{buildroot}
+rm -rf $RPM_BUILD_ROOT
 
 %pre
 /usr/sbin/groupadd -r %{name} &>/dev/null || :
@@ -55,8 +64,10 @@ rm -fr %{buildroot}
 /usr/sbin/usermod -d "" %{name} &>/dev/null || :
 
 %postun
-test "$1" != 0 || /usr/sbin/userdel  %{name} &>/dev/null || :
-test "$1" != 0 || /usr/sbin/groupdel %{name} &>/dev/null || :
+if [ $1 -eq 0 ]; then
+  /usr/sbin/userdel  %{name} &>/dev/null || :
+  /usr/sbin/groupdel %{name} &>/dev/null || :
+fi
 
 %files -f sabayon.lang
 %defattr(-, root, root)
@@ -77,11 +88,16 @@ test "$1" != 0 || /usr/sbin/groupdel %{name} &>/dev/null || :
 %{_sbindir}/%{name}*
 %{_libexecdir}/%{name}*
 
-%{_datadir}/%{name}/*.py*
-%{_datadir}/%{name}/sources/*.py*
 %{_datadir}/%{name}/glade/%{name}.glade
 %{_datadir}/applications/gnome-%{name}.desktop
 %{_datadir}/pixmaps/%{name}.png
+
+%{python_sitelib}/{name}/*.py
+%{python_sitelib}/%{name}/*.pyc
+%{ghost} %{python_sitelib}/%{name}/*.pyo
+%{python_sitelib}/%{name}/sources/*.py
+%{python_sitelib}/%{name}/sources/*.pyc
+%{ghost} %{python_sitelib}/%{name}/sources/*.pyo
 
 %changelog
 * Wed Mar 16 2005 Mark McLoughlin <markmc@redhat.com>

@@ -11,7 +11,7 @@ EXTRA_DIST =				\
 	$(PYTHON_FILES)			\
 	$(NOINST_PYTHON_FILES)
 
-sourcesdir     = $(pkgdatadir)/sources
+sourcesdir     = $(pythondir)/sabayon/sources
 sources_PYTHON = $(PYTHON_FILES)
 
 pycheck:

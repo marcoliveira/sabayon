@@ -20,7 +20,8 @@
 
 if __name__ == '__main__':
     import sys
-    import util
+
+    from sabayon import util
 
     util.init_gettext ()
 
@@ -28,8 +29,9 @@ if __name__ == '__main__':
         sys.stderr.write (_("Usage: %s <profile-name>\n") % sys.argv[0])
         sys.exit (1)
                         
-    import monitorwindow
     import gtk
+    
+    from sabayon import monitorwindow
 
     monitorwindow.ProfileMonitorWindow (sys.argv[1])
 

@@ -1,6 +1,7 @@
 SUBDIRS = sources
 
 PYTHON_FILES =				\
+	__init__.py			\
 	userprofile.py			\
 	config.py			\
 	storage.py			\
@@ -18,7 +19,8 @@ EXTRA_DIST =				\
 	$(NOINST_PYTHON_FILES)		\
 	config.py.in
 
-pkgdata_PYTHON = $(PYTHON_FILES)
+sabayondir     = $(pythondir)/sabayon
+sabayon_PYTHON = $(PYTHON_FILES)
 
 pycheck:
 	pychecker -F $(top_srcdir)/pycheckrc $(PYTHON_FILES) $(NOINST_PYTHON_FILES)

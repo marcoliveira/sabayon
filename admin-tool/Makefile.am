@@ -1,8 +1,4 @@
 PYTHON_FILES =				\
-	sabayon.py			\
-	sabayon-apply.py		\
-	sabayon-monitor.py		\
-	sabayon-session.py		\
 	monitorwindow.py		\
 	editorwindow.py			\
 	profilesdialog.py		\
@@ -30,10 +26,10 @@ EXTRA_DIST =				\
 	$(ICON_FILES)			\
 	$(desktop_in_files)		\
 	$(desktop_DATA)			\
-	sabayon.in			\
-	sabayon-apply.in		\
-	sabayon-monitor.in		\
-	sabayon-session.in		\
+	sabayon				\
+	sabayon-apply			\
+	sabayon-monitor			\
+	sabayon-session			\
 	sabayon.console.in		\
 	sabayon.pam			\
 	sabayon-xinitrc.sh.in
@@ -44,24 +40,18 @@ glade_DATA = $(GLADE_FILES)
 icondir    = $(datadir)/pixmaps
 icon_DATA  = $(ICON_FILES)
 
-wrappers = 			\
-	sabayon			\
-	sabayon-apply		\
-	sabayon-monitor		\
-	sabayon-session
-
-%: %.in
-	sed                                             \
-		-e s!\@SBINDIR\@!$(sbindir)!            \
-		-e s!\@PKGDATADIR\@!$(pkgdatadir)!      \
-		< $< > $@
-	chmod a+x $@
-
 bin_SCRIPTS = sabayon
 sbin_SCRIPTS = sabayon-apply
 libexec_SCRIPTS = sabayon-monitor sabayon-session
 
-pkgdata_PYTHON = $(PYTHON_FILES)
+sabayondir     = $(pythondir)/sabayon
+sabayon_PYTHON = $(PYTHON_FILES)
+
+%: %.in
+	sed                                             \
+		-e s!\@SBINDIR\@!$(sbindir)!            \
+		< $< > $@
+	chmod a+x $@
 
 if INSTALL_XINITRC_SCRIPT
 xinitrcdir      = $(sysconfdir)/$(XINITRC_SYSCONFDIR)
@@ -94,6 +84,5 @@ clean:
 	rm -f *.pyo *.pyc
 
 DISTCLEANFILES =		\
-	$(wrappers)		\
 	$(desktop_DATA)		\
 	sabayon-xinitrc.sh

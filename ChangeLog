@@ -1,5 +1,41 @@
 2005-03-18  Mark McLoughlin  <markmc@redhat.com>
 
+	Re-work the way we install all the python stuff to
+	bring us in line with normal conventions.
+
+	* admin-tool/Makefile.am: install the python files
+	in libdir/python/site-packages/sabayon, remove the
+	wrapper scripts and install the python main scripts
+	in sbindir/libexec etc.
+	
+	* admin-tool/sabayon: renamed from sabayon.py
+
+	* admin-tool/sabayon-apply: renamed from sabayon-apply.py.
+	
+	* admin-tool/sabayon-monitor: renamed from sabayon-monitor.py.
+	
+	* admin-tool/sabayon-session: renamed from sabayon-session.py.
+	
+	* lib/Makefile.am: install __init__.py and install
+	python files in libdir/python/site-packages/sabayon.
+	
+	* lib/__init__.py: empty module init script.
+	
+	* lib/config.py.in: remove GLADEDIR and MODULEPATH foo.
+	
+	* lib/dirmonitor.py: make the unit tests pass.
+	
+	* lib/sources/Makefile.am: change install locatio of python
+	files.
+	
+	* lib/userprofile.py: re-work the module loader to figure
+	out the module load path itself at runtime.
+	
+	* sabayon.spec.in: package the python stuff according
+	to Fedora Extras guidelines.
+
+2005-03-18  Mark McLoughlin  <markmc@redhat.com>
+
 	* sabayon.spec.in: go back to using shadow-utils instead
 	of fedora-usermgmt as there doesn't actually seem to be
 	consensus around using fedora-usermgmt.

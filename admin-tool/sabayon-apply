@@ -20,8 +20,9 @@
 
 if __name__ == '__main__':
     import sys
-    import util
-    # import userdb
+    
+    from sabayon import util
+    # from sabayon import userdb
 
     util.init_gettext ()
 
@@ -38,7 +39,7 @@ if __name__ == '__main__':
         sys.stderr.write (_("Usage: %s [<profile-name>]\n") % sys.argv[0])
         sys.exit (1)
 
-    import userprofile
+    from sabayon import userprofile
     
     def dprint (fmt, *args):
         util.debug_print (util.DEBUG_ADMINTOOL, fmt % args)

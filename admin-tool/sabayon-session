@@ -22,8 +22,9 @@ if __name__ == '__main__':
     import os
     import sys
     import gobject
-    import protosession
-    import util
+    
+    from sabayon import protosession
+    from sabayon import util
 
     util.init_gettext ()
 

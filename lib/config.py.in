@@ -27,7 +27,7 @@ SYSCONFDIR = "@SYSCONFDIR@"
 LIBEXECDIR = "@LIBEXECDIR@"
 SBINDIR    = "@SBINDIR@"
 
-PKGDATADIR  = os.path.join (DATADIR, "sabayon")
+GLADEDIR    = os.path.join (DATADIR, "sabayon", "glade")
 PROFILESDIR = os.path.join (SYSCONFDIR, "desktop-profiles")
 
 SESSION_TOOL_ARGV = [ os.path.join (LIBEXECDIR, "sabayon-session") ]
@@ -95,29 +95,3 @@ DIRECTORIES_TO_IGNORE = [
     ".gconfd",
     ".nautilus/metafiles"
 ]
-
-try:
-    GLADEDIR = os.environ["GLADEDIR"]
-except:
-    if os.path.exists ("sabayon.glade"):
-        GLADEDIR ="./"
-    elif os.path.exists ("admin-tool/sabayon.glade"):
-        GLADEDIR = "admin-tool"
-    elif os.path.exists (os.path.join (PKGDATADIR, "glade/sabayon.glade")):
-        GLADEDIR = os.path.join (PKGDATADIR, "glade")
-    else:
-        GLADEDIR = "./"
-
-try:
-    MODULEPATH = os.environ["MODULEPATH"]
-except:
-    if os.path.exists ("sources"):
-        MODULEPATH = "sources"
-    elif os.path.exists ("lib/sources"):
-        MODULEPATH = "lib/sources"
-    elif os.path.exists ("../lib/sources"):
-        MODULEPATH = "../lib/sources"
-    elif os.path.exists (os.path.join (PKGDATADIR, "sources")):
-        MODULEPATH = os.path.join (PKGDATADIR, "sources")
-    else:
-        MODULEPATH = "sources"
