@@ -221,16 +221,13 @@ class ProfilesDialog:
     def __edit_button_clicked (self, button):
         profile_name = self.__get_selected_profile ()
         if profile_name:
-            # FIXME: shouldn't be hardcoded user name
-	    # NOTE: created when installing the RPM package.
-            username = "sabayon"
             profile_path = _get_profile_path_for_name (profile_name)
 
-            user_path = self.__copy_to_user (profile_path, username)
+            user_path = self.__copy_to_user (profile_path, PROTOTYPE_USER)
 
             self.dialog.set_sensitive (False)
             
-            argv = SESSION_TOOL_ARGV + [ "sabayon", user_path ]
+            argv = SESSION_TOOL_ARGV + [ PROTOTYPE_USER, user_path ]
             dprint ("Running session: %s" % argv)
             os.spawnv (os.P_WAIT, argv[0], argv)
             

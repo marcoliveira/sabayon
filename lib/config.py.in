@@ -27,6 +27,13 @@ SESSION_TOOL_ARGV = [ "@LIBEXECDIR@/sabayon-session" ]
 MONITOR_TOOL_ARGV = [ "@LIBEXECDIR@/sabayon-monitor" ]
 APPLY_TOOL_ARGV   = [ "@SBINDIR@/sabayon-apply" ]
 
+#
+# This is the user which we run the prototype sessions
+# as. The account should be created as part of the packages
+# post installation process
+#
+PROTOTYPE_USER = "sabayon"
+
 DEFAULT_PATH  = "/usr/local/bin:/usr/bin:/bin:/usr/X11R6/bin"
 DEFAULT_SHELL = "/bin/bash"
 NOLOGIN_SHELL = "/sbin/nologin"
