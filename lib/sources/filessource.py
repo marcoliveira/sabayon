@@ -21,12 +21,20 @@
 import os
 import os.path
 import shutil
-import util
 import gobject
-import userprofile
-import dirmonitor
-import storage
-from config import *
+
+try:
+    import userprofile
+    import dirmonitor
+    import storage
+    import util
+    from config import *
+except:
+    from sabayon import userprofile
+    from sabayon import dirmonitor
+    from sabayon import storage
+    from sabayon import util
+    from sabayon.config import *
 
 def dprint (fmt, *args):
     util.debug_print (util.DEBUG_FILESSOURCE, fmt % args)

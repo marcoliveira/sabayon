@@ -22,12 +22,18 @@ import os
 import os.path
 import shutil
 import time
-import util
 import errno
 import gobject
 import gconf
-import userprofile
-import storage
+
+try:
+    import userprofile
+    import storage
+    import util
+except:
+    from sabayon import userprofile
+    from sabayon import storage
+    from sabayon import util
 
 def dprint (fmt, *args):
     util.debug_print (util.DEBUG_GCONFSOURCE, fmt % args)

@@ -1,4 +1,23 @@
 2005-03-18  Mark McLoughlin  <markmc@redhat.com>
+	
+	* lib/userprofile.py: import sources from the
+	sources module.
+	
+	* lib/sources/filessource.py,
+	  lib/sources/gconfsource.py,
+	  lib/sources/mozillasource.py,
+	  lib/sources/paneldelegate.py,
+	  lib/sources/testsource.py: import the
+	various sabayon python modules from the
+	sabayon namespace instead of expecting
+	them to be in the toplevel namespace.
+
+	* lib/sources/__init__.py: module init script
+	for the sources module.
+	
+	* lib/sources/Makefile.am: install __init__.py
+
+2005-03-18  Mark McLoughlin  <markmc@redhat.com>
 
 	* admin-tool/Makefile.am: fix blooper.
 

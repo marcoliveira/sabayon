@@ -19,10 +19,16 @@
 #
 
 import gconf
-import userprofile
 import gconfsource
-import util
-from config import *
+
+try:
+    import userprofile
+    import util
+    from config import *
+except:
+    from sabayon import userprofile
+    from sabayon import util
+    from sabayon.config import *
 
 def dprint (fmt, *args):
     util.debug_print (util.DEBUG_PANELDELEGATE, fmt % args)

@@ -35,19 +35,18 @@ class ModuleLoader:
     to be constructed from said modules using specific constructors
     for each object type."""
     
-    def __init__ (self, module_path, python_path):
+    def __init__ (self, module_path):
         """Construct a ModuleLoader and will load all available
         python modules from @module_path.
         """
         self.module_path = module_path
-        self.python_path = python_path
         self.modules = []
         self.__load_modules ()
 
     def __load_module (self, module):
         """Load a python module named @module."""
         dprint ("Loading module: %s" % module)
-        cmd = "sys.path.append ('%s'); import %s" % (self.python_path, module)
+        cmd = "from sources import %s" % module
         try:
             exec (cmd)
         except:
@@ -65,6 +64,8 @@ class ModuleLoader:
                 continue
             if file[-3:] != ".py":
                 continue
+            if file == "__init__.py":
+                continue
             self.__load_module (file[:-3])
 
     def __construct_object (self, module, constructor, arg):
@@ -72,10 +73,9 @@ class ModuleLoader:
         with @arg as an argument, in the module called @module.
         """
         dprint ("Constructing object from loaded module using %s.%s" % (module, constructor))
-        cmd = ("sys.path.append ('%s');\n"
-               "import %s\n"
+        cmd = ("from sources import %s\n"
                "if %s.__dict__.has_key ('%s'):"
-               "    ret = %s.%s (arg)") % (self.python_path, module, module, constructor, module, constructor)
+               "    ret = %s.%s (arg)") % (module, module, constructor, module, constructor)
         try:
             exec (cmd)
         except:
@@ -107,9 +107,7 @@ def get_module_loader ():
     """Return a singleton ModuleLoader object."""
     global module_loader
     if module_loader == None:
-        current_dir = os.path.dirname (__file__)
-        module_loader = ModuleLoader (os.path.join (current_dir, "sources"),
-                                      current_dir)
+        module_loader = ModuleLoader (os.path.join (os.path.dirname (__file__), "sources"))
     return module_loader
             
 class ProfileChange (gobject.GObject):

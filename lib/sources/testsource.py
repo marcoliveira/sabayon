@@ -19,7 +19,11 @@
 #
 
 import gobject
-import userprofile
+
+try:
+    import userprofile
+except:
+    from sabayon import userprofile
 
 class TestChange (userprofile.ProfileChange):
     def __init__ (self, source, key, value):

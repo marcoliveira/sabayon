@@ -19,15 +19,21 @@
 #
 
 import gobject
-import config
-import userprofile
 import exceptions, sys, os.path, ConfigParser, re, cPickle
 import tempfile, types
-import dirmonitor
-import util
-import filessource
 import traceback
 import errno
+
+try:
+    import util
+    import config
+    import userprofile
+    import dirmonitor
+except:
+    from sabayon import util
+    from sabayon import config
+    from sabayon import userprofile
+    from sabayon import dirmonitor
 
 class file_state:
     (UNKNOWN,

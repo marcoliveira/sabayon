@@ -2,7 +2,8 @@ PYTHON_FILES =				\
 	gconfsource.py			\
 	filessource.py			\
 	mozillasource.py		\
-	paneldelegate.py
+	paneldelegate.py		\
+	__init__.py
 
 NOINST_PYTHON_FILES =			\
 	testsource.py
