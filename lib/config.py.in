@@ -20,13 +20,19 @@
 import os
 import os.path
 
-VERSION     = "@PACKAGE_VERSION@"
-PKGDATADIR  = "@PKGDATADIR@"
-PROFILESDIR = "@SYSCONFDIR@/desktop-profiles"
+PACKAGE    = "@PACKAGE_NAME@"
+VERSION    = "@PACKAGE_VERSION@"
+DATADIR    = "@DATADIR@"
+SYSCONFDIR = "@SYSCONFDIR@"
+LIBEXECDIR = "@LIBEXECDIR@"
+SBINDIR    = "@SBINDIR@"
 
-SESSION_TOOL_ARGV = [ "@LIBEXECDIR@/sabayon-session" ]
-MONITOR_TOOL_ARGV = [ "@LIBEXECDIR@/sabayon-monitor" ]
-APPLY_TOOL_ARGV   = [ "@SBINDIR@/sabayon-apply" ]
+PKGDATADIR  = os.path.join (DATADIR, "sabayon")
+PROFILESDIR = os.path.join (SYSCONFDIR, "desktop-profiles")
+
+SESSION_TOOL_ARGV = [ os.path.join (LIBEXECDIR, "sabayon-session") ]
+MONITOR_TOOL_ARGV = [ os.path.join (LIBEXECDIR, "sabayon-monitor") ]
+APPLY_TOOL_ARGV   = [ os.path.join (SBINDIR,    "sabayon-apply") ]
 
 # FIXME: this is too big a hammer
 CLOBBER_USER_PROCESSES_ARGV = [ "/usr/bin/pkill", "-u" ]
@@ -47,7 +53,7 @@ DEFAULT_SHELL = "/bin/bash"
 NOLOGIN_SHELL = "/sbin/nologin"
 SKEL_HOMEDIR  = "/etc/skel"
 
-XNEST_ARGV   = [ "/usr/X11R6/bin/Xnest", "-terminate", "-audit", "0", "-name", "All Your Settings Are Belong To Us", "-nolisten", "tcp" ]
+XNEST_ARGV   = [ "/usr/X11R6/bin/Xnest", "-terminate", "-audit", "0", "-name", _("All Your Settings Are Belong To Us"), "-nolisten", "tcp" ]
 SESSION_ARGV = [ "/etc/X11/xdm/Xsession", "gnome" ]
 USERMOD_ARGV = [ "/usr/sbin/usermod" ]
 
@@ -93,25 +99,25 @@ DIRECTORIES_TO_IGNORE = [
 try:
     GLADEDIR = os.environ["GLADEDIR"]
 except:
-    if os.path.exists ("./sabayon.glade"):
+    if os.path.exists ("sabayon.glade"):
         GLADEDIR ="./"
     elif os.path.exists ("admin-tool/sabayon.glade"):
-        GLADEDIR = "admin-tool/"
-    elif os.path.exists (PKGDATADIR + "/glade/sabayon.glade"):
-        GLADEDIR = PKGDATADIR + "/glade/"
+        GLADEDIR = "admin-tool"
+    elif os.path.exists (os.path.join (PKGDATADIR, "glade/sabayon.glade")):
+        GLADEDIR = os.path.join (PKGDATADIR, "glade")
     else:
         GLADEDIR = "./"
 
 try:
     MODULEPATH = os.environ["MODULEPATH"]
 except:
-    if os.path.exists ("./sources"):
-        MODULEPATH = "./sources"
+    if os.path.exists ("sources"):
+        MODULEPATH = "sources"
     elif os.path.exists ("lib/sources"):
-        MODULEPATH = "./lib/sources/"
+        MODULEPATH = "lib/sources"
     elif os.path.exists ("../lib/sources"):
-        MODULEPATH = "../lib/sources/"
-    elif os.path.exists (PKGDATADIR + "/sources"):
-        MODULEPATH = PKGDATADIR + "/sources/"
+        MODULEPATH = "../lib/sources"
+    elif os.path.exists (os.path.join (PKGDATADIR, "sources")):
+        MODULEPATH = os.path.join (PKGDATADIR, "sources")
     else:
-        MODULEPATH = "./sources"
+        MODULEPATH = "sources"

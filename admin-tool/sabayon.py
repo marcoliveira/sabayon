@@ -22,15 +22,18 @@ if __name__ == '__main__':
     import os
     import sys
     import gtk
+    import util
+
+    util.init_gettext ()
 
     if os.geteuid () != 0:
         errordialog = gtk.MessageDialog (None,
                                          gtk.DIALOG_DESTROY_WITH_PARENT,
                                          gtk.MESSAGE_ERROR,
                                          gtk.BUTTONS_CLOSE,
-                                         "Your account does not have permissions to run %s" % "sabayon")
-        errordialog.format_secondary_text ("Administrator level permissions are needed to run "
-                                           "this program because it can modify system files.")
+                                         _("Your account does not have permissions to run %s") % "sabayon")
+        errordialog.format_secondary_text (_("Administrator level permissions are needed to run "
+                                             "this program because it can modify system files."))
         errordialog.run ()
         errordialog.destroy ()
         sys.exit (1)

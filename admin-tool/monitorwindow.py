@@ -72,7 +72,7 @@ class ProfileMonitorWindow:
         self.profile_file = profile_file
         self.profile = userprofile.UserProfile (profile_file)
         
-        glade_file = GLADEDIR + '/' + "sabayon.glade"
+        glade_file = os.path.join (GLADEDIR, "sabayon.glade")
         self.xml = gtk.glade.XML (glade_file, "monitor_window")
 
         self.window = self.xml.get_widget ("monitor_window")
@@ -139,7 +139,7 @@ class ProfileMonitorWindow:
         self.about.set_version        (VERSION)
         self.about.set_copyright      ("(C) 2005 Red Hat, Inc.")
         self.about.set_website        ("http://www.gnome.org/projects/sabayon")
-        self.about.set_comments       ("Program to establish and edit profiles for users")
+        self.about.set_comments       (_("Program to establish and edit profiles for users"))
         self.about.set_authors        (authors)
         self.about.set_logo_icon_name ("sabayon")
 
@@ -183,19 +183,19 @@ class ProfileMonitorWindow:
 
         toggle = gtk.CellRendererToggle ()
         toggle.connect ("toggled", self.__on_ignore_toggled)
-        c = gtk.TreeViewColumn ("Ignore",
+        c = gtk.TreeViewColumn (_("Ignore"),
                                 toggle,
                                 active = ProfileChangesModel.COLUMN_IGNORE)
         self.treeview.append_column (c)
                                 
         toggle = gtk.CellRendererToggle ()
         toggle.connect ("toggled", self.__on_mandatory_toggled)
-        c = gtk.TreeViewColumn ("Mandatory",
+        c = gtk.TreeViewColumn (_("Mandatory"),
                                 toggle,
                                 active = ProfileChangesModel.COLUMN_MANDATORY)
         self.treeview.append_column (c)
         
-        c = gtk.TreeViewColumn ("Description",
+        c = gtk.TreeViewColumn (_("Description"),
                                 gtk.CellRendererText (),
                                 text = ProfileChangesModel.COLUMN_DESCRIPTION)
         self.treeview.append_column (c)

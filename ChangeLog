@@ -1,3 +1,32 @@
+2005-02-28  Mark McLoughlin  <markmc@redhat.com>
+
+	i18nize the python code and construct paths
+	with os.path.join()
+
+	* lib/util.py:
+	(init_gettext): add function to call gettext.install()
+	
+	* admin-tool/sabayon-apply.py,
+	  admin-tool/sabayon-monitor.py,
+	  admin-tool/sabayon-session.py,
+	  admin-tool/sabayon.py: call util.init_gettext()
+	
+	* lib/Makefile.am: subst some more variables into
+	config.py.
+	
+	* lib/config.py.in: add PACKAGE and use os.path.join()
+	
+	* admin-tool/monitorwindow.py,
+	  admin-tool/profilesdialog.py,
+	  lib/dirmonitor.py,
+	  lib/protosession.py,
+	  lib/sources/filessource.py,
+	  lib/sources/gconfsource.py,
+	  lib/sources/mozillasource.py,
+	  lib/sources/paneldelegate.py,
+	  lib/storage.py,
+	  lib/unittests.py: i18nize and use os.path.join()
+
 2005-02-28  Alexander Shopov  <ash@contact.bg>
 
 	* configure.in: Added "bg" (Bulgarian) to ALL_LINGUAS

@@ -69,23 +69,23 @@ class GConfChange (userprofile.ProfileChange):
     def get_short_description (self):
         """Return a short description of the GConf key change."""
         if not self.value:
-            return "GConf key '%s' unset" % self.key
+            return _("GConf key '%s' unset") % self.key
         elif self.value.type == gconf.VALUE_STRING:
-            return "GConf key '%s' set to string '%s'"  % (self.key, self.value.to_string ())
+            return _("GConf key '%s' set to string '%s'")  % (self.key, self.value.to_string ())
         elif self.value.type == gconf.VALUE_INT:
-            return "GConf key '%s' set to integer '%s'" % (self.key, self.value.to_string ())
+            return _("GConf key '%s' set to integer '%s'") % (self.key, self.value.to_string ())
         elif self.value.type == gconf.VALUE_FLOAT:
-            return "GConf key '%s' set to float '%s'"   % (self.key, self.value.to_string ())
+            return _("GConf key '%s' set to float '%s'")   % (self.key, self.value.to_string ())
         elif self.value.type == gconf.VALUE_BOOL:
-            return "GConf key '%s' set to boolean '%s'" % (self.key, self.value.to_string ())
+            return _("GConf key '%s' set to boolean '%s'") % (self.key, self.value.to_string ())
         elif self.value.type == gconf.VALUE_SCHEMA:
-            return "GConf key '%s' set to schema '%s'"  % (self.key, self.value.to_string ())
+            return _("GConf key '%s' set to schema '%s'")  % (self.key, self.value.to_string ())
         elif self.value.type == gconf.VALUE_LIST:
-            return "GConf key '%s' set to list '%s'"    % (self.key, self.value.to_string ())
+            return _("GConf key '%s' set to list '%s'")    % (self.key, self.value.to_string ())
         elif self.value.type == gconf.VALUE_PAIR:
-            return "GConf key '%s' set to pair '%s'"    % (self.key, self.value.to_string ())
+            return _("GConf key '%s' set to pair '%s'")    % (self.key, self.value.to_string ())
         else:
-            return "GConf key '%s' set to '%s'"         % (self.key, self.value.to_string ())
+            return _("GConf key '%s' set to '%s'")         % (self.key, self.value.to_string ())
 
 gobject.type_register (GConfChange)
 
@@ -97,7 +97,7 @@ class GConfSource (userprofile.ProfileSource):
 
         @storage: storage object
         """
-        userprofile.ProfileSource.__init__ (self, "GConf", "get_gconf_delegate")
+        userprofile.ProfileSource.__init__ (self, _("GConf"), "get_gconf_delegate")
 
         self.storage          = storage
         self.home_dir         = util.get_home_dir ()
@@ -249,8 +249,8 @@ def run_unit_tests ():
 
     # Remove any stale path files
     try:
-        os.remove (util.get_home_dir () + "/.gconf.path.defaults")
-        os.remove (util.get_home_dir () + "/.gconf.path.mandatory")
+        os.remove (os.path.join (util.get_home_dir (), ".gconf.path.defaults"))
+        os.remove (os.path.join (util.get_home_dir (), ".gconf.path.mandatory"))
     except:
         pass
 
@@ -310,8 +310,8 @@ def run_unit_tests ():
     source.sync_changes ()
     source.apply ()
 
-    assert os.access (util.get_home_dir () + "/.gconf.path.defaults", os.F_OK)
-    assert os.access (util.get_home_dir () + "/.gconf.path.mandatory", os.F_OK)
+    assert os.access (os.path.join (util.get_home_dir (), ".gconf.path.defaults"), os.F_OK)
+    assert os.access (os.path.join (util.get_home_dir (), ".gconf.path.mandatory"), os.F_OK)
 
     # We need to clear the cache because GConfClient doesn't know
     # some new sources have been added to the sources stack so it
@@ -337,7 +337,7 @@ def run_unit_tests ():
     os.system ("gconftool-2 --shutdown")
     time.sleep (1)
 
-    os.remove (util.get_home_dir () + "/.gconf.path.defaults")
-    os.remove (util.get_home_dir () + "/.gconf.path.mandatory")
+    os.remove (os.path.join (util.get_home_dir (), ".gconf.path.defaults"))
+    os.remove (os.path.join (util.get_home_dir (), ".gconf.path.mandatory"))
 
     storage.running_unit_tests = False

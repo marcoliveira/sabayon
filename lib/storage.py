@@ -137,7 +137,7 @@ class ProfileStorage:
         try:
             self.zip = zipfile.ZipFile (self.path, "r")
         except:
-            raise ProfileStorageException ("Failed to read file '%s': %s" %
+            raise ProfileStorageException (_("Failed to read file '%s': %s") %
                                            (self.path, sys.exc_info()[1]))
 
         try:
@@ -147,13 +147,13 @@ class ProfileStorage:
                                       None,
                                       libxml2.XML_PARSE_NOBLANKS)
         except:
-            raise ProfileStorageException ("Failed to read metadata from '%s': %s" %
+            raise ProfileStorageException (_("Failed to read metadata from '%s': %s") %
                                            (self.path, sys.exc_info()[1]))
         
         root = doc.getRootElement ()
         if not root or root.name != "metadata":
             doc.freeDoc ()
-            raise ProfileStorageException ("Invalid metadata section in '%s': %s" %
+            raise ProfileStorageException (_("Invalid metadata section in '%s': %s") %
                                            (self.path, sys.exc_info()[1]))
             
         self.metadata = doc
@@ -450,7 +450,7 @@ class ProfileStorage:
         dst_path = os.path.join (self.temp_path, path)
 
         if not os.path.exists (src_path):
-            raise ProfileStorageException ("Cannot add non-existant file '%s'")
+            raise ProfileStorageException (_("Cannot add non-existant file '%s'"))
         
         if not self.unsaved_revision:
             self.unsaved_revision = self.__create_new_profile_revision ()
@@ -530,11 +530,11 @@ class ProfileStorage:
         if not revision:
             profile_revision = self.__get_current_profile_revision ()
             if not profile_revision:
-                raise ProfileStorageException ("No current revision")
+                raise ProfileStorageException (_("No current revision"))
             
             item = self.__get_profile_revision_item (profile_revision, path)
             if not item:
-                raise ProfileStorageException ("'%s' does not exist in profile revision '%s'" %
+                raise ProfileStorageException (_("'%s' does not exist in profile revision '%s'") %
                                                (path, profile_revision))
 
             item_type     = item.prop ("type")
@@ -545,7 +545,7 @@ class ProfileStorage:
             if item_type == "profile":
                 item = self.__get_profile_revision_item (item_revision, path)
                 if not item:
-                    raise ProfileStorageException ("'%s' does not exist in profile revision '%s'" %
+                    raise ProfileStorageException (_("'%s' does not exist in profile revision '%s'") %
                                                    (path, item_revision))
 
                 item_type     = item.prop ("type")
@@ -616,7 +616,7 @@ class ProfileStorage:
             profile_revision = self.__get_current_profile_revision ()
         else:
             if not profile_revision.startswith ("profile:"):
-                raise ProfileStorageException ("Not a valid profile revision")
+                raise ProfileStorageException (_("Not a valid profile revision"))
             profile_revision = profile_revision[len ("profile:"):]
         
         if not profile_revision:

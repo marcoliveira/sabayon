@@ -19,6 +19,7 @@
 #
 
 import os
+import os.path
 import errno
 import shutil
 import tempfile
@@ -35,7 +36,7 @@ def dprint (fmt, *args):
     util.debug_print (util.DEBUG_ADMINTOOL, fmt % args)
 
 def _get_profile_path_for_name (profile_name):
-    return PROFILESDIR + "/" + profile_name + ".zip"
+    return os.path.join (PROFILESDIR, profile_name + ".zip")
 
 class ProfilesModel (gtk.ListStore):
     (
@@ -66,7 +67,7 @@ class NewProfileDialog:
     def __init__ (self, profiles_model):
         self.profiles_model = profiles_model
         
-        glade_file = GLADEDIR + '/' + "sabayon.glade"
+        glade_file = os.path.join (GLADEDIR, "sabayon.glade")
         self.xml = gtk.glade.XML (glade_file, "new_profile_dialog")
         
         self.dialog = self.xml.get_widget ("new_profile_dialog")
@@ -117,7 +118,7 @@ class ProfilesDialog:
     def __init__ (self):
         assert os.geteuid () == 0
         
-        glade_file = GLADEDIR + '/' + "sabayon.glade"
+        glade_file = os.path.join (GLADEDIR, "sabayon.glade")
         self.xml = gtk.glade.XML (glade_file, "profiles_dialog")
 
         self.dialog = self.xml.get_widget ("profiles_dialog")
@@ -169,7 +170,7 @@ class ProfilesDialog:
         self.profiles_list.get_selection ().set_mode (gtk.SELECTION_SINGLE)
         self.profiles_list.get_selection ().connect ("changed", self.__profile_selection_changed)
 
-        c = gtk.TreeViewColumn ("Name",
+        c = gtk.TreeViewColumn (_("Name"),
                                 gtk.CellRendererText (),
                                 text = ProfilesModel.COLUMN_NAME)
         self.profiles_list.append_column (c)
@@ -201,8 +202,10 @@ class ProfilesDialog:
                                              gtk.DIALOG_DESTROY_WITH_PARENT,
                                              gtk.MESSAGE_ERROR,
                                              gtk.BUTTONS_CLOSE,
-                                             "User account '%s' was not found" % username)
-            errordialog.format_secondary_text ("Sabayon requires a special user account '%s' to be present on this computer. Try again after creating the account (using, for example, the 'adduser' command)" % (username))
+                                             _("User account '%s' was not found") % username)
+            errordialog.format_secondary_text (_("Sabayon requires a special user account '%s' to be present "
+                                                 "on this computer. Try again after creating the account (using, "
+                                                 "for example, the 'adduser' command)") % username)
                                                
             errordialog.run ()
             errordialog.destroy ()

@@ -44,37 +44,37 @@ class PanelAddedChange (PanelChange):
     def __init__ (self, source, delegate, id):
         PanelChange.__init__ (self, source, delegate, id)
     def get_short_description (self):
-        return "Panel '%s' added" % self.id
+        return _("Panel '%s' added") % self.id
     
 class PanelRemovedChange (PanelChange):
     def __init__ (self, source, delegate, id):
         PanelChange.__init__ (self, source, delegate, id)
     def get_short_description (self):
-        return "Panel '%s' removed" % self.id
+        return _("Panel '%s' removed") % self.id
 
 class PanelAppletAddedChange (PanelChange):
     def __init__ (self, source, delegate, id):
         PanelChange.__init__ (self, source, delegate, id)
     def get_short_description (self):
-        return "Panel applet '%s' added" % self.id
+        return _("Panel applet '%s' added") % self.id
 
 class PanelAppletRemovedChange (PanelChange):
     def __init__ (self, source, delegate, id):
         PanelChange.__init__ (self, source, delegate, id)
     def get_short_description (self):
-        return "Panel applet '%s' removed" % self.id
+        return _("Panel applet '%s' removed") % self.id
 
 class PanelObjectAddedChange (PanelChange):
     def __init__ (self, source, delegate, id):
         PanelChange.__init__ (self, source, delegate, id)
     def get_short_description (self):
-        return "Panel object '%s' added" % self.id
+        return _("Panel object '%s' added") % self.id
     
 class PanelObjectRemovedChange (PanelChange):
     def __init__ (self, source, delegate, id):
         PanelChange.__init__ (self, source, delegate, id)
     def get_short_description (self):
-        return "Panel object '%s' removed" % self.id
+        return _("Panel object '%s' removed") % self.id
 
 class PanelDelegate (userprofile.SourceDelegate):
     class PanelThing:
@@ -109,7 +109,7 @@ class PanelDelegate (userprofile.SourceDelegate):
             # self.object_type = self.client.get_string (PANEL_KEY_BASE + "/objects/" + object_id + "/object_type")
 
     def __init__ (self, source):
-        userprofile.SourceDelegate.__init__ (self, "Panel", source, PANEL_KEY_BASE)
+        userprofile.SourceDelegate.__init__ (self, _("Panel"), source, PANEL_KEY_BASE)
         self.client = gconf.client_get_default ()
 
         self.toplevels = {}
@@ -347,13 +347,15 @@ def run_unit_tests ():
         def get_committing_client_and_address (self, mandatory):
             if not mandatory:
                 if not self.defaults_client:
-                    (client, address) = gconfsource.get_client_and_address_for_path (self.temp_path + "/.gconf.xml.defaults")
+                    (client, address) = gconfsource.get_client_and_address_for_path (
+                        os.path.join (self.temp_path, ".gconf.xml.defaults"))
                     self.defaults_client = client
                     self.defaults_address = address
                 return (self.defaults_client, self.defaults_address)
             else:
                 if not self.mandatory_client:
-                    (client, address) = gconfsource.get_client_and_address_for_path (self.temp_path + "/.gconf.xml.mandatory")
+                    (client, address) = gconfsource.get_client_and_address_for_path (
+                        os.path.join (self.temp_path, ".gconf.xml.mandatory"))
                     self.mandatory_client = client
                     self.mandatory_address = address
                 return (self.mandatory_client, self.mandatory_address)
@@ -457,8 +459,8 @@ def run_unit_tests ():
     os.system ("gconftool-2 --shutdown")
     time.sleep (1)
 
-    assert os.access (temp_path + "/.gconf.xml.defaults/apps/panel/general/%gconf.xml", os.F_OK)
-    assert os.access (temp_path + "/.gconf.xml.defaults/apps/panel/toplevels/foo/%gconf.xml", os.F_OK)
+    assert os.access (os.path.join (temp_path, ".gconf.xml.defaults/apps/panel/general/%gconf.xml"), os.F_OK)
+    assert os.access (os.path.join (temp_path, ".gconf.xml.defaults/apps/panel/toplevels/foo/%gconf.xml"), os.F_OK)
 
     changes = []
 
@@ -513,7 +515,7 @@ def run_unit_tests ():
     os.system ("gconftool-2 --shutdown")
     time.sleep (1)
     
-    assert not os.access (temp_path + "/.gconf.xml.defaults/apps/panel/toplevels/foo/%gconf.xml", os.F_OK)
+    assert not os.access (os.path.join (temp_path, ".gconf.xml.defaults/apps/panel/toplevels/foo/%gconf.xml"), os.F_OK)
 
     # Bye, bye cruft
     os.system ("gconftool-2 --recursive-unset %s/toplevels/foo" % PANEL_KEY_BASE)

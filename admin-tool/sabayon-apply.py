@@ -20,6 +20,9 @@
 
 if __name__ == '__main__':
     import sys
+    import util
+
+    util.init_gettext ()
 
     def lookup_users_profile ():
         # FIXME: implement
@@ -31,10 +34,9 @@ if __name__ == '__main__':
     elif len (sys.argv) == 2:
         profile_file = sys.argv[1]
     else:
-        sys.stderr.write ("Usage: %s [<profile-file>]\n" % sys.argv[0])
+        sys.stderr.write (_("Usage: %s [<profile-file>]\n") % sys.argv[0])
         sys.exit (1)
 
-    import util
     import userprofile
     
     def dprint (fmt, *args):

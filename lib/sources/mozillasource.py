@@ -51,11 +51,11 @@ class MozillaChange (userprofile.ProfileChange):
 
     def get_short_description (self):
         if self.event == CREATED:
-            return "Mozilla key '%s' set to '%s'" % (self.key, self.value)
+            return _("Mozilla key '%s' set to '%s'") % (self.key, self.value)
         elif self.event == DELETED:
-            return "Mozilla key '%s' unset" % self.key
+            return _("Mozilla key '%s' unset") % self.key
         else:
-            return "Mozilla key '%s' changed to '%s'" % (self.key, self.value)
+            return _("Mozilla key '%s' changed to '%s'") % (self.key, self.value)
 
 gobject.type_register (MozillaChange)
 
@@ -157,7 +157,7 @@ class FileNotFoundError(Exception):
     def __init__(self, filename):
         self.filename = filename
     def __str__(self):
-        return "File Not Found (%s)" % self.filename
+        return _("File Not Found (%s)") % self.filename
     
 class BadIniFileError(Exception):
     def __init__(self, problem):
@@ -367,14 +367,14 @@ class UserProfile:
                     default = None
                 
                 if name in self.profiles:
-                    raise BadIniFileError("duplicate name (%s) in section %s" % (name, section))
+                    raise BadIniFileError(_("duplicate name (%s) in section %s") % (name, section))
                 profile = {}
                 self.profiles[name] = profile
                 profile["section"] = section
                 profile["path"] = path
                 if default:
                     if self.default:
-                        raise BadIniFileError("redundant default in section %s" % section)
+                        raise BadIniFileError(_("redundant default in section %s") % section)
                     self.default = name
 
                 lastmatch_name = name
@@ -389,13 +389,13 @@ class UserProfile:
         
     def get_default_path(self):
         if not self.default:
-            raise BadIniFileError("no default profile")
+            raise BadIniFileError(_("no default profile"))
         path = self.profiles[self.default]["path"]
         fullpath = "%s/%s" % (os.path.dirname(self.ini_file_path), path)
         if not os.path.exists(fullpath):
-            raise BadIniFileError("default path (%s) does not exist" % fullpath)
+            raise BadIniFileError(_("default path (%s) does not exist") % fullpath)
         if not os.path.isdir(fullpath):
-            raise BadIniFileError("default path (%s) is not a directory" % fullpath)
+            raise BadIniFileError(_("default path (%s) is not a directory") % fullpath)
         return fullpath
 
 
@@ -491,7 +491,7 @@ def run_unit_tests ():
     try:
         profile_ini_file = GetProfileIniFile()
     except FileNotFoundError, e:
-        print "No such profile ini file: %s" % e.filename
+        print _("No such profile ini file: %s") % e.filename
         return
 
     dprint("ini file = %s" % profile_ini_file)

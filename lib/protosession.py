@@ -85,7 +85,7 @@ class ProtoSession (gobject.GObject):
         try:
             pw = pwd.getpwnam (self.username)
         except KeyError:
-            raise SessionStartError, "User '%s' does not exist" % self.username
+            raise SessionStartError, _("User '%s' does not exist") % self.username
 
         self.user_pw = pw
         
@@ -213,7 +213,7 @@ class ProtoSession (gobject.GObject):
     def __get_xauth_record (self):
         (status, output) = commands.getstatusoutput ("xauth -in list $DISPLAY")
         if status != 0:
-            raise XauthParseError, "'xauth list' returned error"
+            raise XauthParseError, _("'xauth list' returned error")
 
         for line in output.split ("\n"):
             fields = line.split ("  ")
@@ -232,7 +232,7 @@ class ProtoSession (gobject.GObject):
             
             return (fields[0], fields[1], binascii.unhexlify (fields[2]))
         
-        raise XauthParseError, "'xauth list' returned no records or records in unknown format"
+        raise XauthParseError, _("'xauth list' returned no records or records in unknown format")
 
     # Write out a temporary Xauthority file which contains the same magic
     # cookie as the parent display so that we can pass that using -auth
@@ -311,7 +311,7 @@ class ProtoSession (gobject.GObject):
     def __start_xnest (self):
         self.display_number = self.__find_free_display ()
         if self.display_number == -1:
-            raise SessionStartError, "Unable to find a free X display"
+            raise SessionStartError, _("Unable to find a free X display")
 
         self.display_name = ":%d" % self.display_number
 
@@ -371,9 +371,9 @@ class ProtoSession (gobject.GObject):
             if self.xnest_pid:
                 safe_kill (self.xnest_pid, signal.SIGTERM)
                 self.xnest_pid = 0
-                raise SessionStartError, "Failed to start Xnest: timed out waiting for USR1 signal"
+                raise SessionStartError, _("Failed to start Xnest: timed out waiting for USR1 signal")
             else:
-                raise SessionStartError, "Failed to start Xnest: died during startup"
+                raise SessionStartError, _("Failed to start Xnest: died during startup")
 
     def __session_child_watch_handler (self, pid, status):
         dprint ("Session died")

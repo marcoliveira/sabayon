@@ -46,17 +46,17 @@ class FilesChange (userprofile.ProfileChange):
 
     def get_short_description (self):
         if self.event == dirmonitor.CREATED:
-            return "File '%s' created" % self.rel_path
+            return _("File '%s' created") % self.rel_path
         elif self.event == dirmonitor.DELETED:
-            return "File '%s' deleted" % self.rel_path
+            return _("File '%s' deleted") % self.rel_path
         elif self.event == dirmonitor.CHANGED:
-            return "File '%s' changed" % self.rel_path
+            return _("File '%s' changed") % self.rel_path
 
 gobject.type_register (FilesChange)
 
 class FilesSource (userprofile.ProfileSource):
     def __init__ (self, storage):
-        userprofile.ProfileSource.__init__ (self, "Files")
+        userprofile.ProfileSource.__init__ (self, _("Files"))
         self.storage = storage
         self.home_dir = util.get_home_dir ()
         self.monitor = dirmonitor.DirectoryMonitor (self.home_dir,
@@ -171,7 +171,7 @@ def run_unit_tests ():
     source = get_source (storage.ProfileStorage ("FileTest"))
     source.apply ()
     
-    assert os.access (temp_path + "/foobar/foo/bar/foo/bar" + "/foo", os.F_OK)
+    assert os.access (os.path.join (temp_path, "foobar/foo/bar/foo/bar/foo"), os.F_OK)
     
     shutil.rmtree (temp_path, True)
 

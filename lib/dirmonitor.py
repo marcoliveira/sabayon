@@ -91,7 +91,7 @@ class DirectoryMonitor:
     def __handle_gamin_event (self, path, event, monitor_file):
         if event == CHANGED or event == DELETED or event == CREATED:
             if not os.path.isabs (path):
-		path = monitor_file + '/' + path
+		path = os.path.join (monitor_file, path)
 
             dprint ("Got gamin event '%s' on '%s'" % (event_to_string (event), path))
 
@@ -110,14 +110,14 @@ class DirectoryMonitor:
 
     def __should_ignore_dir (self, dir):
         for ignore_dir in self.dirs_to_ignore:
-            if dir == self.directory + "/" + ignore_dir:
+            if dir == os.path.join (self.directory, ignore_dir):
                 dprint ("Ignoring directory '%s'" % (dir))
                 return True
         return False
     
     def __should_ignore_file (self, file):
         for ignore_file in self.files_to_ignore:
-            if file == self.directory + "/" + ignore_file:
+            if file == os.path.join (self.directory, ignore_file):
                 dprint ("Ignoring file '%s'" % (file))
                 return True
         return False
@@ -135,7 +135,7 @@ class DirectoryMonitor:
         try:
             self.mon.watch_directory (dir, self.__handle_gamin_event, dir)
         except:
-            print "Failed to add monitor for %s" % (dir)
+            print _("Failed to add monitor for %s") % (dir)
 	    util.print_exception ()
 
     def __monitor_dir_recurse (self, dir, new_dir = False):
@@ -144,7 +144,7 @@ class DirectoryMonitor:
         if dir != self.directory:
             self.__monitor_dir (dir)
         for entry in os.listdir (dir):
-            path = dir + "/" + entry
+            path = os.path.join (dir, entry)
             if self.__should_ignore_dir (path) or \
                self.__should_ignore_file (path):
                 continue
@@ -215,7 +215,7 @@ def run_unit_tests ():
     expected = []
     def should_not_be_reached (expected):
         for (path, event) in expected:
-            print "Expected event: %s %s" % (path, event_to_string (event))
+            print _("Expected event: %s %s") % (path, event_to_string (event))
         assert False
         return True
     timeout = gobject.timeout_add (5 * 1000, should_not_be_reached, expected)
@@ -225,38 +225,38 @@ def run_unit_tests ():
     monitor.set_files_to_ignore (["foobar/foo/foo.txt"])
     monitor.start ()
 
-    expect (expected, temp_path + "/foo.txt", CREATED)
-    f = file (temp_path + "/foo.txt", "w")
+    expect (expected, os.path.join (temp_path, "foo.txt"), CREATED)
+    f = file (os.path.join (temp_path, "foo.txt"), "w")
     f.close ()
 
     # ignored
-    # expect (expected, temp_path + "/bar", CREATED)
-    os.mkdir (temp_path + "/bar")
+    # expect (expected, os.path.join (temp_path, "bar"), CREATED)
+    os.mkdir (os.path.join (temp_path, "bar"))
 
-    expect (expected, temp_path + "/foobar", CREATED)
-    expect (expected, temp_path + "/foobar/foo", CREATED)
-    expect (expected, temp_path + "/foobar/foo/bar", CREATED)
-    expect (expected, temp_path + "/foobar/foo/bar/foo", CREATED)
-    expect (expected, temp_path + "/foobar/foo/bar/foo/bar", CREATED)
-    os.makedirs (temp_path + "/foobar/foo/bar/foo/bar")
+    expect (expected, os.path.join (temp_path, "foobar"), CREATED)
+    expect (expected, os.path.join (temp_path, "foobar/foo"), CREATED)
+    expect (expected, os.path.join (temp_path, "foobar/foo/bar"), CREATED)
+    expect (expected, os.path.join (temp_path, "foobar/foo/bar/foo"), CREATED)
+    expect (expected, os.path.join (temp_path, "foobar/foo/bar/foo/bar"), CREATED)
+    os.makedirs (os.path.join (temp_path, "foobar/foo/bar/foo/bar"))
 
     # ignored:
-    # expect (expected, temp_path + "/foobar/foo/foo.txt", CREATED)
-    f = file (temp_path + "/foobar/foo/foo.txt", "w")
+    # expect (expected, os.path.join (temp_path, "foobar/foo/foo.txt"), CREATED)
+    f = file (os.path.join (temp_path, "foobar/foo/foo.txt"), "w")
     f.close ()
 
     main_loop.run ()
     
-    expect (expected, temp_path + "/foobar/foo/bar/foo/bar", DELETED)
-    expect (expected, temp_path + "/foobar/foo/bar/foo", DELETED)
-    expect (expected, temp_path + "/foobar/foo/bar", DELETED)
+    expect (expected, os.path.join (temp_path, "foobar/foo/bar/foo/bar"), DELETED)
+    expect (expected, os.path.join (temp_path, "foobar/foo/bar/foo"), DELETED)
+    expect (expected, os.path.join (temp_path, "foobar/foo/bar"), DELETED)
     # ignored:
-    # expect (expected, temp_path + "/foobar/foo/foo.txt", DELETED)
-    expect (expected, temp_path + "/foobar/foo", DELETED)
-    expect (expected, temp_path + "/foobar", DELETED)
-    expect (expected, temp_path + "/foo.txt", DELETED)
+    # expect (expected, os.path.join (temp_path, "foobar/foo/foo.txt"), DELETED)
+    expect (expected, os.path.join (temp_path, "foobar/foo"), DELETED)
+    expect (expected, os.path.join (temp_path, "foobar"), DELETED)
+    expect (expected, os.path.join (temp_path, "foo.txt"), DELETED)
     # ignore:
-    # expect (expected, temp_path + "/bar", DELETED)
+    # expect (expected, os.path.join (temp_path, "bar"), DELETED)
     expect (expected, temp_path, DELETED)
 
     shutil.rmtree (temp_path, True)
@@ -266,7 +266,3 @@ def run_unit_tests ():
     gobject.source_remove (timeout)
 
     monitor.stop ()
-
-if __name__ == '__main__':
-    run_unit_tests()
-

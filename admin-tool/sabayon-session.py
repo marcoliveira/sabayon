@@ -23,13 +23,16 @@ if __name__ == '__main__':
     import sys
     import gobject
     import protosession
+    import util
+
+    util.init_gettext ()
 
     if os.geteuid () != 0:
-        sys.stderr.write ("Your account does not have permissions to run sabayon-session.")
+        sys.stderr.write (_("Your account does not have permissions to run sabayon-session."))
         sys.exit (1)
 
     if len (sys.argv) != 3:
-        sys.stderr.write ("Usage: %s <username> <profile-file>\n" % sys.argv[0])
+        sys.stderr.write (_("Usage: %s <username> <profile-file>\n") % sys.argv[0])
         sys.exit (1)
                                             
     (username, profile_file) = sys.argv[1:3]

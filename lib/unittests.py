@@ -19,21 +19,24 @@
 #
 
 import sys
+import util
 
 if __name__ == "__main__":
+    util.init_gettext ()
+    
     def add_mod_dir ():
         sys.path.append ("sources")
     def remove_mod_dir ():
         sys.path.remove ("sources")
     
     unit_tests = [
-        ( "util",          None,              None,        None ),
-        ( "dirmonitor",    None,              None,        None ),
-        ( "filessource",   None,              add_mod_dir, remove_mod_dir ),
-        ( "gconfsource",   "Ignore WARNINGs", add_mod_dir, remove_mod_dir ),
-        ( "paneldelegate", "Ignore WARNINGs", add_mod_dir, remove_mod_dir ),
-        ( "userprofile",   None,              None,        None ),
-        ( "storage",       None,              None,        None )
+        ( "util",          None,                 None,        None ),
+        ( "dirmonitor",    None,                 None,        None ),
+        ( "filessource",   None,                 add_mod_dir, remove_mod_dir ),
+        ( "gconfsource",   _("Ignore WARNINGs"), add_mod_dir, remove_mod_dir ),
+        ( "paneldelegate", _("Ignore WARNINGs"), add_mod_dir, remove_mod_dir ),
+        ( "userprofile",   None,                 None,        None ),
+        ( "storage",       None,                 None,        None )
           ]
     
     if len (sys.argv) > 1:
@@ -51,13 +54,13 @@ if __name__ == "__main__":
         if not module in tests_to_run:
             continue
         if not msg:
-            print "Running %s tests" % module
+            print _("Running %s tests") % module
         else:
-            print "Running %s tests (%s)" % (module, msg)
+            print _("Running %s tests (%s)") % (module, msg)
         if pre_func:
             pre_func ()
         run_unit_tests (module)
         if post_func:
             post_func ()
 
-    print "Success!"
+    print _("Success!")

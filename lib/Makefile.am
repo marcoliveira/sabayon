@@ -35,7 +35,8 @@ config.py: config.py.in Makefile
                 -e s!\@BINDIR\@!$(bindir)!			\
                 -e s!\@SBINDIR\@!$(sbindir)!			\
                 -e s!\@LIBEXECDIR\@!$(libexecdir)!		\
-                -e s!\@PKGDATADIR\@!$(pkgdatadir)!		\
+                -e s!\@DATADIR\@!$(datadir)!			\
                 -e s!\@SYSCONFDIR\@!$(sysconfdir)!		\
+                -e s!\@PACKAGE_NAME\@!$(PACKAGE_NAME)!		\
                 -e s!\@PACKAGE_VERSION\@!$(PACKAGE_VERSION)!	\
                 < $< > $@

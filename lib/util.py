@@ -19,8 +19,11 @@
 #
 
 import os
+import os.path
 import sys
 import pwd
+import gettext
+from config import *
 
 (
     DEBUG_USERPROFILE,
@@ -99,7 +102,7 @@ def get_home_dir ():
     if os.environ.has_key ("HOME"):
         return os.environ["HOME"]
     else:
-        raise GeneralError ("Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment")
+        raise GeneralError (_("Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"))
 
 def get_user_name ():
     try:
@@ -112,12 +115,19 @@ def get_user_name ():
     if os.environ.has_key ("USER"):
         return os.environ["USER"]
     else:
-        raise GeneralError ("Cannot find username: not set in /etc/passwd and no value for $USER in environment")
+        raise GeneralError (_("Cannot find username: not set in /etc/passwd and no value for $USER in environment"))
 
 def print_exception ():
     import traceback
     import sys
     traceback.print_exc(file=sys.stderr)
+
+def init_gettext ():
+    """Binds _() to gettext.gettext() in the global namespace. Run
+    util.init_gettext() at the entry point to any script and you'll
+    be able to use _() to mark strings for translation.
+    """
+    gettext.install (PACKAGE, os.path.join (DATADIR, "locale"))
 
 def run_unit_tests ():
     home_dir = get_home_dir ()
