@@ -24,7 +24,7 @@
     </pre><h4>Environment</h4><p>Check the README file, to test sabayon you need a number of
 packages to be up to date. This is checked by the RPM upon installation.
 You also need a sabayon user defined like:</p><pre>sabayon:x:50140:99:Sabayon user:/var/sabayon:/sbin/nologin</pre><p>The RPM post install scripts uses the following command to
-create this specific user:</p><pre>/usr/sbin/useradd -c "Sabayon user" -d /var/sabayon -g nobody -s /sbin/nologin sabayon </pre><p>You may need to do this by hand or in you package to have a
+create this specific user:</p><tt>/usr/sbin/useradd -c "Sabayon user" -d /var/sabayon -g nobody -s /sbin/nologin sabayon </tt><p>You may need to do this by hand or in you package to have a
 working installation of sabayon</p><h4>Testing</h4><p>
     Now that you have Sabayon installed try it by launching sabayon
 as root and create new profiles and edit them. Don't forget to save
