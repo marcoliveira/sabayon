@@ -43,4 +43,5 @@ config.py: config.py.in Makefile
                 -e s!\@PACKAGE_NAME\@!$(PACKAGE_NAME)!		\
                 -e s!\@PACKAGE_VERSION\@!$(PACKAGE_VERSION)!	\
 		-e s!\@XSESSION\@!$(XSESSION)!			\
+		-e s!\@PROTOTYPE_USER\@!$(PROTOTYPE_USER)!	\
                 < $< > $@

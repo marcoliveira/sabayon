@@ -39,7 +39,7 @@
       <h2 class="box_title">Download</h2>
       <h4 class="box_header">RPMs</h4>
       <ul>
-        <li>Mark provides <a href="http://people.redhat.com/markmc/sabayon/">RPMs for Rawhide</a></li>
+        <li>RPMs for Fedora Core 4 are available from <a href="http://download.fedora.redhat.com/pub/fedora/linux/extras/">Fedora Extras</a></li>
       </ul>
       <h4 class="box_header">Source</h4>
       <ul>

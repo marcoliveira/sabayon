@@ -60,6 +60,17 @@ AC_SUBST(XINITRC_SYSCONFDIR)
 AM_CONDITIONAL(INSTALL_XINITRC_SCRIPT, test "x$install_xinitrc_script" = "xyes")
 
 
+AC_ARG_WITH(prototype-user,
+            AC_HELP_STRING([--with-prototype-user=USERNAME],
+                           [The username of the prototype user (defaults to "sabayon")]))
+
+if test "x$with_prototype_user" != "x"; then
+  PROTOTYPE_USER="$with_prototype_user"
+else
+  PROTOTYPE_USER="sabayon"
+fi
+AC_SUBST(PROTOTYPE_USER)
+
 AC_ARG_ENABLE(console-helper,
   [  --enable-console-helper=[auto/no/yes]  Enable PAM console helper [default=auto]],,
   enable_console_helper=auto)

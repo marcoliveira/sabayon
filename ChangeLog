@@ -1,3 +1,17 @@
+2005-03-24  Mark McLoughlin  <markmc@redhat.com>
+
+	* configure.ac: add --with-prototype-user=<username>,
+	defaults to "sabayon"
+	
+	* lib/Makefile.am, lib/config.py.in: set PROTOTYPE_USER
+	to whatever was passed to configure.
+	
+	* sabayon.spec.in: use --with-prototype-user.
+	
+	* doc/site.xsl: add link to Fedora Extras repository.
+	
+	* doc/*.html: rebuild.
+
 2005-03-23  John Dennis  <jdennis@redhat.com>
 
 	* lib/userprofile.py: add start_monitoring and stop_monitoring to

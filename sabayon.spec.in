@@ -51,7 +51,9 @@ sysadmin should use to manage Sabayon profiles.
 %setup -q
 
 %build
-%configure --enable-consolehelper=yes
+%configure					\
+	--enable-consolehelper=yes		\
+	 --with-prototype-user=%{name}-admin
 make %{?_smp_mflags}
 gzip -9 ChangeLog
 
@@ -171,6 +173,10 @@ fi
 %ghost %{python_sitelib}/%{name}/userswindow.pyo
 
 %changelog
+* Thu Mar 24 2005 Mark McLoughlin <markmc@redhat.com> - 0.17-1
+- Update to 0.17
+- Pass --with-prototype-user=sabayon-admin to configure
+
 * Mon Mar 21 2005 Mark McLoughlin <markmc@redhat.com> - 0.16-8
 - Add BuildRequires: usermode and pass --enable-consolehelper=yes
   to configure
