@@ -1,5 +1,14 @@
 2005-02-11  Mark McLoughlin  <markmc@redhat.com>
 
+	* lib/userprofile.py:
+	(UserProfile.apply): call apply() on all delegates
+	for each source too.
+	
+	* lib/sources/paneldelegate.py:
+	(PanelDelegate.apply): add - it doesn't need to do anything, though.
+
+2005-02-11  Mark McLoughlin  <markmc@redhat.com>
+
 	* lib/sources/gconfsource.py:
 	(recursive_unset): add - it turns out gconf_client_recursive_unset()
 	isn't wrapped either.

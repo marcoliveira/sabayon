@@ -302,6 +302,10 @@ class PanelDelegate (userprofile.SourceDelegate):
                                           "object_id_list",
                                           "objects")
 
+    def apply (self):
+        # Nothing to do here
+        pass
+
 def get_gconf_delegate (source):
     return PanelDelegate (source)
 

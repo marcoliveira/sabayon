@@ -287,6 +287,8 @@ class UserProfile (gobject.GObject):
         """Apply profile to the current user's environment."""
         for s in self.sources:
             s.apply ()
+            for delegate in s.delegates:
+                delegate.apply ()
 
 gobject.type_register (UserProfile)
 
