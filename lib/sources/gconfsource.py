@@ -31,6 +31,13 @@ import errno
 def associate_schema (config_source, key, schema_key):
     os.system ("gconftool-2 --config-source='%s' --apply-schema %s %s" % (config_source, schema_key, key))
 
+# No mapping for gconf_client_recursive_unset()
+def recursive_unset (client, dir):
+    for entry in client.all_entries (dir):
+        client.unset (entry.key)
+    for subdir in client.all_dirs (dir):
+        recursive_unset (client, subdir)
+
 def get_client_and_address_for_path (path):
     try:
         os.makedirs (path)

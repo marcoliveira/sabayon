@@ -18,7 +18,6 @@
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #
 
-import gobject
 import gconf
 import userprofile
 import gconfsource
@@ -260,8 +259,8 @@ class PanelDelegate (userprofile.SourceDelegate):
         id_list = self.__get_current_list (dict)
         if thing.id in id_list:
             id_list.remove (thing.id)
-            client.set_list ("apps/panel/general/" + id_list_name, gconf.VALUE_STRING, id_list)
-            client.recursive_unset (PANEL_KEY_BASE + "/" + dir_name + "/" + thing.id)
+            client.set_list (PANEL_KEY_BASE + "/general/" + id_list_name, gconf.VALUE_STRING, id_list)
+            gconfsource.recursive_unset (client, PANEL_KEY_BASE + "/" + dir_name + "/" + thing.id)
         
         del dict[change.id]
 
@@ -452,6 +451,12 @@ def run_unit_tests ():
     assert isinstance (changes[PANEL_OBJECT_ADDED], PanelObjectAddedChange)
 
     source.commit_change (changes[PANEL_ADDED], False)
+    
+    os.system ("gconftool-2 --shutdown")
+    time.sleep (1)
+
+    assert os.access (temp_path + "/.gconf.xml.defaults/apps/panel/general/%gconf.xml", os.F_OK)
+    assert os.access (temp_path + "/.gconf.xml.defaults/apps/panel/toplevels/foo/%gconf.xml", os.F_OK)
 
     changes = []
 
@@ -500,11 +505,13 @@ def run_unit_tests ():
     assert isinstance (changes[PANEL_APPLET_REMOVED], PanelAppletRemovedChange)
     assert isinstance (changes[PANEL_REMOVED], PanelRemovedChange)
 
-    # source.commit_change (changes[PANEL_ADDED], False)
+    source.commit_change (changes[PANEL_REMOVED], False)
 
     print temp_path
     os.system ("gconftool-2 --shutdown")
     time.sleep (1)
+    
+    assert not os.access (temp_path + "/.gconf.xml.defaults/apps/panel/toplevels/foo/%gconf.xml", os.F_OK)
 
     # Bye, bye cruft
     os.system ("gconftool-2 --recursive-unset %s/toplevels/foo" % PANEL_KEY_BASE)

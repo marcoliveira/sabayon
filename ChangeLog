@@ -1,5 +1,15 @@
 2005-02-11  Mark McLoughlin  <markmc@redhat.com>
 
+	* lib/sources/gconfsource.py:
+	(recursive_unset): add - it turns out gconf_client_recursive_unset()
+	isn't wrapped either.
+	
+	* lib/sources/paneldelegate.py:
+	(PanelDelegate.__commit_removed_changed): make it work.
+	(run_unit_tests): make sure committing is actually doing something.
+
+2005-02-11  Mark McLoughlin  <markmc@redhat.com>
+
 	* lib/config.py.in: add PANEL_KEY_BASE.
 	
 	* lib/sources/paneldelegate.py: use it, instead of hardcoding
