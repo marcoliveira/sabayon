@@ -1,5 +1,6 @@
 PYTHON_FILES =				\
 	sabayon.py			\
+	sabayon-apply.py		\
 	sabayon-monitor.py		\
 	sabayon-session.py		\
 	monitorwindow.py		\
@@ -34,15 +35,18 @@ icon_DATA  = $(ICON_FILES)
 
 wrappers = 			\
 	sabayon			\
+	sabayon-apply		\
 	sabayon-monitor		\
 	sabayon-session
 
 %: %.in
-	sed -e s!\@PKGDATADIR\@!$(pkgdatadir)! < $< > $@
-	sed -e s!\@SBINDIR\@!$(sbindir)! < $< > $@
+	sed                                             \
+		-e s!\@SBINDIR\@!$(sbindir)!            \
+		-e s!\@PKGDATADIR\@!$(pkgdatadir)!      \
+		< $< > $@
 	chmod a+x $@
 
-sbin_SCRIPTS = sabayon
+sbin_SCRIPTS = sabayon sabayon-apply
 libexec_SCRIPTS = sabayon-monitor sabayon-session
 
 pkgdata_PYTHON = $(PYTHON_FILES)

@@ -21,13 +21,30 @@
 if __name__ == '__main__':
     import sys
 
-    if len (sys.argv) != 2:
-        sys.stderr.write ("Usage: %s <profile-file>\n" % sys.argv[0])
+    def lookup_users_profile ():
+        # FIXME: implement
+        sys.stderr.write ("Not implemented\n")
+        raise NotImplementedError
+
+    if len (sys.argv) == 1:
+        profile_file = lookup_users_profile ()
+    elif len (sys.argv) == 2:
+        profile_file = sys.argv[1]
+    else:
+        sys.stderr.write ("Usage: %s [<profile-file>]\n" % sys.argv[0])
         sys.exit (1)
-                        
-    import monitorwindow
-    import gtk
 
-    monitorwindow.ProfileMonitorWindow (sys.argv[1])
+    import util
+    import userprofile
+    
+    def dprint (fmt, *args):
+        util.debug_print (util.DEBUG_ADMINTOOL, fmt % args)
 
-    gtk.main ()
+    dprint ("Applying profile '%s' for user '%s'" %
+            (profile_file, util.get_user_name ()))
+
+    profile = userprofile.UserProfile (profile_file)
+    profile.apply ()
+
+    dprint ("Finished applying profile '%s' for user '%s'" %
+            (profile_file, util.get_user_name ()))

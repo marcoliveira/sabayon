@@ -1,3 +1,22 @@
+2005-02-15  Mark McLoughlin  <markmc@redhat.com>
+
+	Applying seems to actually work now ...
+
+	* admin-tool/sabayon-apply.in,
+	  admin-tool/sabayon-apply.py: add tool which applies
+	a profile.
+	
+	* admin-tool/Makefile.am: add sabayon-apply.
+	
+	* lib/config.py.in: s/SESSION_TOOL_PATH/SESSION_TOOL_ARGV/
+	and add APPLY_TOOL_ARGV.
+	
+	* lib/protosession.py: run sabayon-apply instead of
+	trying to do it directly.
+	
+	* admin-tool/profilesdialog.py: use SESSION_TOOL_ARGV
+	instead of SESSION_TOOL_PATH.
+
 2005-02-14  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/config.py.in: add a list of env variables

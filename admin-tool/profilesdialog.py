@@ -31,7 +31,7 @@ import protosession
 import util
 from config import *
 
-def dprint(fmt, *args):
+def dprint (fmt, *args):
     util.debug_print (util.DEBUG_ADMINTOOL, fmt % args)
 
 def _get_profile_path_for_name (profile_name):
@@ -230,7 +230,7 @@ class ProfilesDialog:
 
             self.dialog.set_sensitive (False)
             
-            argv = [ SESSION_TOOL_PATH, "sabayon", user_path ]
+            argv = SESSION_TOOL_ARGV + [ "sabayon", user_path ]
             dprint ("Running session: %s" % argv)
             os.spawnv (os.P_WAIT, argv[0], argv)
             

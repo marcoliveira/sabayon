@@ -34,7 +34,7 @@ import util
 import userprofile
 from config import *
 
-def dprint(fmt, *args):
+def dprint (fmt, *args):
     util.debug_print (util.DEBUG_PROTOSESSION, fmt % args)
 
 class ProtoSessionError (Exception):
@@ -431,14 +431,13 @@ class ProtoSession (gobject.GObject):
         if self.session_pid == 0: # Child process
             new_environ = self.__prepare_to_run_as_user ()
 
-            dprint ("Applying profile %s" % (self.profile_file))
+            # Apply the profile
+            argv = APPLY_TOOL_ARGV + [ self.profile_file ]
+            dprint ("Running apply tool: %s" % argv)
+            os.spawnve (os.P_WAIT, argv[0], argv, new_environ)
 
-            # FIXME: need to run this as a separate process
-            profile = userprofile.UserProfile (self.profile_file)
-            profile.apply ()
-
+            # Start the session
             dprint ("Executing %s" % SESSION_ARGV)
-    
             os.execve (SESSION_ARGV[0], SESSION_ARGV, new_environ)
 
             # Shouldn't ever happen

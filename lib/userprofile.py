@@ -26,8 +26,8 @@ import storage
 import traceback
 import util
 
-def dprint(fmt, *args):
-    util.debug_print(util.DEBUG_USERPROFILE, fmt % args)
+def dprint (fmt, *args):
+    util.debug_print (util.DEBUG_USERPROFILE, fmt % args)
 
 class ModuleLoader:
     """Loads all python modules from a directory allows objects

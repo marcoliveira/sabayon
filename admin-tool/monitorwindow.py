@@ -24,7 +24,7 @@ import userprofile
 import util
 from config import *
 
-def dprint(fmt, *args):
+def dprint (fmt, *args):
     util.debug_print (util.DEBUG_ADMINTOOL, fmt % args)
 
 class ProfileChangesModel (gtk.ListStore):

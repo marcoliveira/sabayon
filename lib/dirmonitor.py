@@ -30,8 +30,8 @@ CHANGED = gamin.GAMChanged
 DELETED = gamin.GAMDeleted
 CREATED = gamin.GAMCreated
 
-def dprint(fmt, *args):
-    util.debug_print(util.DEBUG_DIRMONITOR, fmt % args)
+def dprint (fmt, *args):
+    util.debug_print (util.DEBUG_DIRMONITOR, fmt % args)
 
 def event_to_string (event):
     if event == CHANGED:

@@ -28,8 +28,8 @@ import dirmonitor
 import storage
 from config import *
 
-def dprint(fmt, *args):
-    util.debug_print(util.DEBUG_FILESSOURCE, fmt % args)
+def dprint (fmt, *args):
+    util.debug_print (util.DEBUG_FILESSOURCE, fmt % args)
 
 class FilesChange (userprofile.ProfileChange):
     def __init__ (self, source, filename, event):

@@ -24,8 +24,8 @@ import gconfsource
 import util
 from config import *
 
-def dprint(fmt, *args):
-    util.debug_print(util.DEBUG_PANELDELEGATE, fmt % args)
+def dprint (fmt, *args):
+    util.debug_print (util.DEBUG_PANELDELEGATE, fmt % args)
 
 class PanelChange (userprofile.ProfileChange):
     def __init__ (self, source, delegate, id):
