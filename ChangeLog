@@ -1,7 +1,11 @@
+Tue Feb  8 11:51:19 CET 2005 Daniel Veillard <veillard@redhat.com>
+
+	* lib/dirmonitor.py: ignore (End)Exists events since we scan
+	  the tree ourselves, works only with gamin >= 0.0.23
+
 2005-02-05  Seth Nickell  <seth@gnome.org>
 
 	* lib/sources/mozillasource.py:
-        
 	If there's only one profile, its the default even if it 
 	doesn't have the Default=1 flag. This makes mozillasource.py
 	work on stock (to Fedora at least) Firefox installs,

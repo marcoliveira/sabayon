@@ -121,6 +121,11 @@ class DirectoryMonitor:
 	    return
 
 	self.mon = gamin.WatchMonitor ()
+	# ignore (End)Exists events since we scan the tree ourselves
+	try:
+	    self.mon.no_exists ()
+	except:
+	    pass
 	self.fd = self.mon.get_fd ()
 	self.io_watch = gobject.io_add_watch (self.fd,
                                               gobject.IO_IN,
