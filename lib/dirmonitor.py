@@ -20,24 +20,11 @@
 
 import os
 import os.path
-try:
-    import gnomevfs
-except:
-    import gnome.vfs
-    import os.path
-    gnomevfs = gnome.vfs
-    def get_local_path_from_uri(s):
-        return s[7:]
-    gnomevfs.__dict__['get_local_path_from_uri'] = get_local_path_from_uri
-    def get_uri_from_local_path(s):
-        if s == None:
-	    return None
-	return "file://" + os.path.abspath(s)
-    gnomevfs.__dict__['get_uri_from_local_path'] = get_uri_from_local_path
-
-CHANGED = gnomevfs.MONITOR_EVENT_CHANGED
-DELETED = gnomevfs.MONITOR_EVENT_DELETED
-CREATED = gnomevfs.MONITOR_EVENT_CREATED
+import gobject
+import gamin
+CHANGED = gamin.GAMChanged
+DELETED = gamin.GAMDeleted
+CREATED = gamin.GAMCreated
 
 def event_to_string (event):
     if event == CHANGED:
@@ -54,31 +41,48 @@ class DirectoryMonitor:
         self.directory = directory
         self.callback = callback
         self.data = data
-        self.monitors = {}
 	self.nb_watches = 0
+	self.mon = None
+	self.fd = -1
+	self.watch = None
 
+    #
+    # call the user level processing
+    #
     def __invoke_callback (self, path, event):
         if self.data:
             self.callback (path, event, self.data)
         else:
             self.callback (path, event)
 
-    def __handle_file_event (self, monitor_uri, info_uri, event):
-        if event == gnomevfs.MONITOR_EVENT_STARTEXECUTING or \
-           event == gnomevfs.MONITOR_EVENT_STOPEXECUTING:
-            return
-
-        path = gnomevfs.get_local_path_from_uri (info_uri)
+    #
+    # Called from the main loop when we have data
+    #
+    def __pending_data(self, foo = None, bar = None):
+	try:
+	    ret = self.mon.handle_events()
+	except:
+	    import util
+	    util.print_exception()
+	return True
         
-        if event == CREATED and os.path.isdir (path):
-            self.__monitor_dir_recurse (path, True)
-        elif event == DELETED:
-            if path != self.directory and self.monitors.has_key (path):
-                gnomevfs.monitor_cancel (self.monitors[path])
-                del self.monitors[path]
+    #
+    # Processing of a gamin callback
+    #
+    def __handle_gamin_event (self, path, event, monitor_file):
+        if event == CHANGED or event == DELETED or event == CREATED:
+	    if path[0] != '/':
+		path = monitor_file + '/' + path
+	    print "got event %s, %s" % (path, event_to_string(event))
 
-        self.__invoke_callback (path, event)
-            
+	    if event == CREATED and os.path.isdir (path):
+		self.__monitor_dir_recurse (path, True)
+	    elif event == DELETED:
+		if path != self.directory and self.monitors.has_key (path):
+		    self.mon.stop_watch(path)
+
+	    self.__invoke_callback (path, event)
+
     def __monitor_dir (self, dir):
         if self.nb_watches == 200:
 	    print "Too many directories to watch on %s" % (self.directory)
@@ -86,17 +90,14 @@ class DirectoryMonitor:
 	if self.nb_watches > 200:
 	    return
 
-        assert not self.monitors.has_key (dir)
         try:
-            monitor = gnomevfs.monitor_add (gnomevfs.get_uri_from_local_path (dir),
-                                            gnomevfs.MONITOR_DIRECTORY,
-                                            self.__handle_file_event)
+            self.mon.watch_directory(dir, self.__handle_gamin_event, dir)
+	    print "monitoring %s" % (dir)
         except:
             print "Failed to add monitor for %s" % (dir)
 	    import util
 	    util.print_exception()
             return
-        self.monitors[dir] = monitor
 	self.nb_watches = self.nb_watches + 1
 
 
@@ -113,22 +114,33 @@ class DirectoryMonitor:
                 self.__monitor_dir_recurse (path, new_dir)
                     
     def start (self):
+        if self.mon != None:
+	    return
+
+	self.mon = gamin.WatchMonitor()
+	self.fd = self.mon.get_fd()
+	self.watch = gobject.io_add_watch (self.fd, gobject.IO_IN,
+	                                   self.__pending_data)
         self.__monitor_dir (self.directory)
         self.__monitor_dir_recurse (self.directory)
 
     def stop (self):
-        for dir in self.monitors:
-            gnomevfs.monitor_cancel (self.monitors[dir])
-        self.monitors.clear ()
+        if self.mon == None:
+	    return
+
+        gobject.source_remove(self.watch)
+	self.mon = None
+	self.watch = None
+	self.fd = -1
 
 def run_unit_tests ():
-    import gobject
     import tempfile
     import shutil
 
     temp_path = tempfile.mkdtemp (prefix = "test-monitor-")
 
     def handle_change (path, event, data):
+        print "handle_change"
         (expected, main_loop) = data
         if len (expected) > 0:
             i = 0
@@ -154,19 +166,19 @@ def run_unit_tests ():
     monitor = DirectoryMonitor (temp_path, handle_change, (expected, main_loop))
     monitor.start ()
 
+    expect (expected, temp_path + "/foo", CREATED)
     f = file (temp_path + "/foo", "w")
     f.close ()
-    expect (expected, temp_path + "/foo", CREATED)
     
-    os.mkdir (temp_path + "/bar")
     expect (expected, temp_path + "/bar", CREATED)
+    os.mkdir (temp_path + "/bar")
 
-    os.makedirs (temp_path + "/foobar/foo/bar/foo/bar")
     expect (expected, temp_path + "/foobar", CREATED)
     expect (expected, temp_path + "/foobar/foo", CREATED)
     expect (expected, temp_path + "/foobar/foo/bar", CREATED)
     expect (expected, temp_path + "/foobar/foo/bar/foo", CREATED)
     expect (expected, temp_path + "/foobar/foo/bar/foo/bar", CREATED)
+    os.makedirs (temp_path + "/foobar/foo/bar/foo/bar")
     
     main_loop.run ()
     
@@ -184,3 +196,7 @@ def run_unit_tests ():
     main_loop.run ()
 
     gobject.source_remove (timeout)
+
+if __name__ == '__main__':
+    run_unit_tests()
+
