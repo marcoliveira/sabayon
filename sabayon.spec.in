@@ -92,12 +92,12 @@ fi
 %{_datadir}/applications/gnome-%{name}.desktop
 %{_datadir}/pixmaps/%{name}.png
 
-%{python_sitelib}/{name}/*.py
+%{python_sitelib}/%{name}/*.py
 %{python_sitelib}/%{name}/*.pyc
-%{ghost} %{python_sitelib}/%{name}/*.pyo
+%ghost %{python_sitelib}/%{name}/*.pyo
 %{python_sitelib}/%{name}/sources/*.py
 %{python_sitelib}/%{name}/sources/*.pyc
-%{ghost} %{python_sitelib}/%{name}/sources/*.pyo
+%ghost %{python_sitelib}/%{name}/sources/*.pyo
 
 %changelog
 * Wed Mar 16 2005 Mark McLoughlin <markmc@redhat.com>
