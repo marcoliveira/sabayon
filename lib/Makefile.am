@@ -5,6 +5,7 @@ PYTHON_FILES =				\
 	config.py			\
 	storage.py			\
 	dirmonitor.py			\
+	protosession.py			\
 	util.py
 
 NOINST_PYTHON_FILES =			\
