@@ -47,15 +47,14 @@ desktop-file-install --vendor gnome --delete-original		\
 %clean
 rm -fr %{buildroot}
 
-%post
+%pre
 # Create a new user for sabayon, see the ISSUES file
-# note that the home directory will be cleaned up and rebuild
-# each time a config is updated.
-/usr/sbin/useradd -c "Sabayon user" -d "" -g nobody -s /sbin/nologin sabayon >/dev/null 2>&1 || /bin/true
+/usr/sbin/useradd -c "Sabayon user" -g nobody -s /sbin/nologin -r sabayon >/dev/null 2>&1 || /bin/true
+/usr/sbin/usermod -d "" -s /sbin/nologin sabayon >/dev/null 2>&1
+# ignore errors, as we can't disambiguate between sabayon already existed
+# and couldn't create account with the current adduser.
+exit 0
 
-%preun
-userdel -r sabayon >/dev/null 2>&1 || /bin/true
-  
 %files -f sabayon.lang
 %defattr(-, root, root)
 
