@@ -327,7 +327,9 @@ class ProtoSession (gobject.GObject):
         if self.xnest_pid == 0: # Child process
             signal.signal (signal.SIGUSR1, signal.SIG_IGN)
 
-            argv = XNEST_ARGV + [ "-auth", self.xnest_xauth_file ]
+            argv = XNEST_ARGV + \
+                   [ "-auth", self.xnest_xauth_file ] + \
+                   [ "-name", _("All Your Settings Are Belong To Us") ]
             argv += [ self.display_name ]
 
             dprint ("Child process launching %s" % argv)

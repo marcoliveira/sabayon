@@ -1,5 +1,18 @@
 2005-02-28  Mark McLoughlin  <markmc@redhat.com>
 
+	* admin-tool/profilesdialog.py: fix bug with cancel
+	on the new profile dialog.
+	
+	* lib/config.py.in: move the Xnest window name to
+	
+	* lib/protosession.py: here so we don't try and
+	reference _() before its defined.
+	
+	* lib/storage.py: add a needs_saving flag so that
+	saving an empty and non-existant profile works.
+
+2005-02-28  Mark McLoughlin  <markmc@redhat.com>
+
 	* admin-tool/profilesdialog.py:
 	(__create_new_profile): upd to use new ProfileStorage
 	API.

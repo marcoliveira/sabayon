@@ -104,7 +104,7 @@ class NewProfileDialog:
         self.dialog.hide ()
         
         if response != gtk.RESPONSE_ACCEPT:
-            return None
+            return (None, None)
 
         iter = self.base_combo.get_active_iter ()
         if iter:

@@ -99,6 +99,7 @@ class ProfileStorage:
         self.temp_path        = None
         self.revisions_path   = None
         self.unsaved_revision = None
+        self.needs_saving     = False
 
         dprint ("Creating profile '%s' from '%s'", self.name, self.path)
 
@@ -127,6 +128,7 @@ class ProfileStorage:
             root.newChild (None, "profile_revisions", None)
             root.newChild (None, "directories", None)
             root.newChild (None, "files", None)
+            self.needs_saving = True
             return
 
         dprint ("Reading metadata from '%s'" % self.path)
@@ -483,6 +485,8 @@ class ProfileStorage:
                 os.makedirs (dirname)
             shutil.copy2 (src_path, dst_path)
 
+        self.needs_saving = True
+
     def remove (self, path):
         """Remove a file or directory from the profile.
 
@@ -509,6 +513,8 @@ class ProfileStorage:
         os.renames (os.path.join (self.temp_path, path),
                     os.path.join (self.revisions_path, path, item_revision))
 
+        self.needs_saving = True
+        
     def extract (self, path, dst_dir, overwrite = False, revision = None):
         """Extract a file or directory from the profile.
 
@@ -657,7 +663,8 @@ class ProfileStorage:
         """Save the contents of the profile to
         /etc/desktop-profiles/$(name).zip.
         """
-        if not self.temp_path:
+        self.__read_metadata ()
+        if not self.needs_saving:
             dprint ("No changes to profile '%s' need saving" % self.name)
             return
 
@@ -718,10 +725,16 @@ class ProfileStorage:
             if backup:
                 failsafe_rename (backup, self.path)
             raise
+
+        if backup:
+            os.remove (backup)
+
+        if self.temp_path:
+            shutil.rmtree (self.temp_path)
+            self.temp_path = None
+            self.revisions_path = None
         
-        shutil.rmtree (self.temp_path)
-        self.temp_path = None
-        self.revisions_path = None
+        self.needs_saving = False
         
         self.zip = zipfile.ZipFile (self.path, "r")
 
