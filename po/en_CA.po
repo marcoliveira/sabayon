@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-03-08 16:29-0500\n"
-"PO-Revision-Date: 2005-03-08 11:14-0400\n"
+"POT-Creation-Date: 2005-03-09 16:20-0500\n"
+"PO-Revision-Date: 2005-03-09 11:14-0400\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: Canadian English <adamw@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -25,74 +25,126 @@ msgstr "Program to establish and edit profiles for users"
 msgid "translator-credits"
 msgstr "Adam Weinberger <adamw@gnome.org>"
 
-#: ../admin-tool/editorwindow.py:111 ../admin-tool/sabayon.glade.h:1
-#: ../lib/protosession.py:332
+#: ../admin-tool/editorwindow.py:123 ../admin-tool/gconfviewer.py:87
+#: ../admin-tool/sabayon.glade.h:1 ../lib/protosession.py:332
 msgid "All Your Settings Are Belong To Us"
 msgstr "All Your Settings Are Belong To Us"
 
-#: ../admin-tool/editorwindow.py:211 ../admin-tool/sabayon.glade.h:7
+#: ../admin-tool/editorwindow.py:223 ../admin-tool/sabayon.glade.h:7
 msgid "_Profile"
 msgstr "_Profile"
 
-#: ../admin-tool/editorwindow.py:212
+#: ../admin-tool/editorwindow.py:224
 msgid "_Save"
 msgstr "_Save"
 
-#: ../admin-tool/editorwindow.py:212
+#: ../admin-tool/editorwindow.py:224
 msgid "Save profile"
 msgstr "Save profile"
 
-#: ../admin-tool/editorwindow.py:213
+#: ../admin-tool/editorwindow.py:225
 msgid "_Close"
 msgstr "_Close"
 
-#: ../admin-tool/editorwindow.py:213
+#: ../admin-tool/editorwindow.py:225
 msgid "Close the current window"
 msgstr "Close the current window"
 
-#: ../admin-tool/editorwindow.py:214
+#: ../admin-tool/editorwindow.py:226
 msgid "_Edit"
 msgstr "_Edit"
 
-#: ../admin-tool/editorwindow.py:215
+#: ../admin-tool/editorwindow.py:227
 msgid "_Delete"
 msgstr "_Delete"
 
-#: ../admin-tool/editorwindow.py:215
+#: ../admin-tool/editorwindow.py:227
 msgid "Delete item"
 msgstr "Delete item"
 
-#: ../admin-tool/editorwindow.py:216
+#: ../admin-tool/editorwindow.py:228
 msgid "C_lear History"
 msgstr "C_lear History"
 
-#: ../admin-tool/editorwindow.py:216
+#: ../admin-tool/editorwindow.py:228
 msgid "Clear revision history"
 msgstr "Clear revision history"
 
-#: ../admin-tool/editorwindow.py:217 ../admin-tool/sabayon.glade.h:6
+#: ../admin-tool/editorwindow.py:229 ../admin-tool/sabayon.glade.h:6
 msgid "_Help"
 msgstr "_Help"
 
-#: ../admin-tool/editorwindow.py:218
+#: ../admin-tool/editorwindow.py:230
 msgid "_About"
 msgstr "_About"
 
-#: ../admin-tool/editorwindow.py:218
+#: ../admin-tool/editorwindow.py:230
 msgid "About Sabayon"
 msgstr "About Sabayon"
 
-#: ../admin-tool/editorwindow.py:249
+#: ../admin-tool/editorwindow.py:261
 msgid "_Version:"
 msgstr "_Version:"
 
-#: ../admin-tool/editorwindow.py:301 ../admin-tool/profilesdialog.py:180
+#: ../admin-tool/editorwindow.py:313 ../admin-tool/monitorwindow.py:155
+msgid "Description"
+msgstr "Description"
+
+#: ../admin-tool/editorwindow.py:324
+msgid "Version"
+msgstr "Version"
+
+#: ../admin-tool/editorwindow.py:350 ../lib/sources/gconfsource.py:100
+msgid "GConf"
+msgstr "GConf"
+
+#: ../admin-tool/gconfviewer.py:58 ../admin-tool/gconfviewer.py:77
+msgid "<no type>"
+msgstr "<no type>"
+
+#: ../admin-tool/gconfviewer.py:59
+msgid "<no value>"
+msgstr "<no value>"
+
+#: ../admin-tool/gconfviewer.py:63
+msgid "string"
+msgstr "string"
+
+#: ../admin-tool/gconfviewer.py:65
+msgid "integer"
+msgstr "integer"
+
+#: ../admin-tool/gconfviewer.py:67
+msgid "float"
+msgstr "float"
+
+#: ../admin-tool/gconfviewer.py:69
+msgid "boolean"
+msgstr "boolean"
+
+#: ../admin-tool/gconfviewer.py:71
+msgid "schema"
+msgstr "schema"
+
+#: ../admin-tool/gconfviewer.py:73
+msgid "list"
+msgstr "list"
+
+#: ../admin-tool/gconfviewer.py:75
+msgid "pair"
+msgstr "pair"
+
+#: ../admin-tool/gconfviewer.py:111 ../admin-tool/profilesdialog.py:180
 msgid "Name"
 msgstr "Name"
 
-#: ../admin-tool/editorwindow.py:312
-msgid "Version"
-msgstr "Version"
+#: ../admin-tool/gconfviewer.py:116
+msgid "Type"
+msgstr "Type"
+
+#: ../admin-tool/gconfviewer.py:121
+msgid "Value"
+msgstr "Value"
 
 #: ../admin-tool/monitorwindow.py:143
 msgid "Ignore"
@@ -101,10 +153,6 @@ msgstr "Ignore"
 #: ../admin-tool/monitorwindow.py:150
 msgid "Mandatory"
 msgstr "Mandatory"
-
-#: ../admin-tool/monitorwindow.py:155
-msgid "Description"
-msgstr "Description"
 
 #: ../admin-tool/profilesdialog.py:212
 #, python-format
@@ -317,6 +365,26 @@ msgstr "File '%s' changed"
 msgid "Files"
 msgstr "Files"
 
+#: ../lib/sources/filessource.py:77
+msgid "Applications menu"
+msgstr "Applications menu"
+
+#: ../lib/sources/filessource.py:79
+msgid "Preferences menu"
+msgstr "Preferences menu"
+
+#: ../lib/sources/filessource.py:81
+msgid "Server Settings menu"
+msgstr "Server Settings menu"
+
+#: ../lib/sources/filessource.py:83
+msgid "System Settings menu"
+msgstr "System Settings menu"
+
+#: ../lib/sources/filessource.py:85
+msgid "Start Here menu"
+msgstr "Start Here menu"
+
 #: ../lib/sources/gconfsource.py:72
 #, python-format
 msgid "GConf key '%s' unset"
@@ -362,9 +430,13 @@ msgstr "GConf key '%s' set to pair '%s'"
 msgid "GConf key '%s' set to '%s'"
 msgstr "GConf key '%s' set to '%s'"
 
-#: ../lib/sources/gconfsource.py:100
-msgid "GConf"
-msgstr "GConf"
+#: ../lib/sources/gconfsource.py:111
+msgid "Default GConf settings"
+msgstr "Default GConf settings"
+
+#: ../lib/sources/gconfsource.py:113
+msgid "Mandatory GConf settings"
+msgstr "Mandatory GConf settings"
 
 #: ../lib/sources/mozillasource.py:54
 #, python-format
