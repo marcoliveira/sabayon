@@ -7,75 +7,149 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-03-05 12:05+0100\n"
-"PO-Revision-Date: 2005-03-05 13:53+0100\n"
+"POT-Creation-Date: 2005-03-11 04:40+0100\n"
+"PO-Revision-Date: 2005-03-11 15:40+0100\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: admin-tool/editorwindow.py:85 admin-tool/sabayon.glade.h:1
-#: lib/protosession.py:332
+#: admin-tool/aboutdialog.py:63
+msgid "Program to establish and edit profiles for users"
+msgstr "Program pro vytvoření a úpravu profilů pro uživatele"
+
+#: admin-tool/aboutdialog.py:66
+msgid "translator-credits"
+msgstr "Miloslav Trmač <mitr@volny.cz>"
+
+#: admin-tool/editorwindow.py:124 admin-tool/gconfviewer.py:87
+#: admin-tool/sabayon.glade.h:1 lib/protosession.py:332
 msgid "All Your Settings Are Belong To Us"
 msgstr "All Your Settings Are Belong To Us"
 
-#: admin-tool/editorwindow.py:167 admin-tool/sabayon.glade.h:7
+#: admin-tool/editorwindow.py:224 admin-tool/sabayon.glade.h:7
 msgid "_Profile"
 msgstr "_Profil"
 
-#: admin-tool/editorwindow.py:168
+#: admin-tool/editorwindow.py:225
 msgid "_Save"
 msgstr "_Uložit"
 
-#: admin-tool/editorwindow.py:168
+#: admin-tool/editorwindow.py:225
 msgid "Save profile"
 msgstr "Uložit profil"
 
-#: admin-tool/editorwindow.py:169
+#: admin-tool/editorwindow.py:226
 msgid "_Close"
 msgstr "_Zavřít"
 
-#: admin-tool/editorwindow.py:169
+#: admin-tool/editorwindow.py:226
 msgid "Close the current window"
 msgstr "Zavřít aktuální okno"
 
-#: admin-tool/editorwindow.py:170
+#: admin-tool/editorwindow.py:227
 msgid "_Edit"
 msgstr "_Upravit"
 
-#: admin-tool/editorwindow.py:171
+#: admin-tool/editorwindow.py:228
 msgid "_Delete"
 msgstr "_Odstranit"
 
-#: admin-tool/editorwindow.py:171
+#: admin-tool/editorwindow.py:228
 msgid "Delete item"
 msgstr "Odstranit položku"
 
-#: admin-tool/editorwindow.py:172
+#: admin-tool/editorwindow.py:229
 msgid "C_lear History"
 msgstr "Vy_mazat historii"
 
-#: admin-tool/editorwindow.py:172
+#: admin-tool/editorwindow.py:229
 msgid "Clear revision history"
 msgstr "Vymazat historii verzí"
 
-#: admin-tool/editorwindow.py:173 admin-tool/sabayon.glade.h:6
+#: admin-tool/editorwindow.py:230 admin-tool/sabayon.glade.h:6
 msgid "_Help"
 msgstr "_Nápověda"
 
-#: admin-tool/editorwindow.py:174
+#: admin-tool/editorwindow.py:231
 msgid "_About"
 msgstr "O _aplikaci"
 
-#: admin-tool/editorwindow.py:174
+#: admin-tool/editorwindow.py:231
 msgid "About Sabayon"
 msgstr "O Sabayon"
 
-#: admin-tool/editorwindow.py:202 admin-tool/profilesdialog.py:180
+#: admin-tool/editorwindow.py:262
+msgid "_Version:"
+msgstr "_Verze:"
+
+#: admin-tool/editorwindow.py:314 admin-tool/monitorwindow.py:155
+msgid "Description"
+msgstr "Popis"
+
+#: admin-tool/editorwindow.py:325
+msgid "Version"
+msgstr "Verze"
+
+#: admin-tool/editorwindow.py:355 lib/sources/gconfsource.py:100
+msgid "GConf"
+msgstr "GConf"
+
+#: admin-tool/editorwindow.py:359 lib/sources/filessource.py:59
+#: lib/sources/mozillasource.py:76
+msgid "Files"
+msgstr "Soubory"
+
+#: admin-tool/gconfviewer.py:58 admin-tool/gconfviewer.py:77
+msgid "<no type>"
+msgstr "<žádný typ>"
+
+#: admin-tool/gconfviewer.py:59
+msgid "<no value>"
+msgstr "<žádná hodnota>"
+
+#: admin-tool/gconfviewer.py:63
+msgid "string"
+msgstr "řetězec"
+
+#: admin-tool/gconfviewer.py:65
+msgid "integer"
+msgstr "celé číslo"
+
+#: admin-tool/gconfviewer.py:67
+msgid "float"
+msgstr "číslo s plovoucí řádovou čárkou"
+
+#: admin-tool/gconfviewer.py:69
+msgid "boolean"
+msgstr "booleovská hodnota"
+
+#: admin-tool/gconfviewer.py:71
+msgid "schema"
+msgstr "schéma"
+
+#: admin-tool/gconfviewer.py:73
+msgid "list"
+msgstr "seznam"
+
+#: admin-tool/gconfviewer.py:75
+msgid "pair"
+msgstr "dvojice"
+
+#: admin-tool/gconfviewer.py:111 admin-tool/profilesdialog.py:180
 msgid "Name"
 msgstr "Název"
+
+#: admin-tool/gconfviewer.py:116
+msgid "Type"
+msgstr "Typ"
+
+#: admin-tool/gconfviewer.py:121
+msgid "Value"
+msgstr "Hodnota"
 
 #: admin-tool/monitorwindow.py:143
 msgid "Ignore"
@@ -84,10 +158,6 @@ msgstr "Ignorovat"
 #: admin-tool/monitorwindow.py:150
 msgid "Mandatory"
 msgstr "Povinné"
-
-#: admin-tool/monitorwindow.py:155
-msgid "Description"
-msgstr "Popis"
 
 #: admin-tool/profilesdialog.py:212
 #, python-format
@@ -100,76 +170,29 @@ msgid ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
 "Try again after creating the account (using, for example, the 'adduser' "
 "command)"
-msgstr "Sabayon vyžaduje, aby na tomto počítači byl přítomen účet speciálního uživatele '%s'. Zkuste to znovu po vytvoření tohoto účtu (například příkazem 'adduser')"
+msgstr ""
+"Sabayon vyžaduje, aby na tomto počítači byl přítomen účet speciálního "
+"uživatele '%s'. Zkuste to znovu po vytvoření tohoto účtu (například příkazem "
+"'adduser')"
 
-#: admin-tool/saveconfirm.py:36
-msgid "Close _Without Saving"
-msgstr "Zavřít _bez uložení"
-
-#: admin-tool/saveconfirm.py:43
+#: admin-tool/sabayon-apply.py:37
 #, python-format
-msgid "Save changes to profile \"%s\" before closing?"
-msgstr "Uložit změny v profilu \"%s\" bez zavřením?"
+msgid "Usage: %s [<profile-name>]\n"
+msgstr "Použití: %s [<název-profilu>]\n"
 
-#: admin-tool/saveconfirm.py:47
+#: admin-tool/sabayon-monitor.py:28
 #, python-format
-msgid ""
-"If you don't save, changes from the last %ld second will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld seconds will be permanently "
-"lost."
-msgstr[0] "Pokud je neuložíte, budou změny za poslední %ld sekundu navždy ztraceny."
-msgstr[1] "Pokud je neuložíte, budou změny za poslední %ld sekundy navždy ztraceny."
-msgstr[2] "Pokud je neuložíte, budou změny za posledních %ld sekund navždy ztraceny."
+msgid "Usage: %s <profile-name>\n"
+msgstr "Použití: %s <název-profilu>\n"
 
-#: admin-tool/saveconfirm.py:53
-msgid ""
-"If you don't save, changes from the last minute will be permanently lost."
-msgstr "Pokud je neuložíte, budou změny za poslední minutu navždy ztraceny."
+#: admin-tool/sabayon-session.py:31
+msgid "Your account does not have permissions to run sabayon-session."
+msgstr "Váš účet nemá oprávnění spustit sabayon-session."
 
-#: admin-tool/saveconfirm.py:57
+#: admin-tool/sabayon-session.py:35
 #, python-format
-msgid ""
-"If you don't save, changes from the last minute and %ld second will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last minute and %ld seconds will be "
-"permanently lost."
-msgstr[0] "Pokud je neuložíte, budou změny za poslední minutu a %ld sekundu navždy ztraceny."
-msgstr[1] "Pokud je neuložíte, budou změny za poslední minutu a %ld sekundy navždy ztraceny."
-msgstr[2] "Pokud je neuložíte, budou změny za poslední minutu a %ld sekund navždy ztraceny."
-
-#: admin-tool/saveconfirm.py:64
-#, python-format
-msgid ""
-"If you don't save, changes from the last %ld minute will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld minutes will be permanently "
-"lost."
-msgstr[0] "Pokud je neuložíte, budou změny za poslední %ld minutu navždy ztraceny."
-msgstr[1] "Pokud je neuložíte, budou změny za poslední %ld minuty navždy ztraceny."
-msgstr[2] "Pokud je neuložíte, budou změny za posledních %ld minut navždy ztraceny."
-
-#: admin-tool/saveconfirm.py:73 admin-tool/saveconfirm.py:83
-#, python-format
-msgid "If you don't save, changes from the last hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "Pokud je neuložíte, budou změny za poslední %ld hodinu navždy ztraceny."
-msgstr[1] "Pokud je neuložíte, budou změny za poslední %ld hodiny navždy ztraceny."
-msgstr[2] "Pokud je neuložíte, budou změny za posledních %ld hodin navždy ztraceny."
-
-#: admin-tool/saveconfirm.py:76
-#, python-format
-msgid ""
-"If you don't save, changes from the last hour and %d minute will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last hour and %d minutes will be "
-"permanently lost."
-msgstr[0] "Pokud je neuložíte, budou změny za poslední hodinu a %ld minutu navždy ztraceny."
-msgstr[1] "Pokud je neuložíte, budou změny za poslední hodinu a %ld minuty navždy ztraceny."
-msgstr[2] "Pokud je neuložíte, budou změny za poslední hodinu a %ld minut navždy ztraceny."
+msgid "Usage: %s <username> <profile-file>\n"
+msgstr "Použití: %s <jménouživatele> <soubor-profilu>\n"
 
 #: admin-tool/sabayon.desktop.in.h:1
 msgid "Desktop User Profiles"
@@ -208,26 +231,99 @@ msgstr "Váš účet nemá oprávnění spustit %s"
 msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
-msgstr "Pro spuštění tohoto programu jsou vyžadována oprávnění správce, protože může měnit systémové soubory."
+msgstr ""
+"Pro spuštění tohoto programu jsou vyžadována oprávnění správce, protože může "
+"měnit systémové soubory."
 
-#: admin-tool/sabayon-apply.py:37
+#: admin-tool/saveconfirm.py:36
+msgid "Close _Without Saving"
+msgstr "Zavřít _bez uložení"
+
+#: admin-tool/saveconfirm.py:43
 #, python-format
-msgid "Usage: %s [<profile-name>]\n"
-msgstr "Použití: %s [<název-profilu>]\n"
+msgid "Save changes to profile \"%s\" before closing?"
+msgstr "Uložit změny v profilu \"%s\" bez zavřením?"
 
-#: admin-tool/sabayon-monitor.py:28
+#: admin-tool/saveconfirm.py:47
 #, python-format
-msgid "Usage: %s <profile-name>\n"
-msgstr "Použití: %s <název-profilu>\n"
+msgid ""
+"If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld seconds will be permanently "
+"lost."
+msgstr[0] ""
+"Pokud je neuložíte, budou změny za poslední %ld sekundu navždy ztraceny."
+msgstr[1] ""
+"Pokud je neuložíte, budou změny za poslední %ld sekundy navždy ztraceny."
+msgstr[2] ""
+"Pokud je neuložíte, budou změny za posledních %ld sekund navždy ztraceny."
 
-#: admin-tool/sabayon-session.py:31
-msgid "Your account does not have permissions to run sabayon-session."
-msgstr "Váš účet nemá oprávnění spustit sabayon-session."
+#: admin-tool/saveconfirm.py:53
+msgid ""
+"If you don't save, changes from the last minute will be permanently lost."
+msgstr "Pokud je neuložíte, budou změny za poslední minutu navždy ztraceny."
 
-#: admin-tool/sabayon-session.py:35
+#: admin-tool/saveconfirm.py:57
 #, python-format
-msgid "Usage: %s <username> <profile-file>\n"
-msgstr "Použití: %s <jménouživatele> <soubor-profilu>\n"
+msgid ""
+"If you don't save, changes from the last minute and %ld second will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last minute and %ld seconds will be "
+"permanently lost."
+msgstr[0] ""
+"Pokud je neuložíte, budou změny za poslední minutu a %ld sekundu navždy "
+"ztraceny."
+msgstr[1] ""
+"Pokud je neuložíte, budou změny za poslední minutu a %ld sekundy navždy "
+"ztraceny."
+msgstr[2] ""
+"Pokud je neuložíte, budou změny za poslední minutu a %ld sekund navždy "
+"ztraceny."
+
+#: admin-tool/saveconfirm.py:64
+#, python-format
+msgid ""
+"If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld minutes will be permanently "
+"lost."
+msgstr[0] ""
+"Pokud je neuložíte, budou změny za poslední %ld minutu navždy ztraceny."
+msgstr[1] ""
+"Pokud je neuložíte, budou změny za poslední %ld minuty navždy ztraceny."
+msgstr[2] ""
+"Pokud je neuložíte, budou změny za posledních %ld minut navždy ztraceny."
+
+#: admin-tool/saveconfirm.py:73 admin-tool/saveconfirm.py:83
+#, python-format
+msgid "If you don't save, changes from the last hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] ""
+"Pokud je neuložíte, budou změny za poslední %ld hodinu navždy ztraceny."
+msgstr[1] ""
+"Pokud je neuložíte, budou změny za poslední %ld hodiny navždy ztraceny."
+msgstr[2] ""
+"Pokud je neuložíte, budou změny za posledních %ld hodin navždy ztraceny."
+
+#: admin-tool/saveconfirm.py:76
+#, python-format
+msgid ""
+"If you don't save, changes from the last hour and %d minute will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last hour and %d minutes will be "
+"permanently lost."
+msgstr[0] ""
+"Pokud je neuložíte, budou změny za poslední hodinu a %ld minutu navždy "
+"ztraceny."
+msgstr[1] ""
+"Pokud je neuložíte, budou změny za poslední hodinu a %ld minuty navždy "
+"ztraceny."
+msgstr[2] ""
+"Pokud je neuložíte, budou změny za poslední hodinu a %ld minut navždy "
+"ztraceny."
 
 #: lib/dirmonitor.py:138
 #, python-format
@@ -250,7 +346,8 @@ msgstr "'xauth list' vrátil chybu"
 
 #: lib/protosession.py:235
 msgid "'xauth list' returned no records or records in unknown format"
-msgstr "'xauth list' nevrátil žádné záznamy nebo vrátil záznamy v neznámém formátu"
+msgstr ""
+"'xauth list' nevrátil žádné záznamy nebo vrátil záznamy v neznámém formátu"
 
 #: lib/protosession.py:314
 msgid "Unable to find a free X display"
@@ -263,69 +360,6 @@ msgstr "Nemohu spustit Xnest: čas vypršel při čekání na signál USR1"
 #: lib/protosession.py:378
 msgid "Failed to start Xnest: died during startup"
 msgstr "Nemohu spustit Xnest: umřel při spouštění"
-
-#: lib/storage.py:144
-#, python-format
-msgid "Failed to read file '%s': %s"
-msgstr "Nemohu číst soubor '%s': %s"
-
-#: lib/storage.py:154
-#, python-format
-msgid "Failed to read metadata from '%s': %s"
-msgstr "Nemohu číst metadata z '%s': %s"
-
-#: lib/storage.py:160
-#, python-format
-msgid "Invalid metadata section in '%s': %s"
-msgstr "Neplatný oddíl metadat v '%s': %s"
-
-#: lib/storage.py:513
-#, python-format
-msgid "Cannot add non-existent file '%s'"
-msgstr "Nemohu přidat neexistující soubor '%s'"
-
-#: lib/storage.py:603
-msgid "No current revision"
-msgstr "Žádná aktuální verze"
-
-#: lib/storage.py:607 lib/storage.py:618
-#, python-format
-msgid "'%s' does not exist in profile revision '%s'"
-msgstr "'%s' neexistuje ve verzi profilu '%s'"
-
-#: lib/storage.py:690
-msgid "Not a valid profile revision"
-msgstr "Není to platná verze profilu"
-
-#: lib/unittests.py:36 lib/unittests.py:37
-msgid "Ignore WARNINGs"
-msgstr "Ignorovat VAROVÁNÍ"
-
-#: lib/unittests.py:57
-#, python-format
-msgid "Running %s tests"
-msgstr "Spouštím testy %s"
-
-#: lib/unittests.py:59
-#, python-format
-msgid "Running %s tests (%s)"
-msgstr "Spouštím testy %s (%s)"
-
-#: lib/unittests.py:66
-msgid "Success!"
-msgstr "Úspěch!"
-
-#: lib/util.py:105
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr "Nemohu najít domovský adresář: nenastaven v /etc/passwd a žádná hodnota $HOME v prostředí"
-
-#: lib/util.py:118
-msgid ""
-"Cannot find username: not set in /etc/passwd and no value for $USER in "
-"environment"
-msgstr "Nemohu najít jméno uživatele: nenastaveno v /etc/passwd a žádná hodnota $USER v prostředí"
 
 #: lib/sources/filessource.py:49
 #, python-format
@@ -342,9 +376,25 @@ msgstr "Soubor '%s' odstraněn"
 msgid "File '%s' changed"
 msgstr "Soubor '%s' změněn"
 
-#: lib/sources/filessource.py:59
-msgid "Files"
-msgstr "Soubory"
+#: lib/sources/filessource.py:77
+msgid "Applications menu"
+msgstr "Menu Aplikace"
+
+#: lib/sources/filessource.py:79
+msgid "Preferences menu"
+msgstr "Menu Nastavení"
+
+#: lib/sources/filessource.py:81
+msgid "Server Settings menu"
+msgstr "Menu Nastavení serveru"
+
+#: lib/sources/filessource.py:83
+msgid "System Settings menu"
+msgstr "Menu Nastavení systému"
+
+#: lib/sources/filessource.py:85
+msgid "Start Here menu"
+msgstr "Menu Začněte zde"
 
 #: lib/sources/gconfsource.py:72
 #, python-format
@@ -391,55 +441,45 @@ msgstr "Klíč GConf '%s' nastaven na dvojici '%s'"
 msgid "GConf key '%s' set to '%s'"
 msgstr "Klíč GConf '%s' nastaven na '%s'"
 
-#: lib/sources/gconfsource.py:100
-msgid "GConf"
-msgstr "GConf"
+#: lib/sources/gconfsource.py:111
+msgid "Default GConf settings"
+msgstr "Implicitní nastavení GConf"
 
-#: lib/sources/mozillasource.py:54
+#: lib/sources/gconfsource.py:113
+msgid "Mandatory GConf settings"
+msgstr "Povinná nastavení GConf"
+
+#: lib/sources/mozillasource.py:61
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
 msgstr "Klíč Mozilly '%s' nastaven na '%s'"
 
-#: lib/sources/mozillasource.py:56
+#: lib/sources/mozillasource.py:63
 #, python-format
 msgid "Mozilla key '%s' unset"
 msgstr "Klíč Mozilly '%s' zrušen"
 
-#: lib/sources/mozillasource.py:58
+#: lib/sources/mozillasource.py:65
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Klíč Mozilly '%s' změněn na '%s'"
 
-#: lib/sources/mozillasource.py:160
+#: lib/sources/mozillasource.py:197
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Soubor nenalezen (%s)"
 
-#: lib/sources/mozillasource.py:370
+#: lib/sources/mozillasource.py:459
 #, python-format
 msgid "duplicate name (%s) in section %s"
 msgstr "duplikované jméno (%s) v oddílu %s"
 
-#: lib/sources/mozillasource.py:377
+#: lib/sources/mozillasource.py:467
 #, python-format
 msgid "redundant default in section %s"
 msgstr "redundantní implicitní v oddílu %s"
 
-#: lib/sources/mozillasource.py:392
-msgid "no default profile"
-msgstr "žádný implicitní profil"
-
-#: lib/sources/mozillasource.py:396
-#, python-format
-msgid "default path (%s) does not exist"
-msgstr "implicitní cesta (%s) neexistuje"
-
-#: lib/sources/mozillasource.py:398
-#, python-format
-msgid "default path (%s) is not a directory"
-msgstr "implicitní cesta (%s) není adresář"
-
-#: lib/sources/mozillasource.py:494
+#: lib/sources/mozillasource.py:571
 #, python-format
 msgid "No such profile ini file: %s"
 msgstr "Soubor ini profilu neexistuje: %s"
@@ -477,6 +517,82 @@ msgstr "Objekt panelu '%s' odstraněn"
 #: lib/sources/paneldelegate.py:112
 msgid "Panel"
 msgstr "Panel"
+
+#: lib/storage.py:144
+#, python-format
+msgid "Failed to read file '%s': %s"
+msgstr "Nemohu číst soubor '%s': %s"
+
+#: lib/storage.py:154
+#, python-format
+msgid "Failed to read metadata from '%s': %s"
+msgstr "Nemohu číst metadata z '%s': %s"
+
+#: lib/storage.py:160
+#, python-format
+msgid "Invalid metadata section in '%s': %s"
+msgstr "Neplatný oddíl metadat v '%s': %s"
+
+#: lib/storage.py:516
+#, python-format
+msgid "Cannot add non-existent file '%s'"
+msgstr "Nemohu přidat neexistující soubor '%s'"
+
+#: lib/storage.py:606
+msgid "No current revision"
+msgstr "Žádná aktuální verze"
+
+#: lib/storage.py:610 lib/storage.py:621
+#, python-format
+msgid "'%s' does not exist in profile revision '%s'"
+msgstr "'%s' neexistuje ve verzi profilu '%s'"
+
+#: lib/storage.py:693
+msgid "Not a valid profile revision"
+msgstr "Není to platná verze profilu"
+
+#: lib/unittests.py:36 lib/unittests.py:37
+msgid "Ignore WARNINGs"
+msgstr "Ignorovat VAROVÁNÍ"
+
+#: lib/unittests.py:57
+#, python-format
+msgid "Running %s tests"
+msgstr "Spouštím testy %s"
+
+#: lib/unittests.py:59
+#, python-format
+msgid "Running %s tests (%s)"
+msgstr "Spouštím testy %s (%s)"
+
+#: lib/unittests.py:66
+msgid "Success!"
+msgstr "Úspěch!"
+
+#: lib/util.py:106
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"Nemohu najít domovský adresář: nenastaven v /etc/passwd a žádná hodnota "
+"$HOME v prostředí"
+
+#: lib/util.py:119
+msgid ""
+"Cannot find username: not set in /etc/passwd and no value for $USER in "
+"environment"
+msgstr ""
+"Nemohu najít jméno uživatele: nenastaveno v /etc/passwd a žádná hodnota "
+"$USER v prostředí"
+
+#~ msgid "no default profile"
+#~ msgstr "žádný implicitní profil"
+
+#~ msgid "default path (%s) does not exist"
+#~ msgstr "implicitní cesta (%s) neexistuje"
+
+#~ msgid "default path (%s) is not a directory"
+#~ msgstr "implicitní cesta (%s) není adresář"
 
 #~ msgid "_Commit"
 #~ msgstr "_Potvrdit"
