@@ -181,15 +181,15 @@ class PanelDelegate (userprofile.SourceDelegate):
         elif change.entry.key.startswith (PANEL_KEY_BASE + "/objects/"):
             object_id = change.entry.key.split ("/")[4]
             if not self.objects.has_key (object_id) or \
-               self.toplevels[object_id].added or \
-               self.toplevels[object_id].removed:
+               self.objects[object_id].added or \
+               self.objects[object_id].removed:
                 return True
         
         elif change.entry.key.startswith (PANEL_KEY_BASE + "/applets"):
             applet_id = change.entry.key.split ("/")[4]
             if not self.applets.has_key (applet_id) or \
-               self.toplevels[applet_id].added or \
-               self.toplevels[applet_id].removed:
+               self.applets[applet_id].added or \
+               self.applets[applet_id].removed:
                 return True
         
         elif change.entry.key == PANEL_KEY_BASE + "/general/toplevel_id_list":
