@@ -26,6 +26,7 @@ Requires: gnome-python2-gconf >= %{gnome_python2_version}
 BuildRequires: python
 BuildRequires: gettext
 BuildRequires: desktop-file-utils
+BuildRequires: usermode
 
 Requires(post):  shadow-utils
 Requires(preun): shadow-utils
@@ -50,7 +51,7 @@ sysadmin should use to manage Sabayon profiles.
 %setup -q
 
 %build
-%configure
+%configure --enable-consolehelper=yes
 make %{?_smp_mflags}
 gzip -9 ChangeLog
 
@@ -170,6 +171,10 @@ fi
 %ghost %{python_sitelib}/%{name}/userswindow.pyo
 
 %changelog
+* Mon Mar 21 2005 Mark McLoughlin <markmc@redhat.com> - 0.16-8
+- Add BuildRequires: usermode and pass --enable-consolehelper=yes
+  to configure
+
 * Mon Mar 21 2005 Mark McLoughlin <markmc@redhat.com> - 0.16-7
 - Move Xnest and shadow-utils requires to sabayon-admin
 - Require libxml2-python
