@@ -1,3 +1,17 @@
+Mon Mar  7 15:45:12 CET 2005 Daniel Veillard <veillard@redhat.com>
+
+	* Makefile.am configure.ac doc/Makefile.am: integrating the doc
+	  subdir with the site/doc informations. The "make rebuild" target
+	  rebuilds the web site
+	* doc/brownbar.jpg doc/brownbarTop.jpg doc/sabayon.css doc/shadow.gif
+	  doc/title01.jpg doc/title02.jpg: new web site design from
+	  Diana Fong and Bryan Clark
+	* TODO site.xsl flat.html: converted the web site generation to
+	  a raw content flat file and an XSLT stylesheet generating the
+	  html pages. Separation of content and presentation, except the
+	  content of the boxes on the left is contained in the stylesheet,
+	  but they should stll be easy to maintain.
+
 2005-03-07  Mark McLoughlin  <mark@skynet.ie>
 
 	* admin-tool/editorwindow.py: add a combo to allow

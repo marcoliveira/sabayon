@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<html>
+  <body>
+    <h1>Sabayon: User profiles made simple</h1>
+    <h3>What is Sabayon?</h3>
+    <p>Sabayon is a system administration tool to manage GNOME desktop settings. Sabayon provides a sane way to edit GConf defaults and GConf mandatory keys: the same way you edit your desktop. Sabayon launches profiles in an Xnest window. Any changes you make in the Xnest window are saved back to the profile file, which can then be applied to user's accounts.</p>
+    <p>More screenshots and a step by step example are available from Seth Nickell <a href="http://www.gnome.org/~seth/blog/sabayon">blog about sabayon 0.12</a>.</p>
+    <h3>Features</h3>
+    <p>Currently Sabayon is limited to the creation and update of user preference profiles. It does not deal with the very large problem of actually populating target system with those preferences.</p>
+    <h3>Supported configuration backend</h3>
+    <p> So far Sabayon supports complete files and the configuration format for:</p>
+    <ul class="left">
+      <li>GConf</li>
+      <li>Mozilla/Firefox</li>
+    </ul>
+    <p> We are looking into or planning on adding support for the following: </p>
+    <ul class="left">
+      <li>OpenOffice.org</li>
+    </ul>
+    <h2>
+      <a name="helping">Helping with Sabayon</a>
+    </h2>
+    <h4>Triage Bugzilla</h4>
+    <p>Use <a href="http://bugzilla.gnome.org/buglist.cgi?short_desc_type=allwordssubstr&amp;short_desc=&amp;product=sabayon&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;status_whiteboard_type=allwordssubstr&amp;status_whiteboard=&amp;keywords_type=anywords&amp;keywords=&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;bug_status=NEEDINFO&amp;bug_status=VERIFIED&amp;emailtype1=substring&amp;email1=&amp;emailtype2=substring&amp;email2=&amp;bugidtype=include&amp;bug_id=&amp;changedin=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;cmdtype=doit&amp;namedcmd=bugs+i+watch&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time&amp;field0-0-0=noop&amp;type0-0-0=noop&amp;value0-0-0=">this link</a> for looking at open bugs with Sabayon.  Please make sure the new and unconfirmed bugs conform the the bug reporting guidelines laid out in the <a href="testing.html">testing</a> section.  </p>
+    <p> The GNOME Bugsquad has a good <a href="http://developer.gnome.org/projects/bugsquad/triage/">triage guide</a> for people new to bugzilla and GNOME.  Read up on that before doing any triage work with bugzilla and if you know that please also read our <em>bug reporting guidelines</em> in the <a href="testing.html">testing</a> section.  </p>
+    <strong>Distribution Support</strong>
+    <p> Sabayon needs as much testing and widespread distribution as
+possible in order to become the default preference management tool for
+sysadmins in GNOME, replacing the ad hoc solutions that people currently use.</p>
+    <p> Ask your favorite distribution to package Sabayon and use it. </p>
+    <h2>
+      <a name="testing">Testing Sabayon</a>
+    </h2>
+    <h4>Getting From CVS</h4>
+    <p>
+    To get the very latest copy of Sabayon you'll need to pull it from CVS.  Here's how you'll do it.
+    </p>
+    <pre>
+    export CVSROOT=':pserver:anonymous@anoncvs.gnome.org:/cvs/gnome'
+    cvs login
+    [press enter for blank password]
+    cvs -z3 co sabayon
+    cd sabayon
+    </pre>
+    <h4>Getting From Package</h4>
+    <p>
+    Download the latest source package from the Sabayon package directory: <a href="http://ftp.gnome.org/pub/GNOME/sources/sabayon/">http://ftp.gnome.org/pub/GNOME/sources/sabayon/</a>.  Then untar the files like this:
+    </p>
+    <pre>
+    tar -zxvf sabayon-0.1.0.tar.gz
+    cd sabayon-0.1.0
+    </pre>
+    <h4>Building From Source</h4>
+    <p>
+    Assuming you've changed into the Sabayon source directory from either a package or CVS you now want to start the build.
+    </p>
+    <pre>
+    ./autogen.sh --prefix=/usr/local
+    make
+    make install (sudo make install may work for you)
+    </pre>
+    <h4>Environment</h4>
+    <p>Check the README file, to test sabayon you need a number of
+packages to be up to date. This is checked by the RPM upon installation.
+You also need a sabayon user defined like:</p>
+    <pre>sabayon:x:50140:99:Sabayon user:/var/sabayon:/sbin/nologin</pre>
+    <p>The RPM post install scripts uses the following command to
+create this specific user:</p>
+    <pre>/usr/sbin/useradd -c "Sabayon user" -d /var/sabayon -g nobody -s /sbin/nologin sabayon </pre>
+    <p>You may need to do this by hand or in you package to have a
+working installation of sabayon</p>
+    <h4>Testing</h4>
+    <p>
+    Now that you have Sabayon installed try it by launching sabayon
+as root and create new profiles and edit them. Don't forget to save
+the session before quitting to have the profile updated. Check the step
+by step example available from Seth Nickell <a href="http://www.gnome.org/~seth/blog/sabayon">blog about sabayon 0.12</a>.</p>
+    <h4>Reporting Bugs</h4>
+    <p>
+    When reporting bugs about Sabayon it is most helpful to explain the sequence of events you did to generate the bug. If we can reproduce the bug it is
+of course easier to fix.</p>
+    <p>
+    Report bugs for sabayon to GNOME Bugzilla under the <a href="http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon">Sabayon
+    product</a>.
+    </p>
+    <h4>Getting More Help</h4>
+    <p>
+    The GNOME web site has lots of materials for helping you build packages from source, see the <a href="http://developer.gnome.org/tools/cvs.html">developer site</a> for more information about CVS and autogen and building.  If you have any other questions feel free to direct them to IRC or the mailing list.
+    </p>
+    <h2>
+      <a name="developing">Developing Sabayon</a>
+    </h2>
+    <p>The <a href="http://cvs.gnome.org/viewcvs/sabayon/AUTHORS?view=auto">AUTHORS</a> file has the current people in charge of the Sabayon project maintenance and development.</p>
+    <h4>Getting Started</h4>
+    <p>If you'd like to start working on Sabayon see the <a href="testing.html">Testing</a> section for how to get the latest CVS sources of Sabayon.</p>
+    <h4>Getting in Touch</h4>
+    <p>Sabayon hackers use the <a href="http://mail.gnome.org/mailman/listinfo/sabayon-list/">mailing list</a> and irc channel <em>#sabayon</em> on the server <em>irc.gnome.org</em> for keeping in touch and discussing issues regarding the project.</p>
+    <h4>The TODO List</h4>
+    <p>Sabayon has a <a href="http://cvs.gnome.org/viewcvs/sabayon/TODO?view=auto">TODO</a> list that should be updated frequently describing the work that the developers would like to undertake and will gladly accept patches for.  </p>
+  </body>
+</html>

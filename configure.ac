@@ -96,6 +96,7 @@ AC_CONFIG_FILES([
 Makefile
 lib/Makefile
 lib/sources/Makefile
+doc/Makefile
 admin-tool/Makefile
 admin-tool/sabayon.console
 po/Makefile.in

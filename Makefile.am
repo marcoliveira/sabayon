@@ -1,6 +1,7 @@
 SUBDIRS =			\
 	lib			\
 	admin-tool		\
+	doc			\
 	po
 
 EXTRA_DIST =			\
