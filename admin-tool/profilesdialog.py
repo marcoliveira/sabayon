@@ -191,7 +191,7 @@ class ProfilesDialog:
         (fd, user_path) = tempfile.mkstemp (prefix = "profile-%s-" % username, suffix = ".zip")
         os.close (fd)
 
-        shutil.copyfile (profile_path, user_path)
+        shutil.copy2 (profile_path, user_path)
 
         try:
             pw = pwd.getpwnam (username)
@@ -242,8 +242,16 @@ class ProfilesDialog:
             self.profiles_model.reload ()
 
     def __create_new_profile (self, profile_name, base_profile):
-        profile_storage = storage.ProfileStorage (_get_profile_path_for_name (profile_name))
-        profile_storage.update_all ("")
+        profile_path = _get_profile_path_for_name (profile_name)
+        if base_profile:
+            base_profile_path = _get_profile_path_for_name (base_profile)
+            dprint ("Copying profile file '%s' to '%s'" % (base_profile_path, profile_path))
+            shutil.copy2 (base_profile_path, profile_path)
+            # FIXME: I guess it would make sense to clear history from metadata
+        else:
+            dprint ("Creating new profile file '%s'" % profile_path)
+            profile_storage = storage.ProfileStorage (profile_path)
+            profile_storage.update_all ("")
 
         self.profiles_model.reload ()
         iter = self.profiles_model.get_iter_first ()
