@@ -102,13 +102,14 @@ def get_module_loader ():
 class ProfileChange (gobject.GObject):
     """Abstract base class for encapsulating profile changes."""
     
-    def __init__ (self, source):
+    def __init__ (self, source, delegate = None):
         """Construct a ProfileChange object.
 
         source: the ProfileSource from which the change came.
         """
         gobject.GObject.__init__ (self)
         self.source = source
+        self.delegate = delegate
 
     def get_source (self):
         """Get the ProfileSource from which this change came."""
@@ -137,7 +138,7 @@ class SourceDelegate:
     to intercept and modify changes from a given configuration
     source."""
     
-    def __init__ (self, source, namespace_section, change_class = None):
+    def __init__ (self, source, namespace_section):
         """Construct a SourceDelegate object.
 
         @source: the ProfileSource whose changes the delegate wishes
@@ -147,12 +148,19 @@ class SourceDelegate:
         """
         self.source = source
         self.namespace_section = namespace_section
-        self.change_class = change_class
 
     def handle_change (self, change):
         """Inspect a ProfileChange. Return #True if the change should
         not be passed on any further (i.e. #True == 'handled') and
         return #False if the change should be passed on unmodified.
+        """
+        raise Exception ("Not implemented")
+
+    def commit_change (self, change, mandatory = False):
+        """Commit a change to profile.
+
+        mandatory: whether the change should be committed such
+        that it overrides the user's value.
         """
         raise Exception ("Not implemented")
 
@@ -197,18 +205,11 @@ class ProfileSource (gobject.GObject):
         mandatory: whether the change should be committed such
         that it overrides the user's value.
         """
-        #
-        # FIXME:
-        #   Need to handle changes that originated from
-        #   a delegate here e.g.
-        # for delegate in self.delegates:
-        #     if isinstance (change, delegate.change_class):
-        #         delegate.commit_change (change, mandatory)
-        #         return
-        # self.really_commit_change (change, mandatory)
-        #
-        raise Exception ("Not Implemented")
-
+        if change.delegate:
+            change.delegate.commit_change (change, mandatory)
+            return True
+        return False
+    
     def start_monitoring (self):
         """Start monitoring for configuration changes."""
         raise Exception ("Not implemented")

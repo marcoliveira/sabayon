@@ -119,6 +119,9 @@ class GConfSource (userprofile.ProfileSource):
 
     def commit_change (self, change, mandatory = False):
         """Commit a GConf change to the profile."""
+        if userprofile.ProfileSource.commit_change (self, change, mandatory):
+            return
+        
         client = self.__get_client (mandatory)
         if change.entry.value:
             client.set (change.entry.key, change.entry.value)

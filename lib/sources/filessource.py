@@ -74,6 +74,9 @@ class FilesSource (userprofile.ProfileSource):
             self.emit_change (FilesChange (self, path, event))
 
     def commit_change (self, change, mandatory = False):
+        if userprofile.ProfileSource.commit_change (self, change, mandatory):
+            return
+                    
         # FIXME: sanity check input (e.g. is change actually in homedir/?)
         rel_path = change.get_name ()[len (self.home_dir):].lstrip ("/")
 

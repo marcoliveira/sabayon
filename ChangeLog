@@ -1,3 +1,26 @@
+2005-02-10  Mark McLoughlin  <markmc@redhat.com>
+
+	Add ability for delegates to commit changes.
+
+	* lib/userprofile.py:
+	(ProfileChange.__init__): allow a delegate to be
+	passed to the constructor.
+	(SourceDelegate.__init__): kill the "changes class" idea.
+	(SourceDelegate.commit_change): add hook for delegates
+	to implement.
+	(ProfileSource.commit_change): if a change is associated
+	with a delegate, commit the change via the delegate.
+	
+	* lib/sources/filessource.py:
+	(FilesSource.commit_change): chain up to ProfileSource.commit_change.
+	
+	* lib/sources/gconfsource.py:
+	(GConfSource.commit_change): ditto.
+	
+	* lib/sources/paneldelegate.py: associate changes with the delegate
+	and add a commit_change() stub. Just need to figure out how in hell
+	to do it now.
+
 Thu Feb 10 13:30:58 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* ISSUES Makefile.am TODO sabayon.spec.in: added an ISSUES file

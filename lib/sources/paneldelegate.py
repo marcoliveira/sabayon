@@ -23,31 +23,30 @@ import gconf
 import userprofile
 
 class PanelChange (userprofile.ProfileChange):
-    def __init__ (self, source, id):
-        userprofile.ProfileChange.__init__ (self, source)
+    def __init__ (self, source, delegate, id):
+        userprofile.ProfileChange.__init__ (self, source, delegate)
         self.id = id
     def get_name (self):
         return self.id
 
 class PanelAddedChange (PanelChange):
-    def __init__ (self, source, id):
-        PanelChange.__init__ (self, source, id)
+    def __init__ (self, source, delegate, id):
+        PanelChange.__init__ (self, source, delegate, id)
     def get_type (self):
         return "Panel added"
     def get_value (self):
         return ""
     
 class PanelRemovedChange (PanelChange):
-    def __init__ (self, source, id):
-        PanelChange.__init__ (self, source, id)
-        PanelChange (self, id)
+    def __init__ (self, source, delegate, id):
+        PanelChange.__init__ (self, source, delegate, id)
     def get_type (self):
         return "Panel removed"
     def get_value (self):
         return ""
 
 class PanelAppletAddedChange (PanelChange):
-    def __init__ (self, source, id):
+    def __init__ (self, source, delegate, id):
         PanelChange.__init__ (self, source, id)
     def get_type (self):
         return "Panel applet added"
@@ -55,24 +54,24 @@ class PanelAppletAddedChange (PanelChange):
         return ""
 
 class PanelAppletRemovedChange (PanelChange):
-    def __init__ (self, source, id):
-        PanelChange.__init__ (self, source, id)
+    def __init__ (self, source, delegate, id):
+        PanelChange.__init__ (self, source, delegate, id)
     def get_type (self):
         return "Panel applet removed"
     def get_value (self):
         return ""
 
 class PanelObjectAddedChange (PanelChange):
-    def __init__ (self, source, id):
-        PanelChange.__init__ (self, source, id)
+    def __init__ (self, source, delegate, id):
+        PanelChange.__init__ (self, source, delegate, id)
     def get_type (self):
         return "Panel object added"
     def get_value (self):
         return ""
 
 class PanelObjectRemovedChange (PanelChange):
-    def __init__ (self, source, id):
-        PanelChange.__init__ (self, source, id)
+    def __init__ (self, source, delegate, id):
+        PanelChange.__init__ (self, source, delegate, id)
     def get_type (self):
         return "Panel object removed"
     def get_value (self):
@@ -80,7 +79,7 @@ class PanelObjectRemovedChange (PanelChange):
 
 class PanelDelegate (userprofile.SourceDelegate):
     def __init__ (self, source):
-        userprofile.SourceDelegate.__init__ (self, source, "/apps/panel", PanelChange)
+        userprofile.SourceDelegate.__init__ (self, source, "/apps/panel")
         self.client = gconf.client_get_default ()
 
         self.toplevels = {}
@@ -154,9 +153,9 @@ class PanelDelegate (userprofile.SourceDelegate):
             removed.append (id)
 
         for id in added:
-            self.source.emit ("changed", added_class (self.source, id))
+            self.source.emit ("changed", added_class (self.source, self, id))
         for id in removed:
-            self.source.emit ("changed", removed_class (self.source, id))
+            self.source.emit ("changed", removed_class (self.source, self, id))
             del dict[id]
 
         return True
@@ -199,6 +198,9 @@ class PanelDelegate (userprofile.SourceDelegate):
                                                  PanelObjectRemovedChange)
 
         return False
+
+    def commit_change (self, change, mandatory = False):
+        pass
 
 def get_gconf_delegate (source):
     return PanelDelegate (source)
