@@ -939,7 +939,7 @@ class ProfileStorage:
         
         self.__unpack ()
         
-        extract_dir = tempfile.mkdtemp ("sabayon-profile-storage-")
+        extract_dir = tempfile.mkdtemp (prefix = "sabayon-profile-storage-")
         
         (revision_type, revision_number) = revision.split (":")
         if revision_type == "profile":
