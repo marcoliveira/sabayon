@@ -22,6 +22,9 @@ import os
 import os.path
 import gobject
 import gamin
+
+N_WATCHES_LIMIT = 200
+
 CHANGED = gamin.GAMChanged
 DELETED = gamin.GAMDeleted
 CREATED = gamin.GAMCreated
@@ -41,10 +44,11 @@ class DirectoryMonitor:
         self.directory = directory
         self.callback = callback
         self.data = data
-	self.nb_watches = 0
 	self.mon = None
+	self.watches = {}
+        self.too_many_watches = False
 	self.fd = -1
-	self.watch = None
+	self.io_watch = None
 
     #
     # call the user level processing
@@ -71,39 +75,38 @@ class DirectoryMonitor:
     #
     def __handle_gamin_event (self, path, event, monitor_file):
         if event == CHANGED or event == DELETED or event == CREATED:
-	    if path[0] != '/':
+            if not os.path.isabs (path):
 		path = monitor_file + '/' + path
-	    print "got event %s, %s" % (path, event_to_string(event))
 
 	    if event == CREATED and os.path.isdir (path):
 		self.__monitor_dir_recurse (path, True)
 	    elif event == DELETED:
-		if path != self.directory and self.monitors.has_key (path):
-		    self.mon.stop_watch(path)
+                if path != self.directory and self.watches.has_key (path):
+                    del self.watches[path]
+                    if len (self.watches) < N_WATCHES_LIMIT:
+                        self.too_many_watches = False
+                    self.mon.stop_watch(path)
 
-	    self.__invoke_callback (path, event)
+            self.__invoke_callback (path, event)
 
     def __monitor_dir (self, dir):
-        if self.nb_watches == 200:
-	    print "Too many directories to watch on %s" % (self.directory)
-	    self.nb_watches = self.nb_watches + 1
-	if self.nb_watches > 200:
-	    return
+        if len (self.watches) >= N_WATCHES_LIMIT:
+            if not self.too_many_watches:
+                print "Too many directories to watch on %s" % (self.directory)
+                self.too_many_watches = True
+            return
 
         try:
             self.mon.watch_directory(dir, self.__handle_gamin_event, dir)
-	    print "monitoring %s" % (dir)
         except:
             print "Failed to add monitor for %s" % (dir)
 	    import util
 	    util.print_exception()
             return
-	self.nb_watches = self.nb_watches + 1
-
 
     def __monitor_dir_recurse (self, dir, new_dir = False):
-        if self.nb_watches > 200:
-	    return
+        if self.too_many_watches:
+            return
         if dir != self.directory:
             self.__monitor_dir (dir)
         for entry in os.listdir (dir):
@@ -119,8 +122,8 @@ class DirectoryMonitor:
 
 	self.mon = gamin.WatchMonitor()
 	self.fd = self.mon.get_fd()
-	self.watch = gobject.io_add_watch (self.fd, gobject.IO_IN,
-	                                   self.__pending_data)
+	self.io_watch = gobject.io_add_watch (self.fd, gobject.IO_IN,
+                                              self.__pending_data)
         self.__monitor_dir (self.directory)
         self.__monitor_dir_recurse (self.directory)
 
@@ -128,9 +131,9 @@ class DirectoryMonitor:
         if self.mon == None:
 	    return
 
-        gobject.source_remove(self.watch)
+        gobject.source_remove(self.io_watch)
+	self.io_watch = 0
 	self.mon = None
-	self.watch = None
 	self.fd = -1
 
 def run_unit_tests ():
@@ -140,13 +143,13 @@ def run_unit_tests ():
     temp_path = tempfile.mkdtemp (prefix = "test-monitor-")
 
     def handle_change (path, event, data):
-        print "handle_change"
         (expected, main_loop) = data
         if len (expected) > 0:
             i = 0
             for (expected_path, expected_event) in expected:
                 if expected_path == path and expected_event == event:
                     break
+                i += 1
             if i < len (expected):
                 del expected[i]
         if len (expected) == 0:
