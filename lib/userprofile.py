@@ -23,6 +23,7 @@ import sys
 import gobject
 from config import *
 import storage
+import traceback
 
 class ModuleLoader:
     """Loads all python modules from a directory allows objects
@@ -43,7 +44,8 @@ class ModuleLoader:
         try:
             exec (cmd)
         except:
-            print "Failed to import module '%s': %s" % (module, sys.exc_type)
+            print >> sys.stderr, "Failed to import module '%s' cmd=\"%s\"" % (module, cmd)
+            traceback.print_exc(file=sys.stderr)
             return
         self.modules.append (module)
         
