@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-03-04 06:25-0500\n"
+"POT-Creation-Date: 2005-03-04 17:27-0500\n"
 "PO-Revision-Date: 2005-03-04 11:14-0400\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: Canadian English <adamw@gnome.org>\n"
@@ -17,7 +17,64 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: admin-tool/editorwindow.py:153 admin-tool/profilesdialog.py:180
+#: admin-tool/editorwindow.py:85 admin-tool/sabayon.glade.h:1
+#: lib/protosession.py:332
+msgid "All Your Settings Are Belong To Us"
+msgstr "All Your Settings Are Belong To Us"
+
+#: admin-tool/editorwindow.py:167 admin-tool/sabayon.glade.h:7
+msgid "_Profile"
+msgstr "_Profile"
+
+#: admin-tool/editorwindow.py:168
+msgid "_Save"
+msgstr "_Save"
+
+#: admin-tool/editorwindow.py:168
+msgid "Save profile"
+msgstr "Save profile"
+
+#: admin-tool/editorwindow.py:169
+msgid "_Close"
+msgstr "_Close"
+
+#: admin-tool/editorwindow.py:169
+msgid "Close the current window"
+msgstr "Close the current window"
+
+#: admin-tool/editorwindow.py:170
+msgid "_Edit"
+msgstr "_Edit"
+
+#: admin-tool/editorwindow.py:171
+msgid "_Delete"
+msgstr "_Delete"
+
+#: admin-tool/editorwindow.py:171
+msgid "Delete item"
+msgstr "Delete item"
+
+#: admin-tool/editorwindow.py:172
+msgid "C_lear History"
+msgstr "C_lear History"
+
+#: admin-tool/editorwindow.py:172
+msgid "Clear revision history"
+msgstr "Clear revision history"
+
+#: admin-tool/editorwindow.py:173 admin-tool/sabayon.glade.h:6
+msgid "_Help"
+msgstr "_Help"
+
+#: admin-tool/editorwindow.py:174
+msgid "_About"
+msgstr "_About"
+
+#: admin-tool/editorwindow.py:174
+msgid "About Sabayon"
+msgstr "About Sabayon"
+
+#: admin-tool/editorwindow.py:202 admin-tool/profilesdialog.py:180
 msgid "Name"
 msgstr "Name"
 
@@ -110,7 +167,8 @@ msgstr[1] ""
 msgid "If you don't save, changes from the last hour will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "If you don't save, changes from the last hour will be permanently lost."
+msgstr[0] ""
+"If you don't save, changes from the last hour will be permanently lost."
 msgstr[1] ""
 "If you don't save, changes from the last %d hours will be permanently lost."
 
@@ -137,43 +195,23 @@ msgstr "Desktop User Profiles"
 msgid "Establish and Edit Profiles for Users"
 msgstr "Establish and Edit Profiles for Users"
 
-#: admin-tool/sabayon.glade.h:1 lib/protosession.py:332
-msgid "All Your Settings Are Belong To Us"
-msgstr "All Your Settings Are Belong To Us"
-
 #: admin-tool/sabayon.glade.h:2
-msgid "C_lear History"
-msgstr "C_lear History"
-
-#: admin-tool/sabayon.glade.h:3
 msgid "C_reate"
 msgstr "C_reate"
 
-#: admin-tool/sabayon.glade.h:4
+#: admin-tool/sabayon.glade.h:3
 msgid "New Profile"
 msgstr "New Profile"
 
-#: admin-tool/sabayon.glade.h:5
+#: admin-tool/sabayon.glade.h:4
 msgid "Profile _name:"
 msgstr "Profile _name:"
 
-#: admin-tool/sabayon.glade.h:6
+#: admin-tool/sabayon.glade.h:5
 msgid "_Base on:"
 msgstr "_Base on:"
 
-#: admin-tool/sabayon.glade.h:7
-msgid "_Edit"
-msgstr "_Edit"
-
 #: admin-tool/sabayon.glade.h:8
-msgid "_Help"
-msgstr "_Help"
-
-#: admin-tool/sabayon.glade.h:9
-msgid "_Profile"
-msgstr "_Profile"
-
-#: admin-tool/sabayon.glade.h:10
 msgid "_Profiles:"
 msgstr "_Profiles:"
 
