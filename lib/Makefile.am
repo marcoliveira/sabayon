@@ -6,6 +6,7 @@ PYTHON_FILES =				\
 	config.py			\
 	storage.py			\
 	dirmonitor.py			\
+	mozilla_bookmarks.py		\
 	protosession.py			\
 	usermod.py			\
 	userdb.py			\

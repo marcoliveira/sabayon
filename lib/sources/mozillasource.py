@@ -29,11 +29,13 @@ try:
     import config
     import userprofile
     import dirmonitor
+    import mozilla_bookmarks
 except:
     from sabayon import util
     from sabayon import config
     from sabayon import userprofile
     from sabayon import dirmonitor
+    from sabayon import mozilla_bookmarks
 
 class file_state:
     (UNKNOWN,
@@ -194,6 +196,8 @@ class MozillaDelegate(userprofile.SourceDelegate):
                     pass
                 else:
                     raise ValueError
+            elif profile_file_type != FirefoxProfileFile.TYPE_BOOKMARK:
+                pass
             elif profile_file_type != FirefoxProfileFile.TYPE_UNKNOWN:
                 if change.event == dirmonitor.CREATED or \
                    change.event == dirmonitor.CHANGED:
@@ -718,8 +722,9 @@ class JavascriptPrefsFile(FirefoxProfileFile):
 # ------ Class FirefoxProfile ------
 
 class FirefoxProfile:
-    def __init__(self, section, rel_dir):
+    def __init__(self, section, home_dir, rel_dir):
         self.section = section
+        self.home_dir = home_dir
         self.rel_dir = rel_dir
         self.attrs = {}
         self.files = {}
@@ -745,7 +750,14 @@ class FirefoxProfile:
     def add_file(self, rel_path, object=None):
         # XXX - jrd, passing object in is ugly & awkward, find more elegant solution
         if not object:
-            object = FirefoxProfileFile(rel_path)
+            # XXX - funky way to get type
+            file_type = get_type_from_path(rel_path)
+            if file_type == FirefoxProfileFile.TYPE_PREFS:
+                object = FirefoxProfileFile(rel_path)
+            elif file_type == FirefoxProfileFile.TYPE_BOOKMARK:
+                object = BookmarksFile(self.home_dir, rel_path)
+            else:
+                object = FirefoxProfileFile(rel_path)
             file = self.files.setdefault(rel_path, object)
         else:
             file = object
@@ -838,7 +850,7 @@ class FirefoxProfilesIni:
                 if name in self.profiles:
                     raise BadIniFileError(_("duplicate name(%s) in section %s") %
                                           (name, section))
-                profile = FirefoxProfile(section, self.rel_dir)
+                profile = FirefoxProfile(section, self.home_dir, self.rel_dir)
                 self.profiles[name] = profile
                 for (key, value) in self.ini.items(section):
                     profile.set_attr(key, value)
@@ -872,6 +884,26 @@ class FirefoxProfilesIni:
         else:
             return self.profiles.values()
 
+# ------ Class BookmarksFile ------
+
+class BookmarksFile(FirefoxProfileFile):
+    def __init__(self, home_dir, rel_path):
+        dprint(LOG_OPERATION, "BookmarksFile: created (%s)", rel_path)
+        FirefoxProfileFile.__init__(self, rel_path)
+        self.home_dir = home_dir
+        self.rel_path = rel_path
+        self.parser = mozilla_bookmarks.BookmarkHTMLParser()
+
+    def get_full_path(self):
+        return os.path.join(self.home_dir, self.rel_path)
+
+    def get_rel_path(self):
+        return self.rel_path
+
+    def read(self):
+        self.parser.feed(open(self.get_full_path()).read())
+        self.parser.close()
+        
 # ------ Utility Functions ------
 
 def get_type_from_path(rel_path):
@@ -883,53 +915,6 @@ def get_type_from_path(rel_path):
         return FirefoxProfileFile.TYPE_BOOKMARK
     else:
         return FirefoxProfileFile.TYPE_UNKNOWN
-
-
-# XXX - this needs more logic to distinquish mozilla, firefox, versions, etc.
-# basically its just hardcoded at the moment.
-def GetProfileIniFile():
-    filename = os.path.expanduser("~/%s" % profiles_ini_rel_path)
-
-    # XXX - should caller thow error instead?
-    if not os.path.exists(filename):
-        raise FileNotFoundError(filename)
-
-    return(filename)
-
-def insert_prefs_into_file(path, prefs):
-    (wfd, tmppath) = tempfile.mkstemp(dir=os.path.dirname(path))
-
-    for line in open(path):
-        wfd.write(line)
-
-    for key, value in prefs.items():
-        wfd.write("user_pref(\"%s\", %s);\n" % (key, value))
-
-    wfd.close()
-    os.rename(tmppath, path)
-
-# XXX - this does not deal with comments
-def remove_prefs_from_file(path, prefs):
-    (wfd, tmppath) = tempfile.mkstemp(dir=os.path.dirname(path))
-
-    for line in open(path):
-        match = pref_re.search(line)
-        if match:
-            key = match.group(2)
-            if type(prefs) is types.DictType:
-                if not prefs.has_key(key):
-                    wfd.write(line)
-            elif type(prefs) is types.ListType:
-                if not key in prefs:
-                    wfd.write(line)
-            else:
-                raise ValueError
-        else:
-            wfd.write(line)
-
-    wfd.close()
-    os.rename(tmppath, path)
-
 
 def dump_change_set(cs):
     _add = cs['add']
@@ -971,65 +956,5 @@ def run_unit_tests():
 
     dprint(LOG_OPERATION, "In mozillaprofile tests")
 
-    try:
-        profile_ini_file = GetProfileIniFile()
-    except FileNotFoundError, e:
-        print _("No such profile ini file: %s") % e.filename
-        return
-
-    dprint(LOG_OPERATION, "ini file = %s" % profile_ini_file)
-
-    profiles_ini = FirefoxProfilesIni(os.path.expanduser("~"), profile_ini_file)
-    profiles_ini.read()
-    profiles_ini.parse_sections()
-    default_path = profiles_ini.get_default_path()
-    dprint(LOG_OPERATION, "default_path = %s" % default_path)
-
-    prefs_path = "%s/%s" % (default_path, "prefs.js")
-
-    # make sure we're working with a clean file copy
-    remove_prefs_from_file(prefs_path, test_prefs)
-
-    pref = JavascriptPrefsFile(prefs_path)
-    pref.open()
-    pref.kill_comments()
-    pref.parse()
-    prev_prefs = pref.get_prefs()
-    
-    insert_prefs_into_file(prefs_path, test_prefs)
-
-    pref = JavascriptPrefsFile(prefs_path)
-    pref.open()
-    pref.kill_comments()
-    pref.parse()
-    cur_prefs = pref.get_prefs()
-
-    dc = DictCompare(prev_prefs, cur_prefs)
-    dc.compare()
-
-    cs = dc.get_change_set('a', 'b')
-    dprint(LOG_DATA, "a <-- b")
-    dump_change_set(cs)
-
-    dc = DictCompare(test_prefs, cs['add'])
-    dc.compare()
-    assert dc.is_equal() == True
-
-    test_prefs['newkey'] = 'new'
-    dc = DictCompare(test_prefs, cs['add'])
-    dc.compare()
-    assert dc.is_equal() == False
-
-    del test_prefs['newkey']
-    dc = DictCompare(test_prefs, cs['add'])
-    dc.compare()
-    assert dc.is_equal() == True
-
-    test_prefs['uno'] = '2'
-    dc = DictCompare(test_prefs, cs['add'])
-    dc.compare()
-    assert dc.is_equal() == False
-
-    remove_prefs_from_file(prefs_path, test_prefs)
 
 

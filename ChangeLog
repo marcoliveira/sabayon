@@ -1,3 +1,15 @@
+2005-03-31  John Dennis  <jdennis@redhat.com>
+
+	* lib/Makefile.am
+	* lib/mozilla_bookmarks.py
+	* lib/sources/mozillasource.py
+
+	Initial "glue" to wed together mozilla_bookmarks and mozillasource.
+	Mozillasource now monitors and creates a bookmark object.
+	Remove obsolete ununsed code
+	Clean up home_dir initialization
+	mozilla_bookmarks now python stand alone for testing, not sh standalone
+	
 2005-03-30  John Dennis  <jdennis@redhat.com>
 
 	* lib/mozilla_bookmarks.py: Add new python file for mozilla

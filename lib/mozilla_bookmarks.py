@@ -1,4 +1,22 @@
-#!/usr/bin/python
+#!/usr/bin/env python
+
+#
+# Copyright (C) 2005 Red Hat, Inc.
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#
 
 import sys
 
@@ -254,18 +272,19 @@ def visit(folder, path, data=None):
 
 # -----------------------
 
-parser = BookmarkHTMLParser()
+if __name__ == "__main__":
+    parser = BookmarkHTMLParser()
 
-parser.feed(open('bookmarks.html').read())
-parser.close()
+    parser.feed(open('bookmarks.html').read())
+    parser.close()
 
-bm_name = "libical"
-bm_list = parser.folder_root.find_bookmark(bm_name)
-if bm_list:
-    for bm in bm_list:
-        print "found bookmark %s url=%s" % (bm.name, bm.get_attr("href"))
-        print "path = %s" % bm.path_as_names(" -> ")
-else:
-    print "%s not found" % bm_name
+    bm_name = "libical"
+    bm_list = parser.folder_root.find_bookmark(bm_name)
+    if bm_list:
+        for bm in bm_list:
+            print "found bookmark %s url=%s" % (bm.name, bm.get_attr("href"))
+            print "path = %s" % bm.path_as_names(" -> ")
+        else:
+            print "%s not found" % bm_name
 
-parser.folder_root.traverse(visit)
+    parser.folder_root.traverse(visit)
