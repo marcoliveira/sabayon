@@ -1,6 +1,5 @@
 2005-03-31  John Dennis  <jdennis@redhat.com>
 
-	* lib/Makefile.am
 	* lib/mozilla_bookmarks.py
 	* lib/sources/mozillasource.py
 
@@ -8,7 +7,12 @@
 	Mozillasource now monitors and creates a bookmark object.
 	Remove obsolete ununsed code
 	Clean up home_dir initialization
-	mozilla_bookmarks now python stand alone for testing, not sh standalone
+	Mozilla_bookmarks now python stand alone for testing, not sh standalone
+	Can now compare and generate differences between two bookmark files.
+	Can now write out bookmark file from data structure (note, the 
+	original ordering is not fully preserved, this needs to be fixed.
+	Attributes written out can now be filtered.
+	Rework add_file method.
 	
 2005-03-30  John Dennis  <jdennis@redhat.com>
 
