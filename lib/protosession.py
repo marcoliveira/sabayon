@@ -283,13 +283,14 @@ class ProtoSession (gobject.GObject):
         (pipe_r, pipe_w) = os.pipe ()
         pid = os.fork ()
         if pid == 0: # Child process
-            os.environ["DISPLAY"] = display_name
-            os.environ["XAUTHORITY"] = xauth_file
-            import gtk
             os.close (pipe_r)
-            os.write (pipe_w, "Y")
-            os.close (pipe_w)
-            gtk.main ()
+            new_environ = os.environ
+            new_environ["DISPLAY"] = display_name
+            new_environ["XAUTHORITY"] = xauth_file
+            argv = [ "python", "-c",
+                     "import gtk, os, sys; os.write (int (sys.argv[1]), 'Y'); gtk.main ()" ,
+                     str (pipe_w) ]
+            os.execvpe (argv[0], argv, new_environ)
         os.close (pipe_w)
         select.select ([pipe_r], [], [])[0]
         os.close (pipe_r)
@@ -470,9 +471,9 @@ class ProtoSession (gobject.GObject):
         if self.admin_tool_pid == 0: # Child process
             new_environ = self.__prepare_to_run_as_user ()
             
-            dprint ("Executing %s" % ADMIN_TOOL_ARGV)
+            dprint ("Executing %s" % MONITOR_TOOL_ARGV)
 
-            os.execve (ADMIN_TOOL_ARGV[0], ADMIN_TOOL_ARGV, new_environ)
+            os.execve (MONITOR_TOOL_ARGV[0], MONITOR_TOOL_ARGV, new_environ)
 
             # Shouldn't ever reach here
             print "Failed to launch admin tool"
@@ -496,36 +497,3 @@ class ProtoSession (gobject.GObject):
         self.__kill_xnest ()
 
 gobject.type_register (ProtoSession)
-
-#
-# Unit tests
-#
-def run_unit_tests ():
-    import tempfile
-    import shutil
-
-    profile_file = "protosession-test.zip"
-    if os.path.exists (profile_file):
-        os.remove (profile_file)
-
-    main_loop = gobject.MainLoop ()
-
-    def handle_session_finished (session, main_loop):
-        main_loop.quit ()
-    
-    session = ProtoSession ("protouser", profile_file)
-    session.connect ("finished", handle_session_finished, main_loop)
-    session.start ()
-
-    main_loop.run ()
-
-    if os.path.exists (profile_file):
-        os.remove (profile_file)
-    if os.path.exists (profile_file + ".bak"):
-        os.remove (profile_file + ".bak")
-
-if __name__ == "__main__":
-    if os.geteuid () == 0:
-        run_unit_tests ()
-    else:
-        dprint ("Not running unit tests - need to be root")

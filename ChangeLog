@@ -1,5 +1,15 @@
 2005-02-09  Mark McLoughlin  <markmc@redhat.com>
 
+	* lib/protosession.py:
+	(open_x_connection): absolutely horrendous hack to
+	have a child process hold open a dummy X connection
+	on Xnest.
+	(main): remove - its been moved to sabayon-session.
+	
+	* lib/config.py.in: upd for admin-tool renaming.
+
+2005-02-09  Mark McLoughlin  <markmc@redhat.com>
+
 	* lib/Makefile.am: add protosession.py
 
 2005-02-09  Mark McLoughlin  <markmc@redhat.com>
