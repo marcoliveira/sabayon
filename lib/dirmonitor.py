@@ -24,7 +24,13 @@ try:
     import gnomevfs
 except:
     import gnome.vfs
+    import os.path
     gnomevfs = gnome.vfs
+    def get_uri_from_local_path(s):
+        if s == None:
+	    return None
+	return "file://" + os.path.abspath(s)
+    gnomevfs.__dict__['get_uri_from_local_path'] = get_uri_from_local_path
 
 CHANGED = gnomevfs.MONITOR_EVENT_CHANGED
 DELETED = gnomevfs.MONITOR_EVENT_DELETED
