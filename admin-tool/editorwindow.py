@@ -54,11 +54,12 @@ def dprint (fmt, *args):
 class ProfileModel (gtk.ListStore):
     (
         COLUMN_NAME,
-        COLUMN_BITE_ME_GUIDO
-    ) = range (2)
+        COLUMN_REVISION,
+        COLUMN_REVISIONS_MODEL
+    ) = range (3)
 
     def __init__ (self, storage):
-        gtk.ListStore.__init__ (self, str)
+        gtk.ListStore.__init__ (self, str, str, RevisionsModel)
 
         self.storage = storage
         self.reload ()
@@ -67,8 +68,12 @@ class ProfileModel (gtk.ListStore):
         dprint ("Reloading profile model")
         self.clear ()
         for (source, name) in self.storage.list ():
+            revisions_model = RevisionsModel (self.storage, name)
+            first = revisions_model.get_iter_first ()
             self.set (self.prepend (),
-                      self.COLUMN_NAME, name)
+                      self.COLUMN_NAME, name,
+                      self.COLUMN_REVISION, revisions_model[first][RevisionsModel.COLUMN_DATE],
+                      self.COLUMN_REVISIONS_MODEL, revisions_model)
 
 class RevisionsModel (gtk.ListStore):
     (
@@ -263,6 +268,23 @@ class ProfileEditorWindow:
         self.current_revision = self.revisions_model[iter][RevisionsModel.COLUMN_REVISION]
         self.revisions_combo.set_active_iter (iter)
         
+    def __file_revision_changed (self, cell, tree_path, new_text):
+        iter = self.profile_model.get_iter_from_string (tree_path)
+        path = self.profile_model[iter][ProfileModel.COLUMN_NAME]
+        revisions_model = self.profile_model[iter][ProfileModel.COLUMN_REVISIONS_MODEL]
+
+        revision_iter = revisions_model.get_iter_first ()
+        while revision_iter:
+            if revisions_model[revision_iter][RevisionsModel.COLUMN_DATE] == new_text:
+                revision = revisions_model[revision_iter][RevisionsModel.COLUMN_REVISION]
+                dprint ("New file revision for '%s': '%s'", path, revision)
+                self.profile_model.set (iter, ProfileModel.COLUMN_REVISION, revision)
+                self.storage.revert (revision, path)
+                self.current_revision = None
+                self.__set_needs_saving (True)
+                return
+            revision_iter = revisions_model.iter_next (revision_iter)
+        
     def __setup_treeview (self):
         self.profile_model = ProfileModel (self.storage)
         
@@ -280,7 +302,19 @@ class ProfileEditorWindow:
                                 gtk.CellRendererText (),
                                 text = ProfileModel.COLUMN_NAME)
         self.treeview.append_column (c)
-        
+
+        renderer = gtk.CellRendererCombo ()
+        renderer.set_property ("text-column", RevisionsModel.COLUMN_DATE)
+        renderer.set_property ("editable", True)
+        renderer.set_property ("has-entry", False)
+        renderer.connect ("edited", self.__file_revision_changed)
+
+        c = gtk.TreeViewColumn (_("Version"),
+                                renderer,
+                                model = ProfileModel.COLUMN_REVISIONS_MODEL,
+                                text = ProfileModel.COLUMN_REVISION)
+        self.treeview.append_column (c)
+
         self.treeview.connect ("key-press-event", self.__handle_key_press)
 
     def __treeview_selection_changed (self, selection):
