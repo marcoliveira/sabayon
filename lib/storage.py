@@ -318,7 +318,7 @@ class ProfileStorage:
 
         # Set properties
         revision_node.setProp ("id",        revision_id)
-        revision_node.setProp ("timestamp", time.ctime (time.time ()))
+        revision_node.setProp ("timestamp", str (int (time.time ())))
         revision_node.setProp ("user",      util.get_user_name ())
         revision_node.setProp ("host",      socket.gethostname ())
 
