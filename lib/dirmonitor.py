@@ -62,12 +62,12 @@ class DirectoryMonitor:
     #
     # Called from the main loop when we have data
     #
-    def __pending_data(self, foo = None, bar = None):
+    def __pending_data (self, foo = None, bar = None):
 	try:
-	    ret = self.mon.handle_events()
+	    ret = self.mon.handle_events ()
 	except:
 	    import util
-	    util.print_exception()
+	    util.print_exception ()
 	return True
         
     #
@@ -85,7 +85,7 @@ class DirectoryMonitor:
                     del self.watches[path]
                     if len (self.watches) < N_WATCHES_LIMIT:
                         self.too_many_watches = False
-                    self.mon.stop_watch(path)
+                    self.mon.stop_watch (path)
 
             self.__invoke_callback (path, event)
 
@@ -97,11 +97,11 @@ class DirectoryMonitor:
             return
 
         try:
-            self.mon.watch_directory(dir, self.__handle_gamin_event, dir)
+            self.mon.watch_directory (dir, self.__handle_gamin_event, dir)
         except:
             print "Failed to add monitor for %s" % (dir)
 	    import util
-	    util.print_exception()
+	    util.print_exception ()
             return
 
     def __monitor_dir_recurse (self, dir, new_dir = False):
@@ -120,9 +120,10 @@ class DirectoryMonitor:
         if self.mon != None:
 	    return
 
-	self.mon = gamin.WatchMonitor()
-	self.fd = self.mon.get_fd()
-	self.io_watch = gobject.io_add_watch (self.fd, gobject.IO_IN,
+	self.mon = gamin.WatchMonitor ()
+	self.fd = self.mon.get_fd ()
+	self.io_watch = gobject.io_add_watch (self.fd,
+                                              gobject.IO_IN,
                                               self.__pending_data)
         self.__monitor_dir (self.directory)
         self.__monitor_dir_recurse (self.directory)
@@ -133,8 +134,11 @@ class DirectoryMonitor:
 
         for path in self.watches:
             self.mon.stop_watch (path)
-        gobject.source_remove(self.io_watch)
+        
+        gobject.source_remove (self.io_watch)
 	self.io_watch = 0
+        
+	self.mon.disconnect ()
 	self.mon = None
 	self.fd = -1
 
