@@ -21,11 +21,15 @@ desktop_DATA     = $(desktop_in_files:.desktop.in=.desktop)
 EXTRA_DIST =				\
 	$(PYTHON_FILES)			\
 	$(GLADE_FILES)			\
+	$(ICON_FILES)			\
 	$(desktop_in_files)		\
 	$(desktop_DATA)			\
 	sabayon.in			\
+	sabayon-apply.in		\
 	sabayon-monitor.in		\
-	sabayon-session.in
+	sabayon-session.in		\
+	sabayon.console.in		\
+	sabayon.pam
 
 gladedir   = $(pkgdatadir)/glade
 glade_DATA = $(GLADE_FILES)
@@ -46,7 +50,8 @@ wrappers = 			\
 		< $< > $@
 	chmod a+x $@
 
-sbin_SCRIPTS = sabayon sabayon-apply
+bin_SCRIPTS = sabayon
+sbin_SCRIPTS = sabayon-apply
 libexec_SCRIPTS = sabayon-monitor sabayon-session
 
 pkgdata_PYTHON = $(PYTHON_FILES)
@@ -75,7 +80,8 @@ pycheck:
 
 clean:
 	rm -f *.pyo *.pyc
-	rm -f $(BUILT_SOURCES)
 
-BUILT_SOURCES  = $(wrappers)
-DISTCLEANFILES = $(wrappers)
+DISTCLEANFILES =		\
+	$(wrappers)		\
+	$(desktop_DATA)		\
+	sabayon.console
