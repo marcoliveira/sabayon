@@ -120,9 +120,9 @@ class UsersWindow (gtk.Window):
         dprint ("Setting profile for '%s' to '%s'", username, profile)
         
         if profile == _("None"):
-            self.users_model[iter][UsersModel.COLUMN_PROFILE] = profile
-        else:
             self.users_model[iter][UsersModel.COLUMN_PROFILE] = None
+        else:
+            self.users_model[iter][UsersModel.COLUMN_PROFILE] = profile
         
         self.userdb.set_profile (username, profile)
 
