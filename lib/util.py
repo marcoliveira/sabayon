@@ -64,22 +64,30 @@ def init_debug_modules ():
         print "    all"
         for module in debug_modules:
             print "    %s" % debug_modules[module][0]
+        print "You may supply a list of modules separated by a colon (:)"
+        print "You may also supply an optional hex debug mask to a module, e.g. foo=0xF8"
         sys.exit (1)
     elif debug_value == "all":
         for module in debug_modules:
             debug_modules[module] = (debug_modules[module][0], True)
     else:
-        for key in debug_value.split (":"):
+        for item in debug_value.split (":"):
+            item = item.split("=")
+            key = item[0]
+            if len(item) > 1:
+                value = int(item[1],16)
+            else:
+                value = ~0
             for module in debug_modules:
                 if debug_modules[module][0] == key:
-                    debug_modules[module] = (key, True)
+                    debug_modules[module] = (key, value)
                     break
 
 init_debug_modules ()
 
-def debug_print (module, message):
+def debug_print (module, message, mask=~0):
     assert debug_modules.has_key(module)
-    if not debug_modules[module][1]:
+    if not debug_modules[module][1] & mask:
         return
     print "(%d) %s: %s" % (os.getpid (), debug_modules[module][0], message)
 

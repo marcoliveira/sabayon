@@ -1,4 +1,4 @@
- #!/usr/bin/env python
+#!/usr/bin/env python
 
 #
 # Copyright (C) 2005 Red Hat, Inc.
@@ -46,9 +46,22 @@ class file_state:
 
 firefox_rel_path = ".mozilla/firefox"
 profiles_ini_rel_path = os.path.join(firefox_rel_path, "profiles.ini")
+sabayon_pref_rel_path = os.path.join(firefox_rel_path, "sabayon-prefs.js")
+sabayon_mandatory_pref_rel_path = os.path.join(firefox_rel_path, "sabayon-mandatory-prefs.js")
 
-def dprint(fmt, *args):
-    util.debug_print(util.DEBUG_MOZILLASOURCE, fmt % args)
+LOG_OPERATION           = 0x00001
+LOG_CHANGE              = 0x00002
+LOG_IGNORED_CHANGE      = 0x00004
+LOG_APPLY               = 0x00008
+LOG_SYNC                = 0x00010
+LOG_PARSE               = 0x00020
+LOG_PREF                = 0x00040
+LOG_FILE_CONTENTS       = 0x00080
+LOG_DATA                = 0x00100
+LOG_VERBOSE             = 0x10000
+
+def dprint(mask, fmt, *args):
+    util.debug_print(util.DEBUG_MOZILLASOURCE, fmt % args, mask)
 
 def dwarn(fmt, *args):
     print >> sys.stderr, "WARNING " + fmt % args
@@ -105,6 +118,7 @@ gobject.type_register(MozillaChange)
 
 class MozillaDelegate(userprofile.SourceDelegate):
     def __init__ (self, source):
+        dprint(LOG_OPERATION, "Delegate construction")
         userprofile.SourceDelegate.__init__ (self, _("Firefox"), source, ".mozilla")
         self.source = source
         self.delegate = self
@@ -112,7 +126,6 @@ class MozillaDelegate(userprofile.SourceDelegate):
         self.committed_prefs = {}
         self.committed_mandatory_prefs = {}
         self.ini_file = None
-        self.load_profiles_ini()
 
     def get_full_path(self, path):
         return os.path.join(self.home_dir, path)        
@@ -124,6 +137,10 @@ class MozillaDelegate(userprofile.SourceDelegate):
         if not self.ini_file:
             self.ini_file = FirefoxProfilesIni(self.home_dir, profiles_ini_rel_path)
         self.ini_file.read()
+
+    def load_profiles(self):
+        if self.ini_file:
+            self.ini_file.load_profiles()
 
     def is_ini_file(self, rel_path):
         if rel_path == profiles_ini_rel_path:
@@ -148,7 +165,7 @@ class MozillaDelegate(userprofile.SourceDelegate):
         # INI File
         #
         if self.is_ini_file(rel_path):
-            dprint("%s ini file: %s",
+            dprint(LOG_CHANGE, "%s ini file: %s",
                    dirmonitor.event_to_string(change.event), rel_path)
             self.load_profiles_ini()
 
@@ -157,7 +174,7 @@ class MozillaDelegate(userprofile.SourceDelegate):
         #
         profile = self.is_profile_file(rel_path)
         if profile:
-            dprint("%s profile file: %s",
+            dprint(LOG_CHANGE, "%s profile file: %s",
                    dirmonitor.event_to_string(change.event), rel_path)
 
             # XXX - jrd, we shouldn't have to create a file just to get its type
@@ -168,8 +185,10 @@ class MozillaDelegate(userprofile.SourceDelegate):
                 if change.event == dirmonitor.CREATED or \
                    change.event == dirmonitor.CHANGED:
                     if not isinstance(profile_file, JavascriptPrefsFile):
-                        profile_file = profile.add_file(rel_path, JavascriptPrefsFile(self.home_dir, rel_path, self.source, self.delegate))
+                        profile_file = profile.add_file(rel_path,JavascriptPrefsFile(self.home_dir, rel_path))
+                    cat_file(profile_file.get_full_path())
                     profile_file.read()
+                    profile_file.emit_changes(self.source, self.delegate)
                     return True
                 elif change.event == dirmonitor.DELETED:
                     pass
@@ -189,11 +208,11 @@ class MozillaDelegate(userprofile.SourceDelegate):
         #
         # Ignored Files
         #
-        dprint("IGNORED: %s", rel_path)
+        dprint(LOG_IGNORED_CHANGE, "IGNORED: %s", rel_path)
         return True
 
     def commit_change(self, change, mandatory = False):
-        dprint("Commiting (mandatory = %s) key = %s value = %s event = %s",
+        dprint(LOG_CHANGE, "Commiting (mandatory = %s) key = %s value = %s event = %s",
                 mandatory, change.key, change.value, change.event)
 
         # XXX - jrd we need to mark here what gets written in sync_changes
@@ -206,23 +225,34 @@ class MozillaDelegate(userprofile.SourceDelegate):
                 JavascriptPreference(change.get_type(), change.get_key(), change.get_value())
                 
 
+    def start_monitoring (self):
+        """Start monitoring for configuration changes."""
+        # Read all files we are going to monitor so that when a change is
+        # reported we have a "before" state to compare to and thus derive
+        # what is different.
+        dprint(LOG_OPERATION, "start_monitoring:")
+        self.load_profiles_ini()
+        self.load_profiles()
+
+    def stop_monitoring (self):
+        """Stop monitoring for configuration changes."""
+        dprint(LOG_OPERATION, "stop_monitoring:")
+
     def sync_changes(self):
         """Ensure that all committed changes are saved to disk."""
 
-        dprint("sync_changes: home_dir = %s", self.home_dir)
+        dprint(LOG_SYNC, "sync_changes: home_dir = %s", self.home_dir)
         ini = self.ini_file
         if ini.is_valid():
             default_profile = ini.get_default_profile()
-            pref_rel_dir = default_profile.get_rel_dir()
-            dprint("sync_changes: default profile rel dir = %s", pref_rel_dir)
-
 
             self.source.storage.add(ini.get_rel_path(), self.home_dir, self.name,
                                     {"file_type" : FirefoxProfileFile.TYPE_PROFILE_INI})
 
             if len(self.committed_prefs) > 0:
-                pref_rel_path = os.path.join(pref_rel_dir, "sabayon-firefox-prefs.js")
-                pref_file = JavascriptPrefsFile(self.home_dir, pref_rel_path, self.source, self.delegate)
+                pref_rel_path = sabayon_pref_rel_path
+                dprint(LOG_SYNC, "sync_changes: storing committed_prefs to %s", pref_rel_path)
+                pref_file = JavascriptPrefsFile(self.home_dir, pref_rel_path)
                 pref_file.set_prefs(self.committed_prefs)
                 pref_file.write()
                 self.source.storage.add(pref_rel_path, self.home_dir, self.name,
@@ -230,8 +260,9 @@ class MozillaDelegate(userprofile.SourceDelegate):
                                           "mandatory"    : False})
 
             if len(self.committed_mandatory_prefs) > 0:
-                pref_rel_path = os.path.join(pref_rel_dir, "sabayon-firefox-mandatory-prefs.js")
-                pref_file = JavascriptPrefsFile(self.home_dir, pref_rel_path, self.source, self.delegate)
+                pref_rel_path = sabayon_mandatory_pref_rel_path
+                dprint(LOG_SYNC, "sync_changes: storing mandatory committed_prefs to %s", pref_rel_path)
+                pref_file = JavascriptPrefsFile(self.home_dir, pref_rel_path)
                 pref_file.set_prefs(self.committed_mandatory_prefs)
                 pref_file.write()
                 self.source.storage.add(pref_rel_path, self.home_dir, self.name,
@@ -244,7 +275,7 @@ class MozillaDelegate(userprofile.SourceDelegate):
         bookmark_files = []
         other_files = []
         
-        dprint("apply: home_dir = %s", self.home_dir)
+        dprint(LOG_APPLY, "apply: home_dir = %s", self.home_dir)
         storage_contents = self.source.storage.list(self.name)
 
         for source, path in storage_contents:
@@ -266,7 +297,7 @@ class MozillaDelegate(userprofile.SourceDelegate):
             else:
                 raise ValueError
             
-        dprint("apply: ini_files=%s pref_files=%s bookmark_files=%s other_files=%s",
+        dprint(LOG_APPLY, "apply: ini_files=%s pref_files=%s bookmark_files=%s other_files=%s",
                ini_files, pref_files, bookmark_files, other_files)
 
         # Profiles.ini file must be done first, if the target does not
@@ -274,35 +305,52 @@ class MozillaDelegate(userprofile.SourceDelegate):
         # Parse the profiles.ini file to learn the target profiles
         self.load_profiles_ini()
         if not self.ini_file.is_valid():
-            dprint("apply: no valid ini file, extracting %s", profiles_ini_rel_path)
+            dprint(LOG_APPLY, "apply: no valid ini file, extracting %s", profiles_ini_rel_path)
             if profiles_ini_rel_path in ini_files:
                 self.source.storage.extract(profiles_ini_rel_path, self.home_dir, True)
                 self.load_profiles_ini()
             else:
-                dprint("apply: but there isn't an ini file in the profile!")
+                dprint(LOG_APPLY, "apply: but there isn't an ini file in the profile!")
+
+        if sabayon_pref_rel_path in pref_files:
+            dprint(LOG_APPLY, "extracting %s" % sabayon_pref_rel_path)
+            self.source.storage.extract(sabayon_pref_rel_path, self.home_dir, True)
+            apply_pref = JavascriptPrefsFile(self.home_dir, path)
+            apply_pref.read()
+        else:
+            apply_pref = None
+
+        if sabayon_mandatory_pref_rel_path in pref_files:
+            dprint(LOG_APPLY, ">>> extracting %s" % sabayon_mandatory_pref_rel_path)
+            self.source.storage.extract(sabayon_mandatory_pref_rel_path, self.home_dir, True)
+            mandatory_apply_pref = JavascriptPrefsFile(self.home_dir, path)
+            mandatory_apply_pref.read()
+        else:
+            mandatory_apply_pref = None
 
         # Now merge the javascript pref files
         # XXX - iterate over all target profiles
         for profile in self.ini_file.get_profiles():
-            dprint("apply: applying to profile %s", profile.attrs)
+            dprint(LOG_APPLY, "apply: applying to profile %s", profile.attrs)
             profile_rel_dir = profile.get_rel_dir()
             target_pref_rel_path = os.path.join(profile_rel_dir, "prefs.js")
-            target_pref = JavascriptPrefsFile(self.home_dir, target_pref_rel_path, self.source, self.delegate)
+            target_pref = JavascriptPrefsFile(self.home_dir, target_pref_rel_path)
             target_pref.read()
 
-            dprint("apply: target profile rel path = %s", target_pref_rel_path)
-            for path in pref_files:
-                attributes = self.source.storage.get_attributes(path)
-                mandatory = attributes.get("mandatory", False)
-                dprint("apply: applying src profile %s, mandatory=%s", path, mandatory)
-                # XXX - should we delete this file after applying it?
-                self.source.storage.extract(path, self.home_dir, True)
-                # XXX - jrd, should this JavascriptPrefsFile have a source and delegate?
-                apply_pref = JavascriptPrefsFile(self.home_dir, path, self.source, self.delegate)
-                apply_pref.read()
+            if apply_pref:
+                mandatory = False
+                dprint(LOG_APPLY, "apply: applying src profile %s to target profile %s, mandatory=%s",
+                       sabayon_pref_rel_path, target_pref_rel_path, mandatory)
                 target_pref.merge(apply_pref, mandatory)
 
-            target_pref.write()
+            if mandatory_apply_pref:
+                mandatory = True
+                dprint(LOG_APPLY, "apply: applying src profile %s to target profile %s, mandatory=%s",
+                       sabayon_pref_rel_path, target_pref_rel_path, mandatory)
+                target_pref.merge(mandatory_apply_pref, mandatory)
+
+            if apply_pref or mandatory_apply_pref:
+                target_pref.write()
 
         # Now merge the bookmarks
         for path in bookmark_files:
@@ -313,9 +361,10 @@ class MozillaDelegate(userprofile.SourceDelegate):
         for path in other_files:
             attributes = self.source.storage.get_attributes(path)
             mandatory = attributes.get("mandatory", False)
-            dprint("apply: extracting other file %s, mandatory=%s", path, mandatory)
+            dprint(LOG_APPLY, "apply: extracting other file %s, mandatory=%s", path, mandatory)
             self.source.storage.extract(path, self.home_dir, mandatory)
             
+        dprint(LOG_APPLY, "apply: finished")
 
 def get_files_delegate(source):
     return MozillaDelegate(source)
@@ -463,11 +512,11 @@ class DictCompare:
 
     def dump(self):
         'Print the results of the dictionary comparision'
-        dprint("intersection = %s" % ",".join(self.intersection))
-        dprint("only a = %s" % ",".join(self.only_a))
-        dprint("only b = %s" % ",".join(self.only_b))
-        dprint("equal = %s" % ",".join(self.equal))
-        dprint("not equal = %s" % ",".join(self.not_equal))
+        dprint(LOG_DATA, "intersection = %s" % ",".join(self.intersection))
+        dprint(LOG_DATA, "only a = %s" % ",".join(self.only_a))
+        dprint(LOG_DATA, "only b = %s" % ",".join(self.only_b))
+        dprint(LOG_DATA, "equal = %s" % ",".join(self.equal))
+        dprint(LOG_DATA, "not equal = %s" % ",".join(self.not_equal))
 
 
 # ------ Class FirefoxProfileFile ------
@@ -526,12 +575,11 @@ class JavascriptPreference:
 # ------ Class JavascriptPrefsFile ------
 
 class JavascriptPrefsFile(FirefoxProfileFile):
-    def __init__(self, home_dir, rel_path, source, delegate):
+    def __init__(self, home_dir, rel_path):
+        dprint(LOG_OPERATION, "JavascriptPrefsFile: created (%s)", rel_path)
         FirefoxProfileFile.__init__(self, rel_path)
         self.file_state = file_state.UNKNOWN
         self.home_dir = home_dir
-        self.source = source
-        self.delegate = delegate
         self.prefs = {}
         self.prev_prefs = {}
 
@@ -548,9 +596,11 @@ class JavascriptPrefsFile(FirefoxProfileFile):
         dir = os.path.dirname(full_path)
         if not os.path.exists(dir):
             os.makedirs(dir)
-        dprint("writing pref file (%s)", full_path)
+        dprint(LOG_OPERATION, "JavascriptPrefsFile: writing file (%s)", full_path)
         fd = open(full_path, "w")
         fd.write('''
+# Mozilla User Preferences
+
 /*
  * Do not edit this file.
  * Created by %s, version %s
@@ -581,7 +631,7 @@ class JavascriptPrefsFile(FirefoxProfileFile):
     def read(self):
         self.prev_prefs = self.get_prefs()
 
-        dprint("read profile prefs (%s)", self.get_full_path())
+        dprint(LOG_OPERATION, "read profile prefs (%s)", self.get_full_path())
         self.file_state = file_state.UNKNOWN
         try:
             fd = open(self.get_full_path())
@@ -600,6 +650,8 @@ class JavascriptPrefsFile(FirefoxProfileFile):
         self.kill_comments()
         self.parse()
 
+
+    def emit_changes(self, source, delegate):
         cur_prefs = self.get_prefs()
 
         dc = DictCompare(self.prev_prefs, cur_prefs)
@@ -611,15 +663,15 @@ class JavascriptPrefsFile(FirefoxProfileFile):
         _del = cs['del']
         _mod = cs['mod']
 
-        def emit_changes(self, items, event):
+        def emit_changes(items, event):
             for key, pref in items:
-                self.source.emit_change(
-                    MozillaChange(self.source, self.delegate,
+                source.emit_change(
+                    MozillaChange(source, delegate,
                                   pref.get_type(), pref.get_key(), pref.get_value(), event))
 
-        emit_changes(self, _add.items(), MozillaChange.CREATED)
-        emit_changes(self, _del.items(), MozillaChange.DELETED)
-        emit_changes(self, _mod.items(), MozillaChange.CHANGED)
+        emit_changes(_add.items(), MozillaChange.CREATED)
+        emit_changes(_del.items(), MozillaChange.DELETED)
+        emit_changes(_mod.items(), MozillaChange.CHANGED)
 
         self.prev_prefs = cur_prefs
 
@@ -643,7 +695,7 @@ class JavascriptPrefsFile(FirefoxProfileFile):
                 type  = match.group(1)
                 key   = match.group(2)
                 value = match.group(3)
-                dprint("(%d:%d) key='%s' value='%s'" %
+                dprint(LOG_PARSE, "(%d:%d) key='%s' value='%s'" %
                        (match.start(), match.end(), key, value))
                 self.prefs[key] = JavascriptPreference(type, key, value)
                 start = match.end()
@@ -660,7 +712,7 @@ class JavascriptPrefsFile(FirefoxProfileFile):
         keys = self.prefs.keys()
         keys.sort()
         for key in keys:
-            dprint("%s=%s" % (key, self.prefs[key]))
+            dprint(LOG_, "%s=%s" % (key, self.prefs[key]))
 
 
 # ------ Class FirefoxProfile ------
@@ -697,7 +749,7 @@ class FirefoxProfile:
             file = self.files.setdefault(rel_path, object)
         else:
             file = object
-            file = self.files[rel_path] = object
+            self.files[rel_path] = object
         return file
 
     def del_file(self, rel_path):
@@ -736,8 +788,18 @@ class FirefoxProfilesIni:
     def get_file_state(self):
         return self.file_state
 
+    def load_profiles(self):
+        dprint(LOG_OPERATION, "FirefoxProfilesIni.load_profiles()")
+        for profile in self.get_profiles():
+            profile_rel_dir = profile.get_rel_dir()
+            pref_rel_path = os.path.join(profile_rel_dir, "prefs.js")
+            dprint(LOG_OPERATION, "FirefoxProfilesIni.load_profiles() pref=%s", pref_rel_path)
+            pref = JavascriptPrefsFile(self.home_dir, pref_rel_path)
+            profile.add_file(pref_rel_path, pref)
+            pref.read()
+
     def read(self):
-        dprint("FirefoxProfilesIni.read() path = %s",
+        dprint(LOG_OPERATION, "FirefoxProfilesIni.read() path = %s",
                self.get_full_path(self.rel_path))
         self.profiles = {}
 
@@ -750,7 +812,7 @@ class FirefoxProfilesIni:
             self.file_state = file_state.PARSE_ERROR
         
 
-        dprint("FirefoxProfilesIni: after read, state = %s", self.file_state)
+        dprint(LOG_PARSE, "FirefoxProfilesIni: after read, state = %s", self.file_state)
         if self.file_state != file_state.VALID:
             self.default_profile = None
 
@@ -764,7 +826,7 @@ class FirefoxProfilesIni:
         last_profile = None
         
         for section in self.ini.sections():
-            dprint("parse_sections() section=%s", section)
+            dprint(LOG_PARSE, "parse_sections() section=%s", section)
             match = profile_re.match(section)
             if match:
                 try:
@@ -795,7 +857,7 @@ class FirefoxProfilesIni:
             # Note: by default Firefox's auto-generated profile doesn't
             # have the Default= flag)
             self.default_profile = last_profile
-            dprint("defaulting profile to the only choice")
+            dprint(LOG_OPERATION, "defaulting profile to the only choice")
             
         
     def get_default_profile(self):
@@ -875,19 +937,29 @@ def dump_change_set(cs):
     _mod = cs['mod']
 
     if len(_add.keys()):
-        dprint("Key/Values to ADD")
+        dprint(LOG_DATA, "Key/Values to ADD")
         for k in _add.keys():
-            dprint("    %s=%s" % (k, _add[k]))
+            dprint(LOG_DATA, "    %s=%s" % (k, _add[k]))
 
     if len(_del.keys()):
-        dprint("Keys to DELETE")
+        dprint(LOG_DATA, "Keys to DELETE")
         for k in _del.keys():
-            dprint("    %s=%s" % (k, _del[k]))
+            dprint(LOG_DATA, "    %s=%s" % (k, _del[k]))
 
     if len(_mod.keys()):
-        dprint("Key/Values to Modify")
+        dprint(LOG_DATA, "Key/Values to Modify")
         for k in _mod.keys():
-            dprint("    %s=%s" % (k, _mod[k]))
+            dprint(LOG_DATA, "    %s=%s" % (k, _mod[k]))
+
+def cat_file(path):
+    if os.path.isfile(path):
+        dprint(LOG_FILE_CONTENTS, "==== %s ====" % path)
+        for line in open(path):
+            dprint(LOG_FILE_CONTENTS, line.rstrip())
+    else:
+        dprint(LOG_FILE_CONTENTS, "WARNING, does not exist ==== %s ====" % path)
+
+
 
 #-----------------------------------------------------------------------------
 
@@ -897,7 +969,7 @@ def dump_change_set(cs):
 def run_unit_tests():
     test_prefs = {'foo':'"bar"', 'uno':'1'}
 
-    dprint("In mozillaprofile tests")
+    dprint(LOG_OPERATION, "In mozillaprofile tests")
 
     try:
         profile_ini_file = GetProfileIniFile()
@@ -905,13 +977,13 @@ def run_unit_tests():
         print _("No such profile ini file: %s") % e.filename
         return
 
-    dprint("ini file = %s" % profile_ini_file)
+    dprint(LOG_OPERATION, "ini file = %s" % profile_ini_file)
 
     profiles_ini = FirefoxProfilesIni(os.path.expanduser("~"), profile_ini_file)
     profiles_ini.read()
     profiles_ini.parse_sections()
     default_path = profiles_ini.get_default_path()
-    dprint("default_path = %s" % default_path)
+    dprint(LOG_OPERATION, "default_path = %s" % default_path)
 
     prefs_path = "%s/%s" % (default_path, "prefs.js")
 
@@ -936,7 +1008,7 @@ def run_unit_tests():
     dc.compare()
 
     cs = dc.get_change_set('a', 'b')
-    dprint("a <-- b")
+    dprint(LOG_DATA, "a <-- b")
     dump_change_set(cs)
 
     dc = DictCompare(test_prefs, cs['add'])

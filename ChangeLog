@@ -1,3 +1,30 @@
+2005-03-23  John Dennis  <jdennis@redhat.com>
+
+	* lib/userprofile.py: add start_monitoring and stop_monitoring to
+	the Delegate class, and invoke them.
+
+	* lib/paneldelegate.py: add start_monitoring and stop_monitoring
+	stub routines
+	
+	* lib/util.py: Add ability for a modules debug flag to be a hex
+	mask. Thus debug output can be limited not only to specific
+	modules, but also to specific classes of debug messages in a
+	module. See usage in mozilla-source.py.
+
+	* lib/sources/mozilla-source.py: Fix the two major bugs
+	outstanding, the union of all profile changes are appled to all
+	target profiles instead of a one-to-one profile merge and the
+	initial state is correctly set at the beginning of monitoring so
+	that we detect what has changed. Clean up path handling. Implement
+	debug logging according to class of message. Remove the source and
+	delegate from the JavascriptPrefFile class. Add code to load the
+	state, used at beginning of monitoring. Added support for
+	start_monitoring. Removed other attempts to load file state during
+	apply and delegate construction. During sync_change take the union
+	of all profile changes and store these in the firefox directory,
+	not in the profile directory. Then have apply() merge this one set
+	of changes stored in the storage module to all target profiles.
+
 2005-03-22  Mark McLoughlin  <markmc@redhat.com>
 
 	* sabayon.spec.in: add BuildRequires: usermode

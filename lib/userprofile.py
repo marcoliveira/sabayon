@@ -172,6 +172,14 @@ class SourceDelegate:
         """
         raise Exception ("Not implemented")
 
+    def start_monitoring (self):
+        """Start monitoring for configuration changes."""
+        raise Exception ("Not implemented")
+
+    def stop_monitoring (self):
+        """Stop monitoring for configuration changes."""
+        raise Exception ("Not implemented")
+
     def sync_changes (self):
         """Save all committed changes to disk."""
         raise Exception ("Not implemented")
@@ -301,12 +309,16 @@ class UserProfile (gobject.GObject):
         """Start monitoring for configuration changes."""
         dprint ("Starting monitoring")
         for s in self.sources:
+            for delegate in s.delegates:
+                delegate.start_monitoring ()
             s.start_monitoring ()
 
     def stop_monitoring (self):
         """Stop monitoring for configuration changes."""
         dprint ("Stopping monitoring")
         for s in self.sources:
+            for delegate in s.delegates:
+                delegate.stop_monitoring ()
             s.stop_monitoring ()
 
     def sync_changes (self):

@@ -306,6 +306,16 @@ class PanelDelegate (userprofile.SourceDelegate):
                                           "object_id_list",
                                           "objects")
 
+    def start_monitoring (self):
+        """Start monitoring for configuration changes."""
+        # Nothing to do here
+        pass
+
+    def stop_monitoring (self):
+        """Stop monitoring for configuration changes."""
+        # Nothing to do here
+        pass
+
     def sync_changes (self):
         # Nothing to do here
         pass
