@@ -1,5 +1,6 @@
 # Czech translation of sabayon.
 # Copyright (C) 2005 sabayon'S COPYRIGHT HOLDER
+# Copyright (C) 2005 Miloslav Trmac <mitr@volny.cz>
 # This file is distributed under the same license as the sabayon package.
 # Miloslav Trmac <mitr@volny.cz>, 2005.
 #
@@ -7,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-03-11 04:40+0100\n"
-"PO-Revision-Date: 2005-03-11 15:40+0100\n"
+"POT-Creation-Date: 2005-03-22 04:32+0100\n"
+"PO-Revision-Date: 2005-03-22 09:44+0100\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -25,81 +26,81 @@ msgstr "Program pro vytvoření a úpravu profilů pro uživatele"
 msgid "translator-credits"
 msgstr "Miloslav Trmač <mitr@volny.cz>"
 
-#: admin-tool/editorwindow.py:124 admin-tool/gconfviewer.py:87
-#: admin-tool/sabayon.glade.h:1 lib/protosession.py:332
+#: admin-tool/editorwindow.py:124 admin-tool/fileviewer.py:29
+#: admin-tool/gconfviewer.py:87 admin-tool/sabayon.glade.h:1
+#: admin-tool/userswindow.py:70 lib/protosession.py:332
 msgid "All Your Settings Are Belong To Us"
 msgstr "All Your Settings Are Belong To Us"
 
-#: admin-tool/editorwindow.py:224 admin-tool/sabayon.glade.h:7
+#: admin-tool/editorwindow.py:227 admin-tool/sabayon.glade.h:7
 msgid "_Profile"
 msgstr "_Profil"
 
-#: admin-tool/editorwindow.py:225
+#: admin-tool/editorwindow.py:228
 msgid "_Save"
 msgstr "_Uložit"
 
-#: admin-tool/editorwindow.py:225
+#: admin-tool/editorwindow.py:228
 msgid "Save profile"
 msgstr "Uložit profil"
 
-#: admin-tool/editorwindow.py:226
+#: admin-tool/editorwindow.py:229
 msgid "_Close"
 msgstr "_Zavřít"
 
-#: admin-tool/editorwindow.py:226
+#: admin-tool/editorwindow.py:229
 msgid "Close the current window"
 msgstr "Zavřít aktuální okno"
 
-#: admin-tool/editorwindow.py:227
+#: admin-tool/editorwindow.py:230
 msgid "_Edit"
 msgstr "_Upravit"
 
-#: admin-tool/editorwindow.py:228
+#: admin-tool/editorwindow.py:231
 msgid "_Delete"
 msgstr "_Odstranit"
 
-#: admin-tool/editorwindow.py:228
+#: admin-tool/editorwindow.py:231
 msgid "Delete item"
 msgstr "Odstranit položku"
 
-#: admin-tool/editorwindow.py:229
+#: admin-tool/editorwindow.py:232
 msgid "C_lear History"
 msgstr "Vy_mazat historii"
 
-#: admin-tool/editorwindow.py:229
+#: admin-tool/editorwindow.py:232
 msgid "Clear revision history"
 msgstr "Vymazat historii verzí"
 
-#: admin-tool/editorwindow.py:230 admin-tool/sabayon.glade.h:6
+#: admin-tool/editorwindow.py:233 admin-tool/sabayon.glade.h:6
 msgid "_Help"
 msgstr "_Nápověda"
 
-#: admin-tool/editorwindow.py:231
+#: admin-tool/editorwindow.py:234
 msgid "_About"
 msgstr "O _aplikaci"
 
-#: admin-tool/editorwindow.py:231
+#: admin-tool/editorwindow.py:234
 msgid "About Sabayon"
 msgstr "O Sabayon"
 
-#: admin-tool/editorwindow.py:262
+#: admin-tool/editorwindow.py:265
 msgid "_Version:"
 msgstr "_Verze:"
 
-#: admin-tool/editorwindow.py:314 admin-tool/monitorwindow.py:155
+#: admin-tool/editorwindow.py:320 admin-tool/monitorwindow.py:158
 msgid "Description"
 msgstr "Popis"
 
-#: admin-tool/editorwindow.py:325
+#: admin-tool/editorwindow.py:331
 msgid "Version"
 msgstr "Verze"
 
-#: admin-tool/editorwindow.py:355 lib/sources/gconfsource.py:100
+#: admin-tool/editorwindow.py:361 lib/sources/gconfsource.py:106
 msgid "GConf"
 msgstr "GConf"
 
-#: admin-tool/editorwindow.py:359 lib/sources/filessource.py:59
-#: lib/sources/mozillasource.py:76
+#: admin-tool/editorwindow.py:365 lib/sources/filessource.py:67
 msgid "Files"
 msgstr "Soubory"
 
@@ -151,11 +152,11 @@ msgstr "Typ"
 msgid "Value"
 msgstr "Hodnota"
 
-#: admin-tool/monitorwindow.py:143
+#: admin-tool/monitorwindow.py:146
 msgid "Ignore"
 msgstr "Ignorovat"
 
-#: admin-tool/monitorwindow.py:150
+#: admin-tool/monitorwindow.py:153
 msgid "Mandatory"
 msgstr "Povinné"
 
@@ -175,22 +176,27 @@ msgstr ""
 "uživatele '%s'. Zkuste to znovu po vytvoření tohoto účtu (například příkazem "
 "'adduser')"
 
-#: admin-tool/sabayon-apply.py:37
-#, python-format
+#: admin-tool/sabayon-apply:34
+#, c-format
+msgid "No profile for user '%s' found\n"
+msgstr "Nebyl nalezen profil pro uživatele '%s'\n"
+
+#: admin-tool/sabayon-apply:39
+#, c-format
 msgid "Usage: %s [<profile-name>]\n"
 msgstr "Použití: %s [<název-profilu>]\n"
 
-#: admin-tool/sabayon-monitor.py:28
-#, python-format
+#: admin-tool/sabayon-monitor:29
+#, c-format
 msgid "Usage: %s <profile-name>\n"
 msgstr "Použití: %s <název-profilu>\n"
 
-#: admin-tool/sabayon-session.py:31
+#: admin-tool/sabayon-session:32
 msgid "Your account does not have permissions to run sabayon-session."
 msgstr "Váš účet nemá oprávnění spustit sabayon-session."
 
-#: admin-tool/sabayon-session.py:35
-#, python-format
+#: admin-tool/sabayon-session:36
+#, c-format
 msgid "Usage: %s <username> <profile-file>\n"
 msgstr "Použití: %s <jménouživatele> <soubor-profilu>\n"
 
@@ -222,12 +228,12 @@ msgstr "_Založit na:"
 msgid "_Profiles:"
 msgstr "_Profily:"
 
-#: admin-tool/sabayon.py:34
-#, python-format
+#: admin-tool/sabayon:35
+#, c-format
 msgid "Your account does not have permissions to run %s"
 msgstr "Váš účet nemá oprávnění spustit %s"
 
-#: admin-tool/sabayon.py:35
+#: admin-tool/sabayon:36
 msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
@@ -325,6 +331,19 @@ msgstr[2] ""
 "Pokud je neuložíte, budou změny za poslední hodinu a %ld minut navždy "
 "ztraceny."
 
+#: admin-tool/userswindow.py:42 admin-tool/userswindow.py:60
+#: admin-tool/userswindow.py:122
+msgid "None"
+msgstr "Žádný"
+
+#: admin-tool/userswindow.py:99
+msgid "User"
+msgstr "Uživatel"
+
+#: admin-tool/userswindow.py:111
+msgid "Profile"
+msgstr "Profil"
+
 #: lib/dirmonitor.py:138
 #, python-format
 msgid "Failed to add monitor for %s"
@@ -361,160 +380,168 @@ msgstr "Nemohu spustit Xnest: čas vypršel při čekání na signál USR1"
 msgid "Failed to start Xnest: died during startup"
 msgstr "Nemohu spustit Xnest: umřel při spouštění"
 
-#: lib/sources/filessource.py:49
+#: lib/sources/filessource.py:57
 #, python-format
 msgid "File '%s' created"
 msgstr "Soubor '%s' vytvořen"
 
-#: lib/sources/filessource.py:51
+#: lib/sources/filessource.py:59
 #, python-format
 msgid "File '%s' deleted"
 msgstr "Soubor '%s' odstraněn"
 
-#: lib/sources/filessource.py:53
+#: lib/sources/filessource.py:61
 #, python-format
 msgid "File '%s' changed"
 msgstr "Soubor '%s' změněn"
 
-#: lib/sources/filessource.py:77
+#: lib/sources/filessource.py:85
 msgid "Applications menu"
 msgstr "Menu Aplikace"
 
-#: lib/sources/filessource.py:79
+#: lib/sources/filessource.py:87
 msgid "Preferences menu"
 msgstr "Menu Nastavení"
 
-#: lib/sources/filessource.py:81
+#: lib/sources/filessource.py:89
 msgid "Server Settings menu"
 msgstr "Menu Nastavení serveru"
 
-#: lib/sources/filessource.py:83
+#: lib/sources/filessource.py:91
 msgid "System Settings menu"
 msgstr "Menu Nastavení systému"
 
-#: lib/sources/filessource.py:85
+#: lib/sources/filessource.py:93
 msgid "Start Here menu"
 msgstr "Menu Začněte zde"
 
-#: lib/sources/gconfsource.py:72
+#: lib/sources/gconfsource.py:78
 #, python-format
 msgid "GConf key '%s' unset"
 msgstr "Klíč GConf '%s' zrušen"
 
-#: lib/sources/gconfsource.py:74
+#: lib/sources/gconfsource.py:80
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
 msgstr "Klíč GConf '%s' nastaven na řetězec '%s'"
 
-#: lib/sources/gconfsource.py:76
+#: lib/sources/gconfsource.py:82
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
 msgstr "Klíč GConf '%s' nastaven na celé číslo '%s'"
 
-#: lib/sources/gconfsource.py:78
+#: lib/sources/gconfsource.py:84
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
 msgstr "Klíč GConf '%s' nastaven na číslo '%s'"
 
-#: lib/sources/gconfsource.py:80
+#: lib/sources/gconfsource.py:86
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
 msgstr "Klíč GConf '%s' nastaven na booleovskou hodnotu '%s'"
 
-#: lib/sources/gconfsource.py:82
+#: lib/sources/gconfsource.py:88
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
 msgstr "Klíč GConf '%s' nastaven na schéma '%s'"
 
-#: lib/sources/gconfsource.py:84
+#: lib/sources/gconfsource.py:90
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
 msgstr "Klíč GConf '%s' nastaven na seznam '%s'"
 
-#: lib/sources/gconfsource.py:86
+#: lib/sources/gconfsource.py:92
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
 msgstr "Klíč GConf '%s' nastaven na dvojici '%s'"
 
-#: lib/sources/gconfsource.py:88
+#: lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to '%s'"
 msgstr "Klíč GConf '%s' nastaven na '%s'"
 
-#: lib/sources/gconfsource.py:111
+#: lib/sources/gconfsource.py:117
 msgid "Default GConf settings"
 msgstr "Implicitní nastavení GConf"
 
-#: lib/sources/gconfsource.py:113
+#: lib/sources/gconfsource.py:119
 msgid "Mandatory GConf settings"
 msgstr "Povinná nastavení GConf"
 
-#: lib/sources/mozillasource.py:61
+#: lib/sources/mozillasource.py:96
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
 msgstr "Klíč Mozilly '%s' nastaven na '%s'"
 
-#: lib/sources/mozillasource.py:63
+#: lib/sources/mozillasource.py:98
 #, python-format
 msgid "Mozilla key '%s' unset"
 msgstr "Klíč Mozilly '%s' zrušen"
 
-#: lib/sources/mozillasource.py:65
+#: lib/sources/mozillasource.py:100
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Klíč Mozilly '%s' změněn na '%s'"
 
-#: lib/sources/mozillasource.py:197
+#: lib/sources/mozillasource.py:108
+msgid "Firefox"
+msgstr "Firefox"
+
+#: lib/sources/mozillasource.py:342
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Soubor nenalezen (%s)"
 
-#: lib/sources/mozillasource.py:459
+#: lib/sources/mozillasource.py:777
 #, python-format
-msgid "duplicate name (%s) in section %s"
+msgid "duplicate name(%s) in section %s"
 msgstr "duplikované jméno (%s) v oddílu %s"
 
-#: lib/sources/mozillasource.py:467
+#: lib/sources/mozillasource.py:786
 #, python-format
 msgid "redundant default in section %s"
 msgstr "redundantní implicitní v oddílu %s"
 
-#: lib/sources/mozillasource.py:571
+#: lib/sources/mozillasource.py:803
+msgid "no default profile"
+msgstr "žádný implicitní profil"
+
+#: lib/sources/mozillasource.py:905
 #, python-format
 msgid "No such profile ini file: %s"
 msgstr "Soubor ini profilu neexistuje: %s"
 
-#: lib/sources/paneldelegate.py:47
+#: lib/sources/paneldelegate.py:53
 #, python-format
 msgid "Panel '%s' added"
 msgstr "Panel '%s' přidán"
 
-#: lib/sources/paneldelegate.py:53
+#: lib/sources/paneldelegate.py:59
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "Panel '%s' odstraněn"
 
-#: lib/sources/paneldelegate.py:59
+#: lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel applet '%s' added"
 msgstr "Aplet panelu '%s' přidán"
 
-#: lib/sources/paneldelegate.py:65
+#: lib/sources/paneldelegate.py:71
 #, python-format
 msgid "Panel applet '%s' removed"
 msgstr "Aplet panelu '%s' odstraněn"
 
-#: lib/sources/paneldelegate.py:71
+#: lib/sources/paneldelegate.py:77
 #, python-format
 msgid "Panel object '%s' added"
 msgstr "Objekt panelu '%s' přidán"
 
-#: lib/sources/paneldelegate.py:77
+#: lib/sources/paneldelegate.py:83
 #, python-format
 msgid "Panel object '%s' removed"
 msgstr "Objekt panelu '%s' odstraněn"
 
-#: lib/sources/paneldelegate.py:112
+#: lib/sources/paneldelegate.py:118
 msgid "Panel"
 msgstr "Panel"
 
@@ -569,7 +596,31 @@ msgstr "Spouštím testy %s (%s)"
 msgid "Success!"
 msgstr "Úspěch!"
 
-#: lib/util.py:106
+#: lib/userdb.py:140
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "Nemohu otevřít %s pro zápis"
+
+#: lib/userdb.py:153
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "Nemohu uložit UserDatabase do %s"
+
+#: lib/userdb.py:177
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "Soubor %s není nastavení profilu"
+
+#: lib/userdb.py:185
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "Nemohu přidat uživatele %s do nastavení profilu"
+
+#: lib/userdb.py:216
+msgid "Failed to get the user list"
+msgstr "Nemohu získat seznam uživatelů"
+
+#: lib/util.py:108
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -577,16 +628,13 @@ msgstr ""
 "Nemohu najít domovský adresář: nenastaven v /etc/passwd a žádná hodnota "
 "$HOME v prostředí"
 
-#: lib/util.py:119
+#: lib/util.py:121
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr ""
 "Nemohu najít jméno uživatele: nenastaveno v /etc/passwd a žádná hodnota "
 "$USER v prostředí"
-
-#~ msgid "no default profile"
-#~ msgstr "žádný implicitní profil"
 
 #~ msgid "default path (%s) does not exist"
 #~ msgstr "implicitní cesta (%s) neexistuje"
