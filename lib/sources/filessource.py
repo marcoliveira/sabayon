@@ -28,6 +28,9 @@ import dirmonitor
 import storage
 from config import *
 
+def dprint(fmt, *args):
+    util.debug_print(util.DEBUG_FILESSOURCE, fmt % args)
+
 class FilesChange (userprofile.ProfileChange):
     def __init__ (self, source, filename, event):
         userprofile.ProfileChange.__init__ (self, source)
@@ -58,9 +61,12 @@ def _safe_copy_file (file, srcdir, dstdir, force = False):
     if not os.access (dir, os.F_OK):
         os.makedirs (dir)
 
-    if not os.path.exists (dstdir + "/" + file) or force:
-        shutil.copyfile (srcdir + "/" + file,
-                         dstdir + "/" + file)
+    src = srcdir + "/" + file
+    dst = dstdir + "/" + file
+
+    if not os.path.exists (dst) or force:
+        dprint ("Copying '%s' to '%s'" % (src, dst))
+        shutil.copyfile (src, dst)
     
 class FilesSource (userprofile.ProfileSource):
     def __init__ (self, profile_storage):
@@ -74,11 +80,14 @@ class FilesSource (userprofile.ProfileSource):
 
     def __handle_monitor_event (self, path, event):
         if os.path.isfile (path):
+            dprint ("Emitting event '%s' on file '%s'" % (dirmonitor.event_to_string (event), path))
             self.emit_change (FilesChange (self, path, event))
 
     def commit_change (self, change, mandatory = False):
         if userprofile.ProfileSource.commit_change (self, change, mandatory):
             return
+
+        dprint ("Commiting '%s' (mandatory = %s)" % (change.get_name (), mandatory))
                     
         # FIXME: sanity check input (e.g. is change actually in homedir/?)
         rel_path = change.get_name ()[len (self.home_dir):].lstrip ("/")

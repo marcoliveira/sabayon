@@ -209,7 +209,8 @@ class ProfileStorage:
     # to commit the change to the target file.
     #
     def add_file(self, file, handler, description):
-        dprint("add_file %s", file)
+        dprint("add_file '%s' with description '%s' and handler '%s'",
+               file, description, handler)
 	if self.filelist == None:
 	    self.__read_filelist()
 	if not file in self.filelist:

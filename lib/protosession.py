@@ -390,10 +390,8 @@ class ProtoSession (gobject.GObject):
         os.umask (022)
         
         new_environ = {}
-        for key in os.environ:
-            if key.startswith ("LC_") or \
-               key == "LANG" or \
-               key == "LINGUAS":
+        for key in PASSTHROUGH_ENVIRONMENT:
+            if os.environ.has_key (key):
                 new_environ[key] = os.environ[key]
 
         new_environ["PATH"]       = DEFAULT_PATH 
@@ -434,7 +432,8 @@ class ProtoSession (gobject.GObject):
             new_environ = self.__prepare_to_run_as_user ()
 
             dprint ("Applying profile %s" % (self.profile_file))
-            
+
+            # FIXME: need to run this as a separate process
             profile = userprofile.UserProfile (self.profile_file)
             profile.apply ()
 

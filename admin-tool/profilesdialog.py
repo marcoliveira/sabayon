@@ -209,7 +209,7 @@ class ProfilesDialog:
         
         os.chown (user_path, pw.pw_uid, pw.pw_gid)
 
-        dprint ("Created %s from %s" % (user_path, profile_path))
+        dprint ("Copied %s temporarily to %s" % (profile_path, user_path))
 
         return user_path
 
@@ -229,8 +229,11 @@ class ProfilesDialog:
             user_path = self.__copy_to_user (profile_path, username)
 
             self.dialog.set_sensitive (False)
+            
             argv = [ SESSION_TOOL_PATH, "sabayon", user_path ]
+            dprint ("Running session: %s" % argv)
             os.spawnv (os.P_WAIT, argv[0], argv)
+            
             self.dialog.set_sensitive (True)
 
             self.__copy_from_user (user_path, profile_path)

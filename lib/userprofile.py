@@ -24,6 +24,10 @@ import gobject
 from config import *
 import storage
 import traceback
+import util
+
+def dprint(fmt, *args):
+    util.debug_print(util.DEBUG_USERPROFILE, fmt % args)
 
 class ModuleLoader:
     """Loads all python modules from a directory allows objects
@@ -40,6 +44,7 @@ class ModuleLoader:
 
     def __load_module (self, module):
         """Load a python module named @module."""
+        dprint ("Loading module: %s" % module)
         cmd = "import " + module
         try:
             exec (cmd)
@@ -51,6 +56,7 @@ class ModuleLoader:
         
     def __load_modules (self):
         """Load all available modules from self.module_path."""
+        dprint ("Loading modules from %s" % self.module_path)
         sys.path.append (self.module_path)
         for file in os.listdir (self.module_path):
             if file[0] == '.':
@@ -63,6 +69,7 @@ class ModuleLoader:
         """Construct an object by invoking a function named @constructor,
         with @arg as an argument, in the module called @module.
         """
+        dprint ("Constructing object from loaded module using %s.%s" % (module, constructor))
         cmd = ("import %s\nif %s.__dict__.has_key ('%s'):"
                "ret = %s.%s (arg)") % (module, module, constructor, module, constructor)
         try:
@@ -138,7 +145,7 @@ class SourceDelegate:
     to intercept and modify changes from a given configuration
     source."""
     
-    def __init__ (self, source, namespace_section):
+    def __init__ (self, delegate_name, source, namespace_section):
         """Construct a SourceDelegate object.
 
         @source: the ProfileSource whose changes the delegate wishes
@@ -146,8 +153,13 @@ class SourceDelegate:
         @namepsace_section: the section of @source's configuration
         namespace that the delegate wishes to inspect.
         """
+        self.name = delegate_name
         self.source = source
         self.namespace_section = namespace_section
+
+    def get_name (self):
+        """Returns the configuration delegate's name."""
+        return self.name
 
     def handle_change (self, change):
         """Inspect a ProfileChange. Return #True if the change should
@@ -196,6 +208,7 @@ class ProfileSource (gobject.GObject):
             if not change.get_name ().startswith (delegate.namespace_section):
                 continue
             if delegate.handle_change (change):
+                dprint ("Delegate '%s' handled change '%s'" % (delegate.get_name (), change.get_name ()))
                 return
         self.emit ("changed", change)
         
@@ -207,6 +220,7 @@ class ProfileSource (gobject.GObject):
         """
         if change.delegate:
             change.delegate.commit_change (change, mandatory)
+            dprint ("Delegate '%s' committed changes '%s'" % (change.delegate.get_name (), change.get_name ()))
             return True
         return False
     
@@ -245,6 +259,8 @@ class UserProfile (gobject.GObject):
         """
         gobject.GObject.__init__ (self)
 
+        dprint ("Constructing profile from %s" % profile_file)
+
         self.profile_file = profile_file
 
         #
@@ -258,7 +274,9 @@ class UserProfile (gobject.GObject):
         self.sources = []
         self.sources = module_loader.construct_objects ("get_source",
                                                         self.profile_storage)
+        dprint ("%d sources loaded:" % len (self.sources))
         for source in self.sources:
+            dprint ("  %s" % source.get_name ())
             source.connect ("changed", self.__handle_source_changed)
 
     def __del__ (self):
@@ -269,22 +287,26 @@ class UserProfile (gobject.GObject):
 
     def start_monitoring (self):
         """Start monitoring for configuration changes."""
+        dprint ("Starting monitoring")
         for s in self.sources:
             s.start_monitoring ()
 
     def stop_monitoring (self):
         """Stop monitoring for configuration changes."""
+        dprint ("Stopping monitoring")
         for s in self.sources:
             s.stop_monitoring ()
 
     def sync_changes (self):
         """Save all committed changes to disk."""
+        dprint ("Syncing all committed changes to disk")
         for s in self.sources:
             s.sync_changes ()
         self.profile_storage.update_all ("")
 
     def apply (self):
         """Apply profile to the current user's environment."""
+        dprint ("Applying profile to user's environment")
         for s in self.sources:
             s.apply ()
             for delegate in s.delegates:

@@ -98,6 +98,7 @@ class ProfileMonitorWindow:
         if row:
             change = model[row][ProfileChangesModel.COLUMN_CHANGE]
             mandatory = model[row][ProfileChangesModel.COLUMN_MANDATORY]
+            dprint ("Committing: %s, mandatory = %s" % (change.get_name (), mandatory))
             change.get_source ().commit_change (change, mandatory)
     
     def __handle_save (self, item):

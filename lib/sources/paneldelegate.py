@@ -115,7 +115,7 @@ class PanelDelegate (userprofile.SourceDelegate):
             # self.object_type = self.client.get_string (PANEL_KEY_BASE + "/objects/" + object_id + "/object_type")
 
     def __init__ (self, source):
-        userprofile.SourceDelegate.__init__ (self, source, PANEL_KEY_BASE)
+        userprofile.SourceDelegate.__init__ (self, "Panel", source, PANEL_KEY_BASE)
         self.client = gconf.client_get_default ()
 
         self.toplevels = {}

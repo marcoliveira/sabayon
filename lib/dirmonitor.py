@@ -22,12 +22,16 @@ import os
 import os.path
 import gobject
 import gamin
+import util
 
 N_WATCHES_LIMIT = 200
 
 CHANGED = gamin.GAMChanged
 DELETED = gamin.GAMDeleted
 CREATED = gamin.GAMCreated
+
+def dprint(fmt, *args):
+    util.debug_print(util.DEBUG_DIRMONITOR, fmt % args)
 
 def event_to_string (event):
     if event == CHANGED:
@@ -55,10 +59,12 @@ class DirectoryMonitor:
     def set_directories_to_ignore (self, dirs):
         assert self.mon == None
         self.dirs_to_ignore = dirs
+        dprint ("Ignoring directories %s" % self.dirs_to_ignore)
 
     def set_files_to_ignore (self, files):
         assert self.mon == None
         self.files_to_ignore = files
+        dprint ("Ignoring files %s" % self.files_to_ignore)
 
     #
     # call the user level processing
@@ -76,7 +82,6 @@ class DirectoryMonitor:
 	try:
 	    ret = self.mon.handle_events ()
 	except:
-	    import util
 	    util.print_exception ()
 	return True
         
@@ -88,6 +93,8 @@ class DirectoryMonitor:
             if not os.path.isabs (path):
 		path = monitor_file + '/' + path
 
+            dprint ("Got gamin event '%s' on '%s'" % (event_to_string (event), path))
+
 	    if event == CREATED and os.path.isdir (path):
 		self.__monitor_dir_recurse (path, True)
 	    elif event == DELETED:
@@ -97,19 +104,21 @@ class DirectoryMonitor:
                         self.too_many_watches = False
                     self.mon.stop_watch (path)
 
-            if not self.__should_ignore_dir (path) or \
+            if not self.__should_ignore_dir (path) and \
                not self.__should_ignore_file (path):
                 self.__invoke_callback (path, event)
 
     def __should_ignore_dir (self, dir):
         for ignore_dir in self.dirs_to_ignore:
             if dir == self.directory + "/" + ignore_dir:
+                dprint ("Ignoring directory '%s'" % (dir))
                 return True
         return False
     
     def __should_ignore_file (self, file):
         for ignore_file in self.files_to_ignore:
             if file == self.directory + "/" + ignore_file:
+                dprint ("Ignoring file '%s'" % (file))
                 return True
         return False
 
@@ -127,9 +136,7 @@ class DirectoryMonitor:
             self.mon.watch_directory (dir, self.__handle_gamin_event, dir)
         except:
             print "Failed to add monitor for %s" % (dir)
-	    import util
 	    util.print_exception ()
-            return
 
     def __monitor_dir_recurse (self, dir, new_dir = False):
         if self.too_many_watches:
@@ -150,6 +157,8 @@ class DirectoryMonitor:
         if self.mon != None:
 	    return
 
+        dprint ("Starting to recursively monitor '%s'" % self.directory)
+
 	self.mon = gamin.WatchMonitor ()
 	# ignore (End)Exists events since we scan the tree ourselves
 	try:
@@ -166,6 +175,8 @@ class DirectoryMonitor:
     def stop (self):
         if self.mon == None:
 	    return
+
+        dprint ("Stopping recursive monitoring of '%s'" % self.directory)
 
         for path in self.watches:
             self.mon.stop_watch (path)

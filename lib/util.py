@@ -26,17 +26,19 @@ import pwd
     DEBUG_USERPROFILE,
     DEBUG_STORAGE,
     DEBUG_PROTOSESSION,
+    DEBUG_DIRMONITOR,
     DEBUG_GCONFSOURCE,
     DEBUG_PANELDELEGATE,
     DEBUG_FILESSOURCE,
     DEBUG_MOZILLASOURCE,
     DEBUG_ADMINTOOL
-) = range (8)
+) = range (9)
 
 debug_modules = {
     DEBUG_USERPROFILE   : ("user-profile",   False),
     DEBUG_STORAGE       : ("storage",        False),
     DEBUG_PROTOSESSION  : ("proto-session",  False),
+    DEBUG_DIRMONITOR    : ("dir-monitor",    False),
     DEBUG_GCONFSOURCE   : ("gconf-source",   False),
     DEBUG_PANELDELEGATE : ("panel-delegate", False),
     DEBUG_FILESSOURCE   : ("files-source",   False),
@@ -71,7 +73,7 @@ def debug_print (module, fmt, *args):
     assert debug_modules.has_key(module)
     if not debug_modules[module][1]:
         return
-    print "%s: %s" % (debug_modules[module][0], fmt % args)
+    print "(%d) %s: %s" % (os.getpid (), debug_modules[module][0], fmt % args)
 
 class GeneralError (Exception):
     def __init__ (self, msg):

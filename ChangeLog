@@ -1,5 +1,27 @@
 2005-02-14  Mark McLoughlin  <markmc@redhat.com>
 
+	* lib/config.py.in: add a list of env variables
+	which should be passed through unmodified when
+	starting the prototype session. Include SABAYON_DEBUG
+	in the list.
+	
+	* lib/protosession.py: use the list here.
+	
+	* lib/dirmonitor.py: add debug spew, fix a bug
+	with ignorationism.
+	
+	* lib/sources/filessource.py,
+	  lib/sources/paneldelegate.py,
+	  lib/storage.py,
+	  lib/userprofile.py: more debug spew.
+	
+	* lib/util.py: add pid to debug spew.
+	
+	* admin-tool/monitorwindow.py,
+	  admin-tool/profilesdialog.py: yet more spewage.
+
+2005-02-14  Mark McLoughlin  <markmc@redhat.com>
+
 	* admin-tool/monitorwindow.py,
 	  lib/sources/mozillasource.py,
 	  lib/sources/paneldelegate.py: hook up debugging.
