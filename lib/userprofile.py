@@ -22,7 +22,7 @@ import os
 import sys
 import gobject
 from config import *
-import package
+import storage
 
 class ProfileChange (gobject.GObject):
     """Abstract base class for encapsulating profile changes."""
@@ -140,7 +140,7 @@ class UserProfile (gobject.GObject):
         self.sources = []
         self.__load_sources (self.module_path)
 
-    def __handle_source (self, source, change):
+    def __handle_source_changed (self, source, change):
         self.emit ("changed", change)
 
     def __load_source (self, module_name):

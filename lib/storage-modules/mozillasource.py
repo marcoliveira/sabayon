@@ -83,8 +83,8 @@ class MozillaSource (userprofile.ProfileSource):
 
 gobject.type_register (MozillaSource)
     
-def get_source (profile_path):
-    return MozillaSource (profile_path)
+#def get_source (profile_path):
+#    return MozillaSource (profile_path)
 
 #-----------------------------------------------------------------------------
 
