@@ -61,8 +61,11 @@ class ProfileEditorWindow:
         self.save_item = self.xml.get_widget ("save_item")
         self.save_item.connect ("activate", self.__handle_save)
         
-        self.quit_item = self.xml.get_widget ("quit_item")
-        self.quit_item.connect ("activate", self.__handle_quit)
+        self.close_item = self.xml.get_widget ("close_item")
+        self.close_item.connect ("activate", self.__handle_close)
+
+        self.clear_history_item = self.xml.get_widget ("clear_history_item")
+        self.clear_history_item.connect ("activate", self.__handle_clear_history)
 
         self.about_item = self.xml.get_widget ("about_item")
         self.about_item.connect ("activate", self.__handle_about)
@@ -71,10 +74,13 @@ class ProfileEditorWindow:
         self.window.show ()
         
     def __handle_save (self, item):
-        # FIXME: implement
-        pass
+        self.storage.save ()
+
+    def __handle_clear_history (self, item):
+        self.storage.clear_revisions ()
     
-    def __handle_quit (self, item):
+    def __handle_close (self, item):
+        # FIXME: are you sure really, really want to close without saving ?
         self.window.destroy ()
 
     def __handle_about (self, item):

@@ -1,3 +1,17 @@
+2005-03-03  Mark McLoughlin  <markmc@redhat.com>
+
+	* admin-tool/sabayon.glade: add a "Clear History"
+	menu item.
+	
+	* admin-tool/editorwindow.py: hook up "Clear History"
+	and "Save".
+	
+	* lib/storage.py:
+	(ProfileStorage.clear_revisions): implement clear
+	revision history.
+	(run_unit_tests): add tests for clearing revision
+	history.
+
 2005-03-02  Mark McLoughlin  <markmc@redhat.com>
 
 	* admin-tool/editorwindow.py: add a silly little
