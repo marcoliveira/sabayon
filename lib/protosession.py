@@ -230,10 +230,12 @@ class ProtoSession (gobject.GObject):
     #
     # Need to hold open the first X connection until the session dies
     #
-    def __open_x_connection (self):
+    def __open_x_connection (self, display_name, xauth_file):
         (pipe_r, pipe_w) = os.pipe ()
         pid = os.fork ()
         if pid == 0: # Child process
+            os.environ["DISPLAY"] = display_name
+            os.environ["XAUTHORITY"] = xauth_file
             import gtk
             os.close (pipe_r)
             os.write (pipe_w, "Y")
@@ -314,8 +316,6 @@ class ProtoSession (gobject.GObject):
                 raise SessionStartError, "Failed to start Xnest: timed out waiting for USR1 signal"
             else:
                 raise SessionStartError, "Failed to start Xnest: died during startup"
-        else:
-            self.__open_x_connection ()
 
     def __session_child_watch_handler (self, pid, status):
         dprint ("Session died")
@@ -347,11 +347,12 @@ class ProtoSession (gobject.GObject):
         dprint ("Starting session as %s" % pw)
 
         self.session_xauth_file = self.__write_temp_xauth_file (False)
+        os.chown (self.session_xauth_file, pw.pw_uid, pw.pw_uid)
+        
+        self.__open_x_connection (self.display_name, self.session_xauth_file)
 
         self.session_pid = os.fork ()
         if self.session_pid == 0: # Child process
-            os.chown (self.session_xauth_file, pw.pw_uid, pw.pw_uid)
-            
             os.setgid (pw.pw_gid)
             os.setuid (pw.pw_uid)
 
