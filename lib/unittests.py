@@ -21,37 +21,43 @@
 import sys
 
 if __name__ == "__main__":
-    print "Running util tests"
-    import util
-    util.run_unit_tests ()
+    def add_mod_dir ():
+        sys.path.append ("sources")
+    def remove_mod_dir ():
+        sys.path.remove ("sources")
     
-    print "Running dirmonitor tests"
-    import dirmonitor
-    dirmonitor.run_unit_tests ()
+    unit_tests = [
+        ( "util",          None,              None,        None ),
+        ( "dirmonitor",    None,              None,        None ),
+        ( "filessource",   None,              add_mod_dir, remove_mod_dir ),
+        ( "gconfsource",   "Ignore WARNINGs", add_mod_dir, remove_mod_dir ),
+        ( "paneldelegate", "Ignore WARNINGs", add_mod_dir, remove_mod_dir ),
+        ( "userprofile",   None,              None,        None ),
+        ( "storage",       None,              None,        None )
+          ]
     
-    sys.path.append ("sources")
+    if len (sys.argv) > 1:
+        tests_to_run = sys.argv[1:]
+    else:
+        tests_to_run = []
+        for test in unit_tests:
+            tests_to_run.append (test[0])
+
+    def run_unit_tests (module):
+        cmd = ("import %s\n%s.run_unit_tests ()") % (module, module)
+        exec (cmd)
     
-    print "Running filessource tests"
-    import filessource
-    filessource.run_unit_tests ()
-
-    print "Running gconfsource tests (ignore WARNINGs)"
-    import gconfsource
-    gconfsource.run_unit_tests ()
-
-    print "Running paneldelegate tests (ignore WARNINGs)"
-    import paneldelegate
-    paneldelegate.run_unit_tests ()
-
-    sys.path.remove ("sources")
-    
-    print "Running userprofile tests"
-    import userprofile
-    userprofile.run_unit_tests ()
-
-    print "Running storage tests"
-    import storage
-    storage.run_unit_tests ()
+    for (module, msg, pre_func, post_func) in unit_tests:
+        if not module in tests_to_run:
+            continue
+        if not msg:
+            print "Running %s tests" % module
+        else:
+            print "Running %s tests (%s)" % (module, msg)
+        if pre_func:
+            pre_func ()
+        run_unit_tests (module)
+        if post_func:
+            post_func ()
 
     print "Success!"
-    
