@@ -159,8 +159,11 @@ class ProfileEditorWindow:
                 iter = self.revisions_model.iter_next (iter)
         else:
             iter = self.revisions_model.get_iter_first ()
-            self.current_revision = self.revisions_model[iter][RevisionsModel.COLUMN_REVISION]
-            self.revisions_combo.set_active_iter (iter)
+            if iter:
+                self.current_revision = self.revisions_model[iter][RevisionsModel.COLUMN_REVISION]
+                self.revisions_combo.set_active_iter (iter)
+            else:
+                self.current_revision = None
 
     def __set_needs_saving (self, needs_saving):
         if needs_saving:
@@ -278,8 +281,11 @@ class ProfileEditorWindow:
         hbox.pack_start (self.revisions_combo, True, True, 0)
 
         iter = self.revisions_model.get_iter_first ()
-        self.current_revision = self.revisions_model[iter][RevisionsModel.COLUMN_REVISION]
-        self.revisions_combo.set_active_iter (iter)
+        if iter:
+            self.current_revision = self.revisions_model[iter][RevisionsModel.COLUMN_REVISION]
+            self.revisions_combo.set_active_iter (iter)
+        else:
+            self.current_revision = None
         
     def __file_revision_changed (self, cell, tree_path, new_text):
         iter = self.profile_model.get_iter_from_string (tree_path)
