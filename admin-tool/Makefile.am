@@ -6,7 +6,8 @@ PYTHON_FILES =				\
 	monitorwindow.py		\
 	editorwindow.py			\
 	profilesdialog.py		\
-	aboutdialog.py
+	aboutdialog.py			\
+	saveconfirm.py
 
 @INTLTOOL_DESKTOP_RULE@
 

@@ -23,6 +23,8 @@ import gtk.glade
 import storage
 import util
 import aboutdialog
+import saveconfirm
+import time
 from config import *
 
 def dprint (fmt, *args):
@@ -51,6 +53,7 @@ class ProfileEditorWindow:
     def __init__ (self, profile_name, parent_window):
         self.profile_name = profile_name
         self.storage = storage.ProfileStorage (profile_name)
+        self.last_save_time = 0
         
         glade_file = os.path.join (GLADEDIR, "sabayon.glade")
         self.xml = gtk.glade.XML (glade_file, "profile_editor_window")
@@ -82,6 +85,17 @@ class ProfileEditorWindow:
         self.window.set_transient_for (parent_window)
         self.window.show ()
 
+        self.__set_needs_saving (False)
+
+    def __set_needs_saving (self, needs_saving):
+        if needs_saving:
+            if not self.last_save_time:
+                self.last_save_time = int (time.time ())
+            self.save_item.set_sensitive (True)
+        else:
+            self.last_save_time = 0
+            self.save_item.set_sensitive (False)
+
     def __delete_currently_selected (self):
         (model, row) = self.treeview.get_selection ().get_selected ()
         if not row:
@@ -91,6 +105,7 @@ class ProfileEditorWindow:
 
         self.storage.remove (model[row][ProfileModel.COLUMN_NAME])
         self.profile_model.reload ()
+        self.__set_needs_saving (True)
 
     def __handle_key_press (self, treeview, event):
         if event.keyval in (gtk.keysyms.Delete, gtk.keysyms.KP_Delete):
@@ -98,9 +113,22 @@ class ProfileEditorWindow:
         
     def __handle_save (self, item):
         self.storage.save ()
+        self.__set_needs_saving (False)
 
     def __handle_close (self, item):
-        # FIXME: are you sure really, really want to close without saving ?
+        if self.last_save_time:
+            dialog = saveconfirm.SaveConfirmationAlert (self.window,
+                                                        self.profile_name,
+                                                        time.time () - self.last_save_time)
+            response = dialog.run ()
+            dialog.destroy ()
+
+            if response == gtk.RESPONSE_CANCEL:
+                return
+            if response == gtk.RESPONSE_YES:
+                self.storage.save ()
+                self.__set_needs_saving (False)
+        
         self.window.destroy ()
 
     def __handle_delete (self, item):
@@ -108,6 +136,7 @@ class ProfileEditorWindow:
         
     def __handle_clear_history (self, item):
         self.storage.clear_revisions ()
+        self.__set_needs_saving (True)
 
     def __handle_about (self, item):
         aboutdialog.show_about_dialog (self.window)
