@@ -58,4 +58,5 @@ all-local: $(wrappers)
 	sed -e s!\@PKGDATADIR\@!$(pkgdatadir)! < $< > $@
 	chmod a+x $@
 
-BUILT_SOURCES = $(wrappers)
+BUILT_SOURCES  = $(wrappers)
+DISTCLEANFILES = $(wrappers)
