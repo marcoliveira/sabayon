@@ -1,0 +1,108 @@
+Thu Jan 20 21:44:31 CET 2005 Daniel Veillard <veillard@redhat.com>
+
+	* lib/dirmonitor.py: try to work around a portability problem
+	  about gnome-vfs python module name
+	* lib/util.py: added a routine print_exception() to display an exception
+
+2005-01-20  Mark McLoughlin  <markmc@redhat.com>
+
+	* lib/modules/gconfprofile.py: import errno module.
+
+2005-01-20  Mark McLoughlin  <markmc@redhat.com>
+
+	* admin-tool/monitorwindow.py: fix buglet.
+
+2005-01-20  Mark McLoughlin  <markmc@redhat.com>
+
+	* admin-tool/Makefile.am: install glade file
+	in $pkgdatadir/glade, generate user-profile-admin.
+	
+	* admin-tool/user-profile-admin: remove.
+	
+	* admin-tool/user-profile-admin.in: add - generated
+	now with correct prefix.
+	
+	* lib/Makefile.am: add some missing files, generate
+	config.py.
+	
+	* lib/config.py: remove
+	
+	* lib/config.py.in: add - generates config.py.
+	
+	* lib/modules/Makefile.am: add filesprofile.py
+
+Thu Jan 20 15:30:04 CET 2005 Daniel Veillard <veillard@redhat.com>
+
+	* lib/README.package lib/package.py: added a get_directory() entry point
+	* admin-tool/monitorwindow.py admin-tool/user-profile-admin.py:
+	  moving profile file intialization down to UserProfile() init
+	* lib/userprofile.py lib/modules/filesprofile.py 
+	  lib/modules/gconfprofile.py lib/modules/testmodule.py: adding the
+	  self.profile_storage coming from the storage module, replacing
+	  bascially self.profile_path by self.profile_storage.get_directory().
+	  The modules creation routines now take a storage object argument
+	  instead of a storage path.
+	  
+2005-01-20  Mark McLoughlin  <markmc@redhat.com>
+
+	* admin-tool/monitorwindow.py: add a mandatory toggle,
+	stop using magic numbers for column indices.
+
+Thu Jan 20 13:32:28 CET 2005 Daniel Veillard <veillard@redhat.com>
+
+	* admin-tool/user-profile-admin.py: use the package module instead of
+	  tar files for the profile storage. Loading only ATM.
+
+2005-01-20  Mark McLoughlin  <markmc@redhat.com>
+
+	* admin-tool/monitorwindow.py:
+	(ProfileChangesModel.handle_profile_change):
+	remove existing changes to the same item from the model
+	before prepending the new one.
+	(ProfileMonitorWindow): hook up the menu items.
+	
+	* admin-tool/user-profile-admin.glade: add a "Commit"
+	menu item.
+
+2005-01-20  Mark McLoughlin  <markmc@redhat.com>
+
+	* lib/modules/filesprofile.py: add "files" backend
+	
+	* lib/dirmonitor.py: remove the timeout when we've
+	completed our tests so we don't screw over other
+	tests.
+	
+	* lib/modules/gconfprofile.py: user util.get_home_dir()
+	and util.get_user_name ()
+	
+	* lib/unittests.py: hook up more tests.
+
+Thu Jan 20 11:28:50 CET 2005 Daniel Veillard <veillard@redhat.com>
+
+	* lib/package.py: GPL header
+	* lib/config.py admin-tool/user-profile-admin: trying to get paths
+	  to work automatically from CVS checkout too
+
+Thu Jan 20 10:42:03 CET 2005 Daniel Veillard <veillard@redhat.com>
+
+	* lib/package.py: reuse util functions
+
+2005-01-20  Mark McLoughlin  <markmc@redhat.com>
+
+	* lib/util.py: add get_home_dir() and get_user_name()
+	utility functions.
+
+2005-01-19  Mark McLoughlin  <markmc@redhat.com>
+
+	* lib/dirmonitor.py: add a recursive directory monitor
+	thingy.
+
+Wed Jan 19 11:36:57 CET 2005 Daniel Veillard <veillard@redhat.com>
+
+	* lib/README.package: quick doc for the package module
+
+Wed Jan 19 11:15:04 CET 2005 Daniel Veillard <veillard@redhat.com>
+
+	* lib/Makefile.am lib/package.py: integrated the package lib in the
+	  tree
+
