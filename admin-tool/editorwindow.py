@@ -18,14 +18,18 @@
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #
 
+import os.path
+import shutil
+import tempfile
+import time
+import locale
 import gtk
 import gtk.glade
 import userprofile
 import util
 import aboutdialog
 import saveconfirm
-import time
-import locale
+import gconfviewer
 from config import *
 
 _ui_string = '''
@@ -53,14 +57,15 @@ def dprint (fmt, *args):
 
 class ProfileModel (gtk.ListStore):
     (
+        COLUMN_SOURCE,
         COLUMN_PATH,
         COLUMN_DESCRIPTION,
         COLUMN_REVISION,
         COLUMN_REVISIONS_MODEL
-    ) = range (4)
+    ) = range (5)
 
     def __init__ (self, profile):
-        gtk.ListStore.__init__ (self, str, str, str, RevisionsModel)
+        gtk.ListStore.__init__ (self, str, str, str, str, RevisionsModel)
 
         self.profile = profile
         self.reload ()
@@ -75,9 +80,10 @@ class ProfileModel (gtk.ListStore):
             first_revision = revisions_model.get_iter_first ()
             
             self.set (self.prepend (),
-                      self.COLUMN_PATH, path,
-                      self.COLUMN_DESCRIPTION, source.get_path_description (path),
-                      self.COLUMN_REVISION, revisions_model[first_revision][RevisionsModel.COLUMN_DATE],
+                      self.COLUMN_SOURCE,          source_name,
+                      self.COLUMN_PATH,            path,
+                      self.COLUMN_DESCRIPTION,     source.get_path_description (path),
+                      self.COLUMN_REVISION,        revisions_model[first_revision][RevisionsModel.COLUMN_DATE],
                       self.COLUMN_REVISIONS_MODEL, revisions_model)
 
 class RevisionsModel (gtk.ListStore):
@@ -322,6 +328,7 @@ class ProfileEditorWindow:
         self.treeview.append_column (c)
 
         self.treeview.connect ("key-press-event", self.__handle_key_press)
+        self.treeview.connect ("row-activated",   self.__handle_row_activation)
 
     def __treeview_selection_changed (self, selection):
         (model, row) = selection.get_selected ()
@@ -332,3 +339,18 @@ class ProfileEditorWindow:
         dprint ("Selected '%s'", model[row][ProfileModel.COLUMN_PATH])
 
         self.delete_action.set_sensitive (True)
+
+    def __handle_row_activation (self, treeview, tree_path, column):
+        iter = self.profile_model.get_iter (tree_path)
+        path = self.profile_model[iter][ProfileModel.COLUMN_PATH]
+        source_name = self.profile_model[iter][ProfileModel.COLUMN_SOURCE]
+        
+        dprint ("Activating '%s'", path)
+
+        if source_name == _("GConf"):
+            extract_dir = tempfile.mkdtemp (prefix = "sabayon-temp-gconf-")
+            self.storage.extract (path, extract_dir)
+            
+            viewer = gconfviewer.GConfViewer (os.path.join (extract_dir, path), self.window)
+            viewer.connect ("destroy", lambda v, dir: shutil.rmtree (dir), extract_dir)
+            viewer.show ()

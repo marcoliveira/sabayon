@@ -50,7 +50,7 @@ def get_client_and_address_for_path (path):
         if err.errno != errno.EEXIST:
             raise err
     address = "xml:readwrite:" + path
-    engine = gconf.engine_get_for_address ("xml:readwrite:" + path)
+    engine = gconf.engine_get_for_address (address)
     return (gconf.client_get_for_engine (engine), address)
 
 class GConfChange (userprofile.ProfileChange):

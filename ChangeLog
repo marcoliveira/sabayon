@@ -1,4 +1,16 @@
 2005-03-09  Mark McLoughlin  <markmc@redhat.com>
+
+	* admin-tool/gconfviewer.py: cheesy view-only
+	gconf-editor type thing.
+	
+	* admin-tool/Makefile.am: add gconfviewer.py
+	
+	* admin-tool/editorwindow.py: show the GConf
+	viewer when a GConf element is activated.
+	
+	* lib/sources/gconfsource.py: fix silly.
+
+2005-03-09  Mark McLoughlin  <markmc@redhat.com>
 	
 	* lib/userprofile.py:
 	(ProfileSource.get_path_description): add stub for
