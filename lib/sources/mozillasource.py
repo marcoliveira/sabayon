@@ -340,13 +340,17 @@ class UserProfile:
 
     def get_profiles(self):
         profile_re = re.compile("^Profile(\d+)$")
+
+        nummatches = 0
+        lastmatch_name = None
+        
         for section in self.ini.sections():
             match = profile_re.match(section)
             if match:
                 name = self.ini.get(section, "Name")
                 path = self.ini.get(section, "Path")
                 try:
-                    default = self.ini.get(section, "Default")
+                    default = self.ini.get(section, "default")
                 except ConfigParser.NoOptionError:
                     default = None
                 
@@ -360,7 +364,17 @@ class UserProfile:
                     if self.default:
                         raise BadIniFileError("redundant default in section %s" % section)
                     self.default = name
-                
+
+                lastmatch_name = name
+                nummatches = nummatches + 1
+
+        if self.default == None and nummatches == 1:
+            # If there's only one profile, its the default even if it doesn't have the Default=1 flag
+            # (by default Firefox's auto-generated profile doesn't have the Default= flag)
+            self.default = lastmatch_name
+            print "defaulting to the only choice"
+            
+        
     def get_default_path(self):
         if not self.default:
             raise BadIniFileError("no default profile")

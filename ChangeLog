@@ -1,5 +1,15 @@
 2005-02-05  Seth Nickell  <seth@gnome.org>
 
+	* lib/sources/mozillasource.py:
+        
+	If there's only one profile, its the default even if it 
+	doesn't have the Default=1 flag. This makes mozillasource.py
+	work on stock (to Fedora at least) Firefox installs,
+	where the auto-generated profile doesn't have the Default=
+	flag set.
+	
+2005-02-05  Seth Nickell  <seth@gnome.org>
+
 	* admin-tool/sabayon.glade:
 
 	Set list view scrollbar policy to auto.
@@ -25,7 +35,7 @@
 
 2005-02-03  Mark McLoughlin  <mark@skynet.ie>
 
-	* lib/storage.py: change ÿ/#gs about a bit so that
+	* lib/storage.py: change things about a bit so that
 	it creates its own temprary install directory.
 	Add ProfileStorage::uninstall()
 	Rename ProfileStorage::get_directory() to
