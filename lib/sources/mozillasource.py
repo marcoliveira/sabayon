@@ -23,6 +23,10 @@ import userprofile
 import exceptions, sys, os.path, ConfigParser, re, cPickle
 import tempfile, types
 import dirmonitor
+import util
+
+def dprint(fmt, *args):
+    util.debug_print(util.DEBUG_MOZILLASOURCE, fmt % args)
 
 class MozillaChange (userprofile.ProfileChange):
     def __init__ (self, module, key, value, event):
@@ -46,12 +50,9 @@ class MozillaSource (userprofile.ProfileSource):
     def __init__ (self, profile_storage):
         userprofile.ProfileSource.__init__ (self, "Mozilla")
         self.profile_storage = profile_storage
-        self.verbose = False
 
         self.ini_file = GetProfileIniFile()
-        if self.verbose:
-            print "ini file = %s" % self.ini_file
-
+        dprint("ini file = %s" % self.ini_file)
 
         # -----------------
 
@@ -62,8 +63,7 @@ class MozillaSource (userprofile.ProfileSource):
         self.up.open()
         self.up.get_profiles()
         self.default_path = self.up.get_default_path()
-        if self.verbose:
-            print "start_monitoring: default_path = %s" % self.default_path
+        dprint("start_monitoring: default_path = %s" % self.default_path)
 
         self.prefs_path = "%s/%s" % (self.default_path, "prefs.js")
 
@@ -269,11 +269,11 @@ class DictCompare:
 
     def dump(self):
         'Print the results of the dictionary comparision'
-        print "intersection = %s" % ",".join(self.intersection)
-        print "only a = %s" % ",".join(self.only_a)
-        print "only b = %s" % ",".join(self.only_b)
-        print "equal = %s" % ",".join(self.equal)
-        print "not equal = %s" % ",".join(self.not_equal)
+        dprint("intersection = %s" % ",".join(self.intersection))
+        dprint("only a = %s" % ",".join(self.only_a))
+        dprint("only b = %s" % ",".join(self.only_b))
+        dprint("equal = %s" % ",".join(self.equal))
+        dprint("not equal = %s" % ",".join(self.not_equal))
 
 
 # ------ Class JavascriptPrefsFile ------
@@ -288,7 +288,7 @@ class JavascriptPrefsFile:
         fd = open(self.filepath)
         self.filebuf = fd.read()
         fd.close()
-        #print self.filebuf
+        #dprint(self.filebuf)
 
     def kill_comments(self):
         slash_comment_re = re.compile("//.*$", re.MULTILINE)
@@ -308,7 +308,7 @@ class JavascriptPrefsFile:
             if match:
                 key   = match.group(1)
                 value = match.group(2)
-                #print "(%d:%d) key='%s' value='%s'" % (match.start(), match.end(), key, value)
+                dprint("(%d:%d) key='%s' value='%s'" % (match.start(), match.end(), key, value))
                 self.prefs[key] = value
                 start = match.end()
             else:
@@ -321,7 +321,7 @@ class JavascriptPrefsFile:
         keys = self.prefs.keys()
         keys.sort()
         for key in keys:
-            print "%s=%s" % (key, self.prefs[key])
+            dprint("%s=%s" % (key, self.prefs[key]))
 
 
 # ------ Class UserProfile ------
@@ -372,7 +372,7 @@ class UserProfile:
             # If there's only one profile, its the default even if it doesn't have the Default=1 flag
             # (by default Firefox's auto-generated profile doesn't have the Default= flag)
             self.default = lastmatch_name
-            print "defaulting to the only choice"
+            dprint("defaulting to the only choice")
             
         
     def get_default_path(self):
@@ -452,19 +452,19 @@ def dump_change_set(cs):
     _mod = cs['mod']
 
     if len(_add.keys()):
-        print "Key/Values to ADD"
+        drint("Key/Values to ADD")
         for k in _add.keys():
-            print "    %s=%s" % (k, _add[k])
+            dprint("    %s=%s" % (k, _add[k]))
 
     if len(_del.keys()):
-        print "Keys to DELETE"
+        dprint("Keys to DELETE")
         for k in _del.keys():
-            print "    %s=%s" % (k, _del[k])
+            dprint("    %s=%s" % (k, _del[k]))
 
     if len(_mod.keys()):
-        print "Key/Values to Modify"
+        dpprint("Key/Values to Modify")
         for k in _mod.keys():
-            print "    %s=%s" % (k, _mod[k])
+            dprint("    %s=%s" % (k, _mod[k]))
 
 #-----------------------------------------------------------------------------
 
@@ -472,11 +472,9 @@ def dump_change_set(cs):
 # Unit tests
 #
 def run_unit_tests ():
-    verbose = False
     test_prefs = {'foo':'"bar"', 'uno':'1'}
 
-    if verbose:
-        print "In mozillaprofile tests"
+    dprint("In mozillaprofile tests")
 
     try:
         profile_ini_file = GetProfileIniFile()
@@ -484,15 +482,13 @@ def run_unit_tests ():
         print "No such profile ini file: %s" % e.filename
         return
 
-    if verbose:
-        print "ini file = %s" % profile_ini_file
+    dprint("ini file = %s" % profile_ini_file)
 
     up = UserProfile(profile_ini_file)
     up.open()
     up.get_profiles()
     default_path = up.get_default_path()
-    if verbose:
-        print "default_path = %s" % default_path
+    dprint("default_path = %s" % default_path)
 
     prefs_path = "%s/%s" % (default_path, "prefs.js")
 
@@ -517,9 +513,8 @@ def run_unit_tests ():
     dc.compare()
 
     cs = dc.get_change_set('a', 'b')
-    if verbose:
-        print "a <-- b"
-        dump_change_set(cs)
+    dprint("a <-- b")
+    dump_change_set(cs)
 
     dc = DictCompare(test_prefs, cs['add'])
     dc.compare()

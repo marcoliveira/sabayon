@@ -21,7 +21,11 @@
 import gconf
 import userprofile
 import gconfsource
+import util
 from config import *
+
+def dprint(fmt, *args):
+    util.debug_print(util.DEBUG_PANELDELEGATE, fmt % args)
 
 class PanelChange (userprofile.ProfileChange):
     def __init__ (self, source, delegate, id):
@@ -511,7 +515,7 @@ def run_unit_tests ():
 
     source.commit_change (changes[PANEL_REMOVED], False)
 
-    print temp_path
+    dprint ("Committed changes to %s" % temp_path)
     os.system ("gconftool-2 --shutdown")
     time.sleep (1)
     
@@ -522,4 +526,4 @@ def run_unit_tests ():
     os.system ("gconftool-2 --recursive-unset %s/objects/foo" % PANEL_KEY_BASE)
     os.system ("gconftool-2 --recursive-unset %s/applets/foo" % PANEL_KEY_BASE)
 
-    #shutil.rmtree (temp_path, True)
+    shutil.rmtree (temp_path, True)

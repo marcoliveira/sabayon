@@ -21,7 +21,11 @@
 import gtk
 import gtk.glade
 import userprofile
+import util
 from config import *
+
+def dprint(fmt, *args):
+    util.debug_print (util.DEBUG_ADMINTOOL, fmt % args)
 
 class ProfileChangesModel (gtk.ListStore):
     (
@@ -149,4 +153,4 @@ class ProfileMonitorWindow:
         (model, row) = selection.get_selected ()
         if row:
             change = model[row][ProfileChangesModel.COLUMN_CHANGE]
-            print "Selected: %s" % model[row][ProfileChangesModel.COLUMN_CHANGE].get_name ()
+            dprint ("Selected: %s" % model[row][ProfileChangesModel.COLUMN_CHANGE].get_name ())
