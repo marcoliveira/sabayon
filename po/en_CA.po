@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-03-15 19:33-0500\n"
-"PO-Revision-Date: 2005-03-15 11:14-0400\n"
+"POT-Creation-Date: 2005-03-17 01:33-0500\n"
+"PO-Revision-Date: 2005-03-17 11:14-0400\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: Canadian English <adamw@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -585,7 +585,21 @@ msgstr "Running %s tests (%s)"
 msgid "Success!"
 msgstr "Success!"
 
-#: ../lib/util.py:106
+#: ../lib/userdb.py:129
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "File %s is not a profile configuration"
+
+#: ../lib/userdb.py:137
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "Failed to add user %s to profile configuration"
+
+#: ../lib/userdb.py:166
+msgid "Failed to get the user list"
+msgstr "Failed to get the user list"
+
+#: ../lib/util.py:108
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -593,7 +607,7 @@ msgstr ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 
-#: ../lib/util.py:119
+#: ../lib/util.py:121
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
