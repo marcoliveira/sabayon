@@ -110,8 +110,8 @@ class FilesSource (userprofile.ProfileSource):
         else:
             metadata = "default"
 
-        self.profile_storage.add_file (rel_path,
-                                       os.path.join (self.home_dir, self.rel_path),
+        self.profile_storage.add_file (change.rel_path,
+                                       os.path.join (self.home_dir, change.rel_path),
                                        metadata)
         
     def start_monitoring (self):

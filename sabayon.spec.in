@@ -46,7 +46,7 @@ rm -fr %{buildroot}
 # Create a new user for sabayon, see the ISSUES file
 # note that the home directory will be cleaned up and rebuild
 # each time a config is updated.
-/usr/sbin/useradd -c "Sabayon user" -d /var/sabayon -g nobody -s /sbin/nologin sabayon >/dev/null 2>&1 || /bin/true
+/usr/sbin/useradd -c "Sabayon user" -d "" -g nobody -s /sbin/nologin sabayon >/dev/null 2>&1 || /bin/true
 
 %preun
 userdel -r sabayon >/dev/null 2>&1 || /bin/true

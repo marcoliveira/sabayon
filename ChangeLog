@@ -1,5 +1,14 @@
 2005-02-16  Mark McLoughlin  <markmc@redhat.com>
 
+	* lib/config.py.in: upd Xnest command line.
+	
+	* lib/sources/filessource.py: fix typos.
+	
+	* sabayon.spec.in: don't set the homedir to
+	/var/sabayon - we don't use that anymore.
+
+2005-02-16  Mark McLoughlin  <markmc@redhat.com>
+
 	* lib/userprofile.py:
 	(ProfileChange): kill get_name(), get_type() and
 	get_value(). Add get_id() and get_short_description().
