@@ -133,7 +133,7 @@ class GConfSource (userprofile.ProfileSource):
         
         (client, address) = self.get_committing_client_and_address (mandatory)
 
-        dprint ("Committing change to '%s' to '%s'" % (change.key, address))
+        dprint ("Committing change to '%s' to '%s'", change.key, address)
         
         if change.value:
             client.set (change.key, change.value)
@@ -151,7 +151,7 @@ class GConfSource (userprofile.ProfileSource):
             return
         
         def handle_notify (client, cnx_id, entry, self):
-            dprint ("Got GConf notification on '%s'" % entry.key)
+            dprint ("Got GConf notification on '%s'", entry.key)
             value = None
             if not entry.get_is_default ():
                 value = entry.value
@@ -180,8 +180,10 @@ class GConfSource (userprofile.ProfileSource):
         os.system ("gconftool-2 --shutdown")
         time.sleep (1)
 
-        self.storage.add (".gconf.xml.defaults", self.home_dir, self.name)
-        self.storage.add (".gconf.xml.mandatory", self.home_dir, self.name)
+        if os.path.exists (os.path.join (self.home_dir, ".gconf.path.defaults")):
+            self.storage.add (".gconf.xml.defaults", self.home_dir, self.name)
+        if os.path.exists (os.path.join (self.home_dir, ".gconf.path.mandatory")):
+            self.storage.add (".gconf.xml.mandatory", self.home_dir, self.name)
 
     def apply (self):
         """Apply the profile by writing the default and mandatory
@@ -200,7 +202,7 @@ class GConfSource (userprofile.ProfileSource):
             temporary file and move it over the original. Failing
             that, write directly to the original.
             """
-            dprint ("Writing GConf path file with '%s' to '%s'" % (source, filename))
+            dprint ("Writing GConf path file with '%s' to '%s'", source, filename)
             temp = filename + ".new"
             try:
                 f = file (temp, "w")
@@ -219,10 +221,15 @@ class GConfSource (userprofile.ProfileSource):
             if temp != None:
                 os.rename (temp, filename)
 
-        self.storage.extract (".gconf.xml.defaults", self.home_dir, True)
+        storage_contents = self.storage.list (self.name)
+
+        if ".gconf.xml.defaults" in storage_contents:
+            self.storage.extract (".gconf.xml.defaults", self.home_dir, True)
         write_path_file (os.path.join (self.home_dir, ".gconf.path.defaults"),
                          "xml:readonly:" + os.path.join (self.home_dir, ".gconf.xml.defaults"))
-        self.storage.extract (".gconf.xml.mandatory", self.home_dir, True)
+        
+        if ".gconf.xml.mandatory" in storage_contents:
+            self.storage.extract (".gconf.xml.mandatory", self.home_dir, True)
         write_path_file (os.path.join (self.home_dir, ".gconf.path.mandatory"),
                          "xml:readonly:" + os.path.join (self.home_dir, ".gconf.xml.mandatory"))
 

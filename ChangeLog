@@ -1,5 +1,28 @@
 2005-03-01  Mark McLoughlin  <markmc@redhat.com>
 
+	* lib/storage.py:
+	(__item_revision_is_current): return false if no
+	current revision.
+	(__unpack): create the revisions directory. Use the
+	list of files and directories in the metadata to
+	figure out what to unpack. Fixes problems with adding
+	empty dirs.
+	(add): don't copy previous revision if it doesn't
+	exist.
+	(save.zip_directory): remove unused param.
+	(save): consolidate duplicate code paths
+	
+	* lib/sources/gconfsource.py:
+	(sync): only add directories to storage if they exist.
+	(apply): only extract directories if they exist.
+	
+	* lib/sources/filessource.py: don't pre-format the
+	debugging string since the path can contain '%'
+	
+	* lib/sources/paneldelegate.py: ditto.
+
+2005-03-01  Mark McLoughlin  <markmc@redhat.com>
+
 	* lib/storage.py: fix spelling error pointed out
 	by Adam Weinberger <adamw@gnome.org> in bug #168843
 

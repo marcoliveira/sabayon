@@ -511,7 +511,7 @@ def run_unit_tests ():
 
     source.commit_change (changes[PANEL_REMOVED], False)
 
-    dprint ("Committed changes to %s" % temp_path)
+    dprint ("Committed changes to %s", temp_path)
     os.system ("gconftool-2 --shutdown")
     time.sleep (1)
     

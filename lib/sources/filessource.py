@@ -68,15 +68,15 @@ class FilesSource (userprofile.ProfileSource):
         if os.path.isfile (path):
             # FIXME: sanity check input (e.g. is change actually in homedir/?)
             rel_path = path[len (self.home_dir):].lstrip ("/")
-            dprint ("Emitting event '%s' on file '%s'" %
-                    (dirmonitor.event_to_string (event), rel_path))
+            dprint ("Emitting event '%s' on file '%s'",
+                    dirmonitor.event_to_string (event), rel_path)
             self.emit_change (FilesChange (self, rel_path, event))
 
     def commit_change (self, change, mandatory = False):
         if userprofile.ProfileSource.commit_change (self, change, mandatory):
             return
 
-        dprint ("Commiting '%s' (mandatory = %s)" % (change.rel_path, mandatory))
+        dprint ("Commiting '%s' (mandatory = %s)", change.rel_path, mandatory)
         
         if change.event == dirmonitor.CREATED or \
            change.event == dirmonitor.CHANGED:

@@ -38,6 +38,7 @@ def copy_tree (dst_base, src_base, dst_name, src_name = None, overwrite = False)
         src_name = dst_name
     
     try:
+        dprint ("Making dir %s" % os.path.join (dst_base, dst_name))
         os.mkdir (os.path.join (dst_base, dst_name))
     except OSError, err:
         if err.errno != errno.EEXIST:
@@ -357,6 +358,8 @@ class ProfileStorage:
         assert self.metadata
 
         current_profile_revision = self.__get_current_profile_revision ()
+        if not current_profile_revision:
+            return False
 
         return self.metadata.xpathEval ("boolean(/metadata/profile_revisions/profile_revision[@id='%s']"
                                         "/item[@path='%s' and @type='%s' and @revision='%s'])" %
@@ -370,28 +373,52 @@ class ProfileStorage:
         
         self.temp_path = tempfile.mkdtemp (prefix = "sabayon-profile-storage-")
         self.revisions_path = os.path.join (self.temp_path, "%revisions%")
+        os.mkdir (self.revisions_path)
 
         dprint ("Unpacking '%s' in '%s'" % (self.path, self.temp_path))
 
         if not self.zip:
-            os.mkdir (self.revisions_path)
             return
         
-        for info in self.zip.infolist ():
-            if info.filename == "metadata":
-                continue
+        def unzip_directory (zip, dir, name):
+            if not os.path.exists (os.path.join (dir, name)):
+                os.makedirs (os.path.join (dir, name))
+            for f in zip.namelist ():
+                if not f.startswith (name):
+                    continue
+
+                dest_path = os.path.join (dir, f)
+                dest_dir  = os.path.dirname (dest_path)
+
+                if not os.path.exists (dest_dir):
+                    os.makedirs (dest_dir)
+                
+                # It sucks that we lose file permissions, mtime etc. with ZIP
+                file (dest_path, "w").write (zip.read (f))
+        
+        def unzip_foreach (path, revision, is_current, is_directory, data):
+            (zip, temp_path, revisions_path) = data
+
+            dprint ("Unzip: path = %s, revision = %s, is_current = %s, is_directory = %s",
+                    path, revision, is_current, is_directory)
             
-            dest_path = os.path.join (self.temp_path, info.filename)
-            dest_dir  = os.path.join (self.temp_path, os.path.dirname (info.filename))
-
-            if not os.path.exists (dest_dir):
-                os.makedirs (dest_dir)
+            if is_current:
+                abs_path = os.path.join (temp_path, path)
+            else:
+                abs_path = os.path.join (revisions_path, path, revision)
+                path = os.path.join ("%revisions%", path, revision)
+                
+            if is_directory:
+                unzip_directory (zip, temp_path, path)
+            else:
+                dest_dir = os.path.join (temp_path, os.path.dirname (path))
+                if not os.path.exists (dest_dir):
+                    os.makedirs (dest_dir)
                                                            
-            # It sucks that we lose file permissions, mtime etc. with ZIP
-            file (dest_path, "w").write (self.zip.read (info.filename))
+                # It sucks that we lose file permissions, mtime etc. with ZIP
+                file (abs_path, "w").write (zip.read (path))
 
-        if not os.path.exists (self.revisions_path):
-            os.mkdir (self.revisions_path)
+        self.__foreach_all (unzip_foreach, (self.zip, self.temp_path, self.revisions_path))
 
     def __foreach_revision (self, node, type, callback, user_data):
         path = node.prop ("path")
@@ -459,26 +486,32 @@ class ProfileStorage:
             
         if os.path.isdir (src_path):
             (new_revision, old_revision) = self.__create_new_directory_revision (path, source, attributes)
-            needs_copying = self.__item_revision_is_current (path, "directory", old_revision)
+            if old_revision:
+                needs_copying = self.__item_revision_is_current (path, "directory", old_revision)
+            else:
+                needs_copying = False
             self.__add_profile_revision_item (self.unsaved_revision, path, "directory", new_revision)
 
-            if old_revision and needs_copying:
-                dprint ("Retaining old revision of '%s' at '%s'",
-                        path, os.path.join (self.revisions_path, path, old_revision))
-                os.renames (os.path.join (self.temp_path, path),
-                            os.path.join (self.revisions_path, path, old_revision))
+            if needs_copying:
+                revision_path = os.path.join (self.revisions_path, path, old_revision)
+                dprint ("Retaining old revision of '%s' from '%s' to '%s'",
+                        path, dst_path, revision_path)
+                os.renames (dst_path, revision_path)
             
             copy_tree (self.temp_path, src_dir, path)
         else:
             (new_revision, old_revision) = self.__create_new_file_revision (path, source, attributes)
-            needs_copying = self.__item_revision_is_current (path, "file", old_revision)
+            if old_revision:
+                needs_copying = self.__item_revision_is_current (path, "file", old_revision)
+            else:
+                needs_copying = False
             self.__add_profile_revision_item (self.unsaved_revision, path, "file", new_revision)
             
-            if old_revision and needs_copying:
-                dprint ("Retaining old revision of '%s' at '%s'",
-                        path, os.path.join (self.revisions_path, path, old_revision))
-                os.renames (os.path.join (self.temp_path, path),
-                            os.path.join (self.revisions_path, path, old_revision))
+            if needs_copying:
+                revision_path = os.path.join (self.revisions_path, path, old_revision)
+                dprint ("Retaining old revision of '%s' from '%s' to '%s'",
+                        path, dst_path, revision_path)
+                os.renames (dst_path, revision_path)
 
             dirname = os.path.dirname (dst_path)
             if not os.path.exists (dirname):
@@ -540,8 +573,8 @@ class ProfileStorage:
             
             item = self.__get_profile_revision_item (profile_revision, path)
             if not item:
-                raise ProfileStorageException (_("'%s' does not exist in profile revision '%s'") %
-                                               (path, profile_revision))
+                raise ProfileStorageException (_("'%s' does not exist in profile revision '%s'"),
+                                               path, profile_revision)
 
             item_type     = item.prop ("type")
             item_revision = item.prop ("revision")
@@ -551,8 +584,9 @@ class ProfileStorage:
             if item_type == "profile":
                 item = self.__get_profile_revision_item (item_revision, path)
                 if not item:
-                    raise ProfileStorageException (_("'%s' does not exist in profile revision '%s'") %
-                                                   (path, item_revision))
+                    raise ProfileStorageException (_("'%s' does not exist in profile revision '%s'"),
+                                                   path, profile_revision)
+                    return
 
                 item_type     = item.prop ("type")
                 item_revision = item.prop ("revision")
@@ -688,15 +722,12 @@ class ProfileStorage:
             save_zip.writestr ("metadata", self.metadata.serialize (format = 1))
             self.unsaved_revision = None
 
-            def zip_directory (save_zip, dir, rel, name = None):
-                if name is None:
-                    name = rel
+            def zip_directory (save_zip, dir, name):
                 for f in os.listdir (dir):
                     path = os.path.join (dir, f)
                     if os.path.isdir (path):
                         zip_directory (save_zip,
                                        path,
-                                       os.path.join (rel, f),
                                        os.path.join (name, f))
                     elif os.path.isfile (path):
                         save_zip.write (path, os.path.join (name, f))
@@ -706,17 +737,14 @@ class ProfileStorage:
 
                 if is_current:
                     abs_path = os.path.join (temp_path, path)
-                    if is_directory:
-                        zip_directory (save_zip, abs_path, path)
-                    else:
-                        save_zip.write (abs_path, path)
                 else:
                     abs_path = os.path.join (revisions_path, path, revision)
-                    name = os.path.join ("%revisions%", path, revision)
-                    if is_directory:
-                        zip_directory (save_zip, abs_path, path, name)
-                    else:
-                        save_zip.write (abs_path, name)
+                    path = os.path.join ("%revisions%", path, revision)
+                    
+                if is_directory:
+                    zip_directory (save_zip, abs_path, path)
+                else:
+                    save_zip.write (abs_path, path)
 
             self.__foreach_all (zip_foreach, (save_zip, self.temp_path, self.revisions_path))
 
