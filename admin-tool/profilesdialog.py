@@ -182,17 +182,11 @@ class ProfilesDialog:
         profile_name = self.__get_selected_profile ()
         if profile_name:
             self.dialog.set_sensitive (False)
-                
-            main_loop = gobject.MainLoop ()
-            def handle_session_finished (session, main_loop):
-                main_loop.quit ()
 
-            session = protosession.ProtoSession ("protouser",
-                                                 _get_profile_path_for_name (profile_name))
-            session.connect ("finished", handle_session_finished, main_loop)
-            session.start ()
+            # FIXME: shouldn't be hardcoded user name
+            argv = [ "sabayon-session", "protouser", _get_profile_path_for_name (profile_name) ]
 
-            main_loop.run ()
+            os.spawnvp (os.P_WAIT, argv[0], argv)
             
             self.dialog.set_sensitive (True)
 
@@ -205,6 +199,12 @@ class ProfilesDialog:
     def __create_new_profile (self, profile_name, base_profile):
         profile_storage = storage.ProfileStorage (_get_profile_path_for_name (profile_name))
         profile_storage.update_all ("")
+
+        # FIXME: just cheating - protosession should make a writable copy
+        #        for protouser and then copy it back when finished
+        import stat
+        os.chmod (_get_profile_path_for_name (profile_name),
+                  stat.S_IRWXU|stat.S_IRWXG|stat.S_IRWXO)
         
         self.profiles_model.reload ()
         iter = self.profiles_model.get_iter_first ()
@@ -218,8 +218,3 @@ class ProfilesDialog:
         profile_name = self.__get_selected_profile ()
         self.edit_button.set_sensitive (profile_name != None)
         self.delete_button.set_sensitive (profile_name != None)
-
-if __name__ == "__main__":
-    dialog = ProfilesDialog ()
-
-    gtk.main ()

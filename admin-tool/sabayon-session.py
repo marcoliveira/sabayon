@@ -19,24 +19,27 @@
 #
 
 if __name__ == '__main__':
-    import os
     import sys
-    import gtk
+    import gobject
+    import protosession
 
     if os.geteuid () != 0:
-        errordialog = gtk.MessageDialog (None,
-                                         gtk.DIALOG_DESTROY_WITH_PARENT,
-                                         gtk.MESSAGE_ERROR,
-                                         gtk.BUTTONS_CLOSE,
-                                         "Your account does not have permissions to run %s" % "sabayon")
-        errordialog.format_secondary_text ("Administrator level permissions are needed to run "
-                                           "this program because it can modify system files.")
-        errordialog.run ()
-        errordialog.destroy ()
+        sys.stderr.write ("Your account does not have permissions to run sabayon-session.")
         sys.exit (1)
-                        
-    import profilesdialog
-    
-    dialog = profilesdialog.ProfilesDialog ()
 
-    gtk.main ()
+    if len (sys.argv) != 3:
+        sys.stderr.write ("Usage: %s <username> <profile-file>\n" % sys.argv[0])
+        sys.exit (1)
+                                            
+    (username, profile_file) = sys.argv[1:3]
+
+    main_loop = gobject.MainLoop ()
+
+    def handle_session_finished (session, main_loop):
+        main_loop.quit ()
+
+    session = protosession.ProtoSession (username, profile_file)
+    session.connect ("finished", handle_session_finished, main_loop)
+    session.start ()
+
+    main_loop.run ()

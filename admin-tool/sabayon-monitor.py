@@ -18,25 +18,17 @@
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #
 
-if __name__ == '__main__':
-    import os
-    import sys
-    import gtk
+import sys
+import gtk
+import monitorwindow
 
-    if os.geteuid () != 0:
-        errordialog = gtk.MessageDialog (None,
-                                         gtk.DIALOG_DESTROY_WITH_PARENT,
-                                         gtk.MESSAGE_ERROR,
-                                         gtk.BUTTONS_CLOSE,
-                                         "Your account does not have permissions to run %s" % "sabayon")
-        errordialog.format_secondary_text ("Administrator level permissions are needed to run "
-                                           "this program because it can modify system files.")
-        errordialog.run ()
-        errordialog.destroy ()
-        sys.exit (1)
-                        
-    import profilesdialog
-    
-    dialog = profilesdialog.ProfilesDialog ()
+if __name__ == '__main__':
+    if len (sys.argv) > 1:
+        profile_file = sys.argv[1]
+    else:
+        profile_file = "test-profile.zip"
+
+    monitorwindow.ProfileMonitorWindow (profile_file)
 
     gtk.main ()
+

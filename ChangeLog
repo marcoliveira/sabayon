@@ -1,3 +1,28 @@
+2005-02-09  Mark McLoughlin  <markmc@redhat.com>
+
+	* admin-tool/Makefile.am: add sabayon-monitor and
+	sabayon-session.
+	
+	* admin-tool/profilesdialog.py:
+	(edit_button_clicked): run sabayon session since
+	ProtoSession has problems if there's an existing
+	X display already open.
+	(create_new_profile): temporary hack to make the profile
+	writable by the prototype user. Will fix soon.
+	
+	* admin-tool/sabayon-monitor.in,
+	  admin-tool/sabayon-monitor.py: re-name sabayon to
+	sabayon-monitor.
+	
+	* admin-tool/sabayon-session.in,
+	  admin-tool/sabayon-session.py: script to run a
+	prototype session.
+	
+	* admin-tool/sabayon.py: launch the profiles editor
+	from here.
+	
+	* admin-tool/profilesdialog.in: remove
+
 Tue Feb  8 17:12:02 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* admin-tool/.cvsignore admin-tool/Makefile.am
