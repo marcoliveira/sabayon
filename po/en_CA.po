@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-03-17 01:33-0500\n"
-"PO-Revision-Date: 2005-03-17 11:14-0400\n"
+"POT-Creation-Date: 2005-03-18 17:24-0500\n"
+"PO-Revision-Date: 2005-03-18 11:14-0400\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: Canadian English <adamw@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -31,75 +31,75 @@ msgstr "Adam Weinberger <adamw@gnome.org>"
 msgid "All Your Settings Are Belong To Us"
 msgstr "All Your Settings Are Belong To Us"
 
-#: ../admin-tool/editorwindow.py:224 ../admin-tool/sabayon.glade.h:7
+#: ../admin-tool/editorwindow.py:227 ../admin-tool/sabayon.glade.h:7
 msgid "_Profile"
 msgstr "_Profile"
 
-#: ../admin-tool/editorwindow.py:225
+#: ../admin-tool/editorwindow.py:228
 msgid "_Save"
 msgstr "_Save"
 
-#: ../admin-tool/editorwindow.py:225
+#: ../admin-tool/editorwindow.py:228
 msgid "Save profile"
 msgstr "Save profile"
 
-#: ../admin-tool/editorwindow.py:226
+#: ../admin-tool/editorwindow.py:229
 msgid "_Close"
 msgstr "_Close"
 
-#: ../admin-tool/editorwindow.py:226
+#: ../admin-tool/editorwindow.py:229
 msgid "Close the current window"
 msgstr "Close the current window"
 
-#: ../admin-tool/editorwindow.py:227
+#: ../admin-tool/editorwindow.py:230
 msgid "_Edit"
 msgstr "_Edit"
 
-#: ../admin-tool/editorwindow.py:228
+#: ../admin-tool/editorwindow.py:231
 msgid "_Delete"
 msgstr "_Delete"
 
-#: ../admin-tool/editorwindow.py:228
+#: ../admin-tool/editorwindow.py:231
 msgid "Delete item"
 msgstr "Delete item"
 
-#: ../admin-tool/editorwindow.py:229
+#: ../admin-tool/editorwindow.py:232
 msgid "C_lear History"
 msgstr "C_lear History"
 
-#: ../admin-tool/editorwindow.py:229
+#: ../admin-tool/editorwindow.py:232
 msgid "Clear revision history"
 msgstr "Clear revision history"
 
-#: ../admin-tool/editorwindow.py:230 ../admin-tool/sabayon.glade.h:6
+#: ../admin-tool/editorwindow.py:233 ../admin-tool/sabayon.glade.h:6
 msgid "_Help"
 msgstr "_Help"
 
-#: ../admin-tool/editorwindow.py:231
+#: ../admin-tool/editorwindow.py:234
 msgid "_About"
 msgstr "_About"
 
-#: ../admin-tool/editorwindow.py:231
+#: ../admin-tool/editorwindow.py:234
 msgid "About Sabayon"
 msgstr "About Sabayon"
 
-#: ../admin-tool/editorwindow.py:262
+#: ../admin-tool/editorwindow.py:265
 msgid "_Version:"
 msgstr "_Version:"
 
-#: ../admin-tool/editorwindow.py:314 ../admin-tool/monitorwindow.py:158
+#: ../admin-tool/editorwindow.py:320 ../admin-tool/monitorwindow.py:158
 msgid "Description"
 msgstr "Description"
 
-#: ../admin-tool/editorwindow.py:325
+#: ../admin-tool/editorwindow.py:331
 msgid "Version"
 msgstr "Version"
 
-#: ../admin-tool/editorwindow.py:355 ../lib/sources/gconfsource.py:100
+#: ../admin-tool/editorwindow.py:361 ../lib/sources/gconfsource.py:106
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:359 ../lib/sources/filessource.py:59
+#: ../admin-tool/editorwindow.py:365 ../lib/sources/filessource.py:67
 msgid "Files"
 msgstr "Files"
 
@@ -175,27 +175,27 @@ msgstr ""
 "Try again after creating the account (using, for example, the 'adduser' "
 "command)"
 
-#: ../admin-tool/sabayon-apply.py:33
-#, python-format
+#: ../admin-tool/sabayon-apply:34
+#, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "No profile for user '%s' found\n"
 
-#: ../admin-tool/sabayon-apply.py:38
-#, python-format
+#: ../admin-tool/sabayon-apply:39
+#, c-format
 msgid "Usage: %s [<profile-name>]\n"
 msgstr "Usage: %s [<profile-name>]\n"
 
-#: ../admin-tool/sabayon-monitor.py:28
-#, python-format
+#: ../admin-tool/sabayon-monitor:29
+#, c-format
 msgid "Usage: %s <profile-name>\n"
 msgstr "Usage: %s <profile-name>\n"
 
-#: ../admin-tool/sabayon-session.py:31
+#: ../admin-tool/sabayon-session:32
 msgid "Your account does not have permissions to run sabayon-session."
 msgstr "Your account does not have permission to run sabayon-session."
 
-#: ../admin-tool/sabayon-session.py:35
-#, python-format
+#: ../admin-tool/sabayon-session:36
+#, c-format
 msgid "Usage: %s <username> <profile-file>\n"
 msgstr "Usage: %s <username> <profile-file>\n"
 
@@ -227,12 +227,12 @@ msgstr "_Base on:"
 msgid "_Profiles:"
 msgstr "_Profiles:"
 
-#: ../admin-tool/sabayon.py:34
-#, python-format
+#: ../admin-tool/sabayon:35
+#, c-format
 msgid "Your account does not have permissions to run %s"
 msgstr "Your account does not have permission to run %s"
 
-#: ../admin-tool/sabayon.py:35
+#: ../admin-tool/sabayon:36
 msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
@@ -369,168 +369,168 @@ msgstr "Failed to start Xnest: timed out waiting for USR1 signal"
 msgid "Failed to start Xnest: died during startup"
 msgstr "Failed to start Xnest: died during startup"
 
-#: ../lib/sources/filessource.py:49
+#: ../lib/sources/filessource.py:57
 #, python-format
 msgid "File '%s' created"
 msgstr "File '%s' created"
 
-#: ../lib/sources/filessource.py:51
+#: ../lib/sources/filessource.py:59
 #, python-format
 msgid "File '%s' deleted"
 msgstr "File '%s' deleted"
 
-#: ../lib/sources/filessource.py:53
+#: ../lib/sources/filessource.py:61
 #, python-format
 msgid "File '%s' changed"
 msgstr "File '%s' changed"
 
-#: ../lib/sources/filessource.py:77
+#: ../lib/sources/filessource.py:85
 msgid "Applications menu"
 msgstr "Applications menu"
 
-#: ../lib/sources/filessource.py:79
+#: ../lib/sources/filessource.py:87
 msgid "Preferences menu"
 msgstr "Preferences menu"
 
-#: ../lib/sources/filessource.py:81
+#: ../lib/sources/filessource.py:89
 msgid "Server Settings menu"
 msgstr "Server Settings menu"
 
-#: ../lib/sources/filessource.py:83
+#: ../lib/sources/filessource.py:91
 msgid "System Settings menu"
 msgstr "System Settings menu"
 
-#: ../lib/sources/filessource.py:85
+#: ../lib/sources/filessource.py:93
 msgid "Start Here menu"
 msgstr "Start Here menu"
 
-#: ../lib/sources/gconfsource.py:72
+#: ../lib/sources/gconfsource.py:78
 #, python-format
 msgid "GConf key '%s' unset"
 msgstr "GConf key '%s' unset"
 
-#: ../lib/sources/gconfsource.py:74
+#: ../lib/sources/gconfsource.py:80
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
 msgstr "GConf key '%s' set to string '%s'"
 
-#: ../lib/sources/gconfsource.py:76
+#: ../lib/sources/gconfsource.py:82
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
 msgstr "GConf key '%s' set to integer '%s'"
 
-#: ../lib/sources/gconfsource.py:78
+#: ../lib/sources/gconfsource.py:84
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
 msgstr "GConf key '%s' set to float '%s'"
 
-#: ../lib/sources/gconfsource.py:80
+#: ../lib/sources/gconfsource.py:86
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
 msgstr "GConf key '%s' set to boolean '%s'"
 
-#: ../lib/sources/gconfsource.py:82
+#: ../lib/sources/gconfsource.py:88
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
 msgstr "GConf key '%s' set to schema '%s'"
 
-#: ../lib/sources/gconfsource.py:84
+#: ../lib/sources/gconfsource.py:90
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
 msgstr "GConf key '%s' set to list '%s'"
 
-#: ../lib/sources/gconfsource.py:86
+#: ../lib/sources/gconfsource.py:92
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
 msgstr "GConf key '%s' set to pair '%s'"
 
-#: ../lib/sources/gconfsource.py:88
+#: ../lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to '%s'"
 msgstr "GConf key '%s' set to '%s'"
 
-#: ../lib/sources/gconfsource.py:111
+#: ../lib/sources/gconfsource.py:117
 msgid "Default GConf settings"
 msgstr "Default GConf settings"
 
-#: ../lib/sources/gconfsource.py:113
+#: ../lib/sources/gconfsource.py:119
 msgid "Mandatory GConf settings"
 msgstr "Mandatory GConf settings"
 
-#: ../lib/sources/mozillasource.py:102
+#: ../lib/sources/mozillasource.py:96
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
 msgstr "Mozilla key '%s' set to '%s'"
 
-#: ../lib/sources/mozillasource.py:104
+#: ../lib/sources/mozillasource.py:98
 #, python-format
 msgid "Mozilla key '%s' unset"
 msgstr "Mozilla key '%s' unset"
 
-#: ../lib/sources/mozillasource.py:106
+#: ../lib/sources/mozillasource.py:100
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Mozilla key '%s' changed to '%s'"
 
-#: ../lib/sources/mozillasource.py:114
+#: ../lib/sources/mozillasource.py:108
 msgid "Firefox"
 msgstr "Firefox"
 
-#: ../lib/sources/mozillasource.py:311
+#: ../lib/sources/mozillasource.py:342
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "File Not Found (%s)"
 
-#: ../lib/sources/mozillasource.py:729
+#: ../lib/sources/mozillasource.py:777
 #, python-format
-msgid "duplicate name (%s) in section %s"
+msgid "duplicate name(%s) in section %s"
 msgstr "duplicate name (%s) in section %s"
 
-#: ../lib/sources/mozillasource.py:738
+#: ../lib/sources/mozillasource.py:786
 #, python-format
 msgid "redundant default in section %s"
 msgstr "redundant default in section %s"
 
-#: ../lib/sources/mozillasource.py:755
+#: ../lib/sources/mozillasource.py:803
 msgid "no default profile"
 msgstr "no default profile"
 
-#: ../lib/sources/mozillasource.py:846
+#: ../lib/sources/mozillasource.py:905
 #, python-format
 msgid "No such profile ini file: %s"
 msgstr "No such profile configuration file: %s"
 
-#: ../lib/sources/paneldelegate.py:47
+#: ../lib/sources/paneldelegate.py:53
 #, python-format
 msgid "Panel '%s' added"
 msgstr "Panel '%s' added"
 
-#: ../lib/sources/paneldelegate.py:53
+#: ../lib/sources/paneldelegate.py:59
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "Panel '%s' removed"
 
-#: ../lib/sources/paneldelegate.py:59
+#: ../lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel applet '%s' added"
 msgstr "Panel applet '%s' added"
 
-#: ../lib/sources/paneldelegate.py:65
+#: ../lib/sources/paneldelegate.py:71
 #, python-format
 msgid "Panel applet '%s' removed"
 msgstr "Panel applet '%s' removed"
 
-#: ../lib/sources/paneldelegate.py:71
+#: ../lib/sources/paneldelegate.py:77
 #, python-format
 msgid "Panel object '%s' added"
 msgstr "Panel object '%s' added"
 
-#: ../lib/sources/paneldelegate.py:77
+#: ../lib/sources/paneldelegate.py:83
 #, python-format
 msgid "Panel object '%s' removed"
 msgstr "Panel object '%s' removed"
 
-#: ../lib/sources/paneldelegate.py:112
+#: ../lib/sources/paneldelegate.py:118
 msgid "Panel"
 msgstr "Panel"
 
@@ -585,17 +585,27 @@ msgstr "Running %s tests (%s)"
 msgid "Success!"
 msgstr "Success!"
 
-#: ../lib/userdb.py:129
+#: ../lib/userdb.py:140
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "Could not open %s for writing"
+
+#: ../lib/userdb.py:153
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "Failed to save UserDatabase to %s"
+
+#: ../lib/userdb.py:177
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "File %s is not a profile configuration"
 
-#: ../lib/userdb.py:137
+#: ../lib/userdb.py:185
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Failed to add user %s to profile configuration"
 
-#: ../lib/userdb.py:166
+#: ../lib/userdb.py:216
 msgid "Failed to get the user list"
 msgstr "Failed to get the user list"
 
