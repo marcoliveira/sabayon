@@ -481,12 +481,21 @@ def run_unit_tests():
     f.write(time.ctime(time.time()))
     f.close()
 	    
-    list = prof.update_all("test update")
+    list = prof.update_all("first test update")
     
     (name, handler, description) = list[0]
     assert name == "config2.test"
     assert handler == "Bar Handler"
     assert description == "Second config test file"
+    
+    open(temp_path + "/config3.test", "w").write("new test file 3")
+    prof.add_file('config3.test', "Blaa Handler", "Third config test file")
+    list = prof.update_all("second test update")
+    
+    (name, handler, description) = list[0]
+    assert name == "config3.test"
+    assert handler == "Blaa Handler"
+    assert description == "Third config test file"
     
     os.remove("storage-test.zip")
     os.remove("storage-test.zip.bak")
