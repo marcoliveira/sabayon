@@ -18,6 +18,7 @@ import util
 XNEST_ARGV = [ "/usr/X11R6/bin/Xnest", "-terminate", "-audit", "0", "-name", "Xnest", "-nolisten", "tcp" ]
 SESSION_ARGV = [ "/etc/X11/xdm/Xsession", "gnome" ]
 #SESSION_ARGV = [ "/home/markmc/bin/jhbuild", "run", "gnome-session" ]
+ADMIN_TOOL_ARGV = [ "/gnome/head/INSTALL/bin/sabayon" ]
 DEFAULT_PATH = "/usr/local/bin:/usr/bin:/bin:/usr/X11R6/bin"
 
 class ProtoSessionError (Exception):
@@ -48,15 +49,54 @@ class ProtoSession (gobject.GObject):
     def __init__ (self, username):
         gobject.GObject.__init__ (self)
         assert os.geteuid () == 0
+        
         self.username = username
+        
         self.usr1_pipe_r = 0
         self.usr1_pipe_w = 0
+        
         self.xnest_pid = 0
-        self.session_pid = 0
         self.xnest_child_watch = 0
-        self.session_child_watch = 0
         self.xnest_xauth_file = None
+        
+        self.session_pid = 0
+        self.session_child_watch = 0
         self.session_xauth_file = None
+        
+        self.admin_tool_timeout = 0
+        self.admin_tool_pid = 0
+        self.admin_tool_child_watch = 0
+
+    def __kill_xnest (self):
+        if self.xnest_child_watch:
+            gobject.source_remove (self.xnest_child_watch)
+            self.xnest_child_watch = 0
+        
+        if self.xnest_pid:
+            safe_kill (self.xnest_pid, signal.SIGTERM)
+            self.xnest_pid = 0
+
+    def __kill_session (self):
+        if self.session_child_watch:
+            gobject.source_remove (self.session_child_watch)
+            self.session_child_watch = 0
+        
+        if self.session_pid:
+            safe_kill (self.session_pid, signal.SIGTERM)
+            self.session_pid = 0
+
+    def __kill_admin_tool (self):
+        if self.admin_tool_timeout:
+            gobject.source_remove (self.admin_tool_timeout)
+            self.admin_tool_timeout = 0
+        
+        if self.admin_tool_child_watch:
+            gobject.source_remove (self.admin_tool_child_watch)
+            self.admin_tool_child_watch = 0
+        
+        if self.admin_tool_pid:
+            safe_kill (self.admin_tool_pid, signal.SIGTERM)
+            self.admin_tool_pid = 0
 
     def __del__ (self):
         if self.xnest_auth_file:
@@ -128,14 +168,9 @@ class ProtoSession (gobject.GObject):
         self.xnest_pid = 0
         self.xnest_child_watch = 0
 
-        if self.session_child_watch:
-            gobject.source_remove (self.session_child_watch)
-            self.session_child_watch = 0
+        self.force_quit ()
 
-        if self.session_pid:
-            safe_kill (self.session_pid, signal.SIGTERM)
-            self.session_pid = 0
-        
+        # If we're waiting for USR1, quit main loop
         if self.main_loop:
             self.main_loop.quit ()
 
@@ -323,17 +358,44 @@ class ProtoSession (gobject.GObject):
         self.session_pid = 0
         self.session_child_watch = 0
 
-        if self.xnest_child_watch:
-            gobject.source_remove (self.xnest_child_watch)
-            self.xnest_child_watch = 0
-
-        if self.xnest_pid:
-            safe_kill (self.xnest_pid, signal.SIGTERM)
-            self.xnest_pid = 0
+        self.force_quit ()
 
         self.emit ("finished")
             
         return False
+
+    def __prepare_to_run_as_user (self):
+        os.setgid (self.user_pw.pw_gid)
+        os.setuid (self.user_pw.pw_uid)
+
+        os.chdir (self.user_pw.pw_dir)
+
+        # FIXME: setting the selinux context?
+
+        os.setsid ()
+        os.umask (022)
+        
+        new_environ = {}
+        for key in os.environ:
+            if key.startswith ("LC_") or \
+               key == "LANG" or \
+               key == "LINGUAS":
+                new_environ[key] = os.environ[key]
+
+        new_environ["PATH"]       = DEFAULT_PATH 
+        new_environ["DISPLAY"]    = self.display_name
+        new_environ["XAUTHORITY"] = self.session_xauth_file
+        new_environ["LOGNAME"]    = self.user_pw.pw_name
+        new_environ["USER"]       = self.user_pw.pw_name
+        new_environ["USERNAME"]   = self.user_pw.pw_name
+        new_environ["HOME"]       = self.user_pw.pw_dir
+        new_environ["SHELL"]      = self.user_pw.pw_shell
+
+        dprint ("Child process env: %s" % new_environ)
+
+        self.session_xauth_file = None
+
+        return new_environ
 
     def __start_session (self):
         try:
@@ -344,44 +406,18 @@ class ProtoSession (gobject.GObject):
         if pw.pw_dir == "" or not os.path.isdir (pw.pw_dir):
             raise SessionStartError, "Home directory for user '%s' does not exist" % self.username
 
-        dprint ("Starting session as %s" % pw)
+        self.user_pw = pw
+        
+        dprint ("Starting session as %s" % self.user_pw)
 
         self.session_xauth_file = self.__write_temp_xauth_file (False)
-        os.chown (self.session_xauth_file, pw.pw_uid, pw.pw_uid)
+        os.chown (self.session_xauth_file, self.user_pw.pw_uid, self.user_pw.pw_uid)
         
         self.__open_x_connection (self.display_name, self.session_xauth_file)
 
         self.session_pid = os.fork ()
         if self.session_pid == 0: # Child process
-            os.setgid (pw.pw_gid)
-            os.setuid (pw.pw_uid)
-
-            os.chdir (pw.pw_dir)
-
-            # FIXME: setting the selinux context?
-
-            new_environ = {}
-            for key in os.environ:
-                if key.startswith ("LC_") or \
-                   key == "LANG" or \
-                   key == "LINGUAS":
-                    new_environ[key] = os.environ[key]
-
-            new_environ["PATH"]       = DEFAULT_PATH 
-            new_environ["DISPLAY"]    = self.display_name
-            new_environ["XAUTHORITY"] = self.session_xauth_file
-            new_environ["LOGNAME"]    = pw.pw_name
-            new_environ["USER"]       = pw.pw_name
-            new_environ["USERNAME"]   = pw.pw_name
-            new_environ["HOME"]       = pw.pw_dir
-            new_environ["SHELL"]      = pw.pw_shell
-
-            dprint ("Child process env: %s" % new_environ)
-
-            self.session_xauth_file = None
-
-            os.setsid ()
-            os.umask (022)
+            new_environ = self.__prepare_to_run_as_user ()
 
             dprint ("Executing %s" % SESSION_ARGV)
     
@@ -394,6 +430,40 @@ class ProtoSession (gobject.GObject):
         self.session_child_watch = gobject.child_watch_add (self.session_pid,
                                                             self.__session_child_watch_handler)
 
+        # This is totally arbitrary
+        self.admin_tool_timeout = gobject.timeout_add (5 * 1000,
+                                                       self.__start_admin_tool)
+
+    def __admin_tool_child_watch_handler (self, pid, status):
+        dprint ("admin tool died")
+
+        self.admin_tool_pid = 0
+        self.admin_tool_child_watch = 0
+
+        self.force_quit ()
+
+        self.emit ("finished")
+
+        return False
+    
+    def __start_admin_tool (self):
+        self.admin_tool_pid = os.fork ()
+        if self.admin_tool_pid == 0: # Child process
+            new_environ = self.__prepare_to_run_as_user ()
+            
+            dprint ("Executing %s" % ADMIN_TOOL_ARGV)
+
+            os.execve (ADMIN_TOOL_ARGV[0], ADMIN_TOOL_ARGV, new_environ)
+
+            # Shouldn't ever reach here
+            print "Failed to launch admin tool"
+            os._exit (1)
+
+        self.admin_tool_child_watch = gobject.child_watch_add (self.admin_tool_pid,
+                                                               self.__admin_tool_child_watch_handler)
+        self.admin_tool_timeout = 0
+        return False
+
     def start (self):
         self.__start_xnest ()
 
@@ -402,24 +472,10 @@ class ProtoSession (gobject.GObject):
         # At this point, we should be able to connect to Xnest
         self.__start_session ()
 
-        # FIXME: need to run the change viewer tool
-
     def force_quit (self):
-        if self.xnest_child_watch:
-            gobject.source_remove (self.xnest_child_watch)
-            self.xnest_child_watch = 0
-        
-        if self.session_child_watch:
-            gobject.source_remove (self.session_child_watch)
-            self.session_child_watch = 0
-
-        if self.xnest_pid:
-            safe_kill (self.xnest_pid, signal.SIGTERM)
-            self.xnest_pid = 0
-        
-        if self.session_pid:
-            safe_kill (self.session_pid, signal.SIGTERM)
-            self.session_pid = 0
+        self.__kill_admin_tool ()
+        self.__kill_session ()
+        self.__kill_xnest ()
 
 gobject.type_register (ProtoSession)
 

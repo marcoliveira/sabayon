@@ -137,7 +137,7 @@ class SourceDelegate:
     to intercept and modify changes from a given configuration
     source."""
     
-    def __init__ (self, source, namespace_section, change_class):
+    def __init__ (self, source, namespace_section, change_class = None):
         """Construct a SourceDelegate object.
 
         @source: the ProfileSource whose changes the delegate wishes
