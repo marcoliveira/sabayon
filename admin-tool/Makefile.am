@@ -4,7 +4,8 @@ PYTHON_FILES =				\
 	sabayon-monitor.py		\
 	sabayon-session.py		\
 	monitorwindow.py		\
-	profilesdialog.py
+	profilesdialog.py		\
+	aboutdialog.py
 
 @INTLTOOL_DESKTOP_RULE@
 

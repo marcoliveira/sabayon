@@ -22,6 +22,7 @@ import gtk
 import gtk.glade
 import userprofile
 import util
+import aboutdialog
 from config import *
 
 def dprint (fmt, *args):
@@ -91,8 +92,6 @@ class ProfileMonitorWindow:
         self.about_item.connect ("activate", self.__handle_about)
 
         self.window.show ()
-        
-        self.about = None
 
     def __handle_save (self, item):
         iter = self.changes_model.get_iter_first ()
@@ -114,51 +113,8 @@ class ProfileMonitorWindow:
         self.window.destroy ()
 
     def __handle_about (self, item):
-        #
-        # Of course, this would all be so much easier if
-        # gtk_show_about_dialog() was wrapped
-        #
-        if self.about:
-            self.about.show ()
-            return
-
-        authors = [
-            "Daniel Veillard <veillard@redhat.com>",
-            "John Dennis <jdennis@redhat.com>",
-            "Mark McLoughlin <markmc@redhat.com>"
-        ]
-
-        # documenters = [
-        # ]
-
-        self.about = gtk.AboutDialog ()
-        
-        self.about.set_transient_for (self.window)
-        self.about.set_destroy_with_parent (True)
-        self.about.set_icon_name ("sabayon")
-
-        self.about.set_name               ("Sabayon")
-        self.about.set_version            (VERSION)
-        self.about.set_copyright          ("(C) 2005 Red Hat, Inc.")
-        self.about.set_website            ("http://www.gnome.org/projects/sabayon")
-        self.about.set_comments           (_("Program to establish and edit profiles for users"))
-        self.about.set_authors            (authors)
-        self.about.set_logo_icon_name     ("sabayon")
-        self.about.set_translator_credits (_("translator-credits"))
-
-        # self.about.set_documenters        (documenters)
-
-        def handle_delete (about, event):
-            about.hide ()
-            return True
-        self.about.connect ("delete-event", handle_delete)
-
-        def handle_response (about, response):
-            about.hide ()
-        self.about.connect ("response", handle_response)
-
-        self.about.show ()
-
+        aboutdialog.show_about_dialog (self.window)
+    
     def __on_ignore_toggled (self, toggle, path):
         iter = self.changes_model.get_iter_from_string (path)
         ignore = self.changes_model.get_value (iter, ProfileChangesModel.COLUMN_IGNORE)
