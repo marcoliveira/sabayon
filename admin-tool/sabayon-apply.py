@@ -21,16 +21,17 @@
 if __name__ == '__main__':
     import sys
     import util
+    # import userdb
 
     util.init_gettext ()
 
-    def lookup_users_profile ():
-        # FIXME: implement
-        sys.stderr.write ("Not implemented\n")
-        raise NotImplementedError
-
     if len (sys.argv) == 1:
-        profile_name = lookup_users_profile ()
+        user_name = util.get_user_name ()
+        profile_name = ""
+        # profile_name = userdb.get_database().get_profile ()
+        if not profile_name:
+            sys.stderr.write (_("No profile for user '%s' found\n") % user_name)
+            sys.exit (1)
     elif len (sys.argv) == 2:
         profile_name = sys.argv[1]
     else:

@@ -1,5 +1,11 @@
 2005-03-15  Mark McLoughlin  <markmc@redhat.com>
 
+	* admin-tool/sabayon-apply.py: add some commented out
+	code to hook up to userdb in order to find the profile
+	for the current user.
+
+2005-03-15  Mark McLoughlin  <markmc@redhat.com>
+
 	Partial fix for bug #170280
 
 	* admin-tool/monitorwindow.py: just print a traceback
@@ -33,7 +39,7 @@
 	only prefs.js and bookmarks.html are stored under the
 	profile. Next is to correctly merge these during the apply phase.
 
-2005-03-14  Mark McLoughlin  <mark@skynet.ie>
+2005-03-14  Mark McLoughlin  <markmc@redhat.com>
 
 	* admin-tool/userswindow.py: add cheesy UI which uses
 	userdb.py
@@ -1011,22 +1017,22 @@ Tue Feb  8 11:51:19 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* configure.ac: Added de to ALL_LINGUAS.
 
-2005-02-03  Mark McLoughlin  <mark@skynet.ie>
+2005-02-03  Mark McLoughlin  <markmc@redhat.com>
 
 	* admin-tool/profilesdialog.py: hook up edit to
 	protosession.
 
-2005-02-03  Mark McLoughlin  <mark@skynet.ie>
+2005-02-03  Mark McLoughlin  <markmc@redhat.com>
 
 	* admin-tool/profilesdialog.py: make new and delete
 	do stuff.
 
-2005-02-03  Mark McLoughlin  <mark@skynet.ie>
+2005-02-03  Mark McLoughlin  <markmc@redhat.com>
 
 	* admin-tool/profilesdialog.py,
 	  admin-tool/sabayon.glade: add a "New Profile" dialog.
 
-2005-02-03  Mark McLoughlin  <mark@skynet.ie>
+2005-02-03  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/storage.py: change things about a bit so that
 	it creates its own temprary install directory.
@@ -1045,7 +1051,7 @@ Tue Feb  8 11:51:19 CET 2005 Daniel Veillard <veillard@redhat.com>
 	* lib/sources/mozillasource.py: get_source() takes
 	a ProfileStorage not profile_path
 
-2005-02-03  Mark McLoughlin  <mark@skynet.ie>
+2005-02-03  Mark McLoughlin  <markmc@redhat.com>
 
 	* admin-tool/profilesdialog.py: start implementing
 	profiles manager dialog.
@@ -1057,7 +1063,7 @@ Tue Feb  8 11:51:19 CET 2005 Daniel Veillard <veillard@redhat.com>
 	
 	* lib/protosession.py: move some variables to config.py
 
-2005-02-02  Mark McLoughlin  <mark@skynet.ie>
+2005-02-02  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/protosession.py: apply the profile before
 	launching the session.
@@ -1068,12 +1074,12 @@ Tue Feb  8 11:51:19 CET 2005 Daniel Veillard <veillard@redhat.com>
 	* lib/userprofile.py: don't ignore exceptions from
 	ProfileStorage.install()
 
-2005-02-02  Mark McLoughlin  <mark@skynet.ie>
+2005-02-02  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/storage.py: test adding a new file after
 	installing.
 
-2005-02-02  Mark McLoughlin  <mark@skynet.ie>
+2005-02-02  Mark McLoughlin  <markmc@redhat.com>
 
 	* README: add bit about bug #154779
 	
@@ -1109,14 +1115,14 @@ Tue Feb  8 11:51:19 CET 2005 Daniel Veillard <veillard@redhat.com>
 	(set_home_dir_for_unit_tests): add to make writing
 	unit tests easier.
 
-2005-02-02  Mark McLoughlin  <mark@skynet.ie>
+2005-02-02  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/unittests.py: over-engineer the test harness
 	to make it easier to selectively run certain tests
 	i.e. "./unittests.py util storage filessource" just
 	runs those tests.
 
-2005-02-01  Mark McLoughlin  <mark@skynet.ie>
+2005-02-01  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/protosession.py: launch the admin tool an
 	arbtrary 5 seconds after starting the session.
@@ -1124,18 +1130,18 @@ Tue Feb  8 11:51:19 CET 2005 Daniel Veillard <veillard@redhat.com>
 	* lib/userprofile.py: allow the delegate not to
 	emit any changes of its own.
 
-2005-02-01  Mark McLoughlin  <mark@skynet.ie>
+2005-02-01  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/protosession.py: open the dummy X connection
 	on the right display.
 
-2005-01-31  Mark McLoughlin  <mark@skynet.ie>
+2005-01-31  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/protosession.py: open and hold open an X
 	connection so Xnest doesn't re-init as xsetroot
 	and xrdb connect and disconnect.
 
-2005-01-31  Mark McLoughlin  <mark@skynet.ie>
+2005-01-31  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/protosession.py:
 	Explicitly write the protouser's xauth file since
@@ -1143,17 +1149,17 @@ Tue Feb  8 11:51:19 CET 2005 Daniel Veillard <veillard@redhat.com>
 	Use execve instead of changing os.environ.
 	Add debugging spew.
 
-2005-01-31  Mark McLoughlin  <mark@skynet.ie>
+2005-01-31  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/dirmonitor.py: disconnect from gamin when
 	stopping the monitor.
 
-2005-01-31  Mark McLoughlin  <mark@skynet.ie>
+2005-01-31  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/dirmonitor.py: remove all watches when
 	stopping monitoring.
 
-2005-01-31  Mark McLoughlin  <mark@skynet.ie>
+2005-01-31  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/dirmonitor.py: fixup some bugs, passes unit
 	tests again.
@@ -1162,12 +1168,12 @@ Tue Feb  8 11:51:19 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* configure.ac: Added pt_BR to ALL_LINGUAS.
 
-2005-01-28  Mark McLoughlin  <mark@skynet.ie>
+2005-01-28  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/protosession.py: copy the xauth file for the user
 	before starting the session.
 
-2005-01-28  Mark McLoughlin  <mark@skynet.ie>
+2005-01-28  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/protosession.py: add code to write out an xauth
 	file for Xnest.
@@ -1177,16 +1183,16 @@ Fri Jan 28 11:20:03 CET 2005 Daniel Veillard <veillard@redhat.com>
 	* README lib/dirmonitor.py: switching to using gamin directly
 	  for the directory watches.
 
-2005-01-27  Mark McLoughlin  <mark@skynet.ie>
+2005-01-27  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/protosession.py: checkpoint of the session
 	launching code.
 
-2005-01-27  Mark McLoughlin  <mark@skynet.ie>
+2005-01-27  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/util.py: hmm, use GeneralError again.
 
-2005-01-26  Mark McLoughlin  <mark@skynet.ie>
+2005-01-26  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/util.py: pull username and homedir from
 	the passwd database if available.
@@ -1195,7 +1201,7 @@ Fri Jan 28 11:20:03 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* configure.ac: Added en_CA to ALL_LINGUAS.
 
-2005-01-25  Mark McLoughlin  <mark@skynet.ie>
+2005-01-25  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/userprofile.py: introduce the concept of a
 	"delegate" - a helper class to give a higher level
@@ -1216,7 +1222,7 @@ Fri Jan 28 11:20:03 CET 2005 Daniel Veillard <veillard@redhat.com>
 	  lib/sources/testsource.py: hook up some more unit
 	tests.
 	
-2005-01-24  Mark McLoughlin  <mark@skynet.ie>
+2005-01-24  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/storage-modules/: rename to lib/sources -
 	these modules are ProfileSource sub-classes, nothing
@@ -1240,7 +1246,7 @@ Fri Jan 21 12:00:42 CET 2005 Daniel Veillard <veillard@redhat.com>
 	* README: small update
 	* lib/dirmonitor.py: try to fix problem with older gnome-vfs bindings
 
-2005-01-21  Mark McLoughlin  <mark@skynet.ie>
+2005-01-21  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/userprofile.py: last few bits of the grand re-naming.
 	
