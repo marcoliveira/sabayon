@@ -30,6 +30,8 @@ pycheck:
 	pychecker -F $(top_srcdir)/pycheckrc $(PYTHON_FILES) $(NOINST_PYTHON_FILES)
 	(cd sources; make pycheck)
 
+DISTCLEANFILES=config.py
+
 clean:
 	rm -f *.pyo *.pyc
 	rm -f $(BUILT_SOURCES)
@@ -38,7 +40,7 @@ BUILT_SOURCES = config.py
 
 all-local: config.py
 
-config.py: config.py.in
+config.py: config.py.in Makefile
 	sed						\
                 -e s!\@BINDIR\@!$(bindir)!		\
                 -e s!\@SBINDIR\@!$(sbindir)!		\
