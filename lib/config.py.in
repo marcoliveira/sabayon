@@ -24,10 +24,8 @@ PKGDATADIR  = "@PKGDATADIR@"
 PROFILESDIR = "@SYSCONFDIR@/desktop-profiles"
 
 SESSION_TOOL_ARGV = [ "@LIBEXECDIR@/sabayon-session" ]
-#MONITOR_TOOL_ARGV = [ "@LIBEXECDIR@/sabayon-monitor" ]
-MONITOR_TOOL_ARGV = [ "/home/markmc/bin/jhbuild", "-f", "/home/markmc/.jhbuildrc", "run", "@LIBEXECDIR@/sabayon-monitor" ]
-#APPLY_TOOL_ARGV = [ "@LIBEXECDIR@/sabayon-monitor" ]
-APPLY_TOOL_ARGV = [ "/home/markmc/bin/jhbuild", "-f", "/home/markmc/.jhbuildrc", "run", "@SBINDIR@/sabayon-apply" ]
+MONITOR_TOOL_ARGV = [ "@LIBEXECDIR@/sabayon-monitor" ]
+APPLY_TOOL_ARGV   = [ "@SBINDIR@/sabayon-apply" ]
 
 DEFAULT_PATH  = "/usr/local/bin:/usr/bin:/bin:/usr/X11R6/bin"
 DEFAULT_SHELL = "/bin/bash"
