@@ -19,10 +19,9 @@ BuildArch: noarch
 
 Requires: python-abi = %{pyver}
 Requires: gamin-python
+Requires: libxml2-python
 Requires: pygtk2 >= %{pygtk2_version}
 Requires: gnome-python2-gconf >= %{gnome_python2_version}
-Requires: xorg-x11-Xnest
-Requires: shadow-utils
 
 BuildRequires: python
 BuildRequires: gettext
@@ -39,6 +38,9 @@ default behaviour of the GNOME desktop.
 Summary:  Graphical tools for Sabayon profile management
 Group:    Applications/System
 Requires: %{name} = %{version}-%{release}
+
+Requires: xorg-x11-Xnest
+Requires: shadow-utils
 
 %description admin
 The sabayon-admin package contains the graphical tools which a
@@ -168,6 +170,10 @@ fi
 %ghost %{python_sitelib}/%{name}/userswindow.pyo
 
 %changelog
+* Mon Mar 21 2005 Mark McLoughlin <markmc@redhat.com> - 0.16-7
+- Move Xnest and shadow-utils requires to sabayon-admin
+- Require libxml2-python
+
 * Mon Mar 21 2005 Mark McLoughlin <markmc@redhat.com> - 0.16-6
 - Make noarch
 
