@@ -214,9 +214,6 @@ def get_source (profile_storage):
 # Unit tests
 #
 def run_unit_tests ():
-    import tempfile
-    import shutil
-    
     main_loop = gobject.MainLoop ()
 
     profile_storage = storage.ProfileStorage ("GConfTest.zip")

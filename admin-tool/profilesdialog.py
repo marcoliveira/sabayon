@@ -20,6 +20,9 @@
 
 import os
 import errno
+import shutil
+import tempfile
+import pwd
 import gobject
 import gtk
 import gtk.glade
@@ -107,6 +110,8 @@ class NewProfileDialog:
 
 class ProfilesDialog:
     def __init__ (self):
+        assert os.geteuid () == 0
+        
         glade_file = GLADEDIR + '/' + "sabayon.glade"
         self.xml = gtk.glade.XML (glade_file, "profiles_dialog")
 
@@ -178,17 +183,40 @@ class ProfilesDialog:
             return None
         return model[row][ProfilesModel.COLUMN_NAME]
 
+    def __copy_to_user (self, profile_path, username):
+        (fd, user_path) = tempfile.mkstemp (prefix = "profile-%s-" % username, suffix = ".zip")
+        os.close (fd)
+
+        shutil.copyfile (profile_path, user_path)
+
+        pw = pwd.getpwnam (username)
+        
+        os.chown (user_path, pw.pw_uid, pw.pw_gid)
+
+        print "Created %s from %s" % (user_path, profile_path)
+
+        return user_path
+
+    def __copy_from_user (self, user_path, profile_path):
+        os.chown (user_path, os.geteuid (), os.getegid ())
+        os.rename (user_path, profile_path)
+        print "Moved %s back from %s" % (user_path, profile_path)
+
     def __edit_button_clicked (self, button):
         profile_name = self.__get_selected_profile ()
         if profile_name:
-            self.dialog.set_sensitive (False)
-
             # FIXME: shouldn't be hardcoded user name
-            argv = [ SESSION_TOOL_PATH, "protouser", _get_profile_path_for_name (profile_name) ]
+            username = "protouser"
+            profile_path = _get_profile_path_for_name (profile_name)
 
+            user_path = self.__copy_to_user (profile_path, username)
+
+            self.dialog.set_sensitive (False)
+            argv = [ SESSION_TOOL_PATH, "protouser", user_path ]
             os.spawnv (os.P_WAIT, argv[0], argv)
-            
             self.dialog.set_sensitive (True)
+
+            self.__copy_from_user (user_path, profile_path)
 
     def __delete_button_clicked (self, button):
         profile_name = self.__get_selected_profile ()
@@ -200,12 +228,6 @@ class ProfilesDialog:
         profile_storage = storage.ProfileStorage (_get_profile_path_for_name (profile_name))
         profile_storage.update_all ("")
 
-        # FIXME: just cheating - protosession should make a writable copy
-        #        for protouser and then copy it back when finished
-        import stat
-        os.chmod (_get_profile_path_for_name (profile_name),
-                  stat.S_IRWXU|stat.S_IRWXG|stat.S_IRWXO)
-        
         self.profiles_model.reload ()
         iter = self.profiles_model.get_iter_first ()
         while iter:

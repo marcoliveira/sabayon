@@ -1,5 +1,16 @@
 2005-02-09  Mark McLoughlin  <markmc@redhat.com>
 
+	* admin-tool/profilesdialog.py:
+	(edit_button_clicked): copy the profile for
+	the prototype session and copy it back when
+	finished.
+	(create_new_profile): remove hackiness.
+	
+	* lib/sources/gconfsource.py: don't import
+	tempfile and shutil, not needed.
+
+2005-02-09  Mark McLoughlin  <markmc@redhat.com>
+
 	* lib/config.py.in: add path to sabayon-session.
 	
 	* admin-tool/profilesdialog.py: use it.
