@@ -52,6 +52,7 @@ class DirectoryMonitor:
         self.callback = callback
         self.data = data
         self.monitors = {}
+	self.nb_watches = 0
 
     def __invoke_callback (self, path, event):
         if self.data:
@@ -76,6 +77,12 @@ class DirectoryMonitor:
         self.__invoke_callback (path, event)
             
     def __monitor_dir (self, dir):
+        if self.nb_watches == 200:
+	    print "Too many directories to watch on %s" % (self.directory)
+	    self.nb_watches = self.nb_watches + 1
+	if self.nb_watches > 200:
+	    return
+
         assert not self.monitors.has_key (dir)
         try:
             monitor = gnomevfs.monitor_add (gnomevfs.get_uri_from_local_path (dir),
@@ -87,8 +94,12 @@ class DirectoryMonitor:
 	    util.print_exception()
             return
         self.monitors[dir] = monitor
+	self.nb_watches = self.nb_watches + 1
+
 
     def __monitor_dir_recurse (self, dir, new_dir = False):
+        if self.nb_watches > 200:
+	    return
         if dir != self.directory:
             self.__monitor_dir (dir)
         for entry in os.listdir (dir):
