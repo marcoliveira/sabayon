@@ -24,9 +24,16 @@ import exceptions, sys, os.path, ConfigParser, re, cPickle
 import tempfile, types
 import dirmonitor
 import util
+import filessource
+import traceback
+
+ini_partial_path = ".mozilla/firefox/profiles.ini"
 
 def dprint(fmt, *args):
     util.debug_print(util.DEBUG_MOZILLASOURCE, fmt % args)
+
+def dwarn(fmt, *args):
+    print >> sys.stderr, "WARNING " + fmt % args
 
 class MozillaChange (userprofile.ProfileChange):
     (
@@ -38,9 +45,9 @@ class MozillaChange (userprofile.ProfileChange):
     def __init__ (self, module, key, value, event):
         userprofile.ProfileChange.__init__ (self, module)
         
-        assert self.event == CREATED or \
-               self.event == DELETED or \
-               self.event == CHANGED
+        assert event == self.CREATED or \
+               event == self.DELETED or \
+               event == self.CHANGED
         
         self.key   = key
         self.value = value
@@ -50,93 +57,123 @@ class MozillaChange (userprofile.ProfileChange):
         return self.key
 
     def get_short_description (self):
-        if self.event == CREATED:
+        if self.event == self.CREATED:
             return _("Mozilla key '%s' set to '%s'") % (self.key, self.value)
-        elif self.event == DELETED:
+        elif self.event == self.DELETED:
             return _("Mozilla key '%s' unset") % self.key
-        else:
+        elif self.event == self.CHANGED:
             return _("Mozilla key '%s' changed to '%s'") % (self.key, self.value)
+        else:
+            raise ValueError
 
 gobject.type_register (MozillaChange)
 
-class MozillaSource (userprofile.ProfileSource):
-    def __init__ (self, storage):
-        userprofile.ProfileSource.__init__ (self, "Mozilla")
-        self.storage = storage
+class MozillaDelegate (userprofile.SourceDelegate):
+    def __init__ (self, source):
+        self.source = source
+        self.ini_files = {}
+        self.pref_files = {}
+        userprofile.SourceDelegate.__init__ (self, _("Files"), source, ".mozilla")
 
-        self.ini_file = GetProfileIniFile()
-        dprint("ini file = %s" % self.ini_file)
+    def get_full_path(self, path):
+        return os.path.expanduser("~/%s" % path)        
 
-        # -----------------
+    def is_ini_file(self, path):
+        ini_path_re = re.compile(ini_partial_path + "$")
+        if ini_path_re.search(path):
+            return True
+        else:
+            return False
 
-    def commit_change (self, change):
-        pass
-    def start_monitoring (self):
-        self.up = UserProfile(self.ini_file)
-        self.up.open()
-        self.up.get_profiles()
-        self.default_path = self.up.get_default_path()
-        dprint("start_monitoring: default_path = %s" % self.default_path)
+    def is_prefs_file(self, path):
+        found_parent_ini = False
 
-        self.prefs_path = "%s/%s" % (self.default_path, "prefs.js")
+        for ini_path in self.ini_files.keys():
+            ini_dir = os.path.dirname(ini_path)
+            if path.startswith(ini_dir):
+                found_parent_ini = True
+                ini = self.ini_files[ini_path]
+                break
 
-        self.pref = JavascriptPrefsFile(self.prefs_path)
-        self.pref.open()
-        self.pref.kill_comments()
-        self.pref.parse()
-        self.prev_prefs = self.pref.get_prefs()
-    
-        # XXX - should this be in contructor instead?
-        self.monitor = dirmonitor.DirectoryMonitor(
-            os.path.dirname(self.prefs_path), self.__handle_monitor_event)
-        self.monitor.start ()
+        if not found_parent_ini:
+            return False
+
+        for profile_dir in ini.get_profiles(True):
+            if path == os.path.join(profile_dir, "prefs.js"):
+                return True
+        return False
+
+    def handle_change (self, change):
+        # XXX - jrd
+        assert isinstance(change, filessource.FilesChange)
+        path = self.get_full_path(change.get_id())
+        if change.event == dirmonitor.CREATED:
+            if self.is_ini_file(path):
+                dprint("CREATED ini file: %s", path)
+                if path in self.ini_files:
+                    dwarn("ini file (%s) reports creation, but was already known", path)
+                else:
+                    ini = FirefoxProfilesIni(path)
+                    self.ini_files[path] = ini
+                    ini.read()
+                return True
+
+            if self.is_prefs_file(path):
+                dprint("CREATED prefs file: %s", path)
+                if path in self.pref_files:
+                    dwarn("prefs file (%s) reports creation, but was already known", path)
+                else:
+                    pref = JavascriptPrefsFile(path, self.source)
+                    self.pref_files[path] = pref
+                    pref.read()
+                return True
+            
+            dprint("CREATED Ignored: %s", path)
+            return True
+
+        if change.event == dirmonitor.CHANGED:
+            if self.is_ini_file(path):
+                dprint("CHANGED ini file: %s", path)
+                ini = self.ini_files.setdefault(path, FirefoxProfilesIni(path))
+                ini.read()
+                return True
+
+            if self.is_prefs_file(path):
+                dprint("CHANGED prefs file: %s", path)
+                pref = self.pref_files.setdefault(path, JavascriptPrefsFile(path, self.source))
+                pref.read()
+                return True
+            
+            dprint("CHANGED Ignored: %s", path)
+            return True
+
+        if change.event == dirmonitor.DELETED:
+            if self.is_ini_file(path):
+                dprint("DELETED ini file: %s", path)
+                if path in self.ini_files:
+                    del self.ini_files[path]
+                return True
+
+            if self.is_prefs_file(path):
+                dprint("DELETED prefs file: %s", path)
+                if path in self.pref_files:
+                    del self.pref_files[path]
+                return True
+            
+            dprint("DELETED Ignored: %s", path)
+            return True
+
+        raise ValueError
 
 
-    def __handle_monitor_event (self, path, event):
-        if path == self.prefs_path:
-            self.pref_file_changed()
+        return True
 
-    def pref_file_changed(self):
-        pref = JavascriptPrefsFile(self.prefs_path)
-        pref.open()
-        pref.kill_comments()
-        pref.parse()
-        cur_prefs = pref.get_prefs()
-
-        dc = DictCompare(self.prev_prefs, cur_prefs)
-        dc.compare()
-        cs = dc.get_change_set('a', 'b')
-        #dump_change_set(cs)
-        _add = cs['add']
-        _del = cs['del']
-        _mod = cs['mod']
-
-        def emit_changes (self, items, event):
-            for key, value in items:
-                self.emit_change (MozillaChange (self, key, value, event))
-
-        emit_changes (self, _add.items (), MozillaChange.CREATED)
-        emit_changes (self, _del.items (), MozillaChange.DELETED)
-        emit_changes (self, _mod.items (), MozillaChange.CHANGED)
-
-        self.prev_prefs = cur_prefs
-
-    def stop_monitoring (self):
-        self.monitor.stop ()
-
-    def sync_changes (self):
-        pass
     def apply (self):
+        # XXX - what is this supposed to do? Why is a delegate applying anything?
         pass
 
-    def get_test_change (self, key, value):
-        ret = MozillaChange (self, key, value)
-        return ret
-
-gobject.type_register (MozillaSource)
-    
-def get_source (storage):
-    return MozillaSource (storage)
+def get_files_delegate (source):
+    return MozillaDelegate (source)
 
 #-----------------------------------------------------------------------------
 
@@ -291,16 +328,43 @@ class DictCompare:
 # ------ Class JavascriptPrefsFile ------
 
 class JavascriptPrefsFile:
-    def __init__(self, filepath):
-        self.filepath = filepath
+    def __init__(self, path, source):
+        self.path = path
+        self.source = source
+        self.prefs = {}
+        self.prev_prefs = {}
 
-    def open(self):
-        '''Constructors shouldn't do heavy processing or anything that might
-        raise exceptions, its bad practice, so put the real work here in open.'''
-        fd = open(self.filepath)
+
+    def read(self):
+        self.prev_prefs = self.get_prefs()
+
+        fd = open(self.path)
         self.filebuf = fd.read()
         fd.close()
-        #dprint(self.filebuf)
+        self.kill_comments()
+        self.parse()
+
+        cur_prefs = self.get_prefs()
+
+        dc = DictCompare(self.prev_prefs, cur_prefs)
+        dc.compare()
+        cs = dc.get_change_set('a', 'b')
+        dump_change_set(cs)
+
+        _add = cs['add']
+        _del = cs['del']
+        _mod = cs['mod']
+
+        def emit_changes(self, items, event):
+            for key, value in items:
+                self.source.emit_change(MozillaChange (self, key, value, event))
+
+        emit_changes(self, _add.items (), MozillaChange.CREATED)
+        emit_changes(self, _del.items (), MozillaChange.DELETED)
+        emit_changes(self, _mod.items (), MozillaChange.CHANGED)
+
+        self.prev_prefs = cur_prefs
+
 
     def kill_comments(self):
         slash_comment_re = re.compile("//.*$", re.MULTILINE)
@@ -320,7 +384,8 @@ class JavascriptPrefsFile:
             if match:
                 key   = match.group(1)
                 value = match.group(2)
-                dprint("(%d:%d) key='%s' value='%s'" % (match.start(), match.end(), key, value))
+                dprint("(%d:%d) key='%s' value='%s'" %
+                       (match.start(), match.end(), key, value))
                 self.prefs[key] = value
                 start = match.end()
             else:
@@ -336,27 +401,51 @@ class JavascriptPrefsFile:
             dprint("%s=%s" % (key, self.prefs[key]))
 
 
-# ------ Class UserProfile ------
+# ------ Class FirefoxProfilesIni ------
 
-class UserProfile:
-    def __init__(self, ini_file_path):
-        self.ini_file_path = ini_file_path
+class FirefoxProfilesIni:
+    (INI_STATE_UNKNOWN,
+     INI_STATE_VALID,
+     INI_STATE_NOT_FOUND,
+     INI_STATE_PARSE_ERROR) = range(4)
 
-    def open(self):
-        '''Constructors shouldn't do heavy processing or anything that might
-        raise exceptions, its bad practice, so put the real work here in open.'''
-        self.ini = ConfigParser.ConfigParser()
-        self.ini.read(self.ini_file_path)
-        self.profiles = {}
+    def __init__(self, path):
+        self.state = self.INI_STATE_UNKNOWN
         self.default = None
+        self.profiles = {}
+        self.ini = ConfigParser.ConfigParser()
+        self.path = path
+        self.dir = os.path.dirname(path)
 
-    def get_profiles(self):
+    def read(self):
+        dprint("FirefoxProfilesIni.read() path = %s",
+               self.path)
+        self.profiles = {}
+
+        try:
+            if self.ini.read(self.path):
+                self.state = self.INI_STATE_VALID
+            else:
+                self.state = self.INI_STATE_NOT_FOUND
+        except ConfigParser.ParsingError, e:
+            self.state = self.INI_STATE_PARSE_ERROR
+        
+
+        if self.state != self.INI_STATE_VALID:
+            self.default = None
+
+        self.parse_sections()
+
+    def parse_sections(self):
         profile_re = re.compile("^Profile(\d+)$")
 
+        self.default = None
+        self.profiles = {}
         nummatches = 0
         lastmatch_name = None
         
         for section in self.ini.sections():
+            dprint("parse_sections() section=%s", section)
             match = profile_re.match(section)
             if match:
                 name = self.ini.get(section, "Name")
@@ -367,44 +456,43 @@ class UserProfile:
                     default = None
                 
                 if name in self.profiles:
-                    raise BadIniFileError(_("duplicate name (%s) in section %s") % (name, section))
+                    raise BadIniFileError(_("duplicate name (%s) in section %s") %
+                                          (name, section))
                 profile = {}
                 self.profiles[name] = profile
                 profile["section"] = section
                 profile["path"] = path
                 if default:
                     if self.default:
-                        raise BadIniFileError(_("redundant default in section %s") % section)
+                        raise BadIniFileError(_("redundant default in section %s") %
+                                              section)
                     self.default = name
 
                 lastmatch_name = name
                 nummatches = nummatches + 1
 
         if self.default == None and nummatches == 1:
-            # If there's only one profile, its the default even if it doesn't have the Default=1 flag
-            # (by default Firefox's auto-generated profile doesn't have the Default= flag)
+            # If there's only one profile, its the default even if it
+            # doesn't have the Default=1 flag
+            # Note: by default Firefox's auto-generated profile doesn't
+            # have the Default= flag)
             self.default = lastmatch_name
             dprint("defaulting to the only choice")
             
         
-    def get_default_path(self):
-        if not self.default:
-            raise BadIniFileError(_("no default profile"))
-        path = self.profiles[self.default]["path"]
-        fullpath = "%s/%s" % (os.path.dirname(self.ini_file_path), path)
-        if not os.path.exists(fullpath):
-            raise BadIniFileError(_("default path (%s) does not exist") % fullpath)
-        if not os.path.isdir(fullpath):
-            raise BadIniFileError(_("default path (%s) is not a directory") % fullpath)
-        return fullpath
-
+    def get_profiles(self, as_dir=False):
+        if as_dir:
+            return [ os.path.join(self.dir, profile["path"])
+                     for profile in self.profiles.values() ]
+        else:
+            return self.profiles.keys()
 
 # ------ Utility Functions ------
 
 # XXX - this needs more logic to distinquish mozilla, firefox, versions, etc.
 # basically its just hardcoded at the moment.
 def GetProfileIniFile():
-    filename = os.path.expanduser("~/.mozilla/firefox/profiles.ini")
+    filename = os.path.expanduser("~/%s" % ini_partial_path)
 
     # XXX - should caller thow error instead?
     if not os.path.exists(filename):
@@ -412,34 +500,23 @@ def GetProfileIniFile():
 
     return(filename)
 
-def write_dict(dict, filepath):
-    fd = open(filepath, 'w')
-    cPickle.dump(dict, fd, True)
-    fd.close()
+def insert_prefs_into_file(path, prefs):
+    (wfd, tmppath) = tempfile.mkstemp(dir=os.path.dirname(path))
 
-def read_dict(filepath):
-    fd = open(filepath)
-    dict = cPickle.load(fd)
-    fd.close()
-    return dict
-
-def insert_prefs_into_file(filepath, prefs):
-    (wfd, tmppath) = tempfile.mkstemp(dir=os.path.dirname(filepath))
-
-    for line in open(filepath):
+    for line in open(path):
         wfd.write(line)
 
     for key, value in prefs.items():
         wfd.write("user_pref(\"%s\", %s);\n" % (key, value))
 
     wfd.close()
-    os.rename(tmppath, filepath)
+    os.rename(tmppath, path)
 
 # XXX - this does not deal with comments
-def remove_prefs_from_file(filepath, prefs):
-    (wfd, tmppath) = tempfile.mkstemp(dir=os.path.dirname(filepath))
+def remove_prefs_from_file(path, prefs):
+    (wfd, tmppath) = tempfile.mkstemp(dir=os.path.dirname(path))
 
-    for line in open(filepath):
+    for line in open(path):
         match = pref_re.search(line)
         if match:
             key = match.group(1)
@@ -455,7 +532,7 @@ def remove_prefs_from_file(filepath, prefs):
             wfd.write(line)
 
     wfd.close()
-    os.rename(tmppath, filepath)
+    os.rename(tmppath, path)
 
 
 def dump_change_set(cs):
@@ -464,7 +541,7 @@ def dump_change_set(cs):
     _mod = cs['mod']
 
     if len(_add.keys()):
-        drint("Key/Values to ADD")
+        dprint("Key/Values to ADD")
         for k in _add.keys():
             dprint("    %s=%s" % (k, _add[k]))
 
@@ -474,7 +551,7 @@ def dump_change_set(cs):
             dprint("    %s=%s" % (k, _del[k]))
 
     if len(_mod.keys()):
-        dpprint("Key/Values to Modify")
+        dprint("Key/Values to Modify")
         for k in _mod.keys():
             dprint("    %s=%s" % (k, _mod[k]))
 
@@ -496,10 +573,10 @@ def run_unit_tests ():
 
     dprint("ini file = %s" % profile_ini_file)
 
-    up = UserProfile(profile_ini_file)
-    up.open()
-    up.get_profiles()
-    default_path = up.get_default_path()
+    profiles_ini = FirefoxProfilesIni(profile_ini_file)
+    profiles_ini.read()
+    profiles_ini.parse_sections()
+    default_path = profiles_ini.get_default_path()
     dprint("default_path = %s" % default_path)
 
     prefs_path = "%s/%s" % (default_path, "prefs.js")

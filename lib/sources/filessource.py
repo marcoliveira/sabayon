@@ -56,7 +56,7 @@ gobject.type_register (FilesChange)
 
 class FilesSource (userprofile.ProfileSource):
     def __init__ (self, storage):
-        userprofile.ProfileSource.__init__ (self, _("Files"))
+        userprofile.ProfileSource.__init__ (self, _("Files"), "get_files_delegate")
         self.storage = storage
         self.home_dir = util.get_home_dir ()
         self.monitor = dirmonitor.DirectoryMonitor (self.home_dir,
