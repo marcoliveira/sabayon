@@ -74,7 +74,6 @@ class MozillaSource (userprofile.ProfileSource):
         self.prev_prefs = self.pref.get_prefs()
     
         # XXX - should this be in contructor instead?
-        #self.monitor = dirmonitor.DirectoryMonitor("/var/tmp", self.__handle_monitor_event)
         self.monitor = dirmonitor.DirectoryMonitor(
             os.path.dirname(self.prefs_path), self.__handle_monitor_event)
         self.monitor.start ()
@@ -399,8 +398,7 @@ def read_dict(filepath):
     return dict
 
 def insert_prefs_into_file(filepath, prefs):
-    tmppath = tempfile.mkstemp(dir=os.path.dirname(filepath))[1]
-    wfd = open(tmppath, 'w')
+    (wfd, tmppath) = tempfile.mkstemp(dir=os.path.dirname(filepath))
 
     for line in open(filepath):
         wfd.write(line)
@@ -413,9 +411,7 @@ def insert_prefs_into_file(filepath, prefs):
 
 # XXX - this does not deal with comments
 def remove_prefs_from_file(filepath, prefs):
-    tmppath = tempfile.mkstemp(dir=os.path.dirname(filepath))[1]
-
-    wfd = open(tmppath, 'w')
+    (wfd, tmppath) = tempfile.mkstemp(dir=os.path.dirname(filepath))
 
     for line in open(filepath):
         match = pref_re.search(line)
