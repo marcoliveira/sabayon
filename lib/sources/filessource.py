@@ -32,19 +32,25 @@ def dprint (fmt, *args):
     util.debug_print (util.DEBUG_FILESSOURCE, fmt % args)
 
 class FilesChange (userprofile.ProfileChange):
-    def __init__ (self, source, filename, event):
+    def __init__ (self, source, rel_path, event):
         userprofile.ProfileChange.__init__ (self, source)
-        self.filename = filename
-        self.event = event
+        self.rel_path = rel_path
+        self.event    = event
 
-    def get_name (self):
-        return self.filename
+        assert self.event == dirmonitor.CREATED or \
+               self.event == dirmonitor.DELETED or \
+               self.event == dirmonitor.CHANGED
 
-    def get_type (self):
-        return dirmonitor.event_to_string (self.event)
+    def get_id (self):
+        return self.rel_path
 
-    def get_value (self):
-        return ""
+    def get_short_description (self):
+        if self.event == dirmonitor.CREATED:
+            return "File '%s' created" % self.rel_path
+        elif self.event == dirmonitor.DELETED:
+            return "File '%s' deleted" % self.rel_path
+        elif self.event == dirmonitor.CHANGED:
+            return "File '%s' changed" % self.rel_path
 
 gobject.type_register (FilesChange)
 
@@ -80,19 +86,21 @@ class FilesSource (userprofile.ProfileSource):
 
     def __handle_monitor_event (self, path, event):
         if os.path.isfile (path):
-            dprint ("Emitting event '%s' on file '%s'" % (dirmonitor.event_to_string (event), path))
-            self.emit_change (FilesChange (self, path, event))
+            # FIXME: sanity check input (e.g. is change actually in homedir/?)
+            rel_path = path[len (self.home_dir):].lstrip ("/")
+            dprint ("Emitting event '%s' on file '%s'" %
+                    (dirmonitor.event_to_string (event), rel_path))
+            self.emit_change (FilesChange (self, rel_path, event))
 
     def commit_change (self, change, mandatory = False):
         if userprofile.ProfileSource.commit_change (self, change, mandatory):
             return
 
-        dprint ("Commiting '%s' (mandatory = %s)" % (change.get_name (), mandatory))
-                    
-        # FIXME: sanity check input (e.g. is change actually in homedir/?)
-        rel_path = change.get_name ()[len (self.home_dir):].lstrip ("/")
+        # FIXME: What about DELETED events ?
 
-        _safe_copy_file (rel_path,
+        dprint ("Commiting '%s' (mandatory = %s)" % (change.rel_path, mandatory))
+                    
+        _safe_copy_file (change.rel_path,
                          self.home_dir,
                          self.profile_storage.get_install_path (),
                          True)
@@ -102,7 +110,9 @@ class FilesSource (userprofile.ProfileSource):
         else:
             metadata = "default"
 
-        self.profile_storage.add_file (rel_path, self.get_name (), metadata)
+        self.profile_storage.add_file (rel_path,
+                                       os.path.join (self.home_dir, self.rel_path),
+                                       metadata)
         
     def start_monitoring (self):
         self.monitor.start ()
@@ -147,13 +157,9 @@ def run_unit_tests ():
                                   prefix = ".test-filesprofile-")
     util.set_home_dir_for_unit_tests (temp_path)
 
-    def handle_change (source, change, data):
-        (temp_path, main_loop) = data
-        filename = change.get_name ()
-        if len (filename) > len (temp_path) and \
-           filename[:len (temp_path)] == temp_path:
-            source.commit_change (change)
-            main_loop.quit ()
+    def handle_change (source, change, main_loop):
+        source.commit_change (change)
+        main_loop.quit ()
 
     main_loop = gobject.MainLoop ()
     
@@ -165,7 +171,7 @@ def run_unit_tests ():
     profile_storage = storage.ProfileStorage ("FileTest.zip")
     profile_storage.install ()
     source = get_source (profile_storage)
-    source.connect ("changed", handle_change, (temp_path, main_loop))
+    source.connect ("changed", handle_change, main_loop)
     source.start_monitoring ()
 
     os.makedirs (temp_path + "/foobar/foo/bar/foo/bar")

@@ -29,20 +29,33 @@ def dprint(fmt, *args):
     util.debug_print(util.DEBUG_MOZILLASOURCE, fmt % args)
 
 class MozillaChange (userprofile.ProfileChange):
+    (
+        CREATED,
+        DELETED,
+        CHANGED
+    ) = range (3)
+    
     def __init__ (self, module, key, value, event):
         userprofile.ProfileChange.__init__ (self, module)
-        self.key = key
+        
+        assert self.event == CREATED or \
+               self.event == DELETED or \
+               self.event == CHANGED
+        
+        self.key   = key
         self.value = value
         self.event = event
 
-    def get_name (self):
+    def get_id (self):
         return self.key
 
-    def get_type (self):
-        return self.event
-
-    def get_value (self):
-        return self.value
+    def get_short_description (self):
+        if self.event == CREATED:
+            return "Mozilla key '%s' set to '%s'" % (self.key, self.value)
+        elif self.event == DELETED:
+            return "Mozilla key '%s' unset" % self.key
+        else:
+            return "Mozilla key '%s' changed to '%s'" % (self.key, self.value)
 
 gobject.type_register (MozillaChange)
 
@@ -98,14 +111,13 @@ class MozillaSource (userprofile.ProfileSource):
         _del = cs['del']
         _mod = cs['mod']
 
-        for key, value in _add.items():
-            self.emit_change(MozillaChange (self, key, value, "created"))
+        def emit_changes (self, items, event):
+            for key, value in items:
+                self.emit_change (MozillaChange (self, key, value, event))
 
-        for key, value in _del.items():
-            self.emit_change(MozillaChange (self, key, value, "deleted"))
-
-        for key, value in _mod.items():
-            self.emit_change(MozillaChange (self, key, value, "changed"))
+        emit_changes (self, _add.items (), MozillaChange.CREATED)
+        emit_changes (self, _del.items (), MozillaChange.DELETED)
+        emit_changes (self, _mod.items (), MozillaChange.CHANGED)
 
         self.prev_prefs = cur_prefs
 

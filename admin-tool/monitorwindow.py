@@ -32,9 +32,8 @@ class ProfileChangesModel (gtk.ListStore):
         COLUMN_CHANGE,
         COLUMN_IGNORE,
         COLUMN_MANDATORY,
-        COLUMN_TYPE,
-        COLUMN_NAME
-    ) = range (5)
+        COLUMN_DESCRIPTION
+    ) = range (4)
 
     def __init__ (self, profile):
         gtk.ListStore.__init__ (self, userprofile.ProfileChange, bool, bool, str, str)
@@ -51,7 +50,7 @@ class ProfileChangesModel (gtk.ListStore):
             next = self.iter_next (iter)
             change = self[iter][self.COLUMN_CHANGE]
             if change.get_source () == new_change.get_source () and \
-               change.get_name ()   == new_change.get_name ():
+               change.get_id ()     == new_change.get_id ():
                 ignore    = self[iter][self.COLUMN_IGNORE]
                 mandatory = self[iter][self.COLUMN_MANDATORY]
                 self.remove (iter)
@@ -59,11 +58,10 @@ class ProfileChangesModel (gtk.ListStore):
 
         row = self.prepend ()
         self.set (row,
-                  self.COLUMN_CHANGE,    new_change,
-                  self.COLUMN_IGNORE,    ignore,
-                  self.COLUMN_MANDATORY, mandatory,
-                  self.COLUMN_TYPE,      new_change.get_source_name (),
-                  self.COLUMN_NAME,      new_change.get_name ())
+                  self.COLUMN_CHANGE,      new_change,
+                  self.COLUMN_IGNORE,      ignore,
+                  self.COLUMN_MANDATORY,   mandatory,
+                  self.COLUMN_DESCRIPTION, new_change.get_short_description ())
 
 class ProfileMonitorWindow:
     #
@@ -105,7 +103,7 @@ class ProfileMonitorWindow:
             mandatory = self.changes_model[iter][ProfileChangesModel.COLUMN_MANDATORY]
 
             if not ignore:
-                dprint ("Committing: %s, mandatory = %s" % (change.get_name (), mandatory))
+                dprint ("Committing: %s, mandatory = %s" % (change.get_id (), mandatory))
                 change.get_source ().commit_change (change, mandatory)
                 
             iter = self.changes_model.iter_next (iter)
@@ -179,11 +177,6 @@ class ProfileMonitorWindow:
         self.treeview.get_selection ().set_mode (gtk.SELECTION_SINGLE)
         self.treeview.get_selection ().connect ("changed", self.__treeview_selection_changed)
 
-        c = gtk.TreeViewColumn ("Type",
-                                gtk.CellRendererText (),
-                                text = ProfileChangesModel.COLUMN_TYPE)
-        self.treeview.append_column (c)
-        
         toggle = gtk.CellRendererToggle ()
         toggle.connect ("toggled", self.__on_ignore_toggled)
         c = gtk.TreeViewColumn ("Ignore",
@@ -198,13 +191,13 @@ class ProfileMonitorWindow:
                                 active = ProfileChangesModel.COLUMN_MANDATORY)
         self.treeview.append_column (c)
         
-        c = gtk.TreeViewColumn ("Name",
+        c = gtk.TreeViewColumn ("Description",
                                 gtk.CellRendererText (),
-                                text = ProfileChangesModel.COLUMN_NAME)
+                                text = ProfileChangesModel.COLUMN_DESCRIPTION)
         self.treeview.append_column (c)
 
     def __treeview_selection_changed (self, selection):
         (model, row) = selection.get_selected ()
         if row:
             change = model[row][ProfileChangesModel.COLUMN_CHANGE]
-            dprint ("Selected: %s" % model[row][ProfileChangesModel.COLUMN_CHANGE].get_name ())
+            dprint ("Selected: %s" % model[row][ProfileChangesModel.COLUMN_CHANGE].get_id ())

@@ -26,13 +26,10 @@ class TestChange (userprofile.ProfileChange):
         userprofile.ProfileChange.__init__ (self, source)
         self.key = key
         self.value = value
-
-    def get_name (self):
+    def get_id (self):
         return self.key
-    def get_type (self):
-        return ""
-    def get_value (self):
-        return self.value
+    def get_short_description (self):
+        return self.key
 
 gobject.type_register (TestChange)
 
@@ -41,7 +38,7 @@ class TestDelegate (userprofile.SourceDelegate):
         userprofile.SourceDelegate.__init__ (self, source, "/foo")
 
     def handle_change (self, change):
-        if change.get_name () == "/foo/bar1":
+        if change.get_id () == "/foo/bar1":
             return True
         return False
 

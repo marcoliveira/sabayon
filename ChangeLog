@@ -1,5 +1,20 @@
 2005-02-16  Mark McLoughlin  <markmc@redhat.com>
 
+	* lib/userprofile.py:
+	(ProfileChange): kill get_name(), get_type() and
+	get_value(). Add get_id() and get_short_description().
+	
+	* lib/sources/filessource.py,
+	  lib/sources/gconfsource.py,
+	  lib/sources/mozillasource.py,
+	  lib/sources/paneldelegate.py,
+	  lib/sources/testsource.py: impl. new functions.
+	
+	* admin-tool/monitorwindow.py: update for ProfileChange
+	changes.
+
+2005-02-16  Mark McLoughlin  <markmc@redhat.com>
+
 	* admin-tool/monitorwindow.py: change things around
 	a bit so that we lose some of the columns in the list
 	and the commit menu item. Now everything gets saved

@@ -56,37 +56,38 @@ class GConfChange (userprofile.ProfileChange):
         userprofile.ProfileChange.__init__ (self, source)
         self.entry = entry
 
-    def get_name (self):
+    def get_id (self):
         """Return the path to the GConf key which changed."""
         return self.entry.key
 
-    def get_type (self):
-        """Return the type of the GConf key which changed."""
+    def get_short_description (self):
+        """Return a short description of the GConf key change."""
         if not self.entry.value:
-            return "None"
+            return "GConf key '%s' unset" % self.entry.key
         elif self.entry.value.type == gconf.VALUE_STRING:
-            return "String"
+            return "GConf key '%s' set to string '%s'" % \
+                   (self.entry.key, self.entry.value.to_string ())
         elif self.entry.value.type == gconf.VALUE_INT:
-            return "Integer"
+            return "GConf key '%s' set to integer '%s'" % \
+                   (self.entry.key, self.entry.value.to_string ())
         elif self.entry.value.type == gconf.VALUE_FLOAT:
-            return "Floating Point"
+            return "GConf key '%s' set to float '%s'" % \
+                   (self.entry.key, self.entry.value.to_string ())
         elif self.entry.value.type == gconf.VALUE_BOOL:
-            return "Bool"
+            return "GConf key '%s' set to boolean '%s'" % \
+                   (self.entry.key, self.entry.value.to_string ())
         elif self.entry.value.type == gconf.VALUE_SCHEMA:
-            return "Schema"
+            return "GConf key '%s' set to schema '%s'" % \
+                   (self.entry.key, self.entry.value.to_string ())
         elif self.entry.value.type == gconf.VALUE_LIST:
-            return "List"
+            return "GConf key '%s' set to list '%s'" % \
+                   (self.entry.key, self.entry.value.to_string ())
         elif self.entry.value.type == gconf.VALUE_PAIR:
-            return "Pair"
+            return "GConf key '%s' set to pair '%s'" % \
+                   (self.entry.key, self.entry.value.to_string ())
         else:
-            return "Invalid"
-        
-    def get_value (self):
-        """Return the value of the GConf key which changed."""
-        if self.entry.value:
-            return self.entry.value.to_string ()
-        else:
-            return "(unset)"
+            return "GConf key '%s' set to '%s'" % \
+                   (self.entry.key, self.entry.value.to_string ())
 
 gobject.type_register (GConfChange)
 

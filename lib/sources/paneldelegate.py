@@ -31,56 +31,50 @@ class PanelChange (userprofile.ProfileChange):
     def __init__ (self, source, delegate, id):
         userprofile.ProfileChange.__init__ (self, source, delegate)
         self.id = id
-    def get_name (self):
+    def get_id (self):
         return self.id
+
+#
+# FIXME: these short descriptions are lame, should be:
+#  "Battery applet added to top panel"
+#  "Launcher (gnome-terminal) added to bottom panel" etc.
+#
 
 class PanelAddedChange (PanelChange):
     def __init__ (self, source, delegate, id):
         PanelChange.__init__ (self, source, delegate, id)
-    def get_type (self):
-        return "Panel added"
-    def get_value (self):
-        return ""
+    def get_short_description (self):
+        return "Panel '%s' added" % self.id
     
 class PanelRemovedChange (PanelChange):
     def __init__ (self, source, delegate, id):
         PanelChange.__init__ (self, source, delegate, id)
-    def get_type (self):
-        return "Panel removed"
-    def get_value (self):
-        return ""
+    def get_short_description (self):
+        return "Panel '%s' removed" % self.id
 
 class PanelAppletAddedChange (PanelChange):
     def __init__ (self, source, delegate, id):
         PanelChange.__init__ (self, source, delegate, id)
-    def get_type (self):
-        return "Panel applet added"
-    def get_value (self):
-        return ""
+    def get_short_description (self):
+        return "Panel applet '%s' added" % self.id
 
 class PanelAppletRemovedChange (PanelChange):
     def __init__ (self, source, delegate, id):
         PanelChange.__init__ (self, source, delegate, id)
-    def get_type (self):
-        return "Panel applet removed"
-    def get_value (self):
-        return ""
+    def get_short_description (self):
+        return "Panel applet '%s' removed" % self.id
 
 class PanelObjectAddedChange (PanelChange):
     def __init__ (self, source, delegate, id):
         PanelChange.__init__ (self, source, delegate, id)
-    def get_type (self):
-        return "Panel object added"
-    def get_value (self):
-        return ""
-
+    def get_short_description (self):
+        return "Panel object '%s' added" % self.id
+    
 class PanelObjectRemovedChange (PanelChange):
     def __init__ (self, source, delegate, id):
         PanelChange.__init__ (self, source, delegate, id)
-    def get_type (self):
-        return "Panel object removed"
-    def get_value (self):
-        return ""
+    def get_short_description (self):
+        return "Panel object '%s' removed" % self.id
 
 class PanelDelegate (userprofile.SourceDelegate):
     class PanelThing:

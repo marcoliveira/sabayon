@@ -122,20 +122,12 @@ class ProfileChange (gobject.GObject):
         """Get the ProfileSource from which this change came."""
         return self.source
 
-    def get_source_name (self):
-        """Return the name of the configuration source."""
-        return self.source.get_name ()
-
-    def get_name (self):
-        """Return the name of the configuration item which changed."""
+    def get_id (self):
+        """Return and identifier for the configuration item which changed."""
         raise Exception ("Not implemented")
 
-    def get_type (self):
-        """Return the type of the configuration item which changed."""
-        raise Exception ("Not implemented")
-
-    def get_value (self):
-        """Return the value of the configuration item which changed."""
+    def get_short_description (self):
+        """Return a short description of the configuration change."""
         raise Exception ("Not implemented")
 
 gobject.type_register (ProfileChange)
@@ -205,10 +197,10 @@ class ProfileSource (gobject.GObject):
         return #True.
         """
         for delegate in self.delegates:
-            if not change.get_name ().startswith (delegate.namespace_section):
+            if not change.get_id ().startswith (delegate.namespace_section):
                 continue
             if delegate.handle_change (change):
-                dprint ("Delegate '%s' handled change '%s'" % (delegate.get_name (), change.get_name ()))
+                dprint ("Delegate '%s' handled change '%s'" % (delegate.get_name (), change.get_id ()))
                 return
         self.emit ("changed", change)
         
@@ -220,7 +212,7 @@ class ProfileSource (gobject.GObject):
         """
         if change.delegate:
             change.delegate.commit_change (change, mandatory)
-            dprint ("Delegate '%s' committed changes '%s'" % (change.delegate.get_name (), change.get_name ()))
+            dprint ("Delegate '%s' committed changes '%s'" % (change.delegate.get_name (), change.get_id ()))
             return True
         return False
     
@@ -323,18 +315,16 @@ def run_unit_tests ():
             ProfileChange.__init__ (self, source)
             self.key = key
             self.value = value
-        def get_name (self):
+        def get_id (self):
             return self.key
-        def get_type (self):
-            return ""
-        def get_value (self):
-            return self.value
+        def get_short_description (self):
+            return self.key
 
     class LocalTestDelegate (SourceDelegate):
         def __init__ (self, source):
             SourceDelegate.__init__ (self, source, "/bar")
         def handle_change (self, change):
-            if change.get_name () == "/bar/foo1":
+            if change.get_id () == "/bar/foo1":
                 return True
             return False
 
