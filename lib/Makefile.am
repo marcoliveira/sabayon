@@ -16,29 +16,18 @@ EXTRA_DIST =				\
 	$(NOINST_PYTHON_FILES)		\
 	config.py.in
 
-install-exec-local:
-	mkdir -p $(DESTDIR)$(pkgdatadir)/
-	for f in $(PYTHON_FILES); do \
-	  install -m 0644 $(srcdir)/$$f $(DESTDIR)$(pkgdatadir)/ ; \
-	done
-
-uninstall-local:
-	rm -f $(DESTDIR)$(pkgdatadir)/*.py
-	rmdir $(DESTDIR)$(pkgdatadir)/
+pkgdata_PYTHON = $(PYTHON_FILES)
 
 pycheck:
 	pychecker -F $(top_srcdir)/pycheckrc $(PYTHON_FILES) $(NOINST_PYTHON_FILES)
 	(cd sources; make pycheck)
 
-DISTCLEANFILES=config.py
-
 clean:
 	rm -f *.pyo *.pyc
 	rm -f $(BUILT_SOURCES)
 
+DISTCLEANFILES = config.py
 BUILT_SOURCES = config.py
-
-all-local: config.py
 
 config.py: config.py.in Makefile
 	sed						\

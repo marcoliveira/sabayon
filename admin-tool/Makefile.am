@@ -13,15 +13,15 @@ GLADE_FILES =				\
 ICON_FILES =				\
 	sabayon.png
 
-Applicationsdir = $(datadir)/applications
-Applications_in_files = sabayon.desktop.in
-Applications_DATA = $(Applications_in_files:.desktop.in=.desktop)
+desktopdir        = $(datadir)/applications
+desktop_in_files = sabayon.desktop.in
+desktop_DATA     = $(desktop_in_files:.desktop.in=.desktop)
 
 EXTRA_DIST =				\
 	$(PYTHON_FILES)			\
 	$(GLADE_FILES)			\
-	$(Applications_in_files)	\
-	$(Applications_DATA)		\
+	$(desktop_in_files)		\
+	$(desktop_DATA)			\
 	sabayon.in			\
 	sabayon-monitor.in		\
 	sabayon-session.in
@@ -32,39 +32,39 @@ glade_DATA = $(GLADE_FILES)
 icondir    = $(datadir)/pixmaps
 icon_DATA  = $(ICON_FILES)
 
-PAMD_DIR = /etc/pam.d
-SECURITY_DIR = /etc/security/console.apps
+wrappers = 			\
+	sabayon			\
+	sabayon-monitor		\
+	sabayon-session
 
-install-exec-local:
-	mkdir -p $(DESTDIR)$(sbindir)/
-	install -m 0755 $(srcdir)/sabayon $(DESTDIR)$(sbindir)
-	mkdir -p $(DESTDIR)$(libexecdir)/
-	install -m 0755 $(srcdir)/sabayon-monitor $(DESTDIR)$(libexecdir)
-	install -m 0755 $(srcdir)/sabayon-session $(DESTDIR)$(libexecdir)
-	mkdir -p $(DESTDIR)$(pkgdatadir)/
+%: %.in
+	sed -e s!\@PKGDATADIR\@!$(pkgdatadir)! < $< > $@
+	sed -e s!\@SBINDIR\@!$(sbindir)! < $< > $@
+	chmod a+x $@
+
+sbin_SCRIPTS = sabayon
+libexec_SCRIPTS = sabayon-monitor sabayon-session
+
+pkgdata_PYTHON = $(PYTHON_FILES)
+
+install-exec-local: sabayon.console
 	mkdir -p $(DESTDIR)$(sysconfdir)/desktop-profiles/
-	for f in $(PYTHON_FILES); do \
-	  install -m 0644 $(srcdir)/$$f $(DESTDIR)$(pkgdatadir)/ ; \
-	done
-	mkdir -p $(DESTDIR)$(PAMD_DIR)
-	mkdir -p $(DESTDIR)$(SECURITY_DIR)
-	install sabayon.pam $(DESTDIR)$(PAMD_DIR)/sabayon
-	install sabayon.console $(DESTDIR)$(SECURITY_DIR)/sabayon
-	ln -sf consolehelper $(DESTDIR)$(bindir)/sabayon
+if CONSOLE_HELPER
+	$(INSTALL_DATA) -D $(srcdir)/sabayon.pam $(DESTDIR)$(PAM_PREFIX)/pam.d/sabayon
+	$(INSTALL_DATA) -D sabayon.console $(DESTDIR)$(PAM_PREFIX)/security/console.apps/sabayon
+	$(INSTALL_DATA) -m 755 -d $(DESTDIR)$(sbindir)
+	mv -f $(DESTDIR)$(bindir)/sabayon $(DESTDIR)$(sbindir)
+	$(LN_S) @CONSOLE_HELPER@ $(DESTDIR)$(bindir)/sabayon
+endif
 
 uninstall-local:
-	rm -f $(DESTDIR)$(pkgdatadir)/*py
-	rmdir $(DESTDIR)$(pkgdatadir)/
-	rm -f $(DESTDIR)$(sbindir)/sabayon
-	rm -f $(DESTDIR)$(libexecdir)/sabayon-monitor
-	rm -f $(DESTDIR)$(libexecdir)/sabayon-session
-	rmdir $(DESTDIR)$(sbindir)/
-	rmdir $(DESTDIR)$(libexecdir)/
 	rmdir $(DESTDIR)$(sysconfdir)/desktop-profiles/
-	rm -f $(DESTDIR)$(PAMD_DIR)/sabayon
-	rm -f $(DESTDIR)$(SECURITY_DIR)/sabayon
-	rmdir $(DESTDIR)$(PAMD_DIR)
-	rmdir $(DESTDIR)$(SECURITY_DIR)
+if CONSOLE_HELPER
+	rm -f $(DESTDIR)$(PAM_PREFIX)/pam.d/sabayon
+	rm -f $(DESTDIR)$(PAM_PREFIX)/security/console.apps/sabayon
+	rmdir $(DESTDIR)$(PAM_PREFIX)/pam.d
+	rmdir $(DESTDIR)$(PAM_PREFIX)/security/console.apps
+endif
 
 pycheck:
 	pychecker -F $(top_srcdir)/pycheckrc $(PYTHON_FILES)
@@ -72,17 +72,6 @@ pycheck:
 clean:
 	rm -f *.pyo *.pyc
 	rm -f $(BUILT_SOURCES)
-
-wrappers = 			\
-	sabayon			\
-	sabayon-monitor		\
-	sabayon-session
-
-all-local: $(wrappers)
-
-%: %.in
-	sed -e s!\@PKGDATADIR\@!$(pkgdatadir)! < $< > $@
-	chmod a+x $@
 
 BUILT_SOURCES  = $(wrappers)
 DISTCLEANFILES = $(wrappers)
