@@ -1,4 +1,12 @@
 2005-02-14  Mark McLoughlin  <markmc@redhat.com>
+
+	* lib/util.py: (debug_print): add "admin-tool" key.
+
+	* admin-tool/profilesdialog.py: hook up debugging.
+	
+	* lib/protosession.py: ditto.
+	
+2005-02-14  Mark McLoughlin  <markmc@redhat.com>
 	
 	* lib/protosession.py: pass the profile file
 	to sabayon-monitor when launching it.

@@ -29,7 +29,7 @@ import shutil
 import util
 
 def dprint(fmt, *args):
-    util.debug_print(util.DEBUG_STORAGE, fmt, args)
+    util.debug_print(util.DEBUG_STORAGE, fmt % args)
 
 class ProfileStorageException(Exception):
     def __init__(self, value):

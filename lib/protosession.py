@@ -34,6 +34,9 @@ import util
 import userprofile
 from config import *
 
+def dprint(fmt, *args):
+    util.debug_print (util.DEBUG_PROTOSESSION, fmt % args)
+
 class ProtoSessionError (Exception):
     pass
 
@@ -49,10 +52,6 @@ def safe_kill (pid, sig):
     except os.error, (err, str):
         if err != errno.ESRCH:
             raise
-
-def dprint (str):
-    # pass
-    print str
 
 class ProtoSession (gobject.GObject):
     __gsignals__ = {
@@ -489,12 +488,12 @@ class ProtoSession (gobject.GObject):
     def __set_shell(self):
         command = USERMOD + ' -s ' + USERSHELL + ' ' + self.username
         dprint ("User shell: %s" % (command))
-	os.system(command)
+	os.system (command)
         
     def __reset_shell(self):
         command = USERMOD + ' -s ' + '/sbin/nologin' + ' ' + self.username
         dprint ("User shell: %s" % (command))
-	os.system(command)
+	os.system (command)
         
     def start (self):
         # Get an X server going

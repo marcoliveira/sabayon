@@ -29,8 +29,9 @@ import pwd
     DEBUG_GCONFSOURCE,
     DEBUG_PANELDELEGATE,
     DEBUG_FILESSOURCE,
-    DEBUG_MOZILLASOURCE
-) = range (7)
+    DEBUG_MOZILLASOURCE,
+    DEBUG_ADMINTOOL
+) = range (8)
 
 debug_modules = {
     DEBUG_USERPROFILE   : ("user-profile",   False),
@@ -39,7 +40,8 @@ debug_modules = {
     DEBUG_GCONFSOURCE   : ("gconf-source",   False),
     DEBUG_PANELDELEGATE : ("panel-delegate", False),
     DEBUG_FILESSOURCE   : ("files-source",   False),
-    DEBUG_MOZILLASOURCE : ("mozilla-source", False)
+    DEBUG_MOZILLASOURCE : ("mozilla-source", False),
+    DEBUG_ADMINTOOL     : ("admin-tool",     False)
 }
 
 def init_debug_modules ():

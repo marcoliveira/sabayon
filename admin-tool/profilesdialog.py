@@ -28,7 +28,11 @@ import gtk
 import gtk.glade
 import storage
 import protosession
+import util
 from config import *
+
+def dprint(fmt, *args):
+    util.debug_print (util.DEBUG_ADMINTOOL, fmt % args)
 
 def _get_profile_path_for_name (profile_name):
     return PROFILESDIR + "/" + profile_name + ".zip"
@@ -205,14 +209,14 @@ class ProfilesDialog:
         
         os.chown (user_path, pw.pw_uid, pw.pw_gid)
 
-        print "Created %s from %s" % (user_path, profile_path)
+        dprint ("Created %s from %s" % (user_path, profile_path))
 
         return user_path
 
     def __copy_from_user (self, user_path, profile_path):
         os.chown (user_path, os.geteuid (), os.getegid ())
         os.rename (user_path, profile_path)
-        print "Moved %s back from %s" % (user_path, profile_path)
+        dprint ("Moved %s back from %s" % (user_path, profile_path))
 
     def __edit_button_clicked (self, button):
         profile_name = self.__get_selected_profile ()
