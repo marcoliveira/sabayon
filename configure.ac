@@ -83,6 +83,11 @@ else
   SABAYON_DIR_TMP="$bindir"
 fi
 
+AC_CHECK_PROG(XNEST,Xnest,yes,no)
+if test "x$XNEST" = "xno" ; then
+  AC_MSG_ERROR(xnest binary not found)
+fi
+
 EXPANDED_SABAYON_DIR=`eval echo $SABAYON_DIR_TMP`
 AC_SUBST(EXPANDED_SABAYON_DIR)
 

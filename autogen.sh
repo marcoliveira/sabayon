@@ -53,7 +53,6 @@ autoconf
 $AUTOMAKE --add-missing $am_opt
 cd $THEDIR
 
-$srcdir/configure --enable-maintainer-mode "$@"
-
-echo 
+$srcdir/configure --enable-maintainer-mode "$@" && \
+echo && \
 echo "Now type 'make' to compile $PROJECT."
