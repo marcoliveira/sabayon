@@ -1,5 +1,13 @@
 2005-01-31  Mark McLoughlin  <mark@skynet.ie>
 
+	* lib/protosession.py:
+	Explicitly write the protouser's xauth file since
+	we need to change the display number.
+	Use execve instead of changing os.environ.
+	Add debugging spew.
+
+2005-01-31  Mark McLoughlin  <mark@skynet.ie>
+
 	* lib/dirmonitor.py: disconnect from gamin when
 	stopping the monitor.
 

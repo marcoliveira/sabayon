@@ -6,9 +6,14 @@ import socket
 import errno
 import signal
 import pwd
+import commands
+import binascii
+import struct
+import tempfile
 import gobject
 import util
 
+# FIXME: move to config.py
 XNEST_ARGV = [ "/usr/X11R6/bin/Xnest", "-audit", "0", "-name", "Xnest", "-nolisten", "tcp" ]
 #SESSION_ARGV = [ "/etc/X11/xdm/Xsession", "gnome" ]
 SESSION_ARGV = [ "/usr/bin/gnome-terminal" ]
@@ -23,12 +28,16 @@ class SessionStartError (ProtoSessionError):
 class XauthParseError (ProtoSessionError):
     pass
 
-def __safe_kill (pid, sig):
+def safe_kill (pid, sig):
     try:
         os.kill (pid, sig)
     except os.error, (err, str):
         if err != errno.ESRCH:
-            rasie
+            raise
+
+def dprint (str):
+    # pass
+    print str
 
 class ProtoSession (gobject.GObject):
     __gsignals__ = {
@@ -45,11 +54,14 @@ class ProtoSession (gobject.GObject):
         self.session_pid = 0
         self.xnest_child_watch = 0
         self.session_child_watch = 0
+        self.xnest_xauth_file = None
+        self.session_xauth_file = None
 
     def __del__ (self):
-        # FIXME: delete xauth files
-        # self.session_xauth_file
-        # self.xnest_xauth_file
+        if self.xnest_auth_file:
+            os.remove (self.xnest_auth_file)
+        if self.session_xauth_file:
+            os.remove (self.session_xauth_file)
         if self.usr1_pipe_r:
             close (self.usr1_pipe_r)
         if self.usr1_pipe_w:
@@ -110,6 +122,8 @@ class ProtoSession (gobject.GObject):
         os.write (self.usr1_pipe_w, "Y")
 
     def __xnest_child_watch_handler (self, pid, status):
+        dprint ("Xnest died")
+        
         self.xnest_pid = 0
         self.xnest_child_watch = 0
 
@@ -118,7 +132,7 @@ class ProtoSession (gobject.GObject):
             self.session_child_watch = 0
 
         if self.session_pid:
-            __safe_kill (self.session_pid, signal.SIGTERM)
+            safe_kill (self.session_pid, signal.SIGTERM)
             self.session_pid = 0
         
         if self.main_loop:
@@ -126,10 +140,12 @@ class ProtoSession (gobject.GObject):
         return False
 
     def __usr1_pipe_watch_handler (self, source, condition):
+        dprint ("Got USR1 signal, quitting mainloop")
         self.main_loop.quit ()
         return True
 
     def __usr1_timeout_handler (self):
+        dprint ("Timed out waiting for USR1, quitting mainloop")
         self.main_loop.quit ()
         return True
 
@@ -140,8 +156,20 @@ class ProtoSession (gobject.GObject):
 
         for line in output.split ("\n"):
             fields = line.split ("  ")
-            if len (fields) == 3 and len (fields[2]) % 2 == 0:
-                return (fields[1], binascii.unhexlify (fields[2]))
+
+            # should have display, auth name, auth data
+            if len (fields) != 3:
+                continue
+
+            # we want the local addr
+            if fields[0].find ("/unix") == -1:
+                continue
+
+            # hex encoded data, len should be a multiple of 2
+            if len (fields[2]) % 2 != 0:
+                continue
+            
+            return (fields[0], fields[1], binascii.unhexlify (fields[2]))
         
         raise XauthParseError, "'xauth list' returned no records or records in unknown format"
 
@@ -161,20 +189,28 @@ class ProtoSession (gobject.GObject):
     #       2 bytes         data length (always MSB first)
     #       D bytes         authorization data string
     #
-    def __write_temp_xauth_file (self):
-        (xauth_name, xauth_data) = self.__get_xauth_record ()
-        
+    def __write_temp_xauth_file (self, wildcard_addr):
+        (xauth_display, xauth_name, xauth_data) = self.__get_xauth_record ()
+
+        if wildcard_addr:
+            family = 0xffff # FamilyWild
+            display_addr = ""
+        else:
+            family = 0x0100 # FamilyLocal
+            display_addr = xauth_display[:xauth_display.find ("/unix")]
+
         display_num_str = str (self.display_number)
         display_num_len = len (display_num_str)
 
-        xauth_name_len = len (xauth_name)
-        xauth_data_len = len (xauth_data)
+        display_addr_len = len (display_addr)
+        xauth_name_len   = len (xauth_name)
+        xauth_data_len   = len (xauth_data)
 
-        pack_format = ">hh0sh%dsh%dsh%d" % (display_num_len, xauth_name_len, xauth_data_len)
+        pack_format = ">hh%dsh%dsh%dsh%d" % (display_addr_len, display_num_len, xauth_name_len, xauth_data_len)
 
         blob = struct.pack (pack_format,
-                            0xffff, # FamilyWild
-                            0, "",  # address
+                            family,
+                            display_addr_len, display_addr,
                             display_num_len, display_num_str,
                             xauth_name_len, xauth_name,
                             xauth_data_len) + xauth_data
@@ -183,30 +219,10 @@ class ProtoSession (gobject.GObject):
         os.write (fd, blob)
         os.close (fd)
 
+        dprint ("Wrote temporary xauth file to %s" % temp_xauth_file)
+
         return temp_xauth_file
 
-    def __copy_xauth_file (self, uid, gid):
-        if os.environ.has_key ("XAUTHORITY"):
-            xauth_file = os.environ["XAUTHORITY"]
-        else:
-            xauth_file = util.get_home_dir () + "/.Xauthority"
-
-        try:
-            handle = file (xauth_file, "r")
-        except IOError, (err, str):
-            raise SessionStartError, "Unable to locate Xauthority file '%s': %s" % (xauth_file, str)
-        
-        (fd, xauth_copy) = tempfile.mkstemp (prefix = ".Xauthority")
-
-        for line in file:
-            os.write (fd, line)
-        os.close (fd)
-        file.close ()
-
-        os.chown (xauth_copy, uid, gid)
-
-        return xauth_copy
-        
     #
     # FIXME: we have a re-entrancy issue here - if while we're
     # runing the mainloop we re-enter, then we'll install another
@@ -219,7 +235,9 @@ class ProtoSession (gobject.GObject):
 
         self.display_name = ":%d" % self.display_number
 
-        self.xnest_xauth_file = self.__write_temp_xauth_file ()
+        dprint ("Starting Xnest %s" % self.display_name)
+
+        self.xnest_xauth_file = self.__write_temp_xauth_file (True)
 
         (self.usr1_pipe_r, self.usr1_pipe_w) = os.pipe ()
         self.got_usr1_signal = False
@@ -231,6 +249,8 @@ class ProtoSession (gobject.GObject):
 
             argv = XNEST_ARGV + [ "-auth", self.xnest_xauth_file ]
             argv += [ self.display_name ]
+
+            dprint ("Child process launching %s" % argv)
 
             os.execv (argv[0], argv)
 
@@ -248,12 +268,14 @@ class ProtoSession (gobject.GObject):
         timeout = gobject.timeout_add (5 * 1000,
                                        self.__usr1_timeout_handler)
 
+        dprint ("Waiting on child process (%d)" % self.xnest_pid)
+
         self.main_loop.run ()
         self.main_loop = None
 
         signal.signal (signal.SIGUSR1, signal.SIG_IGN)
 
-        gobject.source_remove (timeout_watch)
+        gobject.source_remove (timeout)
         gobject.source_remove (io_watch)
         
         os.close (self.usr1_pipe_r)
@@ -267,7 +289,7 @@ class ProtoSession (gobject.GObject):
                 self.xnest_child_watch = 0
             
             if self.xnest_pid:
-                __safe_kill (self.xnest_pid, signal.SIGTERM)
+                safe_kill (self.xnest_pid, signal.SIGTERM)
                 self.xnest_pid = 0
                 raise SessionStartError, "Failed to start Xnest: timed out waiting for USR1 signal"
             else:
@@ -282,7 +304,7 @@ class ProtoSession (gobject.GObject):
             self.xnest_child_watch = 0
 
         if self.xnest_pid:
-            __safe_kill (self.xnest_pid, signal.SIGTERM)
+            safe_kill (self.xnest_pid, signal.SIGTERM)
             self.xnest_pid = 0
 
         self.emit ("finished")
@@ -298,10 +320,14 @@ class ProtoSession (gobject.GObject):
         if pw.pw_dir == "" or not os.path.isdir (pw.pw_dir):
             raise SessionStartError, "Home directory for user '%s' does not exist" % self.username
 
-        self.session_xauth_file = self.__copy_xauth_file (pw.pw_uid, pw.pw_gid)
-        
+        dprint ("Starting session as %s" % pw)
+
+        self.session_xauth_file = self.__write_temp_xauth_file (False)
+
         self.session_pid = os.fork ()
         if self.session_pid == 0: # Child process
+            os.chown (self.session_xauth_file, pw.pw_uid, pw.pw_uid)
+            
             os.setgid (pw.pw_gid)
             os.setuid (pw.pw_uid)
 
@@ -316,21 +342,25 @@ class ProtoSession (gobject.GObject):
                    key == "LINGUAS":
                     new_environ[key] = os.environ[key]
 
-            os.environ = new_environ
-    
-            os.environ["PATH"]       = DEFAULT_PATH 
-            os.environ["DISPLAY"]    = self.display_name
-            os.environ["XAUTHORITY"] = self.session_xauth_file
-            os.environ["LOGNAME"]    = pw.pw_name
-            os.environ["USER"]       = pw.pw_name
-            os.environ["USERNAME"]   = pw.pw_name
-            os.environ["HOME"]       = pw.pw_dir
-            os.environ["SHELL"]      = pw.pw_shell
+            new_environ["PATH"]       = DEFAULT_PATH 
+            new_environ["DISPLAY"]    = self.display_name
+            new_environ["XAUTHORITY"] = self.session_xauth_file
+            new_environ["LOGNAME"]    = pw.pw_name
+            new_environ["USER"]       = pw.pw_name
+            new_environ["USERNAME"]   = pw.pw_name
+            new_environ["HOME"]       = pw.pw_dir
+            new_environ["SHELL"]      = pw.pw_shell
+
+            dprint ("Child process env: %s" % new_environ)
+
+            self.session_xauth_file = None
 
             os.setsid ()
             os.umask (022)
+
+            dprint ("Executing %s" % SESSION_ARGV)
     
-            os.execv (SESSION_ARGV[0], SESSION_ARGV)
+            os.execve (SESSION_ARGV[0], SESSION_ARGV, new_environ)
 
             # Shouldn't ever happen
             print "Failed to launch Xsession"
@@ -359,11 +389,11 @@ class ProtoSession (gobject.GObject):
             self.session_child_watch = 0
 
         if self.xnest_pid:
-            __safe_kill (self.xnest_pid, signal.SIGTERM)
+            safe_kill (self.xnest_pid, signal.SIGTERM)
             self.xnest_pid = 0
         
         if self.session_pid:
-            __safe_kill (self.session_pid, signal.SIGTERM)
+            safe_kill (self.session_pid, signal.SIGTERM)
             self.session_pid = 0
 
 gobject.type_register (ProtoSession)
@@ -373,4 +403,19 @@ gobject.type_register (ProtoSession)
 # Unit tests
 #
 def run_unit_tests ():
-    pass
+    main_loop = gobject.MainLoop ()
+
+    def handle_session_finished (session, main_loop):
+        main_loop.quit ()
+    
+    session = ProtoSession ("protouser")
+    session.connect ("finished", handle_session_finished, main_loop)
+    session.start ()
+
+    main_loop.run ()
+
+if __name__ == "__main__":
+    if os.geteuid () == 0:
+        run_unit_tests ()
+    else:
+        dprint ("Not running unit tests - need to be root")
