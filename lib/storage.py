@@ -452,7 +452,7 @@ class ProfileStorage:
         dst_path = os.path.join (self.temp_path, path)
 
         if not os.path.exists (src_path):
-            raise ProfileStorageException (_("Cannot add non-existant file '%s'"))
+            raise ProfileStorageException (_("Cannot add non-existent file '%s'"))
         
         if not self.unsaved_revision:
             self.unsaved_revision = self.__create_new_profile_revision ()
