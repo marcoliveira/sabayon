@@ -422,7 +422,7 @@ class ProtoSession (gobject.GObject):
         dprint ("Starting session as %s" % self.user_pw)
 
         self.session_xauth_file = self.__write_temp_xauth_file (False)
-        os.chown (self.session_xauth_file, self.user_pw.pw_uid, self.user_pw.pw_uid)
+        os.chown (self.session_xauth_file, self.user_pw.pw_uid, self.user_pw.pw_gid)
         
         self.__open_x_connection (self.display_name, self.session_xauth_file)
 
@@ -486,8 +486,8 @@ class ProtoSession (gobject.GObject):
         dprint ("Setting shell for '%s' to '%s'" % (self.username, DEFAULT_SHELL))
         usermod.set_shell (self.username, DEFAULT_SHELL)
 
-        self.temp_homedir = tempfile.mkdtemp (prefix = "sabayon-temp-home-")
-        os.chown (self.temp_homedir, self.user_pw.pw_uid, self.user_pw.pw_uid)
+        self.temp_homedir = usermod.create_temporary_homedir (self.user_pw.pw_uid,
+                                                              self.user_pw.pw_gid)
         dprint ("Setting temporary home directory for '%s' to '%s'" %
                 (self.username, self.temp_homedir))
         usermod.set_homedir (self.username, self.temp_homedir)

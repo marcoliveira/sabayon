@@ -1,5 +1,18 @@
 2005-02-16  Mark McLoughlin  <markmc@redhat.com>
 
+	* lib/config.py.in: add SKEL_HOMEDIR.
+	
+	* lib/usermod.py:
+	(create_temporary_homedir): copy the contents of
+	/etc/skel when creating the homedir.
+	
+	* lib/protosession.py:
+	(__start_session): fix uid/gid mixup
+	(__setup_shell_and_homedir):
+	use usermod.create_temporary_homedir()
+
+2005-02-16  Mark McLoughlin  <markmc@redhat.com>
+
 	* lib/protosession.py: create a temporary homedir
 	before starting the session and delete it after.
 	
