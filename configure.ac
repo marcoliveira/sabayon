@@ -14,7 +14,7 @@ AC_SUBST(GETTEXT_PACKAGE)
 PYTHON=python
 AC_SUBST(PYTHON)
  
-ALL_LINGUAS=""
+ALL_LINGUAS="sv"
  
 paths=`python <<EOF
 import sys;
