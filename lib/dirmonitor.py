@@ -131,6 +131,8 @@ class DirectoryMonitor:
         if self.mon == None:
 	    return
 
+        for path in self.watches:
+            self.mon.stop_watch (path)
         gobject.source_remove(self.io_watch)
 	self.io_watch = 0
 	self.mon = None
@@ -199,6 +201,8 @@ def run_unit_tests ():
     main_loop.run ()
 
     gobject.source_remove (timeout)
+
+    monitor.stop ()
 
 if __name__ == '__main__':
     run_unit_tests()
