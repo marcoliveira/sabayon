@@ -34,7 +34,8 @@ EXTRA_DIST =				\
 	sabayon-monitor.in		\
 	sabayon-session.in		\
 	sabayon.console.in		\
-	sabayon.pam
+	sabayon.pam			\
+	sabayon-xinitrc.sh.in
 
 gladedir   = $(pkgdatadir)/glade
 glade_DATA = $(GLADE_FILES)
@@ -60,6 +61,11 @@ sbin_SCRIPTS = sabayon-apply
 libexec_SCRIPTS = sabayon-monitor sabayon-session
 
 pkgdata_PYTHON = $(PYTHON_FILES)
+
+if INSTALL_XINITRC_SCRIPT
+xinitrcdir      = $(XINITRCDIR)
+xinitrc_SCRIPTS = sabayon-xinitrc.sh
+endif
 
 install-exec-local:
 	mkdir -p $(DESTDIR)$(sysconfdir)/desktop-profiles/
@@ -88,4 +94,5 @@ clean:
 
 DISTCLEANFILES =		\
 	$(wrappers)		\
-	$(desktop_DATA)
+	$(desktop_DATA)		\
+	sabayon-xinitrc

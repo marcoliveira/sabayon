@@ -17,32 +17,41 @@ ALL_LINGUAS="bg cs de el en_CA en_GB nb no pt_BR sv zh_CN"
 AM_GLIB_GNU_GETTEXT
 
 
-AC_ARG_WITH(distro, AC_HELP_STRING([--with-distro=DISTRO], [Specify the Linux distribution to target: One of redhat or debian]))
-if test "z$with_distro" = "z"; then
-	AC_CHECK_FILE(/etc/redhat-release,with_distro="redhat")
-	AC_CHECK_FILE(/etc/fedora-release,with_distro="redhat")
-	AC_CHECK_FILE(/etc/debian_version,with_distro="debian")
+AC_ARG_WITH(distro,
+            AC_HELP_STRING([--with-distro=DISTRO],
+                           [Specify the Linux distribution to target: One of redhat or debian]))
+
+if test "x$with_distro" = "x"; then
+  AC_CHECK_FILE(/etc/redhat-release, with_distro="redhat")
+  AC_CHECK_FILE(/etc/fedora-release, with_distro="redhat")
+  AC_CHECK_FILE(/etc/debian_version, with_distro="debian")
 fi
 with_distro=`echo ${with_distro} | tr '[[:upper:]]' '[[:lower:]]' `
 
-if test "z$with_distro" = "z"; then
-	echo "Linux distribution autodetection failed, you must specify the distribution to target using --with-distro=DISTRO"
-	exit 1
+if test "x$with_distro" = "x"; then
+  echo "Linux distribution autodetection failed, you must specify the distribution to target using --with-distro=DISTRO"
+  exit 1
 else
-	case $with_distro in
-		redhat) 
-			XSESSION="/etc/X11/xdm/Xsession"
-			;;
-		debian) 
-			XSESSION="/etc/gdm/Xsession"
-			;;
-		*)
-			echo "Your distribution (${with_distro}) is not yet supported!  (patches welcome)"
-			exit 1
-			;;
-	esac
+  case $with_distro in
+    redhat) 
+      XSESSION="/etc/X11/xdm/Xsession"
+      install_xinitrc_script="yes"
+      XINITRCDIR="$sysconfdir/X11/xinit/xinitrc.d"
+      ;;
+    debian) 
+      XSESSION="/etc/gdm/Xsession"
+      install_xinitrc_script="no"
+      XINITRCDIR=""
+      ;;
+    *)
+      echo "Your distribution (${with_distro}) is not yet supported!  (patches welcome)"
+      exit 1
+      ;;
+  esac
 fi
 AC_SUBST(XSESSION)
+AC_SUBST(XINITRCDIR)
+AM_CONDITIONAL(INSTALL_XINITRC_SCRIPT, test "x$install_xinitrc_script" = "xyes")
 
 
 AC_ARG_ENABLE(console-helper,

@@ -1,3 +1,13 @@
+2005-03-16  Mark McLoughlin  <markmc@redhat.com>
+
+	* configure.ac: set XINITRCDIR and INSTALL_XINITRC_SCRIPT
+	on Fedora.
+	
+	* admin-tool/sabayon-xinitrc.sh.in: add xinitrc script
+	to run sabayon-apply at login.
+	
+	* admin-tool/Makefile.am: install sabayon-xinitrc.sh.
+
 2005-03-15  John Dennis  <jdennis@redhat.com>
 
 	* Expand mozilla functionality. The MozillaChange class has more

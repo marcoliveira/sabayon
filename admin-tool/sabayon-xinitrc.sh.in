@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#
+# Apply the Sabayon profile for the current user (if any)
+#
+
+if [ -x @SBINDIR@/sabayon-apply ] ; then
+  @SBINDIR@/sabayon-apply
+fi
