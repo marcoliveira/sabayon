@@ -110,9 +110,7 @@ class FilesSource (userprofile.ProfileSource):
         else:
             metadata = "default"
 
-        self.profile_storage.add_file (change.rel_path,
-                                       os.path.join (self.home_dir, change.rel_path),
-                                       metadata)
+        self.profile_storage.add_file (change.rel_path, self.name, metadata)
         
     def start_monitoring (self):
         self.monitor.start ()
@@ -126,7 +124,7 @@ class FilesSource (userprofile.ProfileSource):
     
     def apply (self):
         for (file, handler, description) in self.profile_storage.info_all ():
-            if handler != self.get_name ():
+            if handler != self.name:
                 continue
             
             if description == "mandatory":

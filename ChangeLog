@@ -1,5 +1,24 @@
 2005-02-17  Mark McLoughlin  <markmc@redhat.com>
 
+	* lib/sources/gconfsource.py:
+	(GConfSource.sync): recursively add all the files
+	in the GConf database to the ProfileStorage.
+	(GConfSource.apply): copy the GConf database out
+	from the ProfileStorage temporary install location.
+	
+	* lib/sources/filessource.py: fix typo.
+	
+	* lib/util.py:
+	(debug_print): only take a pre-formatted string.
+	
+	* lib/storage.py:
+	(ProfileStorage.delete_file): use list.remove() instead
+	of non-existant	list.delete()
+	(ProfileStorage.install): change the prefix for the
+	temporary dir.
+
+2005-02-17  Mark McLoughlin  <markmc@redhat.com>
+
 	* lib/sources/gconfsource.py: add some debugging.
 
 2005-02-16  Mark McLoughlin  <markmc@redhat.com>

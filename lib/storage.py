@@ -224,7 +224,7 @@ class ProfileStorage:
     def delete_file(self, file):
         dprint("delete_file(%s)", file)
 	if file in self.filelist:
-	    self.filelist.delete(file)
+	    self.filelist.remove(file)
 	    self.__delete_file_metadata(file)
 	    return 0
 	return -1
@@ -238,7 +238,7 @@ class ProfileStorage:
         if self.installed:
             return
         
-        self.install_path = tempfile.mkdtemp(prefix = ".profile-storage-%s-" % util.get_user_name())
+        self.install_path = tempfile.mkdtemp(prefix = "sabayon-temp-storage-")
 
         if not self.exists or not self.zipfile:
             self.installed = True

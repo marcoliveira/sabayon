@@ -115,6 +115,10 @@ class ProfileMonitorWindow:
         self.window.destroy ()
 
     def __handle_about (self, item):
+        #
+        # Of course, this would all be so much easier if
+        # gtk_show_about_dialog() was wrapped
+        #
         if self.about:
             self.about.show ()
             return

@@ -71,11 +71,11 @@ def init_debug_modules ():
 
 init_debug_modules ()
 
-def debug_print (module, fmt, *args):
+def debug_print (module, message):
     assert debug_modules.has_key(module)
     if not debug_modules[module][1]:
         return
-    print "(%d) %s: %s" % (os.getpid (), debug_modules[module][0], fmt % args)
+    print "(%d) %s: %s" % (os.getpid (), debug_modules[module][0], message)
 
 class GeneralError (Exception):
     def __init__ (self, msg):

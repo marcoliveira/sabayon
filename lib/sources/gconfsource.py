@@ -19,6 +19,8 @@
 #
 
 import os
+import os.path
+import shutil
 import time
 import util
 import errno
@@ -108,7 +110,7 @@ class GConfSource (userprofile.ProfileSource):
         userprofile.ProfileSource.__init__ (self, "GConf", "get_gconf_delegate")
 
         self.profile_storage  = profile_storage
-        self.client           = gconf.client_get_default ()
+        self.client           = None
         self.notify_id        = 0
         self.defaults_client  = None
         self.mandatory_client = None
@@ -166,7 +168,8 @@ class GConfSource (userprofile.ProfileSource):
             if entry.get_is_default () == True:
                 entry.value = None
             self.emit_change (GConfChange (self, entry))
-    
+
+        self.client = gconf.client_get_default ()
         self.client.add_dir ("/", gconf.CLIENT_PRELOAD_RECURSIVE)
         self.notify_id = self.client.notify_add ("/", handle_notify, self)
 
@@ -178,6 +181,7 @@ class GConfSource (userprofile.ProfileSource):
         self.client.notify_remove (self.notify_id)
         self.notify_id = 0
         self.client.remove_dir ("/")
+        self.client = None
 
     def sync_changes (self):
         """Ensure that all committed changes are saved to disk."""
@@ -187,6 +191,28 @@ class GConfSource (userprofile.ProfileSource):
         dprint ("Shutting down gconfd in order to sync changes to disk")
         os.system ("gconftool-2 --shutdown")
         time.sleep (1)
+
+        # Clear all files from the ProfileStorage
+        files = self.profile_storage.info_all ()
+        for (file, handler, metadata) in files:
+            if handler != self.name:
+                continue
+            self.profile_storage.delete_file (file)
+
+        # Re-add all files again
+        def add_all_files_in_dir (source, profile_storage, dir):
+            path = os.path.join (os.path.abspath (profile_storage.get_install_path ()), dir)
+            if os.path.exists (path):
+                for file in os.listdir (path):
+                    if os.path.isdir (os.path.join (path, file)):
+                        add_all_files_in_dir (source,
+                                              profile_storage,
+                                              os.path.join (dir, file))
+                    elif file == "%gconf.xml" or file == "%gconf-tree.xml":
+                        profile_storage.add_file (os.path.join (dir, file), source.name, None)
+
+        add_all_files_in_dir (self, self.profile_storage, ".gconf.xml.defaults")
+        add_all_files_in_dir (self, self.profile_storage, ".gconf.xml.mandatory")
 
     def apply (self):
         """Apply the profile by writing the default and mandatory
@@ -200,39 +226,66 @@ class GConfSource (userprofile.ProfileSource):
         xml:readwrite:$(HOME)/.gconf
         include $(HOME)/.gconf.path.defaults
         """
-        
-        def write_path_file (filename, source):
-            """Write a GConf path file. First try writing to a
-            temporary file and move it over the original. Failing
-            that, write directly to the original.
-            """
-            dprint ("Writing GConf path file with '%s' to '%s'" % (source, filename))
-            temp = filename + ".new"
-            try:
-                f = file (temp, "w")
-            except:
-                temp = None
-                f = file (filename, "w")
+        def apply_gconf_source (install_path, home_dir, path_file, source):
+            
+            def write_path_file (filename, source):
+                """Write a GConf path file. First try writing to a
+                temporary file and move it over the original. Failing
+                that, write directly to the original.
+                """
+                dprint ("Writing GConf path file with '%s' to '%s'" % (source, filename))
+                temp = filename + ".new"
+                try:
+                    f = file (temp, "w")
+                except:
+                    temp = None
+                    f = file (filename, "w")
 
-            try:
-                f.write (source + "\n")
-                f.close ()
-            except:
+                try:
+                    f.write (source + "\n")
+                    f.close ()
+                except:
+                    if temp != None:
+                        os.remove (temp)
+                    raise
+
                 if temp != None:
-                    os.remove (temp)
-                raise
+                    os.rename (temp, filename)
 
-            if temp != None:
-                os.rename (temp, filename)
+            def copy_tree (src, dst):
+                for file in os.listdir (src):
+                    src_path = os.path.join (src, file)
+                    dst_path = os.path.join (dst, file)
 
-        write_path_file (util.get_home_dir () + "/.gconf.path.defaults",
-                         "xml:readonly:" +
-			 self.profile_storage.get_install_path () +
-			 "/.gconf.xml.defaults")
-        write_path_file (util.get_home_dir () + "/.gconf.path.mandatory",
-                         "xml:readonly:" +
-			 self.profile_storage.get_install_path () +
-			 "/.gconf.xml.mandatory")
+                    if os.path.isdir (src_path):
+                        os.mkdir (dst_path)
+                        copy_tree (src_path, dst_path)
+                    else:
+                        shutil.copy2 (src_path, dst_path)
+
+            src_path = os.path.join (install_path, source)
+            dst_path = os.path.join (home_dir, source)
+            if os.path.exists (src_path):
+                dprint ("Copying GConf database from '%s' to '%s'", src_path, dst_path)
+                os.mkdir (dst_path)
+                copy_tree (src_path, dst_path)
+            write_path_file (os.path.join (home_dir, path_file),
+                             "xml:readonly:" + dst_path)
+
+        apply_gconf_source (self.profile_storage.get_install_path (),
+                            util.get_home_dir (),
+                            ".gconf.path.defaults",
+                            ".gconf.xml.defaults")
+        apply_gconf_source (self.profile_storage.get_install_path (),
+                            util.get_home_dir (),
+                            ".gconf.path.mandatory",
+                            ".gconf.xml.mandatory")
+
+        # FIXME: perhaps just kill -HUP it? It would really just be better
+        #        if we could guarantee that there wasn't a gconfd already
+        #        running.
+        dprint ("Shutting down gconfd so it kill pick up new paths")
+        os.system ("gconftool-2 --shutdown")
 
 gobject.type_register (GConfSource)
 
