@@ -20,7 +20,6 @@ Docdir: %{_docdir}
 Sabayon is a tool to help sysadmins and user change and maintain the
 default behaviour of the GNOME desktop.
 
-
 %prep
 %setup -q
 
@@ -32,7 +31,13 @@ gzip -9 ChangeLog
 %install
 rm -fr %{buildroot}
 
-%makeinstall
+%makeinstall PAM_PREFIX=$RPM_BUILD_ROOT/etc
+
+desktop-file-install --vendor gnome --delete-original		\
+  --dir $RPM_BUILD_ROOT%{_datadir}/applications			\
+  $RPM_BUILD_ROOT%{_datadir}/applications/*.desktop
+
+%find_lang sabayon
 
 %clean
 rm -fr %{buildroot}
@@ -46,19 +51,22 @@ rm -fr %{buildroot}
 %preun
 userdel -r sabayon >/dev/null 2>&1 || /bin/true
   
-%files
+%files -f sabayon.lang
 %defattr(-, root, root)
 
 %doc AUTHORS ChangeLog.gz NEWS README TODO ISSUES
+%config /etc/pam.d/sabayon
+%config /etc/security/console.apps/sabayon
+%{_bindir}/%{name}*
+%{_sbindir}/%{name}*
+%{_libexecdir}/%{name}*
 %{_datadir}/%{name}/*.py*
 %{_datadir}/%{name}/sources/*.py*
 %{_datadir}/%{name}/glade/sabayon.glade
-%{_sbindir}/%{name}
-%{_libexecdir}/%{name}-monitor
-%{_libexecdir}/%{name}-session
+%{_datadir}/applications/*.desktop
+%{_datadir}/pixmaps/*.png
 %{_sysconfdir}/desktop-profiles
 
 %changelog
 * Wed Feb  9 2005 Daniel Veillard <veillard@redhat.com>
 - initial version
-

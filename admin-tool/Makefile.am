@@ -56,7 +56,7 @@ libexec_SCRIPTS = sabayon-monitor sabayon-session
 
 pkgdata_PYTHON = $(PYTHON_FILES)
 
-install-exec-local: sabayon.console
+install-exec-local:
 	mkdir -p $(DESTDIR)$(sysconfdir)/desktop-profiles/
 if CONSOLE_HELPER
 	$(INSTALL_DATA) -D $(srcdir)/sabayon.pam $(DESTDIR)$(PAM_PREFIX)/pam.d/sabayon
@@ -83,5 +83,4 @@ clean:
 
 DISTCLEANFILES =		\
 	$(wrappers)		\
-	$(desktop_DATA)		\
-	sabayon.console
+	$(desktop_DATA)

@@ -11,7 +11,8 @@ EXTRA_DIST =				\
 	$(PYTHON_FILES)			\
 	$(NOINST_PYTHON_FILES)
 
-pkgdata_PYTHON = $(PYTHON_FILES)
+sourcesdir     = $(pkgdatadir)/sources
+sources_PYTHON = $(PYTHON_FILES)
 
 pycheck:
 	pychecker -F $(top_srcdir)/pycheckrc $(PYTHON_FILES) $(NOINST_PYTHON_FILES)

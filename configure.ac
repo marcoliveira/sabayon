@@ -37,6 +37,26 @@ PAM_PREFIX=`eval echo $PAM_PREFIX_UNEXPANDED`
 AC_SUBST(PAM_PREFIX)
 
 
+# find the actual value for $prefix that we'll end up with
+REAL_PREFIX=
+if test "x$prefix" = "xNONE"; then
+  REAL_PREFIX=$ac_default_prefix
+else
+  REAL_PREFIX=$prefix
+fi
+old_prefix=$prefix
+prefix=$REAL_PREFIX
+
+REAL_EXEC_PREFIX=
+if test "x$exec_prefix" = "xNONE"; then
+  REAL_EXEC_PREFIX=$prefix
+else
+  REAL_EXEC_PREFIX=$exec_prefix
+fi
+old_exec_prefix=$exec_prefix
+exec_prefix=$REAL_EXEC_PREFIX
+
+
 AM_PATH_PYTHON
 AC_PROG_INTLTOOL
 AC_PROG_LN_S
@@ -57,9 +77,14 @@ fi
 
 if test "x$enable_console_helper" = "xyes"; then
   AM_CONDITIONAL(CONSOLE_HELPER, true)
+  SABAYON_DIR_TMP="$sbindir"
 else
   AM_CONDITIONAL(CONSOLE_HELPER, false)
+  SABAYON_DIR_TMP="$bindir"
 fi
+
+EXPANDED_SABAYON_DIR=`eval echo $SABAYON_DIR_TMP`
+AC_SUBST(EXPANDED_SABAYON_DIR)
 
 
 AC_CONFIG_FILES([
@@ -67,6 +92,7 @@ Makefile
 lib/Makefile
 lib/sources/Makefile
 admin-tool/Makefile
+admin-tool/sabayon.console
 po/Makefile.in
 ])
 
