@@ -1,3 +1,17 @@
+2005-03-30  John Dennis  <jdennis@redhat.com>
+
+	* lib/mozilla_bookmarks.py: Add new python file for mozilla
+	bookmarks. Not complete yet, it can parse DOCTYPE
+	NETSCAPE-Bookmark-file-1 format file, build a data structure of
+	folder trees, bookmarks, and all attributes. Folders and bookmarks
+	can be searched for.
+
+	ToDo: Generate the difference between two book mark files, this
+	will use the same difference generator code currently in
+	mozillasource. Merge one bookmark file into another. Integrate
+	into monitor and apply. Filter attributes during apply that should
+	not be merged (e.g. timestamps)
+
 Sat Mar 26 17:37:45 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* configure.ac: applied patch from Joshua Hoblitt to add Gentoo support
