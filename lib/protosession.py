@@ -1,5 +1,23 @@
 #!/usr/bin/env python
 
+#
+# Copyright (C) 2005 Red Hat, Inc.
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#
+
 import os
 import os.path
 import socket
@@ -14,13 +32,7 @@ import tempfile
 import gobject
 import util
 import userprofile
-
-# FIXME: move to config.py
-XNEST_ARGV = [ "/usr/X11R6/bin/Xnest", "-terminate", "-audit", "0", "-name", "Xnest", "-nolisten", "tcp" ]
-SESSION_ARGV = [ "/etc/X11/xdm/Xsession", "gnome" ]
-#SESSION_ARGV = [ "/home/markmc/bin/jhbuild", "run", "gnome-session" ]
-ADMIN_TOOL_ARGV = [ "/gnome/head/INSTALL/bin/sabayon" ]
-DEFAULT_PATH = "/usr/local/bin:/usr/bin:/bin:/usr/X11R6/bin"
+from config import *
 
 class ProtoSessionError (Exception):
     pass

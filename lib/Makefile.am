@@ -38,4 +38,8 @@ BUILT_SOURCES = config.py
 all-local: config.py
 
 config.py: config.py.in
-	sed -e s!\@PKGDATADIR\@!$(pkgdatadir)! < $< > $@
+	sed						\
+                -e s!\@BINDIR\@!$(bindir)!		\
+                -e s!\@PKGDATADIR\@!$(pkgdatadir)!	\
+                -e s!\@SYSCONFDIR\@!$(sysconfdir)!	\
+                < $< > $@

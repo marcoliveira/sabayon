@@ -20,7 +20,14 @@
 import os
 import os.path
 
-PKGDATADIR = "@PKGDATADIR@"
+PKGDATADIR  = "@PKGDATADIR@"
+PROFILESDIR = "@SYSCONFDIR@/desktop-profiles"
+
+DEFAULT_PATH = "/usr/local/bin:/usr/bin:/bin:/usr/X11R6/bin"
+
+ADMIN_TOOL_ARGV = [ "@BINDIR@/sabayon" ]
+XNEST_ARGV      = [ "/usr/X11R6/bin/Xnest", "-terminate", "-audit", "0", "-name", "Xnest", "-nolisten", "tcp" ]
+SESSION_ARGV    = [ "/etc/X11/xdm/Xsession", "gnome" ]
 
 try:
     GLADEDIR = os.environ["GLADEDIR"]
