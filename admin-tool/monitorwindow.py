@@ -30,39 +30,40 @@ def dprint (fmt, *args):
 class ProfileChangesModel (gtk.ListStore):
     (
         COLUMN_CHANGE,
+        COLUMN_IGNORE,
         COLUMN_MANDATORY,
-        COLUMN_SOURCE,
-        COLUMN_NAME,
         COLUMN_TYPE,
-        COLUMN_VALUE
-    ) = range (6)
+        COLUMN_NAME
+    ) = range (5)
 
     def __init__ (self, profile):
-        gtk.ListStore.__init__ (self, userprofile.ProfileChange, bool, str, str, str, str)
+        gtk.ListStore.__init__ (self, userprofile.ProfileChange, bool, bool, str, str)
 
         self.profile = profile
         self.profile.connect ("changed", self.handle_profile_change)
         self.profile.start_monitoring ()
 
-    def handle_profile_change (self, profile, change):
+    def handle_profile_change (self, profile, new_change):
         mandatory = False
+        ignore = False
         iter = self.get_iter_first ()
         while iter:
             next = self.iter_next (iter)
-            if self[iter][self.COLUMN_SOURCE] == change.get_source_name () and \
-               self[iter][self.COLUMN_NAME] == change.get_name ():
+            change = self[iter][self.COLUMN_CHANGE]
+            if change.get_source () == new_change.get_source () and \
+               change.get_name ()   == new_change.get_name ():
+                ignore    = self[iter][self.COLUMN_IGNORE]
                 mandatory = self[iter][self.COLUMN_MANDATORY]
                 self.remove (iter)
             iter = next
 
         row = self.prepend ()
         self.set (row,
-                  self.COLUMN_CHANGE, change,
+                  self.COLUMN_CHANGE,    new_change,
+                  self.COLUMN_IGNORE,    ignore,
                   self.COLUMN_MANDATORY, mandatory,
-                  self.COLUMN_SOURCE, change.get_source_name (),
-                  self.COLUMN_NAME, change.get_name (),
-                  self.COLUMN_TYPE, change.get_type (),
-                  self.COLUMN_VALUE, change.get_value ())
+                  self.COLUMN_TYPE,      new_change.get_source_name (),
+                  self.COLUMN_NAME,      new_change.get_name ())
 
 class ProfileMonitorWindow:
     #
@@ -96,18 +97,20 @@ class ProfileMonitorWindow:
         
         self.about = None
 
-    #
-    # FIXME: commit all items marked for committing when saving
-    #
-    # def __handle_commit (self, item):
-    #     (model, row) = self.treeview.get_selection ().get_selected ()
-    #     if row:
-    #         change = model[row][ProfileChangesModel.COLUMN_CHANGE]
-    #         mandatory = model[row][ProfileChangesModel.COLUMN_MANDATORY]
-    #         dprint ("Committing: %s, mandatory = %s" % (change.get_name (), mandatory))
-    #         change.get_source ().commit_change (change, mandatory)
-    
     def __handle_save (self, item):
+        iter = self.changes_model.get_iter_first ()
+        while iter:
+            change    = self.changes_model[iter][ProfileChangesModel.COLUMN_CHANGE]
+            ignore    = self.changes_model[iter][ProfileChangesModel.COLUMN_IGNORE]
+            mandatory = self.changes_model[iter][ProfileChangesModel.COLUMN_MANDATORY]
+
+            if not ignore:
+                dprint ("Committing: %s, mandatory = %s" % (change.get_name (), mandatory))
+                change.get_source ().commit_change (change, mandatory)
+                
+            iter = self.changes_model.iter_next (iter)
+        
+        self.changes_model.clear ()
         self.profile.sync_changes ()
     
     def __handle_quit (self, item):
@@ -153,6 +156,14 @@ class ProfileMonitorWindow:
 
         self.about.show ()
 
+    def __on_ignore_toggled (self, toggle, path):
+        iter = self.changes_model.get_iter_from_string (path)
+        ignore = self.changes_model.get_value (iter, ProfileChangesModel.COLUMN_IGNORE)
+        
+        ignore = not ignore
+
+        self.changes_model.set (iter, ProfileChangesModel.COLUMN_IGNORE, ignore)
+    
     def __on_mandatory_toggled (self, toggle, path):
         iter = self.changes_model.get_iter_from_string (path)
         mandatory = self.changes_model.get_value (iter, ProfileChangesModel.COLUMN_MANDATORY)
@@ -168,32 +179,28 @@ class ProfileMonitorWindow:
         self.treeview.get_selection ().set_mode (gtk.SELECTION_SINGLE)
         self.treeview.get_selection ().connect ("changed", self.__treeview_selection_changed)
 
-        toggle = gtk.CellRendererToggle ()
-        toggle.connect ("toggled", self.__on_mandatory_toggled)
-        
-        c = gtk.TreeViewColumn ("Mandatory",
-                                toggle,
-                                active = ProfileChangesModel.COLUMN_MANDATORY)
-        self.treeview.append_column (c)
-                                
-        c = gtk.TreeViewColumn ("Source",
-                                gtk.CellRendererText (),
-                                text = ProfileChangesModel.COLUMN_SOURCE)
-        self.treeview.append_column (c)
-        
-        c = gtk.TreeViewColumn ("Name",
-                                gtk.CellRendererText (),
-                                text = ProfileChangesModel.COLUMN_NAME)
-        self.treeview.append_column (c)
-        
         c = gtk.TreeViewColumn ("Type",
                                 gtk.CellRendererText (),
                                 text = ProfileChangesModel.COLUMN_TYPE)
         self.treeview.append_column (c)
         
-        c = gtk.TreeViewColumn ("Value",
+        toggle = gtk.CellRendererToggle ()
+        toggle.connect ("toggled", self.__on_ignore_toggled)
+        c = gtk.TreeViewColumn ("Ignore",
+                                toggle,
+                                active = ProfileChangesModel.COLUMN_IGNORE)
+        self.treeview.append_column (c)
+                                
+        toggle = gtk.CellRendererToggle ()
+        toggle.connect ("toggled", self.__on_mandatory_toggled)
+        c = gtk.TreeViewColumn ("Mandatory",
+                                toggle,
+                                active = ProfileChangesModel.COLUMN_MANDATORY)
+        self.treeview.append_column (c)
+        
+        c = gtk.TreeViewColumn ("Name",
                                 gtk.CellRendererText (),
-                                text = ProfileChangesModel.COLUMN_VALUE)
+                                text = ProfileChangesModel.COLUMN_NAME)
         self.treeview.append_column (c)
 
     def __treeview_selection_changed (self, selection):
