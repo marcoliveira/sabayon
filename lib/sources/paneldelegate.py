@@ -214,7 +214,7 @@ class PanelDelegate (userprofile.SourceDelegate):
     def __copy_dir (self, src_client, dst_client, dst_address, dir):
         for entry in src_client.all_entries (dir):
             if entry.get_schema_name ():
-                gconfsource.associate_schema (dst_address, entry.key, entry_get_schema_name ())
+                gconfsource.associate_schema (dst_address, entry.key, entry.get_schema_name ())
             if entry.value and not entry.get_is_default ():
                 dst_client.set (entry.key, entry.value)
         for subdir in src_client.all_dirs (dir):
