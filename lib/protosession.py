@@ -437,6 +437,9 @@ class ProtoSession (gobject.GObject):
             dprint ("Running apply tool: %s" % argv)
             os.spawnve (os.P_WAIT, argv[0], argv, new_environ)
 
+            # Disable sabayon-xinitrc.sh
+            new_environ["DISABLE_SABAYON_XINITRC"] = "yes"
+
             # Start the session
             dprint ("Executing %s" % SESSION_ARGV)
             os.execve (SESSION_ARGV[0], SESSION_ARGV, new_environ)

@@ -4,6 +4,8 @@
 # Apply the Sabayon profile for the current user (if any)
 #
 
-if [ -x @SBINDIR@/sabayon-apply ] ; then
-  @SBINDIR@/sabayon-apply
+if [ "x$DISABLE_SABAYON_XINITRC" = "x"] ; then
+  if [ -x @SBINDIR@/sabayon-apply ] ; then
+    @SBINDIR@/sabayon-apply
+  fi
 fi

@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+import os
+from config import *
+
 class UserDatabase:
     """An encapsulation of the database which maintains an
     association between users and profiles.
@@ -23,6 +26,12 @@ class UserDatabase:
         if db_file is None:
             db_file = os.path.join (PROFILESDIR, "users.xml")
 
+        self.users = {
+            "markmc"  : "foo",
+            "DV"      : "bar",
+            "jdennis" : None
+        }
+
     def get_profile (self, username):
         """Look up the profile for a given username.
 
@@ -33,6 +42,10 @@ class UserDatabase:
         should  be in a suitable form for constructing a
         ProfileStorage object.
         """
+        if self.users.has_key (username):
+            return self.users[username]
+        else:
+            return None
 
     def set_profile (self, username, profile):
         """Set the profile for a given username.
@@ -41,18 +54,22 @@ class UserDatabase:
         set.
         @profile: the location of the profile.
         """
+        if self.users.has_key (username):
+            self.users[username] = profile
 
     def get_profiles (self):
         """Return the list of currently available profiles.
         This is basically just list of zip files in
         /etc/desktop-profiles, each without the .zip extension.
         """
+        return ["foo", "bar", "blaa"]
 
     def get_users (self):
         """Return the list of users on the system. These should
         be real users - i.e. should not include system users
         like nobody, gdm, nfsnobody etc.
         """
+        return self.users.keys ()
 
 user_database = None
 def get_database ():

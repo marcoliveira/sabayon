@@ -1,5 +1,16 @@
 2005-03-16  Mark McLoughlin  <markmc@redhat.com>
 
+	* lib/protosession.py: set $DISABLE_SABAYON_XINITRC
+	when running our protosession.
+	
+	* admin-tool/sabayon-xinitrc.sh.in: don't run
+	sabayon-apply if $DISABLE_SABAYON_XINITRC is set.
+	
+	* lib/userdb.py: add silly impl. of the stubs for
+	testing.
+
+2005-03-16  Mark McLoughlin  <markmc@redhat.com>
+
 	* configure.ac: set XINITRCDIR and INSTALL_XINITRC_SCRIPT
 	on Fedora.
 	
