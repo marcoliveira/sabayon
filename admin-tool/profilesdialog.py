@@ -44,7 +44,57 @@ class ProfilesModel (gtk.ListStore):
                 continue
                 
             row = self.append ()
-            self.set (row, self.COLUMN_NAME, file)
+            self.set (row, self.COLUMN_NAME, file[:-len (".zip")])
+
+class NewProfileDialog:
+    def __init__ (self, profiles_model):
+        self.profiles_model = profiles_model
+        
+        glade_file = GLADEDIR + '/' + "sabayon.glade"
+        self.xml = gtk.glade.XML (glade_file, "new_profile_dialog")
+        
+        self.dialog = self.xml.get_widget ("new_profile_dialog")
+        self.dialog.connect ("destroy", gtk.main_quit)
+        self.dialog.set_default_response (gtk.RESPONSE_ACCEPT)
+
+        self.create_button = self.xml.get_widget ("new_profile_create_button")
+        self.create_button.set_sensitive (False)
+
+        self.name_entry = self.xml.get_widget ("new_profile_name_entry")
+        self.name_entry.connect ("changed", self.__name_entry_changed)
+        self.name_entry.set_activates_default (True)
+        
+        self.base_combo = self.xml.get_widget ("new_profile_base_combo")
+        self.base_combo.set_model (self.profiles_model)
+
+        renderer = gtk.CellRendererText ()
+        self.base_combo.pack_start (renderer, True)
+        self.base_combo.set_attributes (renderer, text = ProfilesModel.COLUMN_NAME)
+
+    def __name_entry_changed (self, entry):
+        text = entry.get_text ()
+        if not text or text.isspace ():
+            self.create_button.set_sensitive (False)
+        else:
+            self.create_button.set_sensitive (True)
+
+    def run (self, parent):
+        self.name_entry.grab_focus ()
+        self.dialog.set_transient_for (parent)
+        self.dialog.present ()
+        response = self.dialog.run ()
+        self.dialog.hide ()
+        
+        if response != gtk.RESPONSE_ACCEPT:
+            return None
+
+        iter = self.base_combo.get_active_iter ()
+        if iter:
+            base = self.profiles_model.get_value (iter, ProfilesModel.COLUMN_NAME)
+        else:
+            base = None
+        
+        return (self.name_entry.get_text (), base)
 
 class ProfilesDialog:
     def __init__ (self):
@@ -53,6 +103,7 @@ class ProfilesDialog:
 
         self.dialog = self.xml.get_widget ("profiles_dialog")
         self.dialog.connect ("destroy", gtk.main_quit)
+        self.dialog.set_default_response (gtk.RESPONSE_ACCEPT)
 
         self.profiles_list = self.xml.get_widget ("profiles_list")
         self.__setup_profiles_list ()
@@ -79,6 +130,8 @@ class ProfilesDialog:
         self.dialog.set_default_size (min (width + 250, 450),
                                       min (height + 190, 400))
 
+        self.profiles_list.grab_focus ()
+
         self.dialog.show ()
 
     def __fix_button_align (self, button):
@@ -104,13 +157,18 @@ class ProfilesDialog:
         dialog.destroy ()
 
     def __new_button_clicked (self, button):
-        print "New"
+        (profile_name, base_profile) = NewProfileDialog (self.profiles_model).run (self.dialog)
+        if profile_name:
+            self.__create_new_profile (profile_name, base_profile)
 
     def __edit_button_clicked (self, button):
         print "Edit"
 
     def __delete_button_clicked (self, button):
         print "Delete"
+
+    def __create_new_profile (self, profile_name, base_profile):
+        print "Create new profile %s based on %s" % (profile_name, base_profile)
 
 if __name__ == "__main__":
     dialog = ProfilesDialog ()
