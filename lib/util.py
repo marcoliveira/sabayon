@@ -36,7 +36,7 @@ def get_home_dir ():
     if os.environ.has_key ("HOME"):
         return os.environ["HOME"]
     else:
-        raise KeyError ("Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment")
+        raise GeneralError ("Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment")
 
 def get_user_name ():
     try:
@@ -49,7 +49,7 @@ def get_user_name ():
     if os.environ.has_key ("USER"):
         return os.environ["USER"]
     else:
-        raise KeyError ("Cannot find username: not set in /etc/passwd and no value for $USER in environment")
+        raise GeneralError ("Cannot find username: not set in /etc/passwd and no value for $USER in environment")
 
 def print_exception ():
     import traceback
