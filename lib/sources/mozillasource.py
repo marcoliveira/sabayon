@@ -22,19 +22,23 @@ import gobject
 import userprofile
 import exceptions, sys, os.path, ConfigParser, re, cPickle
 import tempfile, types
+import dirmonitor
 
 class MozillaChange (userprofile.ProfileChange):
-    def __init__ (self, source, key, value):
-        userprofile.ProfileChange.__init__ (self, source)
+    def __init__ (self, module, key, value, event):
+        userprofile.ProfileChange.__init__ (self, module)
         self.key = key
         self.value = value
+        self.event = event
 
     def get_name (self):
-        return ""
+        return self.key
+
     def get_type (self):
-        return ""
+        return self.event
+
     def get_value (self):
-        return ""
+        return self.value
 
 gobject.type_register (MozillaChange)
 
@@ -42,7 +46,7 @@ class MozillaSource (userprofile.ProfileSource):
     def __init__ (self, profile_path):
         userprofile.ProfileSource.__init__ (self, "Mozilla")
         self.profile_path = profile_path
-        self.verbose = True
+        self.verbose = False
 
         self.ini_file = GetProfileIniFile()
         if self.verbose:
@@ -69,9 +73,46 @@ class MozillaSource (userprofile.ProfileSource):
         self.pref.parse()
         self.prev_prefs = self.pref.get_prefs()
     
+        # XXX - should this be in contructor instead?
+        #self.monitor = dirmonitor.DirectoryMonitor("/var/tmp", self.__handle_monitor_event)
+        self.monitor = dirmonitor.DirectoryMonitor(
+            os.path.dirname(self.prefs_path), self.__handle_monitor_event)
+        self.monitor.start ()
+
+
+    def __handle_monitor_event (self, path, event):
+        if path == self.prefs_path:
+            self.pref_file_changed()
+
+    def pref_file_changed(self):
+        pref = JavascriptPrefsFile(self.prefs_path)
+        pref.open()
+        pref.kill_comments()
+        pref.parse()
+        cur_prefs = pref.get_prefs()
+
+        dc = DictCompare(self.prev_prefs, cur_prefs)
+        dc.compare()
+        cs = dc.get_change_set('a', 'b')
+        #dump_change_set(cs)
+        _add = cs['add']
+        _del = cs['del']
+        _mod = cs['mod']
+
+        for key, value in _add.items():
+            self.emit_change(MozillaChange (self, key, value, "created"))
+
+        for key, value in _del.items():
+            self.emit_change(MozillaChange (self, key, value, "deleted"))
+
+        for key, value in _mod.items():
+            self.emit_change(MozillaChange (self, key, value, "changed"))
+
+        self.prev_prefs = cur_prefs
 
     def stop_monitoring (self):
-        pass
+        self.monitor.stop ()
+
     def sync_changes (self):
         pass
     def apply (self):
@@ -83,8 +124,8 @@ class MozillaSource (userprofile.ProfileSource):
 
 gobject.type_register (MozillaSource)
     
-#def get_source (profile_path):
-#    return MozillaSource (profile_path)
+def get_source (profile_path):
+    return MozillaSource (profile_path)
 
 #-----------------------------------------------------------------------------
 
