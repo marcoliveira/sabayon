@@ -53,14 +53,16 @@ class UserDatabase:
 	dprint("New UserDatabase(%s) object\n" % self.file)
 
 	try:
-	    self.doc = libxml2.parseFile(file);
+	    self.doc = libxml2.readFile(file, None, libxml2.XML_PARSE_NOBLANKS)
 	except:
 	    # TODO add fallback to last good database
 	    dprint("failed to parse %s falling back to default conf\n" %
 	           self.file)
 	    self.doc = None
 	if self.doc == None:
-	    self.doc = libxml2.parseDoc(defaultConf);
+	    self.doc = libxml2.readMemory(defaultConf, len(defaultConf),
+	                                  None, None,
+	                                  libxml2.XML_PARSE_NOBLANKS);
 
     def __del__ (self):
         if self.doc != None:
@@ -111,6 +113,47 @@ class UserDatabase:
         # TODO Check the resulting file path exists
         return profile
 
+    def __save_as(self, filename = None):
+        """Save the current version to the given filename"""
+	if filename == None:
+	    filename = self.file
+
+	dprint("Saving UserDatabase to %s\n", filename)
+	try:
+	    os.rename(filename, filename + ".bak")
+	    backup = 1
+	except:
+	    backup = 0
+	    pass
+
+	try:
+	    f = open(filename, 'w')
+	except:
+	    if backup == 1:
+	        try:
+		    os.rename(filename + ".bak", filename)
+		    dprint("Restore from %s.bak\n", filename)
+		except:
+		    dprint("Failed to restore from %s.bak\n", filename)
+
+	    raise UserDatabaseException(
+	              _("Could not open %s for writing") % filename)
+	try:
+	    f.write(self.doc.serialize("UTF-8", format=1))
+	    f.close()
+	except:
+	    if backup == 1:
+	        try:
+		    os.rename(filename + ".bak", filename)
+		    dprint("Restore from %s.bak\n", filename)
+		except:
+		    dprint("Failed to restore from %s.bak\n", filename)
+
+	    raise UserDatabaseException(
+	              _("Failed to save UserDatabase to %s") % filename)
+	
+	self.modified = 0
+
     def set_profile (self, username, profile):
         """Set the profile for a given username.
 
@@ -118,6 +161,7 @@ class UserDatabase:
         set.
         @profile: the location of the profile.
         """
+	self.modified = 0
 	try:
 	    query = "/profiles/user[@name='%s']" % username
 	    user = self.doc.xpathEval(query)[0]
@@ -141,6 +185,8 @@ class UserDatabase:
 			  _("Failed to add user %s to profile configuration") %
                                            (username))
 	    self.modified = 1
+	if self.modified == 1:
+	    self.__save_as()
 	
     def get_profiles (self):
         """Return the list of currently available profiles.
@@ -197,7 +243,12 @@ def get_database ():
 # Unit tests
 #
 def run_unit_tests ():
-    db = get_database();
+    testfile = "/tmp/test_users.xml"
+    try:
+        os.unlink(testfile)
+    except:
+        pass
+    db = UserDatabase(testfile)
     res = db.get_profile("localuser")
     if res is None:
         print "get_profile failed to return a value"
