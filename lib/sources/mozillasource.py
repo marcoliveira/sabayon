@@ -29,7 +29,7 @@ import filessource
 import traceback
 
 
-ini_partial_path = ".mozilla/firefox/profiles.ini"
+profiles_ini_rel_path = ".mozilla/firefox/profiles.ini"
 
 def dprint(fmt, *args):
     util.debug_print(util.DEBUG_MOZILLASOURCE, fmt % args)
@@ -72,112 +72,103 @@ gobject.type_register (MozillaChange)
 
 class MozillaDelegate (userprofile.SourceDelegate):
     def __init__ (self, source):
-        userprofile.SourceDelegate.__init__ (self, _("Files"), source, ".mozilla")
+        userprofile.SourceDelegate.__init__ (self, _("Firefox"), source, ".mozilla")
         self.source = source
         self.delegate = self
-        self.pref_files = {}
         self.home_dir = util.get_home_dir ()
         if os.path.isfile(self.get_profiles_ini_path()):
-            self.ini_file = FirefoxProfilesIni(self.get_profiles_ini_path())
+            self.ini_file = FirefoxProfilesIni(self.home_dir,
+                                               self.get_profiles_ini_path())
         else:
             self.ini_file = None
 
     def get_full_path(self, path):
         return os.path.join(self.home_dir, path)        
 
-    def get_rel_path(self, path):
-        # XXX - isn't there a more elegant and robust way to do this?
-        return os.path.normpath(path).split(os.path.normpath(self.home_dir))[1][1:]
-
-
     def get_profiles_ini_path(self):
-        return self.get_full_path(ini_partial_path)
+        return self.get_full_path(profiles_ini_rel_path)
 
-    def is_ini_file(self, path):
-        ini_path_re = re.compile(ini_partial_path + "$")
-        if ini_path_re.search(path):
+    def is_ini_file(self, rel_path):
+        if rel_path == profiles_ini_rel_path:
             return True
         else:
             return False
 
-    def is_prefs_file(self, path):
+    def is_profile_file(self, rel_path):
         if self.ini_file:
-            ini_path = self.ini_file.get_full_path()
-            ini_dir = os.path.dirname(ini_path)
-            if path.startswith(ini_dir):
-                for profile_dir in self.ini_file.get_profiles(True):
-                    if path == os.path.join(profile_dir, "prefs.js"):
-                        return True
-                return False
-            else:
-                return False
+            rel_dir = os.path.dirname(rel_path)
+            for profile in self.ini_file.get_profiles():
+                profile_dir = profile.get_rel_dir()
+                if rel_dir.startswith(profile_dir):
+                    return profile
+            return None
         else:
-            return False
+            return None
 
     def handle_change (self, change):
-        # XXX - jrd
-        assert isinstance(change, filessource.FilesChange)
-        path = self.get_full_path(change.get_id())
-        if change.event == dirmonitor.CREATED:
-            if self.is_ini_file(path):
-                dprint("CREATED ini file: %s", path)
+        rel_path = change.get_id()
+        #
+        # INI File
+        #
+        if self.is_ini_file(rel_path):
+            dprint("%s ini file: %s",
+                   dirmonitor.event_to_string(change.event), rel_path)
+            if change.event == dirmonitor.CREATED:
                 if self.ini_file:
-                    dwarn("ini file (%s) reports creation, but was already known", path)
+                    dwarn("ini file (%s) reports creation, but was already known", rel_path)
                 else:
-                    self.ini_file = FirefoxProfilesIni(path)
+                    self.ini_file = FirefoxProfilesIni(self.home_dir, rel_path)
                     self.ini_file.read()
-                return True
-
-            if self.is_prefs_file(path):
-                dprint("CREATED prefs file: %s", path)
-                if path in self.pref_files:
-                    dwarn("prefs file (%s) reports creation, but was already known", path)
-                else:
-                    pref = JavascriptPrefsFile(path, self.source, self.delegate)
-                    self.pref_files[path] = pref
-                    pref.read()
-                return True
-            
-            dprint("CREATED Ignored: %s", path)
-            return True
-
-        if change.event == dirmonitor.CHANGED:
-            if self.is_ini_file(path):
-                dprint("CHANGED ini file: %s", path)
-                self.ini_file = FirefoxProfilesIni(path)
+            elif change.event == dirmonitor.CHANGED:
+                self.ini_file = FirefoxProfilesIni(self.home_dir, rel_path)
                 self.ini_file.read()
                 return True
-
-            if self.is_prefs_file(path):
-                dprint("CHANGED prefs file: %s", path)
-                pref = self.pref_files.setdefault(path, JavascriptPrefsFile(path, self.source, self.delegate))
-                pref.read()
-                return True
-            
-            dprint("CHANGED Ignored: %s", path)
-            return True
-
-        if change.event == dirmonitor.DELETED:
-            if self.is_ini_file(path):
-                dprint("DELETED ini file: %s", path)
-                if path == self.ini_file:
+            elif change.event == dirmonitor.DELETED:
+                if rel_path == self.ini_file:
                     self.ini_file = None
                 else:
-                    dwarn("ini file (%s) reports deletion, but was not known ini (%s)", path, self.ini_file)
+                    dwarn("ini file (%s) reports deletion, but was not known ini (%s)", rel_path, self.ini_file)
                 return True
+            else:
+                raise ValueError
 
-            if self.is_prefs_file(path):
-                dprint("DELETED prefs file: %s", path)
-                if path in self.pref_files:
-                    del self.pref_files[path]
+        #
+        # Profile File
+        #
+        profile = self.is_profile_file(rel_path)
+        if profile:
+            dprint("%s profile file: %s",
+                   dirmonitor.event_to_string(change.event), rel_path)
+
+            profile_file = profile.add_file(rel_path)
+            profile_file_type = profile_file.get_type()
+
+            if profile_file_type == FirefoxProfileFile.TYPE_PREFS:
+                if change.event == dirmonitor.CREATED or \
+                   change.event == dirmonitor.CHANGED:
+                    if not isinstance(profile_file, JavascriptPrefsFile):
+                        profile_file = profile.add_file(rel_path, JavascriptPrefsFile(self.home_dir, rel_path, self.source, self.delegate))
+                    profile_file.read()
+                    return True
+                elif change.event == dirmonitor.DELETED:
+                    pass
+                else:
+                    raise ValueError
+            elif profile_file_type != FirefoxProfileFile.TYPE_UNKNOWN:
+                if change.event == dirmonitor.CREATED or \
+                   change.event == dirmonitor.CHANGED:
+                    profile.add_file(rel_path)
+                elif change.event == dirmonitor.DELETED:
+                    profile.del_file(rel_path)
+                else:
+                    raise ValueError
+            else:
                 return True
-            
-            dprint("DELETED Ignored: %s", path)
-            return True
-
-        raise ValueError
-
-
+                    
+        #
+        # Ignored Files
+        #
+        dprint("IGNORED: %s", rel_path)
         return True
 
     def commit_change (self, change, mandatory = False):
@@ -190,16 +181,32 @@ class MozillaDelegate (userprofile.SourceDelegate):
     def sync_changes (self):
         """Ensure that all committed changes are saved to disk."""
 
-        for pref in self.pref_files.values():
-            ini = self.ini_file
-            # XXX - this path stuff is a mess!
-            pref_path = os.path.join(os.path.dirname(ini_partial_path), ini.get_default_profile().get_rel_path(), "sabayon-prefs.js")
-            pref.write_pref_file(self.get_full_path(pref_path))
-            self.source.storage.add (pref_path, self.home_dir, self.name)
-            break;
+        ini = self.ini_file
+        if ini:
+            self.source.storage.add (ini.get_rel_path(), self.home_dir, self.name)
+            for profile in ini.get_profiles():
+                pref_files = profile.get_files_of_type(FirefoxProfileFile.TYPE_PREFS)
+                # XXX - More than one pref file will overwrite!!
+                for pref_file in pref_files:
+                    pref_rel_path = os.path.join(profile.get_rel_dir(), "sabayon-prefs.js")
+                    pref_file.write_pref_file(self.get_full_path(pref_rel_path))
+                    self.source.storage.add (pref_rel_path, self.home_dir, self.name)
 
     def apply (self):
-        pass
+        storage_contents = self.source.storage.list (self.name)
+        self.source.storage.foreach (self.__apply_foreach, source = self.name)
+
+    def __apply_foreach (self, source, path):
+        attributes = self.source.storage.get_attributes (path)
+        if attributes.has_key ("mandatory"):
+            mandatory = bool (attributes ["mandatory"])
+        else:
+            mandatory = False
+
+        dprin("apply_foreach  %s %s %s", source, self.home_dir, path)
+        self.source.storage.extract (path, self.home_dir, mandatory)
+    
+
 
 def get_files_delegate (source):
     return MozillaDelegate (source)
@@ -354,19 +361,58 @@ class DictCompare:
         dprint("not equal = %s" % ",".join(self.not_equal))
 
 
+# ------ Class FirefoxProfileFile ------
+
+class FirefoxProfileFile:
+    (TYPE_UNKNOWN,
+     TYPE_PREFS,
+     TYPE_BOOKMARK
+     ) = range(3)
+
+    def __init__(self, rel_path):
+        self.rel_path = rel_path
+        self.attrs = {}
+        self.file_type = self.get_type_from_path(rel_path)
+
+    def type_to_string(type):
+        if type == FirefoxProfileFile.TYPE_UNKNOWN:
+            return "UNKNOWN"
+        if type == FirefoxProfileFile.TYPE_PREFS:
+            return "PREFS"
+        if type == FirefoxProfileFile.TYPE_BOOKMARK:
+            return "BOOKMARK"
+        return "?"
+
+    def get_type(self):
+        return self.file_type
+
+    def get_type_from_path(self, rel_path):
+        basename = os.path.basename(rel_path)
+
+        if basename == "prefs.js":
+            return FirefoxProfileFile.TYPE_PREFS
+        elif basename == "bookmarks.html":
+            return FirefoxProfileFile.TYPE_BOOKMARK
+        else:
+            return FirefoxProfileFile.TYPE_UNKNOWN
+
 # ------ Class JavascriptPrefsFile ------
 
-class JavascriptPrefsFile:
-    def __init__(self, path, source, delegate):
-        self.path = path
+class JavascriptPrefsFile(FirefoxProfileFile):
+    def __init__(self, home_dir, rel_path, source, delegate):
+        FirefoxProfileFile.__init__(self, rel_path)
+        self.home_dir = home_dir
         self.source = source
         self.delegate = delegate
         self.prefs = {}
         self.prev_prefs = {}
 
 
-    def write_pref_file(self, pref_path):
-        fd = open(pref_path, "w")
+    def full_path(self):
+        return os.path.join(self.home_dir, self.rel_path)
+
+    def write_pref_file(self, pref_full_path):
+        fd = open(pref_full_path, "w")
         fd.write('''
 /*
  * Do not edit this file.
@@ -390,7 +436,7 @@ class JavascriptPrefsFile:
     def read(self):
         self.prev_prefs = self.get_prefs()
 
-        fd = open(self.path)
+        fd = open(self.full_path())
         self.filebuf = fd.read()
         fd.close()
         self.kill_comments()
@@ -456,10 +502,11 @@ class JavascriptPrefsFile:
 # ------ Class FirefoxProfile ------
 
 class FirefoxProfile:
-    def __init__(self, section, dir):
+    def __init__(self, section, rel_dir):
         self.section = section
-        self.dir = dir
+        self.rel_dir = rel_dir
         self.attrs = {}
+        self.files = {}
 
     def set_attr(self, attr, value):
         self.attrs[attr] = value
@@ -473,12 +520,29 @@ class FirefoxProfile:
     def get_default(self):
         return self.get_attr("default")
 
-    def get_rel_path(self):
+    def get_rel_dir(self):
+        return os.path.join(self.rel_dir, self.get_dir())
+
+    def get_dir(self):
         return self.get_attr("path")
 
-    def get_full_path(self):
-        return os.path.join(self.dir, self.get_rel_path())
-        
+    def add_file(self, rel_path, object=None):
+        # XXX - jrd, passing object in is ugly & awkward, find more elegant solution
+        if not object:
+            object = FirefoxProfileFile(rel_path)
+            file = self.files.setdefault(rel_path, object)
+        else:
+            file = object
+            file = self.files[rel_path] = object
+        return file
+
+    def del_file(self, rel_path):
+        if rel_path in self.files:
+            del self.files[rel_path]
+
+    def get_files_of_type(self, type):
+        return [ file
+                 for file in self.files.values() if file.get_type() == type ]
 
 
 # ------ Class FirefoxProfilesIni ------
@@ -489,24 +553,31 @@ class FirefoxProfilesIni:
      INI_STATE_NOT_FOUND,
      INI_STATE_PARSE_ERROR) = range(4)
 
-    def __init__(self, path):
+    def __init__(self, home_dir, rel_path):
         self.state = self.INI_STATE_UNKNOWN
         self.default_profile = None
         self.profiles = {}
         self.ini = ConfigParser.ConfigParser()
-        self.path = path
-        self.dir = os.path.dirname(path)
+        self.home_dir = home_dir
+        self.rel_path = rel_path
+        self.rel_dir = os.path.dirname(rel_path)
 
-    def get_full_path(self):
-        return self.path
+    def get_full_path(self, path):
+        return os.path.join(self.home_dir, path)        
+
+    def get_rel_dir(self):
+        return self.rel_dir
+
+    def get_rel_path(self):
+        return self.rel_path
 
     def read(self):
         dprint("FirefoxProfilesIni.read() path = %s",
-               self.path)
+               self.get_full_path(self.rel_path))
         self.profiles = {}
 
         try:
-            if self.ini.read(self.path):
+            if self.ini.read(self.get_full_path(self.rel_path)):
                 self.state = self.INI_STATE_VALID
             else:
                 self.state = self.INI_STATE_NOT_FOUND
@@ -539,7 +610,7 @@ class FirefoxProfilesIni:
                 if name in self.profiles:
                     raise BadIniFileError(_("duplicate name (%s) in section %s") %
                                           (name, section))
-                profile = FirefoxProfile(section, self.dir)
+                profile = FirefoxProfile(section, self.rel_dir)
                 self.profiles[name] = profile
                 for (key, value) in self.ini.items(section):
                     profile.set_attr(key, value)
@@ -566,9 +637,9 @@ class FirefoxProfilesIni:
             raise BadIniFileError(_("no default profile"))
         return self.default_profile
 
-    def get_profiles(self, as_full_path=False):
-        if as_full_path:
-            return [ profile.get_full_path()
+    def get_profiles(self, as_rel_dir=False):
+        if as_rel_dir:
+            return [ profile.get_rel_dir()
                      for profile in self.profiles.values() ]
         else:
             return self.profiles.values()
@@ -578,7 +649,7 @@ class FirefoxProfilesIni:
 # XXX - this needs more logic to distinquish mozilla, firefox, versions, etc.
 # basically its just hardcoded at the moment.
 def GetProfileIniFile():
-    filename = os.path.expanduser("~/%s" % ini_partial_path)
+    filename = os.path.expanduser("~/%s" % profiles_ini_rel_path)
 
     # XXX - should caller thow error instead?
     if not os.path.exists(filename):
@@ -659,7 +730,7 @@ def run_unit_tests ():
 
     dprint("ini file = %s" % profile_ini_file)
 
-    profiles_ini = FirefoxProfilesIni(profile_ini_file)
+    profiles_ini = FirefoxProfilesIni(os.path.expanduser("~"), profile_ini_file)
     profiles_ini.read()
     profiles_ini.parse_sections()
     default_path = profiles_ini.get_default_path()

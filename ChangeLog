@@ -1,3 +1,13 @@
+2005-03-14  John Dennis  <jdennis@redhat.com>
+
+	* rework mozillasource so code and class structure better supports
+	file creation, file apply, etc. The profiles.ini file is now added
+	and applied to the storage, as well as a sabayon prefs.js
+	file. Other files under the profile directory are analyzed if they
+	should be added to the storage for each profile. At the moment
+	only prefs.js and bookmarks.html are stored under the
+	profile. Next is to correctly merge these during the apply phase.
+
 2005-03-14  Mark McLoughlin  <mark@skynet.ie>
 
 	* admin-tool/userswindow.py: add cheesy UI which uses
