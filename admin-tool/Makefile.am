@@ -64,7 +64,7 @@ libexec_SCRIPTS = sabayon-monitor sabayon-session
 pkgdata_PYTHON = $(PYTHON_FILES)
 
 if INSTALL_XINITRC_SCRIPT
-xinitrcdir      = $(XINITRCDIR)
+xinitrcdir      = $(sysconfdir)/$(XINITRC_SYSCONFDIR)
 xinitrc_SCRIPTS = sabayon-xinitrc.sh
 endif
 
@@ -96,4 +96,4 @@ clean:
 DISTCLEANFILES =		\
 	$(wrappers)		\
 	$(desktop_DATA)		\
-	sabayon-xinitrc
+	sabayon-xinitrc.sh

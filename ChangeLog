@@ -1,5 +1,22 @@
 2005-03-16  Mark McLoughlin  <markmc@redhat.com>
 
+	* configure.ac: subst a subdir of sysconfdir
+	for xinitrc rather than using sysconfdir
+	directly.
+
+	* admin-tool/Makefile.am: upd. for above change.
+	Needed because sysconfdir may be passed as an
+	argument to make itself.
+
+	* sabayon.spec.in: changes to bring in line with
+	Fedora guidelines. Most notable change is that
+	it uses the fedora-usermgmt scripts for creating
+	users.
+	Note, the uid/gid will need to be registered somewhere
+	like http://www.fedora.us/wiki/PackageUserRegistry
+
+2005-03-16  Mark McLoughlin  <markmc@redhat.com>
+
 	* admin-tool/Makefile.am: add userswindow.py
 	
 	* lib/Makefile.am: add userdb.py

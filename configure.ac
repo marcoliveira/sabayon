@@ -36,12 +36,12 @@ else
     redhat) 
       XSESSION="/etc/X11/xdm/Xsession"
       install_xinitrc_script="yes"
-      XINITRCDIR="$sysconfdir/X11/xinit/xinitrc.d"
+      XINITRC_SYSCONFDIR="X11/xinit/xinitrc.d"
       ;;
     debian) 
       XSESSION="/etc/gdm/Xsession"
       install_xinitrc_script="no"
-      XINITRCDIR=""
+      XINITRC_SYSCONFDIR=""
       ;;
     *)
       echo "Your distribution (${with_distro}) is not yet supported!  (patches welcome)"
@@ -50,7 +50,7 @@ else
   esac
 fi
 AC_SUBST(XSESSION)
-AC_SUBST(XINITRCDIR)
+AC_SUBST(XINITRC_SYSCONFDIR)
 AM_CONDITIONAL(INSTALL_XINITRC_SCRIPT, test "x$install_xinitrc_script" = "xyes")
 
 

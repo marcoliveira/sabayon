@@ -1,20 +1,25 @@
-Summary: Tool to maintain user profiles in a GNOME desktop.
-Name: sabayon
+Name:    sabayon
 Version: @VERSION@
 Release: 1
+Summary: Tool to maintain user profiles in a GNOME desktop.
+
+Group:   Applications/System
 License: GPL
-Group: System/Configuration/Other
-Source: sabayon-%{version}.tar.gz
-BuildRoot: %{_tmppath}/%{name}-%{version}-root
-Requires: python 
+URL:     http://www.gnome.org/projects/sabayon
+Source:  sabayon-%{version}.tar.gz
+
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+
+Requires: python
 Requires: gamin-python
 Requires: pygtk2 >= 2.5.3-2
 Requires: gnome-python2-gconf >= 2.6.0-5
 Requires: xorg-x11-Xnest
-BuildRequires: python 
-URL: http://www.gnome.org/projects/sabayon
-Prefix: %{_prefix}
-Docdir: %{_docdir}
+
+BuildRequires: python
+
+Requires(pre):    fedora-usermgmt
+Requires(postun): fedora-usermgmt
 
 %description
 Sabayon is a tool to help sysadmins and user change and maintain the
@@ -25,22 +30,21 @@ default behaviour of the GNOME desktop.
 
 %build
 %configure
-make
+make %{?_smp_mflags}
 gzip -9 ChangeLog
 
 %install
 rm -fr %{buildroot}
 
-%makeinstall PAM_PREFIX=$RPM_BUILD_ROOT/etc
+%makeinstall PAM_PREFIX=$RPM_BUILD_ROOT%{_sysconfdir}
 
-# FIXME: long term we can't rely on owning these files
 mkdir -p $RPM_BUILD_ROOT/etc/gconf/2
-echo 'include "$(HOME)/.gconf.path.defaults"'  > $RPM_BUILD_ROOT/etc/gconf/2/local-defaults.path
-echo 'include "$(HOME)/.gconf.path.mandatory"' > $RPM_BUILD_ROOT/etc/gconf/2/local-mandatory.path
+echo 'include "$(HOME)/.gconf.path.defaults"'  > $RPM_BUILD_ROOT%{_sysconfdir}/gconf/2/local-defaults.path
+echo 'include "$(HOME)/.gconf.path.mandatory"' > $RPM_BUILD_ROOT%{_sysconfdir}/gconf/2/local-mandatory.path
 
 desktop-file-install --vendor gnome --delete-original		\
   --dir $RPM_BUILD_ROOT%{_datadir}/applications			\
-  $RPM_BUILD_ROOT%{_datadir}/applications/*.desktop
+  $RPM_BUILD_ROOT%{_datadir}/applications/%{name}.desktop
 
 %find_lang sabayon
 
@@ -48,12 +52,13 @@ desktop-file-install --vendor gnome --delete-original		\
 rm -fr %{buildroot}
 
 %pre
-# Create a new user for sabayon, see the ISSUES file
-/usr/sbin/useradd -c "Sabayon user" -g nobody -s /sbin/nologin -r sabayon >/dev/null 2>&1 || /bin/true
-/usr/sbin/usermod -d "" -s /sbin/nologin sabayon >/dev/null 2>&1
-# ignore errors, as we can't disambiguate between sabayon already existed
-# and couldn't create account with the current adduser.
-exit 0
+/usr/sbin/fedora-groupadd 15 -r %{name} &>/dev/null || :
+/usr/sbin/fedora-useradd  15 -r -s /sbin/nologin -c "Sabayon user" -g %{name} %{name} &>/dev/null || :
+/usr/sbin/usermod -d "" %{name} &>/dev/null || :
+
+%postun
+test "$1" != 0 || /usr/sbin/fedora-userdel  %{name} &>/dev/null || :
+test "$1" != 0 || /usr/sbin/fedora-groupdel %{name} &>/dev/null || :
 
 %files -f sabayon.lang
 %defattr(-, root, root)
@@ -61,20 +66,29 @@ exit 0
 %doc AUTHORS ChangeLog.gz NEWS README TODO ISSUES
 %doc doc/index.html doc/testing.html doc/helping.html doc/developing.html
 %doc doc/sabayon.css doc/*.jpg doc/*.gif
-%config /etc/gconf/2/local-defaults.path
-%config /etc/gconf/2/local-mandatory.path
-%config /etc/pam.d/sabayon
-%config /etc/security/console.apps/sabayon
+
+%config(noreplace) /etc/gconf/2/local-defaults.path
+%config(noreplace) /etc/gconf/2/local-mandatory.path
+%config(noreplace) /etc/pam.d/%{name}
+%config(noreplace) /etc/security/console.apps/%{name}
+%config(noreplace) /etc/X11/xinit/xinitrc.d/%{name}*
+
+%{_sysconfdir}/desktop-profiles
+
 %{_bindir}/%{name}*
 %{_sbindir}/%{name}*
 %{_libexecdir}/%{name}*
+
 %{_datadir}/%{name}/*.py*
 %{_datadir}/%{name}/sources/*.py*
-%{_datadir}/%{name}/glade/sabayon.glade
-%{_datadir}/applications/*.desktop
-%{_datadir}/pixmaps/*.png
-%{_sysconfdir}/desktop-profiles
+%{_datadir}/%{name}/glade/%{name}.glade
+%{_datadir}/applications/gnome-%{name}.desktop
+%{_datadir}/pixmaps/%{name}.png
 
 %changelog
+* Wed Mar 16 2005 Mark McLoughlin <markmc@redhat.com>
+- Various changes to bring in line with Fedora package guidelines
+- User fedora-usermgmt to create the sabayon user
+
 * Wed Feb  9 2005 Daniel Veillard <veillard@redhat.com>
 - initial version
