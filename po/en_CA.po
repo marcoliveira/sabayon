@@ -8,44 +8,37 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-03-01 20:19-0500\n"
-"PO-Revision-Date: 2005-03-01 11:14-0400\n"
+"POT-Creation-Date: 2005-03-04 06:25-0500\n"
+"PO-Revision-Date: 2005-03-04 11:14-0400\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: Canadian English <adamw@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: admin-tool/monitorwindow.py:144
-msgid "Program to establish and edit profiles for users"
-msgstr "Program to establish and edit profiles for users"
-
-#: admin-tool/monitorwindow.py:147
-msgid "translator-credits"
-msgstr "Adam Weinberger <adamw@gnome.org>"
-
-#: admin-tool/monitorwindow.py:187
-msgid "Ignore"
-msgstr "Ignore"
-
-#: admin-tool/monitorwindow.py:194
-msgid "Mandatory"
-msgstr "Mandatory"
-
-#: admin-tool/monitorwindow.py:199
-msgid "Description"
-msgstr "Description"
-
-#: admin-tool/profilesdialog.py:173
+#: admin-tool/editorwindow.py:153 admin-tool/profilesdialog.py:180
 msgid "Name"
 msgstr "Name"
 
-#: admin-tool/profilesdialog.py:205
+#: admin-tool/monitorwindow.py:143
+msgid "Ignore"
+msgstr "Ignore"
+
+#: admin-tool/monitorwindow.py:150
+msgid "Mandatory"
+msgstr "Mandatory"
+
+#: admin-tool/monitorwindow.py:155
+msgid "Description"
+msgstr "Description"
+
+#: admin-tool/profilesdialog.py:212
 #, python-format
 msgid "User account '%s' was not found"
 msgstr "User account '%s' was not found"
 
-#: admin-tool/profilesdialog.py:206
+#: admin-tool/profilesdialog.py:213
 #, python-format
 msgid ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
@@ -55,6 +48,86 @@ msgstr ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
 "Try again after creating the account (using, for example, the 'adduser' "
 "command)"
+
+#: admin-tool/saveconfirm.py:36
+msgid "Close _Without Saving"
+msgstr "Close _Without Saving"
+
+#: admin-tool/saveconfirm.py:43
+#, python-format
+msgid "Save changes to profile \"%s\" before closing?"
+msgstr "Save changes to profile \"%s\" before closing?"
+
+#: admin-tool/saveconfirm.py:47
+#, python-format
+msgid ""
+"If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld seconds will be permanently "
+"lost."
+msgstr[0] ""
+"If you don't save, changes from the last %ld second will be permanently lost."
+msgstr[1] ""
+"If you don't save, changes from the last %ld seconds will be permanently "
+"lost."
+
+#: admin-tool/saveconfirm.py:53
+msgid ""
+"If you don't save, changes from the last minute will be permanently lost."
+msgstr ""
+"If you don't save, changes from the last minute will be permanently lost."
+
+#: admin-tool/saveconfirm.py:57
+#, python-format
+msgid ""
+"If you don't save, changes from the last minute and %ld second will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last minute and %ld seconds will be "
+"permanently lost."
+msgstr[0] ""
+"If you don't save, changes from the last minute and %ld second will be "
+"permanently lost."
+msgstr[1] ""
+"If you don't save, changes from the last minute and %ld seconds will be "
+"permanently lost."
+
+#: admin-tool/saveconfirm.py:64
+#, python-format
+msgid ""
+"If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld minutes will be permanently "
+"lost."
+msgstr[0] ""
+"If you don't save, changes from the last %ld minute will be permanently lost."
+msgstr[1] ""
+"If you don't save, changes from the last %ld minutes will be permanently "
+"lost."
+
+#: admin-tool/saveconfirm.py:73 admin-tool/saveconfirm.py:83
+#, python-format
+msgid "If you don't save, changes from the last hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] "If you don't save, changes from the last hour will be permanently lost."
+msgstr[1] ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+
+#: admin-tool/saveconfirm.py:76
+#, python-format
+msgid ""
+"If you don't save, changes from the last hour and %d minute will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last hour and %d minutes will be "
+"permanently lost."
+msgstr[0] ""
+"If you don't save, changes from the last hour and %d minute will be "
+"permanently lost."
+msgstr[1] ""
+"If you don't save, changes from the last hour and %d minutes will be "
+"permanently lost."
 
 #: admin-tool/sabayon.desktop.in.h:1
 msgid "Desktop User Profiles"
@@ -69,30 +142,38 @@ msgid "All Your Settings Are Belong To Us"
 msgstr "All Your Settings Are Belong To Us"
 
 #: admin-tool/sabayon.glade.h:2
+msgid "C_lear History"
+msgstr "C_lear History"
+
+#: admin-tool/sabayon.glade.h:3
 msgid "C_reate"
 msgstr "C_reate"
 
-#: admin-tool/sabayon.glade.h:3
+#: admin-tool/sabayon.glade.h:4
 msgid "New Profile"
 msgstr "New Profile"
 
-#: admin-tool/sabayon.glade.h:4
+#: admin-tool/sabayon.glade.h:5
 msgid "Profile _name:"
 msgstr "Profile _name:"
 
-#: admin-tool/sabayon.glade.h:5
+#: admin-tool/sabayon.glade.h:6
 msgid "_Base on:"
 msgstr "_Base on:"
 
-#: admin-tool/sabayon.glade.h:6
+#: admin-tool/sabayon.glade.h:7
+msgid "_Edit"
+msgstr "_Edit"
+
+#: admin-tool/sabayon.glade.h:8
 msgid "_Help"
 msgstr "_Help"
 
-#: admin-tool/sabayon.glade.h:7
+#: admin-tool/sabayon.glade.h:9
 msgid "_Profile"
 msgstr "_Profile"
 
-#: admin-tool/sabayon.glade.h:8
+#: admin-tool/sabayon.glade.h:10
 msgid "_Profiles:"
 msgstr "_Profiles:"
 
@@ -163,36 +244,36 @@ msgstr "Failed to start Xnest: timed out waiting for USR1 signal"
 msgid "Failed to start Xnest: died during startup"
 msgstr "Failed to start Xnest: died during startup"
 
-#: lib/storage.py:140
+#: lib/storage.py:144
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "Failed to read file '%s': %s"
 
-#: lib/storage.py:150
+#: lib/storage.py:154
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "Failed to read metadata from '%s': %s"
 
-#: lib/storage.py:156
+#: lib/storage.py:160
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "Invalid metadata section in '%s': %s"
 
-#: lib/storage.py:482
+#: lib/storage.py:513
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Cannot add non-existent file '%s'"
 
-#: lib/storage.py:572
+#: lib/storage.py:603
 msgid "No current revision"
 msgstr "No current revision"
 
-#: lib/storage.py:576 lib/storage.py:587
+#: lib/storage.py:607 lib/storage.py:618
 #, python-format
 msgid "'%s' does not exist in profile revision '%s'"
 msgstr "'%s' does not exist in profile revision '%s'"
 
-#: lib/storage.py:659
+#: lib/storage.py:690
 msgid "Not a valid profile revision"
 msgstr "Not a valid profile revision"
 
