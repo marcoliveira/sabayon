@@ -20,7 +20,7 @@
 
 import gtk
 import gtk.glade
-import storage
+import userprofile
 import util
 import aboutdialog
 import saveconfirm
@@ -53,26 +53,31 @@ def dprint (fmt, *args):
 
 class ProfileModel (gtk.ListStore):
     (
-        COLUMN_NAME,
+        COLUMN_PATH,
+        COLUMN_DESCRIPTION,
         COLUMN_REVISION,
         COLUMN_REVISIONS_MODEL
-    ) = range (3)
+    ) = range (4)
 
-    def __init__ (self, storage):
-        gtk.ListStore.__init__ (self, str, str, RevisionsModel)
+    def __init__ (self, profile):
+        gtk.ListStore.__init__ (self, str, str, str, RevisionsModel)
 
-        self.storage = storage
+        self.profile = profile
         self.reload ()
 
     def reload (self):
         dprint ("Reloading profile model")
         self.clear ()
-        for (source, name) in self.storage.list ():
-            revisions_model = RevisionsModel (self.storage, name)
-            first = revisions_model.get_iter_first ()
+        for (source_name, path) in self.profile.storage.list ():
+            source = self.profile.get_source (source_name)
+            
+            revisions_model = RevisionsModel (self.profile.storage, path)
+            first_revision = revisions_model.get_iter_first ()
+            
             self.set (self.prepend (),
-                      self.COLUMN_NAME, name,
-                      self.COLUMN_REVISION, revisions_model[first][RevisionsModel.COLUMN_DATE],
+                      self.COLUMN_PATH, path,
+                      self.COLUMN_DESCRIPTION, source.get_path_description (path),
+                      self.COLUMN_REVISION, revisions_model[first_revision][RevisionsModel.COLUMN_DATE],
                       self.COLUMN_REVISIONS_MODEL, revisions_model)
 
 class RevisionsModel (gtk.ListStore):
@@ -104,7 +109,8 @@ class RevisionsModel (gtk.ListStore):
 class ProfileEditorWindow:
     def __init__ (self, profile_name, parent_window):
         self.profile_name = profile_name
-        self.storage = storage.ProfileStorage (profile_name)
+        self.profile = userprofile.UserProfile (profile_name)
+        self.storage = self.profile.storage
         self.last_save_time = 0
 
         self.window = gtk.Window (gtk.WINDOW_TOPLEVEL)
@@ -164,9 +170,9 @@ class ProfileEditorWindow:
         if not row:
             return
     
-        dprint ("Deleting '%s'", model[row][ProfileModel.COLUMN_NAME])
+        dprint ("Deleting '%s'", model[row][ProfileModel.COLUMN_PATH])
 
-        self.storage.remove (model[row][ProfileModel.COLUMN_NAME])
+        self.storage.remove (model[row][ProfileModel.COLUMN_PATH])
         self.__set_needs_saving (True)
 
     def __handle_key_press (self, treeview, event):
@@ -270,7 +276,7 @@ class ProfileEditorWindow:
         
     def __file_revision_changed (self, cell, tree_path, new_text):
         iter = self.profile_model.get_iter_from_string (tree_path)
-        path = self.profile_model[iter][ProfileModel.COLUMN_NAME]
+        path = self.profile_model[iter][ProfileModel.COLUMN_PATH]
         revisions_model = self.profile_model[iter][ProfileModel.COLUMN_REVISIONS_MODEL]
 
         revision_iter = revisions_model.get_iter_first ()
@@ -286,7 +292,7 @@ class ProfileEditorWindow:
             revision_iter = revisions_model.iter_next (revision_iter)
         
     def __setup_treeview (self):
-        self.profile_model = ProfileModel (self.storage)
+        self.profile_model = ProfileModel (self.profile)
         
         self.treeview = gtk.TreeView (self.profile_model)
         self.treeview.show ()
@@ -298,9 +304,9 @@ class ProfileEditorWindow:
 
         self.treeview.set_headers_visible (False)
 
-        c = gtk.TreeViewColumn (_("Name"),
+        c = gtk.TreeViewColumn (_("Description"),
                                 gtk.CellRendererText (),
-                                text = ProfileModel.COLUMN_NAME)
+                                text = ProfileModel.COLUMN_DESCRIPTION)
         self.treeview.append_column (c)
 
         renderer = gtk.CellRendererCombo ()
@@ -323,6 +329,6 @@ class ProfileEditorWindow:
             self.delete_action.set_sensitive (False)
             return
 
-        dprint ("Selected '%s'", model[row][ProfileModel.COLUMN_NAME])
+        dprint ("Selected '%s'", model[row][ProfileModel.COLUMN_PATH])
 
         self.delete_action.set_sensitive (True)

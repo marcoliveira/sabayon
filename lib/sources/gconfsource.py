@@ -106,6 +106,14 @@ class GConfSource (userprofile.ProfileSource):
         self.defaults_client  = None
         self.mandatory_client = None
 
+    def get_path_description (self, path):
+        if path == ".gconf.xml.defaults":
+            return _("Default GConf settings")
+        elif path == ".gconf.xml.mandatory":
+            return _("Mandatory GConf settings")
+        else:
+            return path
+
     def get_committing_client_and_address (self, mandatory):
         """Get a GConfClient using either .gconf.xml.defaults or
         .gconf.xml.mandatory (in the temporary profile location)

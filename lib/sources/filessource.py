@@ -72,6 +72,20 @@ class FilesSource (userprofile.ProfileSource):
                     dirmonitor.event_to_string (event), rel_path)
             self.emit_change (FilesChange (self, rel_path, event))
 
+    def get_path_description (self, path):
+        if path == ".config/menus/applications.menu":
+            return _("Applications menu")
+        elif path == ".config/menus/preferences.menu":
+            return _("Preferences menu")
+        elif path == ".config/menus/server-settings.menu":
+            return _("Server Settings menu")
+        elif path == ".config/menus/system-settings.menu":
+            return _("System Settings menu")
+        elif path == ".config/menus/start-here.menu":
+            return _("Start Here menu")
+        else:
+            return path
+
     def commit_change (self, change, mandatory = False):
         if userprofile.ProfileSource.commit_change (self, change, mandatory):
             return

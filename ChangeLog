@@ -1,4 +1,24 @@
-2005-03-08  Mark McLoughlin  <mark@skynet.ie>
+2005-03-09  Mark McLoughlin  <markmc@redhat.com>
+	
+	* lib/userprofile.py:
+	(ProfileSource.get_path_description): add stub for
+	sources to implement giving descriptions for their
+	paths.
+	(UserProfile.get_source): lookup a source by name.
+	
+	* lib/sources/filessource.py:
+	(FilesSource.get_path_description): return
+	a description for menu files.
+	
+	* lib/sources/gconfsource.py:
+	(GConfSource.get_path_description): return
+	descriptions for .gconf.xml.defaults and
+	.gconf.xml.mandatory.
+	
+	* admin-tool/editorwindow.py: Display the description
+	for the path rather than the path itself.
+
+2005-03-08  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/storage.py:
 	(ProfileStorage.revert): set the prefix correctly

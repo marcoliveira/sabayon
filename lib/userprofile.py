@@ -191,6 +191,13 @@ class ProfileSource (gobject.GObject):
         """Returns the configuration source's name."""
         return self.name
 
+    def get_path_description (self, path):
+        """Returns a human readable description for @path.
+        @path must have been previously added by the source to the
+        #ProfileStorage.
+        """
+        return path
+
     def emit_change (self, change):
         """Pass @change to all register delegates for this source and
         emit a 'changed' signal with @change if none of the delegates
@@ -270,6 +277,13 @@ class UserProfile (gobject.GObject):
 
     def __handle_source_changed (self, source, change):
         self.emit ("changed", change)
+
+    def get_source (self, source_name):
+        """Return a source named @source_name."""
+        for source in self.sources:
+            if source.get_name () == source_name:
+                return source
+        return None
 
     def start_monitoring (self):
         """Start monitoring for configuration changes."""
