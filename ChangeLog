@@ -1,5 +1,22 @@
 2005-02-13  Seth Nickell  <seth@gnome.org>
 
+	* admin-tool/Makefile.am:
+	* admin-tool/sabayon.desktop.in: 
+
+	Initial .desktop file for Sabayon
+	
+	* admin-tool/sabayon.png: 
+
+	Placeholder icon...10 bonus points if you can tell what it is
+	
+	* admin-tool/sabayon.console:
+	* admin-tool/sabayon.pam:
+
+	consolehelper magic so sabayon can be run from GNOME w/o
+	being root already.
+
+2005-02-13  Seth Nickell  <seth@gnome.org>
+
 	* admin-tool/profilesdialog.py:
 
 	Throw up an explanatory (but not helpful...) error alert if the 
