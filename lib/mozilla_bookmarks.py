@@ -20,6 +20,7 @@
 
 # XXX - TODO:
 # add support for DD tags
+# add support for HR format tags
 
 import sys
 import time
@@ -37,6 +38,7 @@ except:
 debug = 0
 indent = '    '
 
+bookmark_separator = "/"
 TYPE_FOLDER     = 1
 TYPE_BOOKMARK   = 2
 TYPE_FOLDER_END = 3
@@ -112,6 +114,9 @@ class Bookmark:
 
 class BookmarkFolder:
     def __init__(self, name, parent):
+        self.reset(name, parent)
+
+    def reset(self, name, parent):
         self.name = name
         self.parent = parent
         self.attrs = {}
@@ -158,8 +163,6 @@ class BookmarkFolder:
     def _traverse(self, visit_func, path, data):
         assert isinstance(self, BookmarkFolder)
 
-        # XXX - why is causing double visits?
-        #visit_func(self, TYPE_FOLDER, path, data)
         path.append(self)
         for entry in self.entries:
             if isinstance(entry, BookmarkFolder):
@@ -184,18 +187,6 @@ class BookmarkFolder:
             if type == TYPE_BOOKMARK:
                 if entry.name == name:
                     result.append(entry)
-
-        self.traverse(visit)
-        return result
-    
-    def convert_to_dict(self):
-        result = {}
-
-        def visit(entry, type, path, data):
-            if type == TYPE_BOOKMARK:
-                bookmark_path = entry.path_as_names(" -> ")
-                bookmark_url = entry.url()
-                result[bookmark_path] = bookmark_url
 
         self.traverse(visit)
         return result
@@ -257,11 +248,17 @@ class HTMLTag:
         self.data = ""
 
 class BookmarkHTMLParser(HTMLParser):
-    def __init__(self):
+    def __init__(self, root=None):
         HTMLParser.__init__(self)
         self.stack = [HTMLTag("None")]
-        self.folder_root = None
+        self.folder_root = root
         self.cur_folder = self.folder_root
+
+    def set_root(self, root):
+        self.folder_root = root
+
+    def get_root(self):
+        return self.folder_root
 
     def stack_to_string(self):
         return "%s" % [ s.tag for s in self.stack ]
@@ -271,6 +268,7 @@ class BookmarkHTMLParser(HTMLParser):
         while i >= 0:
             if self.stack[i].tag == tag:
                 return self.stack[i]
+            i -= 1
         return None
 
     def implicit_close(self, event, tag):
@@ -344,8 +342,7 @@ class BookmarkHTMLParser(HTMLParser):
                 self.cur_folder = self.cur_folder.add_folder(top.data)
             else:
                 # Tag is h1, must be the root folder
-                assert not self.folder_root and top.tag == 'h1'
-                self.folder_root = BookmarkFolder(top.data, None)
+                self.folder_root.reset(top.data, None)
                 self.cur_folder = self.folder_root
             for attr, value in top.attrs.items():
                 self.cur_folder.attrs[attr] = value
@@ -381,7 +378,7 @@ def visit(entry, type, path, data=None):
     if type == TYPE_FOLDER:
         print "%sFolder: %s(%s) path = [%s]" % (indent*level,
                                                 entry.name[0:max_len],
-                                                data, entry.path_as_names(" -> "))
+                                                data, entry.path_as_names(bookmark_separator))
     elif type == TYPE_BOOKMARK:
         print "%sBookmark: %s" % (indent*(level), entry.name[0:max_len])
     elif type == TYPE_FOLDER_END:
@@ -395,11 +392,14 @@ def visit(entry, type, path, data=None):
 # -----------------------
 
 if __name__ == "__main__":
+    bm_root = []
     bm_file = BookmarkHTMLParser()
+    bm_file.set_root(bm_root)
     bm_file.feed(open('bookmarks.html').read())
     bm_file.close()
 
-    bm_file_1 = BookmarkHTMLParser()
+    bm_root_1 = []
+    bm_file_1 = BookmarkHTMLParser(bm_root_1)
     bm_file_1.feed(open('bookmarks1.html').read())
     bm_file_1.close()
 
@@ -409,14 +409,14 @@ if __name__ == "__main__":
         if bm_list:
             for bm in bm_list:
                 print "found bookmark %s url=%s" % (bm.name, bm.get_attr("href"))
-                print "path = %s" % bm.path_as_names(" -> ")
+                print "path = %s" % bm.path_as_names(bookmark_separator)
         else:
             print "%s not found" % bm_name
 
     if False:
         bm_file.folder_root.traverse(visit)
 
-    if False:
+    if True:
         bm_dict   = bm_file.folder_root.convert_to_dict()
         bm_dict_1 = bm_file_1.folder_root.convert_to_dict()
 
@@ -425,6 +425,6 @@ if __name__ == "__main__":
         cs = dc.get_change_set('a', 'b')
         util.dump_change_set(cs)
 
-    if True:
+    if False:
         bm_file.folder_root.write("tmp_bookmarks.html", exclude_attrs=exclude_attrs)
 

@@ -127,6 +127,8 @@ class MozillaDelegate(userprofile.SourceDelegate):
         self.home_dir = util.get_home_dir()
         self.committed_prefs = {}
         self.committed_mandatory_prefs = {}
+        self.committed_bookmarks = {}
+        self.committed_mandatory_bookmarks = {}
         self.ini_file = None
 
     def get_full_path(self, path):
@@ -179,25 +181,34 @@ class MozillaDelegate(userprofile.SourceDelegate):
             dprint(LOG_CHANGE, "%s profile file: %s",
                    dirmonitor.event_to_string(change.event), rel_path)
 
-            # XXX - jrd, we shouldn't have to create a file just to get its type
             profile_file = profile.add_file(rel_path)
             profile_file_type = profile_file.get_type()
 
             if profile_file_type == FirefoxProfileFile.TYPE_PREFS:
+                assert isinstance(profile_file, JavascriptPrefsFile)
                 if change.event == dirmonitor.CREATED or \
                    change.event == dirmonitor.CHANGED:
-                    if not isinstance(profile_file, JavascriptPrefsFile):
-                        profile_file = profile.add_file(rel_path,JavascriptPrefsFile(self.home_dir, rel_path))
                     cat_file(profile_file.get_full_path())
                     profile_file.read()
                     profile_file.emit_changes(self.source, self.delegate)
                     return True
                 elif change.event == dirmonitor.DELETED:
+                    # XXX - what to do here?
                     pass
                 else:
                     raise ValueError
-            elif profile_file_type != FirefoxProfileFile.TYPE_BOOKMARK:
-                pass
+            elif profile_file_type == FirefoxProfileFile.TYPE_BOOKMARK:
+                assert isinstance(profile_file, BookmarksFile)
+                if change.event == dirmonitor.CREATED or \
+                   change.event == dirmonitor.CHANGED:
+                    profile_file.read()
+                    profile_file.emit_changes(self.source, self.delegate)
+                    return True
+                elif change.event == dirmonitor.DELETED:
+                    # XXX - what to do here?
+                    pass
+                else:
+                    raise ValueError
             elif profile_file_type != FirefoxProfileFile.TYPE_UNKNOWN:
                 if change.event == dirmonitor.CREATED or \
                    change.event == dirmonitor.CHANGED:
@@ -216,17 +227,32 @@ class MozillaDelegate(userprofile.SourceDelegate):
         return True
 
     def commit_change(self, change, mandatory = False):
-        dprint(LOG_CHANGE, "Commiting (mandatory = %s) key = %s value = %s event = %s",
-                mandatory, change.key, change.value, change.event)
+        if isinstance(change, MozillaChange):
+            dprint(LOG_CHANGE, "Commiting preference (mandatory = %s) key = %s value = %s event = %s",
+                   mandatory, change.key, change.value, change.event)
 
-        # XXX - jrd we need to mark here what gets written in sync_changes
-        assert isinstance(change, MozillaChange)
-        if mandatory:
-            self.committed_mandatory_prefs[change.get_key()] = \
-                JavascriptPreference(change.get_type(), change.get_key(), change.get_value())
-        else:
-            self.committed_prefs[change.get_key()] = \
-                JavascriptPreference(change.get_type(), change.get_key(), change.get_value())
+            if mandatory:
+                self.committed_mandatory_prefs[change.get_key()] = \
+                    JavascriptPreference(change.get_type(), change.get_key(), change.get_value())
+            else:
+                self.committed_prefs[change.get_key()] = \
+                    JavascriptPreference(change.get_type(), change.get_key(), change.get_value())
+        elif isinstance(change, BookmarkChange):
+            bookmark_path = change.get_bookmark_path()
+            url = change.get_url()
+
+            if url:
+                object = mozilla_bookmarks.Bookmark(bookmark_path, url)
+            else:
+                object = mozilla_bookmarks.BookmarkFolder(bookmark_path, None)
+
+            dprint(LOG_CHANGE, "Commiting bookmark (mandatory = %s) path = %s url = %s event = %s",
+                   mandatory, bookmark_path, url, change.event)
+
+            if mandatory:
+                self.committed_mandatory_bookmarks[get_bookmark_path] = object
+            else:
+                self.committed_bookmarks[bookmark_path] = object
                 
 
     def start_monitoring (self):
@@ -410,10 +436,17 @@ class FirefoxProfileFile:
      TYPE_BOOKMARK
      ) = range(4)
 
-    def __init__(self, rel_path):
+    def __init__(self, home_dir, rel_path):
+        self.home_dir = home_dir
         self.rel_path = rel_path
         self.attrs = {}
         self.file_type = get_type_from_path(rel_path)
+
+    def get_full_path(self):
+        return os.path.join(self.home_dir, self.rel_path)
+
+    def get_rel_path(self):
+        return self.rel_path
 
     def type_to_string(self, type):
         if type == FirefoxProfileFile.TYPE_UNKNOWN:
@@ -459,15 +492,10 @@ class JavascriptPreference:
 class JavascriptPrefsFile(FirefoxProfileFile):
     def __init__(self, home_dir, rel_path):
         dprint(LOG_OPERATION, "JavascriptPrefsFile: created (%s)", rel_path)
-        FirefoxProfileFile.__init__(self, rel_path)
+        FirefoxProfileFile.__init__(self, home_dir, rel_path)
         self.file_state = file_state.UNKNOWN
-        self.home_dir = home_dir
         self.prefs = {}
         self.prev_prefs = {}
-
-
-    def get_full_path(self):
-        return os.path.join(self.home_dir, self.rel_path)
 
     def get_file_state(self):
         return self.file_state
@@ -554,9 +582,6 @@ class JavascriptPrefsFile(FirefoxProfileFile):
         emit_changes(_del.items(), MozillaChange.DELETED)
         emit_changes(_mod.items(), MozillaChange.CHANGED)
 
-        self.prev_prefs = cur_prefs
-
-
     def kill_comments(self):
         slash_comment_re = re.compile("//.*$", re.MULTILINE)
         hash_comment_re = re.compile("#.*$", re.MULTILINE)
@@ -624,22 +649,22 @@ class FirefoxProfile:
     def get_dir(self):
         return self.get_attr("path")
 
-    def add_file(self, rel_path, object=None):
-        # XXX - jrd, passing object in is ugly & awkward, find more elegant solution
-        if not object:
-            # XXX - funky way to get type
-            file_type = get_type_from_path(rel_path)
-            if file_type == FirefoxProfileFile.TYPE_PREFS:
-                object = FirefoxProfileFile(rel_path)
-            elif file_type == FirefoxProfileFile.TYPE_BOOKMARK:
-                object = BookmarksFile(self.home_dir, rel_path)
-            else:
-                object = FirefoxProfileFile(rel_path)
-            file = self.files.setdefault(rel_path, object)
+    def add_file(self, rel_path):
+        object = self.files.get(rel_path, None)
+        if object:
+            return(object)
+
+
+        file_type = get_type_from_path(rel_path)
+
+        if file_type == FirefoxProfileFile.TYPE_PREFS:
+            object = JavascriptPrefsFile(self.home_dir, rel_path)
+        elif file_type == FirefoxProfileFile.TYPE_BOOKMARK:
+            object = BookmarksFile(self.home_dir, rel_path)
         else:
-            file = object
-            self.files[rel_path] = object
-        return file
+            object = FirefoxProfileFile(self.home_dir, rel_path)
+        self.files[rel_path] = object
+        return object
 
     def del_file(self, rel_path):
         if rel_path in self.files:
@@ -681,11 +706,18 @@ class FirefoxProfilesIni:
         dprint(LOG_OPERATION, "FirefoxProfilesIni.load_profiles()")
         for profile in self.get_profiles():
             profile_rel_dir = profile.get_rel_dir()
+
             pref_rel_path = os.path.join(profile_rel_dir, "prefs.js")
             dprint(LOG_OPERATION, "FirefoxProfilesIni.load_profiles() pref=%s", pref_rel_path)
-            pref = JavascriptPrefsFile(self.home_dir, pref_rel_path)
-            profile.add_file(pref_rel_path, pref)
-            pref.read()
+            profile_file = profile.add_file(pref_rel_path)
+            profile_file.read()
+
+            bookmark_rel_path = os.path.join(profile_rel_dir, "bookmarks.html")
+            dprint(LOG_OPERATION, "FirefoxProfilesIni.load_profiles() bookmark=%s", bookmark_rel_path)
+            profile_file = profile.add_file(bookmark_rel_path)
+            profile_file.read()
+
+
 
     def read(self):
         dprint(LOG_OPERATION, "FirefoxProfilesIni.read() path = %s",
@@ -761,26 +793,143 @@ class FirefoxProfilesIni:
         else:
             return self.profiles.values()
 
+# ------ Class BookmarkChange ------
+
+class BookmarkChange(userprofile.ProfileChange):
+    (
+        CREATED,
+        DELETED,
+        CHANGED
+    ) = range(3)
+    
+    def __init__ (self, source, delegate, bookmark_path, url, event):
+        userprofile.ProfileChange.__init__ (self, source, delegate)
+        
+        assert event == self.CREATED or \
+               event == self.DELETED or \
+               event == self.CHANGED
+        
+        self.bookmark_path   = bookmark_path
+        self.url = url
+        self.event = event
+        self.attrs = {}
+
+    def set_attr(self, attr, value):
+        self.attrs[attr] = value
+
+    def get_attr(self, attr):
+        return self.attrs[attr]
+
+    def get_bookmark_path(self):
+        return self.bookmark_path
+
+    def get_url(self):
+        return self.url
+
+    def get_id(self):
+        return self.bookmark_path
+
+    def get_short_description(self):
+        url = self.get_url()
+        bookmark_path = self.get_bookmark_path()
+        
+        if self.event == self.CREATED:
+            if url:
+                return _("Mozilla bookmark created '%s' -> '%s'") % (bookmark_path, url)
+            else:
+                return _("Mozilla bookmark folder created '%s'") % (bookmark_path)
+        elif self.event == self.DELETED:
+            if url:
+                return _("Mozilla bookmark deleted '%s'") % (bookmark_path)
+            else:
+                return _("Mozilla bookmark folder deleted '%s'") % (bookmark_path)
+        elif self.event == self.CHANGED:
+            if url:
+                return _("Mozilla bookmark changed '%s' '%s'") % (bookmark_path, url)
+            else:
+                return _("Mozilla bookmark folder changed '%s'") % (bookmark_path)
+                
+        else:
+            raise ValueError
+
+gobject.type_register(BookmarkChange)
+
 # ------ Class BookmarksFile ------
 
 class BookmarksFile(FirefoxProfileFile):
     def __init__(self, home_dir, rel_path):
         dprint(LOG_OPERATION, "BookmarksFile: created (%s)", rel_path)
-        FirefoxProfileFile.__init__(self, rel_path)
-        self.home_dir = home_dir
-        self.rel_path = rel_path
+        FirefoxProfileFile.__init__(self, home_dir, rel_path)
         self.parser = mozilla_bookmarks.BookmarkHTMLParser()
+        self.root = mozilla_bookmarks.BookmarkFolder("Null", None)
+        self.parser.set_root(self.root)
+        self.prev_root = self.parser.get_root()
+        self.file_state = file_state.UNKNOWN
+        self.bookmark_separator = "/"
 
-    def get_full_path(self):
-        return os.path.join(self.home_dir, self.rel_path)
-
-    def get_rel_path(self):
-        return self.rel_path
+    def get_folders(self):
+        return self.root
 
     def read(self):
-        self.parser.feed(open(self.get_full_path()).read())
+        self.prev_root = self.parser.get_root()
+        self.root = mozilla_bookmarks.BookmarkFolder("Null", None)
+        self.parser.set_root(self.root)
+        self.file_state = file_state.UNKNOWN
+        full_path = self.get_full_path()
+        dprint(LOG_OPERATION, "BookmarksFile: read (%s)", full_path)
+        try:
+            fd = open(full_path)
+        except IOError, e:
+            if e.errno == errno.ENOENT:
+                self.file_state = file_state.NOT_FOUND
+                return
+            else:
+                self.file_state = file_state.SYS_ERROR
+                raise
+
+        self.file_state = file_state.VALID
+        self.parser.feed(fd.read())
         self.parser.close()
+        self.root = self.parser.get_root()
         
+    def convert_to_dict(self, root):
+        result = {}
+
+        def visit(entry, type, path, data):
+            if type == mozilla_bookmarks.TYPE_BOOKMARK:
+                bookmark_path = entry.path_as_names(self.bookmark_separator)
+                bookmark_url = entry.url()
+                result[bookmark_path] = bookmark_url
+            elif type == mozilla_bookmarks.TYPE_FOLDER:
+                folder_path = entry.path_as_names(self.bookmark_separator)
+                result[folder_path] = None
+
+        root.traverse(visit)
+        return result
+    
+    def emit_changes(self, source, delegate):
+        prev_dict = self.convert_to_dict(self.prev_root)
+        cur_dict  = self.convert_to_dict(self.root)
+
+        dc = util.DictCompare(prev_dict, cur_dict)
+        dc.compare()
+        cs = dc.get_change_set('a', 'b')
+
+        _add = cs['add']
+        _del = cs['del']
+        _mod = cs['mod']
+
+        def emit_changes(items, event):
+            for bookmark_path, bookmark_url in items:
+                source.emit_change(
+                    BookmarkChange(source, delegate,
+                                  bookmark_path, bookmark_url, event))
+
+        emit_changes(_add.items(), BookmarkChange.CREATED)
+        emit_changes(_del.items(), BookmarkChange.DELETED)
+        emit_changes(_mod.items(), BookmarkChange.CHANGED)
+
+
 # ------ Utility Functions ------
 
 def get_type_from_path(rel_path):
