@@ -5,7 +5,7 @@ PYTHON_FILES =				\
 	paneldelegate.py
 
 NOINST_PYTHON_FILES =			\
-	testmodule.py
+	testsource.py
 
 EXTRA_DIST =				\
 	$(PYTHON_FILES)			\
