@@ -1,3 +1,16 @@
+2005-03-14  William Lachance <wrlach@gmail.com>
+
+	* configure.ac: Not finding xnest should be a warning, not an error. 
+	Check for distro, and set path to Xsession accordingly (bug #168123).
+
+	* lib/config.py.in: Don't hard code Xsession, make it a build-time
+	option.
+
+	* lib/Makefile.am: Substitute the Xsession variable appropriately.
+
+	* lib/storage.py: Actually give the filename that's not found upon
+	a ProfileStorageException.
+
 2005-03-14  John Dennis  <jdennis@redhat.com>
 
 	* rework mozillasource so code and class structure better supports

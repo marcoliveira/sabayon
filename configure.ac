@@ -17,6 +17,34 @@ ALL_LINGUAS="bg cs de el en_CA en_GB nb no pt_BR sv zh_CN"
 AM_GLIB_GNU_GETTEXT
 
 
+AC_ARG_WITH(distro, AC_HELP_STRING([--with-distro=DISTRO], [Specify the Linux distribution to target: One of redhat or debian]))
+if test "z$with_distro" = "z"; then
+	AC_CHECK_FILE(/etc/redhat-release,with_distro="redhat")
+	AC_CHECK_FILE(/etc/fedora-release,with_distro="redhat")
+	AC_CHECK_FILE(/etc/debian_version,with_distro="debian")
+fi
+with_distro=`echo ${with_distro} | tr '[[:upper:]]' '[[:lower:]]' `
+
+if test "z$with_distro" = "z"; then
+	echo "Linux distribution autodetection failed, you must specify the distribution to target using --with-distro=DISTRO"
+	exit 1
+else
+	case $with_distro in
+		redhat) 
+			XSESSION="/etc/X11/xdm/Xsession"
+			;;
+		debian) 
+			XSESSION="/etc/gdm/Xsession"
+			;;
+		*)
+			echo "Your distribution (${with_distro}) is not yet supported!  (patches welcome)"
+			exit 1
+			;;
+	esac
+fi
+AC_SUBST(XSESSION)
+
+
 AC_ARG_ENABLE(console-helper,
   [  --enable-console-helper=[auto/no/yes]  Enable PAM console helper [default=auto]],,
   enable_console_helper=auto)
@@ -85,7 +113,7 @@ fi
 
 AC_CHECK_PROG(XNEST,Xnest,yes,no)
 if test "x$XNEST" = "xno" ; then
-  AC_MSG_ERROR(xnest binary not found)
+  AC_MSG_WARN(xnest binary not found)
 fi
 
 EXPANDED_SABAYON_DIR=`eval echo $SABAYON_DIR_TMP`

@@ -39,4 +39,5 @@ config.py: config.py.in Makefile
                 -e s!\@SYSCONFDIR\@!$(sysconfdir)!		\
                 -e s!\@PACKAGE_NAME\@!$(PACKAGE_NAME)!		\
                 -e s!\@PACKAGE_VERSION\@!$(PACKAGE_VERSION)!	\
+		-e s!\@XSESSION\@!$(XSESSION)!			\
                 < $< > $@

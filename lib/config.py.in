@@ -54,7 +54,7 @@ NOLOGIN_SHELL = "/sbin/nologin"
 SKEL_HOMEDIR  = "/etc/skel"
 
 XNEST_ARGV   = [ "/usr/X11R6/bin/Xnest", "-terminate", "-audit", "0", "-nolisten", "tcp" ]
-SESSION_ARGV = [ "/etc/X11/xdm/Xsession", "gnome" ]
+SESSION_ARGV = [ "@XSESSION@", "gnome" ]
 USERMOD_ARGV = [ "/usr/sbin/usermod" ]
 
 PANEL_KEY_BASE = "/apps/panel"
