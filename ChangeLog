@@ -1,3 +1,20 @@
+2005-03-11  Mark McLoughlin  <markmc@redhat.com>
+
+	* lib/userprofile.py:
+	(SourceDelegate.sync_changes),
+	(SourceDelegate.apply): add stubs for these delegate
+	methods.
+	(UserProfile.apply): invoke sync_changes() on each
+	of the delegates after invoking it on the source.
+	
+	* lib/sources/mozillasource.py:
+	(MozillaDelegate.sync_changes),
+	(MozillaDelegate.commit_change),
+	(MozillaDelegate.apply): add empty stubs.
+	
+	* lib/sources/paneldelegate.py:
+	(PanelDelegate.sync_changes): add empty stub.
+
 Thu Mar 10 16:39:38 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* doc/site.xsl doc/*.html: updated the source tarball download link

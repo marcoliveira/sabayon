@@ -168,6 +168,14 @@ class SourceDelegate:
         """
         raise Exception ("Not implemented")
 
+    def sync_changes (self):
+        """Save all committed changes to disk."""
+        raise Exception ("Not implemented")
+
+    def apply (self):
+        """Apply profile to the current user's environment."""
+        raise Exception ("Not implemented")
+    
 class ProfileSource (gobject.GObject):
     """An abstract base class which each configuration source must
     implement."""
@@ -301,6 +309,8 @@ class UserProfile (gobject.GObject):
         """Save all committed changes to disk."""
         dprint ("Syncing all committed changes to disk")
         for s in self.sources:
+            for delegate in s.delegates:
+                delegate.sync_changes ()
             s.sync_changes ()
         self.storage.save ()
 

@@ -300,6 +300,10 @@ class PanelDelegate (userprofile.SourceDelegate):
                                           "object_id_list",
                                           "objects")
 
+    def sync_changes (self):
+        # Nothing to do here
+        pass
+    
     def apply (self):
         # Nothing to do here
         pass

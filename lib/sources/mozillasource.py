@@ -168,6 +168,14 @@ class MozillaDelegate (userprofile.SourceDelegate):
 
         return True
 
+    def commit_change (self, change, mandatory = False):
+        # XXX - implement
+        pass
+    
+    def sync_changes (self):
+        # XXX - implement
+        pass
+
     def apply (self):
         # XXX - what is this supposed to do? Why is a delegate applying anything?
         pass
