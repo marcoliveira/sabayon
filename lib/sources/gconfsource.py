@@ -221,9 +221,9 @@ def run_unit_tests ():
 
     temp_path = tempfile.mkdtemp (prefix = "test-gconfprofile-")
 
-    profile_storage = storage.ProfileStorage("GConfTest.zip")
+    profile_storage = storage.ProfileStorage("GConfTest.zip", temp_path)
     try:
-	profile_storage.install(temp_path)
+	profile_storage.install()
     except:
         pass
     source = get_source (profile_storage)

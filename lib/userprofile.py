@@ -252,9 +252,9 @@ class UserProfile (gobject.GObject):
         #
 	# Open the user settings packages and try to install them
 	#
-	self.profile_storage = storage.ProfileStorage (profile_file)
+	self.profile_storage = storage.ProfileStorage (profile_file, profile_path)
 	try:
-	    profile_storage.install (profile_path)
+	    profile_storage.install ()
 	except:
 	    # FIXME: the file doesn't exist or there is a problem this
 	    #        should be reported at the UI level
@@ -285,6 +285,7 @@ class UserProfile (gobject.GObject):
         """Save all committed changes to disk."""
         for s in self.sources:
             s.sync_changes ()
+        self.profile_storage.update_all ("")
 
     def apply (self):
         """Apply profile to the current user's environment."""

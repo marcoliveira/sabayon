@@ -25,7 +25,14 @@ class GeneralError (Exception):
     def __init__ (self, msg):
         Exception.__init__ (self, msg)
 
+unit_tests_homedir = None
+def set_home_dir_for_unit_tests (homedir):
+    global unit_tests_homedir
+    unit_tests_homedir = homedir
+
 def get_home_dir ():
+    if unit_tests_homedir:
+        return unit_tests_homedir
     try:
         pw = pwd.getpwuid (os.getuid ())
         if pw.pw_dir != "":
@@ -57,5 +64,10 @@ def print_exception ():
     traceback.print_exc(file=sys.stderr)
 
 def run_unit_tests ():
-    assert get_home_dir () != ""
+    home_dir = get_home_dir ()
+    assert home_dir != ""
     assert get_user_name () != ""
+    set_home_dir_for_unit_tests ("foo")
+    assert get_home_dir () == "foo"
+    set_home_dir_for_unit_tests (None)
+    assert get_home_dir () == home_dir

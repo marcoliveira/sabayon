@@ -1,5 +1,41 @@
 2005-02-02  Mark McLoughlin  <mark@skynet.ie>
 
+	* README: add bit about bug #154779
+	
+	* lib/storage.py:
+	(print_exception): remove, unused.
+	(ProfileStorage.__init__): add directory to constructor.
+	Doesn't make sense for it to default to the home directory.
+	(ProfileStorage.__get_metadata_description): accessor
+	for description.
+	(ProfileStorage.__get_file_info): build the tuple to be
+	returned from update_all(), info_all() and install()
+	(ProfileStorage.__get_asb_filename): rename to
+	__get_abs_filename()
+	(ProfileStorage.update_all): allow for a file that was
+	added after installation.
+	(run_unit_tests): re-work so we don't use the home dir,
+	not spew debugging, test things a bit more and crap out
+	if something fails
+	
+	* lib/README.storage: update.
+	
+	* lib/sources/filessource.py: lots of fixing, commiting 
+	and applying work now.
+	
+	* lib/sources/gconfsource.py: update for ProfileStorage
+	changes.
+	
+	* lib/userprofile.py:
+	(UserProfile.__init__): update for storage changes.
+	(UserProfile.sync_changes): sync storage to disk.
+	
+	* lib/util.py:
+	(set_home_dir_for_unit_tests): add to make writing
+	unit tests easier.
+
+2005-02-02  Mark McLoughlin  <mark@skynet.ie>
+
 	* lib/unittests.py: over-engineer the test harness
 	to make it easier to selectively run certain tests
 	i.e. "./unittests.py util storage filessource" just

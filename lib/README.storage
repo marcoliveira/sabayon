@@ -6,7 +6,7 @@
 packages, i.e. containers for files with configuration options.
 
  The main interfaces are the following:
-   - ProfileStorage(filename):
+   - ProfileStorage(filename, directory):
      opens or create an object containing configuration options.
      If the file pointed to by filename does not exist, then it is
      assumed a new package is to be created.

@@ -51,14 +51,15 @@ def _safe_copy_file (file, srcdir, dstdir, force = False):
     files/directories are present.
     """
     #
-    # FIXME: handle @force
     # FIXME: lots of error conditions being ignored here
     #
     dir = dstdir + "/" + os.path.dirname (file)
     if not os.access (dir, os.F_OK):
         os.makedirs (dir)
-    shutil.copyfile (srcdir + "/" + file,
-                     dstdir + "/" + file)
+
+    if not os.path.exists (dstdir + "/" + file) or force:
+        shutil.copyfile (srcdir + "/" + file,
+                         dstdir + "/" + file)
     
 class FilesSource (userprofile.ProfileSource):
     def __init__ (self, profile_storage):
@@ -71,20 +72,22 @@ class FilesSource (userprofile.ProfileSource):
     def __handle_monitor_event (self, path, event):
         if os.path.isfile (path):
             self.emit_change (FilesChange (self, path, event))
-	# TODO: register the file in the profile storage using 
-	#       self.profile_storage.add_file()
 
     def commit_change (self, change, mandatory = False):
-        #
-        # FIXME: handle mandatory
         # FIXME: sanity check input (e.g. is change actually in homedir/?)
-	# TODO: save change to the profile_storage using 
-	#       self.profile_storage.update_all()
-        #
-        _safe_copy_file (change.get_name ()[len (self.home_dir):],
+        rel_path = change.get_name ()[len (self.home_dir):].lstrip ("/")
+
+        _safe_copy_file (rel_path,
                          self.home_dir,
-                         self.profile_storage.get_directory(),
+                         self.profile_storage.get_directory (),
                          True)
+
+        if mandatory:
+            metadata = "mandatory"
+        else:
+            metadata = "default"
+
+        self.profile_storage.add_file (rel_path, self.get_name (), metadata)
         
     def start_monitoring (self):
         self.monitor.start ()
@@ -97,10 +100,19 @@ class FilesSource (userprofile.ProfileSource):
         pass
     
     def apply (self):
-        # FIXME: need to know the list of files and whether they are
-        #        mandatory/defaults. The just use _safe_copy_file()
-        #        to copy them over to self.profile_path
-        pass
+        for (file, handler, description) in self.profile_storage.info_all ():
+            if handler != self.get_name ():
+                continue
+            
+            if description == "mandatory":
+                mandatory = True
+            else:
+                mandatory = False
+            
+            _safe_copy_file (file,
+                             self.profile_storage.get_directory (),
+                             self.home_dir,
+                             mandatory)
 
 gobject.type_register (FilesSource)
     
@@ -114,12 +126,13 @@ def run_unit_tests ():
     import gobject
     import tempfile
 
-    old_homedir = os.environ["HOME"]
+    real_homedir = util.get_home_dir ()
     
-    temp_path = tempfile.mkdtemp (dir = util.get_home_dir (),
+    temp_path = tempfile.mkdtemp (dir = real_homedir,
                                   prefix = ".test-filesprofile-")
-    os.environ["HOME"] = temp_path
     profile_path = tempfile.mkdtemp (prefix = "test-filesprofile-")
+
+    util.set_home_dir_for_unit_tests (temp_path)
 
     def handle_change (source, change, data):
         (temp_path, main_loop) = data
@@ -136,9 +149,9 @@ def run_unit_tests ():
         return True
     timeout = gobject.timeout_add (60 * 1000, should_not_be_reached)
     
-    profile_storage = storage.ProfileStorage("FileTest.zip")
+    profile_storage = storage.ProfileStorage ("FileTest.zip", profile_path)
     try:
-	profile_storage.install(profile_path)
+	profile_storage.install ()
     except:
         pass
     source = get_source (profile_storage)
@@ -156,10 +169,37 @@ def run_unit_tests ():
 
     assert os.access (profile_path + "/foobar/foo/bar/foo/bar" + "/foo", os.F_OK)
 
+    profile_storage.update_all ("")
+
     shutil.rmtree (temp_path, True)
     shutil.rmtree (profile_path, True)
 
     gobject.source_remove (timeout)
 
-    os.environ["HOME"] = old_homedir
+    temp_path = tempfile.mkdtemp (dir = real_homedir,
+                                  prefix = ".test-filesprofile-")
+    profile_path = tempfile.mkdtemp (prefix = "test-filesprofile-")
+    util.set_home_dir_for_unit_tests (temp_path)
+    
+    profile_storage = storage.ProfileStorage ("FileTest.zip", profile_path)
+    try:
+	profile_storage.install ()
+    except:
+        pass
+
+    assert os.access (profile_path + "/foobar/foo/bar/foo/bar" + "/foo", os.F_OK)
+    
+    source = get_source (profile_storage)
+    source.apply ()
+    
+    assert os.access (temp_path + "/foobar/foo/bar/foo/bar" + "/foo", os.F_OK)
+    
+    shutil.rmtree (temp_path, True)
+    shutil.rmtree (profile_path, True)
+
+    os.remove ("FileTest.zip")
+    if os.path.exists ("FileTest.zip.bak"):
+        os.remove ("FileTest.zip.bak")
+    
+    util.set_home_dir_for_unit_tests (None)
 

@@ -29,9 +29,6 @@ import util
 
 verbose = 0
 
-def print_exception():
-    print sys.exc_type, sys.exc_value
-
 class ProfileStorageException(Exception):
     def __init__(self, value):
         Exception.__init__(self)
@@ -41,7 +38,7 @@ class ProfileStorageException(Exception):
         return repr(self.value)
 
 class ProfileStorage:
-    def __init__ (self, filename = None):
+    def __init__ (self, filename, directory):
         if verbose:
 	    print "init", filename
         self.exists = 0
@@ -51,7 +48,7 @@ class ProfileStorage:
 	self.zipfile = None
 	self.filename = filename
 	self.filelist = None
-	self.directory = util.get_home_dir()
+	self.directory = directory
         if filename != None:
 	    try:
 	        os.stat(filename)
@@ -179,6 +176,19 @@ class ProfileStorage:
 	    handler = ""
 	return handler
 
+    def __get_metadata_description(self, file):
+        try:
+	    description = self.doc.xpathEval(
+	       "string(/metadata/files/file[@name='%s']/description)" % file)
+	except:
+	    description = ""
+	return description
+
+    def __get_file_info(self, file):
+        return (file,
+                self.__get_metadata_handler(file),
+                self.__get_metadata_description(file))
+
     def __read_filelist(self):
         if self.filelist != None:
 	    return self.filelist
@@ -190,7 +200,7 @@ class ProfileStorage:
 			self.filelist.append(info.filename)
 	return self.filelist
         
-    def __get_asb_filename(self, directory, path):
+    def __get_abs_filename(self, directory, path):
         return os.path.join(os.path.abspath(directory), path)
         
     #
@@ -243,7 +253,7 @@ class ProfileStorage:
 	# TODO: check for filesystem space left on the device.
 	#
         for file in self.__read_filelist():
-	    target = self.__get_asb_filename(directory, file)
+	    target = self.__get_abs_filename(directory, file)
 	    tardir = os.path.dirname(target)
 	    if not os.path.isdir(tardir):
 	        if os.path.exists(tardir):
@@ -260,7 +270,7 @@ class ProfileStorage:
 		raise ProfileStorageException("File %s is not writable" % (target))
 	
 	for file in self.__read_filelist():
-	    target = self.__get_asb_filename(directory, file)
+	    target = self.__get_abs_filename(directory, file)
 	    tardir = os.path.dirname(target)
 	    data = self.zipfile.read(file)
 	    if verbose:
@@ -274,7 +284,7 @@ class ProfileStorage:
 		f.close()
 	    except:
 		raise ProfileStorageException("Failed to write to %s" % (target))
-	    res.append((file, self.__get_metadata_handler(file)))
+	    res.append(self.__get_file_info(file))
 	    
 	self.installed = 1
         return res     
@@ -289,7 +299,7 @@ class ProfileStorage:
     def info_all(self):
         res = []
         for file in self.__read_filelist():
-	    res.append((file, self.__get_metadata_handler(file)))
+	    res.append(self.__get_file_info(file))
 
 	return res
 	    
@@ -319,12 +329,16 @@ class ProfileStorage:
 	#
         if self.installed:
 	    for file in self.__read_filelist():
-		target = self.__get_asb_filename(directory, file)
+		target = self.__get_abs_filename(directory, file)
 		if os.path.exists(target):
 		    try:
 			olddata = self.zipfile.read(file)
+                    except:
+                        olddata = None
+                    
+                    try:
 			data = open(target, "r").read()
-			if olddata != data:
+			if not olddata or olddata != data:
 			    modified.append((file, data))
 			else:
 			    identical.append((file, data))
@@ -382,7 +396,7 @@ class ProfileStorage:
 		if verbose:
 		    print "Updating %s" % (file)
 		self.zipfile.writestr(file, data)
-		res.append((file, self.__get_metadata_handler(file)))
+		res.append(self.__get_file_info(file))
         else:
 	    if self.zipfile != None:
 	        self.zipfile.close()
@@ -398,16 +412,16 @@ class ProfileStorage:
 					      self.filename)
 	    
 	    for file in self.__read_filelist():
-		target = self.__get_asb_filename(directory, file)
+		target = self.__get_abs_filename(directory, file)
 		if os.path.exists(target):
 		    try:
 			data = open(target, "r").read()
 			if verbose:
 			    print "Updating %s" % (file)
 			self.zipfile.writestr(file, data)
-			res.append((file, self.__get_metadata_handler(file)))
+			res.append(self.__get_file_info(file))
 		    except:
-			res.append((file, 'error'))
+			res.append(self.__get_file_info(file))
 		else:
 		    res.append((file, 'missing'))
         #
@@ -418,56 +432,66 @@ class ProfileStorage:
         return res
         
 def run_unit_tests():
+    import tempfile
+    import shutil
+    
     #
     # First test create a new config file from scratch
     #
-    try:
-        os.unlink('tst.zip');
-    except:
-        pass
-    print "Creating new profile foo.zip"
-    prof = ProfileStorage('tst.zip');
-    open(util.get_home_dir() + "/config1.test", "w").write("new test file 1")
-    open(util.get_home_dir() + "/config2.test", "w").write("new test file 2")
-    prof.add_file('config1.test', None, "First config test file")
-    prof.add_file('config2.test', None, "Second config test file")
+
+    if os.path.exists("storage-test.zip"):
+        os.remove("storage-test.zip")
+
+    temp_path = tempfile.mkdtemp(prefix = ".test-storage-")
+    
+    prof = ProfileStorage('storage-test.zip', temp_path);
+    open(temp_path + "/config1.test", "w").write("new test file 1")
+    open(temp_path + "/config2.test", "w").write("new test file 2")
+    prof.add_file('config1.test', "Foo Handler", "First config test file")
+    prof.add_file('config2.test', "Bar Handler", "Second config test file")
     list = prof.update_all("first save");
-    print "Added: ", list
+
+    assert os.path.exists("storage-test.zip")
+
+    shutil.rmtree(temp_path)
+    temp_path = tempfile.mkdtemp(prefix = ".test-storage-")
 
     #
     # Second test install an existing profile, modify one resource
     # and update it
     #
-    prof = ProfileStorage('tst.zip');
-    print "Trying to install tst.zip"
-    try:
-	list = prof.install()
-	print "Installed:", list
-	try:
-	    (name, handler) = list[0]
-	    home = util.get_home_dir()
-	    file = home + '/' + name
-	    try:
-		f = open(file, "w")
-		f.write(time.ctime(time.time()))
-		f.close()
-		print "modified %s" % (file)
-	    except:
-	        print_exception()
-		print "failed to modify %s" % (file)
-	except:
-	    pass
-	    
-	try:
-	    print "Update tst.zip"
-	    list = prof.update_all("test update")
-	    print "Update list:", list
-	except:
-	    print_exception()
-	    print "failed to update tst.zip"
-    except:
-        print "failed to install tst.zip"
+    prof = ProfileStorage('storage-test.zip', temp_path);
+    list = prof.install()
 
+    assert os.path.exists(temp_path + "/config1.test")
+    assert os.path.exists(temp_path + "/config2.test")
+
+    (name, handler, description) = list[0]
+    assert name == "config1.test"
+    assert handler == "Foo Handler"
+    assert description == "First config test file"
+    
+    (name, handler, description) = list[1]
+    assert name == "config2.test"
+    assert handler == "Bar Handler"
+    assert description == "Second config test file"
+    
+    file = temp_path + '/' + name
+    f = open(file, "w")
+    f.write(time.ctime(time.time()))
+    f.close()
+	    
+    list = prof.update_all("test update")
+    
+    (name, handler, description) = list[0]
+    assert name == "config2.test"
+    assert handler == "Bar Handler"
+    assert description == "Second config test file"
+    
+    os.remove("storage-test.zip")
+    os.remove("storage-test.zip.bak")
+
+    shutil.rmtree(temp_path)
 
 if __name__ == '__main__':
     run_unit_tests()
