@@ -1,5 +1,12 @@
 2005-02-17  Mark McLoughlin  <markmc@redhat.com>
 
+	* lib/protosession.py: clobber all process running
+	as the prototype user before starting the new session.
+	
+	* lib/config.py.in: add CLOBBER_USER_PROCESSES
+
+2005-02-17  Mark McLoughlin  <markmc@redhat.com>
+
 	* lib/sources/gconfsource.py:
 	(GConfSource.sync): recursively add all the files
 	in the GConf database to the ProfileStorage.

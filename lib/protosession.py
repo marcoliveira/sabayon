@@ -506,6 +506,11 @@ class ProtoSession (gobject.GObject):
         # Set the shell to a runnable one and create an empty homedir
 	self.__setup_shell_and_homedir()
 
+        # FIXME: my, what a big hammer you have!
+        argv = CLOBBER_USER_PROCESSES_ARGV + [ self.user_pw.pw_name ]
+        dprint ("Clobbering existing processes running as user '%s': %s" % (self.user_pw.pw_name, argv))
+        os.spawnv (os.P_WAIT, argv[0], argv)
+        
         # Get an X server going
         self.__start_xnest ()
 
