@@ -184,9 +184,9 @@ class ProfilesDialog:
             self.dialog.set_sensitive (False)
 
             # FIXME: shouldn't be hardcoded user name
-            argv = [ "sabayon-session", "protouser", _get_profile_path_for_name (profile_name) ]
+            argv = [ SESSION_TOOL_PATH, "protouser", _get_profile_path_for_name (profile_name) ]
 
-            os.spawnvp (os.P_WAIT, argv[0], argv)
+            os.spawnv (os.P_WAIT, argv[0], argv)
             
             self.dialog.set_sensitive (True)
 

@@ -1,5 +1,11 @@
 2005-02-09  Mark McLoughlin  <markmc@redhat.com>
 
+	* lib/config.py.in: add path to sabayon-session.
+	
+	* admin-tool/profilesdialog.py: use it.
+
+2005-02-09  Mark McLoughlin  <markmc@redhat.com>
+
 	* lib/Makefile.am,
 	  lib/config.py.in: sabayon-monitor is currently
 	installed in sbindir, not bindir.
