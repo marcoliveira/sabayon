@@ -484,12 +484,29 @@ class ProtoSession (gobject.GObject):
         self.admin_tool_timeout = 0
         return False
 
+    def __set_shell(self):
+        command = USERMOD + ' -s ' + USERSHELL + ' ' + self.username
+        dprint ("User shell: %s" % (command))
+	os.system(command)
+        
+    def __reset_shell(self):
+        command = USERMOD + ' -s ' + '/sbin/nologin' + ' ' + self.username
+        dprint ("User shell: %s" % (command))
+	os.system(command)
+        
     def start (self):
         # Get an X server going
         self.__start_xnest ()
 
-        # Start the session as the prototype user
-        self.__start_session ()
+	# Set user shell to runnable
+	self.__set_shell()
+
+        try:
+	    # Start the session as the prototype user
+	    self.__start_session ()
+	finally:
+	    # Reset user shell to nologin
+	    self.__reset_shell ()
 
     def force_quit (self):
         self.__kill_admin_tool ()

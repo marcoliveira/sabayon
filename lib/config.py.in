@@ -22,6 +22,8 @@ import os.path
 
 PKGDATADIR  = "@PKGDATADIR@"
 PROFILESDIR = "@SYSCONFDIR@/desktop-profiles"
+USERSHELL   = "/bin/bash"
+USERMOD     = "/usr/sbin/usermod"
 
 DEFAULT_PATH = "/usr/local/bin:/usr/bin:/bin:/usr/X11R6/bin"
 
