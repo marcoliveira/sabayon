@@ -4,6 +4,7 @@ PYTHON_FILES =				\
 	sabayon-monitor.py		\
 	sabayon-session.py		\
 	monitorwindow.py		\
+	editorwindow.py			\
 	profilesdialog.py		\
 	aboutdialog.py
 

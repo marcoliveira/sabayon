@@ -29,6 +29,7 @@ import gtk
 import gtk.glade
 import storage
 import protosession
+import editorwindow
 import util
 from config import *
 
@@ -136,6 +137,10 @@ class ProfilesDialog:
         self.__fix_button_align (self.edit_button)
         self.edit_button.connect ("clicked", self.__edit_button_clicked)
         
+        self.properties_button = self.xml.get_widget ("properties_button")
+        self.__fix_button_align (self.properties_button)
+        self.properties_button.connect ("clicked", self.__properties_button_clicked)
+        
         self.delete_button = self.xml.get_widget ("delete_button")
         self.__fix_button_align (self.delete_button)
         self.delete_button.connect ("clicked", self.__delete_button_clicked)
@@ -239,6 +244,11 @@ class ProfilesDialog:
 
             self.__copy_from_user (user_path, profile_path)
 
+    def __properties_button_clicked (self, button):
+        profile_name = self.__get_selected_profile ()
+        if profile_name:
+            editorwindow.ProfileEditorWindow (profile_name, self.dialog)
+
     def __delete_button_clicked (self, button):
         profile_name = self.__get_selected_profile ()
         if profile_name:
@@ -264,4 +274,5 @@ class ProfilesDialog:
     def __profile_selection_changed (self, selection):
         profile_name = self.__get_selected_profile ()
         self.edit_button.set_sensitive (profile_name != None)
+        self.properties_button.set_sensitive (profile_name != None)
         self.delete_button.set_sensitive (profile_name != None)

@@ -1,5 +1,19 @@
 2005-03-02  Mark McLoughlin  <markmc@redhat.com>
 
+	* admin-tool/editorwindow.py: add a silly little
+	placeholder viewer for the contents of the profile.
+	Lots more work to be done here.
+	
+	* admin-tool/profilesdialog.py: add a "Properties"
+	button and hook up the editor window.
+	
+	* admin-tool/sabayon.glade: add the properties button
+	and the editor window.
+	
+	* admin-tool/Makefile.am: add editorwindow.py
+
+2005-03-02  Mark McLoughlin  <markmc@redhat.com>
+
 	* admin-tool/monitorwindow.py: move about dialog
 	stuff to
 	
