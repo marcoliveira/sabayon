@@ -26,18 +26,20 @@ import pwd
     DEBUG_USERPROFILE,
     DEBUG_STORAGE,
     DEBUG_PROTOSESSION,
+    DEBUG_USERMOD,
     DEBUG_DIRMONITOR,
     DEBUG_GCONFSOURCE,
     DEBUG_PANELDELEGATE,
     DEBUG_FILESSOURCE,
     DEBUG_MOZILLASOURCE,
     DEBUG_ADMINTOOL
-) = range (9)
+) = range (10)
 
 debug_modules = {
     DEBUG_USERPROFILE   : ("user-profile",   False),
     DEBUG_STORAGE       : ("storage",        False),
     DEBUG_PROTOSESSION  : ("proto-session",  False),
+    DEBUG_USERMOD       : ("usermod",        False),
     DEBUG_DIRMONITOR    : ("dir-monitor",    False),
     DEBUG_GCONFSOURCE   : ("gconf-source",   False),
     DEBUG_PANELDELEGATE : ("panel-delegate", False),

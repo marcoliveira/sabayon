@@ -78,7 +78,7 @@ class DirectoryMonitor:
     #
     # Called from the main loop when we have data
     #
-    def __pending_data (self, foo = None, bar = None):
+    def __pending_data (self, fd, condition):
 	try:
 	    ret = self.mon.handle_events ()
 	except:
@@ -167,7 +167,7 @@ class DirectoryMonitor:
 	    pass
 	self.fd = self.mon.get_fd ()
 	self.io_watch = gobject.io_add_watch (self.fd,
-                                              gobject.IO_IN,
+                                              gobject.IO_IN|gobject.IO_PRI,
                                               self.__pending_data)
         self.__monitor_dir (self.directory)
         self.__monitor_dir_recurse (self.directory)

@@ -22,16 +22,20 @@ import os.path
 
 PKGDATADIR  = "@PKGDATADIR@"
 PROFILESDIR = "@SYSCONFDIR@/desktop-profiles"
-USERSHELL   = "/bin/bash"
-USERMOD     = "/usr/sbin/usermod"
-
-DEFAULT_PATH = "/usr/local/bin:/usr/bin:/bin:/usr/X11R6/bin"
 
 SESSION_TOOL_ARGV = [ "@LIBEXECDIR@/sabayon-session" ]
-MONITOR_TOOL_ARGV = [ "@LIBEXECDIR@/sabayon-monitor" ]
-APPLY_TOOL_ARGV   = [ "@SBINDIR@/sabayon-apply" ]
-XNEST_ARGV        = [ "/usr/X11R6/bin/Xnest", "-terminate", "-audit", "0", "-name", "Xnest", "-nolisten", "tcp" ]
-SESSION_ARGV      = [ "/etc/X11/xdm/Xsession", "gnome" ]
+#MONITOR_TOOL_ARGV = [ "@LIBEXECDIR@/sabayon-monitor" ]
+MONITOR_TOOL_ARGV = [ "/home/markmc/bin/jhbuild", "-f", "/home/markmc/.jhbuildrc", "run", "@LIBEXECDIR@/sabayon-monitor" ]
+#APPLY_TOOL_ARGV = [ "@LIBEXECDIR@/sabayon-monitor" ]
+APPLY_TOOL_ARGV = [ "/home/markmc/bin/jhbuild", "-f", "/home/markmc/.jhbuildrc", "run", "@SBINDIR@/sabayon-apply" ]
+
+DEFAULT_PATH  = "/usr/local/bin:/usr/bin:/bin:/usr/X11R6/bin"
+DEFAULT_SHELL = "/bin/bash"
+NOLOGIN_SHELL = "/sbin/nologin"
+
+XNEST_ARGV   = [ "/usr/X11R6/bin/Xnest", "-terminate", "-audit", "0", "-name", "Xnest", "-nolisten", "tcp" ]
+SESSION_ARGV = [ "/etc/X11/xdm/Xsession", "gnome" ]
+USERMOD_ARGV = [ "/usr/sbin/usermod" ]
 
 PANEL_KEY_BASE = "/apps/panel"
 # PANEL_KEY_BASE = "/apps/panel/profiles/default"

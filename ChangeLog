@@ -1,3 +1,22 @@
+2005-02-16  Mark McLoughlin  <markmc@redhat.com>
+
+	* lib/protosession.py: create a temporary homedir
+	before starting the session and delete it after.
+	
+	* lib/usermod.py:
+	(set_shell), (set_homedir): split these out
+	into their own module. We'll prolly need to
+	implement them differently for other distros.
+
+	* lib/Makefile.am: add usermod.py.
+	
+	* lib/util.py: add usermod debugging.
+	
+	* lib/config.py.in: re-name/re-organize a few things.
+	
+	* lib/dirmonitor.py: add IO_PRI to the io_watch and
+	fill in the other arguments in the callback.
+
 2005-02-15  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/sources/paneldelegate.py: fix typo.

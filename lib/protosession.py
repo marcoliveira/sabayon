@@ -29,8 +29,10 @@ import commands
 import binascii
 import struct
 import tempfile
+import shutil
 import gobject
 import util
+import usermod
 import userprofile
 from config import *
 
@@ -80,6 +82,13 @@ class ProtoSession (gobject.GObject):
         self.admin_tool_pid = 0
         self.admin_tool_child_watch = 0
 
+        try:
+            pw = pwd.getpwnam (self.username)
+        except KeyError:
+            raise SessionStartError, "User '%s' does not exist" % self.username
+
+        self.user_pw = pw
+        
     def __kill_xnest (self):
         if self.xnest_child_watch:
             gobject.source_remove (self.xnest_child_watch)
@@ -382,7 +391,7 @@ class ProtoSession (gobject.GObject):
         os.setgid (self.user_pw.pw_gid)
         os.setuid (self.user_pw.pw_uid)
 
-        os.chdir (self.user_pw.pw_dir)
+        os.chdir (self.temp_homedir)
 
         # FIXME: setting the selinux context?
 
@@ -395,13 +404,13 @@ class ProtoSession (gobject.GObject):
                 new_environ[key] = os.environ[key]
 
         new_environ["PATH"]       = DEFAULT_PATH 
+        new_environ["SHELL"]      = DEFAULT_SHELL
         new_environ["DISPLAY"]    = self.display_name
         new_environ["XAUTHORITY"] = self.session_xauth_file
+        new_environ["HOME"]       = self.temp_homedir
         new_environ["LOGNAME"]    = self.user_pw.pw_name
         new_environ["USER"]       = self.user_pw.pw_name
         new_environ["USERNAME"]   = self.user_pw.pw_name
-        new_environ["HOME"]       = self.user_pw.pw_dir
-        new_environ["SHELL"]      = self.user_pw.pw_shell
 
         dprint ("Child process env: %s" % new_environ)
 
@@ -410,16 +419,6 @@ class ProtoSession (gobject.GObject):
         return new_environ
 
     def __start_session (self):
-        try:
-            pw = pwd.getpwnam (self.username)
-        except KeyError:
-            raise SessionStartError, "User '%s' does not exist" % self.username
-
-        if pw.pw_dir == "" or not os.path.isdir (pw.pw_dir):
-            raise SessionStartError, "Home directory for user '%s' does not exist" % self.username
-
-        self.user_pw = pw
-        
         dprint ("Starting session as %s" % self.user_pw)
 
         self.session_xauth_file = self.__write_temp_xauth_file (False)
@@ -483,33 +482,40 @@ class ProtoSession (gobject.GObject):
         self.admin_tool_timeout = 0
         return False
 
-    def __set_shell(self):
-        command = USERMOD + ' -s ' + USERSHELL + ' ' + self.username
-        dprint ("User shell: %s" % (command))
-	os.system (command)
+    def __setup_shell_and_homedir (self):
+        dprint ("Setting shell for '%s' to '%s'" % (self.username, DEFAULT_SHELL))
+        usermod.set_shell (self.username, DEFAULT_SHELL)
+
+        self.temp_homedir = tempfile.mkdtemp (prefix = "sabayon-temp-home-")
+        os.chown (self.temp_homedir, self.user_pw.pw_uid, self.user_pw.pw_uid)
+        dprint ("Setting temporary home directory for '%s' to '%s'" %
+                (self.username, self.temp_homedir))
+        usermod.set_homedir (self.username, self.temp_homedir)
         
-    def __reset_shell(self):
-        command = USERMOD + ' -s ' + '/sbin/nologin' + ' ' + self.username
-        dprint ("User shell: %s" % (command))
-	os.system (command)
+    def __reset_shell_and_homedir (self):
+        dprint ("Unsetting homedir for '%s'" % self.username)
+        usermod.set_homedir (self.username, "")
+
+        dprint ("Deleting temporary homedir '%s'" % self.temp_homedir)
+        shutil.rmtree (self.temp_homedir)
+        
+        dprint ("Resetting shell for '%s' to '%s'" % (self.username, NOLOGIN_SHELL))
+        usermod.set_shell (self.username, NOLOGIN_SHELL)
         
     def start (self):
+        # Set the shell to a runnable one and create an empty homedir
+	self.__setup_shell_and_homedir()
+
         # Get an X server going
         self.__start_xnest ()
 
-	# Set user shell to runnable
-	self.__set_shell()
-
-        try:
-	    # Start the session as the prototype user
-	    self.__start_session ()
-	finally:
-	    # Reset user shell to nologin
-	    self.__reset_shell ()
-
+        # Start the session as the prototype user
+        self.__start_session ()
+        
     def force_quit (self):
         self.__kill_admin_tool ()
         self.__kill_session ()
         self.__kill_xnest ()
+        self.__reset_shell_and_homedir ()
 
 gobject.type_register (ProtoSession)
