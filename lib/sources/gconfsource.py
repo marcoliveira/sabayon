@@ -223,12 +223,12 @@ class GConfSource (userprofile.ProfileSource):
 
         storage_contents = self.storage.list (self.name)
 
-        if ".gconf.xml.defaults" in storage_contents:
+        if ("GConf", ".gconf.xml.defaults") in storage_contents:
             self.storage.extract (".gconf.xml.defaults", self.home_dir, True)
         write_path_file (os.path.join (self.home_dir, ".gconf.path.defaults"),
                          "xml:readonly:" + os.path.join (self.home_dir, ".gconf.xml.defaults"))
         
-        if ".gconf.xml.mandatory" in storage_contents:
+        if ("GConf", ".gconf.xml.mandatory") in storage_contents:
             self.storage.extract (".gconf.xml.mandatory", self.home_dir, True)
         write_path_file (os.path.join (self.home_dir, ".gconf.path.mandatory"),
                          "xml:readonly:" + os.path.join (self.home_dir, ".gconf.xml.mandatory"))

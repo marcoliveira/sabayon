@@ -1,5 +1,14 @@
 2005-03-01  Mark McLoughlin  <markmc@redhat.com>
 
+	* lib/sources/filessource.py:
+	(commit): set the "mandatory" attribute correctly.
+	
+	* lib/sources/gconfsource.py:
+	(apply): fix check to see if the GConf dirs are in
+	the profile storage.
+
+2005-03-01  Mark McLoughlin  <markmc@redhat.com>
+
 	* lib/storage.py:
 	(__item_revision_is_current): return false if no
 	current revision.

@@ -83,7 +83,7 @@ class FilesSource (userprofile.ProfileSource):
             self.storage.add (change.rel_path,
                               self.home_dir,
                               self.name,
-                              { "mandatory" : True })
+                              { "mandatory" : mandatory })
         elif change.event == dirmonitor.DELETED:
             try:
                 self.storage.remove (change.rel_path)
