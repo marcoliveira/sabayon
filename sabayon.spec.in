@@ -15,11 +15,9 @@ Requires: gamin-python
 Requires: pygtk2 >= 2.5.3-2
 Requires: gnome-python2-gconf >= 2.6.0-5
 Requires: xorg-x11-Xnest
+Requires: shadow-utils
 
 BuildRequires: python
-
-Requires(pre):    fedora-usermgmt
-Requires(postun): fedora-usermgmt
 
 %description
 Sabayon is a tool to help sysadmins and user change and maintain the
@@ -52,13 +50,13 @@ desktop-file-install --vendor gnome --delete-original		\
 rm -fr %{buildroot}
 
 %pre
-/usr/sbin/fedora-groupadd 15 -r %{name} &>/dev/null || :
-/usr/sbin/fedora-useradd  15 -r -s /sbin/nologin -c "Sabayon user" -g %{name} %{name} &>/dev/null || :
+/usr/sbin/groupadd -r %{name} &>/dev/null || :
+/usr/sbin/useradd  -r -s /sbin/nologin -c "Sabayon user" -g %{name} %{name} &>/dev/null || :
 /usr/sbin/usermod -d "" %{name} &>/dev/null || :
 
 %postun
-test "$1" != 0 || /usr/sbin/fedora-userdel  %{name} &>/dev/null || :
-test "$1" != 0 || /usr/sbin/fedora-groupdel %{name} &>/dev/null || :
+test "$1" != 0 || /usr/sbin/userdel  %{name} &>/dev/null || :
+test "$1" != 0 || /usr/sbin/groupdel %{name} &>/dev/null || :
 
 %files -f sabayon.lang
 %defattr(-, root, root)
@@ -88,7 +86,6 @@ test "$1" != 0 || /usr/sbin/fedora-groupdel %{name} &>/dev/null || :
 %changelog
 * Wed Mar 16 2005 Mark McLoughlin <markmc@redhat.com>
 - Various changes to bring in line with Fedora package guidelines
-- User fedora-usermgmt to create the sabayon user
 
 * Wed Feb  9 2005 Daniel Veillard <veillard@redhat.com>
 - initial version
