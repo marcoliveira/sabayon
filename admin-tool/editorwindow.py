@@ -27,6 +27,32 @@ import saveconfirm
 import time
 from config import *
 
+_ui_string = '''
+<ui>
+  <menubar name="Menubar">
+    <menu action="ProfileMenu">
+      <menuitem action="Save"/>
+      <separator/>
+      <menuitem action="Close"/>
+    </menu>
+    <menu action="EditMenu">
+      <menuitem action="Delete"/>
+      <separator/>
+      <menuitem action="ClearHistory"/>
+    </menu>
+    <menu action="HelpMenu">
+      <menuitem action="About"/>
+    </menu>
+  </menubar>
+
+  <toolbar name="Toolbar">
+    <toolitem action="Save"/>
+    <separator/>
+    <toolitem action="Delete"/>
+  </toolbar>
+</ui>
+'''
+
 def dprint (fmt, *args):
     util.debug_print (util.DEBUG_ADMINTOOL, fmt % args)
 
@@ -54,35 +80,27 @@ class ProfileEditorWindow:
         self.profile_name = profile_name
         self.storage = storage.ProfileStorage (profile_name)
         self.last_save_time = 0
-        
-        glade_file = os.path.join (GLADEDIR, "sabayon.glade")
-        self.xml = gtk.glade.XML (glade_file, "profile_editor_window")
 
-        self.window = self.xml.get_widget ("profile_editor_window")
+        self.window = gtk.Window (gtk.WINDOW_TOPLEVEL)
+        self.window.set_title (_("All Your Settings Are Belong To Us"))
         self.window.set_icon_name ("sabayon")
+        self.window.set_transient_for (parent_window)
+        self.window.set_destroy_with_parent (True)
+        self.window.set_default_size (480, 380)
+
+        self.main_vbox = gtk.VBox (False, 0)
+        self.main_vbox.show ()
+        self.window.add (self.main_vbox)
+
+        self.__setup_menus_and_toolbar ()
+
+        self.scrolled = gtk.ScrolledWindow ()
+        self.scrolled.set_policy (gtk.POLICY_AUTOMATIC, gtk.POLICY_AUTOMATIC)
+        self.scrolled.show ()
+        self.main_vbox.pack_start (self.scrolled, True, True, 0)
         
-        self.treeview = self.xml.get_widget ("profile_treeview")
         self.__setup_treeview ()
 
-        self.treeview.connect ("key-press-event", self.__handle_key_press)
-
-        self.save_item = self.xml.get_widget ("save_item")
-        self.save_item.connect ("activate", self.__handle_save)
-        
-        self.close_item = self.xml.get_widget ("close_item")
-        self.close_item.connect ("activate", self.__handle_close)
-
-        self.delete_item = self.xml.get_widget ("delete_item")
-        self.delete_item.connect ("activate", self.__handle_delete)
-        self.delete_item.set_sensitive (False)
-
-        self.clear_history_item = self.xml.get_widget ("clear_history_item")
-        self.clear_history_item.connect ("activate", self.__handle_clear_history)
-
-        self.about_item = self.xml.get_widget ("about_item")
-        self.about_item.connect ("activate", self.__handle_about)
-
-        self.window.set_transient_for (parent_window)
         self.window.show ()
 
         self.__set_needs_saving (False)
@@ -91,10 +109,10 @@ class ProfileEditorWindow:
         if needs_saving:
             if not self.last_save_time:
                 self.last_save_time = int (time.time ())
-            self.save_item.set_sensitive (True)
+            self.save_action.set_sensitive (True)
         else:
             self.last_save_time = 0
-            self.save_item.set_sensitive (False)
+            self.save_action.set_sensitive (False)
 
     def __delete_currently_selected (self):
         (model, row) = self.treeview.get_selection ().get_selected ()
@@ -111,11 +129,11 @@ class ProfileEditorWindow:
         if event.keyval in (gtk.keysyms.Delete, gtk.keysyms.KP_Delete):
             self.__delete_currently_selected ()
         
-    def __handle_save (self, item):
+    def __handle_save (self, action):
         self.storage.save ()
         self.__set_needs_saving (False)
 
-    def __handle_close (self, item):
+    def __handle_close (self, action):
         if self.last_save_time:
             dialog = saveconfirm.SaveConfirmationAlert (self.window,
                                                         self.profile_name,
@@ -131,19 +149,50 @@ class ProfileEditorWindow:
         
         self.window.destroy ()
 
-    def __handle_delete (self, item):
+    def __handle_delete (self, action):
         self.__delete_currently_selected ()
         
-    def __handle_clear_history (self, item):
+    def __handle_clear_history (self, action):
         self.storage.clear_revisions ()
         self.__set_needs_saving (True)
 
-    def __handle_about (self, item):
+    def __handle_about (self, action):
         aboutdialog.show_about_dialog (self.window)
+
+    def __add_widget (self, ui_manager, widget):
+        self.main_vbox.pack_start (widget, False, False, 0)
+        
+    def __setup_menus_and_toolbar (self):
+        actions = [
+            ("ProfileMenu", None, _("_Profile")),
+            ("Save", gtk.STOCK_SAVE, _("_Save"), "<control>S", _("Save profile"), self.__handle_save),
+            ("Close", gtk.STOCK_CLOSE, _("_Close"), "<control>W", _("Close the current window"), self.__handle_close),
+            ("EditMenu", None, _("_Edit")),
+            ("Delete", gtk.STOCK_DELETE, _("_Delete"), "<control>D", _("Delete item"), self.__handle_delete),
+            ("ClearHistory", gtk.STOCK_CLEAR, _("C_lear History"), None, _("Clear revision history"), self.__handle_clear_history),
+            ("HelpMenu", None, _("_Help")),
+            ("About", gtk.STOCK_ABOUT, _("_About"), None, _("About Sabayon"), self.__handle_about),
+        ]
+        action_group = gtk.ActionGroup ("WindowActions")
+        action_group.add_actions (actions)
+        
+        self.ui_manager = gtk.UIManager ()
+        self.ui_manager.insert_action_group (action_group, 0)
+        self.ui_manager.connect ("add-widget", self.__add_widget)
+        self.ui_manager.add_ui_from_string (_ui_string)
+        self.ui_manager.ensure_update ()
+
+        self.window.add_accel_group (self.ui_manager.get_accel_group ())
+
+        self.save_action = action_group.get_action ("Save")
+        self.delete_action = action_group.get_action ("Delete")
 
     def __setup_treeview (self):
         self.profile_model = ProfileModel (self.storage)
-        self.treeview.set_model (self.profile_model)
+        
+        self.treeview = gtk.TreeView (self.profile_model)
+        self.treeview.show ()
+        self.scrolled.add (self.treeview)
         
         self.treeview.get_selection ().set_mode (gtk.SELECTION_SINGLE)
         self.treeview.get_selection ().connect ("changed", self.__treeview_selection_changed)
@@ -154,13 +203,15 @@ class ProfileEditorWindow:
                                 gtk.CellRendererText (),
                                 text = ProfileModel.COLUMN_NAME)
         self.treeview.append_column (c)
+        
+        self.treeview.connect ("key-press-event", self.__handle_key_press)
 
     def __treeview_selection_changed (self, selection):
         (model, row) = selection.get_selected ()
         if not row:
-            self.delete_item.set_sensitive (False)
+            self.delete_action.set_sensitive (False)
             return
 
         dprint ("Selected '%s'", model[row][ProfileModel.COLUMN_NAME])
 
-        self.delete_item.set_sensitive (True)
+        self.delete_action.set_sensitive (True)
