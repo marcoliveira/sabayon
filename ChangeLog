@@ -1,7 +1,29 @@
+2005-02-11  Mark McLoughlin  <markmc@redhat.com>
+
+	* lib/sources/gconfsource.py:
+	(GConfSource.__get_client): rename to get_committing_client()
+	and export. Also make it return a (client, engine) tupple.
+	
+	* lib/sources/paneldelegate.py:
+	Store cached panel configuration in objects rather than tupples.
+	Add added/removed flags for each panel/applet etc. If an applet
+	has been added or removed, but that change not yet committed
+	then these flags are set.
+	(PanelDelegate.handle_change): filter out any changes to not
+	yet committed added/removed panel/applets etc.
+	(PanelDelegate.commit_change): first cut impl. Needs finishing,
+	though.
+	(run_unit_tests): update.
+
 Thu Feb 10 18:33:48 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* lib/config.py.in: added shell and usermod entries
 	* lib/protosession.py: added set/reset shell methods
+
+2005-02-10  Mark McLoughlin  <markmc@redhat.com>
+
+	* lib/sources/paneldelegate.py: make the unit tests
+	run again.
 
 2005-02-10  Mark McLoughlin  <markmc@redhat.com>
 

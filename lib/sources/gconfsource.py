@@ -88,7 +88,7 @@ class GConfSource (userprofile.ProfileSource):
         self.defaults_client  = None
         self.mandatory_client = None
 
-    def __get_client (self, mandatory):
+    def get_committing_client (self, mandatory):
         """Get a GConfClient using either .gconf.xml.defaults or
         .gconf.xml.mandatory (in the temporary profile location)
         as its source.
@@ -102,27 +102,31 @@ class GConfSource (userprofile.ProfileSource):
                 if err.errno != errno.EEXIST:
                     raise err
             engine = gconf.engine_get_for_address ("xml:readwrite:" + path)
-            return gconf.client_get_for_engine (engine)
+            return (gconf.client_get_for_engine (engine), engine)
 
         if not mandatory:
             if not self.defaults_client:
-                self.defaults_client = get_client_for_path (
-		               self.profile_storage.get_install_path () +
-			       "/.gconf.xml.defaults")
-            return self.defaults_client
+                (client, engine) = get_client_for_path (
+                               self.profile_storage.get_install_path () +
+                               "/.gconf.xml.defaults")
+                self.defaults_client = client
+                self.defaults_engine = engine
+            return (self.defaults_client, self.defaults_client)
         else:
             if not self.mandatory_client:
-                self.mandatory_client = get_client_for_path (
-		               self.profile_storage.get_install_path () +
-			       "/.gconf.xml.mandatory")
-            return self.mandatory_client
+                (client, engine) = get_client_for_path (
+                               self.profile_storage.get_install_path () +
+                               "/.gconf.xml.mandatory")
+                self.mandatory_client = client
+                self.mandatory_engine = engine
+            return (self.mandatory_client, self.mandatory_engine)
 
     def commit_change (self, change, mandatory = False):
         """Commit a GConf change to the profile."""
         if userprofile.ProfileSource.commit_change (self, change, mandatory):
             return
         
-        client = self.__get_client (mandatory)
+        (client, engine) = self.get_committing_client (mandatory)
         if change.entry.value:
             client.set (change.entry.key, change.entry.value)
         else:
