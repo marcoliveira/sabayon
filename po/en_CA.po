@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-03-09 16:20-0500\n"
-"PO-Revision-Date: 2005-03-09 11:14-0400\n"
+"POT-Creation-Date: 2005-03-15 19:33-0500\n"
+"PO-Revision-Date: 2005-03-15 11:14-0400\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: Canadian English <adamw@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -25,78 +25,83 @@ msgstr "Program to establish and edit profiles for users"
 msgid "translator-credits"
 msgstr "Adam Weinberger <adamw@gnome.org>"
 
-#: ../admin-tool/editorwindow.py:123 ../admin-tool/gconfviewer.py:87
-#: ../admin-tool/sabayon.glade.h:1 ../lib/protosession.py:332
+#: ../admin-tool/editorwindow.py:124 ../admin-tool/fileviewer.py:29
+#: ../admin-tool/gconfviewer.py:87 ../admin-tool/sabayon.glade.h:1
+#: ../admin-tool/userswindow.py:70 ../lib/protosession.py:332
 msgid "All Your Settings Are Belong To Us"
 msgstr "All Your Settings Are Belong To Us"
 
-#: ../admin-tool/editorwindow.py:223 ../admin-tool/sabayon.glade.h:7
+#: ../admin-tool/editorwindow.py:224 ../admin-tool/sabayon.glade.h:7
 msgid "_Profile"
 msgstr "_Profile"
 
-#: ../admin-tool/editorwindow.py:224
+#: ../admin-tool/editorwindow.py:225
 msgid "_Save"
 msgstr "_Save"
 
-#: ../admin-tool/editorwindow.py:224
+#: ../admin-tool/editorwindow.py:225
 msgid "Save profile"
 msgstr "Save profile"
 
-#: ../admin-tool/editorwindow.py:225
+#: ../admin-tool/editorwindow.py:226
 msgid "_Close"
 msgstr "_Close"
 
-#: ../admin-tool/editorwindow.py:225
+#: ../admin-tool/editorwindow.py:226
 msgid "Close the current window"
 msgstr "Close the current window"
 
-#: ../admin-tool/editorwindow.py:226
+#: ../admin-tool/editorwindow.py:227
 msgid "_Edit"
 msgstr "_Edit"
 
-#: ../admin-tool/editorwindow.py:227
+#: ../admin-tool/editorwindow.py:228
 msgid "_Delete"
 msgstr "_Delete"
 
-#: ../admin-tool/editorwindow.py:227
+#: ../admin-tool/editorwindow.py:228
 msgid "Delete item"
 msgstr "Delete item"
 
-#: ../admin-tool/editorwindow.py:228
+#: ../admin-tool/editorwindow.py:229
 msgid "C_lear History"
 msgstr "C_lear History"
 
-#: ../admin-tool/editorwindow.py:228
+#: ../admin-tool/editorwindow.py:229
 msgid "Clear revision history"
 msgstr "Clear revision history"
 
-#: ../admin-tool/editorwindow.py:229 ../admin-tool/sabayon.glade.h:6
+#: ../admin-tool/editorwindow.py:230 ../admin-tool/sabayon.glade.h:6
 msgid "_Help"
 msgstr "_Help"
 
-#: ../admin-tool/editorwindow.py:230
+#: ../admin-tool/editorwindow.py:231
 msgid "_About"
 msgstr "_About"
 
-#: ../admin-tool/editorwindow.py:230
+#: ../admin-tool/editorwindow.py:231
 msgid "About Sabayon"
 msgstr "About Sabayon"
 
-#: ../admin-tool/editorwindow.py:261
+#: ../admin-tool/editorwindow.py:262
 msgid "_Version:"
 msgstr "_Version:"
 
-#: ../admin-tool/editorwindow.py:313 ../admin-tool/monitorwindow.py:155
+#: ../admin-tool/editorwindow.py:314 ../admin-tool/monitorwindow.py:158
 msgid "Description"
 msgstr "Description"
 
-#: ../admin-tool/editorwindow.py:324
+#: ../admin-tool/editorwindow.py:325
 msgid "Version"
 msgstr "Version"
 
-#: ../admin-tool/editorwindow.py:350 ../lib/sources/gconfsource.py:100
+#: ../admin-tool/editorwindow.py:355 ../lib/sources/gconfsource.py:100
 msgid "GConf"
 msgstr "GConf"
+
+#: ../admin-tool/editorwindow.py:359 ../lib/sources/filessource.py:59
+msgid "Files"
+msgstr "Files"
 
 #: ../admin-tool/gconfviewer.py:58 ../admin-tool/gconfviewer.py:77
 msgid "<no type>"
@@ -146,11 +151,11 @@ msgstr "Type"
 msgid "Value"
 msgstr "Value"
 
-#: ../admin-tool/monitorwindow.py:143
+#: ../admin-tool/monitorwindow.py:146
 msgid "Ignore"
 msgstr "Ignore"
 
-#: ../admin-tool/monitorwindow.py:150
+#: ../admin-tool/monitorwindow.py:153
 msgid "Mandatory"
 msgstr "Mandatory"
 
@@ -170,7 +175,12 @@ msgstr ""
 "Try again after creating the account (using, for example, the 'adduser' "
 "command)"
 
-#: ../admin-tool/sabayon-apply.py:37
+#: ../admin-tool/sabayon-apply.py:33
+#, python-format
+msgid "No profile for user '%s' found\n"
+msgstr "No profile for user '%s' found\n"
+
+#: ../admin-tool/sabayon-apply.py:38
 #, python-format
 msgid "Usage: %s [<profile-name>]\n"
 msgstr "Usage: %s [<profile-name>]\n"
@@ -311,6 +321,19 @@ msgstr[1] ""
 "If you don't save, changes from the last hour and %d minutes will be "
 "permanently lost."
 
+#: ../admin-tool/userswindow.py:42 ../admin-tool/userswindow.py:60
+#: ../admin-tool/userswindow.py:122
+msgid "None"
+msgstr "None"
+
+#: ../admin-tool/userswindow.py:99
+msgid "User"
+msgstr "User"
+
+#: ../admin-tool/userswindow.py:111
+msgid "Profile"
+msgstr "Profile"
+
 #: ../lib/dirmonitor.py:138
 #, python-format
 msgid "Failed to add monitor for %s"
@@ -360,10 +383,6 @@ msgstr "File '%s' deleted"
 #, python-format
 msgid "File '%s' changed"
 msgstr "File '%s' changed"
-
-#: ../lib/sources/filessource.py:59
-msgid "Files"
-msgstr "Files"
 
 #: ../lib/sources/filessource.py:77
 msgid "Applications menu"
@@ -438,51 +457,45 @@ msgstr "Default GConf settings"
 msgid "Mandatory GConf settings"
 msgstr "Mandatory GConf settings"
 
-#: ../lib/sources/mozillasource.py:54
+#: ../lib/sources/mozillasource.py:102
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
 msgstr "Mozilla key '%s' set to '%s'"
 
-#: ../lib/sources/mozillasource.py:56
+#: ../lib/sources/mozillasource.py:104
 #, python-format
 msgid "Mozilla key '%s' unset"
 msgstr "Mozilla key '%s' unset"
 
-#: ../lib/sources/mozillasource.py:58
+#: ../lib/sources/mozillasource.py:106
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Mozilla key '%s' changed to '%s'"
 
-#: ../lib/sources/mozillasource.py:160
+#: ../lib/sources/mozillasource.py:114
+msgid "Firefox"
+msgstr "Firefox"
+
+#: ../lib/sources/mozillasource.py:311
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "File Not Found (%s)"
 
-#: ../lib/sources/mozillasource.py:370
+#: ../lib/sources/mozillasource.py:729
 #, python-format
 msgid "duplicate name (%s) in section %s"
 msgstr "duplicate name (%s) in section %s"
 
-#: ../lib/sources/mozillasource.py:377
+#: ../lib/sources/mozillasource.py:738
 #, python-format
 msgid "redundant default in section %s"
 msgstr "redundant default in section %s"
 
-#: ../lib/sources/mozillasource.py:392
+#: ../lib/sources/mozillasource.py:755
 msgid "no default profile"
 msgstr "no default profile"
 
-#: ../lib/sources/mozillasource.py:396
-#, python-format
-msgid "default path (%s) does not exist"
-msgstr "default path (%s) does not exist"
-
-#: ../lib/sources/mozillasource.py:398
-#, python-format
-msgid "default path (%s) is not a directory"
-msgstr "default path (%s) is not a directory"
-
-#: ../lib/sources/mozillasource.py:494
+#: ../lib/sources/mozillasource.py:846
 #, python-format
 msgid "No such profile ini file: %s"
 msgstr "No such profile configuration file: %s"
