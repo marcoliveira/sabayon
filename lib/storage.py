@@ -560,7 +560,7 @@ class ProfileStorage:
         @path: the relative path of the file or directory. This is
         the same path used with ProfileStorage::add().
         """
-        dprint ("Removing '%s' profile" % path)
+        dprint ("Removing '%s' profile from profile %s", path, self.name)
 
         self.__unpack ()
         
@@ -800,6 +800,38 @@ class ProfileStorage:
         
         self.zip = zipfile.ZipFile (self.path, "r")
 
+    def __get_revision_node (self, path, revision):
+        self.__read_metadata ()
+
+        if not revision:
+            profile_revision = self.__get_current_profile_revision ()
+            if not profile_revision:
+                return None
+            
+            item = self.__get_profile_revision_item (profile_revision, path)
+            if not item:
+                return None
+
+            item_type     = item.prop ("type")
+            item_revision = item.prop ("revision")
+        else:
+            (item_type, item_revision) = revision.split (":")
+
+            if item_type == "profile":
+                item = self.__get_profile_revision_item (item_revision, path)
+                if not item:
+                    return None
+
+                item_type     = item.prop ("type")
+                item_revision = item.prop ("revision")
+
+        if item_type == "file":
+            return self.__get_file_revision_node (path, item_revision)
+        elif item_type == "directory":
+            return self.__get_directory_revision_node (path, item_revision)
+
+        return None
+
     def get_attributes (self, path, revision = None):
         """Return the attributes associated with a file or directory
         from the profile.
@@ -812,40 +844,26 @@ class ProfileStorage:
         Return value: a dictionary containing the key/value pairs
         passed to ProfileStorage::add().
         """
-        self.__read_metadata ()
-
-        if not revision:
-            profile_revision = self.__get_current_profile_revision ()
-            if not profile_revision:
-                return {}
-            
-            item = self.__get_profile_revision_item (profile_revision, path)
-            if not item:
-                return {}
-
-            item_type     = item.prop ("type")
-            item_revision = item.prop ("revision")
-        else:
-            (item_type, item_revision) = revision.split (":")
-
-            if item_type == "profile":
-                item = self.__get_profile_revision_item (item_revision, path)
-                if not item:
-                    return {}
-
-                item_type     = item.prop ("type")
-                item_revision = item.prop ("revision")
-
-        revision_node = None
-        if item_type == "file":
-            revision_node = self.__get_file_revision_node (path, item_revision)
-        elif item_type == "directory":
-            revision_node = self.__get_directory_revision_node (path, item_revision)
-
-        if revision_node == None:
+        revision_node = self.__get_revision_node (path, revision)
+        if revision_node is None:
             return {}
-
         return self.__get_revision_attributes (revision_node)
+
+    def get_source (self, path, revision = None):
+        """Return the source associated with a file or directory
+        from the profile.
+
+        @path: the relative path of the file or directory to look up.
+        This is the same path used with ProfileStorage::add().
+        @revision: the profile or file/directory revision identifier
+        with which to look up.
+
+        Return value: a source identifier.
+        """
+        revision_node = self.__get_revision_node (path, revision)
+        if revision_node is None:
+            return None
+        return self.__get_revision_source (revision_node)
 
     def get_revisions (self, path = None):
         """Retrieve the list of profile revisions or the list of
@@ -903,6 +921,50 @@ class ProfileStorage:
         self.metadata = metadata
         self.unsaved_revision = unsaved_revision
         self.needs_saving = True
+
+    def revert (self, revision, path = None):
+        """Revert @profile, or a specific @path in @profile to
+        a given @revision.
+
+        @revision: the profile, file or directory revision to revert
+        @profile (or @path, if given) to. A file or directory revision
+        may only be used if @path is given.
+        @path: the (optional) path of the file or directory which
+        should be reverted.
+        """
+        if path:
+            dprint ("Reverting '%s' to revision '%s'", path, revision)
+        else:
+            dprint ("Reverting profile '%s' to revision '%s'", self.name, revision)
+        
+        self.__unpack ()
+        
+        extract_dir = tempfile.mkdtemp ("sabayon-profile-storage-")
+        
+        (revision_type, revision_number) = revision.split (":")
+        if revision_type == "profile":
+            # Create new revision and remove everything
+            def remove_from_current_foreach (source, path, self):
+                self.remove (path)
+            self.foreach (remove_from_current_foreach, self)
+
+            # Add everything from @revision
+            def add_from_revision_foreach (source, path, data):
+                (self, extract_dir) = data
+                self.extract (path, extract_dir, revision = revision)
+                attributes = self.get_attributes (path, revision)
+                self.add (path, extract_dir, source, attributes)
+            self.foreach (add_from_revision_foreach,
+                          (self, extract_dir),
+                          profile_revision = revision)
+        else:
+            assert path
+            self.extract (path, extract_dir, revision = revision)
+            attributes = self.get_attributes (path, revision)
+            source = self.get_source (path, revision)
+            self.add (path, extract_dir, source, attributes)
+            
+        shutil.rmtree (extract_dir)
 
 #
 # Unit tests
@@ -1011,6 +1073,7 @@ def run_unit_tests ():
     (source, path) = l[0]
     assert source == "TestSource99"
     assert path == "t/config1.test"
+    assert profile.get_source (path) == "TestSource99"
     attributes = profile.get_attributes (path)
     assert len (attributes) == 2
     assert attributes.has_key ("foo-attr99")
@@ -1025,6 +1088,7 @@ def run_unit_tests ():
     (source, path) = l[1]
     assert source == "TestSource2005"
     assert path == "foobar"
+    assert profile.get_source (path) == "TestSource2005"
     attributes = profile.get_attributes (path)
     assert len (attributes) == 2
     assert attributes.has_key ("foo-attr2005")
@@ -1039,6 +1103,7 @@ def run_unit_tests ():
     (source, path) = l[2]
     assert source == "TestSource2"
     assert path == "config2.test"
+    assert profile.get_source (path) == "TestSource2"
     attributes = profile.get_attributes (path)
     assert len (attributes) == 0
     revisions = profile.get_revisions (path)
@@ -1078,6 +1143,7 @@ def run_unit_tests ():
     (source, path) = l[0]
     assert source == "TestSource99"
     assert path == "t/config1.test"
+    assert profile.get_source (path) == "TestSource99"
     attributes = profile.get_attributes (path, profile_revisions[1][0])
     assert len (attributes) == 2
     assert attributes.has_key ("foo-attr99")
@@ -1090,6 +1156,7 @@ def run_unit_tests ():
     assert revisions[1][0] == "file:1"
 
     # Try using one of the file revisions
+    assert profile.get_source (path, revisions[1][0]) == "TestSource1"
     attributes = profile.get_attributes (path, revisions[1][0])
     assert len (attributes) == 2
     assert attributes.has_key ("foo-attr1")
@@ -1100,6 +1167,7 @@ def run_unit_tests ():
     (source, path) = l[1]
     assert source == "TestSource2005"
     assert path == "foobar"
+    assert profile.get_source (path, profile_revisions[1][0]) == "TestSource2005"
     attributes = profile.get_attributes (path, profile_revisions[1][0])
     assert len (attributes) == 2
     assert attributes.has_key ("foo-attr2005")
@@ -1110,6 +1178,7 @@ def run_unit_tests ():
     (source, path) = l[2]
     assert source == "Waterford"
     assert path == "blaas"
+    assert profile.get_source (path, profile_revisions[1][0]) == "Waterford"
     attributes = profile.get_attributes (path, profile_revisions[1][0])
     assert len (attributes) == 2
     assert attributes.has_key ("with-butter")
@@ -1152,6 +1221,7 @@ def run_unit_tests ():
     (source, path) = l[0]
     assert source == "TestSource1"
     assert path == "t/config1.test"
+    assert profile.get_source (path, profile_revisions[2][0]) == "TestSource1"
     attributes = profile.get_attributes (path, profile_revisions[2][0])
     assert len (attributes) == 2
     assert attributes.has_key ("foo-attr1")
@@ -1162,6 +1232,7 @@ def run_unit_tests ():
     (source, path) = l[1]
     assert source == "TestSource2"
     assert path == "config2.test"
+    assert profile.get_source (path, profile_revisions[2][0]) == "TestSource2"
     attributes = profile.get_attributes (path, profile_revisions[2][0])
     assert len (attributes) == 2
     assert attributes.has_key ("foo-attr2")
@@ -1172,6 +1243,7 @@ def run_unit_tests ():
     (source, path) = l[2]
     assert source == "TestSource3"
     assert path == "foobar"
+    assert profile.get_source (path, profile_revisions[2][0]) == "TestSource3"
     attributes = profile.get_attributes (path, profile_revisions[2][0])
     assert len (attributes) == 2
     assert attributes.has_key ("foo-attr3")
@@ -1202,7 +1274,77 @@ def run_unit_tests ():
     
     # Remove temporary extraction dir
     shutil.rmtree (temp_dir)
+
+    # Test reverting
+    profile = ProfileStorage (profile_path)
+    profile_revisions = profile.get_revisions ()
+    assert len (profile_revisions) == 3
+    assert profile_revisions[0][0] == "profile:3"
+    assert profile_revisions[1][0] == "profile:2"
+    assert profile_revisions[2][0] == "profile:1"
+
+    # Revert whole thing to second revision
+    profile.revert (profile_revisions[1][0])
+
+    # Save
+    os.remove (profile_path)
+    profile.save ()
+    assert os.path.exists (profile_path)
+
+    # Open the reverted profile
+    profile = ProfileStorage (profile_path)
+    profile_revisions = profile.get_revisions ()
+    assert len (profile_revisions) == 4
+    assert profile_revisions[0][0] == "profile:4"
+    assert profile_revisions[1][0] == "profile:3"
+    assert profile_revisions[2][0] == "profile:2"
+    assert profile_revisions[3][0] == "profile:1"
+
+    # Verify the latest revision
+    l = profile.list ()
+    assert len (l) == 3
+
+    (source, path) = l[0]
+    assert source == "TestSource99"
+    assert path == "t/config1.test"
+    assert profile.get_source (path) == "TestSource99"
+    attributes = profile.get_attributes (path)
+    assert len (attributes) == 2
+    assert attributes.has_key ("foo-attr99")
+    assert attributes["foo-attr99"] == "foo"
+    assert attributes.has_key ("bar-attr99")
+    assert attributes["bar-attr99"] == "99"
+    revisions = profile.get_revisions (path)
+    assert len (revisions) == 3
+    assert revisions[0][0] == "file:3"
+    assert revisions[1][0] == "file:2"
+    assert revisions[2][0] == "file:1"
+
+    (source, path) = l[1]
+    assert source == "TestSource2005"
+    assert path == "foobar"
+    assert profile.get_source (path) == "TestSource2005"
+    attributes = profile.get_attributes (path)
+    assert len (attributes) == 2
+    assert attributes.has_key ("foo-attr2005")
+    assert attributes["foo-attr2005"] == "foo"
+    assert attributes.has_key ("bar-attr2005")
+    assert attributes["bar-attr2005"] == "2005"
     
+    (source, path) = l[2]
+    assert source == "Waterford"
+    assert path == "blaas"
+    assert profile.get_source (path) == "Waterford"
+    attributes = profile.get_attributes (path)
+    assert len (attributes) == 2
+    assert attributes.has_key ("with-butter")
+    assert attributes["with-butter"] == "but of course"
+    assert attributes.has_key ("nice")
+    assert attributes["nice"] == "True"
+    revisions = profile.get_revisions (path)
+    assert len (revisions) == 2
+    assert revisions[0][0] == "directory:2"
+    assert revisions[1][0] == "directory:1"
 
     # Clear revision history
     profile.clear_revisions ()
@@ -1220,10 +1362,11 @@ def run_unit_tests ():
     # Verify this revision
     l = profile.list ()
     assert len (l) == 3
-    
+
     (source, path) = l[0]
     assert source == "TestSource99"
     assert path == "t/config1.test"
+    assert profile.get_source (path) == "TestSource99"
     attributes = profile.get_attributes (path)
     assert len (attributes) == 2
     assert attributes.has_key ("foo-attr99")
@@ -1237,6 +1380,7 @@ def run_unit_tests ():
     (source, path) = l[1]
     assert source == "TestSource2005"
     assert path == "foobar"
+    assert profile.get_source (path) == "TestSource2005"
     attributes = profile.get_attributes (path)
     assert len (attributes) == 2
     assert attributes.has_key ("foo-attr2005")
@@ -1248,13 +1392,18 @@ def run_unit_tests ():
     assert revisions[0][0] == "directory:1"
 
     (source, path) = l[2]
-    assert source == "TestSource2"
-    assert path == "config2.test"
+    assert source == "Waterford"
+    assert path == "blaas"
+    assert profile.get_source (path) == "Waterford"
     attributes = profile.get_attributes (path)
-    assert len (attributes) == 0
+    assert len (attributes) == 2
+    assert attributes.has_key ("with-butter")
+    assert attributes["with-butter"] == "but of course"
+    assert attributes.has_key ("nice")
+    assert attributes["nice"] == "True"
     revisions = profile.get_revisions (path)
     assert len (revisions) == 1
-    assert revisions[0][0] == "file:1"
+    assert revisions[0][0] == "directory:1"
     
     # Create temporary dir for extraction
     temp_dir = tempfile.mkdtemp (prefix = "storage-test-")
@@ -1266,8 +1415,8 @@ def run_unit_tests ():
     # Verify their contents
     assert os.path.isfile (os.path.join (temp_dir, "t/config1.test"))
     assert file (os.path.join (temp_dir, "t/config1.test")).read () == "new test file 99"
-    assert os.path.isfile (os.path.join (temp_dir, "config2.test"))
-    assert file (os.path.join (temp_dir, "config2.test")).read () == "I'm back, yes its me!"
+    assert os.path.isfile (os.path.join (temp_dir, "blaas/are/nice/foo.txt"))
+    assert file (os.path.join (temp_dir, "blaas/are/nice/foo.txt")).read () == "blaas are nice"
     assert os.path.isfile (os.path.join (temp_dir, "foobar/foo/bar/foo/bar/%gconf.xml"))
     assert file (os.path.join (temp_dir, "foobar/foo/bar/foo/bar/%gconf.xml")).read () == "new test file 2005"
     assert os.path.isfile (os.path.join (temp_dir, "foobar/foo/bar/foo.txt"))

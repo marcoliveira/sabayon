@@ -61,18 +61,14 @@ class ProfileModel (gtk.ListStore):
         gtk.ListStore.__init__ (self, str)
 
         self.storage = storage
-        self.profile_revision = None
         self.reload ()
 
     def reload (self):
+        dprint ("Reloading profile model")
         self.clear ()
-        for (source, name) in self.storage.list (profile_revision = self.profile_revision):
+        for (source, name) in self.storage.list ():
             self.set (self.prepend (),
                       self.COLUMN_NAME, name)
-
-    def set_revision (self, profile_revision):
-        self.profile_revision = profile_revision
-        self.reload ()
 
 class RevisionsModel (gtk.ListStore):
     (
@@ -89,6 +85,7 @@ class RevisionsModel (gtk.ListStore):
         self.reload ()
 
     def reload (self):
+        dprint ("Reloading revisions model")
         self.clear ()
         iter = None
         revisions = self.storage.get_revisions (self.path)
@@ -131,6 +128,22 @@ class ProfileEditorWindow:
 
         self.__set_needs_saving (False)
 
+    def __reload_models (self):
+        self.profile_model.reload ()
+        
+        self.revisions_model.reload ()
+        if self.current_revision:
+            iter = self.revisions_model.get_iter_first ()
+            while iter:
+                if self.revisions_model[iter][RevisionsModel.COLUMN_REVISION] == self.current_revision:
+                    self.revisions_combo.set_active_iter (iter)
+                    break
+                iter = self.revisions_model.iter_next (iter)
+        else:
+            iter = self.revisions_model.get_iter_first ()
+            self.current_revision = self.revisions_model[iter][RevisionsModel.COLUMN_REVISION]
+            self.revisions_combo.set_active_iter (iter)
+
     def __set_needs_saving (self, needs_saving):
         if needs_saving:
             if not self.last_save_time:
@@ -139,6 +152,7 @@ class ProfileEditorWindow:
         else:
             self.last_save_time = 0
             self.save_action.set_sensitive (False)
+        self.__reload_models ()
 
     def __delete_currently_selected (self):
         (model, row) = self.treeview.get_selection ().get_selected ()
@@ -148,7 +162,6 @@ class ProfileEditorWindow:
         dprint ("Deleting '%s'", model[row][ProfileModel.COLUMN_NAME])
 
         self.storage.remove (model[row][ProfileModel.COLUMN_NAME])
-        self.profile_model.reload ()
         self.__set_needs_saving (True)
 
     def __handle_key_press (self, treeview, event):
@@ -214,10 +227,13 @@ class ProfileEditorWindow:
         self.delete_action = action_group.get_action ("Delete")
 
     def __profile_revision_changed (self, combo):
-        revision = self.revisions_model.get_value (self.revisions_combo.get_active_iter (),
-                                                   RevisionsModel.COLUMN_REVISION)
+        revision = self.revisions_model[self.revisions_combo.get_active_iter ()][RevisionsModel.COLUMN_REVISION]
+        if self.current_revision == revision:
+            return
         dprint ("Profile revision changed: %s", revision)
-        self.profile_model.set_revision (revision)
+        self.storage.revert (revision)
+        self.current_revision = None
+        self.__set_needs_saving (True)
 
     def __setup_profile_revisions_combo (self):
         hbox = gtk.HBox (False, 6)
@@ -233,7 +249,6 @@ class ProfileEditorWindow:
         
         self.revisions_model = RevisionsModel (self.storage)
         self.revisions_combo = gtk.ComboBox (self.revisions_model)
-        self.revisions_combo.set_active (0)
         self.revisions_combo.connect ("changed", self.__profile_revision_changed)
         self.revisions_combo.show ()
 
@@ -243,6 +258,10 @@ class ProfileEditorWindow:
         
         label.set_mnemonic_widget (self.revisions_combo)
         hbox.pack_start (self.revisions_combo, True, True, 0)
+
+        iter = self.revisions_model.get_iter_first ()
+        self.current_revision = self.revisions_model[iter][RevisionsModel.COLUMN_REVISION]
+        self.revisions_combo.set_active_iter (iter)
         
     def __setup_treeview (self):
         self.profile_model = ProfileModel (self.storage)
