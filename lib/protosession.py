@@ -5,6 +5,7 @@ import os.path
 import socket
 import errno
 import signal
+import select
 import pwd
 import commands
 import binascii
@@ -14,9 +15,9 @@ import gobject
 import util
 
 # FIXME: move to config.py
-XNEST_ARGV = [ "/usr/X11R6/bin/Xnest", "-audit", "0", "-name", "Xnest", "-nolisten", "tcp" ]
-#SESSION_ARGV = [ "/etc/X11/xdm/Xsession", "gnome" ]
-SESSION_ARGV = [ "/usr/bin/gnome-terminal" ]
+XNEST_ARGV = [ "/usr/X11R6/bin/Xnest", "-terminate", "-audit", "0", "-name", "Xnest", "-nolisten", "tcp" ]
+SESSION_ARGV = [ "/etc/X11/xdm/Xsession", "gnome" ]
+#SESSION_ARGV = [ "/home/markmc/bin/jhbuild", "run", "gnome-session" ]
 DEFAULT_PATH = "/usr/local/bin:/usr/bin:/bin:/usr/X11R6/bin"
 
 class ProtoSessionError (Exception):
@@ -137,6 +138,9 @@ class ProtoSession (gobject.GObject):
         
         if self.main_loop:
             self.main_loop.quit ()
+
+        self.emit ("finished");
+        
         return False
 
     def __usr1_pipe_watch_handler (self, source, condition):
@@ -224,6 +228,22 @@ class ProtoSession (gobject.GObject):
         return temp_xauth_file
 
     #
+    # Need to hold open the first X connection until the session dies
+    #
+    def __open_x_connection (self):
+        (pipe_r, pipe_w) = os.pipe ()
+        pid = os.fork ()
+        if pid == 0: # Child process
+            import gtk
+            os.close (pipe_r)
+            os.write (pipe_w, "Y")
+            os.close (pipe_w)
+            gtk.main ()
+        os.close (pipe_w)
+        select.select ([pipe_r], [], [])[0]
+        os.close (pipe_r)
+
+    #
     # FIXME: we have a re-entrancy issue here - if while we're
     # runing the mainloop we re-enter, then we'll install another
     # SIGUSR1 handler and everything will break
@@ -294,8 +314,12 @@ class ProtoSession (gobject.GObject):
                 raise SessionStartError, "Failed to start Xnest: timed out waiting for USR1 signal"
             else:
                 raise SessionStartError, "Failed to start Xnest: died during startup"
+        else:
+            self.__open_x_connection ()
 
     def __session_child_watch_handler (self, pid, status):
+        dprint ("Session died")
+        
         self.session_pid = 0
         self.session_child_watch = 0
 
@@ -397,7 +421,6 @@ class ProtoSession (gobject.GObject):
             self.session_pid = 0
 
 gobject.type_register (ProtoSession)
-
 
 #
 # Unit tests

@@ -1,5 +1,11 @@
 2005-01-31  Mark McLoughlin  <mark@skynet.ie>
 
+	* lib/protosession.py: open and hold open an X
+	connection so Xnest doesn't re-init as xsetroot
+	and xrdb connect and disconnect.
+
+2005-01-31  Mark McLoughlin  <mark@skynet.ie>
+
 	* lib/protosession.py:
 	Explicitly write the protouser's xauth file since
 	we need to change the display number.
