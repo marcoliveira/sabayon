@@ -138,7 +138,7 @@ class GConfSource (userprofile.ProfileSource):
         if userprofile.ProfileSource.commit_change (self, change, mandatory):
             return
         
-        (client, engine) = self.get_committing_client (mandatory)
+        (client, engine) = self.get_committing_client_and_address (mandatory)
         if change.entry.value:
             client.set (change.entry.key, change.entry.value)
         else:

@@ -1,5 +1,18 @@
 2005-02-13  Seth Nickell  <seth@gnome.org>
 
+	* admin-tool/sabayon.glade:
+
+	Don't require GNOME (causes lots of debug warnings at
+	sabayon startup).
+	
+	* lib/sources/gconfsource.py:
+
+	Change self.get_committing_client() call to the function name
+	as implemented: self.get_committing_client_and_address().
+	Fixes error when committing GConf keys.
+
+2005-02-13  Seth Nickell  <seth@gnome.org>
+
 	* admin-tool/Makefile.am:
 	* admin-tool/sabayon.desktop.in: 
 
