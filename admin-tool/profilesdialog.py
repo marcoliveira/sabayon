@@ -189,7 +189,19 @@ class ProfilesDialog:
 
         shutil.copyfile (profile_path, user_path)
 
-        pw = pwd.getpwnam (username)
+        try:
+            pw = pwd.getpwnam (username)
+        except KeyError, e:
+            errordialog = gtk.MessageDialog (None,
+                                             gtk.DIALOG_DESTROY_WITH_PARENT,
+                                             gtk.MESSAGE_ERROR,
+                                             gtk.BUTTONS_CLOSE,
+                                             "User account '%s' was not found" % username)
+            errordialog.format_secondary_text ("Sabayon requires a special user account '%s' to be present on this computer. Try again after creating the account (using, for example, the 'adduser' command)" % (username))
+                                               
+            errordialog.run ()
+            errordialog.destroy ()
+            raise e
         
         os.chown (user_path, pw.pw_uid, pw.pw_gid)
 
