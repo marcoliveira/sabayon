@@ -8,7 +8,8 @@ PYTHON_FILES =				\
 	profilesdialog.py		\
 	aboutdialog.py			\
 	saveconfirm.py			\
-	gconfviewer.py
+	gconfviewer.py			\
+	fileviewer.py
 
 @INTLTOOL_DESKTOP_RULE@
 

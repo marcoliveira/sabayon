@@ -30,6 +30,7 @@ import util
 import aboutdialog
 import saveconfirm
 import gconfviewer
+import fileviewer
 from config import *
 
 _ui_string = '''
@@ -346,11 +347,18 @@ class ProfileEditorWindow:
         source_name = self.profile_model[iter][ProfileModel.COLUMN_SOURCE]
         
         dprint ("Activating '%s'", path)
+        
+        extract_dir = tempfile.mkdtemp (prefix = "sabayon-temp-")
+        self.storage.extract (path, extract_dir)
+        extracted_path = os.path.join (extract_dir, path)
 
         if source_name == _("GConf"):
-            extract_dir = tempfile.mkdtemp (prefix = "sabayon-temp-gconf-")
-            self.storage.extract (path, extract_dir)
-            
-            viewer = gconfviewer.GConfViewer (os.path.join (extract_dir, path), self.window)
+            viewer = gconfviewer.GConfViewer (extracted_path, self.window)
             viewer.connect ("destroy", lambda v, dir: shutil.rmtree (dir), extract_dir)
             viewer.show ()
+        elif source_name == _("Files"):
+            viewer = fileviewer.FileViewer (extracted_path, self.window)
+            viewer.connect ("destroy", lambda v, dir: shutil.rmtree (dir), extract_dir)
+            viewer.show ()
+        else:
+            shutil.rmtree (extract_dir)
