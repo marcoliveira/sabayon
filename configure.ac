@@ -25,6 +25,7 @@ if test "x$with_distro" = "x"; then
   AC_CHECK_FILE(/etc/redhat-release, with_distro="redhat")
   AC_CHECK_FILE(/etc/fedora-release, with_distro="redhat")
   AC_CHECK_FILE(/etc/debian_version, with_distro="debian")
+  AC_CHECK_FILE(/etc/slackware-version, with_distro="slackware")
 fi
 with_distro=`echo ${with_distro} | tr '[[:upper:]]' '[[:lower:]]' `
 
@@ -40,6 +41,11 @@ else
       ;;
     debian) 
       XSESSION="/etc/gdm/Xsession"
+      install_xinitrc_script="no"
+      XINITRC_SYSCONFDIR=""
+      ;;
+    slackware)
+      XSESSION="/etc/X11/gdm/Xsession"
       install_xinitrc_script="no"
       XINITRC_SYSCONFDIR=""
       ;;
