@@ -1,3 +1,24 @@
+2005-03-17  John Dennis  <jdennis@redhat.com>
+
+	* remove redundant pref file writing method, fix use of
+	"enumerations", fix initial and subsequent loading of ini file,
+	fix several bugs that confused absolute paths and relative paths,
+	fix the copying of key/values from an extracted pref file to an
+	instantiated pref file, fix how types determined and passed, fix
+	the creation of the sabayon pref file in storage, if no ini file
+	exists in the target extract the ini file that is in storage,
+	parse the ini after we've determined if we using the stored one or
+	the user's target version, iterate over every profile defined in
+	the ini and apply the preferences from storage, fix the ordering
+	of target application so that ini's come first, then prefs, then
+	bookmarks, then other files, make sure directories exist before
+	trying to write a file.
+
+	* Still need to do: Need to reparse the everything after the apply
+	and before monitoring happens. Currently prefs are merged
+	one-to-one with profiles, it should be the default is merged to
+	all profiles.
+
 Thu Mar 17 22:44:53 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* lib/userdb.py: adding saving back on changes.
