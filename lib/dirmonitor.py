@@ -26,6 +26,9 @@ except:
     import gnome.vfs
     import os.path
     gnomevfs = gnome.vfs
+    def get_local_path_from_uri(s):
+        return s[7:]
+    gnomevfs.__dict__['get_local_path_from_uri'] = get_local_path_from_uri
     def get_uri_from_local_path(s):
         if s == None:
 	    return None
