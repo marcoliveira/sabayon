@@ -47,7 +47,7 @@ libexec_SCRIPTS = sabayon-monitor sabayon-session
 sabayondir     = $(pythondir)/sabayon
 sabayon_PYTHON = $(PYTHON_FILES)
 
-%: %.in
+.sh%: %.sh.in
 	sed                                             \
 		-e s!\@SBINDIR\@!$(sbindir)!            \
 		< $< > $@
