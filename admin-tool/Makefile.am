@@ -9,6 +9,8 @@ EXTRA_DIST =				\
 	$(PYTHON_FILES)			\
 	$(GLADE_FILES)			\
 	sabayon.in			\
+	profilesdialog.in		\
+	profilesdialog			\
 	sabayon
 
 gladedir   = $(pkgdatadir)/glade
@@ -35,11 +37,14 @@ clean:
 	rm -f *.pyo *.pyc
 	rm -f $(BUILT_SOURCES)
 
-BUILT_SOURCES = sabayon
+BUILT_SOURCES = sabayon profilesdialog
 
-all-local: sabayon
+all-local: sabayon profilesdialog
 
 sabayon: sabayon.in
 	sed -e s!\@PKGDATADIR\@!$(pkgdatadir)! < $< > $@
 	chmod a+x $@
 
+profilesdialog: profilesdialog.in
+	sed -e s!\@PKGDATADIR\@!$(pkgdatadir)! < $< > $@
+	chmod a+x $@

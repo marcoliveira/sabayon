@@ -1,0 +1,19 @@
+#!/bin/sh
+
+if test -f @PKGDATADIR@/profilesdialog.py ; then
+    export PYTHONPATH=@PKGDATADIR@
+    exec python @PKGDATADIR@/profilesdialog.py $@
+fi
+if test -f ./profilesdialog.py ; then
+    dir=`pwd`
+    dir=`dirname $dir`
+    export GLADEDIR=./
+    export PYTHONPATH=$dir/lib
+    exec python ./profilesdialog.py $@
+fi
+if test -f admin-tool/profilesdialog.py ; then
+    dir=`pwd`
+    export GLADEDIR=admin-tool/
+    export PYTHONPATH=$dir/lib
+    exec python admin-tool/profilesdialog.py $@
+fi
