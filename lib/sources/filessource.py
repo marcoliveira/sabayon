@@ -26,6 +26,7 @@ import gobject
 import userprofile
 import dirmonitor
 import storage
+from config import *
 
 class FilesChange (userprofile.ProfileChange):
     def __init__ (self, source, filename, event):
@@ -68,6 +69,8 @@ class FilesSource (userprofile.ProfileSource):
         self.home_dir = util.get_home_dir ()
         self.monitor = dirmonitor.DirectoryMonitor (self.home_dir,
                                                     self.__handle_monitor_event)
+        self.monitor.set_directories_to_ignore (DIRECTORIES_TO_IGNORE)
+        self.monitor.set_files_to_ignore (FILES_TO_IGNORE)
 
     def __handle_monitor_event (self, path, event):
         if os.path.isfile (path):

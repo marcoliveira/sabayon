@@ -49,6 +49,16 @@ class DirectoryMonitor:
         self.too_many_watches = False
 	self.fd = -1
 	self.io_watch = None
+        self.dirs_to_ignore = []
+        self.files_to_ignore = []
+
+    def set_directories_to_ignore (self, dirs):
+        assert self.mon == None
+        self.dirs_to_ignore = dirs
+
+    def set_files_to_ignore (self, files):
+        assert self.mon == None
+        self.files_to_ignore = files
 
     #
     # call the user level processing
@@ -87,7 +97,21 @@ class DirectoryMonitor:
                         self.too_many_watches = False
                     self.mon.stop_watch (path)
 
-            self.__invoke_callback (path, event)
+            if not self.__should_ignore_dir (path) or \
+               not self.__should_ignore_file (path):
+                self.__invoke_callback (path, event)
+
+    def __should_ignore_dir (self, dir):
+        for ignore_dir in self.dirs_to_ignore:
+            if dir == self.directory + "/" + ignore_dir:
+                return True
+        return False
+    
+    def __should_ignore_file (self, file):
+        for ignore_file in self.files_to_ignore:
+            if file == self.directory + "/" + ignore_file:
+                return True
+        return False
 
     def __monitor_dir (self, dir):
         if len (self.watches) >= N_WATCHES_LIMIT:
@@ -96,6 +120,9 @@ class DirectoryMonitor:
                 self.too_many_watches = True
             return
 
+        if self.__should_ignore_dir (dir):
+            return
+        
         try:
             self.mon.watch_directory (dir, self.__handle_gamin_event, dir)
         except:
@@ -111,6 +138,9 @@ class DirectoryMonitor:
             self.__monitor_dir (dir)
         for entry in os.listdir (dir):
             path = dir + "/" + entry
+            if self.__should_ignore_dir (path) or \
+               self.__should_ignore_file (path):
+                continue
             if new_dir:
                 self.__invoke_callback (path, CREATED)
             if os.path.isdir (path):
@@ -171,20 +201,25 @@ def run_unit_tests ():
 
     main_loop = gobject.MainLoop ()
 
-    def should_not_be_reached ():
+    expected = []
+    def should_not_be_reached (expected):
+        for (path, event) in expected:
+            print "Expected event: %s %s" % (path, event_to_string (event))
         assert False
         return True
-    timeout = gobject.timeout_add (5 * 1000, should_not_be_reached)
+    timeout = gobject.timeout_add (5 * 1000, should_not_be_reached, expected)
 
-    expected = []
     monitor = DirectoryMonitor (temp_path, handle_change, (expected, main_loop))
+    monitor.set_directories_to_ignore (["bar"])
+    monitor.set_files_to_ignore (["foobar/foo/foo.txt"])
     monitor.start ()
 
-    expect (expected, temp_path + "/foo", CREATED)
-    f = file (temp_path + "/foo", "w")
+    expect (expected, temp_path + "/foo.txt", CREATED)
+    f = file (temp_path + "/foo.txt", "w")
     f.close ()
-    
-    expect (expected, temp_path + "/bar", CREATED)
+
+    # ignored
+    # expect (expected, temp_path + "/bar", CREATED)
     os.mkdir (temp_path + "/bar")
 
     expect (expected, temp_path + "/foobar", CREATED)
@@ -193,16 +228,24 @@ def run_unit_tests ():
     expect (expected, temp_path + "/foobar/foo/bar/foo", CREATED)
     expect (expected, temp_path + "/foobar/foo/bar/foo/bar", CREATED)
     os.makedirs (temp_path + "/foobar/foo/bar/foo/bar")
-    
+
+    # ignored:
+    # expect (expected, temp_path + "/foobar/foo/foo.txt", CREATED)
+    f = file (temp_path + "/foobar/foo/foo.txt", "w")
+    f.close ()
+
     main_loop.run ()
     
     expect (expected, temp_path + "/foobar/foo/bar/foo/bar", DELETED)
     expect (expected, temp_path + "/foobar/foo/bar/foo", DELETED)
     expect (expected, temp_path + "/foobar/foo/bar", DELETED)
+    # ignored:
+    # expect (expected, temp_path + "/foobar/foo/foo.txt", DELETED)
     expect (expected, temp_path + "/foobar/foo", DELETED)
     expect (expected, temp_path + "/foobar", DELETED)
-    expect (expected, temp_path + "/foo", DELETED)
-    expect (expected, temp_path + "/bar", DELETED)
+    expect (expected, temp_path + "/foo.txt", DELETED)
+    # ignore:
+    # expect (expected, temp_path + "/bar", DELETED)
     expect (expected, temp_path, DELETED)
 
     shutil.rmtree (temp_path, True)

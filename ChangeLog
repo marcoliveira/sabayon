@@ -1,5 +1,21 @@
 2005-02-11  Mark McLoughlin  <markmc@redhat.com>
 
+	Add first cut of "stuff to ignore" list.
+
+	* lib/dirmonitor.py:
+	(DirectoryMonitor.set_directories_to_ignore),
+	(DirectoryMonitor.set_files_to_ignore): impl.
+	(DirectoryMonitor.__handle_gamin_event),
+	(DirectoryMonitor.monitor_dir): ignore stuff.
+	(run_unit_tests): test out new foo.
+	
+	* lib/config.py.in: add lists of files and directories
+	to ignore.
+	
+	* lib/sources/filessource.py: hook up lists.
+
+2005-02-11  Mark McLoughlin  <markmc@redhat.com>
+
 	* lib/sources/paneldelegate.py: fix typo.
 
 2005-02-11  Mark McLoughlin  <markmc@redhat.com>

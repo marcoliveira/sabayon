@@ -60,3 +60,17 @@ except:
         MODULEPATH = PKGDATADIR + "/sources/"
     else:
         MODULEPATH = "./sources"
+
+FILES_TO_IGNORE = [
+    ".xsession-errors",
+    ".gnome/gnome-vfs/.trash_entry_cache",
+    ".gnome2/share/fonts/fonts.dir",
+    ".gnome2/share/cursor-fonts/fonts.dir"
+]
+
+DIRECTORIES_TO_IGNORE = [
+    ".metacity/sessions",
+    ".gconf",
+    ".gconfd",
+    ".nautilus/metafiles"
+]
