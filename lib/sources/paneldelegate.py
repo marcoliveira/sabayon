@@ -47,7 +47,7 @@ class PanelRemovedChange (PanelChange):
 
 class PanelAppletAddedChange (PanelChange):
     def __init__ (self, source, delegate, id):
-        PanelChange.__init__ (self, source, id)
+        PanelChange.__init__ (self, source, delegate, id)
     def get_type (self):
         return "Panel applet added"
     def get_value (self):
