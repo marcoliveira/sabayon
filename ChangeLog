@@ -1,4 +1,21 @@
 2005-02-14  Mark McLoughlin  <markmc@redhat.com>
+	
+	* lib/protosession.py: pass the profile file
+	to sabayon-monitor when launching it.
+	
+	* admin-tool/sabayon-monitor.py: barf if we're
+	not passed an argument
+	
+2005-02-14  Mark McLoughlin  <markmc@redhat.com>
+
+	Add a SABAYON_DEBUG env variable. Run with
+	SABAYON_DEBUG=help to see allowable values.
+
+	* lib/util.py: add debug_print() foo.
+	
+	* lib/storage.py: use it here.
+
+2005-02-14  Mark McLoughlin  <markmc@redhat.com>
 
 	Try to fix the build mess.
 	

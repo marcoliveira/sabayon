@@ -23,12 +23,11 @@ import gtk
 import monitorwindow
 
 if __name__ == '__main__':
-    if len (sys.argv) > 1:
-        profile_file = sys.argv[1]
-    else:
-        profile_file = "test-profile.zip"
-
-    monitorwindow.ProfileMonitorWindow (profile_file)
+    if len (sys.argv) != 2:
+        sys.stderr.write ("Usage: %s <profile-file>\n" % sys.argv[0])
+        sys.exit (1)
+                        
+    monitorwindow.ProfileMonitorWindow (sys.argv[1])
 
     gtk.main ()
 

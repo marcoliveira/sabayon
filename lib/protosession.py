@@ -470,10 +470,12 @@ class ProtoSession (gobject.GObject):
         self.admin_tool_pid = os.fork ()
         if self.admin_tool_pid == 0: # Child process
             new_environ = self.__prepare_to_run_as_user ()
-            
-            dprint ("Executing %s" % MONITOR_TOOL_ARGV)
 
-            os.execve (MONITOR_TOOL_ARGV[0], MONITOR_TOOL_ARGV, new_environ)
+            argv = MONITOR_TOOL_ARGV + [ self.profile_file ]
+            
+            dprint ("Executing %s" % argv)
+
+            os.execve (argv[0], argv, new_environ)
 
             # Shouldn't ever reach here
             print "Failed to launch admin tool"
