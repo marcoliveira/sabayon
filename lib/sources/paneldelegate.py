@@ -21,6 +21,7 @@
 import gobject
 import gconf
 import userprofile
+import gconfsource
 
 class PanelChange (userprofile.ProfileChange):
     def __init__ (self, source, delegate, id):
@@ -120,46 +121,16 @@ class PanelDelegate (userprofile.SourceDelegate):
 
     def __read_panel_config (self):
         for id in self.client.get_list ("/apps/panel/general/toplevel_id_list", gconf.VALUE_STRING):
-            self.__add_toplevel (id, False)
+            if not self.toplevels.has_key (id):
+                self.toplevels[id] = PanelDelegate.PanelToplevel (id, False)
         for id in self.client.get_list ("/apps/panel/general/applet_id_list", gconf.VALUE_STRING):
-            self.__add_applet (id, False)
+            if not self.applets.has_key (id):
+                self.applets[id] = PanelDelegate.PanelApplet (id, False)
         for id in self.client.get_list ("/apps/panel/general/object_id_list", gconf.VALUE_STRING):
-            self.__add_object (id, False)
+            if not self.objects.has_key (id):
+                self.objects[id] = PanelDelegate.PanelObject (id, False)
 
-    def __add_toplevel (self, toplevel_id, added = True):
-        if not toplevel_id in self.toplevels:
-            self.toplevels[toplevel_id] = PanelDelegate.PanelToplevel (toplevel_id, added = added)
-        else:
-            self.toplevels[toplevel_id].added   = added
-            self.toplevels[toplevel_id].removed = False
-
-    def __remove_toplevel (self, toplevel_id):
-        if toplevel_id in self.toplevels:
-            self.toplevels[toplevel_id].removed = True
-
-    def __add_applet (self, applet_id, added = True):
-        if not applet_id in self.applets:
-            self.applets[applet_id] = PanelDelegate.PanelApplet (applet_id, added = added)
-        else:
-            self.applets[applet_id].added   = added
-            self.applets[applet_id].removed = False
-
-    def __remove_applet (self, applet_id):
-        if applet_id in self.applets:
-            self.applets[applet_id].removed = True
-
-    def __add_object (self, object_id, added = True):
-        if not object_id in self.objects:
-            self.objects[object_id] = PanelDelegate.PanelObject (object_id, added = added)
-        else:
-            self.objects[object_id].added   = added
-            self.objects[object_id].removed = False
-
-    def __remove_object (self, object_id):
-        if object_id in self.objects:
-            self.objects[object_id].removed = True
-
-    def __handle_id_list_change (self, change, dict, add_func, remove_func, added_class, removed_class):
+    def __handle_id_list_change (self, change, dict, thing_class, added_class, removed_class):
         if not change.entry.value or \
                change.entry.value.type != gconf.VALUE_LIST or \
                change.entry.value.get_list_type () != gconf.VALUE_STRING:
@@ -173,15 +144,20 @@ class PanelDelegate (userprofile.SourceDelegate):
         for id in id_list:
             if dict.has_key (id) and not dict[id].removed:
                 continue
-            add_func (id)
+            if not dict.has_key (id):
+                dict[id] = thing_class (id, True)
+            else:
+                dict[id].added   = True
+                dict[id].removed = False
             added.append (id)
 
         removed = []
         for id in dict:
-            if id in id_list or dict[id].removed:
+            if id in id_list:
                 continue
-            remove_func (id)
-            removed.append (id)
+            if dict.has_key (id) and not dict[id].removed:
+                dict[id].removed = True
+                removed.append (id)
 
         for id in added:
             self.source.emit ("changed", added_class (self.source, self, id))
@@ -215,32 +191,42 @@ class PanelDelegate (userprofile.SourceDelegate):
         elif change.entry.key == "/apps/panel/general/toplevel_id_list":
             return self.__handle_id_list_change (change,
                                                  self.toplevels,
-                                                 self.__add_toplevel,
-                                                 self.__remove_toplevel,
+                                                 PanelDelegate.PanelToplevel,
                                                  PanelAddedChange,
                                                  PanelRemovedChange)
             
         elif change.entry.key == "/apps/panel/general/applet_id_list":
             return self.__handle_id_list_change (change,
                                                  self.applets,
-                                                 self.__add_applet,
-                                                 self.__remove_applet,
+                                                 PanelDelegate.PanelApplet,
                                                  PanelAppletAddedChange,
                                                  PanelAppletRemovedChange)
             
         elif change.entry.key == "/apps/panel/general/object_id_list":
             return self.__handle_id_list_change (change,
                                                  self.objects,
-                                                 self.__add_object,
-                                                 self.__remove_object,
+                                                 PanelDelegate.PanelObject,
                                                  PanelObjectAddedChange,
                                                  PanelObjectRemovedChange)
 
         return False
 
-    def __copy_dir (self, src_client, dst_client, dst_engine, dir):
-        # FIXME: implement
-        pass
+    def __copy_dir (self, src_client, dst_client, dst_address, dir):
+        for entry in src_client.all_entries (dir):
+            if entry.get_schema_name ():
+                gconfsource.associate_schema (dst_address, entry.key, entry_get_schema_name ())
+            if entry.value and not entry.get_is_default ():
+                dst_client.set (entry.key, entry.value)
+        for subdir in src_client.all_dirs (dir):
+            self.__copy_dir (src_client, dst_client, dst_address, subdir)
+
+    def __get_current_list (self, dict):
+        id_list = []
+        for id in dict:
+            if dict[id].added:
+                continue
+            id_list.append (id)
+        return id_list
 
     def __commit_added_change (self, change, mandatory, dict, id_list_name, dir_name):
         if not dict.has_key (change.id):
@@ -249,18 +235,15 @@ class PanelDelegate (userprofile.SourceDelegate):
         thing = dict[change.id]
         if not thing.added:
             return
-        
-        (client, engine) = self.source.get_committing_client_and_engine (mandatory)
-        
-        engine.associate_schema ("/apps/panel/general/" + id_list_name,
-                                 "/schemas/apps/panel/general/" + id_list_name)
-        id_list = client.get_list ("/apps/panel/general/" + id_list_name, gconf.VALUE_STRING)
-        if not thing.id in id_list:
-            self.__copy_dir (self.client, client, engine,
-                             "/apps/panel/" + dir_name + "/" + thing.id)
-            id_list.append (thing.id)
-            client.set_list ("/apps/panel/general/" + id_list_name, gconf.VALUE_STRING, id_list)
 
+        (client, address) = self.source.get_committing_client_and_address (mandatory)
+
+        self.__copy_dir (self.client, client, address, "/apps/panel/" + dir_name + "/" + thing.id)
+        
+        id_list = self.__get_current_list (dict)
+        id_list.append (thing.id)
+        client.set_list ("/apps/panel/general/" + id_list_name, gconf.VALUE_STRING, id_list)
+        
         thing.added = False
         
     def __commit_removed_change (self, change, mandatory, dict, id_list_name, dir_name):
@@ -271,57 +254,49 @@ class PanelDelegate (userprofile.SourceDelegate):
         if not thing.removed:
             return
 
-        (client, engine) = self.source.get_committing_client_and_engine (mandatory)
-        
-        engine.associate_schema ("/apps/panel/general/" + id_list_name,
-                                 "/schemas/apps/panel/general/" + id_list_name)
-        id_list = client.get_list ("/apps/panel/general/" + id_list_name, gconf.VALUE_STRING)
+        (client, address) = self.source.get_committing_client_and_address (mandatory)
+
+        id_list = self.__get_current_list (dict)
         if thing.id in id_list:
             id_list.remove (thing.id)
             client.set_list ("apps/panel/general/" + id_list_name, gconf.VALUE_STRING, id_list)
             client.recursive_unset ("/apps/panel/" + dir_name + "/" + thing.id)
-
+        
         del dict[change.id]
 
     def commit_change (self, change, mandatory = False):
         if isinstance (change, PanelAddedChange):
-            self.__commit_added_change (self,
-                                        change,
+            self.__commit_added_change (change,
                                         mandatory,
                                         self.toplevels,
                                         "toplevel_id_list",
                                         "toplevels")
         elif isinstance (change, PanelRemovedChange):
-            self.__commit_removed_change (self,
-                                          change,
+            self.__commit_removed_change (change,
                                           mandatory,
                                           self.toplevels,
                                           "toplevel_id_list",
                                           "toplevels")
         elif isinstance (change, PanelAppletAddedChange):
-            self.__commit_added_change (self,
-                                        change,
+            self.__commit_added_change (change,
                                         mandatory,
                                         self.applets,
                                         "applet_id_list",
                                         "applets")
         elif isinstance (change, PanelAppletRemovedChange):
-            self.__commit_removed_change (self,
-                                          change,
+            self.__commit_removed_change (change,
                                           mandatory,
                                           self.applets,
                                           "applet_id_list",
                                           "applets")
         elif isinstance (change, PanelObjectAddedChange):
-            self.__commit_added_change (self,
-                                        change,
+            self.__commit_added_change (change,
                                         mandatory,
                                         self.objects,
                                         "object_id_list",
                                         "objects")
         elif isinstance (change, PanelObjectRemovedChange):
-            self.__commit_removed_change (self,
-                                          change,
+            self.__commit_removed_change (change,
                                           mandatory,
                                           self.objects,
                                           "object_id_list",
@@ -335,10 +310,11 @@ def get_gconf_delegate (source):
 #
 def run_unit_tests ():
     import gobject
-    import gconfsource
     import os
     import os.path
     import time
+    import tempfile
+    import shutil
 
     # Clear out any cruft
     os.system ("gconftool-2 --recursive-unset /apps/panel/toplevels/foo")
@@ -346,18 +322,45 @@ def run_unit_tests ():
     os.system ("gconftool-2 --recursive-unset /apps/panel/applets/foo")
     time.sleep (1)
 
+    client = gconf.client_get_default ()
+    
+    for id_list_name in ("toplevel_id_list", "object_id_list", "applet_id_list"):
+        id_list = client.get_list ("/apps/panel/general/" + id_list_name, gconf.VALUE_STRING)
+        while "foo" in id_list:
+            id_list.remove ("foo")
+        client.set_list ("/apps/panel/general/" + id_list_name, gconf.VALUE_STRING, id_list)
+
+    temp_path = tempfile.mkdtemp (prefix = "test-paneldelegate-")
+
     # Create a dummy source with a PanelDelegate
     class TempSource (userprofile.ProfileSource):
-        def __init__ (self):
+        def __init__ (self, temp_path):
             userprofile.ProfileSource.__init__ (self, "panel-temp")
             self.delegates.append (PanelDelegate (self))
+            self.temp_path = temp_path
+            self.defaults_client = None
+            self.defaults_address = None
+            self.mandatory_client = None
+            self.mandatory_address = None
+        def get_committing_client_and_address (self, mandatory):
+            if not mandatory:
+                if not self.defaults_client:
+                    (client, address) = gconfsource.get_client_and_address_for_path (self.temp_path + "/.gconf.xml.defaults")
+                    self.defaults_client = client
+                    self.defaults_address = address
+                return (self.defaults_client, self.defaults_address)
+            else:
+                if not self.mandatory_client:
+                    (client, address) = gconfsource.get_client_and_address_for_path (self.temp_path + "/.gconf.xml.mandatory")
+                    self.mandatory_client = client
+                    self.mandatory_address = address
+                return (self.mandatory_client, self.mandatory_address)
     gobject.type_register (TempSource)
-    source = TempSource ()
+    source = TempSource (temp_path)
 
     # Set up the client
     def handle_notify (client, cnx_id, entry, source):
         source.emit_change (gconfsource.GConfChange (source, entry))
-    client = gconf.client_get_default ()
     client.add_dir ("/apps/panel", gconf.CLIENT_PRELOAD_RECURSIVE)
     notify_id = client.notify_add ("/apps/panel", handle_notify, source)
 
@@ -423,8 +426,33 @@ def run_unit_tests ():
     client.set_list ("/apps/panel/general/object_id_list", gconf.VALUE_STRING, objects)
     poll (main_loop)
 
+    time.sleep (3)
+
     client.set_int ("/apps/panel/toplevels/foo/hide_delay", 5)
     poll (main_loop)
+
+    assert len (changes) == 4
+    for change in changes:
+        assert isinstance (change, userprofile.ProfileChange)
+    assert isinstance (changes[0], gconfsource.GConfChange)
+    assert changes[0].entry.key == "/apps/panel/general/show_program_list"
+    for change in changes[1:4]:
+        assert isinstance (change, PanelChange)
+        assert change.id == "foo"
+
+    (
+        PANEL_ADDED,
+        PANEL_APPLET_ADDED,
+        PANEL_OBJECT_ADDED
+    ) = range (1, 4)
+    
+    assert isinstance (changes[PANEL_ADDED], PanelAddedChange)
+    assert isinstance (changes[PANEL_APPLET_ADDED], PanelAppletAddedChange)
+    assert isinstance (changes[PANEL_OBJECT_ADDED], PanelObjectAddedChange)
+
+    source.commit_change (changes[PANEL_ADDED], False)
+
+    changes = []
 
     # Remove the menu bar again
     while "foo" in objects:
@@ -451,30 +479,35 @@ def run_unit_tests ():
     # Shutdown the client again
     client.notify_remove (notify_id)
     client.remove_dir ("/apps/panel")
+
+    assert len (changes) == 4
+    for change in changes:
+        assert isinstance (change, userprofile.ProfileChange)
+    for change in changes[:3]:
+        assert isinstance (change, PanelChange)
+        assert change.id == "foo"
+    assert isinstance (changes[3], gconfsource.GConfChange)
+    assert changes[3].entry.key == "/apps/panel/general/show_program_list"
+
+    (
+        PANEL_OBJECT_REMOVED,
+        PANEL_APPLET_REMOVED,
+        PANEL_REMOVED
+    ) = range (3)
     
+    assert isinstance (changes[PANEL_OBJECT_REMOVED], PanelObjectRemovedChange)
+    assert isinstance (changes[PANEL_APPLET_REMOVED], PanelAppletRemovedChange)
+    assert isinstance (changes[PANEL_REMOVED], PanelRemovedChange)
+
+    # source.commit_change (changes[PANEL_ADDED], False)
+
+    print temp_path
+    os.system ("gconftool-2 --shutdown")
+    time.sleep (1)
+
     # Bye, bye cruft
     os.system ("gconftool-2 --recursive-unset /apps/panel/toplevels/foo")
     os.system ("gconftool-2 --recursive-unset /apps/panel/objects/foo")
     os.system ("gconftool-2 --recursive-unset /apps/panel/applets/foo")
 
-    for c in changes:
-        if isinstance (c, gconfsource.GConfChange):
-            print c.entry.key
-    assert len (changes) == 8
-    for change in changes:
-        assert isinstance (change, userprofile.ProfileChange)
-    for change in changes[1:7]:
-        assert isinstance (change, PanelChange)
-        assert change.id == "foo"
-    for change in changes[-1:1]:
-        assert isinstance (change, gconfsource.GConfChange)
-        assert change.entry.key == "/apps/panel/general/show_program_list"
-    assert isinstance (changes[1], PanelAddedChange)
-    assert isinstance (changes[2], PanelAppletAddedChange)
-    assert isinstance (changes[3], PanelObjectAddedChange)
-    assert isinstance (changes[4], PanelObjectRemovedChange)
-    assert isinstance (changes[5], PanelAppletRemovedChange)
-    assert isinstance (changes[6], PanelRemovedChange)
-
-
-    # FIXME: write test cases for the new stuff
+    #shutil.rmtree (temp_path, True)

@@ -27,6 +27,20 @@ import userprofile
 import storage
 import errno
 
+# gconf_engine_associate_schema() isn't wrapped
+def associate_schema (config_source, key, schema_key):
+    os.system ("gconftool-2 --config-source='%s' --apply-schema %s %s" % (config_source, schema_key, key))
+
+def get_client_and_address_for_path (path):
+    try:
+        os.makedirs (path)
+    except OSError, err:
+        if err.errno != errno.EEXIST:
+            raise err
+    address = "xml:readwrite:" + path
+    engine = gconf.engine_get_for_address ("xml:readwrite:" + path)
+    return (gconf.client_get_for_engine (engine), address)
+
 class GConfChange (userprofile.ProfileChange):
     """Encapsulates a change to a GConf key."""
     
@@ -88,38 +102,29 @@ class GConfSource (userprofile.ProfileSource):
         self.defaults_client  = None
         self.mandatory_client = None
 
-    def get_committing_client (self, mandatory):
+    def get_committing_client_and_address (self, mandatory):
         """Get a GConfClient using either .gconf.xml.defaults or
         .gconf.xml.mandatory (in the temporary profile location)
         as its source.
 
         mandatory: whether to get the mandatory or defaults source
         """
-        def get_client_for_path (path):
-            try:
-                os.makedirs (path)
-            except OSError, err:
-                if err.errno != errno.EEXIST:
-                    raise err
-            engine = gconf.engine_get_for_address ("xml:readwrite:" + path)
-            return (gconf.client_get_for_engine (engine), engine)
-
         if not mandatory:
             if not self.defaults_client:
-                (client, engine) = get_client_for_path (
+                (client, address) = get_client_and_address_for_path (
                                self.profile_storage.get_install_path () +
                                "/.gconf.xml.defaults")
                 self.defaults_client = client
-                self.defaults_engine = engine
-            return (self.defaults_client, self.defaults_client)
+                self.defaults_address = address
+            return (self.defaults_client, self.defaults_address)
         else:
             if not self.mandatory_client:
-                (client, engine) = get_client_for_path (
+                (client, address) = get_client_and_address_for_path (
                                self.profile_storage.get_install_path () +
                                "/.gconf.xml.mandatory")
                 self.mandatory_client = client
-                self.mandatory_engine = engine
-            return (self.mandatory_client, self.mandatory_engine)
+                self.mandatory_address = address
+            return (self.mandatory_client, self.mandatory_address)
 
     def commit_change (self, change, mandatory = False):
         """Commit a GConf change to the profile."""

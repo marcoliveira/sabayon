@@ -1,6 +1,23 @@
 2005-02-11  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/sources/gconfsource.py:
+	(associate_schema): gconf_engine_associate_schema() isn't wrapped, so
+	use gconftool to do the job.
+	(get_client_and_address_for_path): we want the address rather than
+	engine now.
+	
+	* lib/sources/paneldelegate.py:
+	(PanelDelegate.__handle_id_list_change): remove all the added/removed
+	functions and do it generically here.
+	(PanelDelegate.__copy_dir): implement.
+	(PanelDelegate.__commit_removed_change),
+	(PanelDelegate.__commit_added_change): use our cache of the id list
+	rather than the schema default when committing the id list.
+	(run_unit_tests: put Humpty together again.
+
+2005-02-11  Mark McLoughlin  <markmc@redhat.com>
+
+	* lib/sources/gconfsource.py:
 	(GConfSource.__get_client): rename to get_committing_client()
 	and export. Also make it return a (client, engine) tupple.
 	
