@@ -22,6 +22,7 @@ import os
 import errno
 import gtk
 import gtk.glade
+import storage
 from config import *
 
 class ProfilesModel (gtk.ListStore):
@@ -31,7 +32,10 @@ class ProfilesModel (gtk.ListStore):
 
     def __init__ (self):
         gtk.ListStore.__init__ (self, str)
+        self.reload ()
 
+    def reload (self):
+        self.clear ()
         profile_files = []
         try:
             profile_files = os.listdir (PROFILESDIR)
@@ -131,6 +135,7 @@ class ProfilesDialog:
                                       min (height + 190, 400))
 
         self.profiles_list.grab_focus ()
+        self.__profile_selection_changed (self.profiles_list.get_selection ())
 
         self.dialog.show ()
 
@@ -147,6 +152,7 @@ class ProfilesDialog:
         self.profiles_list.set_model (self.profiles_model)
 
         self.profiles_list.get_selection ().set_mode (gtk.SELECTION_SINGLE)
+        self.profiles_list.get_selection ().connect ("changed", self.__profile_selection_changed)
 
         c = gtk.TreeViewColumn ("Name",
                                 gtk.CellRendererText (),
@@ -165,10 +171,28 @@ class ProfilesDialog:
         print "Edit"
 
     def __delete_button_clicked (self, button):
-        print "Delete"
+        (model, row) = self.profiles_list.get_selection ().get_selected ()
+        if row:
+            profile_name = model[row][ProfilesModel.COLUMN_NAME]
+            os.remove (PROFILESDIR + "/" + profile_name + ".zip")
+        self.profiles_model.reload ()
 
     def __create_new_profile (self, profile_name, base_profile):
-        print "Create new profile %s based on %s" % (profile_name, base_profile)
+        profile_storage = storage.ProfileStorage (PROFILESDIR + "/" + profile_name + ".zip")
+        profile_storage.update_all ("")
+        
+        self.profiles_model.reload ()
+        iter = self.profiles_model.get_iter_first ()
+        while iter:
+            if self.profiles_model[iter][ProfilesModel.COLUMN_NAME] == profile_name:
+                self.profiles_list.get_selection ().select_iter (iter)
+                return
+            iter = self.profiles_model.iter_next (iter)
+
+    def __profile_selection_changed (self, selection):
+        (model, row) = self.profiles_list.get_selection ().get_selected ()
+        self.edit_button.set_sensitive (row != None)
+        self.delete_button.set_sensitive (row != None)
 
 if __name__ == "__main__":
     dialog = ProfilesDialog ()
