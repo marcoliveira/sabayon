@@ -69,6 +69,7 @@ class ModuleLoader:
             exec (cmd)
         except:
             print "Failed to invoke function '%s.%s': %s" % (module, constructor, sys.exc_type)
+            traceback.print_exc(file=sys.stderr)
             return None
 
         try:
@@ -115,7 +116,7 @@ class ProfileChange (gobject.GObject):
 
     def get_source_name (self):
         """Return the name of the configuration source."""
-        self.source.get_name ()
+        return self.source.get_name ()
 
     def get_name (self):
         """Return the name of the configuration item which changed."""
