@@ -31,6 +31,10 @@ APPLY_TOOL_ARGV   = [ "@SBINDIR@/sabayon-apply" ]
 # FIXME: this is too big a hammer
 CLOBBER_USER_PROCESSES_ARGV = [ "/usr/bin/pkill", "-u" ]
 
+# No. of seconds to wait after the session has started before
+# running the monitor tool
+ADMIN_TOOL_TIMEOUT = 3
+
 #
 # This is the user which we run the prototype sessions
 # as. The account should be created as part of the packages

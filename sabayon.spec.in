@@ -33,6 +33,11 @@ rm -fr %{buildroot}
 
 %makeinstall PAM_PREFIX=$RPM_BUILD_ROOT/etc
 
+# FIXME: long term we can't rely on owning these files
+mkdir -p $RPM_BUILD_ROOT/etc/gconf/2
+echo 'include "$(HOME)/.gconf.path.defaults"'  > $RPM_BUILD_ROOT/etc/gconf/2/local-defaults.path
+echo 'include "$(HOME)/.gconf.path.mandatory"' > $RPM_BUILD_ROOT/etc/gconf/2/local-mandatory.path
+
 desktop-file-install --vendor gnome --delete-original		\
   --dir $RPM_BUILD_ROOT%{_datadir}/applications			\
   $RPM_BUILD_ROOT%{_datadir}/applications/*.desktop
@@ -55,6 +60,8 @@ userdel -r sabayon >/dev/null 2>&1 || /bin/true
 %defattr(-, root, root)
 
 %doc AUTHORS ChangeLog.gz NEWS README TODO ISSUES
+%config /etc/gconf/2/local-defaults.path
+%config /etc/gconf/2/local-mandatory.path
 %config /etc/pam.d/sabayon
 %config /etc/security/console.apps/sabayon
 %{_bindir}/%{name}*

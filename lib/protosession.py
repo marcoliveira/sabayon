@@ -345,7 +345,7 @@ class ProtoSession (gobject.GObject):
         io_watch = gobject.io_add_watch (self.usr1_pipe_r,
                                          gobject.IO_IN | gobject.IO_PRI,
                                          self.__usr1_pipe_watch_handler)
-        timeout = gobject.timeout_add (5 * 1000,
+        timeout = gobject.timeout_add (ADMIN_TOOL_TIMEOUT * 1000,
                                        self.__usr1_timeout_handler)
 
         dprint ("Waiting on child process (%d)" % self.xnest_pid)

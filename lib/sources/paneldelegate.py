@@ -129,13 +129,13 @@ class PanelDelegate (userprofile.SourceDelegate):
                 self.objects[id] = PanelDelegate.PanelObject (id, False)
 
     def __handle_id_list_change (self, change, dict, thing_class, added_class, removed_class):
-        if not change.entry.value or \
-               change.entry.value.type != gconf.VALUE_LIST or \
-               change.entry.value.get_list_type () != gconf.VALUE_STRING:
+        if not change.value or \
+               change.value.type != gconf.VALUE_LIST or \
+               change.value.get_list_type () != gconf.VALUE_STRING:
                 return True
 
         id_list = []
-        for v in change.entry.value.get_list ():
+        for v in change.value.get_list ():
             id_list.append (v.get_string ())
             
         added = []
@@ -165,42 +165,42 @@ class PanelDelegate (userprofile.SourceDelegate):
         return True
 
     def handle_change (self, change):
-        if change.entry.key.startswith (PANEL_KEY_BASE + "/toplevels/"):
-            toplevel_id = change.entry.key.split ("/")[4]
+        if change.key.startswith (PANEL_KEY_BASE + "/toplevels/"):
+            toplevel_id = change.key.split ("/")[4]
             if not self.toplevels.has_key (toplevel_id) or \
                self.toplevels[toplevel_id].added or \
                self.toplevels[toplevel_id].removed:
                 return True
         
-        elif change.entry.key.startswith (PANEL_KEY_BASE + "/objects/"):
-            object_id = change.entry.key.split ("/")[4]
+        elif change.key.startswith (PANEL_KEY_BASE + "/objects/"):
+            object_id = change.key.split ("/")[4]
             if not self.objects.has_key (object_id) or \
                self.objects[object_id].added or \
                self.objects[object_id].removed:
                 return True
         
-        elif change.entry.key.startswith (PANEL_KEY_BASE + "/applets"):
-            applet_id = change.entry.key.split ("/")[4]
+        elif change.key.startswith (PANEL_KEY_BASE + "/applets"):
+            applet_id = change.key.split ("/")[4]
             if not self.applets.has_key (applet_id) or \
                self.applets[applet_id].added or \
                self.applets[applet_id].removed:
                 return True
         
-        elif change.entry.key == PANEL_KEY_BASE + "/general/toplevel_id_list":
+        elif change.key == PANEL_KEY_BASE + "/general/toplevel_id_list":
             return self.__handle_id_list_change (change,
                                                  self.toplevels,
                                                  PanelDelegate.PanelToplevel,
                                                  PanelAddedChange,
                                                  PanelRemovedChange)
             
-        elif change.entry.key == PANEL_KEY_BASE + "/general/applet_id_list":
+        elif change.key == PANEL_KEY_BASE + "/general/applet_id_list":
             return self.__handle_id_list_change (change,
                                                  self.applets,
                                                  PanelDelegate.PanelApplet,
                                                  PanelAppletAddedChange,
                                                  PanelAppletRemovedChange)
             
-        elif change.entry.key == PANEL_KEY_BASE + "/general/object_id_list":
+        elif change.key == PANEL_KEY_BASE + "/general/object_id_list":
             return self.__handle_id_list_change (change,
                                                  self.objects,
                                                  PanelDelegate.PanelObject,
@@ -437,7 +437,7 @@ def run_unit_tests ():
     for change in changes:
         assert isinstance (change, userprofile.ProfileChange)
     assert isinstance (changes[0], gconfsource.GConfChange)
-    assert changes[0].entry.key == PANEL_KEY_BASE + "/general/show_program_list"
+    assert changes[0].key == PANEL_KEY_BASE + "/general/show_program_list"
     for change in changes[1:4]:
         assert isinstance (change, PanelChange)
         assert change.id == "foo"
@@ -495,7 +495,7 @@ def run_unit_tests ():
         assert isinstance (change, PanelChange)
         assert change.id == "foo"
     assert isinstance (changes[3], gconfsource.GConfChange)
-    assert changes[3].entry.key == PANEL_KEY_BASE + "/general/show_program_list"
+    assert changes[3].key == PANEL_KEY_BASE + "/general/show_program_list"
 
     (
         PANEL_OBJECT_REMOVED,

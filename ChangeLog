@@ -1,5 +1,24 @@
 2005-02-17  Mark McLoughlin  <markmc@redhat.com>
 
+	* admin-tool/sabayon.glade: remove the splitter
+	for now - we're not using the text view yet.
+	
+	* lib/config.py.in: add ADMIN_TOOL_TIMEOUT
+	
+	* lib/protosession.py: and use it here.
+	
+	* lib/sources/gconfsource.py:
+	(GConfChange): store the key and value rather
+	than the entry so we can unset the value if
+	we wish.
+	
+	* lib/sources/paneldelegate.py: upd.
+	
+	* sabayon.spec.in: create /etc/gconf/2/local-defaults.path
+	and /etc/gconf/2/local-mandatory.path
+
+2005-02-17  Mark McLoughlin  <markmc@redhat.com>
+
 	* lib/protosession.py: clobber all process running
 	as the prototype user before starting the new session.
 	

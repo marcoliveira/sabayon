@@ -56,43 +56,36 @@ def get_client_and_address_for_path (path):
 class GConfChange (userprofile.ProfileChange):
     """Encapsulates a change to a GConf key."""
     
-    def __init__ (self, source, entry):
+    def __init__ (self, source, key, value):
         """Construct a GConfChange from a GConfEntry."""
         userprofile.ProfileChange.__init__ (self, source)
-        self.entry = entry
+        self.key   = key
+        self.value = value
 
     def get_id (self):
         """Return the path to the GConf key which changed."""
-        return self.entry.key
+        return self.key
 
     def get_short_description (self):
         """Return a short description of the GConf key change."""
-        if not self.entry.value:
-            return "GConf key '%s' unset" % self.entry.key
-        elif self.entry.value.type == gconf.VALUE_STRING:
-            return "GConf key '%s' set to string '%s'" % \
-                   (self.entry.key, self.entry.value.to_string ())
-        elif self.entry.value.type == gconf.VALUE_INT:
-            return "GConf key '%s' set to integer '%s'" % \
-                   (self.entry.key, self.entry.value.to_string ())
-        elif self.entry.value.type == gconf.VALUE_FLOAT:
-            return "GConf key '%s' set to float '%s'" % \
-                   (self.entry.key, self.entry.value.to_string ())
-        elif self.entry.value.type == gconf.VALUE_BOOL:
-            return "GConf key '%s' set to boolean '%s'" % \
-                   (self.entry.key, self.entry.value.to_string ())
-        elif self.entry.value.type == gconf.VALUE_SCHEMA:
-            return "GConf key '%s' set to schema '%s'" % \
-                   (self.entry.key, self.entry.value.to_string ())
-        elif self.entry.value.type == gconf.VALUE_LIST:
-            return "GConf key '%s' set to list '%s'" % \
-                   (self.entry.key, self.entry.value.to_string ())
-        elif self.entry.value.type == gconf.VALUE_PAIR:
-            return "GConf key '%s' set to pair '%s'" % \
-                   (self.entry.key, self.entry.value.to_string ())
+        if not self.value:
+            return "GConf key '%s' unset" % self.key
+        elif self.value.type == gconf.VALUE_STRING:
+            return "GConf key '%s' set to string '%s'"  % (self.key, self.value.to_string ())
+        elif self.value.type == gconf.VALUE_INT:
+            return "GConf key '%s' set to integer '%s'" % (self.key, self.value.to_string ())
+        elif self.value.type == gconf.VALUE_FLOAT:
+            return "GConf key '%s' set to float '%s'"   % (self.key, self.value.to_string ())
+        elif self.value.type == gconf.VALUE_BOOL:
+            return "GConf key '%s' set to boolean '%s'" % (self.key, self.value.to_string ())
+        elif self.value.type == gconf.VALUE_SCHEMA:
+            return "GConf key '%s' set to schema '%s'"  % (self.key, self.value.to_string ())
+        elif self.value.type == gconf.VALUE_LIST:
+            return "GConf key '%s' set to list '%s'"    % (self.key, self.value.to_string ())
+        elif self.value.type == gconf.VALUE_PAIR:
+            return "GConf key '%s' set to pair '%s'"    % (self.key, self.value.to_string ())
         else:
-            return "GConf key '%s' set to '%s'" % \
-                   (self.entry.key, self.entry.value.to_string ())
+            return "GConf key '%s' set to '%s'"         % (self.key, self.value.to_string ())
 
 gobject.type_register (GConfChange)
 
@@ -146,12 +139,12 @@ class GConfSource (userprofile.ProfileSource):
         
         (client, address) = self.get_committing_client_and_address (mandatory)
 
-        dprint ("Committing change to '%s' to '%s'" % (change.entry.key, address))
+        dprint ("Committing change to '%s' to '%s'" % (change.key, address))
         
-        if change.entry.value:
-            client.set (change.entry.key, change.entry.value)
+        if change.value:
+            client.set (change.key, change.value)
         else:
-            client.unset (change.entry.key)
+            client.unset (change.key)
         
     def start_monitoring (self):
         """Start monitoring for GConf changes. Note that this
@@ -165,9 +158,10 @@ class GConfSource (userprofile.ProfileSource):
         
         def handle_notify (client, cnx_id, entry, self):
             dprint ("Got GConf notification on '%s'" % entry.key)
-            if entry.get_is_default () == True:
-                entry.value = None
-            self.emit_change (GConfChange (self, entry))
+            value = None
+            if not entry.get_is_default ():
+                value = entry.value
+            self.emit_change (GConfChange (self, entry.key, value))
 
         self.client = gconf.client_get_default ()
         self.client.add_dir ("/", gconf.CLIENT_PRELOAD_RECURSIVE)
@@ -350,14 +344,14 @@ def run_unit_tests ():
     source.stop_monitoring ()
     
     assert len (changes) == 4
-    assert changes[3].entry.key == "/tmp/test-gconfprofile/t3"
+    assert changes[3].key == "/tmp/test-gconfprofile/t3"
     source.commit_change (changes[3])
     
-    assert changes[2].entry.key == "/tmp/test-gconfprofile/t2"
+    assert changes[2].key == "/tmp/test-gconfprofile/t2"
     source.commit_change (changes[2], True)
     
-    assert changes[1].entry.key == "/tmp/test-gconfprofile/t1"
-    assert changes[0].entry.key == "/tmp/test-gconfprofile/t1"
+    assert changes[1].key == "/tmp/test-gconfprofile/t1"
+    assert changes[0].key == "/tmp/test-gconfprofile/t1"
 
     # source.client.recursive_unset ("/tmp/test-gconfprofile")
     os.system ("gconftool-2 --recursive-unset /tmp/test-gconfprofile")
