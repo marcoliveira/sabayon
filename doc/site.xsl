@@ -43,7 +43,7 @@
       </ul>
       <h4 class="box_header">Source</h4>
       <ul>
-        <li> <a href="http://people.redhat.com/markmc/sabayon/">tarball</a></li>
+        <li> <a href="http://ftp.gnome.org/pub/GNOME/sources/sabayon/">tarball</a></li>
 	<li> <a href="http://cvs.gnome.org/viewcvs/sabayon/">CVS Repository</a></li>
       </ul>
     </div>
