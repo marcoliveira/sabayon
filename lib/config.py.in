@@ -32,6 +32,9 @@ MONITOR_TOOL_ARGV = [ "@LIBEXECDIR@/sabayon-monitor" ]
 XNEST_ARGV        = [ "/usr/X11R6/bin/Xnest", "-terminate", "-audit", "0", "-name", "Xnest", "-nolisten", "tcp" ]
 SESSION_ARGV      = [ "/etc/X11/xdm/Xsession", "gnome" ]
 
+PANEL_KEY_PATH = /apps/panel
+# PANEL_KEY_PATH = /apps/panel/profiles/default
+
 try:
     GLADEDIR = os.environ["GLADEDIR"]
 except:

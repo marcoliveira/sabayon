@@ -1,5 +1,12 @@
 2005-02-11  Mark McLoughlin  <markmc@redhat.com>
 
+	* lib/config.py.in: add PANEL_KEY_BASE.
+	
+	* lib/sources/paneldelegate.py: use it, instead of hardcoding
+	/apps/panel - older versions use /apps/panel/profiles/default.
+
+2005-02-11  Mark McLoughlin  <markmc@redhat.com>
+
 	* lib/sources/gconfsource.py:
 	(associate_schema): gconf_engine_associate_schema() isn't wrapped, so
 	use gconftool to do the job.
