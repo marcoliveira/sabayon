@@ -1,5 +1,30 @@
 2005-02-28  Mark McLoughlin  <markmc@redhat.com>
 
+	* admin-tool/profilesdialog.py:
+	(__create_new_profile): upd to use new ProfileStorage
+	API.
+	
+	* admin-tool/monitorwindow.py,
+	  admin-tool/sabayon-apply.py,
+	  admin-tool/sabayon-session.py,
+	  admin-tool/sabayon-monitor.py: pass about
+	the profile name instead of the profile path.
+	
+	
+	* lib/storage.py: allow a profile name to be an
+	absolute path. Kill "running_unit_tests" hack.
+	
+	* lib/sources/filessource.py,
+	  lib/sources/gconfsource.py,
+	  lib/userprofile.py:
+	(run_unit_tests): fix to work with new ProfileStoage
+	API.
+	
+	* lib/README.storage: remove, its out of date
+	and we've inline docs now.
+
+2005-02-28  Mark McLoughlin  <markmc@redhat.com>
+
 	* admin-tool/monitorwindow.py:
 	(__handle_about): add translator credits.
 

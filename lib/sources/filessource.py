@@ -124,8 +124,6 @@ def run_unit_tests ():
     import gobject
     import tempfile
 
-    storage.running_unit_tests = True
-
     real_homedir = util.get_home_dir ()
     
     temp_path = tempfile.mkdtemp (dir = real_homedir,
@@ -142,8 +140,12 @@ def run_unit_tests ():
         assert False
         return True
     timeout = gobject.timeout_add (60 * 1000, should_not_be_reached)
+
+    profile_path = os.path.join (os.getcwd (), "file-test.zip")
+    if os.path.exists (profile_path):
+        os.remove (profile_path)
     
-    store = storage.ProfileStorage ("FileTest")
+    store = storage.ProfileStorage (profile_path)
     source = get_source (store)
     source.connect ("changed", handle_change, main_loop)
     source.start_monitoring ()
@@ -158,7 +160,7 @@ def run_unit_tests ():
     source.stop_monitoring ()
 
     store.save ()
-    assert os.path.exists ("FileTest.zip")
+    assert os.path.exists (profile_path)
 
     shutil.rmtree (temp_path, True)
 
@@ -168,17 +170,13 @@ def run_unit_tests ():
                                   prefix = ".test-filesprofile-")
     util.set_home_dir_for_unit_tests (temp_path)
     
-    source = get_source (storage.ProfileStorage ("FileTest"))
+    source = get_source (storage.ProfileStorage (profile_path))
     source.apply ()
     
     assert os.access (os.path.join (temp_path, "foobar/foo/bar/foo/bar/foo"), os.F_OK)
     
     shutil.rmtree (temp_path, True)
 
-    os.remove ("FileTest.zip")
-    if os.path.exists ("FileTest.zip.bak"):
-        os.remove ("FileTest.zip.bak")
+    os.remove (profile_path)
     
     util.set_home_dir_for_unit_tests (None)
-
-    storage.running_unit_tests = False

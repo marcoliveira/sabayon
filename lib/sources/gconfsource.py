@@ -241,9 +241,11 @@ def get_source (storage):
 # Unit tests
 #
 def run_unit_tests ():
-    storage.running_unit_tests = True
-    
     main_loop = gobject.MainLoop ()
+
+    profile_path = os.path.join (os.getcwd (), "gconf-test.zip")
+    if os.path.exists (profile_path):
+        os.remove (profile_path)
 
     source = get_source (storage.ProfileStorage ("GConfTest"))
 
@@ -339,5 +341,6 @@ def run_unit_tests ():
 
     os.remove (os.path.join (util.get_home_dir (), ".gconf.path.defaults"))
     os.remove (os.path.join (util.get_home_dir (), ".gconf.path.mandatory"))
-
-    storage.running_unit_tests = False
+    
+    if os.path.exists (profile_path):
+        os.remove (profile_path)

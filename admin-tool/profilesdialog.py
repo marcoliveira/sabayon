@@ -246,16 +246,12 @@ class ProfilesDialog:
             self.profiles_model.reload ()
 
     def __create_new_profile (self, profile_name, base_profile):
-        profile_path = _get_profile_path_for_name (profile_name)
         if base_profile:
-            base_profile_path = _get_profile_path_for_name (base_profile)
-            dprint ("Copying profile file '%s' to '%s'" % (base_profile_path, profile_path))
-            shutil.copy2 (base_profile_path, profile_path)
-            # FIXME: I guess it would make sense to clear history from metadata
+            base_storage = storage.ProfileStorage (base_profile)
+            new_storage = base_storage.copy (profile_name)
         else:
-            dprint ("Creating new profile file '%s'" % profile_path)
-            profile_storage = storage.ProfileStorage (profile_path)
-            profile_storage.update_all ("")
+            new_storage = storage.ProfileStorage (profile_name)
+            new_storage.save ()
 
         self.profiles_model.reload ()
         iter = self.profiles_model.get_iter_first ()

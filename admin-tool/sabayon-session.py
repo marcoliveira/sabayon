@@ -35,14 +35,14 @@ if __name__ == '__main__':
         sys.stderr.write (_("Usage: %s <username> <profile-file>\n") % sys.argv[0])
         sys.exit (1)
                                             
-    (username, profile_file) = sys.argv[1:3]
+    (username, profile_name) = sys.argv[1:3]
 
     main_loop = gobject.MainLoop ()
 
     def handle_session_finished (session, main_loop):
         main_loop.quit ()
 
-    session = protosession.ProtoSession (username, profile_file)
+    session = protosession.ProtoSession (username, profile_name)
     session.connect ("finished", handle_session_finished, main_loop)
     session.start ()
 

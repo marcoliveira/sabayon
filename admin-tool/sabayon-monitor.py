@@ -25,7 +25,7 @@ if __name__ == '__main__':
     util.init_gettext ()
 
     if len (sys.argv) != 2:
-        sys.stderr.write (_("Usage: %s <profile-file>\n") % sys.argv[0])
+        sys.stderr.write (_("Usage: %s <profile-name>\n") % sys.argv[0])
         sys.exit (1)
                         
     import monitorwindow

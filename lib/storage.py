@@ -30,8 +30,6 @@ import libxml2
 import util
 from config import *
 
-running_unit_tests = False
-
 def dprint (fmt, *args):
     util.debug_print (util.DEBUG_STORAGE, fmt % args)
 
@@ -91,11 +89,10 @@ class ProfileStorage:
         /etc/desktop-profiles/$(name).zip.
         """
         self.name = name
-
-        if not running_unit_tests:
+        if not os.path.isabs (self.name):
             self.path = os.path.join (PROFILESDIR, self.name + ".zip")
         else:
-            self.path = self.name + ".zip"
+            self.path = name
             
         self.metadata         = None
         self.zip              = None
@@ -426,7 +423,10 @@ class ProfileStorage:
                 dprint ("Failed to copy profile from '%s' to '%s': %s" % \
                         (self.path, new_path, sys.exc_info()[1]))
         
-        return ProfileStorage (name)
+        retval = ProfileStorage (name)
+        retval.clear_revisions ()
+        retval.save ()
+        return retval
 
     def add (self, path, src_dir, source, attributes = None):
         """Add a new - or update an existing - file or directory
@@ -796,23 +796,24 @@ class ProfileStorage:
 
         return revisions
 
+    def clear_revisions (self):
+        """Remove all profile and file/directory revision history."""
+        # FIXME: implement
+
 #
 # Unit tests
 #
 def run_unit_tests ():
-    # Make ProfileStorage look in the current dir for profiles
-    global running_unit_tests
-    running_unit_tests = True
-
     # Remove cruft
-    if os.path.exists ("storage-test.zip"):
-        os.remove ("storage-test.zip")
+    profile_path = os.path.join (os.getcwd (), "storage-test.zip")
+    if os.path.exists (profile_path):
+        os.remove (profile_path)
 
     # Create temporary dir for test
     temp_dir = tempfile.mkdtemp (prefix = "storage-test-")
 
     # Create profile
-    profile = ProfileStorage ("storage-test")
+    profile = ProfileStorage (profile_path)
 
     # Create two test files in the temporary dir
     os.mkdir (os.path.join (temp_dir, "t"))
@@ -868,7 +869,7 @@ def run_unit_tests ():
     temp_dir = tempfile.mkdtemp (prefix = "storage-test-")
     
     # Now, re-open
-    profile = ProfileStorage ("storage-test")
+    profile = ProfileStorage (profile_path)
 
     # Remove a directory
     profile.remove ("blaas")
@@ -886,7 +887,7 @@ def run_unit_tests ():
     shutil.rmtree (temp_dir)
 
     # Now, re-open and validate
-    profile = ProfileStorage ("storage-test")
+    profile = ProfileStorage (profile_path)
 
     # We should have three revisions, we saved thrice
     profile_revisions = profile.get_revisions ()
@@ -1094,6 +1095,4 @@ def run_unit_tests ():
     # Remove temporary extraction dir
     shutil.rmtree (temp_dir)
     
-    os.remove ("storage-test.zip")
-    
-    running_unit_tests = False
+    os.remove (profile_path)

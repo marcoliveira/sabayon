@@ -30,11 +30,11 @@ if __name__ == '__main__':
         raise NotImplementedError
 
     if len (sys.argv) == 1:
-        profile_file = lookup_users_profile ()
+        profile_name = lookup_users_profile ()
     elif len (sys.argv) == 2:
-        profile_file = sys.argv[1]
+        profile_name = sys.argv[1]
     else:
-        sys.stderr.write (_("Usage: %s [<profile-file>]\n") % sys.argv[0])
+        sys.stderr.write (_("Usage: %s [<profile-name>]\n") % sys.argv[0])
         sys.exit (1)
 
     import userprofile
@@ -43,10 +43,10 @@ if __name__ == '__main__':
         util.debug_print (util.DEBUG_ADMINTOOL, fmt % args)
 
     dprint ("Applying profile '%s' for user '%s'" %
-            (profile_file, util.get_user_name ()))
+            (profile_name, util.get_user_name ()))
 
-    profile = userprofile.UserProfile (profile_file)
+    profile = userprofile.UserProfile (profile_name)
     profile.apply ()
 
     dprint ("Finished applying profile '%s' for user '%s'" %
-            (profile_file, util.get_user_name ()))
+            (profile_name, util.get_user_name ()))

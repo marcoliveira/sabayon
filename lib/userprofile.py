@@ -326,7 +326,7 @@ def run_unit_tests ():
         def __init__ (self):
             ProfileSource.__init__ (self, "local")
 
-    profile = UserProfile ("/tmp/foo-storage")
+    profile = UserProfile ("foo-storage")
     assert len (profile.sources) > 0
 
     testsource = None
