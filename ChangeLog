@@ -1,3 +1,12 @@
+2005-03-07  Mark McLoughlin  <mark@skynet.ie>
+
+	* admin-tool/editorwindow.py: add a combo to allow
+	selecting the profile revision.
+	
+	* lib/storage.py:
+	(ProfileStorage.get_revision): return the date along
+	with the revision in a tuple.
+
 Sun Mar  6 11:49:38 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* po/POTFILES.in: added admin-tool/aboutdialog.py to avoid automated

@@ -44,12 +44,6 @@ _ui_string = '''
       <menuitem action="About"/>
     </menu>
   </menubar>
-
-  <toolbar name="Toolbar">
-    <toolitem action="Save"/>
-    <separator/>
-    <toolitem action="Delete"/>
-  </toolbar>
 </ui>
 '''
 
@@ -66,14 +60,41 @@ class ProfileModel (gtk.ListStore):
         gtk.ListStore.__init__ (self, str)
 
         self.storage = storage
+        self.profile_revision = None
         self.reload ()
 
     def reload (self):
         self.clear ()
-        for (source, name) in self.storage.list ():
-            row = self.prepend ()
-            self.set (row,
+        for (source, name) in self.storage.list (profile_revision = self.profile_revision):
+            self.set (self.prepend (),
                       self.COLUMN_NAME, name)
+
+    def set_revision (self, profile_revision):
+        self.profile_revision = profile_revision
+        self.reload ()
+
+class RevisionsModel (gtk.ListStore):
+    (
+        COLUMN_REVISION,
+        COLUMN_DATE
+    ) = range (2)
+
+    def __init__ (self, storage, path = None):
+        gtk.ListStore.__init__ (self, str, str)
+
+        self.storage = storage
+        self.path = path
+        self.reload ()
+
+    def reload (self):
+        self.clear ()
+        iter = None
+        revisions = self.storage.get_revisions (self.path)
+        revisions.reverse ()
+        for (revision, date) in revisions:
+            self.set (self.prepend (),
+                      self.COLUMN_REVISION, revision,
+                      self.COLUMN_DATE,     date)
 
 class ProfileEditorWindow:
     def __init__ (self, profile_name, parent_window):
@@ -92,10 +113,12 @@ class ProfileEditorWindow:
         self.main_vbox.show ()
         self.window.add (self.main_vbox)
 
-        self.__setup_menus_and_toolbar ()
+        self.__setup_menus ()
+        self.__setup_profile_revisions_combo ()
 
         self.scrolled = gtk.ScrolledWindow ()
         self.scrolled.set_policy (gtk.POLICY_AUTOMATIC, gtk.POLICY_AUTOMATIC)
+        self.scrolled.set_shadow_type (gtk.SHADOW_IN)
         self.scrolled.show ()
         self.main_vbox.pack_start (self.scrolled, True, True, 0)
         
@@ -162,7 +185,7 @@ class ProfileEditorWindow:
     def __add_widget (self, ui_manager, widget):
         self.main_vbox.pack_start (widget, False, False, 0)
         
-    def __setup_menus_and_toolbar (self):
+    def __setup_menus (self):
         actions = [
             ("ProfileMenu", None, _("_Profile")),
             ("Save", gtk.STOCK_SAVE, _("_Save"), "<control>S", _("Save profile"), self.__handle_save),
@@ -187,6 +210,37 @@ class ProfileEditorWindow:
         self.save_action = action_group.get_action ("Save")
         self.delete_action = action_group.get_action ("Delete")
 
+    def __profile_revision_changed (self, combo):
+        revision = self.revisions_model.get_value (self.revisions_combo.get_active_iter (),
+                                                   RevisionsModel.COLUMN_REVISION)
+        dprint ("Profile revision changed: %s", revision)
+        self.profile_model.set_revision (revision)
+
+    def __setup_profile_revisions_combo (self):
+        hbox = gtk.HBox (False, 6)
+        hbox.set_border_width (6)
+        hbox.show ()
+        self.main_vbox.pack_start (hbox, False, False, 0)
+
+        label = gtk.Label (_("_Version:"))
+        label.set_use_underline (True)
+        label.set_alignment (0.0, 0.5)
+        label.show ()
+        hbox.pack_start (label, False, False, 0)
+        
+        self.revisions_model = RevisionsModel (self.storage)
+        self.revisions_combo = gtk.ComboBox (self.revisions_model)
+        self.revisions_combo.set_active (0)
+        self.revisions_combo.connect ("changed", self.__profile_revision_changed)
+        self.revisions_combo.show ()
+
+        renderer = gtk.CellRendererText ()
+        self.revisions_combo.pack_start (renderer, False)
+        self.revisions_combo.set_attributes (renderer, text = RevisionsModel.COLUMN_DATE)
+        
+        label.set_mnemonic_widget (self.revisions_combo)
+        hbox.pack_start (self.revisions_combo, True, True, 0)
+        
     def __setup_treeview (self):
         self.profile_model = ProfileModel (self.storage)
         
@@ -195,7 +249,8 @@ class ProfileEditorWindow:
         self.scrolled.add (self.treeview)
         
         self.treeview.get_selection ().set_mode (gtk.SELECTION_SINGLE)
-        self.treeview.get_selection ().connect ("changed", self.__treeview_selection_changed)
+        self.treeview.get_selection ().connect ("changed",
+                                                self.__treeview_selection_changed)
 
         self.treeview.set_headers_visible (False)
 

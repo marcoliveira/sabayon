@@ -175,7 +175,8 @@ class ProfileStorage:
         assert metadata
         revisions = []
         for profile_revision in metadata.xpathEval ("/metadata/profile_revisions/profile_revision"):
-            revisions.append (profile_revision.prop ("id"))
+            revisions.append ((profile_revision.prop ("id"),
+                               profile_revision.prop ("date")))
         return revisions
     
     def __get_current_profile_revision (self, metadata = None):
@@ -235,7 +236,8 @@ class ProfileStorage:
         assert metadata
         revisions = []
         for revision in metadata.xpathEval ("/metadata/files/file[@path='%s']/revisions/revision" % path):
-            revisions.append (revision.prop ("id"))
+            revisions.append ((revision.prop ("id"),
+                               revision.prop ("date")))
         return revisions
     
     def __get_directory_revisions (self, path, metadata = None):
@@ -244,7 +246,8 @@ class ProfileStorage:
         assert metadata
         revisions = []
         for revision in metadata.xpathEval ("/metadata/directories/directory[@path='%s']/revisions/revision" % path):
-            revisions.append (revision.prop ("id"))
+            revisions.append ((revision.prop ("id"),
+                               revision.prop ("date")))
         return revisions
 
     def __get_revision_source (self, revision_node):
@@ -851,20 +854,20 @@ class ProfileStorage:
         @path: the relative path of the file or directory to look up.
         This is the same path used with ProfileStorage::add().
 
-        Return value: a list of revision identifiers for the profile
-        or file/directory in chronological order.
+        Return value: a list of revision identifiers and dates for the
+        profile or file/directory in chronological order.
         """
         self.__read_metadata ()
 
         revisions = []
         if not path:
-            for profile_revision in self.__get_profile_revisions ():
-                revisions.append ("profile:%s" % profile_revision)
+            for (revision, date) in self.__get_profile_revisions ():
+                revisions.append (("profile:%s" % revision, date))
         else:
-            for file_revision in self.__get_file_revisions (path):
-                revisions.append ("file:%s" % file_revision)
-            for directory_revision in self.__get_directory_revisions (path):
-                revisions.append ("directory:%s" % directory_revision)
+            for (revision, date) in self.__get_file_revisions (path):
+                revisions.append (("file:%s" % revision, date))
+            for (revision, date) in self.__get_directory_revisions (path):
+                revisions.append (("directory:%s" % revision, date))
 
         return revisions
 
@@ -997,9 +1000,9 @@ def run_unit_tests ():
     # We should have three revisions, we saved thrice
     profile_revisions = profile.get_revisions ()
     assert len (profile_revisions) == 3
-    assert profile_revisions[0] == "profile:3"
-    assert profile_revisions[1] == "profile:2"
-    assert profile_revisions[2] == "profile:1"
+    assert profile_revisions[0][0] == "profile:3"
+    assert profile_revisions[1][0] == "profile:2"
+    assert profile_revisions[2][0] == "profile:1"
 
     # Verify the latest revision
     l = profile.list ()
@@ -1016,8 +1019,8 @@ def run_unit_tests ():
     assert attributes["bar-attr99"] == "99"
     revisions = profile.get_revisions (path)
     assert len (revisions) == 2
-    assert revisions[0] == "file:2"
-    assert revisions[1] == "file:1"
+    assert revisions[0][0] == "file:2"
+    assert revisions[1][0] == "file:1"
 
     (source, path) = l[1]
     assert source == "TestSource2005"
@@ -1030,8 +1033,8 @@ def run_unit_tests ():
     assert attributes["bar-attr2005"] == "2005"
     revisions = profile.get_revisions (path)
     assert len (revisions) == 2
-    assert revisions[0] == "directory:2"
-    assert revisions[1] == "directory:1"
+    assert revisions[0][0] == "directory:2"
+    assert revisions[1][0] == "directory:1"
 
     (source, path) = l[2]
     assert source == "TestSource2"
@@ -1040,8 +1043,8 @@ def run_unit_tests ():
     assert len (attributes) == 0
     revisions = profile.get_revisions (path)
     assert len (revisions) == 2
-    assert revisions[0] == "file:2"
-    assert revisions[1] == "file:1"
+    assert revisions[0][0] == "file:2"
+    assert revisions[1][0] == "file:1"
     
     # Create temporary dir for extraction
     temp_dir = tempfile.mkdtemp (prefix = "storage-test-")
@@ -1069,13 +1072,13 @@ def run_unit_tests ():
 
 
     # Verify the second revision
-    l = profile.list (profile_revision = profile_revisions[1])
+    l = profile.list (profile_revision = profile_revisions[1][0])
     assert len (l) == 3
 
     (source, path) = l[0]
     assert source == "TestSource99"
     assert path == "t/config1.test"
-    attributes = profile.get_attributes (path, profile_revisions[1])
+    attributes = profile.get_attributes (path, profile_revisions[1][0])
     assert len (attributes) == 2
     assert attributes.has_key ("foo-attr99")
     assert attributes["foo-attr99"] == "foo"
@@ -1083,11 +1086,11 @@ def run_unit_tests ():
     assert attributes["bar-attr99"] == "99"
     revisions = profile.get_revisions (path)
     assert len (revisions) == 2
-    assert revisions[0] == "file:2"
-    assert revisions[1] == "file:1"
+    assert revisions[0][0] == "file:2"
+    assert revisions[1][0] == "file:1"
 
     # Try using one of the file revisions
-    attributes = profile.get_attributes (path, revisions[1])
+    attributes = profile.get_attributes (path, revisions[1][0])
     assert len (attributes) == 2
     assert attributes.has_key ("foo-attr1")
     assert attributes["foo-attr1"] == "foo"
@@ -1097,7 +1100,7 @@ def run_unit_tests ():
     (source, path) = l[1]
     assert source == "TestSource2005"
     assert path == "foobar"
-    attributes = profile.get_attributes (path, profile_revisions[1])
+    attributes = profile.get_attributes (path, profile_revisions[1][0])
     assert len (attributes) == 2
     assert attributes.has_key ("foo-attr2005")
     assert attributes["foo-attr2005"] == "foo"
@@ -1107,7 +1110,7 @@ def run_unit_tests ():
     (source, path) = l[2]
     assert source == "Waterford"
     assert path == "blaas"
-    attributes = profile.get_attributes (path, profile_revisions[1])
+    attributes = profile.get_attributes (path, profile_revisions[1][0])
     assert len (attributes) == 2
     assert attributes.has_key ("with-butter")
     assert attributes["with-butter"] == "but of course"
@@ -1115,14 +1118,14 @@ def run_unit_tests ():
     assert attributes["nice"] == "True"
     revisions = profile.get_revisions (path)
     assert len (revisions) == 1
-    assert revisions[0] == "directory:1"
+    assert revisions[0][0] == "directory:1"
 
     # Create temporary dir for extraction
     temp_dir = tempfile.mkdtemp (prefix = "storage-test-")
 
     # Extract each of the files/directories
     for (source, path) in l:
-        profile.extract (path, temp_dir, revision = profile_revisions[1])
+        profile.extract (path, temp_dir, revision = profile_revisions[1][0])
 
     # Verify their contents
     assert os.path.isfile (os.path.join (temp_dir, "t/config1.test"))
@@ -1143,13 +1146,13 @@ def run_unit_tests ():
 
     
     # Verify the first revision
-    l = profile.list (profile_revision = profile_revisions[2])
+    l = profile.list (profile_revision = profile_revisions[2][0])
     assert len (l) == 3
 
     (source, path) = l[0]
     assert source == "TestSource1"
     assert path == "t/config1.test"
-    attributes = profile.get_attributes (path, profile_revisions[2])
+    attributes = profile.get_attributes (path, profile_revisions[2][0])
     assert len (attributes) == 2
     assert attributes.has_key ("foo-attr1")
     assert attributes["foo-attr1"] == "foo"
@@ -1159,7 +1162,7 @@ def run_unit_tests ():
     (source, path) = l[1]
     assert source == "TestSource2"
     assert path == "config2.test"
-    attributes = profile.get_attributes (path, profile_revisions[2])
+    attributes = profile.get_attributes (path, profile_revisions[2][0])
     assert len (attributes) == 2
     assert attributes.has_key ("foo-attr2")
     assert attributes["foo-attr2"] == "foo"
@@ -1169,7 +1172,7 @@ def run_unit_tests ():
     (source, path) = l[2]
     assert source == "TestSource3"
     assert path == "foobar"
-    attributes = profile.get_attributes (path, profile_revisions[2])
+    attributes = profile.get_attributes (path, profile_revisions[2][0])
     assert len (attributes) == 2
     assert attributes.has_key ("foo-attr3")
     assert attributes["foo-attr3"] == "foo"
@@ -1181,7 +1184,7 @@ def run_unit_tests ():
 
     # Extract each of the files/directories
     for (source, path) in l:
-        profile.extract (path, temp_dir, revision = profile_revisions[2])
+        profile.extract (path, temp_dir, revision = profile_revisions[2][0])
 
     # Verify their contents
     assert os.path.isfile (os.path.join (temp_dir, "t/config1.test"))
@@ -1212,7 +1215,7 @@ def run_unit_tests ():
     # We should only have a single revision now
     profile_revisions = profile.get_revisions ()
     assert len (profile_revisions) == 1
-    assert profile_revisions[0] == "profile:1"
+    assert profile_revisions[0][0] == "profile:1"
 
     # Verify this revision
     l = profile.list ()
@@ -1229,7 +1232,7 @@ def run_unit_tests ():
     assert attributes["bar-attr99"] == "99"
     revisions = profile.get_revisions (path)
     assert len (revisions) == 1
-    assert revisions[0] == "file:1"
+    assert revisions[0][0] == "file:1"
 
     (source, path) = l[1]
     assert source == "TestSource2005"
@@ -1242,7 +1245,7 @@ def run_unit_tests ():
     assert attributes["bar-attr2005"] == "2005"
     revisions = profile.get_revisions (path)
     assert len (revisions) == 1
-    assert revisions[0] == "directory:1"
+    assert revisions[0][0] == "directory:1"
 
     (source, path) = l[2]
     assert source == "TestSource2"
@@ -1251,7 +1254,7 @@ def run_unit_tests ():
     assert len (attributes) == 0
     revisions = profile.get_revisions (path)
     assert len (revisions) == 1
-    assert revisions[0] == "file:1"
+    assert revisions[0][0] == "file:1"
     
     # Create temporary dir for extraction
     temp_dir = tempfile.mkdtemp (prefix = "storage-test-")
