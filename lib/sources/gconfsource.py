@@ -21,11 +21,14 @@
 import os
 import time
 import util
+import errno
 import gobject
 import gconf
 import userprofile
 import storage
-import errno
+
+def dprint (fmt, *args):
+    util.debug_print (util.DEBUG_GCONFSOURCE, fmt % args)
 
 # gconf_engine_associate_schema() isn't wrapped
 def associate_schema (config_source, key, schema_key):
@@ -139,7 +142,10 @@ class GConfSource (userprofile.ProfileSource):
         if userprofile.ProfileSource.commit_change (self, change, mandatory):
             return
         
-        (client, engine) = self.get_committing_client_and_address (mandatory)
+        (client, address) = self.get_committing_client_and_address (mandatory)
+
+        dprint ("Committing change to '%s' to '%s'" % (change.entry.key, address))
+        
         if change.entry.value:
             client.set (change.entry.key, change.entry.value)
         else:
@@ -156,6 +162,7 @@ class GConfSource (userprofile.ProfileSource):
             return
         
         def handle_notify (client, cnx_id, entry, self):
+            dprint ("Got GConf notification on '%s'" % entry.key)
             if entry.get_is_default () == True:
                 entry.value = None
             self.emit_change (GConfChange (self, entry))
@@ -177,6 +184,7 @@ class GConfSource (userprofile.ProfileSource):
         
         # FIXME: it would be nicer if we just wrote directly
         #        to the defaults and mandatory sources
+        dprint ("Shutting down gconfd in order to sync changes to disk")
         os.system ("gconftool-2 --shutdown")
         time.sleep (1)
 
@@ -198,6 +206,7 @@ class GConfSource (userprofile.ProfileSource):
             temporary file and move it over the original. Failing
             that, write directly to the original.
             """
+            dprint ("Writing GConf path file with '%s' to '%s'" % (source, filename))
             temp = filename + ".new"
             try:
                 f = file (temp, "w")
