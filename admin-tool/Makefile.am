@@ -9,7 +9,8 @@ PYTHON_FILES =				\
 	aboutdialog.py			\
 	saveconfirm.py			\
 	gconfviewer.py			\
-	fileviewer.py
+	fileviewer.py			\
+	userswindow.py
 
 @INTLTOOL_DESKTOP_RULE@
 

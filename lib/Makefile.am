@@ -7,6 +7,7 @@ PYTHON_FILES =				\
 	dirmonitor.py			\
 	protosession.py			\
 	usermod.py			\
+	userdb.py			\
 	util.py
 
 NOINST_PYTHON_FILES =			\
