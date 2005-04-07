@@ -23,6 +23,7 @@ import exceptions, sys, os.path, ConfigParser, re, cPickle
 import tempfile, types
 import traceback
 import errno
+import time
 
 try:
     import util
@@ -47,9 +48,14 @@ class file_state:
 
 
 firefox_rel_path = ".mozilla/firefox"
+
 profiles_ini_rel_path = os.path.join(firefox_rel_path, "profiles.ini")
+
 sabayon_pref_rel_path = os.path.join(firefox_rel_path, "sabayon-prefs.js")
 sabayon_mandatory_pref_rel_path = os.path.join(firefox_rel_path, "sabayon-mandatory-prefs.js")
+
+sabayon_bookmark_rel_path = os.path.join(firefox_rel_path, "sabayon-bookmarks.html")
+sabayon_mandatory_bookmark_rel_path = os.path.join(firefox_rel_path, "sabayon-mandatory-bookmarks.html")
 
 LOG_OPERATION           = 0x00001
 LOG_CHANGE              = 0x00002
@@ -67,6 +73,21 @@ def dprint(mask, fmt, *args):
 
 def dwarn(fmt, *args):
     print >> sys.stderr, "WARNING " + fmt % args
+
+bookmark_exclude_attrs = [re.compile("^id$"),
+                          re.compile("^last_"),
+                          re.compile("^add_"),
+                          #re.compile("^icon$"),
+                          ]
+
+def filter_attr(attr, exclude):
+    if not exclude:
+        return False
+
+    for regexp in exclude:
+        if regexp.search(attr):
+            return True
+    return False
 
 class MozillaChange(userprofile.ProfileChange):
     (
@@ -127,8 +148,8 @@ class MozillaDelegate(userprofile.SourceDelegate):
         self.home_dir = util.get_home_dir()
         self.committed_prefs = {}
         self.committed_mandatory_prefs = {}
-        self.committed_bookmarks = {}
-        self.committed_mandatory_bookmarks = {}
+        self.committed_bookmarks = mozilla_bookmarks.BookmarkFolder("Null", None)
+        self.committed_mandatory_bookmarks = mozilla_bookmarks.BookmarkFolder("Null", None)
         self.ini_file = None
 
     def get_full_path(self, path):
@@ -239,20 +260,15 @@ class MozillaDelegate(userprofile.SourceDelegate):
                     JavascriptPreference(change.get_type(), change.get_key(), change.get_value())
         elif isinstance(change, BookmarkChange):
             bookmark_path = change.get_bookmark_path()
-            url = change.get_url()
-
-            if url:
-                object = mozilla_bookmarks.Bookmark(bookmark_path, url)
-            else:
-                object = mozilla_bookmarks.BookmarkFolder(bookmark_path, None)
+            entry = change.get_entry()
 
             dprint(LOG_CHANGE, "Commiting bookmark (mandatory = %s) path = %s url = %s event = %s",
-                   mandatory, bookmark_path, url, change.event)
+                   mandatory, entry.path_as_string(), entry.get_url(), change.event)
 
             if mandatory:
-                self.committed_mandatory_bookmarks[get_bookmark_path] = object
+                self.committed_mandatory_bookmarks.add_path_entry(entry.path(), entry)
             else:
-                self.committed_bookmarks[bookmark_path] = object
+                self.committed_bookmarks.add_path_entry(entry.path(), entry)
                 
 
     def start_monitoring (self):
@@ -299,6 +315,26 @@ class MozillaDelegate(userprofile.SourceDelegate):
                                          {"file_type" : FirefoxProfileFile.TYPE_PREFS,
                                           "mandatory"    : True})
 
+            if len(self.committed_bookmarks.entries) > 0:
+                bookmark_rel_path = sabayon_bookmark_rel_path
+                dprint(LOG_SYNC, "sync_changes: storing committed_bookmarks to %s", bookmark_rel_path)
+                bookmark_file = BookmarksFile(self.home_dir, bookmark_rel_path)
+                bookmark_file.set_root(self.committed_bookmarks)
+                bookmark_file.write(exclude_attrs=bookmark_exclude_attrs)
+                self.source.storage.add(bookmark_rel_path, self.home_dir, self.name,
+                                         {"file_type" : FirefoxProfileFile.TYPE_BOOKMARK,
+                                          "mandatory"    : False})
+
+            if len(self.committed_mandatory_bookmarks.entries) > 0:
+                bookmark_rel_path = sabayon_mandatory_bookmark_rel_path
+                dprint(LOG_SYNC, "sync_changes: storing mandatory committed_bookmarks to %s", bookmark_rel_path)
+                bookmark_file = BookmarksFile(self.home_dir, bookmark_rel_path)
+                bookmark_file.set_root(self.committed_mandatory_bookmarks)
+                bookmark_file.write(exclude_attrs=bookmark_exclude_attrs)
+                self.source.storage.add(bookmark_rel_path, self.home_dir, self.name,
+                                         {"file_type" : FirefoxProfileFile.TYPE_BOOKMARK,
+                                          "mandatory"    : True})
+
     def apply(self):
         ini_files = []
         pref_files = []
@@ -342,6 +378,7 @@ class MozillaDelegate(userprofile.SourceDelegate):
             else:
                 dprint(LOG_APPLY, "apply: but there isn't an ini file in the profile!")
 
+        # --------------------
         if sabayon_pref_rel_path in pref_files:
             dprint(LOG_APPLY, "extracting %s" % sabayon_pref_rel_path)
             self.source.storage.extract(sabayon_pref_rel_path, self.home_dir, True)
@@ -351,18 +388,41 @@ class MozillaDelegate(userprofile.SourceDelegate):
             apply_pref = None
 
         if sabayon_mandatory_pref_rel_path in pref_files:
-            dprint(LOG_APPLY, ">>> extracting %s" % sabayon_mandatory_pref_rel_path)
+            dprint(LOG_APPLY, "extracting %s" % sabayon_mandatory_pref_rel_path)
             self.source.storage.extract(sabayon_mandatory_pref_rel_path, self.home_dir, True)
             mandatory_apply_pref = JavascriptPrefsFile(self.home_dir, path)
             mandatory_apply_pref.read()
         else:
             mandatory_apply_pref = None
 
+        # --------------------
+
+        if sabayon_bookmark_rel_path in bookmark_files:
+            dprint(LOG_APPLY, "extracting %s" % sabayon_bookmark_rel_path)
+            self.source.storage.extract(sabayon_bookmark_rel_path, self.home_dir, True)
+            apply_bookmark = BookmarksFile(self.home_dir, path)
+            apply_bookmark.read()
+        else:
+            apply_bookmark = None
+
+        if sabayon_mandatory_bookmark_rel_path in bookmark_files:
+            dprint(LOG_APPLY, "extracting %s" % sabayon_mandatory_bookmark_rel_path)
+            self.source.storage.extract(sabayon_mandatory_bookmark_rel_path, self.home_dir, True)
+            mandatory_apply_bookmark = BookmarksFile(self.home_dir, path)
+            mandatory_apply_bookmark.read()
+        else:
+            mandatory_apply_bookmark = None
+
+
+        # --------------------
+
         # Now merge the javascript pref files
         # XXX - iterate over all target profiles
         for profile in self.ini_file.get_profiles():
             dprint(LOG_APPLY, "apply: applying to profile %s", profile.attrs)
             profile_rel_dir = profile.get_rel_dir()
+
+            # --------------------
             target_pref_rel_path = os.path.join(profile_rel_dir, "prefs.js")
             target_pref = JavascriptPrefsFile(self.home_dir, target_pref_rel_path)
             target_pref.read()
@@ -382,10 +442,25 @@ class MozillaDelegate(userprofile.SourceDelegate):
             if apply_pref or mandatory_apply_pref:
                 target_pref.write()
 
-        # Now merge the bookmarks
-        for path in bookmark_files:
-            # XXX - merge not implemented.
-            pass
+            # --------------------
+            target_bookmark_rel_path = os.path.join(profile_rel_dir, "bookmarks.html")
+            target_bookmark = BookmarksFile(self.home_dir, target_bookmark_rel_path)
+            target_bookmark.read()
+
+            if apply_bookmark:
+                mandatory = False
+                dprint(LOG_APPLY, "apply: applying src profile %s to target profile %s, mandatory=%s",
+                       sabayon_bookmark_rel_path, target_bookmark_rel_path, mandatory)
+                target_bookmark.merge(apply_bookmark, mandatory)
+
+            if mandatory_apply_bookmark:
+                mandatory = True
+                dprint(LOG_APPLY, "apply: applying src profile %s to target profile %s, mandatory=%s",
+                       sabayon_bookmark_rel_path, target_bookmark_rel_path, mandatory)
+                target_bookmark.merge(mandatory_apply_bookmark, mandatory)
+
+            if apply_bookmark or mandatory_apply_bookmark:
+                target_bookmark.write()
 
         # Finally extract any other file
         for path in other_files:
@@ -802,15 +877,14 @@ class BookmarkChange(userprofile.ProfileChange):
         CHANGED
     ) = range(3)
     
-    def __init__ (self, source, delegate, bookmark_path, url, event):
+    def __init__ (self, source, delegate, entry, event):
         userprofile.ProfileChange.__init__ (self, source, delegate)
         
         assert event == self.CREATED or \
                event == self.DELETED or \
                event == self.CHANGED
         
-        self.bookmark_path   = bookmark_path
-        self.url = url
+        self.entry = entry
         self.event = event
         self.attrs = {}
 
@@ -821,19 +895,23 @@ class BookmarkChange(userprofile.ProfileChange):
         return self.attrs[attr]
 
     def get_bookmark_path(self):
-        return self.bookmark_path
+        return self.entry.path_as_string()
+
+    def get_entry(self):
+        return self.entry
 
     def get_url(self):
-        return self.url
+        return self.entry.get_url()
 
     def get_id(self):
-        return self.bookmark_path
+        return self.get_bookmark_path()
 
     def get_short_description(self):
         url = self.get_url()
         bookmark_path = self.get_bookmark_path()
         
         if self.event == self.CREATED:
+            # XXX - don't test for url, use type
             if url:
                 return _("Mozilla bookmark created '%s' -> '%s'") % (bookmark_path, url)
             else:
@@ -865,10 +943,19 @@ class BookmarksFile(FirefoxProfileFile):
         self.parser.set_root(self.root)
         self.prev_root = self.parser.get_root()
         self.file_state = file_state.UNKNOWN
-        self.bookmark_separator = "/"
 
-    def get_folders(self):
+    def get_full_path(self):
+        return os.path.join(self.home_dir, self.rel_path)
+
+    def get_rel_path(self):
+        return self.rel_path
+
+    def get_root(self):
         return self.root
+
+    def set_root(self, root):
+        self.root = root
+        self.parser.set_root(self.root)
 
     def read(self):
         self.prev_root = self.parser.get_root()
@@ -892,17 +979,57 @@ class BookmarksFile(FirefoxProfileFile):
         self.parser.close()
         self.root = self.parser.get_root()
         
+    def write(self, full_path=None, exclude_attrs=None):
+        if not full_path:
+            full_path = self.get_full_path()
+        dir = os.path.dirname(full_path)
+        if not os.path.exists(dir):
+            os.makedirs(dir)
+        dprint(LOG_OPERATION, "MozillaBookmark: writing file (%s)", full_path)
+        fd = open(full_path, "w")
+        fd.write('''
+<!DOCTYPE NETSCAPE-Bookmark-file-1>
+<!-- This is an automatically generated file. (Created by %s, version %s)
+     It will be read and overwritten.
+     DO NOT EDIT! -->
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>Bookmarks</TITLE>
+<H1 LAST_MODIFIED="%.0f">Bookmarks</H1>
+
+<DL><p>
+''' % (config.PACKAGE, config.VERSION, time.time()))
+
+        def visit(entry, type, path, data):
+            indent = "    "
+            level = len(path)
+
+            if type == mozilla_bookmarks.TYPE_FOLDER:
+                fd.write("%s<DT><H3" % (indent*level))
+                for attr, value in entry.attrs.items():
+                    if not filter_attr(attr, exclude_attrs):
+                        fd.write(" %s=\"%s\"" % (attr, value))
+                fd.write(">%s</H3>\n" % (entry.name))
+                fd.write("%s<DL><p>\n" % (indent*level))
+            elif type == mozilla_bookmarks.TYPE_BOOKMARK:
+                fd.write("%s<DT><A" % (indent*level))
+                for attr, value in entry.attrs.items():
+                    if not filter_attr(attr, exclude_attrs):
+                        fd.write(" %s=\"%s\"" % (attr, value))
+                fd.write(">%s</A>\n" % (entry.name))
+            elif type == mozilla_bookmarks.TYPE_FOLDER_END:
+                fd.write("%s</DL><p>\n" % (indent*level))
+            else:
+                raise ValueError
+
+        self.root.traverse(visit)
+        fd.close()
+        
     def convert_to_dict(self, root):
         result = {}
 
         def visit(entry, type, path, data):
-            if type == mozilla_bookmarks.TYPE_BOOKMARK:
-                bookmark_path = entry.path_as_names(self.bookmark_separator)
-                bookmark_url = entry.url()
-                result[bookmark_path] = bookmark_url
-            elif type == mozilla_bookmarks.TYPE_FOLDER:
-                folder_path = entry.path_as_names(self.bookmark_separator)
-                result[folder_path] = None
+            bookmark_path = entry.path_as_string()
+            result[bookmark_path] = entry
 
         root.traverse(visit)
         return result
@@ -920,14 +1047,24 @@ class BookmarksFile(FirefoxProfileFile):
         _mod = cs['mod']
 
         def emit_changes(items, event):
-            for bookmark_path, bookmark_url in items:
+            for bookmark_path, entry in items:
                 source.emit_change(
-                    BookmarkChange(source, delegate,
-                                  bookmark_path, bookmark_url, event))
+                    BookmarkChange(source, delegate, entry, event))
 
         emit_changes(_add.items(), BookmarkChange.CREATED)
         emit_changes(_del.items(), BookmarkChange.DELETED)
         emit_changes(_mod.items(), BookmarkChange.CHANGED)
+
+
+    def merge(self, src, mandatory):
+        def visit(entry, type, path, data):
+            if type == mozilla_bookmarks.TYPE_FOLDER_END:
+                return
+            dst_entry = self.root.lookup_path(path)
+            if not dst_entry or mandatory:
+                self.root.add_path_entry(path, entry)
+
+        src.root.traverse(visit)
 
 
 # ------ Utility Functions ------

@@ -23,7 +23,6 @@
 # add support for HR format tags
 
 import sys
-import time
 import os
 import re
 from HTMLParser import HTMLParser
@@ -72,21 +71,6 @@ LOG_VERBOSE             = 0x10000
 def dprint(mask, fmt, *args):
     util.debug_print(util.DEBUG_MOZILLASOURCE, fmt % args, mask)
 
-exclude_attrs = [re.compile("^id$"),
-                 re.compile("^last_"),
-                 re.compile("^add_"),
-                 re.compile("^icon$"),
-                 ]
-
-def filter_attr(attr, exclude):
-    if not exclude:
-        return False
-
-    for regexp in exclude:
-        if regexp.search(attr):
-            return True
-    return False
-
 class Bookmark:
     def __init__(self, folder, name):
         self.folder = folder
@@ -96,7 +80,7 @@ class Bookmark:
     def get_attr(self, name):
         return self.attrs.get(name, None)
 
-    def url(self):
+    def get_url(self):
         return self.attrs.get("href", None)
 
     def path(self):
@@ -112,6 +96,9 @@ class Bookmark:
         else:
             return join.join(path)
 
+    def path_as_string(self):
+        return self.path_as_names(bookmark_separator)                       
+
 class BookmarkFolder:
     def __init__(self, name, parent):
         self.reset(name, parent)
@@ -120,27 +107,86 @@ class BookmarkFolder:
         self.name = name
         self.parent = parent
         self.attrs = {}
-        self.folders = []
-        self.bookmarks = []
         self.entries = []
 
-    def add_folder(self, name):
-        folder = BookmarkFolder(name, self)
-        self.folders.append(folder)
+    def entry_index(self, entry):
+        n_entries = len(self.entries)
+        i = 0
+        while (i < n_entries):
+            if self.entries[i] == entry:
+                return i
+            i += 1
+        return None
+
+    def add_entry(self, entry):
+        self.entries.append(entry)
+        return entry
+
+    def add_folder(self, folder):
+        if not isinstance(folder, BookmarkFolder):
+            folder = BookmarkFolder(folder, self)
         self.entries.append(folder)
         return folder
 
-    def add_bookmark(self, name):
-        bookmark = Bookmark(self, name)
-        self.bookmarks.append(bookmark)
+    def lookup_folder(self, folder):
+        for entry in self.entries:
+            if isinstance(entry, BookmarkFolder):
+                if entry == folder:
+                    return entry
+        return None
+
+    def add_bookmark(self, bookmark):
+        if not isinstance(bookmark, Bookmark):
+            bookmark = Bookmark(self, bookmark)
         self.entries.append(bookmark)
         return bookmark
+
+
+    def lookup_bookmark(self, bookmark):
+        for entry in self.entries:
+            if isinstance(entry, Bookmark):
+                if entry == bookmark:
+                    return entry
+        return None
+
+    def lookup_path(self, path):
+        path_len = len(path)
+        i = 0
+        folder = self
+        while i < path_len - 1:
+            folder = folder.lookup_folder(path[i])
+            if not folder:
+                return None
+            i += 1
+        entry_index = folder.entry_index(path[i])
+        if entry_index == None:
+            return None
+        else:
+            return folder.entries[entry_index]
+                    
+
+    def add_path_entry(self, path, entry):
+        path_len = len(path)
+        i = 0
+        parent = folder = self
+        while i < path_len - 1:
+            folder = parent.lookup_folder(path[i])
+            if not folder:
+                folder = parent.add_folder(path[i])
+            parent = folder
+            i += 1
+        if folder.entry_index(path[i]) == None:
+            folder.add_entry(path[i])
+        
 
     def set_attr(self, name, value):
         self.attrs[name] = value
 
     def get_attr(self, name):
         return self.attrs.get(name, None)
+
+    def get_url(self):
+        return self.attrs.get("href", None)
 
     def path(self):
         path = [self]
@@ -160,6 +206,9 @@ class BookmarkFolder:
         else:
             return join.join(path)
         
+    def path_as_string(self):
+        return self.path_as_names(bookmark_separator)                       
+
     def _traverse(self, visit_func, path, data):
         assert isinstance(self, BookmarkFolder)
 
@@ -191,54 +240,6 @@ class BookmarkFolder:
         self.traverse(visit)
         return result
     
-    # XXX - need to separate parsing from file object
-    def write(self, full_path=None, exclude_attrs=None):
-        #if not full_path:
-        #    full_path = self.get_full_path()
-        #dir = os.path.dirname(full_path)
-        #if not os.path.exists(dir):
-        #    os.makedirs(dir)
-        #dprint(LOG_OPERATION, "MozillaBookmark: writing file (%s)", full_path)
-        # XXX fd = open(full_path, "w")
-        fd = sys.stdout
-        fd.write('''
-<!DOCTYPE NETSCAPE-Bookmark-file-1>
-<!-- This is an automatically generated file. (Created by %s, version %s)
-     It will be read and overwritten.
-     DO NOT EDIT! -->
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-<TITLE>Bookmarks</TITLE>
-<H1 LAST_MODIFIED="%.0f">Bookmarks</H1>
-
-<DL><p>
-''' % (config.PACKAGE, config.VERSION, time.time()))
-
-        def visit(entry, type, path, data):
-            indent = "    "
-            level = len(path)
-
-            if type == TYPE_FOLDER:
-                fd.write("%s<DT><H3" % (indent*level))
-                for attr, value in entry.attrs.items():
-                    if not filter_attr(attr, exclude_attrs):
-                        fd.write(" %s=\"%s\"" % (attr, value))
-                fd.write(">%s</H3>\n" % (entry.name))
-                fd.write("%s<DL><p>\n" % (indent*level))
-            elif type == TYPE_BOOKMARK:
-                fd.write("%s<DT><A" % (indent*level))
-                for attr, value in entry.attrs.items():
-                    if not filter_attr(attr, exclude_attrs):
-                        fd.write(" %s=\"%s\"" % (attr, value))
-                fd.write(">%s</A>\n" % (entry.name))
-            elif type == TYPE_FOLDER_END:
-                fd.write("%s</DL><p>\n" % (indent*level))
-            else:
-                raise ValueError
-
-        self.traverse(visit)
-        fd.close()
-        
-
 # ----------------------------------
 
 class HTMLTag:
@@ -378,7 +379,7 @@ def visit(entry, type, path, data=None):
     if type == TYPE_FOLDER:
         print "%sFolder: %s(%s) path = [%s]" % (indent*level,
                                                 entry.name[0:max_len],
-                                                data, entry.path_as_names(bookmark_separator))
+                                                data, entry.path_as_string())
     elif type == TYPE_BOOKMARK:
         print "%sBookmark: %s" % (indent*(level), entry.name[0:max_len])
     elif type == TYPE_FOLDER_END:
@@ -409,7 +410,7 @@ if __name__ == "__main__":
         if bm_list:
             for bm in bm_list:
                 print "found bookmark %s url=%s" % (bm.name, bm.get_attr("href"))
-                print "path = %s" % bm.path_as_names(bookmark_separator)
+                print "path = %s" % bm.path_as_string()
         else:
             print "%s not found" % bm_name
 

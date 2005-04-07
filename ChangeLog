@@ -1,3 +1,11 @@
+2005-04-07  John Dennis  <jdennis@redhat.com>
+
+	* Bookmark commit/sync/apply mostly working.
+	  Is initial state correct?
+	  Bookmark root and traversal needs reworking.
+	  Many places now have redundant code that varies only
+	  a few variables, these should be collapsed into subroutines.
+
 2005-04-06  John Dennis  <jdennis@redhat.com>
 
 	* bookmark changes now working
