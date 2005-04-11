@@ -7,50 +7,617 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-02-18 13:03+0100\n"
-"PO-Revision-Date: 2005-02-18 13:02+0100\n"
+"POT-Creation-Date: 2005-04-11 22:14+0200\n"
+"PO-Revision-Date: 2005-04-11 22:19+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian Bokmaal <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: admin-tool/sabayon.desktop.in.h:1
-msgid "Desktop User Profiles"
-msgstr "Brukerprofiler for skrivebordet"
+#: ../admin-tool/aboutdialog.py:63
+msgid "Program to establish and edit profiles for users"
+msgstr "Program for å opprette og redigere brukerprofiler"
 
-#: admin-tool/sabayon.desktop.in.h:2
-msgid "Establish and Edit Profiles for Users"
-msgstr "Opprett og rediger brukerprofiler"
+#: ../admin-tool/aboutdialog.py:66
+msgid "translator-credits"
+msgstr "Kjartan Maraas <kmaraas@gnome.org>"
 
-#: admin-tool/sabayon.glade.h:1
+#: ../admin-tool/editorwindow.py:124 ../admin-tool/fileviewer.py:29
+#: ../admin-tool/gconfviewer.py:87 ../admin-tool/sabayon.glade.h:1
+#: ../admin-tool/userswindow.py:70 ../lib/protosession.py:332
 msgid "All Your Settings Are Belong To Us"
 msgstr "Alle dine innstillinger tilhører oss"
 
-#: admin-tool/sabayon.glade.h:2
-msgid "C_reate"
-msgstr "Opp_rett"
-
-#: admin-tool/sabayon.glade.h:3
-msgid "New Profile"
-msgstr "Ny profil"
-
-#: admin-tool/sabayon.glade.h:4
-msgid "Profile _name:"
-msgstr "Profil_navn:"
-
-#: admin-tool/sabayon.glade.h:5
-msgid "_Base on:"
-msgstr "_Baser på:"
-
-#: admin-tool/sabayon.glade.h:6
-msgid "_Help"
-msgstr "_Hjelp"
-
-#: admin-tool/sabayon.glade.h:7
+#: ../admin-tool/editorwindow.py:227 ../admin-tool/sabayon.glade.h:7
 msgid "_Profile"
 msgstr "_Profil"
 
-#: admin-tool/sabayon.glade.h:8
+#: ../admin-tool/editorwindow.py:228
+msgid "_Save"
+msgstr "_Lagre"
+
+#: ../admin-tool/editorwindow.py:228
+msgid "Save profile"
+msgstr "Lagre profil"
+
+#: ../admin-tool/editorwindow.py:229
+msgid "_Close"
+msgstr "L_ukk"
+
+#: ../admin-tool/editorwindow.py:229
+msgid "Close the current window"
+msgstr "Lukk dette vinduet"
+
+#: ../admin-tool/editorwindow.py:230
+msgid "_Edit"
+msgstr "R_ediger"
+
+#: ../admin-tool/editorwindow.py:231
+msgid "_Delete"
+msgstr "_Slett"
+
+#: ../admin-tool/editorwindow.py:231
+msgid "Delete item"
+msgstr "Slett oppføring"
+
+#: ../admin-tool/editorwindow.py:232
+msgid "C_lear History"
+msgstr ""
+
+#: ../admin-tool/editorwindow.py:232
+msgid "Clear revision history"
+msgstr ""
+
+#: ../admin-tool/editorwindow.py:233 ../admin-tool/sabayon.glade.h:6
+msgid "_Help"
+msgstr "_Hjelp"
+
+#: ../admin-tool/editorwindow.py:234
+msgid "_About"
+msgstr "_Om"
+
+#: ../admin-tool/editorwindow.py:234
+msgid "About Sabayon"
+msgstr "Om Sabayon"
+
+#: ../admin-tool/editorwindow.py:265
+msgid "_Version:"
+msgstr "_Versjon:"
+
+#: ../admin-tool/editorwindow.py:320 ../admin-tool/monitorwindow.py:158
+msgid "Description"
+msgstr "Beskrivelse"
+
+#: ../admin-tool/editorwindow.py:331
+msgid "Version"
+msgstr "Versjon"
+
+#: ../admin-tool/editorwindow.py:361 ../lib/sources/gconfsource.py:106
+msgid "GConf"
+msgstr "GConf"
+
+#: ../admin-tool/editorwindow.py:365 ../lib/sources/filessource.py:67
+msgid "Files"
+msgstr "Filer"
+
+#: ../admin-tool/gconfviewer.py:58 ../admin-tool/gconfviewer.py:77
+msgid "<no type>"
+msgstr "<ingen type>"
+
+#: ../admin-tool/gconfviewer.py:59
+msgid "<no value>"
+msgstr "<ingen verdi>"
+
+#: ../admin-tool/gconfviewer.py:63
+msgid "string"
+msgstr "streng"
+
+#: ../admin-tool/gconfviewer.py:65
+msgid "integer"
+msgstr "heltall"
+
+#: ../admin-tool/gconfviewer.py:67
+msgid "float"
+msgstr "flyttall"
+
+#: ../admin-tool/gconfviewer.py:69
+msgid "boolean"
+msgstr "boolsk verdi"
+
+#: ../admin-tool/gconfviewer.py:71
+msgid "schema"
+msgstr ""
+
+#: ../admin-tool/gconfviewer.py:73
+msgid "list"
+msgstr "liste"
+
+#: ../admin-tool/gconfviewer.py:75
+msgid "pair"
+msgstr "par"
+
+#: ../admin-tool/gconfviewer.py:111 ../admin-tool/profilesdialog.py:180
+msgid "Name"
+msgstr "Navn"
+
+#: ../admin-tool/gconfviewer.py:116
+msgid "Type"
+msgstr "Type"
+
+#: ../admin-tool/gconfviewer.py:121
+msgid "Value"
+msgstr "Verdi"
+
+#: ../admin-tool/monitorwindow.py:146
+msgid "Ignore"
+msgstr "Ignorer"
+
+#: ../admin-tool/monitorwindow.py:153
+msgid "Mandatory"
+msgstr ""
+
+#: ../admin-tool/profilesdialog.py:212
+#, python-format
+msgid "User account '%s' was not found"
+msgstr "Brukerkonto «%s» ble ikke funnet"
+
+#: ../admin-tool/profilesdialog.py:213
+#, python-format
+msgid ""
+"Sabayon requires a special user account '%s' to be present on this computer. "
+"Try again after creating the account (using, for example, the 'adduser' "
+"command)"
+msgstr ""
+
+#: ../admin-tool/sabayon-apply:34
+#, c-format
+msgid "No profile for user '%s' found\n"
+msgstr ""
+
+#: ../admin-tool/sabayon-apply:39
+#, c-format
+msgid "Usage: %s [<profile-name>]\n"
+msgstr ""
+
+#: ../admin-tool/sabayon-monitor:29
+#, c-format
+msgid "Usage: %s <profile-name>\n"
+msgstr ""
+
+#: ../admin-tool/sabayon-session:32
+msgid "Your account does not have permissions to run sabayon-session."
+msgstr ""
+
+#: ../admin-tool/sabayon-session:36
+#, c-format
+msgid "Usage: %s <username> <profile-file>\n"
+msgstr ""
+
+#: ../admin-tool/sabayon.desktop.in.h:1
+msgid "Desktop User Profiles"
+msgstr "Brukerprofiler for skrivebordet"
+
+#: ../admin-tool/sabayon.desktop.in.h:2
+msgid "Establish and Edit Profiles for Users"
+msgstr "Opprett og rediger brukerprofiler"
+
+#: ../admin-tool/sabayon.glade.h:2
+msgid "C_reate"
+msgstr "Opp_rett"
+
+#: ../admin-tool/sabayon.glade.h:3
+msgid "New Profile"
+msgstr "Ny profil"
+
+#: ../admin-tool/sabayon.glade.h:4
+msgid "Profile _name:"
+msgstr "Profil_navn:"
+
+#: ../admin-tool/sabayon.glade.h:5
+msgid "_Base on:"
+msgstr "_Baser på:"
+
+#: ../admin-tool/sabayon.glade.h:8
 msgid "_Profiles:"
 msgstr "_Profiler:"
+
+#: ../admin-tool/sabayon:35
+#, c-format
+msgid "Your account does not have permissions to run %s"
+msgstr ""
+
+#: ../admin-tool/sabayon:36
+msgid ""
+"Administrator level permissions are needed to run this program because it "
+"can modify system files."
+msgstr ""
+
+#: ../admin-tool/saveconfirm.py:36
+msgid "Close _Without Saving"
+msgstr ""
+
+#: ../admin-tool/saveconfirm.py:43
+#, python-format
+msgid "Save changes to profile \"%s\" before closing?"
+msgstr ""
+
+#: ../admin-tool/saveconfirm.py:47
+#, python-format
+msgid ""
+"If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld seconds will be permanently "
+"lost."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../admin-tool/saveconfirm.py:53
+msgid ""
+"If you don't save, changes from the last minute will be permanently lost."
+msgstr ""
+
+#: ../admin-tool/saveconfirm.py:57
+#, python-format
+msgid ""
+"If you don't save, changes from the last minute and %ld second will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last minute and %ld seconds will be "
+"permanently lost."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../admin-tool/saveconfirm.py:64
+#, python-format
+msgid ""
+"If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld minutes will be permanently "
+"lost."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../admin-tool/saveconfirm.py:73 ../admin-tool/saveconfirm.py:83
+#, python-format
+msgid "If you don't save, changes from the last hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../admin-tool/saveconfirm.py:76
+#, python-format
+msgid ""
+"If you don't save, changes from the last hour and %d minute will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last hour and %d minutes will be "
+"permanently lost."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../admin-tool/userswindow.py:42 ../admin-tool/userswindow.py:60
+#: ../admin-tool/userswindow.py:122
+msgid "None"
+msgstr "Ingen"
+
+#: ../admin-tool/userswindow.py:99
+msgid "User"
+msgstr "Bruker"
+
+#: ../admin-tool/userswindow.py:111
+msgid "Profile"
+msgstr "Profil"
+
+#: ../lib/dirmonitor.py:138
+#, python-format
+msgid "Failed to add monitor for %s"
+msgstr ""
+
+#: ../lib/dirmonitor.py:218
+#, python-format
+msgid "Expected event: %s %s"
+msgstr ""
+
+#: ../lib/protosession.py:88
+#, python-format
+msgid "User '%s' does not exist"
+msgstr "Bruker «%s» eksisterer ikke"
+
+#: ../lib/protosession.py:216
+msgid "'xauth list' returned error"
+msgstr ""
+
+#: ../lib/protosession.py:235
+msgid "'xauth list' returned no records or records in unknown format"
+msgstr ""
+
+#: ../lib/protosession.py:314
+msgid "Unable to find a free X display"
+msgstr ""
+
+#: ../lib/protosession.py:376
+msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+msgstr ""
+
+#: ../lib/protosession.py:378
+msgid "Failed to start Xnest: died during startup"
+msgstr ""
+
+#: ../lib/sources/filessource.py:57
+#, python-format
+msgid "File '%s' created"
+msgstr "Fil «%s» opprettet"
+
+#: ../lib/sources/filessource.py:59
+#, python-format
+msgid "File '%s' deleted"
+msgstr "Fil «%s» slettet"
+
+#: ../lib/sources/filessource.py:61
+#, python-format
+msgid "File '%s' changed"
+msgstr "Fil «%s» endret"
+
+#: ../lib/sources/filessource.py:85
+msgid "Applications menu"
+msgstr "Programmeny"
+
+#: ../lib/sources/filessource.py:87
+msgid "Preferences menu"
+msgstr "Meny for brukervalg"
+
+#: ../lib/sources/filessource.py:89
+msgid "Server Settings menu"
+msgstr "Meny for tjenerinnstillinger"
+
+#: ../lib/sources/filessource.py:91
+msgid "System Settings menu"
+msgstr "Meny for systeminnstillinger"
+
+#: ../lib/sources/filessource.py:93
+msgid "Start Here menu"
+msgstr "Start her-meny"
+
+#: ../lib/sources/gconfsource.py:78
+#, python-format
+msgid "GConf key '%s' unset"
+msgstr ""
+
+#: ../lib/sources/gconfsource.py:80
+#, python-format
+msgid "GConf key '%s' set to string '%s'"
+msgstr ""
+
+#: ../lib/sources/gconfsource.py:82
+#, python-format
+msgid "GConf key '%s' set to integer '%s'"
+msgstr ""
+
+#: ../lib/sources/gconfsource.py:84
+#, python-format
+msgid "GConf key '%s' set to float '%s'"
+msgstr ""
+
+#: ../lib/sources/gconfsource.py:86
+#, python-format
+msgid "GConf key '%s' set to boolean '%s'"
+msgstr ""
+
+#: ../lib/sources/gconfsource.py:88
+#, python-format
+msgid "GConf key '%s' set to schema '%s'"
+msgstr ""
+
+#: ../lib/sources/gconfsource.py:90
+#, python-format
+msgid "GConf key '%s' set to list '%s'"
+msgstr ""
+
+#: ../lib/sources/gconfsource.py:92
+#, python-format
+msgid "GConf key '%s' set to pair '%s'"
+msgstr ""
+
+#: ../lib/sources/gconfsource.py:94
+#, python-format
+msgid "GConf key '%s' set to '%s'"
+msgstr ""
+
+#: ../lib/sources/gconfsource.py:117
+msgid "Default GConf settings"
+msgstr ""
+
+#: ../lib/sources/gconfsource.py:119
+msgid "Mandatory GConf settings"
+msgstr ""
+
+#: ../lib/sources/mozillasource.py:132
+#, python-format
+msgid "Mozilla key '%s' set to '%s'"
+msgstr ""
+
+#: ../lib/sources/mozillasource.py:134
+#, python-format
+msgid "Mozilla key '%s' unset"
+msgstr ""
+
+#: ../lib/sources/mozillasource.py:136
+#, python-format
+msgid "Mozilla key '%s' changed to '%s'"
+msgstr ""
+
+#: ../lib/sources/mozillasource.py:145
+msgid "Firefox"
+msgstr "Firefox"
+
+#: ../lib/sources/mozillasource.py:496
+#, python-format
+msgid "File Not Found (%s)"
+msgstr "Filen ble ikke funnet (%s)"
+
+#: ../lib/sources/mozillasource.py:835
+#, python-format
+msgid "duplicate name(%s) in section %s"
+msgstr ""
+
+#: ../lib/sources/mozillasource.py:844
+#, python-format
+msgid "redundant default in section %s"
+msgstr ""
+
+#: ../lib/sources/mozillasource.py:861
+msgid "no default profile"
+msgstr "ingen forvalgt profil"
+
+#: ../lib/sources/mozillasource.py:916
+#, python-format
+msgid "Mozilla bookmark created '%s' -> '%s'"
+msgstr ""
+
+#: ../lib/sources/mozillasource.py:918
+#, python-format
+msgid "Mozilla bookmark folder created '%s'"
+msgstr ""
+
+#: ../lib/sources/mozillasource.py:921
+#, python-format
+msgid "Mozilla bookmark deleted '%s'"
+msgstr ""
+
+#: ../lib/sources/mozillasource.py:923
+#, python-format
+msgid "Mozilla bookmark folder deleted '%s'"
+msgstr ""
+
+#: ../lib/sources/mozillasource.py:926
+#, python-format
+msgid "Mozilla bookmark changed '%s' '%s'"
+msgstr ""
+
+#: ../lib/sources/mozillasource.py:928
+#, python-format
+msgid "Mozilla bookmark folder changed '%s'"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:53
+#, python-format
+msgid "Panel '%s' added"
+msgstr "Panel «%s» lagt til"
+
+#: ../lib/sources/paneldelegate.py:59
+#, python-format
+msgid "Panel '%s' removed"
+msgstr "Panel «%s» fjernet"
+
+#: ../lib/sources/paneldelegate.py:65
+#, python-format
+msgid "Panel applet '%s' added"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:71
+#, python-format
+msgid "Panel applet '%s' removed"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:77
+#, python-format
+msgid "Panel object '%s' added"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:83
+#, python-format
+msgid "Panel object '%s' removed"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:118
+msgid "Panel"
+msgstr "Panel"
+
+#: ../lib/storage.py:144
+#, python-format
+msgid "Failed to read file '%s': %s"
+msgstr ""
+
+#: ../lib/storage.py:154
+#, python-format
+msgid "Failed to read metadata from '%s': %s"
+msgstr ""
+
+#: ../lib/storage.py:160
+#, python-format
+msgid "Invalid metadata section in '%s': %s"
+msgstr ""
+
+#: ../lib/storage.py:516
+#, python-format
+msgid "Cannot add non-existent file '%s'"
+msgstr ""
+
+#: ../lib/storage.py:606
+msgid "No current revision"
+msgstr ""
+
+#: ../lib/storage.py:610 ../lib/storage.py:621
+#, python-format
+msgid "'%s' does not exist in profile revision '%s'"
+msgstr ""
+
+#: ../lib/storage.py:693
+msgid "Not a valid profile revision"
+msgstr ""
+
+#: ../lib/unittests.py:36 ../lib/unittests.py:37
+msgid "Ignore WARNINGs"
+msgstr ""
+
+#: ../lib/unittests.py:57
+#, python-format
+msgid "Running %s tests"
+msgstr "Kjører %s tester"
+
+#: ../lib/unittests.py:59
+#, python-format
+msgid "Running %s tests (%s)"
+msgstr "Kjører %s tester (%s)"
+
+#: ../lib/unittests.py:66
+msgid "Success!"
+msgstr "Suksess!"
+
+#: ../lib/userdb.py:140
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "Kunne ikke åpne %s for skriving"
+
+#: ../lib/userdb.py:153
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr ""
+
+#: ../lib/userdb.py:177
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr ""
+
+#: ../lib/userdb.py:185
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr ""
+
+#: ../lib/userdb.py:216
+msgid "Failed to get the user list"
+msgstr ""
+
+#: ../lib/util.py:116
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+
+#: ../lib/util.py:129
+msgid ""
+"Cannot find username: not set in /etc/passwd and no value for $USER in "
+"environment"
+msgstr ""
