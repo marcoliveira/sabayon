@@ -22,14 +22,13 @@ if __name__ == '__main__':
     import sys
     
     from sabayon import util
-    # from sabayon import userdb
+    from sabayon import userdb
 
     util.init_gettext ()
 
     if len (sys.argv) == 1:
         user_name = util.get_user_name ()
-        profile_name = ""
-        # profile_name = userdb.get_database().get_profile ()
+        profile_name = userdb.get_database().get_profile (user_name)
         if not profile_name:
             sys.stderr.write (_("No profile for user '%s' found\n") % user_name)
             sys.exit (1)
