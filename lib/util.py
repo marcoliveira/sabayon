@@ -24,6 +24,7 @@ import sys
 import pwd
 import gettext
 import locale
+import errno
 from config import *
 
 (
