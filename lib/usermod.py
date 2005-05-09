@@ -29,23 +29,10 @@ from config import *
 def dprint (fmt, *args):
     util.debug_print (util.DEBUG_USERMOD, fmt % args)
 
-#
-# os.spawn() doesn't handle EINTR from waitpid() on Linux:
-#  http://sourceforge.net/tracker/?group_id=5470&atid=105470&func=detail&aid=686667
-# Best we can do is ignore the exception and carry on
-# See bug #303034
-#
-def _uninterruptible_spawn (mode, file, args):
-    try:
-        os.spawnv (mode, file, args)
-    except os.error, (err, str):
-        if err != errno.EINTR:
-            raise
-
 def set_shell (username, shell):
     argv = USERMOD_ARGV + [ "-s", shell, username ]
     dprint ("Executing %s" % argv)
-    _uninterruptible_spawn (os.P_WAIT, argv[0], argv)
+    util.uninterruptible_spawnv (os.P_WAIT, argv[0], argv)
 
 #
 # FIXME:
@@ -56,7 +43,7 @@ def set_shell (username, shell):
 def set_homedir (username, homedir):
     argv = USERMOD_ARGV + [ "-d", homedir, username ]
     dprint ("Executing %s" % argv)
-    _uninterruptible_spawn (os.P_WAIT, argv[0], argv)
+    util.uninterruptible_spawnv (os.P_WAIT, argv[0], argv)
 
 def create_temporary_homedir (uid, gid):
     temp_homedir = tempfile.mkdtemp (prefix = "sabayon-temp-home-")

@@ -141,6 +141,22 @@ def init_gettext ():
     locale.setlocale (locale.LC_ALL, "")
     gettext.install (PACKAGE, os.path.join (DATADIR, "locale"))
 
+#
+# os.spawn() doesn't handle EINTR from waitpid() on Linux:
+#  http://sourceforge.net/tracker/?group_id=5470&atid=105470&func=detail&aid=686667
+# Best we can do is ignore the exception and carry on
+# See bug #303034
+#
+def uninterruptible_spawnve (mode, file, args, env):
+    try:
+        os.spawnve (mode, file, args, env)
+    except os.error, (err, str):
+        if err != errno.EINTR:
+            raise
+        
+def uninterruptible_spawnv (mode, file, args):
+    uninterruptible_spawnve (mode, file, args, None)
+
 def run_unit_tests ():
     home_dir = get_home_dir ()
     assert home_dir != ""

@@ -240,7 +240,7 @@ class ProfilesDialog:
             
             argv = SESSION_TOOL_ARGV + [ PROTOTYPE_USER, user_path ]
             dprint ("Running session: %s" % argv)
-            os.spawnv (os.P_WAIT, argv[0], argv)
+            util.uninterruptible_spawnv (os.P_WAIT, argv[0], argv)
             
             self.dialog.set_sensitive (True)
 

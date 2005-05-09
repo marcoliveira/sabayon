@@ -1,5 +1,17 @@
 2005-05-09  Mark McLoughlin  <mark@skynet.ie>
 
+	* lib/usermod.py: move _uninterruptible_spawn() to ..
+
+	* lib/util.py:
+	(uninterruptible_spawnv),
+	(uninterruptible_spawnve): ... here
+	
+	* admin-tool/profilesdialog.py,
+	  lib/protosession.py: use uninterruptible variant
+	of os.spawnv() here too.
+
+2005-05-09  Mark McLoughlin  <mark@skynet.ie>
+
 	Fix hang when exiting the prototype session on Ubuntu.
 
 	Problem turned out to be that os.spawn() doesn't handle

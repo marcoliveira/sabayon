@@ -435,7 +435,7 @@ class ProtoSession (gobject.GObject):
             # Apply the profile
             argv = APPLY_TOOL_ARGV + [ self.profile_file ]
             dprint ("Running apply tool: %s" % argv)
-            os.spawnve (os.P_WAIT, argv[0], argv, new_environ)
+            util.uninterruptible_spawnve (os.P_WAIT, argv[0], argv, new_environ)
 
             # Disable sabayon-xinitrc.sh
             new_environ["DISABLE_SABAYON_XINITRC"] = "yes"
@@ -514,7 +514,7 @@ class ProtoSession (gobject.GObject):
         # FIXME: my, what a big hammer you have!
         argv = CLOBBER_USER_PROCESSES_ARGV + [ self.user_pw.pw_name ]
         dprint ("Clobbering existing processes running as user '%s': %s" % (self.user_pw.pw_name, argv))
-        os.spawnv (os.P_WAIT, argv[0], argv)
+        util.uninterruptible_spawnv (os.P_WAIT, argv[0], argv)
         
         # Get an X server going
         self.__start_xnest ()
