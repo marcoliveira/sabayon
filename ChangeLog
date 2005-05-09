@@ -1,3 +1,23 @@
+2005-05-09  Mark McLoughlin  <mark@skynet.ie>
+
+	Fix hang when exiting the prototype session on Ubuntu.
+
+	Problem turned out to be that os.spawn() doesn't handle
+	EINTR from waitpid() on Linux:
+	  http://sourceforge.net/tracker/?group_id=5470&atid=105470&func=detail&aid=686667
+
+	Thanks to Sebastien Bacher <seb128@debian.org> for help
+	in tracking the problem down.
+
+	* lib/usermod.py:
+	(_uninterruptible_spawn): ignore EINTR from os.spawn()
+	(set_shell), (set_homedir): use _uninterruptible_spawn()
+
+	* lib/protosession.py:
+	(ProtoSession.__session_child_watch_handler): emit the
+	"finished" signal before anything else so that we
+	still quit the mainloop even if we get an exception.
+
 2005-04-26  Mark McLoughlin  <markmc@redhat.com>
 
 	* admin-tool/sabayon-apply: actually look up the profile

@@ -190,13 +190,13 @@ class ProtoSession (gobject.GObject):
         self.xnest_pid = 0
         self.xnest_child_watch = 0
 
+        self.emit ("finished");
+        
         self.force_quit ()
 
         # If we're waiting for USR1, quit main loop
         if self.main_loop:
             self.main_loop.quit ()
-
-        self.emit ("finished");
         
         return False
 
