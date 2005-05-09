@@ -158,8 +158,7 @@ def uninterruptible_spawnve (mode, file, args, env):
             raise
         
 def uninterruptible_spawnv (mode, file, args):
-    os.spawnv (mode, file, args)
-    #uninterruptible_spawnve (mode, file, args, None)
+    uninterruptible_spawnve (mode, file, args, None)
 
 def run_unit_tests ():
     home_dir = get_home_dir ()
