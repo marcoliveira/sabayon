@@ -226,7 +226,7 @@ class ProfilesDialog:
 
     def __copy_from_user (self, user_path, profile_path):
         os.chown (user_path, os.geteuid (), os.getegid ())
-        os.rename (user_path, profile_path)
+        shutil.move (user_path, profile_path)
         dprint ("Moved %s back from %s" % (user_path, profile_path))
 
     def __edit_button_clicked (self, button):

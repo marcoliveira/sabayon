@@ -1,3 +1,8 @@
+2005-05-09  Sebastien Bacher  <seb128@debian.org>
+
+	* admin-tool/profilesdialog.py: use shutil.move instead of os.rename,
+	fix the issue when /tmp and /etc are on different partitions.
+
 2005-05-09  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/util.py: import errno module
