@@ -1,14 +1,14 @@
-2005-05-09  Mark McLoughlin  <mark@skynet.ie>
+2005-05-09  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/util.py: import errno module
 
-2005-05-09  Mark McLoughlin  <mark@skynet.ie>
+2005-05-09  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/util.py:
 	(uninterruptible_spawnv): actually call
 	uninterruptible_spawnve() rather than os.spawnv
 
-2005-05-09  Mark McLoughlin  <mark@skynet.ie>
+2005-05-09  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/usermod.py: don't import errno.
 	
@@ -17,7 +17,7 @@
 	os.spawnv() since os.spawnve() seems to dislike
 	when env is None.
 
-2005-05-09  Mark McLoughlin  <mark@skynet.ie>
+2005-05-09  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/usermod.py: move _uninterruptible_spawn() to ..
 
@@ -29,7 +29,7 @@
 	  lib/protosession.py: use uninterruptible variant
 	of os.spawnv() here too.
 
-2005-05-09  Mark McLoughlin  <mark@skynet.ie>
+2005-05-09  Mark McLoughlin  <markmc@redhat.com>
 
 	Fix hang when exiting the prototype session on Ubuntu.
 
@@ -38,7 +38,7 @@
 	  http://sourceforge.net/tracker/?group_id=5470&atid=105470&func=detail&aid=686667
 
 	Thanks to Sebastien Bacher <seb128@debian.org> for help
-	in tracking the problem down.
+	in tracking the problem down. Bug #303034.
 
 	* lib/usermod.py:
 	(_uninterruptible_spawn): ignore EINTR from os.spawn()
