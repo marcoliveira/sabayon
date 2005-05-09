@@ -1,5 +1,14 @@
 2005-05-09  Mark McLoughlin  <mark@skynet.ie>
 
+	* lib/usermod.py: don't import errno.
+	
+	* lib/util.py:
+	(uninterruptible_spawnve): if env is None, call
+	os.spawnv() since os.spawnve() seems to dislike
+	when env is None.
+
+2005-05-09  Mark McLoughlin  <mark@skynet.ie>
+
 	* lib/usermod.py: move _uninterruptible_spawn() to ..
 
 	* lib/util.py:

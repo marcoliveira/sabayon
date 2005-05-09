@@ -149,13 +149,17 @@ def init_gettext ():
 #
 def uninterruptible_spawnve (mode, file, args, env):
     try:
-        os.spawnve (mode, file, args, env)
+        if env is None:
+            os.spawnv (mode, file, args)
+        else:
+            os.spawnve (mode, file, args, env)
     except os.error, (err, str):
         if err != errno.EINTR:
             raise
         
 def uninterruptible_spawnv (mode, file, args):
-    uninterruptible_spawnve (mode, file, args, None)
+    os.spawnv (mode, file, args)
+    #uninterruptible_spawnve (mode, file, args, None)
 
 def run_unit_tests ():
     home_dir = get_home_dir ()

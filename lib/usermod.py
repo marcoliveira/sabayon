@@ -23,7 +23,6 @@ import os.path
 import tempfile
 import shutil
 import util
-import errno
 from config import *
 
 def dprint (fmt, *args):
