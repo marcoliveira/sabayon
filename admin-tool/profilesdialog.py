@@ -64,26 +64,26 @@ class ProfilesModel (gtk.ListStore):
             row = self.append ()
             self.set (row, self.COLUMN_NAME, file[:-len (".zip")])
 
-class NewProfileDialog:
+class AddProfileDialog:
     def __init__ (self, profiles_model):
         self.profiles_model = profiles_model
         
         glade_file = os.path.join (GLADEDIR, "sabayon.glade")
-        self.xml = gtk.glade.XML (glade_file, "new_profile_dialog")
+        self.xml = gtk.glade.XML (glade_file, "add_profile_dialog")
         
-        self.dialog = self.xml.get_widget ("new_profile_dialog")
+        self.dialog = self.xml.get_widget ("add_profile_dialog")
         self.dialog.connect ("destroy", gtk.main_quit)
         self.dialog.set_default_response (gtk.RESPONSE_ACCEPT)
         self.dialog.set_icon_name ("sabayon")
 
-        self.create_button = self.xml.get_widget ("new_profile_create_button")
-        self.create_button.set_sensitive (False)
+        self.add_button = self.xml.get_widget ("add_profile_add_button")
+        self.add_button.set_sensitive (False)
 
-        self.name_entry = self.xml.get_widget ("new_profile_name_entry")
+        self.name_entry = self.xml.get_widget ("add_profile_name_entry")
         self.name_entry.connect ("changed", self.__name_entry_changed)
         self.name_entry.set_activates_default (True)
         
-        self.base_combo = self.xml.get_widget ("new_profile_base_combo")
+        self.base_combo = self.xml.get_widget ("add_profile_base_combo")
         self.base_combo.set_model (self.profiles_model)
 
         renderer = gtk.CellRendererText ()
@@ -93,9 +93,9 @@ class NewProfileDialog:
     def __name_entry_changed (self, entry):
         text = entry.get_text ()
         if not text or text.isspace ():
-            self.create_button.set_sensitive (False)
+            self.add_button.set_sensitive (False)
         else:
-            self.create_button.set_sensitive (True)
+            self.add_button.set_sensitive (True)
 
     def run (self, parent):
         self.name_entry.grab_focus ()
@@ -131,10 +131,12 @@ class ProfilesDialog:
         
         self.profiles_list.connect ("key-press-event", self.__handle_key_press)
 
-        self.new_button = self.xml.get_widget ("new_button")
-        self.__fix_button_align (self.new_button)
-        self.new_button.connect ("clicked", self.__new_button_clicked)
+        self.add_button = self.xml.get_widget ("add_button")
+        self.add_button.connect ("clicked", self.__add_button_clicked)
 
+        self.remove_button = self.xml.get_widget ("remove_button")
+        self.remove_button.connect ("clicked", self.__remove_button_clicked)
+        
         self.edit_button = self.xml.get_widget ("edit_button")
         self.__fix_button_align (self.edit_button)
         self.edit_button.connect ("clicked", self.__edit_button_clicked)
@@ -143,12 +145,8 @@ class ProfilesDialog:
         self.__fix_button_align (self.properties_button)
         self.properties_button.connect ("clicked", self.__properties_button_clicked)
         
-        self.delete_button = self.xml.get_widget ("delete_button")
-        self.__fix_button_align (self.delete_button)
-        self.delete_button.connect ("clicked", self.__delete_button_clicked)
-        
         self.help_button = self.xml.get_widget ("help_button")
-        self.help_button.set_sensitive (False)
+        self.help_button.hide ()
 
         self.dialog.connect ("response", self.__dialog_response)
 
@@ -185,8 +183,8 @@ class ProfilesDialog:
     def __dialog_response (self, dialog, response_id):
         dialog.destroy ()
 
-    def __new_button_clicked (self, button):
-        (profile_name, base_profile) = NewProfileDialog (self.profiles_model).run (self.dialog)
+    def __add_button_clicked (self, button):
+        (profile_name, base_profile) = AddProfileDialog (self.profiles_model).run (self.dialog)
         if profile_name:
             self.__create_new_profile (profile_name, base_profile)
 
@@ -258,7 +256,7 @@ class ProfilesDialog:
             os.remove (_get_profile_path_for_name (profile_name))
             self.profiles_model.reload ()
 
-    def __delete_button_clicked (self, button):
+    def __remove_button_clicked (self, button):
         self.__delete_currently_selected ()
 
     def __handle_key_press (self, profiles_list, event):
@@ -285,4 +283,4 @@ class ProfilesDialog:
         profile_name = self.__get_selected_profile ()
         self.edit_button.set_sensitive (profile_name != None)
         self.properties_button.set_sensitive (profile_name != None)
-        self.delete_button.set_sensitive (profile_name != None)
+        self.remove_button.set_sensitive (profile_name != None)
