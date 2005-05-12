@@ -36,6 +36,7 @@ if __name__ == "__main__":
         ( "gconfsource",   _("Ignore WARNINGs"), add_mod_dir, remove_mod_dir ),
         ( "paneldelegate", _("Ignore WARNINGs"), add_mod_dir, remove_mod_dir ),
         ( "userprofile",   None,                 None,        None ),
+        ( "userdb",        None,                 None,        None ),
         ( "storage",       None,                 None,        None )
           ]
     

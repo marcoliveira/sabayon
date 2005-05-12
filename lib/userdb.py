@@ -1,4 +1,23 @@
 #!/usr/bin/env python
+
+#
+# Copyright (C) 2005 Red Hat, Inc.
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#
+
 import sys
 import string
 import pwd
@@ -8,7 +27,7 @@ import config
 import util
 
 defaultConf="""<profiles>
-  <default profile="default"/>
+  <default profile=""/>
 </profiles>"""
 
 def libxml2_no_error_callback(ctx, str):
@@ -68,32 +87,10 @@ class UserDatabase:
         if self.doc != None:
 	    self.doc.freeDoc()
 
-    def get_profile (self, username):
-        """Look up the profile for a given username.
-
-        @username: the user whose profile location should be
-        returned.
-
-        Return value: the location of the profile. The location
-        should  be in a suitable form for constructing a
-        ProfileStorage object.
-        """
-	try:
-	    query = "/profiles/user[@name='%s']" % username
-	    user = self.doc.xpathEval(query)[0]
-	    profile = user.prop("profile")
-	except:
-	    profile = None
-	if profile is None or profile == "":
-	    try:
-	        query = "string(/profiles/default[1]/@profile)"
-	        profile = self.doc.xpathEval(query)
-	    except:
-	        profile = None
-	if profile == "":
-	    profile = None
-	if profile is None:
-	    return None
+    def __profile_name_to_location (self, profile):
+        if not profile:
+            return None
+        
 	try:
 	    uri = libxml2.parseURI(profile);
 	    if uri.scheme() is None:
@@ -105,13 +102,68 @@ class UserDatabase:
 	    else:
 	        # TODO need to make a local copy or use the local copy
 		profile = profile
-
 	except:
 	    # we really expect an URI there
-	    return None
+	    profile = None
 
-        # TODO Check the resulting file path exists
         return profile
+
+    def get_default_profile (self, profile_location = True):
+        """Look up the default profile.
+
+        @profile_location: whether the profile location should
+        be returned
+
+        Return value: the location of the default profile, which
+        should be in a suitable form for constructing a ProfileStorage
+        object, or the default profile name if @profile_location is
+        False.
+        """
+	try:
+	    default = self.doc.xpathEval("/profiles/default")[0]
+	    profile = default.prop("profile")
+	except:
+	    profile = None
+
+        if not profile_location:
+            return profile
+        
+        # TODO Check the resulting file path exists
+        return self.__profile_name_to_location (profile)
+
+    def get_profile (self, username, profile_location = True, ignore_default = False):
+        """Look up the profile for a given username.
+
+        @username: the user whose profile location should be
+        returned.
+        @profile_location: whether the profile location should
+        be returned
+        @ignore_default: don't use the default profile if
+        no profile is explicitly set.
+
+        Return value: the location of the profile, which
+        should be in a suitable form for constructing a
+        ProfileStorage object, or the profile name if
+        @profile_location is False.
+        """
+	try:
+	    query = "/profiles/user[@name='%s']" % username
+	    user = self.doc.xpathEval(query)[0]
+	    profile = user.prop("profile")
+	except:
+	    profile = None
+	if not profile and not ignore_default:
+	    try:
+	        query = "string(/profiles/default[1]/@profile)"
+	        profile = self.doc.xpathEval(query)
+	    except:
+	        profile = None
+        
+        if not profile_location:
+            return profile
+        
+        # TODO Check the resulting file path exists
+        return self.__profile_name_to_location (profile)
 
     def __save_as(self, filename = None):
         """Save the current version to the given filename"""
@@ -154,6 +206,38 @@ class UserDatabase:
 	
 	self.modified = 0
 
+    def set_default_profile (self, profile):
+        """Set the default profile to be used for all users.
+
+        @profile: the location of the profile.
+        """
+        if profile is None:
+            profile = ""
+	self.modified = 0
+	try:
+	    default = self.doc.xpathEval("/profiles/default")[0]
+	    oldprofile = default.prop("profile")
+	    if oldprofile != profile:
+	        default.setProp("profile", profile)
+		self.modified = 1
+        except:
+	    try:
+		profiles = self.doc.xpathEval("/profiles")[0]
+	    except:
+		raise UserDatabaseException(
+			  _("File %s is not a profile configuration") %
+                                           (self.file))
+	    try:
+		default = profiles.newChild(None, "default", None)
+		default.setProp("profile", profile)
+	    except:
+		raise UserDatabaseException(
+			  _("Failed to add default profile %s to configuration") %
+                                           (profile))
+	    self.modified = 1
+	if self.modified == 1:
+	    self.__save_as()
+
     def set_profile (self, username, profile):
         """Set the profile for a given username.
 
@@ -161,6 +245,8 @@ class UserDatabase:
         set.
         @profile: the location of the profile.
         """
+        if profile is None:
+            profile = ""
 	self.modified = 0
 	try:
 	    query = "/profiles/user[@name='%s']" % username
@@ -218,7 +304,7 @@ class UserDatabase:
 	for user in pwd.getpwall():
 	    try:
 	        # remove non-users
-		if user[2] < 1000:
+		if user[2] < 500:
 		    continue
 		if user[0] in list:
 		    continue
@@ -249,24 +335,18 @@ def run_unit_tests ():
     except:
         pass
     db = UserDatabase(testfile)
-    res = db.get_profile("localuser")
-    if res is None:
-        print "get_profile failed to return a value"
-    if res[-29:] != "/desktop-profiles/default.zip":
-        print "get_profile returned the wrong value"
+    db.set_default_profile("default")
+    res = db.get_profile("localuser", False)
+    assert not res is None
+    assert res == "default"
     db.set_profile("localuser", "groupA")
     res = db.get_profile("localuser")
-    if res is None:
-        print "get_profile failed to return a value"
-    if res[-28:] != "/desktop-profiles/groupA.zip":
-        print "get_profile returned a wrong value, expected groupA.zip got", res
+    assert not res is None
+    assert res[-28:] == "/desktop-profiles/groupA.zip"
     db.set_profile("localuser", "groupB")
     res = db.get_profile("localuser")
-    if res is None:
-        print "get_profile failed to return a value"
-    if res[-28:] != "/desktop-profiles/groupB.zip":
-        print "get_profile returned a wrong value, expected groupB.zip got", res
-        
+    assert not res is None
+    assert res[-28:] == "/desktop-profiles/groupB.zip"
 
 if __name__ == "__main__":
     util.init_gettext ()

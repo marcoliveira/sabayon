@@ -6,7 +6,7 @@ PYTHON_FILES =				\
 	saveconfirm.py			\
 	gconfviewer.py			\
 	fileviewer.py			\
-	userswindow.py
+	usersdialog.py
 
 @INTLTOOL_DESKTOP_RULE@
 

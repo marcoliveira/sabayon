@@ -1,5 +1,34 @@
 2005-05-12  Mark McLoughlin  <markmc@redhat.com>
 
+	Add a dialog for associating users with profiles.
+
+	* admin-tool/Makefile.am: add usersdialog.py
+	
+	* admin-tool/usersdialog.py: dialog from which you
+	can make a profile the default profile or assign
+	that profile to users.
+	
+	* admin-tool/profilesdialog.py: add a "Users" button
+	and popup the dialog when clicked.
+	
+	* admin-tool/sabayon.glade: add the new dialog and
+	button.
+	
+	* lib/unittests.py: add userdb.
+	
+	* lib/userdb.py: implement get_default_profile() and
+	set set_default_profile(). Add a "profile_location"
+	arg to get_profile() and get_default_profile() which
+	specifies whether you want to know the full path for
+	the profile. Add a "ignore_default" arg to get_profile()
+	which causes it to not return the default profile if
+	no profile is explicitly set for that user.
+	
+	* admin-tool/userswindow.py: goodness, I'd forgotten
+	I'd ever written this junk.
+
+2005-05-12  Mark McLoughlin  <markmc@redhat.com>
+
 	* admin-tool/sabayon.glade: rename the
 	"Properties" button to "Details"
 

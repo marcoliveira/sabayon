@@ -30,6 +30,7 @@ import gtk.glade
 import storage
 import protosession
 import editorwindow
+import usersdialog
 import util
 from config import *
 
@@ -141,9 +142,13 @@ class ProfilesDialog:
         self.__fix_button_align (self.edit_button)
         self.edit_button.connect ("clicked", self.__edit_button_clicked)
         
-        self.properties_button = self.xml.get_widget ("properties_button")
-        self.__fix_button_align (self.properties_button)
-        self.properties_button.connect ("clicked", self.__properties_button_clicked)
+        self.details_button = self.xml.get_widget ("details_button")
+        self.__fix_button_align (self.details_button)
+        self.details_button.connect ("clicked", self.__details_button_clicked)
+        
+        self.users_button = self.xml.get_widget ("users_button")
+        self.__fix_button_align (self.users_button)
+        self.users_button.connect ("clicked", self.__users_button_clicked)
         
         self.help_button = self.xml.get_widget ("help_button")
         self.help_button.hide ()
@@ -244,10 +249,15 @@ class ProfilesDialog:
 
             self.__copy_from_user (user_path, profile_path)
 
-    def __properties_button_clicked (self, button):
+    def __details_button_clicked (self, button):
         profile_name = self.__get_selected_profile ()
         if profile_name:
             editorwindow.ProfileEditorWindow (profile_name, self.dialog)
+        
+    def __users_button_clicked (self, button):
+        profile_name = self.__get_selected_profile ()
+        if profile_name:
+            usersdialog.UsersDialog (profile_name, self.dialog)
 
     def __delete_currently_selected (self):
         profile_name = self.__get_selected_profile ()
@@ -282,5 +292,6 @@ class ProfilesDialog:
     def __profile_selection_changed (self, selection):
         profile_name = self.__get_selected_profile ()
         self.edit_button.set_sensitive (profile_name != None)
-        self.properties_button.set_sensitive (profile_name != None)
+        self.details_button.set_sensitive (profile_name != None)
+        self.users_button.set_sensitive (profile_name != None)
         self.remove_button.set_sensitive (profile_name != None)
