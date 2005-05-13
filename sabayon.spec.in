@@ -109,6 +109,9 @@ fi
 %{python_sitelib}/%{name}/dirmonitor.py
 %{python_sitelib}/%{name}/dirmonitor.pyc
 %ghost %{python_sitelib}/%{name}/dirmonitor.pyo
+%{python_sitelib}/%{name}/mozilla_bookmarks.py
+%{python_sitelib}/%{name}/mozilla_bookmarks.pyc
+%ghost %{python_sitelib}/%{name}/mozilla_bookmarks.pyo
 %{python_sitelib}/%{name}/storage.py
 %{python_sitelib}/%{name}/storage.pyc
 %ghost %{python_sitelib}/%{name}/storage.pyo
@@ -168,9 +171,9 @@ fi
 %{python_sitelib}/%{name}/usermod.py
 %{python_sitelib}/%{name}/usermod.pyc
 %ghost %{python_sitelib}/%{name}/usermod.pyo
-%{python_sitelib}/%{name}/userswindow.py
-%{python_sitelib}/%{name}/userswindow.pyc
-%ghost %{python_sitelib}/%{name}/userswindow.pyo
+%{python_sitelib}/%{name}/usersdialog.py
+%{python_sitelib}/%{name}/usersdialog.pyc
+%ghost %{python_sitelib}/%{name}/usersdialog.pyo
 
 %changelog
 * Thu Mar 24 2005 Mark McLoughlin <markmc@redhat.com> - 0.17-1
