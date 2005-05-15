@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-04-09 11:31+0000\n"
-"PO-Revision-Date: 2005-04-09 18:50+0200\n"
+"POT-Creation-Date: 2005-05-15 12:02+0000\n"
+"PO-Revision-Date: 2005-05-15 20:51+0200\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -27,8 +27,8 @@ msgid "translator-credits"
 msgstr "Miloslav Trmač <mitr@volny.cz>"
 
 #: ../admin-tool/editorwindow.py:124 ../admin-tool/fileviewer.py:29
-#: ../admin-tool/gconfviewer.py:87 ../admin-tool/sabayon.glade.h:1
-#: ../admin-tool/userswindow.py:70 ../lib/protosession.py:332
+#: ../admin-tool/gconfviewer.py:87 ../admin-tool/sabayon.glade.h:2
+#: ../lib/protosession.py:332
 msgid "All Your Settings Are Belong To Us"
 msgstr "All Your Settings Are Belong To Us"
 
@@ -140,7 +140,8 @@ msgstr "seznam"
 msgid "pair"
 msgstr "dvojice"
 
-#: ../admin-tool/gconfviewer.py:111 ../admin-tool/profilesdialog.py:180
+#: ../admin-tool/gconfviewer.py:111 ../admin-tool/profilesdialog.py:183
+#: ../admin-tool/usersdialog.py:83
 msgid "Name"
 msgstr "Název"
 
@@ -160,12 +161,12 @@ msgstr "Ignorovat"
 msgid "Mandatory"
 msgstr "Povinné"
 
-#: ../admin-tool/profilesdialog.py:212
+#: ../admin-tool/profilesdialog.py:215
 #, python-format
 msgid "User account '%s' was not found"
 msgstr "Účet uživatele '%s' nebyl nalezen"
 
-#: ../admin-tool/profilesdialog.py:213
+#: ../admin-tool/profilesdialog.py:216
 #, python-format
 msgid ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
@@ -176,12 +177,12 @@ msgstr ""
 "uživatele '%s'. Zkuste to znovu po vytvoření tohoto účtu (například příkazem "
 "'adduser')"
 
-#: ../admin-tool/sabayon-apply:34
+#: ../admin-tool/sabayon-apply:33
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Nebyl nalezen profil pro uživatele '%s'\n"
 
-#: ../admin-tool/sabayon-apply:39
+#: ../admin-tool/sabayon-apply:38
 #, c-format
 msgid "Usage: %s [<profile-name>]\n"
 msgstr "Použití: %s [<název-profilu>]\n"
@@ -208,17 +209,17 @@ msgstr "Profily uživatelů pracovní plochy"
 msgid "Establish and Edit Profiles for Users"
 msgstr "Vytvářet a upravovat profily uživatelů"
 
-#: ../admin-tool/sabayon.glade.h:2
-msgid "C_reate"
-msgstr "_Vytvořit"
+#: ../admin-tool/sabayon.glade.h:1
+msgid "Add Profile"
+msgstr "Přidat profil"
 
 #: ../admin-tool/sabayon.glade.h:3
-msgid "New Profile"
-msgstr "Nový profil"
-
-#: ../admin-tool/sabayon.glade.h:4
 msgid "Profile _name:"
 msgstr "_Název profilu:"
+
+#: ../admin-tool/sabayon.glade.h:4
+msgid "Use this profile for _all users"
+msgstr "Používat tento profil pro _všechny uživatele"
 
 #: ../admin-tool/sabayon.glade.h:5
 msgid "_Base on:"
@@ -227,6 +228,18 @@ msgstr "_Založit na:"
 #: ../admin-tool/sabayon.glade.h:8
 msgid "_Profiles:"
 msgstr "_Profily:"
+
+#: ../admin-tool/sabayon.glade.h:9
+msgid "_Users"
+msgstr "_Uživatelé"
+
+#: ../admin-tool/sabayon.glade.h:10
+msgid "_Users:"
+msgstr "_Uživatelé:"
+
+#: ../admin-tool/sabayon.glade.h:11
+msgid "dialog1"
+msgstr "dialog1"
 
 #: ../admin-tool/sabayon:35
 #, c-format
@@ -331,18 +344,9 @@ msgstr[2] ""
 "Pokud je neuložíte, budou změny za poslední hodinu a %ld minut navždy "
 "ztraceny."
 
-#: ../admin-tool/userswindow.py:42 ../admin-tool/userswindow.py:60
-#: ../admin-tool/userswindow.py:122
-msgid "None"
-msgstr "Žádný"
-
-#: ../admin-tool/userswindow.py:99
-msgid "User"
-msgstr "Uživatel"
-
-#: ../admin-tool/userswindow.py:111
-msgid "Profile"
-msgstr "Profil"
+#: ../admin-tool/usersdialog.py:90
+msgid "Use This Profile"
+msgstr "Používat tento profil"
 
 #: ../lib/dirmonitor.py:138
 #, python-format
@@ -607,45 +611,50 @@ msgstr "Není to platná verze profilu"
 msgid "Ignore WARNINGs"
 msgstr "Ignorovat VAROVÁNÍ"
 
-#: ../lib/unittests.py:57
+#: ../lib/unittests.py:58
 #, python-format
 msgid "Running %s tests"
 msgstr "Spouštím testy %s"
 
-#: ../lib/unittests.py:59
+#: ../lib/unittests.py:60
 #, python-format
 msgid "Running %s tests (%s)"
 msgstr "Spouštím testy %s (%s)"
 
-#: ../lib/unittests.py:66
+#: ../lib/unittests.py:67
 msgid "Success!"
 msgstr "Úspěch!"
 
-#: ../lib/userdb.py:140
+#: ../lib/userdb.py:192
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Nemohu otevřít %s pro zápis"
 
-#: ../lib/userdb.py:153
+#: ../lib/userdb.py:205
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Nemohu uložit UserDatabase do %s"
 
-#: ../lib/userdb.py:177
+#: ../lib/userdb.py:228 ../lib/userdb.py:263
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Soubor %s není nastavení profilu"
 
-#: ../lib/userdb.py:185
+#: ../lib/userdb.py:235
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "Nemohu přidat implicitní profil %s do nastavení"
+
+#: ../lib/userdb.py:271
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Nemohu přidat uživatele %s do nastavení profilu"
 
-#: ../lib/userdb.py:216
+#: ../lib/userdb.py:302
 msgid "Failed to get the user list"
 msgstr "Nemohu získat seznam uživatelů"
 
-#: ../lib/util.py:116
+#: ../lib/util.py:117
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -653,13 +662,19 @@ msgstr ""
 "Nemohu najít domovský adresář: nenastaven v /etc/passwd a žádná hodnota "
 "$HOME v prostředí"
 
-#: ../lib/util.py:129
+#: ../lib/util.py:130
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr ""
 "Nemohu najít jméno uživatele: nenastaveno v /etc/passwd a žádná hodnota "
 "$USER v prostředí"
+
+#~ msgid "C_reate"
+#~ msgstr "_Vytvořit"
+
+#~ msgid "None"
+#~ msgstr "Žádný"
 
 #~ msgid "No such profile ini file: %s"
 #~ msgstr "Soubor ini profilu neexistuje: %s"
