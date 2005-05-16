@@ -29,4 +29,5 @@ sabayon.spec: sabayon.spec.in Makefile
                 < $< > $@
 
 rpm: sabayon.spec dist
+	@(gzip -cd sabayon-$(PACKAGE_VERSION).tar.gz | bzip2 > sabayon-$(PACKAGE_VERSION).tar.bz2)
 	@(rpmbuild -ta sabayon-$(PACKAGE_VERSION).tar.gz)
