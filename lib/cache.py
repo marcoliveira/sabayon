@@ -18,16 +18,21 @@
 #
 import urllib2
 import urlparse
-#import util
+import util
 import os
 import stat
 import string
 import libxml2
 import StringIO
 
+def libxml2_no_error_callback(ctx, str):
+    pass
+
+libxml2.registerErrorHandler(libxml2_no_error_callback, "")
+
 def dprint(fmt, *args):
-    print fmt % args
-#    util.debug_print (util.DEBUG_CACHE, fmt % args)
+#    print fmt % args
+    util.debug_print (util.DEBUG_CACHE, fmt % args)
 
 def get_home_dir():
     # return util.get_home_dir()
@@ -54,6 +59,7 @@ class cacheRepository:
 		try:
 		    os.mkdir(directory)
 		    dprint("Created directory %s", directory)
+		    info = os.stat(directory)
 		except:
 		    dprint("Failed to create directory %s", directory)
 		    directory = None
@@ -80,6 +86,7 @@ class cacheRepository:
 		    dprint("Failed to create directory %s", directory)
 		    directory = None
 	if info == None:
+	    dprint("Running with cache deactivated")
 	    self.directory = None
 	    return
 	else:
@@ -87,7 +94,7 @@ class cacheRepository:
 	if stat.S_IMODE(info[0]) != stat.S_IRUSR + stat.S_IWUSR + stat.S_IXUSR:
 	    dprint("Wrong mode for %s", directory)
 	    try:
-		os.chmod(directory, stat.S_IRUSR +sxstat.S_IWUSR + stat.S_IXUSR)
+		os.chmod(directory, stat.S_IRUSR + stat.S_IWUSR + stat.S_IXUSR)
 	    except:
 	        dprint("Failed to chmod %s, ignored", directory)
 		self.directory = None
@@ -120,8 +127,8 @@ class cacheRepository:
 
     def __URL_mapping(self, URL):
         """Function to convert an URL to a local name in the cache"""
-	URL = string.replace(URL, '//', _)
-	URL = string.replace(URL, '/', _)
+	URL = string.replace(URL, '//', "_")
+	URL = string.replace(URL, '/', "_")
 	return URL
 
     def __save_catalog(self):
@@ -199,7 +206,7 @@ class cacheRepository:
 	        return None
 	else:
 	    filename = self.directory + "/" + self.__URL_mapping(URL)
-	    timestamp = __catalog_lookup(URL)
+	    timestamp = self.__catalog_lookup(URL)
 	    last_modified = None
 	    try:
 	        request = urllib2.Request(URL)
@@ -234,18 +241,77 @@ class cacheRepository:
 	        dprint("Failed to write cache file %s", filename)
 	    return StringIO.StringIO(data)
 
-	        
-
-
-        
-
-
 def run_unit_tests ():
+    import BaseHTTPServer
+    import SimpleHTTPServer
     import shutil
+    import os
+    import thread
+    import time
+
+    class test_http_handler(SimpleHTTPServer.SimpleHTTPRequestHandler):
+        def do_GET(self):
+	    SimpleHTTPServer.SimpleHTTPRequestHandler.do_GET(self)
+
+	def log_message(self, format, *args):
+	    pass
+
+    def run_http_server(www):
+	os.chdir(www)
+	server_address = ('', 8000)
+	httpd = BaseHTTPServer.HTTPServer(server_address,test_http_handler)
+	dprint("starting HTTP on %s" % (www))
+	httpd.handle_request()
+	dprint("stopping HTTP server")
+
+    www = "/tmp/sabayon_http_test"
+    shutil.rmtree(www, True)
+    os.mkdir(www)
+    open(www + "/foo", "w").write("content")
+    server = thread.start_new_thread(run_http_server, (www,))
 
     dir = "/tmp/cache_test"
-    # shutil.rmtree(dir, True)
+    shutil.rmtree(dir, True)
     cache = cacheRepository(dir)
+
+    f = cache.get_resource(www + "/foo")
+    assert(f != None)
+    data = f.read()
+    assert(data == "content")
+    dprint("absolute local path okay")
+
+    f = cache.get_resource("foo")
+    assert(f == None)
+    dprint("relative path okay")
+
+    # give time for the HTTP server to start
+    time.sleep(0.5)
+
+    f = cache.get_resource("http://localhost:8000/foo")
+    assert(f != None)
+    data = f.read()
+    assert(data == "content")
+    dprint("first HTTP access okay")
+
+    f = cache.get_resource("http://localhost:8000/foo")
+    assert(f != None)
+    data = f.read()
+    assert(data == "content")
+    dprint("second cached HTTP access okay")
+
+    # shutdown the cache, restart a new instance and try to get the
+    # resource
+    del cache
+    cache = cacheRepository(dir)
+
+    f = cache.get_resource("http://localhost:8000/foo")
+    assert(f != None)
+    data = f.read()
+    assert(data == "content")
+    dprint("New cache cached HTTP access okay")
+
+    shutil.rmtree(www, True)
+    shutil.rmtree(dir, True)
 
 if __name__ == "__main__":
     run_unit_tests()

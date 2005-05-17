@@ -39,7 +39,8 @@ from config import *
     DEBUG_MOZILLASOURCE,
     DEBUG_ADMINTOOL,
     DEBUG_USERDB,
-) = range (11)
+    DEBUG_CACHE,
+) = range (12)
 
 debug_modules = {
     DEBUG_USERPROFILE   : ("user-profile",   False),
@@ -53,6 +54,7 @@ debug_modules = {
     DEBUG_MOZILLASOURCE : ("mozilla-source", False),
     DEBUG_ADMINTOOL     : ("admin-tool",     False),
     DEBUG_USERDB        : ("user-db",        False),
+    DEBUG_CACHE         : ("cache",          False),
 }
 
 def init_debug_modules ():
