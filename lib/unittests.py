@@ -37,7 +37,8 @@ if __name__ == "__main__":
         ( "paneldelegate", _("Ignore WARNINGs"), add_mod_dir, remove_mod_dir ),
         ( "userprofile",   None,                 None,        None ),
         ( "userdb",        None,                 None,        None ),
-        ( "storage",       None,                 None,        None )
+        ( "storage",       None,                 None,        None ),
+        ( "cache",         None,                 None,        None )
           ]
     
     if len (sys.argv) > 1:
