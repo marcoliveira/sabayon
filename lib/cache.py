@@ -74,6 +74,7 @@ class cacheRepository:
 			shutil.rmtree(directory, True)
 			os.mkdir(directory)
 			dprint("Recreated directory %s", directory)
+			info = os.stat(directory)
 		    except:
 		        dprint("Failed to create directory %s", directory)
 			directory = None
@@ -82,6 +83,7 @@ class cacheRepository:
 		try:
 		    os.mkdir(directory)
 		    dprint("Created directory %s", directory)
+		    info = os.stat(directory)
 		except:
 		    dprint("Failed to create directory %s", directory)
 		    directory = None
@@ -188,7 +190,8 @@ class cacheRepository:
     def get_resource(self, URL):
         """Get a resource from the cache. It may fetch it from the network
 	   or use a local copy. It returns a Python file liek open() would.
-	   If passed a filename it will accept it if absolute."""
+	   If passed a filename it will accept it if absolute.
+	   The return value is an absolute path to a local file."""
 	file = None
 	try:
 	    decomp = urlparse.urlparse(URL)
@@ -200,7 +203,7 @@ class cacheRepository:
 	    if file[0] != '/':
 	        return None
 	    try:
-	        return open(file, "r")
+	        return file
 	    except:
 	        dprint("Failed to read %s", file)
 	        return None
@@ -228,9 +231,10 @@ class cacheRepository:
 	    except:
 	        dprint("Resource not available or older using cache")
 		try:
-		    return open(filename, "r")
+		    info = os.stat(filename)
+		    return filename
 		except:
-		    dprint("Failed to read cache file %s", filename)
+		    dprint("Failed to find cache file %s", filename)
 		    return None
             try:
 	        fd = open(filename, "w")
@@ -239,7 +243,18 @@ class cacheRepository:
 		self.__update_catalog(URL, last_modified)
 	    except:
 	        dprint("Failed to write cache file %s", filename)
-	    return StringIO.StringIO(data)
+		return None
+	    return filename
+
+default_cache = None
+
+def get_default_cache():
+     global default_cache
+
+     if default_cache == None:
+         default_cache = cacheRepository()
+
+     return default_cache
 
 def run_unit_tests ():
     import BaseHTTPServer
@@ -276,7 +291,7 @@ def run_unit_tests ():
 
     f = cache.get_resource(www + "/foo")
     assert(f != None)
-    data = f.read()
+    data = open(f).read()
     assert(data == "content")
     dprint("absolute local path okay")
 
@@ -289,13 +304,13 @@ def run_unit_tests ():
 
     f = cache.get_resource("http://localhost:8000/foo")
     assert(f != None)
-    data = f.read()
+    data = open(f).read()
     assert(data == "content")
     dprint("first HTTP access okay")
 
     f = cache.get_resource("http://localhost:8000/foo")
     assert(f != None)
-    data = f.read()
+    data = open(f).read()
     assert(data == "content")
     dprint("second cached HTTP access okay")
 
@@ -306,7 +321,7 @@ def run_unit_tests ():
 
     f = cache.get_resource("http://localhost:8000/foo")
     assert(f != None)
-    data = f.read()
+    data = open(f).read()
     assert(data == "content")
     dprint("New cache cached HTTP access okay")
 

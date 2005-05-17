@@ -27,6 +27,8 @@ import shutil
 import tempfile
 import zipfile
 import libxml2
+import urlparse
+import cache
 import util
 from config import *
 
@@ -90,8 +92,23 @@ class ProfileStorage:
         /etc/desktop-profiles/$(name).zip.
         """
         self.name = name
+	self.readonly = 0
+	
         if not os.path.isabs (self.name):
-            self.path = os.path.join (PROFILESDIR, self.name + ".zip")
+	    try:
+	        protocol = urlparse.urlparse(self.name)[0]
+	        if protocol == "":
+		    self.path = os.path.join (PROFILESDIR, self.name + ".zip")
+		else:
+		    # if someone uses file:/// they deserve to have troubles
+		    self.readonly == 1
+		    cachou = cache.get_default_cache()
+		    self.path = cachou.get_resource(self.name)
+		    if self.path == None:
+		        self.path = self.name
+		    
+	    except:
+		self.path = os.path.join (PROFILESDIR, self.name + ".zip")
         else:
             self.path = name
             
@@ -731,6 +748,9 @@ class ProfileStorage:
         """Save the contents of the profile to
         /etc/desktop-profiles/$(name).zip.
         """
+	if self.readonly:
+            raise ProfileStorageException (_("Profile is read-only %s") %
+                                           (self.name))
         self.__read_metadata ()
         if not self.needs_saving:
             dprint ("No changes to profile '%s' need saving" % self.name)

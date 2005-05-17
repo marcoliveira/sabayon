@@ -3,6 +3,7 @@ SUBDIRS = sources
 PYTHON_FILES =				\
 	__init__.py			\
 	userprofile.py			\
+	cache.py			\
 	config.py			\
 	storage.py			\
 	dirmonitor.py			\

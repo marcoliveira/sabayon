@@ -1,3 +1,10 @@
+Tue May 17 17:49:48 CEST 2005 Daniel Veillard <veillard@redhat.com>
+
+	* lib/cache.py lib/storage.py: plugging the network cache at the
+	  storage level, added read-only property, change the cache output
+	  to be filenames not streams, and a couple of bug fixes
+	* sabayon.spec.in lib/Makefile.am: integration of the cache module
+
 Tue May 17 14:33:55 CEST 2005 Daniel Veillard <veillard@redhat.com>
 
 	* lib/cache.py lib/util.py: added regression testing to the cache 

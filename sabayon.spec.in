@@ -106,6 +106,9 @@ fi
 %{python_sitelib}/%{name}/config.py
 %{python_sitelib}/%{name}/config.pyc
 %ghost %{python_sitelib}/%{name}/config.pyo
+%{python_sitelib}/%{name}/cache.py
+%{python_sitelib}/%{name}/cache.pyc
+%ghost %{python_sitelib}/%{name}/cache.pyo
 %{python_sitelib}/%{name}/dirmonitor.py
 %{python_sitelib}/%{name}/dirmonitor.pyc
 %ghost %{python_sitelib}/%{name}/dirmonitor.pyo
