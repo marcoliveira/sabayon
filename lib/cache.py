@@ -26,12 +26,10 @@ import libxml2
 import StringIO
 
 def dprint(fmt, *args):
-#    print fmt % args
     util.debug_print (util.DEBUG_CACHE, fmt % args)
 
 def get_home_dir():
-    # return util.get_home_dir()
-    return "/u/veillard"
+    return util.get_home_dir()
 
 class cacheRepository:
     """This is a remote resource cache, based on Python native urllib2
