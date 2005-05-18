@@ -25,11 +25,6 @@ import string
 import libxml2
 import StringIO
 
-def libxml2_no_error_callback(ctx, str):
-    pass
-
-libxml2.registerErrorHandler(libxml2_no_error_callback, "")
-
 def dprint(fmt, *args):
 #    print fmt % args
     util.debug_print (util.DEBUG_CACHE, fmt % args)
@@ -249,12 +244,37 @@ class cacheRepository:
 default_cache = None
 
 def get_default_cache():
-     global default_cache
+    global default_cache
 
-     if default_cache == None:
-         default_cache = cacheRepository()
+    if default_cache == None:
+        default_cache = cacheRepository()
+	# now we can activate the entity loader
+	libxml2.setEntityLoader(libxml2_entity_loader)
 
-     return default_cache
+    return default_cache
+
+# redefine libxml2 entity loader to use the default cache
+def libxml2_entity_loader(URL, ID, ctxt):
+    dprint("Cache entity loader called for %s '%s'", URL, ID)
+    the_cache = get_default_cache()
+    file = the_cache.get_resource(URL)
+    try:
+        fd = open(file)
+	dprint("Cache entity loader resolved to %s", file)
+    except:
+        fd = None
+    return fd
+
+# don't report errors from libxml2 parsing
+def libxml2_no_error_callback(ctx, str):
+    pass
+
+libxml2.registerErrorHandler(libxml2_no_error_callback, "")
+
+def initialize():
+    get_default_cache()
+    libxml2.setEntityLoader(libxml2_entity_loader)
+
 
 def run_unit_tests ():
     import BaseHTTPServer

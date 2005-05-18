@@ -25,15 +25,16 @@ import os
 import libxml2
 import config
 import util
+import cache
 
 defaultConf="""<profiles>
   <default profile=""/>
 </profiles>"""
 
-def libxml2_no_error_callback(ctx, str):
-    pass
-
-libxml2.registerErrorHandler(libxml2_no_error_callback, "")
+# make sure to initialize the cache first
+# this will make sure we can handle disconnection
+# and initialize libxml2 environment
+cache.initialize()
 
 def dprint (fmt, *args):
     util.debug_print (util.DEBUG_USERDB, fmt % args)
@@ -73,6 +74,8 @@ class UserDatabase:
 
 	try:
 	    self.doc = libxml2.readFile(file, None, libxml2.XML_PARSE_NOBLANKS)
+	    # Process XInclude statements
+	    self.doc.xincludeProcess()
 	except:
 	    # TODO add fallback to last good database
 	    dprint("failed to parse %s falling back to default conf\n" %
@@ -87,10 +90,20 @@ class UserDatabase:
         if self.doc != None:
 	    self.doc.freeDoc()
 
-    def __profile_name_to_location (self, profile):
+    def __profile_name_to_location (self, profile, node):
         if not profile:
             return None
         
+	# if there is a base on the node, then use 
+	if node != None:
+	    try:
+		base = node.getBase(None)
+		if base != None and base != "" and \
+		   base != os.path.join (config.PROFILESDIR, "users.xml"):
+		    # URI composition from the base
+                    return libxml2.buildURI(profile, base)
+	    except:
+		pass
 	try:
 	    uri = libxml2.parseURI(profile);
 	    if uri.scheme() is None:
@@ -119,6 +132,7 @@ class UserDatabase:
         object, or the default profile name if @profile_location is
         False.
         """
+	default = None
 	try:
 	    default = self.doc.xpathEval("/profiles/default")[0]
 	    profile = default.prop("profile")
@@ -128,8 +142,7 @@ class UserDatabase:
         if not profile_location:
             return profile
         
-        # TODO Check the resulting file path exists
-        return self.__profile_name_to_location (profile)
+        return self.__profile_name_to_location (profile, default)
 
     def get_profile (self, username, profile_location = True, ignore_default = False):
         """Look up the profile for a given username.
@@ -146,6 +159,7 @@ class UserDatabase:
         ProfileStorage object, or the profile name if
         @profile_location is False.
         """
+	user = None
 	try:
 	    query = "/profiles/user[@name='%s']" % username
 	    user = self.doc.xpathEval(query)[0]
@@ -154,8 +168,9 @@ class UserDatabase:
 	    profile = None
 	if not profile and not ignore_default:
 	    try:
-	        query = "string(/profiles/default[1]/@profile)"
-	        profile = self.doc.xpathEval(query)
+	        query = "/profiles/default[1][@profile]"
+		user = self.doc.xpathEval(query)[0]
+		profile = user.prop("profile")
 	    except:
 	        profile = None
         
@@ -163,7 +178,7 @@ class UserDatabase:
             return profile
         
         # TODO Check the resulting file path exists
-        return self.__profile_name_to_location (profile)
+        return self.__profile_name_to_location (profile, user)
 
     def __save_as(self, filename = None):
         """Save the current version to the given filename"""

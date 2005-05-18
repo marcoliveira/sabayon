@@ -1,3 +1,11 @@
+Wed May 18 16:33:34 CEST 2005 Daniel Veillard <veillard@redhat.com>
+
+	* lib/userdb.py lib/cache.py: add XInclude support when parsing
+	  the user DB database to be able to build it from various web
+	  fragments. MAke sure the cache is used for all those potential
+	  web requests. Now the user as well as the profiles can be defined
+	  in a centralized place.
+
 2005-05-17  Mark McLoughlin  <mark@skynet.ie>
 
 	* lib/unittests.py: add cache
