@@ -22,6 +22,12 @@
       <xsl:when test="$name = '#helping'">
         <xsl:text>helping.html</xsl:text>
       </xsl:when>
+      <xsl:when test="$name = '#config'">
+        <xsl:text>config.html</xsl:text>
+      </xsl:when>
+      <xsl:when test="$name = '#format'">
+        <xsl:text>format.html</xsl:text>
+      </xsl:when>
       <xsl:otherwise>
         <xsl:value-of select="$name"/>
       </xsl:otherwise>
@@ -70,6 +76,16 @@
       <p>You can contact developers <a href="mailto:sabayon-list@gnome.org">sending a mail</a> to the <a href="http://mail.gnome.org/mailman/listinfo/sabayon-list/">Sabayon mailing list</a>. You do not need to be subscribed.</p>
       <p>We are also often available to <a href="irc://irc.gnome.org/sabayon">chat on IRC</a>.</p>
       <p><strong>Server:</strong> irc.gnome.org<br /><strong>Channel:</strong> #sabayon</p>
+    </div>
+  </xsl:template>
+
+  <xsl:template name="docs">
+    <div class="box">
+      <h2 class="box_title">Documentation</h2>
+      <p>Format and deployement of the <a href="config.html">config
+         files</a></p>
+      <p>Technical informations on the <a href="format.html">profile
+         format</a></p>
     </div>
   </xsl:template>
 
@@ -127,6 +143,7 @@
 	      <xsl:call-template name="download"/>
 	      <xsl:call-template name="contribute"/>
 	      <xsl:call-template name="contact"/>
+	      <xsl:call-template name="docs"/>
 	    </div>
 	    <div id="right">
 	      <xsl:apply-templates mode="subfile" select="$header/following-sibling::*[preceding-sibling::h2[1] = $header and name() != 'h2' ]"/>
@@ -170,6 +187,7 @@
 	  <xsl:call-template name="download"/>
 	  <xsl:call-template name="contribute"/>
 	  <xsl:call-template name="contact"/>
+	  <xsl:call-template name="docs"/>
         </div>
         <div id="right">
           <xsl:apply-templates mode="content" select="($firsth2/preceding-sibling::*)"/>
