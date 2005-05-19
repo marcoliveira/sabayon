@@ -100,6 +100,7 @@ fi
 
 %{_sbindir}/%{name}-apply
 
+%dir %{python_sitelib}/%{name}/
 %{python_sitelib}/%{name}/__init__.py
 %{python_sitelib}/%{name}/__init__.pyc
 %ghost %{python_sitelib}/%{name}/__init__.pyo
@@ -128,6 +129,7 @@ fi
 %{python_sitelib}/%{name}/util.pyc
 %ghost %{python_sitelib}/%{name}/util.pyo
 
+%dir %{python_sitelib}/%{name}/sources/
 %{python_sitelib}/%{name}/sources/*.py
 %{python_sitelib}/%{name}/sources/*.pyc
 %ghost %{python_sitelib}/%{name}/sources/*.pyo
@@ -181,6 +183,9 @@ fi
 %changelog
 * Wed May 18 2005 Mark McLoughlin <markmc@redhat.com> - 0.18-1
 - Update to 0.18
+
+* Fri Apr  1 2005 Michael Schwendt <mschwendt[AT]users.sf.net> - 0.17-2
+- Add missing %%dir entries.
 
 * Thu Mar 24 2005 Mark McLoughlin <markmc@redhat.com> - 0.17-1
 - Update to 0.17
