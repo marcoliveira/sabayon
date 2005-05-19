@@ -38,9 +38,10 @@ class UsersModel (gtk.ListStore):
         for user in db.get_users ():
             pw = pwd.getpwnam (user)
 
+            name = None
             if pw.pw_gecos:
-                name = pw.pw_gecos
-            else:
+                name = pw.pw_gecos.split (",")[0]
+            if not name:
                 name = user
 
             row = self.append ()
