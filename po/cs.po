@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-05-15 12:02+0000\n"
-"PO-Revision-Date: 2005-05-15 20:51+0200\n"
+"POT-Creation-Date: 2005-05-19 20:07+0000\n"
+"PO-Revision-Date: 2005-05-22 13:26+0200\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -141,7 +141,7 @@ msgid "pair"
 msgstr "dvojice"
 
 #: ../admin-tool/gconfviewer.py:111 ../admin-tool/profilesdialog.py:183
-#: ../admin-tool/usersdialog.py:83
+#: ../admin-tool/usersdialog.py:84
 msgid "Name"
 msgstr "Název"
 
@@ -344,7 +344,7 @@ msgstr[2] ""
 "Pokud je neuložíte, budou změny za poslední hodinu a %ld minut navždy "
 "ztraceny."
 
-#: ../admin-tool/usersdialog.py:90
+#: ../admin-tool/usersdialog.py:91
 msgid "Use This Profile"
 msgstr "Používat tento profil"
 
@@ -574,87 +574,92 @@ msgstr "Objekt panelu '%s' odstraněn"
 msgid "Panel"
 msgstr "Panel"
 
-#: ../lib/storage.py:144
+#: ../lib/storage.py:161
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "Nemohu číst soubor '%s': %s"
 
-#: ../lib/storage.py:154
+#: ../lib/storage.py:171
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "Nemohu číst metadata z '%s': %s"
 
-#: ../lib/storage.py:160
+#: ../lib/storage.py:177
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "Neplatný oddíl metadat v '%s': %s"
 
-#: ../lib/storage.py:516
+#: ../lib/storage.py:533
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Nemohu přidat neexistující soubor '%s'"
 
-#: ../lib/storage.py:606
+#: ../lib/storage.py:623
 msgid "No current revision"
 msgstr "Žádná aktuální verze"
 
-#: ../lib/storage.py:610 ../lib/storage.py:621
+#: ../lib/storage.py:627 ../lib/storage.py:638
 #, python-format
 msgid "'%s' does not exist in profile revision '%s'"
 msgstr "'%s' neexistuje ve verzi profilu '%s'"
 
-#: ../lib/storage.py:693
+#: ../lib/storage.py:710
 msgid "Not a valid profile revision"
 msgstr "Není to platná verze profilu"
+
+#: ../lib/storage.py:752
+#, python-format
+msgid "Profile is read-only %s"
+msgstr "Profil je jen pro čtení %s"
 
 #: ../lib/unittests.py:36 ../lib/unittests.py:37
 msgid "Ignore WARNINGs"
 msgstr "Ignorovat VAROVÁNÍ"
 
-#: ../lib/unittests.py:58
+#: ../lib/unittests.py:59
 #, python-format
 msgid "Running %s tests"
 msgstr "Spouštím testy %s"
 
-#: ../lib/unittests.py:60
+#: ../lib/unittests.py:61
 #, python-format
 msgid "Running %s tests (%s)"
 msgstr "Spouštím testy %s (%s)"
 
-#: ../lib/unittests.py:67
+#: ../lib/unittests.py:68
 msgid "Success!"
 msgstr "Úspěch!"
 
-#: ../lib/userdb.py:192
+#: ../lib/userdb.py:207
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Nemohu otevřít %s pro zápis"
 
-#: ../lib/userdb.py:205
+#: ../lib/userdb.py:220
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Nemohu uložit UserDatabase do %s"
 
-#: ../lib/userdb.py:228 ../lib/userdb.py:263
+#: ../lib/userdb.py:243 ../lib/userdb.py:278
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Soubor %s není nastavení profilu"
 
-#: ../lib/userdb.py:235
+#: ../lib/userdb.py:250
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Nemohu přidat implicitní profil %s do nastavení"
 
-#: ../lib/userdb.py:271
+#: ../lib/userdb.py:286
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Nemohu přidat uživatele %s do nastavení profilu"
 
-#: ../lib/userdb.py:302
+#: ../lib/userdb.py:317
 msgid "Failed to get the user list"
 msgstr "Nemohu získat seznam uživatelů"
 
-#: ../lib/util.py:117
+#: ../lib/util.py:119
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -662,7 +667,7 @@ msgstr ""
 "Nemohu najít domovský adresář: nenastaven v /etc/passwd a žádná hodnota "
 "$HOME v prostředí"
 
-#: ../lib/util.py:130
+#: ../lib/util.py:132
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
