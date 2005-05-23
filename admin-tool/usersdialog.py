@@ -63,6 +63,7 @@ class UsersDialog:
         self.dialog = self.xml.get_widget ("users_dialog")
         self.dialog.set_transient_for (parent)
         self.dialog.set_default_response (gtk.RESPONSE_CLOSE)
+        self.dialog.set_icon_name ("sabayon")
         self.dialog.set_title (profile)
 
         self.close_button = self.xml.get_widget ("users_close_button")

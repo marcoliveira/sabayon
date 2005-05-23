@@ -1,3 +1,14 @@
+2005-05-23  Mark McLoughlin  <markmc@redhat.com>
+
+	Make the window icon work.
+
+	* admin-tool/Makefile.am: install the icon in
+	$(datadir)/icons/hicolor/48x48/apps
+	
+	* admin-tool/profilesdialog.py,
+	  admin-tool/usersdialog.py: set the icon name
+	on the users and profiles windows.
+
 Thu May 19 13:52:09 CEST 2005 Daniel Veillard <veillard@redhat.com>
 
 	* doc/config.html doc/format.html doc/site.xsl doc/*.html: added

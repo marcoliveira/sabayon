@@ -37,7 +37,7 @@ EXTRA_DIST =				\
 gladedir   = $(pkgdatadir)/glade
 glade_DATA = $(GLADE_FILES)
 
-icondir    = $(datadir)/pixmaps
+icondir    = $(datadir)/icons/hicolor/48x48/apps
 icon_DATA  = $(ICON_FILES)
 
 bin_SCRIPTS = sabayon
