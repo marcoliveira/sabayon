@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-04-20 11:48+0000\n"
-"PO-Revision-Date: 2005-04-20 23:54+0200\n"
+"POT-Creation-Date: 2005-05-23 12:08+0000\n"
+"PO-Revision-Date: 2005-05-24 17:23+0200\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <gnome@gnome.hu>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=1; plural=0;\n"
-"X-Generator: KBabel 1.3.1\n"
+"X-Generator: KBabel 1.10\n"
 
 #: ../admin-tool/aboutdialog.py:63
 msgid "Program to establish and edit profiles for users"
@@ -26,8 +26,8 @@ msgid "translator-credits"
 msgstr "Kelemen Gábor <kelemeng@gnome.hu>"
 
 #: ../admin-tool/editorwindow.py:124 ../admin-tool/fileviewer.py:29
-#: ../admin-tool/gconfviewer.py:87 ../admin-tool/sabayon.glade.h:1
-#: ../admin-tool/userswindow.py:70 ../lib/protosession.py:332
+#: ../admin-tool/gconfviewer.py:87 ../admin-tool/sabayon.glade.h:2
+#: ../lib/protosession.py:332
 msgid "All Your Settings Are Belong To Us"
 msgstr "A gépbül veszi ki a beállításokat"
 
@@ -139,7 +139,8 @@ msgstr "lista"
 msgid "pair"
 msgstr "pár"
 
-#: ../admin-tool/gconfviewer.py:111 ../admin-tool/profilesdialog.py:180
+#: ../admin-tool/gconfviewer.py:111 ../admin-tool/profilesdialog.py:183
+#: ../admin-tool/usersdialog.py:84
 msgid "Name"
 msgstr "Név"
 
@@ -159,12 +160,12 @@ msgstr "Mellőzendő"
 msgid "Mandatory"
 msgstr "Kötelező"
 
-#: ../admin-tool/profilesdialog.py:212
+#: ../admin-tool/profilesdialog.py:215
 #, python-format
 msgid "User account '%s' was not found"
 msgstr "\"%s\" felhasználói fiók nem található"
 
-#: ../admin-tool/profilesdialog.py:213
+#: ../admin-tool/profilesdialog.py:216
 #, python-format
 msgid ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
@@ -175,12 +176,12 @@ msgstr ""
 "számítógépen. Próbálja újra a fiók létrehozása után (például az \"adduser\" "
 "parancs használatával)"
 
-#: ../admin-tool/sabayon-apply:34
+#: ../admin-tool/sabayon-apply:33
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "\"%s\" felhasználónak nincs profilja\n"
 
-#: ../admin-tool/sabayon-apply:39
+#: ../admin-tool/sabayon-apply:38
 #, c-format
 msgid "Usage: %s [<profile-name>]\n"
 msgstr "Használat: %s [<profilnév>]\n"
@@ -207,17 +208,17 @@ msgstr "Munkaasztal-felhasználói profilok"
 msgid "Establish and Edit Profiles for Users"
 msgstr "Felhasználók profiljainak létesítése és szerkesztése"
 
-#: ../admin-tool/sabayon.glade.h:2
-msgid "C_reate"
-msgstr "_Létrehozás"
+#: ../admin-tool/sabayon.glade.h:1
+msgid "Add Profile"
+msgstr "Profil hozzáadása"
 
 #: ../admin-tool/sabayon.glade.h:3
-msgid "New Profile"
-msgstr "Új profil"
-
-#: ../admin-tool/sabayon.glade.h:4
 msgid "Profile _name:"
 msgstr "Profil_név:"
+
+#: ../admin-tool/sabayon.glade.h:4
+msgid "Use this profile for _all users"
+msgstr "Ezen _profil használata minden felhasználóhoz"
 
 #: ../admin-tool/sabayon.glade.h:5
 msgid "_Base on:"
@@ -226,6 +227,18 @@ msgstr "_Alapuljon ezen:"
 #: ../admin-tool/sabayon.glade.h:8
 msgid "_Profiles:"
 msgstr "_Profilok:"
+
+#: ../admin-tool/sabayon.glade.h:9
+msgid "_Users"
+msgstr "_Felhasználók"
+
+#: ../admin-tool/sabayon.glade.h:10
+msgid "_Users:"
+msgstr "_Felhasználók:"
+
+#: ../admin-tool/sabayon.glade.h:11
+msgid "dialog1"
+msgstr "dialog1"
 
 #: ../admin-tool/sabayon:35
 #, c-format
@@ -318,18 +331,9 @@ msgstr[1] ""
 "Ha nem menti, akkor az elmúlt egy órában és %d percben történt változások "
 "véglegesen elvesznek."
 
-#: ../admin-tool/userswindow.py:42 ../admin-tool/userswindow.py:60
-#: ../admin-tool/userswindow.py:122
-msgid "None"
-msgstr "Nincs"
-
-#: ../admin-tool/userswindow.py:99
-msgid "User"
-msgstr "Felhasználó"
-
-#: ../admin-tool/userswindow.py:111
-msgid "Profile"
-msgstr "Profil"
+#: ../admin-tool/usersdialog.py:91
+msgid "Use This Profile"
+msgstr "Ezen profil használata"
 
 #: ../lib/dirmonitor.py:138
 #, python-format
@@ -558,82 +562,92 @@ msgstr "\"%s\" panelobjektum eltávolítva"
 msgid "Panel"
 msgstr "Panel"
 
-#: ../lib/storage.py:144
+#: ../lib/storage.py:161
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "Nem sikerült a(z) \"%s\" fájlt olvasni: %s"
 
-#: ../lib/storage.py:154
+#: ../lib/storage.py:171
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "Nem sikerült metaadatokat olvasni a következőből: \"%s\": %s"
 
-#: ../lib/storage.py:160
+#: ../lib/storage.py:177
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "Érvénytelen metaadat-szakasz a következőben: \"%s\": %s"
 
-#: ../lib/storage.py:516
+#: ../lib/storage.py:533
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Nem lehet hozzáadni \"%s\" nem létező fájlt"
 
-#: ../lib/storage.py:606
+#: ../lib/storage.py:623
 msgid "No current revision"
 msgstr "Nincs aktuális verzió"
 
-#: ../lib/storage.py:610 ../lib/storage.py:621
+#: ../lib/storage.py:627 ../lib/storage.py:638
 #, python-format
 msgid "'%s' does not exist in profile revision '%s'"
 msgstr "\"%s\" nem létezik a(z) \"%s\" profilverzióban"
 
-#: ../lib/storage.py:693
+#: ../lib/storage.py:710
 msgid "Not a valid profile revision"
 msgstr "Érvénytelen profilverzió"
+
+#: ../lib/storage.py:752
+#, python-format
+msgid "Profile is read-only %s"
+msgstr "A profil csak olvasható %s"
 
 #: ../lib/unittests.py:36 ../lib/unittests.py:37
 msgid "Ignore WARNINGs"
 msgstr "Figyelmeztetések mellőzése"
 
-#: ../lib/unittests.py:57
+#: ../lib/unittests.py:59
 #, python-format
 msgid "Running %s tests"
 msgstr "%s teszt végrehajtása"
 
-#: ../lib/unittests.py:59
+#: ../lib/unittests.py:61
 #, python-format
 msgid "Running %s tests (%s)"
 msgstr "%s teszt végrehajtása (%s)"
 
-#: ../lib/unittests.py:66
+#: ../lib/unittests.py:68
 msgid "Success!"
 msgstr "Sikerült!"
 
-#: ../lib/userdb.py:140
+#: ../lib/userdb.py:207
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Nem sikerült megnyitni olvasásra a következőt: %s"
 
-#: ../lib/userdb.py:153
+#: ../lib/userdb.py:220
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Nem sikerült menteni a felhasználó-adatbázist ide: %s"
 
-#: ../lib/userdb.py:177
+#: ../lib/userdb.py:243 ../lib/userdb.py:278
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "%s fájl nem egy profilbeállítás"
 
-#: ../lib/userdb.py:185
+#: ../lib/userdb.py:250
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "%s alapértelmezett profil hozzáadása a beállításhoz sikertelen"
+
+#: ../lib/userdb.py:286
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "%s felhasználó hozzáadása a profilbeállításhoz sikertelen"
 
-#: ../lib/userdb.py:216
+#: ../lib/userdb.py:317
 msgid "Failed to get the user list"
 msgstr "A felhasználók listájának lekérése sikertelen"
 
-#: ../lib/util.py:116
+#: ../lib/util.py:119
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -641,7 +655,7 @@ msgstr ""
 "Nem található a saját könyvtár: nincs beállítva az /etc/passwd-ben és a "
 "$HOME környezeti változónak nincs értéke"
 
-#: ../lib/util.py:129
+#: ../lib/util.py:132
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
