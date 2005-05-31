@@ -1,56 +1,667 @@
+# translation of el.po to Greek
 # Greek translation of sabayon.
 # Copyright (C) 2005  Free Software Foundation, Inc.
 # This file is distributed under the same license as the sabayon package.
 # Initial translation by Stelios
 # Stylianos Papanastasiou <stelios@dcs.gla.ac.uk>, 2005.
+# Kostas Papadimas <pkst@gnome.org>, 2005.
 msgid ""
 msgstr ""
-"Project-Id-Version: sabayon\n"
+"Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-02-20 18:26+0200\n"
-"PO-Revision-Date: 2005-02-20 14:11+0000\n"
-"Last-Translator: Stylianos Papanastasiou <stelios@dcs.gla.ac.uk>\n"
-"Language-Team: Greek <Greek <nls@tux.hellug.gr>\n"
+"POT-Creation-Date: 2005-05-31 09:00+0300\n"
+"PO-Revision-Date: 2005-05-31 09:03+0300\n"
+"Last-Translator: Kostas Papadimas <pkst@gnome.org>\n"
+"Language-Team: Greek <team@gnome.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.10\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
-#: admin-tool/sabayon.desktop.in.h:1
-msgid "Desktop User Profiles"
-msgstr "Προφίλ Χρήστη Επιφάνειας Εργασίας"
+#: ../admin-tool/aboutdialog.py:63
+msgid "Program to establish and edit profiles for users"
+msgstr "Πρόγραμμα δημιουργίας και τροποποίησης προφίλ για χρήστες"
 
-#: admin-tool/sabayon.desktop.in.h:2
-msgid "Establish and Edit Profiles for Users"
-msgstr "Δημιουργία και τροποποίση προφίλ για χρήστες"
+#: ../admin-tool/aboutdialog.py:66
+msgid "translator-credits"
+msgstr "Μνεία μεταφραστών"
 
-#: admin-tool/sabayon.glade.h:1
+#: ../admin-tool/editorwindow.py:124 ../admin-tool/fileviewer.py:29
+#: ../admin-tool/gconfviewer.py:87 ../admin-tool/sabayon.glade.h:2
+#: ../lib/protosession.py:332
 msgid "All Your Settings Are Belong To Us"
 msgstr "Όλες οι τροποποιήσεις σας ανήκουν"
 
-#: admin-tool/sabayon.glade.h:2
-msgid "C_reate"
-msgstr "_Δημιουργία"
-
-#: admin-tool/sabayon.glade.h:3
-msgid "New Profile"
-msgstr "Νέο Προφίλ"
-
-#: admin-tool/sabayon.glade.h:4
-msgid "Profile _name:"
-msgstr "_Όνομα προφίλ"
-
-#: admin-tool/sabayon.glade.h:5
-msgid "_Base on:"
-msgstr "_Βασίζεται στο:"
-
-#: admin-tool/sabayon.glade.h:6
-msgid "_Help"
-msgstr "_Βοήθεια"
-
-#: admin-tool/sabayon.glade.h:7
+#: ../admin-tool/editorwindow.py:227 ../admin-tool/sabayon.glade.h:7
 msgid "_Profile"
 msgstr "_Προφίλ"
 
-#: admin-tool/sabayon.glade.h:8
+#: ../admin-tool/editorwindow.py:228
+msgid "_Save"
+msgstr "_Αποθήκευση"
+
+#: ../admin-tool/editorwindow.py:228
+msgid "Save profile"
+msgstr "Αποθήκευση προφίλ"
+
+#: ../admin-tool/editorwindow.py:229
+msgid "_Close"
+msgstr "_Κλείσιμο"
+
+#: ../admin-tool/editorwindow.py:229
+msgid "Close the current window"
+msgstr "_Κλείσιμο παραθύρου"
+
+# _Επεξεργασία
+#: ../admin-tool/editorwindow.py:230
+msgid "_Edit"
+msgstr "_Επεξεργασία"
+
+#: ../admin-tool/editorwindow.py:231
+msgid "_Delete"
+msgstr "_Διαγραφή"
+
+#: ../admin-tool/editorwindow.py:231
+msgid "Delete item"
+msgstr "Διαγραφή αντικειμένου"
+
+#: ../admin-tool/editorwindow.py:232
+msgid "C_lear History"
+msgstr "Καθα_ρισμός Ιστορικού"
+
+#: ../admin-tool/editorwindow.py:232
+msgid "Clear revision history"
+msgstr "Καθαρισμός ιστορικού αλλαγών"
+
+#: ../admin-tool/editorwindow.py:233 ../admin-tool/sabayon.glade.h:6
+msgid "_Help"
+msgstr "_Βοήθεια"
+
+#: ../admin-tool/editorwindow.py:234
+msgid "_About"
+msgstr "_Περί"
+
+#: ../admin-tool/editorwindow.py:234
+msgid "About Sabayon"
+msgstr "Περί Sabayon"
+
+#: ../admin-tool/editorwindow.py:265
+msgid "_Version:"
+msgstr "_Έκδοση:"
+
+#: ../admin-tool/editorwindow.py:320 ../admin-tool/monitorwindow.py:158
+msgid "Description"
+msgstr "Περιγραφή"
+
+#: ../admin-tool/editorwindow.py:331
+msgid "Version"
+msgstr "Έκδοση"
+
+#: ../admin-tool/editorwindow.py:361 ../lib/sources/gconfsource.py:106
+msgid "GConf"
+msgstr "GConf"
+
+#: ../admin-tool/editorwindow.py:365 ../lib/sources/filessource.py:67
+msgid "Files"
+msgstr "Αρχεία"
+
+#: ../admin-tool/gconfviewer.py:58 ../admin-tool/gconfviewer.py:77
+msgid "<no type>"
+msgstr "<xωρίς τύπο>"
+
+#: ../admin-tool/gconfviewer.py:59
+msgid "<no value>"
+msgstr "<χωρίς τύπο>"
+
+#: ../admin-tool/gconfviewer.py:63
+msgid "string"
+msgstr "string"
+
+#: ../admin-tool/gconfviewer.py:65
+msgid "integer"
+msgstr "integer"
+
+#: ../admin-tool/gconfviewer.py:67
+msgid "float"
+msgstr "float"
+
+#: ../admin-tool/gconfviewer.py:69
+msgid "boolean"
+msgstr "boolean"
+
+#: ../admin-tool/gconfviewer.py:71
+msgid "schema"
+msgstr "schema"
+
+#: ../admin-tool/gconfviewer.py:73
+msgid "list"
+msgstr "list"
+
+#: ../admin-tool/gconfviewer.py:75
+msgid "pair"
+msgstr "pair"
+
+#: ../admin-tool/gconfviewer.py:111 ../admin-tool/profilesdialog.py:184
+#: ../admin-tool/usersdialog.py:85
+msgid "Name"
+msgstr "Όνομα"
+
+#: ../admin-tool/gconfviewer.py:116
+msgid "Type"
+msgstr "Τύπος"
+
+#: ../admin-tool/gconfviewer.py:121
+msgid "Value"
+msgstr "Τιμή"
+
+#: ../admin-tool/monitorwindow.py:146
+msgid "Ignore"
+msgstr "Αγνόηση"
+
+#: ../admin-tool/monitorwindow.py:153
+msgid "Mandatory"
+msgstr "Υποχρεωτικό"
+
+#: ../admin-tool/profilesdialog.py:216
+#, python-format
+msgid "User account '%s' was not found"
+msgstr "Ο λογαριασμός χρήστη '%s' δεν βρέθηκε"
+
+#: ../admin-tool/profilesdialog.py:217
+#, python-format
+msgid ""
+"Sabayon requires a special user account '%s' to be present on this computer. "
+"Try again after creating the account (using, for example, the 'adduser' "
+"command)"
+msgstr ""
+"Το πρόγραμμα Sabayon απαιτεί την ύπαρξη ενός ειδικού λογαριασμού χρήστη '%"
+"s'\n"
+"στον υπολογιστή. Προσπαθήστε ξανά αφού έχετε προηγουμένως δημιουργήσει τον\n"
+"λογαριασμό αυτό (για παράδειγμα, δίνοντας την εντολή 'adduser')"
+
+#: ../admin-tool/sabayon-apply:33
+#, c-format
+msgid "No profile for user '%s' found\n"
+msgstr "Δεν βρέθηκε προφίλ για τον χρήστη '%s'\n"
+
+#: ../admin-tool/sabayon-apply:38
+#, c-format
+msgid "Usage: %s [<profile-name>]\n"
+msgstr "Χρήση: %s [<όνομα προφίλ>]\n"
+
+#: ../admin-tool/sabayon-monitor:29
+#, c-format
+msgid "Usage: %s <profile-name>\n"
+msgstr "Χρήση: %s [<όνομα προφίλ>]\n"
+
+#: ../admin-tool/sabayon-session:32
+msgid "Your account does not have permissions to run sabayon-session."
+msgstr ""
+"Ο λογαριασμός σας δεν έχει επαρκή δικαιώματα για να εκτελέσει το sabayon-"
+"session"
+
+#: ../admin-tool/sabayon-session:36
+#, c-format
+msgid "Usage: %s <username> <profile-file>\n"
+msgstr "Χρήση: %s [<όνομα χρήστη> <όνομα προφίλ>]\n"
+
+#: ../admin-tool/sabayon.desktop.in.h:1
+msgid "Desktop User Profiles"
+msgstr "Προφίλ Χρήστη Επιφάνειας Εργασίας"
+
+#: ../admin-tool/sabayon.desktop.in.h:2
+msgid "Establish and Edit Profiles for Users"
+msgstr "Δημιουργία και τροποποίση προφίλ για χρήστες"
+
+#: ../admin-tool/sabayon.glade.h:1
+msgid "Add Profile"
+msgstr "Πρόσθεση προφίλ"
+
+#: ../admin-tool/sabayon.glade.h:3
+msgid "Profile _name:"
+msgstr "_Όνομα προφίλ"
+
+#: ../admin-tool/sabayon.glade.h:4
+msgid "Use this profile for _all users"
+msgstr "Χρήση αυτού του προφίλ για _όλους τους χρήστες"
+
+#: ../admin-tool/sabayon.glade.h:5
+msgid "_Base on:"
+msgstr "_Βασίζεται στο:"
+
+#: ../admin-tool/sabayon.glade.h:8
 msgid "_Profiles:"
 msgstr "_Προφίλ:"
+
+#: ../admin-tool/sabayon.glade.h:9
+msgid "_Users"
+msgstr "_Χρήστες"
+
+#: ../admin-tool/sabayon.glade.h:10
+msgid "_Users:"
+msgstr "_Χρήστες:"
+
+#: ../admin-tool/sabayon.glade.h:11
+msgid "dialog1"
+msgstr "διάλογος1"
+
+#: ../admin-tool/sabayon:35
+#, c-format
+msgid "Your account does not have permissions to run %s"
+msgstr "Ο λογαριασμός σας δεν έχει επαρκή δικαιώματα για να εκτελέσει %s"
+
+#: ../admin-tool/sabayon:36
+msgid ""
+"Administrator level permissions are needed to run this program because it "
+"can modify system files."
+msgstr ""
+"Απαιτούνται δικαιώματα χρήστη διαχείρισης για να εκτελεστεί το πρόγραμμα "
+"επειδή το πρόγραμμα μπορεί να τροποποιήσει αρχεία συστήματος."
+
+#: ../admin-tool/saveconfirm.py:36
+msgid "Close _Without Saving"
+msgstr "Κλείσιμο _χωρίς Αποθήκευση"
+
+#: ../admin-tool/saveconfirm.py:43
+#, python-format
+msgid "Save changes to profile \"%s\" before closing?"
+msgstr "Αποθήκευση των αλλαγών στο προφίλ \"%s\" πριν το κλείσιμο;"
+
+#: ../admin-tool/saveconfirm.py:47
+#, python-format
+msgid "If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld seconds will be permanently "
+"lost."
+msgstr[0] ""
+"Αν δεν αποθηκεύσετε, οι αλλαγές που έγιναν το προηγούμενο %ld δευτερόλεπτο "
+"θα χαθούν."
+msgstr[1] ""
+"Αν δεν αποθηκεύσετε, οι αλλαγές που έγιναν τελευταία %ld δευτερόλεπτα θα "
+"χαθούν."
+
+#: ../admin-tool/saveconfirm.py:53
+msgid "If you don't save, changes from the last minute will be permanently lost."
+msgstr "Αν δεν αποθηκεύσετε, οι αλλαγές που έγιναν το τελευταίο λεπτό θα χαθούν."
+
+#: ../admin-tool/saveconfirm.py:57
+#, python-format
+msgid ""
+"If you don't save, changes from the last minute and %ld second will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last minute and %ld seconds will be "
+"permanently lost."
+msgstr[0] ""
+"Αν δεν αποθηκεύσετε, οι αλλαγές που έγιναν το προηγούμενο λεπτό και %ld "
+"δευτερόλεπτο θα χαθούν."
+msgstr[1] ""
+"Αν δεν αποθηκεύσετε, οι αλλαγές που έγιναν το προηγούμενο λεπτό και %ld "
+"δευτερόλεπτα θα χαθούν."
+
+#: ../admin-tool/saveconfirm.py:64
+#, python-format
+msgid "If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld minutes will be permanently "
+"lost."
+msgstr[0] ""
+"Αν δεν αποθηκεύσετε, οι αλλαγές που έγιναν το προηγούμενο %ld λεπτό θα "
+"χαθούν."
+msgstr[1] "Αν δεν αποθηκεύσετε, οι αλλαγές που έγιναν τα τελευταία %ld λεπτά θα χαθούν."
+
+#: ../admin-tool/saveconfirm.py:73 ../admin-tool/saveconfirm.py:83
+#, python-format
+msgid "If you don't save, changes from the last hour will be permanently lost."
+msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] "Αν δεν αποθηκεύσετε, οι αλλαγές που έγιναν την προηγούμενη ώρα θα χαθούν."
+msgstr[1] "Αν δεν αποθηκεύσετε, οι αλλαγές που έγιναν τις τελευταίες %d ώρες θα χαθούν."
+
+#: ../admin-tool/saveconfirm.py:76
+#, python-format
+msgid ""
+"If you don't save, changes from the last hour and %d minute will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last hour and %d minutes will be "
+"permanently lost."
+msgstr[0] ""
+"Αν δεν αποθηκεύσετε, οι αλλαγές που έγιναν την τελευταία ώρα και %d λεπτό θα "
+"χαθούν."
+msgstr[1] ""
+"Αν δεν αποθηκεύσετε, οι αλλαγές που έγιναν την τελευταία ώρα και %d λεπτά θα "
+"χαθούν."
+
+#: ../admin-tool/usersdialog.py:92
+msgid "Use This Profile"
+msgstr "Χρήση αυτού του προφίλ"
+
+#: ../lib/dirmonitor.py:138
+#, python-format
+msgid "Failed to add monitor for %s"
+msgstr "Απέτυχε η πρόσθεση παρακολούθησης για το %s"
+
+#: ../lib/dirmonitor.py:218
+#, python-format
+msgid "Expected event: %s %s"
+msgstr "Απρόσμενο γεγονός: %s %s"
+
+#: ../lib/protosession.py:88
+#, python-format
+msgid "User '%s' does not exist"
+msgstr "Ο χρήστης '%s' δεν υπάρχει"
+
+#: ../lib/protosession.py:216
+msgid "'xauth list' returned error"
+msgstr "Το 'xauth list' επέστρεψε σφάλμα"
+
+#: ../lib/protosession.py:235
+msgid "'xauth list' returned no records or records in unknown format"
+msgstr "Το 'xauth list' δεν επέστρεψε στοιχεία ή τα στοιχεία είναι σε άγνωστη μορφή"
+
+#: ../lib/protosession.py:314
+msgid "Unable to find a free X display"
+msgstr "Αδυναμία εύρεσης ελεύθερου X display"
+
+#: ../lib/protosession.py:376
+msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+msgstr ""
+"Αποτυχία εκκίνησης Xnest:  ξεπέρασε το καθορισμένο χρόνο αναμονής για σήμα "
+"USR1"
+
+#: ../lib/protosession.py:378
+msgid "Failed to start Xnest: died during startup"
+msgstr "Αποτυχία εκκίνησης Xnest: τερματίστηκε κατά την εκκίνηση"
+
+#: ../lib/sources/filessource.py:57
+#, python-format
+msgid "File '%s' created"
+msgstr "Το αρχείο '%s' δημιουργήθηκε"
+
+#: ../lib/sources/filessource.py:59
+#, python-format
+msgid "File '%s' deleted"
+msgstr "Το αρχείο '%s' διαγράφηκε"
+
+#: ../lib/sources/filessource.py:61
+#, python-format
+msgid "File '%s' changed"
+msgstr "Το αρχείο '%s' άλλαξε"
+
+#: ../lib/sources/filessource.py:85
+msgid "Applications menu"
+msgstr "Μενού εφαρμογών"
+
+#: ../lib/sources/filessource.py:87
+msgid "Preferences menu"
+msgstr "Μενού προτιμήσεων"
+
+#: ../lib/sources/filessource.py:89
+msgid "Server Settings menu"
+msgstr "Μενού προτιμήσεων εξυπηρετητή"
+
+#: ../lib/sources/filessource.py:91
+msgid "System Settings menu"
+msgstr "Μενού προτιμήσεων συστήματος"
+
+#: ../lib/sources/filessource.py:93
+msgid "Start Here menu"
+msgstr "Μενού 'Ξεκινήστε Εδώ'"
+
+#: ../lib/sources/gconfsource.py:78
+#, python-format
+msgid "GConf key '%s' unset"
+msgstr "Άρση κλειδιού GConf '%s'"
+
+#: ../lib/sources/gconfsource.py:80
+#, python-format
+msgid "GConf key '%s' set to string '%s'"
+msgstr "Το κλειδί GConf '%s' τέθηκε στο αλφαριθμητικό '%s'"
+
+#: ../lib/sources/gconfsource.py:82
+#, python-format
+msgid "GConf key '%s' set to integer '%s'"
+msgstr "Το κλειδί GConf '%s' τέθηκε στον ακέραιο '%s'"
+
+#: ../lib/sources/gconfsource.py:84
+#, python-format
+msgid "GConf key '%s' set to float '%s'"
+msgstr "Το κλειδί GConf '%s' τέθηκε στο κινητής υποδιαστολής '%s'"
+
+#: ../lib/sources/gconfsource.py:86
+#, python-format
+msgid "GConf key '%s' set to boolean '%s'"
+msgstr "Το κλειδί GConf '%s' τέθηκε στο δυαδικό '%s'"
+
+#: ../lib/sources/gconfsource.py:88
+#, python-format
+msgid "GConf key '%s' set to schema '%s'"
+msgstr "Το κλειδί GConf '%s' τέθηκε στο schema '%s'"
+
+#: ../lib/sources/gconfsource.py:90
+#, python-format
+msgid "GConf key '%s' set to list '%s'"
+msgstr "Το κλειδί GConf '%s' τέθηκε στη λίστα '%s'"
+
+#: ../lib/sources/gconfsource.py:92
+#, python-format
+msgid "GConf key '%s' set to pair '%s'"
+msgstr "Το κλειδί GConf '%s' τέθηκε στο ζεύγος '%s'"
+
+#: ../lib/sources/gconfsource.py:94
+#, python-format
+msgid "GConf key '%s' set to '%s'"
+msgstr "Το κλειδί GConf '%s' τέθηκε στο '%s'"
+
+#: ../lib/sources/gconfsource.py:117
+msgid "Default GConf settings"
+msgstr "Προκαθορισμένες ρυθμίσεις GConf"
+
+#: ../lib/sources/gconfsource.py:119
+msgid "Mandatory GConf settings"
+msgstr "Απαραίτητες ρυθμίσεις GConf"
+
+#: ../lib/sources/mozillasource.py:132
+#, python-format
+msgid "Mozilla key '%s' set to '%s'"
+msgstr "Το κλειδί Mozilla '%s' τέθηκε στο '%s'"
+
+#: ../lib/sources/mozillasource.py:134
+#, python-format
+msgid "Mozilla key '%s' unset"
+msgstr "Το κλειδί Mozilla '%s' αποκαθορίστηκε"
+
+#: ../lib/sources/mozillasource.py:136
+#, python-format
+msgid "Mozilla key '%s' changed to '%s'"
+msgstr "Το κλειδί Mozilla '%s' άλλαξε σε '%s'"
+
+#: ../lib/sources/mozillasource.py:145
+msgid "Firefox"
+msgstr "Firefox"
+
+#: ../lib/sources/mozillasource.py:496
+#, python-format
+msgid "File Not Found (%s)"
+msgstr "Το αρχείο δεν βρέθηκε (%s)"
+
+#: ../lib/sources/mozillasource.py:835
+#, python-format
+msgid "duplicate name(%s) in section %s"
+msgstr "διπλοεγγραφή ονόματος(%s) στην ενότητα %s"
+
+#: ../lib/sources/mozillasource.py:844
+#, python-format
+msgid "redundant default in section %s"
+msgstr "περιττό προεπιλεγμένο στην ενότητα %s"
+
+#: ../lib/sources/mozillasource.py:861
+msgid "no default profile"
+msgstr "δεν υπάρχει προεπιλεγμένο προφίλ"
+
+#: ../lib/sources/mozillasource.py:916
+#, python-format
+msgid "Mozilla bookmark created '%s' -> '%s'"
+msgstr "Δημιουργήθηκε σελιδοδείκτης Mozilla '%s' -> '%s'"
+
+#: ../lib/sources/mozillasource.py:918
+#, python-format
+msgid "Mozilla bookmark folder created '%s'"
+msgstr "Δημιουργήθηκε φάκελος σελιδοδεικτών Mozilla '%s'"
+
+#: ../lib/sources/mozillasource.py:921
+#, python-format
+msgid "Mozilla bookmark deleted '%s'"
+msgstr "Διαγράφηκε σελιδοδείκτης Mozilla '%s'"
+
+#: ../lib/sources/mozillasource.py:923
+#, python-format
+msgid "Mozilla bookmark folder deleted '%s'"
+msgstr "Διαγράφηκε φάκελος σελιδοδεικτών Mozilla '%s'"
+
+#: ../lib/sources/mozillasource.py:926
+#, python-format
+msgid "Mozilla bookmark changed '%s' '%s'"
+msgstr "Ο σελιδοδείκτης Mozilla άλλαξε '%s' '%s'"
+
+#: ../lib/sources/mozillasource.py:928
+#, python-format
+msgid "Mozilla bookmark folder changed '%s'"
+msgstr "Ο φάκελος σελιδοδεικτών Mozilla άλλαξε '%s'"
+
+#: ../lib/sources/paneldelegate.py:53
+#, python-format
+msgid "Panel '%s' added"
+msgstr "Το ταμπλώ '%s' προστέθηκε"
+
+#: ../lib/sources/paneldelegate.py:59
+#, python-format
+msgid "Panel '%s' removed"
+msgstr "Το ταμπλώ '%s' αφαιρέθηκε"
+
+#: ../lib/sources/paneldelegate.py:65
+#, python-format
+msgid "Panel applet '%s' added"
+msgstr "Το εφαρμογίδιο '%s' προστέθηκε"
+
+#: ../lib/sources/paneldelegate.py:71
+#, python-format
+msgid "Panel applet '%s' removed"
+msgstr "Το εφαρμογίδιο '%s' αφαιρέθηκε"
+
+#: ../lib/sources/paneldelegate.py:77
+#, python-format
+msgid "Panel object '%s' added"
+msgstr "Προστέθηκε το αντικείμενο ταμπλώ '%s'"
+
+#: ../lib/sources/paneldelegate.py:83
+#, python-format
+msgid "Panel object '%s' removed"
+msgstr "Αφαιρέθηκε το αντικείμενο ταμπλώ '%s'"
+
+#: ../lib/sources/paneldelegate.py:118
+msgid "Panel"
+msgstr "Ταμπλώ"
+
+#: ../lib/storage.py:161
+#, python-format
+msgid "Failed to read file '%s': %s"
+msgstr "Αποτυχία ανάγνωσης αρχείου '%s': %s"
+
+#: ../lib/storage.py:171
+#, python-format
+msgid "Failed to read metadata from '%s': %s"
+msgstr "Αποτυχία ανάγνωσης metadata απο '%s': %s"
+
+#: ../lib/storage.py:177
+#, python-format
+msgid "Invalid metadata section in '%s': %s"
+msgstr "Μη έγκυρος τομέας metadata στο '%s': %s"
+
+#: ../lib/storage.py:533
+#, python-format
+msgid "Cannot add non-existent file '%s'"
+msgstr "Αδυναμία πρόσθεσης μη υπάρχοντος αρχείου '%s'"
+
+#: ../lib/storage.py:623
+msgid "No current revision"
+msgstr "Μη υπάρχουσα αναθεώρηση"
+
+#: ../lib/storage.py:627 ../lib/storage.py:638
+#, python-format
+msgid "'%s' does not exist in profile revision '%s'"
+msgstr "'%s' δεν υπάρχει στην αναθεώρηση προφίλ '%s'"
+
+#: ../lib/storage.py:710
+msgid "Not a valid profile revision"
+msgstr "Μη έγκυρη αναθεώρηση προφίλ"
+
+#: ../lib/storage.py:752
+#, python-format
+msgid "Profile is read-only %s"
+msgstr "Το προφίλ είναι μόνο για ανάγνωση %s"
+
+#: ../lib/unittests.py:36 ../lib/unittests.py:37
+msgid "Ignore WARNINGs"
+msgstr "Αγνόηση προειδοποιήσεων"
+
+#: ../lib/unittests.py:59
+#, python-format
+msgid "Running %s tests"
+msgstr "Εκτελούνται %s τεστ"
+
+#: ../lib/unittests.py:61
+#, python-format
+msgid "Running %s tests (%s)"
+msgstr "Εκτελούνται %s τεστ (%s)"
+
+#: ../lib/unittests.py:68
+msgid "Success!"
+msgstr "Επιτυχία!"
+
+#: ../lib/userdb.py:207
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "Αδυναμία ανοίγματος %s για εγγραφή"
+
+#: ../lib/userdb.py:220
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "Αδυναμία αποθήκευσης UserDatabase στο %s"
+
+#: ../lib/userdb.py:243 ../lib/userdb.py:278
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "Το αρχείο %s δεν είναι ρύθμιση προφίλ"
+
+#: ../lib/userdb.py:250
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "Αποτυχία πρόσθεσης προκαθορισμένου προφίλ %s στις ρυθμίσεις"
+
+#: ../lib/userdb.py:286
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "Αποτυχία πρόσθεσης χρήστη %s στις ρυθμίσεις προφίλ"
+
+#: ../lib/userdb.py:317
+msgid "Failed to get the user list"
+msgstr "Αποτυχία λήψης λίστα χρηστών"
+
+#: ../lib/util.py:119
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"Αδυναμία εύρεσης αρχικού καταλόγου: δεν έχει τεθεί στο /etc/passwd και δεν "
+"υπάρχει τιμή για το $HOME στο περιβάλλον"
+
+#: ../lib/util.py:132
+msgid ""
+"Cannot find username: not set in /etc/passwd and no value for $USER in "
+"environment"
+msgstr ""
+"Αδυναμία εύρεσης ονόματος χρήστη: δεν έχει τεθεί στο /etc/passwd και δεν "
+"υπάρχει τιμή για το $USER στο περιβάλλον"
+
