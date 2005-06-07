@@ -1,21 +1,24 @@
-# translation of sabayon.HEAD.ES.po to 
+# translation of es.po to 
+# translation of sabayon.HEAD.ES.po to
 # Spanish/Spain translation of SABAYON.
 # Copyright (C) 2005 THE SABAYON'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the SABAYON package.
 # Jaime Iniesta Alemán <capitanplaneta@gmail.com>, 2005.
-# 
-# 
+#
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: sabayon.HEAD.ES\n"
+"Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-05-30 12:11+0000\n"
-"PO-Revision-Date: 2005-05-30 19:03+0200\n"
-"Last-Translator:  <capitanplaneta@gmail.com>\n"
-"Language-Team:  <en@li.org>\n"
+"POT-Creation-Date: 2005-06-07 21:16+0200\n"
+"PO-Revision-Date: 2005-06-07 21:28+0200\n"
+"Last-Translator: \n"
+"Language-Team:  <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);"
 
 #: ../admin-tool/aboutdialog.py:63
 msgid "Program to establish and edit profiles for users"
@@ -141,7 +144,7 @@ msgstr "lista"
 msgid "pair"
 msgstr "par"
 
-#: ../admin-tool/gconfviewer.py:111 ../admin-tool/profilesdialog.py:184
+#: ../admin-tool/gconfviewer.py:111 ../admin-tool/profilesdialog.py:186
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Nombre"
@@ -162,12 +165,12 @@ msgstr "Ignorar"
 msgid "Mandatory"
 msgstr "Obligatorio"
 
-#: ../admin-tool/profilesdialog.py:216
+#: ../admin-tool/profilesdialog.py:218
 #, python-format
 msgid "User account '%s' was not found"
 msgstr "No·se·encontró la cuenta del usuario «%s»"
 
-#: ../admin-tool/profilesdialog.py:217
+#: ../admin-tool/profilesdialog.py:219
 #, python-format
 msgid ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
@@ -265,59 +268,55 @@ msgid "Save changes to profile \"%s\" before closing?"
 msgstr "¿Desea guardar los cambios al perfil «%s» antes de cerrar?"
 
 #: ../admin-tool/saveconfirm.py:47
-#, python-format
-msgid ""
-"If you don't save, changes from the last %ld second will be permanently lost."
+#, python-format, fuzzy
+msgid "If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural ""
 "If you don't save, changes from the last %ld seconds will be permanently "
 "lost."
-msgstr ""
-"Si no guarda, se perderán permanentemente los cambios del último %ld segundo."
-"Si no guarda, se perderán permanentemente los cambios de los últimos %ld segundos."
+msgstr[0] "Si no guarda, se perderán permanentemente los cambios del último minuto."
+msgstr[1] "Si no guarda, se perderán permanentemente los cambios del último minuto."
 
 #: ../admin-tool/saveconfirm.py:53
-msgid ""
-"If you don't save, changes from the last minute will be permanently lost."
-msgstr ""
-"Si no guarda, se perderán permanentemente los cambios del último minuto."
+msgid "If you don't save, changes from the last minute will be permanently lost."
+msgstr "Si no guarda, se perderán permanentemente los cambios del último minuto."
 
 #: ../admin-tool/saveconfirm.py:57
-#, python-format
+#, python-format, fuzzy
 msgid ""
 "If you don't save, changes from the last minute and %ld second will be "
 "permanently lost."
+msgid_plural ""
 "If you don't save, changes from the last minute and %ld seconds will be "
 "permanently lost."
-msgstr ""
-"Si no guarda, se perderán permanentemente los cambios del último minuto y %ld segundo."
-"Si no guarda, se perderán permanentemente los cambios del último minuto y %ld segundos."
+msgstr[0] "Si no guarda, se perderán permanentemente los cambios del último minuto."
+msgstr[1] "Si no guarda, se perderán permanentemente los cambios del último minuto."
 
 #: ../admin-tool/saveconfirm.py:64
-#, python-format
-msgid ""
-"If you don't save, changes from the last %ld minute will be permanently lost."
+#, fuzzy, python-format
+msgid "If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
-msgstr ""
-"Si no guarda, se perderán permanentemente los cambios del último %ld minuto."
-"Si no guarda, se perderán permanentemente los cambios de los últimos %ld minutos."
+msgstr[0] "Si no guarda, se perderán permanentemente los cambios del último minuto."
+msgstr[1] "Si no guarda, se perderán permanentemente los cambios del último minuto."
 
 #: ../admin-tool/saveconfirm.py:73 ../admin-tool/saveconfirm.py:83
-#, python-format
+#, fuzzy, python-format
 msgid "If you don't save, changes from the last hour will be permanently lost."
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr "Si no guarda, se perderán permanentemente los cambios de la última hora."
-"Si no guarda, se perderán permanentemente los cambios de las últimas %d horas."
+msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] "Si no guarda, se perderán permanentemente los cambios del último minuto."
+msgstr[1] "Si no guarda, se perderán permanentemente los cambios del último minuto."
 
 #: ../admin-tool/saveconfirm.py:76
 #, python-format
 msgid ""
 "If you don't save, changes from the last hour and %d minute will be "
 "permanently lost."
+msgid_plural ""
 "If you don't save, changes from the last hour and %d minutes will be "
 "permanently lost."
-msgstr ""
-"Si no guarda, se perderán permanentemente los cambios de la última hora y %d minuto."
-"Si no guarda, se perderán permanentemente los cambios de la última hora y %d minutos."
+msgstr[0] "Si no guarda, se perderán permanentemente los cambios de la última hora y del %d minuto"
+msgstr[1] "Si no guarda, se perderán permanentemente los cambios de la última hora y de los %d minutos."
 
 #: ../admin-tool/usersdialog.py:92
 msgid "Use This Profile"
@@ -344,7 +343,8 @@ msgstr "«xauth list» devolvió un error"
 
 #: ../lib/protosession.py:235
 msgid "'xauth list' returned no records or records in unknown format"
-msgstr "«xauth list» no devolvió ningún registro o registros en un formato "
+msgstr ""
+"«xauth list» no devolvió ningún registro o registros en un formato "
 "desconocido"
 
 #: ../lib/protosession.py:314
@@ -650,52 +650,3 @@ msgstr ""
 "No se pudo encontrar el nombre de usuario: no se encuentra establecido en /"
 "etc/passwd y no existe ningún valor para $USER en el entorno"
 
-#~ msgid "C_reate"
-#~ msgstr "C_rear"
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld second will be permanently "
-#~ "lost.If you don't save, changes from the last %ld seconds will be "
-#~ "permanently lost."
-#~ msgstr ""
-#~ "Si no guarda, se perderán permanentemente los cambios del último %ld "
-#~ "segundo.Si no guarda, se perderán permanentemente los cambios de los "
-#~ "últimos %ld segundos."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last minute and %ld second will be "
-#~ "permanently lost.If you don't save, changes from the last minute and %ld "
-#~ "seconds will be permanently lost."
-#~ msgstr ""
-#~ "Si no guarda, se perderán permanentemente los cambios del último minuto y "
-#~ "%ld segundo.Si no guarda, se perderán permanentemente los cambios del "
-#~ "último minuto y %ld segundos."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld minute will be permanently "
-#~ "lost.If you don't save, changes from the last %ld minutes will be "
-#~ "permanently lost."
-#~ msgstr ""
-#~ "Si no guarda, se perderán permanentemente los cambios realizados durante "
-#~ "el último %ld minuto.Si no guarda, se perderán permanentemente los "
-#~ "cambios realizados durante los últimos %ld minutos."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last hour will be permanently lost.If "
-#~ "you don't save, changes from the last %d hours will be permanently lost."
-#~ msgstr ""
-#~ "Si no guarda, se perderán permanentemente los cambios realizados durante "
-#~ "la última hora.Si no guarda, se perderán permanentemente los cambios "
-#~ "realizados durante las últimas %d horas."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last hour and %d minute will be "
-#~ "permanently lost.If you don't save, changes from the last hour and %d "
-#~ "minutes will be permanently lost."
-#~ msgstr ""
-#~ "Si no guarda, se perderán permanentemente los cambios realizados durante "
-#~ "la última horas y %d minuto.Si no guarda, se perderán permanentemente los "
-#~ "cambios realizados durante la última horas y %d minutos."
-
-#~ msgid "None"
-#~ msgstr "Ninguno"
