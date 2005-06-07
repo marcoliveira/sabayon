@@ -1,3 +1,10 @@
+2005-06-07  Mark McLoughlin  <markmc@redhat.com>
+
+	Fix for bug #305395
+
+	* admin-tool/profilesdialog.py: make the "Base on" combo
+	insensitive if there's no existing profiles.
+
 Fri Jun  3 15:06:31 CEST 2005 Daniel Veillard <veillard@redhat.com>
 
 	* doc/flat.html doc/index.html: added link to the english version

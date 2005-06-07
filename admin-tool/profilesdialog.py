@@ -86,6 +86,8 @@ class AddProfileDialog:
         
         self.base_combo = self.xml.get_widget ("add_profile_base_combo")
         self.base_combo.set_model (self.profiles_model)
+        if self.profiles_model.get_iter_first () is None:
+            self.base_combo.set_sensitive (False)
 
         renderer = gtk.CellRendererText ()
         self.base_combo.pack_start (renderer, True)
