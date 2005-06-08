@@ -4,7 +4,7 @@
 
 	* admin-tool/profilesdialog.py:
 	(ProfilesDialog.__delete_currently_selected): remove
-	any refences to the profiles from userdb too.
+	any references to the profile from userdb too.
 	
 2005-06-08  Mark McLoughlin  <markmc@redhat.com>
 	
@@ -21,7 +21,6 @@
 	is unique. Fixes bug #305759
 
 	* admin-tool/profilesdialog.py:
-	(ProfilesModel.reload): sort the profiles list
 	(ProfilesDialog.__make_unique_profile_name): if the
 	profile name already exists, make it unique by adding
 	an integer in parenthesis to the name.
@@ -29,6 +28,7 @@
 2005-06-08  Mark McLoughlin  <markmc@redhat.com>
 	
 	* admin-tool/profilesdialog.py:
+	(ProfilesModel.reload): sort the profiles list
 	(ProfilesDialog.__delete_currently_selected): select
 	another profile in the list when we delete a profile.
 
