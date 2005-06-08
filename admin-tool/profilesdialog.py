@@ -32,6 +32,7 @@ import protosession
 import editorwindow
 import usersdialog
 import util
+import userdb
 from config import *
 
 def dprint (fmt, *args):
@@ -51,20 +52,11 @@ class ProfilesModel (gtk.ListStore):
 
     def reload (self):
         self.clear ()
-        profile_files = []
-        try:
-            profile_files = os.listdir (PROFILESDIR)
-        except OSError, err:
-            if err.errno != errno.ENOENT:
-                raise err
-
-        profile_files.sort ()
-        for file in profile_files:
-            if not file.endswith (".zip"):
-                continue
-                
-            row = self.append ()
-            self.set (row, self.COLUMN_NAME, file[:-len (".zip")])
+        profiles = userdb.get_database ().get_profiles ()
+        profiles.sort ()
+        for profile in profiles:
+            self.set (self.append (),
+                      self.COLUMN_NAME, profile)
 
 class AddProfileDialog:
     def __init__ (self, profiles_model):
@@ -281,6 +273,14 @@ class ProfilesDialog:
             profile_name = model[selected][ProfilesModel.COLUMN_NAME]
             dprint ("Deleting '%s'", profile_name)
             os.remove (_get_profile_path_for_name (profile_name))
+
+            db = userdb.get_database ()
+            if db.get_default_profile (False) == profile_name:
+                db.set_default_profile (None)
+            for user in db.get_users ():
+                if db.get_profile (user, False, True) == profile_name:
+                    db.set_profile (user, None)
+            
             self.profiles_model.reload ()
 
             iter = None
@@ -303,16 +303,11 @@ class ProfilesDialog:
             self.__delete_currently_selected ()
 
     def __make_unique_profile_name (self, profile_name):
-        profile_files = []
-        try:
-            profile_files = os.listdir (PROFILESDIR)
-        except OSError, err:
-            if err.errno != errno.ENOENT:
-                raise err
+        profiles = userdb.get_database ().get_profiles ()
 
         name = profile_name
         idx = 1
-        while name + ".zip" in profile_files:
+        while name in profiles:
             #
             # Translators: this string specifies how a profile
             #              name is concatenated with an integer

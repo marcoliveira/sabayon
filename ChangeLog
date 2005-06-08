@@ -1,5 +1,22 @@
 2005-06-08  Mark McLoughlin  <markmc@redhat.com>
 
+	Fixes bug #305761
+
+	* admin-tool/profilesdialog.py:
+	(ProfilesDialog.__delete_currently_selected): remove
+	any refences to the profiles from userdb too.
+	
+2005-06-08  Mark McLoughlin  <markmc@redhat.com>
+	
+	* admin-tool/profilesdialog.py:
+	(ProfilesModel.reload): use UserDatabase.get_profiles()
+	(ProfilesDialog.__make_unique_profile_name): ditto
+	
+	* lib/userdb.py: use config.PROFILESDIR rather
+	than /etc/desktop-profiles
+
+2005-06-08  Mark McLoughlin  <markmc@redhat.com>
+
 	When creating a new profile, make sure the profile name
 	is unique. Fixes bug #305759
 

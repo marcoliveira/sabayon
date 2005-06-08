@@ -296,7 +296,7 @@ class UserDatabase:
         """
 	list = []
 	try:
-	    for file in os.listdir('/etc/desktop-profiles'):
+	    for file in os.listdir(config.PROFILESDIR):
 	        if file[-4:] != ".zip":
 		    continue
 		list.append(file[0:-4])
