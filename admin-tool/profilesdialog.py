@@ -57,7 +57,8 @@ class ProfilesModel (gtk.ListStore):
         except OSError, err:
             if err.errno != errno.ENOENT:
                 raise err
-                                        
+
+        profile_files.sort ()
         for file in profile_files:
             if not file.endswith (".zip"):
                 continue
@@ -263,11 +264,36 @@ class ProfilesDialog:
             usersdialog.UsersDialog (profile_name, self.dialog)
 
     def __delete_currently_selected (self):
-        profile_name = self.__get_selected_profile ()
-        if profile_name:
+        (model, selected) = self.profiles_list.get_selection ().get_selected ()
+        if selected:
+            if model.iter_next (selected):
+                select = model[model.iter_next (selected)][ProfilesModel.COLUMN_NAME]
+            else:
+                select = None
+                iter = model.get_iter_first ()
+                while iter and model.iter_next (iter):
+                    next = model.iter_next (iter)
+                    if model.get_string_from_iter (next) == model.get_string_from_iter (selected):
+                        select = model[iter][ProfilesModel.COLUMN_NAME]
+                        break
+                    iter = next
+
+            profile_name = model[selected][ProfilesModel.COLUMN_NAME]
             dprint ("Deleting '%s'", profile_name)
             os.remove (_get_profile_path_for_name (profile_name))
             self.profiles_model.reload ()
+
+            iter = None
+            if select:
+                iter = self.profiles_model.get_iter_first ()
+                while iter:
+                    if select == model[iter][ProfilesModel.COLUMN_NAME]:
+                        break
+                    iter = model.iter_next (iter)
+            if not iter:
+                iter = self.profiles_model.get_iter_first ()
+            if iter:
+                self.profiles_list.get_selection ().select_iter (iter)
 
     def __remove_button_clicked (self, button):
         self.__delete_currently_selected ()
@@ -276,7 +302,31 @@ class ProfilesDialog:
         if event.keyval in (gtk.keysyms.Delete, gtk.keysyms.KP_Delete):
             self.__delete_currently_selected ()
 
+    def __make_unique_profile_name (self, profile_name):
+        profile_files = []
+        try:
+            profile_files = os.listdir (PROFILESDIR)
+        except OSError, err:
+            if err.errno != errno.ENOENT:
+                raise err
+
+        name = profile_name
+        idx = 1
+        while name + ".zip" in profile_files:
+            #
+            # Translators: this string specifies how a profile
+            #              name is concatenated with an integer
+            #              to form a unique profile name e.g.
+            #              "Artist Workstation (5)"
+            #
+            name = _("%s (%s)") % (profile_name, idx)
+            idx += 1
+        
+        return name
+
     def __create_new_profile (self, profile_name, base_profile):
+        profile_name = self.__make_unique_profile_name (profile_name)
+        
         if base_profile:
             base_storage = storage.ProfileStorage (base_profile)
             new_storage = base_storage.copy (profile_name)
