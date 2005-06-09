@@ -126,6 +126,8 @@ class ProfileEditorWindow:
         self.window.set_transient_for (parent_window)
         self.window.set_destroy_with_parent (True)
         self.window.set_default_size (480, 380)
+        self.window.connect ("delete-event",
+                             self.__handle_delete_event);
 
         self.main_vbox = gtk.VBox (False, 0)
         self.main_vbox.show ()
@@ -193,7 +195,7 @@ class ProfileEditorWindow:
         self.storage.save ()
         self.__set_needs_saving (False)
 
-    def __handle_close (self, action):
+    def __do_saveconfirm (self):
         if self.last_save_time:
             dialog = saveconfirm.SaveConfirmationAlert (self.window,
                                                         self.profile_name,
@@ -202,12 +204,19 @@ class ProfileEditorWindow:
             dialog.destroy ()
 
             if response == gtk.RESPONSE_CANCEL:
-                return
+                return False
             if response == gtk.RESPONSE_YES:
                 self.storage.save ()
                 self.__set_needs_saving (False)
         
-        self.window.destroy ()
+        return True
+        
+    def __handle_close (self, action):
+        if self.__do_saveconfirm ():
+            self.window.destroy ()
+
+    def __handle_delete_event (self, window, event):
+        return not self.__do_saveconfirm ()
 
     def __handle_delete (self, action):
         self.__delete_currently_selected ()

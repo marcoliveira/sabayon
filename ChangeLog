@@ -1,5 +1,18 @@
 2005-06-09  Mark McLoughlin  <markmc@redhat.com>
 
+	Fix for bug #305869 - closing the details window using
+	the WM close button doesn't give you a save confirmation
+	dialog.
+
+	* admin-tool/editorwindow.py:
+	(ProfileEditorWindow.__init__): connect to the toplevel
+	"delete-event" signal
+	(ProfileEditorWindow.__handle_delete_event): if changes
+	have been made, display the saveconfirm dialog, allowing
+	the window to be destroyed unless "Cancel" is clicked.
+
+2005-06-09  Mark McLoughlin  <markmc@redhat.com>
+
 	Fix for bug #305865 - traceback on opening user's
 	dialog with a profile which has been made the default
 	for all users.
