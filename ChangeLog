@@ -1,5 +1,16 @@
 2005-06-09  Mark McLoughlin  <markmc@redhat.com>
 
+	Should fix bug #305868 - "Clear History" causes the profile
+	contents do dissappear from the window.
+
+	* admin-tool/editorwindow.py:
+	(ProfileModel.reload), (RevisionsModel.reload): add
+	some debug spew.
+	(ProfileEditorWindow.__handle_clear_history): unset the
+	current profile when we clear the history.
+
+2005-06-09  Mark McLoughlin  <markmc@redhat.com>
+
 	Fix for bug #305869 - closing the details window using
 	the WM close button doesn't give you a save confirmation
 	dialog.
