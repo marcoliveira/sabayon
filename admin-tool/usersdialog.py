@@ -72,8 +72,8 @@ class UsersDialog:
         self.help_button.hide ()
 
         self.all_check = self.xml.get_widget ("users_all_check")
-        self.all_check.connect ("toggled", self.__all_check_toggled)
         self.all_check.set_active (apply_to_all)
+        self.all_check.connect ("toggled", self.__all_check_toggled)
 
         self.users_model = UsersModel (self.userdb, self.profile)
         

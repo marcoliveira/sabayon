@@ -1,3 +1,12 @@
+2005-06-09  Mark McLoughlin  <markmc@redhat.com>
+
+	Fix for bug #305865 - traceback on opening user's
+	dialog with a profile which has been made the default
+	for all users.
+
+	* admin-tool/usersdialog.py: connect to the checkbox
+	toggled signal only after we've set its initial state.
+
 2005-06-08  Mark McLoughlin  <markmc@redhat.com>
 
 	Fixes bug #305761
