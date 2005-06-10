@@ -28,9 +28,9 @@ import gobject
 import gtk
 import gtk.glade
 import storage
-import protosession
 import editorwindow
 import usersdialog
+import sessionwindow
 import util
 import userdb
 from config import *
@@ -236,10 +236,10 @@ class ProfilesDialog:
             user_path = self.__copy_to_user (profile_path, PROTOTYPE_USER)
 
             self.dialog.set_sensitive (False)
+
+            sessionwindow.SessionWindow (PROTOTYPE_USER, user_path)
             
-            argv = SESSION_TOOL_ARGV + [ PROTOTYPE_USER, user_path ]
-            dprint ("Running session: %s" % argv)
-            util.uninterruptible_spawnv (os.P_WAIT, argv[0], argv)
+            gtk.main ()
             
             self.dialog.set_sensitive (True)
 

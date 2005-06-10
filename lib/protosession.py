@@ -308,7 +308,7 @@ class ProtoSession (gobject.GObject):
     # runing the mainloop we re-enter, then we'll install another
     # SIGUSR1 handler and everything will break
     #
-    def __start_xnest (self):
+    def __start_xnest (self, parent_window):
         self.display_number = self.__find_free_display ()
         if self.display_number == -1:
             raise SessionStartError, _("Unable to find a free X display")
@@ -330,6 +330,8 @@ class ProtoSession (gobject.GObject):
             argv = XNEST_ARGV + \
                    [ "-auth", self.xnest_xauth_file ] + \
                    [ "-name", _("All Your Settings Are Belong To Us") ]
+            if parent_window:
+                argv += [ "-parent", parent_window ]
             argv += [ self.display_name ]
 
             dprint ("Child process launching %s" % argv)
@@ -507,7 +509,7 @@ class ProtoSession (gobject.GObject):
         dprint ("Resetting shell for '%s' to '%s'" % (self.username, NOLOGIN_SHELL))
         usermod.set_shell (self.username, NOLOGIN_SHELL)
         
-    def start (self):
+    def start (self, parent_window):
         # Set the shell to a runnable one and create an empty homedir
 	self.__setup_shell_and_homedir()
 
@@ -517,7 +519,7 @@ class ProtoSession (gobject.GObject):
         util.uninterruptible_spawnv (os.P_WAIT, argv[0], argv)
         
         # Get an X server going
-        self.__start_xnest ()
+        self.__start_xnest (parent_window)
 
         # Start the session as the prototype user
         self.__start_session ()

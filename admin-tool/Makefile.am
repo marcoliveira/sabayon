@@ -6,7 +6,8 @@ PYTHON_FILES =				\
 	saveconfirm.py			\
 	gconfviewer.py			\
 	fileviewer.py			\
-	usersdialog.py
+	usersdialog.py			\
+	sessionwindow.py
 
 @INTLTOOL_DESKTOP_RULE@
 
@@ -29,7 +30,6 @@ EXTRA_DIST =				\
 	sabayon				\
 	sabayon-apply			\
 	sabayon-monitor			\
-	sabayon-session			\
 	sabayon.console.in		\
 	sabayon.pam			\
 	sabayon-xinitrc.sh.in
@@ -42,7 +42,7 @@ icon_DATA  = $(ICON_FILES)
 
 bin_SCRIPTS = sabayon
 sbin_SCRIPTS = sabayon-apply
-libexec_SCRIPTS = sabayon-monitor sabayon-session
+libexec_SCRIPTS = sabayon-monitor
 
 sabayondir     = $(pythondir)/sabayon
 sabayon_PYTHON = $(PYTHON_FILES)

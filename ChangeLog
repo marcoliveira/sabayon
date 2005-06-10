@@ -1,5 +1,33 @@
 2005-06-10  Mark McLoughlin  <markmc@redhat.com>
 
+	Embed Xnest in a window which we create. First step
+	towards making the monitor window contain the prototype
+	session	rather than the other way around.
+
+	* admin-tool/Makefile.am: add sessionwindow.py and
+	remove sabayon-session.
+	
+	* lib/protosession.py: allow passing a parent window id
+	which Xnest should embed itself in.
+	
+	* admin-tool/sessionwindow.py: add. Creates a toplevel
+	window and embeds Xnest in it.
+	
+	* admin-tool/profilesdialog.py: open a SessionWindow
+	rather than running sabayon-session
+	
+	* admin-tool/sabayon-session: remove. I don't think
+	we've needed to run the protosession code from a 
+	separate process for quite a while now. The original
+	problem was that we couldn't open an X connection
+	with the Xnest server if we already had an open X
+	connection, but we solved that with the open_x_connection()
+	hack in protosession.py (I think)
+	
+	* lib/config.py.in: remove SESSION_TOOL_ARGV
+
+2005-06-10  Mark McLoughlin  <markmc@redhat.com>
+
 	Fix for bug #307062 - when you run configure with no
 	--prefix, PAM_PREFIX ends up defined as "NONE/etc"
 
