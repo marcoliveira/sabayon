@@ -82,21 +82,6 @@ AC_ARG_ENABLE(console-helper,
   enable_console_helper=auto)
 
 
-withval=""
-AC_ARG_WITH(pam-prefix,
-[      --with-pam-prefix=<prefix>   specify where pam files go],[
-if test x$withval != x; then
-   AC_MSG_RESULT("PAM files will be installed in prefix ${withval}.")
-fi])
-if test x$withval != x; then
-        PAM_PREFIX_UNEXPANDED="$withval"
-else
-        PAM_PREFIX_UNEXPANDED="$sysconfdir"
-fi
-PAM_PREFIX=`eval echo $PAM_PREFIX_UNEXPANDED`
-AC_SUBST(PAM_PREFIX)
-
-
 # find the actual value for $prefix that we'll end up with
 REAL_PREFIX=
 if test "x$prefix" = "xNONE"; then
@@ -115,6 +100,21 @@ else
 fi
 old_exec_prefix=$exec_prefix
 exec_prefix=$REAL_EXEC_PREFIX
+
+
+withval=""
+AC_ARG_WITH(pam-prefix,
+[      --with-pam-prefix=<prefix>   specify where pam files go],[
+if test x$withval != x; then
+   AC_MSG_RESULT("PAM files will be installed in prefix ${withval}.")
+fi])
+if test x$withval != x; then
+        PAM_PREFIX_UNEXPANDED="$withval"
+else
+        PAM_PREFIX_UNEXPANDED="$sysconfdir"
+fi
+PAM_PREFIX=`eval echo $PAM_PREFIX_UNEXPANDED`
+AC_SUBST(PAM_PREFIX)
 
 
 AM_PATH_PYTHON
