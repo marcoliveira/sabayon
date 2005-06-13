@@ -1,3 +1,12 @@
+2005-06-13  Mark McLoughlin  <markmc@redhat.com>
+
+	Fix for "the Sabayon session is locked and I don't have
+	a password for sabayon-admin issue". Bug #305771
+
+	* lib/protosession.py:
+	(ProtoSession.__start_session): set $RUNNING_UNDER_GDM
+	env variable so Xscreensaver won't ever lock the screen.
+
 Fri Jun 10 22:20:01 CEST 2005 Daniel Veillard <veillard@redhat.com>
 
 	* sabayon.spec.in: add a new file.

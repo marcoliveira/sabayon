@@ -442,6 +442,9 @@ class ProtoSession (gobject.GObject):
             # Disable sabayon-xinitrc.sh
             new_environ["DISABLE_SABAYON_XINITRC"] = "yes"
 
+            # Disable Xscreensaver locking
+            new_environ["RUNNING_UNDER_GDM"] = "yes"
+
             # Start the session
             dprint ("Executing %s" % SESSION_ARGV)
             os.execve (SESSION_ARGV[0], SESSION_ARGV, new_environ)
