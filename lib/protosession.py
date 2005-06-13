@@ -211,7 +211,13 @@ class ProtoSession (gobject.GObject):
         return True
 
     def __get_xauth_record (self):
-        (status, output) = commands.getstatusoutput ("xauth -in list $DISPLAY")
+        while True:
+            try:
+                (status, output) = commands.getstatusoutput ("xauth -in list $DISPLAY")
+                break
+            except os.error, (err, str):
+                if err != errno.EINTR:
+                    raise
         if status != 0:
             raise XauthParseError, _("'xauth list' returned error")
 
@@ -300,7 +306,13 @@ class ProtoSession (gobject.GObject):
                      str (pipe_w) ]
             os.execvpe (argv[0], argv, new_environ)
         os.close (pipe_w)
-        select.select ([pipe_r], [], [])[0]
+        while True:
+            try:
+                select.select ([pipe_r], [], [])[0]
+                break
+            except select.error, (err, str):
+                if err != errno.EINTR:
+                    raise
         os.close (pipe_r)
 
     #

@@ -1,5 +1,14 @@
 2005-06-13  Mark McLoughlin  <markmc@redhat.com>
 
+	* admin-tool/sessionwindow.py: show the window
+	on "map-event" rather than on "realize" - fixes
+	race condition with Xnest.
+
+	* lib/protosession.py: handle EINTR from
+	select.select() and commands.getstatusoutput()
+
+2005-06-13  Mark McLoughlin  <markmc@redhat.com>
+
 	Don't allow running Sabayon within a Sabayon session.
 	Fixes bug #305510
 

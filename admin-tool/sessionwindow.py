@@ -40,15 +40,16 @@ class SessionWindow:
         dprint ("Creating %dx%d session window" % (width, height))
         
         self.window = gtk.Window ()
-        self.window.connect_after ("realize", self.__window_realized)
+        self.window.connect ("map-event", self.__window_mapped)
         self.window.connect ("destroy", gtk.main_quit)
         self.window.set_default_size (width, height)
         self.window.show ()
 
-    def __window_realized (self, window):
-        dprint ("Session window realized; starting prototype session")
+    def __window_mapped (self, window, event):
+        dprint ("Session window mapped; starting prototype session")
         self.session.connect ("finished", self.__session_finished)
         self.session.start (str (self.window.window.xid))
+        return False
 
     def __session_finished (self, session):
         self.window.destroy ()
