@@ -32,9 +32,21 @@ if __name__ == '__main__':
                                          gtk.DIALOG_DESTROY_WITH_PARENT,
                                          gtk.MESSAGE_ERROR,
                                          gtk.BUTTONS_CLOSE,
-                                         _("Your account does not have permissions to run %s") % "sabayon")
+                                         _("Your account does not have permissions to run the Desktop User Profiles tool"))
         errordialog.format_secondary_text (_("Administrator level permissions are needed to run "
                                              "this program because it can modify system files."))
+        errordialog.run ()
+        errordialog.destroy ()
+        sys.exit (1)
+
+    if os.environ.has_key ("SABAYON_SESSION_RUNNING"):
+        errordialog = gtk.MessageDialog (None,
+                                         gtk.DIALOG_DESTROY_WITH_PARENT,
+                                         gtk.MESSAGE_ERROR,
+                                         gtk.BUTTONS_CLOSE,
+                                         _("Desktop User Profiles tool is already running"))
+        errordialog.format_secondary_text (_("You may not use Desktop User Profiles tool from "
+                                             "within a profile editing session"))
         errordialog.run ()
         errordialog.destroy ()
         sys.exit (1)

@@ -1,5 +1,16 @@
 2005-06-13  Mark McLoughlin  <markmc@redhat.com>
 
+	Don't allow running Sabayon within a Sabayon session.
+	Fixes bug #305510
+
+	* lib/protosession.py:
+	(ProtoSession.__start_session): set $SABAYON_SESSION_RUNNING
+	
+	* admin-tool/sabayon: pop up an error dialog if
+	$SABAYON_SESSION_RUNNING is set.
+
+2005-06-13  Mark McLoughlin  <markmc@redhat.com>
+
 	Fix for "the Sabayon session is locked and I don't have
 	a password for sabayon-admin issue". Bug #305771
 
