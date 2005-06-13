@@ -1,5 +1,12 @@
 2005-06-13  Mark McLoughlin  <markmc@redhat.com>
 
+	* admin-tool/sessionwindow.py: disconnect from
+	the "map-event" signal once we've started the
+	session. Don't want to try and start the session
+	again when we change workspaces etc.
+
+2005-06-13  Mark McLoughlin  <markmc@redhat.com>
+
 	* admin-tool/sessionwindow.py: show the window
 	on "map-event" rather than on "realize" - fixes
 	race condition with Xnest.
