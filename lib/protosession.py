@@ -51,7 +51,7 @@ class XauthParseError (ProtoSessionError):
 def safe_kill (pid, sig):
     try:
         os.kill (pid, sig)
-    except os.error, (err, str):
+    except os.error, (err, errstr):
         if err != errno.ESRCH:
             raise
 
@@ -138,7 +138,7 @@ class ProtoSession (gobject.GObject):
         sock = socket.socket (socket.AF_INET, socket.SOCK_STREAM)
         try:
             sock.connect (("127.0.0.1", 6000 + display_number))
-        except socket.error, (err, str):
+        except socket.error, (err, errstr):
             if err == errno.ECONNREFUSED:
                 refused = True
         
@@ -159,7 +159,7 @@ class ProtoSession (gobject.GObject):
             process_exists = True
             try:
                 os.kill (pid, 0)
-            except os.error, (err, str):
+            except os.error, (err, errstr):
                 if err == errno.ESRCH:
                     process_exists = False
             if process_exists:
@@ -215,7 +215,7 @@ class ProtoSession (gobject.GObject):
             try:
                 (status, output) = commands.getstatusoutput ("xauth -in list $DISPLAY")
                 break
-            except os.error, (err, str):
+            except os.error, (err, errstr):
                 if err != errno.EINTR:
                     raise
         if status != 0:
@@ -310,7 +310,7 @@ class ProtoSession (gobject.GObject):
             try:
                 select.select ([pipe_r], [], [])[0]
                 break
-            except select.error, (err, str):
+            except select.error, (err, errstr):
                 if err != errno.EINTR:
                     raise
         os.close (pipe_r)

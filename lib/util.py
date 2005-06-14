@@ -156,7 +156,7 @@ def uninterruptible_spawnve (mode, file, args, env):
             os.spawnv (mode, file, args)
         else:
             os.spawnve (mode, file, args, env)
-    except os.error, (err, str):
+    except os.error, (err, errstr):
         if err != errno.EINTR:
             raise
         

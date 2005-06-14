@@ -1,4 +1,20 @@
+NULL = 
+
 SUBDIRS = sources
+
+INCLUDES = 				\
+	$(WARN_CFLAGS)			\
+	$(NO_STRICT_ALIASING_CFLAGS)	\
+	$(PYTHON_INCLUDES)		\
+	$(XLIB_MODULE_CFLAGS)		\
+	$(X_CFLAGS)			\
+	$(NULL)
+
+sabayon_LTLIBRARIES = xlib.la
+
+xlib_la_LDFLAGS = -module -avoid-version -fPIC -export-symbols-regex initxlib
+xlib_la_LIBADD  = $(XLIB_MODULE_LIBS) $(X_LIBS)
+xlib_la_SOURCES = xlib.c
 
 PYTHON_FILES =				\
 	__init__.py			\

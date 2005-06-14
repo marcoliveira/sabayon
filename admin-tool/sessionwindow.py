@@ -21,6 +21,7 @@
 import gtk
 import util
 import protosession
+import xlib
 from config import *
 
 def dprint (fmt, *args):
@@ -45,6 +46,11 @@ class SessionWindow:
         
         self.mapped_handler_id = self.window.connect ("map-event", self.__window_mapped)
         
+        self.window.set_property ("can-focus", True)
+        self.window.grab_focus ()
+        self.window.connect ("key-press-event",   self.__handle_key_press)
+        self.window.connect ("key-release-event", self.__handle_key_release)
+        
         self.window.show ()
 
     def __window_mapped (self, window, event):
@@ -54,6 +60,20 @@ class SessionWindow:
         self.session.connect ("finished", self.__session_finished)
         self.session.start (str (self.window.window.xid))
         return False
+
+    def __handle_key_press (self, window, event):
+        print event
+        if not event.send_event:
+            print "sending press", event.hardware_keycode
+            xlib.send_key_event (window.window, True, event.time, event.state, event.hardware_keycode)
+        return True
+    
+    def __handle_key_release (self, window, event):
+        print event
+        if not event.send_event:
+            print "sending release", event.hardware_keycode
+            xlib.send_key_event (window.window, False, event.time, event.state, event.hardware_keycode)
+        return True
 
     def __session_finished (self, session):
         self.window.destroy ()

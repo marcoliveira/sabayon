@@ -4,17 +4,86 @@ AC_CONFIG_SRCDIR(lib/userprofile.py)
 
 
 AM_INIT_AUTOMAKE
+AM_CONFIG_HEADER(config.h)
 AM_MAINTAINER_MODE
 
-dnl make sure we keep ACLOCAL_FLAGS around for maintainer builds to work
+# make sure we keep ACLOCAL_FLAGS around for maintainer builds to work
 AC_SUBST(ACLOCAL_AMFLAGS, "\${ACLOCAL_FLAGS}")
-
  
 GETTEXT_PACKAGE=sabayon
 AC_SUBST(GETTEXT_PACKAGE)
 
 ALL_LINGUAS="bg ca cs de el en_CA en_GB es hu nb no pt_BR rw sv zh_CN"
 AM_GLIB_GNU_GETTEXT
+
+AC_PROG_CC
+AC_ISC_POSIX
+AC_HEADER_STDC
+AC_ARG_PROGRAM
+
+AM_PROG_LIBTOOL
+AM_PATH_PYTHON
+AC_PROG_INTLTOOL
+AC_PROG_LN_S
+
+GNOME_COMPILE_WARNINGS(yes)
+
+# Detect if we can build Python bindings (need python and python headers)
+AM_CHECK_PYTHON_HEADERS(,[AC_MSG_ERROR([Can't locate python headers])])
+
+# Check for GDK/X11 and PyGObject
+PKG_CHECK_MODULES(XLIB_MODULE, gdk-x11-2.0 pygobject-2.0)
+AC_SUBST(XLIB_MODULE_CFLAGS)
+AC_SUBST(XLIB_MODULE_LIBS)
+
+#
+# If Pango included the shared library dependencies from X11 in
+# the pkg-config output, then we use that (to avoid duplicates).
+# but if they were omitted to avoid binary compatibility problems
+# then we need to repeat the checks.
+#
+if $PKG_CONFIG --exists pangoxft ; then
+  PANGO_PACKAGES="pangox pangoxft"
+else
+  PANGO_PACKAGES="pangox"
+fi
+
+x_libs="`$PKG_CONFIG --libs $PANGO_PACKAGES`"
+case x_libs in
+  *-lX11*) pango_omitted_x_deps=no ;;
+  *)       pango_omitted_x_deps=yes ;;
+esac
+
+if test $pango_omitted_x_deps = yes ; then
+  AC_PATH_XTRA
+
+  if test x$no_x = xyes ; then
+    AC_MSG_ERROR([X development libraries not found])
+  else
+    X_LIBS="$X_PRE_LIBS $X_LIBS -lX11 $X_EXTRA_LIBS"
+  fi
+fi
+
+# Because of the way Python implements polymorphism, we get the following warning:
+# "warning: dereferencing type-punned pointer will break strict-aliasing rules"
+# -fno-strict-aliasing (as used in Python build) switches warnings off
+NO_STRICT_ALIASING_CFLAGS=""
+if test "x$GCC" = "xyes" ; then
+  AC_MSG_CHECKING(whether $CC accepts -fno-strict-aliasing)
+  ac_save_cc="$CC"
+  CC="$CC -fno-strict-aliasing"
+  AC_TRY_RUN([int main() { return 0; }],
+             ac_cv_no_strict_aliasing_ok=yes,
+             ac_cv_no_strict_aliasing_ok=no,
+             ac_cv_no_strict_aliasing_ok=no)
+  CC="$ac_save_cc"
+  AC_MSG_RESULT($ac_cv_no_strict_aliasing_ok)
+  if test "x$ac_cv_no_strict_aliasing_ok" = "xyes" ; then
+    NO_STRICT_ALIASING_CFLAGS="-fno-strict-aliasing"
+  fi
+fi
+AC_SUBST(NO_STRICT_ALIASING_CFLAGS)
+
 
 
 AC_ARG_WITH(distro,
@@ -115,11 +184,6 @@ else
 fi
 PAM_PREFIX=`eval echo $PAM_PREFIX_UNEXPANDED`
 AC_SUBST(PAM_PREFIX)
-
-
-AM_PATH_PYTHON
-AC_PROG_INTLTOOL
-AC_PROG_LN_S
 
 
 AC_PATH_PROG(CONSOLE_HELPER,consolehelper,no)

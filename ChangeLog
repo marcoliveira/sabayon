@@ -1,3 +1,43 @@
+2005-06-14  Mark McLoughlin  <markmc@redhat.com>
+
+	Add all sorts of crackrock to fix focus handling with
+	the embedded Xnest.
+
+	The strategy is simple - any GTK key events received
+	on the window (which we're using as the root window
+	for the embedded session) should get sent back to
+	the window again using XSendEvent()
+
+	The reason for needing to do this is because the
+	pseudo-root window itself is not the keyboard focus
+	window, which it would be with plain old Xnest. Instead
+	GTK+'s focus proxy receives the X event, Xnest never
+	sees that because it has selected events on the
+	pseudo-root and so we need to catch the event and
+	make sure it actually gets sent to the pseudo-root
+	window itself.
+
+	There's still bugs - we seem to get even more confused
+	with Alt now. Its probably a metacity bug.
+
+	* acinclude.m4: add AM_CHECK_PYTHON_HEADERS
+	
+	* autogen.sh: use the autogen from gnome-common.
+	
+	* configure.ac: check for python headers, gtk+, pygobject,
+	C compiler etc. etc.
+	
+	* lib/Makefile.am: build the xlib module.
+	 
+	* lib/xlib.c: (xlib_send_key_event), (initxlib): add simple
+	module with a wrapper for XSendEvent()
+	
+	* admin-tool/sessionwindow.py: make the toplevel focusable
+	and re-send key press/release events with xlib.send_key_event()
+	
+	* lib/protosession.py, lib/util.py: don't override builtin
+	str() in exception handler (don't ask me ... wtf?)
+
 2005-06-13  Mark McLoughlin  <markmc@redhat.com>
 
 	* admin-tool/sessionwindow.py: disconnect from
