@@ -62,16 +62,14 @@ class SessionWindow:
         return False
 
     def __handle_key_press (self, window, event):
-        print event
         if not event.send_event:
-            print "sending press", event.hardware_keycode
+            dprint ("Re-sending key press: %d" % event.hardware_keycode)
             xlib.send_key_event (window.window, True, event.time, event.state, event.hardware_keycode)
         return True
     
     def __handle_key_release (self, window, event):
-        print event
         if not event.send_event:
-            print "sending release", event.hardware_keycode
+            dprint ("Re-sending key release: %d" % event.hardware_keycode)
             xlib.send_key_event (window.window, False, event.time, event.state, event.hardware_keycode)
         return True
 
