@@ -16,7 +16,6 @@ URL:     http://www.gnome.org/projects/sabayon
 Source:  http://ftp.gnome.org/pub/GNOME/sources/sabayon/%{version}/sabayon-%{version}.tar.bz2
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildArch: noarch
 
 Requires: python-abi = %{pyver}
 Requires: gamin-python
@@ -24,7 +23,9 @@ Requires: libxml2-python
 Requires: pygtk2 >= %{pygtk2_version}
 Requires: gnome-python2-gconf >= %{gnome_python2_version}
 
-BuildRequires: python
+BuildRequires: python-devel
+BuildRequires: gtk2-devel
+BuildRequires: xorg-x11-devel
 BuildRequires: gettext
 BuildRequires: desktop-file-utils
 BuildRequires: usermode
@@ -74,6 +75,10 @@ desktop-file-install --vendor gnome --delete-original		\
   --dir $RPM_BUILD_ROOT%{_datadir}/applications			\
   --add-category X-Fedora-Extra					\
   $RPM_BUILD_ROOT%{_datadir}/applications/%{name}.desktop
+
+# We don't want these
+rm -f $RPM_BUILD_ROOT%{python_sitelib}/%{name}/xlib.la
+rm -f $RPM_BUILD_ROOT%{python_sitelib}/%{name}/xlib.a
 
 %find_lang sabayon
 
@@ -164,6 +169,8 @@ fi
 %{_datadir}/applications/gnome-%{name}.desktop
 %{_datadir}/icons/hicolor/48x48/apps/%{name}.png
 
+%{python_sitelib}/%{name}/xlib.so
+
 %{python_sitelib}/%{name}/aboutdialog.py
 %{python_sitelib}/%{name}/aboutdialog.pyc
 %ghost %{python_sitelib}/%{name}/aboutdialog.pyo
@@ -200,6 +207,10 @@ fi
 
 %changelog
 * Mon May 23 2005 Mark McLoughlin <markmc@redhat.com> - 0.19-1
+- We're no longer a noarch package
+- BuildRequire python-devel, gtk2-devel and xorg-x11-devel for
+  the xlib module
+- Add sessionwindow.py and xlib.so to %files
 - Icon is now installed in the icon theme; update the
   icon cache in %post and %postun
 
