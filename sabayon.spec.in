@@ -24,6 +24,7 @@ Requires: pygtk2 >= %{pygtk2_version}
 Requires: gnome-python2-gconf >= %{gnome_python2_version}
 
 BuildRequires: python-devel
+BuildRequires: pygtk2-devel
 BuildRequires: gtk2-devel
 BuildRequires: xorg-x11-devel
 BuildRequires: gettext
@@ -208,8 +209,8 @@ fi
 %changelog
 * Mon May 23 2005 Mark McLoughlin <markmc@redhat.com> - 0.19-1
 - We're no longer a noarch package
-- BuildRequire python-devel, gtk2-devel and xorg-x11-devel for
-  the xlib module
+- BuildRequire python-devel, pygtk2-devel, gtk2-devel and xorg-x11-devel
+  for the xlib module
 - Add sessionwindow.py and xlib.so to %files
 - Icon is now installed in the icon theme; update the
   icon cache in %post and %postun
