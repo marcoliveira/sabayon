@@ -41,6 +41,8 @@ class SessionWindow:
         dprint ("Creating %dx%d session window" % (width, height))
         
         self.window = gtk.Window ()
+        self.window.set_title (_("All Your Settings Are Belong To Us"))
+        self.window.set_icon_name ("sabayon")
         self.window.connect ("destroy", gtk.main_quit)
         self.window.set_default_size (width, height)
         
@@ -63,13 +65,15 @@ class SessionWindow:
 
     def __handle_key_press (self, window, event):
         if not event.send_event:
-            dprint ("Re-sending key press: %d" % event.hardware_keycode)
+            dprint ("Re-sending key press; keycode = 0x%x, state = 0x%x" %
+                    (event.hardware_keycode, event.state))
             xlib.send_key_event (window.window, True, event.time, event.state, event.hardware_keycode)
         return True
     
     def __handle_key_release (self, window, event):
         if not event.send_event:
-            dprint ("Re-sending key release: %d" % event.hardware_keycode)
+            dprint ("Re-sending key release; keycode = 0x%x, state = 0x%x" %
+                    (event.hardware_keycode, event.state))
             xlib.send_key_event (window.window, False, event.time, event.state, event.hardware_keycode)
         return True
 

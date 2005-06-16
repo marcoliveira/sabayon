@@ -1,3 +1,15 @@
+2005-06-16  Mark McLoughlin  <markmc@redhat.com>
+
+	* admin-tool/sessionwindow.py:
+	(SessionWindow.__init__): set the window's title
+	and icon
+	(SessionWindow.__handle_key_press),
+	(SessionWindow.__handle_key_press): improve debug
+	spew.
+	
+	* lib/config.py.in: pass through metacity debug
+	environment variables to the prototype session.
+
 2005-06-15  Mark McLoughlin  <markmc@redhat.com>
 
 	* sabayon.spec.in: need to BuildRequires pygtk2-devel
