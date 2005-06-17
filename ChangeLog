@@ -1,3 +1,25 @@
+2005-06-17  John Dennis  <jdennis@redhat.com>
+
+	Fixes for bug #3057
+	
+	* admin-tool/editorwindow.py: in ProfileModel:reload if get_source
+	fails try calling get_delegate
+	  
+	* lib/storage.py: break extract() into two parts, new function
+	get_extract_src_path() computes the path to the file/directory
+	requested for extraction, extract() now calls
+	get_extract_src_path() and then just does the copy
+	operation. get_extract_src_path() can now be used by other code to
+	get a path to the file in the profile without having to copy to a
+	destination, this is useful if all you want to do is read the file.
+	
+	* lib/userprofile.py: add UserProfile:get_delegate &
+	ProfileSource:get_delegate()
+	
+	* lib/sources/mozillasource.py: remove internationalization of
+	Firefox name, implement get_path_description
+
+
 2005-06-16  Mark McLoughlin  <markmc@redhat.com>
 
 	* admin-tool/sessionwindow.py:

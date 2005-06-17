@@ -207,6 +207,13 @@ class ProfileSource (gobject.GObject):
         if delegate_constructor:
             self.delegates = module_loader.construct_objects (delegate_constructor, self)
     
+    def get_delegate (self, delegate_name):
+        """Return a delegate named @delegate_name."""
+        for delegate in self.delegates:
+            if delegate.get_name () == delegate_name:
+                return delegate
+        return None
+
     def get_name (self):
         """Returns the configuration source's name."""
         return self.name
@@ -303,6 +310,14 @@ class UserProfile (gobject.GObject):
         for source in self.sources:
             if source.get_name () == source_name:
                 return source
+        return None
+
+    def get_delegate (self, delegate_name):
+        """Return a delegate named @delegate_name."""
+        for source in self.sources:
+            delegate = source.get_delegate (delegate_name)
+            if not delegate is None:
+                return delegate
         return None
 
     def start_monitoring (self):

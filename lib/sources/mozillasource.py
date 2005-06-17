@@ -142,7 +142,7 @@ gobject.type_register(MozillaChange)
 class MozillaDelegate(userprofile.SourceDelegate):
     def __init__ (self, source):
         dprint(LOG_OPERATION, "Delegate construction")
-        userprofile.SourceDelegate.__init__ (self, _("Firefox"), source, ".mozilla")
+        userprofile.SourceDelegate.__init__ (self, "Firefox", source, ".mozilla")
         self.source = source
         self.delegate = self
         self.home_dir = util.get_home_dir()
@@ -157,6 +157,26 @@ class MozillaDelegate(userprofile.SourceDelegate):
 
     def get_profiles_ini_path(self):
         return self.get_full_path(profiles_ini_rel_path)
+
+    def get_path_description (self, path):
+        type = get_type_from_path(path)
+
+        if   type == FirefoxProfileFile.TYPE_PREFS:
+            return _("Web browser preferences")
+        elif type == FirefoxProfileFile.TYPE_BOOKMARK:
+            return _("Web browser bookmarks")
+        elif type == FirefoxProfileFile.TYPE_PROFILE_INI:
+            return _("Web browser profile list")
+        else:
+            # XXX
+            basename = os.path.basename(path)
+    
+            if   basename.endswith("prefs.js"):
+                return _("Web browser preferences")
+            elif basename.endswith("bookmarks.html"):
+                return _("Web browser bookmarks")
+            else:
+                return path
 
     def load_profiles_ini(self):
         if not self.ini_file:
@@ -1076,6 +1096,8 @@ def get_type_from_path(rel_path):
         return FirefoxProfileFile.TYPE_PREFS
     elif basename == "bookmarks.html":
         return FirefoxProfileFile.TYPE_BOOKMARK
+    elif basename == "profiles.ini":
+        return FirefoxProfileFile.TYPE_PROFILE_INI
     else:
         return FirefoxProfileFile.TYPE_UNKNOWN
 

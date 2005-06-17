@@ -76,6 +76,8 @@ class ProfileModel (gtk.ListStore):
         self.clear ()
         for (source_name, path) in self.profile.storage.list ():
             source = self.profile.get_source (source_name)
+            if source is None:
+                source = self.profile.get_delegate (source_name)
             
             revisions_model = RevisionsModel (self.profile.storage, path)
             first_revision = revisions_model.get_iter_first ()
