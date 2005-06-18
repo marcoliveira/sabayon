@@ -8,13 +8,228 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-02-19 12:16+0100\n"
-"PO-Revision-Date: 2005-02-19 12:16+0100\n"
+"POT-Creation-Date: 2005-06-19 01:19+0200\n"
+"PO-Revision-Date: 2005-06-19 01:19+0200\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: admin-tool/aboutdialog.py:63
+msgid "Program to establish and edit profiles for users"
+msgstr "Program för att etablera och redigera profiler för användare"
+
+#: admin-tool/aboutdialog.py:66
+msgid "translator-credits"
+msgstr ""
+"Christian Rose\n"
+"Skicka synpunkter på översättningen till sv@li.org."
+
+#: admin-tool/editorwindow.py:133 admin-tool/fileviewer.py:29
+#: admin-tool/gconfviewer.py:87 admin-tool/sabayon.glade.h:2
+#: admin-tool/sessionwindow.py:44 lib/protosession.py:344
+msgid "All Your Settings Are Belong To Us"
+msgstr "Alla dina inställningar oss tillhör"
+
+#: admin-tool/editorwindow.py:248 admin-tool/sabayon.glade.h:7
+msgid "_Profile"
+msgstr "_Profil"
+
+#: admin-tool/editorwindow.py:249
+msgid "_Save"
+msgstr "_Spara"
+
+#: admin-tool/editorwindow.py:249
+msgid "Save profile"
+msgstr "Spara profil"
+
+#: admin-tool/editorwindow.py:250
+msgid "_Close"
+msgstr "S_täng"
+
+#: admin-tool/editorwindow.py:250
+msgid "Close the current window"
+msgstr "Stäng det aktuella fönstret"
+
+#: admin-tool/editorwindow.py:251
+msgid "_Edit"
+msgstr "_Redigera"
+
+#: admin-tool/editorwindow.py:252
+msgid "_Delete"
+msgstr "_Ta bort"
+
+#: admin-tool/editorwindow.py:252
+msgid "Delete item"
+msgstr "Ta bort objekt"
+
+#: admin-tool/editorwindow.py:253
+msgid "C_lear History"
+msgstr "T_öm historiken"
+
+#: admin-tool/editorwindow.py:253
+msgid "Clear revision history"
+msgstr "Töm revisionshistoriken"
+
+#: admin-tool/editorwindow.py:254 admin-tool/sabayon.glade.h:6
+msgid "_Help"
+msgstr "_Hjälp"
+
+#: admin-tool/editorwindow.py:255
+msgid "_About"
+msgstr "_Om"
+
+#: admin-tool/editorwindow.py:255
+msgid "About Sabayon"
+msgstr "Om Sabayon"
+
+#: admin-tool/editorwindow.py:286
+msgid "_Version:"
+msgstr "_Version:"
+
+#: admin-tool/editorwindow.py:341 admin-tool/monitorwindow.py:158
+msgid "Description"
+msgstr "Beskrivning"
+
+#: admin-tool/editorwindow.py:352
+msgid "Version"
+msgstr "Version"
+
+#: admin-tool/editorwindow.py:382 lib/sources/gconfsource.py:106
+msgid "GConf"
+msgstr "GConf"
+
+#: admin-tool/editorwindow.py:386 lib/sources/filessource.py:67
+msgid "Files"
+msgstr "Filer"
+
+#: admin-tool/gconfviewer.py:58 admin-tool/gconfviewer.py:77
+msgid "<no type>"
+msgstr "<ingen typ>"
+
+#: admin-tool/gconfviewer.py:59
+msgid "<no value>"
+msgstr "<inget värde>"
+
+#: admin-tool/gconfviewer.py:63
+msgid "string"
+msgstr "sträng"
+
+#: admin-tool/gconfviewer.py:65
+msgid "integer"
+msgstr "heltal"
+
+#: admin-tool/gconfviewer.py:67
+msgid "float"
+msgstr "flyttal"
+
+#: admin-tool/gconfviewer.py:69
+msgid "boolean"
+msgstr "booleskt värde"
+
+#: admin-tool/gconfviewer.py:71
+msgid "schema"
+msgstr "schema"
+
+#: admin-tool/gconfviewer.py:73
+msgid "list"
+msgstr "lista"
+
+#: admin-tool/gconfviewer.py:75
+msgid "pair"
+msgstr "par"
+
+#: admin-tool/gconfviewer.py:111 admin-tool/profilesdialog.py:179
+#: admin-tool/usersdialog.py:85
+msgid "Name"
+msgstr "Namn"
+
+#: admin-tool/gconfviewer.py:116
+msgid "Type"
+msgstr "Typ"
+
+#: admin-tool/gconfviewer.py:121
+msgid "Value"
+msgstr "Värde"
+
+#: admin-tool/monitorwindow.py:146
+msgid "Ignore"
+msgstr "Ignorera"
+
+#: admin-tool/monitorwindow.py:153
+msgid "Mandatory"
+msgstr "Obligatorisk"
+
+#: admin-tool/profilesdialog.py:211
+#, python-format
+msgid "User account '%s' was not found"
+msgstr "Användarkontot \"%s\" hittades inte"
+
+#: admin-tool/profilesdialog.py:212
+#, python-format
+msgid ""
+"Sabayon requires a special user account '%s' to be present on this computer. "
+"Try again after creating the account (using, for example, the 'adduser' "
+"command)"
+msgstr ""
+"Sabayon kräver att ett speciellt användarkonto med namnet \"%s\" finns på "
+"denna dator. Försök igen efter det att du skapat detta konto (genom att "
+"använda till exempel kommandot \"adduser\")"
+
+#.
+#. Translators: this string specifies how a profile
+#. name is concatenated with an integer
+#. to form a unique profile name e.g.
+#. "Artist Workstation (5)"
+#.
+#: admin-tool/profilesdialog.py:317
+#, python-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: admin-tool/sabayon:35
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr ""
+"Ditt konto har inte rättigheter för att köra verktyget för "
+"skrivbordsanvändarprofiler"
+
+#: admin-tool/sabayon:36
+msgid ""
+"Administrator level permissions are needed to run this program because it "
+"can modify system files."
+msgstr ""
+"Administratörsrättigheter krävs för att köra detta program eftersom det kan "
+"ändra systemfiler."
+
+#: admin-tool/sabayon:47
+msgid "Desktop User Profiles tool is already running"
+msgstr "Verktyget för skrivbordsanvändarprofiler kör redan"
+
+#: admin-tool/sabayon:48
+msgid ""
+"You may not use Desktop User Profiles tool from within a profile editing "
+"session"
+msgstr ""
+"Du kan inte använda verktyget för skrivbordsanvändarprofiler inifrån en "
+"profilredigeringssession"
+
+#: admin-tool/sabayon-apply:33
+#, c-format
+msgid "No profile for user '%s' found\n"
+msgstr "Ingen profil för användaren \"%s\" hittades\n"
+
+#: admin-tool/sabayon-apply:38
+#, c-format
+msgid "Usage: %s [<profile-name>]\n"
+msgstr "Användning: %s [<profilnamn>]\n"
+
+#: admin-tool/sabayon-monitor:29
+#, c-format
+msgid "Usage: %s <profile-name>\n"
+msgstr "Användning: %s <profilnamn>\n"
 
 #: admin-tool/sabayon.desktop.in.h:1
 msgid "Desktop User Profiles"
@@ -25,48 +240,499 @@ msgid "Establish and Edit Profiles for Users"
 msgstr "Etablera och redigera profiler för användare"
 
 #: admin-tool/sabayon.glade.h:1
-msgid "All Your Settings Are Belong To Us"
-msgstr "Alla dina inställningar oss tillhör"
-
-#: admin-tool/sabayon.glade.h:2
-msgid "C_reate"
-msgstr "S_kapa"
+msgid "Add Profile"
+msgstr "Lägg till profil"
 
 #: admin-tool/sabayon.glade.h:3
-msgid "New Profile"
-msgstr "Ny profil"
-
-#: admin-tool/sabayon.glade.h:4
 msgid "Profile _name:"
 msgstr "Profil_namn:"
+
+#: admin-tool/sabayon.glade.h:4
+msgid "Use this profile for _all users"
+msgstr "Använd denna profil för _alla användare"
 
 #: admin-tool/sabayon.glade.h:5
 msgid "_Base on:"
 msgstr "_Basera på:"
 
-#: admin-tool/sabayon.glade.h:6
-msgid "_Help"
-msgstr "_Hjälp"
-
-#: admin-tool/sabayon.glade.h:7
-msgid "_Profile"
-msgstr "_Profil"
-
 #: admin-tool/sabayon.glade.h:8
 msgid "_Profiles:"
 msgstr "_Profiler:"
 
-#~ msgid "User Profiles"
-#~ msgstr "Användarprofiler"
+#: admin-tool/sabayon.glade.h:9
+msgid "_Users"
+msgstr "_Användare"
+
+#: admin-tool/sabayon.glade.h:10
+msgid "_Users:"
+msgstr "_Användare:"
+
+#: admin-tool/sabayon.glade.h:11
+msgid "dialog1"
+msgstr "dialog1"
+
+#: admin-tool/saveconfirm.py:36
+msgid "Close _Without Saving"
+msgstr "Stäng _utan att spara"
+
+#: admin-tool/saveconfirm.py:43
+#, python-format
+msgid "Save changes to profile \"%s\" before closing?"
+msgstr "Spara ändringarna till profilen \"%s\" innan avslutande?"
+
+#: admin-tool/saveconfirm.py:47
+#, python-format
+msgid ""
+"If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld seconds will be permanently "
+"lost."
+msgstr[0] ""
+"Om du inte sparar kommer ändringar gjorda under den senaste sekunden att "
+"vara borta för alltid."
+msgstr[1] ""
+"Om du inte sparar kommer ändringar gjorda under de senaste %ld sekunderna "
+"att vara borta för alltid."
+
+#: admin-tool/saveconfirm.py:53
+msgid ""
+"If you don't save, changes from the last minute will be permanently lost."
+msgstr ""
+"Om du inte sparar kommer ändringar gjorda under den senaste minuten att vara "
+"borta för alltid."
+
+#: admin-tool/saveconfirm.py:57
+#, python-format
+msgid ""
+"If you don't save, changes from the last minute and %ld second will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last minute and %ld seconds will be "
+"permanently lost."
+msgstr[0] ""
+"Om du inte sparar kommer ändringar gjorda under den senaste minuten och "
+"sekunden att vara borta för alltid."
+msgstr[1] ""
+"Om du inte sparar kommer ändringar gjorda under den senaste minuten och %ld "
+"sekunderna att vara borta för alltid."
+
+#: admin-tool/saveconfirm.py:64
+#, python-format
+msgid ""
+"If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld minutes will be permanently "
+"lost."
+msgstr[0] ""
+"Om du inte sparar kommer ändringar gjorda under den senaste minuten att vara "
+"borta för alltid."
+msgstr[1] ""
+"Om du inte sparar kommer ändringar gjorda under de senaste %ld minuterna att "
+"vara borta för alltid."
+
+#: admin-tool/saveconfirm.py:73 admin-tool/saveconfirm.py:83
+#, python-format
+msgid "If you don't save, changes from the last hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] ""
+"Om du inte sparar kommer ändringar gjorda under den senaste timmen att vara "
+"borta för alltid."
+msgstr[1] ""
+"Om du inte sparar kommer ändringar gjorda under de senaste %d timmarna att "
+"vara borta för alltid."
+
+#: admin-tool/saveconfirm.py:76
+#, python-format
+msgid ""
+"If you don't save, changes from the last hour and %d minute will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last hour and %d minutes will be "
+"permanently lost."
+msgstr[0] ""
+"Om du inte sparar kommer ändringar gjorda under den senaste timmen och "
+"minuten att vara borta för alltid."
+msgstr[1] ""
+"Om du inte sparar kommer ändringar gjorda under den senaste timmen och %d "
+"minuterna att vara borta för alltid."
+
+#: admin-tool/usersdialog.py:92
+msgid "Use This Profile"
+msgstr "Använd denna profil"
+
+#: lib/dirmonitor.py:138
+#, python-format
+msgid "Failed to add monitor for %s"
+msgstr "Misslyckades med att lägga till övervakare för %s"
+
+#: lib/dirmonitor.py:218
+#, python-format
+msgid "Expected event: %s %s"
+msgstr "Händelse förväntades: %s %s"
+
+#: lib/protosession.py:88
+#, python-format
+msgid "User '%s' does not exist"
+msgstr "Användaren \"%s\" finns inte"
+
+#: lib/protosession.py:222
+msgid "'xauth list' returned error"
+msgstr ""
+
+#: lib/protosession.py:241
+msgid "'xauth list' returned no records or records in unknown format"
+msgstr ""
+
+#: lib/protosession.py:326
+msgid "Unable to find a free X display"
+msgstr "Kan inte hitta en ledig X-display"
+
+#: lib/protosession.py:390
+msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+msgstr ""
+
+#: lib/protosession.py:392
+msgid "Failed to start Xnest: died during startup"
+msgstr "Misslyckades med att starta Xnest: dog under uppstart"
+
+#: lib/sources/filessource.py:57
+#, python-format
+msgid "File '%s' created"
+msgstr "Filen \"%s\" skapades"
+
+#: lib/sources/filessource.py:59
+#, python-format
+msgid "File '%s' deleted"
+msgstr "Filen \"%s\" togs bort"
+
+#: lib/sources/filessource.py:61
+#, python-format
+msgid "File '%s' changed"
+msgstr "Filen \"%s\" ändrades"
+
+#: lib/sources/filessource.py:85
+msgid "Applications menu"
+msgstr "Programmeny"
+
+#: lib/sources/filessource.py:87
+msgid "Preferences menu"
+msgstr "Inställningsmeny"
+
+#: lib/sources/filessource.py:89
+msgid "Server Settings menu"
+msgstr "Serverinställningsmeny"
+
+#: lib/sources/filessource.py:91
+msgid "System Settings menu"
+msgstr "Systeminställningsmeny"
+
+#: lib/sources/filessource.py:93
+msgid "Start Here menu"
+msgstr "Börja här-meny"
+
+#: lib/sources/gconfsource.py:78
+#, python-format
+msgid "GConf key '%s' unset"
+msgstr "GConf-nyckeln \"%s\" nollställdes"
+
+#: lib/sources/gconfsource.py:80
+#, python-format
+msgid "GConf key '%s' set to string '%s'"
+msgstr "GConf-nyckeln \"%s\" sattes till strängen \"%s\""
+
+#: lib/sources/gconfsource.py:82
+#, python-format
+msgid "GConf key '%s' set to integer '%s'"
+msgstr "GConf-nyckeln \"%s\" sattes till heltalet \"%s\""
+
+#: lib/sources/gconfsource.py:84
+#, python-format
+msgid "GConf key '%s' set to float '%s'"
+msgstr "GConf-nyckeln \"%s\" sattes till flyttalet \"%s\""
+
+#: lib/sources/gconfsource.py:86
+#, python-format
+msgid "GConf key '%s' set to boolean '%s'"
+msgstr "GConf-nyckeln \"%s\" sattes till det booleska värdet \"%s\""
+
+#: lib/sources/gconfsource.py:88
+#, python-format
+msgid "GConf key '%s' set to schema '%s'"
+msgstr "GConf-nyckeln \"%s\" sattes till schemat \"%s\""
+
+#: lib/sources/gconfsource.py:90
+#, python-format
+msgid "GConf key '%s' set to list '%s'"
+msgstr "GConf-nyckeln \"%s\" sattes till listan \"%s\""
+
+#: lib/sources/gconfsource.py:92
+#, python-format
+msgid "GConf key '%s' set to pair '%s'"
+msgstr "GConf-nyckeln \"%s\" sattes till paret \"%s\""
+
+#: lib/sources/gconfsource.py:94
+#, python-format
+msgid "GConf key '%s' set to '%s'"
+msgstr "GConf-nyckeln \"%s\" sattes till \"%s\""
+
+#: lib/sources/gconfsource.py:117
+msgid "Default GConf settings"
+msgstr "Standardinställningar i GConf"
+
+#: lib/sources/gconfsource.py:119
+msgid "Mandatory GConf settings"
+msgstr "Obligatoriska inställningar i GConf"
+
+#: lib/sources/mozillasource.py:132
+#, python-format
+msgid "Mozilla key '%s' set to '%s'"
+msgstr "Mozilla-nyckeln \"%s\" sattes till \"%s\""
+
+#: lib/sources/mozillasource.py:134
+#, python-format
+msgid "Mozilla key '%s' unset"
+msgstr "Mozilla-nyckeln \"%s\" nollställdes"
+
+#: lib/sources/mozillasource.py:136
+#, python-format
+msgid "Mozilla key '%s' changed to '%s'"
+msgstr "Mozilla-nyckeln \"%s\" ändrades till \"%s\""
+
+#: lib/sources/mozillasource.py:165 lib/sources/mozillasource.py:175
+msgid "Web browser preferences"
+msgstr "Webbläsarinställningar"
+
+#: lib/sources/mozillasource.py:167 lib/sources/mozillasource.py:177
+msgid "Web browser bookmarks"
+msgstr "Webbläsarbokmärken"
+
+#: lib/sources/mozillasource.py:169
+msgid "Web browser profile list"
+msgstr "Webbläsarprofillista"
+
+#: lib/sources/mozillasource.py:516
+#, python-format
+msgid "File Not Found (%s)"
+msgstr "Filen hittades inte (%s)"
+
+#: lib/sources/mozillasource.py:855
+#, python-format
+msgid "duplicate name(%s) in section %s"
+msgstr ""
+
+#: lib/sources/mozillasource.py:864
+#, python-format
+msgid "redundant default in section %s"
+msgstr ""
+
+#: lib/sources/mozillasource.py:881
+msgid "no default profile"
+msgstr "ingen standardprofil"
+
+#: lib/sources/mozillasource.py:936
+#, python-format
+msgid "Mozilla bookmark created '%s' -> '%s'"
+msgstr ""
+
+#: lib/sources/mozillasource.py:938
+#, python-format
+msgid "Mozilla bookmark folder created '%s'"
+msgstr ""
+
+#: lib/sources/mozillasource.py:941
+#, fuzzy, python-format
+msgid "Mozilla bookmark deleted '%s'"
+msgstr "Inga bokmärken angivna"
+
+#: lib/sources/mozillasource.py:943
+#, python-format
+msgid "Mozilla bookmark folder deleted '%s'"
+msgstr ""
+
+#: lib/sources/mozillasource.py:946
+#, python-format
+msgid "Mozilla bookmark changed '%s' '%s'"
+msgstr ""
+
+#: lib/sources/mozillasource.py:948
+#, python-format
+msgid "Mozilla bookmark folder changed '%s'"
+msgstr ""
+
+#: lib/sources/paneldelegate.py:53
+#, python-format
+msgid "Panel '%s' added"
+msgstr "Panelen \"%s\" lades till"
+
+#: lib/sources/paneldelegate.py:59
+#, python-format
+msgid "Panel '%s' removed"
+msgstr "Panelen \"%s\" togs bort"
+
+#: lib/sources/paneldelegate.py:65
+#, python-format
+msgid "Panel applet '%s' added"
+msgstr "Panelprogrammet \"%s\" lades till"
+
+#: lib/sources/paneldelegate.py:71
+#, python-format
+msgid "Panel applet '%s' removed"
+msgstr "Panelprogrammet \"%s\" togs bort"
+
+#: lib/sources/paneldelegate.py:77
+#, python-format
+msgid "Panel object '%s' added"
+msgstr "Panelobjektet \"%s\" lades till"
+
+#: lib/sources/paneldelegate.py:83
+#, python-format
+msgid "Panel object '%s' removed"
+msgstr "Panelobjektet \"%s\" togs bort"
+
+#: lib/sources/paneldelegate.py:118
+msgid "Panel"
+msgstr "Panel"
+
+#: lib/storage.py:161
+#, fuzzy, python-format
+msgid "Failed to read file '%s': %s"
+msgstr "Misslyckades med att skapa filen \"%s\": %s"
+
+#: lib/storage.py:171
+#, fuzzy, python-format
+msgid "Failed to read metadata from '%s': %s"
+msgstr "Misslyckades med att skapa rör till \"%s\": %s"
+
+#: lib/storage.py:177
+#, fuzzy, python-format
+msgid "Invalid metadata section in '%s': %s"
+msgstr "Ogiltig meddelandeström mottagen från %s: %s"
+
+#: lib/storage.py:533
+#, fuzzy, python-format
+msgid "Cannot add non-existent file '%s'"
+msgstr "Kan inte köra \"%s\""
+
+#: lib/storage.py:621
+msgid "No current revision"
+msgstr "Ingen aktuell revision"
+
+#: lib/storage.py:625 lib/storage.py:636
+#, fuzzy, python-format
+msgid "'%s' does not exist in profile revision '%s'"
+msgstr "\"%s\" finns inte i bokmärkeslistan"
+
+#: lib/storage.py:725
+msgid "Not a valid profile revision"
+msgstr ""
+
+#: lib/storage.py:767
+#, fuzzy, python-format
+msgid "Profile is read-only %s"
+msgstr "Filen \"%s\" är skrivskyddad."
+
+#: lib/unittests.py:36 lib/unittests.py:37
+msgid "Ignore WARNINGs"
+msgstr "Ignorera VARNINGar"
+
+#: lib/unittests.py:59
+#, fuzzy, python-format
+msgid "Running %s tests"
+msgstr "Körs"
+
+#: lib/unittests.py:61
+#, fuzzy, python-format
+msgid "Running %s tests (%s)"
+msgstr "Byter namn på \"%s\" till \"%s\"."
+
+#: lib/unittests.py:68
+msgid "Success!"
+msgstr "Lyckades!"
+
+#: lib/userdb.py:207
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "Kunde inte öppna %s för skrivning"
+
+#: lib/userdb.py:220
+#, fuzzy, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "Misslyckades med att skicka användarnamnet till servern"
+
+#: lib/userdb.py:243 lib/userdb.py:278
+#, fuzzy, python-format
+msgid "File %s is not a profile configuration"
+msgstr "Konfigurera Pilotkanalskonfiguration"
+
+#: lib/userdb.py:250
+#, fuzzy, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "Misslyckades med att köra tidskonfigurationsverktyget: %s"
+
+#: lib/userdb.py:286
+#, fuzzy, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "Misslyckades med att köra tidskonfigurationsverktyget: %s"
+
+#: lib/userdb.py:317
+#, fuzzy
+msgid "Failed to get the user list"
+msgstr "Misslyckades med att få ett lås"
+
+#: lib/util.py:119
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+
+#: lib/util.py:132
+msgid ""
+"Cannot find username: not set in /etc/passwd and no value for $USER in "
+"environment"
+msgstr ""
+
+#~ msgid "File Not Found"
+#~ msgstr "Filen hittades inte"
+
+#~ msgid "Establish and edit profiles for users"
+#~ msgstr "Etablera och redigera profiler för användare"
+
+#~ msgid "Save"
+#~ msgstr "Spara"
+
+#~ msgid "String"
+#~ msgstr "Sträng"
+
+#~ msgid "Integer"
+#~ msgstr "Heltal"
+
+#~ msgid "Float"
+#~ msgstr "Flyttal"
+
+#~ msgid "Boolean"
+#~ msgstr "Booleskt värde"
+
+#~ msgid "Schema"
+#~ msgstr "Schema"
+
+#~ msgid "List"
+#~ msgstr "Lista"
+
+#~ msgid "Pair"
+#~ msgstr "Par"
+
+#~ msgid "C_reate"
+#~ msgstr "S_kapa"
+
+#~ msgid "New Profile"
+#~ msgstr "Ny profil"
 
 #~ msgid "Desktop Users"
 #~ msgstr "Skrivbordsanvändare"
 
 #~ msgid "Create"
 #~ msgstr "Skapa"
-
-#~ msgid "Profile"
-#~ msgstr "Profil"
 
 #~ msgid "Profile name:"
 #~ msgstr "Profilnamn:"
@@ -116,11 +782,6 @@ msgstr "_Profiler:"
 #~ "Christian Rose\n"
 #~ "Skicka synpunkter på översättningen till sv@li.org."
 
-#~ msgid "translator-credits"
-#~ msgstr ""
-#~ "Christian Rose\n"
-#~ "Skicka synpunkter på översättningen till sv@li.org."
-
 #~ msgid "An editor for the GConf configuration system."
 #~ msgstr "En redigerare för konfigurationssystemet GConf."
 
@@ -159,21 +820,11 @@ msgstr "_Profiler:"
 #~ "Kunde inte synkronisera värde. Felet var:\n"
 #~ "%s"
 
-# Arkiv, Arkiv och inget annat än Arkiv.
-#~ msgid "_File"
-#~ msgstr "_Arkiv"
-
-#~ msgid "_Edit"
-#~ msgstr "_Redigera"
-
 #~ msgid "_Search"
 #~ msgstr "_Sök"
 
 #~ msgid "_Bookmarks"
 #~ msgstr "_Bokmärken"
-
-#~ msgid "New _Settings Window"
-#~ msgstr "Nytt _inställningsfönster"
 
 #~ msgid "New _Defaults Window"
 #~ msgstr "Nytt _standardinställningsfönster"
@@ -217,14 +868,8 @@ msgstr "_Profiler:"
 #~ msgid "_Edit Bookmarks"
 #~ msgstr "_Redigera bokmärken"
 
-#~ msgid "Edit the bookmarks"
-#~ msgstr "Redigera bokmärkena"
-
 #~ msgid "_Contents"
 #~ msgstr "_Innehåll"
-
-#~ msgid "_About"
-#~ msgstr "_Om"
 
 #~ msgid "_New Key..."
 #~ msgstr "_Ny nyckel..."
@@ -250,21 +895,12 @@ msgstr "_Profiler:"
 #~ msgid "Set the selected key to be the default"
 #~ msgstr "Ställ in den valda nyckeln att vara standardvärdet"
 
-#~ msgid "Set as _Mandatory"
-#~ msgstr "Ställ in som _obligatorisk"
-
 # Konstig originalsträng...
 #~ msgid "Set the selected key to the mandatory"
 #~ msgstr "Ställ in den valda nyckeln till de obligatoriska"
 
 #~ msgid "(None)"
 #~ msgstr "(Inget)"
-
-#~ msgid "Name"
-#~ msgstr "Namn"
-
-#~ msgid "Value"
-#~ msgstr "Värde"
 
 #~ msgid "Key Documentation"
 #~ msgstr "Nyckeldokumentation"
@@ -284,29 +920,8 @@ msgstr "_Profiler:"
 #~ msgid "Short Description:"
 #~ msgstr "Kort beskrivning:"
 
-#~ msgid "Long Description:"
-#~ msgstr "Lång beskrivning:"
-
 #~ msgid "T_rue"
 #~ msgstr "_Sant"
-
-#~ msgid "_False"
-#~ msgstr "_Falskt"
-
-#~ msgid "Integer"
-#~ msgstr "Heltal"
-
-#~ msgid "Boolean"
-#~ msgstr "Booleskt värde"
-
-#~ msgid "String"
-#~ msgstr "Sträng"
-
-#~ msgid "Float"
-#~ msgstr "Flyttal"
-
-#~ msgid "List"
-#~ msgstr "Lista"
 
 #~ msgid "Add new list entry"
 #~ msgstr "Lägg till ny listpost"
@@ -322,9 +937,6 @@ msgstr "_Profiler:"
 
 #~ msgid "Key path:"
 #~ msgstr "Nyckelsökväg:"
-
-#~ msgid "_Type:"
-#~ msgstr "_Typ:"
 
 #~ msgid "Key _value:"
 #~ msgstr "Nyckel_värde:"
@@ -352,9 +964,6 @@ msgstr "_Profiler:"
 
 #~ msgid "Search also in key _values"
 #~ msgstr "Sök även i nyckel_värden"
-
-#~ msgid "Close the output window"
-#~ msgstr "Stäng utdatafönstret"
 
 #~ msgid "Copy selected lines"
 #~ msgstr "Kopiera markerade rader"
@@ -436,9 +1045,6 @@ msgstr "_Profiler:"
 #~ msgid "Add _Schema"
 #~ msgstr "Lägg till _schema"
 
-#~ msgid "_Delete Key"
-#~ msgstr "_Ta bort nyckel"
-
 #~ msgid "Show _Location Bar"
 #~ msgstr "Visa _platsrad"
 
@@ -453,9 +1059,6 @@ msgstr "_Profiler:"
 
 #~ msgid "Name:"
 #~ msgstr "Namn:"
-
-#~ msgid "Schema:"
-#~ msgstr "Schema:"
 
 #~ msgid "Apply"
 #~ msgstr "Tillämpa"
@@ -475,14 +1078,14 @@ msgstr "_Profiler:"
 #~ msgid "Open File"
 #~ msgstr "Öppna fil"
 
-#~ msgid "Save"
-#~ msgstr "Spara"
-
-#~ msgid "Save File"
-#~ msgstr "Spara fil"
-
 #~ msgid "Location:"
 #~ msgstr "Plats:"
 
-#~ msgid "(no value set)"
-#~ msgstr "(inget värde angivet)"
+#~ msgid "Add Profile..."
+#~ msgstr "Lägg till profil..."
+
+#~ msgid "Cannot find directory %s\n"
+#~ msgstr "Kan inte hitta katalogen %s\n"
+
+#~ msgid "Error saving GConf tree to '%s': %s\n"
+#~ msgstr "Fel vid sparande av GConf-träd till \"%s\": %s\n"
