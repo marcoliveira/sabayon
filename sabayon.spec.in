@@ -122,38 +122,18 @@ fi
 %{_sbindir}/%{name}-apply
 
 %dir %{python_sitelib}/%{name}/
-%{python_sitelib}/%{name}/__init__.py
-%{python_sitelib}/%{name}/__init__.pyc
-%ghost %{python_sitelib}/%{name}/__init__.pyo
-%{python_sitelib}/%{name}/config.py
-%{python_sitelib}/%{name}/config.pyc
-%ghost %{python_sitelib}/%{name}/config.pyo
-%{python_sitelib}/%{name}/cache.py
-%{python_sitelib}/%{name}/cache.pyc
-%ghost %{python_sitelib}/%{name}/cache.pyo
-%{python_sitelib}/%{name}/dirmonitor.py
-%{python_sitelib}/%{name}/dirmonitor.pyc
-%ghost %{python_sitelib}/%{name}/dirmonitor.pyo
-%{python_sitelib}/%{name}/mozilla_bookmarks.py
-%{python_sitelib}/%{name}/mozilla_bookmarks.pyc
-%ghost %{python_sitelib}/%{name}/mozilla_bookmarks.pyo
-%{python_sitelib}/%{name}/storage.py
-%{python_sitelib}/%{name}/storage.pyc
-%ghost %{python_sitelib}/%{name}/storage.pyo
-%{python_sitelib}/%{name}/userdb.py
-%{python_sitelib}/%{name}/userdb.pyc
-%ghost %{python_sitelib}/%{name}/userdb.pyo
-%{python_sitelib}/%{name}/userprofile.py
-%{python_sitelib}/%{name}/userprofile.pyc
-%ghost %{python_sitelib}/%{name}/userprofile.pyo
-%{python_sitelib}/%{name}/util.py
-%{python_sitelib}/%{name}/util.pyc
-%ghost %{python_sitelib}/%{name}/util.pyo
+%{python_sitelib}/%{name}/__init__.py*
+%{python_sitelib}/%{name}/config.py*
+%{python_sitelib}/%{name}/cache.py*
+%{python_sitelib}/%{name}/dirmonitor.py*
+%{python_sitelib}/%{name}/mozilla_bookmarks.py*
+%{python_sitelib}/%{name}/storage.py*
+%{python_sitelib}/%{name}/userdb.py*
+%{python_sitelib}/%{name}/userprofile.py*
+%{python_sitelib}/%{name}/util.py*
 
 %dir %{python_sitelib}/%{name}/sources/
-%{python_sitelib}/%{name}/sources/*.py
-%{python_sitelib}/%{name}/sources/*.pyc
-%ghost %{python_sitelib}/%{name}/sources/*.pyo
+%{python_sitelib}/%{name}/sources/*.py*
 
 %files admin
 %doc doc/index.html doc/testing.html doc/helping.html doc/developing.html
@@ -172,42 +152,21 @@ fi
 
 %{python_sitelib}/%{name}/xlib.so
 
-%{python_sitelib}/%{name}/aboutdialog.py
-%{python_sitelib}/%{name}/aboutdialog.pyc
-%ghost %{python_sitelib}/%{name}/aboutdialog.pyo
-%{python_sitelib}/%{name}/editorwindow.py
-%{python_sitelib}/%{name}/editorwindow.pyc
-%ghost %{python_sitelib}/%{name}/editorwindow.pyo
-%{python_sitelib}/%{name}/fileviewer.py
-%{python_sitelib}/%{name}/fileviewer.pyc
-%ghost %{python_sitelib}/%{name}/fileviewer.pyo
-%{python_sitelib}/%{name}/gconfviewer.py
-%{python_sitelib}/%{name}/gconfviewer.pyc
-%ghost %{python_sitelib}/%{name}/gconfviewer.pyo
-%{python_sitelib}/%{name}/monitorwindow.py
-%{python_sitelib}/%{name}/monitorwindow.pyc
-%ghost %{python_sitelib}/%{name}/monitorwindow.pyo
-%{python_sitelib}/%{name}/profilesdialog.py
-%{python_sitelib}/%{name}/profilesdialog.pyc
-%ghost %{python_sitelib}/%{name}/profilesdialog.pyo
-%{python_sitelib}/%{name}/protosession.py
-%{python_sitelib}/%{name}/protosession.pyc
-%ghost %{python_sitelib}/%{name}/protosession.pyo
-%{python_sitelib}/%{name}/saveconfirm.py
-%{python_sitelib}/%{name}/saveconfirm.pyc
-%ghost %{python_sitelib}/%{name}/saveconfirm.pyo
-%{python_sitelib}/%{name}/sessionwindow.py
-%{python_sitelib}/%{name}/sessionwindow.pyc
-%ghost %{python_sitelib}/%{name}/sessionwindow.pyo
-%{python_sitelib}/%{name}/usermod.py
-%{python_sitelib}/%{name}/usermod.pyc
-%ghost %{python_sitelib}/%{name}/usermod.pyo
-%{python_sitelib}/%{name}/usersdialog.py
-%{python_sitelib}/%{name}/usersdialog.pyc
-%ghost %{python_sitelib}/%{name}/usersdialog.pyo
+%{python_sitelib}/%{name}/aboutdialog.py*
+%{python_sitelib}/%{name}/editorwindow.py*
+%{python_sitelib}/%{name}/fileviewer.py*
+%{python_sitelib}/%{name}/gconfviewer.py*
+%{python_sitelib}/%{name}/monitorwindow.py*
+%{python_sitelib}/%{name}/profilesdialog.py*
+%{python_sitelib}/%{name}/protosession.py*
+%{python_sitelib}/%{name}/saveconfirm.py*
+%{python_sitelib}/%{name}/sessionwindow.py*
+%{python_sitelib}/%{name}/usermod.py*
+%{python_sitelib}/%{name}/usersdialog.py*
 
 %changelog
 * Mon May 23 2005 Mark McLoughlin <markmc@redhat.com> - 0.19-1
+- Don't %ghost .pyo files, package them
 - We're no longer a noarch package
 - BuildRequire python-devel, pygtk2-devel, gtk2-devel and xorg-x11-devel
   for the xlib module

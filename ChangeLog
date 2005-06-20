@@ -1,6 +1,10 @@
+2005-06-20  Mark McLoughlin  <markmc@redhat.com>
+
+	* sabayon.spec.in: don't %ghost .pyo files, package them
+
 2005-06-17  John Dennis  <jdennis@redhat.com>
 
-	Fixes for bug #3057
+	Fixes for bug #305778
 	
 	* admin-tool/editorwindow.py: in ProfileModel:reload if get_source
 	fails try calling get_delegate
