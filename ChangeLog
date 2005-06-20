@@ -1,5 +1,34 @@
 2005-06-20  Mark McLoughlin  <markmc@redhat.com>
 
+	Big pile o' hacks to get input focus working in a
+	reasonably sane manner. Highlights:
+	   - SessionWidget is a NO_WINDOW widget, but it creates
+	     an XWindow for XNest to use as a root window
+	   - It can draw a focus indication around (not in) that
+	     window
+	   - We also have an InputOnly window so we can trap
+	     ButtonPress events and grab focus. We can't trap
+	     the ButtonPress on Xnest's window because only one
+	     client can select ButtonPress events. Once we have
+	     focus, we hide the InputOnly window so window cursors
+	     in the protosession work
+	   - Any input events we receive, either from the focus
+	     proxy or the InputOnly window, we forward to the
+	     Xnest window.
+
+	* admin-tool/sessionwidget.py: implement SessionWidget
+	
+	* admin-tool/sessionwindow.py: use sessionwidget
+	
+	* admin-tool/Makefile.am: add sessionwidget.py
+	
+	* lib/xlib.c:
+	(xlib_send_key_event), (xlib_send_button_event),
+	(xlib_send_motion_event), (xlib_send_crossing_event):
+	Add new XSendEvent wrappers
+
+2005-06-20  Mark McLoughlin  <markmc@redhat.com>
+
 	* sabayon.spec.in: don't %ghost .pyo files, package them
 
 2005-06-17  John Dennis  <jdennis@redhat.com>

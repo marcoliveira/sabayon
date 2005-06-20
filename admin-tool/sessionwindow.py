@@ -21,7 +21,7 @@
 import gtk
 import util
 import protosession
-import xlib
+import sessionwidget
 from config import *
 
 def dprint (fmt, *args):
@@ -34,48 +34,31 @@ class SessionWindow:
         
         self.session = protosession.ProtoSession (username, self.profile_name)
 
-        screen = gtk.gdk.screen_get_default ()
-        width  = (screen.get_width ()  * 3) / 4
-        height = (screen.get_height () * 3) / 4
-
-        dprint ("Creating %dx%d session window" % (width, height))
-        
         self.window = gtk.Window ()
         self.window.set_title (_("All Your Settings Are Belong To Us"))
         self.window.set_icon_name ("sabayon")
         self.window.connect ("destroy", gtk.main_quit)
-        self.window.set_default_size (width, height)
+
+        screen = gtk.gdk.screen_get_default ()
+        width  = (screen.get_width ()  * 3) / 4
+        height = (screen.get_height () * 3) / 4
+
+        dprint ("Creating %dx%d session wiget" % (width, height))
         
-        self.mapped_handler_id = self.window.connect ("map-event", self.__window_mapped)
-        
-        self.window.set_property ("can-focus", True)
-        self.window.grab_focus ()
-        self.window.connect ("key-press-event",   self.__handle_key_press)
-        self.window.connect ("key-release-event", self.__handle_key_release)
+        self.session_widget = sessionwidget.SessionWidget (width, height)
+        self.window.add (self.session_widget)
+        self.mapped_handler_id = self.session_widget.connect ("map-event", self.__session_mapped)
+        self.session_widget.show ()
         
         self.window.show ()
 
-    def __window_mapped (self, window, event):
-        dprint ("Session window mapped; starting prototype session")
-        self.window.disconnect (self.mapped_handler_id)
+    def __session_mapped (self, session_widget, event):
+        dprint ("Session widget mapped; starting prototype session")
+        self.session_widget.disconnect (self.mapped_handler_id)
         self.mapped_handler_id = 0
         self.session.connect ("finished", self.__session_finished)
-        self.session.start (str (self.window.window.xid))
+        self.session.start (str (self.session_widget.session_window.xid))
         return False
-
-    def __handle_key_press (self, window, event):
-        if not event.send_event:
-            dprint ("Re-sending key press; keycode = 0x%x, state = 0x%x" %
-                    (event.hardware_keycode, event.state))
-            xlib.send_key_event (window.window, True, event.time, event.state, event.hardware_keycode)
-        return True
-    
-    def __handle_key_release (self, window, event):
-        if not event.send_event:
-            dprint ("Re-sending key release; keycode = 0x%x, state = 0x%x" %
-                    (event.hardware_keycode, event.state))
-            xlib.send_key_event (window.window, False, event.time, event.state, event.hardware_keycode)
-        return True
 
     def __session_finished (self, session):
         self.window.destroy ()
