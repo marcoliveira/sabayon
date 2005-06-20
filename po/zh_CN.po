@@ -7,56 +7,660 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-02-17 17:00+0000\n"
-"PO-Revision-Date: 2005-01-25 01:30+0800\n"
+"POT-Creation-Date: 2005-06-20 04:28+0000\n"
+"PO-Revision-Date: 2005-06-20 14:58+0800\n"
 "Last-Translator: Funda Wang <fundawang@linux.net.cn>\n"
 "Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
-#: admin-tool/sabayon.desktop.in.h:1
-msgid "Desktop User Profiles"
-msgstr ""
+#: ../admin-tool/aboutdialog.py:63
+msgid "Program to establish and edit profiles for users"
+msgstr "为用户建立并编辑配置文件的程序"
 
-#: admin-tool/sabayon.desktop.in.h:2
-msgid "Establish and Edit Profiles for Users"
-msgstr ""
+#: ../admin-tool/aboutdialog.py:66
+msgid "translator-credits"
+msgstr "开源软件国际化之 GNOME 简体中文组"
 
-#: admin-tool/sabayon.glade.h:1
+#: ../admin-tool/editorwindow.py:133 ../admin-tool/fileviewer.py:29
+#: ../admin-tool/gconfviewer.py:87 ../admin-tool/sabayon.glade.h:2
+#: ../admin-tool/sessionwindow.py:44 ../lib/protosession.py:344
 msgid "All Your Settings Are Belong To Us"
 msgstr "您的所有设置都属于我们"
 
-#: admin-tool/sabayon.glade.h:2
-msgid "C_reate"
-msgstr ""
-
-#: admin-tool/sabayon.glade.h:3
-#, fuzzy
-msgid "New Profile"
-msgstr "配置文件(_P)"
-
-#: admin-tool/sabayon.glade.h:4
-#, fuzzy
-msgid "Profile _name:"
-msgstr "配置文件(_P)"
-
-#: admin-tool/sabayon.glade.h:5
-msgid "_Base on:"
-msgstr ""
-
-#: admin-tool/sabayon.glade.h:6
-msgid "_Help"
-msgstr ""
-
-#: admin-tool/sabayon.glade.h:7
+#: ../admin-tool/editorwindow.py:248 ../admin-tool/sabayon.glade.h:7
 msgid "_Profile"
 msgstr "配置文件(_P)"
 
-#: admin-tool/sabayon.glade.h:8
-#, fuzzy
-msgid "_Profiles:"
-msgstr "配置文件(_P)"
+#: ../admin-tool/editorwindow.py:249
+msgid "_Save"
+msgstr "保存(_S)"
 
-#~ msgid "_Commit"
-#~ msgstr "提交(_C)"
+#: ../admin-tool/editorwindow.py:249
+msgid "Save profile"
+msgstr "保存配置文件"
+
+#: ../admin-tool/editorwindow.py:250
+msgid "_Close"
+msgstr "关闭(_C)"
+
+#: ../admin-tool/editorwindow.py:250
+msgid "Close the current window"
+msgstr "关闭当前窗口"
+
+#: ../admin-tool/editorwindow.py:251
+msgid "_Edit"
+msgstr "编辑(_E)"
+
+#: ../admin-tool/editorwindow.py:252
+msgid "_Delete"
+msgstr "删除(_D)"
+
+#: ../admin-tool/editorwindow.py:252
+msgid "Delete item"
+msgstr "删除项目"
+
+#: ../admin-tool/editorwindow.py:253
+msgid "C_lear History"
+msgstr "清除历史(_L)"
+
+#: ../admin-tool/editorwindow.py:253
+msgid "Clear revision history"
+msgstr "清除修订历史"
+
+#: ../admin-tool/editorwindow.py:254 ../admin-tool/sabayon.glade.h:6
+msgid "_Help"
+msgstr "帮助(_H)"
+
+#: ../admin-tool/editorwindow.py:255
+msgid "_About"
+msgstr "关于(_A)"
+
+#: ../admin-tool/editorwindow.py:255
+msgid "About Sabayon"
+msgstr "关于 Sabayon"
+
+#: ../admin-tool/editorwindow.py:286
+msgid "_Version:"
+msgstr "版本(_V)："
+
+#: ../admin-tool/editorwindow.py:341 ../admin-tool/monitorwindow.py:158
+msgid "Description"
+msgstr "描述"
+
+#: ../admin-tool/editorwindow.py:352
+msgid "Version"
+msgstr "版本"
+
+#: ../admin-tool/editorwindow.py:382 ../lib/sources/gconfsource.py:106
+msgid "GConf"
+msgstr "GConf"
+
+#: ../admin-tool/editorwindow.py:386 ../lib/sources/filessource.py:67
+msgid "Files"
+msgstr "文件"
+
+#: ../admin-tool/gconfviewer.py:58 ../admin-tool/gconfviewer.py:77
+msgid "<no type>"
+msgstr "<无类型>"
+
+#: ../admin-tool/gconfviewer.py:59
+msgid "<no value>"
+msgstr "<无值>"
+
+#: ../admin-tool/gconfviewer.py:63
+msgid "string"
+msgstr "字符串"
+
+#: ../admin-tool/gconfviewer.py:65
+msgid "integer"
+msgstr "整数"
+
+#: ../admin-tool/gconfviewer.py:67
+msgid "float"
+msgstr "浮点数"
+
+#: ../admin-tool/gconfviewer.py:69
+msgid "boolean"
+msgstr "布尔值"
+
+#: ../admin-tool/gconfviewer.py:71
+msgid "schema"
+msgstr "大纲"
+
+#: ../admin-tool/gconfviewer.py:73
+msgid "list"
+msgstr "列表"
+
+#: ../admin-tool/gconfviewer.py:75
+msgid "pair"
+msgstr "对"
+
+#: ../admin-tool/gconfviewer.py:111 ../admin-tool/profilesdialog.py:179
+#: ../admin-tool/usersdialog.py:85
+msgid "Name"
+msgstr "名称"
+
+#: ../admin-tool/gconfviewer.py:116
+msgid "Type"
+msgstr "类型"
+
+#: ../admin-tool/gconfviewer.py:121
+msgid "Value"
+msgstr "值"
+
+#: ../admin-tool/monitorwindow.py:146
+msgid "Ignore"
+msgstr "忽略"
+
+#: ../admin-tool/monitorwindow.py:153
+msgid "Mandatory"
+msgstr "强制"
+
+#: ../admin-tool/profilesdialog.py:211
+#, python-format
+msgid "User account '%s' was not found"
+msgstr "用户帐户“%s”未找到"
+
+#: ../admin-tool/profilesdialog.py:212
+#, python-format
+msgid ""
+"Sabayon requires a special user account '%s' to be present on this computer. "
+"Try again after creating the account (using, for example, the 'adduser' "
+"command)"
+msgstr ""
+"Sabayon 需要此计算机上有特殊的用户帐户“%s”。请在创建该帐户后再试(例如使用“adduser”命令)"
+
+#.
+#. Translators: this string specifies how a profile
+#. name is concatenated with an integer
+#. to form a unique profile name e.g.
+#. "Artist Workstation (5)"
+#.
+#: ../admin-tool/profilesdialog.py:317
+#, python-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../admin-tool/sabayon:35
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr ""
+"您的帐户没有权限运行桌面用户配置文件工具"
+
+#: ../admin-tool/sabayon:36
+msgid ""
+"Administrator level permissions are needed to run this program because it "
+"can modify system files."
+msgstr ""
+"要运行此程序，需要有管理员级别的权限，因为此程序将会修改系统文件。"
+
+#: ../admin-tool/sabayon:47
+msgid "Desktop User Profiles tool is already running"
+msgstr "桌面用户配置文件工具已在运行中"
+
+#: ../admin-tool/sabayon:48
+msgid ""
+"You may not use Desktop User Profiles tool from within a profile editing "
+"session"
+msgstr ""
+"在编辑配置文件的会话中，您无法使用桌面用户配置文件工具。"
+
+#: ../admin-tool/sabayon-apply:33
+#, c-format
+msgid "No profile for user '%s' found\n"
+msgstr "用户“%s”未找到配置文件\n "
+
+#: ../admin-tool/sabayon-apply:38
+#, c-format
+msgid "Usage: %s [<profile-name>]\n"
+msgstr "用法：%s [<配置文件名>]\n"
+
+#: ../admin-tool/sabayon-monitor:29
+#, c-format
+msgid "Usage: %s <profile-name>\n"
+msgstr "用法：%s <配置文件名>\n"
+
+#: ../admin-tool/sabayon.desktop.in.h:1
+msgid "Desktop User Profiles"
+msgstr "桌面用户配置文件"
+
+#: ../admin-tool/sabayon.desktop.in.h:2
+msgid "Establish and Edit Profiles for Users"
+msgstr "为用户建立并编辑配置文件"
+
+#: ../admin-tool/sabayon.glade.h:1
+msgid "Add Profile"
+msgstr "添加配置文件"
+
+#: ../admin-tool/sabayon.glade.h:3
+msgid "Profile _name:"
+msgstr "配置文件名(_N)："
+
+#: ../admin-tool/sabayon.glade.h:4
+msgid "Use this profile for _all users"
+msgstr "为所有用户使用此配置文件(_A)"
+
+#: ../admin-tool/sabayon.glade.h:5
+msgid "_Base on:"
+msgstr "基于(_B)："
+
+#: ../admin-tool/sabayon.glade.h:8
+msgid "_Profiles:"
+msgstr "配置文件(_P)："
+
+#: ../admin-tool/sabayon.glade.h:9
+msgid "_Users"
+msgstr "用户(_U)"
+
+#: ../admin-tool/sabayon.glade.h:10
+msgid "_Users:"
+msgstr "用户(_U)："
+
+#: ../admin-tool/sabayon.glade.h:11
+msgid "dialog1"
+msgstr "dialog1"
+
+#: ../admin-tool/saveconfirm.py:36
+msgid "Close _Without Saving"
+msgstr "关闭而不保存(_W)"
+
+#: ../admin-tool/saveconfirm.py:43
+#, python-format
+msgid "Save changes to profile \"%s\" before closing?"
+msgstr "关闭前将更改保存到配置文件“%s”中吗？"
+
+#: ../admin-tool/saveconfirm.py:47
+#, python-format
+msgid ""
+"If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld seconds will be permanently "
+"lost."
+msgstr[0] ""
+"如果您不保存的话，上%ld秒内所做的更改都将永久丢失。"
+
+#: ../admin-tool/saveconfirm.py:53
+msgid ""
+"If you don't save, changes from the last minute will be permanently lost."
+msgstr ""
+"如果您不保存的话，上1分钟内所做的更改都将永久丢失。"
+
+#: ../admin-tool/saveconfirm.py:57
+#, python-format
+msgid ""
+"If you don't save, changes from the last minute and %ld second will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last minute and %ld seconds will be "
+"permanently lost."
+msgstr[0] ""
+"如果您不保存的话，上%ld分钟%ld秒内所做的更改都将永久丢失。"
+
+#: ../admin-tool/saveconfirm.py:64
+#, python-format
+msgid ""
+"If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld minutes will be permanently "
+"lost."
+msgstr[0] ""
+"如果您不保存的话，上%ld分钟内所做的更改都将永久丢失。"
+
+#: ../admin-tool/saveconfirm.py:73 ../admin-tool/saveconfirm.py:83
+#, python-format
+msgid "If you don't save, changes from the last hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] ""
+"如果您不保存的话，上%d小时内所做的更改都将永久丢失。"
+
+#: ../admin-tool/saveconfirm.py:76
+#, python-format
+msgid ""
+"If you don't save, changes from the last hour and %d minute will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last hour and %d minutes will be "
+"permanently lost."
+msgstr[0] ""
+"如果您不保存的话，上一小时%d分钟内所做的更改都将永久丢失。"
+
+#: ../admin-tool/usersdialog.py:92
+msgid "Use This Profile"
+msgstr "使用此配置文件"
+
+#: ../lib/dirmonitor.py:138
+#, python-format
+msgid "Failed to add monitor for %s"
+msgstr "为 %s 添加监视器失败"
+
+#: ../lib/dirmonitor.py:218
+#, python-format
+msgid "Expected event: %s %s"
+msgstr "意外事件：% %s"
+
+#: ../lib/protosession.py:88
+#, python-format
+msgid "User '%s' does not exist"
+msgstr "用户“%s”不存在"
+
+#: ../lib/protosession.py:222
+msgid "'xauth list' returned error"
+msgstr "“xauth list”返回错误"
+
+#: ../lib/protosession.py:241
+msgid "'xauth list' returned no records or records in unknown format"
+msgstr "“xauth list”没有返回记录，或者记录格式未知"
+
+#: ../lib/protosession.py:326
+msgid "Unable to find a free X display"
+msgstr "无法找到空闲的 X 显示"
+
+#: ../lib/protosession.py:390
+msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+msgstr "启动 Xnest 失败：等候 USR1 信号超时"
+
+#: ../lib/protosession.py:392
+msgid "Failed to start Xnest: died during startup"
+msgstr "启动 Xnest 失败：启动时死掉"
+
+#: ../lib/sources/filessource.py:57
+#, python-format
+msgid "File '%s' created"
+msgstr "创建了文件“%s”"
+
+#: ../lib/sources/filessource.py:59
+#, python-format
+msgid "File '%s' deleted"
+msgstr "删除了文件“%s”"
+
+#: ../lib/sources/filessource.py:61
+#, python-format
+msgid "File '%s' changed"
+msgstr "更改了文件“%s”"
+
+#: ../lib/sources/filessource.py:85
+msgid "Applications menu"
+msgstr "应用程序菜单"
+
+#: ../lib/sources/filessource.py:87
+msgid "Preferences menu"
+msgstr "首选项菜单"
+
+#: ../lib/sources/filessource.py:89
+msgid "Server Settings menu"
+msgstr "服务器设置菜单"
+
+#: ../lib/sources/filessource.py:91
+msgid "System Settings menu"
+msgstr "系统设置菜单"
+
+#: ../lib/sources/filessource.py:93
+msgid "Start Here menu"
+msgstr "从这里开始菜单"
+
+#: ../lib/sources/gconfsource.py:78
+#, python-format
+msgid "GConf key '%s' unset"
+msgstr "取消了 GConf 键“%s”"
+
+#: ../lib/sources/gconfsource.py:80
+#, python-format
+msgid "GConf key '%s' set to string '%s'"
+msgstr "GConf 键“%s”设置为字符串“%s”"
+
+#: ../lib/sources/gconfsource.py:82
+#, python-format
+msgid "GConf key '%s' set to integer '%s'"
+msgstr "GConf 键“%s”设置为整数“%s”"
+
+#: ../lib/sources/gconfsource.py:84
+#, python-format
+msgid "GConf key '%s' set to float '%s'"
+msgstr "GConf 键“%s”设置为浮点数“%s”"
+
+#: ../lib/sources/gconfsource.py:86
+#, python-format
+msgid "GConf key '%s' set to boolean '%s'"
+msgstr "GConf 键“%s”设置为布尔值“%s”"
+
+#: ../lib/sources/gconfsource.py:88
+#, python-format
+msgid "GConf key '%s' set to schema '%s'"
+msgstr "GConf 键“%s”设置为大纲“%s”"
+
+#: ../lib/sources/gconfsource.py:90
+#, python-format
+msgid "GConf key '%s' set to list '%s'"
+msgstr "GConf 键“%s”设置为列表“%s”"
+
+#: ../lib/sources/gconfsource.py:92
+#, python-format
+msgid "GConf key '%s' set to pair '%s'"
+msgstr "GConf 键“%s”设置为对“%s”"
+
+#: ../lib/sources/gconfsource.py:94
+#, python-format
+msgid "GConf key '%s' set to '%s'"
+msgstr "GConf 键“%s”设置为“%s”"
+
+#: ../lib/sources/gconfsource.py:117
+msgid "Default GConf settings"
+msgstr "默认 GConf 设置"
+
+#: ../lib/sources/gconfsource.py:119
+msgid "Mandatory GConf settings"
+msgstr "强制 GConf 设置"
+
+#: ../lib/sources/mozillasource.py:132
+#, python-format
+msgid "Mozilla key '%s' set to '%s'"
+msgstr "Mozilla 键“%s”设置为“%s”"
+
+#: ../lib/sources/mozillasource.py:134
+#, python-format
+msgid "Mozilla key '%s' unset"
+msgstr "取消了 Mozilla 键“%s”"
+
+#: ../lib/sources/mozillasource.py:136
+#, python-format
+msgid "Mozilla key '%s' changed to '%s'"
+msgstr "Mozilla 键“%s”更改为“%s”"
+
+#: ../lib/sources/mozillasource.py:165 ../lib/sources/mozillasource.py:175
+msgid "Web browser preferences"
+msgstr "Web 浏览器首选项"
+
+#: ../lib/sources/mozillasource.py:167 ../lib/sources/mozillasource.py:177
+msgid "Web browser bookmarks"
+msgstr "Web 浏览器书签"
+
+#: ../lib/sources/mozillasource.py:169
+msgid "Web browser profile list"
+msgstr "Web 浏览器配置文件列表"
+
+#: ../lib/sources/mozillasource.py:516
+#, python-format
+msgid "File Not Found (%s)"
+msgstr "文件未找到(%s)"
+
+#: ../lib/sources/mozillasource.py:855
+#, python-format
+msgid "duplicate name(%s) in section %s"
+msgstr ""
+
+#: ../lib/sources/mozillasource.py:864
+#, python-format
+msgid "redundant default in section %s"
+msgstr ""
+
+#: ../lib/sources/mozillasource.py:881
+msgid "no default profile"
+msgstr "无默认的配置文件"
+
+#: ../lib/sources/mozillasource.py:936
+#, python-format
+msgid "Mozilla bookmark created '%s' -> '%s'"
+msgstr "创建了 Mozilla 书签“%s”->“%s”"
+
+#: ../lib/sources/mozillasource.py:938
+#, python-format
+msgid "Mozilla bookmark folder created '%s'"
+msgstr "创建了 Mozilla 书签文件夹“%s”"
+
+#: ../lib/sources/mozillasource.py:941
+#, python-format
+msgid "Mozilla bookmark deleted '%s'"
+msgstr "删除了 Mozilla 书签“%s”"
+
+#: ../lib/sources/mozillasource.py:943
+#, python-format
+msgid "Mozilla bookmark folder deleted '%s'"
+msgstr "删除了 Mozilla 书签文件夹“%s”"
+
+#: ../lib/sources/mozillasource.py:946
+#, python-format
+msgid "Mozilla bookmark changed '%s' '%s'"
+msgstr "更改了 Mozilla 书签“%s”“%s”"
+
+#: ../lib/sources/mozillasource.py:948
+#, python-format
+msgid "Mozilla bookmark folder changed '%s'"
+msgstr "更改了 Mozilla 书签文件夹“%s”"
+
+#: ../lib/sources/paneldelegate.py:53
+#, python-format
+msgid "Panel '%s' added"
+msgstr "添加了面板“%s”"
+
+#: ../lib/sources/paneldelegate.py:59
+#, python-format
+msgid "Panel '%s' removed"
+msgstr "删除了面板“%s”"
+
+#: ../lib/sources/paneldelegate.py:65
+#, python-format
+msgid "Panel applet '%s' added"
+msgstr "添加了面板小程序“%s”"
+
+#: ../lib/sources/paneldelegate.py:71
+#, python-format
+msgid "Panel applet '%s' removed"
+msgstr "删除了面板小程序“%s”"
+
+#: ../lib/sources/paneldelegate.py:77
+#, python-format
+msgid "Panel object '%s' added"
+msgstr "添加了面板对象“%s”"
+
+#: ../lib/sources/paneldelegate.py:83
+#, python-format
+msgid "Panel object '%s' removed"
+msgstr "删除了面板对象“%s”"
+
+#: ../lib/sources/paneldelegate.py:118
+msgid "Panel"
+msgstr "面板"
+
+#: ../lib/storage.py:161
+#, python-format
+msgid "Failed to read file '%s': %s"
+msgstr "读取文件“%s”失败：%s"
+
+#: ../lib/storage.py:171
+#, python-format
+msgid "Failed to read metadata from '%s': %s"
+msgstr "从“%s”读取元数据失败：%s"
+
+#: ../lib/storage.py:177
+#, python-format
+msgid "Invalid metadata section in '%s': %s"
+msgstr "“%s”中有无效的元数据：%s"
+
+#: ../lib/storage.py:533
+#, python-format
+msgid "Cannot add non-existent file '%s'"
+msgstr "无法添加不存在的文件“%s”"
+
+#: ../lib/storage.py:621
+msgid "No current revision"
+msgstr "无当前版本"
+
+#: ../lib/storage.py:625 ../lib/storage.py:636
+#, python-format
+msgid "'%s' does not exist in profile revision '%s'"
+msgstr ""
+
+#: ../lib/storage.py:725
+msgid "Not a valid profile revision"
+msgstr "不是有效的配置文件版本"
+
+#: ../lib/storage.py:767
+#, python-format
+msgid "Profile is read-only %s"
+msgstr "配置文件只读 %s"
+
+#: ../lib/unittests.py:36 ../lib/unittests.py:37
+msgid "Ignore WARNINGs"
+msgstr "忽略警告"
+
+#: ../lib/unittests.py:59
+#, python-format
+msgid "Running %s tests"
+msgstr "正运行 %s 测试"
+
+#: ../lib/unittests.py:61
+#, python-format
+msgid "Running %s tests (%s)"
+msgstr "正运行 %s 测试(%s)"
+
+#: ../lib/unittests.py:68
+msgid "Success!"
+msgstr "成功！"
+
+#: ../lib/userdb.py:207
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "无法打开 %s 写入"
+
+#: ../lib/userdb.py:220
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "将用户数据库保存到 %s 失败"
+
+#: ../lib/userdb.py:243 ../lib/userdb.py:278
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "文件 %s 不是配置文件配置"
+
+#: ../lib/userdb.py:250
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "将默认配置文件 %s 添加到配置失败"
+
+#: ../lib/userdb.py:286
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "将用户 %s 添加到配置文件配置失败"
+
+#: ../lib/userdb.py:317
+msgid "Failed to get the user list"
+msgstr "获得用户列表失败"
+
+#: ../lib/util.py:119
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"找不到主目录：未在 /etc/passwd 中设定，也未在 $HOME 环境变量中设定"
+
+#: ../lib/util.py:132
+msgid ""
+"Cannot find username: not set in /etc/passwd and no value for $USER in "
+"environment"
+msgstr ""
+"找不到用户名：未在 /etc/passwd 中设定，也未在 $USER 环境变量中设定"
+
