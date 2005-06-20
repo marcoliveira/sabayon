@@ -144,6 +144,45 @@ def init_gettext ():
     locale.setlocale (locale.LC_ALL, "")
     gettext.install (PACKAGE, os.path.join (DATADIR, "locale"))
 
+def split_path(path, head=None, tail=None):
+    '''Given a path split it into a head and tail. If head is passed then
+    it is assumed to comprise the first part of the full path. If tail is
+    passed it is assumed to comprise the second part of the full path.
+    The path, head, and tail are made canonical via os.path.normpath prior
+    to the operations. ValueErrors are raised if head is not present at the
+    start of the path or if the path does not end with tail. The split must
+    occur on a directory separator boundary.
+
+    The return value is the tuple (head, tail) in canonical form.'''
+    path = os.path.normpath(path)
+
+    if tail is not None:
+        tail = os.path.normpath(tail)
+        if tail[0] == '/':
+            tail = tail[1:]
+        if not path.endswith(tail):
+            raise ValueError
+        path_len = len (path)
+        tail_len = len (tail)
+        dir_split = path_len - tail_len - 1
+        if path[dir_split] != '/':
+            raise ValueError
+        return (path[:dir_split], path[dir_split+1:])
+
+    if head is not None:
+        head = os.path.normpath(head)
+        if head[-1] == '/':
+            head = head[:-1]
+        if not path.startswith(head):
+            raise ValueError
+        head_len = len (head)
+        dir_split = head_len
+        if path[dir_split] != '/':
+            raise ValueError
+        return (path[:dir_split], path[dir_split+1:])
+        
+    raise ValueError
+
 #
 # os.spawn() doesn't handle EINTR from waitpid() on Linux:
 #  http://sourceforge.net/tracker/?group_id=5470&atid=105470&func=detail&aid=686667

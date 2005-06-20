@@ -1,3 +1,13 @@
+2005-06-20  John Dennis  <jdennis@redhat.com>
+
+	* lib/util.py: add new function split_path()
+	* lib/storage.py: make suggested fixes to get_extract_src_path(),
+	now it just returns a path instead of a tuple, extract now checks
+	to see if the extract_src_path is a directory and calls copy_tree
+	if it is. The extract_src_path is split via util.split_path() into
+	a head (the storage directory) and a tail (the requested subdir)
+	before invoking copy_tree.
+
 2005-06-20  Mark McLoughlin  <markmc@redhat.com>
 
 	Big pile o' hacks to get input focus working in a

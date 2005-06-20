@@ -601,7 +601,6 @@ class ProfileStorage:
         
     def get_extract_src_path (self, path, revision = None):
         """Return the src path of a file or directory for extraction from the profile.
-        The actual return values is the tuple (src_path, item_type, item_revision)
 
         @path: the relative path of the file or directory to extract.
         This is the same path used with ProfileStorage::add().
@@ -651,8 +650,9 @@ class ProfileStorage:
             else:
                 extract_src_path = os.path.join (self.revisions_path, path, item_revision)
 
+        extract_src_path = os.path.normpath(extract_src_path)
         dprint ("Extract src path for '%s', revision %s is '%s'" % (path, revision, extract_src_path))
-        return extract_src_path, item_type, item_revision
+        return extract_src_path
 
     def extract (self, path, dst_dir, overwrite = False, revision = None):
         """Extract a file or directory from the profile.
@@ -670,10 +670,12 @@ class ProfileStorage:
         """
         dprint ("Extracting '%s' to '%s', revision %s" % (path, dst_dir, revision))
         
-        (extract_src_path, item_type, item_revision) = self.get_extract_src_path(path, revision)
+        path = os.path.normpath(path)
+        extract_src_path = self.get_extract_src_path(path, revision)
 
-        if item_type == "directory":
-            copy_tree (dst_dir, extract_src_path, '', None, overwrite)
+        if os.path.isdir(extract_src_path):
+            (root, subdir) = util.split_path(extract_src_path, tail=path)
+            copy_tree (dst_dir, root, subdir, None, overwrite)
         else:
             dst_path = os.path.join (dst_dir, path)
             if overwrite or not os.path.exists (dst_path):
