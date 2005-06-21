@@ -40,7 +40,7 @@ def copy_tree (dst_base, src_base, dst_name, src_name = None, overwrite = False)
         src_name = dst_name
     
     try:
-        dprint ("Making dir %s" % os.path.join (dst_base, dst_name))
+        dprint ("Making dir %s", os.path.join (dst_base, dst_name))
         os.mkdir (os.path.join (dst_base, dst_name))
     except OSError, err:
         if err.errno != errno.EEXIST:
@@ -148,12 +148,12 @@ class ProfileStorage:
             return
 
         if not os.path.exists (self.path):
-            dprint ("Profile file '%s' doesn't exist" % self.path)
+            dprint ("Profile file '%s' doesn't exist", self.path)
             self.metadata = self.__create_empty_metadata_doc ()
             self.needs_saving = True
             return
 
-        dprint ("Reading metadata from '%s'" % self.path)
+        dprint ("Reading metadata from '%s'", self.path)
             
         try:
             self.zip = zipfile.ZipFile (self.path, "r")
@@ -426,7 +426,7 @@ class ProfileStorage:
         self.revisions_path = os.path.join (self.temp_path, "%revisions%")
         os.mkdir (self.revisions_path)
 
-        dprint ("Unpacking '%s' in '%s'" % (self.path, self.temp_path))
+        dprint ("Unpacking '%s' in '%s'", self.path, self.temp_path)
 
         if not self.zip:
             return
@@ -500,8 +500,8 @@ class ProfileStorage:
             try:
                 shutil.copyfile (self.path, new_path)
             except:
-                dprint ("Failed to copy profile from '%s' to '%s': %s" % \
-                        (self.path, new_path, sys.exc_info()[1]))
+                dprint ("Failed to copy profile from '%s' to '%s': %s",
+                        self.path, new_path, sys.exc_info()[1])
         
         retval = ProfileStorage (name)
         retval.clear_revisions ()
@@ -522,7 +522,7 @@ class ProfileStorage:
         @attributes: a varargs list of arbitrary key/value pairs
         (specific to @source) which should be saved.
         """
-        dprint ("Adding '%s' from %s:%s" % (path, source, src_dir))
+        dprint ("Adding '%s' from %s:%s", path, source, src_dir)
         
         self.__unpack ()
 
@@ -668,7 +668,7 @@ class ProfileStorage:
         ProfileStorage::get_revisions() and may be a profile or file
         revision.
         """
-        dprint ("Extracting '%s' to '%s', revision %s" % (path, dst_dir, revision))
+        dprint ("Extracting '%s' to '%s', revision %s", path, dst_dir, revision)
         
         path = os.path.normpath(path)
         extract_src_path = self.get_extract_src_path(path, revision)
@@ -740,17 +740,17 @@ class ProfileStorage:
             elif item_type == "directory":
                 revision_node = self.__get_directory_revision_node (item_path, item_revision)
             else:
-                dprint ("Unknown item type '%s' for path '%s' in revision '%s'" %
-                        (item_type, item_path, item_revision))
+                dprint ("Unknown item type '%s' for path '%s' in revision '%s'",
+                        item_type, item_path, item_revision)
                 continue
 
             if not revision_node:
-                dprint ("No revision '%s' for %s '%s" % (item_revision, item_type, item_path))
+                dprint ("No revision '%s' for %s '%s", item_revision, item_type, item_path)
                 continue
 
             item_source = self.__get_revision_source (revision_node)
             if not item_source:
-                dprint ("No source associated with item '%s'" % item_path)
+                dprint ("No source associated with item '%s'", item_path)
                 continue
 
             if source and source != item_source:
@@ -770,7 +770,7 @@ class ProfileStorage:
                                            (self.name))
         self.__read_metadata ()
         if not self.needs_saving:
-            dprint ("No changes to profile '%s' need saving" % self.name)
+            dprint ("No changes to profile '%s' need saving", self.name)
             return
 
         def failsafe_rename (src, dst):
@@ -785,7 +785,7 @@ class ProfileStorage:
         else:
             backup = None
         
-        dprint ("Writing contents of profile to '%s'" % self.path)
+        dprint ("Writing contents of profile to '%s'", self.path)
         
         try:
             save_zip = zipfile.ZipFile (self.path, "w")

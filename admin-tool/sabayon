@@ -21,34 +21,43 @@
 if __name__ == '__main__':
     import os
     import sys
+    import pwd
     import gtk
 
     from sabayon import util
+    from sabayon import config
 
     util.init_gettext ()
 
-    if os.geteuid () != 0:
+    def show_error_dialog (primary_text, secondary_text):
         errordialog = gtk.MessageDialog (None,
                                          gtk.DIALOG_DESTROY_WITH_PARENT,
                                          gtk.MESSAGE_ERROR,
                                          gtk.BUTTONS_CLOSE,
-                                         _("Your account does not have permissions to run the Desktop User Profiles tool"))
-        errordialog.format_secondary_text (_("Administrator level permissions are needed to run "
-                                             "this program because it can modify system files."))
+                                         primary_text)
+        errordialog.format_secondary_text (secondary_text)
         errordialog.run ()
         errordialog.destroy ()
+
+    if os.geteuid () != 0:
+        show_error_dialog (_("Your account does not have permissions to run the Desktop User Profiles tool"),
+                           _("Administrator level permissions are needed to run this program because it can "
+                             "modify system files."))
         sys.exit (1)
 
     if os.environ.has_key ("SABAYON_SESSION_RUNNING"):
-        errordialog = gtk.MessageDialog (None,
-                                         gtk.DIALOG_DESTROY_WITH_PARENT,
-                                         gtk.MESSAGE_ERROR,
-                                         gtk.BUTTONS_CLOSE,
-                                         _("Desktop User Profiles tool is already running"))
-        errordialog.format_secondary_text (_("You may not use Desktop User Profiles tool from "
-                                             "within a profile editing session"))
-        errordialog.run ()
-        errordialog.destroy ()
+        show_error_dialog (_("Desktop User Profiles tool is already running"),
+                           _("You may not use Desktop User Profiles tool from "
+                             "within a profile editing session"))
+        sys.exit (1)
+
+    try:
+        pwd.getpwnam (config.PROTOTYPE_USER)
+    except KeyError, e:
+        show_error_dialog (_("User account '%s' was not found") % config.PROTOTYPE_USER,
+                           _("Sabayon requires a special user account '%s' to be present "
+                             "on this computer. Try again after creating the account (using, "
+                             "for example, the 'adduser' command)") % config.PROTOTYPE_USER)
         sys.exit (1)
                         
     from sabayon import profilesdialog

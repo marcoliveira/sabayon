@@ -20,7 +20,7 @@
 
 import os
 import os.path
-import errno
+import sys
 import shutil
 import tempfile
 import pwd
@@ -30,9 +30,9 @@ import gtk.glade
 import storage
 import editorwindow
 import usersdialog
-import sessionwindow
 import util
 import userdb
+import protosession
 from config import *
 
 def dprint (fmt, *args):
@@ -40,6 +40,142 @@ def dprint (fmt, *args):
 
 def _get_profile_path_for_name (profile_name):
     return os.path.join (PROFILESDIR, profile_name + ".zip")
+
+class Session (gobject.GObject):
+    __gsignals__ = {
+        "finished" : (gobject.SIGNAL_RUN_LAST, gobject.TYPE_NONE, ())
+        }
+        
+    def __init__ (self, username, profile_name):
+        gobject.GObject.__init__ (self)
+        
+        self.username     = username
+        self.profile_name = profile_name
+        self.profile_path = _get_profile_path_for_name (profile_name)
+
+        self.pw = pwd.getpwnam (self.username)
+
+        self.user_profile_path = None
+        self.temp_homedir      = None
+
+        self.session_pid         = 0
+        self.session_child_watch = 0
+
+    def __del__ (self):
+        if self.temp_homedir:
+            protosession.reset_shell_and_homedir (self.username, self.temp_homedir)
+            self.temp_homedir = None
+        if self.user_profile_path:
+            os.remove (self.user_profile_path)
+            self.user_profile_path = None
+        if self.temp_xauth_path:
+            os.remove (self.temp_xauth_path)
+            self.temp_xauth_path = None
+
+    def __copy_xauthority (self):
+        if not os.environ.has_key ("XAUTHORITY"):
+            return None
+
+        xauthority = os.environ["XAUTHORITY"]
+
+        (fd, temp_path) = tempfile.mkstemp (prefix = "xauth-%s-" % self.username)
+        os.close (fd)
+
+        shutil.copy2 (xauthority, temp_path)
+        
+        os.chown (temp_path, self.pw.pw_uid, self.pw.pw_gid)
+
+        dprint ("Copied $XAUTHORITY (%s) temporarily to %s", xauthority, temp_path)
+
+        return temp_path
+
+    def __copy_to_user (self, profile_path):
+        (fd, user_path) = tempfile.mkstemp (prefix = "profile-%s-" % self.username, suffix = ".zip")
+        os.close (fd)
+
+        shutil.copy2 (profile_path, user_path)
+        
+        os.chown (user_path, self.pw.pw_uid, self.pw.pw_gid)
+
+        dprint ("Copied %s temporarily to %s", profile_path, user_path)
+
+        return user_path
+
+    def __copy_from_user (self, user_path, profile_path):
+        os.chown (user_path, os.geteuid (), os.getegid ())
+        shutil.move (user_path, profile_path)
+        dprint ("Moved %s back from %s", user_path, profile_path)
+
+    def __session_child_watch_handler (self, pid, status):
+        dprint ("sabayon-session died")
+
+        protosession.reset_shell_and_homedir (self.username, self.temp_homedir)
+        self.temp_homedir = None
+
+        if self.temp_xauth_path:
+            os.remove (self.temp_xauth_path)
+            self.temp_xauth_path = None
+        
+        self.__copy_from_user (self.user_profile_path, self.profile_path)
+        self.user_profile_path = None
+
+        self.session_pid         = 0
+        self.session_child_watch = 0
+
+        self.emit ("finished")
+        
+        return False
+
+    def start (self):
+        self.user_profile_path = self.__copy_to_user (self.profile_path)
+        self.temp_homedir = protosession.setup_shell_and_homedir (self.username)
+        protosession.clobber_user_processes (self.username)
+        
+        display_number = protosession.find_free_display ()
+
+        self.temp_xauth_path = self.__copy_xauthority ()
+
+        self.session_pid = os.fork ()
+        if self.session_pid == 0: # Child process
+            os.setgid (self.pw.pw_gid)
+            os.setuid (self.pw.pw_uid)
+
+            os.chdir (self.temp_homedir)
+
+            os.setsid ()
+            os.umask (022)
+
+            new_environ = {}
+            for key in PASSTHROUGH_ENVIRONMENT:
+                if os.environ.has_key (key):
+                    new_environ[key] = os.environ[key]
+
+            new_environ["PATH"]       = DEFAULT_PATH
+            new_environ["SHELL"]      = DEFAULT_SHELL
+            new_environ["DISPLAY"]    = os.environ["DISPLAY"]
+            new_environ["HOME"]       = self.temp_homedir
+            new_environ["LOGNAME"]    = self.pw.pw_name
+            new_environ["USER"]       = self.pw.pw_name
+            new_environ["USERNAME"]   = self.pw.pw_name
+
+            if self.temp_xauth_path:
+                new_environ["XAUTHORITY"] = self.temp_xauth_path
+
+            dprint ("Child process env: %s" % new_environ)
+
+            argv = SESSION_TOOL_ARGV + [ self.profile_name, self.user_profile_path, str (display_number) ]
+
+            dprint ("Executing %s" % argv)
+            os.execve (SESSION_TOOL_ARGV[0], argv, new_environ)
+
+            # Shouldn't ever happen
+            sys.stderr.write ("Failed to launch sabayon-session")
+            os._exit (1)
+
+        self.session_child_watch = gobject.child_watch_add (self.session_pid,
+                                                            self.__session_child_watch_handler)
+
+gobject.type_register (Session)
 
 class ProfilesModel (gtk.ListStore):
     (
@@ -103,9 +239,9 @@ class AddProfileDialog:
         if response != gtk.RESPONSE_ACCEPT:
             return (None, None)
 
-        iter = self.base_combo.get_active_iter ()
-        if iter:
-            base = self.profiles_model.get_value (iter, ProfilesModel.COLUMN_NAME)
+        row = self.base_combo.get_active_iter ()
+        if row:
+            base = self.profiles_model.get_value (row, ProfilesModel.COLUMN_NAME)
         else:
             base = None
         
@@ -195,55 +331,17 @@ class ProfilesDialog:
             return None
         return model[row][ProfilesModel.COLUMN_NAME]
 
-    def __copy_to_user (self, profile_path, username):
-        (fd, user_path) = tempfile.mkstemp (prefix = "profile-%s-" % username, suffix = ".zip")
-        os.close (fd)
-
-        shutil.copy2 (profile_path, user_path)
-
-        try:
-            pw = pwd.getpwnam (username)
-        except KeyError, e:
-            errordialog = gtk.MessageDialog (None,
-                                             gtk.DIALOG_DESTROY_WITH_PARENT,
-                                             gtk.MESSAGE_ERROR,
-                                             gtk.BUTTONS_CLOSE,
-                                             _("User account '%s' was not found") % username)
-            errordialog.format_secondary_text (_("Sabayon requires a special user account '%s' to be present "
-                                                 "on this computer. Try again after creating the account (using, "
-                                                 "for example, the 'adduser' command)") % username)
-                                               
-            errordialog.run ()
-            errordialog.destroy ()
-            raise e
-        
-        os.chown (user_path, pw.pw_uid, pw.pw_gid)
-
-        dprint ("Copied %s temporarily to %s" % (profile_path, user_path))
-
-        return user_path
-
-    def __copy_from_user (self, user_path, profile_path):
-        os.chown (user_path, os.geteuid (), os.getegid ())
-        shutil.move (user_path, profile_path)
-        dprint ("Moved %s back from %s" % (user_path, profile_path))
+    def __session_finished (self, session):
+        self.dialog.set_sensitive (True)
 
     def __edit_button_clicked (self, button):
         profile_name = self.__get_selected_profile ()
         if profile_name:
-            profile_path = _get_profile_path_for_name (profile_name)
-
-            user_path = self.__copy_to_user (profile_path, PROTOTYPE_USER)
-
             self.dialog.set_sensitive (False)
 
-            sessionwindow.SessionWindow (PROTOTYPE_USER, user_path)
-            
-            gtk.main ()
-            
-            self.dialog.set_sensitive (True)
-
-            self.__copy_from_user (user_path, profile_path)
+            session = Session (PROTOTYPE_USER, profile_name)
+            session.connect ("finished", self.__session_finished)
+            session.start ()
 
     def __details_button_clicked (self, button):
         profile_name = self.__get_selected_profile ()
@@ -262,13 +360,13 @@ class ProfilesDialog:
                 select = model[model.iter_next (selected)][ProfilesModel.COLUMN_NAME]
             else:
                 select = None
-                iter = model.get_iter_first ()
-                while iter and model.iter_next (iter):
-                    next = model.iter_next (iter)
+                row = model.get_iter_first ()
+                while row and model.iter_next (row):
+                    next = model.iter_next (row)
                     if model.get_string_from_iter (next) == model.get_string_from_iter (selected):
-                        select = model[iter][ProfilesModel.COLUMN_NAME]
+                        select = model[row][ProfilesModel.COLUMN_NAME]
                         break
-                    iter = next
+                    row = next
 
             profile_name = model[selected][ProfilesModel.COLUMN_NAME]
             dprint ("Deleting '%s'", profile_name)
@@ -283,17 +381,17 @@ class ProfilesDialog:
             
             self.profiles_model.reload ()
 
-            iter = None
+            row = None
             if select:
-                iter = self.profiles_model.get_iter_first ()
-                while iter:
-                    if select == model[iter][ProfilesModel.COLUMN_NAME]:
+                row = self.profiles_model.get_iter_first ()
+                while row:
+                    if select == model[row][ProfilesModel.COLUMN_NAME]:
                         break
-                    iter = model.iter_next (iter)
-            if not iter:
-                iter = self.profiles_model.get_iter_first ()
-            if iter:
-                self.profiles_list.get_selection ().select_iter (iter)
+                    row = model.iter_next (row)
+            if not row:
+                row = self.profiles_model.get_iter_first ()
+            if row:
+                self.profiles_list.get_selection ().select_iter (row)
 
     def __remove_button_clicked (self, button):
         self.__delete_currently_selected ()
@@ -330,12 +428,12 @@ class ProfilesDialog:
             new_storage.save ()
 
         self.profiles_model.reload ()
-        iter = self.profiles_model.get_iter_first ()
-        while iter:
-            if self.profiles_model[iter][ProfilesModel.COLUMN_NAME] == profile_name:
-                self.profiles_list.get_selection ().select_iter (iter)
+        row = self.profiles_model.get_iter_first ()
+        while row:
+            if self.profiles_model[row][ProfilesModel.COLUMN_NAME] == profile_name:
+                self.profiles_list.get_selection ().select_iter (row)
                 return
-            iter = self.profiles_model.iter_next (iter)
+            row = self.profiles_model.iter_next (row)
 
     def __profile_selection_changed (self, selection):
         profile_name = self.__get_selected_profile ()

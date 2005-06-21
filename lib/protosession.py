@@ -20,6 +20,7 @@
 
 import os
 import os.path
+import sys
 import socket
 import errno
 import signal
@@ -33,7 +34,6 @@ import shutil
 import gobject
 import util
 import usermod
-import userprofile
 from config import *
 
 def dprint (fmt, *args):
@@ -48,90 +48,49 @@ class SessionStartError (ProtoSessionError):
 class XauthParseError (ProtoSessionError):
     pass
 
-def safe_kill (pid, sig):
-    try:
-        os.kill (pid, sig)
-    except os.error, (err, errstr):
-        if err != errno.ESRCH:
-            raise
-
-class ProtoSession (gobject.GObject):
-    __gsignals__ = {
-        "finished" : (gobject.SIGNAL_RUN_LAST, gobject.TYPE_NONE, ())
-        }
+#
+# These functions are run as root in order to prepare to launch the session
+#
+def setup_shell_and_homedir (username):
+    assert os.geteuid () == 0
     
-    def __init__ (self, username, profile_file):
-        gobject.GObject.__init__ (self)
-        assert os.geteuid () == 0
+    pw = pwd.getpwnam (username)
         
-        self.username = username
-        self.profile_file = profile_file
+    dprint ("Setting shell for '%s' to '%s'", username, DEFAULT_SHELL)
+    usermod.set_shell (username, DEFAULT_SHELL)
 
-        self.usr1_pipe_r = 0
-        self.usr1_pipe_w = 0
-        
-        self.xnest_pid = 0
-        self.xnest_child_watch = 0
-        self.xnest_xauth_file = None
-        
-        self.session_pid = 0
-        self.session_child_watch = 0
-        self.session_xauth_file = None
-        
-        self.admin_tool_timeout = 0
-        self.admin_tool_pid = 0
-        self.admin_tool_child_watch = 0
+    temp_homedir = usermod.create_temporary_homedir (pw.pw_uid, pw.pw_gid)
+    dprint ("Setting temporary home directory for '%s' to '%s'", username, temp_homedir)
+    usermod.set_homedir (username, temp_homedir)
 
-        try:
-            pw = pwd.getpwnam (self.username)
-        except KeyError:
-            raise SessionStartError, _("User '%s' does not exist") % self.username
-
-        self.user_pw = pw
+    return temp_homedir
         
-    def __kill_xnest (self):
-        if self.xnest_child_watch:
-            gobject.source_remove (self.xnest_child_watch)
-            self.xnest_child_watch = 0
-        
-        if self.xnest_pid:
-            safe_kill (self.xnest_pid, signal.SIGTERM)
-            self.xnest_pid = 0
+def reset_shell_and_homedir (username, temp_homedir):
+    assert os.geteuid () == 0
+    
+    pw = pwd.getpwnam (username)
+    
+    dprint ("Unsetting homedir for '%s'", username)
+    usermod.set_homedir (username, "")
 
-    def __kill_session (self):
-        if self.session_child_watch:
-            gobject.source_remove (self.session_child_watch)
-            self.session_child_watch = 0
+    dprint ("Deleting temporary homedir '%s'", temp_homedir)
+    shutil.rmtree (temp_homedir)
         
-        if self.session_pid:
-            safe_kill (self.session_pid, signal.SIGTERM)
-            self.session_pid = 0
+    dprint ("Resetting shell for '%s' to '%s'", username, NOLOGIN_SHELL)
+    usermod.set_shell (username, NOLOGIN_SHELL)
 
-    def __kill_admin_tool (self):
-        if self.admin_tool_timeout:
-            gobject.source_remove (self.admin_tool_timeout)
-            self.admin_tool_timeout = 0
-        
-        if self.admin_tool_child_watch:
-            gobject.source_remove (self.admin_tool_child_watch)
-            self.admin_tool_child_watch = 0
-        
-        if self.admin_tool_pid:
-            safe_kill (self.admin_tool_pid, signal.SIGTERM)
-            self.admin_tool_pid = 0
+def clobber_user_processes (username):
+    assert os.geteuid () == 0
+    
+    pw = pwd.getpwnam (username)
+    
+    # FIXME: my, what a big hammer you have!
+    argv = CLOBBER_USER_PROCESSES_ARGV + [ pw.pw_name ]
+    dprint ("Clobbering existing processes running as user '%s': %s", pw.pw_name, argv)
+    util.uninterruptible_spawnv (os.P_WAIT, argv[0], argv)
 
-    def __del__ (self):
-        if self.xnest_auth_file:
-            os.remove (self.xnest_auth_file)
-        if self.session_xauth_file:
-            os.remove (self.session_xauth_file)
-        if self.usr1_pipe_r:
-            close (self.usr1_pipe_r)
-        if self.usr1_pipe_w:
-            close (self.usr1_pipe_w)
-        self.force_quit ()
-
-    def __is_display_free (self, display_number):
+def find_free_display ():
+    def is_display_free (display_number):
         # First make sure we get CONNREFUSED connecting
         # to port 6000 + display_number
         refused = False
@@ -167,13 +126,98 @@ class ProtoSession (gobject.GObject):
 
         return True
 
-    def __find_free_display (self):
-        display_number = 1
-        while display_number < 100:
-            if self.__is_display_free (display_number):
-                return display_number
-            display_number += 1
-        return -1
+    display_number = 1
+    while display_number < 100:
+        if is_display_free (display_number):
+            break
+        display_number += 1
+        
+    if display_number == 100:
+        raise ProtoSessionError, _("Unable to find a free X display")
+
+    return display_number
+        
+#
+# Everything beyond here gets run from sabayon-session
+#
+        
+def safe_kill (pid, sig):
+    try:
+        os.kill (pid, sig)
+    except os.error, (err, errstr):
+        if err != errno.ESRCH:
+            raise
+
+class ProtoSession (gobject.GObject):
+    __gsignals__ = {
+        "finished" : (gobject.SIGNAL_RUN_LAST, gobject.TYPE_NONE, ())
+        }
+    
+    def __init__ (self, profile_file, display_number):
+        gobject.GObject.__init__ (self)
+        
+        self.profile_file   = profile_file
+        self.display_number = display_number
+        self.display_name   = ":%s" % display_number
+
+        self.usr1_pipe_r = 0
+        self.usr1_pipe_w = 0
+        
+        self.xnest_pid = 0
+        self.xnest_child_watch = 0
+        self.xnest_xauth_file = None
+        
+        self.session_pid = 0
+        self.session_child_watch = 0
+        self.session_xauth_file = None
+        
+        self.admin_tool_timeout = 0
+        self.admin_tool_pid = 0
+        self.admin_tool_child_watch = 0
+
+        self.pw = pwd.getpwuid (os.getuid ())
+        
+    def __kill_xnest (self):
+        if self.xnest_child_watch:
+            gobject.source_remove (self.xnest_child_watch)
+            self.xnest_child_watch = 0
+        
+        if self.xnest_pid:
+            safe_kill (self.xnest_pid, signal.SIGTERM)
+            self.xnest_pid = 0
+
+    def __kill_session (self):
+        if self.session_child_watch:
+            gobject.source_remove (self.session_child_watch)
+            self.session_child_watch = 0
+        
+        if self.session_pid:
+            safe_kill (self.session_pid, signal.SIGTERM)
+            self.session_pid = 0
+
+    def __kill_admin_tool (self):
+        if self.admin_tool_timeout:
+            gobject.source_remove (self.admin_tool_timeout)
+            self.admin_tool_timeout = 0
+        
+        if self.admin_tool_child_watch:
+            gobject.source_remove (self.admin_tool_child_watch)
+            self.admin_tool_child_watch = 0
+        
+        if self.admin_tool_pid:
+            safe_kill (self.admin_tool_pid, signal.SIGTERM)
+            self.admin_tool_pid = 0
+
+    def __del__ (self):
+        if self.xnest_xauth_file:
+            os.remove (self.xnest_xauth_file)
+        if self.session_xauth_file:
+            os.remove (self.session_xauth_file)
+        if self.usr1_pipe_r:
+            os.close (self.usr1_pipe_r)
+        if self.usr1_pipe_w:
+            os.close (self.usr1_pipe_w)
+        self.force_quit ()
 
     #
     # This USR1 malarky is that if you set the signal handler for
@@ -266,7 +310,7 @@ class ProtoSession (gobject.GObject):
             family = 0x0100 # FamilyLocal
             display_addr = xauth_display[:xauth_display.find ("/unix")]
 
-        display_num_str = str (self.display_number)
+        display_num_str = self.display_number
         display_num_len = len (display_num_str)
 
         display_addr_len = len (display_addr)
@@ -308,7 +352,7 @@ class ProtoSession (gobject.GObject):
         os.close (pipe_w)
         while True:
             try:
-                select.select ([pipe_r], [], [])[0]
+                select.select ([pipe_r], [], [])
                 break
             except select.error, (err, errstr):
                 if err != errno.EINTR:
@@ -321,12 +365,6 @@ class ProtoSession (gobject.GObject):
     # SIGUSR1 handler and everything will break
     #
     def __start_xnest (self, parent_window):
-        self.display_number = self.__find_free_display ()
-        if self.display_number == -1:
-            raise SessionStartError, _("Unable to find a free X display")
-
-        self.display_name = ":%d" % self.display_number
-
         dprint ("Starting Xnest %s" % self.display_name)
 
         self.xnest_xauth_file = self.__write_temp_xauth_file (True)
@@ -351,7 +389,7 @@ class ProtoSession (gobject.GObject):
             os.execv (argv[0], argv)
 
             # Shouldn't ever reach here
-            print "Failed to launch Xnest"
+            sys.stderr.write ("Failed to launch Xnest")
             os._exit (1)
 
         self.main_loop = gobject.MainLoop ()
@@ -361,7 +399,7 @@ class ProtoSession (gobject.GObject):
         io_watch = gobject.io_add_watch (self.usr1_pipe_r,
                                          gobject.IO_IN | gobject.IO_PRI,
                                          self.__usr1_pipe_watch_handler)
-        timeout = gobject.timeout_add (ADMIN_TOOL_TIMEOUT * 1000,
+        timeout = gobject.timeout_add (XNEST_USR1_TIMEOUT * 1000,
                                        self.__usr1_timeout_handler)
 
         dprint ("Waiting on child process (%d)" % self.xnest_pid)
@@ -403,48 +441,21 @@ class ProtoSession (gobject.GObject):
             
         return False
 
-    def __prepare_to_run_as_user (self):
-        os.setgid (self.user_pw.pw_gid)
-        os.setuid (self.user_pw.pw_uid)
-
-        os.chdir (self.temp_homedir)
-
-        # FIXME: setting the selinux context?
-
-        os.setsid ()
-        os.umask (022)
-        
-        new_environ = {}
-        for key in PASSTHROUGH_ENVIRONMENT:
-            if os.environ.has_key (key):
-                new_environ[key] = os.environ[key]
-
-        new_environ["PATH"]       = DEFAULT_PATH 
-        new_environ["SHELL"]      = DEFAULT_SHELL
-        new_environ["DISPLAY"]    = self.display_name
-        new_environ["XAUTHORITY"] = self.session_xauth_file
-        new_environ["HOME"]       = self.temp_homedir
-        new_environ["LOGNAME"]    = self.user_pw.pw_name
-        new_environ["USER"]       = self.user_pw.pw_name
-        new_environ["USERNAME"]   = self.user_pw.pw_name
-
-        dprint ("Child process env: %s" % new_environ)
-
-        self.session_xauth_file = None
-
-        return new_environ
-
     def __start_session (self):
-        dprint ("Starting session as %s" % self.user_pw)
+        dprint ("Starting session")
 
         self.session_xauth_file = self.__write_temp_xauth_file (False)
-        os.chown (self.session_xauth_file, self.user_pw.pw_uid, self.user_pw.pw_gid)
         
         self.__open_x_connection (self.display_name, self.session_xauth_file)
 
         self.session_pid = os.fork ()
         if self.session_pid == 0: # Child process
-            new_environ = self.__prepare_to_run_as_user ()
+            new_environ = os.environ
+
+            new_environ["DISPLAY"]    = self.display_name
+            new_environ["XAUTHORITY"] = self.session_xauth_file
+
+            self.session_xauth_file = None
 
             # Apply the profile
             argv = APPLY_TOOL_ARGV + [ self.profile_file ]
@@ -460,92 +471,28 @@ class ProtoSession (gobject.GObject):
             # Disable Xscreensaver locking
             new_environ["RUNNING_UNDER_GDM"] = "yes"
 
+            dprint ("Child process env: %s" % new_environ)
+            
             # Start the session
             dprint ("Executing %s" % SESSION_ARGV)
             os.execve (SESSION_ARGV[0], SESSION_ARGV, new_environ)
 
             # Shouldn't ever happen
-            print "Failed to launch Xsession"
+            sys.stderr.write ("Failed to launch Xsession")
             os._exit (1)
 
         self.session_child_watch = gobject.child_watch_add (self.session_pid,
                                                             self.__session_child_watch_handler)
-
-        # This is totally arbitrary
-        self.admin_tool_timeout = gobject.timeout_add (5 * 1000,
-                                                       self.__start_admin_tool)
-
-    def __admin_tool_child_watch_handler (self, pid, status):
-        dprint ("admin tool died")
-
-        self.admin_tool_pid = 0
-        self.admin_tool_child_watch = 0
-
-        self.force_quit ()
-
-        self.emit ("finished")
-
-        return False
     
-    def __start_admin_tool (self):
-        self.admin_tool_pid = os.fork ()
-        if self.admin_tool_pid == 0: # Child process
-            new_environ = self.__prepare_to_run_as_user ()
-
-            argv = MONITOR_TOOL_ARGV + [ self.profile_file ]
-            
-            dprint ("Executing %s" % argv)
-
-            os.execve (argv[0], argv, new_environ)
-
-            # Shouldn't ever reach here
-            print "Failed to launch admin tool"
-            os._exit (1)
-
-        self.admin_tool_child_watch = gobject.child_watch_add (self.admin_tool_pid,
-                                                               self.__admin_tool_child_watch_handler)
-        self.admin_tool_timeout = 0
-        return False
-
-    def __setup_shell_and_homedir (self):
-        dprint ("Setting shell for '%s' to '%s'" % (self.username, DEFAULT_SHELL))
-        usermod.set_shell (self.username, DEFAULT_SHELL)
-
-        self.temp_homedir = usermod.create_temporary_homedir (self.user_pw.pw_uid,
-                                                              self.user_pw.pw_gid)
-        dprint ("Setting temporary home directory for '%s' to '%s'" %
-                (self.username, self.temp_homedir))
-        usermod.set_homedir (self.username, self.temp_homedir)
-        
-    def __reset_shell_and_homedir (self):
-        dprint ("Unsetting homedir for '%s'" % self.username)
-        usermod.set_homedir (self.username, "")
-
-        dprint ("Deleting temporary homedir '%s'" % self.temp_homedir)
-        shutil.rmtree (self.temp_homedir)
-        
-        dprint ("Resetting shell for '%s' to '%s'" % (self.username, NOLOGIN_SHELL))
-        usermod.set_shell (self.username, NOLOGIN_SHELL)
-        
     def start (self, parent_window):
-        # Set the shell to a runnable one and create an empty homedir
-	self.__setup_shell_and_homedir()
-
-        # FIXME: my, what a big hammer you have!
-        argv = CLOBBER_USER_PROCESSES_ARGV + [ self.user_pw.pw_name ]
-        dprint ("Clobbering existing processes running as user '%s': %s" % (self.user_pw.pw_name, argv))
-        util.uninterruptible_spawnv (os.P_WAIT, argv[0], argv)
-        
         # Get an X server going
         self.__start_xnest (parent_window)
 
-        # Start the session as the prototype user
+        # Start the session
         self.__start_session ()
         
     def force_quit (self):
-        self.__kill_admin_tool ()
         self.__kill_session ()
         self.__kill_xnest ()
-        self.__reset_shell_and_homedir ()
 
 gobject.type_register (ProtoSession)

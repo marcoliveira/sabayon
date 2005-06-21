@@ -1,5 +1,4 @@
 PYTHON_FILES =				\
-	monitorwindow.py		\
 	editorwindow.py			\
 	profilesdialog.py		\
 	aboutdialog.py			\
@@ -30,7 +29,7 @@ EXTRA_DIST =				\
 	$(desktop_DATA)			\
 	sabayon				\
 	sabayon-apply			\
-	sabayon-monitor			\
+	sabayon-session			\
 	sabayon.console.in		\
 	sabayon.pam			\
 	sabayon-xinitrc.sh.in
@@ -43,7 +42,7 @@ icon_DATA  = $(ICON_FILES)
 
 bin_SCRIPTS = sabayon
 sbin_SCRIPTS = sabayon-apply
-libexec_SCRIPTS = sabayon-monitor
+libexec_SCRIPTS = sabayon-session
 
 sabayondir     = $(pythondir)/sabayon
 sabayon_PYTHON = $(PYTHON_FILES)

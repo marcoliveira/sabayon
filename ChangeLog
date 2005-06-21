@@ -1,5 +1,50 @@
 2005-06-21  Mark McLoughlin  <markmc@redhat.com>
 
+	Move the monitoring window out into the session
+	window itself. Things still look a bit funny; more
+	work needed.
+
+	Fixes "closing session window doesn't ask me if I
+	want to save". Bug #305871
+
+	* admin-tool/sabayon-session: add this back again.
+	The session window now runs as the sabayon user
+	rather than as root.
+	
+	* admin-tool/Makefile.am: add sabayon-session; remove
+	sabayon-monitor and monitorwindow.py
+	
+	* admin-tool/profilesdialog.py: run sabayon-session
+	as the sabayon user. Need to setup the temporary homedir,
+	copy/chown the xauth file and copy/chown the profile
+	beforehand.
+	
+	* admin-tool/sabayon: check to see if the sabayon user
+	exists and pop up an error if not.
+	
+	* admin-tool/sabayon.glade: re-name some widgets; pack
+	the monitor output at the end of the vbox so we can
+	stick the session widget in there.
+	
+	* admin-tool/sessionwindow.py: merge everything from
+	monitorwindow.py in here and add a save confirmation
+	dialog.
+
+	* admin-tool/monitorwindow.py: remove.
+	
+	* lib/config.py.in: add SESSION_TOOL_ARGV and rename
+	ADMIN_TOOL_TIMEOUT to XNEST_USR1_TIMEOUT.
+	
+	* lib/protosession.py: substantially re-work so as to
+	split up the code into the stuff that needs to be run
+	by sabayon as root and the stuff that gets run by
+	sabayon-session as the sabayon user. Also, don't
+	run sabayon-monitor anymore.
+	
+	* lib/dirmonitor.py, lib/storage.py: fix debug spew.
+
+2005-06-21  Mark McLoughlin  <markmc@redhat.com>
+
 	* lib/storage.py:
 	(ProfileStorage.get_extract_src_path): allow dprint to
 	combine the format strings and arguments. The path may

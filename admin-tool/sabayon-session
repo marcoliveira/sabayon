@@ -20,19 +20,21 @@
 
 if __name__ == '__main__':
     import sys
-
+    import gtk
+    
     from sabayon import util
+    from sabayon import sessionwindow
 
     util.init_gettext ()
 
-    if len (sys.argv) != 2:
-        sys.stderr.write (_("Usage: %s <profile-name>\n") % sys.argv[0])
+    if len (sys.argv) != 4:
+        sys.stderr.write (_("Usage: %s <profile-name> <profile-path> <display-number>\n") % sys.argv[0])
         sys.exit (1)
-                        
-    import gtk
-    
-    from sabayon import monitorwindow
 
-    monitorwindow.ProfileMonitorWindow (sys.argv[1])
+    (profile_name, profile_path, display_number) = sys.argv[1:4]
+
+    window = sessionwindow.SessionWindow (profile_name, profile_path, display_number)
+    window.window.connect ("destroy", gtk.main_quit)
+    window.window.show ()
 
     gtk.main ()

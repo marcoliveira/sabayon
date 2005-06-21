@@ -59,12 +59,12 @@ class DirectoryMonitor:
     def set_directories_to_ignore (self, dirs):
         assert self.mon == None
         self.dirs_to_ignore = dirs
-        dprint ("Ignoring directories %s" % self.dirs_to_ignore)
+        dprint ("Ignoring directories %s", self.dirs_to_ignore)
 
     def set_files_to_ignore (self, files):
         assert self.mon == None
         self.files_to_ignore = files
-        dprint ("Ignoring files %s" % self.files_to_ignore)
+        dprint ("Ignoring files %s", self.files_to_ignore)
 
     #
     # call the user level processing
@@ -93,7 +93,7 @@ class DirectoryMonitor:
             if not os.path.isabs (path):
 		path = os.path.join (monitor_file, path)
 
-            dprint ("Got gamin event '%s' on '%s'" % (event_to_string (event), path))
+            dprint ("Got gamin event '%s' on '%s'", event_to_string (event), path)
 
 	    if event == CREATED and os.path.isdir (path):
 		self.__monitor_dir_recurse (path, True)
@@ -111,14 +111,14 @@ class DirectoryMonitor:
     def __should_ignore_dir (self, dir):
         for ignore_dir in self.dirs_to_ignore:
             if dir == os.path.join (self.directory, ignore_dir):
-                dprint ("Ignoring directory '%s'" % (dir))
+                dprint ("Ignoring directory '%s'", dir)
                 return True
         return False
     
     def __should_ignore_file (self, file):
         for ignore_file in self.files_to_ignore:
             if file == os.path.join (self.directory, ignore_file):
-                dprint ("Ignoring file '%s'" % (file))
+                dprint ("Ignoring file '%s'", file)
                 return True
         return False
 
@@ -157,7 +157,7 @@ class DirectoryMonitor:
         if self.mon != None:
 	    return
 
-        dprint ("Starting to recursively monitor '%s'" % self.directory)
+        dprint ("Starting to recursively monitor '%s'", self.directory)
 
 	self.mon = gamin.WatchMonitor ()
 	# ignore (End)Exists events since we scan the tree ourselves
@@ -176,7 +176,7 @@ class DirectoryMonitor:
         if self.mon == None:
 	    return
 
-        dprint ("Stopping recursive monitoring of '%s'" % self.directory)
+        dprint ("Stopping recursive monitoring of '%s'", self.directory)
 
         for path in self.watches:
             self.mon.stop_watch (path)

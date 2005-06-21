@@ -31,14 +31,14 @@ GLADEDIR    = os.path.join (DATADIR, "sabayon", "glade")
 PROFILESDIR = os.path.join (SYSCONFDIR, "desktop-profiles")
 
 MONITOR_TOOL_ARGV = [ os.path.join (LIBEXECDIR, "sabayon-monitor") ]
+SESSION_TOOL_ARGV = [ os.path.join (LIBEXECDIR, "sabayon-session") ]
 APPLY_TOOL_ARGV   = [ os.path.join (SBINDIR,    "sabayon-apply") ]
 
 # FIXME: this is too big a hammer
 CLOBBER_USER_PROCESSES_ARGV = [ "/usr/bin/pkill", "-u" ]
 
-# No. of seconds to wait after the session has started before
-# running the monitor tool
-ADMIN_TOOL_TIMEOUT = 3
+# No. of seconds to wait for USR1 from Xnest before giving up
+XNEST_USR1_TIMEOUT = 10
 
 #
 # This is the user which we run the prototype sessions
