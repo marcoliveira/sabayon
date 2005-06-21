@@ -30,7 +30,20 @@ import saveconfirm
 import aboutdialog
 from config import *
 
-# FIXME: use gtk.UIManager() like editorwindow.py
+_ui_string = '''
+<ui>
+  <menubar name="Menubar">
+    <menu action="ProfileMenu">
+      <menuitem action="Save"/>
+      <separator/>
+      <menuitem action="Quit"/>
+    </menu>
+    <menu action="HelpMenu">
+      <menuitem action="About"/>
+    </menu>
+  </menubar>
+</ui>
+'''
 
 def dprint (fmt, *args):
     util.debug_print (util.DEBUG_ADMINTOOL, fmt % args)
@@ -104,28 +117,44 @@ class SessionWindow:
         self.box      = self.xml.get_widget ("session_window_vbox")
         self.treeview = self.xml.get_widget ("changes_treeview")
 
-        self.save_item = self.xml.get_widget ("save_item")
-        self.save_item.connect ("activate", self.__handle_save)
-
-        self.quit_item = self.xml.get_widget ("quit_item")
-        self.quit_item.connect ("activate", self.__handle_quit)
-
-        self.about_item = self.xml.get_widget ("about_item")
-        self.about_item.connect ("activate", self.__handle_about)
-
+        self.__setup_menus ()
         self.__setup_treeview ()
         self.__setup_session ()
 
         self.__set_needs_saving (False)
 
+    def __add_widget (self, ui_manager, widget):
+        self.box.pack_start (widget, False, False, 0)
+        
+    def __setup_menus (self):
+        actions = [
+            ("ProfileMenu", None,            _("_Profile")),
+            ("Save",        gtk.STOCK_SAVE,  _("_Save"), "<control>S", _("Save profile"),             self.__handle_save),
+            ("Quit",        gtk.STOCK_QUIT,  _("_Quit"), "<control>Q", _("Close the current window"), self.__handle_quit),
+            ("HelpMenu",    None,            _("_Help")),
+            ("About",       gtk.STOCK_ABOUT, _("_About"), None,        _("About Sabayon"),            self.__handle_about),
+        ]
+        action_group = gtk.ActionGroup ("WindowActions")
+        action_group.add_actions (actions)
+        
+        self.ui_manager = gtk.UIManager ()
+        self.ui_manager.insert_action_group (action_group, 0)
+        self.ui_manager.connect ("add-widget", self.__add_widget)
+        self.ui_manager.add_ui_from_string (_ui_string)
+        self.ui_manager.ensure_update ()
+
+        self.window.add_accel_group (self.ui_manager.get_accel_group ())
+
+        self.save_action = action_group.get_action ("Save")
+    
     def __set_needs_saving (self, needs_saving):
         if needs_saving:
             if not self.last_save_time:
                 self.last_save_time = int (time.time ())
-            self.save_item.set_sensitive (True)
+            self.save_action.set_sensitive (True)
         else:
             self.last_save_time = 0
-            self.save_item.set_sensitive (False)
+            self.save_action.set_sensitive (False)
             
     def __do_save (self):
         iter = self.changes_model.get_iter_first ()
@@ -161,17 +190,17 @@ class SessionWindow:
         
         return True
     
-    def __handle_save (self, item):
+    def __handle_save (self, action):
         self.__do_save ()
         
-    def __handle_quit (self, item):
+    def __handle_quit (self, action):
         if self.__do_saveconfirm ():
             self.window.destroy ()
 
     def __handle_delete_event (self, window, event):
         return not self.__do_saveconfirm ()
 
-    def __handle_about (self, item):
+    def __handle_about (self, action):
         aboutdialog.show_about_dialog (self.window)
     
     def __on_ignore_toggled (self, toggle, path):

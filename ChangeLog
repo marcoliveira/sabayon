@@ -1,5 +1,14 @@
 2005-06-21  Mark McLoughlin  <markmc@redhat.com>
 
+	* admin-tool/sessionwindow.py: use gtk.UIManager()
+	for menus.
+	
+	* admin-tool/sabayon.glade: remove menus.
+	
+	* admin-tool/editorwindow.py: fix debug spew.
+
+2005-06-21  Mark McLoughlin  <markmc@redhat.com>
+
 	* sabayon.spec.in: update %files
 
 2005-06-21  Mark McLoughlin  <markmc@redhat.com>

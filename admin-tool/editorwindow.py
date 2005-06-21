@@ -82,11 +82,11 @@ class ProfileModel (gtk.ListStore):
             revisions_model = RevisionsModel (self.profile.storage, path)
             first_revision = revisions_model.get_iter_first ()
 
-            dprint ("  source %s, path %s, description %s, revision %s" %
-                    (source_name,
-                     path,
-                     source.get_path_description (path),
-                     revisions_model[first_revision][RevisionsModel.COLUMN_DATE]))
+            dprint ("  source %s, path %s, description %s, revision %s",
+                    source_name,
+                    path,
+                    source.get_path_description (path),
+                    revisions_model[first_revision][RevisionsModel.COLUMN_DATE])
             
             self.set (self.prepend (),
                       self.COLUMN_SOURCE,          source_name,
@@ -110,13 +110,13 @@ class RevisionsModel (gtk.ListStore):
         self.reload ()
 
     def reload (self):
-        dprint ("Reloading revisions model; path = %s" % self.path)
+        dprint ("Reloading revisions model; path = %s", self.path)
         self.clear ()
         iter = None
         revisions = self.storage.get_revisions (self.path)
         revisions.reverse ()
         for (revision, timestamp) in revisions:
-            dprint ("  revision %s, time %s" % (revision, timestamp))
+            dprint ("  revision %s, time %s", revision, timestamp)
             self.set (self.prepend (),
                       self.COLUMN_REVISION, revision,
                       self.COLUMN_DATE,     time.strftime (self.time_format,
@@ -176,7 +176,7 @@ class ProfileEditorWindow:
             else:
                 self.current_revision = None
 
-        dprint ("Reloaded models; current_revision = %s" % self.current_revision)
+        dprint ("Reloaded models; current_revision = %s", self.current_revision)
 
     def __set_needs_saving (self, needs_saving):
         if needs_saving:
