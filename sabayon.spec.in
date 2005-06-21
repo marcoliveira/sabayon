@@ -156,11 +156,11 @@ fi
 %{python_sitelib}/%{name}/editorwindow.py*
 %{python_sitelib}/%{name}/fileviewer.py*
 %{python_sitelib}/%{name}/gconfviewer.py*
-%{python_sitelib}/%{name}/monitorwindow.py*
 %{python_sitelib}/%{name}/profilesdialog.py*
 %{python_sitelib}/%{name}/protosession.py*
 %{python_sitelib}/%{name}/saveconfirm.py*
 %{python_sitelib}/%{name}/sessionwindow.py*
+%{python_sitelib}/%{name}/sessionwidget.py*
 %{python_sitelib}/%{name}/usermod.py*
 %{python_sitelib}/%{name}/usersdialog.py*
 
@@ -170,7 +170,8 @@ fi
 - We're no longer a noarch package
 - BuildRequire python-devel, pygtk2-devel, gtk2-devel and xorg-x11-devel
   for the xlib module
-- Add sessionwindow.py and xlib.so to %files
+- Add sessionwindow.py, sessionwidget.py and xlib.so to %files
+- Remove sabayon-monitor and monitorwindow.py
 - Icon is now installed in the icon theme; update the
   icon cache in %post and %postun
 
