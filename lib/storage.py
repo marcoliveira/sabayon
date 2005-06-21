@@ -651,7 +651,7 @@ class ProfileStorage:
                 extract_src_path = os.path.join (self.revisions_path, path, item_revision)
 
         extract_src_path = os.path.normpath(extract_src_path)
-        dprint ("Extract src path for '%s', revision %s is '%s'" % (path, revision, extract_src_path))
+        dprint ("Extract src path for '%s', revision %s is '%s'", path, revision, extract_src_path)
         return extract_src_path
 
     def extract (self, path, dst_dir, overwrite = False, revision = None):

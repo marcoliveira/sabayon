@@ -1,3 +1,11 @@
+2005-06-21  Mark McLoughlin  <markmc@redhat.com>
+
+	* lib/storage.py:
+	(ProfileStorage.get_extract_src_path): allow dprint to
+	combine the format strings and arguments. The path may
+	contain '%' symbols which we don't want in the format
+	string.
+
 2005-06-20  John Dennis  <jdennis@redhat.com>
 
 	* lib/util.py: add new function split_path()
