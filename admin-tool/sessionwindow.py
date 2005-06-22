@@ -22,6 +22,7 @@ import time
 import gobject
 import gtk
 import gtk.glade
+import pango
 import util
 import userprofile
 import protosession
@@ -57,11 +58,17 @@ class ProfileChangesModel (gtk.ListStore):
         COLUMN_CHANGE,
         COLUMN_IGNORE,
         COLUMN_MANDATORY,
+        COLUMN_LOCK_PIXBUF,
         COLUMN_DESCRIPTION
-    ) = range (4)
+    ) = range (5)
 
     def __init__ (self, profile):
-        gtk.ListStore.__init__ (self, userprofile.ProfileChange, bool, bool, str, str)
+        gtk.ListStore.__init__ (self, userprofile.ProfileChange, bool, bool, gtk.gdk.Pixbuf, str, str)
+
+        icon_theme = gtk.icon_theme_get_default ()
+
+        self.locked_pixbuf   = icon_theme.load_icon ("stock_lock",      16, 0)
+        self.unlocked_pixbuf = icon_theme.load_icon ("stock_lock-open", 16, 0)
 
         self.profile = profile
         self.profile.connect ("changed", self.handle_profile_change)
@@ -81,11 +88,17 @@ class ProfileChangesModel (gtk.ListStore):
                 self.remove (iter)
             iter = next
 
+        if mandatory:
+            lock_pixbuf = self.locked_pixbuf
+        else:
+            lock_pixbuf = self.unlocked_pixbuf
+
         row = self.prepend ()
         self.set (row,
                   self.COLUMN_CHANGE,      new_change,
                   self.COLUMN_IGNORE,      ignore,
                   self.COLUMN_MANDATORY,   mandatory,
+                  self.COLUMN_LOCK_PIXBUF, lock_pixbuf,
                   self.COLUMN_DESCRIPTION, new_change.get_short_description ())
 
         self.emit ("changed")
@@ -95,6 +108,20 @@ class ProfileChangesModel (gtk.ListStore):
         self.emit ("changed")
 
 gobject.type_register (ProfileChangesModel)
+
+class PixbufToggleRenderer (gtk.CellRendererPixbuf):
+    __gsignals__ = {
+        "toggled" : (gobject.SIGNAL_RUN_LAST, gobject.TYPE_NONE, (str, ))
+        }
+    
+    def __init__ (self):
+        gtk.CellRendererPixbuf.__init__ (self)
+        self.set_property ("mode", gtk.CELL_RENDERER_MODE_ACTIVATABLE)
+
+    def do_activate (self, event, widget, path, background_area, cell_area, flags):
+        self.emit ("toggled", path)
+        
+gobject.type_register (PixbufToggleRenderer)
 
 class SessionWindow:
     def __init__ (self, profile_name, profile_path, display_number):
@@ -115,6 +142,7 @@ class SessionWindow:
                              self.__handle_delete_event);
 
         self.box      = self.xml.get_widget ("session_window_vbox")
+        self.paned    = self.xml.get_widget ("session_window_hpaned")
         self.treeview = self.xml.get_widget ("changes_treeview")
 
         self.__setup_menus ()
@@ -216,8 +244,14 @@ class SessionWindow:
         mandatory = self.changes_model.get_value (iter, ProfileChangesModel.COLUMN_MANDATORY)
         
         mandatory = not mandatory
+        
+        if mandatory:
+            lock_pixbuf = self.changes_model.locked_pixbuf
+        else:
+            lock_pixbuf = self.changes_model.unlocked_pixbuf
 
-        self.changes_model.set (iter, ProfileChangesModel.COLUMN_MANDATORY, mandatory)
+        self.changes_model.set (iter, ProfileChangesModel.COLUMN_MANDATORY,   mandatory)
+        self.changes_model.set (iter, ProfileChangesModel.COLUMN_LOCK_PIXBUF, lock_pixbuf);
     
     def __treeview_selection_changed (self, selection):
         (model, row) = selection.get_selected ()
@@ -236,26 +270,20 @@ class SessionWindow:
         self.treeview.get_selection ().set_mode (gtk.SELECTION_SINGLE)
         self.treeview.get_selection ().connect ("changed", self.__treeview_selection_changed)
 
-        toggle = gtk.CellRendererToggle ()
-        toggle.connect ("toggled", self.__on_ignore_toggled)
-        c = gtk.TreeViewColumn (_("Ignore"),
-                                toggle,
-                                active = ProfileChangesModel.COLUMN_IGNORE)
-        self.treeview.append_column (c)
-                                
-        toggle = gtk.CellRendererToggle ()
-        toggle.connect ("toggled", self.__on_mandatory_toggled)
-        c = gtk.TreeViewColumn (_("Mandatory"),
-                                toggle,
-                                active = ProfileChangesModel.COLUMN_MANDATORY)
-        self.treeview.append_column (c)
-        
-        c = gtk.TreeViewColumn (_("Description"),
-                                gtk.CellRendererText (),
-                                text = ProfileChangesModel.COLUMN_DESCRIPTION)
-        self.treeview.append_column (c)
-
+        cell = PixbufToggleRenderer ()
+        cell.connect ("toggled", self.__on_mandatory_toggled)
+        column = gtk.TreeViewColumn ()
+        column.pack_start (cell, False)
+        column.add_attribute (cell, "pixbuf", ProfileChangesModel.COLUMN_LOCK_PIXBUF)
+        self.treeview.append_column (column)
             
+        cell = gtk.CellRendererText ()
+        cell.set_property ("ellipsize", pango.ELLIPSIZE_END)
+        column = gtk.TreeViewColumn ()
+        column.pack_start (cell, True)
+        column.add_attribute (cell, "text", ProfileChangesModel.COLUMN_DESCRIPTION)
+        self.treeview.append_column (column)
+
     def __session_finished (self, session):
         self.window.destroy ()
         
@@ -277,6 +305,6 @@ class SessionWindow:
         dprint ("Creating %dx%d session wiget", width, height)
         
         self.session_widget = sessionwidget.SessionWidget (width, height)
-        self.box.pack_start (self.session_widget, True, False, 0)
+        self.paned.pack2 (self.session_widget, False, False)
         self.mapped_handler_id = self.session_widget.connect ("map-event", self.__session_mapped)
         self.session_widget.show ()

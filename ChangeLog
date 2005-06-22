@@ -1,3 +1,12 @@
+2005-06-22  Mark McLoughlin  <markmc@redhat.com>
+
+	* admin-tool/sessionwindow.py,
+	  admin-tool/sabayon.glade: Move the monitor
+	output into a pane on the righthand side of the
+	window, remove the mandatory/ignore toggles, add
+	a pixbuf toggle for the mandatory flag, ellipsize
+	the change description.
+
 2005-06-21  John Dennis  <jdennis@redhat.com>
 
 	* apply Mark's patch for get_extract_src_path()
