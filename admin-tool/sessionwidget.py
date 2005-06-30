@@ -172,54 +172,50 @@ class SessionWidget (gtk.Widget):
             self.grab_focus ()
             
         if not event.send_event:
-            dprint ("Resending button press; button = %d" % event.button);
-            xlib.send_button_event (self.session_window, True, event.time, event.button);
+            dprint ("Resending button press; button = %d, state = 0x%x", event.button, event.state);
+            xlib.send_button_event (self.session_window, True, event.time, event.button, event.state);
         
         return True
     
     def do_button_release_event (self, event):
         if not event.send_event:
-            dprint ("Resending button release; button = %d" % event.button);
-            xlib.send_button_event (self.session_window, False, event.time, event.button);
+            dprint ("Resending button release; button = %d, state = 0x%x" % event.button, event.state);
+            xlib.send_button_event (self.session_window, False, event.time, event.button, event.state);
         
         return True
 
     def do_motion_notify_event (self, event):
         if not event.send_event:
-            dprint ("Resending motion notify; x = %d, y = %d" % (event.x, event.y));
+            dprint ("Resending motion notify; x = %d, y = %d", event.x, event.y);
             xlib.send_motion_event (self.session_window, event.time, event.x, event.y);
         
         return True
     
     def do_enter_notify_event (self, event):
         if not event.send_event:
-            dprint ("Resending enter notify; x = %d, y = %d, detail = %d" %
-                    (event.x, event.y, event.detail));
+            dprint ("Resending enter notify; x = %d, y = %d, detail = %d", event.x, event.y, event.detail);
             xlib.send_crossing_event (self.session_window, True, event.time, event.x, event.y, event.detail);
         
         return True
     
     def do_leave_notify_event (self, event):
         if not event.send_event:
-            dprint ("Resending leave notify; x = %d, y = %d, detail = %d" %
-                    (event.x, event.y, event.detail));
+            dprint ("Resending leave notify; x = %d, y = %d, detail = %d", event.x, event.y, event.detail);
             xlib.send_crossing_event (self.session_window, False, event.time, event.x, event.y, event.detail);
         
         return True
     
     def do_key_press_event (self, event):
         if not event.send_event:
-            dprint ("Resending key press; keycode = 0x%x, state = 0x%x" %
-                    (event.hardware_keycode, event.state))
-            xlib.send_key_event (self.session_window, True, event.time, event.state, event.hardware_keycode)
+            dprint ("Resending key press; keycode = 0x%x, state = 0x%x", event.hardware_keycode, event.state)
+            xlib.send_key_event (self.session_window, True, event.time, event.hardware_keycode, event.state)
         
         return True
 
     def do_key_release_event (self, event):
         if not event.send_event:
-            dprint ("Resending key release; keycode = 0x%x, state = 0x%x" %
-                    (event.hardware_keycode, event.state))
-            xlib.send_key_event (self.session_window, False, event.time, event.state, event.hardware_keycode)
+            dprint ("Resending key release; keycode = 0x%x, state = 0x%x", event.hardware_keycode, event.state)
+            xlib.send_key_event (self.session_window, False, event.time, event.hardware_keycode, event.state)
         
         return True
 

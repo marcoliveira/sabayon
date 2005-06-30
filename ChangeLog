@@ -1,5 +1,19 @@
 2005-06-30  Mark McLoughlin  <markmc@redhat.com>
 
+	* admin-tool/sessionwidget.py: fixup debug spew and
+	send the modifier state with button events.
+	
+	* lib/xlib.c:
+	(xlib_send_button_event): allow sending the modifier
+	state.
+	(xlib_send_motion_event),
+	(xlib_send_crossing_event): fix deprecation warning
+	caused by the fact that we're passed floating point
+	co-ordinates and ask PyArg_Parse() to convert them
+	to integers.
+
+2005-06-30  Mark McLoughlin  <markmc@redhat.com>
+
 	Patch from William Lachance <wrlach@gmail.com> in
 	bug #308735
 

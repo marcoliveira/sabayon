@@ -38,10 +38,10 @@ xlib_send_key_event (PyObject *self,
   XEvent         xevent;
   int            press;
   unsigned long  time;
-  int            state;
   int            hardware_keycode;
+  int            state;
 
-  if (!PyArg_ParseTuple (args, "Oilii:xlib.send_key_event", &window, &press, &time, &state, &hardware_keycode))
+  if (!PyArg_ParseTuple (args, "Oilii:xlib.send_key_event", &window, &press, &time, &hardware_keycode, &state))
     return NULL;
 
   if (!GDK_IS_WINDOW (window->obj))
@@ -93,8 +93,9 @@ xlib_send_button_event (PyObject *self,
   int            press;
   unsigned long  time;
   int            button;
+  int            state;
 
-  if (!PyArg_ParseTuple (args, "Oili:xlib.send_button_event", &window, &press, &time, &button))
+  if (!PyArg_ParseTuple (args, "Oilii:xlib.send_button_event", &window, &press, &time, &button, &state))
     return NULL;
 
   if (!GDK_IS_WINDOW (window->obj))
@@ -116,7 +117,7 @@ xlib_send_button_event (PyObject *self,
   xevent.xbutton.y           = 0;
   xevent.xbutton.x_root      = 0;
   xevent.xbutton.y_root      = 0;
-  xevent.xbutton.state       = 0;
+  xevent.xbutton.state       = state;
   xevent.xbutton.button      = button;
   xevent.xbutton.same_screen = True;
 
@@ -144,10 +145,10 @@ xlib_send_motion_event (PyObject *self,
   GdkScreen     *screen;
   XEvent         xevent;
   unsigned long  time;
-  int            x;
-  int            y;
+  double         x;
+  double         y;
 
-  if (!PyArg_ParseTuple (args, "Olii:xlib.send_motion_event", &window, &time, &x, &y))
+  if (!PyArg_ParseTuple (args, "Oldd:xlib.send_motion_event", &window, &time, &x, &y))
     return NULL;
 
   if (!GDK_IS_WINDOW (window->obj))
@@ -198,11 +199,11 @@ xlib_send_crossing_event (PyObject *self,
   XEvent         xevent;
   int            enter;
   unsigned long  time;
-  int            x;
-  int            y;
+  double         x;
+  double         y;
   int            detail;
 
-  if (!PyArg_ParseTuple (args, "Oiliii:xlib.send_crossing_event", &window, &enter, &time, &x, &y, &detail))
+  if (!PyArg_ParseTuple (args, "Oilddi:xlib.send_crossing_event", &window, &enter, &time, &x, &y, &detail))
     return NULL;
 
   if (!GDK_IS_WINDOW (window->obj))
