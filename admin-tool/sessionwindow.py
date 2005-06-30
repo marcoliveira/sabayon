@@ -21,11 +21,12 @@
 import time
 import gobject
 import gtk
-import gtk.glade
+import gtk.gdk
 import pango
 import util
 import userprofile
 import protosession
+import changeswindow
 import sessionwidget
 import saveconfirm
 import aboutdialog
@@ -38,6 +39,9 @@ _ui_string = '''
       <menuitem action="Save"/>
       <separator/>
       <menuitem action="Quit"/>
+    </menu>
+    <menu action="EditMenu">
+      <menuitem action="Changes"/>
     </menu>
     <menu action="HelpMenu">
       <menuitem action="About"/>
@@ -72,7 +76,6 @@ class ProfileChangesModel (gtk.ListStore):
 
         self.profile = profile
         self.profile.connect ("changed", self.handle_profile_change)
-        self.profile.start_monitoring ()
 
     def handle_profile_change (self, profile, new_change):
         mandatory = False
@@ -100,7 +103,6 @@ class ProfileChangesModel (gtk.ListStore):
                   self.COLUMN_MANDATORY,   mandatory,
                   self.COLUMN_LOCK_PIXBUF, lock_pixbuf,
                   self.COLUMN_DESCRIPTION, new_change.get_short_description ())
-
         self.emit ("changed")
 
     def clear (self):
@@ -108,20 +110,6 @@ class ProfileChangesModel (gtk.ListStore):
         self.emit ("changed")
 
 gobject.type_register (ProfileChangesModel)
-
-class PixbufToggleRenderer (gtk.CellRendererPixbuf):
-    __gsignals__ = {
-        "toggled" : (gobject.SIGNAL_RUN_LAST, gobject.TYPE_NONE, (str, ))
-        }
-    
-    def __init__ (self):
-        gtk.CellRendererPixbuf.__init__ (self)
-        self.set_property ("mode", gtk.CELL_RENDERER_MODE_ACTIVATABLE)
-
-    def do_activate (self, event, widget, path, background_area, cell_area, flags):
-        self.emit ("toggled", path)
-        
-gobject.type_register (PixbufToggleRenderer)
 
 class SessionWindow:
     def __init__ (self, profile_name, profile_path, display_number):
@@ -131,36 +119,41 @@ class SessionWindow:
 
         self.profile = userprofile.UserProfile (profile_path)
 
+        self.changes_model = ProfileChangesModel (self.profile)
+        self.changes_model.connect ("changed", self.__changes_model_changed)
+        self.changes_window = None
+
         self.last_save_time = 0
 
-        glade_file = os.path.join (GLADEDIR, "sabayon.glade")
-        self.xml = gtk.glade.XML (glade_file, "session_window")
-
-        self.window = self.xml.get_widget ("session_window")
+        self.window = gtk.Window ()
         self.window.set_icon_name ("sabayon")
         self.window.connect ("delete-event",
                              self.__handle_delete_event);
 
-        self.box      = self.xml.get_widget ("session_window_vbox")
-        self.paned    = self.xml.get_widget ("session_window_hpaned")
-        self.treeview = self.xml.get_widget ("changes_treeview")
+        self.box = gtk.VBox ()
+        self.window.add (self.box)
+        self.box.show ()
 
         self.__setup_menus ()
-        self.__setup_treeview ()
         self.__setup_session ()
+        self.__setup_statusbar ()
 
         self.__set_needs_saving (False)
 
+        self.profile.start_monitoring ()
+        
     def __add_widget (self, ui_manager, widget):
         self.box.pack_start (widget, False, False, 0)
         
     def __setup_menus (self):
         actions = [
             ("ProfileMenu", None,            _("_Profile")),
-            ("Save",        gtk.STOCK_SAVE,  _("_Save"), "<control>S", _("Save profile"),             self.__handle_save),
-            ("Quit",        gtk.STOCK_QUIT,  _("_Quit"), "<control>Q", _("Close the current window"), self.__handle_quit),
+            ("Save",        gtk.STOCK_SAVE,  _("_Save"),    "<control>S", _("Save profile"),             self.__handle_save),
+            ("Quit",        gtk.STOCK_QUIT,  _("_Quit"),    "<control>Q", _("Close the current window"), self.__handle_quit),
+            ("EditMenu",    None,            _("_Edit")),
+            ("Changes",     gtk.STOCK_EDIT,  _("_Changes"), "<control>H", _("Edit changes"),             self.__handle_edit),
             ("HelpMenu",    None,            _("_Help")),
-            ("About",       gtk.STOCK_ABOUT, _("_About"), None,        _("About Sabayon"),            self.__handle_about),
+            ("About",       gtk.STOCK_ABOUT, _("_About"),   None,         _("About Sabayon"),            self.__handle_about),
         ]
         action_group = gtk.ActionGroup ("WindowActions")
         action_group.add_actions (actions)
@@ -184,6 +177,9 @@ class SessionWindow:
             self.last_save_time = 0
             self.save_action.set_sensitive (False)
             
+    def __changes_model_changed (self, model):
+        self.__set_needs_saving (not model.get_iter_first () is None)
+        
     def __do_save (self):
         iter = self.changes_model.get_iter_first ()
         while iter:
@@ -230,60 +226,15 @@ class SessionWindow:
 
     def __handle_about (self, action):
         aboutdialog.show_about_dialog (self.window)
+
+    def __handle_edit (self, action):
+        if not self.changes_window:
+            self.changes_window = changeswindow.ChangesWindow (self.changes_model,
+                                                               self.window)
+            self.changes_window.window.connect ("delete-event",
+                                                gtk.Widget.hide_on_delete)
+        self.changes_window.window.present ()
     
-    def __on_ignore_toggled (self, toggle, path):
-        iter = self.changes_model.get_iter_from_string (path)
-        ignore = self.changes_model.get_value (iter, ProfileChangesModel.COLUMN_IGNORE)
-        
-        ignore = not ignore
-
-        self.changes_model.set (iter, ProfileChangesModel.COLUMN_IGNORE, ignore)
-    
-    def __on_mandatory_toggled (self, toggle, path):
-        iter = self.changes_model.get_iter_from_string (path)
-        mandatory = self.changes_model.get_value (iter, ProfileChangesModel.COLUMN_MANDATORY)
-        
-        mandatory = not mandatory
-        
-        if mandatory:
-            lock_pixbuf = self.changes_model.locked_pixbuf
-        else:
-            lock_pixbuf = self.changes_model.unlocked_pixbuf
-
-        self.changes_model.set (iter, ProfileChangesModel.COLUMN_MANDATORY,   mandatory)
-        self.changes_model.set (iter, ProfileChangesModel.COLUMN_LOCK_PIXBUF, lock_pixbuf);
-    
-    def __treeview_selection_changed (self, selection):
-        (model, row) = selection.get_selected ()
-        if row:
-            change = model[row][ProfileChangesModel.COLUMN_CHANGE]
-            dprint ("Selected: %s", model[row][ProfileChangesModel.COLUMN_CHANGE].get_id ())
-
-    def __changes_model_changed (self, model):
-        self.__set_needs_saving (not model.get_iter_first () is None)
-        
-    def __setup_treeview (self):
-        self.changes_model = ProfileChangesModel (self.profile)
-        self.changes_model.connect ("changed", self.__changes_model_changed)
-        self.treeview.set_model (self.changes_model)
-        
-        self.treeview.get_selection ().set_mode (gtk.SELECTION_SINGLE)
-        self.treeview.get_selection ().connect ("changed", self.__treeview_selection_changed)
-
-        cell = PixbufToggleRenderer ()
-        cell.connect ("toggled", self.__on_mandatory_toggled)
-        column = gtk.TreeViewColumn ()
-        column.pack_start (cell, False)
-        column.add_attribute (cell, "pixbuf", ProfileChangesModel.COLUMN_LOCK_PIXBUF)
-        self.treeview.append_column (column)
-            
-        cell = gtk.CellRendererText ()
-        cell.set_property ("ellipsize", pango.ELLIPSIZE_END)
-        column = gtk.TreeViewColumn ()
-        column.pack_start (cell, True)
-        column.add_attribute (cell, "text", ProfileChangesModel.COLUMN_DESCRIPTION)
-        self.treeview.append_column (column)
-
     def __session_finished (self, session):
         self.window.destroy ()
         
@@ -305,6 +256,31 @@ class SessionWindow:
         dprint ("Creating %dx%d session wiget", width, height)
         
         self.session_widget = sessionwidget.SessionWidget (width, height)
-        self.paned.pack2 (self.session_widget, False, False)
+        self.box.pack_start (self.session_widget, True, True)
         self.mapped_handler_id = self.session_widget.connect ("map-event", self.__session_mapped)
         self.session_widget.show ()
+
+    def __update_statusbar (self, model):
+        iter = self.changes_model.get_iter_first ()
+        if iter:
+            self.statusbar.pop (self.status_context_id)
+            self.statusbar.push (self.status_context_id,
+                                 self.changes_model[iter][self.changes_model.COLUMN_DESCRIPTION])
+
+    def __update_resize_grip (self, window, event):
+        if event.changed_mask & gtk.gdk.WINDOW_STATE_MAXIMIZED:
+            if event.new_window_state & gtk.gdk.WINDOW_STATE_MAXIMIZED:
+                self.statusbar.set_has_resize_grip (False)
+            else:
+                self.statusbar.set_has_resize_grip (True)
+
+    def __setup_statusbar (self):
+        self.statusbar = gtk.Statusbar ()
+        self.box.pack_start (self.statusbar, False, False)
+        self.statusbar.show ()
+
+        self.status_context_id = self.statusbar.get_context_id ("sabayon-change")
+
+        self.changes_model.connect ("changed", self.__update_statusbar)
+
+        self.window.connect ("window-state-event", self.__update_resize_grip)

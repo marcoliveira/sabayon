@@ -1,3 +1,26 @@
+2005-06-30  Mark McLoughlin  <markmc@redhat.com>
+
+	Re-work things such that we display only the latest
+	change in a status bar at the bottom of the window
+	and a more detailed list of changes can be reached
+	from the menus.
+
+	The idea is that each change you make in the protosession
+	should correspond to a single change which Sabayon
+	notices. Lot of work needed to get there, though.
+
+	* admin-tool/sessionwindow.py: add a Statusbar and
+	remove the changes list.
+	
+	* admin-tool/changeswindow.py: split out the changes
+	list here.
+	
+	* admin-tool/Makefile.am: add changeswindow.py.
+
+	* admin-tool/sabayon.glade: remove the session window.
+	
+	* lib/storage.py: fix debug spew.
+
 2005-06-22  Mark McLoughlin  <markmc@redhat.com>
 
 	* admin-tool/sessionwindow.py,

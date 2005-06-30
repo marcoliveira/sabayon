@@ -667,7 +667,7 @@ class ProfileStorage:
         ProfileStorage::get_revisions() and may be a profile or file
         revision.
         """
-        dprint ("Extracting '%s' to '%s', revision %s" % (path, dst_dir, revision))
+        dprint ("Extracting '%s' to '%s', revision %s", path, dst_dir, revision)
         
         (item_type, item_revision, is_current) = self.__get_item_type_and_revision (path, revision)
 

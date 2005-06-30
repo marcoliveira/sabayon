@@ -7,7 +7,8 @@ PYTHON_FILES =				\
 	fileviewer.py			\
 	usersdialog.py			\
 	sessionwindow.py		\
-	sessionwidget.py
+	sessionwidget.py		\
+	changeswindow.py
 
 @INTLTOOL_DESKTOP_RULE@
 
