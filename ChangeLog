@@ -1,5 +1,13 @@
 2005-06-30  Mark McLoughlin  <markmc@redhat.com>
 
+	Patch from William Lachance <wrlach@gmail.com> in
+	bug #308735
+
+	* lib/config.py.in: add .gconf.path.defaults and
+	.gconf.path.mandatory to FILES_TO_IGNORE
+
+2005-06-30  Mark McLoughlin  <markmc@redhat.com>
+
 	Re-work things such that we display only the latest
 	change in a status bar at the bottom of the window
 	and a more detailed list of changes can be reached
