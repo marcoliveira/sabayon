@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-06-23 19:54-0400\n"
-"PO-Revision-Date: 2005-06-23 11:14-0400\n"
+"POT-Creation-Date: 2005-07-03 19:00-0400\n"
+"PO-Revision-Date: 2005-07-03 11:14-0400\n"
 "Last-Translator: Adam Weinberger <adamw@gnome.org>\n"
 "Language-Team: Canadian English <adamw@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -25,21 +25,33 @@ msgstr "Program to establish and edit profiles for users"
 msgid "translator-credits"
 msgstr "Adam Weinberger <adamw@gnome.org>"
 
+#: admin-tool/changeswindow.py:96
+msgid "Ignore"
+msgstr "Ignore"
+
+#: admin-tool/changeswindow.py:103
+msgid "Lock"
+msgstr "Lock"
+
+#: admin-tool/changeswindow.py:109 admin-tool/editorwindow.py:341
+msgid "Description"
+msgstr "Description"
+
 #: admin-tool/editorwindow.py:133 admin-tool/fileviewer.py:29
 #: admin-tool/gconfviewer.py:87 admin-tool/sabayon.glade.h:2
 #: lib/protosession.py:382
 msgid "All Your Settings Are Belong To Us"
 msgstr "All Your Settings Are Belong To Us"
 
-#: admin-tool/editorwindow.py:248 admin-tool/sessionwindow.py:159
+#: admin-tool/editorwindow.py:248 admin-tool/sessionwindow.py:150
 msgid "_Profile"
 msgstr "_Profile"
 
-#: admin-tool/editorwindow.py:249 admin-tool/sessionwindow.py:160
+#: admin-tool/editorwindow.py:249 admin-tool/sessionwindow.py:151
 msgid "_Save"
 msgstr "_Save"
 
-#: admin-tool/editorwindow.py:249 admin-tool/sessionwindow.py:160
+#: admin-tool/editorwindow.py:249 admin-tool/sessionwindow.py:151
 msgid "Save profile"
 msgstr "Save profile"
 
@@ -47,11 +59,11 @@ msgstr "Save profile"
 msgid "_Close"
 msgstr "_Close"
 
-#: admin-tool/editorwindow.py:250 admin-tool/sessionwindow.py:161
+#: admin-tool/editorwindow.py:250 admin-tool/sessionwindow.py:152
 msgid "Close the current window"
 msgstr "Close the current window"
 
-#: admin-tool/editorwindow.py:251
+#: admin-tool/editorwindow.py:251 admin-tool/sessionwindow.py:153
 msgid "_Edit"
 msgstr "_Edit"
 
@@ -71,25 +83,21 @@ msgstr "C_lear History"
 msgid "Clear revision history"
 msgstr "Clear revision history"
 
-#: admin-tool/editorwindow.py:254 admin-tool/sessionwindow.py:162
+#: admin-tool/editorwindow.py:254 admin-tool/sessionwindow.py:155
 msgid "_Help"
 msgstr "_Help"
 
-#: admin-tool/editorwindow.py:255 admin-tool/sessionwindow.py:163
+#: admin-tool/editorwindow.py:255 admin-tool/sessionwindow.py:156
 msgid "_About"
 msgstr "_About"
 
-#: admin-tool/editorwindow.py:255 admin-tool/sessionwindow.py:163
+#: admin-tool/editorwindow.py:255 admin-tool/sessionwindow.py:156
 msgid "About Sabayon"
 msgstr "About Sabayon"
 
 #: admin-tool/editorwindow.py:286
 msgid "_Version:"
 msgstr "_Version:"
-
-#: admin-tool/editorwindow.py:341
-msgid "Description"
-msgstr "Description"
 
 #: admin-tool/editorwindow.py:352
 msgid "Version"
@@ -341,9 +349,17 @@ msgstr[1] ""
 "If you don't save, changes from the last hour and %d minutes will be "
 "permanently lost."
 
-#: admin-tool/sessionwindow.py:161
+#: admin-tool/sessionwindow.py:152
 msgid "_Quit"
 msgstr "_Quit"
+
+#: admin-tool/sessionwindow.py:154
+msgid "_Changes"
+msgstr "_Changes"
+
+#: admin-tool/sessionwindow.py:154
+msgid "Edit changes"
+msgstr "Edit changes"
 
 #: admin-tool/usersdialog.py:92
 msgid "Use This Profile"
