@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-05-23 12:08+0000\n"
-"PO-Revision-Date: 2005-05-24 17:23+0200\n"
+"POT-Creation-Date: 2005-07-05 04:13+0000\n"
+"PO-Revision-Date: 2005-07-05 18:00+0200\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <gnome@gnome.hu>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=1; plural=0;\n"
-"X-Generator: KBabel 1.10\n"
+"X-Generator: KBabel 1.10.1\n"
 
 #: ../admin-tool/aboutdialog.py:63
 msgid "Program to establish and edit profiles for users"
@@ -25,81 +25,89 @@ msgstr "Felhasználói profilok létrehozására és szerkesztésére szolgáló
 msgid "translator-credits"
 msgstr "Kelemen Gábor <kelemeng@gnome.hu>"
 
-#: ../admin-tool/editorwindow.py:124 ../admin-tool/fileviewer.py:29
-#: ../admin-tool/gconfviewer.py:87 ../admin-tool/sabayon.glade.h:2
-#: ../lib/protosession.py:332
-msgid "All Your Settings Are Belong To Us"
-msgstr "A gépbül veszi ki a beállításokat"
+#: ../admin-tool/changeswindow.py:96
+msgid "Ignore"
+msgstr "Mellőzendő"
 
-#: ../admin-tool/editorwindow.py:227 ../admin-tool/sabayon.glade.h:7
-msgid "_Profile"
-msgstr "_Profil"
+#: ../admin-tool/changeswindow.py:103
+msgid "Lock"
+msgstr "Zárolás"
 
-#: ../admin-tool/editorwindow.py:228
-msgid "_Save"
-msgstr "M_entés"
-
-#: ../admin-tool/editorwindow.py:228
-msgid "Save profile"
-msgstr "Profil mentése"
-
-#: ../admin-tool/editorwindow.py:229
-msgid "_Close"
-msgstr "_Bezárás"
-
-#: ../admin-tool/editorwindow.py:229
-msgid "Close the current window"
-msgstr "A jelenlegi ablak bezárása"
-
-#: ../admin-tool/editorwindow.py:230
-msgid "_Edit"
-msgstr "S_zerkesztés"
-
-#: ../admin-tool/editorwindow.py:231
-msgid "_Delete"
-msgstr "Tö_rlés"
-
-#: ../admin-tool/editorwindow.py:231
-msgid "Delete item"
-msgstr "Elem törlése"
-
-#: ../admin-tool/editorwindow.py:232
-msgid "C_lear History"
-msgstr "_Előzmények törlése"
-
-#: ../admin-tool/editorwindow.py:232
-msgid "Clear revision history"
-msgstr "Verziótörténet törlése"
-
-#: ../admin-tool/editorwindow.py:233 ../admin-tool/sabayon.glade.h:6
-msgid "_Help"
-msgstr "_Súgó"
-
-#: ../admin-tool/editorwindow.py:234
-msgid "_About"
-msgstr "_Névjegy"
-
-#: ../admin-tool/editorwindow.py:234
-msgid "About Sabayon"
-msgstr "A Sabayon névjegye"
-
-#: ../admin-tool/editorwindow.py:265
-msgid "_Version:"
-msgstr "_Verzió:"
-
-#: ../admin-tool/editorwindow.py:320 ../admin-tool/monitorwindow.py:158
+#: ../admin-tool/changeswindow.py:109 ../admin-tool/editorwindow.py:341
 msgid "Description"
 msgstr "Leírás"
 
-#: ../admin-tool/editorwindow.py:331
+#: ../admin-tool/editorwindow.py:133 ../admin-tool/fileviewer.py:29
+#: ../admin-tool/gconfviewer.py:87 ../admin-tool/sabayon.glade.h:2
+#: ../lib/protosession.py:382
+msgid "All Your Settings Are Belong To Us"
+msgstr "A gépbül veszi ki a beállításokat"
+
+#: ../admin-tool/editorwindow.py:248 ../admin-tool/sessionwindow.py:150
+msgid "_Profile"
+msgstr "_Profil"
+
+#: ../admin-tool/editorwindow.py:249 ../admin-tool/sessionwindow.py:151
+msgid "_Save"
+msgstr "M_entés"
+
+#: ../admin-tool/editorwindow.py:249 ../admin-tool/sessionwindow.py:151
+msgid "Save profile"
+msgstr "Profil mentése"
+
+#: ../admin-tool/editorwindow.py:250
+msgid "_Close"
+msgstr "_Bezárás"
+
+#: ../admin-tool/editorwindow.py:250 ../admin-tool/sessionwindow.py:152
+msgid "Close the current window"
+msgstr "A jelenlegi ablak bezárása"
+
+#: ../admin-tool/editorwindow.py:251 ../admin-tool/sessionwindow.py:153
+msgid "_Edit"
+msgstr "S_zerkesztés"
+
+#: ../admin-tool/editorwindow.py:252
+msgid "_Delete"
+msgstr "Tö_rlés"
+
+#: ../admin-tool/editorwindow.py:252
+msgid "Delete item"
+msgstr "Elem törlése"
+
+#: ../admin-tool/editorwindow.py:253
+msgid "C_lear History"
+msgstr "_Előzmények törlése"
+
+#: ../admin-tool/editorwindow.py:253
+msgid "Clear revision history"
+msgstr "Verziótörténet törlése"
+
+#: ../admin-tool/editorwindow.py:254 ../admin-tool/sessionwindow.py:155
+msgid "_Help"
+msgstr "_Súgó"
+
+#: ../admin-tool/editorwindow.py:255 ../admin-tool/sessionwindow.py:156
+msgid "_About"
+msgstr "_Névjegy"
+
+#: ../admin-tool/editorwindow.py:255 ../admin-tool/sessionwindow.py:156
+msgid "About Sabayon"
+msgstr "A Sabayon névjegye"
+
+#: ../admin-tool/editorwindow.py:286
+msgid "_Version:"
+msgstr "_Verzió:"
+
+#: ../admin-tool/editorwindow.py:352
 msgid "Version"
 msgstr "Verzió"
 
-#: ../admin-tool/editorwindow.py:361 ../lib/sources/gconfsource.py:106
+#: ../admin-tool/editorwindow.py:382 ../lib/sources/gconfsource.py:106
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:365 ../lib/sources/filessource.py:67
+#: ../admin-tool/editorwindow.py:386 ../lib/sources/filessource.py:67
 msgid "Files"
 msgstr "Fájlok"
 
@@ -139,8 +147,8 @@ msgstr "lista"
 msgid "pair"
 msgstr "pár"
 
-#: ../admin-tool/gconfviewer.py:111 ../admin-tool/profilesdialog.py:183
-#: ../admin-tool/usersdialog.py:84
+#: ../admin-tool/gconfviewer.py:111 ../admin-tool/profilesdialog.py:315
+#: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Név"
 
@@ -152,21 +160,46 @@ msgstr "Típus"
 msgid "Value"
 msgstr "Érték"
 
-#: ../admin-tool/monitorwindow.py:146
-msgid "Ignore"
-msgstr "Mellőzendő"
-
-#: ../admin-tool/monitorwindow.py:153
-msgid "Mandatory"
-msgstr "Kötelező"
-
-#: ../admin-tool/profilesdialog.py:215
+#.
+#. Translators: this string specifies how a profile
+#. name is concatenated with an integer
+#. to form a unique profile name e.g.
+#. "Artist Workstation (5)"
+#.
+#: ../admin-tool/profilesdialog.py:415
 #, python-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../admin-tool/sabayon:43
+msgid "Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr "A felhasználói fiókjának nincs jogosultsága futtatni a Munkaasztal-felhasználói profilok eszközt"
+
+#: ../admin-tool/sabayon:44
+msgid ""
+"Administrator level permissions are needed to run this program because it "
+"can modify system files."
+msgstr ""
+"Rendszergazda szintű jogosultság szükséges ezen program futtatásához, mivel "
+"rendszerfájlokat tud módosítani."
+
+#: ../admin-tool/sabayon:49
+msgid "Desktop User Profiles tool is already running"
+msgstr "A Munkaasztal-felhasználói profilok eszköz már fut"
+
+#: ../admin-tool/sabayon:50
+msgid ""
+"You may not use Desktop User Profiles tool from within a profile editing "
+"session"
+msgstr "Nem használhatja a Munkaasztal-felhasználói profilok eszközt egy profilszerkesztő munkafolyamaton belül"
+
+#: ../admin-tool/sabayon:57
+#, c-format
 msgid "User account '%s' was not found"
 msgstr "\"%s\" felhasználói fiók nem található"
 
-#: ../admin-tool/profilesdialog.py:216
-#, python-format
+#: ../admin-tool/sabayon:58
+#, c-format
 msgid ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
 "Try again after creating the account (using, for example, the 'adduser' "
@@ -186,19 +219,10 @@ msgstr "\"%s\" felhasználónak nincs profilja\n"
 msgid "Usage: %s [<profile-name>]\n"
 msgstr "Használat: %s [<profilnév>]\n"
 
-#: ../admin-tool/sabayon-monitor:29
+#: ../admin-tool/sabayon-session:31
 #, c-format
-msgid "Usage: %s <profile-name>\n"
-msgstr "Használat: %s <profilnév>\n"
-
-#: ../admin-tool/sabayon-session:32
-msgid "Your account does not have permissions to run sabayon-session."
-msgstr "A felhasználói fiókjának nincs jogosultsága a sabayon-munkamenet futtatására"
-
-#: ../admin-tool/sabayon-session:36
-#, c-format
-msgid "Usage: %s <username> <profile-file>\n"
-msgstr "Használat: %s <felhasználónév> <profilfájl>\n"
+msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
+msgstr "Használat: %s <profil-név> <profil-útvonal> <megjelenítő-szám>\n"
 
 #: ../admin-tool/sabayon.desktop.in.h:1
 msgid "Desktop User Profiles"
@@ -224,34 +248,21 @@ msgstr "Ezen _profil használata minden felhasználóhoz"
 msgid "_Base on:"
 msgstr "_Alapuljon ezen:"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.glade.h:6
 msgid "_Profiles:"
 msgstr "_Profilok:"
 
-#: ../admin-tool/sabayon.glade.h:9
+#: ../admin-tool/sabayon.glade.h:7
 msgid "_Users"
 msgstr "_Felhasználók"
 
-#: ../admin-tool/sabayon.glade.h:10
+#: ../admin-tool/sabayon.glade.h:8
 msgid "_Users:"
 msgstr "_Felhasználók:"
 
-#: ../admin-tool/sabayon.glade.h:11
+#: ../admin-tool/sabayon.glade.h:9
 msgid "dialog1"
 msgstr "dialog1"
-
-#: ../admin-tool/sabayon:35
-#, c-format
-msgid "Your account does not have permissions to run %s"
-msgstr "A felhasználói fiókjának nincs jogosultsága futtatni a következőt: %s"
-
-#: ../admin-tool/sabayon:36
-msgid ""
-"Administrator level permissions are needed to run this program because it "
-"can modify system files."
-msgstr ""
-"Rendszergazda szintű jogosultság szükséges ezen program futtatásához, mivel "
-"rendszerfájlokat tud módosítani."
 
 #: ../admin-tool/saveconfirm.py:36
 msgid "Close _Without Saving"
@@ -331,7 +342,19 @@ msgstr[1] ""
 "Ha nem menti, akkor az elmúlt egy órában és %d percben történt változások "
 "véglegesen elvesznek."
 
-#: ../admin-tool/usersdialog.py:91
+#: ../admin-tool/sessionwindow.py:152
+msgid "_Quit"
+msgstr "_Kilépés"
+
+#: ../admin-tool/sessionwindow.py:154
+msgid "_Changes"
+msgstr "_Változtatások"
+
+#: ../admin-tool/sessionwindow.py:154
+msgid "Edit changes"
+msgstr "Változtatások szerkesztése"
+
+#: ../admin-tool/usersdialog.py:92
 msgid "Use This Profile"
 msgstr "Ezen profil használata"
 
@@ -345,30 +368,25 @@ msgstr "Nem sikerült figyelőt hozzáadni a következőhöz: %s"
 msgid "Expected event: %s %s"
 msgstr "Várt esemény: %s %s"
 
-#: ../lib/protosession.py:88
-#, python-format
-msgid "User '%s' does not exist"
-msgstr "\"%s\" felhasználó nem létezik"
-
-#: ../lib/protosession.py:216
-msgid "'xauth list' returned error"
-msgstr "az \"xauth list\" hibával tért vissza"
-
-#: ../lib/protosession.py:235
-msgid "'xauth list' returned no records or records in unknown format"
-msgstr "az \"xauth list\" nem vagy hibás formátumban adott vissza rekordokat"
-
-#: ../lib/protosession.py:314
+#: ../lib/protosession.py:136
 msgid "Unable to find a free X display"
 msgstr "Nem sikerült szabad X megjelenítőt találni"
 
-#: ../lib/protosession.py:376
+#: ../lib/protosession.py:266
+msgid "'xauth list' returned error"
+msgstr "az \"xauth list\" hibával tért vissza"
+
+#: ../lib/protosession.py:285
+msgid "'xauth list' returned no records or records in unknown format"
+msgstr "az \"xauth list\" nem vagy hibás formátumban adott vissza rekordokat"
+
+#: ../lib/protosession.py:428
 msgid "Failed to start Xnest: timed out waiting for USR1 signal"
 msgstr ""
 "Nem sikerült elindítani az Xnestet: időtúllépés az USR1 szignálra való "
 "várakozás közben"
 
-#: ../lib/protosession.py:378
+#: ../lib/protosession.py:430
 msgid "Failed to start Xnest: died during startup"
 msgstr "Nem sikerült elindítani az Xnestet: indítás közben elpusztult"
 
@@ -475,55 +493,63 @@ msgstr "\"%s\" Mozilla kulcs visszaállítva"
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "\"%s\" Mozilla kulcs megváltoztatva a következőre: \"%s\""
 
-#: ../lib/sources/mozillasource.py:145
-msgid "Firefox"
-msgstr "Firefox"
+#: ../lib/sources/mozillasource.py:165 ../lib/sources/mozillasource.py:175
+msgid "Web browser preferences"
+msgstr "Webböngésző tulajdonságai"
 
-#: ../lib/sources/mozillasource.py:496
+#: ../lib/sources/mozillasource.py:167 ../lib/sources/mozillasource.py:177
+msgid "Web browser bookmarks"
+msgstr "Webböngésző könyvjelzői"
+
+#: ../lib/sources/mozillasource.py:169
+msgid "Web browser profile list"
+msgstr "Webböngésző-profilok listája"
+
+#: ../lib/sources/mozillasource.py:516
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "%s fájl nem található"
 
-#: ../lib/sources/mozillasource.py:835
+#: ../lib/sources/mozillasource.py:855
 #, python-format
 msgid "duplicate name(%s) in section %s"
 msgstr "kettőzött név (%s) %s szakaszban"
 
-#: ../lib/sources/mozillasource.py:844
+#: ../lib/sources/mozillasource.py:864
 #, python-format
 msgid "redundant default in section %s"
 msgstr "többszörös alapértelmezés %s szakaszban"
 
-#: ../lib/sources/mozillasource.py:861
+#: ../lib/sources/mozillasource.py:881
 msgid "no default profile"
 msgstr "nincs alapértelmezett profil"
 
-#: ../lib/sources/mozillasource.py:916
+#: ../lib/sources/mozillasource.py:936
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Mozilla könyvjelző létrehozva: \"%s\" -> \"%s\""
 
-#: ../lib/sources/mozillasource.py:918
+#: ../lib/sources/mozillasource.py:938
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Mozilla könyvjelzőmappa létrehozva: \"%s\""
 
-#: ../lib/sources/mozillasource.py:921
+#: ../lib/sources/mozillasource.py:941
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Mozilla könyvjelző törölve: \"%s\""
 
-#: ../lib/sources/mozillasource.py:923
+#: ../lib/sources/mozillasource.py:943
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Mozilla könyvjelzőmappa törölve: \"%s\""
 
-#: ../lib/sources/mozillasource.py:926
+#: ../lib/sources/mozillasource.py:946
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Mozilla könyvjelző megváltoztatva: \"%s\" \"%s\""
 
-#: ../lib/sources/mozillasource.py:928
+#: ../lib/sources/mozillasource.py:948
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mozilla könyvjelzőmappa megváltoztatva: \"%s\""
@@ -582,20 +608,20 @@ msgstr "Érvénytelen metaadat-szakasz a következőben: \"%s\": %s"
 msgid "Cannot add non-existent file '%s'"
 msgstr "Nem lehet hozzáadni \"%s\" nem létező fájlt"
 
-#: ../lib/storage.py:623
+#: ../lib/storage.py:608
 msgid "No current revision"
 msgstr "Nincs aktuális verzió"
 
-#: ../lib/storage.py:627 ../lib/storage.py:638
+#: ../lib/storage.py:612 ../lib/storage.py:623
 #, python-format
 msgid "'%s' does not exist in profile revision '%s'"
 msgstr "\"%s\" nem létezik a(z) \"%s\" profilverzióban"
 
-#: ../lib/storage.py:710
+#: ../lib/storage.py:734
 msgid "Not a valid profile revision"
 msgstr "Érvénytelen profilverzió"
 
-#: ../lib/storage.py:752
+#: ../lib/storage.py:776
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "A profil csak olvasható %s"
