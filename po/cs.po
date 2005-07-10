@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-06-12 04:05+0000\n"
-"PO-Revision-Date: 2005-06-12 15:35+0200\n"
+"POT-Creation-Date: 2005-07-05 12:12+0000\n"
+"PO-Revision-Date: 2005-07-10 19:07+0200\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -26,81 +26,89 @@ msgstr "Program pro vytvoření a úpravu profilů pro uživatele"
 msgid "translator-credits"
 msgstr "Miloslav Trmač <mitr@volny.cz>"
 
-#: ../admin-tool/editorwindow.py:131 ../admin-tool/fileviewer.py:29
-#: ../admin-tool/gconfviewer.py:87 ../admin-tool/sabayon.glade.h:2
-#: ../lib/protosession.py:332
-msgid "All Your Settings Are Belong To Us"
-msgstr "All Your Settings Are Belong To Us"
+#: ../admin-tool/changeswindow.py:96
+msgid "Ignore"
+msgstr "Ignorovat"
 
-#: ../admin-tool/editorwindow.py:246 ../admin-tool/sabayon.glade.h:7
-msgid "_Profile"
-msgstr "_Profil"
+#: ../admin-tool/changeswindow.py:103
+msgid "Lock"
+msgstr "Zamknout"
 
-#: ../admin-tool/editorwindow.py:247
-msgid "_Save"
-msgstr "_Uložit"
-
-#: ../admin-tool/editorwindow.py:247
-msgid "Save profile"
-msgstr "Uložit profil"
-
-#: ../admin-tool/editorwindow.py:248
-msgid "_Close"
-msgstr "_Zavřít"
-
-#: ../admin-tool/editorwindow.py:248
-msgid "Close the current window"
-msgstr "Zavřít aktuální okno"
-
-#: ../admin-tool/editorwindow.py:249
-msgid "_Edit"
-msgstr "_Upravit"
-
-#: ../admin-tool/editorwindow.py:250
-msgid "_Delete"
-msgstr "_Odstranit"
-
-#: ../admin-tool/editorwindow.py:250
-msgid "Delete item"
-msgstr "Odstranit položku"
-
-#: ../admin-tool/editorwindow.py:251
-msgid "C_lear History"
-msgstr "Vy_mazat historii"
-
-#: ../admin-tool/editorwindow.py:251
-msgid "Clear revision history"
-msgstr "Vymazat historii verzí"
-
-#: ../admin-tool/editorwindow.py:252 ../admin-tool/sabayon.glade.h:6
-msgid "_Help"
-msgstr "_Nápověda"
-
-#: ../admin-tool/editorwindow.py:253
-msgid "_About"
-msgstr "O _aplikaci"
-
-#: ../admin-tool/editorwindow.py:253
-msgid "About Sabayon"
-msgstr "O Sabayon"
-
-#: ../admin-tool/editorwindow.py:284
-msgid "_Version:"
-msgstr "_Verze:"
-
-#: ../admin-tool/editorwindow.py:339 ../admin-tool/monitorwindow.py:158
+#: ../admin-tool/changeswindow.py:109 ../admin-tool/editorwindow.py:341
 msgid "Description"
 msgstr "Popis"
 
-#: ../admin-tool/editorwindow.py:350
+#: ../admin-tool/editorwindow.py:133 ../admin-tool/fileviewer.py:29
+#: ../admin-tool/gconfviewer.py:87 ../admin-tool/sabayon.glade.h:2
+#: ../lib/protosession.py:382
+msgid "All Your Settings Are Belong To Us"
+msgstr "All Your Settings Are Belong To Us"
+
+#: ../admin-tool/editorwindow.py:248 ../admin-tool/sessionwindow.py:150
+msgid "_Profile"
+msgstr "_Profil"
+
+#: ../admin-tool/editorwindow.py:249 ../admin-tool/sessionwindow.py:151
+msgid "_Save"
+msgstr "_Uložit"
+
+#: ../admin-tool/editorwindow.py:249 ../admin-tool/sessionwindow.py:151
+msgid "Save profile"
+msgstr "Uložit profil"
+
+#: ../admin-tool/editorwindow.py:250
+msgid "_Close"
+msgstr "_Zavřít"
+
+#: ../admin-tool/editorwindow.py:250 ../admin-tool/sessionwindow.py:152
+msgid "Close the current window"
+msgstr "Zavřít aktuální okno"
+
+#: ../admin-tool/editorwindow.py:251 ../admin-tool/sessionwindow.py:153
+msgid "_Edit"
+msgstr "_Upravit"
+
+#: ../admin-tool/editorwindow.py:252
+msgid "_Delete"
+msgstr "_Odstranit"
+
+#: ../admin-tool/editorwindow.py:252
+msgid "Delete item"
+msgstr "Odstranit položku"
+
+#: ../admin-tool/editorwindow.py:253
+msgid "C_lear History"
+msgstr "Vy_mazat historii"
+
+#: ../admin-tool/editorwindow.py:253
+msgid "Clear revision history"
+msgstr "Vymazat historii verzí"
+
+#: ../admin-tool/editorwindow.py:254 ../admin-tool/sessionwindow.py:155
+msgid "_Help"
+msgstr "_Nápověda"
+
+#: ../admin-tool/editorwindow.py:255 ../admin-tool/sessionwindow.py:156
+msgid "_About"
+msgstr "O _aplikaci"
+
+#: ../admin-tool/editorwindow.py:255 ../admin-tool/sessionwindow.py:156
+msgid "About Sabayon"
+msgstr "O Sabayon"
+
+#: ../admin-tool/editorwindow.py:286
+msgid "_Version:"
+msgstr "_Verze:"
+
+#: ../admin-tool/editorwindow.py:352
 msgid "Version"
 msgstr "Verze"
 
-#: ../admin-tool/editorwindow.py:380 ../lib/sources/gconfsource.py:106
+#: ../admin-tool/editorwindow.py:382 ../lib/sources/gconfsource.py:106
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:384 ../lib/sources/filessource.py:67
+#: ../admin-tool/editorwindow.py:386 ../lib/sources/filessource.py:67
 msgid "Files"
 msgstr "Soubory"
 
@@ -140,7 +148,7 @@ msgstr "seznam"
 msgid "pair"
 msgstr "dvojice"
 
-#: ../admin-tool/gconfviewer.py:111 ../admin-tool/profilesdialog.py:179
+#: ../admin-tool/gconfviewer.py:111 ../admin-tool/profilesdialog.py:315
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Název"
@@ -153,21 +161,47 @@ msgstr "Typ"
 msgid "Value"
 msgstr "Hodnota"
 
-#: ../admin-tool/monitorwindow.py:146
-msgid "Ignore"
-msgstr "Ignorovat"
-
-#: ../admin-tool/monitorwindow.py:153
-msgid "Mandatory"
-msgstr "Povinné"
-
-#: ../admin-tool/profilesdialog.py:211
+#.
+#. Translators: this string specifies how a profile
+#. name is concatenated with an integer
+#. to form a unique profile name e.g.
+#. "Artist Workstation (5)"
+#.
+#: ../admin-tool/profilesdialog.py:415
 #, python-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../admin-tool/sabayon:43
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr "Váš účet nemá oprávnění spustit nástroj Profily uživatelů pracovní plochy"
+
+#: ../admin-tool/sabayon:44
+msgid ""
+"Administrator level permissions are needed to run this program because it "
+"can modify system files."
+msgstr ""
+"Pro spuštění tohoto programu jsou vyžadována oprávnění správce, protože může "
+"měnit systémové soubory."
+
+#: ../admin-tool/sabayon:49
+msgid "Desktop User Profiles tool is already running"
+msgstr "Nástroj Profily uživatelů pracovní plochy již běží"
+
+#: ../admin-tool/sabayon:50
+msgid ""
+"You may not use Desktop User Profiles tool from within a profile editing "
+"session"
+msgstr "Nemůžete používat nástroj Profily uživatelů pracovní plochy v sezení upravujícím profil"
+
+#: ../admin-tool/sabayon:57
+#, c-format
 msgid "User account '%s' was not found"
 msgstr "Účet uživatele '%s' nebyl nalezen"
 
-#: ../admin-tool/profilesdialog.py:212
-#, python-format
+#: ../admin-tool/sabayon:58
+#, c-format
 msgid ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
 "Try again after creating the account (using, for example, the 'adduser' "
@@ -176,17 +210,6 @@ msgstr ""
 "Sabayon vyžaduje, aby na tomto počítači byl přítomen účet speciálního "
 "uživatele '%s'. Zkuste to znovu po vytvoření tohoto účtu (například příkazem "
 "'adduser')"
-
-#.
-#. Translators: this string specifies how a profile
-#. name is concatenated with an integer
-#. to form a unique profile name e.g.
-#. "Artist Workstation (5)"
-#.
-#: ../admin-tool/profilesdialog.py:317
-#, python-format
-msgid "%s (%s)"
-msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon-apply:33
 #, c-format
@@ -198,10 +221,10 @@ msgstr "Nebyl nalezen profil pro uživatele '%s'\n"
 msgid "Usage: %s [<profile-name>]\n"
 msgstr "Použití: %s [<název-profilu>]\n"
 
-#: ../admin-tool/sabayon-monitor:29
+#: ../admin-tool/sabayon-session:31
 #, c-format
-msgid "Usage: %s <profile-name>\n"
-msgstr "Použití: %s <název-profilu>\n"
+msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
+msgstr "Použití: %s <název-profilu> <cesta-k-profilu> <číslo-displeje>\n"
 
 #: ../admin-tool/sabayon.desktop.in.h:1
 msgid "Desktop User Profiles"
@@ -227,34 +250,21 @@ msgstr "Používat tento profil pro _všechny uživatele"
 msgid "_Base on:"
 msgstr "_Založit na:"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.glade.h:6
 msgid "_Profiles:"
 msgstr "_Profily:"
 
-#: ../admin-tool/sabayon.glade.h:9
+#: ../admin-tool/sabayon.glade.h:7
 msgid "_Users"
 msgstr "_Uživatelé"
 
-#: ../admin-tool/sabayon.glade.h:10
+#: ../admin-tool/sabayon.glade.h:8
 msgid "_Users:"
 msgstr "_Uživatelé:"
 
-#: ../admin-tool/sabayon.glade.h:11
+#: ../admin-tool/sabayon.glade.h:9
 msgid "dialog1"
 msgstr "dialog1"
-
-#: ../admin-tool/sabayon:35
-#, c-format
-msgid "Your account does not have permissions to run %s"
-msgstr "Váš účet nemá oprávnění spustit %s"
-
-#: ../admin-tool/sabayon:36
-msgid ""
-"Administrator level permissions are needed to run this program because it "
-"can modify system files."
-msgstr ""
-"Pro spuštění tohoto programu jsou vyžadována oprávnění správce, protože může "
-"měnit systémové soubory."
 
 #: ../admin-tool/saveconfirm.py:36
 msgid "Close _Without Saving"
@@ -346,6 +356,18 @@ msgstr[2] ""
 "Pokud je neuložíte, budou změny za poslední hodinu a %ld minut navždy "
 "ztraceny."
 
+#: ../admin-tool/sessionwindow.py:152
+msgid "_Quit"
+msgstr "U_končit"
+
+#: ../admin-tool/sessionwindow.py:154
+msgid "_Changes"
+msgstr "_Změny"
+
+#: ../admin-tool/sessionwindow.py:154
+msgid "Edit changes"
+msgstr "Upravit změny"
+
 #: ../admin-tool/usersdialog.py:92
 msgid "Use This Profile"
 msgstr "Používat tento profil"
@@ -360,29 +382,24 @@ msgstr "Nemohu přidat sledování pro %s"
 msgid "Expected event: %s %s"
 msgstr "Očekávaná událost: %s %s"
 
-#: ../lib/protosession.py:88
-#, python-format
-msgid "User '%s' does not exist"
-msgstr "Uživatel '%s' neexistuje"
+#: ../lib/protosession.py:136
+msgid "Unable to find a free X display"
+msgstr "Nemohu najít volný displej X"
 
-#: ../lib/protosession.py:216
+#: ../lib/protosession.py:266
 msgid "'xauth list' returned error"
 msgstr "'xauth list' vrátil chybu"
 
-#: ../lib/protosession.py:235
+#: ../lib/protosession.py:285
 msgid "'xauth list' returned no records or records in unknown format"
 msgstr ""
 "'xauth list' nevrátil žádné záznamy nebo vrátil záznamy v neznámém formátu"
 
-#: ../lib/protosession.py:314
-msgid "Unable to find a free X display"
-msgstr "Nemohu najít volný displej X"
-
-#: ../lib/protosession.py:378
+#: ../lib/protosession.py:428
 msgid "Failed to start Xnest: timed out waiting for USR1 signal"
 msgstr "Nemohu spustit Xnest: čas vypršel při čekání na signál USR1"
 
-#: ../lib/protosession.py:380
+#: ../lib/protosession.py:430
 msgid "Failed to start Xnest: died during startup"
 msgstr "Nemohu spustit Xnest: umřel při spouštění"
 
@@ -489,55 +506,63 @@ msgstr "Klíč Mozilly '%s' zrušen"
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Klíč Mozilly '%s' změněn na '%s'"
 
-#: ../lib/sources/mozillasource.py:145
-msgid "Firefox"
-msgstr "Firefox"
+#: ../lib/sources/mozillasource.py:165 ../lib/sources/mozillasource.py:175
+msgid "Web browser preferences"
+msgstr "Nastavení WWW prohlížeče"
 
-#: ../lib/sources/mozillasource.py:496
+#: ../lib/sources/mozillasource.py:167 ../lib/sources/mozillasource.py:177
+msgid "Web browser bookmarks"
+msgstr "Záložky WWW prohlížeče"
+
+#: ../lib/sources/mozillasource.py:169
+msgid "Web browser profile list"
+msgstr "Seznam profilů WWW prohlížeče"
+
+#: ../lib/sources/mozillasource.py:516
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Soubor nenalezen (%s)"
 
-#: ../lib/sources/mozillasource.py:835
+#: ../lib/sources/mozillasource.py:855
 #, python-format
 msgid "duplicate name(%s) in section %s"
 msgstr "duplikované jméno (%s) v oddílu %s"
 
-#: ../lib/sources/mozillasource.py:844
+#: ../lib/sources/mozillasource.py:864
 #, python-format
 msgid "redundant default in section %s"
 msgstr "redundantní implicitní v oddílu %s"
 
-#: ../lib/sources/mozillasource.py:861
+#: ../lib/sources/mozillasource.py:881
 msgid "no default profile"
 msgstr "žádný implicitní profil"
 
-#: ../lib/sources/mozillasource.py:916
+#: ../lib/sources/mozillasource.py:936
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Záložka Mozilly vytvořena '%s' -> '%s'"
 
-#: ../lib/sources/mozillasource.py:918
+#: ../lib/sources/mozillasource.py:938
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Složka záložek Mozilly '%s' vytvořena"
 
-#: ../lib/sources/mozillasource.py:921
+#: ../lib/sources/mozillasource.py:941
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Záložka Mozilly '%s' odstraněna"
 
-#: ../lib/sources/mozillasource.py:923
+#: ../lib/sources/mozillasource.py:943
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Složka záložek Mozilly '%s' odstraněna"
 
-#: ../lib/sources/mozillasource.py:926
+#: ../lib/sources/mozillasource.py:946
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Záložka Mozilly změněna '%s' '%s'"
 
-#: ../lib/sources/mozillasource.py:928
+#: ../lib/sources/mozillasource.py:948
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Složka záložek Mozilly změněna '%s'"
@@ -596,20 +621,20 @@ msgstr "Neplatný oddíl metadat v '%s': %s"
 msgid "Cannot add non-existent file '%s'"
 msgstr "Nemohu přidat neexistující soubor '%s'"
 
-#: ../lib/storage.py:623
+#: ../lib/storage.py:608
 msgid "No current revision"
 msgstr "Žádná aktuální verze"
 
-#: ../lib/storage.py:627 ../lib/storage.py:638
+#: ../lib/storage.py:612 ../lib/storage.py:623
 #, python-format
 msgid "'%s' does not exist in profile revision '%s'"
 msgstr "'%s' neexistuje ve verzi profilu '%s'"
 
-#: ../lib/storage.py:710
+#: ../lib/storage.py:734
 msgid "Not a valid profile revision"
 msgstr "Není to platná verze profilu"
 
-#: ../lib/storage.py:752
+#: ../lib/storage.py:776
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Profil je jen pro čtení %s"
@@ -677,11 +702,17 @@ msgstr ""
 "Nemohu najít jméno uživatele: nenastaveno v /etc/passwd a žádná hodnota "
 "$USER v prostředí"
 
+#~ msgid "Mandatory"
+#~ msgstr "Povinné"
+
+#~ msgid "Usage: %s <profile-name>\n"
+#~ msgstr "Použití: %s <název-profilu>\n"
+
+#~ msgid "User '%s' does not exist"
+#~ msgstr "Uživatel '%s' neexistuje"
+
 #~ msgid "Your account does not have permissions to run sabayon-session."
 #~ msgstr "Váš účet nemá oprávnění spustit sabayon-session."
-
-#~ msgid "Usage: %s <username> <profile-file>\n"
-#~ msgstr "Použití: %s <jménouživatele> <soubor-profilu>\n"
 
 #~ msgid "C_reate"
 #~ msgstr "_Vytvořit"
