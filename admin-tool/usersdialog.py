@@ -85,7 +85,10 @@ class UsersDialog:
         c = gtk.TreeViewColumn (_("Name"),
                                 gtk.CellRendererText (),
                                 text = UsersModel.COLUMN_NAME)
+        c.set_sort_column_id(UsersModel.COLUMN_NAME)        
         self.users_list.append_column (c)
+        self.users_model.set_sort_column_id(UsersModel.COLUMN_NAME, gtk.SORT_ASCENDING)
+
 
         toggle = gtk.CellRendererToggle ()
         toggle.connect ("toggled", self.__on_use_toggled)
