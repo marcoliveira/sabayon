@@ -10,15 +10,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-06-07 21:16+0200\n"
-"PO-Revision-Date: 2005-06-07 21:28+0200\n"
+"POT-Creation-Date: 2005-07-13 22:33+0200\n"
+"PO-Revision-Date: 2005-07-13 22:38+0200\n"
 "Last-Translator: \n"
 "Language-Team:  <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #: ../admin-tool/aboutdialog.py:63
 msgid "Program to establish and edit profiles for users"
@@ -30,81 +30,89 @@ msgstr ""
 "Jaime Iniesta Alemán (capitanplaneta@gmail.com)\n"
 "QA Francisco Javier F. Serrador, serrador@gnome.org,"
 
-#: ../admin-tool/editorwindow.py:124 ../admin-tool/fileviewer.py:29
-#: ../admin-tool/gconfviewer.py:87 ../admin-tool/sabayon.glade.h:2
-#: ../lib/protosession.py:332
-msgid "All Your Settings Are Belong To Us"
-msgstr "Todas tus configuraciones nos pertenecen"
+#: ../admin-tool/changeswindow.py:96
+msgid "Ignore"
+msgstr "Ignorar"
 
-#: ../admin-tool/editorwindow.py:227 ../admin-tool/sabayon.glade.h:7
-msgid "_Profile"
-msgstr "_Perfil"
+#: ../admin-tool/changeswindow.py:103
+msgid "Lock"
+msgstr "Bloquear"
 
-#: ../admin-tool/editorwindow.py:228
-msgid "_Save"
-msgstr "_Guardar"
-
-#: ../admin-tool/editorwindow.py:228
-msgid "Save profile"
-msgstr "Guardar perfil"
-
-#: ../admin-tool/editorwindow.py:229
-msgid "_Close"
-msgstr "_Cerrar"
-
-#: ../admin-tool/editorwindow.py:229
-msgid "Close the current window"
-msgstr "Cierra la ventana actual"
-
-#: ../admin-tool/editorwindow.py:230
-msgid "_Edit"
-msgstr "_Editar"
-
-#: ../admin-tool/editorwindow.py:231
-msgid "_Delete"
-msgstr "_Borrar"
-
-#: ../admin-tool/editorwindow.py:231
-msgid "Delete item"
-msgstr "Borrar elemento"
-
-#: ../admin-tool/editorwindow.py:232
-msgid "C_lear History"
-msgstr "_Vaciar histórico"
-
-#: ../admin-tool/editorwindow.py:232
-msgid "Clear revision history"
-msgstr "Vaciar historial de revisiones"
-
-#: ../admin-tool/editorwindow.py:233 ../admin-tool/sabayon.glade.h:6
-msgid "_Help"
-msgstr "A_yuda"
-
-#: ../admin-tool/editorwindow.py:234
-msgid "_About"
-msgstr "A_cerca de"
-
-#: ../admin-tool/editorwindow.py:234
-msgid "About Sabayon"
-msgstr "Acerca de Sabayon"
-
-#: ../admin-tool/editorwindow.py:265
-msgid "_Version:"
-msgstr "_Versión:"
-
-#: ../admin-tool/editorwindow.py:320 ../admin-tool/monitorwindow.py:158
+#: ../admin-tool/changeswindow.py:109 ../admin-tool/editorwindow.py:341
 msgid "Description"
 msgstr "Descripción"
 
-#: ../admin-tool/editorwindow.py:331
+#: ../admin-tool/editorwindow.py:133 ../admin-tool/fileviewer.py:29
+#: ../admin-tool/gconfviewer.py:87 ../admin-tool/sabayon.glade.h:2
+#: ../lib/protosession.py:382
+msgid "All Your Settings Are Belong To Us"
+msgstr "Todas tus configuraciones nos pertenecen"
+
+#: ../admin-tool/editorwindow.py:248 ../admin-tool/sessionwindow.py:150
+msgid "_Profile"
+msgstr "_Perfil"
+
+#: ../admin-tool/editorwindow.py:249 ../admin-tool/sessionwindow.py:151
+msgid "_Save"
+msgstr "_Guardar"
+
+#: ../admin-tool/editorwindow.py:249 ../admin-tool/sessionwindow.py:151
+msgid "Save profile"
+msgstr "Guardar perfil"
+
+#: ../admin-tool/editorwindow.py:250
+msgid "_Close"
+msgstr "_Cerrar"
+
+#: ../admin-tool/editorwindow.py:250 ../admin-tool/sessionwindow.py:152
+msgid "Close the current window"
+msgstr "Cierra la ventana actual"
+
+#: ../admin-tool/editorwindow.py:251 ../admin-tool/sessionwindow.py:153
+msgid "_Edit"
+msgstr "_Editar"
+
+#: ../admin-tool/editorwindow.py:252
+msgid "_Delete"
+msgstr "_Borrar"
+
+#: ../admin-tool/editorwindow.py:252
+msgid "Delete item"
+msgstr "Borrar elemento"
+
+#: ../admin-tool/editorwindow.py:253
+msgid "C_lear History"
+msgstr "_Vaciar histórico"
+
+#: ../admin-tool/editorwindow.py:253
+msgid "Clear revision history"
+msgstr "Vaciar historial de revisiones"
+
+#: ../admin-tool/editorwindow.py:254 ../admin-tool/sessionwindow.py:155
+msgid "_Help"
+msgstr "A_yuda"
+
+#: ../admin-tool/editorwindow.py:255 ../admin-tool/sessionwindow.py:156
+msgid "_About"
+msgstr "A_cerca de"
+
+#: ../admin-tool/editorwindow.py:255 ../admin-tool/sessionwindow.py:156
+msgid "About Sabayon"
+msgstr "Acerca de Sabayon"
+
+#: ../admin-tool/editorwindow.py:286
+msgid "_Version:"
+msgstr "_Versión:"
+
+#: ../admin-tool/editorwindow.py:352
 msgid "Version"
 msgstr "Versión"
 
-#: ../admin-tool/editorwindow.py:361 ../lib/sources/gconfsource.py:106
+#: ../admin-tool/editorwindow.py:382 ../lib/sources/gconfsource.py:106
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:365 ../lib/sources/filessource.py:67
+#: ../admin-tool/editorwindow.py:386 ../lib/sources/filessource.py:67
 msgid "Files"
 msgstr "Archivos"
 
@@ -144,7 +152,7 @@ msgstr "lista"
 msgid "pair"
 msgstr "par"
 
-#: ../admin-tool/gconfviewer.py:111 ../admin-tool/profilesdialog.py:186
+#: ../admin-tool/gconfviewer.py:111 ../admin-tool/profilesdialog.py:315
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Nombre"
@@ -157,21 +165,47 @@ msgstr "Tipo"
 msgid "Value"
 msgstr "Valor"
 
-#: ../admin-tool/monitorwindow.py:146
-msgid "Ignore"
-msgstr "Ignorar"
-
-#: ../admin-tool/monitorwindow.py:153
-msgid "Mandatory"
-msgstr "Obligatorio"
-
-#: ../admin-tool/profilesdialog.py:218
+#.
+#. Translators: this string specifies how a profile
+#. name is concatenated with an integer
+#. to form a unique profile name e.g.
+#. "Artist Workstation (5)"
+#.
+#: ../admin-tool/profilesdialog.py:415
 #, python-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../admin-tool/sabayon:43
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr "Su cuenta no tiene permisos para ejecutar la herramienta de configuraión de perfiles del escritorio."
+
+#: ../admin-tool/sabayon:44
+msgid ""
+"Administrator level permissions are needed to run this program because it "
+"can modify system files."
+msgstr ""
+"Se necesitan privilegios de nivel de administrador para ejecutar este "
+"programa ya que puede modificar archivos de sistema."
+
+#: ../admin-tool/sabayon:49
+msgid "Desktop User Profiles tool is already running"
+msgstr "La herramienta de Perfiles de usuarios está ejecutándose ya"
+
+#: ../admin-tool/sabayon:50
+msgid ""
+"You may not use Desktop User Profiles tool from within a profile editing "
+"session"
+msgstr "No debe usar una herramienta de perfiles de escritorio desde dentro de una sesión de edición de perfiles"
+
+#: ../admin-tool/sabayon:57
+#, c-format
 msgid "User account '%s' was not found"
 msgstr "No·se·encontró la cuenta del usuario «%s»"
 
-#: ../admin-tool/profilesdialog.py:219
-#, python-format
+#: ../admin-tool/sabayon:58
+#, c-format
 msgid ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
 "Try again after creating the account (using, for example, the 'adduser' "
@@ -191,19 +225,10 @@ msgstr "No se ha encontrado ningún perfil para el usuario «%s»\n"
 msgid "Usage: %s [<profile-name>]\n"
 msgstr "Uso: %s [<nombre-de-perfil>]\n"
 
-#: ../admin-tool/sabayon-monitor:29
+#: ../admin-tool/sabayon-session:31
 #, c-format
-msgid "Usage: %s <profile-name>\n"
-msgstr "Uso: %s <nombre-de-perfil>\n"
-
-#: ../admin-tool/sabayon-session:32
-msgid "Your account does not have permissions to run sabayon-session."
-msgstr "Su cuenta no tiene permisos para ejecutar sabayon-session."
-
-#: ../admin-tool/sabayon-session:36
-#, c-format
-msgid "Usage: %s <username> <profile-file>\n"
-msgstr "Uso: %s <nombre-de-usuario> <archivo-de-perfil>\n"
+msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
+msgstr "Uso: %s <nombre-de-perfil> <ruta-de-perfil> <número-de-pantalla>\n"
 
 #: ../admin-tool/sabayon.desktop.in.h:1
 msgid "Desktop User Profiles"
@@ -229,34 +254,21 @@ msgstr "Usar este perfil para _todos los usuarios"
 msgid "_Base on:"
 msgstr "_Basado en:"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.glade.h:6
 msgid "_Profiles:"
 msgstr "_Perfiles:"
 
-#: ../admin-tool/sabayon.glade.h:9
+#: ../admin-tool/sabayon.glade.h:7
 msgid "_Users"
 msgstr "_Usuarios"
 
-#: ../admin-tool/sabayon.glade.h:10
+#: ../admin-tool/sabayon.glade.h:8
 msgid "_Users:"
 msgstr "_Usuarios:"
 
-#: ../admin-tool/sabayon.glade.h:11
+#: ../admin-tool/sabayon.glade.h:9
 msgid "dialog1"
 msgstr "diálogo1"
-
-#: ../admin-tool/sabayon:35
-#, c-format
-msgid "Your account does not have permissions to run %s"
-msgstr "Su cuenta no tiene permisos para ejecutar %s"
-
-#: ../admin-tool/sabayon:36
-msgid ""
-"Administrator level permissions are needed to run this program because it "
-"can modify system files."
-msgstr ""
-"Se necesitan privilegios de nivel de administrador para ejecutar este "
-"programa ya que puede modificar archivos de sistema."
 
 #: ../admin-tool/saveconfirm.py:36
 msgid "Close _Without Saving"
@@ -268,44 +280,53 @@ msgid "Save changes to profile \"%s\" before closing?"
 msgstr "¿Desea guardar los cambios al perfil «%s» antes de cerrar?"
 
 #: ../admin-tool/saveconfirm.py:47
-#, python-format, fuzzy
-msgid "If you don't save, changes from the last %ld second will be permanently lost."
+#, python-format
+msgid ""
+"If you don't save, changes from the last %ld second will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld seconds will be permanently "
 "lost."
-msgstr[0] "Si no guarda, se perderán permanentemente los cambios del último minuto."
-msgstr[1] "Si no guarda, se perderán permanentemente los cambios del último minuto."
+msgstr[0] "Si no guarda, se perderán permanentemente los cambios del último %ld segundo."
+msgstr[1] "Si no guarda, se perderán permanentemente los cambios de los últimos %ld segundos."
 
 #: ../admin-tool/saveconfirm.py:53
-msgid "If you don't save, changes from the last minute will be permanently lost."
-msgstr "Si no guarda, se perderán permanentemente los cambios del último minuto."
+msgid ""
+"If you don't save, changes from the last minute will be permanently lost."
+msgstr ""
+"Si no guarda, se perderán permanentemente los cambios del último minuto."
 
 #: ../admin-tool/saveconfirm.py:57
-#, python-format, fuzzy
+#, python-format
 msgid ""
 "If you don't save, changes from the last minute and %ld second will be "
 "permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last minute and %ld seconds will be "
 "permanently lost."
-msgstr[0] "Si no guarda, se perderán permanentemente los cambios del último minuto."
-msgstr[1] "Si no guarda, se perderán permanentemente los cambios del último minuto."
+msgstr[0] "Si no guarda, se perderán permanentemente los cambios del último minuto y %ld segundo."
+msgstr[1] "Si no guarda, se perderán permanentemente los cambios del último minuto y los %ld segundos."
 
 #: ../admin-tool/saveconfirm.py:64
 #, fuzzy, python-format
-msgid "If you don't save, changes from the last %ld minute will be permanently lost."
+msgid ""
+"If you don't save, changes from the last %ld minute will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
-msgstr[0] "Si no guarda, se perderán permanentemente los cambios del último minuto."
-msgstr[1] "Si no guarda, se perderán permanentemente los cambios del último minuto."
+msgstr[0] ""
+"Si no guarda, se perderán permanentemente los cambios del último minuto."
+msgstr[1] ""
+"Si no guarda, se perderán permanentemente los cambios del último minuto."
 
 #: ../admin-tool/saveconfirm.py:73 ../admin-tool/saveconfirm.py:83
 #, fuzzy, python-format
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "Si no guarda, se perderán permanentemente los cambios del último minuto."
-msgstr[1] "Si no guarda, se perderán permanentemente los cambios del último minuto."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] ""
+"Si no guarda, se perderán permanentemente los cambios del último minuto."
+msgstr[1] ""
+"Si no guarda, se perderán permanentemente los cambios del último minuto."
 
 #: ../admin-tool/saveconfirm.py:76
 #, python-format
@@ -315,10 +336,26 @@ msgid ""
 msgid_plural ""
 "If you don't save, changes from the last hour and %d minutes will be "
 "permanently lost."
-msgstr[0] "Si no guarda, se perderán permanentemente los cambios de la última hora y del %d minuto"
-msgstr[1] "Si no guarda, se perderán permanentemente los cambios de la última hora y de los %d minutos."
+msgstr[0] ""
+"Si no guarda, se perderán permanentemente los cambios de la última hora y "
+"del %d minuto"
+msgstr[1] ""
+"Si no guarda, se perderán permanentemente los cambios de la última hora y de "
+"los %d minutos."
 
-#: ../admin-tool/usersdialog.py:92
+#: ../admin-tool/sessionwindow.py:152
+msgid "_Quit"
+msgstr "_Salir"
+
+#: ../admin-tool/sessionwindow.py:154
+msgid "_Changes"
+msgstr "_Cambios"
+
+#: ../admin-tool/sessionwindow.py:154
+msgid "Edit changes"
+msgstr "Editar cambios"
+
+#: ../admin-tool/usersdialog.py:95
 msgid "Use This Profile"
 msgstr "Usar este perfil"
 
@@ -332,30 +369,26 @@ msgstr "No se ha conseguido añadir un monitor para %s"
 msgid "Expected event: %s %s"
 msgstr "Se esperaba un evento: %s %s"
 
-#: ../lib/protosession.py:88
-#, python-format
-msgid "User '%s' does not exist"
-msgstr "El usuario «%s» no existe"
+#: ../lib/protosession.py:136
+msgid "Unable to find a free X display"
+msgstr "No se pudo encontrar una pantalla X libre"
 
-#: ../lib/protosession.py:216
+#: ../lib/protosession.py:266
 msgid "'xauth list' returned error"
 msgstr "«xauth list» devolvió un error"
 
-#: ../lib/protosession.py:235
+#: ../lib/protosession.py:285
 msgid "'xauth list' returned no records or records in unknown format"
 msgstr ""
 "«xauth list» no devolvió ningún registro o registros en un formato "
 "desconocido"
 
-#: ../lib/protosession.py:314
-msgid "Unable to find a free X display"
-msgstr "No se pudo encontrar una pantalla X libre"
-
-#: ../lib/protosession.py:376
+#: ../lib/protosession.py:428
 msgid "Failed to start Xnest: timed out waiting for USR1 signal"
-msgstr "No se pudo iniciar Xnest: se excedió el tiempo de espera para la señal USR1"
+msgstr ""
+"No se pudo iniciar Xnest: se excedió el tiempo de espera para la señal USR1"
 
-#: ../lib/protosession.py:378
+#: ../lib/protosession.py:430
 msgid "Failed to start Xnest: died during startup"
 msgstr "No se pudo iniciar Xnest: murió durante el inicio"
 
@@ -462,55 +495,63 @@ msgstr "Clave de Mozilla «%s» no establecida"
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Clave de Mozilla «%s» cambiada a «%s»"
 
-#: ../lib/sources/mozillasource.py:145
-msgid "Firefox"
-msgstr "Firefox"
+#: ../lib/sources/mozillasource.py:165 ../lib/sources/mozillasource.py:175
+msgid "Web browser preferences"
+msgstr "Preferencias del navegador web"
 
-#: ../lib/sources/mozillasource.py:496
+#: ../lib/sources/mozillasource.py:167 ../lib/sources/mozillasource.py:177
+msgid "Web browser bookmarks"
+msgstr "Marcadores del navegador web"
+
+#: ../lib/sources/mozillasource.py:169
+msgid "Web browser profile list"
+msgstr "Lista de perfiles del navegador web"
+
+#: ../lib/sources/mozillasource.py:516
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Archivo no encontrado (%s)"
 
-#: ../lib/sources/mozillasource.py:835
+#: ../lib/sources/mozillasource.py:855
 #, python-format
 msgid "duplicate name(%s) in section %s"
 msgstr "nombre duplicado (%s) en la sección %s"
 
-#: ../lib/sources/mozillasource.py:844
+#: ../lib/sources/mozillasource.py:864
 #, python-format
 msgid "redundant default in section %s"
 msgstr "valor por omisión redundante en la sección %s"
 
-#: ../lib/sources/mozillasource.py:861
+#: ../lib/sources/mozillasource.py:881
 msgid "no default profile"
 msgstr "no hay un perfil predeterminado"
 
-#: ../lib/sources/mozillasource.py:916
+#: ../lib/sources/mozillasource.py:936
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Se ha creado un marcador de Mozilla «%s» -> «%s»"
 
-#: ../lib/sources/mozillasource.py:918
+#: ../lib/sources/mozillasource.py:938
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Se ha creado una carpeta de marcadores de Mozilla «%s»"
 
-#: ../lib/sources/mozillasource.py:921
+#: ../lib/sources/mozillasource.py:941
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Se ha borrado un marcador de Mozilla «%s»"
 
-#: ../lib/sources/mozillasource.py:923
+#: ../lib/sources/mozillasource.py:943
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Se ha borrado una carpeta de marcadores de Mozilla «%s»"
 
-#: ../lib/sources/mozillasource.py:926
+#: ../lib/sources/mozillasource.py:946
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Se ha cambiado un marcador de Mozilla «%s» «%s»"
 
-#: ../lib/sources/mozillasource.py:928
+#: ../lib/sources/mozillasource.py:948
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Se ha cambiado una carpeta de marcadores de Mozilla «%s»"
@@ -569,20 +610,20 @@ msgstr "Sección de metadatos inválida en «%s»: «%s»"
 msgid "Cannot add non-existent file '%s'"
 msgstr "No se ha podido añadir el archivo inexistente «%s»"
 
-#: ../lib/storage.py:623
+#: ../lib/storage.py:608
 msgid "No current revision"
 msgstr "No hay revisión actual"
 
-#: ../lib/storage.py:627 ../lib/storage.py:638
+#: ../lib/storage.py:612 ../lib/storage.py:623
 #, python-format
 msgid "'%s' does not exist in profile revision '%s'"
 msgstr "«%s» no existe en la revisión del perfil «%s»"
 
-#: ../lib/storage.py:710
+#: ../lib/storage.py:734
 msgid "Not a valid profile revision"
 msgstr "No es una revisión de perfil válida"
 
-#: ../lib/storage.py:752
+#: ../lib/storage.py:776
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "El perfil es de sólo lectura %s"
@@ -650,3 +691,17 @@ msgstr ""
 "No se pudo encontrar el nombre de usuario: no se encuentra establecido en /"
 "etc/passwd y no existe ningún valor para $USER en el entorno"
 
+#~ msgid "Mandatory"
+#~ msgstr "Obligatorio"
+
+#~ msgid "Usage: %s <profile-name>\n"
+#~ msgstr "Uso: %s <nombre-de-perfil>\n"
+
+#~ msgid "Your account does not have permissions to run sabayon-session."
+#~ msgstr "Su cuenta no tiene permisos para ejecutar sabayon-session."
+
+#~ msgid "User '%s' does not exist"
+#~ msgstr "El usuario «%s» no existe"
+
+#~ msgid "Firefox"
+#~ msgstr "Firefox"
