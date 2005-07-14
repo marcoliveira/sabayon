@@ -66,6 +66,15 @@ class ChangesWindow:
 
         self.__setup_treeview ()
 
+    def __mandatory_data_method(self, column, cell, model, iter):
+        ignore = self.changes_model.get_value (iter,
+                                               self.changes_model.COLUMN_IGNORE)
+        cell.set_property ("sensitive", not ignore)
+        if ignore:
+            cell.set_property ("mode", gtk.CELL_RENDERER_MODE_INERT)
+        else:
+            cell.set_property ("mode", gtk.CELL_RENDERER_MODE_ACTIVATABLE)
+            
     def __on_ignore_toggled (self, toggle, path):
         iter = self.changes_model.get_iter_from_string (path)
         ignore = self.changes_model.get_value (iter, self.changes_model.COLUMN_IGNORE)
@@ -103,6 +112,7 @@ class ChangesWindow:
         column = gtk.TreeViewColumn (_("Lock"),
                                      cell,
                                      pixbuf = self.changes_model.COLUMN_LOCK_PIXBUF)
+        column.set_cell_data_func (cell, self.__mandatory_datamethod)
         self.treeview.append_column (column)
         
         cell = gtk.CellRendererText ()
