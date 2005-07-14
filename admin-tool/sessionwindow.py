@@ -207,7 +207,8 @@ class SessionWindow:
             response = dialog.run ()
             dialog.destroy ()
 
-            if response == gtk.RESPONSE_CANCEL:
+            if response == gtk.RESPONSE_CANCEL or \
+               response == gtk.RESPONSE_DELETE_EVENT:
                 return False
             if response == gtk.RESPONSE_YES:
                 self.__do_save ()
