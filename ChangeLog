@@ -1,5 +1,13 @@
 2005-07-18  Mark McLoughlin  <markmc@redhat.com>
 
+	* lib/config.py.in: add ~/.gstreamer-0.8 to
+	directories-to-ignore - registry.xml is basically
+	just a cache of plugin info; it'll never be
+	interesting to have in a profile since it gets
+	created during login.
+
+2005-07-18  Mark McLoughlin  <markmc@redhat.com>
+
 	* lib/config.py.in: add ~/.recently-used to
 	files-to-ignore - its never going to something
 	an admin will want populated by default.
