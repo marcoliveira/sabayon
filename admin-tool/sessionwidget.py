@@ -179,7 +179,7 @@ class SessionWidget (gtk.Widget):
     
     def do_button_release_event (self, event):
         if not event.send_event:
-            dprint ("Resending button release; button = %d, state = 0x%x" % event.button, event.state);
+            dprint ("Resending button release; button = %d, state = 0x%x", event.button, event.state);
             xlib.send_button_event (self.session_window, False, event.time, event.button, event.state);
         
         return True
