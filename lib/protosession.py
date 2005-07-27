@@ -124,6 +124,12 @@ def find_free_display ():
             if process_exists:
                 return False
 
+            os.remove (lock_file)
+            
+        socket_file = "/tmp/.X11-unix/X%d" % display_number
+        if os.path.exists (socket_file):
+            os.remove (socket_file)
+
         return True
 
     display_number = 1

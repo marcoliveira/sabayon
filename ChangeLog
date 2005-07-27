@@ -1,3 +1,10 @@
+2005-07-27  Mark McLoughlin  <markmc@redhat.com>
+
+	* lib/protosession.py: remove stale X lock files and
+	unix sockets. Now that Xnest runs as the sabayon
+	user and not root, Xnest won't have permission to
+	overwrite someone else's files.
+
 2005-07-25  Mark McLoughlin  <markmc@redhat.com>
 
 	* admin-tool/sessionwidget.py: fix debug spew error.
