@@ -94,6 +94,13 @@ class UserDatabase:
         if not profile:
             return None
         
+        dprint("profile name %s\n", profile)
+	# do the necessary URI escaping of the profile name if needed
+	try:
+	    tmp = parseURI(profile)
+	except:
+	    profile = libxml2.URIEscapeStr(profile, "/:")
+
 	# if there is a base on the node, then use 
 	if node != None:
 	    try:
@@ -101,7 +108,9 @@ class UserDatabase:
 		if base != None and base != "" and \
 		   base != os.path.join (config.PROFILESDIR, "users.xml"):
 		    # URI composition from the base
-                    return libxml2.buildURI(profile, base)
+                    ret = libxml2.buildURI(profile, base)
+		    dprint("location %s\n", ret)
+                    return ret
 	    except:
 		pass
 	try:
@@ -119,6 +128,7 @@ class UserDatabase:
 	    # we really expect an URI there
 	    profile = None
 
+        dprint("location %s\n", profile)
         return profile
 
     def get_default_profile (self, profile_location = True):
