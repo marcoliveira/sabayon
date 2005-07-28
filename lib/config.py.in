@@ -82,25 +82,26 @@ PASSTHROUGH_ENVIRONMENT = [
 # notifications for
 #
 FILES_TO_IGNORE = [
-    ".recently-used",
     ".ICEauthority",
-    ".xsession-errors",
-    ".gtkrc-1.2-gnome2",
     ".gconf.path.defaults",
     ".gconf.path.defaults.new",
     ".gconf.path.mandatory",
     ".gconf.path.mandatory.new",
     ".gnome/gnome-vfs/.trash_entry_cache",
+    ".gnome2/share/cursor-fonts/fonts.dir",
     ".gnome2/share/fonts/fonts.dir",
-    ".gnome2/share/cursor-fonts/fonts.dir"
+    ".gtkrc-1.2-gnome2",
+    ".recently-used",
+    ".xsession-errors"
 ]
 
 DIRECTORIES_TO_IGNORE = [
-    ".gstreamer-0.8",
-    ".metacity/sessions",
     ".gconf",
     ".gconf.xml.defaults",
     ".gconf.xml.mandatory",
     ".gconfd",
-    ".nautilus/metafiles"
+    ".gstreamer-0.8",
+    ".metacity/sessions",
+    ".nautilus/metafiles",
+    ".thumbnails"
 ]
