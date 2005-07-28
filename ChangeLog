@@ -1,3 +1,8 @@
+Thu Jul 28 12:05:25 CEST 2005 Daniel Veillard <veillard@redhat.com>
+
+	* lib/cache.py: trying to fix #309273, avoid creating ~/.profile_cache
+	  if no remote resources are used.
+
 Thu Jul 28 11:14:59 CEST 2005 Daniel Veillard <veillard@redhat.com>
 
 	* lib/userdb.py: tried to fix #311796 problem of profilename to

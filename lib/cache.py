@@ -41,6 +41,11 @@ class cacheRepository:
 	self.directory = None
 	self.catalog = None
 	self.root = None
+	# delay the directory check/creation until needed
+	self.orig_directory = directory
+
+    def __check_directory(self):
+        directory = self.orig_directory
         if directory != None:
 	    try:
 		info = os.stat(directory)
@@ -115,10 +120,13 @@ class cacheRepository:
 	    else:
 	        self.root = root
 
-	if self.catalog == None:
-	    self.catalog = libxml2.newDoc("1.0")
-	    self.root = self.catalog.newChild (None, "catalog", None)
-	    self.__save_catalog()
+	# remove empty catalogs
+	if self.catalog == None or self.root == None or \
+	   self.root.children == None:
+	    try:
+		os.unlink(self.directory + "/catalog.xml")
+	    except:
+	        pass
 
     def __URL_mapping(self, URL):
         """Function to convert an URL to a local name in the cache"""
@@ -128,6 +136,14 @@ class cacheRepository:
 
     def __save_catalog(self):
         """Save the on disk catalog in XML format"""
+	# don't save an empty catalog, and remove it if empty
+	if self.catalog == None or self.root == None or \
+	   self.root.children == None:
+	    try:
+		os.unlink(self.directory + "/catalog.xml")
+	    except:
+	        pass
+	    return
         if self.catalog != None and self.directory != None:
 	    f = open(self.directory + "/catalog.xml", "w")
 	    f.write(self.catalog.serialize(format = 1))
@@ -135,9 +151,18 @@ class cacheRepository:
 
     def __update_catalog(self, URL, timestamp = None):
         """Update the catalog of resources in the cache with an updated entry"""
-	if self.root == None:
+	if URL == None:
 	    return
 	modified = 0
+
+        # create the catalog if needed
+	if self.catalog == None:
+	    self.catalog = libxml2.newDoc("1.0")
+	    self.root = self.catalog.newChild (None, "catalog", None)
+	    modified = 1
+	if self.root == None:
+	    return
+
 	try:
 	    child = self.root.xpathEval("/catalog/entry[@URL = '%s']" % URL)[0]
 	except:
@@ -166,6 +191,8 @@ class cacheRepository:
 	   file path and the timestamp if found, None otherwise. If the
 	   file is referenced in the cache but has not timestamp then it
 	   will return an empty string."""
+	if self.root == None:
+	    return None
 	try:
 	    child = self.root.xpathEval("/catalog/entry[@URL = '%s']" % URL)[0]
 	except:
@@ -201,6 +228,7 @@ class cacheRepository:
 	        dprint("Failed to read %s", file)
 	        return None
 	else:
+	    self.__check_directory()
 	    filename = self.directory + "/" + self.__URL_mapping(URL)
 	    timestamp = self.__catalog_lookup(URL)
 	    last_modified = None
