@@ -78,11 +78,11 @@ PASSTHROUGH_ENVIRONMENT = [
 ]
 
 #
-# Files a directories which we don't want to see change
-# notifications for
+# Files which we don't want to see change notifications for
 #
 FILES_TO_IGNORE = [
     ".ICEauthority",
+    ".fonts.cache-1*",
     ".gconf.path.defaults",
     ".gconf.path.defaults.new",
     ".gconf.path.mandatory",
@@ -95,6 +95,9 @@ FILES_TO_IGNORE = [
     ".xsession-errors"
 ]
 
+#
+# Directories which we don't want to see change notifications for
+# 
 DIRECTORIES_TO_IGNORE = [
     ".gconf",
     ".gconf.xml.defaults",

@@ -1,3 +1,14 @@
+2005-07-29  Mark McLoughlin  <mark@skynet.ie>
+
+	* lib/config.py.in: add ".fonts.cache-1*" to 
+	files-to-ignore.
+	
+	* lib/dirmonitor.py:
+	(DirectoryMonitor.__should_ignore_dir),
+	(DirectoryMonitor.__should_ignore_file): add support
+	for shell-style globs in the lists of files and
+	directories to ignore.
+
 2005-07-29  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/userdb.py: minor fix to DV's fix for bug #311796

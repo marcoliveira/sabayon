@@ -23,6 +23,7 @@ import os.path
 import gobject
 import gamin
 import util
+import fnmatch
 
 N_WATCHES_LIMIT = 200
 
@@ -109,18 +110,30 @@ class DirectoryMonitor:
                 self.__invoke_callback (path, event)
 
     def __should_ignore_dir (self, dir):
+        dir = os.path.normpath (dir)
+        
         for ignore_dir in self.dirs_to_ignore:
-            if dir == os.path.join (self.directory, ignore_dir):
+            ignore_path = os.path.normpath (os.path.join (self.directory, ignore_dir))
+
+            if fnmatch.fnmatch (dir, ignore_path):
                 dprint ("Ignoring directory '%s'", dir)
                 return True
-        return False
+
+        parent = os.path.dirname (dir)
+        if parent != dir:
+            return self.__should_ignore_dir (parent)
+        else:
+            return False
     
     def __should_ignore_file (self, file):
+        file = os.path.normpath (file)
+        
         for ignore_file in self.files_to_ignore:
-            if file == os.path.join (self.directory, ignore_file):
+            ignore_path = os.path.normpath (os.path.join (self.directory, ignore_file))
+            if fnmatch.fnmatch (file, ignore_path):
                 dprint ("Ignoring file '%s'", file)
                 return True
-        return False
+        return self.__should_ignore_dir (os.path.dirname (file))
 
     def __monitor_dir (self, dir):
         if len (self.watches) >= N_WATCHES_LIMIT:
