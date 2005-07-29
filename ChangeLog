@@ -1,3 +1,13 @@
+2005-07-29  Mark McLoughlin  <markmc@redhat.com>
+
+	* lib/userdb.py:
+	(UserDatabase.__profile_name_to_location): make the debug
+	spew a bit more clear.
+	
+	* admin-tool/sabayon-apply, lib/userprofile.py: make
+	the debug spew not crash if the profile name contains
+	a '%' character.
+
 Thu Jul 28 12:05:25 CEST 2005 Daniel Veillard <veillard@redhat.com>
 
 	* lib/cache.py: trying to fix #309273, avoid creating ~/.profile_cache

@@ -45,7 +45,7 @@ class ModuleLoader:
 
     def __load_module (self, module):
         """Load a python module named @module."""
-        dprint ("Loading module: %s" % module)
+        dprint ("Loading module: %s", module)
         cmd = "from sources import %s" % module
         try:
             exec (cmd)
@@ -57,7 +57,7 @@ class ModuleLoader:
         
     def __load_modules (self):
         """Load all available modules from self.module_path."""
-        dprint ("Loading modules from %s" % self.module_path)
+        dprint ("Loading modules from %s", self.module_path)
         sys.path.append (self.module_path)
         for file in os.listdir (self.module_path):
             if file[0] == '.':
@@ -72,7 +72,7 @@ class ModuleLoader:
         """Construct an object by invoking a function named @constructor,
         with @arg as an argument, in the module called @module.
         """
-        dprint ("Constructing object from loaded module using %s.%s" % (module, constructor))
+        dprint ("Constructing object from loaded module using %s.%s", module, constructor)
         cmd = ("from sources import %s\n"
                "if %s.__dict__.has_key ('%s'):"
                "    ret = %s.%s (arg)") % (module, module, constructor, module, constructor)
@@ -234,7 +234,7 @@ class ProfileSource (gobject.GObject):
             if not change.get_id ().startswith (delegate.namespace_section):
                 continue
             if delegate.handle_change (change):
-                dprint ("Delegate '%s' handled change '%s'" % (delegate.get_name (), change.get_id ()))
+                dprint ("Delegate '%s' handled change '%s'", delegate.get_name (), change.get_id ())
                 return
         self.emit ("changed", change)
         
@@ -246,7 +246,7 @@ class ProfileSource (gobject.GObject):
         """
         if change.delegate:
             change.delegate.commit_change (change, mandatory)
-            dprint ("Delegate '%s' committed changes '%s'" % (change.delegate.get_name (), change.get_id ()))
+            dprint ("Delegate '%s' committed changes '%s'", change.delegate.get_name (), change.get_id ())
             return True
         return False
     
@@ -284,7 +284,7 @@ class UserProfile (gobject.GObject):
         """
         gobject.GObject.__init__ (self)
 
-        dprint ("Constructing profile from %s" % profile_name)
+        dprint ("Constructing profile from %s", profile_name)
 
         self.profile_name = profile_name
 
@@ -297,9 +297,9 @@ class UserProfile (gobject.GObject):
         
         self.sources = []
         self.sources = module_loader.construct_objects ("get_source", self.storage)
-        dprint ("%d sources loaded:" % len (self.sources))
+        dprint ("%d sources loaded:", len (self.sources))
         for source in self.sources:
-            dprint ("  %s" % source.get_name ())
+            dprint ("  %s", source.get_name ())
             source.connect ("changed", self.__handle_source_changed)
 
     def __handle_source_changed (self, source, change):

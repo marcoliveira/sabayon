@@ -93,9 +93,9 @@ class UserDatabase:
     def __profile_name_to_location (self, profile, node):
         if not profile:
             return None
-        
-        dprint("profile name %s\n", profile)
+
 	# do the necessary URI escaping of the profile name if needed
+        orig_profile = profile
 	try:
 	    tmp = parseURI(profile)
 	except:
@@ -109,7 +109,8 @@ class UserDatabase:
 		   base != os.path.join (config.PROFILESDIR, "users.xml"):
 		    # URI composition from the base
                     ret = libxml2.buildURI(profile, base)
-		    dprint("location %s\n", ret)
+		    dprint("Converted profile name '%s' to location '%s'\n",
+                           orig_profile, ret)
                     return ret
 	    except:
 		pass
@@ -128,7 +129,8 @@ class UserDatabase:
 	    # we really expect an URI there
 	    profile = None
 
-        dprint("location %s\n", profile)
+        dprint("Converted profile name '%s' to location '%s'\n",
+               orig_profile, profile)
         return profile
 
     def get_default_profile (self, profile_location = True):

@@ -43,11 +43,11 @@ if __name__ == '__main__':
     def dprint (fmt, *args):
         util.debug_print (util.DEBUG_ADMINTOOL, fmt % args)
 
-    dprint ("Applying profile '%s' for user '%s'" %
-            (profile_name, util.get_user_name ()))
+    dprint ("Applying profile '%s' for user '%s'",
+            profile_name, util.get_user_name ())
 
     profile = userprofile.UserProfile (profile_name)
     profile.apply ()
 
-    dprint ("Finished applying profile '%s' for user '%s'" %
-            (profile_name, util.get_user_name ()))
+    dprint ("Finished applying profile '%s' for user '%s'",
+            profile_name, util.get_user_name ())
