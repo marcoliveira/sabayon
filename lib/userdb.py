@@ -132,7 +132,7 @@ class UserDatabase:
 	    profile = None
 
 	if profile[0] == '/':
-	    ret = libxml2.URIUnescapeString(profile, len(profile), None)
+	    profile = libxml2.URIUnescapeString(profile, len(profile), None)
         dprint("Converted profile name '%s' to location '%s'\n",
                orig_profile, profile)
         return profile
