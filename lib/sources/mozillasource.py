@@ -852,7 +852,7 @@ class FirefoxProfilesIni:
                 
                 name = self.ini.get(section, "Name")
                 if name in self.profiles:
-                    raise BadIniFileError(_("duplicate name(%s) in section %s") %
+                    raise BadIniFileError(_("duplicate name(%(name)s) in section %(section)s") %
                                           (name, section))
                 profile = FirefoxProfile(section, self.home_dir, self.rel_dir)
                 self.profiles[name] = profile
