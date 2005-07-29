@@ -1,3 +1,8 @@
+Fri Jul 29 12:09:38 CEST 2005 Daniel Veillard <veillard@redhat.com>
+
+	* lib/userdb.py: second part of #311796 fix, unescape once the
+	  URI base composition has been done if it is a local path.
+
 2005-07-29  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/config.py.in: add ~/.profile_cache to directories-to-ignore

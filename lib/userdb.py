@@ -109,6 +109,8 @@ class UserDatabase:
 		   base != os.path.join (config.PROFILESDIR, "users.xml"):
 		    # URI composition from the base
                     ret = libxml2.buildURI(profile, base)
+		    if ret[0] == '/':
+		        ret = libxml2.URIUnescapeString(ret, len(ret), None)
 		    dprint("Converted profile name '%s' to location '%s'\n",
                            orig_profile, ret)
                     return ret
@@ -129,6 +131,8 @@ class UserDatabase:
 	    # we really expect an URI there
 	    profile = None
 
+	if profile[0] == '/':
+	    ret = libxml2.URIUnescapeString(profile, len(profile), None)
         dprint("Converted profile name '%s' to location '%s'\n",
                orig_profile, profile)
         return profile
