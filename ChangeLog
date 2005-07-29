@@ -1,3 +1,9 @@
+2005-07-29  Mark McLoughlin  <mark@skynet.ie>
+
+	* sabayon.spec.in: on FC5, require pygtk-2.7.1 for
+	the MessageDialog constructor fix in bug #311226.
+	pygtk-2.6.x should work fine too, though.
+
 2005-07-29  Mark McLoughlin  <markmc@redhat.com>
 
 	Fixes bug #308363
