@@ -25,9 +25,12 @@ import pwd
 import gettext
 import locale
 import errno
+import warnings
+import exceptions
 from config import *
 
 (
+    DEBUG_DEPRECATED,
     DEBUG_USERPROFILE,
     DEBUG_STORAGE,
     DEBUG_PROTOSESSION,
@@ -40,9 +43,10 @@ from config import *
     DEBUG_ADMINTOOL,
     DEBUG_USERDB,
     DEBUG_CACHE,
-) = range (12)
+) = range (13)
 
 debug_modules = {
+    DEBUG_DEPRECATED    : ("deprecated",     False),
     DEBUG_USERPROFILE   : ("user-profile",   False),
     DEBUG_STORAGE       : ("storage",        False),
     DEBUG_PROTOSESSION  : ("proto-session",  False),
@@ -60,6 +64,7 @@ debug_modules = {
 def init_debug_modules ():
     debug_value = os.getenv ("SABAYON_DEBUG")
     if not debug_value:
+        warnings.filterwarnings ("ignore", category = exceptions.DeprecationWarning)
         return
 
     if debug_value == "help":
@@ -77,14 +82,16 @@ def init_debug_modules ():
         for item in debug_value.split (":"):
             item = item.split("=")
             key = item[0]
+            value = True
             if len(item) > 1:
                 value = int(item[1],16)
-            else:
-                value = ~0
             for module in debug_modules:
                 if debug_modules[module][0] == key:
                     debug_modules[module] = (key, value)
                     break
+
+    if not debug_modules[DEBUG_DEPRECATED][1]:
+        warnings.filterwarnings ("ignore", category = exceptions.DeprecationWarning)
 
 init_debug_modules ()
 

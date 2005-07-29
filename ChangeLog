@@ -1,5 +1,10 @@
 2005-07-29  Mark McLoughlin  <markmc@redhat.com>
 
+	* lib/util.py: turn deprecation warnings off by
+	default unless you do SABAYON_DEBUG=deprecated
+
+2005-07-29  Mark McLoughlin  <markmc@redhat.com>
+
 	* lib/config.py.in:
 	s/.gtkrc-1.2-gnome2/.gtkrc-1.2-gnome2\*/ in
 	files-to-ignore so we catch the temporary .new
