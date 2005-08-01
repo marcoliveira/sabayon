@@ -25,15 +25,18 @@ import time
 import errno
 import gobject
 import gconf
+import fnmatch
 
 try:
     import userprofile
     import storage
     import util
+    from config import *
 except:
     from sabayon import userprofile
     from sabayon import storage
     from sabayon import util
+    from sabayon.config import *
 
 def dprint (fmt, *args):
     util.debug_print (util.DEBUG_GCONFSOURCE, fmt % args)
@@ -166,9 +169,17 @@ class GConfSource (userprofile.ProfileSource):
         
         def handle_notify (client, cnx_id, entry, self):
             dprint ("Got GConf notification on '%s'", entry.key)
+            
+            for ignore_pattern in GCONF_KEYS_TO_IGNORE:
+                if fnmatch.fnmatchcase (entry.key, ignore_pattern):
+                    dprint ("Ignoring GConf notification on '%s' because it matches '%s'",
+                            entry.key, ignore_pattern)
+                    return
+                
             value = None
             if not entry.get_is_default ():
                 value = entry.value
+            
             self.emit_change (GConfChange (self, entry.key, value))
 
         self.client = gconf.client_get_default ()

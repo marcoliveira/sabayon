@@ -81,7 +81,7 @@ PASSTHROUGH_ENVIRONMENT = [
 # Files which we don't want to see change notifications for
 #
 FILES_TO_IGNORE = [
-    ".ICEauthority",
+    ".ICEauthority*",
     ".fonts.cache-1*",
     ".gconf.path.defaults",
     ".gconf.path.defaults.new",
@@ -108,4 +108,14 @@ DIRECTORIES_TO_IGNORE = [
     ".nautilus/metafiles",
     ".profile_cache",
     ".thumbnails"
+]
+
+#
+# GConf keys which we don't want to see change notifications for
+#
+GCONF_KEYS_TO_IGNORE = [
+    "/apps/nautilus/preferences_version",
+    "/apps/nautilus/sound_state",
+    "/apps/panel/general/profiles_migrated"
+    "/desktop/gnome/peripherals/keyboard/kbd.sysbackup/*",
 ]

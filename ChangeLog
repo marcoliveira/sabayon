@@ -1,5 +1,22 @@
 2005-08-01  Mark McLoughlin  <markmc@redhat.com>
 
+	Allow ignoring changes to specific GConf keys.
+	Bug #310514
+
+	* lib/config.py.in: add GCONF_KEYS_TO_IGNORE
+	
+	* lib/sources/gconfsource.py: ignore notifications
+	of changes to keys which match any pattern in
+	GCONF_KEYS_TO_IGNORE
+	
+2005-08-01  Mark McLoughlin  <markmc@redhat.com>
+
+	* lib/config.py.in: looks like .ICEauthority gets
+	created initially as .ICEauthority-c or whatever.
+	Ignore those files too.
+
+2005-08-01  Mark McLoughlin  <markmc@redhat.com>
+
 	Fix issue with stacking behaviour of windows.
 	Turns out to be that you shouldn't have a
 	_NET_WM_WINDOW_TYPE_NORMAL window whose
@@ -42,7 +59,7 @@
 	files-to-ignore so we catch the temporary .new
 	file.
 
-2005-07-29  Mark McLoughlin  <mark@skynet.ie>
+2005-07-29  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/config.py.in: add ".fonts.cache-1*" to 
 	files-to-ignore.
