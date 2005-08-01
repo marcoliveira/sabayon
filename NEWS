@@ -1,3 +1,55 @@
+===============
+Version 2.11.90
+===============
+
+  Features
+
+	+ Embed the session in a GTK+ window with menu and status bars (Mark)
+ 	+ Move the changes window out of the session (Mark)
+	+ No spew of changes at session start with GNOME 2.12 (Mark)
+
+  Fixes 
+
+	+ Allow ignoring changes to specific GConf keys (Mark)
+	+ Fix weirdness with window stacking order (Mark)
+	+ Fix strings to be more translator friendly (Funda Wang)
+	+ Turn lame pygtk deprecation warnings off by default (Mark)
+	+ Support shell style globs in ignore lists (Mark)
+	+ Don't create ~/.profile_cache unless needed (DV)
+	+ Fix issue with sabayon-apply and profile names containing spaces (DV)
+	+ Remove stale X lock and socket files to avoid Xnest errors (Mark)
+	+ Make closing the save confirm window act like cancel (Mark)
+	+ De-sensitize mandatory column when ignore is selected (William Lachance)
+	+ Sort the list of users by name (William Lachance)
+	+ Ignore changes to our gconf path files (William Lachance)
+	+ Fix issue with displaying Firefox changes (John)
+	+ Don't allow running Sabayon from with Sabayon (Mark)
+	+ Don't allow xscreensaver to lock a proto-session (Mark)
+	+ Fix "Clear History" in the details window (Mark)
+	+ Prompt for confirmation when closing the details window (Mark)
+	+ Fix traceback when making a profile the default (Mark)
+	+ Update user associations when a profile is deleted (Mark)
+	+ When creating a profile, make sure its name is unique (Mark)
+	+ Select another profile on the list when profile is deleted (Mark)
+	+ Make the "Base on" combo insensitive if there are no profiles (Mark)
+	+ Make all Sabayon windows show a window icon (Mark)
+	+ Correctly parse user's full name from GECOS info (Sebastien Bacher)
+
+  Misc
+
+	+ Website updates (DV)
+	+ Fix build issue with --prefix and PAM (Mark)
+
+  Translators
+
+	+ Miloslav Trmac (cs)
+	+ Kostas Papadimas (el)
+	+ Adam Weinberger (en_CA)
+	+ Francisco Javier F. Serrador (es)
+	+ Gabor Kelemen (hu)
+	+ Christian Rose (sv)
+	+ Funda Wang (zh_CN)
+
 ============
 Version 0.18
 ============
