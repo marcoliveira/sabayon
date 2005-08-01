@@ -124,15 +124,25 @@ class PanelDelegate (userprofile.SourceDelegate):
         self.__read_panel_config ()
 
     def __read_panel_config (self):
+        dprint ("Reading initial panel config");
+        
+        dprint ("Toplevels:");
         for id in self.client.get_list (PANEL_KEY_BASE + "/general/toplevel_id_list", gconf.VALUE_STRING):
             if not self.toplevels.has_key (id):
-                self.toplevels[id] = PanelDelegate.PanelToplevel (id, False)
+                dprint ("  %s", id);
+                self.toplevels[id] = PanelDelegate.PanelToplevel (id)
+                
+        dprint ("Applets:");
         for id in self.client.get_list (PANEL_KEY_BASE + "/general/applet_id_list", gconf.VALUE_STRING):
             if not self.applets.has_key (id):
-                self.applets[id] = PanelDelegate.PanelApplet (id, False)
+                dprint ("  %s", id);
+                self.applets[id] = PanelDelegate.PanelApplet (id)
+                
+        dprint ("Objects:");
         for id in self.client.get_list (PANEL_KEY_BASE + "/general/object_id_list", gconf.VALUE_STRING):
             if not self.objects.has_key (id):
-                self.objects[id] = PanelDelegate.PanelObject (id, False)
+                dprint ("  %s", id);
+                self.objects[id] = PanelDelegate.PanelObject (id)
 
     def __handle_id_list_change (self, change, dict, thing_class, added_class, removed_class):
         if not change.value or \
@@ -162,6 +172,9 @@ class PanelDelegate (userprofile.SourceDelegate):
             if dict.has_key (id) and not dict[id].removed:
                 dict[id].removed = True
                 removed.append (id)
+
+        dprint ("%s changed: (%s) added, (%s) removed\n",
+                change.key, added, removed);
 
         for id in added:
             self.source.emit ("changed", added_class (self.source, self, id))
