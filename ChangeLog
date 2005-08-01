@@ -1,5 +1,17 @@
 2005-08-01  Mark McLoughlin  <markmc@redhat.com>
 
+	Fix issue with stacking behaviour of windows.
+	Turns out to be that you shouldn't have a
+	_NET_WM_WINDOW_TYPE_NORMAL window whose
+	transient parent is _NET_WM_WINDOW_TYPE_DIALOG.
+	Bug #305181
+
+	* admin-tool/sabayon.glade: set type_hint on
+	profiles_dialog to _NET_WM_WINDOW_TYPE_DIALOG
+	and window_position to GTK_WIN_POS_CENTER.
+
+2005-08-01  Mark McLoughlin  <markmc@redhat.com>
+
 	* lib/storage.py: fix another instance of
 	a translator-unfriendly	string. Bug #308363
 
