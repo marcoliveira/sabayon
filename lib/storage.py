@@ -609,8 +609,8 @@ class ProfileStorage:
             
             item = self.__get_profile_revision_item (profile_revision, path)
             if not item:
-                raise ProfileStorageException (_("'%s' does not exist in profile revision '%s'"),
-                                               path, profile_revision)
+                raise ProfileStorageException (_("'%(path)s' does not exist in profile revision '%(profile_revision)s'"),
+                                                   path, profile_revision)
 
             item_type     = item.prop ("type")
             item_revision = item.prop ("revision")
@@ -622,7 +622,6 @@ class ProfileStorage:
                 if not item:
                     raise ProfileStorageException (_("'%(path)s' does not exist in profile revision '%(profile_revision)s'"),
                                                    path, profile_revision)
-                    return
 
                 item_type     = item.prop ("type")
                 item_revision = item.prop ("revision")
