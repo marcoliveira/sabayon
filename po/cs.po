@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-05 12:12+0000\n"
-"PO-Revision-Date: 2005-07-10 19:07+0200\n"
+"POT-Creation-Date: 2005-08-05 04:21+0000\n"
+"PO-Revision-Date: 2005-08-05 12:31+0200\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -26,21 +26,21 @@ msgstr "Program pro vytvoření a úpravu profilů pro uživatele"
 msgid "translator-credits"
 msgstr "Miloslav Trmač <mitr@volny.cz>"
 
-#: ../admin-tool/changeswindow.py:96
+#: ../admin-tool/changeswindow.py:105
 msgid "Ignore"
 msgstr "Ignorovat"
 
-#: ../admin-tool/changeswindow.py:103
+#: ../admin-tool/changeswindow.py:112
 msgid "Lock"
 msgstr "Zamknout"
 
-#: ../admin-tool/changeswindow.py:109 ../admin-tool/editorwindow.py:341
+#: ../admin-tool/changeswindow.py:119 ../admin-tool/editorwindow.py:341
 msgid "Description"
 msgstr "Popis"
 
 #: ../admin-tool/editorwindow.py:133 ../admin-tool/fileviewer.py:29
 #: ../admin-tool/gconfviewer.py:87 ../admin-tool/sabayon.glade.h:2
-#: ../lib/protosession.py:382
+#: ../lib/protosession.py:388
 msgid "All Your Settings Are Belong To Us"
 msgstr "All Your Settings Are Belong To Us"
 
@@ -104,7 +104,7 @@ msgstr "_Verze:"
 msgid "Version"
 msgstr "Verze"
 
-#: ../admin-tool/editorwindow.py:382 ../lib/sources/gconfsource.py:106
+#: ../admin-tool/editorwindow.py:382 ../lib/sources/gconfsource.py:109
 msgid "GConf"
 msgstr "GConf"
 
@@ -175,7 +175,8 @@ msgstr "%s (%s)"
 #: ../admin-tool/sabayon:43
 msgid ""
 "Your account does not have permissions to run the Desktop User Profiles tool"
-msgstr "Váš účet nemá oprávnění spustit nástroj Profily uživatelů pracovní plochy"
+msgstr ""
+"Váš účet nemá oprávnění spustit nástroj Profily uživatelů pracovní plochy"
 
 #: ../admin-tool/sabayon:44
 msgid ""
@@ -193,7 +194,9 @@ msgstr "Nástroj Profily uživatelů pracovní plochy již běží"
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
-msgstr "Nemůžete používat nástroj Profily uživatelů pracovní plochy v sezení upravujícím profil"
+msgstr ""
+"Nemůžete používat nástroj Profily uživatelů pracovní plochy v sezení "
+"upravujícím profil"
 
 #: ../admin-tool/sabayon:57
 #, c-format
@@ -368,38 +371,38 @@ msgstr "_Změny"
 msgid "Edit changes"
 msgstr "Upravit změny"
 
-#: ../admin-tool/usersdialog.py:92
+#: ../admin-tool/usersdialog.py:95
 msgid "Use This Profile"
 msgstr "Používat tento profil"
 
-#: ../lib/dirmonitor.py:138
+#: ../lib/dirmonitor.py:151
 #, python-format
 msgid "Failed to add monitor for %s"
 msgstr "Nemohu přidat sledování pro %s"
 
-#: ../lib/dirmonitor.py:218
+#: ../lib/dirmonitor.py:231
 #, python-format
 msgid "Expected event: %s %s"
 msgstr "Očekávaná událost: %s %s"
 
-#: ../lib/protosession.py:136
+#: ../lib/protosession.py:142
 msgid "Unable to find a free X display"
 msgstr "Nemohu najít volný displej X"
 
-#: ../lib/protosession.py:266
+#: ../lib/protosession.py:272
 msgid "'xauth list' returned error"
 msgstr "'xauth list' vrátil chybu"
 
-#: ../lib/protosession.py:285
+#: ../lib/protosession.py:291
 msgid "'xauth list' returned no records or records in unknown format"
 msgstr ""
 "'xauth list' nevrátil žádné záznamy nebo vrátil záznamy v neznámém formátu"
 
-#: ../lib/protosession.py:428
+#: ../lib/protosession.py:434
 msgid "Failed to start Xnest: timed out waiting for USR1 signal"
 msgstr "Nemohu spustit Xnest: čas vypršel při čekání na signál USR1"
 
-#: ../lib/protosession.py:430
+#: ../lib/protosession.py:436
 msgid "Failed to start Xnest: died during startup"
 msgstr "Nemohu spustit Xnest: umřel při spouštění"
 
@@ -438,56 +441,56 @@ msgstr "Menu Nastavení systému"
 msgid "Start Here menu"
 msgstr "Menu Začněte zde"
 
-#: ../lib/sources/gconfsource.py:78
+#: ../lib/sources/gconfsource.py:81
 #, python-format
 msgid "GConf key '%s' unset"
 msgstr "Klíč GConf '%s' zrušen"
 
-#: ../lib/sources/gconfsource.py:80
+#: ../lib/sources/gconfsource.py:83
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
 msgstr "Klíč GConf '%s' nastaven na řetězec '%s'"
 
-#: ../lib/sources/gconfsource.py:82
+#: ../lib/sources/gconfsource.py:85
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
 msgstr "Klíč GConf '%s' nastaven na celé číslo '%s'"
 
-#: ../lib/sources/gconfsource.py:84
+#: ../lib/sources/gconfsource.py:87
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
 msgstr "Klíč GConf '%s' nastaven na číslo '%s'"
 
-#: ../lib/sources/gconfsource.py:86
+#: ../lib/sources/gconfsource.py:89
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
 msgstr "Klíč GConf '%s' nastaven na booleovskou hodnotu '%s'"
 
-#: ../lib/sources/gconfsource.py:88
+#: ../lib/sources/gconfsource.py:91
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
 msgstr "Klíč GConf '%s' nastaven na schéma '%s'"
 
-#: ../lib/sources/gconfsource.py:90
+#: ../lib/sources/gconfsource.py:93
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
 msgstr "Klíč GConf '%s' nastaven na seznam '%s'"
 
-#: ../lib/sources/gconfsource.py:92
+#: ../lib/sources/gconfsource.py:95
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
 msgstr "Klíč GConf '%s' nastaven na dvojici '%s'"
 
-#: ../lib/sources/gconfsource.py:94
+#: ../lib/sources/gconfsource.py:97
 #, python-format
 msgid "GConf key '%s' set to '%s'"
 msgstr "Klíč GConf '%s' nastaven na '%s'"
 
-#: ../lib/sources/gconfsource.py:117
+#: ../lib/sources/gconfsource.py:120
 msgid "Default GConf settings"
 msgstr "Implicitní nastavení GConf"
 
-#: ../lib/sources/gconfsource.py:119
+#: ../lib/sources/gconfsource.py:122
 msgid "Mandatory GConf settings"
 msgstr "Povinná nastavení GConf"
 
@@ -525,8 +528,8 @@ msgstr "Soubor nenalezen (%s)"
 
 #: ../lib/sources/mozillasource.py:855
 #, python-format
-msgid "duplicate name(%s) in section %s"
-msgstr "duplikované jméno (%s) v oddílu %s"
+msgid "duplicate name(%(name)s) in section %(section)s"
+msgstr "duplikované jméno (%(name)s) v oddílu %(section)s"
 
 #: ../lib/sources/mozillasource.py:864
 #, python-format
@@ -627,14 +630,14 @@ msgstr "Žádná aktuální verze"
 
 #: ../lib/storage.py:612 ../lib/storage.py:623
 #, python-format
-msgid "'%s' does not exist in profile revision '%s'"
-msgstr "'%s' neexistuje ve verzi profilu '%s'"
+msgid "'%(path)s' does not exist in profile revision '%(profile_revision)s'"
+msgstr "'%(path)s' neexistuje ve verzi profilu '%(profile_revision)s'"
 
-#: ../lib/storage.py:734
+#: ../lib/storage.py:733
 msgid "Not a valid profile revision"
 msgstr "Není to platná verze profilu"
 
-#: ../lib/storage.py:776
+#: ../lib/storage.py:775
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Profil je jen pro čtení %s"
@@ -657,36 +660,36 @@ msgstr "Spouštím testy %s (%s)"
 msgid "Success!"
 msgstr "Úspěch!"
 
-#: ../lib/userdb.py:207
+#: ../lib/userdb.py:223
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Nemohu otevřít %s pro zápis"
 
-#: ../lib/userdb.py:220
+#: ../lib/userdb.py:236
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Nemohu uložit UserDatabase do %s"
 
-#: ../lib/userdb.py:243 ../lib/userdb.py:278
+#: ../lib/userdb.py:259 ../lib/userdb.py:294
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Soubor %s není nastavení profilu"
 
-#: ../lib/userdb.py:250
+#: ../lib/userdb.py:266
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Nemohu přidat implicitní profil %s do nastavení"
 
-#: ../lib/userdb.py:286
+#: ../lib/userdb.py:302
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Nemohu přidat uživatele %s do nastavení profilu"
 
-#: ../lib/userdb.py:317
+#: ../lib/userdb.py:333
 msgid "Failed to get the user list"
 msgstr "Nemohu získat seznam uživatelů"
 
-#: ../lib/util.py:119
+#: ../lib/util.py:126
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -694,7 +697,7 @@ msgstr ""
 "Nemohu najít domovský adresář: nenastaven v /etc/passwd a žádná hodnota "
 "$HOME v prostředí"
 
-#: ../lib/util.py:132
+#: ../lib/util.py:139
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
