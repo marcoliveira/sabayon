@@ -1,0 +1,659 @@
+# Ukrainian translation of sabayon. 
+# Copyright (C) 2005 Free Software Foundation, Inc. 
+# Maxim Dziumanenko <mvd@mylinux.com.ua>, 2005
+msgid ""
+msgstr ""
+"Project-Id-Version:  sabayon\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-08-10 16:51+0300\n"
+"PO-Revision-Date: 2005-08-10 16:52+0300\n"
+"Last-Translator: Maxim V. Dziumanenko <mvd@mylinux.ua>\n"
+"Language-Team: Ukrainian <uk@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../admin-tool/aboutdialog.py:63
+msgid "Program to establish and edit profiles for users"
+msgstr "Програма для налаштовування та редагування профілів користувачів"
+
+#: ../admin-tool/aboutdialog.py:66
+msgid "translator-credits"
+msgstr "Максим Дзюманенко <mvd@mylinux.com.ua>"
+
+#: ../admin-tool/changeswindow.py:105
+msgid "Ignore"
+msgstr "Ігнорувати"
+
+#: ../admin-tool/changeswindow.py:112
+msgid "Lock"
+msgstr "Блокувати"
+
+#: ../admin-tool/changeswindow.py:119
+#: ../admin-tool/editorwindow.py:341
+msgid "Description"
+msgstr "Опис"
+
+#: ../admin-tool/editorwindow.py:133
+#: ../admin-tool/fileviewer.py:29
+#: ../admin-tool/gconfviewer.py:87
+#: ../admin-tool/sabayon.glade.h:2
+#: ../lib/protosession.py:388
+msgid "All Your Settings Are Belong To Us"
+msgstr "Усі ваші параметри належать нам"
+
+#: ../admin-tool/editorwindow.py:248
+#: ../admin-tool/sessionwindow.py:150
+msgid "_Profile"
+msgstr "П_рофіль"
+
+#: ../admin-tool/editorwindow.py:249
+#: ../admin-tool/sessionwindow.py:151
+msgid "_Save"
+msgstr "З_берегти"
+
+#: ../admin-tool/editorwindow.py:249
+#: ../admin-tool/sessionwindow.py:151
+msgid "Save profile"
+msgstr "Зберегти профіль..."
+
+#: ../admin-tool/editorwindow.py:250
+msgid "_Close"
+msgstr "_Закрити"
+
+#: ../admin-tool/editorwindow.py:250
+#: ../admin-tool/sessionwindow.py:152
+msgid "Close the current window"
+msgstr "Закрити поточне вікно"
+
+#: ../admin-tool/editorwindow.py:251
+#: ../admin-tool/sessionwindow.py:153
+msgid "_Edit"
+msgstr "_Правка"
+
+#: ../admin-tool/editorwindow.py:252
+msgid "_Delete"
+msgstr "В_идалити"
+
+#: ../admin-tool/editorwindow.py:252
+msgid "Delete item"
+msgstr "Видалити елемент"
+
+#: ../admin-tool/editorwindow.py:253
+msgid "C_lear History"
+msgstr "О_чистити історію"
+
+#: ../admin-tool/editorwindow.py:253
+msgid "Clear revision history"
+msgstr "Очистити історію перегляду"
+
+#: ../admin-tool/editorwindow.py:254
+#: ../admin-tool/sessionwindow.py:155
+msgid "_Help"
+msgstr "_Довідка"
+
+#: ../admin-tool/editorwindow.py:255
+#: ../admin-tool/sessionwindow.py:156
+msgid "_About"
+msgstr "_Про програму"
+
+#: ../admin-tool/editorwindow.py:255
+#: ../admin-tool/sessionwindow.py:156
+msgid "About Sabayon"
+msgstr "Про Sabayon"
+
+#: ../admin-tool/editorwindow.py:286
+msgid "_Version:"
+msgstr "_Версія:"
+
+#: ../admin-tool/editorwindow.py:352
+msgid "Version"
+msgstr "Версія"
+
+#: ../admin-tool/editorwindow.py:382
+#: ../lib/sources/gconfsource.py:109
+msgid "GConf"
+msgstr "GConf"
+
+#: ../admin-tool/editorwindow.py:386
+#: ../lib/sources/filessource.py:67
+msgid "Files"
+msgstr "Файли"
+
+#: ../admin-tool/gconfviewer.py:58
+#: ../admin-tool/gconfviewer.py:77
+msgid "<no type>"
+msgstr "<без типу>"
+
+#: ../admin-tool/gconfviewer.py:59
+msgid "<no value>"
+msgstr "<без значення>"
+
+#: ../admin-tool/gconfviewer.py:63
+msgid "string"
+msgstr "символьний рядок"
+
+#: ../admin-tool/gconfviewer.py:65
+msgid "integer"
+msgstr "ціле число"
+
+#: ../admin-tool/gconfviewer.py:67
+msgid "float"
+msgstr "число з комою"
+
+#: ../admin-tool/gconfviewer.py:69
+msgid "boolean"
+msgstr "логічне значення"
+
+#: ../admin-tool/gconfviewer.py:71
+msgid "schema"
+msgstr "схема"
+
+#: ../admin-tool/gconfviewer.py:73
+msgid "list"
+msgstr "список"
+
+#: ../admin-tool/gconfviewer.py:75
+msgid "pair"
+msgstr "пара"
+
+#: ../admin-tool/gconfviewer.py:111
+#: ../admin-tool/profilesdialog.py:315
+#: ../admin-tool/usersdialog.py:85
+msgid "Name"
+msgstr "Назва"
+
+#: ../admin-tool/gconfviewer.py:116
+msgid "Type"
+msgstr "Тип"
+
+#: ../admin-tool/gconfviewer.py:121
+msgid "Value"
+msgstr "Значення"
+
+#. Translators: this string specifies how a profile
+#. to form a unique profile name e.g.
+#: ../admin-tool/profilesdialog.py:415
+#, python-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../admin-tool/sabayon:43
+msgid "Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr "Ваш обліковий рахунок не має прав для запуску програми Профілі користувачів"
+
+#: ../admin-tool/sabayon:44
+msgid "Administrator level permissions are needed to run this program because it can modify system files."
+msgstr "Для запуску цієї програми необхідно мати пава адміністратора, тому що вона може змінювати  системні файли."
+
+#: ../admin-tool/sabayon:49
+msgid "Desktop User Profiles tool is already running"
+msgstr "Програма редагування профілів користувачів вже запущена"
+
+#: ../admin-tool/sabayon:50
+msgid "You may not use Desktop User Profiles tool from within a profile editing session"
+msgstr "Ви не можете використовувати програму редагування профілів у сеансі редагування профілів"
+
+#: ../admin-tool/sabayon:57
+#, c-format
+msgid "User account '%s' was not found"
+msgstr "Обліковий запис користувача \"%s\" не існує"
+
+#: ../admin-tool/sabayon:58
+#, c-format
+msgid "Sabayon requires a special user account '%s' to be present on this computer. Try again after creating the account (using, for example, the 'adduser' command)"
+msgstr ""
+"Sabayon потрібен спеціальний обліковий запис '%s' у системі. Спробуйте ще раз після створення облікового запису (наприкла, за допомогою команди 'adduser')"
+
+#: ../admin-tool/sabayon-apply:33
+#, c-format
+msgid "No profile for user '%s' found\n"
+msgstr "для користувача '%s' профіль не знайдено\n"
+
+#: ../admin-tool/sabayon-apply:38
+#, c-format
+msgid "Usage: %s [<profile-name>]\n"
+msgstr "Використання: %s [<назва-профілю>]\n"
+
+#: ../admin-tool/sabayon-session:31
+#, c-format
+msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
+msgstr "Використання: %s <назва-профілю> <шлях-профілю> <номер-дисплея>\n"
+
+#: ../admin-tool/sabayon.desktop.in.h:1
+msgid "Desktop User Profiles"
+msgstr "Профілі користувачів"
+
+#: ../admin-tool/sabayon.desktop.in.h:2
+msgid "Establish and Edit Profiles for Users"
+msgstr "Встановлення та редагування профілів користувачів"
+
+#: ../admin-tool/sabayon.glade.h:1
+msgid "Add Profile"
+msgstr "Додати профіль"
+
+#: ../admin-tool/sabayon.glade.h:3
+msgid "Profile _name:"
+msgstr "_Назва профілю:"
+
+#: ../admin-tool/sabayon.glade.h:4
+msgid "Use this profile for _all users"
+msgstr "Використовувати цей профіль для _усіх користувачів"
+
+#: ../admin-tool/sabayon.glade.h:5
+msgid "_Base on:"
+msgstr "_Базуватись на:"
+
+#: ../admin-tool/sabayon.glade.h:6
+msgid "_Profiles:"
+msgstr "П_рофілі:"
+
+#: ../admin-tool/sabayon.glade.h:7
+msgid "_Users"
+msgstr "_Користувачі"
+
+#: ../admin-tool/sabayon.glade.h:8
+msgid "_Users:"
+msgstr "_Користувачі:"
+
+#: ../admin-tool/sabayon.glade.h:9
+msgid "dialog1"
+msgstr "dialog1"
+
+#: ../admin-tool/saveconfirm.py:36
+msgid "Close _Without Saving"
+msgstr "_Закрити без збереження"
+
+#: ../admin-tool/saveconfirm.py:43
+#, python-format
+msgid "Save changes to profile \"%s\" before closing?"
+msgstr "Зберегти зміни у профілі \"%s\" перед закриванням?"
+
+#: ../admin-tool/saveconfirm.py:47
+#, python-format
+msgid "If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural "If you don't save, changes from the last %ld seconds will be permanently lost."
+msgstr[0] "Якщо ви не збережете, зміни за останню %ld секунду будуть остаточно втрачені."
+msgstr[1] "Якщо ви не збережете, зміни за останні %ld секунди будуть остаточно втрачені."
+msgstr[2] "Якщо ви не збережете, зміни за останні %ld секунд будуть остаточно втрачені."
+
+#: ../admin-tool/saveconfirm.py:53
+msgid "If you don't save, changes from the last minute will be permanently lost."
+msgstr "Якщо ви не збережете, зміни за останню хвилину будуть остаточно втрачені."
+
+#: ../admin-tool/saveconfirm.py:57
+#, python-format
+msgid "If you don't save, changes from the last minute and %ld second will be permanently lost."
+msgid_plural "If you don't save, changes from the last minute and %ld seconds will be permanently lost."
+msgstr[0] "Якщо ви не збережете, зміни за останню хвилину та %ld секунду будуть остаточно втрачені."
+msgstr[1] "Якщо ви не збережете, зміни за останню хвилину та %ld секунди будуть остаточно втрачені."
+msgstr[2] "Якщо ви не збережете, зміни за останню хвилину та %ld секунд будуть остаточно втрачені."
+
+#: ../admin-tool/saveconfirm.py:64
+#, python-format
+msgid "If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural "If you don't save, changes from the last %ld minutes will be permanently lost."
+msgstr[0] "Якщо ви не збережете, зміни за останню %ld хвилину будуть остаточно втрачені."
+msgstr[1] "Якщо ви не збережете, зміни за останні %ld хвилини будуть остаточно втрачені."
+msgstr[2] "Якщо ви не збережете, зміни за останні %ld хвилин будуть остаточно втрачені."
+
+#: ../admin-tool/saveconfirm.py:73
+#: ../admin-tool/saveconfirm.py:83
+#, python-format
+msgid "If you don't save, changes from the last hour will be permanently lost."
+msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] "Якщо ви не збережете, зміни за останню годину будуть остаточно втрачені."
+msgstr[1] "Якщо ви не збережете, зміни за останні %d години будуть остаточно втрачені."
+msgstr[2] "Якщо ви не збережете, зміни за останні %d годин будуть остаточно втрачені."
+
+#: ../admin-tool/saveconfirm.py:76
+#, python-format
+msgid "If you don't save, changes from the last hour and %d minute will be permanently lost."
+msgid_plural "If you don't save, changes from the last hour and %d minutes will be permanently lost."
+msgstr[0] "Якщо ви не збережете, зміни за останню годину та %d хвилину будуть остаточно втрачені."
+msgstr[1] "Якщо ви не збережете, зміни за останню годину та %d хвилини будуть остаточно втрачені."
+msgstr[2] "Якщо ви не збережете, зміни за останню годину та %d хвилин будуть остаточно втрачені."
+
+#: ../admin-tool/sessionwindow.py:152
+msgid "_Quit"
+msgstr "Ви_йти"
+
+#: ../admin-tool/sessionwindow.py:154
+msgid "_Changes"
+msgstr "_Зміни"
+
+#: ../admin-tool/sessionwindow.py:154
+msgid "Edit changes"
+msgstr "Редагувати зміни"
+
+#: ../admin-tool/usersdialog.py:95
+msgid "Use This Profile"
+msgstr "Використовувати цей профіль"
+
+#: ../lib/dirmonitor.py:151
+#, python-format
+msgid "Failed to add monitor for %s"
+msgstr "Не вдається додати монітор для %s"
+
+#: ../lib/dirmonitor.py:231
+#, python-format
+msgid "Expected event: %s %s"
+msgstr "Очікувана подія: %s %s"
+
+#: ../lib/protosession.py:142
+msgid "Unable to find a free X display"
+msgstr "Не вдається знайти вільний X дисплей"
+
+#: ../lib/protosession.py:272
+msgid "'xauth list' returned error"
+msgstr "команда 'xauth list' повернула помилку"
+
+#: ../lib/protosession.py:291
+msgid "'xauth list' returned no records or records in unknown format"
+msgstr "команда 'xauth list' не повернула записи або повернула їх у невідомому форматі"
+
+#: ../lib/protosession.py:434
+msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+msgstr "Не вдається запустити Xnest: вийшов час очікування сигналу USR1"
+
+#: ../lib/protosession.py:436
+msgid "Failed to start Xnest: died during startup"
+msgstr "Не вдається запустити Xnest: завершився на старті"
+
+#: ../lib/sources/filessource.py:57
+#, python-format
+msgid "File '%s' created"
+msgstr "Файл '%s' створено"
+
+#: ../lib/sources/filessource.py:59
+#, python-format
+msgid "File '%s' deleted"
+msgstr "Файл '%s' видалено"
+
+#: ../lib/sources/filessource.py:61
+#, python-format
+msgid "File '%s' changed"
+msgstr "Файл '%s' змінено"
+
+#: ../lib/sources/filessource.py:85
+msgid "Applications menu"
+msgstr "Меню програм"
+
+#: ../lib/sources/filessource.py:87
+msgid "Preferences menu"
+msgstr "Меню параметрів"
+
+#: ../lib/sources/filessource.py:89
+msgid "Server Settings menu"
+msgstr "Меню параметрів сервера"
+
+#: ../lib/sources/filessource.py:91
+msgid "System Settings menu"
+msgstr "Меню системних параметрів"
+
+#: ../lib/sources/filessource.py:93
+msgid "Start Here menu"
+msgstr "Меню \"Починати тут\""
+
+#: ../lib/sources/gconfsource.py:81
+#, python-format
+msgid "GConf key '%s' unset"
+msgstr "Не встановлено ключ GConf '%s'"
+
+#: ../lib/sources/gconfsource.py:83
+#, python-format
+msgid "GConf key '%s' set to string '%s'"
+msgstr "Ключ GConf \"%s\" встановлено у рядок '%s'"
+
+#: ../lib/sources/gconfsource.py:85
+#, python-format
+msgid "GConf key '%s' set to integer '%s'"
+msgstr "Ключ GConf \"%s\" встановлено у ціле число '%s'"
+
+#: ../lib/sources/gconfsource.py:87
+#, python-format
+msgid "GConf key '%s' set to float '%s'"
+msgstr "Ключ GConf \"%s\" встановлено у число з рухомою комою '%s'"
+
+#: ../lib/sources/gconfsource.py:89
+#, python-format
+msgid "GConf key '%s' set to boolean '%s'"
+msgstr "Ключ GConf \"%s\" встановлено у логічне значення '%s'"
+
+#: ../lib/sources/gconfsource.py:91
+#, python-format
+msgid "GConf key '%s' set to schema '%s'"
+msgstr "Ключ GConf \"%s\" встановлено у схему '%s'"
+
+#: ../lib/sources/gconfsource.py:93
+#, python-format
+msgid "GConf key '%s' set to list '%s'"
+msgstr "Ключ GConf \"%s\" встановлено у список '%s'"
+
+#: ../lib/sources/gconfsource.py:95
+#, python-format
+msgid "GConf key '%s' set to pair '%s'"
+msgstr "Ключ GConf \"%s\" встановлено у пару '%s'"
+
+#: ../lib/sources/gconfsource.py:97
+#, python-format
+msgid "GConf key '%s' set to '%s'"
+msgstr "Ключ GConf \"%s\" встановлено у '%s'"
+
+#: ../lib/sources/gconfsource.py:120
+msgid "Default GConf settings"
+msgstr "Типові параметри GConf"
+
+#: ../lib/sources/gconfsource.py:122
+msgid "Mandatory GConf settings"
+msgstr "Призначені параметри GConf"
+
+#: ../lib/sources/mozillasource.py:132
+#, python-format
+msgid "Mozilla key '%s' set to '%s'"
+msgstr "Ключ Mozilla '%s' встановлено у '%s'"
+
+#: ../lib/sources/mozillasource.py:134
+#, python-format
+msgid "Mozilla key '%s' unset"
+msgstr "Ключ Mozilla '%s' не встановлено"
+
+#: ../lib/sources/mozillasource.py:136
+#, python-format
+msgid "Mozilla key '%s' changed to '%s'"
+msgstr "Ключ Mozilla '%s' змінено на '%s'"
+
+#: ../lib/sources/mozillasource.py:165
+#: ../lib/sources/mozillasource.py:175
+msgid "Web browser preferences"
+msgstr "Параметри веб-переглядача"
+
+#: ../lib/sources/mozillasource.py:167
+#: ../lib/sources/mozillasource.py:177
+msgid "Web browser bookmarks"
+msgstr "Закладки веб-переглядача"
+
+#: ../lib/sources/mozillasource.py:169
+msgid "Web browser profile list"
+msgstr "Список профілів веб-переглядача"
+
+#: ../lib/sources/mozillasource.py:516
+#, python-format
+msgid "File Not Found (%s)"
+msgstr "Файл не існує (%s)"
+
+#: ../lib/sources/mozillasource.py:855
+#, python-format
+msgid "duplicate name(%(name)s) in section %(section)s"
+msgstr "дублікат імені(%(name)s) у розділі %(section)s"
+
+#: ../lib/sources/mozillasource.py:864
+#, python-format
+msgid "redundant default in section %s"
+msgstr "зайвий default у розділі %s"
+
+#: ../lib/sources/mozillasource.py:881
+msgid "no default profile"
+msgstr "немає типового профілю"
+
+#: ../lib/sources/mozillasource.py:936
+#, python-format
+msgid "Mozilla bookmark created '%s' -> '%s'"
+msgstr "Закладки Mozilla створено '%s' -> '%s'"
+
+#: ../lib/sources/mozillasource.py:938
+#, python-format
+msgid "Mozilla bookmark folder created '%s'"
+msgstr "Створено каталог закладок Mozilla '%s'"
+
+#: ../lib/sources/mozillasource.py:941
+#, python-format
+msgid "Mozilla bookmark deleted '%s'"
+msgstr "Закладки Mozilla видалено '%s'"
+
+#: ../lib/sources/mozillasource.py:943
+#, python-format
+msgid "Mozilla bookmark folder deleted '%s'"
+msgstr "Теку закладок Mozilla видалено '%s'"
+
+#: ../lib/sources/mozillasource.py:946
+#, python-format
+msgid "Mozilla bookmark changed '%s' '%s'"
+msgstr "Закладки Mozilla змінено '%s' '%s'"
+
+#: ../lib/sources/mozillasource.py:948
+#, python-format
+msgid "Mozilla bookmark folder changed '%s'"
+msgstr "Теку закладок Mozilla змінено '%s'"
+
+#: ../lib/sources/paneldelegate.py:53
+#, python-format
+msgid "Panel '%s' added"
+msgstr "Додано панель '%s' "
+
+#: ../lib/sources/paneldelegate.py:59
+#, python-format
+msgid "Panel '%s' removed"
+msgstr "Видалено панель '%s'"
+
+#: ../lib/sources/paneldelegate.py:65
+#, python-format
+msgid "Panel applet '%s' added"
+msgstr "Додано аплет панелі '%s'"
+
+#: ../lib/sources/paneldelegate.py:71
+#, python-format
+msgid "Panel applet '%s' removed"
+msgstr "Видалено аплет панелі '%s'"
+
+#: ../lib/sources/paneldelegate.py:77
+#, python-format
+msgid "Panel object '%s' added"
+msgstr "Додано об'єкт панелі '%s'"
+
+#: ../lib/sources/paneldelegate.py:83
+#, python-format
+msgid "Panel object '%s' removed"
+msgstr "Видалено об'єкт панелі '%s'"
+
+#: ../lib/sources/paneldelegate.py:118
+msgid "Panel"
+msgstr "Панель"
+
+#: ../lib/storage.py:161
+#, python-format
+msgid "Failed to read file '%s': %s"
+msgstr "Не вдається прочитати файл \"%s\": %s"
+
+#: ../lib/storage.py:171
+#, python-format
+msgid "Failed to read metadata from '%s': %s"
+msgstr "Не вдається прочитати метадані з \"%s\": %s"
+
+#: ../lib/storage.py:177
+#, python-format
+msgid "Invalid metadata section in '%s': %s"
+msgstr "Неправильні метадані у розділі '%s': %s"
+
+#: ../lib/storage.py:533
+#, python-format
+msgid "Cannot add non-existent file '%s'"
+msgstr "Не вдається додати неіснуючий файл '%s'"
+
+#: ../lib/storage.py:608
+msgid "No current revision"
+msgstr "Немає поточної версії"
+
+#: ../lib/storage.py:612
+#: ../lib/storage.py:623
+#, python-format
+msgid "'%(path)s' does not exist in profile revision '%(profile_revision)s'"
+msgstr "'%(path)s' не існує у версії профіля '%(profile_revision)s'"
+
+#: ../lib/storage.py:733
+msgid "Not a valid profile revision"
+msgstr "Не є правильною версією профілю"
+
+#: ../lib/storage.py:775
+#, python-format
+msgid "Profile is read-only %s"
+msgstr "Профіль лише для читання %s"
+
+#: ../lib/unittests.py:36
+#: ../lib/unittests.py:37
+msgid "Ignore WARNINGs"
+msgstr "Ігнорувати попередження"
+
+#: ../lib/unittests.py:59
+#, python-format
+msgid "Running %s tests"
+msgstr "Запущено %s тестів"
+
+#: ../lib/unittests.py:61
+#, python-format
+msgid "Running %s tests (%s)"
+msgstr "Запущено %s тестів (%s)"
+
+#: ../lib/unittests.py:68
+msgid "Success!"
+msgstr "Успішно!"
+
+#: ../lib/userdb.py:223
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "Не вдається відкрити %s для запису"
+
+#: ../lib/userdb.py:236
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "Не вдається зберегти UserDatabase у %s"
+
+#: ../lib/userdb.py:259
+#: ../lib/userdb.py:294
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "Файл %s не є конфігурацією профілю"
+
+#: ../lib/userdb.py:266
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "Не вдається додати у конфігурацію типовий профіль %s"
+
+#: ../lib/userdb.py:302
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "Не вдається додати користувача %s у конфігурацію профілю"
+
+#: ../lib/userdb.py:333
+msgid "Failed to get the user list"
+msgstr "Не вдається отримати список користувачів"
+
+#: ../lib/util.py:126
+msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+msgstr "Не вдається отримати домашній каталог: не встановлено у /etc/passwd та не встановлено значення змінної $HOME"
+
+#: ../lib/util.py:139
+msgid "Cannot find username: not set in /etc/passwd and no value for $USER in environment"
+msgstr "Не вдається знайти користувача:  не встановлено у /etc/passwd та не встановлено значення змінної $USER"
+
