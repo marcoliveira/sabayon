@@ -348,7 +348,7 @@ class ProtoSession (gobject.GObject):
         pid = os.fork ()
         if pid == 0: # Child process
             os.close (pipe_r)
-            new_environ = os.environ
+            new_environ = os.environ.copy ()
             new_environ["DISPLAY"] = display_name
             new_environ["XAUTHORITY"] = xauth_file
             argv = [ "python", "-c",
@@ -456,7 +456,7 @@ class ProtoSession (gobject.GObject):
 
         self.session_pid = os.fork ()
         if self.session_pid == 0: # Child process
-            new_environ = os.environ
+            new_environ = os.environ.copy ()
 
             new_environ["DISPLAY"]    = self.display_name
             new_environ["XAUTHORITY"] = self.session_xauth_file

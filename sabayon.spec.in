@@ -173,7 +173,8 @@ fi
 %{python_sitelib}/%{name}/usersdialog.py*
 
 %changelog
-* Mon May 23 2005 Mark McLoughlin <markmc@redhat.com> - 0.19-1
+* Mon May 23 2005 Mark McLoughlin <markmc@redhat.com> - 2.11.90-1
+- Update to 2.11.90
 - Don't %ghost .pyo files, package them
 - We're no longer a noarch package
 - BuildRequire python-devel, pygtk2-devel, gtk2-devel and xorg-x11-devel
