@@ -1,14 +1,14 @@
-# SOME DESCRIPTIVE TITLE.
-# This file is distributed under the same license as the PACKAGE package.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# Hungarian translation of sabayon
+# This file is distributed under the same license as the sabayon package.
+# Copyright (C) 2005, Free Software Foundation, Inc.
 # Gabor Kelemen <kelemeng@gnome.hu>, 2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-05 04:13+0000\n"
-"PO-Revision-Date: 2005-07-05 18:00+0200\n"
+"POT-Creation-Date: 2005-08-16 12:30+0000\n"
+"PO-Revision-Date: 2005-08-16 17:07+0200\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <gnome@gnome.hu>\n"
 "MIME-Version: 1.0\n"
@@ -25,21 +25,21 @@ msgstr "Felhasználói profilok létrehozására és szerkesztésére szolgáló
 msgid "translator-credits"
 msgstr "Kelemen Gábor <kelemeng@gnome.hu>"
 
-#: ../admin-tool/changeswindow.py:96
+#: ../admin-tool/changeswindow.py:105
 msgid "Ignore"
 msgstr "Mellőzendő"
 
-#: ../admin-tool/changeswindow.py:103
+#: ../admin-tool/changeswindow.py:112
 msgid "Lock"
 msgstr "Zárolás"
 
-#: ../admin-tool/changeswindow.py:109 ../admin-tool/editorwindow.py:341
+#: ../admin-tool/changeswindow.py:119 ../admin-tool/editorwindow.py:341
 msgid "Description"
 msgstr "Leírás"
 
 #: ../admin-tool/editorwindow.py:133 ../admin-tool/fileviewer.py:29
 #: ../admin-tool/gconfviewer.py:87 ../admin-tool/sabayon.glade.h:2
-#: ../lib/protosession.py:382
+#: ../lib/protosession.py:388
 msgid "All Your Settings Are Belong To Us"
 msgstr "A gépbül veszi ki a beállításokat"
 
@@ -103,7 +103,7 @@ msgstr "_Verzió:"
 msgid "Version"
 msgstr "Verzió"
 
-#: ../admin-tool/editorwindow.py:382 ../lib/sources/gconfsource.py:106
+#: ../admin-tool/editorwindow.py:382 ../lib/sources/gconfsource.py:109
 msgid "GConf"
 msgstr "GConf"
 
@@ -173,7 +173,9 @@ msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:43
 msgid "Your account does not have permissions to run the Desktop User Profiles tool"
-msgstr "A felhasználói fiókjának nincs jogosultsága futtatni a Munkaasztal-felhasználói profilok eszközt"
+msgstr ""
+"A felhasználói fiókjának nincs jogosultsága futtatni a Munkaasztal-"
+"felhasználói profilok eszközt"
 
 #: ../admin-tool/sabayon:44
 msgid ""
@@ -191,7 +193,9 @@ msgstr "A Munkaasztal-felhasználói profilok eszköz már fut"
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
-msgstr "Nem használhatja a Munkaasztal-felhasználói profilok eszközt egy profilszerkesztő munkafolyamaton belül"
+msgstr ""
+"Nem használhatja a Munkaasztal-felhasználói profilok eszközt egy "
+"profilszerkesztő munkafolyamaton belül"
 
 #: ../admin-tool/sabayon:57
 #, c-format
@@ -354,39 +358,39 @@ msgstr "_Változtatások"
 msgid "Edit changes"
 msgstr "Változtatások szerkesztése"
 
-#: ../admin-tool/usersdialog.py:92
+#: ../admin-tool/usersdialog.py:95
 msgid "Use This Profile"
 msgstr "Ezen profil használata"
 
-#: ../lib/dirmonitor.py:138
+#: ../lib/dirmonitor.py:151
 #, python-format
 msgid "Failed to add monitor for %s"
 msgstr "Nem sikerült figyelőt hozzáadni a következőhöz: %s"
 
-#: ../lib/dirmonitor.py:218
+#: ../lib/dirmonitor.py:231
 #, python-format
 msgid "Expected event: %s %s"
 msgstr "Várt esemény: %s %s"
 
-#: ../lib/protosession.py:136
+#: ../lib/protosession.py:142
 msgid "Unable to find a free X display"
 msgstr "Nem sikerült szabad X megjelenítőt találni"
 
-#: ../lib/protosession.py:266
+#: ../lib/protosession.py:272
 msgid "'xauth list' returned error"
 msgstr "az \"xauth list\" hibával tért vissza"
 
-#: ../lib/protosession.py:285
+#: ../lib/protosession.py:291
 msgid "'xauth list' returned no records or records in unknown format"
 msgstr "az \"xauth list\" nem vagy hibás formátumban adott vissza rekordokat"
 
-#: ../lib/protosession.py:428
+#: ../lib/protosession.py:434
 msgid "Failed to start Xnest: timed out waiting for USR1 signal"
 msgstr ""
 "Nem sikerült elindítani az Xnestet: időtúllépés az USR1 szignálra való "
 "várakozás közben"
 
-#: ../lib/protosession.py:430
+#: ../lib/protosession.py:436
 msgid "Failed to start Xnest: died during startup"
 msgstr "Nem sikerült elindítani az Xnestet: indítás közben elpusztult"
 
@@ -425,56 +429,56 @@ msgstr "Rendszerbeállítások menü"
 msgid "Start Here menu"
 msgstr "Kezdje itt menü"
 
-#: ../lib/sources/gconfsource.py:78
+#: ../lib/sources/gconfsource.py:81
 #, python-format
 msgid "GConf key '%s' unset"
 msgstr "\"%s\" GConf kulcs visszaállítva"
 
-#: ../lib/sources/gconfsource.py:80
+#: ../lib/sources/gconfsource.py:83
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
 msgstr "\"%s\" GConf kulcs beállítva \"%s\" karakterláncra"
 
-#: ../lib/sources/gconfsource.py:82
+#: ../lib/sources/gconfsource.py:85
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
 msgstr "\"%s\" GConf kulcs beállítva \"%s\" egész értékre"
 
-#: ../lib/sources/gconfsource.py:84
+#: ../lib/sources/gconfsource.py:87
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
 msgstr "\"%s\" GConf kulcs beállítva \"%s\" lebegőpontos értékre"
 
-#: ../lib/sources/gconfsource.py:86
+#: ../lib/sources/gconfsource.py:89
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
 msgstr "\"%s\" GConf kulcs beállítva \"%s\" logikai értékre"
 
-#: ../lib/sources/gconfsource.py:88
+#: ../lib/sources/gconfsource.py:91
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
 msgstr "\"%s\" GConf kulcs beállítva \"%s\" sémára"
 
-#: ../lib/sources/gconfsource.py:90
+#: ../lib/sources/gconfsource.py:93
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
 msgstr "\"%s\" GConf kulcs beállítva \"%s\" listára"
 
-#: ../lib/sources/gconfsource.py:92
+#: ../lib/sources/gconfsource.py:95
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
 msgstr "\"%s\" GConf kulcs beállítva \"%s\" párra"
 
-#: ../lib/sources/gconfsource.py:94
+#: ../lib/sources/gconfsource.py:97
 #, python-format
 msgid "GConf key '%s' set to '%s'"
 msgstr "\"%s\" GConf kulcs beállítva a következőre: \"%s\""
 
-#: ../lib/sources/gconfsource.py:117
+#: ../lib/sources/gconfsource.py:120
 msgid "Default GConf settings"
 msgstr "Alapértelmezett GConf beállítások"
 
-#: ../lib/sources/gconfsource.py:119
+#: ../lib/sources/gconfsource.py:122
 msgid "Mandatory GConf settings"
 msgstr "Kötelező GConf beállítások"
 
@@ -512,8 +516,8 @@ msgstr "%s fájl nem található"
 
 #: ../lib/sources/mozillasource.py:855
 #, python-format
-msgid "duplicate name(%s) in section %s"
-msgstr "kettőzött név (%s) %s szakaszban"
+msgid "duplicate name(%(name)s) in section %(section)s"
+msgstr "kettőzött név (%(name)s) %(section)s szakaszban"
 
 #: ../lib/sources/mozillasource.py:864
 #, python-format
@@ -614,14 +618,14 @@ msgstr "Nincs aktuális verzió"
 
 #: ../lib/storage.py:612 ../lib/storage.py:623
 #, python-format
-msgid "'%s' does not exist in profile revision '%s'"
-msgstr "\"%s\" nem létezik a(z) \"%s\" profilverzióban"
+msgid "'%(path)s' does not exist in profile revision '%(profile_revision)s'"
+msgstr "\"%(path)s\" nem létezik a(z) \"%(profile_revision)s\" profilverzióban"
 
-#: ../lib/storage.py:734
+#: ../lib/storage.py:733
 msgid "Not a valid profile revision"
 msgstr "Érvénytelen profilverzió"
 
-#: ../lib/storage.py:776
+#: ../lib/storage.py:775
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "A profil csak olvasható %s"
@@ -644,36 +648,36 @@ msgstr "%s teszt végrehajtása (%s)"
 msgid "Success!"
 msgstr "Sikerült!"
 
-#: ../lib/userdb.py:207
+#: ../lib/userdb.py:223
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Nem sikerült megnyitni olvasásra a következőt: %s"
 
-#: ../lib/userdb.py:220
+#: ../lib/userdb.py:236
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Nem sikerült menteni a felhasználó-adatbázist ide: %s"
 
-#: ../lib/userdb.py:243 ../lib/userdb.py:278
+#: ../lib/userdb.py:259 ../lib/userdb.py:294
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "%s fájl nem egy profilbeállítás"
 
-#: ../lib/userdb.py:250
+#: ../lib/userdb.py:266
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "%s alapértelmezett profil hozzáadása a beállításhoz sikertelen"
 
-#: ../lib/userdb.py:286
+#: ../lib/userdb.py:302
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "%s felhasználó hozzáadása a profilbeállításhoz sikertelen"
 
-#: ../lib/userdb.py:317
+#: ../lib/userdb.py:333
 msgid "Failed to get the user list"
 msgstr "A felhasználók listájának lekérése sikertelen"
 
-#: ../lib/util.py:119
+#: ../lib/util.py:126
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -681,7 +685,7 @@ msgstr ""
 "Nem található a saját könyvtár: nincs beállítva az /etc/passwd-ben és a "
 "$HOME környezeti változónak nincs értéke"
 
-#: ../lib/util.py:132
+#: ../lib/util.py:139
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
