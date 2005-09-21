@@ -2,7 +2,6 @@ AC_INIT([sabayon], [2.11.91],
         [http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon])
 AC_CONFIG_SRCDIR(lib/userprofile.py)
 
-
 AM_INIT_AUTOMAKE
 AM_CONFIG_HEADER(config.h)
 AM_MAINTAINER_MODE
@@ -88,7 +87,7 @@ AC_SUBST(NO_STRICT_ALIASING_CFLAGS)
 
 AC_ARG_WITH(distro,
             AC_HELP_STRING([--with-distro=DISTRO],
-                           [Specify the Linux distribution to target: One of redhat or debian]))
+                           [Specify the Linux distribution to target: One of redhat, debian, slackware, or gentoo]))
 
 if test "x$with_distro" = "x"; then
   AC_CHECK_FILE(/etc/redhat-release, with_distro="redhat")
@@ -106,21 +105,25 @@ else
   case $with_distro in
     redhat) 
       XSESSION="/etc/X11/xdm/Xsession"
+      SESSION_NAME="gnome"
       install_xinitrc_script="yes"
       XINITRC_SYSCONFDIR="X11/xinit/xinitrc.d"
       ;;
     debian) 
       XSESSION="/etc/gdm/Xsession"
+      SESSION_NAME="gnome-session"
       install_xinitrc_script="no"
       XINITRC_SYSCONFDIR=""
       ;;
     slackware)
       XSESSION="/etc/X11/gdm/Xsession"
+      SESSION_NAME="gnome"
       install_xinitrc_script="no"
       XINITRC_SYSCONFDIR=""
       ;;
     gentoo)
       XSESSION="/etc/X11/xdm/Xsession"
+      SESSION_NAME="gnome"
       install_xinitrc_script="no"
       XINITRC_SYSCONFDIR=""
       ;;
@@ -131,6 +134,7 @@ else
   esac
 fi
 AC_SUBST(XSESSION)
+AC_SUBST(SESSION_NAME)
 AC_SUBST(XINITRC_SYSCONFDIR)
 AM_CONDITIONAL(INSTALL_XINITRC_SCRIPT, test "x$install_xinitrc_script" = "xyes")
 
