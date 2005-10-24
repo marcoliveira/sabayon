@@ -205,9 +205,9 @@ class GConfSource (userprofile.ProfileSource):
         os.system ("gconftool-2 --shutdown")
         time.sleep (1)
 
-        if os.path.exists (os.path.join (self.home_dir, ".gconf.path.defaults")):
+        if os.path.exists (os.path.join (self.home_dir, ".gconf.xml.defaults")):
             self.storage.add (".gconf.xml.defaults", self.home_dir, self.name)
-        if os.path.exists (os.path.join (self.home_dir, ".gconf.path.mandatory")):
+        if os.path.exists (os.path.join (self.home_dir, ".gconf.xml.mandatory")):
             self.storage.add (".gconf.xml.mandatory", self.home_dir, self.name)
 
     def apply (self):

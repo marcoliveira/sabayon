@@ -1,5 +1,10 @@
 2005-10-24  Alexander Larsson  <alexl@redhat.com>
 
+	* lib/sources/gconfsource.py (GConfSource.sync_changes):
+	Look for the right file when saving gconf state.
+
+2005-10-24  Alexander Larsson  <alexl@redhat.com>
+
 	* admin-tool/gconfviewer.py:
 	* admin-tool/sabayon:
 	* admin-tool/sabayon-session:
