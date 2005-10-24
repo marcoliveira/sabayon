@@ -20,6 +20,7 @@
 
 if __name__ == '__main__':
     import sys
+    import pygtk; pygtk.require('2.0');
     import gtk
     
     from sabayon import util

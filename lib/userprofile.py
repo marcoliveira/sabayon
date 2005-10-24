@@ -21,6 +21,7 @@
 import os
 import os.path
 import sys
+import pygtk; pygtk.require('2.0');
 import gobject
 from config import *
 import storage

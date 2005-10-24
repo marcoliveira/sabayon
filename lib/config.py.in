@@ -53,7 +53,8 @@ NOLOGIN_SHELL = "/sbin/nologin"
 SKEL_HOMEDIR  = "/etc/skel"
 
 XNEST_ARGV   = [ "/usr/X11R6/bin/Xnest", "-terminate", "-audit", "0", "-nolisten", "tcp" ]
-SESSION_ARGV = [ "@XSESSION@", "@SESSION_NAME@" ]
+#SESSION_ARGV = [ "@XSESSION@", "@SESSION_NAME@" ]
+SESSION_ARGV = [ "/home/alex/bin/jhbuild", "-f", "/home/alex/.jhbuildrc", "run", "@XSESSION@", "gnome" ]
 USERMOD_ARGV = [ "/usr/sbin/usermod" ]
 
 PANEL_KEY_BASE = "/apps/panel"
@@ -74,7 +75,8 @@ PASSTHROUGH_ENVIRONMENT = [
     "LC_MONETARY",
     "LC_MESSAGES",
     "METACITY_VERBOSE",
-    "METACITY_USE_LOGFILE"
+    "METACITY_USE_LOGFILE",
+    "PYTHONPATH"
 ]
 
 #
