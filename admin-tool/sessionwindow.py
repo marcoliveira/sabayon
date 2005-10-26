@@ -140,7 +140,6 @@ class SessionWindow:
 
         self.__set_needs_saving (False)
 
-        self.profile.start_monitoring ()
         
     def __add_widget (self, ui_manager, widget):
         self.box.pack_start (widget, False, False, 0)
@@ -249,7 +248,10 @@ class SessionWindow:
 
     def __setup_session (self):
         self.session = protosession.ProtoSession (self.profile_name, self.display_number)
-
+        
+        self.session.apply_profile ()
+        self.profile.start_monitoring ()
+        
         screen = gtk.gdk.screen_get_default ()
         width  = (screen.get_width ()  * 3) / 4
         height = (screen.get_height () * 3) / 4

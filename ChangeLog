@@ -1,3 +1,10 @@
+2005-10-26  Alexander Larsson  <alexl@redhat.com>
+
+	* admin-tool/sessionwindow.py:
+	* lib/protosession.py:
+	Apply the profile before starting the session.
+	This means the file sources being applied isn't recorded in the session.
+
 2005-10-24  Alexander Larsson  <alexl@redhat.com>
 
 	* lib/sources/gconfsource.py (GConfSource.sync_changes):

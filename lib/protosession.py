@@ -463,11 +463,6 @@ class ProtoSession (gobject.GObject):
 
             self.session_xauth_file = None
 
-            # Apply the profile
-            argv = APPLY_TOOL_ARGV + [ self.profile_file ]
-            dprint ("Running apply tool: %s" % argv)
-            util.uninterruptible_spawnve (os.P_WAIT, argv[0], argv, new_environ)
-
             # Disable sabayon-xinitrc.sh
             new_environ["DISABLE_SABAYON_XINITRC"] = "yes"
 
@@ -489,6 +484,12 @@ class ProtoSession (gobject.GObject):
 
         self.session_child_watch = gobject.child_watch_add (self.session_pid,
                                                             self.__session_child_watch_handler)
+
+        
+    def apply_profile (self):
+        argv = APPLY_TOOL_ARGV + [ self.profile_file ]
+        dprint ("Running apply tool: %s" % argv)
+        util.uninterruptible_spawnve (os.P_WAIT, argv[0], argv, os.environ.copy ())
     
     def start (self, parent_window):
         # Get an X server going
