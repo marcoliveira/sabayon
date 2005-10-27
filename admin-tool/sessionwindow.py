@@ -80,7 +80,7 @@ class ProfileChangesModel (gtk.ListStore):
 
     def handle_profile_change (self, profile, new_change):
         mandatory = False
-        ignore = False
+        ignore = new_change.get_ignore_default ()
         iter = self.get_iter_first ()
         while iter:
             next = self.iter_next (iter)

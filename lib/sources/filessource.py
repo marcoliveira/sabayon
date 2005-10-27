@@ -52,6 +52,12 @@ class FilesChange (userprofile.ProfileChange):
     def get_id (self):
         return self.rel_path
 
+    def get_ignore_default (self):
+        # Ignore backup files by default
+        if self.rel_path[-1] == "~":
+            return True
+        return False
+
     def get_short_description (self):
         if self.event == dirmonitor.CREATED:
             return _("File '%s' created") % self.rel_path

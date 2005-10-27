@@ -135,6 +135,10 @@ class ProfileChange (gobject.GObject):
         """Return a short description of the configuration change."""
         raise Exception ("Not implemented")
 
+    def get_ignore_default (self):
+        """Returns the default value for the ignore item for this change."""
+        return False;
+
 gobject.type_register (ProfileChange)
 
 class SourceDelegate:
