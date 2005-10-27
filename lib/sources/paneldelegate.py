@@ -333,7 +333,11 @@ class PanelDelegate (userprofile.SourceDelegate):
         # Nothing to do here
         pass
     
-    def apply (self):
+    def set_enforce_mandatory (self, enforce):
+        # Nothing to do here
+        pass
+
+    def apply (self, is_sabayon_session):
         # Nothing to do here
         pass
 

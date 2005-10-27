@@ -42,6 +42,7 @@ _ui_string = '''
     </menu>
     <menu action="EditMenu">
       <menuitem action="Changes"/>
+      <menuitem action="EnforceMandatory"/>
     </menu>
     <menu action="HelpMenu">
       <menuitem action="About"/>
@@ -154,8 +155,12 @@ class SessionWindow:
             ("HelpMenu",    None,            _("_Help")),
             ("About",       gtk.STOCK_ABOUT, _("_About"),   None,         _("About Sabayon"),            self.__handle_about),
         ]
+        toggle_actions = [
+            ("EnforceMandatory", None, _("Enforce Mandatory"), None, _("Enforce mandatory settings in the editing session"), self.__handle_enforce_mandatory, True),
+        ]
         action_group = gtk.ActionGroup ("WindowActions")
         action_group.add_actions (actions)
+        action_group.add_toggle_actions (toggle_actions)
         
         self.ui_manager = gtk.UIManager ()
         self.ui_manager.insert_action_group (action_group, 0)
@@ -235,6 +240,9 @@ class SessionWindow:
                                                 gtk.Widget.hide_on_delete)
         self.changes_window.window.present ()
     
+    def __handle_enforce_mandatory (self, action):
+        self.profile.set_enforce_mandatory (action.get_active())
+    
     def __session_finished (self, session):
         self.window.destroy ()
         
@@ -251,7 +259,6 @@ class SessionWindow:
         
         self.session.apply_profile ()
         self.profile.start_monitoring ()
-        
         screen = gtk.gdk.screen_get_default ()
         width  = (screen.get_width ()  * 3) / 4
         height = (screen.get_height () * 3) / 4

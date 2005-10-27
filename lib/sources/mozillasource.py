@@ -355,7 +355,11 @@ class MozillaDelegate(userprofile.SourceDelegate):
                                          {"file_type" : FirefoxProfileFile.TYPE_BOOKMARK,
                                           "mandatory"    : True})
 
-    def apply(self):
+    def set_enforce_mandatory (self, enforce):
+        # Nothing to do here
+        pass
+
+    def apply(self, is_sabayon_session):
         ini_files = []
         pref_files = []
         bookmark_files = []

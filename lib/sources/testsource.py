@@ -62,7 +62,9 @@ class TestSource (userprofile.ProfileSource):
         pass
     def sync_changes (self):
         pass
-    def apply (self):
+    def set_enforce_mandatory (self, enforce):
+        pass
+    def apply (self, is_sabayon_session):
         pass
 
     def get_test_change (self, key, value):

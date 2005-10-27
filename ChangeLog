@@ -1,3 +1,36 @@
+2005-10-27  Alexander Larsson  <alexl@redhat.com>
+
+	* admin-tool/sabayon-apply:
+	Add -s argument to mean "nested sabayon session"
+	
+	* admin-tool/sessionwindow.py:
+	Add Enforce mandatory toggle menu item. You can use
+	this to edit a settting that you earlier set as mandatory.
+	
+	* lib/config.py.in:
+	Ignore directory .gconf.xml.mandatory-alt
+	
+	* lib/protosession.py:
+	Pass -s to apply tool
+	
+	* lib/sources/filessource.py:
+	* lib/sources/mozillasource.py:
+	* lib/sources/paneldelegate.py:
+	* lib/sources/testsource.py:
+	* lib/userprofile.py:
+	Add set_enforce_mandatory() call and is_sabayon_session argument
+	to apply()
+	
+	* lib/storage.py:
+	Allow you to use different source name when adding file
+	
+	* lib/sources/gconfsource.py:
+	Implement set_enforce_mandatory() by having two mandatory trees
+	at different places in the stack and moving between them.
+	Only listen for changes in the ~/.gconf source
+	use client.suggest_sync to sync in sync_changes instead of shutting
+	down gconfd.
+
 2005-10-26  Alexander Larsson  <alexl@redhat.com>
 
 	* admin-tool/sessionwindow.py:

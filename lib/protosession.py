@@ -487,7 +487,7 @@ class ProtoSession (gobject.GObject):
 
         
     def apply_profile (self):
-        argv = APPLY_TOOL_ARGV + [ self.profile_file ]
+        argv = APPLY_TOOL_ARGV + [ "-s", self.profile_file ]
         dprint ("Running apply tool: %s" % argv)
         util.uninterruptible_spawnve (os.P_WAIT, argv[0], argv, os.environ.copy ())
     

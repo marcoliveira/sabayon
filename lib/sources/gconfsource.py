@@ -45,6 +45,13 @@ def dprint (fmt, *args):
 def associate_schema (config_source, key, schema_key):
     os.system ("gconftool-2 --config-source='%s' --apply-schema %s %s" % (config_source, schema_key, key))
 
+def copy_tree (src_client, dst_client, dir):
+    for entry in src_client.all_entries (dir):
+        if entry.value:
+            dst_client.set (entry.key, entry.value)
+    for subdir in src_client.all_dirs (dir):
+        copy_tree (src_client, dst_client, subdir)
+
 # No mapping for gconf_client_recursive_unset()
 def recursive_unset (client, dir):
     for entry in client.all_entries (dir):
@@ -108,12 +115,14 @@ class GConfSource (userprofile.ProfileSource):
         """
         userprofile.ProfileSource.__init__ (self, _("GConf"), "get_gconf_delegate")
 
-        self.storage          = storage
-        self.home_dir         = util.get_home_dir ()
-        self.client           = None
-        self.notify_id        = 0
-        self.defaults_client  = None
-        self.mandatory_client = None
+        self.storage              = storage
+        self.home_dir             = util.get_home_dir ()
+        self.client               = None
+        self.notify_id            = 0
+        self.defaults_client      = None
+        self.mandatory_client     = None
+        self.mandatory_alt_client = None
+        self.enforce_mandatory    = True
 
     def get_path_description (self, path):
         if path == ".gconf.xml.defaults":
@@ -137,11 +146,19 @@ class GConfSource (userprofile.ProfileSource):
                 self.defaults_address = address
             return (self.defaults_client, self.defaults_address)
         else:
-            if not self.mandatory_client:
-                (client, address) = get_client_and_address_for_path (os.path.join (self.home_dir, ".gconf.xml.mandatory"))
-                self.mandatory_client = client
-                self.mandatory_address = address
-            return (self.mandatory_client, self.mandatory_address)
+            if self.enforce_mandatory:
+                if not self.mandatory_client:
+                    (client, address) = get_client_and_address_for_path (os.path.join (self.home_dir, ".gconf.xml.mandatory"))
+                    self.mandatory_client = client
+                    self.mandatory_address = address
+                return (self.mandatory_client, self.mandatory_address)
+            else:
+                if not self.mandatory_alt_client:
+                    (client, address) = get_client_and_address_for_path (os.path.join (self.home_dir, ".gconf.xml.mandatory-alt"))
+                    self.mandatory_alt_client = client
+                    self.mandatory_alt_address = address
+                return (self.mandatory_alt_client, self.mandatory_alt_address)
+                
 
     def commit_change (self, change, mandatory = False):
         """Commit a GConf change to the profile."""
@@ -156,6 +173,11 @@ class GConfSource (userprofile.ProfileSource):
             client.set (change.key, change.value)
         else:
             client.unset (change.key)
+
+        # Make sure to unset the other sabayon gconf database, as we may be changing
+        # the key from mandatory to non-mandatory
+        (client, address) = self.get_committing_client_and_address (not mandatory)
+        client.unset (change.key)
         
     def start_monitoring (self):
         """Start monitoring for GConf changes. Note that this
@@ -182,7 +204,8 @@ class GConfSource (userprofile.ProfileSource):
             
             self.emit_change (GConfChange (self, entry.key, value))
 
-        self.client = gconf.client_get_default ()
+        # Only monitor for changes in the user settings database
+        (self.client, address) = get_client_and_address_for_path (os.path.join (self.home_dir, ".gconf"))
         self.client.add_dir ("/", gconf.CLIENT_PRELOAD_RECURSIVE)
         self.notify_id = self.client.notify_add ("/", handle_notify, self)
 
@@ -198,19 +221,44 @@ class GConfSource (userprofile.ProfileSource):
 
     def sync_changes (self):
         """Ensure that all committed changes are saved to disk."""
-        
+    
         # FIXME: it would be nicer if we just wrote directly
         #        to the defaults and mandatory sources
-        dprint ("Shutting down gconfd in order to sync changes to disk")
-        os.system ("gconftool-2 --shutdown")
-        time.sleep (1)
+        #dprint ("Shutting down gconfd in order to sync changes to disk")
+        #os.system ("gconftool-2 --shutdown")
+        if self.defaults_client:
+            self.defaults_client.suggest_sync();
+        if self.mandatory_client:
+            self.mandatory_client.suggest_sync();
+        if self.mandatory_alt_client:
+            self.mandatory_alt_client.suggest_sync();
+        time.sleep (2)
+        
 
         if os.path.exists (os.path.join (self.home_dir, ".gconf.xml.defaults")):
             self.storage.add (".gconf.xml.defaults", self.home_dir, self.name)
-        if os.path.exists (os.path.join (self.home_dir, ".gconf.xml.mandatory")):
-            self.storage.add (".gconf.xml.mandatory", self.home_dir, self.name)
 
-    def apply (self):
+        if self.enforce_mandatory:
+            mandatory_src = ".gconf.xml.mandatory"
+        else:
+            mandatory_src = ".gconf.xml.mandatory-alt"
+        if os.path.exists (os.path.join (self.home_dir, mandatory_src)):
+            self.storage.add (".gconf.xml.mandatory", self.home_dir, self.name, src_path = mandatory_src)
+
+    def set_enforce_mandatory (self, enforce):
+        if enforce == self.enforce_mandatory:
+          return
+
+        dprint ("Setting enforce mandatory to %d", enforce)
+        
+        (old_client, old_address) = self.get_committing_client_and_address (True)
+        self.enforce_mandatory = enforce
+        (client, address) = self.get_committing_client_and_address (True)
+
+        copy_tree (old_client, client, "/")
+        recursive_unset (old_client, "/")
+
+    def apply (self, is_sabayon_session):
         """Apply the profile by writing the default and mandatory
         sources location to ~/.gconf.path.defaults and
         ~/.gconf.path.mandatory.
@@ -250,8 +298,11 @@ class GConfSource (userprofile.ProfileSource):
 
         if ("GConf", ".gconf.xml.defaults") in storage_contents:
             self.storage.extract (".gconf.xml.defaults", self.home_dir, True)
-        write_path_file (os.path.join (self.home_dir, ".gconf.path.defaults"),
-                         "xml:readonly:" + os.path.join (self.home_dir, ".gconf.xml.defaults"))
+        default_path = "xml:readonly:" + os.path.join (self.home_dir, ".gconf.xml.defaults");
+        if is_sabayon_session:
+            default_path = "xml:readonly:" + os.path.join (self.home_dir, ".gconf.xml.mandatory-alt") + "\n" + default_path
+                                                  
+        write_path_file (os.path.join (self.home_dir, ".gconf.path.defaults"), default_path)
         
         if ("GConf", ".gconf.xml.mandatory") in storage_contents:
             self.storage.extract (".gconf.xml.mandatory", self.home_dir, True)
@@ -342,7 +393,7 @@ def run_unit_tests ():
     os.system ("gconftool-2 --recursive-unset /tmp/test-gconfprofile")
     
     source.sync_changes ()
-    source.apply ()
+    source.apply (False)
 
     assert os.access (os.path.join (util.get_home_dir (), ".gconf.path.defaults"), os.F_OK)
     assert os.access (os.path.join (util.get_home_dir (), ".gconf.path.mandatory"), os.F_OK)

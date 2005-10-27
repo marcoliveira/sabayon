@@ -185,7 +185,11 @@ class SourceDelegate:
         """Save all committed changes to disk."""
         raise Exception ("Not implemented")
 
-    def apply (self):
+    def set_enforce_mandatory (self, enforce):
+        """Temporary make mandatory setting non-mandatory."""
+        raise Exception ("Not implemented")
+
+    def apply (self, is_sabayon_session):
         """Apply profile to the current user's environment."""
         raise Exception ("Not implemented")
     
@@ -263,7 +267,11 @@ class ProfileSource (gobject.GObject):
         """Save all committed changes to disk."""
         raise Exception ("Not implemented")
 
-    def apply (self):
+    def set_enforce_mandatory (self, enforce):
+        """Temporary make mandatory setting non-mandatory."""
+        raise Exception ("Not implemented")
+    
+    def apply (self, is_sabayon_session):
         """Apply profile to the current user's environment."""
         raise Exception ("Not implemented")
 
@@ -346,13 +354,21 @@ class UserProfile (gobject.GObject):
             s.sync_changes ()
         self.storage.save ()
 
-    def apply (self):
+    def set_enforce_mandatory (self, enforce):
+        """Temporary make mandatory setting non-mandatory."""
+        dprint ("Changing mandatory enforcement in user's environment")
+        for s in self.sources:
+            s.set_enforce_mandatory (enforce)
+            for delegate in s.delegates:
+                delegate.set_enforce_mandatory (enforce)
+    
+    def apply (self, is_sabayon_session):
         """Apply profile to the current user's environment."""
         dprint ("Applying profile to user's environment")
         for s in self.sources:
-            s.apply ()
+            s.apply (is_sabayon_session)
             for delegate in s.delegates:
-                delegate.apply ()
+                delegate.apply (is_sabayon_session)
 
 gobject.type_register (UserProfile)
 

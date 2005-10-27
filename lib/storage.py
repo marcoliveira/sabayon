@@ -508,7 +508,7 @@ class ProfileStorage:
         retval.save ()
         return retval
 
-    def add (self, path, src_dir, source, attributes = None):
+    def add (self, path, src_dir, source, attributes = None, src_path = None):
         """Add a new - or update an existing - file or directory
         to the profile. If @path is a directory, then the contents
         of the directory will be recursively saved in the profile.
@@ -526,7 +526,9 @@ class ProfileStorage:
         
         self.__unpack ()
 
-        src_path = os.path.join (src_dir, path)
+        if src_path == None:
+            src_path = path
+        src_path = os.path.join (src_dir, src_path)
         dst_path = os.path.join (self.temp_path, path)
 
         if not os.path.exists (src_path):

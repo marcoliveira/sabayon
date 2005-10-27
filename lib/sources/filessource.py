@@ -122,6 +122,10 @@ class FilesSource (userprofile.ProfileSource):
         # Nothing to do here
         pass
 
+    def set_enforce_mandatory (self, enforce):
+        # Nothing to do here
+        pass
+
     def __apply_foreach (self, source, path):
         attributes = self.storage.get_attributes (path)
         if attributes.has_key ("mandatory"):
@@ -131,7 +135,7 @@ class FilesSource (userprofile.ProfileSource):
 
         self.storage.extract (path, self.home_dir, mandatory)
     
-    def apply (self):
+    def apply (self, is_sabayon_session):
         self.storage.foreach (self.__apply_foreach, source = self.name)
 
 gobject.type_register (FilesSource)
@@ -193,7 +197,7 @@ def run_unit_tests ():
     util.set_home_dir_for_unit_tests (temp_path)
     
     source = get_source (storage.ProfileStorage (profile_path))
-    source.apply ()
+    source.apply (False)
     
     assert os.access (os.path.join (temp_path, "foobar/foo/bar/foo/bar/foo"), os.F_OK)
     
