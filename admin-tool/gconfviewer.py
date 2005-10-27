@@ -78,14 +78,14 @@ class GConfModel (gtk.TreeStore):
             return _("<no type>")
 
 class GConfViewer (gtk.Window):
-    def __init__ (self, xml_backend_dir, parent_window):
+    def __init__ (self, xml_backend_dir, description, parent_window):
         gtk.Window.__init__ (self, gtk.WINDOW_TOPLEVEL)
         
         self.backend_address = "xml:readonly:" + xml_backend_dir
         self.engine = gconf.engine_get_for_address ("xml:readonly:" + xml_backend_dir)
         self.client = gconf.client_get_for_engine (self.engine)
 
-        self.set_title (_("All Your Settings Are Belong To Us"))
+        self.set_title (_("Profile settings: %s")%description)
         self.set_icon_name ("sabayon")
         self.set_transient_for (parent_window)
         self.set_destroy_with_parent (True)

@@ -130,7 +130,7 @@ class ProfileEditorWindow:
         self.last_save_time = 0
 
         self.window = gtk.Window (gtk.WINDOW_TOPLEVEL)
-        self.window.set_title (_("All Your Settings Are Belong To Us"))
+        self.window.set_title (_("Profile %s")%profile_name)
         self.window.set_icon_name ("sabayon")
         self.window.set_transient_for (parent_window)
         self.window.set_destroy_with_parent (True)
@@ -371,6 +371,7 @@ class ProfileEditorWindow:
     def __handle_row_activation (self, treeview, tree_path, column):
         iter = self.profile_model.get_iter (tree_path)
         path = self.profile_model[iter][ProfileModel.COLUMN_PATH]
+        description = self.profile_model[iter][ProfileModel.COLUMN_DESCRIPTION]
         source_name = self.profile_model[iter][ProfileModel.COLUMN_SOURCE]
         
         dprint ("Activating '%s'", path)
@@ -380,11 +381,11 @@ class ProfileEditorWindow:
         extracted_path = os.path.join (extract_dir, path)
 
         if source_name == _("GConf"):
-            viewer = gconfviewer.GConfViewer (extracted_path, self.window)
+            viewer = gconfviewer.GConfViewer (extracted_path, description, self.window)
             viewer.connect ("destroy", lambda v, dir: shutil.rmtree (dir), extract_dir)
             viewer.show ()
         elif source_name == _("Files"):
-            viewer = fileviewer.FileViewer (extracted_path, self.window)
+            viewer = fileviewer.FileViewer (extracted_path, description, self.window)
             viewer.connect ("destroy", lambda v, dir: shutil.rmtree (dir), extract_dir)
             viewer.show ()
         else:

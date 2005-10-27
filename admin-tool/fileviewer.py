@@ -21,12 +21,12 @@
 import gtk
 
 class FileViewer (gtk.Window):
-    def __init__ (self, path, parent_window):
+    def __init__ (self, path, description, parent_window):
         gtk.Window.__init__ (self, gtk.WINDOW_TOPLEVEL)
 
         self.path = path
         
-        self.set_title (_("All Your Settings Are Belong To Us"))
+        self.set_title (_("Profile file: %s")%description)
         self.set_icon_name ("sabayon")
         self.set_transient_for (parent_window)
         self.set_destroy_with_parent (True)

@@ -42,12 +42,12 @@ class PixbufToggleRenderer (gtk.CellRendererPixbuf):
 gobject.type_register (PixbufToggleRenderer)
 
 class ChangesWindow:
-    def __init__ (self, changes_model, parent_window):
+    def __init__ (self, changes_model, profile_name, parent_window):
         self.changes_model = changes_model
         
         self.window = gtk.Window ()
         self.window.set_transient_for (parent_window)
-        self.window.set_title ("All your settings are belong to us")
+        self.window.set_title (_("Changes in profile %s")%profile_name)
         self.window.set_icon_name ("sabayon")
 
         (width, height) = parent_window.get_size ()

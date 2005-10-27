@@ -385,7 +385,7 @@ class ProtoSession (gobject.GObject):
 
             argv = XNEST_ARGV + \
                    [ "-auth", self.xnest_xauth_file ] + \
-                   [ "-name", _("All Your Settings Are Belong To Us") ]
+                   [ "-name", "sabayon" ]
             if parent_window:
                 argv += [ "-parent", parent_window ]
             argv += [ self.display_name ]

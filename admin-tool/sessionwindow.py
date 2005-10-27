@@ -127,6 +127,7 @@ class SessionWindow:
         self.last_save_time = 0
 
         self.window = gtk.Window ()
+        self.window.set_title (_("Editing profile %s")%profile_name)
         self.window.set_icon_name ("sabayon")
         self.window.connect ("delete-event",
                              self.__handle_delete_event);
@@ -235,6 +236,7 @@ class SessionWindow:
     def __handle_edit (self, action):
         if not self.changes_window:
             self.changes_window = changeswindow.ChangesWindow (self.changes_model,
+                                                               self.profile_name,
                                                                self.window)
             self.changes_window.window.connect ("delete-event",
                                                 gtk.Widget.hide_on_delete)
