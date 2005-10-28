@@ -1,3 +1,26 @@
+2005-10-28  Alexander Larsson  <alexl@redhat.com>
+
+	* admin-tool/lockdownwindow.py:
+	* admin-tool/Makefile.am:
+	New lockdown window.
+	Simple initial version, using an applier abstraction so that we
+	can plug in Pessulus later.
+	
+	* lib/userprofile.py:
+	Add get_mandatory method to ProfileChange
+	
+	* admin-tool/sessionwindow.py:
+	Use the lockdown window.
+	Add changed parameter to changed signal of change model
+	Add find method for chage model
+	Get mandatory setting from change event if set
+	
+	* admin-tool/changeswindow.py:
+	Emit changed when changing the mandatory setting of a change
+	
+	* lib/sources/gconfsource.py:
+	Add gconf helper for lockdown settings
+
 2005-10-27  Alexander Larsson  <alexl@redhat.com>
 
 	* admin-tool/sessionwindow.py:

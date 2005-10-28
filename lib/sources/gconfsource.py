@@ -77,6 +77,7 @@ class GConfChange (userprofile.ProfileChange):
         userprofile.ProfileChange.__init__ (self, source)
         self.key   = key
         self.value = value
+        self.mandatory = None
 
     def get_id (self):
         """Return the path to the GConf key which changed."""
@@ -102,6 +103,12 @@ class GConfChange (userprofile.ProfileChange):
             return _("GConf key '%s' set to pair '%s'")    % (self.key, self.value.to_string ())
         else:
             return _("GConf key '%s' set to '%s'")         % (self.key, self.value.to_string ())
+
+    def set_mandatory (self, value):
+        self.mandatory = value
+        
+    def get_mandatory (self):
+        return self.mandatory
 
 gobject.type_register (GConfChange)
 
@@ -314,6 +321,28 @@ class GConfSource (userprofile.ProfileSource):
         #        running.
         dprint ("Shutting down gconfd so it kill pick up new paths")
         os.system ("gconftool-2 --shutdown")
+
+    def add_gconf_notify (self, key, handler, data):
+        return self.client.notify_add (key, handler, data)
+
+    def remove_gconf_notify (self, id):
+        return self.client.notify_remove (id)
+
+    def get_gconf_key_is_mandatory (self, key):
+        (client, address) = self.get_committing_client_and_address (True)
+        entry = client.get_entry (key, "", True)
+        if entry and entry.value:
+            return True
+        return False
+
+    def set_gconf_boolean (self, key, value, mandatory):
+        gconf_value = gconf.Value(gconf.VALUE_BOOL)
+        gconf_value.set_bool (value)
+        change = GConfChange (self, key, gconf_value)
+        change.set_mandatory (mandatory)
+        self.client.set_bool (key, value)
+        self.emit_change (change)
+        
 
 gobject.type_register (GConfSource)
 

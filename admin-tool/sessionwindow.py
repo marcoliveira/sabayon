@@ -30,6 +30,7 @@ import changeswindow
 import sessionwidget
 import saveconfirm
 import aboutdialog
+import lockdownwindow
 from config import *
 
 _ui_string = '''
@@ -42,6 +43,7 @@ _ui_string = '''
     </menu>
     <menu action="EditMenu">
       <menuitem action="Changes"/>
+      <menuitem action="Lockdown"/>
       <menuitem action="EnforceMandatory"/>
     </menu>
     <menu action="HelpMenu">
@@ -56,7 +58,7 @@ def dprint (fmt, *args):
 
 class ProfileChangesModel (gtk.ListStore):
     __gsignals__ = {
-        "changed" : (gobject.SIGNAL_RUN_LAST, gobject.TYPE_NONE, ())
+        "changed" : (gobject.SIGNAL_RUN_LAST, gobject.TYPE_NONE, (userprofile.ProfileChange, ))
         }
         
     (
@@ -78,19 +80,19 @@ class ProfileChangesModel (gtk.ListStore):
         self.profile = profile
         self.profile.connect ("changed", self.handle_profile_change)
 
+    
     def handle_profile_change (self, profile, new_change):
-        mandatory = False
+        default_mandatory = False
         ignore = new_change.get_ignore_default ()
-        iter = self.get_iter_first ()
-        while iter:
-            next = self.iter_next (iter)
-            change = self[iter][self.COLUMN_CHANGE]
-            if change.get_source () == new_change.get_source () and \
-               change.get_id ()     == new_change.get_id ():
-                ignore    = self[iter][self.COLUMN_IGNORE]
-                mandatory = self[iter][self.COLUMN_MANDATORY]
-                self.remove (iter)
-            iter = next
+        iter = self.find (new_change.get_source (), new_change.get_id ())
+        if iter:
+            ignore    = self[iter][self.COLUMN_IGNORE]
+            default_mandatory = self[iter][self.COLUMN_MANDATORY]
+            self.remove (iter)
+
+        mandatory = new_change.get_mandatory ()
+        if mandatory == None:
+            mandatory = default_mandatory
 
         if mandatory:
             lock_pixbuf = self.locked_pixbuf
@@ -104,11 +106,23 @@ class ProfileChangesModel (gtk.ListStore):
                   self.COLUMN_MANDATORY,   mandatory,
                   self.COLUMN_LOCK_PIXBUF, lock_pixbuf,
                   self.COLUMN_DESCRIPTION, new_change.get_short_description ())
-        self.emit ("changed")
+        self.emit ("changed", new_change)
 
     def clear (self):
         gtk.ListStore.clear (self)
-        self.emit ("changed")
+        self.emit ("changed", None)
+
+    def find (self, source, id):
+        iter = self.get_iter_first ()
+        while iter:
+            next = self.iter_next (iter)
+            change = self[iter][self.COLUMN_CHANGE]
+            if change.get_source () == source and \
+               change.get_id ()     == id:
+                return iter
+            iter = next
+        return None
+    
 
 gobject.type_register (ProfileChangesModel)
 
@@ -123,6 +137,7 @@ class SessionWindow:
         self.changes_model = ProfileChangesModel (self.profile)
         self.changes_model.connect ("changed", self.__changes_model_changed)
         self.changes_window = None
+        self.lockdown_window = None
 
         self.last_save_time = 0
 
@@ -153,6 +168,7 @@ class SessionWindow:
             ("Quit",        gtk.STOCK_QUIT,  _("_Quit"),    "<control>Q", _("Close the current window"), self.__handle_quit),
             ("EditMenu",    None,            _("_Edit")),
             ("Changes",     gtk.STOCK_EDIT,  _("_Changes"), "<control>H", _("Edit changes"),             self.__handle_edit),
+            ("Lockdown",    None,            _("_Lockdown"),"<control>L", _("Edit Lockdown settings"),   self.__handle_lockdown),
             ("HelpMenu",    None,            _("_Help")),
             ("About",       gtk.STOCK_ABOUT, _("_About"),   None,         _("About Sabayon"),            self.__handle_about),
         ]
@@ -182,7 +198,7 @@ class SessionWindow:
             self.last_save_time = 0
             self.save_action.set_sensitive (False)
             
-    def __changes_model_changed (self, model):
+    def __changes_model_changed (self, model, change):
         self.__set_needs_saving (not model.get_iter_first () is None)
         
     def __do_save (self):
@@ -241,7 +257,16 @@ class SessionWindow:
             self.changes_window.window.connect ("delete-event",
                                                 gtk.Widget.hide_on_delete)
         self.changes_window.window.present ()
-    
+
+    def __handle_lockdown (self, action):
+        if not self.lockdown_window:
+            self.lockdown_window = lockdownwindow.LockdownWindow(self.profile_name,
+                                                                 self.profile,
+                                                                 self.changes_model,
+                                                                 self.window)
+        self.lockdown_window.window.present ()
+        
+
     def __handle_enforce_mandatory (self, action):
         self.profile.set_enforce_mandatory (action.get_active())
     
@@ -272,12 +297,11 @@ class SessionWindow:
         self.mapped_handler_id = self.session_widget.connect ("map-event", self.__session_mapped)
         self.session_widget.show ()
 
-    def __update_statusbar (self, model):
-        iter = self.changes_model.get_iter_first ()
-        if iter:
+    def __update_statusbar (self, model, change):
+        if change:
             self.statusbar.pop (self.status_context_id)
             self.statusbar.push (self.status_context_id,
-                                 self.changes_model[iter][self.changes_model.COLUMN_DESCRIPTION])
+                                 change.get_short_description ())
 
     def __update_resize_grip (self, window, event):
         if event.changed_mask & gtk.gdk.WINDOW_STATE_MAXIMIZED:

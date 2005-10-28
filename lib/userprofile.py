@@ -138,6 +138,10 @@ class ProfileChange (gobject.GObject):
     def get_ignore_default (self):
         """Returns the default value for the ignore item for this change."""
         return False;
+        
+    def get_mandatory (self):
+        """Returns the mandatory value of the change, or None to use the default"""
+        return None
 
 gobject.type_register (ProfileChange)
 

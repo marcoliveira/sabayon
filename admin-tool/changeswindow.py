@@ -96,6 +96,7 @@ class ChangesWindow:
 
         self.changes_model.set (iter, self.changes_model.COLUMN_MANDATORY,   mandatory)
         self.changes_model.set (iter, self.changes_model.COLUMN_LOCK_PIXBUF, lock_pixbuf);
+        self.changes_model.emit ("changed", self.changes_model.get_value (iter, self.changes_model.COLUMN_CHANGE))
     
     def __setup_treeview (self):
         self.treeview.set_model (self.changes_model)

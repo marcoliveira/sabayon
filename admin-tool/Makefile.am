@@ -8,6 +8,7 @@ PYTHON_FILES =				\
 	usersdialog.py			\
 	sessionwindow.py		\
 	sessionwidget.py		\
+	lockdownwindow.py		\
 	changeswindow.py
 
 @INTLTOOL_DESKTOP_RULE@
