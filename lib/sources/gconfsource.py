@@ -342,7 +342,9 @@ class GConfSource (userprofile.ProfileSource):
         change.set_mandatory (mandatory)
         self.client.set_bool (key, value)
         self.emit_change (change)
-        
+
+    def set_gconf_list (self, key, list_type, value, mandatory):
+        raise NotImplementedError
 
 gobject.type_register (GConfSource)
 

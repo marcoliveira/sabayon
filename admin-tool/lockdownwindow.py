@@ -23,6 +23,9 @@ import gconf
 import util
 import sessionwindow
 
+#import Pessulus.lockdownapplier
+#import Pessulus.maindialog
+
 def dprint (fmt, *args):
     util.debug_print (util.DEBUG_ADMINTOOL, fmt % args)
 
@@ -33,7 +36,7 @@ class LockdownMonitor:
         self.handler = handler
         self.data = data
 
-class LockdownApplier:
+class LockdownApplierSabayon: # (Pessulus.lockdownapplier.PessulusLockdownApplier):
     def __init__ (self, profile, changes_model):
         self.changes_model = changes_model
         self.source = profile.get_source ("GConf")
@@ -46,36 +49,52 @@ class LockdownApplier:
         if change == None or change.get_source () != self.source:
             return
         key = change.get_id ()
+        entry = gconf.Entry (key, change.value)
         if self.monitored_keys.has_key (key):
             for monitor in self.monitored_keys[key]:
-                monitor.handler (monitor.data)
+                monitor.handler (None, None, entry, monitor.data)
 
     def supports_mandatory_settings (self):
         return True
 
-    def is_mandatory (self, key):
+    def get_schema (self, key):
+        return self.client.get_schema (key)
+
+    def __is_mandatory (self, key):
         iter = self.changes_model.find (self.source, key)
         if iter:
             return self.changes_model[iter][sessionwindow.ProfileChangesModel.COLUMN_MANDATORY]
         
         return self.source.get_gconf_key_is_mandatory (key)
         
-    def get_boolean (self, key):
+    def get_bool (self, key):
         iter = self.changes_model.find (self.source, key)
         if iter:
             change = self.changes_model[iter][sessionwindow.ProfileChangesModel.COLUMN_CHANGE]
-            return change.value.get_bool()
+            val = change.value.get_bool()
+        else:
+            val = self.client.get_bool (key)
         
-        return self.client.get_bool (key)
+        return (val, self.__is_mandatory (key))
             
-    def set_boolean (self, key, value, mandatory):
+    def set_bool (self, key, value, mandatory):
         return self.source.set_gconf_boolean (key, value, mandatory)
+
+    def get_list (self, key, list_type):
+        value = self.client.get_list (key, list_type)
+        return (value, self.__is_mandatory (key))
+
+    def set_list (self, key, list_type, value, mandatory):
+        return self.source.set_gconf_list (key, list_type, value, mandatory)
+
+    def key_is_writable (self, key):
+        return True
 
     def notify_add (self, key, handler, data = None):
         monitor = LockdownMonitor (key, handler, data)
 
         def __gconf_notify_proxy (client, cnx_id, entry, monitor):
-            monitor.handler (monitor.data)
+            monitor.handler (client, cnx_id, entry, monitor.data)
         
         monitor.gconf_id = self.source.add_gconf_notify (key, __gconf_notify_proxy, monitor)
         
@@ -89,15 +108,27 @@ class LockdownApplier:
         return monitor
         
     def notify_remove (self, monitor):
-        self.remove_gconf_notify (monitor.gconf_id)
+        self.source.remove_gconf_notify (monitor.gconf_id)
         monitors = self.monitored_keys[monitor.key]
         monitors.remove (monitor)
+
+    # We always monitor all dirs anyway
+    def add_dir (self, dir, preloadtype):
+        pass
+    def remove_dir (self, dir):
+        pass
+        
 
 class LockdownWindow:
     def __init__ (self, profile_name, profile, changes_model, parent_window):
         self.profile_name = profile_name
-        self.applier = LockdownApplier (profile, changes_model)
+        self.applier = LockdownApplierSabayon (profile, changes_model)
 
+
+#        dialog = Pessulus.maindialog.PessulusMainDialog (self.applier, False)
+#        self.window = dialog.window
+#        return
+    
         self.key = "/apps/panel/global/locked_down"
 
         self.window = gtk.Window (gtk.WINDOW_TOPLEVEL)
@@ -135,15 +166,16 @@ class LockdownWindow:
         if not self.ignore_change:
             active = self.checkbutton.get_active ()
             mandatory = self.mandatory_checkbutton.get_active ()
-            self.applier.set_boolean (self.key, active, mandatory)
+            self.applier.set_bool (self.key, active, mandatory)
 
-    def __handle_change (self, data):
+    def __handle_change (self, client, cnx_id, entry, data):
         self.__update ()
 
     def __update (self):
         self.ignore_change = True
-        
-        self.checkbutton.set_active (self.applier.get_boolean (self.key))
-        self.mandatory_checkbutton.set_active (self.applier.is_mandatory (self.key))
+
+        (active, mandatory) = self.applier.get_bool (self.key)
+        self.checkbutton.set_active (active)
+        self.mandatory_checkbutton.set_active (mandatory)
         
         self.ignore_change = False
