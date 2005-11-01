@@ -341,9 +341,12 @@ class UserProfile (gobject.GObject):
         """Start monitoring for configuration changes."""
         dprint ("Starting monitoring")
         for s in self.sources:
+            # Start source monitor before delegates so we
+            # can e.g. set up gconf in the gconf source and
+            # use it in the gconf delegate
+            s.start_monitoring ()
             for delegate in s.delegates:
                 delegate.start_monitoring ()
-            s.start_monitoring ()
 
     def stop_monitoring (self):
         """Stop monitoring for configuration changes."""

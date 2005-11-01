@@ -33,12 +33,16 @@ except:
 def dprint (fmt, *args):
     util.debug_print (util.DEBUG_PANELDELEGATE, fmt % args)
 
+PANEL_LAUNCHER_DIR = ".gnome2/panel2.d/default/launchers"
+
 class PanelChange (userprofile.ProfileChange):
     def __init__ (self, source, delegate, id):
         userprofile.ProfileChange.__init__ (self, source, delegate)
         self.id = id
     def get_id (self):
         return self.id
+    def commit_change (self, mandatory):
+        pass
 
 #
 # FIXME: these short descriptions are lame, should be:
@@ -75,6 +79,12 @@ class PanelObjectAddedChange (PanelChange):
         PanelChange.__init__ (self, source, delegate, id)
     def get_short_description (self):
         return _("Panel object '%s' added") % self.id
+    def commit_change (self, mandatory):
+        # Might have to commit a launcher file
+        launcher = self.delegate.client.get_string (PANEL_KEY_BASE + "/objects/" + self.id + "/launcher_location")
+        if launcher and launcher[0] != '/':
+            file = PANEL_LAUNCHER_DIR + "/" + launcher
+            self.source.storage.add (file, self.delegate.home_dir, self.delegate.name)
     
 class PanelObjectRemovedChange (PanelChange):
     def __init__ (self, source, delegate, id):
@@ -97,7 +107,7 @@ class PanelDelegate (userprofile.SourceDelegate):
             # self.name        = self.client.get_string (PANEL_KEY_BASE + "/toplevels/" + toplevel_id + "/name")
             # self.orientation = self.client.get_string (PANEL_KEY_BASE + "/toplevels/" + toplevel_id + "/orientation")
             # self.expand      = self.client.get_bool   (PANEL_KEY_BASE + "/toplevels/" + toplevel_id + "/expand")
-        
+
     class PanelApplet (PanelThing):
         def __init__ (self, id, added = False, removed = False):
             PanelDelegate.PanelThing.__init__ (self, id, added, removed)
@@ -118,10 +128,10 @@ class PanelDelegate (userprofile.SourceDelegate):
         userprofile.SourceDelegate.__init__ (self, _("Panel"), source, PANEL_KEY_BASE)
         self.client = gconf.client_get_default ()
 
+        self.home_dir = util.get_home_dir()
         self.toplevels = {}
         self.applets = {}
         self.objects = {}
-        self.__read_panel_config ()
 
     def __read_panel_config (self):
         dprint ("Reading initial panel config");
@@ -253,6 +263,8 @@ class PanelDelegate (userprofile.SourceDelegate):
         if not thing.added:
             return
 
+        change.commit_change (mandatory)
+
         (client, address) = self.source.get_committing_client_and_address (mandatory)
 
         self.__copy_dir (self.client, client, address, PANEL_KEY_BASE + "/" + dir_name + "/" + thing.id)
@@ -320,8 +332,8 @@ class PanelDelegate (userprofile.SourceDelegate):
                                           "objects")
 
     def start_monitoring (self):
-        """Start monitoring for configuration changes."""
-        # Nothing to do here
+        # Need to do this here so gconf paths are setup
+        self.__read_panel_config ()
         pass
 
     def stop_monitoring (self):
@@ -337,12 +349,42 @@ class PanelDelegate (userprofile.SourceDelegate):
         # Nothing to do here
         pass
 
+    def __apply_foreach (self, source, path):
+        self.source.storage.extract (path, self.home_dir)
+
     def apply (self, is_sabayon_session):
-        # Nothing to do here
+        self.source.storage.foreach (self.__apply_foreach, source = self.name)
         pass
 
 def get_gconf_delegate (source):
     return PanelDelegate (source)
+
+class PanelFileDelegate (userprofile.SourceDelegate):
+    def __init__ (self, source):
+        userprofile.SourceDelegate.__init__ (self, _("Panel File"), source, PANEL_LAUNCHER_DIR)
+
+    def handle_change (self, change):
+        dprint ("Ignoring file chage due to panel delegation: %s"%change)
+        return True
+
+    def start_monitoring (self):
+        pass
+
+    def stop_monitoring (self):
+        pass
+
+    def sync_changes (self):
+        pass
+
+    def set_enforce_mandatory (self, enforce):
+        pass
+
+    def apply (self, is_sabayon_session):
+        pass
+
+def get_files_delegate(source):
+    return PanelFileDelegate(source)
+
 
 #
 # Unit tests
