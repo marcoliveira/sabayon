@@ -166,6 +166,13 @@ class SourceDelegate:
         """Returns the configuration delegate's name."""
         return self.name
 
+    def get_path_description (self, path):
+        """Returns a human readable description for @path.
+        @path must have been previously added by the delegate to the
+        #ProfileStorage.
+        """
+        return path
+    
     def handle_change (self, change):
         """Inspect a ProfileChange. Return #True if the change should
         not be passed on any further (i.e. #True == 'handled') and

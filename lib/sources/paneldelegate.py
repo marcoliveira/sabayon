@@ -18,6 +18,7 @@
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #
 
+import os
 import gconf
 import gconfsource
 
@@ -91,6 +92,11 @@ class PanelObjectRemovedChange (PanelChange):
         PanelChange.__init__ (self, source, delegate, id)
     def get_short_description (self):
         return _("Panel object '%s' removed") % self.id
+    def commit_change (self, mandatory):
+        launcher = self.delegate.client.get_string (PANEL_KEY_BASE + "/objects/" + self.id + "/launcher_location")
+        if launcher and launcher[0] != '/':
+            file = PANEL_LAUNCHER_DIR + "/" + launcher
+            self.source.storage.remove (file)
 
 class PanelDelegate (userprofile.SourceDelegate):
     class PanelThing:
@@ -283,6 +289,8 @@ class PanelDelegate (userprofile.SourceDelegate):
         if not thing.removed:
             return
 
+        change.commit_change (mandatory)
+
         (client, address) = self.source.get_committing_client_and_address (mandatory)
 
         id_list = self.__get_current_list (dict)
@@ -331,6 +339,9 @@ class PanelDelegate (userprofile.SourceDelegate):
                                           "object_id_list",
                                           "objects")
 
+    def get_path_description (self, path):
+        return "Panel launcher: %s"%os.path.basename(path)
+    
     def start_monitoring (self):
         # Need to do this here so gconf paths are setup
         self.__read_panel_config ()

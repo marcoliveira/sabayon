@@ -1,4 +1,13 @@
 2005-11-02  Alexander Larsson  <alexl@redhat.com>
+	
+	* lib/userprofile.py:
+	Add get_path_description to delegates
+	
+	* lib/sources/paneldelegate.py:
+	Implement get_path_description for panel delegate.
+	Remove launchers from storage on removal.
+
+2005-11-02  Alexander Larsson  <alexl@redhat.com>
 
 	* configure.ac:
 	* admin-tool/Makefile.am:
