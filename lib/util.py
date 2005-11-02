@@ -149,7 +149,7 @@ def init_gettext ():
     be able to use _() to mark strings for translation.
     """
     locale.setlocale (locale.LC_ALL, "")
-    gettext.install (PACKAGE, os.path.join (DATADIR, "locale"))
+    gettext.install (PACKAGE, LOCALEDIR)
 
 def split_path(path, head=None, tail=None):
     '''Given a path split it into a head and tail. If head is passed then

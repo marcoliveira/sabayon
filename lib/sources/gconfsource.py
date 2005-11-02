@@ -336,7 +336,7 @@ class GConfSource (userprofile.ProfileSource):
         return False
 
     def set_gconf_boolean (self, key, value, mandatory):
-        gconf_value = gconf.Value(gconf.VALUE_BOOL)
+        gconf_value = gconf.Value (gconf.VALUE_BOOL)
         gconf_value.set_bool (value)
         change = GConfChange (self, key, gconf_value)
         change.set_mandatory (mandatory)
@@ -344,7 +344,21 @@ class GConfSource (userprofile.ProfileSource):
         self.emit_change (change)
 
     def set_gconf_list (self, key, list_type, value, mandatory):
-        raise NotImplementedError
+        gconf_value = gconf.Value (gconf.VALUE_LIST)
+        list = []
+        for item in value:
+            item_value = gconf.Value (list_type)
+            if list_type == gconf.VALUE_STRING:
+                item_value.set_string (item)
+            else:
+                raise NotImplementedError
+            list.append (item_value)
+        gconf_value.set_list_type (list_type)
+        gconf_value.set_list (list)
+        change = GConfChange (self, key, gconf_value)
+        change.set_mandatory (mandatory)
+        self.client.set_list (key, list_type, value)
+        self.emit_change (change)
 
 gobject.type_register (GConfSource)
 

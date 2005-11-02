@@ -56,6 +56,7 @@ config.py: config.py.in Makefile
                 -e s!\@BINDIR\@!$(bindir)!			\
                 -e s!\@SBINDIR\@!$(sbindir)!			\
                 -e s!\@LIBEXECDIR\@!$(libexecdir)!		\
+                -e s!\@LOCALEDIR\@!$(datadir)/locale!		\
                 -e s!\@DATADIR\@!$(datadir)!			\
                 -e s!\@SYSCONFDIR\@!$(sysconfdir)!		\
                 -e s!\@PACKAGE_NAME\@!$(PACKAGE_NAME)!		\

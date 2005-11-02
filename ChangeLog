@@ -1,3 +1,38 @@
+2005-11-02  Alexander Larsson  <alexl@redhat.com>
+
+	* configure.ac:
+	* admin-tool/Makefile.am:
+	* admin-tool/lockdown/.cvsignore:
+	* admin-tool/lockdown/DONT_EDIT_FILES_HERE:
+	* admin-tool/lockdown/Makefile.am:
+	* admin-tool/lockdown/__init__.py:
+	* admin-tool/lockdown/config.py:
+	Set up for pessulus import.
+	
+	* admin-tool/lockdown/disabledapplets.py:
+	* admin-tool/lockdown/icons.py:
+	* admin-tool/lockdown/lockdownapplier.py:
+	* admin-tool/lockdown/lockdowncheckbutton.py:
+	* admin-tool/lockdown/maindialog.py:
+	* admin-tool/lockdown/pessulus.glade:
+	* admin-tool/lockdown/safeprotocols.py:
+	* admin-tool/lockdown/simpleeditabletreeview.py:
+	Initial pessulus import (ChangeLog entry 2005-11-02)
+	
+	* admin-tool/lockdownwindow.py:
+	* admin-tool/lockdownappliersabayon.py:
+	* admin-tool/sessionwindow.py:
+	Remove lockdown window and move sabayon applier
+	code to its own file.
+	
+	* lib/Makefile.am:
+	* lib/config.py.in:
+	* lib/util.py:
+	Add and use LOCALEDIR
+	
+	* lib/sources/gconfsource.py:
+	Implement set_gconf_list.
+
 2005-11-01  Alexander Larsson  <alexl@redhat.com>
 
 	* lib/userprofile.py:

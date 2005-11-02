@@ -1,3 +1,5 @@
+SUBDIRS = lockdown
+
 PYTHON_FILES =				\
 	editorwindow.py			\
 	profilesdialog.py		\
@@ -8,7 +10,7 @@ PYTHON_FILES =				\
 	usersdialog.py			\
 	sessionwindow.py		\
 	sessionwidget.py		\
-	lockdownwindow.py		\
+	lockdownappliersabayon.py	\
 	changeswindow.py
 
 @INTLTOOL_DESKTOP_RULE@

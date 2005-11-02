@@ -1,0 +1,1 @@
+from sabayon.config import *

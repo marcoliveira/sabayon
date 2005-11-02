@@ -30,7 +30,8 @@ import changeswindow
 import sessionwidget
 import saveconfirm
 import aboutdialog
-import lockdownwindow
+from lockdownappliersabayon import LockdownApplierSabayon
+from sabayon.lockdown import maindialog as lockdowndialog
 from config import *
 
 _ui_string = '''
@@ -260,10 +261,9 @@ class SessionWindow:
 
     def __handle_lockdown (self, action):
         if not self.lockdown_window:
-            self.lockdown_window = lockdownwindow.LockdownWindow(self.profile_name,
-                                                                 self.profile,
-                                                                 self.changes_model,
-                                                                 self.window)
+            applier = LockdownApplierSabayon (self.profile, self.changes_model)
+            self.lockdown_window = lockdowndialog.PessulusMainDialog (applier, False)
+            self.lockdown_window.window.set_title (_("Lockdown settings for %s")%self.profile_name) 
         self.lockdown_window.window.present ()
         
 

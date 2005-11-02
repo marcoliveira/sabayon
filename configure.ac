@@ -227,6 +227,7 @@ lib/sources/Makefile
 doc/Makefile
 admin-tool/Makefile
 admin-tool/sabayon.console
+admin-tool/lockdown/Makefile
 po/Makefile.in
 ])
 

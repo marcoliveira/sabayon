@@ -18,13 +18,11 @@
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #
 
-import gtk
 import gconf
 import util
 import sessionwindow
 
-#import Pessulus.lockdownapplier
-#import Pessulus.maindialog
+from sabayon.lockdown import lockdownapplier
 
 def dprint (fmt, *args):
     util.debug_print (util.DEBUG_ADMINTOOL, fmt % args)
@@ -36,7 +34,7 @@ class LockdownMonitor:
         self.handler = handler
         self.data = data
 
-class LockdownApplierSabayon: # (Pessulus.lockdownapplier.PessulusLockdownApplier):
+class LockdownApplierSabayon (lockdownapplier.PessulusLockdownApplier):
     def __init__ (self, profile, changes_model):
         self.changes_model = changes_model
         self.source = profile.get_source ("GConf")
@@ -49,10 +47,9 @@ class LockdownApplierSabayon: # (Pessulus.lockdownapplier.PessulusLockdownApplie
         if change == None or change.get_source () != self.source:
             return
         key = change.get_id ()
-        entry = gconf.Entry (key, change.value)
         if self.monitored_keys.has_key (key):
             for monitor in self.monitored_keys[key]:
-                monitor.handler (None, None, entry, monitor.data)
+                monitor.handler (monitor.data)
 
     def supports_mandatory_settings (self):
         return True
@@ -94,7 +91,7 @@ class LockdownApplierSabayon: # (Pessulus.lockdownapplier.PessulusLockdownApplie
         monitor = LockdownMonitor (key, handler, data)
 
         def __gconf_notify_proxy (client, cnx_id, entry, monitor):
-            monitor.handler (client, cnx_id, entry, monitor.data)
+            monitor.handler (monitor.data)
         
         monitor.gconf_id = self.source.add_gconf_notify (key, __gconf_notify_proxy, monitor)
         
@@ -118,64 +115,3 @@ class LockdownApplierSabayon: # (Pessulus.lockdownapplier.PessulusLockdownApplie
     def remove_dir (self, dir):
         pass
         
-
-class LockdownWindow:
-    def __init__ (self, profile_name, profile, changes_model, parent_window):
-        self.profile_name = profile_name
-        self.applier = LockdownApplierSabayon (profile, changes_model)
-
-
-#        dialog = Pessulus.maindialog.PessulusMainDialog (self.applier, False)
-#        self.window = dialog.window
-#        return
-    
-        self.key = "/apps/panel/global/locked_down"
-
-        self.window = gtk.Window (gtk.WINDOW_TOPLEVEL)
-        self.window.set_title (_("Lockdown of profile %s")%profile_name)
-        self.window.set_icon_name ("sabayon")
-        self.window.set_transient_for (parent_window)
-        self.window.set_destroy_with_parent (True)
-        self.window.set_default_size (480, 380)
-        self.window.connect ("delete-event",
-                             gtk.Widget.hide_on_delete)
-        self.ignore_change = False
-
-        main_vbox = gtk.VBox (False, 0)
-        self.window.add (main_vbox)
-
-
-        hbox = gtk.HBox (False, 0)
-        main_vbox.pack_start (hbox, False, False, 0)
-       
-        self.checkbutton = gtk.CheckButton("Lock down panel")
-        hbox.pack_start (self.checkbutton, False, False, 0)
-        
-        self.mandatory_checkbutton = gtk.CheckButton("Mandatory")
-        hbox.pack_start (self.mandatory_checkbutton, False, False, 0)
-
-        self.checkbutton.connect ("toggled", self.__send_change)
-        self.mandatory_checkbutton.connect ("toggled", self.__send_change)
-
-        self.__update ()
-        self.applier.notify_add (self.key, self.__handle_change)
-        
-        self.window.show_all ()
-
-    def __send_change (self, checkbutton):
-        if not self.ignore_change:
-            active = self.checkbutton.get_active ()
-            mandatory = self.mandatory_checkbutton.get_active ()
-            self.applier.set_bool (self.key, active, mandatory)
-
-    def __handle_change (self, client, cnx_id, entry, data):
-        self.__update ()
-
-    def __update (self):
-        self.ignore_change = True
-
-        (active, mandatory) = self.applier.get_bool (self.key)
-        self.checkbutton.set_active (active)
-        self.mandatory_checkbutton.set_active (mandatory)
-        
-        self.ignore_change = False
