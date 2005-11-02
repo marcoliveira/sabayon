@@ -43,8 +43,6 @@ _ui_string = '''
     </menu>
     <menu action="EditMenu">
       <menuitem action="Delete"/>
-      <separator/>
-      <menuitem action="ClearHistory"/>
     </menu>
     <menu action="HelpMenu">
       <menuitem action="About"/>
@@ -60,13 +58,11 @@ class ProfileModel (gtk.ListStore):
     (
         COLUMN_SOURCE,
         COLUMN_PATH,
-        COLUMN_DESCRIPTION,
-        COLUMN_REVISION,
-        COLUMN_REVISIONS_MODEL
-    ) = range (5)
+        COLUMN_DESCRIPTION
+    ) = range (3)
 
     def __init__ (self, profile):
-        gtk.ListStore.__init__ (self, str, str, str, str, RevisionsModel)
+        gtk.ListStore.__init__ (self, str, str, str)
 
         self.profile = profile
         self.reload ()
@@ -79,48 +75,16 @@ class ProfileModel (gtk.ListStore):
             if source is None:
                 source = self.profile.get_delegate (source_name)
             
-            revisions_model = RevisionsModel (self.profile.storage, path)
-            first_revision = revisions_model.get_iter_first ()
-
-            dprint ("  source %s, path %s, description %s, revision %s",
+            dprint ("  source %s, path %s, description %s",
                     source_name,
                     path,
-                    source.get_path_description (path),
-                    revisions_model[first_revision][RevisionsModel.COLUMN_DATE])
+                    source.get_path_description (path))
             
             self.set (self.prepend (),
                       self.COLUMN_SOURCE,          source_name,
                       self.COLUMN_PATH,            path,
-                      self.COLUMN_DESCRIPTION,     source.get_path_description (path),
-                      self.COLUMN_REVISION,        revisions_model[first_revision][RevisionsModel.COLUMN_DATE],
-                      self.COLUMN_REVISIONS_MODEL, revisions_model)
+                      self.COLUMN_DESCRIPTION,     source.get_path_description (path))
 
-class RevisionsModel (gtk.ListStore):
-    (
-        COLUMN_REVISION,
-        COLUMN_DATE
-    ) = range (2)
-
-    def __init__ (self, storage, path = None):
-        gtk.ListStore.__init__ (self, str, str)
-
-        self.storage = storage
-        self.path = path
-        self.time_format = locale.nl_langinfo (locale.D_T_FMT)
-        self.reload ()
-
-    def reload (self):
-        dprint ("Reloading revisions model; path = %s", self.path)
-        self.clear ()
-        iter = None
-        revisions = self.storage.get_revisions (self.path)
-        revisions.reverse ()
-        for (revision, timestamp) in revisions:
-            dprint ("  revision %s, time %s", revision, timestamp)
-            self.set (self.prepend (),
-                      self.COLUMN_REVISION, revision,
-                      self.COLUMN_DATE,     time.strftime (self.time_format,
-                                                           time.localtime (float (timestamp))))
 
 class ProfileEditorWindow:
     def __init__ (self, profile_name, parent_window):
@@ -143,7 +107,6 @@ class ProfileEditorWindow:
         self.window.add (self.main_vbox)
 
         self.__setup_menus ()
-        self.__setup_profile_revisions_combo ()
 
         self.scrolled = gtk.ScrolledWindow ()
         self.scrolled.set_policy (gtk.POLICY_AUTOMATIC, gtk.POLICY_AUTOMATIC)
@@ -159,24 +122,7 @@ class ProfileEditorWindow:
 
     def __reload_models (self):
         self.profile_model.reload ()
-        
-        self.revisions_model.reload ()
-        if self.current_revision:
-            iter = self.revisions_model.get_iter_first ()
-            while iter:
-                if self.revisions_model[iter][RevisionsModel.COLUMN_REVISION] == self.current_revision:
-                    self.revisions_combo.set_active_iter (iter)
-                    break
-                iter = self.revisions_model.iter_next (iter)
-        else:
-            iter = self.revisions_model.get_iter_first ()
-            if iter:
-                self.current_revision = self.revisions_model[iter][RevisionsModel.COLUMN_REVISION]
-                self.revisions_combo.set_active_iter (iter)
-            else:
-                self.current_revision = None
-
-        dprint ("Reloaded models; current_revision = %s", self.current_revision)
+        dprint ("Reloaded models")
 
     def __set_needs_saving (self, needs_saving):
         if needs_saving:
@@ -232,11 +178,6 @@ class ProfileEditorWindow:
     def __handle_delete (self, action):
         self.__delete_currently_selected ()
         
-    def __handle_clear_history (self, action):
-        self.storage.clear_revisions ()
-        self.current_revision = None
-        self.__set_needs_saving (True)
-
     def __handle_about (self, action):
         aboutdialog.show_about_dialog (self.window)
 
@@ -250,7 +191,6 @@ class ProfileEditorWindow:
             ("Close", gtk.STOCK_CLOSE, _("_Close"), "<control>W", _("Close the current window"), self.__handle_close),
             ("EditMenu", None, _("_Edit")),
             ("Delete", gtk.STOCK_DELETE, _("_Delete"), "<control>D", _("Delete item"), self.__handle_delete),
-            ("ClearHistory", gtk.STOCK_CLEAR, _("C_lear History"), None, _("Clear revision history"), self.__handle_clear_history),
             ("HelpMenu", None, _("_Help")),
             ("About", gtk.STOCK_ABOUT, _("_About"), None, _("About Sabayon"), self.__handle_about),
         ]
@@ -268,63 +208,6 @@ class ProfileEditorWindow:
         self.save_action = action_group.get_action ("Save")
         self.delete_action = action_group.get_action ("Delete")
 
-    def __profile_revision_changed (self, combo):
-        revision = self.revisions_model[self.revisions_combo.get_active_iter ()][RevisionsModel.COLUMN_REVISION]
-        if self.current_revision == revision:
-            return
-        dprint ("Profile revision changed: %s", revision)
-        self.storage.revert (revision)
-        self.current_revision = None
-        self.__set_needs_saving (True)
-
-    def __setup_profile_revisions_combo (self):
-        hbox = gtk.HBox (False, 6)
-        hbox.set_border_width (6)
-        hbox.show ()
-        self.main_vbox.pack_start (hbox, False, False, 0)
-
-        label = gtk.Label (_("_Version:"))
-        label.set_use_underline (True)
-        label.set_alignment (0.0, 0.5)
-        label.show ()
-        hbox.pack_start (label, False, False, 0)
-        
-        self.revisions_model = RevisionsModel (self.storage)
-        self.revisions_combo = gtk.ComboBox (self.revisions_model)
-        self.revisions_combo.connect ("changed", self.__profile_revision_changed)
-        self.revisions_combo.show ()
-
-        renderer = gtk.CellRendererText ()
-        self.revisions_combo.pack_start (renderer, False)
-        self.revisions_combo.set_attributes (renderer, text = RevisionsModel.COLUMN_DATE)
-        
-        label.set_mnemonic_widget (self.revisions_combo)
-        hbox.pack_start (self.revisions_combo, True, True, 0)
-
-        iter = self.revisions_model.get_iter_first ()
-        if iter:
-            self.current_revision = self.revisions_model[iter][RevisionsModel.COLUMN_REVISION]
-            self.revisions_combo.set_active_iter (iter)
-        else:
-            self.current_revision = None
-        
-    def __file_revision_changed (self, cell, tree_path, new_text):
-        iter = self.profile_model.get_iter_from_string (tree_path)
-        path = self.profile_model[iter][ProfileModel.COLUMN_PATH]
-        revisions_model = self.profile_model[iter][ProfileModel.COLUMN_REVISIONS_MODEL]
-
-        revision_iter = revisions_model.get_iter_first ()
-        while revision_iter:
-            if revisions_model[revision_iter][RevisionsModel.COLUMN_DATE] == new_text:
-                revision = revisions_model[revision_iter][RevisionsModel.COLUMN_REVISION]
-                dprint ("New file revision for '%s': '%s'", path, revision)
-                self.profile_model.set (iter, ProfileModel.COLUMN_REVISION, revision)
-                self.storage.revert (revision, path)
-                self.current_revision = None
-                self.__set_needs_saving (True)
-                return
-            revision_iter = revisions_model.iter_next (revision_iter)
-        
     def __setup_treeview (self):
         self.profile_model = ProfileModel (self.profile)
         
@@ -341,18 +224,6 @@ class ProfileEditorWindow:
         c = gtk.TreeViewColumn (_("Description"),
                                 gtk.CellRendererText (),
                                 text = ProfileModel.COLUMN_DESCRIPTION)
-        self.treeview.append_column (c)
-
-        renderer = gtk.CellRendererCombo ()
-        renderer.set_property ("text-column", RevisionsModel.COLUMN_DATE)
-        renderer.set_property ("editable", True)
-        renderer.set_property ("has-entry", False)
-        renderer.connect ("edited", self.__file_revision_changed)
-
-        c = gtk.TreeViewColumn (_("Version"),
-                                renderer,
-                                model = ProfileModel.COLUMN_REVISIONS_MODEL,
-                                text = ProfileModel.COLUMN_REVISION)
         self.treeview.append_column (c)
 
         self.treeview.connect ("key-press-event", self.__handle_key_press)
@@ -384,7 +255,7 @@ class ProfileEditorWindow:
             viewer = gconfviewer.GConfViewer (extracted_path, description, self.window)
             viewer.connect ("destroy", lambda v, dir: shutil.rmtree (dir), extract_dir)
             viewer.show ()
-        elif source_name == _("Files"):
+        elif source_name == _("Files") or source_name == _("Panel"):
             viewer = fileviewer.FileViewer (extracted_path, description, self.window)
             viewer.connect ("destroy", lambda v, dir: shutil.rmtree (dir), extract_dir)
             viewer.show ()

@@ -1,4 +1,15 @@
 2005-11-02  Alexander Larsson  <alexl@redhat.com>
+
+	* lib/storage.py:
+	* lib/unittests.py:
+	Remove the revisioning stuff from the storage. The UI was way to
+	complicated. This is easier done on a profile zipfile level.
+
+	* admin-tool/editorwindow.py:
+	Remove revisions from UI.
+	Display panel launcher files.
+
+2005-11-02  Alexander Larsson  <alexl@redhat.com>
 	
 	* lib/userprofile.py:
 	Add get_path_description to delegates

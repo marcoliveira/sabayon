@@ -20,6 +20,7 @@
 
 import sys
 import util
+import pygtk; pygtk.require("2.0")
 
 if __name__ == "__main__":
     util.init_gettext ()
@@ -30,6 +31,7 @@ if __name__ == "__main__":
         sys.path.remove ("sources")
     
     unit_tests = [
+        ( "storage",       None,                 None,        None ),
         ( "util",          None,                 None,        None ),
         ( "dirmonitor",    None,                 None,        None ),
         ( "filessource",   None,                 add_mod_dir, remove_mod_dir ),
@@ -37,7 +39,6 @@ if __name__ == "__main__":
         ( "paneldelegate", _("Ignore WARNINGs"), add_mod_dir, remove_mod_dir ),
         ( "userprofile",   None,                 None,        None ),
         ( "userdb",        None,                 None,        None ),
-        ( "storage",       None,                 None,        None ),
         ( "cache",         None,                 None,        None )
           ]
     
