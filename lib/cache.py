@@ -44,47 +44,46 @@ class cacheRepository:
 	# delay the directory check/creation until needed
 	self.orig_directory = directory
 
+    def __ensure_directory(self, directory, remove_old):
+        try:
+            info = os.stat(directory)
+            if (not stat.S_ISDIR(info[0])) or (info[4] != os.getuid()):
+                dprint("File %s is not a directory", directory)
+                if not remove_old:
+                    return None
+                try:
+                    import shutil
+                    shutil.rmtree(directory, True)
+                    os.mkdir(directory)
+                    dprint("Recreated directory %s", directory)
+                    info = os.stat(directory)
+                except:
+                    dprint("Failed to create directory %s", directory)
+                    return None
+        except:
+            dprint("Failed to check directory %s", directory)
+            try:
+                os.mkdir(directory)
+                dprint("Created directory %s", directory)
+                info = os.stat(directory)
+            except:
+                dprint("Failed to create directory %s", directory)
+                return None
+        return info
+
     def __check_directory(self):
         directory = self.orig_directory
         if directory != None:
-	    try:
-		info = os.stat(directory)
-		if (not stat.S_ISDIR(info[0])) or (info[4] != os.getuid()):
-		    dprint("File %s is not a directory", directory)
-		    directory = None
-	    except:
-		dprint("Failed to check directory %s", directory)
-		try:
-		    os.mkdir(directory)
-		    dprint("Created directory %s", directory)
-		    info = os.stat(directory)
-		except:
-		    dprint("Failed to create directory %s", directory)
-		    directory = None
+            info = self.__ensure_directory (directory, False)
+            if info == None:
+                directory = None
+                
 	if directory == None:
-	    directory = get_home_dir() + "/.profile_cache"
-	    try:
-		info = os.stat(directory)
-		if (not stat.S_ISDIR(info[0])) or (info[4] != os.getuid()):
-		    dprint("File %s is not a directory", directory)
-		    try:
-			import shutil
-			shutil.rmtree(directory, True)
-			os.mkdir(directory)
-			dprint("Recreated directory %s", directory)
-			info = os.stat(directory)
-		    except:
-		        dprint("Failed to create directory %s", directory)
-			directory = None
-	    except:
-		dprint("Failed to check directory %s", directory)
-		try:
-		    os.mkdir(directory)
-		    dprint("Created directory %s", directory)
-		    info = os.stat(directory)
-		except:
-		    dprint("Failed to create directory %s", directory)
-		    directory = None
+            parent_info = self.__ensure_directory (get_home_dir() + "/.sabayon", True)
+            if parent_info:
+                directory = get_home_dir() + "/.sabayon/profile_cache"
+                info = self.__ensure_directory (directory, True)
+                    
 	if info == None:
 	    dprint("Running with cache deactivated")
 	    self.directory = None
