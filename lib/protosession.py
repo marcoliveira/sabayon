@@ -161,7 +161,8 @@ class ProtoSession (gobject.GObject):
     
     def __init__ (self, profile_file, display_number):
         gobject.GObject.__init__ (self)
-        
+
+        self.xauth_cookie = None
         self.profile_file   = profile_file
         self.display_number = display_number
         self.display_name   = ":%s" % display_number
@@ -260,36 +261,6 @@ class ProtoSession (gobject.GObject):
         self.main_loop.quit ()
         return True
 
-    def __get_xauth_record (self):
-        while True:
-            try:
-                (status, output) = commands.getstatusoutput ("xauth -in list $DISPLAY")
-                break
-            except os.error, (err, errstr):
-                if err != errno.EINTR:
-                    raise
-        if status != 0:
-            raise XauthParseError, _("'xauth list' returned error")
-
-        for line in output.split ("\n"):
-            fields = line.split ("  ")
-
-            # should have display, auth name, auth data
-            if len (fields) != 3:
-                continue
-
-            # we want the local addr
-            if fields[0].find ("/unix") == -1:
-                continue
-
-            # hex encoded data, len should be a multiple of 2
-            if len (fields[2]) % 2 != 0:
-                continue
-            
-            return (fields[0], fields[1], binascii.unhexlify (fields[2]))
-        
-        raise XauthParseError, _("'xauth list' returned no records or records in unknown format")
-
     # Write out a temporary Xauthority file which contains the same magic
     # cookie as the parent display so that we can pass that using -auth
     # to Xnest.
@@ -307,14 +278,18 @@ class ProtoSession (gobject.GObject):
     #       D bytes         authorization data string
     #
     def __write_temp_xauth_file (self, wildcard_addr):
-        (xauth_display, xauth_name, xauth_data) = self.__get_xauth_record ()
+        if self.xauth_cookie == None:
+            self.xauth_cookie = util.random_string (16)
+
+        xauth_name = "MIT-MAGIC-COOKIE-1"
+        xauth_data = self.xauth_cookie
 
         if wildcard_addr:
             family = 0xffff # FamilyWild
             display_addr = ""
         else:
             family = 0x0100 # FamilyLocal
-            display_addr = xauth_display[:xauth_display.find ("/unix")]
+            display_addr = socket.gethostname ()
 
         display_num_str = self.display_number
         display_num_len = len (display_num_str)

@@ -27,6 +27,7 @@ import locale
 import errno
 import warnings
 import exceptions
+import random
 from config import *
 
 (
@@ -150,6 +151,15 @@ def init_gettext ():
     """
     locale.setlocale (locale.LC_ALL, "")
     gettext.install (PACKAGE, LOCALEDIR)
+
+def random_string (len):
+    """Returns a string with random binary data of the specified length"""
+    bin = ""
+    while len > 0:
+        len = len - 1
+        bin = bin + chr(random.getrandbits(8))
+    return bin
+
 
 def split_path(path, head=None, tail=None):
     '''Given a path split it into a head and tail. If head is passed then

@@ -1,5 +1,14 @@
 2005-11-03  Alexander Larsson  <alexl@redhat.com>
 
+	* lib/protosession.py:
+	Generate our own cookie instead of reusing the one from the
+	parent display. (#318810)
+	
+	* lib/util.py:
+	Add function to generate random strings
+
+2005-11-03  Alexander Larsson  <alexl@redhat.com>
+
 	* lib/sources/mozillasource.py:
 	Don't strip comments from inside strings
 	
