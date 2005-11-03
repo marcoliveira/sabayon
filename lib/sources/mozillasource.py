@@ -637,13 +637,15 @@ class JavascriptPrefsFile(FirefoxProfileFile):
                                                            src_pref.get_value())
                 
 
-    def read(self):
+    def read(self, full_path = None):
         self.prev_prefs = self.get_prefs()
 
+        if not full_path:
+            full_path = self.get_full_path()
         dprint(LOG_OPERATION, "read profile prefs (%s)", self.get_full_path())
         self.file_state = file_state.UNKNOWN
         try:
-            fd = open(self.get_full_path())
+            fd = open(full_path)
         except IOError, e:
             if e.errno == errno.ENOENT:
                 self.file_state = file_state.NOT_FOUND
@@ -681,14 +683,24 @@ class JavascriptPrefsFile(FirefoxProfileFile):
         emit_changes(_del.items(), MozillaChange.DELETED)
         emit_changes(_mod.items(), MozillaChange.CHANGED)
 
-    def kill_comments(self):
-        slash_comment_re = re.compile("//.*$", re.MULTILINE)
-        hash_comment_re = re.compile("#.*$", re.MULTILINE)
-        c_comment_re = re.compile("/\*.*?\*/", re.MULTILINE | re.DOTALL)
+        
 
-        self.filebuf = slash_comment_re.sub("", self.filebuf)
-        self.filebuf = hash_comment_re.sub("", self.filebuf)
-        self.filebuf = c_comment_re.sub("", self.filebuf)
+    def kill_comments(self):
+        def not_in_string (regexp):
+            double = '\\"(?:\\\\.|[^\"\\\\])*\\"'
+            single = "\\'(?:\\\\.|[^\"\\\\])*\\'"
+            return "(" + double + "|" + single + ")(?:" + regexp + ")"
+        def match (matchobj):
+            return matchobj.group(1)
+        
+            
+        slash_comment_re = re.compile(not_in_string ("//.*$"), re.MULTILINE)
+        hash_comment_re = re.compile(not_in_string ("#.*$"), re.MULTILINE)
+        c_comment_re = re.compile(not_in_string ("/\*.*?\*/"), re.MULTILINE | re.DOTALL)
+
+        self.filebuf = slash_comment_re.sub(match, self.filebuf)
+        self.filebuf = hash_comment_re.sub(match, self.filebuf)
+        self.filebuf = c_comment_re.sub(match, self.filebuf)
 
     def parse(self):
         start = 0;
@@ -1124,6 +1136,3 @@ def run_unit_tests():
     test_prefs = {'foo':'"bar"', 'uno':'1'}
 
     dprint(LOG_OPERATION, "In mozillaprofile tests")
-
-
-

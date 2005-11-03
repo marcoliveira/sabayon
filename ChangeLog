@@ -1,5 +1,13 @@
 2005-11-03  Alexander Larsson  <alexl@redhat.com>
 
+	* lib/sources/mozillasource.py:
+	Don't strip comments from inside strings
+	
+	* lib/unittests.py:
+	Add mozillasource tests
+
+2005-11-03  Alexander Larsson  <alexl@redhat.com>
+
 	* lib/cache.py:
 	Use ~/.sabayon/profile_cache, not ~/.profile_cache
 
