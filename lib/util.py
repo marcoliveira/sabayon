@@ -78,7 +78,7 @@ def init_debug_modules ():
         sys.exit (1)
     elif debug_value == "all":
         for module in debug_modules:
-            debug_modules[module] = (debug_modules[module][0], True)
+            debug_modules[module] = (debug_modules[module][0], 0xFFFFFFFF)
     else:
         for item in debug_value.split (":"):
             item = item.split("=")

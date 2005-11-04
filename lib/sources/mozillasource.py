@@ -406,7 +406,7 @@ class MozillaDelegate(userprofile.SourceDelegate):
         if sabayon_pref_rel_path in pref_files:
             dprint(LOG_APPLY, "extracting %s" % sabayon_pref_rel_path)
             self.source.storage.extract(sabayon_pref_rel_path, self.home_dir, True)
-            apply_pref = JavascriptPrefsFile(self.home_dir, path)
+            apply_pref = JavascriptPrefsFile(self.home_dir, sabayon_pref_rel_path)
             apply_pref.read()
         else:
             apply_pref = None
@@ -414,7 +414,7 @@ class MozillaDelegate(userprofile.SourceDelegate):
         if sabayon_mandatory_pref_rel_path in pref_files:
             dprint(LOG_APPLY, "extracting %s" % sabayon_mandatory_pref_rel_path)
             self.source.storage.extract(sabayon_mandatory_pref_rel_path, self.home_dir, True)
-            mandatory_apply_pref = JavascriptPrefsFile(self.home_dir, path)
+            mandatory_apply_pref = JavascriptPrefsFile(self.home_dir, sabayon_mandatory_pref_rel_path)
             mandatory_apply_pref.read()
         else:
             mandatory_apply_pref = None
@@ -424,7 +424,7 @@ class MozillaDelegate(userprofile.SourceDelegate):
         if sabayon_bookmark_rel_path in bookmark_files:
             dprint(LOG_APPLY, "extracting %s" % sabayon_bookmark_rel_path)
             self.source.storage.extract(sabayon_bookmark_rel_path, self.home_dir, True)
-            apply_bookmark = BookmarksFile(self.home_dir, path)
+            apply_bookmark = BookmarksFile(self.home_dir, sabayon_bookmark_rel_path)
             apply_bookmark.read()
         else:
             apply_bookmark = None
@@ -432,7 +432,7 @@ class MozillaDelegate(userprofile.SourceDelegate):
         if sabayon_mandatory_bookmark_rel_path in bookmark_files:
             dprint(LOG_APPLY, "extracting %s" % sabayon_mandatory_bookmark_rel_path)
             self.source.storage.extract(sabayon_mandatory_bookmark_rel_path, self.home_dir, True)
-            mandatory_apply_bookmark = BookmarksFile(self.home_dir, path)
+            mandatory_apply_bookmark = BookmarksFile(self.home_dir, sabayon_mandatory_bookmark_rel_path)
             mandatory_apply_bookmark.read()
         else:
             mandatory_apply_bookmark = None

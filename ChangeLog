@@ -1,3 +1,14 @@
+2005-11-04  Alexander Larsson  <alexl@redhat.com>
+
+	* sabayon.spec.in:
+	Update for changes
+	
+	* lib/sources/mozillasource.py:
+	Fix bug that caused multiple files in profile to be mishandled
+	
+	* lib/util.py:
+	debug prints for "all" gets mask 0xFFFFFFFF
+
 2005-11-03  Alexander Larsson  <alexl@redhat.com>
 
 	* lib/protosession.py:
