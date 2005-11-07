@@ -1,4 +1,41 @@
 ==============
+Version 2.12.1
+==============
+
+  The profile format has changed in this version, so old profiles are not
+  compatible.
+
+  Features
+
+	* New menu item "Enforce Mandatory" lets you change mandatory settings (Alex)
+	* Backup files are ignored by default (Alex)
+	* Lockdown settings editor, based on Pessulus (Vincent Untz and Alex)
+	* Better handling of panel lauchers (Alex)
+	* Removed versioning support. Simplified UI and profile format. (Alex)
+	  
+  Fixes
+
+	* Fix typo in session name replacement (Sebastien Bacher)
+	* Handle non-existing mandatory or default gconf dirs (Alex)
+	* Make file source apply not be recorded as changes (Alex)
+	* Handle // and other comments in strings in mozilla source (Alex)
+	* Work with remote X displays (Alex)
+	* Fix mozilla source handling of multiple files (Alex)
+
+  Misc
+
+	* Find pygtk even if installed in non-default directory (Alex)
+	* Better window titles (Alex)
+	* Moved ~/.profile_cache to ~/.sabayon/profile_cache (Alex)
+	* SABAYON_DEBUG=all now sets a full mask (Alex)
+  
+  Translators
+
+	* Adam Weinberger (en_CA)
+	* Kjartan Maraas (nb)
+	* Kjartan Maraas (no)
+
+==============
 Version 2.12.0
 ==============
 
