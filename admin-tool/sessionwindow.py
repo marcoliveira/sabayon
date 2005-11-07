@@ -86,9 +86,11 @@ class ProfileChangesModel (gtk.ListStore):
         default_mandatory = False
         ignore = new_change.get_ignore_default ()
         iter = self.find (new_change.get_source (), new_change.get_id ())
+        old_change = None
         if iter:
             ignore    = self[iter][self.COLUMN_IGNORE]
             default_mandatory = self[iter][self.COLUMN_MANDATORY]
+            old_change = self[iter][self.COLUMN_CHANGE]
             self.remove (iter)
 
         mandatory = new_change.get_mandatory ()
@@ -100,13 +102,18 @@ class ProfileChangesModel (gtk.ListStore):
         else:
             lock_pixbuf = self.unlocked_pixbuf
 
-        row = self.prepend ()
-        self.set (row,
-                  self.COLUMN_CHANGE,      new_change,
-                  self.COLUMN_IGNORE,      ignore,
-                  self.COLUMN_MANDATORY,   mandatory,
-                  self.COLUMN_LOCK_PIXBUF, lock_pixbuf,
-                  self.COLUMN_DESCRIPTION, new_change.get_short_description ())
+        discard_change = False
+        if old_change:
+            discard_change = new_change.merge_old_change (old_change)
+
+        if not discard_change:
+            row = self.prepend ()
+            self.set (row,
+                      self.COLUMN_CHANGE,      new_change,
+                      self.COLUMN_IGNORE,      ignore,
+                      self.COLUMN_MANDATORY,   mandatory,
+                      self.COLUMN_LOCK_PIXBUF, lock_pixbuf,
+                      self.COLUMN_DESCRIPTION, new_change.get_short_description ())
         self.emit ("changed", new_change)
 
     def clear (self):

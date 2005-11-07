@@ -1,5 +1,19 @@
 2005-11-07  Alexander Larsson  <alexl@redhat.com>
 
+	* admin-tool/sessionwindow.py:
+	* lib/userprofile.py:
+	Add method mergo_old_change to ProfileChange and call it
+	
+	* lib/sources/filessource.py:
+	Use the merging to make delete changes remove a create change
+	from this session.
+	Fix delete change events
+	
+	* lib/config.py.in:
+	Ignore files ~/.config and ~/.local.
+
+2005-11-07  Alexander Larsson  <alexl@redhat.com>
+
 	* NEWS:
 	Update for release.
 

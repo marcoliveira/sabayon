@@ -44,6 +44,7 @@ class FilesChange (userprofile.ProfileChange):
         userprofile.ProfileChange.__init__ (self, source)
         self.rel_path = rel_path
         self.event    = event
+        self.created = self.event == dirmonitor.CREATED
 
         assert self.event == dirmonitor.CREATED or \
                self.event == dirmonitor.DELETED or \
@@ -51,6 +52,10 @@ class FilesChange (userprofile.ProfileChange):
 
     def get_id (self):
         return self.rel_path
+
+    def merge_old_change (self, old_change):
+        self.created = old_change.created
+        return self.event == dirmonitor.DELETED and self.created
 
     def get_ignore_default (self):
         # Ignore backup files by default
@@ -79,7 +84,7 @@ class FilesSource (userprofile.ProfileSource):
         self.monitor.set_files_to_ignore (FILES_TO_IGNORE)
 
     def __handle_monitor_event (self, path, event):
-        if os.path.isfile (path):
+        if event == dirmonitor.DELETED or os.path.isfile (path):
             # FIXME: sanity check input (e.g. is change actually in homedir/?)
             rel_path = path[len (self.home_dir):].lstrip ("/")
             dprint ("Emitting event '%s' on file '%s'",

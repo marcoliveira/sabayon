@@ -143,6 +143,10 @@ class ProfileChange (gobject.GObject):
         """Returns the mandatory value of the change, or None to use the default"""
         return None
 
+    def merge_old_change (self, old_change):
+        """Merges info from previous change into this change. Return True to discard the new change."""
+        return False
+
 gobject.type_register (ProfileChange)
 
 class SourceDelegate:
