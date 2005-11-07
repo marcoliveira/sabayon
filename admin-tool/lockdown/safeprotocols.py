@@ -28,47 +28,65 @@ try:
 except:
     from sets import Set as set
 
+import globalvar
 import simpleeditabletreeview
 
+# Note that the idea is to only have one toggle to set/unset mandatory settings
+# for this key and the disable_unsafe_protocols key.
+
 class PessulusSafeProtocols:
-    def __init__ (self, applier, treeview, addbutton, editbutton, removebutton):
+    def __init__ (self, lockdownbutton, treeview, addbutton, editbutton, removebutton):
         self.notify_id = None
-        self.applier = applier
         self.key = "/apps/epiphany/lockdown/additional_safe_protocols"
         self.safe_protocols = None
         self.sensitive = True
+
+        self.lockdownbutton = lockdownbutton
+        self.lockdownbutton.connect ("toggled",
+                                     self.__on_lockdownbutton_toggled)
 
         treeview.connect ("destroy", self.__on_destroyed)
         self.simpleeditabletreeview = simpleeditabletreeview.PessulusSimpleEditableTreeview (treeview, addbutton, editbutton, removebutton)
         self.simpleeditabletreeview.connect ("changed",
                                              self.__on_treeview_changed)
 
-        (list, mandatory) = self.applier.get_list (self.key, gconf.VALUE_STRING)
+        (list, mandatory) = globalvar.applier.get_list (self.key,
+                                                        gconf.VALUE_STRING)
         self.safe_protocols = set (list)
         self.__update_simpleeditabletreeview ()
-        self.notify_id = self.applier.notify_add (self.key, self.__on_notified)
+        self.lockdownbutton.set (mandatory)
+        self.notify_id = globalvar.applier.notify_add (self.key,
+                                                       self.__on_notified)
 
     def set_sensitive (self, sensitive):
         self.sensitive = sensitive
         self.__update_sensitivity ()
 
     def __on_notified (self, data):
-        (list, mandatory) = self.applier.get_list (self.key, gconf.VALUE_STRING)
+        (list, mandatory) = globalvar.applier.get_list (self.key,
+                                                        gconf.VALUE_STRING)
         gconf_set = set (list)
         if gconf_set != self.safe_protocols:
             self.safe_protocols = gconf_set
             self.__update_simpleeditabletreeview ()
+        if mandatory != self.lockdownbutton.get ():
+            self.lockdownbutton.set (mandatory)
+
+    def __on_lockdownbutton_toggled (self, lockdownbutton, mandatory):
+        globalvar.applier.set_list (self.key, gconf.VALUE_STRING,
+                                    list (self.safe_protocols),
+                                    mandatory)
 
     def __on_treeview_changed (self, simpleeditabletreeview, new_set):
         if new_set != self.safe_protocols:
             self.safe_protocols = new_set.copy ()
-    #FIXME
-            self.applier.set_list (self.key, gconf.VALUE_STRING,
-                                   list (self.safe_protocols), False)
+            globalvar.applier.set_list (self.key, gconf.VALUE_STRING,
+                                        list (self.safe_protocols),
+                                        self.lockdownbutton.get ())
 
     def __update_sensitivity (self):
-        if self.applier:
-            sensitive = self.sensitive and self.applier.key_is_writable (self.key)
+        if globalvar.applier:
+            sensitive = self.sensitive and globalvar.applier.key_is_writable (self.key)
         else:
             sensitive = self.sensitive
 
@@ -80,9 +98,6 @@ class PessulusSafeProtocols:
 
     def __on_destroyed (self, treeview):
         if self.notify_id:
-            if self.applier:
-                self.applier.notify_remove (self.notify_id)
+            if globalvar.applier:
+                globalvar.applier.notify_remove (self.notify_id)
             self.notify_id = None
-
-        if self.applier:
-            self.applier = None

@@ -1,13 +1,15 @@
 PESSULUSDIR=../../../pessulus
 PESSULUSDATA=pessulus.glade
 PESSULUSPYTHON= \
-  disabledapplets.py        \
-  icons.py                  \
-  lockdownapplier.py        \
-  lockdowncheckbutton.py    \
-  maindialog.py             \
-  safeprotocols.py          \
-  simpleeditabletreeview.py
+        disabledapplets.py      \
+        icons.py                \
+        globalvar.py            \
+        lockdownapplier.py      \
+        lockdownbutton.py       \
+        lockdowncheckbutton.py  \
+        maindialog.py           \
+        safeprotocols.py        \
+        simpleeditabletreeview.py
 
 update:
 	for file in $(PESSULUSDATA); do \

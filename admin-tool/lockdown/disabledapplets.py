@@ -25,14 +25,13 @@ import bonobo
 import gconf
 import gtk
 
-import icons
-
-
 try:
     set
 except:
     from sets import Set as set
 
+import globalvar
+import icons
 
 # there's no wrapper for g_get_language_names (). Ugly workaround:
 # Note that we don't handle locale alias...
@@ -121,9 +120,8 @@ class PessulusDisabledApplets:
         COLUMN_DISABLED
     ) = range (5)
 
-    def __init__ (self, applier, treeview):
+    def __init__ (self, treeview, lockdownbutton):
         self.notify_id = None
-        self.applier = applier
         self.key = "/apps/panel/global/disabled_applets"
         self.disabled_applets = None
 
@@ -136,6 +134,10 @@ class PessulusDisabledApplets:
         self.treeview.connect ("screen-changed", self.__on_screen_changed)
         self.treeview.connect ("destroy", self.__on_destroyed)
 
+        self.lockdownbutton = lockdownbutton
+        self.lockdownbutton.connect ("toggled",
+                                     self.__on_lockdownbutton_toggled)
+
         screen = self.treeview.get_screen ()
         self.icon_theme = gtk.icon_theme_get_for_screen (screen)
 
@@ -144,10 +146,13 @@ class PessulusDisabledApplets:
         self.__fill_liststore ()
         self.__create_columns ()
 
-        (list, mandatory) = self.applier.get_list (self.key, gconf.VALUE_STRING)
+        (list, mandatory) = globalvar.applier.get_list (self.key,
+                                                        gconf.VALUE_STRING)
         self.disabled_applets = set (list)
         self.__update_toggles ()
-        self.notify_id = self.applier.notify_add (self.key, self.__on_notified)
+        self.lockdownbutton.set (mandatory)
+        self.notify_id = globalvar.applier.notify_add (self.key,
+                                                       self.__on_notified)
 
     def __on_screen_changed (self, widget, screen):
         self.icon_theme = gtk.icon_theme_get_for_screen (screen)
@@ -206,6 +211,11 @@ class PessulusDisabledApplets:
         column.pack_start (cell, True)
         column.set_attributes (cell, text = self.COLUMN_NAME)
 
+    def __on_lockdownbutton_toggled (self, lockdownbutton, mandatory):
+        globalvar.applier.set_list (self.key, gconf.VALUE_STRING,
+                                    list (self.disabled_applets),
+                                    mandatory)
+
     def __on_toggled (self, toggle, path):
         def toggle_value (model, iter, column):
             model[iter][column] = not model[iter][column]
@@ -218,21 +228,24 @@ class PessulusDisabledApplets:
         if active:
             if iid not in self.disabled_applets:
                 self.disabled_applets.add (iid)
-    #FIXME
-                self.applier.set_list (self.key, gconf.VALUE_STRING,
-                                       list (self.disabled_applets), False)
+                globalvar.applier.set_list (self.key, gconf.VALUE_STRING,
+                                            list (self.disabled_applets),
+                                            self.lockdownbutton.get ())
         elif iid in self.disabled_applets:
             self.disabled_applets.remove (iid)
-    #FIXME
-            self.applier.set_list (self.key, gconf.VALUE_STRING,
-                                   list (self.disabled_applets), False)
+            globalvar.applier.set_list (self.key, gconf.VALUE_STRING,
+                                        list (self.disabled_applets),
+                                        self.lockdownbutton.get ())
 
     def __on_notified (self, data):
-        (list, mandatory) = self.applier.get_list (self.key, gconf.VALUE_STRING)
+        (list, mandatory) = globalvar.applier.get_list (self.key,
+                                                        gconf.VALUE_STRING)
         gconf_set = set (list)
         if gconf_set != self.disabled_applets:
             self.disabled_applets = gconf_set
             self.__update_toggles ()
+        if mandatory != self.lockdownbutton.get ():
+            self.lockdownbutton.set (mandatory)
 
     def __update_toggles (self):
         def update_toggle (model, path, iter, data):
@@ -241,13 +254,10 @@ class PessulusDisabledApplets:
                 model[iter][self.COLUMN_DISABLED] = active
 
         self.liststore.foreach (update_toggle, self)
-        self.treeview.set_sensitive (self.applier.key_is_writable (self.key))
+        self.treeview.set_sensitive (globalvar.applier.key_is_writable (self.key))
 
     def __on_destroyed (self, treeview):
         if self.notify_id:
-            if self.applier:
-                self.applier.notify_remove (self.notify_id)
+            if globalvar.applier:
+                globalvar.applier.notify_remove (self.notify_id)
             self.notify_id = None
-
-        if self.applier:
-            self.applier = None

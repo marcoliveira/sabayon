@@ -41,10 +41,12 @@ def load_icon_from_data_dirs (icon_value):
         data_dirs = "/usr/local/share/:/usr/share/"
 
     for data_dir in data_dirs.split (":"):
-        retval = load_icon_from_path (os.path.join (data_dir, "pixmaps", icon_value))
+        retval = load_icon_from_path (os.path.join (data_dir, "pixmaps",
+                                                    icon_value))
         if retval:
             return retval
-        retval = load_icon_from_path (os.path.join (data_dir, "icons", icon_value))
+        retval = load_icon_from_path (os.path.join (data_dir, "icons",
+                                                    icon_value))
         if retval:
             return retval
     

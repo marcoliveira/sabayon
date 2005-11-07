@@ -30,8 +30,10 @@ import gtk.glade
 from config import *
 
 import disabledapplets
-import safeprotocols
+import lockdownbutton
 import lockdowncheckbutton
+import globalvar
+import safeprotocols
 
 gettext.install (PACKAGE, LOCALEDIR)
 
@@ -64,29 +66,26 @@ lockdownbuttons = (
 
 class PessulusMainDialog:
     def __init__ (self, applier, quit_on_close = True):
-        self.applier = applier
+        globalvar.applier = applier
+        globalvar.tooltips = gtk.Tooltips ()
+
         self.quit_on_close = quit_on_close
+
         for gconfdir in gconfdirs:
-            self.applier.add_dir (gconfdir, gconf.CLIENT_PRELOAD_NONE)
+            globalvar.applier.add_dir (gconfdir, gconf.CLIENT_PRELOAD_NONE)
 
         self.glade_file = os.path.join (GLADEDIR, "pessulus.glade")
         self.xml = gtk.glade.XML (self.glade_file, "dialogEditor", PACKAGE)
 
-        for (key, string, box_str) in lockdownbuttons:
-            button = lockdowncheckbutton.PessulusLockdownCheckbutton.new (applier, key, string)
-            box = self.xml.get_widget (box_str)
-            box.pack_start (button.get_hbox (), False)
-
-        treeview = self.xml.get_widget ("treeviewDisabledApplets")
-        self.disabledapplets = disabledapplets.PessulusDisabledApplets (applier,
-                                                                        treeview)
-
+        self.__init_checkbuttons ()
+        self.__init_disabledapplets ()
         self.__init_safeprotocols ()
 
         self.xml.get_widget ("helpbutton").set_sensitive (False)
 
         self.window = self.xml.get_widget ("dialogEditor")
         self.window.connect ("response", self.__on_dialog_response)
+
         if self.quit_on_close:
             self.window.connect ("destroy", self.__on_dialog_destroy)
         else:
@@ -94,12 +93,25 @@ class PessulusMainDialog:
 
         self.window.show ()
 
+    def __init_checkbuttons (self):
+        for (key, string, box_str) in lockdownbuttons:
+            button = lockdowncheckbutton.PessulusLockdownCheckbutton.new (key,
+                                                                          string)
+            box = self.xml.get_widget (box_str)
+            box.pack_start (button.get_widget (), False)
+
+    def __init_disabledapplets (self):
+        treeview = self.xml.get_widget ("treeviewDisabledApplets")
+        button = self.xml.get_widget ("buttonDisabledApplets")
+        ldbutton = lockdownbutton.PessulusLockdownButton.new_with_widget (button)
+        self.disabledapplets = disabledapplets.PessulusDisabledApplets (treeview,
+                                                                        ldbutton)
+
     def __init_safeprotocols (self):
         button = self.xml.get_widget ("buttonDisableUnsafeProtocols")
         checkbutton = self.xml.get_widget ("checkbuttonDisableUnsafeProtocols")
 
-        lockdowncheckbutton.PessulusLockdownCheckbutton.new_with_widgets (
-                    self.applier,
+        lockdown = lockdowncheckbutton.PessulusLockdownCheckbutton.new_with_widgets (
                     "/apps/epiphany/lockdown/disable_unsafe_protocols",
                     button, checkbutton)
 
@@ -110,7 +122,7 @@ class PessulusMainDialog:
         editbutton = self.xml.get_widget ("buttonSafeProtocolEdit")
         removebutton = self.xml.get_widget ("buttonSafeProtocolRemove")
 
-        self.safeprotocols = safeprotocols.PessulusSafeProtocols (self.applier,
+        self.safeprotocols = safeprotocols.PessulusSafeProtocols (lockdown.get_lockdownbutton (),
                                                                   treeview,
                                                                   addbutton,
                                                                   editbutton,
@@ -118,6 +130,11 @@ class PessulusMainDialog:
 
         checkbutton.connect ("toggled", self.__on_unsafeprotocols_toggled, hbox)
         self.__on_unsafeprotocols_toggled (checkbutton, hbox)
+
+    def __on_unsafeprotocols_toggled (self, checkbutton, hbox):
+        sensitive = checkbutton.get_active ()
+        hbox.set_sensitive (sensitive)
+        self.safeprotocols.set_sensitive (sensitive)
 
     def __on_dialog_response (self, dialog, response_id):
         if dialog == self.window and response_id == gtk.RESPONSE_HELP:
@@ -129,11 +146,6 @@ class PessulusMainDialog:
 
     def __on_dialog_destroy (self, dialog):
         for gconfdir in gconfdirs:
-            self.applier.remove_dir (gconfdir)
+            globalvar.applier.remove_dir (gconfdir)
 
         gtk.main_quit ()
-
-    def __on_unsafeprotocols_toggled (self, checkbutton, hbox):
-        sensitive = checkbutton.get_active ()
-        hbox.set_sensitive (sensitive)
-        self.safeprotocols.set_sensitive (sensitive)

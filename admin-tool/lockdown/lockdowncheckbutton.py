@@ -25,38 +25,29 @@ import gtk
 import gconf
 import sys
 
-def load_image (name):
-    image = gtk.Image ()
-    image.set_from_icon_name (name, gtk.ICON_SIZE_MENU)
-    image.show ()
-    return image
+import globalvar
+import lockdownbutton
 
 class PessulusLockdownCheckbutton:
-    def __init__ (self, applier, key):
+    def __init__ (self, key):
         self.notify_id = None
-        self.applier = applier
         self.key = key
-        self.locked = False
 
-        self.button = None
+        self.lockdownbutton = None
         self.checkbutton = None
         self.hbox = None
 
-        self.locked_image = load_image ("stock_lock")
-        self.unlocked_image = load_image ("stock_lock-open")
-
-        self.tooltips = gtk.Tooltips ()
-
-    def new (applier, key, label):
-        lockdown = PessulusLockdownCheckbutton (applier, key)
+    def new (key, label):
+        lockdown = PessulusLockdownCheckbutton (key)
 
         lockdown.hbox = gtk.HBox ()
-        lockdown.button = gtk.Button ()
+        lockdown.lockdownbutton = lockdownbutton.PessulusLockdownButton.new ()
 
         lockdown.checkbutton = gtk.CheckButton (label)
         lockdown.checkbutton.show ()
 
-        lockdown.hbox.pack_start (lockdown.button, False, False)
+        lockdown.hbox.pack_start (lockdown.lockdownbutton.get_widget (),
+                                  False, False)
         lockdown.hbox.pack_start (lockdown.checkbutton)
         lockdown.hbox.show ()
 
@@ -64,94 +55,75 @@ class PessulusLockdownCheckbutton:
         return lockdown
     new = staticmethod (new)
 
-    def new_with_widgets (applier, key, button, checkbutton):
-        lockdown = PessulusLockdownCheckbutton (applier, key)
+    def new_with_widgets (key, button, checkbutton):
+        lockdown = PessulusLockdownCheckbutton (key)
 
-        lockdown.button = button
+        lockdown.lockdownbutton = lockdownbutton.PessulusLockdownButton.new_with_widget (button)
         lockdown.checkbutton = checkbutton
-        lockdown.hbox = lockdown.button.get_parent ()
-
-        button.remove (button.get_child ())
+        lockdown.hbox = lockdown.checkbutton.get_parent ()
 
         lockdown.__connect_and_update ()
         return lockdown
     new_with_widgets = staticmethod (new_with_widgets)
 
     def __connect_and_update (self):
-        self.button.set_relief (gtk.RELIEF_NONE)
-        self.button.connect ("clicked", self.__on_button_clicked)
+        self.__update_toggle ()
 
-        self.button.add (self.unlocked_image)
-
-        if self.applier.supports_mandatory_settings ():
-            self.button.show ()
-        else:
-            self.button.hide ()
+        self.lockdownbutton.connect ("toggled",
+                                     self.__on_lockdownbutton_toggled)
 
         self.checkbutton.connect ("toggled", self.__on_check_toggled)
         self.checkbutton.connect ("destroy", self.__on_destroyed)
 
-        self.__update_toggle ()
-        self.notify_id = self.applier.notify_add (self.key, self.__on_notified)
-        self.set_tooltip ()
+        self.notify_id = globalvar.applier.notify_add (self.key,
+                                                       self.__on_notified)
+        self.__set_tooltip ()
 
-    def get_hbox (self):
+    def get_widget (self):
         return self.hbox
 
-    def set_tooltip (self):
-        if not self.applier:
+    def get_lockdownbutton (self):
+        return self.lockdownbutton
+
+    def __set_tooltip (self):
+        if not globalvar.applier:
             return
 
         try:
-            schema = self.applier.get_schema ("/schemas" + self.key)
+            schema = globalvar.applier.get_schema ("/schemas" + self.key)
             if schema:
-                self.tooltips.set_tip (self.checkbutton, schema.get_long_desc ())
+                globalvar.tooltips.set_tip (self.checkbutton,
+                                            schema.get_long_desc ())
         except gobject.GError:
             print >> sys.stderr, "Warning: Could not get schema for %s" % self.key
 
     def __update_toggle (self):
-        (active, mandatory) = self.applier.get_bool (self.key)
+        (active, mandatory) = globalvar.applier.get_bool (self.key)
 
-        self.locked = mandatory
-        self.__set_button_icon ()
+        self.lockdownbutton.set (mandatory)
 
         self.checkbutton.set_active (active)
-        self.checkbutton.set_sensitive (self.applier.key_is_writable (self.key))
-
-    def __set_button_icon (self):
-        if self.locked:
-            newimage = self.locked_image
-        else:
-            newimage = self.unlocked_image
-
-        if self.button.get_child () != newimage:
-            self.button.remove (self.button.get_child ())
-            self.button.add (newimage)
+        self.checkbutton.set_sensitive (globalvar.applier.key_is_writable (self.key))
 
     def __on_notified (self, data):
-        (active, mandatory) = self.applier.get_bool (self.key)
-        if active != self.checkbutton.get_active () or mandatory != self.locked:
+        (active, mandatory) = globalvar.applier.get_bool (self.key)
+        if active != self.checkbutton.get_active () or mandatory != self.lockdownbutton.get ():
             self.__update_toggle ()
 
-    def __on_button_clicked (self, button):
-        self.locked = not self.locked
-
-        self.__set_button_icon ()
-
-        if self.applier and self.applier.key_is_writable (self.key):
-            self.applier.set_bool (self.key, self.checkbutton.get_active (),
-                                   self.locked)
+    def __on_lockdownbutton_toggled (self, lockdownbutton, mandatory):
+        self.__do_change ()
 
     def __on_check_toggled (self, checkbutton):
-        if self.applier and self.applier.key_is_writable (self.key):
-            self.applier.set_bool (self.key, self.checkbutton.get_active (),
-                                   self.locked)
+        self.__do_change ()
+
+    def __do_change (self):
+        if globalvar.applier and globalvar.applier.key_is_writable (self.key):
+            globalvar.applier.set_bool (self.key,
+                                        self.checkbutton.get_active (),
+                                        self.lockdownbutton.get ())
 
     def __on_destroyed (self, checkbutton):
         if self.notify_id:
-            if self.applier:
-                self.applier.notify_remove (self.notify_id)
+            if globalvar.applier:
+                globalvar.applier.notify_remove (self.notify_id)
             self.notify_id = None
-
-        if self.applier:
-            self.applier = None
