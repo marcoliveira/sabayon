@@ -96,6 +96,8 @@ if test "x$with_distro" = "x"; then
   AC_CHECK_FILE(/etc/slackware-version, with_distro="slackware")
   AC_CHECK_FILE(/etc/gentoo-release, with_distro="gentoo")
   AC_CHECK_FILE(/etc/SuSE-release, with_distro="suse")
+  AC_CHECK_FILE(/etc/mandriva-release, with_distro="mandriva")
+  AC_CHECK_FILE(/etc/mandrakelinux-release, with_distro="mandriva")
 fi
 with_distro=`echo ${with_distro} | tr '[[:upper:]]' '[[:lower:]]' `
 
@@ -132,6 +134,12 @@ else
       XSESSION="/etc/opt/gnome/gdm/Xsession"
       install_xinitrc_script="no"
       XINITRC_SYSCONFDIR="/etc/X11/xinit/xinitrc.d"
+      ;;
+    mandriva)
+      XSESSION="/etc/X11/Xsession"
+      SESSION_NAME="GNOME"
+      install_xinitrc_script="yes"
+      XINITRC_SYSCONFDIR="X11/xinit.d"
       ;;
     *)
       echo "Your distribution (${with_distro}) is not yet supported!  (patches welcome)"
