@@ -95,6 +95,7 @@ if test "x$with_distro" = "x"; then
   AC_CHECK_FILE(/etc/debian_version, with_distro="debian")
   AC_CHECK_FILE(/etc/slackware-version, with_distro="slackware")
   AC_CHECK_FILE(/etc/gentoo-release, with_distro="gentoo")
+  AC_CHECK_FILE(/etc/SuSE-release, with_distro="suse")
 fi
 with_distro=`echo ${with_distro} | tr '[[:upper:]]' '[[:lower:]]' `
 
@@ -126,6 +127,11 @@ else
       SESSION_NAME="gnome"
       install_xinitrc_script="no"
       XINITRC_SYSCONFDIR=""
+      ;;
+    suse)
+      XSESSION="/etc/opt/gnome/gdm/Xsession"
+      install_xinitrc_script="no"
+      XINITRC_SYSCONFDIR="/etc/X11/xinit/xinitrc.d"
       ;;
     *)
       echo "Your distribution (${with_distro}) is not yet supported!  (patches welcome)"
