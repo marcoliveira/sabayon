@@ -136,7 +136,7 @@ else
       XINITRC_SYSCONFDIR="/etc/X11/xinit/xinitrc.d"
       ;;
     mandriva)
-      XSESSION="/etc/X11/Xsession"
+      XSESSION="/etc/X11/xdm/Xsession"
       SESSION_NAME="GNOME"
       install_xinitrc_script="yes"
       XINITRC_SYSCONFDIR="X11/xinit.d"
