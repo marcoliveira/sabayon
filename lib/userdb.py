@@ -26,6 +26,9 @@ import libxml2
 import config
 import util
 import cache
+import random
+import ldap
+import socket
 
 defaultConf="""<profiles>
   <default profile=""/>
@@ -38,6 +41,33 @@ cache.initialize()
 
 def dprint (fmt, *args):
     util.debug_print (util.DEBUG_USERDB, fmt % args)
+
+
+def get_setting (node, setting, default = None, convert_to = str):
+    a = node.hasProp(setting)
+    if a:
+        try:
+            return convert_to (a.content)
+        except:
+            raise UserDatabaseException(_("invalid type for setting %s in %s") % (setting, node.nodePath()))
+    return default
+
+def expand_string (string, attrs):
+    res = ""
+    i = 0
+    while i < len(string):
+        c = string[i]
+        i = i + 1
+        if c == "%":
+            if i < len(string):
+                c = string[i]
+                if c != "%":
+                    if c in attrs:
+                        c = attrs[c]
+                i = i + 1
+        res = res + c
+    return res
+
 
 class UserDatabaseException (Exception):
     pass
@@ -94,6 +124,10 @@ class UserDatabase:
         if not profile:
             return None
 
+        uri = self.__ldap_query ("locationmap", {"p":profile, "h":socket.getfqdn()})
+        if uri:
+            return uri
+
 	# do the necessary URI escaping of the profile name if needed
         orig_profile = profile
 	try:
@@ -137,6 +171,86 @@ class UserDatabase:
                orig_profile, profile)
         return profile
 
+    def __open_ldap (self):
+        nodes = self.doc.xpathEval ("/profiles/ldap")
+        if len (nodes) == 0:
+            return None
+        ldap_node = nodes[0]
+
+        server = get_setting (ldap_node, "server", "localhost")
+        port = get_setting (ldap_node, "port", ldap.PORT, int)
+
+        l = ldap.open (server, port)
+        
+        l.protocol_version = get_setting (ldap_node, "version", ldap.VERSION3, int)
+        l.timeout =  get_setting (ldap_node, "timeout", 10, int)
+        
+        bind_dn = get_setting (ldap_node, "bind_dn", "")
+        bind_pw = get_setting (ldap_node, "bind_pw", "")
+        if bind_dn != "":
+            l.simple_bind (bind_dn, bind_pw)
+        
+        return l
+
+    def __ldap_query (self, map, replace):
+        nodes = self.doc.xpathEval ("/profiles/ldap/" + map)
+        if len (nodes) == 0:
+            return None
+        map_node = nodes[0]
+        
+        l = self.__open_ldap ()
+        if not l:
+            return None
+        
+        search_base = get_setting (map_node, "search_base")
+        query_filter = get_setting (map_node, "query_filter")
+        result_attribute = get_setting (map_node, "result_attribute")
+        scope = get_setting (map_node, "scope", "sub")
+        multiple_result = get_setting (map_node, "multiple_result", "first")
+
+        if search_base == None:
+            raise UserDatabaseException(_("No search based specified for %s"%map))
+            
+        if query_filter == None:
+            raise UserDatabaseException(_("No query filter specified for %s"%map))
+            
+        if result_attribute == None:
+            raise UserDatabaseException(_("No result attribute specified for %s"%map))
+
+        if scope == "sub":
+            scope = ldap.SCOPE_SUBTREE
+        elif scope == "base":
+            scope = ldap.SCOPE_BASE
+        elif scope == "one":
+            scope = ldap.SCOPE_ONELEVEL
+        else:
+            raise UserDatabaseException(_("Scope must be one of sub, base and one"))
+        
+        query_filter = expand_string (query_filter, replace)
+        search_base = expand_string (search_base, replace)
+
+        results = l.search_s (search_base, scope, query_filter, [result_attribute])
+        
+        if len (results) == 0:
+            return None
+
+        (dn, attrs) = results[0]
+        if not result_attribute in attrs:
+            return None
+        vals = attrs[result_attribute]
+
+        if multiple_result == "first":
+            val = vals[0]
+        elif multiple_result == "random":
+            val = vals[random.randint(0, len(vals)-1)]
+        else:
+            raise UserDatabaseException(_("multiple_result must be one of first and random"))
+
+        l.unbind ()
+        
+        return val
+
+
     def get_default_profile (self, profile_location = True):
         """Look up the default profile.
 
@@ -175,13 +289,15 @@ class UserDatabase:
         ProfileStorage object, or the profile name if
         @profile_location is False.
         """
-	user = None
-	try:
-	    query = "/profiles/user[@name='%s']" % username
-	    user = self.doc.xpathEval(query)[0]
-	    profile = user.prop("profile")
-	except:
-	    profile = None
+        user = None
+        profile = self.__ldap_query ("profilemap", {"u":username, "h":socket.getfqdn()})
+        if not profile:
+            try:
+                query = "/profiles/user[@name='%s']" % username
+                user = self.doc.xpathEval(query)[0]
+                profile = user.prop("profile")
+            except:
+                profile = None
 	if not profile and not ignore_default:
 	    try:
 	        query = "/profiles/default[1][@profile]"
