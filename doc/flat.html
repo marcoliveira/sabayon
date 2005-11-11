@@ -168,9 +168,117 @@ of course easier to fix.</p>
     <b>http://server.corp.com/prof/developers.zip</b>. Also note that
     shortcut are not allowed there, the trailing <b>.zip</b> is needed.</p>
     <p> The last point about the centralized support is that sabayon will
-    use a cache located in the user home directory under <b>.profile_cache</b>
+    use a cache located in the user home directory under <b>.sabayon/profile_cache</b>
     to keep a copy of the non-local files, this allows profile to function
     normally in disconnected operations or in case of server failures.</p>
+    <h4>LDAP support</h4>
+    <p> Sabayon also supports using LDAP to get profiles in a very flexible way.
+    Further details <a href="ldap.html">here</a>.</p>
+    <h2><a name="ldap">LDAP support</a></h2>
+    <p> Sabayon supports using LDAP to get profiles in a very flexible way.
+    By defining server settings and queries in the
+    <b>/etc/desktop-profiles/users.xml</b> file it can do the mapping from user
+     to profile file using LDAP queries. An example setup can look like:</p>
+    <pre>
+      &lt;profiles&gt;
+       &lt;ldap server="ldap.example.com"&gt;
+        &lt;profilemap search_base="ou=People,dc=example,dc=com"
+                 scope="one"
+                 query_filter="(uid=%u)"
+                 result_attribute="sabayonProfileURL"/&gt;
+        &lt;/ldap&gt;
+        &lt;default profile="default"/&gt;
+      &lt;/profiles&gt;
+    </pre>
+    <h4>LDAP server configuration</h4>
+    <p>The toplevel ldap tag sets up the server connection. Availible
+    attributes are:</p>
+    <ul>
+      <li>server (default: localhost): The address of the ldap server</li>
+      <li>port (default: 389): The port of the ldap server</li>
+      <li>version (default: 3): The ldap version to use</li>
+      <li>timeout (default: 10): Timeout to use for ldap operations, 0 to disable</li>
+      <li>bind_dn: dn to bind as, or leave out to run queries without binding</li>
+      <li>bind_pw: password used when binding</li>
+    </ul>
+    <h4>LDAP queries</h4>
+    <p>Inside the ldap tag you can define the two queries used by sabayon. The
+    first is the profilemap query, which maps from the username to the profile
+    name to use for the user. The profile name is just a string, and it can be
+    either an absolute URI, a URI relative to the config file, or just a name.
+    If it is a name it will be looked up in the locationmap LDAP query (if specified)
+    and if that didn't match, it will be converted to a filename in /etc/desktop-profiles
+    by appending ".zip".</p>
+    <p>The locationmap query specifies the mapping from profile name to profile
+    URI. This can optinally be used instead of storing the profile URI directly
+    in the LDAP user object, to allow more flexibility in changing the URI.</p>
+    <p>Both queries support these attributes:</p>
+    <ul>
+     <li>search_base: The search base of the query</li>
+     <li>query_filter: the LDAP filter to use</li>
+     <li>result_attribute: The name of the attribute to look at in the query result</li>
+     <li>scope (default "sub"): The search scope. Can be sub, base or one.</li>
+     <li>multiple_result (default "first"): How to handle multiple values in the
+     resulting attribute. Can be "first", use the first attribute or "random", pick
+     a random one (for e.g. load balancing).</li>
+    </ul>
+    <p>Both search_base and query_filter are expanded. In profilemap %u expands to the username
+    and in locationmap %p expands to the profile name. In both maps %h expands to the full
+    hostname of the client, and %% expands to %.</p>
+    <h4>Examples</h4>
+    <p>There are many way to set up the sabayon LDAP integration. Here are some examples,
+    all using the sabayon LDAP schema that comes in the sabayon package.</p>
+    <h5>Store profile URL in the user</h5>
+    <p>This is the simplest setup. Add a sabayonProfileURLObject to your user objects
+    and set the sabayonProfileURL property for each user to a URI of the profile.</p>
+    <pre>
+  ...    
+  &lt;ldap server="..."&gt;
+     &lt;profilemap search_base="ou=People,dc=example,dc=com"
+                 scope="one"
+                 query_filter="(uid=%u)"
+                 result_attribute="sabayonProfileURL"/&gt;
+  &lt;/ldap&gt;
+  ...
+    </pre>    
+    <h5>Store profile as a separate entity in ldap</h5>
+    <p>Store the name of the profile for each user (using a
+    sabayonProfileNameObject object), and store the actual URI in
+    a sabayonProfile object. This gives a lot of flexibility to change
+    the URI of the profile, without having to update each user.</p>
+    <pre>
+  ...    
+  &lt;ldap server="..."&gt;
+     &lt;profilemap search_base="ou=People,dc=example,dc=com"
+                 scope="one"
+                 query_filter="(uid=%u)"
+                 result_attribute="sabayonProfileName"/&gt;
+     &lt;locationmap search_base="ou=Profiles,dc=example,dc=com"
+                  scope="one"
+                  query_filter="(cn=%p)"
+                  result_attribute="sabayonProfileURL"/&gt;
+  &lt;/ldap&gt;
+  ...
+    </pre>    
+    <h5>Pick profile based on group membership</h5>
+    <p>This lets you pick a profile based on what group the user
+    is part of by adding the sabayonProfileURL attribute to the
+    group object.</p>
+    <pre>
+  ...    
+  &lt;ldap server="..."&gt;
+     &lt;profilemap search_base="ou=Group,dc=example,dc=com"
+                 scope="one"
+                 query_filter="(memberUid=%u)"
+                 result_attribute="sabayonProfileURL"/&gt;
+  &lt;/ldap&gt;
+  ...
+    </pre>
+    <h5>others</h5>
+    <p>There are countless other ways, for example you could combine the
+    group example and the separate profile object example. If you come up
+    with an interesting way, please tell us on the mailing list.</p>
+    
     <h2> <a name="format">The profile files format</a> </h2>
     <p> The following is a description of the requirement and the choices
     made when designing the user profile files. The existing format may
@@ -215,7 +323,6 @@ of course easier to fix.</p>
     content of the archive. It can be viewed using the command
     <b>unzip -p /etc/desktop-profiles/test.zip metadata</b>:</p>
     <ul>
-      <li> versionning informations</li>
       <li> general description for the whole set of settings e.g. "Configuration for developers in project foo":
         <ul>
 	  <li> administrative informations</li>
@@ -226,12 +333,10 @@ of course easier to fix.</p>
       </li>
       <li> per stream description
         <ul>
-	  <li>  name of the stream in the archive</li>
+	  <li> name of the stream in the archive</li>
 	  <li> associated application</li>
-	  <li> versionning informations</li>
 	  <li> description for settings e.g. "Mozilla starts full screen"</li>
 	  <li> administrative info</li>
-	  <li> type of stream (rawfile/xml/.ini etc.)</li>
 	</ul>
       </li>
     </ul>

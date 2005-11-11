@@ -17,6 +17,7 @@ DISTCLEANFILES =		\
 	intltool-extract	\
 	intltool-merge		\
 	intltool-update		\
+	sabayon.schema		\
 	sabayon.spec
 
 pycheck:

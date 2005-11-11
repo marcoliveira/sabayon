@@ -2,7 +2,10 @@ PAGES=			\
 	index.html	\
 	developing.html	\
 	testing.html	\
-	helping.html
+	helping.html	\
+	format.html	\
+	config.html	\
+	ldap.html
 
 WSOURCES=		\
 	flat.html	\

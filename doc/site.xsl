@@ -25,6 +25,9 @@
       <xsl:when test="$name = '#config'">
         <xsl:text>config.html</xsl:text>
       </xsl:when>
+      <xsl:when test="$name = '#ldap'">
+        <xsl:text>ldap.html</xsl:text>
+      </xsl:when>
       <xsl:when test="$name = '#format'">
         <xsl:text>format.html</xsl:text>
       </xsl:when>
