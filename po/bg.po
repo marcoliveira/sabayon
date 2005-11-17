@@ -2,15 +2,15 @@
 # Copyright (C) 2005 THE sabayon'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the sabayon package.
 # Rostislav Raykov <zbrox@i-space.org>, 2005.
-#
+# Alexander Shopov <ash@contact.bg>, 2005.
 #
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-02-28 09:49+0200\n"
-"PO-Revision-Date: 2005-02-28 09:49+0200\n"
+"POT-Creation-Date: 2005-11-17 09:45+0200\n"
+"PO-Revision-Date: 2005-11-17 09:38+0200\n"
 "Last-Translator: Rostislav Raykov <zbrox@i-space.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,42 +18,821 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: ../admin-tool/sabayon.desktop.in.h:1
-msgid "Desktop User Profiles"
-msgstr "Потребителски профили на работния плот"
+#: ../admin-tool/aboutdialog.py:63
+msgid "Program to establish and edit profiles for users"
+msgstr "Настройване и редактиране на профили за потребители"
 
-#: ../admin-tool/sabayon.desktop.in.h:2
+#: ../admin-tool/aboutdialog.py:66
+msgid "translator-credits"
+msgstr ""
+"Ростислав Райков <zbrox@i-space.org>\n"
+"Александър Шопов <ash@contact.bg>\n"
+"\n"
+"Проектът за превод на GNOME има нужда от подкрепа.\n"
+"Научете повече за нас на http://gnome.cult.bg\n"
+"Докладвайте за грешки на http://gnome.cult.bg/bugs"
+
+#: ../admin-tool/changeswindow.py:50
+#, python-format
+msgid "Changes in profile %s"
+msgstr "Промени в профила %s"
+
+#: ../admin-tool/changeswindow.py:106
+msgid "Ignore"
+msgstr "Игнориране"
+
+#: ../admin-tool/changeswindow.py:113
+msgid "Lock"
+msgstr "Заключване"
+
+#: ../admin-tool/changeswindow.py:120 ../admin-tool/editorwindow.py:224
+msgid "Description"
+msgstr "Описание"
+
+#: ../admin-tool/editorwindow.py:97
+#, python-format
+msgid "Profile %s"
+msgstr "Профил „%s“"
+
+#: ../admin-tool/editorwindow.py:189 ../admin-tool/sessionwindow.py:174
+msgid "_Profile"
+msgstr "_Профил"
+
+#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
+msgid "_Save"
+msgstr "_Запазване"
+
+#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
+msgid "Save profile"
+msgstr "Запазване на профила"
+
+#: ../admin-tool/editorwindow.py:191
+msgid "_Close"
+msgstr "_Затваряне"
+
+#: ../admin-tool/editorwindow.py:191 ../admin-tool/sessionwindow.py:176
+msgid "Close the current window"
+msgstr "Затваряне на текущия прозорец"
+
+#: ../admin-tool/editorwindow.py:192 ../admin-tool/sessionwindow.py:177
+msgid "_Edit"
+msgstr "_Редактиране"
+
+#: ../admin-tool/editorwindow.py:193
+msgid "_Delete"
+msgstr "_Изтриване"
+
+#: ../admin-tool/editorwindow.py:193
+msgid "Delete item"
+msgstr "Изтриване на елемент"
+
+#: ../admin-tool/editorwindow.py:194 ../admin-tool/sessionwindow.py:180
+msgid "_Help"
+msgstr "_Помощ"
+
+#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:181
+msgid "_About"
+msgstr "_Относно"
+
+#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:181
+msgid "About Sabayon"
+msgstr "Относно Sabayon"
+
+#: ../admin-tool/editorwindow.py:254 ../lib/sources/gconfsource.py:123
+msgid "GConf"
+msgstr "GConf"
+
+#: ../admin-tool/editorwindow.py:258 ../lib/sources/filessource.py:78
+msgid "Files"
+msgstr "Файлове"
+
+#: ../admin-tool/editorwindow.py:258 ../admin-tool/lockdown/pessulus.glade.h:7
+#: ../lib/sources/paneldelegate.py:134
+msgid "Panel"
+msgstr "Панел"
+
+#: ../admin-tool/fileviewer.py:29
+#, python-format
+msgid "Profile file: %s"
+msgstr "Файл с профил: %s"
+
+#: ../admin-tool/gconfviewer.py:59 ../admin-tool/gconfviewer.py:78
+msgid "<no type>"
+msgstr "<без вид>"
+
+#: ../admin-tool/gconfviewer.py:60
+msgid "<no value>"
+msgstr "<без стойност>"
+
+#: ../admin-tool/gconfviewer.py:64
+msgid "string"
+msgstr "низ"
+
+#: ../admin-tool/gconfviewer.py:66
+msgid "integer"
+msgstr "цяло число"
+
+#: ../admin-tool/gconfviewer.py:68
+msgid "float"
+msgstr "число с плаваща запетая"
+
+#: ../admin-tool/gconfviewer.py:70
+msgid "boolean"
+msgstr "булева величина"
+
+#: ../admin-tool/gconfviewer.py:72
+msgid "schema"
+msgstr "схема"
+
+#: ../admin-tool/gconfviewer.py:74
+msgid "list"
+msgstr "списък"
+
+#: ../admin-tool/gconfviewer.py:76
+msgid "pair"
+msgstr "двойка"
+
+#: ../admin-tool/gconfviewer.py:88
+#, python-format
+msgid "Profile settings: %s"
+msgstr "Настройки на профила: %s"
+
+#: ../admin-tool/gconfviewer.py:112 ../admin-tool/profilesdialog.py:315
+#: ../admin-tool/usersdialog.py:85
+msgid "Name"
+msgstr "Име"
+
+#: ../admin-tool/gconfviewer.py:117
+msgid "Type"
+msgstr "Вид"
+
+#: ../admin-tool/gconfviewer.py:122
+msgid "Value"
+msgstr "Стойност"
+
+#: ../admin-tool/lockdown/lockdownbutton.py:99
+msgid "Click to make this setting not mandatory"
+msgstr "Натиснете, за да направите настройката незадължителна"
+
+#: ../admin-tool/lockdown/lockdownbutton.py:101
+msgid "Click to make this setting mandatory"
+msgstr "Натиснете, за да направите настройката задължителна"
+
+#: ../admin-tool/lockdown/maindialog.py:47
+msgid "Disable _command line"
+msgstr "Забраняване на _командния ред"
+
+#: ../admin-tool/lockdown/maindialog.py:48
+msgid "Disable _printing"
+msgstr "Забраняване на _печата"
+
+#: ../admin-tool/lockdown/maindialog.py:49
+msgid "Disable print _setup"
+msgstr "Забраняване на _настройването на печата"
+
+#: ../admin-tool/lockdown/maindialog.py:50
+msgid "Disable save to _disk"
+msgstr "Забраняване на _запазването върху носител"
+
+#: ../admin-tool/lockdown/maindialog.py:52
+msgid "_Lock down the panels"
+msgstr "Закл_ючване на панелите"
+
+#: ../admin-tool/lockdown/maindialog.py:53
+msgid "Disable force _quit"
+msgstr "Забраняване на прину_дителното спиране"
+
+#: ../admin-tool/lockdown/maindialog.py:54
+msgid "Disable lock _screen"
+msgstr "Забраняване на заключването на _екрана"
+
+#: ../admin-tool/lockdown/maindialog.py:55
+msgid "Disable log _out"
+msgstr "Забраняване на _изхода"
+
+#: ../admin-tool/lockdown/maindialog.py:57
+msgid "Disable _quit"
+msgstr "Забраняване на _спирането"
+
+#: ../admin-tool/lockdown/maindialog.py:58
+msgid "Disable _arbitrary URL"
+msgstr "Забраняване на п_роизволно URL"
+
+#: ../admin-tool/lockdown/maindialog.py:59
+msgid "Disable _bookmark editing"
+msgstr "Забраняване на редактирането на _отметки"
+
+#: ../admin-tool/lockdown/maindialog.py:60
+msgid "Disable _history"
+msgstr "Забраняване на _историята"
+
+#: ../admin-tool/lockdown/maindialog.py:61
+msgid "Disable _javascript chrome"
+msgstr "Забраняване на chrome на _javascript"
+
+#: ../admin-tool/lockdown/maindialog.py:62
+msgid "Disable _toolbar editing"
+msgstr "Забраняване на редактирането на _лентите с инструменти"
+
+#: ../admin-tool/lockdown/maindialog.py:63
+msgid "_Fullscreen"
+msgstr "На _цял екран"
+
+#: ../admin-tool/lockdown/maindialog.py:64
+msgid "Hide _menubar"
+msgstr "Скриване на лентата с _менюта"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:1
+msgid "<b>Disabled Applets</b>"
+msgstr "<b>Изключени аплети</b>"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:2
+msgid "<b>Safe Protocols</b>"
+msgstr "<b>Безопасни протоколи</b>"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:3
+msgid "Disable _unsafe protocols"
+msgstr "Изключване на _опасните протоколи"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:4
+msgid "Epiphany Web Browser"
+msgstr "Уеб браузър - Epiphany"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:5
+msgid "General"
+msgstr "Общи"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:6
+msgid "Lockdown Editor"
+msgstr "Редактор на забраните"
+
+#.
+#. Translators: this string specifies how a profile
+#. name is concatenated with an integer
+#. to form a unique profile name e.g.
+#. "Artist Workstation (5)"
+#.
+#: ../admin-tool/profilesdialog.py:415
+#, python-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../admin-tool/sabayon:44
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr ""
+"Нямате права да изпълните програмата за настройване на потребителските "
+"профили"
+
+#: ../admin-tool/sabayon:45
+msgid ""
+"Administrator level permissions are needed to run this program because it "
+"can modify system files."
+msgstr ""
+"Необходими са права на администратор, защото програмата може да редактира "
+"системни файлове."
+
+#: ../admin-tool/sabayon:50
+msgid "Desktop User Profiles tool is already running"
+msgstr "Програмата за настройване на потребителските профили вече е пусната"
+
+#: ../admin-tool/sabayon:51
+msgid ""
+"You may not use Desktop User Profiles tool from within a profile editing "
+"session"
+msgstr ""
+"Не можете да използвате програмата за настройване на потребителските профили "
+"от сесия за редактиране на сесиите"
+
+#: ../admin-tool/sabayon:58
+#, c-format
+msgid "User account '%s' was not found"
+msgstr "Потребителят „%s“ не бе открит"
+
+#: ../admin-tool/sabayon:59
+#, c-format
+msgid ""
+"Sabayon requires a special user account '%s' to be present on this computer. "
+"Try again after creating the account (using, for example, the 'adduser' "
+"command)"
+msgstr ""
+"За Sabayon е необходимо да се създаде следния специален потребител на тази "
+"система - „%s“. Опитайте отново след като го създадете (напр. чрез командата "
+"„adduser“)"
+
+#: ../admin-tool/sabayon-apply:39
+#, c-format
+msgid "No profile for user '%s' found\n"
+msgstr "Не е открит профилът на потребителя „%s“\n"
+
+#: ../admin-tool/sabayon-apply:44
+#, c-format
+msgid "Usage: %s [<profile-name>]\n"
+msgstr "Употреба: %s [<име-на-профил>]\n"
+
+#: ../admin-tool/sabayon-session:32
+#, c-format
+msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
+msgstr "Употреба: %s <име-на-профил> <път-до-профила> <номер-на-дисплея>\n"
+
+#: ../admin-tool/sabayon.desktop.in.h:1
 msgid "Establish and Edit Profiles for Users"
-msgstr "Установяване и редакция на профили за потребители"
+msgstr "Настройване и редактиране на профили за потребители"
+
+#: ../admin-tool/sabayon.desktop.in.h:2 ../admin-tool/sabayon.glade.h:4
+msgid "User Profile Editor"
+msgstr "Редактор на потребителски настройки"
 
 #: ../admin-tool/sabayon.glade.h:1
-msgid "All Your Settings Are Belong To Us"
-msgstr "All Your Settings Are Belong To Us"
+msgid "Add Profile"
+msgstr "Добавяне на профил"
 
 #: ../admin-tool/sabayon.glade.h:2
-msgid "C_reate"
-msgstr "Създаване"
+msgid "Profile _name:"
+msgstr "_Име на профил:"
 
 #: ../admin-tool/sabayon.glade.h:3
-msgid "New Profile"
-msgstr "Нов профил"
-
-#: ../admin-tool/sabayon.glade.h:4
-msgid "Profile _name:"
-msgstr "Име на профил:"
+msgid "Use this profile for _all users"
+msgstr "Използване на този профил за _всички потребители"
 
 #: ../admin-tool/sabayon.glade.h:5
 msgid "_Base on:"
-msgstr "Базиран на:"
+msgstr "_Базиран на:"
 
 #: ../admin-tool/sabayon.glade.h:6
-msgid "_Help"
-msgstr "Помощ"
+msgid "_Profiles:"
+msgstr "_Профили:"
 
 #: ../admin-tool/sabayon.glade.h:7
-msgid "_Profile"
-msgstr "Профил"
+msgid "_Users"
+msgstr "_Потребители"
 
 #: ../admin-tool/sabayon.glade.h:8
-msgid "_Profiles:"
-msgstr "Профили:"
+msgid "_Users:"
+msgstr "_Потребители:"
+
+#: ../admin-tool/saveconfirm.py:36
+msgid "Close _Without Saving"
+msgstr "Затваряне _без запазване"
+
+#: ../admin-tool/saveconfirm.py:43
+#, python-format
+msgid "Save changes to profile \"%s\" before closing?"
+msgstr "Запазване на промените в профила „%s“ преди затваряне?"
+
+#: ../admin-tool/saveconfirm.py:47
+#, python-format
+msgid ""
+"If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld seconds will be permanently "
+"lost."
+msgstr[0] ""
+"Промените от последната %ld секунда ще бъдат загубени, ако не ги запазите."
+msgstr[1] ""
+"Промените от последните %ld секунди ще бъдат загубени, ако не ги запазите."
+
+#: ../admin-tool/saveconfirm.py:53
+msgid ""
+"If you don't save, changes from the last minute will be permanently lost."
+msgstr "Промените от последната минута ще бъдат загубени, ако не ги запазите."
+
+#: ../admin-tool/saveconfirm.py:57
+#, python-format
+msgid ""
+"If you don't save, changes from the last minute and %ld second will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last minute and %ld seconds will be "
+"permanently lost."
+msgstr[0] ""
+"Промените от последната минута и %ld секунда ще бъдат загубени, ако не ги "
+"запазите."
+msgstr[1] ""
+"Промените от последната минута и %ld секунди ще бъдат загубени, ако не ги "
+"запазите."
+
+#: ../admin-tool/saveconfirm.py:64
+#, python-format
+msgid ""
+"If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld minutes will be permanently "
+"lost."
+msgstr[0] ""
+"Промените от последната %ld минута ще бъдат загубени, ако не ги запазите."
+msgstr[1] ""
+"Промените от последните %ld минути ще бъдат загубени, ако не ги запазите."
+
+#: ../admin-tool/saveconfirm.py:73 ../admin-tool/saveconfirm.py:83
+#, python-format
+msgid "If you don't save, changes from the last hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] "Промените от последния час ще бъдат загубени, ако не ги запазите."
+msgstr[1] ""
+"Промените от последните %d часа ще бъдат загубени, ако не ги запазите."
+
+#: ../admin-tool/saveconfirm.py:76
+#, python-format
+msgid ""
+"If you don't save, changes from the last hour and %d minute will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last hour and %d minutes will be "
+"permanently lost."
+msgstr[0] ""
+"Промените от последния час и %d минута ще бъдат загубени, ако не ги запазите."
+msgstr[1] ""
+"Промените от последния час и %d минути ще бъдат загубени, ако не ги запазите."
+"<"
+
+#: ../admin-tool/sessionwindow.py:153
+#, python-format
+msgid "Editing profile %s"
+msgstr "Редактиране на профила %s"
+
+#: ../admin-tool/sessionwindow.py:176
+msgid "_Quit"
+msgstr "_Спиране на програмата"
+
+#: ../admin-tool/sessionwindow.py:178
+msgid "_Changes"
+msgstr "_Промени"
+
+#: ../admin-tool/sessionwindow.py:178
+msgid "Edit changes"
+msgstr "Редактиране на промените"
+
+#: ../admin-tool/sessionwindow.py:179
+msgid "_Lockdown"
+msgstr "_Заключване"
+
+#: ../admin-tool/sessionwindow.py:179
+msgid "Edit Lockdown settings"
+msgstr "Редактиране на настройките на заключването"
+
+#: ../admin-tool/sessionwindow.py:184
+msgid "Enforce Mandatory"
+msgstr "Задължително прилагане"
+
+#: ../admin-tool/sessionwindow.py:184
+msgid "Enforce mandatory settings in the editing session"
+msgstr ""
+"Задаване на задължително прилаганите настройки в сесията за редактиране"
+
+#: ../admin-tool/sessionwindow.py:273
+#, python-format
+msgid "Lockdown settings for %s"
+msgstr "Настройки на заключването за %s"
+
+#: ../admin-tool/usersdialog.py:67
+#, python-format
+msgid "Users for profile %s"
+msgstr "Потребители с профил %s"
+
+#: ../admin-tool/usersdialog.py:95
+msgid "Use This Profile"
+msgstr "Използване на този профил"
+
+#: ../lib/dirmonitor.py:151
+#, python-format
+msgid "Failed to add monitor for %s"
+msgstr "Неуспех при добавянето на датчик за %s"
+
+#: ../lib/dirmonitor.py:231
+#, python-format
+msgid "Expected event: %s %s"
+msgstr "Очаквано събитие: %s %s"
+
+#: ../lib/protosession.py:142
+msgid "Unable to find a free X display"
+msgstr "Не е открит свободен дисплей на X"
+
+#: ../lib/protosession.py:409
+msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+msgstr ""
+"Неуспех при стартирането на Xnest: свърши времето за изчакване на сигнал USR1"
+
+#: ../lib/protosession.py:411
+msgid "Failed to start Xnest: died during startup"
+msgstr ""
+"Неуспех при стартирането на Xnest: процесът завърши работа още при "
+"стартирането си"
+
+#: ../lib/sources/filessource.py:68
+#, python-format
+msgid "File '%s' created"
+msgstr "Файлът „%s“ е създаден"
+
+#: ../lib/sources/filessource.py:70
+#, python-format
+msgid "File '%s' deleted"
+msgstr "Файлът „%s“ е изтрит"
+
+#: ../lib/sources/filessource.py:72
+#, python-format
+msgid "File '%s' changed"
+msgstr "Файлът „%s“ е променен"
+
+#: ../lib/sources/filessource.py:96
+msgid "Applications menu"
+msgstr "Меню „Приложения“"
+
+#: ../lib/sources/filessource.py:98
+msgid "Preferences menu"
+msgstr "Меню „Предпочитания“"
+
+#: ../lib/sources/filessource.py:100
+msgid "Server Settings menu"
+msgstr "Меню „Настройки на сървъра“"
+
+#: ../lib/sources/filessource.py:102
+msgid "System Settings menu"
+msgstr "Меню „Системни настройки“"
+
+#: ../lib/sources/filessource.py:104
+msgid "Start Here menu"
+msgstr "Меню „Начало“"
+
+#: ../lib/sources/gconfsource.py:89
+#, python-format
+msgid "GConf key '%s' unset"
+msgstr "Стойността на ключа на GConf „%s“ е премахната"
+
+#: ../lib/sources/gconfsource.py:91
+#, python-format
+msgid "GConf key '%s' set to string '%s'"
+msgstr "Стойността на ключа на GConf „%s“ е зададена да е низа „%s“"
+
+#: ../lib/sources/gconfsource.py:93
+#, python-format
+msgid "GConf key '%s' set to integer '%s'"
+msgstr "Стойността на ключа на GConf „%s“ е зададена да е цялото число „%s“"
+
+#: ../lib/sources/gconfsource.py:95
+#, python-format
+msgid "GConf key '%s' set to float '%s'"
+msgstr ""
+"Стойността на ключа на GConf „%s“ е зададена да е числото с плаваща запетая "
+"„%s“"
+
+#: ../lib/sources/gconfsource.py:97
+#, python-format
+msgid "GConf key '%s' set to boolean '%s'"
+msgstr ""
+"Стойността на ключа на GConf „%s“ е зададена да е булевата стойност „%s“"
+
+#: ../lib/sources/gconfsource.py:99
+#, python-format
+msgid "GConf key '%s' set to schema '%s'"
+msgstr "Стойността на ключа на GConf „%s“ е зададена да е схемата „%s“"
+
+#: ../lib/sources/gconfsource.py:101
+#, python-format
+msgid "GConf key '%s' set to list '%s'"
+msgstr "Стойността на ключа на GConf „%s“ е зададена да е списъка „%s“"
+
+#: ../lib/sources/gconfsource.py:103
+#, python-format
+msgid "GConf key '%s' set to pair '%s'"
+msgstr "Стойността на ключа на GConf „%s“ е зададена да е двойката „%s“"
+
+#: ../lib/sources/gconfsource.py:105
+#, python-format
+msgid "GConf key '%s' set to '%s'"
+msgstr "Стойността на ключа на GConf „%s“ е зададена да е „%s“"
+
+#: ../lib/sources/gconfsource.py:136
+msgid "Default GConf settings"
+msgstr "Настройки на GConf по подразбиране"
+
+#: ../lib/sources/gconfsource.py:138
+msgid "Mandatory GConf settings"
+msgstr "Задължителни настройки на GConf"
+
+#: ../lib/sources/mozillasource.py:132
+#, python-format
+msgid "Mozilla key '%s' set to '%s'"
+msgstr "Стойността на ключа на Mozilla „%s“ е зададена да е „%s“"
+
+#: ../lib/sources/mozillasource.py:134
+#, python-format
+msgid "Mozilla key '%s' unset"
+msgstr "Стойността на ключа на Mozilla „%s“ е премахната"
+
+#: ../lib/sources/mozillasource.py:136
+#, python-format
+msgid "Mozilla key '%s' changed to '%s'"
+msgstr "Стойността на ключа на GConf „%s“ е променена на „%s“"
+
+#: ../lib/sources/mozillasource.py:165 ../lib/sources/mozillasource.py:175
+msgid "Web browser preferences"
+msgstr "Настройки на уеб браузъра"
+
+#: ../lib/sources/mozillasource.py:167 ../lib/sources/mozillasource.py:177
+msgid "Web browser bookmarks"
+msgstr "Отметки за уеб браузъра"
+
+#: ../lib/sources/mozillasource.py:169
+msgid "Web browser profile list"
+msgstr "Списък с профилите за уеб браузъра"
+
+#: ../lib/sources/mozillasource.py:520
+#, python-format
+msgid "File Not Found (%s)"
+msgstr "Не е открит файл (%s)"
+
+#: ../lib/sources/mozillasource.py:871
+#, python-format
+msgid "duplicate name(%(name)s) in section %(section)s"
+msgstr "повторение на име (%(name)s) в раздела %(section)s"
+
+#: ../lib/sources/mozillasource.py:880
+#, python-format
+msgid "redundant default in section %s"
+msgstr "излишна стойност в раздела %s, която има стойността по подразбиране"
+
+#: ../lib/sources/mozillasource.py:897
+msgid "no default profile"
+msgstr "няма профил по подразбиране"
+
+#: ../lib/sources/mozillasource.py:952
+#, python-format
+msgid "Mozilla bookmark created '%s' -> '%s'"
+msgstr "Създадена е отметка в Mozilla: „%s“ -> „%s“"
+
+#: ../lib/sources/mozillasource.py:954
+#, python-format
+msgid "Mozilla bookmark folder created '%s'"
+msgstr "Създадена е папка за отметки в Mozilla: „%s“"
+
+#: ../lib/sources/mozillasource.py:957
+#, python-format
+msgid "Mozilla bookmark deleted '%s'"
+msgstr "Изтрита е отметка в Mozilla: „%s“"
+
+#: ../lib/sources/mozillasource.py:959
+#, python-format
+msgid "Mozilla bookmark folder deleted '%s'"
+msgstr "Изтрита е папка за отметки в Mozilla: „%s“"
+
+#: ../lib/sources/mozillasource.py:962
+#, python-format
+msgid "Mozilla bookmark changed '%s' '%s'"
+msgstr "Отметката „%s“ в Mozilla е променена на „%s“"
+
+#: ../lib/sources/mozillasource.py:964
+#, python-format
+msgid "Mozilla bookmark folder changed '%s'"
+msgstr "Папката за отметки в Mozilla е променена: „%s“"
+
+#: ../lib/sources/paneldelegate.py:58
+#, python-format
+msgid "Panel '%s' added"
+msgstr "Панелът „%s“ е добавен"
+
+#: ../lib/sources/paneldelegate.py:64
+#, python-format
+msgid "Panel '%s' removed"
+msgstr "Панелът „%s“ е премахнат"
+
+#: ../lib/sources/paneldelegate.py:70
+#, python-format
+msgid "Panel applet '%s' added"
+msgstr "Аплетът „%s“ е добавен"
+
+#: ../lib/sources/paneldelegate.py:76
+#, python-format
+msgid "Panel applet '%s' removed"
+msgstr "Аплетът „%s“ е премахнат"
+
+#: ../lib/sources/paneldelegate.py:82
+#, python-format
+msgid "Panel object '%s' added"
+msgstr "Панелният елемент „%s“ е добавен"
+
+#: ../lib/sources/paneldelegate.py:94
+#, python-format
+msgid "Panel object '%s' removed"
+msgstr "Панелният елемент „%s“ е премахнат"
+
+#: ../lib/sources/paneldelegate.py:375
+msgid "Panel File"
+msgstr "Файл за панел"
+
+#: ../lib/storage.py:173
+#, python-format
+msgid "Failed to read file '%s': %s"
+msgstr "Неуспех при прочитането на файла „%s“: %s"
+
+#: ../lib/storage.py:183
+#, python-format
+msgid "Failed to read metadata from '%s': %s"
+msgstr "Неуспех при прочитането на метаданните от „%s“: %s"
+
+#: ../lib/storage.py:189
+#, python-format
+msgid "Invalid metadata section in '%s': %s"
+msgstr "Невалиден раздел с метаданни в „%s“: %s"
+
+#: ../lib/storage.py:363
+#, python-format
+msgid "Cannot add non-existent file '%s'"
+msgstr "Несъществуващият файл „%s“ не може да бъде добавен"
+
+#: ../lib/storage.py:540
+#, python-format
+msgid "Profile is read-only %s"
+msgstr "Профилът „%s“ е само за четене"
+
+#: ../lib/unittests.py:38 ../lib/unittests.py:39
+msgid "Ignore WARNINGs"
+msgstr "Игнориране на ПРЕДУПРЕЖДЕНИЯта"
+
+#: ../lib/unittests.py:61
+#, python-format
+msgid "Running %s tests"
+msgstr "Пуснати са %s теста"
+
+#: ../lib/unittests.py:63
+#, python-format
+msgid "Running %s tests (%s)"
+msgstr "Пуснати са %s теста (%s)"
+
+#: ../lib/unittests.py:70
+msgid "Success!"
+msgstr "Успех!"
+
+#: ../lib/userdb.py:52
+#, python-format
+msgid "invalid type for setting %s in %s"
+msgstr "невалиден вид на настройката %s в %s"
+
+#: ../lib/userdb.py:212
+#, python-format
+msgid "No search based specified for %s"
+msgstr "Не е указана база за търсене за %s"
+
+#: ../lib/userdb.py:215
+#, python-format
+msgid "No query filter specified for %s"
+msgstr "Не е зададен филтър на заявката %s"
+
+#: ../lib/userdb.py:218
+#, python-format
+msgid "No result attribute specified for %s"
+msgstr "Не е зададен атрибут на резултата за %s"
+
+#: ../lib/userdb.py:227
+msgid "Scope must be one of sub, base and one"
+msgstr "Обхватът може да е „sub“, „base“ и „one“"
+
+#: ../lib/userdb.py:247
+msgid "multiple_result must be one of first and random"
+msgstr "множественият резултат може да е „first“ (първи) и „random“ (случаен)"
+
+#: ../lib/userdb.py:339
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "Неуспех при отварянето на „%s“ за запис"
+
+#: ../lib/userdb.py:352
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "Неуспех при запазването на потребителската база от данни в „%s“"
+
+#: ../lib/userdb.py:375 ../lib/userdb.py:410
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "Файлът „%s“ не е настройка на профил"
+
+#: ../lib/userdb.py:382
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "Неуспех при добавянето на стандартния профил „%s“ към настройките"
+
+#: ../lib/userdb.py:418
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "Неуспех при добавянето на потребителя „%s“ към настройките на профила"
+
+#: ../lib/userdb.py:449
+msgid "Failed to get the user list"
+msgstr "Неуспех при получаването на списъка с потребители"
+
+#: ../lib/util.py:127
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"Не може да се открие домашната директория: не е зададена в /etc/passwd и "
+"променливата $HOME, ако съществува, е без стойност"
+
+#: ../lib/util.py:140
+msgid ""
+"Cannot find username: not set in /etc/passwd and no value for $USER in "
+"environment"
+msgstr ""
+"Не може да се открие името на потребителя: не е зададено в /etc/passwd и "
+"променливата $USER, ако съществува, е без стойност"
