@@ -12,7 +12,7 @@ AC_SUBST(ACLOCAL_AMFLAGS, "\${ACLOCAL_FLAGS}")
 GETTEXT_PACKAGE=sabayon
 AC_SUBST(GETTEXT_PACKAGE)
 
-ALL_LINGUAS="bg ca cs de el en_CA en_GB es fi fr hu ja nb ne no pt_BR rw sv uk zh_CN"
+ALL_LINGUAS="bg ca cs de el en_CA en_GB es fi fr hu ja nb ne no pa pt_BR rw sv uk zh_CN"
 AM_GLIB_GNU_GETTEXT
 
 AC_PROG_CC
