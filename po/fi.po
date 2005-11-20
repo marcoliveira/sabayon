@@ -1,0 +1,835 @@
+# Finnish messages for sabayon
+# Copyright (C) 2005 Ilkka Tuohela 
+# This file is distributed under the same license as the sabayon package.
+#
+# Ilkka Tuohela <hile@iki.fi>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sabayon\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-11-20 09:04+0200\n"
+"PO-Revision-Date: 2005-11-20 09:10+0200\n"
+"Last-Translator: Ilkka Tuohela <hile@iki.fi>\n"
+"Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../admin-tool/aboutdialog.py:63
+msgid "Program to establish and edit profiles for users"
+msgstr "Ohjelma käyttäjäprofiilien määrittelyyn ja muokkaamiseen"
+
+#: ../admin-tool/aboutdialog.py:66
+msgid "translator-credits"
+msgstr ""
+"Ilkka Tuohela, 2005\n"
+"http://gnome.fi/"
+
+#: ../admin-tool/changeswindow.py:50
+#, python-format
+msgid "Changes in profile %s"
+msgstr "Muutokset profiilissa %s"
+
+#: ../admin-tool/changeswindow.py:106
+msgid "Ignore"
+msgstr "Älä huomioi"
+
+#: ../admin-tool/changeswindow.py:113
+msgid "Lock"
+msgstr "Lukitse"
+
+#: ../admin-tool/changeswindow.py:120 ../admin-tool/editorwindow.py:224
+msgid "Description"
+msgstr "Kuvaus"
+
+#: ../admin-tool/editorwindow.py:97
+#, python-format
+msgid "Profile %s"
+msgstr "Profiili %s"
+
+#: ../admin-tool/editorwindow.py:189 ../admin-tool/sessionwindow.py:174
+msgid "_Profile"
+msgstr "_Profiili"
+
+#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
+msgid "_Save"
+msgstr "_Tallenna"
+
+#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
+msgid "Save profile"
+msgstr "Tallenna profiili"
+
+#: ../admin-tool/editorwindow.py:191
+msgid "_Close"
+msgstr "_Sulje"
+
+#: ../admin-tool/editorwindow.py:191 ../admin-tool/sessionwindow.py:176
+msgid "Close the current window"
+msgstr "Sulje nykyinen ikkuna"
+
+#: ../admin-tool/editorwindow.py:192 ../admin-tool/sessionwindow.py:177
+msgid "_Edit"
+msgstr "_Muokkaa"
+
+#: ../admin-tool/editorwindow.py:193
+msgid "_Delete"
+msgstr "_Poista"
+
+#: ../admin-tool/editorwindow.py:193
+msgid "Delete item"
+msgstr "Poista kohta"
+
+#: ../admin-tool/editorwindow.py:194 ../admin-tool/sessionwindow.py:180
+msgid "_Help"
+msgstr "O_hje"
+
+#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:181
+msgid "_About"
+msgstr "_Tietoja"
+
+#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:181
+msgid "About Sabayon"
+msgstr "Tietoja Sabayonista"
+
+#: ../admin-tool/editorwindow.py:254 ../lib/sources/gconfsource.py:123
+msgid "GConf"
+msgstr "GConf"
+
+#: ../admin-tool/editorwindow.py:258 ../lib/sources/filessource.py:78
+msgid "Files"
+msgstr "Tiedostot"
+
+#: ../admin-tool/editorwindow.py:258 ../admin-tool/lockdown/pessulus.glade.h:7
+#: ../lib/sources/paneldelegate.py:134
+msgid "Panel"
+msgstr "Paneeli"
+
+#: ../admin-tool/fileviewer.py:29
+#, python-format
+msgid "Profile file: %s"
+msgstr "Profiilitiedosto: %s"
+
+#: ../admin-tool/gconfviewer.py:59 ../admin-tool/gconfviewer.py:78
+msgid "<no type>"
+msgstr "<ei tyyppiä>"
+
+#: ../admin-tool/gconfviewer.py:60
+msgid "<no value>"
+msgstr "<ei arvoa>"
+
+#: ../admin-tool/gconfviewer.py:64
+msgid "string"
+msgstr "merkkijono"
+
+#: ../admin-tool/gconfviewer.py:66
+msgid "integer"
+msgstr "kokonaisluku"
+
+#: ../admin-tool/gconfviewer.py:68
+msgid "float"
+msgstr "liukuluku"
+
+#: ../admin-tool/gconfviewer.py:70
+msgid "boolean"
+msgstr "totuusarvo"
+
+#: ../admin-tool/gconfviewer.py:72
+msgid "schema"
+msgstr "skeema"
+
+#: ../admin-tool/gconfviewer.py:74
+msgid "list"
+msgstr "lista"
+
+#: ../admin-tool/gconfviewer.py:76
+msgid "pair"
+msgstr "pari"
+
+#: ../admin-tool/gconfviewer.py:88
+#, python-format
+msgid "Profile settings: %s"
+msgstr "Profiilin asetukset: %s"
+
+#: ../admin-tool/gconfviewer.py:112 ../admin-tool/profilesdialog.py:315
+#: ../admin-tool/usersdialog.py:85
+msgid "Name"
+msgstr "Nimi"
+
+#: ../admin-tool/gconfviewer.py:117
+msgid "Type"
+msgstr "Tyyppi"
+
+#: ../admin-tool/gconfviewer.py:122
+msgid "Value"
+msgstr "Arvo"
+
+#: ../admin-tool/lockdown/lockdownbutton.py:99
+msgid "Click to make this setting not mandatory"
+msgstr "Tee asetuksesta vapaaehtoinen napsauttamalla tästä"
+
+#: ../admin-tool/lockdown/lockdownbutton.py:101
+msgid "Click to make this setting mandatory"
+msgstr "Tee asetuksesta vaadittu napsauttamalla tästä"
+
+#: ../admin-tool/lockdown/maindialog.py:47
+msgid "Disable _command line"
+msgstr "Estä _komentorivi"
+
+#: ../admin-tool/lockdown/maindialog.py:48
+msgid "Disable _printing"
+msgstr "Estä _tulostus"
+
+#: ../admin-tool/lockdown/maindialog.py:49
+msgid "Disable print _setup"
+msgstr "Estä tulostus_asetukset"
+
+#: ../admin-tool/lockdown/maindialog.py:50
+msgid "Disable save to _disk"
+msgstr "Estä levylle t_allennus"
+
+#: ../admin-tool/lockdown/maindialog.py:52
+msgid "_Lock down the panels"
+msgstr "_Lukitse paneelit"
+
+#: ../admin-tool/lockdown/maindialog.py:53
+msgid "Disable force _quit"
+msgstr "Estä pakotettu _sulkeminen"
+
+#: ../admin-tool/lockdown/maindialog.py:54
+msgid "Disable lock _screen"
+msgstr "Estä _näytön lukitus"
+
+#: ../admin-tool/lockdown/maindialog.py:55
+msgid "Disable log _out"
+msgstr "Estä ulos_kirjautuminen"
+
+#: ../admin-tool/lockdown/maindialog.py:57
+msgid "Disable _quit"
+msgstr "Estä _sulkeminen"
+
+#: ../admin-tool/lockdown/maindialog.py:58
+msgid "Disable _arbitrary URL"
+msgstr "Estä _satunnaiset URLit"
+
+#: ../admin-tool/lockdown/maindialog.py:59
+msgid "Disable _bookmark editing"
+msgstr "Estä _kirjanmerkkien muokkaus"
+
+#: ../admin-tool/lockdown/maindialog.py:60
+msgid "Disable _history"
+msgstr "Estä _historia"
+
+#: ../admin-tool/lockdown/maindialog.py:61
+msgid "Disable _javascript chrome"
+msgstr "Estä _javascriptin chromet"
+
+#: ../admin-tool/lockdown/maindialog.py:62
+msgid "Disable _toolbar editing"
+msgstr "Estä _työkalupalkkien muokkaus"
+
+#: ../admin-tool/lockdown/maindialog.py:63
+msgid "_Fullscreen"
+msgstr "_Kokoruutu"
+
+#: ../admin-tool/lockdown/maindialog.py:64
+msgid "Hide _menubar"
+msgstr "Piilota _valikkopalkki"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:1
+msgid "<b>Disabled Applets</b>"
+msgstr "<b>Estetyt sovelmat</b>"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:2
+msgid "<b>Safe Protocols</b>"
+msgstr "<b>Turvalliset protokollat</b>"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:3
+msgid "Disable _unsafe protocols"
+msgstr "Estä _turvattomat protokollat"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:4
+msgid "Epiphany Web Browser"
+msgstr "Epiphany WWW-selain"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:5
+msgid "General"
+msgstr "Yleistä"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:6
+msgid "Lockdown Editor"
+msgstr "Käyttörajoitusten muokkain"
+
+#.
+#. Translators: this string specifies how a profile
+#. name is concatenated with an integer
+#. to form a unique profile name e.g.
+#. "Artist Workstation (5)"
+#.
+#: ../admin-tool/profilesdialog.py:415
+#, python-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../admin-tool/sabayon:44
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr ""
+"Käyttäjätilisi oikeudet eivät riitä käyttäjäprofiilityökalun suorittamiseen"
+
+#: ../admin-tool/sabayon:45
+msgid ""
+"Administrator level permissions are needed to run this program because it "
+"can modify system files."
+msgstr ""
+"Tämän ohjelman suorittamiseen vaaditaan järjestelmän ylläpitäjän oikeudet, "
+"koska se voi muokata järjestelmän asetuksia."
+
+#: ../admin-tool/sabayon:50
+msgid "Desktop User Profiles tool is already running"
+msgstr "Työpöytäkäyttäjien profiilien työkalu on jo käynnissä"
+
+#: ../admin-tool/sabayon:51
+msgid ""
+"You may not use Desktop User Profiles tool from within a profile editing "
+"session"
+msgstr ""
+"Et voi käyttää käyttäjäoikeuksien hallintaohjelmaa profiilin "
+"muokkausistunnosta"
+
+#: ../admin-tool/sabayon:58
+#, c-format
+msgid "User account '%s' was not found"
+msgstr "Käyttäjätunnusta \"%s\" ei löydy"
+
+#: ../admin-tool/sabayon:59
+#, c-format
+msgid ""
+"Sabayon requires a special user account '%s' to be present on this computer. "
+"Try again after creating the account (using, for example, the 'adduser' "
+"command)"
+msgstr ""
+"Sabayon vaatii erityistä käyttäjätiliä \"%s\" tietokoneella. Yritä uudestaan "
+"luotuasi tämä käyttäjätilin esimerkiksi \"adduser\"-ohjelmalla."
+
+#: ../admin-tool/sabayon-apply:39
+#, c-format
+msgid "No profile for user '%s' found\n"
+msgstr "Profiilia käyttäjälle \"%s\" ei löydy\n"
+
+#: ../admin-tool/sabayon-apply:44
+#, c-format
+msgid "Usage: %s [<profile-name>]\n"
+msgstr "Käyttö: %s [<profiilin-nimi]\n"
+
+#: ../admin-tool/sabayon-session:32
+#, c-format
+msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
+msgstr "Käyttö: %s <profiilin-nimi> <profiilin-polku> <näytön-numero>\n"
+
+#: ../admin-tool/sabayon.desktop.in.h:1
+msgid "Establish and Edit Profiles for Users"
+msgstr "Määrittele ja muokkaa käyttäjäprofiileja"
+
+#: ../admin-tool/sabayon.desktop.in.h:2 ../admin-tool/sabayon.glade.h:4
+msgid "User Profile Editor"
+msgstr "Käyttäjäprofiilien muokkain"
+
+#: ../admin-tool/sabayon.glade.h:1
+msgid "Add Profile"
+msgstr "Lisää profiili"
+
+#: ../admin-tool/sabayon.glade.h:2
+msgid "Profile _name:"
+msgstr "Profiilin _nimi:"
+
+#: ../admin-tool/sabayon.glade.h:3
+msgid "Use this profile for _all users"
+msgstr "Käytä tätä profiilia _kaikille käyttäjille"
+
+#: ../admin-tool/sabayon.glade.h:5
+msgid "_Base on:"
+msgstr "_Käytä pohjana:"
+
+#: ../admin-tool/sabayon.glade.h:6
+msgid "_Profiles:"
+msgstr "_Profiilit:"
+
+#: ../admin-tool/sabayon.glade.h:7
+msgid "_Users"
+msgstr "_Käyttäjät"
+
+#: ../admin-tool/sabayon.glade.h:8
+msgid "_Users:"
+msgstr "_Käyttäjät:"
+
+#: ../admin-tool/saveconfirm.py:36
+msgid "Close _Without Saving"
+msgstr "Sulje _tallentamatta"
+
+#: ../admin-tool/saveconfirm.py:43
+#, python-format
+msgid "Save changes to profile \"%s\" before closing?"
+msgstr "Tallennetaanko muutokset profiiliin \"%s\" ennen sulkemista?"
+
+#: ../admin-tool/saveconfirm.py:47
+#, python-format
+msgid ""
+"If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld seconds will be permanently "
+"lost."
+msgstr[0] ""
+"Jos et tallenna muutoksia, hukkuvat viimeisen %ld sekunnin aikana tehdyt "
+"muutokset pysyvästi."
+msgstr[1] ""
+"Jos et tallenna muutoksia, hukkuvat viimeisten %ld sekunnin aikana tehdyt "
+"muutokset pysyvästi."
+
+#: ../admin-tool/saveconfirm.py:53
+msgid ""
+"If you don't save, changes from the last minute will be permanently lost."
+msgstr ""
+"Jos et tallenna muutoksia, hukkuvat viimeisen minuutin aikana tehdyt "
+"muutokset pysyvästi."
+
+#: ../admin-tool/saveconfirm.py:57
+#, python-format
+msgid ""
+"If you don't save, changes from the last minute and %ld second will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last minute and %ld seconds will be "
+"permanently lost."
+msgstr[0] ""
+"Jos et tallenna muutoksia, hukkuvat viimeisen minuutin ja %ld sekunnin "
+"aikana tehdyt muutokset pysyvästi."
+msgstr[1] ""
+"Jos et tallenna muutoksia, hukkuvat viimeisen minuutin ja %ld sekunnin "
+"aikana tehdyt muutokset pysyvästi."
+
+#: ../admin-tool/saveconfirm.py:64
+#, python-format
+msgid ""
+"If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld minutes will be permanently "
+"lost."
+msgstr[0] ""
+"Jos et tallenna muutoksia, hukkuvat viimeisen %ld minuutin aikana tehdyt "
+"muutokset pysyvästi."
+msgstr[1] ""
+"Jos et tallenna muutoksia, hukkuvat viimeisten %ld minuutin aikana tehdyt "
+"muutokset pysyvästi."
+
+#: ../admin-tool/saveconfirm.py:73 ../admin-tool/saveconfirm.py:83
+#, python-format
+msgid "If you don't save, changes from the last hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] ""
+"Jos et tallenna muutoksia, hukkuvat viimeisen %ld tunnin aikana tehdyt "
+"muutokset pysyvästi."
+msgstr[1] ""
+"Jos et tallenna muutoksia, hukkuvat viimeisten %ld tunnin aikana tehdyt "
+"muutokset pysyvästi."
+
+#: ../admin-tool/saveconfirm.py:76
+#, python-format
+msgid ""
+"If you don't save, changes from the last hour and %d minute will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last hour and %d minutes will be "
+"permanently lost."
+msgstr[0] ""
+"Jos et tallenna muutoksia, hukkuvat viimeisten tunnin ja %ld minuutin aikana "
+"tehdyt muutokset pysyvästi."
+msgstr[1] ""
+"Jos et tallenna muutoksia, hukkuvat viimeisten tunnin ja %ld minuutin aikana "
+"tehdyt muutokset pysyvästi."
+
+#: ../admin-tool/sessionwindow.py:153
+#, python-format
+msgid "Editing profile %s"
+msgstr "Muokataan profiilia %s"
+
+#: ../admin-tool/sessionwindow.py:176
+msgid "_Quit"
+msgstr "_Lopeta"
+
+#: ../admin-tool/sessionwindow.py:178
+msgid "_Changes"
+msgstr "_Muutokset"
+
+#: ../admin-tool/sessionwindow.py:178
+msgid "Edit changes"
+msgstr "Muokkaa muutoksia"
+
+#: ../admin-tool/sessionwindow.py:179
+msgid "_Lockdown"
+msgstr "_Käyttörajoitukset"
+
+#: ../admin-tool/sessionwindow.py:179
+msgid "Edit Lockdown settings"
+msgstr "Muokkaa käyttörajoituksia"
+
+#: ../admin-tool/sessionwindow.py:184
+msgid "Enforce Mandatory"
+msgstr "Pakota vaaditut asetukset"
+
+#: ../admin-tool/sessionwindow.py:184
+msgid "Enforce mandatory settings in the editing session"
+msgstr "Pakota vaaditut asetukset muokkausistunnossa"
+
+#: ../admin-tool/sessionwindow.py:273
+#, python-format
+msgid "Lockdown settings for %s"
+msgstr "Käyttörajoitukset käyttäjälle %s"
+
+#: ../admin-tool/usersdialog.py:67
+#, python-format
+msgid "Users for profile %s"
+msgstr "Profiilin %s käyttäjät"
+
+#: ../admin-tool/usersdialog.py:95
+msgid "Use This Profile"
+msgstr "Käytä tätä profiilia"
+
+#: ../lib/dirmonitor.py:151
+#, python-format
+msgid "Failed to add monitor for %s"
+msgstr "Kohdan %s tarkkailijan lisäys epäonnistui"
+
+#: ../lib/dirmonitor.py:231
+#, python-format
+msgid "Expected event: %s %s"
+msgstr "Odotettiin tapahtumaa: %s %s"
+
+#: ../lib/protosession.py:142
+msgid "Unable to find a free X display"
+msgstr "Vapaa X-näyttöä ei löydy"
+
+#: ../lib/protosession.py:409
+msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+msgstr ""
+"Xnestin käynnistys epäonnistui: Aikakatkaisu odotettaessa signaalia USR1"
+
+#: ../lib/protosession.py:411
+msgid "Failed to start Xnest: died during startup"
+msgstr "Xnestin käynnistys epäonnistui: ohjelma kaatui käynnistettäessä"
+
+#: ../lib/sources/filessource.py:68
+#, python-format
+msgid "File '%s' created"
+msgstr "Tiedosto \"%s\" luotu"
+
+#: ../lib/sources/filessource.py:70
+#, python-format
+msgid "File '%s' deleted"
+msgstr "Tiedosto \"%s\" poistettu"
+
+#: ../lib/sources/filessource.py:72
+#, python-format
+msgid "File '%s' changed"
+msgstr "Tiedostoa \"%s\" muutettu"
+
+#: ../lib/sources/filessource.py:96
+msgid "Applications menu"
+msgstr "Sovellusvalikko"
+
+#: ../lib/sources/filessource.py:98
+msgid "Preferences menu"
+msgstr "Asetusvalikko"
+
+#: ../lib/sources/filessource.py:100
+msgid "Server Settings menu"
+msgstr "Palvelimen asetusvalikko"
+
+#: ../lib/sources/filessource.py:102
+msgid "System Settings menu"
+msgstr "Järjestelmän asetusvalikko"
+
+#: ../lib/sources/filessource.py:104
+msgid "Start Here menu"
+msgstr "Käynnistysvalikko"
+
+#: ../lib/sources/gconfsource.py:89
+#, python-format
+msgid "GConf key '%s' unset"
+msgstr "GConf-avaimen \"%s\" arvo poistettu"
+
+#: ../lib/sources/gconfsource.py:91
+#, python-format
+msgid "GConf key '%s' set to string '%s'"
+msgstr "GConf-avain \"%s\" asetettu merkkijonoksi \"%s\""
+
+#: ../lib/sources/gconfsource.py:93
+#, python-format
+msgid "GConf key '%s' set to integer '%s'"
+msgstr "GConf-avain \"%s\" asetettu kokonaisluvuksi \"%s\""
+
+#: ../lib/sources/gconfsource.py:95
+#, python-format
+msgid "GConf key '%s' set to float '%s'"
+msgstr "GConf-avain \"%s\" asetettu liukuluvuksi \"%s\""
+
+#: ../lib/sources/gconfsource.py:97
+#, python-format
+msgid "GConf key '%s' set to boolean '%s'"
+msgstr "GConf-avain \"%s\" asetettu totuusarvoksi \"%s\""
+
+#: ../lib/sources/gconfsource.py:99
+#, python-format
+msgid "GConf key '%s' set to schema '%s'"
+msgstr "GConf-avain \"%s\" asetettu skeemaksi \"%s\""
+
+#: ../lib/sources/gconfsource.py:101
+#, python-format
+msgid "GConf key '%s' set to list '%s'"
+msgstr "GConf-avain \"%s\" asetettu listaksi \"%s\""
+
+#: ../lib/sources/gconfsource.py:103
+#, python-format
+msgid "GConf key '%s' set to pair '%s'"
+msgstr "GConf-avain \"%s\" asetettu pariksi \"%s\""
+
+#: ../lib/sources/gconfsource.py:105
+#, python-format
+msgid "GConf key '%s' set to '%s'"
+msgstr "GConf avain \"%s\" asetettu arvoon \"%s\""
+
+#: ../lib/sources/gconfsource.py:136
+msgid "Default GConf settings"
+msgstr "GConf-asetusten oletukset"
+
+#: ../lib/sources/gconfsource.py:138
+msgid "Mandatory GConf settings"
+msgstr "Vaaditut GConf-asetukset"
+
+#: ../lib/sources/mozillasource.py:132
+#, python-format
+msgid "Mozilla key '%s' set to '%s'"
+msgstr "Mozillan avain \"%s\" asetettu arvoon \"%s\""
+
+#: ../lib/sources/mozillasource.py:134
+#, python-format
+msgid "Mozilla key '%s' unset"
+msgstr "Mozillan avaimen \"%s\" arvo poistettu"
+
+#: ../lib/sources/mozillasource.py:136
+#, python-format
+msgid "Mozilla key '%s' changed to '%s'"
+msgstr "Mozillan avaimen \"%s\" arvo muutettu arvoksi \"%s\""
+
+#: ../lib/sources/mozillasource.py:165 ../lib/sources/mozillasource.py:175
+msgid "Web browser preferences"
+msgstr "WWW-selaimen asetukset"
+
+#: ../lib/sources/mozillasource.py:167 ../lib/sources/mozillasource.py:177
+msgid "Web browser bookmarks"
+msgstr "WWW-selaimen kirjanmerkit"
+
+#: ../lib/sources/mozillasource.py:169
+msgid "Web browser profile list"
+msgstr "WWW-selaimen profiililista"
+
+#: ../lib/sources/mozillasource.py:520
+#, python-format
+msgid "File Not Found (%s)"
+msgstr "Tiedosta ei löydy (%s)"
+
+#: ../lib/sources/mozillasource.py:871
+#, python-format
+msgid "duplicate name(%(name)s) in section %(section)s"
+msgstr "kahdennettu nimi(%(name)s) kohdassa %(section)s"
+
+#: ../lib/sources/mozillasource.py:880
+#, python-format
+msgid "redundant default in section %s"
+msgstr "ylimääräinen oletus osiossa %s"
+
+#: ../lib/sources/mozillasource.py:897
+msgid "no default profile"
+msgstr "ei oletusprofiilia"
+
+#: ../lib/sources/mozillasource.py:952
+#, python-format
+msgid "Mozilla bookmark created '%s' -> '%s'"
+msgstr "Mozillan kirjanmerkki luotu \"%s\" -> \"%s\""
+
+#: ../lib/sources/mozillasource.py:954
+#, python-format
+msgid "Mozilla bookmark folder created '%s'"
+msgstr "Mozillan kirjanmerkkikansio luotu \"%s\""
+
+#: ../lib/sources/mozillasource.py:957
+#, python-format
+msgid "Mozilla bookmark deleted '%s'"
+msgstr "Mozillan kirjanmerkki poistettu \"%s\""
+
+#: ../lib/sources/mozillasource.py:959
+#, python-format
+msgid "Mozilla bookmark folder deleted '%s'"
+msgstr "Mozilla kirjanmerkkikansio poistettu \"%s\""
+
+#: ../lib/sources/mozillasource.py:962
+#, python-format
+msgid "Mozilla bookmark changed '%s' '%s'"
+msgstr "Mozillan kirjanmerkkiä muutettu \"%s\" \"%s\""
+
+#: ../lib/sources/mozillasource.py:964
+#, python-format
+msgid "Mozilla bookmark folder changed '%s'"
+msgstr "Mozilla kirjanmerkkikansiota muutettu \"%s\""
+
+#: ../lib/sources/paneldelegate.py:58
+#, python-format
+msgid "Panel '%s' added"
+msgstr "Paneeli \"%s\" lisätty"
+
+#: ../lib/sources/paneldelegate.py:64
+#, python-format
+msgid "Panel '%s' removed"
+msgstr "Paneeli \"%s\" poistettu"
+
+#: ../lib/sources/paneldelegate.py:70
+#, python-format
+msgid "Panel applet '%s' added"
+msgstr "Paneelin sovelma \"%s\" lisätty"
+
+#: ../lib/sources/paneldelegate.py:76
+#, python-format
+msgid "Panel applet '%s' removed"
+msgstr "Paneelin sovelma \"%s\" poistettu"
+
+#: ../lib/sources/paneldelegate.py:82
+#, python-format
+msgid "Panel object '%s' added"
+msgstr "Paneelin osa \"%s\" lisätty"
+
+#: ../lib/sources/paneldelegate.py:94
+#, python-format
+msgid "Panel object '%s' removed"
+msgstr "Paneelin osa \"%s\" poistettu"
+
+#: ../lib/sources/paneldelegate.py:375
+msgid "Panel File"
+msgstr "Paneelitiedosto"
+
+#: ../lib/storage.py:173
+#, python-format
+msgid "Failed to read file '%s': %s"
+msgstr "Tiedostoa \"%s\" ei voitu lukea: %s"
+
+#: ../lib/storage.py:183
+#, python-format
+msgid "Failed to read metadata from '%s': %s"
+msgstr "Metatietoa tiedostosta \"%s\" ei voitu lukea: %s"
+
+#: ../lib/storage.py:189
+#, python-format
+msgid "Invalid metadata section in '%s': %s"
+msgstr "Virheellinen metadataosa tiedostossa \"%s\": %s"
+
+#: ../lib/storage.py:363
+#, python-format
+msgid "Cannot add non-existent file '%s'"
+msgstr "Olematonta tiedostoa \"%s\" ei voida lisätä"
+
+#: ../lib/storage.py:540
+#, python-format
+msgid "Profile is read-only %s"
+msgstr "Profiili on kirjoitussuojattu %s"
+
+#: ../lib/unittests.py:38 ../lib/unittests.py:39
+msgid "Ignore WARNINGs"
+msgstr "Ohita varoitukset"
+
+#: ../lib/unittests.py:61
+#, python-format
+msgid "Running %s tests"
+msgstr "Suoritetaan %s testiä"
+
+#: ../lib/unittests.py:63
+#, python-format
+msgid "Running %s tests (%s)"
+msgstr "Suoritetaan %s testiä (%s)"
+
+#: ../lib/unittests.py:70
+msgid "Success!"
+msgstr "Onnistui!"
+
+#: ../lib/userdb.py:52
+#, python-format
+msgid "invalid type for setting %s in %s"
+msgstr "virheellinen tyyppi asetukselle %s kohdassa %s"
+
+#: ../lib/userdb.py:212
+#, python-format
+msgid "No search based specified for %s"
+msgstr "Hakualuetta ei ole määritelty arvolle %s"
+
+#: ../lib/userdb.py:215
+#, python-format
+msgid "No query filter specified for %s"
+msgstr "Kyselyn suodatinta ei ole määritelty arvolle %s"
+
+#: ../lib/userdb.py:218
+#, python-format
+msgid "No result attribute specified for %s"
+msgstr "Tulosattribuuttia ei ole määritelty arvolle %s"
+
+#: ../lib/userdb.py:227
+msgid "Scope must be one of sub, base and one"
+msgstr "Kattavuuden tulee olla joko sub, base tai one"
+
+#: ../lib/userdb.py:247
+msgid "multiple_result must be one of first and random"
+msgstr "arvon multiple_result tulee olla joko \"first\" tai \"random\""
+
+#: ../lib/userdb.py:339
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "Tiedostoa %s ei voitu avata kirjoitettavaksi"
+
+#: ../lib/userdb.py:352
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "Käyttäjän tiedostokantaa ei voitu tallentaa tiedostoon %s"
+
+#: ../lib/userdb.py:375 ../lib/userdb.py:410
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "Tiedosto %s ei ole profiilien asetustiedosto"
+
+#: ../lib/userdb.py:382
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "Oletusprofiilin %s lisäys asetuksiin epäonnistui"
+
+#: ../lib/userdb.py:418
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "Käyttäjää %s ei voitu lisätä profiilin asetuksiin"
+
+#: ../lib/userdb.py:449
+msgid "Failed to get the user list"
+msgstr "Käyttäjälistaa ei voitu lukea"
+
+#: ../lib/util.py:127
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"Kotihakemistoa ei löydy: se ei ole asetettu /etc/passwd-tiedostossa eikä "
+"muuttujassa $HOME."
+
+#: ../lib/util.py:140
+msgid ""
+"Cannot find username: not set in /etc/passwd and no value for $USER in "
+"environment"
+msgstr ""
+"Käyttäjätunnusta ei löydy: se ei ole asetettu /etc/passwd-tiedostossa eikä "
+"muuttujassa $USER"
