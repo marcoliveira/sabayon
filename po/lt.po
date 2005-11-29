@@ -1,0 +1,846 @@
+# Lithuanian translation of Sabayon.
+# Copyright (C) 2005 Free Software Foundation, Inc.
+# This file is distributed under the same license as the Sabayon package.
+# Žygimantas Beručka <zygis@gnome.org>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Sabayon HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-11-29 12:47+0200\n"
+"PO-Revision-Date: 2005-11-29 13:39+0200\n"
+"Last-Translator: Žygimantas Beručka <zygis@gnome.org>\n"
+"Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../admin-tool/aboutdialog.py:63
+msgid "Program to establish and edit profiles for users"
+msgstr "Naudotojų profilių kūrimo ir redagavimo programa"
+
+#: ../admin-tool/aboutdialog.py:66
+msgid "translator-credits"
+msgstr "Žygimantas Beručka <zygis@gnome.org>"
+
+#: ../admin-tool/changeswindow.py:50
+#, python-format
+msgid "Changes in profile %s"
+msgstr "Pakeitimai profilyje %s"
+
+#: ../admin-tool/changeswindow.py:106
+msgid "Ignore"
+msgstr "Ignoruoti"
+
+#: ../admin-tool/changeswindow.py:113
+msgid "Lock"
+msgstr "Užrakinti"
+
+#: ../admin-tool/changeswindow.py:120 ../admin-tool/editorwindow.py:224
+msgid "Description"
+msgstr "Aprašymas"
+
+#: ../admin-tool/editorwindow.py:97
+#, python-format
+msgid "Profile %s"
+msgstr "Profilis %s"
+
+#: ../admin-tool/editorwindow.py:189 ../admin-tool/sessionwindow.py:174
+msgid "_Profile"
+msgstr "_Profilis"
+
+#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
+msgid "_Save"
+msgstr "Iš_saugoti"
+
+#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
+msgid "Save profile"
+msgstr "Išsaugoti profilį"
+
+#: ../admin-tool/editorwindow.py:191
+msgid "_Close"
+msgstr "_Užverti"
+
+#: ../admin-tool/editorwindow.py:191 ../admin-tool/sessionwindow.py:176
+msgid "Close the current window"
+msgstr "Užverti esamą langą"
+
+#: ../admin-tool/editorwindow.py:192 ../admin-tool/sessionwindow.py:177
+msgid "_Edit"
+msgstr "_Keisti"
+
+#: ../admin-tool/editorwindow.py:193
+msgid "_Delete"
+msgstr "_Ištrinti"
+
+#: ../admin-tool/editorwindow.py:193
+msgid "Delete item"
+msgstr "Ištrinti elementą"
+
+#: ../admin-tool/editorwindow.py:194 ../admin-tool/sessionwindow.py:180
+msgid "_Help"
+msgstr "_Pagalba"
+
+#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:181
+msgid "_About"
+msgstr "_Apie"
+
+#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:181
+msgid "About Sabayon"
+msgstr "Apie Sabayon"
+
+#: ../admin-tool/editorwindow.py:254 ../lib/sources/gconfsource.py:123
+msgid "GConf"
+msgstr "GConf"
+
+#: ../admin-tool/editorwindow.py:258 ../lib/sources/filessource.py:78
+msgid "Files"
+msgstr "Bylos"
+
+#: ../admin-tool/editorwindow.py:258 ../admin-tool/lockdown/pessulus.glade.h:7
+#: ../lib/sources/paneldelegate.py:134
+msgid "Panel"
+msgstr "Skydelis"
+
+#: ../admin-tool/fileviewer.py:29
+#, python-format
+msgid "Profile file: %s"
+msgstr "Profilio byla: %s"
+
+#: ../admin-tool/gconfviewer.py:59 ../admin-tool/gconfviewer.py:78
+msgid "<no type>"
+msgstr "<nėra tipo>"
+
+#: ../admin-tool/gconfviewer.py:60
+msgid "<no value>"
+msgstr "<nėra reikšmės>"
+
+#: ../admin-tool/gconfviewer.py:64
+msgid "string"
+msgstr "eilutė"
+
+#: ../admin-tool/gconfviewer.py:66
+msgid "integer"
+msgstr "sveikasis sk."
+
+#: ../admin-tool/gconfviewer.py:68
+msgid "float"
+msgstr "sl. kablelio sk."
+
+#: ../admin-tool/gconfviewer.py:70
+msgid "boolean"
+msgstr "loginė"
+
+#: ../admin-tool/gconfviewer.py:72
+msgid "schema"
+msgstr "schema"
+
+#: ../admin-tool/gconfviewer.py:74
+msgid "list"
+msgstr "sąrašas"
+
+#: ../admin-tool/gconfviewer.py:76
+msgid "pair"
+msgstr "pora"
+
+#: ../admin-tool/gconfviewer.py:88
+#, python-format
+msgid "Profile settings: %s"
+msgstr "Profilio nustatymai: %s"
+
+#: ../admin-tool/gconfviewer.py:112 ../admin-tool/profilesdialog.py:315
+#: ../admin-tool/usersdialog.py:85
+msgid "Name"
+msgstr "Vardas"
+
+#: ../admin-tool/gconfviewer.py:117
+msgid "Type"
+msgstr "Tipas"
+
+#: ../admin-tool/gconfviewer.py:122
+msgid "Value"
+msgstr "Reikšmė"
+
+#: ../admin-tool/lockdown/lockdownbutton.py:99
+msgid "Click to make this setting not mandatory"
+msgstr "Spragtelėkite norėdami padaryti šį nustatymą neprivalomu"
+
+#: ../admin-tool/lockdown/lockdownbutton.py:101
+msgid "Click to make this setting mandatory"
+msgstr "Spragtelėkite norėdami padaryti šį nustatymą privalomu"
+
+#: ../admin-tool/lockdown/maindialog.py:47
+msgid "Disable _command line"
+msgstr "Išjungti _komandų eilutę"
+
+#: ../admin-tool/lockdown/maindialog.py:48
+msgid "Disable _printing"
+msgstr "Išjungti s_pausdinimą"
+
+#: ../admin-tool/lockdown/maindialog.py:49
+msgid "Disable print _setup"
+msgstr "Išjungti spausdinimo _nustatymus"
+
+#: ../admin-tool/lockdown/maindialog.py:50
+msgid "Disable save to _disk"
+msgstr "Išjungti saugojimą į _diską"
+
+#: ../admin-tool/lockdown/maindialog.py:52
+msgid "_Lock down the panels"
+msgstr "_Užrakinti skydelius"
+
+#: ../admin-tool/lockdown/maindialog.py:53
+msgid "Disable force _quit"
+msgstr "Išjungti priverstinį _išėjimą"
+
+#: ../admin-tool/lockdown/maindialog.py:54
+msgid "Disable lock _screen"
+msgstr "Išjungti _ekrano užrakinimą"
+
+#: ../admin-tool/lockdown/maindialog.py:55
+msgid "Disable log _out"
+msgstr "Išjungti _atsijungimą"
+
+#: ../admin-tool/lockdown/maindialog.py:57
+msgid "Disable _quit"
+msgstr "Išjungti _išėjimą"
+
+#: ../admin-tool/lockdown/maindialog.py:58
+msgid "Disable _arbitrary URL"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:59
+msgid "Disable _bookmark editing"
+msgstr "Išjungti ž_ymėlių redagavimą"
+
+#: ../admin-tool/lockdown/maindialog.py:60
+msgid "Disable _history"
+msgstr "Išjungti ist_oriją"
+
+#: ../admin-tool/lockdown/maindialog.py:61
+msgid "Disable _javascript chrome"
+msgstr "Išjungti _javascript chromą"
+
+#: ../admin-tool/lockdown/maindialog.py:62
+msgid "Disable _toolbar editing"
+msgstr "Išjungti į_rankių juostų redagavimą"
+
+#: ../admin-tool/lockdown/maindialog.py:63
+msgid "_Fullscreen"
+msgstr "_Visame ekrane"
+
+#: ../admin-tool/lockdown/maindialog.py:64
+msgid "Hide _menubar"
+msgstr "Paslėpti _meniu juostą"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:1
+msgid "<b>Disabled Applets</b>"
+msgstr "<b>Išjungti įtaisai</b>"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:2
+msgid "<b>Safe Protocols</b>"
+msgstr "<b>Saugūs protokolai</b>"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:3
+msgid "Disable _unsafe protocols"
+msgstr "Išjungti _nesaugius protokolus"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:4
+msgid "Epiphany Web Browser"
+msgstr "Epiphany web naršyklė"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:5
+msgid "General"
+msgstr "Bendra"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:6
+msgid "Lockdown Editor"
+msgstr "Užrakinimo redaktorius"
+
+#.
+#. Translators: this string specifies how a profile
+#. name is concatenated with an integer
+#. to form a unique profile name e.g.
+#. "Artist Workstation (5)"
+#.
+#: ../admin-tool/profilesdialog.py:415
+#, python-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../admin-tool/sabayon:44
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr ""
+"Jūsų abonementui neleidžiama paleisti Darbo aplinkos naudotojų profilių įrankio"
+
+#: ../admin-tool/sabayon:45
+msgid ""
+"Administrator level permissions are needed to run this program because it "
+"can modify system files."
+msgstr ""
+"Norint paleisti šią programą reikalingos administratoriaus lygio teisės, "
+"nes ji gali modifikuoti sistemines bylas."
+
+#: ../admin-tool/sabayon:50
+msgid "Desktop User Profiles tool is already running"
+msgstr "Darbo aplinkos naudotojų profilių įrankis jau paleistas"
+
+#: ../admin-tool/sabayon:51
+msgid ""
+"You may not use Desktop User Profiles tool from within a profile editing "
+"session"
+msgstr ""
+"Negalite naudoti Darbo aplinkos naudotojų profilių įrankio profilių redagavimo "
+"sesijoje"
+
+#: ../admin-tool/sabayon:58
+#, c-format
+msgid "User account '%s' was not found"
+msgstr "Naudotojo abonementas „%s“ nerastas"
+
+#: ../admin-tool/sabayon:59
+#, c-format
+msgid ""
+"Sabayon requires a special user account '%s' to be present on this computer. "
+"Try again after creating the account (using, for example, the 'adduser' "
+"command)"
+msgstr ""
+"Sabayon reikia, kad šiame kompiuteryje būtų specialus naudotojo abonementas „%s“. "
+"Kai sukursite šį abonementą (pvz., naudodami komandą „adduser“), bandykite dar kartą."
+
+#: ../admin-tool/sabayon-apply:39
+#, c-format
+msgid "No profile for user '%s' found\n"
+msgstr "Naudotojo „%s“ profilis nerastas\n"
+
+#: ../admin-tool/sabayon-apply:44
+#, c-format
+msgid "Usage: %s [<profile-name>]\n"
+msgstr "Naudojimas: %s [<profilio-pavadinimas>]\n"
+
+#: ../admin-tool/sabayon-session:32
+#, c-format
+msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
+msgstr "Naudojimas: %s <profilio-pavadinimas> <profilio-kelias> <ekrano-numeris>\n"
+
+#: ../admin-tool/sabayon.desktop.in.h:1
+msgid "Establish and Edit Profiles for Users"
+msgstr "Kurti ir redaguoti naudotojų profilius"
+
+#: ../admin-tool/sabayon.desktop.in.h:2 ../admin-tool/sabayon.glade.h:4
+msgid "User Profile Editor"
+msgstr "Naudotojų profilių redaktorius"
+
+#: ../admin-tool/sabayon.glade.h:1
+msgid "Add Profile"
+msgstr "Pridėti profilį"
+
+#: ../admin-tool/sabayon.glade.h:2
+msgid "Profile _name:"
+msgstr "Profilio _pavadinimas:"
+
+#: ../admin-tool/sabayon.glade.h:3
+msgid "Use this profile for _all users"
+msgstr "Naudoti šį profilį _visiems naudotojams"
+
+#: ../admin-tool/sabayon.glade.h:5
+msgid "_Base on:"
+msgstr "_Paremti:"
+
+#: ../admin-tool/sabayon.glade.h:6
+msgid "_Profiles:"
+msgstr "_Profiliai:"
+
+#: ../admin-tool/sabayon.glade.h:7
+msgid "_Users"
+msgstr "_Naudotojai"
+
+#: ../admin-tool/sabayon.glade.h:8
+msgid "_Users:"
+msgstr "_Naudotojai:"
+
+#: ../admin-tool/saveconfirm.py:36
+msgid "Close _Without Saving"
+msgstr "Užverti _neišsaugant"
+
+#: ../admin-tool/saveconfirm.py:43
+#, python-format
+msgid "Save changes to profile \"%s\" before closing?"
+msgstr "Prieš užveriant išsaugoti pakeitimus profiliui „%s“?"
+
+#: ../admin-tool/saveconfirm.py:47
+#, python-format
+msgid ""
+"If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld seconds will be permanently "
+"lost."
+msgstr[0] ""
+"Jeigu neišsaugosite, pakeitimai atlikti per paskutinę %ld sekundę bus negrįžtamai "
+"prarasti."
+msgstr[1] ""
+"Jeigu neišsaugosite, pakeitimai atlikti per paskutines %ld sekundes bus negrįžtamai "
+"prarasti."
+msgstr[2] ""
+"Jeigu neišsaugosite, pakeitimai atlikti per paskutines %ld sekundžių bus negrįžtamai "
+"prarasti."
+
+#: ../admin-tool/saveconfirm.py:53
+msgid ""
+"If you don't save, changes from the last minute will be permanently lost."
+msgstr ""
+"Jeigu neišsaugosite, pakeitimai atlikti per paskutinę minutę bus negrįžtamai "
+"prarasti."
+
+#: ../admin-tool/saveconfirm.py:57
+#, python-format
+msgid ""
+"If you don't save, changes from the last minute and %ld second will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last minute and %ld seconds will be "
+"permanently lost."
+msgstr[0] ""
+"Jeigu neišsaugosite, pakeitimai atlikti per paskutinę minutę ir %ld sekundę "
+"bus negrįžtamai prarasti."
+msgstr[1] ""
+"Jeigu neišsaugosite, pakeitimai atlikti per paskutinę minutę ir %ld sekundes "
+"bus negrįžtamai prarasti."
+msgstr[2] ""
+"Jeigu neišsaugosite, pakeitimai atlikti per paskutinę minutę ir %ld sekundžių "
+"bus negrįžtamai prarasti."
+
+#: ../admin-tool/saveconfirm.py:64
+#, python-format
+msgid ""
+"If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld minutes will be permanently "
+"lost."
+msgstr[0] ""
+"Jeigu neišsaugosite, pakeitimai atlikti per paskutinę %ld minutę bus negrįžtamai "
+"prarasti."
+msgstr[1] ""
+"Jeigu neišsaugosite, pakeitimai atlikti per paskutines %ld minutes bus negrįžtamai "
+"prarasti."
+msgstr[2] ""
+"Jeigu neišsaugosite, pakeitimai atlikti per paskutines %ld minučių bus negrįžtamai "
+"prarasti."
+
+#: ../admin-tool/saveconfirm.py:73 ../admin-tool/saveconfirm.py:83
+#, python-format
+msgid "If you don't save, changes from the last hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] ""
+"Jeigu neišsaugosite, pakeitimai atlikti per paskutinę valandą bus negrįžtamai "
+"prarasti."
+msgstr[1] ""
+"Jeigu neišsaugosite, pakeitimai atlikti per paskutines %d valandas bus negrįžtamai "
+"prarasti."
+msgstr[2] ""
+"Jeigu neišsaugosite, pakeitimai atlikti per paskutines %d valandų bus negrįžtamai "
+"prarasti."
+
+#: ../admin-tool/saveconfirm.py:76
+#, python-format
+msgid ""
+"If you don't save, changes from the last hour and %d minute will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last hour and %d minutes will be "
+"permanently lost."
+msgstr[0] ""
+"Jeigu neišsaugosite, pakeitimai atlikti per paskutinę valandą ir %d minutę "
+"bus negrįžtamai prarasti."
+msgstr[1] ""
+"Jeigu neišsaugosite, pakeitimai atlikti per paskutinę valandą ir %d minutes "
+"bus negrįžtamai prarasti."
+msgstr[2] ""
+"Jeigu neišsaugosite, pakeitimai atlikti per paskutinę valandą ir %d minučių "
+"bus negrįžtamai prarasti."
+
+#: ../admin-tool/sessionwindow.py:153
+#, python-format
+msgid "Editing profile %s"
+msgstr "Redaguojamas profilis %s"
+
+#: ../admin-tool/sessionwindow.py:176
+msgid "_Quit"
+msgstr "Iš_eiti"
+
+#: ../admin-tool/sessionwindow.py:178
+msgid "_Changes"
+msgstr "_Pakeitimai"
+
+#: ../admin-tool/sessionwindow.py:178
+msgid "Edit changes"
+msgstr "Redaguoti pakeitimus"
+
+#: ../admin-tool/sessionwindow.py:179
+msgid "_Lockdown"
+msgstr "_Užrakinti"
+
+#: ../admin-tool/sessionwindow.py:179
+msgid "Edit Lockdown settings"
+msgstr "Redaguoti užrakinimo nustatymus"
+
+#: ../admin-tool/sessionwindow.py:184
+msgid "Enforce Mandatory"
+msgstr "Priverstinai naudoti privalomus"
+
+#: ../admin-tool/sessionwindow.py:184
+msgid "Enforce mandatory settings in the editing session"
+msgstr "Redagavimo sesijoje priverstinai naudoti privalomus nustatymus"
+
+#: ../admin-tool/sessionwindow.py:273
+#, python-format
+msgid "Lockdown settings for %s"
+msgstr "%s užrakinimo nustatymai "
+
+#: ../admin-tool/usersdialog.py:67
+#, python-format
+msgid "Users for profile %s"
+msgstr "Profilio %s naudotojai"
+
+#: ../admin-tool/usersdialog.py:95
+msgid "Use This Profile"
+msgstr "Naudoti šį profilį"
+
+#: ../lib/dirmonitor.py:151
+#, python-format
+msgid "Failed to add monitor for %s"
+msgstr "Nepavyko %s pridėti monitoriaus"
+
+#: ../lib/dirmonitor.py:231
+#, python-format
+msgid "Expected event: %s %s"
+msgstr "Tikėtasi įvykio: %s %s"
+
+#: ../lib/protosession.py:142
+msgid "Unable to find a free X display"
+msgstr "Nepavyko rasti laisvo X ekrano"
+
+#: ../lib/protosession.py:409
+msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+msgstr "Nepavyko paleisti Xnest: nutrauktas laukimas USR1 signalo"
+
+#: ../lib/protosession.py:411
+msgid "Failed to start Xnest: died during startup"
+msgstr "Nepavyko paleisti Xnest: nulūžo paleidimo metu"
+
+#: ../lib/sources/filessource.py:68
+#, python-format
+msgid "File '%s' created"
+msgstr "Sukurta byla „%s“"
+
+#: ../lib/sources/filessource.py:70
+#, python-format
+msgid "File '%s' deleted"
+msgstr "Ištrinta byla „%s“"
+
+#: ../lib/sources/filessource.py:72
+#, python-format
+msgid "File '%s' changed"
+msgstr "Pakeista byla „%s“"
+
+#: ../lib/sources/filessource.py:96
+msgid "Applications menu"
+msgstr "Programų meniu"
+
+#: ../lib/sources/filessource.py:98
+msgid "Preferences menu"
+msgstr "Nustatymų meniu"
+
+#: ../lib/sources/filessource.py:100
+msgid "Server Settings menu"
+msgstr "Serverio nustatymų meniu"
+
+#: ../lib/sources/filessource.py:102
+msgid "System Settings menu"
+msgstr "Sistemos nustatymų meniu"
+
+#: ../lib/sources/filessource.py:104
+msgid "Start Here menu"
+msgstr "„Pradėti čia“ meniu"
+
+#: ../lib/sources/gconfsource.py:89
+#, python-format
+msgid "GConf key '%s' unset"
+msgstr "GConf raktas „%s“ išjungtas"
+
+#: ../lib/sources/gconfsource.py:91
+#, python-format
+msgid "GConf key '%s' set to string '%s'"
+msgstr "GConf raktas „%s“ nustatytas į eilutę „%s“"
+
+#: ../lib/sources/gconfsource.py:93
+#, python-format
+msgid "GConf key '%s' set to integer '%s'"
+msgstr "GConf raktas „%s“ nustatytas į sveikąjį skaičių „%s“"
+
+#: ../lib/sources/gconfsource.py:95
+#, python-format
+msgid "GConf key '%s' set to float '%s'"
+msgstr "GConf raktas „%s“ nustatytas į sl.kablelio skaičių „%s“"
+
+#: ../lib/sources/gconfsource.py:97
+#, python-format
+msgid "GConf key '%s' set to boolean '%s'"
+msgstr "GConf raktas „%s“ nustatytas į loginę reikšmę „%s“"
+
+#: ../lib/sources/gconfsource.py:99
+#, python-format
+msgid "GConf key '%s' set to schema '%s'"
+msgstr "GConf raktas „%s“ nustatytas į schemą „%s“"
+
+#: ../lib/sources/gconfsource.py:101
+#, python-format
+msgid "GConf key '%s' set to list '%s'"
+msgstr "GConf raktas „%s“ nustatytas į sąrašą „%s“"
+
+#: ../lib/sources/gconfsource.py:103
+#, python-format
+msgid "GConf key '%s' set to pair '%s'"
+msgstr "GConf raktas „%s“ nustatytas į porą „%s“"
+
+#: ../lib/sources/gconfsource.py:105
+#, python-format
+msgid "GConf key '%s' set to '%s'"
+msgstr "GConf raktas „%s“ nustatytas į „%s“"
+
+#: ../lib/sources/gconfsource.py:136
+msgid "Default GConf settings"
+msgstr "Numatytieji GConf nustatymai"
+
+#: ../lib/sources/gconfsource.py:138
+msgid "Mandatory GConf settings"
+msgstr "Privalomi GConf nustatymai"
+
+#: ../lib/sources/mozillasource.py:132
+#, python-format
+msgid "Mozilla key '%s' set to '%s'"
+msgstr "Mozilla raktas „%s“ nustatytas į „%s“"
+
+#: ../lib/sources/mozillasource.py:134
+#, python-format
+msgid "Mozilla key '%s' unset"
+msgstr "Mozila raktas „%s“ išjungtas"
+
+#: ../lib/sources/mozillasource.py:136
+#, python-format
+msgid "Mozilla key '%s' changed to '%s'"
+msgstr "Mozilla raktas „%s“ pakeistas į „%s“"
+
+#: ../lib/sources/mozillasource.py:165 ../lib/sources/mozillasource.py:175
+msgid "Web browser preferences"
+msgstr "Web naršyklės nustatymai"
+
+#: ../lib/sources/mozillasource.py:167 ../lib/sources/mozillasource.py:177
+msgid "Web browser bookmarks"
+msgstr "Web naršyklės žymelės"
+
+#: ../lib/sources/mozillasource.py:169
+msgid "Web browser profile list"
+msgstr "Web naršyklės profilių sąrašas"
+
+#: ../lib/sources/mozillasource.py:520
+#, python-format
+msgid "File Not Found (%s)"
+msgstr "Byla nerasta (%s)"
+
+#: ../lib/sources/mozillasource.py:871
+#, python-format
+msgid "duplicate name(%(name)s) in section %(section)s"
+msgstr "dvigubas vardas (%(name)s) skyriuje %(section)s"
+
+#: ../lib/sources/mozillasource.py:880
+#, python-format
+msgid "redundant default in section %s"
+msgstr ""
+
+#: ../lib/sources/mozillasource.py:897
+msgid "no default profile"
+msgstr "nėra numatytojo profilio"
+
+#: ../lib/sources/mozillasource.py:952
+#, python-format
+msgid "Mozilla bookmark created '%s' -> '%s'"
+msgstr "Sukurta Mozilla žymelė „%s“ -> „%s“"
+
+#: ../lib/sources/mozillasource.py:954
+#, python-format
+msgid "Mozilla bookmark folder created '%s'"
+msgstr "Sukurtas Mozilla žymelių aplankas „%s“"
+
+#: ../lib/sources/mozillasource.py:957
+#, python-format
+msgid "Mozilla bookmark deleted '%s'"
+msgstr "Ištrinta Mozilla žymelė „%s“"
+
+#: ../lib/sources/mozillasource.py:959
+#, python-format
+msgid "Mozilla bookmark folder deleted '%s'"
+msgstr "Ištrintas Mozilla žymelių aplankas „%s“"
+
+#: ../lib/sources/mozillasource.py:962
+#, python-format
+msgid "Mozilla bookmark changed '%s' '%s'"
+msgstr "Pakeita Mozilla žymelė „%s“ „%s“"
+
+#: ../lib/sources/mozillasource.py:964
+#, python-format
+msgid "Mozilla bookmark folder changed '%s'"
+msgstr "Pakeistas Mozilla žymelių aplankas „%s“"
+
+#: ../lib/sources/paneldelegate.py:58
+#, python-format
+msgid "Panel '%s' added"
+msgstr "Pridėtas skydelis „%s“"
+
+#: ../lib/sources/paneldelegate.py:64
+#, python-format
+msgid "Panel '%s' removed"
+msgstr "Pašalintas skydelis „%s“"
+
+#: ../lib/sources/paneldelegate.py:70
+#, python-format
+msgid "Panel applet '%s' added"
+msgstr "Pridėtas skydelio įtaisas „%s“"
+
+#: ../lib/sources/paneldelegate.py:76
+#, python-format
+msgid "Panel applet '%s' removed"
+msgstr "Pašalintas skydelio įtaisas „%s“"
+
+#: ../lib/sources/paneldelegate.py:82
+#, python-format
+msgid "Panel object '%s' added"
+msgstr "Pridėtas skydelio obektas „%s“"
+
+#: ../lib/sources/paneldelegate.py:94
+#, python-format
+msgid "Panel object '%s' removed"
+msgstr "Pašalintas skydelio objektas „%s“"
+
+#: ../lib/sources/paneldelegate.py:375
+msgid "Panel File"
+msgstr "Skydelio byla"
+
+#: ../lib/storage.py:173
+#, python-format
+msgid "Failed to read file '%s': %s"
+msgstr "Nepavyko perskaityti bylos „%s“: %s"
+
+#: ../lib/storage.py:183
+#, python-format
+msgid "Failed to read metadata from '%s': %s"
+msgstr "Nepavyko iš „%s“ perskaityti metaduomenų: %s"
+
+#: ../lib/storage.py:189
+#, python-format
+msgid "Invalid metadata section in '%s': %s"
+msgstr "%s yra netinkamas metaduomenų skyrius: %s"
+
+#: ../lib/storage.py:363
+#, python-format
+msgid "Cannot add non-existent file '%s'"
+msgstr "Negalima pridėti neegzistuojančios bylos „%s“"
+
+#: ../lib/storage.py:540
+#, python-format
+msgid "Profile is read-only %s"
+msgstr "Profilis yra tik skaitymui %s"
+
+#: ../lib/unittests.py:38 ../lib/unittests.py:39
+msgid "Ignore WARNINGs"
+msgstr "Ignoruoti ĮSPĖJIMUS"
+
+#: ../lib/unittests.py:61
+#, python-format
+msgid "Running %s tests"
+msgstr "Vykdomi %s testai"
+
+#: ../lib/unittests.py:63
+#, python-format
+msgid "Running %s tests (%s)"
+msgstr "Vykdomi %s testai (%s)"
+
+#: ../lib/unittests.py:70
+msgid "Success!"
+msgstr "Sėkminga!"
+
+#: ../lib/userdb.py:52
+#, python-format
+msgid "invalid type for setting %s in %s"
+msgstr ""
+
+#: ../lib/userdb.py:212
+#, python-format
+msgid "No search based specified for %s"
+msgstr ""
+
+#: ../lib/userdb.py:215
+#, python-format
+msgid "No query filter specified for %s"
+msgstr ""
+
+#: ../lib/userdb.py:218
+#, python-format
+msgid "No result attribute specified for %s"
+msgstr ""
+
+#: ../lib/userdb.py:227
+msgid "Scope must be one of sub, base and one"
+msgstr ""
+
+#: ../lib/userdb.py:247
+msgid "multiple_result must be one of first and random"
+msgstr ""
+
+#: ../lib/userdb.py:339
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "Nepavyko atverti %s rašymui"
+
+#: ../lib/userdb.py:352
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "Nepavyko į %s išsaugoti UserDatabase"
+
+#: ../lib/userdb.py:375 ../lib/userdb.py:410
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "Byla %s nėra profilio konfigūracija"
+
+#: ../lib/userdb.py:382
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "Nepavyko į konfigūraciją įtraukti numatytojo profilio %s"
+
+#: ../lib/userdb.py:418
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "Nepavyko į profilio konfigūraciją įtraukti naudotojo %s"
+
+#: ../lib/userdb.py:449
+msgid "Failed to get the user list"
+msgstr "Nepavyko gauti naudotojų sąrašo"
+
+#: ../lib/util.py:127
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"Nepavyko rasti namų aplanko: nenurodytas nei /etc/passwd, nei aplinkos "
+"kintamąjame $HOME"
+
+#: ../lib/util.py:140
+msgid ""
+"Cannot find username: not set in /etc/passwd and no value for $USER in "
+"environment"
+msgstr ""
+"Nepavyko rasti naudotojo vardo: nenurodytas nei /etc/passwd, nei aplinkos "
+"kintamąjame $USER"
