@@ -1,0 +1,816 @@
+# Thai translation of sabayon.
+# Copyright (C) 2005 Free Software Foundation, Inc.
+# This file is distributed under the same license as the sabayon package.
+# Theppitak Karoonboonyanan <thep@linux.thai.net>, 2005.
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sabayon 2.12.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-12-05 10:48+0700\n"
+"PO-Revision-Date: 2005-12-05 12:44+0700\n"
+"Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
+"Language-Team: Thai <l10n@opentle.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;"
+
+#: admin-tool/aboutdialog.py:63
+msgid "Program to establish and edit profiles for users"
+msgstr "โปรแกรมสร้างและแก้ไขโพรไฟล์ของผู้ใช้"
+
+#: admin-tool/aboutdialog.py:66
+msgid "translator-credits"
+msgstr "เทพพิทักษ์ การุญบุญญานันท์ <thep@linux.thai.net>"
+
+#: admin-tool/changeswindow.py:50
+#, python-format
+msgid "Changes in profile %s"
+msgstr "การเปลี่ยนแปลงในโพรไฟล์ %s"
+
+#: admin-tool/changeswindow.py:106
+msgid "Ignore"
+msgstr "ละเลย"
+
+#: admin-tool/changeswindow.py:113
+msgid "Lock"
+msgstr "ล็อค"
+
+#: admin-tool/changeswindow.py:120 admin-tool/editorwindow.py:224
+msgid "Description"
+msgstr "คำบรรยาย"
+
+#: admin-tool/editorwindow.py:97
+#, python-format
+msgid "Profile %s"
+msgstr "โพรไฟล์ %s"
+
+#: admin-tool/editorwindow.py:189 admin-tool/sessionwindow.py:174
+msgid "_Profile"
+msgstr "โ_พรไฟล์"
+
+#: admin-tool/editorwindow.py:190 admin-tool/sessionwindow.py:175
+msgid "_Save"
+msgstr "_บันทึก"
+
+#: admin-tool/editorwindow.py:190 admin-tool/sessionwindow.py:175
+msgid "Save profile"
+msgstr "บันทึกโพรไฟล์"
+
+#: admin-tool/editorwindow.py:191
+msgid "_Close"
+msgstr "_ปิด"
+
+#: admin-tool/editorwindow.py:191 admin-tool/sessionwindow.py:176
+msgid "Close the current window"
+msgstr "ปิดหน้าต่างปัจจุบัน"
+
+#: admin-tool/editorwindow.py:192 admin-tool/sessionwindow.py:177
+msgid "_Edit"
+msgstr "แ_ก้ไข"
+
+#: admin-tool/editorwindow.py:193
+msgid "_Delete"
+msgstr "_ลบ"
+
+#: admin-tool/editorwindow.py:193
+msgid "Delete item"
+msgstr "ลบรายการออก"
+
+#: admin-tool/editorwindow.py:194 admin-tool/sessionwindow.py:180
+msgid "_Help"
+msgstr "_วิธีใช้"
+
+#: admin-tool/editorwindow.py:195 admin-tool/sessionwindow.py:181
+msgid "_About"
+msgstr "เ_กี่ยวกับ"
+
+#: admin-tool/editorwindow.py:195 admin-tool/sessionwindow.py:181
+msgid "About Sabayon"
+msgstr "เกี่ยวกับ Sabayon"
+
+#: admin-tool/editorwindow.py:254 lib/sources/gconfsource.py:123
+msgid "GConf"
+msgstr "GConf"
+
+#: admin-tool/editorwindow.py:258 lib/sources/filessource.py:78
+msgid "Files"
+msgstr "แฟ้ม"
+
+#: admin-tool/editorwindow.py:258 admin-tool/lockdown/pessulus.glade.h:7
+#: lib/sources/paneldelegate.py:134
+msgid "Panel"
+msgstr "พาเนล"
+
+#: admin-tool/fileviewer.py:29
+#, python-format
+msgid "Profile file: %s"
+msgstr "แฟ้มโพรไฟล์: %s"
+
+#: admin-tool/gconfviewer.py:59 admin-tool/gconfviewer.py:78
+msgid "<no type>"
+msgstr "<ไม่ระบุชนิด>"
+
+#: admin-tool/gconfviewer.py:60
+msgid "<no value>"
+msgstr "<ไม่ได้กำหนดค่า>"
+
+#: admin-tool/gconfviewer.py:64
+msgid "string"
+msgstr "สตริง"
+
+#: admin-tool/gconfviewer.py:66
+msgid "integer"
+msgstr "จำนวนเต็ม"
+
+#: admin-tool/gconfviewer.py:68
+msgid "float"
+msgstr "เลขทศนิยม"
+
+#: admin-tool/gconfviewer.py:70
+msgid "boolean"
+msgstr "บูลีน"
+
+#: admin-tool/gconfviewer.py:72
+msgid "schema"
+msgstr "schema"
+
+#: admin-tool/gconfviewer.py:74
+msgid "list"
+msgstr "รายการ"
+
+#: admin-tool/gconfviewer.py:76
+msgid "pair"
+msgstr "คู่"
+
+#: admin-tool/gconfviewer.py:88
+#, python-format
+msgid "Profile settings: %s"
+msgstr "ค่าตั้งของโพรไฟล์: %s"
+
+#: admin-tool/gconfviewer.py:112 admin-tool/profilesdialog.py:315
+#: admin-tool/usersdialog.py:85
+msgid "Name"
+msgstr "ชื่อ"
+
+#: admin-tool/gconfviewer.py:117
+msgid "Type"
+msgstr "ชนิด"
+
+#: admin-tool/gconfviewer.py:122
+msgid "Value"
+msgstr "ค่า"
+
+#: admin-tool/lockdown/lockdownbutton.py:99
+msgid "Click to make this setting not mandatory"
+msgstr "คลิกเพื่อให้ค่าตั้งนี้ไม่เป็นค่าบังคับ"
+
+#: admin-tool/lockdown/lockdownbutton.py:101
+msgid "Click to make this setting mandatory"
+msgstr "คลิกเพื่อให้ค่าตั้งนี้เป็นค่าบังคับ"
+
+#: admin-tool/lockdown/maindialog.py:47
+msgid "Disable _command line"
+msgstr "ห้ามใช้_บรรทัดคำสั่ง"
+
+#: admin-tool/lockdown/maindialog.py:48
+msgid "Disable _printing"
+msgstr "ห้าม_พิมพ์"
+
+#: admin-tool/lockdown/maindialog.py:49
+msgid "Disable print _setup"
+msgstr "ห้าม_ตั้งค่าการพิมพ์"
+
+#: admin-tool/lockdown/maindialog.py:50
+msgid "Disable save to _disk"
+msgstr "ห้าม_บันทึกลงดิสก์"
+
+#: admin-tool/lockdown/maindialog.py:52
+msgid "_Lock down the panels"
+msgstr "_ล็อคค่าตั้งพาเนล"
+
+#: admin-tool/lockdown/maindialog.py:53
+msgid "Disable force _quit"
+msgstr "ห้าม_บังคับออก"
+
+#: admin-tool/lockdown/maindialog.py:54
+msgid "Disable lock _screen"
+msgstr "ห้ามล็อคหน้า_จอ"
+
+#: admin-tool/lockdown/maindialog.py:55
+msgid "Disable log _out"
+msgstr "ห้าม_ออกจากระบบ"
+
+#: admin-tool/lockdown/maindialog.py:57
+msgid "Disable _quit"
+msgstr "ห้าม_ออก"
+
+#: admin-tool/lockdown/maindialog.py:58
+msgid "Disable _arbitrary URL"
+msgstr "ห้ามป้อน URL อิ_สระ"
+
+#: admin-tool/lockdown/maindialog.py:59
+msgid "Disable _bookmark editing"
+msgstr "ห้ามแก้ไข_ที่คั่นหน้า"
+
+#: admin-tool/lockdown/maindialog.py:60
+msgid "Disable _history"
+msgstr "ห้ามใช้_ประวัติการท่องเว็บ"
+
+#: admin-tool/lockdown/maindialog.py:61
+msgid "Disable _javascript chrome"
+msgstr "ห้าม_จาวาสคริปต์ดัดแปลงหน้าตาโปรแกรม"
+
+#: admin-tool/lockdown/maindialog.py:62
+msgid "Disable _toolbar editing"
+msgstr "ห้ามแก้ไขแถบเ_ครื่องมือ"
+
+#: admin-tool/lockdown/maindialog.py:63
+msgid "_Fullscreen"
+msgstr "เ_ต็มจอ"
+
+#: admin-tool/lockdown/maindialog.py:64
+msgid "Hide _menubar"
+msgstr "ซ่อนแถบเ_มนู"
+
+#: admin-tool/lockdown/pessulus.glade.h:1
+msgid "<b>Disabled Applets</b>"
+msgstr "<b>แอพเพล็ตห้ามใช้</b>"
+
+#: admin-tool/lockdown/pessulus.glade.h:2
+msgid "<b>Safe Protocols</b>"
+msgstr "<b>โพรโทคอลที่ปลอดภัย</b>"
+
+#: admin-tool/lockdown/pessulus.glade.h:3
+msgid "Disable _unsafe protocols"
+msgstr "ห้ามใช้โพรโทคอลที่ไ_ม่ปลอดภัย"
+
+#: admin-tool/lockdown/pessulus.glade.h:4
+msgid "Epiphany Web Browser"
+msgstr "เว็บเบราว์เซอร์ Epiphany"
+
+#: admin-tool/lockdown/pessulus.glade.h:5
+msgid "General"
+msgstr "ทั่วไป"
+
+#: admin-tool/lockdown/pessulus.glade.h:6
+msgid "Lockdown Editor"
+msgstr "แก้ไขการจำกัดการใช้งาน"
+
+#.
+#. Translators: this string specifies how a profile
+#. name is concatenated with an integer
+#. to form a unique profile name e.g.
+#. "Artist Workstation (5)"
+#.
+#: admin-tool/profilesdialog.py:415
+#, python-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: admin-tool/sabayon:44
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr ""
+"บัญชีของคุณไม่มีสิทธิ์เรียกใช้เครื่องมือกำหนดโพรไฟล์ผู้ใช้เดสก์ท็อป"
+
+#: admin-tool/sabayon:45
+msgid ""
+"Administrator level permissions are needed to run this program because it "
+"can modify system files."
+msgstr ""
+"ต้องมีสิทธิ์ระดับผู้ดูแลระบบ จึงจะใช้โปรแกรมนี้ได้ เพราะมีการแก้ไขแฟ้มของระบบ"
+
+#: admin-tool/sabayon:50
+msgid "Desktop User Profiles tool is already running"
+msgstr "เครื่องมือกำหนดโพรไฟล์ผู้ใช้เดสก์ท็อปกำลังทำงานอยู่แล้ว"
+
+#: admin-tool/sabayon:51
+msgid ""
+"You may not use Desktop User Profiles tool from within a profile editing "
+"session"
+msgstr ""
+"คุณไม่สามารถใช้เครื่องมือกำหนดโพรไฟล์ผู้ใช้เดสก์ท็อปจากวาระที่กำลังแก้ไขโพรไฟล์ได้"
+
+#: admin-tool/sabayon:58
+#, c-format
+msgid "User account '%s' was not found"
+msgstr "ไม่พบบัญชีผู้ใช้ '%s'"
+
+#: admin-tool/sabayon:59
+#, c-format
+msgid ""
+"Sabayon requires a special user account '%s' to be present on this computer. "
+"Try again after creating the account (using, for example, the 'adduser' "
+"command)"
+msgstr ""
+"Sabayon ต้องการใช้บัญชีผู้ใช้พิเศษ '%s' ในเครื่องนี้ กรุณาสร้างบัญชีดังกล่าว "
+"(โดยใช้เครื่องมือเช่นคำสั่ง 'adduser') แล้วลองใหม่"
+
+#: admin-tool/sabayon-apply:39
+#, c-format
+msgid "No profile for user '%s' found\n"
+msgstr "ไม่พบโพรไฟล์สำหรับผู้ใช้ '%s'\n"
+
+#: admin-tool/sabayon-apply:44
+#, c-format
+msgid "Usage: %s [<profile-name>]\n"
+msgstr "วิธีใช้: %s [<ชื่อโพรไฟล์>]\n"
+
+#: admin-tool/sabayon-session:32
+#, c-format
+msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
+msgstr "วิธีใช้: %s <ชื่อโพรไฟล์> <พาธโพรไฟล์> <หมายเลขดิสเพลย์>\n"
+
+#: admin-tool/sabayon.desktop.in.h:1
+msgid "Establish and Edit Profiles for Users"
+msgstr "สร้างและแก้ไขโพรไฟล์สำหรับผู้ใช้"
+
+#: admin-tool/sabayon.desktop.in.h:2 admin-tool/sabayon.glade.h:4
+msgid "User Profile Editor"
+msgstr "เครื่องมือแก้ไขโพรไฟล์ผู้ใช้"
+
+#: admin-tool/sabayon.glade.h:1
+msgid "Add Profile"
+msgstr "เพิ่มโพรไฟล์"
+
+#: admin-tool/sabayon.glade.h:2
+msgid "Profile _name:"
+msgstr "_ชื่อโพรไฟล์:"
+
+#: admin-tool/sabayon.glade.h:3
+msgid "Use this profile for _all users"
+msgstr "ใช้โพรไฟล์นี้สำหรับผู้ใช้_ทั้งหมด"
+
+#: admin-tool/sabayon.glade.h:5
+msgid "_Base on:"
+msgstr "สร้าง_จาก:"
+
+#: admin-tool/sabayon.glade.h:6
+msgid "_Profiles:"
+msgstr "โ_พรไฟล์:"
+
+#: admin-tool/sabayon.glade.h:7
+msgid "_Users"
+msgstr "_ผู้ใช้"
+
+#: admin-tool/sabayon.glade.h:8
+msgid "_Users:"
+msgstr "_ผู้ใช้:"
+
+#: admin-tool/saveconfirm.py:36
+msgid "Close _Without Saving"
+msgstr "_ปิดโดยไม่บันทึก"
+
+#: admin-tool/saveconfirm.py:43
+#, python-format
+msgid "Save changes to profile \"%s\" before closing?"
+msgstr "บันทึกการเปลี่ยนแปลงในโพรไฟล์ \"%s\" ก่อนปิดหรือไม่?"
+
+#: admin-tool/saveconfirm.py:47
+#, python-format
+msgid ""
+"If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld seconds will be permanently "
+"lost."
+msgstr[0] ""
+"ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดใน %ld วินาทีที่ผ่านมาจะสูญหายอย่างถาวร"
+msgstr[1] ""
+"ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดใน %ld วินาทีที่ผ่านมาจะสูญหายอย่างถาวร"
+
+#: admin-tool/saveconfirm.py:53
+msgid ""
+"If you don't save, changes from the last minute will be permanently lost."
+msgstr ""
+"ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดในนาทีที่ผ่านมาจะสูญหายอย่างถาวร"
+
+#: admin-tool/saveconfirm.py:57
+#, python-format
+msgid ""
+"If you don't save, changes from the last minute and %ld second will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last minute and %ld seconds will be "
+"permanently lost."
+msgstr[0] ""
+"ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดในนาทีกับ %ld วินาทีที่ผ่านมาจะสูญหายอย่างถาวร"
+msgstr[1] ""
+"ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดในนาทีกับ %ld วินาทีที่ผ่านมาจะสูญหายอย่างถาวร"
+
+#: admin-tool/saveconfirm.py:64
+#, python-format
+msgid ""
+"If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld minutes will be permanently "
+"lost."
+msgstr[0] ""
+"ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดใน %ld นาทีที่ผ่านมาจะสูญหายอย่างถาวร"
+msgstr[1] ""
+"ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดใน %ld นาทีที่ผ่านมาจะสูญหายอย่างถาวร"
+
+#: admin-tool/saveconfirm.py:73 admin-tool/saveconfirm.py:83
+#, python-format
+msgid "If you don't save, changes from the last hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดในชั่วโมงที่ผ่านมาจะสูญหายอย่างถาวร"
+msgstr[1] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดใน %d ชั่วโมงที่ผ่านมาจะสูญหายอย่างถาวร"
+
+#: admin-tool/saveconfirm.py:76
+#, python-format
+msgid ""
+"If you don't save, changes from the last hour and %d minute will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last hour and %d minutes will be "
+"permanently lost."
+msgstr[0] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดในชั่วโมงกับ %d นาทีที่ผ่านมาจะสูญหายอย่างถาวร"
+msgstr[1] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดในชั่วโมงกับ %d นาทีที่ผ่านมาจะสูญหายอย่างถาวร"
+
+#: admin-tool/sessionwindow.py:153
+#, python-format
+msgid "Editing profile %s"
+msgstr "กำลังแก้ไขโพรไฟล์ %s"
+
+#: admin-tool/sessionwindow.py:176
+msgid "_Quit"
+msgstr "_ออก"
+
+#: admin-tool/sessionwindow.py:178
+msgid "_Changes"
+msgstr "_การเปลี่ยนแปลง"
+
+#: admin-tool/sessionwindow.py:178
+msgid "Edit changes"
+msgstr "แก้ไขการเปลี่ยนแปลง"
+
+#: admin-tool/sessionwindow.py:179
+msgid "_Lockdown"
+msgstr "_จำกัดการใช้งาน"
+
+#: admin-tool/sessionwindow.py:179
+msgid "Edit Lockdown settings"
+msgstr "แก้ไขค่าตั้งการจำกัดการใช้งาน"
+
+#: admin-tool/sessionwindow.py:184
+msgid "Enforce Mandatory"
+msgstr "ใช้ค่าตั้งบังคับ"
+
+#: admin-tool/sessionwindow.py:184
+msgid "Enforce mandatory settings in the editing session"
+msgstr "บังคับใช้ค่าตั้งบังคับกับวาระที่กำลังแก้ไข"
+
+#: admin-tool/sessionwindow.py:273
+#, python-format
+msgid "Lockdown settings for %s"
+msgstr "ค่าตั้งการจำกัดการใช้งานสำหรับ %s"
+
+#: admin-tool/usersdialog.py:67
+#, python-format
+msgid "Users for profile %s"
+msgstr "ผู้ใช้สำหรับโพรไฟล์ %s"
+
+#: admin-tool/usersdialog.py:95
+msgid "Use This Profile"
+msgstr "ใช้โพรไฟล์นี้"
+
+#: lib/dirmonitor.py:151
+#, python-format
+msgid "Failed to add monitor for %s"
+msgstr "ไม่สามารถเพิ่มการติดตามสำหรับ %s"
+
+#: lib/dirmonitor.py:231
+#, python-format
+msgid "Expected event: %s %s"
+msgstr "เหตุการณ์ที่คาดหวัง: %s %s"
+
+#: lib/protosession.py:142
+msgid "Unable to find a free X display"
+msgstr "หาดิสเพลย์ของ X ที่ว่างไม่พบ"
+
+#: lib/protosession.py:409
+msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+msgstr "เริ่มใช้ Xnest ไม่สำเร็จ: ไม่มีสัญญาณ USR1 เข้ามาในเวลาที่กำหนด"
+
+#: lib/protosession.py:411
+msgid "Failed to start Xnest: died during startup"
+msgstr "เริ่มใช้ Xnest ไม่สำเร็จ: โปรแกรมตายระหว่างเริ่มทำงาน"
+
+#: lib/sources/filessource.py:68
+#, python-format
+msgid "File '%s' created"
+msgstr "สร้างแฟ้ม '%s' แล้ว"
+
+#: lib/sources/filessource.py:70
+#, python-format
+msgid "File '%s' deleted"
+msgstr "ลบแฟ้ม '%s' แล้ว"
+
+#: lib/sources/filessource.py:72
+#, python-format
+msgid "File '%s' changed"
+msgstr "เปลี่ยนแปลงแฟ้ม '%s' แล้ว"
+
+#: lib/sources/filessource.py:96
+msgid "Applications menu"
+msgstr "เมนูโปรแกรม"
+
+#: lib/sources/filessource.py:98
+msgid "Preferences menu"
+msgstr "เมนูปรับแต่ง"
+
+#: lib/sources/filessource.py:100
+msgid "Server Settings menu"
+msgstr "เมนูค่าตั้งเซิร์ฟเวอร์"
+
+#: lib/sources/filessource.py:102
+msgid "System Settings menu"
+msgstr "เมนูค่าตั้งระบบ"
+
+#: lib/sources/filessource.py:104
+msgid "Start Here menu"
+msgstr "เมนูเริ่มต้น"
+
+#: lib/sources/gconfsource.py:89
+#, python-format
+msgid "GConf key '%s' unset"
+msgstr "ล้างค่าคีย์ GConf '%s' แล้ว"
+
+#: lib/sources/gconfsource.py:91
+#, python-format
+msgid "GConf key '%s' set to string '%s'"
+msgstr "ตั้งค่าคีย์ GConf '%s' เป็นสตริง '%s' แล้ว"
+
+#: lib/sources/gconfsource.py:93
+#, python-format
+msgid "GConf key '%s' set to integer '%s'"
+msgstr "ตั้งค่าคีย์ GConf '%s' เป็นจำนวนเต็ม '%s' แล้ว"
+
+#: lib/sources/gconfsource.py:95
+#, python-format
+msgid "GConf key '%s' set to float '%s'"
+msgstr "ตั้งค่าคีย์ GConf '%s' เป็นเลขทศนิยม '%s' แล้ว"
+
+#: lib/sources/gconfsource.py:97
+#, python-format
+msgid "GConf key '%s' set to boolean '%s'"
+msgstr "ตั้งค่าคีย์ GConf '%s' เป็นบูลีน '%s' แล้ว"
+
+#: lib/sources/gconfsource.py:99
+#, python-format
+msgid "GConf key '%s' set to schema '%s'"
+msgstr "ตั้งค่าคีย์ GConf '%s' เป็น schema '%s' แล้ว"
+
+#: lib/sources/gconfsource.py:101
+#, python-format
+msgid "GConf key '%s' set to list '%s'"
+msgstr "ตั้งค่าคีย์ GConf '%s' เป็นรายการ '%s' แล้ว"
+
+#: lib/sources/gconfsource.py:103
+#, python-format
+msgid "GConf key '%s' set to pair '%s'"
+msgstr "ตั้งค่าคีย์ GConf '%s' เป็นคู่ '%s' แล้ว"
+
+#: lib/sources/gconfsource.py:105
+#, python-format
+msgid "GConf key '%s' set to '%s'"
+msgstr "ตั้งค่าคีย์ GConf '%s' เป็น '%s' แล้ว"
+
+#: lib/sources/gconfsource.py:136
+msgid "Default GConf settings"
+msgstr "ค่าตั้ง GConf ปริยาย"
+
+#: lib/sources/gconfsource.py:138
+msgid "Mandatory GConf settings"
+msgstr "ค่าตั้ง GConf บังคับ"
+
+#: lib/sources/mozillasource.py:132
+#, python-format
+msgid "Mozilla key '%s' set to '%s'"
+msgstr "ตั้งค่าคีย์ Mozilla '%s' เป็น '%s' แล้ว"
+
+#: lib/sources/mozillasource.py:134
+#, python-format
+msgid "Mozilla key '%s' unset"
+msgstr "ล้างค่าคีย์ Mozilla '%s' แล้ว"
+
+#: lib/sources/mozillasource.py:136
+#, python-format
+msgid "Mozilla key '%s' changed to '%s'"
+msgstr "เปลี่ยนค่าคีย์ Mozilla '%s' เป็น '%s' แล้ว"
+
+#: lib/sources/mozillasource.py:165 lib/sources/mozillasource.py:175
+msgid "Web browser preferences"
+msgstr "ปรับแต่งเว็บเบราว์เซอร์"
+
+#: lib/sources/mozillasource.py:167 lib/sources/mozillasource.py:177
+msgid "Web browser bookmarks"
+msgstr "ที่คั่นหน้าของเว็บเบราว์เซอร์"
+
+#: lib/sources/mozillasource.py:169
+msgid "Web browser profile list"
+msgstr "รายการโพรไฟล์ของเว็บเบราว์เซอร์"
+
+#: lib/sources/mozillasource.py:520
+#, python-format
+msgid "File Not Found (%s)"
+msgstr "หาแฟ้มไม่พบ (%s)"
+
+#: lib/sources/mozillasource.py:871
+#, python-format
+msgid "duplicate name(%(name)s) in section %(section)s"
+msgstr "ชื่อ (%(name)s) ซ้ำกันในหัวข้อ %(section)s"
+
+#: lib/sources/mozillasource.py:880
+#, python-format
+msgid "redundant default in section %s"
+msgstr "ค่าปริยายส่วนเกินในหัวข้อ %s"
+
+#: lib/sources/mozillasource.py:897
+msgid "no default profile"
+msgstr "ไม่มีโพรไฟล์ปริยาย"
+
+#: lib/sources/mozillasource.py:952
+#, python-format
+msgid "Mozilla bookmark created '%s' -> '%s'"
+msgstr "สร้างที่คั่นหน้าของ Mozilla '%s' -> '%s' แล้ว"
+
+#: lib/sources/mozillasource.py:954
+#, python-format
+msgid "Mozilla bookmark folder created '%s'"
+msgstr "สร้างโฟลเดอร์ที่คั่นหน้า '%s' แล้ว"
+
+#: lib/sources/mozillasource.py:957
+#, python-format
+msgid "Mozilla bookmark deleted '%s'"
+msgstr "ลบที่คั่นหน้า Mozilla '%s' แล้ว"
+
+#: lib/sources/mozillasource.py:959
+#, python-format
+msgid "Mozilla bookmark folder deleted '%s'"
+msgstr "ลบโฟลเดอร์ที่คั่นหน้า Mozilla '%s' แล้ว"
+
+#: lib/sources/mozillasource.py:962
+#, python-format
+msgid "Mozilla bookmark changed '%s' '%s'"
+msgstr "เปลี่ยนแปลงที่คั่นหน้า Mozilla '%s' '%s' แล้ว"
+
+#: lib/sources/mozillasource.py:964
+#, python-format
+msgid "Mozilla bookmark folder changed '%s'"
+msgstr "เปลี่ยนแปลงโฟลเดอร์ที่คั่นหน้า Mozilla '%s' แล้ว"
+
+#: lib/sources/paneldelegate.py:58
+#, python-format
+msgid "Panel '%s' added"
+msgstr "เพิ่มพาเนล '%s' แล้ว"
+
+#: lib/sources/paneldelegate.py:64
+#, python-format
+msgid "Panel '%s' removed"
+msgstr "ลบพาเนล '%s' แล้ว"
+
+#: lib/sources/paneldelegate.py:70
+#, python-format
+msgid "Panel applet '%s' added"
+msgstr "เพิ่มแอพเพล็ต '%s' แล้ว"
+
+#: lib/sources/paneldelegate.py:76
+#, python-format
+msgid "Panel applet '%s' removed"
+msgstr "ลบแอพเพล็ต '%s' แล้ว"
+
+#: lib/sources/paneldelegate.py:82
+#, python-format
+msgid "Panel object '%s' added"
+msgstr "เพิ่มวัตถุพาเนล '%s' แล้ว"
+
+#: lib/sources/paneldelegate.py:94
+#, python-format
+msgid "Panel object '%s' removed"
+msgstr "ลบวัตถุพาเนล '%s' แล้ว"
+
+#: lib/sources/paneldelegate.py:375
+msgid "Panel File"
+msgstr "แฟ้มพาเนล"
+
+#: lib/storage.py:173
+#, python-format
+msgid "Failed to read file '%s': %s"
+msgstr "อ่านแฟ้ม '%s' ไม่สำเร็จ: %s"
+
+#: lib/storage.py:183
+#, python-format
+msgid "Failed to read metadata from '%s': %s"
+msgstr "อ่าน metadata จาก '%s' ไม่สำเร็จ: %s"
+
+#: lib/storage.py:189
+#, python-format
+msgid "Invalid metadata section in '%s': %s"
+msgstr "หัวข้อ metadata ไม่ถูกต้องใน '%s' : %s"
+
+#: lib/storage.py:363
+#, python-format
+msgid "Cannot add non-existent file '%s'"
+msgstr "ไม่สามารถเพิ่มแฟ้ม '%s' ที่ไม่มีอยู่ได้"
+
+#: lib/storage.py:540
+#, python-format
+msgid "Profile is read-only %s"
+msgstr "โพรไฟล์ %s ห้ามเขียน"
+
+#: lib/unittests.py:38 lib/unittests.py:39
+msgid "Ignore WARNINGs"
+msgstr "ละเลย WARNING"
+
+#: lib/unittests.py:61
+#, python-format
+msgid "Running %s tests"
+msgstr "กำลังทดสอบ %s"
+
+#: lib/unittests.py:63
+#, python-format
+msgid "Running %s tests (%s)"
+msgstr "กำลังทดสอบ %s (%s)"
+
+#: lib/unittests.py:70
+msgid "Success!"
+msgstr "สำเร็จ!"
+
+#: lib/userdb.py:52
+#, python-format
+msgid "invalid type for setting %s in %s"
+msgstr "ชนิดสำหรับค่าตั้ง %s ไม่ถูกต้องใน %s"
+
+#: lib/userdb.py:212
+#, python-format
+msgid "No search based specified for %s"
+msgstr "ไม่พบตำแหน่งเริ่มค้นหาสำหรับ %s"
+
+#: lib/userdb.py:215
+#, python-format
+msgid "No query filter specified for %s"
+msgstr "ไม่มีตัวกรองคำสืบค้นสำหรับ %s"
+
+#: lib/userdb.py:218
+#, python-format
+msgid "No result attribute specified for %s"
+msgstr "ไม่ได้ระบุแอตทริบิวต์ของผลลัพธ์สำหรับ %s"
+
+#: lib/userdb.py:227
+msgid "Scope must be one of sub, base and one"
+msgstr "ขอบเขตต้องมีค่าเป็น sub, base หรือ one"
+
+#: lib/userdb.py:247
+msgid "multiple_result must be one of first and random"
+msgstr "multiple_result ต้องมีค่าเป็น first หรือ random"
+
+#: lib/userdb.py:339
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "ไม่สามารถเปิด %s เพื่อเขียนได้"
+
+#: lib/userdb.py:352
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "ไม่สามารถบันทึก UserDatabase ไปยัง %s"
+
+#: lib/userdb.py:375 lib/userdb.py:410
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "แฟ้ม %s ไม่ใช่ค่าตั้งโพรไฟล์"
+
+#: lib/userdb.py:382
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "ไม่สามารถเพิ่มโพรไฟล์ปริยาย %s เข้าในค่าตั้งได้"
+
+#: lib/userdb.py:418
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "ไม่สามารถเพิ่มผู้ใช้ %s เข้าในค่าตั้งโพรไฟล์ได้"
+
+#: lib/userdb.py:449
+msgid "Failed to get the user list"
+msgstr "ไม่สามารถอ่านรายการผู้ใช้ได้"
+
+#: lib/util.py:127
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"หาไดเรกทอรีบ้านไม่พบ: ไม่ได้กำหนดใน /etc/passwd และไม่ได้กำหนดค่า $HOME "
+"ในตัวแปรสภาพแวดล้อม"
+
+#: lib/util.py:140
+msgid ""
+"Cannot find username: not set in /etc/passwd and no value for $USER in "
+"environment"
+msgstr ""
+"หาชื่อผู้ใช้ไม่พบ: ไม่ได้กำหนดใน /etc/passwd และไม่ได้กำหนดค่า $USER "
+"ในตัวแปรสภาพแวดล้อม"
+
