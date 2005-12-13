@@ -1,21 +1,21 @@
 # Hungarian translation of sabayon
 # This file is distributed under the same license as the sabayon package.
 # Copyright (C) 2005, Free Software Foundation, Inc.
-# Gabor Kelemen <kelemeng@gnome.hu>, 2005.
 #
+# Gabor Kelemen <kelemeng@gnome.hu>, 2005.
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-16 12:30+0000\n"
-"PO-Revision-Date: 2005-08-16 17:07+0200\n"
+"POT-Creation-Date: 2005-12-13 06:33+0100\n"
+"PO-Revision-Date: 2005-12-12 00:45+0100\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <gnome@gnome.hu>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=1; plural=0;\n"
-"X-Generator: KBabel 1.10.1\n"
+"X-Generator: KBabel 1.11.1\n"
 
 #: ../admin-tool/aboutdialog.py:63
 msgid "Program to establish and edit profiles for users"
@@ -25,140 +25,239 @@ msgstr "Felhasználói profilok létrehozására és szerkesztésére szolgáló
 msgid "translator-credits"
 msgstr "Kelemen Gábor <kelemeng@gnome.hu>"
 
-#: ../admin-tool/changeswindow.py:105
+#: ../admin-tool/changeswindow.py:50
+#, python-format
+msgid "Changes in profile %s"
+msgstr "Módosítások a(z) %s profilban"
+
+#: ../admin-tool/changeswindow.py:106
 msgid "Ignore"
 msgstr "Mellőzendő"
 
-#: ../admin-tool/changeswindow.py:112
+#: ../admin-tool/changeswindow.py:113
 msgid "Lock"
 msgstr "Zárolás"
 
-#: ../admin-tool/changeswindow.py:119 ../admin-tool/editorwindow.py:341
+#: ../admin-tool/changeswindow.py:120 ../admin-tool/editorwindow.py:224
 msgid "Description"
 msgstr "Leírás"
 
-#: ../admin-tool/editorwindow.py:133 ../admin-tool/fileviewer.py:29
-#: ../admin-tool/gconfviewer.py:87 ../admin-tool/sabayon.glade.h:2
-#: ../lib/protosession.py:388
-msgid "All Your Settings Are Belong To Us"
-msgstr "A gépbül veszi ki a beállításokat"
+#: ../admin-tool/editorwindow.py:97
+#, python-format
+msgid "Profile %s"
+msgstr "%s profil"
 
-#: ../admin-tool/editorwindow.py:248 ../admin-tool/sessionwindow.py:150
+#: ../admin-tool/editorwindow.py:189 ../admin-tool/sessionwindow.py:174
 msgid "_Profile"
 msgstr "_Profil"
 
-#: ../admin-tool/editorwindow.py:249 ../admin-tool/sessionwindow.py:151
+#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
 msgid "_Save"
 msgstr "M_entés"
 
-#: ../admin-tool/editorwindow.py:249 ../admin-tool/sessionwindow.py:151
+#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
 msgid "Save profile"
 msgstr "Profil mentése"
 
-#: ../admin-tool/editorwindow.py:250
+#: ../admin-tool/editorwindow.py:191
 msgid "_Close"
 msgstr "_Bezárás"
 
-#: ../admin-tool/editorwindow.py:250 ../admin-tool/sessionwindow.py:152
+#: ../admin-tool/editorwindow.py:191 ../admin-tool/sessionwindow.py:176
 msgid "Close the current window"
 msgstr "A jelenlegi ablak bezárása"
 
-#: ../admin-tool/editorwindow.py:251 ../admin-tool/sessionwindow.py:153
+#: ../admin-tool/editorwindow.py:192 ../admin-tool/sessionwindow.py:177
 msgid "_Edit"
 msgstr "S_zerkesztés"
 
-#: ../admin-tool/editorwindow.py:252
+#: ../admin-tool/editorwindow.py:193
 msgid "_Delete"
 msgstr "Tö_rlés"
 
-#: ../admin-tool/editorwindow.py:252
+#: ../admin-tool/editorwindow.py:193
 msgid "Delete item"
 msgstr "Elem törlése"
 
-#: ../admin-tool/editorwindow.py:253
-msgid "C_lear History"
-msgstr "_Előzmények törlése"
-
-#: ../admin-tool/editorwindow.py:253
-msgid "Clear revision history"
-msgstr "Verziótörténet törlése"
-
-#: ../admin-tool/editorwindow.py:254 ../admin-tool/sessionwindow.py:155
+#: ../admin-tool/editorwindow.py:194 ../admin-tool/sessionwindow.py:180
 msgid "_Help"
 msgstr "_Súgó"
 
-#: ../admin-tool/editorwindow.py:255 ../admin-tool/sessionwindow.py:156
+#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:181
 msgid "_About"
 msgstr "_Névjegy"
 
-#: ../admin-tool/editorwindow.py:255 ../admin-tool/sessionwindow.py:156
+#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:181
 msgid "About Sabayon"
 msgstr "A Sabayon névjegye"
 
-#: ../admin-tool/editorwindow.py:286
-msgid "_Version:"
-msgstr "_Verzió:"
-
-#: ../admin-tool/editorwindow.py:352
-msgid "Version"
-msgstr "Verzió"
-
-#: ../admin-tool/editorwindow.py:382 ../lib/sources/gconfsource.py:109
+#: ../admin-tool/editorwindow.py:254 ../lib/sources/gconfsource.py:123
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:386 ../lib/sources/filessource.py:67
+#: ../admin-tool/editorwindow.py:258 ../lib/sources/filessource.py:78
 msgid "Files"
 msgstr "Fájlok"
 
-#: ../admin-tool/gconfviewer.py:58 ../admin-tool/gconfviewer.py:77
+#: ../admin-tool/editorwindow.py:258 ../admin-tool/lockdown/pessulus.glade.h:7
+#: ../lib/sources/paneldelegate.py:134
+msgid "Panel"
+msgstr "Panel"
+
+#: ../admin-tool/fileviewer.py:29
+#, python-format
+msgid "Profile file: %s"
+msgstr "Profilfájl: %s"
+
+#: ../admin-tool/gconfviewer.py:59 ../admin-tool/gconfviewer.py:78
 msgid "<no type>"
 msgstr "<nincs típus>"
 
-#: ../admin-tool/gconfviewer.py:59
+#: ../admin-tool/gconfviewer.py:60
 msgid "<no value>"
 msgstr "<nincs érték>"
 
-#: ../admin-tool/gconfviewer.py:63
+#: ../admin-tool/gconfviewer.py:64
 msgid "string"
 msgstr "karakterlánc"
 
-#: ../admin-tool/gconfviewer.py:65
+#: ../admin-tool/gconfviewer.py:66
 msgid "integer"
 msgstr "egész"
 
-#: ../admin-tool/gconfviewer.py:67
+#: ../admin-tool/gconfviewer.py:68
 msgid "float"
 msgstr "lebegőpontos"
 
-#: ../admin-tool/gconfviewer.py:69
+#: ../admin-tool/gconfviewer.py:70
 msgid "boolean"
 msgstr "logikai"
 
-#: ../admin-tool/gconfviewer.py:71
+#: ../admin-tool/gconfviewer.py:72
 msgid "schema"
 msgstr "séma"
 
-#: ../admin-tool/gconfviewer.py:73
+#: ../admin-tool/gconfviewer.py:74
 msgid "list"
 msgstr "lista"
 
-#: ../admin-tool/gconfviewer.py:75
+#: ../admin-tool/gconfviewer.py:76
 msgid "pair"
 msgstr "pár"
 
-#: ../admin-tool/gconfviewer.py:111 ../admin-tool/profilesdialog.py:315
+#: ../admin-tool/gconfviewer.py:88
+#, python-format
+msgid "Profile settings: %s"
+msgstr "Profilbeállítások: %s"
+
+#: ../admin-tool/gconfviewer.py:112 ../admin-tool/profilesdialog.py:315
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Név"
 
-#: ../admin-tool/gconfviewer.py:116
+#: ../admin-tool/gconfviewer.py:117
 msgid "Type"
 msgstr "Típus"
 
-#: ../admin-tool/gconfviewer.py:121
+#: ../admin-tool/gconfviewer.py:122
 msgid "Value"
 msgstr "Érték"
+
+#: ../admin-tool/lockdown/lockdownbutton.py:99
+msgid "Click to make this setting not mandatory"
+msgstr "Ide kattintva ez a beállítás nem lesz kötelező"
+
+#: ../admin-tool/lockdown/lockdownbutton.py:101
+msgid "Click to make this setting mandatory"
+msgstr "Ide kattintva ez a beállítás kötelező lesz"
+
+#: ../admin-tool/lockdown/maindialog.py:47
+msgid "Disable _command line"
+msgstr "_Parancssor tiltása"
+
+#: ../admin-tool/lockdown/maindialog.py:48
+msgid "Disable _printing"
+msgstr "_Nyomtatás letiltása"
+
+#: ../admin-tool/lockdown/maindialog.py:49
+msgid "Disable print _setup"
+msgstr "Ny_omtatás beállításának letiltása"
+
+#: ../admin-tool/lockdown/maindialog.py:50
+msgid "Disable save to _disk"
+msgstr "_Lemezre mentés letiltása"
+
+#: ../admin-tool/lockdown/maindialog.py:52
+msgid "_Lock down the panels"
+msgstr "Panelek _zárolása"
+
+#: ../admin-tool/lockdown/maindialog.py:53
+msgid "Disable force _quit"
+msgstr "_Erőltetett kilépés tiltása"
+
+#: ../admin-tool/lockdown/maindialog.py:54
+msgid "Disable lock _screen"
+msgstr "_Képernyő zárolásának tiltása"
+
+#: ../admin-tool/lockdown/maindialog.py:55
+msgid "Disable log _out"
+msgstr "Kijele_ntkezés letiltása"
+
+#: ../admin-tool/lockdown/maindialog.py:57
+msgid "Disable _quit"
+msgstr "_Kilépés letiltása"
+
+#: ../admin-tool/lockdown/maindialog.py:58
+msgid "Disable _arbitrary URL"
+msgstr "Tetszőleges _URL-ek kikapcsolása"
+
+#: ../admin-tool/lockdown/maindialog.py:59
+msgid "Disable _bookmark editing"
+msgstr "Köny_vjelzők szerkesztésének letiltása"
+
+#: ../admin-tool/lockdown/maindialog.py:60
+msgid "Disable _history"
+msgstr "_Előzmények letiltása"
+
+#: ../admin-tool/lockdown/maindialog.py:61
+msgid "Disable _javascript chrome"
+msgstr "_Javascript chrome letiltása"
+
+#: ../admin-tool/lockdown/maindialog.py:62
+msgid "Disable _toolbar editing"
+msgstr "Eszköztár szerkesztésé_nek letiltása"
+
+#: ../admin-tool/lockdown/maindialog.py:63
+msgid "_Fullscreen"
+msgstr "_Teljes képernyő"
+
+#: ../admin-tool/lockdown/maindialog.py:64
+msgid "Hide _menubar"
+msgstr "_Menüsor elrejtése"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:1
+msgid "<b>Disabled Applets</b>"
+msgstr "<b>Letiltott kisalkalmazások</b>"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:2
+msgid "<b>Safe Protocols</b>"
+msgstr "<b>Biztonságos protokollok</b>"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:3
+msgid "Disable _unsafe protocols"
+msgstr "Nem _biztonságos protokollok kikapcsolása"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:4
+msgid "Epiphany Web Browser"
+msgstr "Epiphany webböngésző"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:5
+msgid "General"
+msgstr "Általános"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:6
+msgid "Lockdown Editor"
+msgstr "Zárolásszerkesztő"
 
 #.
 #. Translators: this string specifies how a profile
@@ -171,13 +270,14 @@ msgstr "Érték"
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../admin-tool/sabayon:43
-msgid "Your account does not have permissions to run the Desktop User Profiles tool"
+#: ../admin-tool/sabayon:44
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr ""
 "A felhasználói fiókjának nincs jogosultsága futtatni a Munkaasztal-"
 "felhasználói profilok eszközt"
 
-#: ../admin-tool/sabayon:44
+#: ../admin-tool/sabayon:45
 msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
@@ -185,11 +285,11 @@ msgstr ""
 "Rendszergazda szintű jogosultság szükséges ezen program futtatásához, mivel "
 "rendszerfájlokat tud módosítani."
 
-#: ../admin-tool/sabayon:49
+#: ../admin-tool/sabayon:50
 msgid "Desktop User Profiles tool is already running"
 msgstr "A Munkaasztal-felhasználói profilok eszköz már fut"
 
-#: ../admin-tool/sabayon:50
+#: ../admin-tool/sabayon:51
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
@@ -197,12 +297,12 @@ msgstr ""
 "Nem használhatja a Munkaasztal-felhasználói profilok eszközt egy "
 "profilszerkesztő munkafolyamaton belül"
 
-#: ../admin-tool/sabayon:57
+#: ../admin-tool/sabayon:58
 #, c-format
 msgid "User account '%s' was not found"
 msgstr "\"%s\" felhasználói fiók nem található"
 
-#: ../admin-tool/sabayon:58
+#: ../admin-tool/sabayon:59
 #, c-format
 msgid ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
@@ -213,38 +313,38 @@ msgstr ""
 "számítógépen. Próbálja újra a fiók létrehozása után (például az \"adduser\" "
 "parancs használatával)"
 
-#: ../admin-tool/sabayon-apply:33
+#: ../admin-tool/sabayon-apply:39
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "\"%s\" felhasználónak nincs profilja\n"
 
-#: ../admin-tool/sabayon-apply:38
+#: ../admin-tool/sabayon-apply:44
 #, c-format
 msgid "Usage: %s [<profile-name>]\n"
 msgstr "Használat: %s [<profilnév>]\n"
 
-#: ../admin-tool/sabayon-session:31
+#: ../admin-tool/sabayon-session:32
 #, c-format
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
 msgstr "Használat: %s <profil-név> <profil-útvonal> <megjelenítő-szám>\n"
 
 #: ../admin-tool/sabayon.desktop.in.h:1
-msgid "Desktop User Profiles"
-msgstr "Munkaasztal-felhasználói profilok"
-
-#: ../admin-tool/sabayon.desktop.in.h:2
 msgid "Establish and Edit Profiles for Users"
 msgstr "Felhasználók profiljainak létesítése és szerkesztése"
+
+#: ../admin-tool/sabayon.desktop.in.h:2 ../admin-tool/sabayon.glade.h:4
+msgid "User Profile Editor"
+msgstr "Profilszerkesző használata"
 
 #: ../admin-tool/sabayon.glade.h:1
 msgid "Add Profile"
 msgstr "Profil hozzáadása"
 
-#: ../admin-tool/sabayon.glade.h:3
+#: ../admin-tool/sabayon.glade.h:2
 msgid "Profile _name:"
 msgstr "Profil_név:"
 
-#: ../admin-tool/sabayon.glade.h:4
+#: ../admin-tool/sabayon.glade.h:3
 msgid "Use this profile for _all users"
 msgstr "Ezen _profil használata minden felhasználóhoz"
 
@@ -264,10 +364,6 @@ msgstr "_Felhasználók"
 msgid "_Users:"
 msgstr "_Felhasználók:"
 
-#: ../admin-tool/sabayon.glade.h:9
-msgid "dialog1"
-msgstr "dialog1"
-
 #: ../admin-tool/saveconfirm.py:36
 msgid "Close _Without Saving"
 msgstr "Bezárás mentés _nélkül"
@@ -279,7 +375,8 @@ msgstr "Elmenti \"%s\" profil változásait mielőtt kilép?"
 
 #: ../admin-tool/saveconfirm.py:47
 #, python-format
-msgid "If you don't save, changes from the last %ld second will be permanently lost."
+msgid ""
+"If you don't save, changes from the last %ld second will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld seconds will be permanently "
 "lost."
@@ -291,7 +388,8 @@ msgstr[1] ""
 "elvesznek."
 
 #: ../admin-tool/saveconfirm.py:53
-msgid "If you don't save, changes from the last minute will be permanently lost."
+msgid ""
+"If you don't save, changes from the last minute will be permanently lost."
 msgstr ""
 "Ha nem menti, akkor az elmúlt percben történt változások véglegesen "
 "elvesznek."
@@ -313,7 +411,8 @@ msgstr[1] ""
 
 #: ../admin-tool/saveconfirm.py:64
 #, python-format
-msgid "If you don't save, changes from the last %ld minute will be permanently lost."
+msgid ""
+"If you don't save, changes from the last %ld minute will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
@@ -327,9 +426,12 @@ msgstr[1] ""
 #: ../admin-tool/saveconfirm.py:73 ../admin-tool/saveconfirm.py:83
 #, python-format
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "Ha nem menti, akkor az elmúlt órában történt változások véglegesen elvesznek."
-msgstr[1] "Ha nem menti, akkor az elmúlt órában történt változások véglegesen elvesznek."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] ""
+"Ha nem menti, akkor az elmúlt órában történt változások véglegesen elvesznek."
+msgstr[1] ""
+"Ha nem menti, akkor az elmúlt órában történt változások véglegesen elvesznek."
 
 #: ../admin-tool/saveconfirm.py:76
 #, python-format
@@ -346,17 +448,48 @@ msgstr[1] ""
 "Ha nem menti, akkor az elmúlt egy órában és %d percben történt változások "
 "véglegesen elvesznek."
 
-#: ../admin-tool/sessionwindow.py:152
+#: ../admin-tool/sessionwindow.py:153
+#, python-format
+msgid "Editing profile %s"
+msgstr "%s profil szerkesztése"
+
+#: ../admin-tool/sessionwindow.py:176
 msgid "_Quit"
 msgstr "_Kilépés"
 
-#: ../admin-tool/sessionwindow.py:154
+#: ../admin-tool/sessionwindow.py:178
 msgid "_Changes"
 msgstr "_Változtatások"
 
-#: ../admin-tool/sessionwindow.py:154
+#: ../admin-tool/sessionwindow.py:178
 msgid "Edit changes"
 msgstr "Változtatások szerkesztése"
+
+#: ../admin-tool/sessionwindow.py:179
+msgid "_Lockdown"
+msgstr "_Zárolás"
+
+#: ../admin-tool/sessionwindow.py:179
+msgid "Edit Lockdown settings"
+msgstr "Zárolási beállítások szerkesztése"
+
+#: ../admin-tool/sessionwindow.py:184
+msgid "Enforce Mandatory"
+msgstr "Kötelezőek kikényszerítése"
+
+#: ../admin-tool/sessionwindow.py:184
+msgid "Enforce mandatory settings in the editing session"
+msgstr "Kötelező beállítások kikényszerítése a szerkesztő munkamenetben"
+
+#: ../admin-tool/sessionwindow.py:273
+#, python-format
+msgid "Lockdown settings for %s"
+msgstr "%s zárolási beállításai"
+
+#: ../admin-tool/usersdialog.py:67
+#, python-format
+msgid "Users for profile %s"
+msgstr "%s profil felhasználói"
 
 #: ../admin-tool/usersdialog.py:95
 msgid "Use This Profile"
@@ -376,109 +509,101 @@ msgstr "Várt esemény: %s %s"
 msgid "Unable to find a free X display"
 msgstr "Nem sikerült szabad X megjelenítőt találni"
 
-#: ../lib/protosession.py:272
-msgid "'xauth list' returned error"
-msgstr "az \"xauth list\" hibával tért vissza"
-
-#: ../lib/protosession.py:291
-msgid "'xauth list' returned no records or records in unknown format"
-msgstr "az \"xauth list\" nem vagy hibás formátumban adott vissza rekordokat"
-
-#: ../lib/protosession.py:434
+#: ../lib/protosession.py:409
 msgid "Failed to start Xnest: timed out waiting for USR1 signal"
 msgstr ""
 "Nem sikerült elindítani az Xnestet: időtúllépés az USR1 szignálra való "
 "várakozás közben"
 
-#: ../lib/protosession.py:436
+#: ../lib/protosession.py:411
 msgid "Failed to start Xnest: died during startup"
 msgstr "Nem sikerült elindítani az Xnestet: indítás közben elpusztult"
 
-#: ../lib/sources/filessource.py:57
+#: ../lib/sources/filessource.py:68
 #, python-format
 msgid "File '%s' created"
 msgstr "\"%s\" fájl létrehozva"
 
-#: ../lib/sources/filessource.py:59
+#: ../lib/sources/filessource.py:70
 #, python-format
 msgid "File '%s' deleted"
 msgstr "\"%s\" fájl törölve"
 
-#: ../lib/sources/filessource.py:61
+#: ../lib/sources/filessource.py:72
 #, python-format
 msgid "File '%s' changed"
 msgstr "\"%s\" fájl megváltoztatva"
 
-#: ../lib/sources/filessource.py:85
+#: ../lib/sources/filessource.py:96
 msgid "Applications menu"
 msgstr "Alkalmazások menü"
 
-#: ../lib/sources/filessource.py:87
+#: ../lib/sources/filessource.py:98
 msgid "Preferences menu"
 msgstr "Tulajdonságok menü"
 
-#: ../lib/sources/filessource.py:89
+#: ../lib/sources/filessource.py:100
 msgid "Server Settings menu"
 msgstr "Kiszolgálóbeállítások menü"
 
-#: ../lib/sources/filessource.py:91
+#: ../lib/sources/filessource.py:102
 msgid "System Settings menu"
 msgstr "Rendszerbeállítások menü"
 
-#: ../lib/sources/filessource.py:93
+#: ../lib/sources/filessource.py:104
 msgid "Start Here menu"
 msgstr "Kezdje itt menü"
 
-#: ../lib/sources/gconfsource.py:81
+#: ../lib/sources/gconfsource.py:89
 #, python-format
 msgid "GConf key '%s' unset"
 msgstr "\"%s\" GConf kulcs visszaállítva"
 
-#: ../lib/sources/gconfsource.py:83
+#: ../lib/sources/gconfsource.py:91
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
 msgstr "\"%s\" GConf kulcs beállítva \"%s\" karakterláncra"
 
-#: ../lib/sources/gconfsource.py:85
+#: ../lib/sources/gconfsource.py:93
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
 msgstr "\"%s\" GConf kulcs beállítva \"%s\" egész értékre"
 
-#: ../lib/sources/gconfsource.py:87
+#: ../lib/sources/gconfsource.py:95
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
 msgstr "\"%s\" GConf kulcs beállítva \"%s\" lebegőpontos értékre"
 
-#: ../lib/sources/gconfsource.py:89
+#: ../lib/sources/gconfsource.py:97
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
 msgstr "\"%s\" GConf kulcs beállítva \"%s\" logikai értékre"
 
-#: ../lib/sources/gconfsource.py:91
+#: ../lib/sources/gconfsource.py:99
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
 msgstr "\"%s\" GConf kulcs beállítva \"%s\" sémára"
 
-#: ../lib/sources/gconfsource.py:93
+#: ../lib/sources/gconfsource.py:101
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
 msgstr "\"%s\" GConf kulcs beállítva \"%s\" listára"
 
-#: ../lib/sources/gconfsource.py:95
+#: ../lib/sources/gconfsource.py:103
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
 msgstr "\"%s\" GConf kulcs beállítva \"%s\" párra"
 
-#: ../lib/sources/gconfsource.py:97
+#: ../lib/sources/gconfsource.py:105
 #, python-format
 msgid "GConf key '%s' set to '%s'"
 msgstr "\"%s\" GConf kulcs beállítva a következőre: \"%s\""
 
-#: ../lib/sources/gconfsource.py:120
+#: ../lib/sources/gconfsource.py:136
 msgid "Default GConf settings"
 msgstr "Alapértelmezett GConf beállítások"
 
-#: ../lib/sources/gconfsource.py:122
+#: ../lib/sources/gconfsource.py:138
 msgid "Mandatory GConf settings"
 msgstr "Kötelező GConf beállítások"
 
@@ -509,175 +634,190 @@ msgstr "Webböngésző könyvjelzői"
 msgid "Web browser profile list"
 msgstr "Webböngésző-profilok listája"
 
-#: ../lib/sources/mozillasource.py:516
+#: ../lib/sources/mozillasource.py:520
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "%s fájl nem található"
 
-#: ../lib/sources/mozillasource.py:855
+#: ../lib/sources/mozillasource.py:871
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "kettőzött név (%(name)s) %(section)s szakaszban"
 
-#: ../lib/sources/mozillasource.py:864
+#: ../lib/sources/mozillasource.py:880
 #, python-format
 msgid "redundant default in section %s"
 msgstr "többszörös alapértelmezés %s szakaszban"
 
-#: ../lib/sources/mozillasource.py:881
+#: ../lib/sources/mozillasource.py:897
 msgid "no default profile"
 msgstr "nincs alapértelmezett profil"
 
-#: ../lib/sources/mozillasource.py:936
+#: ../lib/sources/mozillasource.py:952
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Mozilla könyvjelző létrehozva: \"%s\" -> \"%s\""
 
-#: ../lib/sources/mozillasource.py:938
+#: ../lib/sources/mozillasource.py:954
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Mozilla könyvjelzőmappa létrehozva: \"%s\""
 
-#: ../lib/sources/mozillasource.py:941
+#: ../lib/sources/mozillasource.py:957
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Mozilla könyvjelző törölve: \"%s\""
 
-#: ../lib/sources/mozillasource.py:943
+#: ../lib/sources/mozillasource.py:959
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Mozilla könyvjelzőmappa törölve: \"%s\""
 
-#: ../lib/sources/mozillasource.py:946
+#: ../lib/sources/mozillasource.py:962
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Mozilla könyvjelző megváltoztatva: \"%s\" \"%s\""
 
-#: ../lib/sources/mozillasource.py:948
+#: ../lib/sources/mozillasource.py:964
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mozilla könyvjelzőmappa megváltoztatva: \"%s\""
 
-#: ../lib/sources/paneldelegate.py:53
+#: ../lib/sources/paneldelegate.py:58
 #, python-format
 msgid "Panel '%s' added"
 msgstr "\"%s\" panel hozzáadva"
 
-#: ../lib/sources/paneldelegate.py:59
+#: ../lib/sources/paneldelegate.py:64
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "\"%s\" panel eltávolítva"
 
-#: ../lib/sources/paneldelegate.py:65
+#: ../lib/sources/paneldelegate.py:70
 #, python-format
 msgid "Panel applet '%s' added"
 msgstr "\"%s\" panel-kisalkalmazás hozzáadva"
 
-#: ../lib/sources/paneldelegate.py:71
+#: ../lib/sources/paneldelegate.py:76
 #, python-format
 msgid "Panel applet '%s' removed"
 msgstr "\"%s\" panel-kisalkalmazás eltávolítva"
 
-#: ../lib/sources/paneldelegate.py:77
+#: ../lib/sources/paneldelegate.py:82
 #, python-format
 msgid "Panel object '%s' added"
 msgstr "\"%s\" panelobjektum hozzáadva"
 
-#: ../lib/sources/paneldelegate.py:83
+#: ../lib/sources/paneldelegate.py:94
 #, python-format
 msgid "Panel object '%s' removed"
 msgstr "\"%s\" panelobjektum eltávolítva"
 
-#: ../lib/sources/paneldelegate.py:118
-msgid "Panel"
-msgstr "Panel"
+#: ../lib/sources/paneldelegate.py:375
+msgid "Panel File"
+msgstr "Panelfájl"
 
-#: ../lib/storage.py:161
+#: ../lib/storage.py:173
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "Nem sikerült a(z) \"%s\" fájlt olvasni: %s"
 
-#: ../lib/storage.py:171
+#: ../lib/storage.py:183
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "Nem sikerült metaadatokat olvasni a következőből: \"%s\": %s"
 
-#: ../lib/storage.py:177
+#: ../lib/storage.py:189
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "Érvénytelen metaadat-szakasz a következőben: \"%s\": %s"
 
-#: ../lib/storage.py:533
+#: ../lib/storage.py:363
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Nem lehet hozzáadni \"%s\" nem létező fájlt"
 
-#: ../lib/storage.py:608
-msgid "No current revision"
-msgstr "Nincs aktuális verzió"
-
-#: ../lib/storage.py:612 ../lib/storage.py:623
-#, python-format
-msgid "'%(path)s' does not exist in profile revision '%(profile_revision)s'"
-msgstr "\"%(path)s\" nem létezik a(z) \"%(profile_revision)s\" profilverzióban"
-
-#: ../lib/storage.py:733
-msgid "Not a valid profile revision"
-msgstr "Érvénytelen profilverzió"
-
-#: ../lib/storage.py:775
+#: ../lib/storage.py:540
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "A profil csak olvasható %s"
 
-#: ../lib/unittests.py:36 ../lib/unittests.py:37
+#: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
 msgstr "Figyelmeztetések mellőzése"
 
-#: ../lib/unittests.py:59
+#: ../lib/unittests.py:61
 #, python-format
 msgid "Running %s tests"
 msgstr "%s teszt végrehajtása"
 
-#: ../lib/unittests.py:61
+#: ../lib/unittests.py:63
 #, python-format
 msgid "Running %s tests (%s)"
 msgstr "%s teszt végrehajtása (%s)"
 
-#: ../lib/unittests.py:68
+#: ../lib/unittests.py:70
 msgid "Success!"
 msgstr "Sikerült!"
 
-#: ../lib/userdb.py:223
+#: ../lib/userdb.py:52
+#, python-format
+msgid "invalid type for setting %s in %s"
+msgstr "%s beállításhoz megadott típus érvénytelen a következőben: %s"
+
+#: ../lib/userdb.py:212
+#, python-format
+msgid "No search based specified for %s"
+msgstr "Nincs keresési alap megadva a következőhöz: %s"
+
+#: ../lib/userdb.py:215
+#, python-format
+msgid "No query filter specified for %s"
+msgstr "Nincs lekérdezési szűrő megadva a következőhöz: %s"
+
+#: ../lib/userdb.py:218
+#, python-format
+msgid "No result attribute specified for %s"
+msgstr "Nincs eredményattribútum megadva a következőhöz: %s"
+
+#: ../lib/userdb.py:227
+msgid "Scope must be one of sub, base and one"
+msgstr "A hatókörnek az al, alap, és egy egyikének kell lennie"
+
+#: ../lib/userdb.py:247
+msgid "multiple_result must be one of first and random"
+msgstr "a multiple_result az első és a véletlen egyike kell legyen"
+
+#: ../lib/userdb.py:339
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Nem sikerült megnyitni olvasásra a következőt: %s"
 
-#: ../lib/userdb.py:236
+#: ../lib/userdb.py:352
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Nem sikerült menteni a felhasználó-adatbázist ide: %s"
 
-#: ../lib/userdb.py:259 ../lib/userdb.py:294
+#: ../lib/userdb.py:375 ../lib/userdb.py:410
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "%s fájl nem egy profilbeállítás"
 
-#: ../lib/userdb.py:266
+#: ../lib/userdb.py:382
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "%s alapértelmezett profil hozzáadása a beállításhoz sikertelen"
 
-#: ../lib/userdb.py:302
+#: ../lib/userdb.py:418
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "%s felhasználó hozzáadása a profilbeállításhoz sikertelen"
 
-#: ../lib/userdb.py:333
+#: ../lib/userdb.py:449
 msgid "Failed to get the user list"
 msgstr "A felhasználók listájának lekérése sikertelen"
 
-#: ../lib/util.py:126
+#: ../lib/util.py:127
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -685,11 +825,10 @@ msgstr ""
 "Nem található a saját könyvtár: nincs beállítva az /etc/passwd-ben és a "
 "$HOME környezeti változónak nincs értéke"
 
-#: ../lib/util.py:139
+#: ../lib/util.py:140
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr ""
 "Nem található a felhasználónév: nincs beállítva az /etc/passwd-ben és a "
 "$USER környezeti változónak nincs értéke"
-
