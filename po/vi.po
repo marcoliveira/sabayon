@@ -1,0 +1,801 @@
+# Vietnamese translation for Sabayon.
+# Copyright © 2005 Gnome i18n Project for Vietnamese.
+# Clytie Siddall <clytie@riverland.net.au>, 2005.
+# 
+msgid ""
+""
+msgstr "Project-Id-Version: Sabayon 2.12.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-12-20 07:04+0100\n"
+"PO-Revision-Date: 2005-12-20 21:47+1030\n"
+"Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
+"Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"X-Generator: LocFactoryEditor 1.5.1b\n"
+
+#:../admin-tool/aboutdialog.py:63
+msgid "Program to establish and edit profiles for users"
+msgstr "Chương trình tạo và sửa đổi tiểu sử sơ lược cho người dùng"
+
+#:../admin-tool/aboutdialog.py:66
+msgid "translator-credits"
+msgstr "Nhóm Việt hóa Gnome <gnomevi-list@lists.sourceforge.net>"
+
+#:../admin-tool/changeswindow.py:50
+#,python-format
+msgid "Changes in profile %s"
+msgstr "Các thay đổi tiểu sử sơ lược %s"
+
+#:../admin-tool/changeswindow.py:106
+msgid "Ignore"
+msgstr "Bỏ qua"
+
+#:../admin-tool/changeswindow.py:113
+msgid "Lock"
+msgstr "Khóa"
+
+#:../admin-tool/changeswindow.py:120 ../admin-tool/editorwindow.py:224
+msgid "Description"
+msgstr "Mô tả"
+
+#:../admin-tool/editorwindow.py:97
+#,python-format
+msgid "Profile %s"
+msgstr "Tiểu sử sơ lược %s"
+
+#:../admin-tool/editorwindow.py:189 ../admin-tool/sessionwindow.py:174
+msgid "_Profile"
+msgstr "Tiểu sử s_ơ lược"
+
+#:../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
+msgid "_Save"
+msgstr "_Lưu"
+
+#:../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
+msgid "Save profile"
+msgstr "Lưu tiểu sử sơ lược"
+
+#:../admin-tool/editorwindow.py:191
+msgid "_Close"
+msgstr "_Đóng"
+
+#:../admin-tool/editorwindow.py:191 ../admin-tool/sessionwindow.py:176
+msgid "Close the current window"
+msgstr "Đóng cửa sổ hiện có"
+
+#:../admin-tool/editorwindow.py:192 ../admin-tool/sessionwindow.py:177
+msgid "_Edit"
+msgstr "_Hiệu chỉnh"
+
+#:../admin-tool/editorwindow.py:193
+msgid "_Delete"
+msgstr "_Xóa bỏ"
+
+#:../admin-tool/editorwindow.py:193
+msgid "Delete item"
+msgstr "Xóa bỏ mục"
+
+#:../admin-tool/editorwindow.py:194 ../admin-tool/sessionwindow.py:180
+msgid "_Help"
+msgstr "Trợ _giúp"
+
+#:../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:181
+msgid "_About"
+msgstr "_Giới thiệu"
+
+#:../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:181
+msgid "About Sabayon"
+msgstr "Giới thiệu Sabayon"
+
+#:../admin-tool/editorwindow.py:254 ../lib/sources/gconfsource.py:123
+msgid "GConf"
+msgstr "GConf"
+
+#:../admin-tool/editorwindow.py:258 ../lib/sources/filessource.py:78
+msgid "Files"
+msgstr "Tập tin"
+
+#:../admin-tool/editorwindow.py:258 ../admin-tool/lockdown/pessulus.glade.h:7
+#:../lib/sources/paneldelegate.py:134
+msgid "Panel"
+msgstr "Bảng điều khiển"
+
+#:../admin-tool/fileviewer.py:29
+#,python-format
+msgid "Profile file: %s"
+msgstr "Tập tin tiểu sử sơ lược: %s"
+
+#:../admin-tool/gconfviewer.py:59 ../admin-tool/gconfviewer.py:78
+msgid "<no type>"
+msgstr "<không kiểu>"
+
+#:../admin-tool/gconfviewer.py:60
+msgid "<no value>"
+msgstr "<không giá trị>"
+
+#:../admin-tool/gconfviewer.py:64
+msgid "string"
+msgstr "chuỗi"
+
+#:../admin-tool/gconfviewer.py:66
+msgid "integer"
+msgstr "số nguyên"
+
+#:../admin-tool/gconfviewer.py:68
+msgid "float"
+msgstr "nổi"
+
+#:../admin-tool/gconfviewer.py:70
+msgid "boolean"
+msgstr "bun"
+
+#:../admin-tool/gconfviewer.py:72
+msgid "schema"
+msgstr "giản đồ"
+
+#:../admin-tool/gconfviewer.py:74
+msgid "list"
+msgstr "danh sách"
+
+#:../admin-tool/gconfviewer.py:76
+msgid "pair"
+msgstr "cặp"
+
+#:../admin-tool/gconfviewer.py:88
+#,python-format
+msgid "Profile settings: %s"
+msgstr "Thiết lập tiểu sử sơ lược: %s"
+
+#:../admin-tool/gconfviewer.py:112 ../admin-tool/profilesdialog.py:315
+#:../admin-tool/usersdialog.py:85
+msgid "Name"
+msgstr "Tên"
+
+#:../admin-tool/gconfviewer.py:117
+msgid "Type"
+msgstr "Kiểu"
+
+#:../admin-tool/gconfviewer.py:122
+msgid "Value"
+msgstr "Giá trị"
+
+#:../admin-tool/lockdown/lockdownbutton.py:99
+msgid "Click to make this setting not mandatory"
+msgstr "Nhắp chuột để làm cho thiết lập này không bắt buộc"
+
+#:../admin-tool/lockdown/lockdownbutton.py:101
+msgid "Click to make this setting mandatory"
+msgstr "Nhắp chuột để làm cho thiết lập này bắt buộc"
+
+#:../admin-tool/lockdown/maindialog.py:47
+msgid "Disable _command line"
+msgstr "Tắt dòng _lệnh"
+
+#:../admin-tool/lockdown/maindialog.py:48
+msgid "Disable _printing"
+msgstr "Tắt khả năng _in"
+
+#:../admin-tool/lockdown/maindialog.py:49
+msgid "Disable print _setup"
+msgstr "Tắt _thiết lập in"
+
+#:../admin-tool/lockdown/maindialog.py:50
+msgid "Disable save to _disk"
+msgstr "Tắt khả năng lưu vào _đĩa"
+
+#:../admin-tool/lockdown/maindialog.py:52
+msgid "_Lock down the panels"
+msgstr "_Khóa xuống Bảng điều khiển"
+
+#:../admin-tool/lockdown/maindialog.py:53
+msgid "Disable force _quit"
+msgstr "Tắt khả năng buộc t_hoát"
+
+#:../admin-tool/lockdown/maindialog.py:54
+msgid "Disable lock _screen"
+msgstr "Tắt khả năng khóa _màn hình"
+
+#:../admin-tool/lockdown/maindialog.py:55
+msgid "Disable log _out"
+msgstr "Tắt khả năng đăng _xuất"
+
+#:../admin-tool/lockdown/maindialog.py:57
+msgid "Disable _quit"
+msgstr "Tắt khả năng t_hoát"
+
+#:../admin-tool/lockdown/maindialog.py:58
+msgid "Disable _arbitrary URL"
+msgstr "Tắt địa chỉ Mạng tù_y ý"
+
+#:../admin-tool/lockdown/maindialog.py:59
+msgid "Disable _bookmark editing"
+msgstr "Tắt hiệu chỉnh đánh _dấu"
+
+#:../admin-tool/lockdown/maindialog.py:60
+msgid "Disable _history"
+msgstr "Tắt _lược sử"
+
+#:../admin-tool/lockdown/maindialog.py:61
+msgid "Disable _javascript chrome"
+msgstr "Tắt crom _JavaScript"
+
+#:../admin-tool/lockdown/maindialog.py:62
+msgid "Disable _toolbar editing"
+msgstr "Tắt hiệu chỉnh thanh _công cụ"
+
+#:../admin-tool/lockdown/maindialog.py:63
+msgid "_Fullscreen"
+msgstr "Toàn _màn hình"
+
+#:../admin-tool/lockdown/maindialog.py:64
+msgid "Hide _menubar"
+msgstr "Ẩn thanh trình đơ_n"
+
+#:../admin-tool/lockdown/pessulus.glade.h:1
+msgid "<b>Disabled Applets</b>"
+msgstr "<b>Tiểu dụng bị tắt</b>"
+
+#:../admin-tool/lockdown/pessulus.glade.h:2
+msgid "<b>Safe Protocols</b>"
+msgstr "<b>Giao thức an toàn</b>"
+
+#:../admin-tool/lockdown/pessulus.glade.h:3
+msgid "Disable _unsafe protocols"
+msgstr "Tắt các giao thức _bất an"
+
+#:../admin-tool/lockdown/pessulus.glade.h:4
+msgid "Epiphany Web Browser"
+msgstr "Trình Duyệt Mạng Epiphany"
+
+#:../admin-tool/lockdown/pessulus.glade.h:5
+msgid "General"
+msgstr "Chung"
+
+#:../admin-tool/lockdown/pessulus.glade.h:6
+msgid "Lockdown Editor"
+msgstr "Bộ hiệu chỉnh khóa xuống"
+
+# Variable: do not translate/ biến: đừng dịch
+#.
+#.Translators: this string specifies how a profile
+#.name is concatenated with an integer
+#.to form a unique profile name e.g.
+#.Artist Workstation (5)
+#.
+#:../admin-tool/profilesdialog.py:415
+#,python-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#:../admin-tool/sabayon:44
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr "Tài khoản của bạn không có quyền chạy công cụ Tiểu sử sơ lược Người dùng Môi trường"
+
+#:../admin-tool/sabayon:45
+msgid ""
+"Administrator level permissions are needed to run this program because it "
+"can modify system files."
+msgstr "Cần thiết quyền lớp quản trị để chạy chương trình này vì nó có  thể sửa  đổi tập tin hệ thống."
+
+#:../admin-tool/sabayon:50
+msgid "Desktop User Profiles tool is already running"
+msgstr " Công cụ Tiểu sử sơ lược Người dùng Môi trường đang chạy"
+
+#:../admin-tool/sabayon:51
+msgid ""
+"You may not use Desktop User Profiles tool from within a profile editing "
+"session"
+msgstr "Bạn không thể sử dụng công cụ Tiểu sử sơ lược Người dùng Môi trường ở trong phiên hiệu chỉnh tiểu sử sơ lược"
+
+#:../admin-tool/sabayon:58
+#,c-format
+msgid "User account '%s' was not found"
+msgstr "Không tìm thấy tài khoản người dùng « %s »"
+
+#:../admin-tool/sabayon:59
+#,c-format
+msgid ""
+"Sabayon requires a special user account '%s' to be present on this computer. "
+"Try again after creating the account (using, for example, the 'adduser' "
+"command)"
+msgstr "Sabayon cần thiết một tài khoản người dùng đặc biệt « %s » có trong máy tính này. Hãy thử lại sau khi tạo tài khoản này (lấy thí dụ, bằng lệnh « adduser » [thêm người dùng])"
+
+#:../admin-tool/sabayon-apply:39
+#,c-format
+msgid "No profile for user '%s' found\n"
+msgstr "Không tìm thấy tiểu sử sơ lược cho người dùng « %s »\n"
+
+#:../admin-tool/sabayon-apply:44
+#,c-format
+msgid "Usage: %s [<profile-name>]\n"
+msgstr "Cách sử dụng: %s [<tên_tiểu_sử_sơ_lược>]\n"
+
+#:../admin-tool/sabayon-session:32
+#,c-format
+msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
+msgstr "Cách sử dụng: %s <tên_tiểu_sử_sơ_lược> <đường_dẫn_tiểu_sử_sơ_lược> <số_thứ_tự_bộ_trình_bày>\n"
+
+#:../admin-tool/sabayon.desktop.in.h:1
+msgid "Establish and Edit Profiles for Users"
+msgstr "Tạo và Sửa đổi Tiểu sử sơ lược cho Người dùng"
+
+#:../admin-tool/sabayon.desktop.in.h:2 ../admin-tool/sabayon.glade.h:4
+msgid "User Profile Editor"
+msgstr "Bộ Sửa đổi Tiểu sử sơ lược Người dùng"
+
+#:../admin-tool/sabayon.glade.h:1
+msgid "Add Profile"
+msgstr "Thêm tiểu sử sơ lược"
+
+#:../admin-tool/sabayon.glade.h:2
+msgid "Profile _name:"
+msgstr "T_ên tiểu sử sơ lược:"
+
+#:../admin-tool/sabayon.glade.h:3
+msgid "Use this profile for _all users"
+msgstr "Dùng tiểu sử sơ lược này cho _mọi người dùng"
+
+#:../admin-tool/sabayon.glade.h:5
+msgid "_Base on:"
+msgstr "_Dựa trên:"
+
+#:../admin-tool/sabayon.glade.h:6
+msgid "_Profiles:"
+msgstr "_Tiểu sử sơ lược:"
+
+#:../admin-tool/sabayon.glade.h:7
+msgid "_Users"
+msgstr "_Người dùng"
+
+#:../admin-tool/sabayon.glade.h:8
+msgid "_Users:"
+msgstr "_Người dùng:"
+
+#:../admin-tool/saveconfirm.py:36
+msgid "Close _Without Saving"
+msgstr "Đóng mà _không lưu"
+
+#:../admin-tool/saveconfirm.py:43
+#,python-format
+msgid "Save changes to profile \"%s\" before closing?"
+msgstr "Lưu các thay đổi tiểu sử sơ lược « %s » trước khi đóng không?"
+
+#:../admin-tool/saveconfirm.py:47
+#,python-format
+msgid ""
+"If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural "If you don't save, changes from the last %ld second will be permanently lost."
+msgstr[0] "Nếu bạn không lưu, các thay đổi ở %ld giây chót sẽ bị mất hoàn toàn."
+
+#:../admin-tool/saveconfirm.py:53
+msgid ""
+"If you don't save, changes from the last minute will be permanently lost."
+msgstr "Nếu bạn không lưu, các thay đổi ở phút chót sẽ bị mất hoàn toàn."
+
+#:../admin-tool/saveconfirm.py:57
+#,python-format
+msgid ""
+"If you don't save, changes from the last minute and %ld second will be "
+"permanently lost."
+msgid_plural "If you don't save, changes from the last minute and %ld second will be "
+"permanently lost."
+msgstr[0] "Nếu bạn không lưu, các thay đổi ở phút chót và %ld giây sẽ bị mất hoàn toàn."
+
+#:../admin-tool/saveconfirm.py:64
+#,python-format
+msgid ""
+"If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural "If you don't save, changes from the last %ld minute will be permanently lost."
+msgstr[0] "Nếu bạn không lưu, các thay đổi ở %ld phút chót sẽ bị mất hoàn toàn."
+
+#:../admin-tool/saveconfirm.py:73 ../admin-tool/saveconfirm.py:83
+#,python-format
+msgid "If you don't save, changes from the last hour will be permanently lost."
+msgid_plural "If you don't save, changes from the last hour will be permanently lost."
+msgstr[0] "Nếu bạn không lưu, các thay đổi ở giờ sau chót sẽ bị mất hoàn toàn."
+
+#:../admin-tool/saveconfirm.py:76
+#,python-format
+msgid ""
+"If you don't save, changes from the last hour and %d minute will be "
+"permanently lost."
+msgid_plural "If you don't save, changes from the last hour and %d minute will be "
+"permanently lost."
+msgstr[0] "Nếu bạn không lưu, các thay đổi ở giờ sau chót và %d phút chót sẽ bị mất hoàn toàn."
+
+#:../admin-tool/sessionwindow.py:153
+#,python-format
+msgid "Editing profile %s"
+msgstr "Đang sửa đổi tiểu sử sơ lược %s"
+
+#:../admin-tool/sessionwindow.py:176
+msgid "_Quit"
+msgstr "T_hoát"
+
+#:../admin-tool/sessionwindow.py:178
+msgid "_Changes"
+msgstr "_Đổi"
+
+#:../admin-tool/sessionwindow.py:178
+msgid "Edit changes"
+msgstr "Sửa đổi các thay đổi"
+
+#:../admin-tool/sessionwindow.py:179
+msgid "_Lockdown"
+msgstr "_Khóa xuống"
+
+#:../admin-tool/sessionwindow.py:179
+msgid "Edit Lockdown settings"
+msgstr "Sửa đổi thiết lập Khóa xuống"
+
+#:../admin-tool/sessionwindow.py:184
+msgid "Enforce Mandatory"
+msgstr "Ép làm việc Bắt buộc"
+
+#:../admin-tool/sessionwindow.py:184
+msgid "Enforce mandatory settings in the editing session"
+msgstr "Ép làm dùng thiết lập bắt buộc trong phiên sửa đổi"
+
+#:../admin-tool/sessionwindow.py:273
+#,python-format
+msgid "Lockdown settings for %s"
+msgstr "Thiết lập khóa xuống cho %s"
+
+#:../admin-tool/usersdialog.py:67
+#,python-format
+msgid "Users for profile %s"
+msgstr "Người dùng cho tiểu sử sơ lược %s"
+
+#:../admin-tool/usersdialog.py:95
+msgid "Use This Profile"
+msgstr "Dùng Tiểu sử sơ lược này"
+
+#:../lib/dirmonitor.py:151
+#,python-format
+msgid "Failed to add monitor for %s"
+msgstr "Việc thêm thiết bị hiển thị cho %s bị lỗi"
+
+#:../lib/dirmonitor.py:231
+#,python-format
+msgid "Expected event: %s %s"
+msgstr "Dữ kiện mong đợi: %s %s"
+
+#:../lib/protosession.py:142
+msgid "Unable to find a free X display"
+msgstr "Không tìm thấy bộ trình bày X còn rảnh"
+
+#:../lib/protosession.py:409
+msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+msgstr "Lỗi khởi chạy Xnest: quá giờ trong khi đợi ký hiệu USR1"
+
+#:../lib/protosession.py:411
+msgid "Failed to start Xnest: died during startup"
+msgstr "Lỗi khởi chạy Xnest: kết thức trong khi khởi chạy"
+
+#:../lib/sources/filessource.py:68
+#,python-format
+msgid "File '%s' created"
+msgstr "Tập tin « %s » đã được tạo"
+
+#:../lib/sources/filessource.py:70
+#,python-format
+msgid "File '%s' deleted"
+msgstr "Tập tin « %s » bị xóa bỏ"
+
+#:../lib/sources/filessource.py:72
+#,python-format
+msgid "File '%s' changed"
+msgstr "Tập tin « %s » đã được thay đổi"
+
+#:../lib/sources/filessource.py:96
+msgid "Applications menu"
+msgstr "Trình đơn Ứng dụng"
+
+#:../lib/sources/filessource.py:98
+msgid "Preferences menu"
+msgstr "Trình đơn Tùy thích"
+
+#:../lib/sources/filessource.py:100
+msgid "Server Settings menu"
+msgstr "Trình đơn Thiết lập Trình phục vụ"
+
+#:../lib/sources/filessource.py:102
+msgid "System Settings menu"
+msgstr "Trình đơn Thiết lập Hệ thống"
+
+# Type: note
+# Description
+#:../lib/sources/filessource.py:104
+msgid "Start Here menu"
+msgstr "Trình đơn Bắt đầu từ đây"
+
+#:../lib/sources/gconfsource.py:89
+#,python-format
+msgid "GConf key '%s' unset"
+msgstr "Khóa GConf « %s » chưa lập"
+
+#:../lib/sources/gconfsource.py:91
+#,python-format
+msgid "GConf key '%s' set to string '%s'"
+msgstr "Khóa GConf « %s » được đặt là chuỗi « %s »"
+
+#:../lib/sources/gconfsource.py:93
+#,python-format
+msgid "GConf key '%s' set to integer '%s'"
+msgstr "Khóa GConf « %s » được đặt là số nguyên « %s »"
+
+#:../lib/sources/gconfsource.py:95
+#,python-format
+msgid "GConf key '%s' set to float '%s'"
+msgstr "Khóa GConf « %s » được đặt là nổi « %s »"
+
+#:../lib/sources/gconfsource.py:97
+#,python-format
+msgid "GConf key '%s' set to boolean '%s'"
+msgstr "Khóa GConf « %s » được đặt là bun « %s »"
+
+#:../lib/sources/gconfsource.py:99
+#,python-format
+msgid "GConf key '%s' set to schema '%s'"
+msgstr "Khóa GConf « %s » được đặt là giản đồ « %s »"
+
+#:../lib/sources/gconfsource.py:101
+#,python-format
+msgid "GConf key '%s' set to list '%s'"
+msgstr "Khóa GConf « %s » được đặt là danh sác h « %s »"
+
+#:../lib/sources/gconfsource.py:103
+#,python-format
+msgid "GConf key '%s' set to pair '%s'"
+msgstr "Khóa GConf « %s » được đặt là cặp « %s »"
+
+#:../lib/sources/gconfsource.py:105
+#,python-format
+msgid "GConf key '%s' set to '%s'"
+msgstr "Khóa GConf « %s » được đặt là « %s »"
+
+#:../lib/sources/gconfsource.py:136
+msgid "Default GConf settings"
+msgstr "Thiết lập GConf mặc định"
+
+#:../lib/sources/gconfsource.py:138
+msgid "Mandatory GConf settings"
+msgstr "Thiết lập GConf bắt buộc"
+
+#:../lib/sources/mozillasource.py:132
+#,python-format
+msgid "Mozilla key '%s' set to '%s'"
+msgstr "Khóa Mozilla « %s » đã đặt là « %s »"
+
+#:../lib/sources/mozillasource.py:134
+#,python-format
+msgid "Mozilla key '%s' unset"
+msgstr "Khóa Mozilla « %s » chưa đặt"
+
+#:../lib/sources/mozillasource.py:136
+#,python-format
+msgid "Mozilla key '%s' changed to '%s'"
+msgstr "Khóa Mozilla « %s » được thay đổi thành « %s »"
+
+#:../lib/sources/mozillasource.py:165 ../lib/sources/mozillasource.py:175
+msgid "Web browser preferences"
+msgstr "Tùy trích trình duyệt Mạng"
+
+#:../lib/sources/mozillasource.py:167 ../lib/sources/mozillasource.py:177
+msgid "Web browser bookmarks"
+msgstr "Đánh dấu trình duyệt Mạng"
+
+#:../lib/sources/mozillasource.py:169
+msgid "Web browser profile list"
+msgstr "Danh sách tiểu sử sơ lược trình duyệt Mạng"
+
+#:../lib/sources/mozillasource.py:520
+#,python-format
+msgid "File Not Found (%s)"
+msgstr "Không tìm thấy tập tin (%s)"
+
+#:../lib/sources/mozillasource.py:871
+#,python-format
+msgid "duplicate name(%(name)s) in section %(section)s"
+msgstr "tên trùng(%(name)s) trong phần %(section)s"
+
+#:../lib/sources/mozillasource.py:880
+#,python-format
+msgid "redundant default in section %s"
+msgstr "mặc định thừa trong phần %s"
+
+#:../lib/sources/mozillasource.py:897
+msgid "no default profile"
+msgstr "không có tiểu sử sơ lược mặc định"
+
+#:../lib/sources/mozillasource.py:952
+#,python-format
+msgid "Mozilla bookmark created '%s' -> '%s'"
+msgstr "Đánh dấu Mozilla đã được tạo « %s » → « %s »"
+
+#:../lib/sources/mozillasource.py:954
+#,python-format
+msgid "Mozilla bookmark folder created '%s'"
+msgstr "Thư mục đánh dấu Mozilla đã được tạo « %s »"
+
+#:../lib/sources/mozillasource.py:957
+#,python-format
+msgid "Mozilla bookmark deleted '%s'"
+msgstr "Đánh dấu Mozilla bị xóa bỏ « %s »"
+
+#:../lib/sources/mozillasource.py:959
+#,python-format
+msgid "Mozilla bookmark folder deleted '%s'"
+msgstr "Thư mục đánh dấu Mozilla bị xóa bỏ « %s »"
+
+#:../lib/sources/mozillasource.py:962
+#,python-format
+msgid "Mozilla bookmark changed '%s' '%s'"
+msgstr "Đánh dấu Mozilla đã được thay đổi « %s » « %s »"
+
+#:../lib/sources/mozillasource.py:964
+#,python-format
+msgid "Mozilla bookmark folder changed '%s'"
+msgstr "Thư mục đánh dấu Mozilla đã được thay đổi « %s »"
+
+#:../lib/sources/paneldelegate.py:58
+#,python-format
+msgid "Panel '%s' added"
+msgstr "Bảng điều khiển « %s » đã được thêm"
+
+#:../lib/sources/paneldelegate.py:64
+#,python-format
+msgid "Panel '%s' removed"
+msgstr "Bảng điều khiển « %s » bị gỡ bỏ"
+
+#:../lib/sources/paneldelegate.py:70
+#,python-format
+msgid "Panel applet '%s' added"
+msgstr "Tiểu dụng bảng điều khiển « %s » đã được thêm"
+
+#:../lib/sources/paneldelegate.py:76
+#,python-format
+msgid "Panel applet '%s' removed"
+msgstr "Tiểu dụng bảng điều khiển « %s » bị gỡ bỏ"
+
+#:../lib/sources/paneldelegate.py:82
+#,python-format
+msgid "Panel object '%s' added"
+msgstr "Đối tượng Bảng điều khiển « %s » đã được thêm"
+
+#:../lib/sources/paneldelegate.py:94
+#,python-format
+msgid "Panel object '%s' removed"
+msgstr "Đối tượng Bảng điều khiển « %s » bị gỡ bỏ"
+
+#:../lib/sources/paneldelegate.py:375
+msgid "Panel File"
+msgstr "Tập tin Bảng điều khiển"
+
+#:../lib/storage.py:173
+#,python-format
+msgid "Failed to read file '%s': %s"
+msgstr "Lỗi đọc tập tin « %s »: %s"
+
+#:../lib/storage.py:183
+#,python-format
+msgid "Failed to read metadata from '%s': %s"
+msgstr "Lỗi đọc siêu dữ liệu từ « %s »: %s"
+
+#:../lib/storage.py:189
+#,python-format
+msgid "Invalid metadata section in '%s': %s"
+msgstr "Phần siêu dữ liệu không hợp lệ trong « %s »: %s"
+
+#:../lib/storage.py:363
+#,python-format
+msgid "Cannot add non-existent file '%s'"
+msgstr "Không thể thêm tập tin không tồn tại « %s »"
+
+#:../lib/storage.py:540
+#,python-format
+msgid "Profile is read-only %s"
+msgstr "Tiêu sử sơ lược chỉ cho phép đọc %s"
+
+#:../lib/unittests.py:38 ../lib/unittests.py:39
+msgid "Ignore WARNINGs"
+msgstr "Bỏ qua các CẢNH BÁO"
+
+#:../lib/unittests.py:61
+#,python-format
+msgid "Running %s tests"
+msgstr "Đang chạy %s việc thử"
+
+#:../lib/unittests.py:63
+#,python-format
+msgid "Running %s tests (%s)"
+msgstr "Đang chạy %s việc thử (%s)"
+
+#:../lib/unittests.py:70
+msgid "Success!"
+msgstr "Thành công!"
+
+#:../lib/userdb.py:52
+#,python-format
+msgid "invalid type for setting %s in %s"
+msgstr "kiểu không hợp lệ cho thiết lập %s trong %s"
+
+#:../lib/userdb.py:212
+#,python-format
+msgid "No search based specified for %s"
+msgstr "Chưa ghi rõ cơ bản  tìm kiếm cho %s"
+
+#:../lib/userdb.py:215
+#,python-format
+msgid "No query filter specified for %s"
+msgstr "Chưa ghi rõ bộ lọc truy vấn cho %s"
+
+#:../lib/userdb.py:218
+#,python-format
+msgid "No result attribute specified for %s"
+msgstr "Chưa ghi rõ thuộc tính kết quả cho %s"
+
+#:../lib/userdb.py:227
+msgid "Scope must be one of sub, base and one"
+msgstr "Phạm vị phải là một của:\n"
+" • sub (dưới)\n"
+" • base (cơ bản)\n"
+" • one (một)"
+
+#:../lib/userdb.py:247
+msgid "multiple_result must be one of first and random"
+msgstr "multiple_result (nhiều kết quả) phải là một của:\n"
+" • first (thứ nhất)\n"
+" • random (ngẫu nhiên)"
+
+#:../lib/userdb.py:339
+#,python-format
+msgid "Could not open %s for writing"
+msgstr "Không thể mở %s để ghi"
+
+#:../lib/userdb.py:352
+#,python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "Lỗi lưu UserDatabase (cơ sở dữ liệu người dùng) vào %s"
+
+# Type: text
+# Description
+#:../lib/userdb.py:375 ../lib/userdb.py:410
+#,python-format
+msgid "File %s is not a profile configuration"
+msgstr "Tập tin %s không phải là cấu hình tiểu sử sơ lược"
+
+# Type: error
+# Description
+#:../lib/userdb.py:382
+#,python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "Lỗi thêm tiểu sử sơ lược mặc định %s vào cấu hình"
+
+# Type: error
+# Description
+#:../lib/userdb.py:418
+#,python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "Lỗi thêm người dùng %s vào cấu hình tiểu sử sơ lược"
+
+#:../lib/userdb.py:449
+msgid "Failed to get the user list"
+msgstr "Lỗi lấy danh sách người dùng"
+
+#:../lib/util.py:127
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr "Không tìm thấy thư mục chính: chưa lập trong </etc/passwd> và không có giá trị cho biến « $HOME » trong môi trường."
+
+#:../lib/util.py:140
+msgid ""
+"Cannot find username: not set in /etc/passwd and no value for $USER in "
+"environment"
+msgstr "Không tìm thấy tên người dùng: chưa lập trong </etc/passwd> và không có giá "
+"trị cho biến « $USER » trong môi trường."
