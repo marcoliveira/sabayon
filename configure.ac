@@ -225,10 +225,12 @@ else
   SABAYON_DIR_TMP="$bindir"
 fi
 
-AC_CHECK_PROG(XNEST,Xnest,yes,no)
-if test "x$XNEST" = "xno" ; then
-  AC_MSG_WARN(xnest binary not found)
+AC_PATH_PROG(XNEST_PATH,Xnest,no)
+if test "x$XNEST_PATH" = "xno" ; then
+  AC_MSG_ERROR(Xnest binary not found)
 fi
+AC_SUBST(XNEST_PATH)
+
 
 EXPANDED_SABAYON_DIR=`eval echo $SABAYON_DIR_TMP`
 AC_SUBST(EXPANDED_SABAYON_DIR)

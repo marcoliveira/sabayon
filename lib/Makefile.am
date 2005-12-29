@@ -62,6 +62,7 @@ config.py: config.py.in Makefile
                 -e s!\@PACKAGE_NAME\@!$(PACKAGE_NAME)!		\
                 -e s!\@PACKAGE_VERSION\@!$(PACKAGE_VERSION)!	\
 		-e s!\@XSESSION\@!$(XSESSION)!			\
+		-e s!\@XNEST_PATH\@!$(XNEST_PATH)!		\
 		-e s!\@SESSION_NAME\@!$(SESSION_NAME)!		\
 		-e s!\@PROTOTYPE_USER\@!$(PROTOTYPE_USER)!	\
                 < $< > $@

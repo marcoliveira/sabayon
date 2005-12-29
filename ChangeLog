@@ -1,3 +1,10 @@
+2005-12-28  William Lachance <wrlach@gmail.com>
+
+	* configure.ac lib/config.py.in lib/Makefile.am: 
+	Don't assume that the Xnest binary is '/usr/X11R6/bin/Xnest':
+	detect its location automatically. Also make configure fail if
+	we can't find it, since it no longer has a canonical location.
+
 2005-12-20  Ankit Patel  <ankit644@yahoo.com>
 
         * configure.ac: Added 'gu' to ALL_LINGUAS.
