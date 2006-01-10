@@ -1,14 +1,14 @@
 # sabayon ja.po.
-# Copyright (C) 2005 The Gnome Foundation.
+# Copyright (C) 2005,2006 The Gnome Foundation.
 # This file is distributed under the same license as the 'sabayon' package.
-# Takeshi AIHANA <aihana@gnome.gr.jp>, 2005.
+# Takeshi AIHANA <aihana@gnome.gr.jp>, 2005,2006.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-11-20 00:42+0900\n"
-"PO-Revision-Date: 2005-11-20 00:41+0900\n"
+"POT-Creation-Date: 2006-01-11 01:05+0900\n"
+"PO-Revision-Date: 2006-01-11 01:05+0900\n"
 "Last-Translator: Takeshi AIHANA <aihana@gnome.gr.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -18,13 +18,13 @@ msgstr ""
 
 #: ../admin-tool/aboutdialog.py:63
 msgid "Program to establish and edit profiles for users"
-msgstr "ユーザ・プロファイルを決定し編集するプログラムです"
+msgstr "ユーザ・プロファイルを規定したり編集するプログラムです"
 
 #: ../admin-tool/aboutdialog.py:66
 msgid "translator-credits"
 msgstr ""
 "相花 毅 <aihana@gnome.gr.jp>\n"
-"日本GNOMEユーザー会 <http://www.gnome.gr.jp>"
+"日本GNOMEユーザー会 http://www.gnome.gr.jp"
 
 #: ../admin-tool/changeswindow.py:50
 #, python-format
@@ -33,11 +33,11 @@ msgstr "プロファイル '%s' の変更箇所"
 
 #: ../admin-tool/changeswindow.py:106
 msgid "Ignore"
-msgstr "無視"
+msgstr "無視する"
 
 #: ../admin-tool/changeswindow.py:113
 msgid "Lock"
-msgstr "ロック"
+msgstr "ロックする"
 
 #: ../admin-tool/changeswindow.py:120 ../admin-tool/editorwindow.py:224
 msgid "Description"
@@ -124,15 +124,15 @@ msgstr "文字列"
 
 #: ../admin-tool/gconfviewer.py:66
 msgid "integer"
-msgstr "整数"
+msgstr "整数値"
 
 #: ../admin-tool/gconfviewer.py:68
 msgid "float"
-msgstr "浮動小数点"
+msgstr "実数値"
 
 #: ../admin-tool/gconfviewer.py:70
 msgid "boolean"
-msgstr "論理"
+msgstr "論理値"
 
 #: ../admin-tool/gconfviewer.py:72
 msgid "schema"
@@ -140,7 +140,7 @@ msgstr "スキーマ"
 
 #: ../admin-tool/gconfviewer.py:74
 msgid "list"
-msgstr "リスト"
+msgstr "配列"
 
 #: ../admin-tool/gconfviewer.py:76
 msgid "pair"
@@ -158,107 +158,107 @@ msgstr "名前"
 
 #: ../admin-tool/gconfviewer.py:117
 msgid "Type"
-msgstr ""
+msgstr "型"
 
 #: ../admin-tool/gconfviewer.py:122
 msgid "Value"
-msgstr ""
+msgstr "値"
 
 #: ../admin-tool/lockdown/lockdownbutton.py:99
 msgid "Click to make this setting not mandatory"
-msgstr ""
+msgstr "クリックすると、この設定を任意にします"
 
 #: ../admin-tool/lockdown/lockdownbutton.py:101
 msgid "Click to make this setting mandatory"
-msgstr ""
+msgstr "クリックすると、この設定を必須にします"
 
 #: ../admin-tool/lockdown/maindialog.py:47
 msgid "Disable _command line"
-msgstr ""
+msgstr "コマンドラインを入力できないようにする(_C)"
 
 #: ../admin-tool/lockdown/maindialog.py:48
 msgid "Disable _printing"
-msgstr ""
+msgstr "印刷機能を使用不可にする(_P)"
 
 #: ../admin-tool/lockdown/maindialog.py:49
 msgid "Disable print _setup"
-msgstr ""
+msgstr "印刷設定を使用不可にする(_S)"
 
 #: ../admin-tool/lockdown/maindialog.py:50
 msgid "Disable save to _disk"
-msgstr ""
+msgstr "ディスクへ保存できないようにする(_D)"
 
 #: ../admin-tool/lockdown/maindialog.py:52
 msgid "_Lock down the panels"
-msgstr ""
+msgstr "パネル操作を利用不可にする(_L)"
 
 #: ../admin-tool/lockdown/maindialog.py:53
 msgid "Disable force _quit"
-msgstr ""
+msgstr "強制終了できないようにする(_Q)"
 
 #: ../admin-tool/lockdown/maindialog.py:54
 msgid "Disable lock _screen"
-msgstr ""
+msgstr "画面をロックできないようにする(_S)"
 
 #: ../admin-tool/lockdown/maindialog.py:55
 msgid "Disable log _out"
-msgstr ""
+msgstr "ログアウトできないようにする(_O)"
 
 #: ../admin-tool/lockdown/maindialog.py:57
 msgid "Disable _quit"
-msgstr ""
+msgstr "終了できないようにする(_Q)"
 
 #: ../admin-tool/lockdown/maindialog.py:58
 msgid "Disable _arbitrary URL"
-msgstr ""
+msgstr "URL を入力できないようにする(_A)"
 
 #: ../admin-tool/lockdown/maindialog.py:59
 msgid "Disable _bookmark editing"
-msgstr ""
+msgstr "ブックマークを編集できないようにする(_B)"
 
 #: ../admin-tool/lockdown/maindialog.py:60
 msgid "Disable _history"
-msgstr ""
+msgstr "履歴操作を使用不可にする(_H)"
 
 #: ../admin-tool/lockdown/maindialog.py:61
 msgid "Disable _javascript chrome"
-msgstr ""
+msgstr "JavaScript の処理を無効にする(_J)"
 
 #: ../admin-tool/lockdown/maindialog.py:62
 msgid "Disable _toolbar editing"
-msgstr ""
+msgstr "ツールバーを編集できないようにする(_T)"
 
 #: ../admin-tool/lockdown/maindialog.py:63
 msgid "_Fullscreen"
-msgstr ""
+msgstr "フルスクリーン表示できないようにする(_F)"
 
 #: ../admin-tool/lockdown/maindialog.py:64
 msgid "Hide _menubar"
-msgstr ""
+msgstr "メニューバーを隠す(_M)"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:1
 msgid "<b>Disabled Applets</b>"
-msgstr ""
+msgstr "<b>利用不可にするアプレット</b>"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:2
 msgid "<b>Safe Protocols</b>"
-msgstr ""
+msgstr "<b>安全なプロトコル</b>"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:3
 msgid "Disable _unsafe protocols"
-msgstr ""
+msgstr "安全ではないプロトコルを無効にする(_U)"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:4
 msgid "Epiphany Web Browser"
-msgstr ""
+msgstr "Epiphany ウェブ・エディタ"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:5
 msgid "General"
-msgstr ""
+msgstr "全般"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:6
 msgid "Lockdown Editor"
-msgstr ""
+msgstr "ロックダウン・エディタ"
 
 #.
 #. Translators: this string specifies how a profile
@@ -269,33 +269,39 @@ msgstr ""
 #: ../admin-tool/profilesdialog.py:415
 #, python-format
 msgid "%s (%s)"
-msgstr ""
+msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:44
 msgid ""
 "Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr ""
+"お使いのアカウントでは \"デスクトップ・ユーザ・プロファイル\" ツールを実行で"
+"きません"
 
 #: ../admin-tool/sabayon:45
 msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
 msgstr ""
+"このプログラムではシステム規模のファイルを変更するため、実行するには管理者レ"
+"ベルの権限が必要です。"
 
 #: ../admin-tool/sabayon:50
 msgid "Desktop User Profiles tool is already running"
-msgstr ""
+msgstr "既に \"デスクトップ・ユーザ・プロファイル\" ツールを実行しています"
 
 #: ../admin-tool/sabayon:51
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
 msgstr ""
+"プロファイル編集セッションの中から \"デスクトップ・ユーザ・プロファイル\" "
+"ツールは利用できません。"
 
 #: ../admin-tool/sabayon:58
 #, c-format
 msgid "User account '%s' was not found"
-msgstr ""
+msgstr "ユーザ・アカウント '%s' が見つかりませんでした"
 
 #: ../admin-tool/sabayon:59
 #, c-format
@@ -304,21 +310,24 @@ msgid ""
 "Try again after creating the account (using, for example, the 'adduser' "
 "command)"
 msgstr ""
+"このシステムで Sabayon を起動するには '%s' という特別なアカウントが必要です。"
+"このアカウントを (例えば 'adduser' コマンドで) 登録した後に、もう一度実行して"
+"みて下さい。"
 
 #: ../admin-tool/sabayon-apply:39
 #, c-format
 msgid "No profile for user '%s' found\n"
-msgstr ""
+msgstr "ユーザ '%s' のプロファイルが見つかりませんでした\n"
 
 #: ../admin-tool/sabayon-apply:44
 #, c-format
 msgid "Usage: %s [<profile-name>]\n"
-msgstr ""
+msgstr "用法: %s [<プロファイル名>]\n"
 
 #: ../admin-tool/sabayon-session:32
 #, c-format
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
-msgstr ""
+msgstr "用法: %s <プロファイル名> <プロファイルのパス名> <ディスプレイ番号>\n"
 
 #: ../admin-tool/sabayon.desktop.in.h:1
 msgid "Establish and Edit Profiles for Users"
@@ -363,7 +372,7 @@ msgstr "保存せずに閉じる(_W)"
 #: ../admin-tool/saveconfirm.py:43
 #, python-format
 msgid "Save changes to profile \"%s\" before closing?"
-msgstr ""
+msgstr "閉じる前にプロファイル \"%s\" の変更点を保存しますか？"
 
 #: ../admin-tool/saveconfirm.py:47
 #, python-format
@@ -372,13 +381,13 @@ msgid ""
 msgid_plural ""
 "If you don't save, changes from the last %ld seconds will be permanently "
 "lost."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "保存しないと、%ld秒前からの変更が完全に失われます。"
+msgstr[1] "保存しないと、%ld秒前からの変更が完全に失われます。"
 
 #: ../admin-tool/saveconfirm.py:53
 msgid ""
 "If you don't save, changes from the last minute will be permanently lost."
-msgstr ""
+msgstr "保存しないと、1分前からの変更が完全に失われます。"
 
 #: ../admin-tool/saveconfirm.py:57
 #, python-format
@@ -388,8 +397,8 @@ msgid ""
 msgid_plural ""
 "If you don't save, changes from the last minute and %ld seconds will be "
 "permanently lost."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "保存しないと、1分 %ld秒前からの変更が完全に失われます。"
+msgstr[1] "保存しないと、1分 %ld秒前からの変更が完全に失われます。"
 
 #: ../admin-tool/saveconfirm.py:64
 #, python-format
@@ -398,16 +407,16 @@ msgid ""
 msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "保存しないと、%ld分前からの変更が完全に失われます。"
+msgstr[1] "保存しないと、%ld分前からの変更が完全に失われます。"
 
 #: ../admin-tool/saveconfirm.py:73 ../admin-tool/saveconfirm.py:83
 #, python-format
 msgid "If you don't save, changes from the last hour will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "保存しないと、1時間前からの変更が完全に失われます。"
+msgstr[1] "保存しないと、1時間前からの変更が完全に失われます。"
 
 #: ../admin-tool/saveconfirm.py:76
 #, python-format
@@ -417,8 +426,8 @@ msgid ""
 msgid_plural ""
 "If you don't save, changes from the last hour and %d minutes will be "
 "permanently lost."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "保存しないと、1時間 %d分前からの変更が完全に失われます。"
+msgstr[1] "保存しないと、1時間 %d分前からの変更が完全に失われます。"
 
 #: ../admin-tool/sessionwindow.py:153
 #, python-format
@@ -431,371 +440,374 @@ msgstr "終了(_Q)"
 
 #: ../admin-tool/sessionwindow.py:178
 msgid "_Changes"
-msgstr ""
+msgstr "変更点(_C)"
 
 #: ../admin-tool/sessionwindow.py:178
 msgid "Edit changes"
-msgstr ""
+msgstr "変更した内容を編集します"
 
 #: ../admin-tool/sessionwindow.py:179
 msgid "_Lockdown"
-msgstr ""
+msgstr "ロックダウン(_L)"
 
 #: ../admin-tool/sessionwindow.py:179
 msgid "Edit Lockdown settings"
-msgstr ""
+msgstr "ロックダウンの設定を編集します"
 
 #: ../admin-tool/sessionwindow.py:184
 msgid "Enforce Mandatory"
-msgstr ""
+msgstr "強制適用"
 
 #: ../admin-tool/sessionwindow.py:184
 msgid "Enforce mandatory settings in the editing session"
-msgstr ""
+msgstr "セッションを編集する際に必須の設定を強制的にに適用します"
 
 #: ../admin-tool/sessionwindow.py:273
 #, python-format
 msgid "Lockdown settings for %s"
-msgstr ""
+msgstr "%s のロックダウン設定"
 
 #: ../admin-tool/usersdialog.py:67
 #, python-format
 msgid "Users for profile %s"
-msgstr ""
+msgstr "プロファイル %s のユーザ"
 
 #: ../admin-tool/usersdialog.py:95
-#, fuzzy
 msgid "Use This Profile"
-msgstr "プロファイル(_P)"
+msgstr "このプロファイルを使用する"
 
 #: ../lib/dirmonitor.py:151
 #, python-format
 msgid "Failed to add monitor for %s"
-msgstr ""
+msgstr "%s のモニタを追加できませんでした"
 
 #: ../lib/dirmonitor.py:231
 #, python-format
 msgid "Expected event: %s %s"
-msgstr ""
+msgstr "想定していたイベント: %s %s"
 
 #: ../lib/protosession.py:142
 msgid "Unable to find a free X display"
-msgstr ""
+msgstr "利用できる X-ディスプレイが見つかりませんでした"
 
 #: ../lib/protosession.py:409
 msgid "Failed to start Xnest: timed out waiting for USR1 signal"
-msgstr ""
+msgstr "Xnest の起動に失敗: USR1 シグナル待ちでタイムアウトしました"
 
 #: ../lib/protosession.py:411
 msgid "Failed to start Xnest: died during startup"
-msgstr ""
+msgstr "Xnest の起動に失敗: 起動する際に強制終了しました"
 
 #: ../lib/sources/filessource.py:68
 #, python-format
 msgid "File '%s' created"
-msgstr ""
+msgstr "ファイル '%s' を生成しました"
 
 #: ../lib/sources/filessource.py:70
 #, python-format
 msgid "File '%s' deleted"
-msgstr ""
+msgstr "ファイル '%s' を削除しました"
 
 #: ../lib/sources/filessource.py:72
 #, python-format
 msgid "File '%s' changed"
-msgstr ""
+msgstr "ファイル '%s' を変更しました"
 
 #: ../lib/sources/filessource.py:96
 msgid "Applications menu"
-msgstr ""
+msgstr "アプリケーション・メニュー"
 
 #: ../lib/sources/filessource.py:98
 msgid "Preferences menu"
-msgstr ""
+msgstr "設定メニュー"
 
 #: ../lib/sources/filessource.py:100
 msgid "Server Settings menu"
-msgstr ""
+msgstr "サーバ設定メニュー"
 
 #: ../lib/sources/filessource.py:102
 msgid "System Settings menu"
-msgstr ""
+msgstr "システム設定メニュー"
 
 #: ../lib/sources/filessource.py:104
 msgid "Start Here menu"
-msgstr ""
+msgstr "\"ここから起動\" メニュー"
 
 #: ../lib/sources/gconfsource.py:89
 #, python-format
 msgid "GConf key '%s' unset"
-msgstr ""
+msgstr "GConf キー '%s' の設定を解除しました"
 
 #: ../lib/sources/gconfsource.py:91
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
-msgstr ""
+msgstr "GConf キーの '%s' に文字列 '%s' をセットしました"
 
 #: ../lib/sources/gconfsource.py:93
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
-msgstr ""
+msgstr "GConf キーの '%s' に整数値 '%s' をセットしました"
 
 #: ../lib/sources/gconfsource.py:95
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
-msgstr ""
+msgstr "GConf キーの '%s' に実数値 '%s' をセットしました"
 
 #: ../lib/sources/gconfsource.py:97
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
-msgstr ""
+msgstr "GConf キーの '%s' に論理値 '%s' をセットしました"
 
 #: ../lib/sources/gconfsource.py:99
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
-msgstr ""
+msgstr "GConf キーの '%s' にスキーマ '%s' をセットしました"
 
 #: ../lib/sources/gconfsource.py:101
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
-msgstr ""
+msgstr "GConf キーの '%s' に配列 '%s' をセットしました"
 
 #: ../lib/sources/gconfsource.py:103
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
-msgstr ""
+msgstr "GConf キーの '%s' にペア '%s' をセットしました"
 
 #: ../lib/sources/gconfsource.py:105
 #, python-format
 msgid "GConf key '%s' set to '%s'"
-msgstr ""
+msgstr "GConf キーの '%s' に '%s' をセットしました"
 
 #: ../lib/sources/gconfsource.py:136
 msgid "Default GConf settings"
-msgstr ""
+msgstr "デフォルトの GConf 設定"
 
 #: ../lib/sources/gconfsource.py:138
 msgid "Mandatory GConf settings"
-msgstr ""
+msgstr "必須の GConf 設定"
 
 #: ../lib/sources/mozillasource.py:132
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
-msgstr ""
+msgstr "Mozilla キーの '%s' に '%s' をセットしました"
 
 #: ../lib/sources/mozillasource.py:134
 #, python-format
 msgid "Mozilla key '%s' unset"
-msgstr ""
+msgstr "Mozilla キー '%s' の設定を解除しました"
 
 #: ../lib/sources/mozillasource.py:136
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
-msgstr ""
+msgstr "Mozilla キーの '%s' を '%s' に変更しました"
 
 #: ../lib/sources/mozillasource.py:165 ../lib/sources/mozillasource.py:175
 msgid "Web browser preferences"
-msgstr ""
+msgstr "ウェブ・ブラウザの設定"
 
 #: ../lib/sources/mozillasource.py:167 ../lib/sources/mozillasource.py:177
 msgid "Web browser bookmarks"
-msgstr ""
+msgstr "ウェブ・ブラウザのブックマーク"
 
 #: ../lib/sources/mozillasource.py:169
 msgid "Web browser profile list"
-msgstr ""
+msgstr "ウェブ・ブラウザのプロファイル一覧"
 
 #: ../lib/sources/mozillasource.py:520
 #, python-format
 msgid "File Not Found (%s)"
-msgstr ""
+msgstr "ファイル (%s) が見つかりませんでした"
 
 #: ../lib/sources/mozillasource.py:871
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
-msgstr ""
+msgstr "名前 (%(name)s) がセクション %(section)s の中で重複しています"
 
 #: ../lib/sources/mozillasource.py:880
 #, python-format
 msgid "redundant default in section %s"
-msgstr ""
+msgstr "セクション %s のデフォルトが多すぎます"
 
 #: ../lib/sources/mozillasource.py:897
 msgid "no default profile"
-msgstr ""
+msgstr "デフォルトのプロファイルではありません"
 
 #: ../lib/sources/mozillasource.py:952
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
-msgstr ""
+msgstr "Mozilla のブックマークを生成しました: '%s' -> '%s'"
 
 #: ../lib/sources/mozillasource.py:954
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
-msgstr ""
+msgstr "Mozilla のブックマーク・フォルダ '%s' を生成しました"
 
 #: ../lib/sources/mozillasource.py:957
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
-msgstr ""
+msgstr "Mozilla のブックマーク '%s' を削除しました"
 
 #: ../lib/sources/mozillasource.py:959
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
-msgstr ""
+msgstr "Mozilla のブックマーク・フォルダ '%s' を削除しました"
 
 #: ../lib/sources/mozillasource.py:962
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
-msgstr ""
+msgstr "Mozilla のブックマーク '%s' '%s' を変更しました"
 
 #: ../lib/sources/mozillasource.py:964
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
-msgstr ""
+msgstr "Mozilla のブックマーク・フォルダ '%s' を変更しました"
 
 #: ../lib/sources/paneldelegate.py:58
 #, python-format
 msgid "Panel '%s' added"
-msgstr ""
+msgstr "パネル '%s' を追加しました"
 
 #: ../lib/sources/paneldelegate.py:64
 #, python-format
 msgid "Panel '%s' removed"
-msgstr ""
+msgstr "パネル '%s' を削除しました"
 
 #: ../lib/sources/paneldelegate.py:70
 #, python-format
 msgid "Panel applet '%s' added"
-msgstr ""
+msgstr "パネル・アプレット '%s' を追加しました"
 
 #: ../lib/sources/paneldelegate.py:76
 #, python-format
 msgid "Panel applet '%s' removed"
-msgstr ""
+msgstr "パネル・アプレット '%s' を削除しました"
 
 #: ../lib/sources/paneldelegate.py:82
 #, python-format
 msgid "Panel object '%s' added"
-msgstr ""
+msgstr "パネルにオブジェクト '%s' を追加しました"
 
 #: ../lib/sources/paneldelegate.py:94
 #, python-format
 msgid "Panel object '%s' removed"
-msgstr ""
+msgstr "パネルからオブジェクト '%s' を削除しました"
 
 #: ../lib/sources/paneldelegate.py:375
 msgid "Panel File"
-msgstr ""
+msgstr "パネルのファイル"
 
 #: ../lib/storage.py:173
 #, python-format
 msgid "Failed to read file '%s': %s"
-msgstr ""
+msgstr "ファイル '%s' の読み込みに失敗: %s"
 
 #: ../lib/storage.py:183
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
-msgstr ""
+msgstr "'%s' からメタデータの読み込みに失敗: %s"
 
 #: ../lib/storage.py:189
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
-msgstr ""
+msgstr "'%s' のメタデータ・セクションが間違っています: %s"
 
 #: ../lib/storage.py:363
 #, python-format
 msgid "Cannot add non-existent file '%s'"
-msgstr ""
+msgstr "存在していないファイル '%s' を追加できません"
 
 #: ../lib/storage.py:540
 #, python-format
 msgid "Profile is read-only %s"
-msgstr ""
+msgstr "プロファイル %s は読み込み専用です"
 
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
-msgstr ""
+msgstr "複数の WARNING を無視する"
 
 #: ../lib/unittests.py:61
 #, python-format
 msgid "Running %s tests"
-msgstr ""
+msgstr "%s の起動テスト"
 
 #: ../lib/unittests.py:63
 #, python-format
 msgid "Running %s tests (%s)"
-msgstr ""
+msgstr "%s の起動テスト (%s)"
 
 #: ../lib/unittests.py:70
 msgid "Success!"
-msgstr ""
+msgstr "成功しました！"
 
 #: ../lib/userdb.py:52
 #, python-format
 msgid "invalid type for setting %s in %s"
-msgstr ""
+msgstr "%s (%s にある) 設定の型が正しくありません"
 
 #: ../lib/userdb.py:212
 #, python-format
 msgid "No search based specified for %s"
-msgstr ""
+msgstr "%s で指定した検索ベースはありません"
 
 #: ../lib/userdb.py:215
 #, python-format
 msgid "No query filter specified for %s"
-msgstr ""
+msgstr "%s で指定したクエリ・フィルタはありません"
 
 #: ../lib/userdb.py:218
 #, python-format
 msgid "No result attribute specified for %s"
-msgstr ""
+msgstr "%s で指定した属性はありません"
 
 #: ../lib/userdb.py:227
 msgid "Scope must be one of sub, base and one"
-msgstr ""
+msgstr "Scope must be one of sub, base and one"
 
 #: ../lib/userdb.py:247
 msgid "multiple_result must be one of first and random"
-msgstr ""
+msgstr "multiple_result must be one of first and random"
 
 #: ../lib/userdb.py:339
 #, python-format
 msgid "Could not open %s for writing"
-msgstr ""
+msgstr "%s を書き込みモードで開けませんでした"
 
 #: ../lib/userdb.py:352
 #, python-format
 msgid "Failed to save UserDatabase to %s"
-msgstr ""
+msgstr "UserDatabase を %s に保存できませんでした"
 
 #: ../lib/userdb.py:375 ../lib/userdb.py:410
 #, python-format
 msgid "File %s is not a profile configuration"
-msgstr ""
+msgstr "ファイル %s はプロファイル設定ではありません"
 
 #: ../lib/userdb.py:382
 #, python-format
 msgid "Failed to add default profile %s to configuration"
-msgstr ""
+msgstr "デフォルトのプロファイル %s を設定に追加できませんでした"
 
 #: ../lib/userdb.py:418
 #, python-format
 msgid "Failed to add user %s to profile configuration"
-msgstr ""
+msgstr "ユーザ %s をプロファイルの設定に追加できませんでした"
 
 #: ../lib/userdb.py:449
 msgid "Failed to get the user list"
-msgstr ""
+msgstr "ユーザの一覧を取得できませんでした"
 
 #: ../lib/util.py:127
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
+"ホーム・フォルダが見つかりません: /etc/passwd で設定されていないか環境変数 "
+"$HOME がセットされていません"
 
 #: ../lib/util.py:140
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr ""
+"ユーザ名が見つかりません: /etc/passwd で設定されていないか環境変数 $USER が"
+"セットされていません"
