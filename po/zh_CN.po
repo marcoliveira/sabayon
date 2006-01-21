@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-11-17 14:53+0100\n"
+"POT-Creation-Date: 2006-01-21 15:32+0100\n"
 "PO-Revision-Date: 2005-11-17 22:44+0800\n"
 "Last-Translator: Funda Wang <fundawang@linux.net.cn>\n"
 "Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
@@ -256,7 +256,7 @@ msgstr "常规"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:6
 msgid "Lockdown Editor"
-msgstr "锁定编辑器"
+msgstr "锁闭编辑器"
 
 #.
 #. Translators: this string specifies how a profile
@@ -434,11 +434,11 @@ msgstr "编辑更改"
 
 #: ../admin-tool/sessionwindow.py:179
 msgid "_Lockdown"
-msgstr "锁定(_L)"
+msgstr "锁闭(_L)"
 
 #: ../admin-tool/sessionwindow.py:179
 msgid "Edit Lockdown settings"
-msgstr "编辑锁定设置"
+msgstr "编辑锁闭设置"
 
 #: ../admin-tool/sessionwindow.py:184
 msgid "Enforce Mandatory"
@@ -446,12 +446,12 @@ msgstr "强制"
 
 #: ../admin-tool/sessionwindow.py:184
 msgid "Enforce mandatory settings in the editing session"
-msgstr ""
+msgstr "编辑会话中强制设置"
 
 #: ../admin-tool/sessionwindow.py:273
 #, python-format
 msgid "Lockdown settings for %s"
-msgstr "%s 的锁定设置"
+msgstr "%s 的锁闭设置"
 
 #: ../admin-tool/usersdialog.py:67
 #, python-format
@@ -607,12 +607,12 @@ msgstr "文件未找到(%s)"
 #: ../lib/sources/mozillasource.py:871
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
-msgstr ""
+msgstr "在 %(section)s 节中有重复的名称(%(name)s)"
 
 #: ../lib/sources/mozillasource.py:880
 #, python-format
 msgid "redundant default in section %s"
-msgstr ""
+msgstr "在 %s 节中有多余的默认值"
 
 #: ../lib/sources/mozillasource.py:897
 msgid "no default profile"
@@ -733,7 +733,7 @@ msgstr ""
 #: ../lib/userdb.py:212
 #, python-format
 msgid "No search based specified for %s"
-msgstr ""
+msgstr "未为 %s 指定搜索基础"
 
 #: ../lib/userdb.py:215
 #, python-format
@@ -793,4 +793,3 @@ msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr "找不到用户名：未在 /etc/passwd 中设定，也未在 $USER 环境变量中设定"
-
