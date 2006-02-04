@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-control-center\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-11-18 19:13+0100\n"
-"PO-Revision-Date: 2005-11-18 19:17+0100\n"
+"POT-Creation-Date: 2006-02-04 16:34+0100\n"
+"PO-Revision-Date: 2006-02-04 16:44+0100\n"
 "Last-Translator: Francisco Javier F. Serrador <serrador@cvs.gnome.org>\n"
 "Language-Team: Spanish <traductores@es.gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -261,7 +261,7 @@ msgstr "General"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:6
 msgid "Lockdown Editor"
-msgstr "Bloquear editor"
+msgstr "Editor de restricciones"
 
 #.
 #. Translators: this string specifies how a profile
@@ -291,20 +291,18 @@ msgstr ""
 
 #: ../admin-tool/sabayon:50
 msgid "Desktop User Profiles tool is already running"
-msgstr "La herramienta de Perfiles de usuarios está ejecutándose ya"
+msgstr "La herramienta de «Perfiles de usuario para el Escritorio» está ejecutándose ya"
 
 #: ../admin-tool/sabayon:51
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
-msgstr ""
-"No debe usar una herramienta de perfiles de escritorio desde dentro de una "
-"sesión de edición de perfiles"
+msgstr "No debe usar la herramienta «Perfiles de usuario para el Escritorio» desde dentro de una sesión de edición de perfiles"
 
 #: ../admin-tool/sabayon:58
 #, c-format
 msgid "User account '%s' was not found"
-msgstr "No·se·encontró la cuenta del usuario «%s»"
+msgstr "No se encontró la cuenta del usuario «%s»"
 
 #: ../admin-tool/sabayon:59
 #, c-format
@@ -486,7 +484,7 @@ msgstr "Forzar ajustes obligatorios en la sesión de edición"
 #: ../admin-tool/sessionwindow.py:273
 #, python-format
 msgid "Lockdown settings for %s"
-msgstr "Bloquear ajustes para %s"
+msgstr "Configuraciones restrigidas para %s"
 
 #: ../admin-tool/usersdialog.py:67
 #, python-format
@@ -500,7 +498,7 @@ msgstr "Usar este perfil"
 #: ../lib/dirmonitor.py:151
 #, python-format
 msgid "Failed to add monitor for %s"
-msgstr "No se ha conseguido añadir un monitor para %s"
+msgstr "Falló al añadir un monitor para %s"
 
 #: ../lib/dirmonitor.py:231
 #, python-format
@@ -602,11 +600,11 @@ msgstr "Clave de GConf «%s» establecida a «%s»"
 
 #: ../lib/sources/gconfsource.py:136
 msgid "Default GConf settings"
-msgstr "Configuración por omisión de GConf"
+msgstr "Preferencias predeterminadas de GConf"
 
 #: ../lib/sources/gconfsource.py:138
 msgid "Mandatory GConf settings"
-msgstr "Configuración obligatoria de GConf"
+msgstr "Preferencias obligatorias de GConf"
 
 #: ../lib/sources/mozillasource.py:132
 #, python-format
@@ -833,39 +831,3 @@ msgid ""
 msgstr ""
 "No se pudo encontrar el nombre de usuario: no se encuentra establecido en /"
 "etc/passwd y no existe ningún valor para $USER en el entorno"
-
-#~ msgid "All Your Settings Are Belong To Us"
-#~ msgstr "Todas tus configuraciones nos pertenecen"
-
-#~ msgid "Clear revision history"
-#~ msgstr "Vaciar historial de revisiones"
-
-#~ msgid "_Version:"
-#~ msgstr "_Versión:"
-
-#~ msgid "Version"
-#~ msgstr "Versión"
-
-#~ msgid "Desktop User Profiles"
-#~ msgstr "Perfiles de usuarios de escritorio"
-
-#~ msgid "dialog1"
-#~ msgstr "diálogo1"
-
-#~ msgid "'xauth list' returned error"
-#~ msgstr "«xauth list» devolvió un error"
-
-#~ msgid "'xauth list' returned no records or records in unknown format"
-#~ msgstr ""
-#~ "«xauth list» no devolvió ningún registro o registros en un formato "
-#~ "desconocido"
-
-#~ msgid "No current revision"
-#~ msgstr "No hay revisión actual"
-
-#~ msgid "'%(path)s' does not exist in profile revision '%(profile_revision)s'"
-#~ msgstr ""
-#~ "«%(path)s» no existe en la revisión del perfil «%(profile_revision)s»"
-
-#~ msgid "Not a valid profile revision"
-#~ msgstr "No es una revisión de perfil válida"
