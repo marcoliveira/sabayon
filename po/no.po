@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon 0.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-02-18 14:26+0100\n"
-"PO-Revision-Date: 2006-02-18 14:29+0100\n"
+"POT-Creation-Date: 2006-03-02 09:50+0100\n"
+"PO-Revision-Date: 2006-03-02 09:58+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian Bokmaal <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -163,7 +163,7 @@ msgstr "Verdi"
 
 #: ../admin-tool/lockdown/lockdownbutton.py:99
 msgid "Click to make this setting not mandatory"
-msgstr ""
+msgstr "Klikk for å gjøre denne innstillingen valgfri"
 
 #: ../admin-tool/lockdown/lockdownbutton.py:101
 msgid "Click to make this setting mandatory"
@@ -277,7 +277,7 @@ msgstr "Kontoen din har ikke rettigheter til å kjøre brukerprofilverktøyet"
 msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
-msgstr ""
+msgstr "Tilgang på administratornivå kreves for å kjøre dette programmet fordi det endrer systemfiler."
 
 #: ../admin-tool/sabayon:50
 msgid "Desktop User Profiles tool is already running"
@@ -287,7 +287,7 @@ msgstr "Verktøy for brukerprofiler for skrivebordet kjører allerede"
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
-msgstr ""
+msgstr "Du kan ikke bruker verktøy for brukerprofiler fra en sesjon som endrer brukerprofilene"
 
 #: ../admin-tool/sabayon:58
 #, c-format
@@ -300,7 +300,7 @@ msgid ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
 "Try again after creating the account (using, for example, the 'adduser' "
 "command)"
-msgstr ""
+msgstr "Sabayon krever at en spesiell brukerkonto «%s» er tilgjengelig på denne datamaskinen. Prøv igjen etter at kontoen er opprettet (bruk f.eks kommandoen «adduser»)"
 
 #: ../admin-tool/sabayon-apply:39
 #, c-format
@@ -444,11 +444,11 @@ msgstr "Rediger innstillinger for nedlåsing"
 
 #: ../admin-tool/sessionwindow.py:184
 msgid "Enforce Mandatory"
-msgstr ""
+msgstr "Bruk tvungne"
 
 #: ../admin-tool/sessionwindow.py:184
 msgid "Enforce mandatory settings in the editing session"
-msgstr ""
+msgstr "Bruk tvungne innstillinger i redigeringssesjonen"
 
 #: ../admin-tool/sessionwindow.py:273
 #, python-format
@@ -480,11 +480,11 @@ msgstr "Kan ikke finne en ledig X-skjerm"
 
 #: ../lib/protosession.py:409
 msgid "Failed to start Xnest: timed out waiting for USR1 signal"
-msgstr ""
+msgstr "Kunne ikke starte Xnest: tidsavbrudd ved venting på signal USR1"
 
 #: ../lib/protosession.py:411
 msgid "Failed to start Xnest: died during startup"
-msgstr ""
+msgstr "Kunne ikke starte Xnest: terminerte ved oppstart"
 
 #: ../lib/sources/filessource.py:68
 #, python-format
@@ -572,7 +572,7 @@ msgstr "Forvalgte innstillinger for GConf"
 
 #: ../lib/sources/gconfsource.py:138
 msgid "Mandatory GConf settings"
-msgstr ""
+msgstr "Tvungne GConf-innstillinger"
 
 #: ../lib/sources/mozillasource.py:132
 #, python-format
@@ -609,7 +609,7 @@ msgstr "Filen ble ikke funnet (%s)"
 #: ../lib/sources/mozillasource.py:871
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
-msgstr ""
+msgstr "duplisert navn(%(name)s) i del %(section)s"
 
 #: ../lib/sources/mozillasource.py:880
 #, python-format
@@ -623,12 +623,12 @@ msgstr "ingen forvalgt profil"
 #: ../lib/sources/mozillasource.py:952
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
-msgstr ""
+msgstr "Mozilla-bokmerke opprettet «%s» -> «%s»"
 
 #: ../lib/sources/mozillasource.py:954
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
-msgstr ""
+msgstr "Bokmerkemappe for Mozilla opprettet «%s»"
 
 #: ../lib/sources/mozillasource.py:957
 #, python-format
@@ -638,17 +638,17 @@ msgstr "Mozilla-bokmerke slettet «%s»"
 #: ../lib/sources/mozillasource.py:959
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
-msgstr ""
+msgstr "Bokmerkemappe for Mozilla slettet «%s»"
 
 #: ../lib/sources/mozillasource.py:962
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
-msgstr ""
+msgstr "Mozilla-bokmerke endret «%s» «%s»"
 
 #: ../lib/sources/mozillasource.py:964
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
-msgstr ""
+msgstr "Bokmerkemappe for Mozilla endret «%s»"
 
 #: ../lib/sources/paneldelegate.py:58
 #, python-format
@@ -692,12 +692,12 @@ msgstr "Kunne ikke lese fil «%s»: %s"
 #: ../lib/storage.py:183
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
-msgstr ""
+msgstr "Kunne ikke lese metadata fra «%s»: %s"
 
 #: ../lib/storage.py:189
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
-msgstr ""
+msgstr "Ugyldig metadatakomponent i «%s»: %s"
 
 #: ../lib/storage.py:363
 #, python-format
@@ -740,20 +740,20 @@ msgstr "Ingen søkebase oppgitt for %s"
 #: ../lib/userdb.py:215
 #, python-format
 msgid "No query filter specified for %s"
-msgstr ""
+msgstr "Ingen filter oppgitt for spørring %s"
 
 #: ../lib/userdb.py:218
 #, python-format
 msgid "No result attribute specified for %s"
-msgstr ""
+msgstr "Ingen resultatattributt oppgitt for %s"
 
 #: ../lib/userdb.py:227
 msgid "Scope must be one of sub, base and one"
-msgstr ""
+msgstr "Området må være en av sub, base og en"
 
 #: ../lib/userdb.py:247
 msgid "multiple_result must be one of first and random"
-msgstr ""
+msgstr "multiple_result må være en av first og random"
 
 #: ../lib/userdb.py:339
 #, python-format
@@ -763,7 +763,7 @@ msgstr "Kunne ikke åpne %s for skriving"
 #: ../lib/userdb.py:352
 #, python-format
 msgid "Failed to save UserDatabase to %s"
-msgstr ""
+msgstr "Kunne ikke lagre UserDatabase til %s"
 
 #: ../lib/userdb.py:375 ../lib/userdb.py:410
 #, python-format
@@ -773,12 +773,12 @@ msgstr "Fil %s er ikke en profilkonfigurasjon"
 #: ../lib/userdb.py:382
 #, python-format
 msgid "Failed to add default profile %s to configuration"
-msgstr ""
+msgstr "Kunne ikke legge til forvalgt profil %s i konfigurasjonen"
 
 #: ../lib/userdb.py:418
 #, python-format
 msgid "Failed to add user %s to profile configuration"
-msgstr ""
+msgstr "Kunne ikke legge til bruker %s i profilkonfigurasjonen"
 
 #: ../lib/userdb.py:449
 msgid "Failed to get the user list"
@@ -788,10 +788,10 @@ msgstr "Kunne ikke hente brukerlisten"
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr ""
+msgstr "Kan ikke finne hjemmekatalog: ikke satt i /etc/passwd og det finnes ingen verdi for $HOME i miljøet"
 
 #: ../lib/util.py:140
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
-msgstr ""
+msgstr "Kan ikke finne brukernavn: ikke satt i /etc/passwd og det finnes ingen verdi for $USER i miljøet"
