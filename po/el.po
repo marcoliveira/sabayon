@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-02-20 11:50+0200\n"
+"POT-Creation-Date: 2006-03-02 17:15+0200\n"
 "PO-Revision-Date: 2006-02-20 11:51+0200\n"
 "Last-Translator: Kostas Papadimas <pkst@gnome.org>\n"
 "Language-Team: Greek <team@gnome.gr>\n"
@@ -69,7 +69,6 @@ msgstr "_Κλείσιμο"
 msgid "Close the current window"
 msgstr "_Κλείσιμο παραθύρου"
 
-# _Επεξεργασία
 #: ../admin-tool/editorwindow.py:192 ../admin-tool/sessionwindow.py:177
 msgid "_Edit"
 msgstr "_Επεξεργασία"
@@ -105,7 +104,7 @@ msgstr "Αρχεία"
 #: ../admin-tool/editorwindow.py:258 ../admin-tool/lockdown/pessulus.glade.h:7
 #: ../lib/sources/paneldelegate.py:134
 msgid "Panel"
-msgstr "Ταμπλώ"
+msgstr "Πίνακας εφαρμογών"
 
 #: ../admin-tool/fileviewer.py:29
 #, python-format
@@ -274,7 +273,8 @@ msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:44
-msgid "Your account does not have permissions to run the Desktop User Profiles tool"
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr "Ο λογαριασμός σας δεν έχει επαρκή δικαιώματα για να εκτελέσει %s"
 
 #: ../admin-tool/sabayon:45
@@ -376,7 +376,8 @@ msgstr "Αποθήκευση των αλλαγών στο προφίλ \"%s\" π
 
 #: ../admin-tool/saveconfirm.py:47
 #, python-format
-msgid "If you don't save, changes from the last %ld second will be permanently lost."
+msgid ""
+"If you don't save, changes from the last %ld second will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld seconds will be permanently "
 "lost."
@@ -388,8 +389,10 @@ msgstr[1] ""
 "χαθούν."
 
 #: ../admin-tool/saveconfirm.py:53
-msgid "If you don't save, changes from the last minute will be permanently lost."
-msgstr "Αν δεν αποθηκεύσετε, οι αλλαγές που έγιναν το τελευταίο λεπτό θα χαθούν."
+msgid ""
+"If you don't save, changes from the last minute will be permanently lost."
+msgstr ""
+"Αν δεν αποθηκεύσετε, οι αλλαγές που έγιναν το τελευταίο λεπτό θα χαθούν."
 
 #: ../admin-tool/saveconfirm.py:57
 #, python-format
@@ -408,19 +411,25 @@ msgstr[1] ""
 
 #: ../admin-tool/saveconfirm.py:64
 #, python-format
-msgid "If you don't save, changes from the last %ld minute will be permanently lost."
+msgid ""
+"If you don't save, changes from the last %ld minute will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
-msgstr[0] "Αν δεν αποθηκεύσετε, οι αλλαγές που έγιναν το τελευταίο %d λεπτό θα χαθούν."
-msgstr[1] "Αν δεν αποθηκεύσετε, οι αλλαγές που έγιναν τα τελευταία %d λεπτά θα χαθούν."
+msgstr[0] ""
+"Αν δεν αποθηκεύσετε, οι αλλαγές που έγιναν το τελευταίο %d λεπτό θα χαθούν."
+msgstr[1] ""
+"Αν δεν αποθηκεύσετε, οι αλλαγές που έγιναν τα τελευταία %d λεπτά θα χαθούν."
 
 #: ../admin-tool/saveconfirm.py:73 ../admin-tool/saveconfirm.py:83
 #, python-format
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "Αν δεν αποθηκεύσετε, οι αλλαγές που έγιναν την προηγούμενη ώρα θα χαθούν."
-msgstr[1] "Αν δεν αποθηκεύσετε, οι αλλαγές που έγιναν τις τελευταίες %d ώρες θα χαθούν."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] ""
+"Αν δεν αποθηκεύσετε, οι αλλαγές που έγιναν την προηγούμενη ώρα θα χαθούν."
+msgstr[1] ""
+"Αν δεν αποθηκεύσετε, οι αλλαγές που έγιναν τις τελευταίες %d ώρες θα χαθούν."
 
 #: ../admin-tool/saveconfirm.py:76
 #, python-format
@@ -681,27 +690,27 @@ msgstr "Το ταμπλώ '%s' προστέθηκε"
 #: ../lib/sources/paneldelegate.py:64
 #, python-format
 msgid "Panel '%s' removed"
-msgstr "Το ταμπλώ '%s' αφαιρέθηκε"
+msgstr "Ο πίνακας εφαρμογών '%s' αφαιρέθηκε"
 
 #: ../lib/sources/paneldelegate.py:70
 #, python-format
 msgid "Panel applet '%s' added"
-msgstr "Το εφαρμογίδιο '%s' προστέθηκε"
+msgstr "Η μικροεφαρμογή'%s' προστέθηκε"
 
 #: ../lib/sources/paneldelegate.py:76
 #, python-format
 msgid "Panel applet '%s' removed"
-msgstr "Το εφαρμογίδιο '%s' αφαιρέθηκε"
+msgstr "Η μικροεφαρμογή '%s' αφαιρέθηκε"
 
 #: ../lib/sources/paneldelegate.py:82
 #, python-format
 msgid "Panel object '%s' added"
-msgstr "Προστέθηκε το αντικείμενο ταμπλώ '%s'"
+msgstr "Προστέθηκε το αντικείμενο πίνακα εφαρμογών '%s'"
 
 #: ../lib/sources/paneldelegate.py:94
 #, python-format
 msgid "Panel object '%s' removed"
-msgstr "Αφαιρέθηκε το αντικείμενο ταμπλώ '%s'"
+msgstr "Αφαιρέθηκε το αντικείμενο πίνακα εφαρμογών '%s'"
 
 #: ../lib/sources/paneldelegate.py:375
 msgid "Panel File"
@@ -822,4 +831,3 @@ msgid ""
 msgstr ""
 "Αδυναμία εύρεσης ονόματος χρήστη: δεν έχει τεθεί στο /etc/passwd και δεν "
 "υπάρχει τιμή για το $USER στο περιβάλλον"
-
