@@ -7,13 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon 0.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-02 09:50+0100\n"
-"PO-Revision-Date: 2006-03-02 09:58+0100\n"
+"POT-Creation-Date: 2006-03-05 15:28+0100\n"
+"PO-Revision-Date: 2006-03-05 15:32+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian Bokmaal <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../admin-tool/aboutdialog.py:63
 msgid "Program to establish and edit profiles for users"
@@ -277,7 +278,9 @@ msgstr "Kontoen din har ikke rettigheter til å kjøre brukerprofilverktøyet"
 msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
-msgstr "Tilgang på administratornivå kreves for å kjøre dette programmet fordi det endrer systemfiler."
+msgstr ""
+"Tilgang på administratornivå kreves for å kjøre dette programmet fordi det "
+"endrer systemfiler."
 
 #: ../admin-tool/sabayon:50
 msgid "Desktop User Profiles tool is already running"
@@ -287,7 +290,9 @@ msgstr "Verktøy for brukerprofiler for skrivebordet kjører allerede"
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
-msgstr "Du kan ikke bruker verktøy for brukerprofiler fra en sesjon som endrer brukerprofilene"
+msgstr ""
+"Du kan ikke bruker verktøy for brukerprofiler fra en sesjon som endrer "
+"brukerprofilene"
 
 #: ../admin-tool/sabayon:58
 #, c-format
@@ -300,7 +305,10 @@ msgid ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
 "Try again after creating the account (using, for example, the 'adduser' "
 "command)"
-msgstr "Sabayon krever at en spesiell brukerkonto «%s» er tilgjengelig på denne datamaskinen. Prøv igjen etter at kontoen er opprettet (bruk f.eks kommandoen «adduser»)"
+msgstr ""
+"Sabayon krever at en spesiell brukerkonto «%s» er tilgjengelig på denne "
+"datamaskinen. Prøv igjen etter at kontoen er opprettet (bruk f.eks "
+"kommandoen «adduser»)"
 
 #: ../admin-tool/sabayon-apply:39
 #, c-format
@@ -369,8 +377,8 @@ msgid ""
 msgid_plural ""
 "If you don't save, changes from the last %ld seconds will be permanently "
 "lost."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Hvis du ikke lagrer vil endringer fra siste %ld sekund gå tapt permanent."
+msgstr[1] "Hvis du ikke lagrer vil endringer fra de siste %ld sekunder gå tapt permanent."
 
 #: ../admin-tool/saveconfirm.py:53
 msgid ""
@@ -385,8 +393,8 @@ msgid ""
 msgid_plural ""
 "If you don't save, changes from the last minute and %ld seconds will be "
 "permanently lost."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Hvis du ikke lagrer vil endringer fra det siste minuttet og %ld sekundet gå tapt."
+msgstr[1] "Hvis du ikke lagrer vil endringer fra det siste minuttet og de siste %ld sekundene gå tapt."
 
 #: ../admin-tool/saveconfirm.py:64
 #, python-format
@@ -395,16 +403,16 @@ msgid ""
 msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Hvis du ikke lagrer vil endringer fra det siste %ld miunttet gå tapt."
+msgstr[1] "Hvis du ikke lagrer vil endringer fra de siste %ld minuttene gå tapt."
 
 #: ../admin-tool/saveconfirm.py:73 ../admin-tool/saveconfirm.py:83
 #, python-format
 msgid "If you don't save, changes from the last hour will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Hvis du ikke lagrer vil endringer fra den siste timen gå tapt."
+msgstr[1] "Hvis du ikke lagrer vil endringer fra de siste %d timene gå tapt."
 
 #: ../admin-tool/saveconfirm.py:76
 #, python-format
@@ -414,8 +422,8 @@ msgid ""
 msgid_plural ""
 "If you don't save, changes from the last hour and %d minutes will be "
 "permanently lost."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Hvis du ikke lagrer vil endringer fra den siste timen og det siste %d minuttet gå tapt."
+msgstr[1] "Hvis du ikke lagrer vil endringer fra den siste timen og de siste %d minuttene gå tapt."
 
 #: ../admin-tool/sessionwindow.py:153
 #, python-format
@@ -788,10 +796,14 @@ msgstr "Kunne ikke hente brukerlisten"
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "Kan ikke finne hjemmekatalog: ikke satt i /etc/passwd og det finnes ingen verdi for $HOME i miljøet"
+msgstr ""
+"Kan ikke finne hjemmekatalog: ikke satt i /etc/passwd og det finnes ingen "
+"verdi for $HOME i miljøet"
 
 #: ../lib/util.py:140
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
-msgstr "Kan ikke finne brukernavn: ikke satt i /etc/passwd og det finnes ingen verdi for $USER i miljøet"
+msgstr ""
+"Kan ikke finne brukernavn: ikke satt i /etc/passwd og det finnes ingen verdi "
+"for $USER i miljøet"
