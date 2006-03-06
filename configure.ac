@@ -108,7 +108,7 @@ if test "x$with_distro" = "x"; then
 else
   case $with_distro in
     redhat) 
-      XSESSION="/etc/X11/xdm/Xsession"
+      AC_CHECK_FILE(/etc/X11/xinit/Xsession, XSESSION="/etc/X11/xinit/Xsession", XSESSION="/etc/X11/xdm/Xsession")
       SESSION_NAME="gnome"
       install_xinitrc_script="yes"
       XINITRC_SYSCONFDIR="X11/xinit/xinitrc.d"
