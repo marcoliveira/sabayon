@@ -9,6 +9,7 @@ EXTRA_DIST =			\
 	intltool-extract.in	\
 	intltool-merge.in	\
 	intltool-update.in	\
+	sabayon.schema		\
 	sabayon.spec.in		\
 	sabayon.spec		\
 	ISSUES
@@ -17,7 +18,6 @@ DISTCLEANFILES =		\
 	intltool-extract	\
 	intltool-merge		\
 	intltool-update		\
-	sabayon.schema		\
 	sabayon.spec
 
 pycheck:
