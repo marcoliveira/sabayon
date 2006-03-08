@@ -1,0 +1,915 @@
+# Përkthimi i mesazheve të sabayon në shqip
+# Copyright (C) 2006 Free Software Foundation, Inc.
+# This file is distributed under the same license as the SABAYON package.
+#
+# Laurent Dhima <laurenti@alblinux.net>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: sabayon HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-03-08 15:21+0100\n"
+"PO-Revision-Date: 2006-03-08 19:27+0100\n"
+"Last-Translator: Laurent Dhima <laurenti@alblinux.net>\n"
+"Language-Team: Albanian <gnome-albanian-perkthyesit@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../admin-tool/aboutdialog.py:63
+msgid "Program to establish and edit profiles for users"
+msgstr "Program për të përcaktuar dhe ndryshuar profilet për përdoruesit"
+
+#: ../admin-tool/aboutdialog.py:66
+msgid "translator-credits"
+msgstr "Laurent Dhima <laurenti@alblinux.net>"
+
+#: ../admin-tool/changeswindow.py:50
+#, python-format
+msgid "Changes in profile %s"
+msgstr "Ndryshime tek profili %s"
+
+#: ../admin-tool/changeswindow.py:106
+msgid "Ignore"
+msgstr "Shpërfill"
+
+#: ../admin-tool/changeswindow.py:113
+msgid "Lock"
+msgstr "Blloko"
+
+#: ../admin-tool/changeswindow.py:120 ../admin-tool/editorwindow.py:224
+msgid "Description"
+msgstr "Përshkrimi"
+
+#: ../admin-tool/editorwindow.py:97
+#, python-format
+msgid "Profile %s"
+msgstr "Profili %s"
+
+#: ../admin-tool/editorwindow.py:189 ../admin-tool/sessionwindow.py:174
+msgid "_Profile"
+msgstr "_Profili"
+
+#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
+msgid "_Save"
+msgstr "_Ruaj"
+
+#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
+msgid "Save profile"
+msgstr "Ruaj profilin"
+
+#: ../admin-tool/editorwindow.py:191
+msgid "_Close"
+msgstr "_Mbyll"
+
+#: ../admin-tool/editorwindow.py:191 ../admin-tool/sessionwindow.py:176
+msgid "Close the current window"
+msgstr "Mbyll dritaren aktuale"
+
+#: ../admin-tool/editorwindow.py:192 ../admin-tool/sessionwindow.py:177
+msgid "_Edit"
+msgstr "_Ndrysho"
+
+#: ../admin-tool/editorwindow.py:193
+msgid "_Delete"
+msgstr "_Elemino"
+
+#: ../admin-tool/editorwindow.py:193
+msgid "Delete item"
+msgstr "Elemino elementin"
+
+#: ../admin-tool/editorwindow.py:194 ../admin-tool/sessionwindow.py:180
+msgid "_Help"
+msgstr "_Ndihmë"
+
+#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:181
+msgid "_About"
+msgstr "_Informacione"
+
+#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:181
+msgid "About Sabayon"
+msgstr "Informacione mbi Sabayon"
+
+#: ../admin-tool/editorwindow.py:254 ../lib/sources/gconfsource.py:123
+msgid "GConf"
+msgstr "GConf"
+
+#: ../admin-tool/editorwindow.py:258 ../lib/sources/filessource.py:78
+msgid "Files"
+msgstr "Files"
+
+#: ../admin-tool/editorwindow.py:258 ../admin-tool/lockdown/pessulus.glade.h:7
+#: ../lib/sources/paneldelegate.py:134
+msgid "Panel"
+msgstr "Paneli"
+
+#: ../admin-tool/fileviewer.py:29
+#, python-format
+msgid "Profile file: %s"
+msgstr "File i profilit: %s"
+
+#: ../admin-tool/gconfviewer.py:59 ../admin-tool/gconfviewer.py:78
+msgid "<no type>"
+msgstr "<asnjë lloj>"
+
+#: ../admin-tool/gconfviewer.py:60
+msgid "<no value>"
+msgstr "<asnjë vlerë>"
+
+#: ../admin-tool/gconfviewer.py:64
+msgid "string"
+msgstr "string"
+
+#: ../admin-tool/gconfviewer.py:66
+msgid "integer"
+msgstr "integer"
+
+#: ../admin-tool/gconfviewer.py:68
+msgid "float"
+msgstr "float"
+
+#: ../admin-tool/gconfviewer.py:70
+msgid "boolean"
+msgstr "boolean"
+
+#: ../admin-tool/gconfviewer.py:72
+msgid "schema"
+msgstr "schema"
+
+#: ../admin-tool/gconfviewer.py:74
+msgid "list"
+msgstr "listë"
+
+#: ../admin-tool/gconfviewer.py:76
+msgid "pair"
+msgstr "çift"
+
+#: ../admin-tool/gconfviewer.py:88
+#, python-format
+msgid "Profile settings: %s"
+msgstr "Rregullimet e profilit: %s"
+
+#: ../admin-tool/gconfviewer.py:112 ../admin-tool/profilesdialog.py:315
+#: ../admin-tool/usersdialog.py:85
+msgid "Name"
+msgstr "Emri"
+
+#: ../admin-tool/gconfviewer.py:117
+msgid "Type"
+msgstr "Lloji"
+
+#: ../admin-tool/gconfviewer.py:122
+msgid "Value"
+msgstr "Vlera"
+
+#: ../admin-tool/lockdown/lockdownbutton.py:99
+msgid "Click to make this setting not mandatory"
+msgstr "Kliko për t'a bërë këtë rregullim jo të detyrueshëm"
+
+#: ../admin-tool/lockdown/lockdownbutton.py:101
+msgid "Click to make this setting mandatory"
+msgstr "Kliko për t'a bërë këtë rregullim të detyrueshëm"
+
+#: ../admin-tool/lockdown/maindialog.py:47
+msgid "Disable _command line"
+msgstr "Çaktivo rreshtin e _komandës"
+
+#: ../admin-tool/lockdown/maindialog.py:48
+msgid "Disable _printing"
+msgstr "Çaktivo _printimin"
+
+#: ../admin-tool/lockdown/maindialog.py:49
+msgid "Disable print _setup"
+msgstr "Çaktivo _konfigurimin e printimit"
+
+#: ../admin-tool/lockdown/maindialog.py:50
+msgid "Disable save to _disk"
+msgstr "Çaktivo ruajtjen në _disk"
+
+#: ../admin-tool/lockdown/maindialog.py:52
+msgid "_Lock down the panels"
+msgstr "_Blloko poshtë panelët"
+
+#: ../admin-tool/lockdown/maindialog.py:53
+msgid "Disable force _quit"
+msgstr "Çaktivo _daljen e detyrueshme"
+
+#: ../admin-tool/lockdown/maindialog.py:54
+msgid "Disable lock _screen"
+msgstr "Çaktivo bllokimin e _ekranit"
+
+#: ../admin-tool/lockdown/maindialog.py:55
+msgid "Disable log _out"
+msgstr "Çaktiv_o shkëputjen"
+
+#: ../admin-tool/lockdown/maindialog.py:57
+msgid "Disable _quit"
+msgstr "Çaktivo _daljen"
+
+#: ../admin-tool/lockdown/maindialog.py:58
+msgid "Disable _arbitrary URL"
+msgstr "Çaktivo URL _arbitrare"
+
+#: ../admin-tool/lockdown/maindialog.py:59
+msgid "Disable _bookmark editing"
+msgstr "Çaktivo ndryshimin e li_bërshënuesve"
+
+#: ../admin-tool/lockdown/maindialog.py:60
+msgid "Disable _history"
+msgstr "Çaktivo _historikun"
+
+#: ../admin-tool/lockdown/maindialog.py:61
+msgid "Disable _javascript chrome"
+msgstr "Çaktivo chrome _javascript"
+
+#: ../admin-tool/lockdown/maindialog.py:62
+msgid "Disable _toolbar editing"
+msgstr "Çaktivo ndryshimin e panelit të ins_trumentëve"
+
+#: ../admin-tool/lockdown/maindialog.py:63
+msgid "_Fullscreen"
+msgstr "_Ekran i plotë"
+
+#: ../admin-tool/lockdown/maindialog.py:64
+msgid "Hide _menubar"
+msgstr "Fshih panelin e _menusë"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:1
+msgid "<b>Disabled Applets</b>"
+msgstr "<b>Ndihmues jo aktivë</b>"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:2
+msgid "<b>Safe Protocols</b>"
+msgstr "<b>Protokollë të sigurt</b>"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:3
+msgid "Disable _unsafe protocols"
+msgstr "Çaktivo protokollët e pasig_urtë"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:4
+msgid "Epiphany Web Browser"
+msgstr "Shfletuesi Web Epiphany"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:5
+msgid "General"
+msgstr "Të përgjithshme"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:6
+msgid "Lockdown Editor"
+msgstr "Editori i bllokimeve"
+
+#.
+#. Translators: this string specifies how a profile
+#. name is concatenated with an integer
+#. to form a unique profile name e.g.
+#. "Artist Workstation (5)"
+#.
+#: ../admin-tool/profilesdialog.py:415
+#, python-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../admin-tool/sabayon:44
+msgid "Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr "Profili juaj nuk ka të drejtë të përdorë instrumentin e Profilit të Përdoruesit"
+
+#: ../admin-tool/sabayon:45
+msgid ""
+"Administrator level permissions are needed to run this program because it "
+"can modify system files."
+msgstr ""
+"Të drejta të nivelit të administrimit nevoiten për të përdorur këtë program pasi "
+"ai mund të ndryshojë file të sistemit."
+
+#: ../admin-tool/sabayon:50
+msgid "Desktop User Profiles tool is already running"
+msgstr "Instrumenti \"Profili i Përdoruesit\" është në përdorim"
+
+#: ../admin-tool/sabayon:51
+#, fuzzy
+msgid ""
+"You may not use Desktop User Profiles tool from within a profile editing "
+"session"
+msgstr "Ti nuk Hapësira e Punës Përdoruesi Profilet a profili sesion"
+
+#: ../admin-tool/sabayon:58
+#, c-format
+#, fuzzy
+msgid "User account '%s' was not found"
+msgstr "Përdoruesi llogari s nuk"
+
+#: ../admin-tool/sabayon:59
+#, c-format
+#, fuzzy
+msgid ""
+"Sabayon requires a special user account '%s' to be present on this computer. "
+"Try again after creating the account (using, for example, the 'adduser' "
+"command)"
+msgstr "a përdorues llogari s tek në mbas llogari për komandë"
+
+#: ../admin-tool/sabayon-apply:39
+#, c-format
+#, fuzzy
+msgid "No profile for user '%s' found\n"
+msgstr "Jo profili për përdorues s j"
+
+#: ../admin-tool/sabayon-apply:44
+#, c-format
+#, fuzzy
+msgid "Usage: %s [<profile-name>]\n"
+msgstr "s<profile-name> j"
+
+#: ../admin-tool/sabayon-session:32
+#, c-format
+#, fuzzy
+msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
+msgstr "s<profile-name><profile-path><display-number> j"
+
+#: ../admin-tool/sabayon.desktop.in.h:1
+#, fuzzy
+msgid "Establish and Edit Profiles for Users"
+msgstr "dhe Ndrysho Profilet për Përdorues"
+
+#: ../admin-tool/sabayon.desktop.in.h:2 ../admin-tool/sabayon.glade.h:4
+#, fuzzy
+msgid "User Profile Editor"
+msgstr "Përdoruesi Profili Editori"
+
+#: ../admin-tool/sabayon.glade.h:1
+#, fuzzy
+msgid "Add Profile"
+msgstr "Shto Profili"
+
+#: ../admin-tool/sabayon.glade.h:2
+#, fuzzy
+msgid "Profile _name:"
+msgstr "_Emri i profilit:"
+
+#: ../admin-tool/sabayon.glade.h:3
+#, fuzzy
+msgid "Use this profile for _all users"
+msgstr "profili për gjithçk_a përdoruesit"
+
+#: ../admin-tool/sabayon.glade.h:5
+#, fuzzy
+msgid "_Base on:"
+msgstr "_Bazuar tek:"
+
+#: ../admin-tool/sabayon.glade.h:6
+#, fuzzy
+msgid "_Profiles:"
+msgstr "_Profilet:"
+
+#: ../admin-tool/sabayon.glade.h:7
+#, fuzzy
+msgid "_Users"
+msgstr "Përdor_ues"
+
+#: ../admin-tool/sabayon.glade.h:8
+#, fuzzy
+msgid "_Users:"
+msgstr "Përdor_ues:"
+
+#: ../admin-tool/saveconfirm.py:36
+#, fuzzy
+msgid "Close _Without Saving"
+msgstr "Mbyll Duke ruajtur"
+
+#: ../admin-tool/saveconfirm.py:43
+#, python-format
+#, fuzzy
+msgid "Save changes to profile \"%s\" before closing?"
+msgstr "Ruaj tek profili s përpara?"
+
+#: ../admin-tool/saveconfirm.py:47
+#, python-format
+#, fuzzy
+msgid "If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld seconds will be permanently "
+"lost."
+msgstr[0] ""
+"Nëse nuk ruani, ndryshimet nga %ld sekonda e fundit do të humbin "
+"përfundimisht."
+msgstr[1] ""
+"Nëse nuk ruani, ndryshimet nga %ld sekonda e fundit do të humbin "
+"përfundimisht."
+
+#: ../admin-tool/saveconfirm.py:53
+#, fuzzy
+msgid "If you don't save, changes from the last minute will be permanently lost."
+msgstr "Nëse nuk ruani, ndryshimet nga minuta e fundit do të humbin përfundimisht."
+
+#: ../admin-tool/saveconfirm.py:57
+#, python-format
+#, fuzzy
+msgid ""
+"If you don't save, changes from the last minute and %ld second will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last minute and %ld seconds will be "
+"permanently lost."
+msgstr[0] ""
+"Nëse nuk ruani, ndryshimet nga minuti i fundit dhe %ld sekondë do të humbin "
+"përfundimisht."
+msgstr[1] ""
+"Nëse nuk ruani, ndryshimet nga minuti i fundit dhe %ld sekondë do të humbin "
+"përfundimisht."
+
+#: ../admin-tool/saveconfirm.py:64
+#, python-format
+#, fuzzy
+msgid "If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld minutes will be permanently "
+"lost."
+msgstr[0] ""
+"Nëse nuk ruani, ndryshimet nga %ld minuti i fundit do të humbin "
+"përfundimisht."
+msgstr[1] ""
+"Nëse nuk ruani, ndryshimet nga %ld minuti i fundit do të humbin "
+"përfundimisht."
+
+#: ../admin-tool/saveconfirm.py:73 ../admin-tool/saveconfirm.py:83
+#, python-format
+#, fuzzy
+msgid "If you don't save, changes from the last hour will be permanently lost."
+msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] "Nëse nuk ruani, ndryshimet nga ora e fundit do të humben përfundimisht."
+msgstr[1] "Nëse nuk ruani, ndryshimet nga ora e fundit do të humben përfundimisht."
+
+#: ../admin-tool/saveconfirm.py:76
+#, python-format
+#, fuzzy
+msgid ""
+"If you don't save, changes from the last hour and %d minute will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last hour and %d minutes will be "
+"permanently lost."
+msgstr[0] ""
+"Nëse nuk ruani, ndryshimet nga ora e fundit dhe %d minutë do të humbin "
+"përfundimisht."
+msgstr[1] ""
+"Nëse nuk ruani, ndryshimet nga ora e fundit dhe %d minutë do të humbin "
+"përfundimisht."
+
+#: ../admin-tool/sessionwindow.py:153
+#, python-format
+#, fuzzy
+msgid "Editing profile %s"
+msgstr "Duke ndryshuar profili s"
+
+#: ../admin-tool/sessionwindow.py:176
+#, fuzzy
+msgid "_Quit"
+msgstr "_Dalja"
+
+#: ../admin-tool/sessionwindow.py:178
+msgid "_Changes"
+msgstr ""
+
+#: ../admin-tool/sessionwindow.py:178
+#, fuzzy
+msgid "Edit changes"
+msgstr "Ndrysho"
+
+#: ../admin-tool/sessionwindow.py:179
+msgid "_Lockdown"
+msgstr ""
+
+#: ../admin-tool/sessionwindow.py:179
+#, fuzzy
+msgid "Edit Lockdown settings"
+msgstr "Ndrysho rregullimet"
+
+#: ../admin-tool/sessionwindow.py:184
+msgid "Enforce Mandatory"
+msgstr ""
+
+#: ../admin-tool/sessionwindow.py:184
+#, fuzzy
+msgid "Enforce mandatory settings in the editing session"
+msgstr "rregullimet në sesion"
+
+#: ../admin-tool/sessionwindow.py:273
+#, python-format
+#, fuzzy
+msgid "Lockdown settings for %s"
+msgstr "rregullimet për s"
+
+#: ../admin-tool/usersdialog.py:67
+#, python-format
+#, fuzzy
+msgid "Users for profile %s"
+msgstr "Përdorues për profili s"
+
+#: ../admin-tool/usersdialog.py:95
+#, fuzzy
+msgid "Use This Profile"
+msgstr "Profili"
+
+#: ../lib/dirmonitor.py:151
+#, python-format
+#, fuzzy
+msgid "Failed to add monitor for %s"
+msgstr "Dështoi tek shto për s"
+
+#: ../lib/dirmonitor.py:231
+#, python-format
+#, fuzzy
+msgid "Expected event: %s %s"
+msgstr "s s"
+
+#: ../lib/protosession.py:142
+#, fuzzy
+msgid "Unable to find a free X display"
+msgstr "tek gjej a X"
+
+#: ../lib/protosession.py:409
+#, fuzzy
+msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+msgstr "Dështoi tek për"
+
+#: ../lib/protosession.py:411
+#, fuzzy
+msgid "Failed to start Xnest: died during startup"
+msgstr "Dështoi tek"
+
+#: ../lib/sources/filessource.py:68
+#, python-format
+#, fuzzy
+msgid "File '%s' created"
+msgstr "File s"
+
+#: ../lib/sources/filessource.py:70
+#, python-format
+#, fuzzy
+msgid "File '%s' deleted"
+msgstr "File s"
+
+#: ../lib/sources/filessource.py:72
+#, python-format
+#, fuzzy
+msgid "File '%s' changed"
+msgstr "File s"
+
+#: ../lib/sources/filessource.py:96
+#, fuzzy
+msgid "Applications menu"
+msgstr "Programe menuja"
+
+#: ../lib/sources/filessource.py:98
+#, fuzzy
+msgid "Preferences menu"
+msgstr "Preferimet menuja"
+
+#: ../lib/sources/filessource.py:100
+#, fuzzy
+msgid "Server Settings menu"
+msgstr "Serveri Rregullimet menuja"
+
+#: ../lib/sources/filessource.py:102
+#, fuzzy
+msgid "System Settings menu"
+msgstr "Sistemi Rregullimet menuja"
+
+#: ../lib/sources/filessource.py:104
+#, fuzzy
+msgid "Start Here menu"
+msgstr "Fillo menuja"
+
+#: ../lib/sources/gconfsource.py:89
+#, python-format
+#, fuzzy
+msgid "GConf key '%s' unset"
+msgstr "s"
+
+#: ../lib/sources/gconfsource.py:91
+#, python-format
+#, fuzzy
+msgid "GConf key '%s' set to string '%s'"
+msgstr "s tek s"
+
+#: ../lib/sources/gconfsource.py:93
+#, python-format
+#, fuzzy
+msgid "GConf key '%s' set to integer '%s'"
+msgstr "s tek s"
+
+#: ../lib/sources/gconfsource.py:95
+#, python-format
+#, fuzzy
+msgid "GConf key '%s' set to float '%s'"
+msgstr "s tek s"
+
+#: ../lib/sources/gconfsource.py:97
+#, python-format
+#, fuzzy
+msgid "GConf key '%s' set to boolean '%s'"
+msgstr "s tek s"
+
+#: ../lib/sources/gconfsource.py:99
+#, python-format
+#, fuzzy
+msgid "GConf key '%s' set to schema '%s'"
+msgstr "s tek s"
+
+#: ../lib/sources/gconfsource.py:101
+#, python-format
+#, fuzzy
+msgid "GConf key '%s' set to list '%s'"
+msgstr "s tek lista s"
+
+#: ../lib/sources/gconfsource.py:103
+#, python-format
+#, fuzzy
+msgid "GConf key '%s' set to pair '%s'"
+msgstr "s tek s"
+
+#: ../lib/sources/gconfsource.py:105
+#, python-format
+#, fuzzy
+msgid "GConf key '%s' set to '%s'"
+msgstr "s tek s"
+
+#: ../lib/sources/gconfsource.py:136
+#, fuzzy
+msgid "Default GConf settings"
+msgstr "E prezgjedhur rregullimet"
+
+#: ../lib/sources/gconfsource.py:138
+#, fuzzy
+msgid "Mandatory GConf settings"
+msgstr "rregullimet"
+
+#: ../lib/sources/mozillasource.py:132
+#, python-format
+#, fuzzy
+msgid "Mozilla key '%s' set to '%s'"
+msgstr "Mozilla s tek s"
+
+#: ../lib/sources/mozillasource.py:134
+#, python-format
+#, fuzzy
+msgid "Mozilla key '%s' unset"
+msgstr "Mozilla s"
+
+#: ../lib/sources/mozillasource.py:136
+#, python-format
+#, fuzzy
+msgid "Mozilla key '%s' changed to '%s'"
+msgstr "Mozilla s tek s"
+
+#: ../lib/sources/mozillasource.py:165 ../lib/sources/mozillasource.py:175
+#, fuzzy
+msgid "Web browser preferences"
+msgstr "Web preferimet"
+
+#: ../lib/sources/mozillasource.py:167 ../lib/sources/mozillasource.py:177
+#, fuzzy
+msgid "Web browser bookmarks"
+msgstr "Web"
+
+#: ../lib/sources/mozillasource.py:169
+#, fuzzy
+msgid "Web browser profile list"
+msgstr "Web profili lista"
+
+#: ../lib/sources/mozillasource.py:520
+#, python-format
+#, fuzzy
+msgid "File Not Found (%s)"
+msgstr "File Not s"
+
+#: ../lib/sources/mozillasource.py:871
+#, python-format
+#, fuzzy
+msgid "duplicate name(%(name)s) in section %(section)s"
+msgstr "emri emri s në seksion seksion s"
+
+#: ../lib/sources/mozillasource.py:880
+#, python-format
+#, fuzzy
+msgid "redundant default in section %s"
+msgstr "prezgjedhur në seksion s"
+
+#: ../lib/sources/mozillasource.py:897
+#, fuzzy
+msgid "no default profile"
+msgstr "jo prezgjedhur profili"
+
+#: ../lib/sources/mozillasource.py:952
+#, python-format
+#, fuzzy
+msgid "Mozilla bookmark created '%s' -> '%s'"
+msgstr "Mozilla s s"
+
+#: ../lib/sources/mozillasource.py:954
+#, python-format
+#, fuzzy
+msgid "Mozilla bookmark folder created '%s'"
+msgstr "Mozilla kartelë s"
+
+#: ../lib/sources/mozillasource.py:957
+#, python-format
+#, fuzzy
+msgid "Mozilla bookmark deleted '%s'"
+msgstr "Mozilla s"
+
+#: ../lib/sources/mozillasource.py:959
+#, python-format
+#, fuzzy
+msgid "Mozilla bookmark folder deleted '%s'"
+msgstr "Mozilla kartelë s"
+
+#: ../lib/sources/mozillasource.py:962
+#, python-format
+#, fuzzy
+msgid "Mozilla bookmark changed '%s' '%s'"
+msgstr "Mozilla s s"
+
+#: ../lib/sources/mozillasource.py:964
+#, python-format
+#, fuzzy
+msgid "Mozilla bookmark folder changed '%s'"
+msgstr "Mozilla kartelë s"
+
+#: ../lib/sources/paneldelegate.py:58
+#, python-format
+#, fuzzy
+msgid "Panel '%s' added"
+msgstr "Paneli s"
+
+#: ../lib/sources/paneldelegate.py:64
+#, python-format
+#, fuzzy
+msgid "Panel '%s' removed"
+msgstr "Paneli s"
+
+#: ../lib/sources/paneldelegate.py:70
+#, python-format
+#, fuzzy
+msgid "Panel applet '%s' added"
+msgstr "Paneli s"
+
+#: ../lib/sources/paneldelegate.py:76
+#, python-format
+#, fuzzy
+msgid "Panel applet '%s' removed"
+msgstr "Paneli s"
+
+#: ../lib/sources/paneldelegate.py:82
+#, python-format
+#, fuzzy
+msgid "Panel object '%s' added"
+msgstr "Paneli s"
+
+#: ../lib/sources/paneldelegate.py:94
+#, python-format
+#, fuzzy
+msgid "Panel object '%s' removed"
+msgstr "Paneli s"
+
+#: ../lib/sources/paneldelegate.py:375
+#, fuzzy
+msgid "Panel File"
+msgstr "Paneli File"
+
+#: ../lib/storage.py:173
+#, python-format
+#, fuzzy
+msgid "Failed to read file '%s': %s"
+msgstr "Dështoi tek file s s"
+
+#: ../lib/storage.py:183
+#, python-format
+#, fuzzy
+msgid "Failed to read metadata from '%s': %s"
+msgstr "Dështoi tek s s"
+
+#: ../lib/storage.py:189
+#, python-format
+#, fuzzy
+msgid "Invalid metadata section in '%s': %s"
+msgstr "E pavlefshme seksion në s s"
+
+#: ../lib/storage.py:363
+#, python-format
+#, fuzzy
+msgid "Cannot add non-existent file '%s'"
+msgstr "shto file s"
+
+#: ../lib/storage.py:540
+#, python-format
+#, fuzzy
+msgid "Profile is read-only %s"
+msgstr "Profili është s"
+
+#: ../lib/unittests.py:38 ../lib/unittests.py:39
+#, fuzzy
+msgid "Ignore WARNINGs"
+msgstr "Shpërfill"
+
+#: ../lib/unittests.py:61
+#, python-format
+#, fuzzy
+msgid "Running %s tests"
+msgstr "Në ekzekutim s"
+
+#: ../lib/unittests.py:63
+#, python-format
+#, fuzzy
+msgid "Running %s tests (%s)"
+msgstr "Në ekzekutim s s"
+
+#: ../lib/unittests.py:70
+#, fuzzy
+msgid "Success!"
+msgstr "Me sukses!"
+
+#: ../lib/userdb.py:52
+#, python-format
+#, fuzzy
+msgid "invalid type for setting %s in %s"
+msgstr "I pavlefshëm lloji për s në s"
+
+#: ../lib/userdb.py:212
+#, python-format
+#, fuzzy
+msgid "No search based specified for %s"
+msgstr "Jo kërko për s"
+
+#: ../lib/userdb.py:215
+#, python-format
+#, fuzzy
+msgid "No query filter specified for %s"
+msgstr "Jo kërkesë filtri për s"
+
+#: ../lib/userdb.py:218
+#, python-format
+#, fuzzy
+msgid "No result attribute specified for %s"
+msgstr "Jo karakteristika për s"
+
+#: ../lib/userdb.py:227
+#, fuzzy
+msgid "Scope must be one of sub, base and one"
+msgstr "Qëllimi nga dhe"
+
+#: ../lib/userdb.py:247
+#, fuzzy
+msgid "multiple_result must be one of first and random"
+msgstr "nga i pa_ri dhe"
+
+#: ../lib/userdb.py:339
+#, python-format
+#, fuzzy
+msgid "Could not open %s for writing"
+msgstr "nuk hap s për"
+
+#: ../lib/userdb.py:352
+#, python-format
+#, fuzzy
+msgid "Failed to save UserDatabase to %s"
+msgstr "Dështoi tek ruaj tek s"
+
+#: ../lib/userdb.py:375 ../lib/userdb.py:410
+#, python-format
+#, fuzzy
+msgid "File %s is not a profile configuration"
+msgstr "File s është nuk a profili"
+
+#: ../lib/userdb.py:382
+#, python-format
+#, fuzzy
+msgid "Failed to add default profile %s to configuration"
+msgstr "Dështoi tek shto prezgjedhur profili s tek"
+
+#: ../lib/userdb.py:418
+#, python-format
+#, fuzzy
+msgid "Failed to add user %s to profile configuration"
+msgstr "Dështoi tek shto përdorues s tek profili"
+
+#: ../lib/userdb.py:449
+#, fuzzy
+msgid "Failed to get the user list"
+msgstr "Dështoi tek merr përdorues lista"
+
+#: ../lib/util.py:127
+#, fuzzy
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"E pamundur gjetja e dosjes shtëpi. e pacaktuar në /etc/password dhe asnjë "
+"vlerë për $HOME në mjedis"
+
+#: ../lib/util.py:140
+#, fuzzy
+msgid ""
+"Cannot find username: not set in /etc/passwd and no value for $USER in "
+"environment"
+msgstr "gjej përdoruesi nuk në dhe jo për PËRDORUES në"
+
