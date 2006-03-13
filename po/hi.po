@@ -1,0 +1,812 @@
+# translation of sabayon.HEAD.po to Hindi
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# Rajesh Ranjan <rranjan@redhat.com>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sabayon.HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-03-13 07:19+0100\n"
+"PO-Revision-Date: 2006-03-13 14:09+0530\n"
+"Last-Translator: Rajesh Ranjan <rranjan@redhat.com>\n"
+"Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
+"X-Generator: KBabel 1.9.1\n"
+
+#: ../admin-tool/aboutdialog.py:63
+msgid "Program to establish and edit profiles for users"
+msgstr "उपयोक्ता के लिये प्रोफाइल संपादन व स्थापन के लिये प्रोग्राम"
+
+#: ../admin-tool/aboutdialog.py:66
+msgid "translator-credits"
+msgstr ""
+"रविशंकर श्रीवास्तव (raviratlami@yahoo.com)\n"
+"राजेश रंजन (rajeshkajha@yahoo.com)"
+
+#: ../admin-tool/changeswindow.py:50
+#, python-format
+msgid "Changes in profile %s"
+msgstr "%s प्रोफाइल में बदलाव"
+
+#: ../admin-tool/changeswindow.py:106
+msgid "Ignore"
+msgstr "नजरअंदाज करें"
+
+#: ../admin-tool/changeswindow.py:113
+msgid "Lock"
+msgstr "बंद करें"
+
+#: ../admin-tool/changeswindow.py:120 ../admin-tool/editorwindow.py:224
+msgid "Description"
+msgstr "वर्णन"
+
+#: ../admin-tool/editorwindow.py:97
+#, python-format
+msgid "Profile %s"
+msgstr "प्रोफाइल %s"
+
+#: ../admin-tool/editorwindow.py:189 ../admin-tool/sessionwindow.py:174
+msgid "_Profile"
+msgstr "प्रोफाइल (_P)"
+
+#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
+msgid "_Save"
+msgstr "सहेजें (_S)"
+
+#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
+msgid "Save profile"
+msgstr "प्रोफाइल सहेजें"
+
+#: ../admin-tool/editorwindow.py:191
+msgid "_Close"
+msgstr "बंद करें (_C)"
+
+#: ../admin-tool/editorwindow.py:191 ../admin-tool/sessionwindow.py:176
+msgid "Close the current window"
+msgstr "मौजूदा विंडो बन्द करो"
+
+#: ../admin-tool/editorwindow.py:192 ../admin-tool/sessionwindow.py:177
+msgid "_Edit"
+msgstr "संपादन (_E)"
+
+#: ../admin-tool/editorwindow.py:193
+msgid "_Delete"
+msgstr "मिटाएँ (_D)"
+
+#: ../admin-tool/editorwindow.py:193
+msgid "Delete item"
+msgstr "मिटाएँ मद"
+
+#: ../admin-tool/editorwindow.py:194 ../admin-tool/sessionwindow.py:180
+msgid "_Help"
+msgstr "मदद (_H)"
+
+#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:181
+msgid "_About"
+msgstr "के बारे में (_A)"
+
+#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:181
+msgid "About Sabayon"
+msgstr "सबेयन के बारे में"
+
+#: ../admin-tool/editorwindow.py:254 ../lib/sources/gconfsource.py:123
+msgid "GConf"
+msgstr "GConf"
+
+#: ../admin-tool/editorwindow.py:258 ../lib/sources/filessource.py:78
+msgid "Files"
+msgstr "फ़ाइल"
+
+#: ../admin-tool/editorwindow.py:258 ../admin-tool/lockdown/pessulus.glade.h:7
+#: ../lib/sources/paneldelegate.py:134
+msgid "Panel"
+msgstr "पटल"
+
+#: ../admin-tool/fileviewer.py:29
+#, python-format
+msgid "Profile file: %s"
+msgstr "प्रोफाइल फाइल: %s"
+
+#: ../admin-tool/gconfviewer.py:59 ../admin-tool/gconfviewer.py:78
+msgid "<no type>"
+msgstr "<no type>"
+
+#: ../admin-tool/gconfviewer.py:60
+msgid "<no value>"
+msgstr "<no value>"
+
+#: ../admin-tool/gconfviewer.py:64
+msgid "string"
+msgstr "स्ट्रिंग"
+
+#: ../admin-tool/gconfviewer.py:66
+msgid "integer"
+msgstr "पूर्णांक"
+
+#: ../admin-tool/gconfviewer.py:68
+msgid "float"
+msgstr "फ्लोट"
+
+#: ../admin-tool/gconfviewer.py:70
+msgid "boolean"
+msgstr "बूलियन"
+
+#: ../admin-tool/gconfviewer.py:72
+msgid "schema"
+msgstr "स्कीमा"
+
+#: ../admin-tool/gconfviewer.py:74
+msgid "list"
+msgstr "सूची"
+
+#: ../admin-tool/gconfviewer.py:76
+msgid "pair"
+msgstr "जोड़ा"
+
+#: ../admin-tool/gconfviewer.py:88
+#, python-format
+msgid "Profile settings: %s"
+msgstr "प्रोफाइल जमावट: %s"
+
+#: ../admin-tool/gconfviewer.py:112 ../admin-tool/profilesdialog.py:315
+#: ../admin-tool/usersdialog.py:85
+msgid "Name"
+msgstr "नाम"
+
+#: ../admin-tool/gconfviewer.py:117
+msgid "Type"
+msgstr "प्रकार"
+
+#: ../admin-tool/gconfviewer.py:122
+msgid "Value"
+msgstr "मान"
+
+#: ../admin-tool/lockdown/lockdownbutton.py:99
+msgid "Click to make this setting not mandatory"
+msgstr "इस सेटिंग को अऩिवार्य न बनाने के लिये क्लिक करें"
+
+#: ../admin-tool/lockdown/lockdownbutton.py:101
+msgid "Click to make this setting mandatory"
+msgstr "इस सेटिंग को अऩिवार्य बनाने के लिये क्लिक करें"
+
+#: ../admin-tool/lockdown/maindialog.py:47
+msgid "Disable _command line"
+msgstr "कमांड लाइन निष्क्रिय करें (_c)"
+
+#: ../admin-tool/lockdown/maindialog.py:48
+msgid "Disable _printing"
+msgstr "मुद्रण निष्क्रिय करें (_p)"
+
+#: ../admin-tool/lockdown/maindialog.py:49
+msgid "Disable print _setup"
+msgstr "प्रिंट सेटअप निष्क्रिय करें (_s)"
+
+#: ../admin-tool/lockdown/maindialog.py:50
+msgid "Disable save to _disk"
+msgstr "डिस्क में सहेजना निष्क्रिय करें (_d)"
+
+#: ../admin-tool/lockdown/maindialog.py:52
+msgid "_Lock down the panels"
+msgstr "पैनल बंद करें (_L)"
+
+#: ../admin-tool/lockdown/maindialog.py:53
+msgid "Disable force _quit"
+msgstr "जबरदस्ती निष्क्रियकरण छोड़ें (_q)"
+
+#: ../admin-tool/lockdown/maindialog.py:54
+msgid "Disable lock _screen"
+msgstr "लॉक स्क्रीन निष्क्रिय करें (_s)"
+
+#: ../admin-tool/lockdown/maindialog.py:55
+msgid "Disable log _out"
+msgstr "लॉगआउट निष्क्रिय करें (_o)"
+
+#: ../admin-tool/lockdown/maindialog.py:57
+msgid "Disable _quit"
+msgstr "छोड़ना निष्क्रिय करें (_q)"
+
+#: ../admin-tool/lockdown/maindialog.py:58
+msgid "Disable _arbitrary URL"
+msgstr "निष्क्रिय करें यादृच्छिक यूआरएल (_a)"
+
+#: ../admin-tool/lockdown/maindialog.py:59
+msgid "Disable _bookmark editing"
+msgstr "पुस्तकचिह्न संपादन निष्क्रिय करें (_b)"
+
+#: ../admin-tool/lockdown/maindialog.py:60
+msgid "Disable _history"
+msgstr "इतिहास निष्क्रिय करें (_h)"
+
+#: ../admin-tool/lockdown/maindialog.py:61
+msgid "Disable _javascript chrome"
+msgstr "जावास्क्रिप्ट क्रोम निष्क्रिय करें (_j)"
+
+#: ../admin-tool/lockdown/maindialog.py:62
+msgid "Disable _toolbar editing"
+msgstr "टूलबार निष्क्रिय करें (_t)"
+
+#: ../admin-tool/lockdown/maindialog.py:63
+msgid "_Fullscreen"
+msgstr "फुलस्क्रीन (_F)"
+
+#: ../admin-tool/lockdown/maindialog.py:64
+msgid "Hide _menubar"
+msgstr "मेनूबार छुपाएँ (_m)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:1
+msgid "<b>Disabled Applets</b>"
+msgstr "<b> एप्पलेट अक्षम करे</b>"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:2
+msgid "<b>Safe Protocols</b>"
+msgstr "<b>सुरक्षित प्रोटोकॉल</b>"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:3
+msgid "Disable _unsafe protocols"
+msgstr "असुरक्षित प्रोटोकॉल निष्क्रिय करें (_u)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:4
+msgid "Epiphany Web Browser"
+msgstr "एपीफेनी वेब ब्राउसर"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:5
+msgid "General"
+msgstr "सामान्य"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:6
+msgid "Lockdown Editor"
+msgstr "संपादक लॉकडाउन करें"
+
+#.
+#. Translators: this string specifies how a profile
+#. name is concatenated with an integer
+#. to form a unique profile name e.g.
+#. "Artist Workstation (5)"
+#.
+#: ../admin-tool/profilesdialog.py:415
+#, python-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../admin-tool/sabayon:44
+#, fuzzy
+msgid "Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr "डेस्कटॉप उपयोक्ता प्रोफ़ाइल्स"
+
+#: ../admin-tool/sabayon:45
+#, fuzzy
+msgid ""
+"Administrator level permissions are needed to run this program because it "
+"can modify system files."
+msgstr "स्तर प्रोग्राम."
+
+#: ../admin-tool/sabayon:50
+msgid "Desktop User Profiles tool is already running"
+msgstr "डेस्कटॉप उपयोक्ता प्रोफ़ाइल्स पहले से चल रहा है"
+
+#: ../admin-tool/sabayon:51
+#, fuzzy
+msgid ""
+"You may not use Desktop User Profiles tool from within a profile editing "
+"session"
+msgstr "डेस्कटॉप उपयोक्ता प्रोफ़ाइल्स ए सत्र"
+
+#: ../admin-tool/sabayon:58
+#, c-format
+msgid "User account '%s' was not found"
+msgstr "उपयोक्ता खाता '%s' नहीं मिला था"
+
+#: ../admin-tool/sabayon:59
+#, c-format
+#, fuzzy
+msgid ""
+"Sabayon requires a special user account '%s' to be present on this computer. "
+"Try again after creating the account (using, for example, the 'adduser' "
+"command)"
+msgstr "ए पर पश्चात के लिये"
+
+#: ../admin-tool/sabayon-apply:39
+#, c-format
+msgid "No profile for user '%s' found\n"
+msgstr "उपयोक्ता '%s' के लिये कोई प्रोफाइल नहीं मिला\n"
+
+#: ../admin-tool/sabayon-apply:44
+#, c-format
+msgid "Usage: %s [<profile-name>]\n"
+msgstr "प्रयोग: %s [<profile-name>]\n"
+
+#: ../admin-tool/sabayon-session:32
+#, c-format
+msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
+msgstr "प्रयोग: %s <profile-name> <profile-path> <display-number>\n"
+
+#: ../admin-tool/sabayon.desktop.in.h:1
+msgid "Establish and Edit Profiles for Users"
+msgstr "उपयोक्ता के लिये प्रोफ़ाइल्स स्थापित और संपादित करें"
+
+#: ../admin-tool/sabayon.desktop.in.h:2 ../admin-tool/sabayon.glade.h:4
+msgid "User Profile Editor"
+msgstr "उपयोक्ता प्रोफाइल संपादक"
+
+#: ../admin-tool/sabayon.glade.h:1
+msgid "Add Profile"
+msgstr "जोड़ें प्रोफाइल"
+
+#: ../admin-tool/sabayon.glade.h:2
+msgid "Profile _name:"
+msgstr "प्रोफ़ाइल नामः (_n)"
+
+#: ../admin-tool/sabayon.glade.h:3
+msgid "Use this profile for _all users"
+msgstr "सारे उपयोक्ता के लिये इस प्रोफाइल का प्रयोग करें (_a)"
+
+#: ../admin-tool/sabayon.glade.h:5
+msgid "_Base on:"
+msgstr "आधार पर: (_B)"
+
+#: ../admin-tool/sabayon.glade.h:6
+msgid "_Profiles:"
+msgstr "प्रोफ़ाइल्स: (_P)"
+
+#: ../admin-tool/sabayon.glade.h:7
+msgid "_Users"
+msgstr "उपयोक्ता (_U)"
+
+#: ../admin-tool/sabayon.glade.h:8
+msgid "_Users:"
+msgstr "उपयोक्ता (_U):"
+
+#: ../admin-tool/saveconfirm.py:36
+msgid "Close _Without Saving"
+msgstr "बिना सहेजें बंद करें (_W)"
+
+#: ../admin-tool/saveconfirm.py:43
+#, python-format
+msgid "Save changes to profile \"%s\" before closing?"
+msgstr "बंद करने के पहले \"%s\" प्रोफाइल में बदलाव सहेजें?"
+
+#: ../admin-tool/saveconfirm.py:47
+#, python-format
+msgid "If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld seconds will be permanently "
+"lost."
+msgstr[0] "यदि आप सहेजते नहीं हैं तो अंतिम %ld सेकंड में आपके द्वारा किए गए परिवर्तन मिट ही जाएँगे."
+msgstr[1] "यदि आप सहेजते नहीं हैं तो अंतिम %ld सेकंड में आपके द्वारा किए गए परिवर्तन मिट ही जाएँगे."
+
+#: ../admin-tool/saveconfirm.py:53
+msgid "If you don't save, changes from the last minute will be permanently lost."
+msgstr "यदि आप सहेजते नहीं हैं तो आपके द्वारा अंतिम मिनट में किए गए परिवर्तन मिट ही जाएँगे."
+
+#: ../admin-tool/saveconfirm.py:57
+#, python-format
+msgid ""
+"If you don't save, changes from the last minute and %ld second will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last minute and %ld seconds will be "
+"permanently lost."
+msgstr[0] ""
+"यदि आप सहेजते नहीं हैं तो अंतिम मिनट और %ld सेकंड में आपके द्वारा किए गए परिवर्तन मिट ही "
+"जाएँगे."
+msgstr[1] ""
+"यदि आप सहेजते नहीं हैं तो अंतिम मिनट और %ld सेकंड में आपके द्वारा किए गए परिवर्तन मिट ही "
+"जाएँगे."
+
+#: ../admin-tool/saveconfirm.py:64
+#, python-format
+msgid "If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld minutes will be permanently "
+"lost."
+msgstr[0] "यदि आप सहेजते नहीं हैं तो आपके द्वारा अंतिम %ld मिनट में किए गए परिवर्तन मिट ही जाएँगे."
+msgstr[1] "यदि आप सहेजते नहीं हैं तो आपके द्वारा अंतिम %ld मिनट में किए गए परिवर्तन मिट ही जाएँगे."
+
+#: ../admin-tool/saveconfirm.py:73 ../admin-tool/saveconfirm.py:83
+#, python-format
+msgid "If you don't save, changes from the last hour will be permanently lost."
+msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] "यदि आप सहेजते नहीं हैं तो अंतिम %d घंटे में आपके द्वारा किए गए परिवर्तन मिट ही जाएँगे."
+msgstr[1] "यदि आप सहेजते नहीं हैं तो अंतिम %d घंटे में आपके द्वारा किए गए परिवर्तन मिट ही जाएँगे."
+
+#: ../admin-tool/saveconfirm.py:76
+#, python-format
+msgid ""
+"If you don't save, changes from the last hour and %d minute will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last hour and %d minutes will be "
+"permanently lost."
+msgstr[0] ""
+"यदि आप सहेजते नहीं हैं तो अंतिम घंटे व %d मिनट में आपके द्वारा किए गए परिवर्तन स्थायी रूप से "
+"मिट ही जाएँगे."
+msgstr[1] ""
+"यदि आप सहेजते नहीं हैं तो अंतिम घंटे व %d मिनट में आपके द्वारा किए गए परिवर्तन स्थायी रूप से "
+"मिट ही जाएँगे."
+
+#: ../admin-tool/sessionwindow.py:153
+#, python-format
+msgid "Editing profile %s"
+msgstr "%s प्रोफाइल संपादन कर रहा है"
+
+#: ../admin-tool/sessionwindow.py:176
+msgid "_Quit"
+msgstr "बाहर (_Q)"
+
+#: ../admin-tool/sessionwindow.py:178
+msgid "_Changes"
+msgstr "बदलाव (_C)"
+
+#: ../admin-tool/sessionwindow.py:178
+msgid "Edit changes"
+msgstr "संपादन बदलें"
+
+#: ../admin-tool/sessionwindow.py:179
+msgid "_Lockdown"
+msgstr "लॉकडाउन (_L)"
+
+#: ../admin-tool/sessionwindow.py:179
+msgid "Edit Lockdown settings"
+msgstr "लॉकडाउन सेंटिंग संपादित करें"
+
+#: ../admin-tool/sessionwindow.py:184
+msgid "Enforce Mandatory"
+msgstr "अनिवार्य लागू करें"
+
+#: ../admin-tool/sessionwindow.py:184
+msgid "Enforce mandatory settings in the editing session"
+msgstr "संपादन सत्र में अनिवार्य जमावट लागू करें"
+
+#: ../admin-tool/sessionwindow.py:273
+#, python-format
+msgid "Lockdown settings for %s"
+msgstr "%s के लिये लॉकडाउन सेटिंग"
+
+#: ../admin-tool/usersdialog.py:67
+#, python-format
+msgid "Users for profile %s"
+msgstr "%s प्रोफाइल के लिये उपयोक्ता"
+
+#: ../admin-tool/usersdialog.py:95
+msgid "Use This Profile"
+msgstr "इस प्रोफाइल का प्रयोग करें"
+
+#: ../lib/dirmonitor.py:151
+#, python-format
+msgid "Failed to add monitor for %s"
+msgstr "%s के लिये मॉनीटर जोड़ने में विफल"
+
+#: ../lib/dirmonitor.py:231
+#, python-format
+msgid "Expected event: %s %s"
+msgstr "प्रत्याशित घटना: %s %s"
+
+#: ../lib/protosession.py:142
+msgid "Unable to find a free X display"
+msgstr "मुक्त X डिस्प्ले पाने में विफल"
+
+#: ../lib/protosession.py:409
+msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+msgstr "Xnest आरंभ करने में विफल:USR1 सिग्नल के लिये प्रतीक्षारत समय समाप्त"
+
+#: ../lib/protosession.py:411
+msgid "Failed to start Xnest: died during startup"
+msgstr "Xnest आरंभ करने में विफल: आरंभन के दौरान मृत"
+
+#: ../lib/sources/filessource.py:68
+#, python-format
+msgid "File '%s' created"
+msgstr "फाइल '%s' बनाया गया"
+
+#: ../lib/sources/filessource.py:70
+#, python-format
+msgid "File '%s' deleted"
+msgstr "फाइल '%s' मिटाया गया"
+
+#: ../lib/sources/filessource.py:72
+#, python-format
+msgid "File '%s' changed"
+msgstr "फाइल '%s' बदला गया"
+
+#: ../lib/sources/filessource.py:96
+msgid "Applications menu"
+msgstr "अनुप्रयोग मेनू"
+
+#: ../lib/sources/filessource.py:98
+msgid "Preferences menu"
+msgstr "वरीयता मेनू"
+
+#: ../lib/sources/filessource.py:100
+msgid "Server Settings menu"
+msgstr "सर्वर जमावट मेनू"
+
+#: ../lib/sources/filessource.py:102
+msgid "System Settings menu"
+msgstr "सिस्टम जमावट मेनू"
+
+#: ../lib/sources/filessource.py:104
+msgid "Start Here menu"
+msgstr "आरंभ यहां मेनू"
+
+#: ../lib/sources/gconfsource.py:89
+#, python-format
+msgid "GConf key '%s' unset"
+msgstr "GConf कुंजी '%s' अनसेट किया"
+
+#: ../lib/sources/gconfsource.py:91
+#, python-format
+msgid "GConf key '%s' set to string '%s'"
+msgstr "GConf कुंजी '%s' '%s' स्ट्रिंग में सेट किया है"
+
+#: ../lib/sources/gconfsource.py:93
+#, python-format
+msgid "GConf key '%s' set to integer '%s'"
+msgstr "GConf कुंजी '%s' '%s' पूर्णांक में सेट किया है"
+
+#: ../lib/sources/gconfsource.py:95
+#, python-format
+msgid "GConf key '%s' set to float '%s'"
+msgstr "GConf कुंजी '%s' '%s' फ्लोट में सेट किया है"
+
+#: ../lib/sources/gconfsource.py:97
+#, python-format
+msgid "GConf key '%s' set to boolean '%s'"
+msgstr "GConf कुंजी '%s' '%s' बुलियन में सेट किया गया"
+
+#: ../lib/sources/gconfsource.py:99
+#, python-format
+msgid "GConf key '%s' set to schema '%s'"
+msgstr "GConf कुंजी '%s' '%s' स्कीमा में सेट किया गया"
+
+#: ../lib/sources/gconfsource.py:101
+#, python-format
+msgid "GConf key '%s' set to list '%s'"
+msgstr "GConf कुंजी '%s' '%s' सूची में सेट किया गया है"
+
+#: ../lib/sources/gconfsource.py:103
+#, python-format
+msgid "GConf key '%s' set to pair '%s'"
+msgstr "GConf कुंजी '%s' को '%s' में जोड़ा जा रहा है"
+
+#: ../lib/sources/gconfsource.py:105
+#, python-format
+msgid "GConf key '%s' set to '%s'"
+msgstr "GConf कुंजी '%s' '%s' में सेट किया गया"
+
+#: ../lib/sources/gconfsource.py:136
+msgid "Default GConf settings"
+msgstr "मूलभूत GConf जमावट"
+
+#: ../lib/sources/gconfsource.py:138
+msgid "Mandatory GConf settings"
+msgstr "अनिवार्य GConf जमावट"
+
+#: ../lib/sources/mozillasource.py:132
+#, python-format
+msgid "Mozilla key '%s' set to '%s'"
+msgstr "मोज़िला कुंजी '%s' को '%s' में सेट किया गया"
+
+#: ../lib/sources/mozillasource.py:134
+#, python-format
+msgid "Mozilla key '%s' unset"
+msgstr "मोज़िला कुंजी '%s' अनसेट किया गया"
+
+#: ../lib/sources/mozillasource.py:136
+#, python-format
+msgid "Mozilla key '%s' changed to '%s'"
+msgstr "मोजिला कुंजी '%s' '%s' में बदला गया"
+
+#: ../lib/sources/mozillasource.py:165 ../lib/sources/mozillasource.py:175
+msgid "Web browser preferences"
+msgstr "वेबब्रॉउजर वरीयता"
+
+#: ../lib/sources/mozillasource.py:167 ../lib/sources/mozillasource.py:177
+msgid "Web browser bookmarks"
+msgstr "वेबब्रॉउजर पुस्तकचिह्न"
+
+#: ../lib/sources/mozillasource.py:169
+msgid "Web browser profile list"
+msgstr "वेब ब्रॉउजर प्रोफाइल सूची"
+
+#: ../lib/sources/mozillasource.py:520
+#, python-format
+msgid "File Not Found (%s)"
+msgstr "फाइल नहीं मिला (%s)"
+
+#: ../lib/sources/mozillasource.py:871
+#, python-format
+msgid "duplicate name(%(name)s) in section %(section)s"
+msgstr "duplicate name(%(name)s) in section %(section)s"
+
+#: ../lib/sources/mozillasource.py:880
+#, python-format
+msgid "redundant default in section %s"
+msgstr "%s खंड में वैकल्पिक मूलभूत"
+
+#: ../lib/sources/mozillasource.py:897
+msgid "no default profile"
+msgstr "कोई मूलभूत प्रोफाइल नहीं"
+
+#: ../lib/sources/mozillasource.py:952
+#, python-format
+msgid "Mozilla bookmark created '%s' -> '%s'"
+msgstr "मोजिला बुकमार्क बनाया गया '%s'-> '%s'"
+
+#: ../lib/sources/mozillasource.py:954
+#, python-format
+msgid "Mozilla bookmark folder created '%s'"
+msgstr "मोजिला बुकमार्क फोल्डर बनाया गया '%s'"
+
+#: ../lib/sources/mozillasource.py:957
+#, python-format
+msgid "Mozilla bookmark deleted '%s'"
+msgstr "मोजिला बुकमार्क मिटाया गया '%s'"
+
+#: ../lib/sources/mozillasource.py:959
+#, python-format
+msgid "Mozilla bookmark folder deleted '%s'"
+msgstr "मोजिला बुकमार्क फोल्डर मिटाया गया '%s'"
+
+#: ../lib/sources/mozillasource.py:962
+#, python-format
+msgid "Mozilla bookmark changed '%s' '%s'"
+msgstr "मोडिला बुकमार्क बदला गया '%s' '%s'"
+
+#: ../lib/sources/mozillasource.py:964
+#, python-format
+msgid "Mozilla bookmark folder changed '%s'"
+msgstr "मोजिला पुस्तकचिह्न फोल्डर बदला गया '%s'"
+
+#: ../lib/sources/paneldelegate.py:58
+#, python-format
+msgid "Panel '%s' added"
+msgstr "पैनल '%s' जोड़ा गया"
+
+#: ../lib/sources/paneldelegate.py:64
+#, python-format
+msgid "Panel '%s' removed"
+msgstr "पैनल '%s' हटाया गया"
+
+#: ../lib/sources/paneldelegate.py:70
+#, python-format
+msgid "Panel applet '%s' added"
+msgstr "पैनल एप्पलेट '%s' जोड़ा गया"
+
+#: ../lib/sources/paneldelegate.py:76
+#, python-format
+msgid "Panel applet '%s' removed"
+msgstr "पैनल एप्पलेट '%s' हटाया गया"
+
+#: ../lib/sources/paneldelegate.py:82
+#, python-format
+msgid "Panel object '%s' added"
+msgstr "पैनल वस्तु '%s' जोड़ा गया"
+
+#: ../lib/sources/paneldelegate.py:94
+#, python-format
+msgid "Panel object '%s' removed"
+msgstr "पैनल वस्तु '%s' हटाया गया"
+
+#: ../lib/sources/paneldelegate.py:375
+msgid "Panel File"
+msgstr "पटल फ़ाइल"
+
+#: ../lib/storage.py:173
+#, python-format
+msgid "Failed to read file '%s': %s"
+msgstr "'%s' फाइल पढ़ने में विफल: %s"
+
+#: ../lib/storage.py:183
+#, python-format
+msgid "Failed to read metadata from '%s': %s"
+msgstr "'%s' से मेटाडाटा पढ़ने में विफल: %s"
+
+#: ../lib/storage.py:189
+#, python-format
+msgid "Invalid metadata section in '%s': %s"
+msgstr "'%s' में अवैध मेटाडाटा खंड: %s"
+
+#: ../lib/storage.py:363
+#, python-format
+msgid "Cannot add non-existent file '%s'"
+msgstr "गैर मौजूद फाइल '%s' नहीं जोड़ सकता है"
+
+#: ../lib/storage.py:540
+#, python-format
+msgid "Profile is read-only %s"
+msgstr "प्रोफाइल सिर्फ पढ़ने योग्य है %s"
+
+#: ../lib/unittests.py:38 ../lib/unittests.py:39
+msgid "Ignore WARNINGs"
+msgstr "चेतावनी नजरअंदाज करें"
+
+#: ../lib/unittests.py:61
+#, python-format
+msgid "Running %s tests"
+msgstr "%s जांच चला रहा है"
+
+#: ../lib/unittests.py:63
+#, python-format
+msgid "Running %s tests (%s)"
+msgstr "%s जांच चला रहा है (%s)"
+
+#: ../lib/unittests.py:70
+msgid "Success!"
+msgstr "सफल!"
+
+#: ../lib/userdb.py:52
+#, python-format
+msgid "invalid type for setting %s in %s"
+msgstr "%s सेटिंग के लिये %s में अवैध प्रकार"
+
+#: ../lib/userdb.py:212
+#, python-format
+msgid "No search based specified for %s"
+msgstr "%s के लिये कोई खोज निर्दिष्ट नहीं था"
+
+#: ../lib/userdb.py:215
+#, python-format
+msgid "No query filter specified for %s"
+msgstr "कोई प्रश्न फिल्टर %s के लिये निर्दिष्ट नहीं था"
+
+#: ../lib/userdb.py:218
+#, python-format
+msgid "No result attribute specified for %s"
+msgstr "कोई परिणाम गुण %s के लिये निर्दिष्ट नहीं था"
+
+#: ../lib/userdb.py:227
+msgid "Scope must be one of sub, base and one"
+msgstr "स्कोप जरूर एक सब, बेस और एक का होना चाहिये"
+
+#: ../lib/userdb.py:247
+msgid "multiple_result must be one of first and random"
+msgstr "multiple_result को जरूर एक या यादृच्छिक में से एक होना चाहिये"
+
+#: ../lib/userdb.py:339
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "%s लेखन के लिये नहीं खोल सका"
+
+#: ../lib/userdb.py:352
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "UserDatabase को %s में सहेजने में विफल"
+
+#: ../lib/userdb.py:375 ../lib/userdb.py:410
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "फाइल %s प्रोफाइल विन्यास नहीं है"
+
+#: ../lib/userdb.py:382
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "मूलभूत प्रोफाइल %s को विन्यास में जोड़ने में विफल"
+
+#: ../lib/userdb.py:418
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "उपयोक्ता %s को प्रोफाइल विन्यास में जोड़ने में विफल"
+
+#: ../lib/userdb.py:449
+msgid "Failed to get the user list"
+msgstr "उपयोक्ता सूची पाने में विफल"
+
+#: ../lib/util.py:127
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"घर निर्देशिका नहीं पा सकता है: /etc/passwd में सेट नहीं और $HOME के लिये वातावरण में कोई "
+"मान नहीं है"
+
+#: ../lib/util.py:140
+#, fuzzy
+msgid ""
+"Cannot find username: not set in /etc/passwd and no value for $USER in "
+"environment"
+msgstr "इं और के लिये USER इं"
+
