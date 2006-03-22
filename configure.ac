@@ -99,6 +99,7 @@ if test "x$with_distro" = "x"; then
   AC_CHECK_FILE(/etc/SuSE-release, with_distro="suse")
   AC_CHECK_FILE(/etc/mandriva-release, with_distro="mandriva")
   AC_CHECK_FILE(/etc/mandrakelinux-release, with_distro="mandriva")
+  AC_CHECK_FILE(/etc/frugalware-release, with_distro="frugalware")
 fi
 with_distro=`echo ${with_distro} | tr '[[:upper:]]' '[[:lower:]]' `
 
@@ -141,6 +142,12 @@ else
       SESSION_NAME="GNOME"
       install_xinitrc_script="yes"
       XINITRC_SYSCONFDIR="X11/xinit.d"
+      ;;
+    frugalware)
+      XSESSION="/etc/gdm/Xsession"
+      SESSION_NAME="gnome-session"
+      install_xinitrc_script="yes"
+      XINITRC_SYSCONFDIR="X11/xinit/xinitrc.d"
       ;;
     *)
       echo "Your distribution (${with_distro}) is not yet supported!  (patches welcome)"
