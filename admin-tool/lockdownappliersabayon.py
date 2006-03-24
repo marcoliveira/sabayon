@@ -63,19 +63,44 @@ class LockdownApplierSabayon (lockdownapplier.PessulusLockdownApplier):
             return self.changes_model[iter][sessionwindow.ProfileChangesModel.COLUMN_MANDATORY]
         
         return self.source.get_gconf_key_is_mandatory (key)
-        
-    def get_bool (self, key):
+
+    def get_value (self, key):
         iter = self.changes_model.find (self.source, key)
         if iter:
             change = self.changes_model[iter][sessionwindow.ProfileChangesModel.COLUMN_CHANGE]
-            val = change.value.get_bool()
+            val = change.value
         else:
-            val = self.client.get_bool (key)
+            val = self.client.get (key)
+        return val
         
+    def get_bool (self, key):
+        val = self.get_value (key)
+        if val == None:
+            val = False
+        else:
+            val = val.get_bool()
         return (val, self.__is_mandatory (key))
-            
+
+    def get_int (self, key):
+        val = self.get_value (key)
+        if val != None:
+            val = val.get_int()
+        return (val, self.__is_mandatory (key))
+
+    def get_string (self, key):
+        val = self.get_value (key)
+        if val != None:
+            val = val.get_string()
+        return (val, self.__is_mandatory (key))
+
     def set_bool (self, key, value, mandatory):
         return self.source.set_gconf_boolean (key, value, mandatory)
+
+    def set_int (self, key, value, mandatory):
+        return self.source.set_gconf_int (key, value, mandatory)
+
+    def set_string (self, key, value, mandatory):
+        return self.source.set_gconf_string (key, value, mandatory)
 
     def get_list (self, key, list_type):
         value = self.client.get_list (key, list_type)
