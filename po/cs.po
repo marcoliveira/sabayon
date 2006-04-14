@@ -1,19 +1,18 @@
 # Czech translation of gnome-2.14.
 # Copyright (C) 2005 sabayon'S COPYRIGHT HOLDER
-# Copyright (C) 2005 Miloslav Trmac <mitr@volny.cz>
+# Copyright (C) 2005, 2006 Miloslav Trmac <mitr@volny.cz>
 # Copyright (C) 2006 Lukas Novotny <lukasnov@cvs.gnome.org>
 # This file is distributed under the same license as the sabayon package.
-# Miloslav Trmac <mitr@volny.cz>, 2005.
+# Miloslav Trmac <mitr@volny.cz>, 2005 - 2006.
 # Lukas Novotny <lukasnov@cvs.gnome.org>, 2006.
 # Petr Tomeš <ptomes@gmail.com>, 2006.
-# 
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-11 07:03+0100\n"
-"PO-Revision-Date: 2006-01-25 11:05+0100\n"
+"POT-Creation-Date: 2006-04-14 13:46+0200\n"
+"PO-Revision-Date: 2006-04-14 21:34+0200\n"
 "Last-Translator: Petr Tomeš <ptomes@gmail.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -110,7 +109,7 @@ msgid "Panel"
 msgstr "Panel"
 
 #: ../admin-tool/fileviewer.py:29
-#, fuzzy, python-format
+#, python-format
 msgid "Profile file: %s"
 msgstr "Soubor profilu: %s"
 
@@ -484,14 +483,12 @@ msgid "Edit Lockdown settings"
 msgstr "Editace nastavení omezení práv"
 
 #: ../admin-tool/sessionwindow.py:184
-#, fuzzy
 msgid "Enforce Mandatory"
-msgstr "Povinné vynucení"
+msgstr "Vynucovat povinné"
 
 #: ../admin-tool/sessionwindow.py:184
-#, fuzzy
 msgid "Enforce mandatory settings in the editing session"
-msgstr "Nepovinné vynucení nastavení v editovaném sezení"
+msgstr "Vynucovat povinná nastavení v upravovacím sezení"
 
 #: ../admin-tool/sessionwindow.py:273
 #, python-format
@@ -724,9 +721,8 @@ msgid "Panel object '%s' removed"
 msgstr "Objekt panelu '%s' odstraněn"
 
 #: ../lib/sources/paneldelegate.py:375
-#, fuzzy
 msgid "Panel File"
-msgstr "Panel soubor"
+msgstr "Soubor panelu"
 
 #: ../lib/storage.py:173
 #, python-format
@@ -792,14 +788,12 @@ msgid "No result attribute specified for %s"
 msgstr "Nespecifikovaný výsledek pro vlastnost %s"
 
 #: ../lib/userdb.py:227
-#, fuzzy
 msgid "Scope must be one of sub, base and one"
-msgstr "rozsah musí být jeden pod, základní a stejný"
+msgstr "Rozsah musí být jedno z sub, base a one"
 
 #: ../lib/userdb.py:247
-#, fuzzy
 msgid "multiple_result must be one of first and random"
-msgstr "multiple_result má být první a libovolný"
+msgstr "multiple_result musí být jedno z first a random"
 
 #: ../lib/userdb.py:339
 #, python-format
@@ -846,9 +840,6 @@ msgstr ""
 "Nemohu najít jméno uživatele: nenastaveno v /etc/passwd a žádná hodnota "
 "$USER v prostředí"
 
-#~ msgid "All Your Settings Are Belong To Us"
-#~ msgstr "All Your Settings Are Belong To Us"
-
 #~ msgid "Clear revision history"
 #~ msgstr "Vymazat historii verzí"
 
@@ -860,9 +851,6 @@ msgstr ""
 
 #~ msgid "Desktop User Profiles"
 #~ msgstr "Profily uživatelů pracovní plochy"
-
-#~ msgid "dialog1"
-#~ msgstr "dialog1"
 
 #~ msgid "'xauth list' returned error"
 #~ msgstr "'xauth list' vrátil chybu"
