@@ -1,0 +1,797 @@
+# translation of sabayon.po to Georgian
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Vladimer Sichinava <alinux@siena.linux.it>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: sabayon\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-04-14 21:45+0200\n"
+"PO-Revision-Date: 2006-04-15 05:18+0200\n"
+"Last-Translator: Vladimer Sichinava <alinux@siena.linux.it>\n"
+"Language-Team: Georgian <geognome@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"X-Generator: KBabel 1.11.1\n"
+
+#: ../admin-tool/aboutdialog.py:63
+msgid "Program to establish and edit profiles for users"
+msgstr "მომხმარებლების სამუშაო გარემოს მარეგულირებელი პროგრამა"
+
+#: ../admin-tool/aboutdialog.py:66
+msgid "translator-credits"
+msgstr "Vladimer Sichinava  <vlsichinava@gmail.com>"
+
+#: ../admin-tool/changeswindow.py:50
+#, python-format
+msgid "Changes in profile %s"
+msgstr "ცვლილებები პროფილში %s"
+
+#: ../admin-tool/changeswindow.py:106
+msgid "Ignore"
+msgstr "იგნორირება"
+
+#: ../admin-tool/changeswindow.py:113
+msgid "Lock"
+msgstr "დაბლოკვა"
+
+#: ../admin-tool/changeswindow.py:120 ../admin-tool/editorwindow.py:224
+msgid "Description"
+msgstr "აღწერა"
+
+#: ../admin-tool/editorwindow.py:97
+#, python-format
+msgid "Profile %s"
+msgstr "პროფილი %s"
+
+#: ../admin-tool/editorwindow.py:189 ../admin-tool/sessionwindow.py:174
+msgid "_Profile"
+msgstr "_პროფილი"
+
+#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
+msgid "_Save"
+msgstr "_შენახვა"
+
+#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
+msgid "Save profile"
+msgstr "პროფილის დამახსოვრება"
+
+#: ../admin-tool/editorwindow.py:191
+msgid "_Close"
+msgstr "_დახურვა"
+
+#: ../admin-tool/editorwindow.py:191 ../admin-tool/sessionwindow.py:176
+msgid "Close the current window"
+msgstr "მიმდინარე ფანჯრის დახურვა"
+
+#: ../admin-tool/editorwindow.py:192 ../admin-tool/sessionwindow.py:177
+msgid "_Edit"
+msgstr "_დამუშავება"
+
+#: ../admin-tool/editorwindow.py:193
+msgid "_Delete"
+msgstr "_წაშლა"
+
+#: ../admin-tool/editorwindow.py:193
+msgid "Delete item"
+msgstr "ელემენტის წაშლა"
+
+#: ../admin-tool/editorwindow.py:194 ../admin-tool/sessionwindow.py:180
+msgid "_Help"
+msgstr "_დახმარება"
+
+#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:181
+msgid "_About"
+msgstr "_პროგრამის შესახებ"
+
+#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:181
+msgid "About Sabayon"
+msgstr "პროგრამა Sabayon-ის შესახებ"
+
+#: ../admin-tool/editorwindow.py:254 ../lib/sources/gconfsource.py:123
+msgid "GConf"
+msgstr "GConf"
+
+#: ../admin-tool/editorwindow.py:258 ../lib/sources/filessource.py:78
+msgid "Files"
+msgstr "ფაილები"
+
+#: ../admin-tool/editorwindow.py:258 ../admin-tool/lockdown/pessulus.glade.h:7
+#: ../lib/sources/paneldelegate.py:134
+msgid "Panel"
+msgstr "_პანელი"
+
+#: ../admin-tool/fileviewer.py:29
+#, python-format
+msgid "Profile file: %s"
+msgstr "პროფილის ფაილი %s"
+
+#: ../admin-tool/gconfviewer.py:59 ../admin-tool/gconfviewer.py:78
+msgid "<no type>"
+msgstr "<არავითარი ტიპი>"
+
+#: ../admin-tool/gconfviewer.py:60
+msgid "<no value>"
+msgstr "<არავითარი>"
+
+#: ../admin-tool/gconfviewer.py:64
+msgid "string"
+msgstr "სტრიქონი"
+
+#: ../admin-tool/gconfviewer.py:66
+msgid "integer"
+msgstr "მთელი"
+
+#: ../admin-tool/gconfviewer.py:68
+msgid "float"
+msgstr "მცურავი მძიმეს ნიშანი"
+
+#: ../admin-tool/gconfviewer.py:70
+msgid "boolean"
+msgstr "ლოგიკური ოპერატორი boolean"
+
+#: ../admin-tool/gconfviewer.py:72
+msgid "schema"
+msgstr "სქემა"
+
+#: ../admin-tool/gconfviewer.py:74
+msgid "list"
+msgstr "სია"
+
+#: ../admin-tool/gconfviewer.py:76
+msgid "pair"
+msgstr "წყვილი"
+
+#: ../admin-tool/gconfviewer.py:88
+#, python-format
+msgid "Profile settings: %s"
+msgstr "პროფილის პარამეტრები: %s"
+
+#: ../admin-tool/gconfviewer.py:112 ../admin-tool/profilesdialog.py:315
+#: ../admin-tool/usersdialog.py:85
+msgid "Name"
+msgstr "სახელი"
+
+#: ../admin-tool/gconfviewer.py:117
+msgid "Type"
+msgstr "ტიპი"
+
+#: ../admin-tool/gconfviewer.py:122
+msgid "Value"
+msgstr "მნიშვნელობა"
+
+#: ../admin-tool/lockdown/lockdownbutton.py:99
+msgid "Click to make this setting not mandatory"
+msgstr "დაწკაპეთ ამ პარამეტრის არააუცილებლად მისათითებლად"
+
+#: ../admin-tool/lockdown/lockdownbutton.py:101
+msgid "Click to make this setting mandatory"
+msgstr "დაწკაპეთ ამ პარამეტრის აუცილებლად მისათითებლად"
+
+#: ../admin-tool/lockdown/maindialog.py:47
+msgid "Disable _command line"
+msgstr "_ბრძანების ხაზის ამორთვა"
+
+#: ../admin-tool/lockdown/maindialog.py:48
+msgid "Disable _printing"
+msgstr "_ბეჭდვის ამორთვა"
+
+#: ../admin-tool/lockdown/maindialog.py:49
+msgid "Disable print _setup"
+msgstr "ბეჭდვის _გამართვის ამორთვა"
+
+#: ../admin-tool/lockdown/maindialog.py:50
+msgid "Disable save to _disk"
+msgstr "_დისკზე შენახვის ამორთვა"
+
+#: ../admin-tool/lockdown/maindialog.py:52
+msgid "_Lock down the panels"
+msgstr "_პანელების დაბლოკვა"
+
+#: ../admin-tool/lockdown/maindialog.py:53
+msgid "Disable force _quit"
+msgstr "_იძულებითი დასრულების ამორთვა"
+
+#: ../admin-tool/lockdown/maindialog.py:54
+msgid "Disable lock _screen"
+msgstr "_ეკრანის დაბლოკვის ამორთვა"
+
+#: ../admin-tool/lockdown/maindialog.py:55
+msgid "Disable log _out"
+msgstr "_გასვლის ამორთვა"
+
+#: ../admin-tool/lockdown/maindialog.py:57
+msgid "Disable _quit"
+msgstr "_დასრულების ამორთვა"
+
+#: ../admin-tool/lockdown/maindialog.py:58
+msgid "Disable _arbitrary URL"
+msgstr "_ნებისმიერი URL მისამართის ამორთვა"
+
+#: ../admin-tool/lockdown/maindialog.py:59
+msgid "Disable _bookmark editing"
+msgstr "_სანიშნეების რედაქტირების ამორთვა"
+
+#: ../admin-tool/lockdown/maindialog.py:60
+msgid "Disable _history"
+msgstr "_ისტორიის ამორთვა"
+
+#: ../admin-tool/lockdown/maindialog.py:61
+msgid "Disable _javascript chrome"
+msgstr "_javascript-ის ქრომოს ამორთვა"
+
+#: ../admin-tool/lockdown/maindialog.py:62
+msgid "Disable _toolbar editing"
+msgstr "_პულტის რედაქტირების ამორთვა"
+
+#: ../admin-tool/lockdown/maindialog.py:63
+msgid "_Fullscreen"
+msgstr "_მთელს ეკრანზე"
+
+#: ../admin-tool/lockdown/maindialog.py:64
+msgid "Hide _menubar"
+msgstr "_მენიუს ზოლის დამალვა"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:1
+msgid "<b>Disabled Applets</b>"
+msgstr "<b>ამორთული აპლეტები</b>"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:2
+msgid "<b>Safe Protocols</b>"
+msgstr "<b>უსაფრთხო ოქმები</b>"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:3
+msgid "Disable _unsafe protocols"
+msgstr "_უსაფრთხო ოქმების ამორთვა"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:4
+msgid "Epiphany Web Browser"
+msgstr "ვებ ბრაუზერი Epiphany"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:5
+msgid "General"
+msgstr "საერთო"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:6
+msgid "Lockdown Editor"
+msgstr "დაბლოკვის რედაქტორი"
+
+#.
+#. Translators: this string specifies how a profile
+#. name is concatenated with an integer
+#. to form a unique profile name e.g.
+#. "Artist Workstation (5)"
+#.
+#: ../admin-tool/profilesdialog.py:415
+#, python-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../admin-tool/sabayon:44
+msgid "Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr "თქვენს ანგარიშს არ აქვს გარემოს მომხმარებელთა მარეგულირებელი ხელსაწყოს გაშვების უფლება"
+
+#: ../admin-tool/sabayon:45
+msgid ""
+"Administrator level permissions are needed to run this program because it "
+"can modify system files."
+msgstr "საჭიროა ადმინისტრატორული უფლებების ქონა, რადგანაც პროგრამას შეუძლია სისტემური ფაილების შეცვლა."
+
+#: ../admin-tool/sabayon:50
+msgid "Desktop User Profiles tool is already running"
+msgstr "მომხმარებელთა მარეგულირებელი ხელსაწყო უკვე ჩართულია."
+
+#: ../admin-tool/sabayon:51
+msgid ""
+"You may not use Desktop User Profiles tool from within a profile editing "
+"session"
+msgstr "თქვენ არ შეგიძლიათ მომხმარებელთა პროფილების მარეგულირებელი ხელსაწყოს გამოყენება მიმდინარე პროფილების შეცვლის სეანსში"
+
+#: ../admin-tool/sabayon:58
+#, c-format
+msgid "User account '%s' was not found"
+msgstr "მომხმარებელ '%s'-ის ანგარიში არ არის ნაპოვნი"
+
+#: ../admin-tool/sabayon:59
+#, c-format
+msgid ""
+"Sabayon requires a special user account '%s' to be present on this computer. "
+"Try again after creating the account (using, for example, the 'adduser' "
+"command)"
+msgstr ""
+"პროგრამა Sabayon-თან მუშაობისთვის საჭიროა სპეც მომხმარებლის '%s' ანგარიშის ქონა. "
+"გაიმეორეთ კიდევ ერთხელ პროგრამის ჩართვა ანგარიშის შექმნის შემდგომ."
+
+#: ../admin-tool/sabayon-apply:39
+#, c-format
+msgid "No profile for user '%s' found\n"
+msgstr "შეუძლებელია მომხმარებელ '%s'-ის პროფილის პოვნა\n"
+
+#: ../admin-tool/sabayon-apply:44
+#, c-format
+msgid "Usage: %s [<profile-name>]\n"
+msgstr "გამოყენება: %s [<პროფილის-სახელი>]\n"
+
+#: ../admin-tool/sabayon-session:32
+#, c-format
+msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
+msgstr "გამოყენება: %s <პროფილის სახელი><პროფილის ადგილსამყოფელი><დისპლეის-ნომერი>\n"
+
+#: ../admin-tool/sabayon.desktop.in.h:1
+msgid "Establish and Edit Profiles for Users"
+msgstr "მომხმარებლების პროფილების ჩადგმა და რედაქტირება"
+
+#: ../admin-tool/sabayon.desktop.in.h:2 ../admin-tool/sabayon.glade.h:4
+msgid "User Profile Editor"
+msgstr "მომხმარებელთა პროფილების რედაქტორი"
+
+#: ../admin-tool/sabayon.glade.h:1
+msgid "Add Profile"
+msgstr "პროფილის დამატება"
+
+#: ../admin-tool/sabayon.glade.h:2
+msgid "Profile _name:"
+msgstr "პროფილის _სახელი:"
+
+#: ../admin-tool/sabayon.glade.h:3
+msgid "Use this profile for _all users"
+msgstr "მიმდინარე პროფილის ყველა მომხმარებლისთვის გამოყენება"
+
+#: ../admin-tool/sabayon.glade.h:5
+msgid "_Base on:"
+msgstr "_დაფუძნებულია:"
+
+#: ../admin-tool/sabayon.glade.h:6
+msgid "_Profiles:"
+msgstr "_პროფილი:"
+
+#: ../admin-tool/sabayon.glade.h:7
+msgid "_Users"
+msgstr "მ_ომხმარებლები"
+
+#: ../admin-tool/sabayon.glade.h:8
+msgid "_Users:"
+msgstr "_მომხმარებლები:"
+
+#: ../admin-tool/saveconfirm.py:36
+msgid "Close _Without Saving"
+msgstr "დახურვა დამახსოვრების _გარეშე"
+
+#: ../admin-tool/saveconfirm.py:43
+#, python-format
+msgid "Save changes to profile \"%s\" before closing?"
+msgstr "დავიმახსოვრო პროფილ \"%s\" ცვლილებები პროგრამიდან გამოსვლამდე?"
+
+#: ../admin-tool/saveconfirm.py:47
+#, python-format
+msgid "If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld seconds will be permanently "
+"lost."
+msgstr[0] "თუ არ დაიმახსოვრებთ ცვლილებებს %ld წამის განმავლობაში, ყველა ცვლილება დაიკარგება სამუდამოდ."
+msgstr[1] "t შენახვა წამი."
+
+#: ../admin-tool/saveconfirm.py:53
+msgid "If you don't save, changes from the last minute will be permanently lost."
+msgstr "თუ არ დაიმახსოვრებთ ცვლილებებს წუთის განმავლობაში, ყველა ცვლილება დაიკარგება სამუდამოდ."
+
+#: ../admin-tool/saveconfirm.py:57
+#, python-format
+msgid ""
+"If you don't save, changes from the last minute and %ld second will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last minute and %ld seconds will be "
+"permanently lost."
+msgstr[0] "თუ არ დაიმახსოვრებთ ცვლილებებს ბოლო წუთის და %ld წამის განმავლობაში, ყველა ცვლილება დაიკარგება სამუდამოდ."
+msgstr[1] ""
+
+#: ../admin-tool/saveconfirm.py:64
+#, python-format
+msgid "If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld minutes will be permanently "
+"lost."
+msgstr[0] "თუ არ დაიმახსოვრებთ ცვლილებებს ბოლო %ld წუთის განმავლობაში, ყველა ცვლილება დაიკარგება სამუდამოდ."
+msgstr[1] "t შენახვა წუთი."
+
+#: ../admin-tool/saveconfirm.py:73 ../admin-tool/saveconfirm.py:83
+#, python-format
+msgid "If you don't save, changes from the last hour will be permanently lost."
+msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] "თუ არ დაიმახსოვრებთ ცვლილებებს ბოლო ერთი საათის განმავლობაში, ყველა ცვლილება დაიკარგება სამუდამოდ."
+msgstr[1] "t შენახვა საათი."
+
+#: ../admin-tool/saveconfirm.py:76
+#, python-format
+msgid ""
+"If you don't save, changes from the last hour and %d minute will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last hour and %d minutes will be "
+"permanently lost."
+msgstr[0] "თუ არ დაიმახსოვრებთ ცვლილებებს ბოლო ერთი საათის და %d წუთის განმავლობაში, ყველა ცვლილება დაიკარგება სამუდამოდ."
+msgstr[1] "t შენახვა საათი და წუთი."
+
+#: ../admin-tool/sessionwindow.py:153
+#, python-format
+msgid "Editing profile %s"
+msgstr "პროფილის შეცვლა %s"
+
+#: ../admin-tool/sessionwindow.py:176
+msgid "_Quit"
+msgstr "_გასვლა"
+
+#: ../admin-tool/sessionwindow.py:178
+msgid "_Changes"
+msgstr "ც_ვლილებები"
+
+#: ../admin-tool/sessionwindow.py:178
+msgid "Edit changes"
+msgstr "წვლილებების რედაქტირება"
+
+#: ../admin-tool/sessionwindow.py:179
+msgid "_Lockdown"
+msgstr "_დაბლოკვა"
+
+#: ../admin-tool/sessionwindow.py:179
+msgid "Edit Lockdown settings"
+msgstr "დაბლოკვის პარამეტრების რედაქტირება"
+
+#: ../admin-tool/sessionwindow.py:184
+msgid "Enforce Mandatory"
+msgstr "სავალდებულო პარამეტრების დაძალება"
+
+#: ../admin-tool/sessionwindow.py:184
+msgid "Enforce mandatory settings in the editing session"
+msgstr "სავალდებულო პარამეტრების დაძალება რედაქტირების დროს"
+
+#: ../admin-tool/sessionwindow.py:273
+#, python-format
+msgid "Lockdown settings for %s"
+msgstr "ბლოკირების პარამეტრები %s-თვის"
+
+#: ../admin-tool/usersdialog.py:67
+#, python-format
+msgid "Users for profile %s"
+msgstr "პროფილ %s მომხმარებლები"
+
+#: ../admin-tool/usersdialog.py:95
+msgid "Use This Profile"
+msgstr "მიმდინარე პროფილის გამოყენება"
+
+#: ../lib/dirmonitor.py:151
+#, python-format
+msgid "Failed to add monitor for %s"
+msgstr "ვერ განხორციელდა %s-თვის მონიტორის დამატება"
+
+#: ../lib/dirmonitor.py:231
+#, python-format
+msgid "Expected event: %s %s"
+msgstr "მოსალოდნელი მოვლენა: %s %s"
+
+#: ../lib/protosession.py:142
+msgid "Unable to find a free X display"
+msgstr "ვერ ვპოულობ თავისუფალ X დისპლეის"
+
+#: ../lib/protosession.py:409
+msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+msgstr "ვერ განხორციელდა Xnest-ის გაშვება: USR1-ის ლოდინის დრო ამოიწურა"
+
+#: ../lib/protosession.py:411
+msgid "Failed to start Xnest: died during startup"
+msgstr "ვერ განხორციელდა Xnest-ის გაშვება: მოკვდა გაშვებისას"
+
+#: ../lib/sources/filessource.py:68
+#, python-format
+msgid "File '%s' created"
+msgstr "ფაილი '%s' შექმნილია"
+
+#: ../lib/sources/filessource.py:70
+#, python-format
+msgid "File '%s' deleted"
+msgstr "ფაილი '%s' მოშორებულია"
+
+#: ../lib/sources/filessource.py:72
+#, python-format
+msgid "File '%s' changed"
+msgstr "ფაილი '%s' შეცვლილია"
+
+#: ../lib/sources/filessource.py:96
+msgid "Applications menu"
+msgstr "პროგრამების მენიუ"
+
+#: ../lib/sources/filessource.py:98
+msgid "Preferences menu"
+msgstr "პარამეტრების მენიუ"
+
+#: ../lib/sources/filessource.py:100
+msgid "Server Settings menu"
+msgstr "სერვერის პარამეტრების მენიუ"
+
+#: ../lib/sources/filessource.py:102
+msgid "System Settings menu"
+msgstr "სისტემის პარამეტრების მენიუ"
+
+#: ../lib/sources/filessource.py:104
+msgid "Start Here menu"
+msgstr "მენიუს \"აქ გაშვება\""
+
+#: ../lib/sources/gconfsource.py:89
+#, python-format
+msgid "GConf key '%s' unset"
+msgstr "GConf გასაღები '%s' ამორთულია"
+
+#: ../lib/sources/gconfsource.py:91
+#, python-format
+msgid "GConf key '%s' set to string '%s'"
+msgstr "Gconf გასაღები'%s' დაყენებულია როგორც სტრიქონი '%s'"
+
+#: ../lib/sources/gconfsource.py:93
+#, python-format
+msgid "GConf key '%s' set to integer '%s'"
+msgstr "Gconf გასაღები'%s' დაყენებულია როგორც მთელი '%s'"
+
+#: ../lib/sources/gconfsource.py:95
+#, python-format
+msgid "GConf key '%s' set to float '%s'"
+msgstr "Gconf გასაღები'%s' დაყენებულია როგორც მცურავი'%s'"
+
+#: ../lib/sources/gconfsource.py:97
+#, python-format
+msgid "GConf key '%s' set to boolean '%s'"
+msgstr "Gconf გასაღები'%s' დაყენებულია როგორც ბულეანური '%s'"
+
+#: ../lib/sources/gconfsource.py:99
+#, python-format
+msgid "GConf key '%s' set to schema '%s'"
+msgstr "Gconf გასაღები'%s' დაყენებულია როგორც სქემა '%s'"
+
+#: ../lib/sources/gconfsource.py:101
+#, python-format
+msgid "GConf key '%s' set to list '%s'"
+msgstr "Gconf გასაღები'%s' დაყენებულია როგორც სია '%s'"
+
+#: ../lib/sources/gconfsource.py:103
+#, python-format
+msgid "GConf key '%s' set to pair '%s'"
+msgstr "Gconf გასაღები'%s' დაყენებულია როგორც წყვილი '%s'"
+
+#: ../lib/sources/gconfsource.py:105
+#, python-format
+msgid "GConf key '%s' set to '%s'"
+msgstr "Gconf გასაღები'%s' დაყენებულია როგორც '%s'"
+
+#: ../lib/sources/gconfsource.py:136
+msgid "Default GConf settings"
+msgstr "GConf-ის ნაგულისხმები პარამეტრები"
+
+#: ../lib/sources/gconfsource.py:138
+msgid "Mandatory GConf settings"
+msgstr "GConf-ის სავალდებულო პარამეტრები"
+
+#: ../lib/sources/mozillasource.py:132
+#, python-format
+msgid "Mozilla key '%s' set to '%s'"
+msgstr "მოზილას გასაღები '%s' დაყენებულია როგორც '%s'"
+
+#: ../lib/sources/mozillasource.py:134
+#, python-format
+msgid "Mozilla key '%s' unset"
+msgstr "მოზილას გასაღები '%s' ამორთულია"
+
+#: ../lib/sources/mozillasource.py:136
+#, python-format
+msgid "Mozilla key '%s' changed to '%s'"
+msgstr "მოზილას გასაღები '%s' შეცვლილია '%s'"
+
+#: ../lib/sources/mozillasource.py:165 ../lib/sources/mozillasource.py:175
+msgid "Web browser preferences"
+msgstr "ვებ ბროუზერის პარამეტრები"
+
+#: ../lib/sources/mozillasource.py:167 ../lib/sources/mozillasource.py:177
+msgid "Web browser bookmarks"
+msgstr "ვებ ბროუზერის სანიშნე"
+
+#: ../lib/sources/mozillasource.py:169
+msgid "Web browser profile list"
+msgstr "ვებ ბროუზერის პროფილების სია"
+
+#: ../lib/sources/mozillasource.py:520
+#, python-format
+msgid "File Not Found (%s)"
+msgstr "ფაილი არ არის ნაპოვნი (%s)"
+
+#: ../lib/sources/mozillasource.py:871
+#, python-format
+msgid "duplicate name(%(name)s) in section %(section)s"
+msgstr "დუბლირებული სახელი(%(name)s) სექცია %(section)s -ში"
+
+#: ../lib/sources/mozillasource.py:880
+#, python-format
+msgid "redundant default in section %s"
+msgstr "გამეორებული ნაგულისხმევ სესია %s-ში"
+
+#: ../lib/sources/mozillasource.py:897
+msgid "no default profile"
+msgstr "არავითარი ნაგულისხმევი პროფილი"
+
+#: ../lib/sources/mozillasource.py:952
+#, python-format
+msgid "Mozilla bookmark created '%s' -> '%s'"
+msgstr "მოზილას სანიშნე შექმნილია '%s' -> '%s'"
+
+#: ../lib/sources/mozillasource.py:954
+#, python-format
+msgid "Mozilla bookmark folder created '%s'"
+msgstr "მოზილას სანიშნეთა საქაღალდე შექმნილია '%s'"
+
+#: ../lib/sources/mozillasource.py:957
+#, python-format
+msgid "Mozilla bookmark deleted '%s'"
+msgstr "მოზილას სანიშნე წაშლილია '%s'"
+
+#: ../lib/sources/mozillasource.py:959
+#, python-format
+msgid "Mozilla bookmark folder deleted '%s'"
+msgstr "მოზილა სანიშნეთა საქაღალდე წაშლილია '%s'"
+
+#: ../lib/sources/mozillasource.py:962
+#, python-format
+msgid "Mozilla bookmark changed '%s' '%s'"
+msgstr "მოზილას სანიშნე შეცვლილია '%s' '%s'"
+
+#: ../lib/sources/mozillasource.py:964
+#, python-format
+msgid "Mozilla bookmark folder changed '%s'"
+msgstr "მოზილას სანიშნეთა საქაღალდე შეცვლილია '%s'"
+
+#: ../lib/sources/paneldelegate.py:58
+#, python-format
+msgid "Panel '%s' added"
+msgstr "დამატებულია '%s' პანელი"
+
+#: ../lib/sources/paneldelegate.py:64
+#, python-format
+msgid "Panel '%s' removed"
+msgstr "მოშორებულია '%s' პანელი"
+
+#: ../lib/sources/paneldelegate.py:70
+#, python-format
+msgid "Panel applet '%s' added"
+msgstr "დამატებულია პანელის აპლეტი '%s'"
+
+#: ../lib/sources/paneldelegate.py:76
+#, python-format
+msgid "Panel applet '%s' removed"
+msgstr "მოშორებულია პანელის აპლეტი '%s'"
+
+#: ../lib/sources/paneldelegate.py:82
+#, python-format
+msgid "Panel object '%s' added"
+msgstr "პანელის ობიექტი '%s' დამატებულია"
+
+#: ../lib/sources/paneldelegate.py:94
+#, python-format
+msgid "Panel object '%s' removed"
+msgstr "პანელის ობიექტი '%s' მოშორებულია"
+
+#: ../lib/sources/paneldelegate.py:375
+msgid "Panel File"
+msgstr "პანელის ფაილი"
+
+#: ../lib/storage.py:173
+#, python-format
+msgid "Failed to read file '%s': %s"
+msgstr "ვერ ვკითხულობ ფაილს '%s': %s"
+
+#: ../lib/storage.py:183
+#, python-format
+msgid "Failed to read metadata from '%s': %s"
+msgstr "ვერ განხორციელდა მეტადატის წაკითხვა %s': %s"
+
+#: ../lib/storage.py:189
+#, python-format
+msgid "Invalid metadata section in '%s': %s"
+msgstr "არასწორი მეტადატის სექცია %s': %s"
+
+#: ../lib/storage.py:363
+#, python-format
+msgid "Cannot add non-existent file '%s'"
+msgstr "შეუძლებელია არ არსებული ფაილის '%s' დამატება"
+
+#: ../lib/storage.py:540
+#, python-format
+msgid "Profile is read-only %s"
+msgstr "პროფილი მხოლოდ წაკითხვადია %s"
+
+#: ../lib/unittests.py:38 ../lib/unittests.py:39
+msgid "Ignore WARNINGs"
+msgstr "გადრთხილებების იგნორირება"
+
+#: ../lib/unittests.py:61
+#, python-format
+msgid "Running %s tests"
+msgstr "გაშვებულია %s ტესტები"
+
+#: ../lib/unittests.py:63
+#, python-format
+msgid "Running %s tests (%s)"
+msgstr "გაშვებულია %s ტესტები (%s)"
+
+#: ../lib/unittests.py:70
+msgid "Success!"
+msgstr "წარმატება!"
+
+#: ../lib/userdb.py:52
+#, python-format
+msgid "invalid type for setting %s in %s"
+msgstr "მცდარი ტიპი %s-ის %s-ში დაყენებისთვის"
+
+#: ../lib/userdb.py:212
+#, python-format
+msgid "No search based specified for %s"
+msgstr "არავითარი %s-თვის საძებნი ელემენტი "
+
+#: ../lib/userdb.py:215
+#, python-format
+msgid "No query filter specified for %s"
+msgstr "არავითარი გამოკითხვის ფილტრი %s-თვის"
+
+#: ../lib/userdb.py:218
+#, python-format
+msgid "No result attribute specified for %s"
+msgstr "არავითარი მითითებული ატრიბუტების შედეგი %s-თვის"
+
+#: ../lib/userdb.py:227
+msgid "Scope must be one of sub, base and one"
+msgstr "Scope უნდა იყოს ერთ-ერთი sub, base და one-ს შორის"
+
+#: ../lib/userdb.py:247
+msgid "multiple_result must be one of first and random"
+msgstr "multiple_result უნდა იყოს ერთ-ერთი first და random-ს შორის"
+
+#: ../lib/userdb.py:339
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "ვერ ვხსნი %s ჩასაწერად"
+
+#: ../lib/userdb.py:352
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "ვერ ვიმახსოვრებ UserDatabase-ს %s-ში"
+
+#: ../lib/userdb.py:375 ../lib/userdb.py:410
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "ფაილ %s არ წარმოადგენს პროფილის კონფიგურაციას"
+
+#: ../lib/userdb.py:382
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "შეუძლებელია %s პროფილის კონფიგურაციაში ჩამატება"
+
+#: ../lib/userdb.py:418
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "შეუძლებელია %s მომხმარებლის პროფილის კონფიგურაციაში ჩამატება"
+
+#: ../lib/userdb.py:449
+msgid "Failed to get the user list"
+msgstr "მომხმარებელთა სიის მიღება ვერ განხორციელდა"
+
+#: ../lib/util.py:127
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr "ვერ ვპოულობ სახლის საქაღალდეს: არ იქნება დაყენებული /etc/passwd-ში და საერთოდ არ არსებობს მნიშვნელობა $HOME-ისთვის"
+
+#: ../lib/util.py:140
+msgid ""
+"Cannot find username: not set in /etc/passwd and no value for $USER in "
+"environment"
+msgstr "ვერ ვპოულობ მომხმარებლის სახელს: არ იქნება დაყენებული /etc/passwd-ში და საერთოდ არ არსებობს მისთვის მნიშვნელობა $USER-ში"
+
