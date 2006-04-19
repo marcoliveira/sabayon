@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: sabayon HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-03-05 07:30+0100\n"
-"PO-Revision-Date: 2006-03-12 00:15+0200\n"
+"PO-Revision-Date: 2006-04-10 11:23+0300\n"
 "Last-Translator: Ivar Smolin <okul@linux.ee>\n"
 "Language-Team: Estonian <gnome-et@linux.ee>\n"
 "MIME-Version: 1.0\n"
@@ -34,11 +34,11 @@ msgstr "Muudatused profiilis %s"
 
 #: ../admin-tool/changeswindow.py:106
 msgid "Ignore"
-msgstr ""
+msgstr "Eira"
 
 #: ../admin-tool/changeswindow.py:113
 msgid "Lock"
-msgstr ""
+msgstr "Lukusta"
 
 #: ../admin-tool/changeswindow.py:120 ../admin-tool/editorwindow.py:224
 msgid "Description"
@@ -137,7 +137,7 @@ msgstr "tõeväärtus"
 
 #: ../admin-tool/gconfviewer.py:72
 msgid "schema"
-msgstr ""
+msgstr "skeem"
 
 #: ../admin-tool/gconfviewer.py:74
 msgid "list"
@@ -145,7 +145,7 @@ msgstr "loend"
 
 #: ../admin-tool/gconfviewer.py:76
 msgid "pair"
-msgstr ""
+msgstr "paar"
 
 #: ../admin-tool/gconfviewer.py:88
 #, python-format
@@ -175,39 +175,39 @@ msgstr ""
 
 #: ../admin-tool/lockdown/maindialog.py:47
 msgid "Disable _command line"
-msgstr ""
+msgstr "_Käsurida keelatud"
 
 #: ../admin-tool/lockdown/maindialog.py:48
 msgid "Disable _printing"
-msgstr ""
+msgstr "_Printimine keelatud"
 
 #: ../admin-tool/lockdown/maindialog.py:49
 msgid "Disable print _setup"
-msgstr ""
+msgstr "Pri_ntimissätete muutmine keelatud"
 
 #: ../admin-tool/lockdown/maindialog.py:50
 msgid "Disable save to _disk"
-msgstr ""
+msgstr "Ke_ttale salvestamine keelatud"
 
 #: ../admin-tool/lockdown/maindialog.py:52
 msgid "_Lock down the panels"
-msgstr ""
+msgstr "_Paneelid on lukus"
 
 #: ../admin-tool/lockdown/maindialog.py:53
 msgid "Disable force _quit"
-msgstr ""
+msgstr "_Jõuga sulgemine keelatud"
 
 #: ../admin-tool/lockdown/maindialog.py:54
 msgid "Disable lock _screen"
-msgstr ""
+msgstr "_Ekraani lukustamine keelatud"
 
 #: ../admin-tool/lockdown/maindialog.py:55
 msgid "Disable log _out"
-msgstr ""
+msgstr "_Väljalogimine keelatud"
 
 #: ../admin-tool/lockdown/maindialog.py:57
 msgid "Disable _quit"
-msgstr ""
+msgstr "_Väljumine keelatud"
 
 #: ../admin-tool/lockdown/maindialog.py:58
 msgid "Disable _arbitrary URL"
@@ -215,19 +215,19 @@ msgstr ""
 
 #: ../admin-tool/lockdown/maindialog.py:59
 msgid "Disable _bookmark editing"
-msgstr ""
+msgstr "Järje_hoidjate redigeerimine keelatud"
 
 #: ../admin-tool/lockdown/maindialog.py:60
 msgid "Disable _history"
-msgstr ""
+msgstr "A_jalugu keelatud"
 
 #: ../admin-tool/lockdown/maindialog.py:61
 msgid "Disable _javascript chrome"
-msgstr ""
+msgstr "_Javascript chrome keelatud"
 
 #: ../admin-tool/lockdown/maindialog.py:62
 msgid "Disable _toolbar editing"
-msgstr ""
+msgstr "_Tööriistariba redigeerimine keelatud"
 
 #: ../admin-tool/lockdown/maindialog.py:63
 msgid "_Fullscreen"
@@ -235,7 +235,7 @@ msgstr "_Täisekraan"
 
 #: ../admin-tool/lockdown/maindialog.py:64
 msgid "Hide _menubar"
-msgstr ""
+msgstr "Menüüriba _peidus"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:1
 msgid "<b>Disabled Applets</b>"
@@ -359,12 +359,12 @@ msgstr "Kas_utajad:"
 
 #: ../admin-tool/saveconfirm.py:36
 msgid "Close _Without Saving"
-msgstr ""
+msgstr "Sulge _ilma salvestamata"
 
 #: ../admin-tool/saveconfirm.py:43
 #, python-format
 msgid "Save changes to profile \"%s\" before closing?"
-msgstr ""
+msgstr "Salvestada enne sulgemist profiili \"%s\" muudatused?"
 
 #: ../admin-tool/saveconfirm.py:47
 #, python-format
@@ -374,12 +374,18 @@ msgid_plural ""
 "If you don't save, changes from the last %ld seconds will be permanently "
 "lost."
 msgstr[0] ""
+"Kui Sa ei salvesta, siis viimase %ld sekundi jooksul tehtud muudatused "
+"lähevad jäädavalt kaotsi"
 msgstr[1] ""
+"Kui Sa ei salvesta, siis viimase %ld sekundi jooksul tehtud muudatused "
+"lähevad jäädavalt kaotsi"
 
 #: ../admin-tool/saveconfirm.py:53
 msgid ""
 "If you don't save, changes from the last minute will be permanently lost."
 msgstr ""
+"Kui Sa ei salvesta, siis viimase minuti jooksul tehtud muudatused lähevad "
+"jäädavalt kaotsi"
 
 #: ../admin-tool/saveconfirm.py:57
 #, python-format
@@ -390,7 +396,11 @@ msgid_plural ""
 "If you don't save, changes from the last minute and %ld seconds will be "
 "permanently lost."
 msgstr[0] ""
+"Kui Sa ei salvesta, siis viimase minuti ja %ld sekundi jooksul tehtud "
+"muudatused lähevad jäädavalt kaotsi"
 msgstr[1] ""
+"Kui Sa ei salvesta, siis viimase minuti ja %ld sekundi jooksul tehtud "
+"muudatused lähevad jäädavalt kaotsi"
 
 #: ../admin-tool/saveconfirm.py:64
 #, python-format
@@ -400,7 +410,11 @@ msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
 msgstr[0] ""
+"Kui Sa ei salvesta, siis viimase minuti jooksul tehtud muudatused lähevad "
+"jäädavalt kaotsi"
 msgstr[1] ""
+"Kui Sa ei salvesta, siis viimase %ld minuti jooksul tehtud muudatused "
+"lähevad jäädavalt kaotsi"
 
 #: ../admin-tool/saveconfirm.py:73 ../admin-tool/saveconfirm.py:83
 #, python-format
@@ -408,7 +422,11 @@ msgid "If you don't save, changes from the last hour will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %d hours will be permanently lost."
 msgstr[0] ""
+"Kui Sa ei salvesta, siis viimase tunni jooksul tehtud muudatused "
+"lähevad jäädavalt kaotsi"
 msgstr[1] ""
+"Kui Sa ei salvesta, siis viimase %d tunni jooksul tehtud muudatused "
+"lähevad jäädavalt kaotsi"
 
 #: ../admin-tool/saveconfirm.py:76
 #, python-format
@@ -419,7 +437,11 @@ msgid_plural ""
 "If you don't save, changes from the last hour and %d minutes will be "
 "permanently lost."
 msgstr[0] ""
+"Kui Sa ei salvesta, siis viimase tunni ja %d minuti jooksul tehtud "
+"muudatused lähevad jäädavalt kaotsi"
 msgstr[1] ""
+"Kui Sa ei salvesta, siis viimase tunni ja %d minuti jooksul tehtud "
+"muudatused lähevad jäädavalt kaotsi"
 
 #: ../admin-tool/sessionwindow.py:153
 #, python-format
@@ -432,19 +454,19 @@ msgstr "_Lõpeta"
 
 #: ../admin-tool/sessionwindow.py:178
 msgid "_Changes"
-msgstr ""
+msgstr "_Muudatused"
 
 #: ../admin-tool/sessionwindow.py:178
 msgid "Edit changes"
-msgstr ""
+msgstr "Muudatuste redigeerimine"
 
 #: ../admin-tool/sessionwindow.py:179
 msgid "_Lockdown"
-msgstr ""
+msgstr "_Lukustatud"
 
 #: ../admin-tool/sessionwindow.py:179
 msgid "Edit Lockdown settings"
-msgstr ""
+msgstr "Lukustussätete muutmine"
 
 #: ../admin-tool/sessionwindow.py:184
 msgid "Enforce Mandatory"
@@ -533,42 +555,42 @@ msgstr ""
 #: ../lib/sources/gconfsource.py:91
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
-msgstr ""
+msgstr "GConf võtme '%s' väärtuseks määrati string '%s'"
 
 #: ../lib/sources/gconfsource.py:93
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
-msgstr ""
+msgstr "GConf võtme '%s' väärtuseks määrati täisarv '%s'"
 
 #: ../lib/sources/gconfsource.py:95
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
-msgstr ""
+msgstr "GConf võtme '%s' väärtuseks määrati arvväärtus '%s'"
 
 #: ../lib/sources/gconfsource.py:97
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
-msgstr ""
+msgstr "GConf võtme '%s' väärtuseks määrati tõeväärtus '%s'"
 
 #: ../lib/sources/gconfsource.py:99
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
-msgstr ""
+msgstr "GConf võtme '%s' väärtuseks määrati skeem '%s'"
 
 #: ../lib/sources/gconfsource.py:101
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
-msgstr ""
+msgstr "GConf võtme '%s' väärtuseks määrati loend '%s'"
 
 #: ../lib/sources/gconfsource.py:103
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
-msgstr ""
+msgstr "GConf võtme '%s' väärtuseks määrati paar '%s'"
 
 #: ../lib/sources/gconfsource.py:105
 #, python-format
 msgid "GConf key '%s' set to '%s'"
-msgstr ""
+msgstr "GConf võtme '%s' väärtuseks määrati '%s'"
 
 #: ../lib/sources/gconfsource.py:136
 msgid "Default GConf settings"
