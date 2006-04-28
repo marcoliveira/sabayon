@@ -12,7 +12,6 @@ AC_SUBST(ACLOCAL_AMFLAGS, "\${ACLOCAL_FLAGS}")
 GETTEXT_PACKAGE=sabayon
 AC_SUBST(GETTEXT_PACKAGE)
 
-ALL_LINGUAS="bg ca cs cy de dz el en_CA en_GB es et eu fi fr gl gu hi hu id it ja ka ko ku lt nb ne nl pa pt pt_BR rw sq sr sr@Latn sv th uk vi zh_CN zh_HK zh_TW"
 AM_GLIB_GNU_GETTEXT
 
 AC_PROG_CC
@@ -22,7 +21,7 @@ AC_ARG_PROGRAM
 
 AM_PROG_LIBTOOL
 AM_PATH_PYTHON
-AC_PROG_INTLTOOL
+IT_PROG_INTLTOOL([0.34.90])
 AC_PROG_LN_S
 
 GNOME_COMPILE_WARNINGS(yes)
