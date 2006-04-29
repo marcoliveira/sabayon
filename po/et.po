@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: sabayon HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-03-05 07:30+0100\n"
-"PO-Revision-Date: 2006-04-10 11:23+0300\n"
+"PO-Revision-Date: 2006-04-28 16:07+0300\n"
 "Last-Translator: Ivar Smolin <okul@linux.ee>\n"
 "Language-Team: Estonian <gnome-et@linux.ee>\n"
 "MIME-Version: 1.0\n"
@@ -484,7 +484,7 @@ msgstr "Lukustussätted %s jaoks"
 #: ../admin-tool/usersdialog.py:67
 #, python-format
 msgid "Users for profile %s"
-msgstr ""
+msgstr "Profiili %s kasutajad"
 
 #: ../admin-tool/usersdialog.py:95
 msgid "Use This Profile"
@@ -498,7 +498,7 @@ msgstr "Tõrge  %s jaoks monitori lisamisel"
 #: ../lib/dirmonitor.py:231
 #, python-format
 msgid "Expected event: %s %s"
-msgstr ""
+msgstr "Oodatud sündmus: %s %s"
 
 #: ../lib/protosession.py:142
 msgid "Unable to find a free X display"
@@ -506,7 +506,7 @@ msgstr "X'i vaba kuva pole võimalik leida"
 
 #: ../lib/protosession.py:409
 msgid "Failed to start Xnest: timed out waiting for USR1 signal"
-msgstr ""
+msgstr "Tõrge Xnest-i käivitamisel: USR1 signaali ootamisel ületati ajapiirang"
 
 #: ../lib/protosession.py:411
 msgid "Failed to start Xnest: died during startup"
@@ -761,17 +761,17 @@ msgstr ""
 #: ../lib/userdb.py:212
 #, python-format
 msgid "No search based specified for %s"
-msgstr ""
+msgstr "%s jaoks pole otsingubaasi määratud"
 
 #: ../lib/userdb.py:215
 #, python-format
 msgid "No query filter specified for %s"
-msgstr ""
+msgstr "%s jaoks pole päringufiltrit määratud"
 
 #: ../lib/userdb.py:218
 #, python-format
 msgid "No result attribute specified for %s"
-msgstr ""
+msgstr "%s jaoks pole tulemuse atribuuti määratud"
 
 #: ../lib/userdb.py:227
 msgid "Scope must be one of sub, base and one"
@@ -794,7 +794,7 @@ msgstr ""
 #: ../lib/userdb.py:375 ../lib/userdb.py:410
 #, python-format
 msgid "File %s is not a profile configuration"
-msgstr ""
+msgstr "Fail %s pole profiili seadistusfail"
 
 #: ../lib/userdb.py:382
 #, python-format
@@ -815,9 +815,13 @@ msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
+"Kodukataloogi pole võimalik leida: seda pole määratud ei /etc/passwd failis "
+"ega ka keskkonnamuutujas $HOME"
 
 #: ../lib/util.py:140
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr ""
+"Kasutajanime pole võimalik leida: seda pole määratud ei /etc/passwd failis "
+"ega ka keskkonnamuutujas $USER"
