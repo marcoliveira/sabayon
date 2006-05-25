@@ -4,18 +4,20 @@
 #
 # Hervé ROMANO <azuri@free.fr>, 2005.
 # Gianni Moschini <gianni@cmsoft.net>, 2006.
-# 
+# Jonathan Ernst <jonathan@ernstfamily.ch>, 2006.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon 2.14.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-05-17 19:07+0200\n"
-"PO-Revision-Date: 2006-04-22 04:44+0200\n"
-"Last-Translator: Gianni Moschini <gianni@cmsoft.net>\n"
+"POT-Creation-Date: 2006-05-25 11:49+0200\n"
+"PO-Revision-Date: 2006-05-24 02:30+0100\n"
+"Last-Translator: Jonathan Ernst <jonathan@ernstfamily.ch>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
 
 #: ../admin-tool/aboutdialog.py:63
 msgid "Program to establish and edit profiles for users"
@@ -25,7 +27,8 @@ msgstr "Programme de création et d'édition de profils pour les utilisateurs"
 msgid "translator-credits"
 msgstr ""
 "Gianni Moschini <gianni@cmsoft.net>\n"
-"Hervé Romano <azuri@free.fr>"
+"Hervé Romano <azuri@free.fr>\n"
+"Jonathan Ernst <jonathan@ernstfamily.ch>"
 
 #: ../admin-tool/changeswindow.py:50
 #, python-format
@@ -194,7 +197,6 @@ msgid "_Lock down the panels"
 msgstr "_Verrouiller les tableaux de bord"
 
 #: ../admin-tool/lockdown/maindialog.py:53
-#, fuzzy
 msgid "Disable force _quit"
 msgstr "Désactiver forcer à _quitter"
 
@@ -207,7 +209,6 @@ msgid "Disable log _out"
 msgstr "Désactiver la fermeture de sessi_on"
 
 #: ../admin-tool/lockdown/maindialog.py:57
-#, fuzzy
 msgid "Disable _quit"
 msgstr "Désactiver _quitter"
 
@@ -224,9 +225,8 @@ msgid "Disable _history"
 msgstr "Désactiver l'_historique"
 
 #: ../admin-tool/lockdown/maindialog.py:61
-#, fuzzy
 msgid "Disable _javascript chrome"
-msgstr "Désactiver le _JavaScript"
+msgstr "Désactiver le chrome _JavaScript"
 
 #: ../admin-tool/lockdown/maindialog.py:62
 msgid "Disable _toolbar editing"
@@ -382,28 +382,28 @@ msgstr ""
 "de fermer ?"
 
 #: ../admin-tool/saveconfirm.py:47
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "If you don't save, changes from the last %ld second will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld seconds will be permanently "
 "lost."
 msgstr[0] ""
-"Si vous n'enregistrez pas, les modifications de la dernière minute seront "
-"perdues."
+"Si vous n'enregistrez pas, les modifications effectuées depuis %ld seconde "
+"seront définitivement perdues."
 msgstr[1] ""
-"Si vous n'enregistrez pas, les modifications de la dernière minute seront "
-"perdues."
+"Si vous n'enregistrez pas, les modifications effectuées ces %ld dernières "
+"secondes seront définitivement perdues."
 
 #: ../admin-tool/saveconfirm.py:53
 msgid ""
 "If you don't save, changes from the last minute will be permanently lost."
 msgstr ""
-"Si vous n'enregistrez pas, les modifications de la dernière minute seront "
-"perdues."
+"Si vous n'enregistrez pas, les modifications effectuées cette dernière "
+"minute seront définitivement perdues."
 
 #: ../admin-tool/saveconfirm.py:57
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "If you don't save, changes from the last minute and %ld second will be "
 "permanently lost."
@@ -411,40 +411,40 @@ msgid_plural ""
 "If you don't save, changes from the last minute and %ld seconds will be "
 "permanently lost."
 msgstr[0] ""
-"Si vous n'enregistrez pas, les modifications de la dernière minute seront "
-"perdues."
+"Si vous n'enregistrez pas, les modifications effectuées depuis une minute et "
+"%ld seconde seront définitivement perdues."
 msgstr[1] ""
-"Si vous n'enregistrez pas, les modifications de la dernière minute seront "
-"perdues."
+"Si vous n'enregistrez pas, les modifications effectuées depuis une minute et "
+"%ld secondes seront définitivement perdues."
 
 #: ../admin-tool/saveconfirm.py:64
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "If you don't save, changes from the last %ld minute will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
 msgstr[0] ""
-"Si vous n'enregistrez pas, les modifications de la dernière minute seront "
-"perdues."
+"Si vous n'enregistrez pas, les modifications effectuées depuis %ld minute "
+"seront définitivement perdues."
 msgstr[1] ""
-"Si vous n'enregistrez pas, les modifications de la dernière minute seront "
-"perdues."
+"Si vous n'enregistrez pas, les modifications effectuées ces %ld dernières "
+"minutes seront définitivement perdues."
 
 #: ../admin-tool/saveconfirm.py:73 ../admin-tool/saveconfirm.py:83
-#, fuzzy, python-format
+#, python-format
 msgid "If you don't save, changes from the last hour will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %d hours will be permanently lost."
 msgstr[0] ""
-"Si vous n'enregistrez pas, les modifications de la dernière minute seront "
-"perdues."
+"Si vous n'enregistrez pas, les modifications effectuées depuis une heure "
+"seront définitivement perdues."
 msgstr[1] ""
-"Si vous n'enregistrez pas, les modifications de la dernière minute seront "
-"perdues."
+"Si vous n'enregistrez pas, les modifications effectuées ces %d dernières "
+"heures seront définitivement perdues."
 
 #: ../admin-tool/saveconfirm.py:76
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "If you don't save, changes from the last hour and %d minute will be "
 "permanently lost."
@@ -452,11 +452,11 @@ msgid_plural ""
 "If you don't save, changes from the last hour and %d minutes will be "
 "permanently lost."
 msgstr[0] ""
-"Si vous n'enregistrez pas, les modifications de la dernière minute seront "
-"perdues."
+"Si vous n'enregistrez pas, les modifications effectuées depuis une heure et %"
+"d minute seront définitivement perdues."
 msgstr[1] ""
-"Si vous n'enregistrez pas, les modifications de la dernière minute seront "
-"perdues."
+"Si vous n'enregistrez pas, les modifications effectuées depuis une heure et %"
+"d minutes seront définitivement perdues."
 
 #: ../admin-tool/sessionwindow.py:153
 #, python-format
@@ -704,7 +704,7 @@ msgstr "Le tableau de bord « %s » a été retiré"
 #: ../lib/sources/paneldelegate.py:70
 #, python-format
 msgid "Panel applet '%s' added"
-msgstr "Applet « %s » ajoutée au tableau de bord "
+msgstr "Applet « %s » ajoutée au tableau de bord"
 
 #: ../lib/sources/paneldelegate.py:76
 #, python-format
@@ -840,55 +840,3 @@ msgid ""
 msgstr ""
 "Impossible de localiser le nom de l'utilisateur : non défini dans /etc/"
 "passwd et la variable d'environnement $USER n'est pas définie"
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld second will be permanently "
-#~ "lost.If you don't save, changes from the last %ld seconds will be "
-#~ "permanently lost."
-#~ msgstr ""
-#~ "Si vous n'enregistrez pas, les modifications de la %ld dernière seconde "
-#~ "seront perdues.Si vous n'enregistrez pas, les modifications des %ld "
-#~ "dernières secondes seront perdues."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last minute and %ld second will be "
-#~ "permanently lost.If you don't save, changes from the last minute and %ld "
-#~ "seconds will be permanently lost."
-#~ msgstr ""
-#~ "Si vous n'enregistrez pas, les modifications de la dernière minute et de "
-#~ "la %ld dernière seconde seront perdues.Si vous n'enregistrez pas, les "
-#~ "modifications de la dernière minute et des %ld dernières secondes seront "
-#~ "perdues."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld minute will be permanently "
-#~ "lost.If you don't save, changes from the last %ld minutes will be "
-#~ "permanently lost."
-#~ msgstr ""
-#~ "Si vous n'enregistrez pas, les modifications de la %ld dernière minute "
-#~ "seront perdues.Si vous n'enregistrez pas, les modifications des %ld "
-#~ "dernières minutes seront perdues."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last hour will be permanently lost.If "
-#~ "you don't save, changes from the last %d hours will be permanently lost."
-#~ msgstr ""
-#~ "Si vous n'enregistrez pas, les modifications de la dernière heure seront "
-#~ "perdues.Si vous n'enregistrez pas, les modifications des %ld dernières "
-#~ "heures seront perdues."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last hour and %d minute will be "
-#~ "permanently lost.If you don't save, changes from the last hour and %d "
-#~ "minutes will be permanently lost."
-#~ msgstr ""
-#~ "Si vous n'enregistrez pas, les modifications de la dernière heure et de "
-#~ "la %ld dernière minute seront perdues.Si vous n'enregistrez pas, les "
-#~ "modifications de la dernière heure et des %ld dernières minutes seront "
-#~ "perdues."
-
-#~ msgid "All Your Settings Are Belong To Us"
-#~ msgstr "Toutes Vos Préférences Sont Entre Nos Mains"
-
-#~ msgid "Desktop User Profiles"
-#~ msgstr "Profils Utilisateur de Bureau"
