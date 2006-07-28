@@ -12,7 +12,7 @@ EXTRA_DIST =				\
 	$(PYTHON_FILES)			\
 	$(NOINST_PYTHON_FILES)
 
-sourcesdir     = $(pythondir)/sabayon/sources
+sourcesdir     = $(pyexecdir)/sabayon/sources
 sources_PYTHON = $(PYTHON_FILES)
 
 pycheck:

@@ -31,7 +31,7 @@ EXTRA_DIST =				\
 	$(PYTHON_FILES)			\
 	$(GLADE_FILES)			
 
-sabayonlockdowndir     = $(pythondir)/sabayon/lockdown
+sabayonlockdowndir     = $(pyexecdir)/sabayon/lockdown
 sabayonlockdown_PYTHON = $(PYTHON_FILES)
 
 pycheck:

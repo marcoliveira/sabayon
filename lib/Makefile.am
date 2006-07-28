@@ -37,7 +37,7 @@ EXTRA_DIST =				\
 	$(NOINST_PYTHON_FILES)		\
 	config.py.in
 
-sabayondir     = $(pythondir)/sabayon
+sabayondir     = $(pyexecdir)/sabayon
 sabayon_PYTHON = $(PYTHON_FILES)
 
 pycheck:

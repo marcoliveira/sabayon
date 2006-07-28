@@ -1,5 +1,14 @@
 2006-07-28  Alexander Larsson  <alexl@redhat.com>
 
+	* admin-tool/Makefile.am:
+	* admin-tool/lockdown/Makefile.am:
+	* lib/Makefile.am:
+	* lib/sources/Makefile.am:
+	Install into lib64 on 64bit arches,  because we ship
+	an .so file.
+
+2006-07-28  Alexander Larsson  <alexl@redhat.com>
+
 	* configure.ac:
 	Post release version bump
 

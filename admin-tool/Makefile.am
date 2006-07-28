@@ -48,7 +48,7 @@ bin_SCRIPTS = sabayon
 sbin_SCRIPTS = sabayon-apply
 libexec_SCRIPTS = sabayon-session
 
-sabayondir     = $(pythondir)/sabayon
+sabayondir     = $(pyexecdir)/sabayon
 sabayon_PYTHON = $(PYTHON_FILES)
 
 %.sh: %.sh.in
