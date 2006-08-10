@@ -5,13 +5,14 @@
 # This file is distributed under the same license as the pessulus package.
 #
 # Ivar Smolin <okul@linux.ee>, 2006.
+# Priit Laes <amd@store20.com>, 2006.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-08-05 11:53+0200\n"
-"PO-Revision-Date: 2006-08-05 15:50+0200\n"
+"POT-Creation-Date: 2006-08-10 00:43+0200\n"
+"PO-Revision-Date: 2006-08-10 09:21+0200\n"
 "Last-Translator: Priit Laes <plaes@plaes.org>\n"
 "Language-Team: Estonian <gnome-et@linux.ee>\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +26,9 @@ msgstr "Programm kasutajaprofiilide loomiseks ja muutmiseks"
 
 #: ../admin-tool/aboutdialog.py:64
 msgid "translator-credits"
-msgstr "Ivar Smolin <okul@linux.ee>, 2006."
+msgstr ""
+"Ivar Smolin <okul@linux.ee>, 2006.\n"
+"Priit Laes <amd@store20.com>, 2006."
 
 #: ../admin-tool/changeswindow.py:48
 #, python-format
@@ -181,11 +184,11 @@ msgstr "Väärtus"
 
 #: ../admin-tool/lockdown/lockdownbutton.py:99
 msgid "Click to make this setting not mandatory"
-msgstr ""
+msgstr "Kliki, et muuta see säte mittekohustuslikuks"
 
 #: ../admin-tool/lockdown/lockdownbutton.py:101
 msgid "Click to make this setting mandatory"
-msgstr ""
+msgstr "Kliki, et muuta see säte kohustuslikuks"
 
 #: ../admin-tool/lockdown/maindialog.py:47
 msgid "Disable _command line"
@@ -225,7 +228,7 @@ msgstr "_Väljumine keelatud"
 
 #: ../admin-tool/lockdown/maindialog.py:58
 msgid "Disable _arbitrary URL"
-msgstr ""
+msgstr "Keela _suvalised URL-id"
 
 #: ../admin-tool/lockdown/maindialog.py:59
 msgid "Disable _bookmark editing"
@@ -288,7 +291,7 @@ msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:44
 msgid "Your account does not have permissions to run the Desktop User Profiles tool"
-msgstr ""
+msgstr "Sinu kontol pole piisavalt õiguseid, et käivitada töölauakasutajate profiilide tööriista"
 
 #: ../admin-tool/sabayon:45
 msgid "Administrator level permissions are needed to run this program because it can modify system files."
@@ -296,7 +299,7 @@ msgstr ""
 
 #: ../admin-tool/sabayon:50
 msgid "Desktop User Profiles tool is already running"
-msgstr ""
+msgstr "Tööriist töölauakasutajate profiilide redigeerimiseks juba töötab."
 
 #: ../admin-tool/sabayon:51
 msgid "You may not use Desktop User Profiles tool from within a profile editing session"
@@ -440,7 +443,7 @@ msgstr "Lukustussätete muutmine"
 
 #: ../admin-tool/sessionwindow.py:182
 msgid "Enforce Mandatory"
-msgstr ""
+msgstr "Määra kohustuslikuks"
 
 #: ../admin-tool/sessionwindow.py:182
 msgid "Enforce mandatory settings in the editing session"
@@ -480,7 +483,7 @@ msgstr "Tõrge Xnest-i käivitamisel: USR1 signaali ootamisel ületati ajapiiran
 
 #: ../lib/protosession.py:409
 msgid "Failed to start Xnest: died during startup"
-msgstr ""
+msgstr "Xnest-i käivitamine ebaõnnestus: viga alustamisel"
 
 #: ../lib/sources/filessource.py:66
 #, python-format
@@ -607,7 +610,7 @@ msgstr "Faili ei leitud (%s)"
 #: ../lib/sources/mozillasource.py:869
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
-msgstr ""
+msgstr "korduvad nimed (%(name)s) osas %(section)s"
 
 #: ../lib/sources/mozillasource.py:878
 #, python-format
@@ -729,7 +732,7 @@ msgstr "Edukas!"
 #: ../lib/userdb.py:50
 #, python-format
 msgid "invalid type for setting %s in %s"
-msgstr ""
+msgstr "vigane tüüp sättele %s asukohas %s"
 
 #: ../lib/userdb.py:210
 #, python-format
@@ -762,7 +765,7 @@ msgstr "%s pole võimalik kirjutamiseks avada"
 #: ../lib/userdb.py:350
 #, python-format
 msgid "Failed to save UserDatabase to %s"
-msgstr ""
+msgstr "Kasutajate andmebaasi salvestamine asukohta %s ebaõnnestus"
 
 #: ../lib/userdb.py:373
 #: ../lib/userdb.py:408
@@ -773,12 +776,12 @@ msgstr "Fail %s pole profiili seadistusfail"
 #: ../lib/userdb.py:380
 #, python-format
 msgid "Failed to add default profile %s to configuration"
-msgstr ""
+msgstr "Vaikimisi profiili %s lisamine häälestusse ebaõnnestus"
 
 #: ../lib/userdb.py:416
 #, python-format
 msgid "Failed to add user %s to profile configuration"
-msgstr ""
+msgstr "Kasutaja %s lisamine profiili häälestusse ebaõnnestus"
 
 #: ../lib/userdb.py:447
 msgid "Failed to get the user list"
