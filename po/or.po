@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: or\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-08-12 16:46+0200\n"
-"PO-Revision-Date: 2006-08-13 20:30+0530\n"
+"PO-Revision-Date: 2006-08-14 12:15+0530\n"
 "Last-Translator: Subhransu Behera <arya_subhransu@yahoo.co.in>\n"
 "Language-Team: Oriya <oriya-group@lists.sarovar.org>\n"
 "MIME-Version: 1.0\n"
@@ -229,7 +229,7 @@ msgstr "ସାଧନ ପଟି ସମ୍ପାଦନକୁ ନିଷ୍କ୍ର
 
 #: ../admin-tool/lockdown/maindialog.py:63
 msgid "_Fullscreen"
-msgstr ""
+msgstr "ସମ୍ପୂର୍ଣ୍ଣ ପରଦା ପ୍ରଦର୍ଶନ (_F)"
 
 #: ../admin-tool/lockdown/maindialog.py:64
 msgid "Hide _menubar"
@@ -272,28 +272,30 @@ msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:44
 msgid "Your account does not have permissions to run the Desktop User Profiles tool"
-msgstr ""
+msgstr "ଆପଣଙ୍କ ଖାତାରେ ଡେସ୍କଟପ ଚାଳକ ରୂପରେଖ ଉପକରଣକୁ ଚଳାଇବାର ଅନୁମତି ନାହିଁ"
 
 #: ../admin-tool/sabayon:45
 msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
 msgstr ""
+"ଏହି ପ୍ରୋଗ୍ରାମକୁ ଚଳାଇବା ପାଇଁ ପ୍ରସାଶନ ସ୍ତରୀୟ ଅନୁମତି ଆବଶ୍ଯକ କାରଣ ଏହା ତନ୍ତ୍ର ଫାଇଲ ମାନଙ୍କୁ ବଦଳାଇ ପାରେ।"
 
 #: ../admin-tool/sabayon:50
 msgid "Desktop User Profiles tool is already running"
-msgstr ""
+msgstr "ଡେସ୍କଟପ ଚାଳକ ରୂପରେଖ ଉପକରଣ ପୂର୍ବରୁ ଚାଲୁଅଛି"
 
 #: ../admin-tool/sabayon:51
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
 msgstr ""
+"ଗୋଟିଏ ରୂପରେଖ ସମ୍ପାଦନ ଅଧିବେଶନରୁ ଆପଣ ଡେସ୍କଟପ ଚାଳକ ରୂପରେଖ ଉପକରଣକୁ ବ୍ଯବହାର କରି ନ ପାରନ୍ତି"
 
 #: ../admin-tool/sabayon:58
 #, c-format
 msgid "User account '%s' was not found"
-msgstr ""
+msgstr "'%s' ଚାଳକ ହିସାବ ଖାତା ମିଳିଲା ନାହିଁ"
 
 #: ../admin-tool/sabayon:59
 #, c-format
@@ -302,21 +304,23 @@ msgid ""
 "Try again after creating the account (using, for example, the 'adduser' "
 "command)"
 msgstr ""
+"ସବାୟୋନ ଏହି କମ୍ପୁଟରରେ ଗୋଟିଏ ବିଶେଷ ଚାଳକ ଖାତା '%s' ର ଉପସ୍ଥିତିକୁ ଆବଶ୍ଯକ କରୁଅଛି। ଖାତା ତିଆରି କରି ସାରିବା ପରେ "
+"ପୁନର୍ବାର ପ୍ରଚେଷ୍ଟା କରନ୍ତୁ (ଉଦାହରଣ ସ୍ବରୂପ, 'adduser' ନିର୍ଦ୍ଦେଶକୁ ବ୍ଯବହାର କରି)"
 
 #: ../admin-tool/sabayon-apply:39
 #, c-format
 msgid "No profile for user '%s' found\n"
-msgstr ""
+msgstr "'%s' ଚାଳକ ପାଇଁ କୌଣସି ରୂପରେଖ ମିଳିଲା ନାହିଁ\n"
 
 #: ../admin-tool/sabayon-apply:44
 #, c-format
 msgid "Usage: %s [<profile-name>]\n"
-msgstr ""
+msgstr "ବ୍ଯବହାର ବିଧି: %s [<profile-name>]\n"
 
 #: ../admin-tool/sabayon-session:32
 #, c-format
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
-msgstr ""
+msgstr "ବ୍ଯବହାର ବିଧି: %s <profile-name> <profile-path> <display-number>\n"
 
 #: ../admin-tool/sabayon.desktop.in.h:1
 msgid "Establish and Edit Profiles for Users"
@@ -336,7 +340,7 @@ msgstr "ରୂପରେଖ ନାମ (_n):"
 
 #: ../admin-tool/sabayon.glade.h:3
 msgid "Use this profile for _all users"
-msgstr ""
+msgstr "ସମସ୍ତ ଚାଳକ ମାନଙ୍କ ପାଇଁ ଏହି ରୂପରେଖକୁ ବ୍ଯବହାର କରନ୍ତୁ (_a)"
 
 #: ../admin-tool/sabayon.glade.h:5
 msgid "_Base on:"
@@ -356,12 +360,12 @@ msgstr "ଚାଳକ (_U):"
 
 #: ../admin-tool/saveconfirm.py:34
 msgid "Close _Without Saving"
-msgstr ""
+msgstr "ସଂରକ୍ଷଣ ନକରି ବନ୍ଦ କରନ୍ତୁ (_W)"
 
 #: ../admin-tool/saveconfirm.py:41
 #, python-format
 msgid "Save changes to profile \"%s\" before closing?"
-msgstr ""
+msgstr "ବନ୍ଦ କରିବା ପୂର୍ବରୁ \"%s\" ରୂପରେଖରେ ପରିବର୍ତ୍ତନ ମାନଙ୍କୁ ସଂରକ୍ଷଣ କରନ୍ତୁ?"
 
 #: ../admin-tool/saveconfirm.py:45
 #, python-format
@@ -369,12 +373,12 @@ msgid "If you don't save, changes from the last %ld second will be permanently l
 msgid_plural ""
 "If you don't save, changes from the last %ld seconds will be permanently "
 "lost."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ଯଦି ଆପଣ ସଂରକ୍ଷଣ ନ କରନ୍ତି, ଅନ୍ତିମ %ld ସେକେଣ୍ଡରେ ହୋଇଥିବା ପରିବର୍ତ୍ତନ ଗୁଡିକ ସବୁଦିନ ପାଇଁ ନଷ୍ଟ ହୋଇଯିବ।"
+msgstr[1] "ଯଦି ଆପଣ ସଂରକ୍ଷଣ ନ କରନ୍ତି, ଅନ୍ତିମ %ld ସେକେଣ୍ଡରେ ହୋଇଥିବା ପରିବର୍ତ୍ତନ ଗୁଡିକ ସବୁଦିନ ପାଇଁ ନଷ୍ଟ ହୋଇଯିବ।"
 
 #: ../admin-tool/saveconfirm.py:51
 msgid "If you don't save, changes from the last minute will be permanently lost."
-msgstr ""
+msgstr "ଯଦି ଆପଣ ସଂରକ୍ଷଣ ନ କରନ୍ତି, ଅନ୍ତିମ ମିନିଟରେ ହୋଇଥିବା ପରିବର୍ତ୍ତନ ଗୁଡିକ ସବୁଦିନ ପାଇଁ ନଷ୍ଟ ହୋଇଯିବ।"
 
 #: ../admin-tool/saveconfirm.py:55
 #, python-format
@@ -384,8 +388,8 @@ msgid ""
 msgid_plural ""
 "If you don't save, changes from the last minute and %ld seconds will be "
 "permanently lost."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ଯଦି ଆପଣ ସଂରକ୍ଷଣ ନ କରନ୍ତି, ଅନ୍ତିମ ମିନିଟ ଏବଂ %ld ସେକେଣ୍ଡରେ ହୋଇଥିବା ପରିବର୍ତ୍ତନ ଗୁଡିକ ସବୁଦିନ ପାଇଁ ନଷ୍ଟ ହୋଇଯିବ।"
+msgstr[1] "ଯଦି ଆପଣ ସଂରକ୍ଷଣ ନ କରନ୍ତି, ଅନ୍ତିମ ମିନିଟ ଏବଂ %ld ସେକେଣ୍ଡରେ ହୋଇଥିବା ପରିବର୍ତ୍ତନ ଗୁଡିକ ସବୁଦିନ ପାଇଁ ନଷ୍ଟ ହୋଇଯିବ।"
 
 #: ../admin-tool/saveconfirm.py:62
 #, python-format
@@ -393,15 +397,15 @@ msgid "If you don't save, changes from the last %ld minute will be permanently l
 msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ଯଦି ଆପଣ ସଂରକ୍ଷଣ ନ କରନ୍ତି, ଅନ୍ତିମ %ld ମିନିଟରେ ହୋଇଥିବା ପରିବର୍ତ୍ତନ ଗୁଡିକ ସବୁଦିନ ପାଇଁ ନଷ୍ଟ ହୋଇଯିବ।"
+msgstr[1] "ଯଦି ଆପଣ ସଂରକ୍ଷଣ ନ କରନ୍ତି, ଅନ୍ତିମ %ld ମିନିଟରେ ହୋଇଥିବା ପରିବର୍ତ୍ତନ ଗୁଡିକ ସବୁଦିନ ପାଇଁ ନଷ୍ଟ ହୋଇଯିବ।"
 
 #: ../admin-tool/saveconfirm.py:71 ../admin-tool/saveconfirm.py:81
 #, python-format
 msgid "If you don't save, changes from the last hour will be permanently lost."
 msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ଯଦି ଆପଣ ସଂରକ୍ଷଣ ନ କରନ୍ତି, ଅନ୍ତିମ ଘଣ୍ଟାରେ ହୋଇଥିବା ପରିବର୍ତ୍ତନ ଗୁଡିକ ସବୁଦିନ ପାଇଁ ନଷ୍ଟ ହୋଇଯିବ।"
+msgstr[1] "ଯଦି ଆପଣ ସଂରକ୍ଷଣ ନ କରନ୍ତି, ଅନ୍ତିମ %d ଘଣ୍ଟାରେ ହୋଇଥିବା ପରିବର୍ତ୍ତନ ଗୁଡିକ ସବୁଦିନ ପାଇଁ ନଷ୍ଟ ହୋଇଯିବ।"
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
@@ -412,12 +416,14 @@ msgid_plural ""
 "If you don't save, changes from the last hour and %d minutes will be "
 "permanently lost."
 msgstr[0] ""
+"ଯଦି ଆପଣ ସଂରକ୍ଷଣ ନ କରନ୍ତି, ଅନ୍ତିମ ଘଣ୍ଟା ଏବଂ %d ମିନିଟରେ ହୋଇଥିବା ପରିବର୍ତ୍ତନ ଗୁଡିକ ସବୁଦିନ ପାଇଁ ନଷ୍ଟ ହୋଇଯିବ।"
 msgstr[1] ""
+"ଯଦି ଆପଣ ସଂରକ୍ଷଣ ନ କରନ୍ତି, ଅନ୍ତିମ ଘଣ୍ଟା ଏବଂ %d ମିନିଟରେ ହୋଇଥିବା ପରିବର୍ତ୍ତନ ଗୁଡିକ ସବୁଦିନ ପାଇଁ ନଷ୍ଟ ହୋଇଯିବ।"
 
 #: ../admin-tool/sessionwindow.py:151
 #, python-format
 msgid "Editing profile %s"
-msgstr ""
+msgstr "%s ରୂପରେଖକୁ ସମ୍ପାଦନ କରୁଅଛି"
 
 #: ../admin-tool/sessionwindow.py:174
 msgid "_Quit"
@@ -433,24 +439,24 @@ msgstr "ପରିବର୍ତ୍ତନକୁ ସମ୍ପାଦନ କରନ୍�
 
 #: ../admin-tool/sessionwindow.py:177
 msgid "_Lockdown"
-msgstr ""
+msgstr "ଲକ-ଡାଉନ (_L)"
 
 #: ../admin-tool/sessionwindow.py:177
 msgid "Edit Lockdown settings"
-msgstr ""
+msgstr "ଲକ-ଡାଉନ ବିନ୍ଯାସକୁ ସମ୍ପାଦନ କରନ୍ତୁ"
 
 #: ../admin-tool/sessionwindow.py:182
 msgid "Enforce Mandatory"
-msgstr ""
+msgstr "ବାଧ୍ଯତାମୂଳକ ବିନ୍ଯାସ ଲାଗୁ କରନ୍ତୁ"
 
 #: ../admin-tool/sessionwindow.py:182
 msgid "Enforce mandatory settings in the editing session"
-msgstr ""
+msgstr "ଏହି ସମ୍ପାଦନ ଅଧିବେଶନରେ ବାଧ୍ଯତାମୂଳକ ବିନ୍ଯାସ ଲାଗୁ କରନ୍ତୁ"
 
 #: ../admin-tool/sessionwindow.py:271
 #, python-format
 msgid "Lockdown settings for %s"
-msgstr ""
+msgstr "%s ପାଇଁ ଲକ-ଡାଉନ ବିନ୍ଯାସ"
 
 #: ../admin-tool/usersdialog.py:65
 #, python-format
@@ -464,24 +470,24 @@ msgstr "ଏହି ରୂପରେଖକୁ ବ୍ଯବହାର କରନ୍ତ
 #: ../lib/dirmonitor.py:149
 #, python-format
 msgid "Failed to add monitor for %s"
-msgstr ""
+msgstr "%s ପାଇଁ ପ୍ରଦର୍ଶିକା ଯୋଗ କରିବାରେ ବିଫଳ"
 
 #: ../lib/dirmonitor.py:229
 #, python-format
 msgid "Expected event: %s %s"
-msgstr ""
+msgstr "ପ୍ରତ୍ଯାଶିତ ଘଟଣା: %s %s"
 
 #: ../lib/protosession.py:140
 msgid "Unable to find a free X display"
-msgstr ""
+msgstr "ଗୋଟିଏ ମାଗଣା X ପ୍ରଦର୍ଶନ ପାଇବାରେ ବିଫଳ"
 
 #: ../lib/protosession.py:407
 msgid "Failed to start Xnest: timed out waiting for USR1 signal"
-msgstr ""
+msgstr "Xnest କୁ ପ୍ରାରମ୍ଭ କରିବାରେ ବିଫଳ: USR1 ସଙ୍କେତ ପାଇଁ ଅପେକ୍ଷା କରିବା ସମୟ ସମାପ୍ତି"
 
 #: ../lib/protosession.py:409
 msgid "Failed to start Xnest: died during startup"
-msgstr ""
+msgstr "Xnest କୁ ପ୍ରାରମ୍ଭ କରିବାରେ ବିଫଳ: ବ୍ଯବସ୍ଥାପନ ସମୟରେ ଅଚଳ ହୋଇଗଲା"
 
 #: ../lib/sources/filessource.py:66
 #, python-format
@@ -491,12 +497,12 @@ msgstr "'%s' ଫାଇଲ ପ୍ରସ୍ତୁତ କରାଗଲା"
 #: ../lib/sources/filessource.py:68
 #, python-format
 msgid "File '%s' deleted"
-msgstr ""
+msgstr "'%s' ଫାଇଲକୁ କାଢି ଦିଆଗଲା"
 
 #: ../lib/sources/filessource.py:70
 #, python-format
 msgid "File '%s' changed"
-msgstr ""
+msgstr "'%s' ଫାଇଲକୁ ବଦଳାଗଲା"
 
 #: ../lib/sources/filessource.py:94
 msgid "Applications menu"
@@ -516,52 +522,52 @@ msgstr "ତନ୍ତ୍ର ବିନ୍ଯାସ ତାଲିକା"
 
 #: ../lib/sources/filessource.py:102
 msgid "Start Here menu"
-msgstr ""
+msgstr "ଏଠାରେ ଆରମ୍ଭ କରନ୍ତୁ ତାଲିକା"
 
 #: ../lib/sources/gconfsource.py:87
 #, python-format
 msgid "GConf key '%s' unset"
-msgstr ""
+msgstr "GConf ଚାବି '%s' ବିନ୍ଯାସ କରାଯାଇ ନାହିଁ"
 
 #: ../lib/sources/gconfsource.py:89
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
-msgstr ""
+msgstr "GConf ଚାବି '%s' କୁ '%s' ବାକ୍ଯଖଣ୍ଡ ଭାବରେ ବିନ୍ଯାସ କରାଗଲା"
 
 #: ../lib/sources/gconfsource.py:91
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
-msgstr ""
+msgstr "GConf ଚାବି '%s' କୁ '%s' ପୂର୍ଣ୍ଣ ସଂଖ୍ଯା ଭାବରେ ବିନ୍ଯାସ କରାଗଲା"
 
 #: ../lib/sources/gconfsource.py:93
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
-msgstr ""
+msgstr "GConf ଚାବି '%s' କୁ '%s' ଭାସମାନ ସଂଖ୍ଯା ଭାବରେ ବିନ୍ଯାସ କରାଗଲା"
 
 #: ../lib/sources/gconfsource.py:95
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
-msgstr ""
+msgstr "GConf ଚାବି '%s' କୁ '%s' ବୁଲିଆନ ଭାବରେ ବିନ୍ଯାସ କରାଗଲା"
 
 #: ../lib/sources/gconfsource.py:97
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
-msgstr ""
+msgstr "GConf ଚାବି '%s' କୁ '%s' ବିବରଣିକା ଭାବରେ ବିନ୍ଯାସ କରାଗଲା"
 
 #: ../lib/sources/gconfsource.py:99
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
-msgstr ""
+msgstr "GConf ଚାବି '%s' କୁ '%s' ତାଲିକା ଭାବରେ ବିନ୍ଯାସ କରାଗଲା"
 
 #: ../lib/sources/gconfsource.py:101
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
-msgstr ""
+msgstr "GConf ଚାବି '%s' କୁ '%s' ଯୋଡି ଭାବରେ ବିନ୍ଯାସ କରାଗଲା"
 
 #: ../lib/sources/gconfsource.py:103
 #, python-format
 msgid "GConf key '%s' set to '%s'"
-msgstr ""
+msgstr "GConf ଚାବି '%s' କୁ '%s' ଭାବରେ ବିନ୍ଯାସ କରାଗଲା"
 
 #: ../lib/sources/gconfsource.py:134
 msgid "Default GConf settings"
@@ -574,44 +580,44 @@ msgstr "ବାଧ୍ଯତାମୂଳକ GConf ବିନ୍ଯାସ"
 #: ../lib/sources/mozillasource.py:130
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
-msgstr ""
+msgstr "ମୋଜିଲା ଚାବି '%s' କୁ '%s' ଭାବରେ ବିନ୍ଯାସ କରାଗଲା"
 
 #: ../lib/sources/mozillasource.py:132
 #, python-format
 msgid "Mozilla key '%s' unset"
-msgstr ""
+msgstr "ମୋଜିଲା ଚାବି '%s' ବିନ୍ଯାସ କରାଯାଇ ନାହିଁ"
 
 #: ../lib/sources/mozillasource.py:134
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
-msgstr ""
+msgstr "ମୋଜିଲା ଚାବି '%s' କୁ '%s' ରେ ବଦଳାଗଲା"
 
 #: ../lib/sources/mozillasource.py:163 ../lib/sources/mozillasource.py:173
 msgid "Web browser preferences"
-msgstr ""
+msgstr "ଓ୍ବେବ ବ୍ରାଉଜର ପସନ୍ଦ"
 
 #: ../lib/sources/mozillasource.py:165 ../lib/sources/mozillasource.py:175
 msgid "Web browser bookmarks"
-msgstr ""
+msgstr "ଓ୍ବେବ ବ୍ରାଉଜର ଚିହ୍ନିତ ସ୍ଥାନ"
 
 #: ../lib/sources/mozillasource.py:167
 msgid "Web browser profile list"
-msgstr ""
+msgstr "ଓ୍ବେବ ବ୍ରାଉଜର ରୂପରେଖ ତାଲିକା"
 
 #: ../lib/sources/mozillasource.py:518
 #, python-format
 msgid "File Not Found (%s)"
-msgstr ""
+msgstr "(%s) ଫାଇଲ ମିଳିଲା ନାହିଁ"
 
 #: ../lib/sources/mozillasource.py:869
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
-msgstr ""
+msgstr "ନକଲି ନାମ (%(name)s) %(section)s ବିଭାଗ ରେ"
 
 #: ../lib/sources/mozillasource.py:878
 #, python-format
 msgid "redundant default in section %s"
-msgstr ""
+msgstr "%s ବିଭାଗରେ ଅନାବଶ୍ଯକ ପୂର୍ବ ନିର୍ଦ୍ଧାରିତ ମାନ"
 
 #: ../lib/sources/mozillasource.py:895
 msgid "no default profile"
@@ -620,32 +626,32 @@ msgstr "କୌଣସି ପୂର୍ବ ନିର୍ଦ୍ଧାରିତ ରୂ
 #: ../lib/sources/mozillasource.py:950
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
-msgstr ""
+msgstr "ମୋଜିଲା ଚିହ୍ନିତ ସ୍ଥାନ ଫୋଲଡର ସ୍ରୁଷ୍ଟି କରାଗଲା '%s -> '%s''"
 
 #: ../lib/sources/mozillasource.py:952
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
-msgstr ""
+msgstr "ମୋଜିଲା ଚିହ୍ନିତ ସ୍ଥାନ ଫୋଲଡର ସ୍ରୁଷ୍ଟି କରାଗଲା '%s'"
 
 #: ../lib/sources/mozillasource.py:955
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
-msgstr ""
+msgstr "ମୋଜିଲା ଚିହ୍ନିତ ସ୍ଥାନ ଅପସାରଣ କରାଗଲା '%s'"
 
 #: ../lib/sources/mozillasource.py:957
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
-msgstr ""
+msgstr "ମୋଜିଲା ଚିହ୍ନିତ ସ୍ଥାନ ଫୋଲଡର ଅପସାରଣ କରାଗଲା '%s'"
 
 #: ../lib/sources/mozillasource.py:960
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
-msgstr ""
+msgstr "ମୋଜିଲା ଚିହ୍ନିତ ସ୍ଥାନ ଫୋଲଡର ବଦଳାଗଲା '%s' '%s'"
 
 #: ../lib/sources/mozillasource.py:962
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
-msgstr ""
+msgstr "ମୋଜିଲା ଚିହ୍ନିତ ସ୍ଥାନ ଫୋଲଡର ବଦଳାଗଲା '%s'"
 
 #: ../lib/sources/paneldelegate.py:56
 #, python-format
@@ -684,22 +690,22 @@ msgstr "ଫଳକ ଫାଇଲ"
 #: ../lib/storage.py:171
 #, python-format
 msgid "Failed to read file '%s': %s"
-msgstr ""
+msgstr "'%s' ଫାଇଲକୁ ପଢିବାରେ ବିଫଳ: %s"
 
 #: ../lib/storage.py:181
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
-msgstr ""
+msgstr "'%s' ରୁ ଅଧିତଥ୍ଯ ପଢିବାରେ ବିଫଳ: %s"
 
 #: ../lib/storage.py:187
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
-msgstr ""
+msgstr "'%s' ରେ ଅବୈଧ ଅଧିତଥ୍ଯ ବିଭାଗ: %s"
 
 #: ../lib/storage.py:361
 #, python-format
 msgid "Cannot add non-existent file '%s'"
-msgstr ""
+msgstr "ଅନୁପଲବ୍ଧ ଫାଇଲ %s କୁ ଯୋଗ କରି ପାରିବ ନାହିଁ"
 
 #: ../lib/storage.py:538
 #, python-format
@@ -718,7 +724,7 @@ msgstr "%s ପରୀକ୍ଷଣକୁ ଚଳାଉଛି"
 #: ../lib/unittests.py:63
 #, python-format
 msgid "Running %s tests (%s)"
-msgstr ""
+msgstr "%s ପରୀକ୍ଷଣ (%s) ଚାଲୁଅଛି "
 
 #: ../lib/unittests.py:70
 msgid "Success!"
@@ -727,69 +733,71 @@ msgstr "ସଫଳ!"
 #: ../lib/userdb.py:50
 #, python-format
 msgid "invalid type for setting %s in %s"
-msgstr ""
+msgstr "%s ବିନ୍ଯାସ ପାଇଁ %s ରେ ଅବୈଧ ପ୍ରକାର"
 
 #: ../lib/userdb.py:210
 #, python-format
 msgid "No search based specified for %s"
-msgstr ""
+msgstr "%s ପାଇଁ କୌଣସି ସନ୍ଧାନ ଆଧାର ନିର୍ଦ୍ଦିଷ୍ଟ କରାଯାଇ ନାହିଁ"
 
 #: ../lib/userdb.py:213
 #, python-format
 msgid "No query filter specified for %s"
-msgstr ""
+msgstr "%s ପାଇଁ କୌଣସି ପ୍ରଶ୍ନ ଛାଣକ ନିର୍ଦ୍ଦିଷ୍ଟ କରାଯାଇ ନାହିଁ"
 
 #: ../lib/userdb.py:216
 #, python-format
 msgid "No result attribute specified for %s"
-msgstr ""
+msgstr "%s ପାଇଁ କୌଣସି ଫଳାଫଳ ଗୁଣ ନାହିଁ"
 
 #: ../lib/userdb.py:225
 msgid "Scope must be one of sub, base and one"
-msgstr ""
+msgstr "ସୁଯୋଗ ନିଶ୍ଚିତ ଭାବରେ ବିକଲ୍ପ, ଆଧାର ଏବଂ ଏକ୍ଯକ ମଧ୍ଯରୁ ଗୋଟିଏ ହେବା ଉଚିତ"
 
 #: ../lib/userdb.py:245
 msgid "multiple_result must be one of first and random"
-msgstr ""
+msgstr "multiple_result ପ୍ରଥମ ଏବଂ କ୍ରମମୁକ୍ତ ମଧ୍ଯରୁ ଗୋଟିଏ ହେବା ଆବଶ୍ଯକ"
 
 #: ../lib/userdb.py:337
 #, python-format
 msgid "Could not open %s for writing"
-msgstr ""
+msgstr "%s କୁ ଲେଖିବା ପାଇଁ ଖୋଲିପାରିଲା ନାହିଁ"
 
 #: ../lib/userdb.py:350
 #, python-format
 msgid "Failed to save UserDatabase to %s"
-msgstr ""
+msgstr "ଚାଳକ-ତଥ୍ଯାଧାରକୁ %s ରେ ସଂରକ୍ଷଣ କରିବାରେ ବିଫଳ"
 
 #: ../lib/userdb.py:373 ../lib/userdb.py:408
 #, python-format
 msgid "File %s is not a profile configuration"
-msgstr ""
+msgstr "%s ଫାଇଲ ଗୋଟିଏ ରୂପରେଖ ବିନ୍ଯାସ ନୁହେଁ"
 
 #: ../lib/userdb.py:380
 #, python-format
 msgid "Failed to add default profile %s to configuration"
-msgstr ""
+msgstr "ବିନ୍ଯାସରେ ପୂର୍ବ ନିର୍ଦ୍ଧାରିତ ରୂପରେଖ %s କୁ ଯୋଗ କରିବାରେ ବିଫଳ"
 
 #: ../lib/userdb.py:416
 #, python-format
 msgid "Failed to add user %s to profile configuration"
-msgstr ""
+msgstr "ରୂପରେଖ ବିନ୍ଯାସରେ %s ଚାଳକକୁ ଯୋଗ କରିବାରେ ବିଫଳ"
 
 #: ../lib/userdb.py:447
 msgid "Failed to get the user list"
-msgstr ""
+msgstr "ଚାଳକ ତାଲିକା ପାଇବାରେ ବିଫଳ"
 
 #: ../lib/util.py:125
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
+"ମୂଳସ୍ଥାନ ପଞ୍ଜିକାକୁ ପାଇ ପାରିବ ନାହିଁ: /etc/passwd ରେ ବିନ୍ଯାସ ହୋଇନାହିଁ ଏବଂ ପରିବେଶରେ $HOME ପାଇଁ କୌଣସି ମୂଲ୍ଯ ନାହିଁ"
 
 #: ../lib/util.py:138
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr ""
+"ଚାଳକ-ନାମକୁ ପାଇ ପାରିବ ନାହିଁ: /etc/passwd ରେ ବିନ୍ଯାସ ହୋଇନାହିଁ ଏବଂ ପରିବେଶରେ $USER ପାଇଁ କୌଣସି ମୂଲ୍ଯ ନାହିଁ"
 
