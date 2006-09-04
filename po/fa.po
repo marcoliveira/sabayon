@@ -1,0 +1,810 @@
+# Persian translation of sabayon.
+# Copyright (C) 2006 Sharif FarsiWeb, Inc.
+# This file is distributed under the same license as the sabayon package.
+# Sanaz shahrokni <sanaz.shahrokni@gmail.com>, 2006.
+# Meelad Zakaria <meelad@farsiweb.info>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: sabayon HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-08-27 08:57+0200\n"
+"PO-Revision-Date: 2006-09-03 19:46+0430\n"
+"Last-Translator: Meelad Zakaria <meelad@farsiweb.info>\n"
+"Language-Team: Persian \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../admin-tool/aboutdialog.py:61
+msgid "Program to establish and edit profiles for users"
+msgstr "برنامهٔ ایجاد و ویرایش مجموعه تنظیمات برای کاربران"
+
+#: ../admin-tool/aboutdialog.py:64
+msgid "translator-credits"
+msgstr ""
+"ساناز شاه‌رکنی <sanaz.shahrokni@gmail.com>\n"
+"میلاد زکریا <meelad@farsiweb.info>"
+
+#: ../admin-tool/changeswindow.py:48
+#, python-format
+msgid "Changes in profile %s"
+msgstr "تغییرات در مجموعه تنظیمات %s"
+
+#: ../admin-tool/changeswindow.py:104
+msgid "Ignore"
+msgstr "نادیده‌گرفتن"
+
+#: ../admin-tool/changeswindow.py:111
+msgid "Lock"
+msgstr "قفل کردن"
+
+#: ../admin-tool/changeswindow.py:118 ../admin-tool/editorwindow.py:222
+msgid "Description"
+msgstr "شرح"
+
+#: ../admin-tool/editorwindow.py:95
+#, python-format
+msgid "Profile %s"
+msgstr "مجموعه تنظیمات %s"
+
+#: ../admin-tool/editorwindow.py:187 ../admin-tool/sessionwindow.py:172
+msgid "_Profile"
+msgstr "_مجموعه تنظیمات"
+
+#: ../admin-tool/editorwindow.py:188 ../admin-tool/sessionwindow.py:173
+msgid "_Save"
+msgstr "_ذخیره"
+
+#: ../admin-tool/editorwindow.py:188 ../admin-tool/sessionwindow.py:173
+msgid "Save profile"
+msgstr "ذخیره کردن مجموعه تنظیمات "
+
+#: ../admin-tool/editorwindow.py:189
+msgid "_Close"
+msgstr "_بستن"
+
+#: ../admin-tool/editorwindow.py:189 ../admin-tool/sessionwindow.py:174
+msgid "Close the current window"
+msgstr "بستن پنجرهٔ فعلی"
+
+#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
+msgid "_Edit"
+msgstr "_ویرایش"
+
+#: ../admin-tool/editorwindow.py:191
+msgid "_Delete"
+msgstr "_حذف"
+
+#: ../admin-tool/editorwindow.py:191
+msgid "Delete item"
+msgstr "حذف مورد"
+
+#: ../admin-tool/editorwindow.py:192 ../admin-tool/sessionwindow.py:178
+msgid "_Help"
+msgstr "_راهنما"
+
+#: ../admin-tool/editorwindow.py:193 ../admin-tool/sessionwindow.py:179
+msgid "_About"
+msgstr "_دربارهٔ"
+
+#: ../admin-tool/editorwindow.py:193 ../admin-tool/sessionwindow.py:179
+msgid "About Sabayon"
+msgstr "دربارهٔ سابایون"
+
+#: ../admin-tool/editorwindow.py:252 ../lib/sources/gconfsource.py:121
+msgid "GConf"
+msgstr "GConf"
+
+#: ../admin-tool/editorwindow.py:256 ../lib/sources/filessource.py:76
+msgid "Files"
+msgstr "پرونده‌ها"
+
+#: ../admin-tool/editorwindow.py:256 ../admin-tool/lockdown/pessulus.glade.h:7
+#: ../lib/sources/paneldelegate.py:132
+msgid "Panel"
+msgstr "تابلو"
+
+#: ../admin-tool/fileviewer.py:27
+#, python-format
+msgid "Profile file: %s"
+msgstr "پرونده‌ٔ مجموعه تنظیمات: %s"
+
+#: ../admin-tool/gconfviewer.py:57 ../admin-tool/gconfviewer.py:76
+msgid "<no type>"
+msgstr "<بدون نوع>"
+
+#: ../admin-tool/gconfviewer.py:58
+msgid "<no value>"
+msgstr "<تعریف نشده>"
+
+#: ../admin-tool/gconfviewer.py:62
+msgid "string"
+msgstr "رشته"
+
+#: ../admin-tool/gconfviewer.py:64
+msgid "integer"
+msgstr "عددِ صحیح"
+
+#: ../admin-tool/gconfviewer.py:66
+msgid "float"
+msgstr "ممیز شناور"
+
+#: ../admin-tool/gconfviewer.py:68
+msgid "boolean"
+msgstr "بولی"
+
+#: ../admin-tool/gconfviewer.py:70
+msgid "schema"
+msgstr "شِما"
+
+#: ../admin-tool/gconfviewer.py:72
+msgid "list"
+msgstr "فهرست"
+
+#: ../admin-tool/gconfviewer.py:74
+msgid "pair"
+msgstr "جفت"
+
+#: ../admin-tool/gconfviewer.py:86
+#, python-format
+msgid "Profile settings: %s"
+msgstr "مجموعه تنظیمات: %s"
+
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:313
+#: ../admin-tool/usersdialog.py:83
+msgid "Name"
+msgstr "نام"
+
+#: ../admin-tool/gconfviewer.py:115
+msgid "Type"
+msgstr "نوع"
+
+#: ../admin-tool/gconfviewer.py:120
+msgid "Value"
+msgstr "مقدار"
+
+#: ../admin-tool/lockdown/lockdownbutton.py:99
+msgid "Click to make this setting not mandatory"
+msgstr "برای غیراجباری کردن این تنظیمات کلیک کنید"
+
+#: ../admin-tool/lockdown/lockdownbutton.py:101
+msgid "Click to make this setting mandatory"
+msgstr "برای اجباری کردن این تنظیمات کلیک کنید"
+
+#: ../admin-tool/lockdown/maindialog.py:47
+msgid "Disable _command line"
+msgstr "از کار انداختن _سطر فرمان"
+
+#: ../admin-tool/lockdown/maindialog.py:48
+msgid "Disable _printing"
+msgstr "از کار انداختن _چاپ"
+
+#: ../admin-tool/lockdown/maindialog.py:49
+msgid "Disable print _setup"
+msgstr "از کار انداختن _تنظیمات چاپ"
+
+#: ../admin-tool/lockdown/maindialog.py:50
+msgid "Disable save to _disk"
+msgstr "از کار انداختن ذخیره در _دیسک"
+
+#: ../admin-tool/lockdown/maindialog.py:52
+msgid "_Lock down the panels"
+msgstr "_قفل کردن تابلوها"
+
+#: ../admin-tool/lockdown/maindialog.py:53
+msgid "Disable force _quit"
+msgstr "از کار انداختن _ترک اجباری"
+
+#: ../admin-tool/lockdown/maindialog.py:54
+msgid "Disable lock _screen"
+msgstr "از کار انداختن قفل _صفحهٔ نمایش"
+
+#: ../admin-tool/lockdown/maindialog.py:55
+msgid "Disable log _out"
+msgstr "از کار انداختن _خروج از سیستم"
+
+#: ../admin-tool/lockdown/maindialog.py:57
+msgid "Disable _quit"
+msgstr "از کار انداختن _ترک"
+
+#: ../admin-tool/lockdown/maindialog.py:58
+msgid "Disable _arbitrary URL"
+msgstr "از کار انداختن نشانی _اختیاری"
+
+#: ../admin-tool/lockdown/maindialog.py:59
+msgid "Disable _bookmark editing"
+msgstr "از کار انداختن ویرایش _چوب‌الف"
+
+#: ../admin-tool/lockdown/maindialog.py:60
+msgid "Disable _history"
+msgstr "از کار انداختن _تاریخچه"
+
+#: ../admin-tool/lockdown/maindialog.py:61
+msgid "Disable _javascript chrome"
+msgstr "از کار انداختن کروم _جاوااسکریپت"
+
+#: ../admin-tool/lockdown/maindialog.py:62
+msgid "Disable _toolbar editing"
+msgstr "از کار انداختن ویرایش _نوار ابزار"
+
+#: ../admin-tool/lockdown/maindialog.py:63
+msgid "_Fullscreen"
+msgstr "_تمام صفحه"
+
+#: ../admin-tool/lockdown/maindialog.py:64
+msgid "Hide _menubar"
+msgstr "مخفی کردن _نوار منو"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:1
+msgid "<b>Disabled Applets</b>"
+msgstr "<b>از کار انداختن برنامک‌ها</b>"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:2
+msgid "<b>Safe Protocols</b>"
+msgstr "<b>قراردادهای امن</b>"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:3
+msgid "Disable _unsafe protocols"
+msgstr "از کار انداختن قراردادهای _ناامن"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:4
+msgid "Epiphany Web Browser"
+msgstr "مرورگر وب اِپیفانی"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:5
+msgid "General"
+msgstr "کلیات"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:6
+msgid "Lockdown Editor"
+msgstr "قفل کردن ویرایشگر"
+
+#.
+#. Translators: this string specifies how a profile
+#. name is concatenated with an integer
+#. to form a unique profile name e.g.
+#. "Artist Workstation (5)"
+#.
+#: ../admin-tool/profilesdialog.py:413
+#, python-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../admin-tool/sabayon:44
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr "حساب شما اجازهٔ اجرای ابزار مجموعه تنظیمات رومیزی کاربر را ندارد"
+
+#: ../admin-tool/sabayon:45
+msgid ""
+"Administrator level permissions are needed to run this program because it "
+"can modify system files."
+msgstr ""
+"برای اجرای این برنامه اجازهٔ مدیر لازم است، چون این کار"
+"می‌تواند سیستم پرونده‌ها را تغییر دهد."
+
+#: ../admin-tool/sabayon:50
+msgid "Desktop User Profiles tool is already running"
+msgstr "ابزار مجموعه تنظیمات رومیزی کاربر از قبل در حال اجراست"
+
+#: ../admin-tool/sabayon:51
+msgid ""
+"You may not use Desktop User Profiles tool from within a profile editing "
+"session"
+msgstr ""
+"نمی‌توانید در یک نشست ویرایش مجموعه تنظیمات از ابزار مجموعه تنظیمات کاربر رومیزی"
+" استفاده کنید"
+#: ../admin-tool/sabayon:58
+#, c-format
+msgid "User account '%s' was not found"
+msgstr "حساب کاربر «%s» پیدا نشد "
+
+#: ../admin-tool/sabayon:59
+#, c-format
+msgid ""
+"Sabayon requires a special user account '%s' to be present on this computer. "
+"Try again after creating the account (using, for example, the 'adduser' "
+"command)"
+msgstr "" 
+"سابایون به یک حساب کاربر مشخص «%s» که روی این کامپیوتر وجود داشته باشد احتیاج دارد."
+"بعد از ایجاد حساب، (برای مثال، با استفاده از"
+" فرمان «adduser») دوباره امتحان کنید."
+
+#: ../admin-tool/sabayon-apply:39
+#, c-format
+msgid "No profile for user '%s' found\n"
+msgstr "هیچ مجموعه تنظیماتی برای کاربر «%s» پیدا نشد\n"
+
+#: ../admin-tool/sabayon-apply:44
+#, c-format
+msgid "Usage: %s [<profile-name>]\n"
+msgstr "طرز کار: %s [<مجموعه تنظیمات-نام>]\n"
+
+#: ../admin-tool/sabayon-session:32
+#, c-format
+msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
+msgstr "طرز کار: %s <نام-مجموعه تنظیمات> <مجموعه تنظیمات-مسیر> <شماره-نمایش>\n"
+
+#: ../admin-tool/sabayon.desktop.in.h:1
+msgid "Establish and Edit Profiles for Users"
+msgstr "ایجاد و ویرایش مجموعه تنظیمات برای کاربر"
+
+#: ../admin-tool/sabayon.desktop.in.h:2 ../admin-tool/sabayon.glade.h:4
+msgid "User Profile Editor"
+msgstr "ویرایشگر مجموعه تنظیمات کاربر"
+
+#: ../admin-tool/sabayon.glade.h:1
+msgid "Add Profile"
+msgstr "اضافه کردن مجموعه تنظیمات"
+
+#: ../admin-tool/sabayon.glade.h:2
+msgid "Profile _name:"
+msgstr "_نام مجموعه تنظیمات:"
+
+#: ../admin-tool/sabayon.glade.h:3
+msgid "Use this profile for _all users"
+msgstr "استفاده از این مجموعه تنظیمات برای _همهٔ کاربران"
+
+#: ../admin-tool/sabayon.glade.h:5
+msgid "_Base on:"
+msgstr "_بر مبنای:"
+
+#: ../admin-tool/sabayon.glade.h:6
+msgid "_Profiles:"
+msgstr "_مجموعه‌های تنظیمات"
+
+#: ../admin-tool/sabayon.glade.h:7
+msgid "_Users"
+msgstr "_کاربران"
+
+#: ../admin-tool/sabayon.glade.h:8
+msgid "_Users:"
+msgstr "_کاربران:"
+
+#: ../admin-tool/saveconfirm.py:34
+msgid "Close _Without Saving"
+msgstr "بستن _بدون ذخیره کردن"
+
+#: ../admin-tool/saveconfirm.py:41
+#, python-format
+msgid "Save changes to profile \"%s\" before closing?"
+msgstr "آیا مایلید قبل از بستن تغییرات مجموعه تنظیمات «%s» را ذخیره کنید؟"
+
+#: ../admin-tool/saveconfirm.py:45
+#, python-format
+msgid ""
+"If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld seconds will be permanently "
+"lost."
+msgstr[0]
+ "اگر تغییرات %ld ثانیهٔ گذشته را ذخیره نکنید، برای همیشه از بین می‌روند."
+
+
+#: ../admin-tool/saveconfirm.py:51
+msgid ""
+"If you don't save, changes from the last minute will be permanently lost."
+msgstr "اگر تغییرات یک دقیقه گذشته را ذخیره نکنید، برای همیشه از بین می‌روند."
+
+#: ../admin-tool/saveconfirm.py:55
+#, python-format
+msgid ""
+"If you don't save, changes from the last minute and %ld second will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last minute and %ld seconds will be "
+"permanently lost."
+msgstr[0] ""
+"اگر تغییرات یک دقیقه و %ld ثانیهٔ گذشته را ذخیره نکنید، برای "
+"همیشه از بین می‌روند."
+#: ../admin-tool/saveconfirm.py:62
+#, python-format
+msgid ""
+"If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld minutes will be permanently "
+"lost."
+msgstr[0] ""
+"اگر تغییرات %ld دقیقهٔ گذشته را ذخیره نکنید، برای همیشه از بین می‌روند."
+
+#: ../admin-tool/saveconfirm.py:71 ../admin-tool/saveconfirm.py:81
+#, python-format
+msgid "If you don't save, changes from the last hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] ""
+"اگر تغییرات %d ساعت گذشته را ذخیره نکنید، برای همیشه از بین می‌روند."
+
+#: ../admin-tool/saveconfirm.py:74
+#, python-format
+msgid ""
+"If you don't save, changes from the last hour and %d minute will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last hour and %d minutes will be "
+"permanently lost."
+msgstr[0] ""
+"اگر تغییرات یک ساعت و %d دقیقهٔ گذشته را ذخیره نکنید، برای "
+"همیشه از بین می‌روند."
+#: ../admin-tool/sessionwindow.py:151
+#, python-format
+msgid "Editing profile %s"
+msgstr "ویرایش مجموعه تنظیمات %s"
+
+#: ../admin-tool/sessionwindow.py:174
+msgid "_Quit"
+msgstr "_ترک"
+
+#: ../admin-tool/sessionwindow.py:176
+msgid "_Changes"
+msgstr "_تغییرات"
+
+#: ../admin-tool/sessionwindow.py:176
+msgid "Edit changes"
+msgstr "ویرایش تغییرات"
+
+#: ../admin-tool/sessionwindow.py:177
+msgid "_Lockdown"
+msgstr "_قفل کردن"
+
+#: ../admin-tool/sessionwindow.py:177
+msgid "Edit Lockdown settings"
+msgstr "ویرایش تنظیمات قفل"
+
+#: ../admin-tool/sessionwindow.py:182
+msgid "Enforce Mandatory"
+msgstr "به کارگیری اجبار"
+
+#: ../admin-tool/sessionwindow.py:182
+msgid "Enforce mandatory settings in the editing session"
+msgstr "بکارگیری تنظیمات اجباری در نشست ویرایش"
+
+#: ../admin-tool/sessionwindow.py:271
+#, python-format
+msgid "Lockdown settings for %s"
+msgstr "قفل کردن تنظیمات %s"
+
+#: ../admin-tool/usersdialog.py:65
+#, python-format
+msgid "Users for profile %s"
+msgstr "کاربران مجموعه تنظیمات %s"
+
+#: ../admin-tool/usersdialog.py:93
+msgid "Use This Profile"
+msgstr "استفاده از این مجموعه تنظیمات"
+
+#: ../lib/dirmonitor.py:149
+#, python-format
+msgid "Failed to add monitor for %s"
+msgstr "اضافه کردن پایشگر برای %s شکست خورد"
+
+#: ../lib/dirmonitor.py:229
+#, python-format
+msgid "Expected event: %s %s"
+msgstr "رویداد مورد انتظار: %s %s"
+
+#: ../lib/protosession.py:140
+msgid "Unable to find a free X display"
+msgstr "پیدا کردن یک نمایش X مجانی ممکن نیست"
+
+#: ../lib/protosession.py:407
+msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+msgstr "آغاز Xnest شکست خورد: مهلت انتظار برای سیگنال USR1 تمام شد"
+
+#: ../lib/protosession.py:409
+msgid "Failed to start Xnest: died during startup"
+msgstr "آغاز Xnest شکست خورد: در هنگام راه‌اندازی از کار افتاد"
+
+#: ../lib/sources/filessource.py:66
+#, python-format
+msgid "File '%s' created"
+msgstr "پروندهٔ «%s» ایجاد شد"
+
+#: ../lib/sources/filessource.py:68
+#, python-format
+msgid "File '%s' deleted"
+msgstr "پروندهٔ «%s» حذف شد"
+
+#: ../lib/sources/filessource.py:70
+#, python-format
+msgid "File '%s' changed"
+msgstr "پروندهٔ «%s» تغییر یافت"
+
+#: ../lib/sources/filessource.py:94
+msgid "Applications menu"
+msgstr "منوی برنامه‌ها"
+
+#: ../lib/sources/filessource.py:96
+msgid "Preferences menu"
+msgstr "منوی ترجیحات"
+
+#: ../lib/sources/filessource.py:98
+msgid "Server Settings menu"
+msgstr "منوی تنظیمات کارگزار"
+
+#: ../lib/sources/filessource.py:100
+msgid "System Settings menu"
+msgstr "منوی تنظیمات سیستم"
+
+#: ../lib/sources/filessource.py:102
+msgid "Start Here menu"
+msgstr "منوی آغاز"
+
+#: ../lib/sources/gconfsource.py:87
+#, python-format
+msgid "GConf key '%s' unset"
+msgstr "کلید GConf «%s» تنظیم نشده"
+
+#: ../lib/sources/gconfsource.py:89
+#, python-format
+msgid "GConf key '%s' set to string '%s'"
+msgstr "کلید GConf «%s» به رشتهٔ «%s» تنظیم شد"
+
+#: ../lib/sources/gconfsource.py:91
+#, python-format
+msgid "GConf key '%s' set to integer '%s'"
+msgstr "کلید GConf «%s» به عددِ صحیح «%s» تنظیم شد"
+
+#: ../lib/sources/gconfsource.py:93
+#, python-format
+msgid "GConf key '%s' set to float '%s'"
+msgstr "کلید GConf «%s» به مقدار ممیز شناور «%s» تنظیم شد"
+
+#: ../lib/sources/gconfsource.py:95
+#, python-format
+msgid "GConf key '%s' set to boolean '%s'"
+msgstr "کلید GConf «%s» به مقدار بولی «%s» تنظیم شد"
+
+#: ../lib/sources/gconfsource.py:97
+#, python-format
+msgid "GConf key '%s' set to schema '%s'"
+msgstr "کلید GConf «%s» به شِِما «%s» تنظیم شد"
+
+#: ../lib/sources/gconfsource.py:99
+#, python-format
+msgid "GConf key '%s' set to list '%s'"
+msgstr "کلید GConf «%s» به فهرست «%s» تنظیم شد"
+
+#: ../lib/sources/gconfsource.py:101
+#, python-format
+msgid "GConf key '%s' set to pair '%s'"
+msgstr "کلید GConf «%s» به جفت «%s» تنظیم شد"
+
+#: ../lib/sources/gconfsource.py:103
+#, python-format
+msgid "GConf key '%s' set to '%s'"
+msgstr "کلید GConf «%s» به  «%s» تنظیم شد"
+
+#: ../lib/sources/gconfsource.py:134
+msgid "Default GConf settings"
+msgstr "تنظیمات پیش‌فرض GConf"
+
+#: ../lib/sources/gconfsource.py:136
+msgid "Mandatory GConf settings"
+msgstr "تنظیمات اجباری GConf"
+
+#: ../lib/sources/mozillasource.py:130
+#, python-format
+msgid "Mozilla key '%s' set to '%s'"
+msgstr "کلید موزیلا «%s» به «%s» تنظیم شد"
+
+#: ../lib/sources/mozillasource.py:132
+#, python-format
+msgid "Mozilla key '%s' unset"
+msgstr "کلید «%s» موزیلا تنظیم نشده"
+
+#: ../lib/sources/mozillasource.py:134
+#, python-format
+msgid "Mozilla key '%s' changed to '%s'"
+msgstr "کلید «%s» موزیلا به «%s» تغییر یافت"
+
+#: ../lib/sources/mozillasource.py:163 ../lib/sources/mozillasource.py:173
+msgid "Web browser preferences"
+msgstr "ترجیحات مرورگر وب"
+
+#: ../lib/sources/mozillasource.py:165 ../lib/sources/mozillasource.py:175
+msgid "Web browser bookmarks"
+msgstr "چوب‌الف‌های مرورگر وب"
+
+#: ../lib/sources/mozillasource.py:167
+msgid "Web browser profile list"
+msgstr "فهرست مجموعه تنظیمات مرورگر وب"
+
+#: ../lib/sources/mozillasource.py:518
+#, python-format
+msgid "File Not Found (%s)"
+msgstr "پرونده پیدا نشد (%s)"
+
+#: ../lib/sources/mozillasource.py:869
+#, python-format
+msgid "duplicate name(%(name)s) in section %(section)s"
+msgstr "تکثیر نام (%(name)s) در بخش %(section)s"
+
+#: ../lib/sources/mozillasource.py:878
+#, python-format
+msgid "redundant default in section %s"
+msgstr "افزونهٔ پیش‌فرض در بخش %s"
+
+#: ../lib/sources/mozillasource.py:895
+msgid "no default profile"
+msgstr "مجموعه تنظیماتی به طور پیش‌فرض وجود ندارد"
+
+#: ../lib/sources/mozillasource.py:950
+#, python-format
+msgid "Mozilla bookmark created '%s' -> '%s'"
+msgstr "چوب‌الف موزیلا ایجاد شد «%s»  -> «%s»"
+
+#: ../lib/sources/mozillasource.py:952
+#, python-format
+msgid "Mozilla bookmark folder created '%s'"
+msgstr "پوشهٔ چوب‌الف موزیلا ایجاد شد «%s»"
+
+#: ../lib/sources/mozillasource.py:955
+#, python-format
+msgid "Mozilla bookmark deleted '%s'"
+msgstr "چوب‌الف موزیلا حذف شد  «%s»"
+
+#: ../lib/sources/mozillasource.py:957
+#, python-format
+msgid "Mozilla bookmark folder deleted '%s'"
+msgstr "پوشهٔ چوب‌الف موزیلا «%s» را حذف کرد"
+
+#: ../lib/sources/mozillasource.py:960
+#, python-format
+msgid "Mozilla bookmark changed '%s' '%s'"
+msgstr "چوب‌الف موزیلا «%s»  «%s» را تغییر داد"
+
+#: ../lib/sources/mozillasource.py:962
+#, python-format
+msgid "Mozilla bookmark folder changed '%s'"
+msgstr "پوشهٔ چوب‌الف موزیلا «%s» را تغییر داد"
+
+#: ../lib/sources/paneldelegate.py:56
+#, python-format
+msgid "Panel '%s' added"
+msgstr "تابلوی «%s» اضافه شد"
+
+#: ../lib/sources/paneldelegate.py:62
+#, python-format
+msgid "Panel '%s' removed"
+msgstr "تابلوی «%s» حذف شد"
+
+#: ../lib/sources/paneldelegate.py:68
+#, python-format
+msgid "Panel applet '%s' added"
+msgstr "تابلوی برنامک «%s» اضافه شد"
+
+#: ../lib/sources/paneldelegate.py:74
+#, python-format
+msgid "Panel applet '%s' removed"
+msgstr "تابلوی برنامک «%s» حذف شد"
+
+#: ../lib/sources/paneldelegate.py:80
+#, python-format
+msgid "Panel object '%s' added"
+msgstr "شیء تابلوی «%s» اضافه شد"
+
+#: ../lib/sources/paneldelegate.py:92
+#, python-format
+msgid "Panel object '%s' removed"
+msgstr "شیء تابلوی «%s» حذف شد"
+
+#: ../lib/sources/paneldelegate.py:373
+msgid "Panel File"
+msgstr "پروندهٔ تابلو"
+
+#: ../lib/storage.py:171
+#, python-format
+msgid "Failed to read file '%s': %s"
+msgstr "خواندن پروندهٔ «%s» شکست خورد: %s"
+
+#: ../lib/storage.py:181
+#, python-format
+msgid "Failed to read metadata from '%s': %s"
+msgstr "خواندن فوق داده‌ها از «%s» شکست خورد: %s"
+
+#: ../lib/storage.py:187
+#, python-format
+msgid "Invalid metadata section in '%s': %s"
+msgstr "بخش فوق داده‌ها در «%s» نامعتبر است: %s"
+
+#: ../lib/storage.py:361
+#, python-format
+msgid "Cannot add non-existent file '%s'"
+msgstr "اضافه کردن پرونده‌ای که وجود ندارد «%s»، ممکن نیست"
+
+#: ../lib/storage.py:538
+#, python-format
+msgid "Profile is read-only %s"
+msgstr "مجموعه تنظیمات %s فقط خواندنی است"
+
+#: ../lib/unittests.py:38 ../lib/unittests.py:39
+msgid "Ignore WARNINGs"
+msgstr "نادیده‌گرفتن اخطارها"
+
+#: ../lib/unittests.py:61
+#, python-format
+msgid "Running %s tests"
+msgstr "در حال اجرای %s آزمایش"
+
+#: ../lib/unittests.py:63
+#, python-format
+msgid "Running %s tests (%s)"
+msgstr "در حال اجرای  %s آزمایش (%s)"
+
+#: ../lib/unittests.py:70
+msgid "Success!"
+msgstr "موفقیت!"
+
+#: ../lib/userdb.py:50
+#, python-format
+msgid "invalid type for setting %s in %s"
+msgstr "نوع نامعتبر برای تنظیمات  %s در  %s"
+
+#: ../lib/userdb.py:210
+#, python-format
+msgid "No search based specified for %s"
+msgstr "هیچ مبنای جستجویی برای %s مشخص نشده"
+
+#: ../lib/userdb.py:213
+#, python-format
+msgid "No query filter specified for %s"
+msgstr "هیچ صافی پرس و جویی برای %s مشخص نشد"
+
+#: ../lib/userdb.py:216
+#, python-format
+msgid "No result attribute specified for %s"
+msgstr "هیچ مشخصهٔ نتیجه‌ای برای %s مشخص نشد"
+
+#: ../lib/userdb.py:225
+msgid "Scope must be one of sub, base and one"
+msgstr "باید یکی از دامنه‌های «one»، « base» یا «sub» را انتخاب کنید"
+
+#: ../lib/userdb.py:245
+msgid "multiple_result must be one of first and random"
+msgstr "multiple_result باید یکی از این گزینه‌های «first» یا «random» باشد"
+
+#: ../lib/userdb.py:337
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "بازکردن %s برای نوشتن ممکن نیست"
+
+#: ../lib/userdb.py:350
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "ذخیرهٔ پایگاه دادهٔ کاربر در %s شکست خورد"
+
+#: ../lib/userdb.py:373 ../lib/userdb.py:408
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "پروندهٔ %s پیکربندی مجموعه تنظیمات نیست"
+
+#: ../lib/userdb.py:380
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "اضافه کردن مجموعه تنظیمات پیش‌فرض %s به پیکربندی شکست خورد"
+
+#: ../lib/userdb.py:416
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "اضافه کردن کاربر %s به پیکربندی مجموعه تنظیمات شکست خورد"
+
+#: ../lib/userdb.py:447
+msgid "Failed to get the user list"
+msgstr "دریافت فهرست کاربر شکست خورد"
+
+#: ../lib/util.py:125
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"پیدا کردن شاخهٔ آغازه ممکن نیست: در ‎/etc/passwd تنظیم نشده و محیط‌های مختلف $HOME"
+" تعریف نشده"
+#: ../lib/util.py:138
+msgid ""
+"Cannot find username: not set in /etc/passwd and no value for $USER in "
+"environment"
+msgstr ""
+"پیدا کردن نام کاربر ممکن نیست: در ‎/etc/passwd تنظیم نشده و  هیچ محیطی برای $USER"
+" وجود ندارد"
