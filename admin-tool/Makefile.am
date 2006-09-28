@@ -73,12 +73,12 @@ if CONSOLE_HELPER
 endif
 
 uninstall-local:
-	rmdir $(DESTDIR)$(sysconfdir)/desktop-profiles/
+	rmdir --ignore-fail-on-non-empty $(DESTDIR)$(sysconfdir)/desktop-profiles/
 if CONSOLE_HELPER
 	rm -f $(DESTDIR)$(PAM_PREFIX)/pam.d/sabayon
 	rm -f $(DESTDIR)$(PAM_PREFIX)/security/console.apps/sabayon
-	rmdir $(DESTDIR)$(PAM_PREFIX)/pam.d
-	rmdir $(DESTDIR)$(PAM_PREFIX)/security/console.apps
+	rmdir --ignore-fail-on-non-empty $(DESTDIR)$(PAM_PREFIX)/pam.d
+	rmdir --ignore-fail-on-non-empty $(DESTDIR)$(PAM_PREFIX)/security/console.apps
 endif
 
 pycheck:
