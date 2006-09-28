@@ -1,3 +1,10 @@
+Thu Sep 28 22:57:23 CEST 2006 Daniel Veillard <veillard@redhat.com>
+
+	* lib/userdb.py: revert patch for #327983
+	  <uws> DV: You broke string freeze when fixing #327983. Since
+	  sabayon has not been branched for gnome-2-16 (or something like
+	  that, why doesn't it use gnome versioning?), please revert!
+
 Thu Sep 28 11:30:52 CEST 2006 Daniel Veillard <veillard@redhat.com>
 
 	* admin-tool/Makefile.am: applied patch from Joseph Sacco to have
