@@ -1,0 +1,840 @@
+# Danish translation of sabayon
+# Copyright (C) 2006 Free Software Foundation, Inc.
+# This file is distributed under the same license as the sabayon package.
+# Kenneth Nielsen <k.nielsen81@gmail.com>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sabayon\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-10-25 15:07+0200\n"
+"PO-Revision-Date: 2006-10-18 20:08+0200\n"
+"Last-Translator: Kenneth Nielsen <k.nielsen81@gmail.com>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Jeg overvejede her først:
+# "Program til at lave og redigere i brugerprofiler", 
+# men efter at have undersøgt det viser det sig at det 
+# der henvises til som "profil" her er en mængde 
+# indstillinger, UD OVER det vi normalt betragter som 
+# en brugerprofil, så for ikke at brugerne skal kløjs 
+# i begreberne besluttede jeg mig for at beholde
+# den nuværende formulering
+#: ../admin-tool/aboutdialog.py:61
+msgid "Program to establish and edit profiles for users"
+msgstr "Program til at oprette og redigere i profiler for brugere"
+
+#: ../admin-tool/aboutdialog.py:64
+msgid "translator-credits"
+msgstr ""
+"Kenneth Nielsen\n"
+"\n"
+"Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
+"Mere info: http://www.dansk-gruppen.dk"
+
+#: ../admin-tool/changeswindow.py:48
+#, python-format
+msgid "Changes in profile %s"
+msgstr "Ændringer i profil %s"
+
+#: ../admin-tool/changeswindow.py:104
+msgid "Ignore"
+msgstr "Ignorér"
+
+#: ../admin-tool/changeswindow.py:111
+msgid "Lock"
+msgstr "Lås"
+
+#: ../admin-tool/changeswindow.py:118 ../admin-tool/editorwindow.py:222
+msgid "Description"
+msgstr "Beskrivelse"
+
+#: ../admin-tool/editorwindow.py:95
+#, python-format
+msgid "Profile %s"
+msgstr "Profil %s"
+
+#: ../admin-tool/editorwindow.py:187 ../admin-tool/sessionwindow.py:172
+msgid "_Profile"
+msgstr "_Profil"
+
+#: ../admin-tool/editorwindow.py:188 ../admin-tool/sessionwindow.py:173
+msgid "_Save"
+msgstr "_Gem"
+
+#: ../admin-tool/editorwindow.py:188 ../admin-tool/sessionwindow.py:173
+msgid "Save profile"
+msgstr "Gem profil"
+
+#: ../admin-tool/editorwindow.py:189
+msgid "_Close"
+msgstr "_Luk"
+
+#: ../admin-tool/editorwindow.py:189 ../admin-tool/sessionwindow.py:174
+msgid "Close the current window"
+msgstr "Luk det aktive vindue"
+
+#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
+msgid "_Edit"
+msgstr "_Redigér"
+
+#: ../admin-tool/editorwindow.py:191
+msgid "_Delete"
+msgstr "_Slet"
+
+#: ../admin-tool/editorwindow.py:191
+msgid "Delete item"
+msgstr "Slet element"
+
+#: ../admin-tool/editorwindow.py:192 ../admin-tool/sessionwindow.py:178
+msgid "_Help"
+msgstr "_Hjælp"
+
+#: ../admin-tool/editorwindow.py:193 ../admin-tool/sessionwindow.py:179
+msgid "_About"
+msgstr "_Om"
+
+#: ../admin-tool/editorwindow.py:193 ../admin-tool/sessionwindow.py:179
+msgid "About Sabayon"
+msgstr "Om Sabayon"
+
+#: ../admin-tool/editorwindow.py:252 ../lib/sources/gconfsource.py:121
+msgid "GConf"
+msgstr "GConf"
+
+#: ../admin-tool/editorwindow.py:256 ../lib/sources/filessource.py:76
+msgid "Files"
+msgstr "Filer"
+
+#: ../admin-tool/editorwindow.py:256 ../admin-tool/lockdown/pessulus.glade.h:7
+#: ../lib/sources/paneldelegate.py:132
+msgid "Panel"
+msgstr "Panel"
+
+#: ../admin-tool/fileviewer.py:27
+#, python-format
+msgid "Profile file: %s"
+msgstr "Profil-fil: %s"
+
+# På grund af klammerne var jeg i tvivl om hvorvidt de skulle oversættes. Jeg tjekkede i den norske version og her er det oversat så jeg har gjort ligeså
+#: ../admin-tool/gconfviewer.py:57 ../admin-tool/gconfviewer.py:76
+msgid "<no type>"
+msgstr "<ingen type>"
+
+#: ../admin-tool/gconfviewer.py:58
+msgid "<no value>"
+msgstr "<ingen værdi>"
+
+#: ../admin-tool/gconfviewer.py:62
+msgid "string"
+msgstr "streng"
+
+#: ../admin-tool/gconfviewer.py:64
+msgid "integer"
+msgstr "heltal"
+
+#: ../admin-tool/gconfviewer.py:66
+msgid "float"
+msgstr "kommatal"
+
+#: ../admin-tool/gconfviewer.py:68
+msgid "boolean"
+msgstr "sandhedsværdi"
+
+#: ../admin-tool/gconfviewer.py:70
+msgid "schema"
+msgstr "skema"
+
+#: ../admin-tool/gconfviewer.py:72
+msgid "list"
+msgstr "liste"
+
+#: ../admin-tool/gconfviewer.py:74
+msgid "pair"
+msgstr "par"
+
+#: ../admin-tool/gconfviewer.py:86
+#, python-format
+msgid "Profile settings: %s"
+msgstr "Indstillinger for profil: %s"
+
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:313
+#: ../admin-tool/usersdialog.py:83
+msgid "Name"
+msgstr "Navn"
+
+#: ../admin-tool/gconfviewer.py:115
+msgid "Type"
+msgstr "Type"
+
+#: ../admin-tool/gconfviewer.py:120
+msgid "Value"
+msgstr "Værdi"
+
+#: ../admin-tool/lockdown/lockdownbutton.py:99
+msgid "Click to make this setting not mandatory"
+msgstr "Klik for at gøre denne indstilling valgfri"
+
+#: ../admin-tool/lockdown/lockdownbutton.py:101
+msgid "Click to make this setting mandatory"
+msgstr "Klik for at gøre denne indstilling obligatorisk"
+
+#: ../admin-tool/lockdown/maindialog.py:47
+msgid "Disable _command line"
+msgstr "Deaktivér _kommandolinje"
+
+#: ../admin-tool/lockdown/maindialog.py:48
+msgid "Disable _printing"
+msgstr "Deaktivér _udskrivning"
+
+#: ../admin-tool/lockdown/maindialog.py:49
+msgid "Disable print _setup"
+msgstr "Deaktivér udskrifts_opsætning"
+
+#: ../admin-tool/lockdown/maindialog.py:50
+msgid "Disable save to _disk"
+msgstr "Deaktivér gem til _disk"
+
+#: ../admin-tool/lockdown/maindialog.py:52
+msgid "_Lock down the panels"
+msgstr "_Lås panelerne"
+
+#: ../admin-tool/lockdown/maindialog.py:53
+msgid "Disable force _quit"
+msgstr "Deaktivér tvungen _afslutning"
+
+#: ../admin-tool/lockdown/maindialog.py:54
+msgid "Disable lock _screen"
+msgstr "Deaktivér lås _skærm"
+
+#: ../admin-tool/lockdown/maindialog.py:55
+msgid "Disable log _out"
+msgstr "Deaktivér log_ud"
+
+#: ../admin-tool/lockdown/maindialog.py:57
+msgid "Disable _quit"
+msgstr "Deaktivér _afslut"
+
+#: ../admin-tool/lockdown/maindialog.py:58
+msgid "Disable _arbitrary URL"
+msgstr "Deaktivér _arbitrær adresse"
+
+#: ../admin-tool/lockdown/maindialog.py:59
+msgid "Disable _bookmark editing"
+msgstr "Deaktivér redigering af _bogmærker"
+
+#: ../admin-tool/lockdown/maindialog.py:60
+msgid "Disable _history"
+msgstr "Deaktivér _historik"
+
+#: ../admin-tool/lockdown/maindialog.py:61
+msgid "Disable _javascript chrome"
+msgstr "Deaktivér _javaskript-chrome"
+
+#: ../admin-tool/lockdown/maindialog.py:62
+msgid "Disable _toolbar editing"
+msgstr "Deaktivér redigering af _værktøjslinje"
+
+#: ../admin-tool/lockdown/maindialog.py:63
+msgid "_Fullscreen"
+msgstr "_Fuldskærm"
+
+#: ../admin-tool/lockdown/maindialog.py:64
+msgid "Hide _menubar"
+msgstr "Skjul _værktøjslinje"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:1
+msgid "<b>Disabled Applets</b>"
+msgstr "<b>Deaktivér panelprogrammer</b>"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:2
+msgid "<b>Safe Protocols</b>"
+msgstr "<b>Sikre protokoller</b>"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:3
+msgid "Disable _unsafe protocols"
+msgstr "Deaktivér _usikre protokoller"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:4
+msgid "Epiphany Web Browser"
+msgstr "Internetbrowseren Epiphany"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:5
+msgid "General"
+msgstr "Generelt"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:6
+msgid "Lockdown Editor"
+msgstr "Aflås redigering"
+
+#.
+#. Translators: this string specifies how a profile
+#. name is concatenated with an integer
+#. to form a unique profile name e.g.
+#. "Artist Workstation (5)"
+#.
+#: ../admin-tool/profilesdialog.py:413
+#, python-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../admin-tool/sabayon:44
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr "Du har ikke tilladelse til at køre dette program"
+
+#: ../admin-tool/sabayon:45
+msgid ""
+"Administrator level permissions are needed to run this program because it "
+"can modify system files."
+msgstr ""
+"Der kræves administrator-rettigheder for at køre dette program idet det kan "
+"modificere systemfiler."
+
+#: ../admin-tool/sabayon:50
+msgid "Desktop User Profiles tool is already running"
+msgstr "Skrivebordsbrugerprofil-værktøjet kører allerede"
+
+#: ../admin-tool/sabayon:51
+msgid ""
+"You may not use Desktop User Profiles tool from within a profile editing "
+"session"
+msgstr ""
+"Du kan ikke bruge skrivebordsbrugerprofil-værktøjet inde i en "
+"profilredigerings-session"
+
+#: ../admin-tool/sabayon:58
+#, c-format
+msgid "User account '%s' was not found"
+msgstr "Brugerkonto \"%s\" blev ikke fundet"
+
+#: ../admin-tool/sabayon:59
+#, c-format
+msgid ""
+"Sabayon requires a special user account '%s' to be present on this computer. "
+"Try again after creating the account (using, for example, the 'adduser' "
+"command)"
+msgstr ""
+"Sabayon kræver at en speciel brugerkonto \"%s\" er til stede på denne "
+"computer. Prøv igen efter at have oprettet denne konto (ved f.eks. at bruge "
+"\"adduser\"-kommandoen)"
+
+#: ../admin-tool/sabayon-apply:39
+#, c-format
+msgid "No profile for user '%s' found\n"
+msgstr "Ingen profil fundet for bruger \"%s\"\n"
+
+#: ../admin-tool/sabayon-apply:44
+#, c-format
+msgid "Usage: %s [<profile-name>]\n"
+msgstr "Brug: %s [<profilenavn>]\n"
+
+#: ../admin-tool/sabayon-session:32
+#, c-format
+msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
+msgstr "Brug: %s <profilnavn> <profilsti> <profilnummer>\n"
+
+#: ../admin-tool/sabayon.desktop.in.h:1
+msgid "Establish and Edit Profiles for Users"
+msgstr "Etablér og redigér brugerprofiler"
+
+#: ../admin-tool/sabayon.desktop.in.h:2 ../admin-tool/sabayon.glade.h:4
+msgid "User Profile Editor"
+msgstr "Redigering af brugerprofil"
+
+#: ../admin-tool/sabayon.glade.h:1
+msgid "Add Profile"
+msgstr "Tilføj profil"
+
+#: ../admin-tool/sabayon.glade.h:2
+msgid "Profile _name:"
+msgstr "Profil_navn:"
+
+#: ../admin-tool/sabayon.glade.h:3
+msgid "Use this profile for _all users"
+msgstr "Brug denne profil til _alle brugere"
+
+# Igen oversat med inspiration fra den norske version:
+# "Baser på"
+#: ../admin-tool/sabayon.glade.h:5
+msgid "_Base on:"
+msgstr "_Basere på:"
+
+#: ../admin-tool/sabayon.glade.h:6
+msgid "_Profiles:"
+msgstr "_Profiler:"
+
+#: ../admin-tool/sabayon.glade.h:7
+msgid "_Users"
+msgstr "_Brugere"
+
+#: ../admin-tool/sabayon.glade.h:8
+msgid "_Users:"
+msgstr "_Brugere:"
+
+#: ../admin-tool/saveconfirm.py:34
+msgid "Close _Without Saving"
+msgstr "Luk _uden at gemme"
+
+#: ../admin-tool/saveconfirm.py:41
+#, python-format
+msgid "Save changes to profile \"%s\" before closing?"
+msgstr "Gem ændringer i profil \"%s\" før afslutning?"
+
+#: ../admin-tool/saveconfirm.py:45
+#, python-format
+msgid ""
+"If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld seconds will be permanently "
+"lost."
+msgstr[0] ""
+"Hvis du ikke gemmer vil ændringer fra det sidste %ld sekund gå tabt."
+msgstr[1] ""
+"Hvis du ikke gemmer vil ændringer fra de sidste %ld sekunder gå tabt."
+
+#: ../admin-tool/saveconfirm.py:51
+msgid ""
+"If you don't save, changes from the last minute will be permanently lost."
+msgstr ""
+"Hvis du ikke gemmer vil ændringer foretaget inden for det sidste minut gå "
+"tabt."
+
+#: ../admin-tool/saveconfirm.py:55
+#, python-format
+msgid ""
+"If you don't save, changes from the last minute and %ld second will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last minute and %ld seconds will be "
+"permanently lost."
+msgstr[0] ""
+"Hvis du ikke gemmer vil ændringer fra det sidste minut og %ld sekund gå tabt."
+msgstr[1] ""
+"Hvis du ikke gemmer vil ændringer fra det sidste minut og %ld sekunder gå "
+"tabt."
+
+#: ../admin-tool/saveconfirm.py:62
+#, python-format
+msgid ""
+"If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld minutes will be permanently "
+"lost."
+msgstr[0] "Hvis du ikke gemmer vil ændringer fra det sidste %ld minut gå tabt."
+msgstr[1] ""
+"Hvis du ikke gemmer vil ændringer fra de sidste %ld minutter gå tabt."
+
+#: ../admin-tool/saveconfirm.py:71 ../admin-tool/saveconfirm.py:81
+#, python-format
+msgid "If you don't save, changes from the last hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] "Hvis du ikke gemmer vil ændringer fra den sidste time gå tabt."
+msgstr[1] "Hvis du ikke gemmer vil ændringer fra de sidste %ld timer gå tabt."
+
+#: ../admin-tool/saveconfirm.py:74
+#, python-format
+msgid ""
+"If you don't save, changes from the last hour and %d minute will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last hour and %d minutes will be "
+"permanently lost."
+msgstr[0] ""
+"Hvis du ikke gemmer vil ændringer fra den sidste time og %ld minut gå tabt."
+msgstr[1] ""
+"Hvis du ikke gemmer vil ændringer fra den sidste time og %ld minutter gå "
+"tabt."
+
+#: ../admin-tool/sessionwindow.py:151
+#, python-format
+msgid "Editing profile %s"
+msgstr "Redigerer profil %s"
+
+#: ../admin-tool/sessionwindow.py:174
+msgid "_Quit"
+msgstr "_Afslut"
+
+#: ../admin-tool/sessionwindow.py:176
+msgid "_Changes"
+msgstr "_Ændringer"
+
+#: ../admin-tool/sessionwindow.py:176
+msgid "Edit changes"
+msgstr "Redigér ændringer"
+
+#: ../admin-tool/sessionwindow.py:177
+msgid "_Lockdown"
+msgstr "_Lås"
+
+#: ../admin-tool/sessionwindow.py:177
+msgid "Edit Lockdown settings"
+msgstr "Redigér låsningsindstillinger"
+
+#: ../admin-tool/sessionwindow.py:182
+msgid "Enforce Mandatory"
+msgstr "Gennemtving obligatorisk"
+
+#: ../admin-tool/sessionwindow.py:182
+msgid "Enforce mandatory settings in the editing session"
+msgstr "Gennemtving obligatoriske indstillinger i redigerings-sessionen"
+
+#: ../admin-tool/sessionwindow.py:271
+#, python-format
+msgid "Lockdown settings for %s"
+msgstr "Låsnings-indstillinger for %s"
+
+#: ../admin-tool/usersdialog.py:65
+#, python-format
+msgid "Users for profile %s"
+msgstr "Brugere til profil %s"
+
+#: ../admin-tool/usersdialog.py:93
+msgid "Use This Profile"
+msgstr "Brug denne profil"
+
+#: ../lib/dirmonitor.py:149
+#, python-format
+msgid "Failed to add monitor for %s"
+msgstr "Kunne ikke tilføje overvågning for %s"
+
+#: ../lib/dirmonitor.py:229
+#, python-format
+msgid "Expected event: %s %s"
+msgstr "Forventet begivenhed: %s %s"
+
+#: ../lib/protosession.py:140
+msgid "Unable to find a free X display"
+msgstr "Ude af stand til at finde en fri X-visning"
+
+#: ../lib/protosession.py:407
+msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+msgstr ""
+"Kunne ikke starte Xnest: tidsgrænsen blev nået mens der ventedes på USR1 "
+"signal"
+
+#: ../lib/protosession.py:409
+msgid "Failed to start Xnest: died during startup"
+msgstr "Kunne ikke starte Xnest: stoppede under opstart"
+
+#: ../lib/sources/filessource.py:66
+#, python-format
+msgid "File '%s' created"
+msgstr "Fil \"%s\" oprettet"
+
+#: ../lib/sources/filessource.py:68
+#, python-format
+msgid "File '%s' deleted"
+msgstr "Fil \"%s\" slettet"
+
+#: ../lib/sources/filessource.py:70
+#, python-format
+msgid "File '%s' changed"
+msgstr "Fil \"%s\" ændret"
+
+#: ../lib/sources/filessource.py:94
+msgid "Applications menu"
+msgstr "Program-menu"
+
+#: ../lib/sources/filessource.py:96
+msgid "Preferences menu"
+msgstr "Indstillings-menu"
+
+#: ../lib/sources/filessource.py:98
+msgid "Server Settings menu"
+msgstr "Serverindstillings-menu"
+
+#: ../lib/sources/filessource.py:100
+msgid "System Settings menu"
+msgstr "Systemindstillings-menu"
+
+#: ../lib/sources/filessource.py:102
+msgid "Start Here menu"
+msgstr "\"Start her\"-menu"
+
+#: ../lib/sources/gconfsource.py:87
+#, python-format
+msgid "GConf key '%s' unset"
+msgstr "GConf-nøgle \"%s\" nulstillet"
+
+#: ../lib/sources/gconfsource.py:89
+#, python-format
+msgid "GConf key '%s' set to string '%s'"
+msgstr "GConf-nøgle \"%s\" sat til streng \"%s\""
+
+#: ../lib/sources/gconfsource.py:91
+#, python-format
+msgid "GConf key '%s' set to integer '%s'"
+msgstr "GConf-nøgle \"%s\" sat til heltal \"%s\""
+
+#: ../lib/sources/gconfsource.py:93
+#, python-format
+msgid "GConf key '%s' set to float '%s'"
+msgstr "GConf-nøgle \"%s\" sat til kommatal \"%s\""
+
+#: ../lib/sources/gconfsource.py:95
+#, python-format
+msgid "GConf key '%s' set to boolean '%s'"
+msgstr "GConf-nøgle \"%s\" sat til sandhedsværdi \"%s\""
+
+#: ../lib/sources/gconfsource.py:97
+#, python-format
+msgid "GConf key '%s' set to schema '%s'"
+msgstr "GConf-nøgle \"%s\" sat til skema \"%s\""
+
+#: ../lib/sources/gconfsource.py:99
+#, python-format
+msgid "GConf key '%s' set to list '%s'"
+msgstr "GConf-nøgle \"%s\" sat til liste \"%s\""
+
+#: ../lib/sources/gconfsource.py:101
+#, python-format
+msgid "GConf key '%s' set to pair '%s'"
+msgstr "GConf-nøgle \"%s\" sat til par \"%s\""
+
+#: ../lib/sources/gconfsource.py:103
+#, python-format
+msgid "GConf key '%s' set to '%s'"
+msgstr "GConf-nøgle \"%s\" sat til \"%s\""
+
+#: ../lib/sources/gconfsource.py:134
+msgid "Default GConf settings"
+msgstr "Forvalgte GConf-indstillinger"
+
+#: ../lib/sources/gconfsource.py:136
+msgid "Mandatory GConf settings"
+msgstr "Obligatoriske GConf-indstillinger"
+
+#: ../lib/sources/mozillasource.py:130
+#, python-format
+msgid "Mozilla key '%s' set to '%s'"
+msgstr "Mozilla-nøgle \"%s\" sat til \"%s\""
+
+#: ../lib/sources/mozillasource.py:132
+#, python-format
+msgid "Mozilla key '%s' unset"
+msgstr "Mozilla-nøgle \"%s\" nulstillet"
+
+#: ../lib/sources/mozillasource.py:134
+#, python-format
+msgid "Mozilla key '%s' changed to '%s'"
+msgstr "Mozilla-nøgle \"%s\" ændret til \"%s\""
+
+#: ../lib/sources/mozillasource.py:163 ../lib/sources/mozillasource.py:173
+msgid "Web browser preferences"
+msgstr "Internetbrowser-indstillinger"
+
+#: ../lib/sources/mozillasource.py:165 ../lib/sources/mozillasource.py:175
+msgid "Web browser bookmarks"
+msgstr "Internetbrowser-bogmærker"
+
+#: ../lib/sources/mozillasource.py:167
+msgid "Web browser profile list"
+msgstr "Internetbrowser-profil-liste"
+
+#: ../lib/sources/mozillasource.py:518
+#, python-format
+msgid "File Not Found (%s)"
+msgstr "Fil ikke fundet (%s)"
+
+# Denne streng er oversat på en lignende måde i både den svenske og den norske udgave,
+# på den måde at name i parenteserne ikke er oversat. Jeg går ud fra at det er rigtigt
+# men måske en der kan Python kan be- eller af-kræfte dette
+#: ../lib/sources/mozillasource.py:869
+#, python-format
+msgid "duplicate name(%(name)s) in section %(section)s"
+msgstr "dobbelt navn(%(name)s) in sektion %(section)s"
+
+#: ../lib/sources/mozillasource.py:878
+#, python-format
+msgid "redundant default in section %s"
+msgstr "overflødig forvalgt indstilling i sektion %s"
+
+#: ../lib/sources/mozillasource.py:895
+msgid "no default profile"
+msgstr "ingen forvalgt profil"
+
+#: ../lib/sources/mozillasource.py:950
+#, python-format
+msgid "Mozilla bookmark created '%s' -> '%s'"
+msgstr "Mozilla-bogmærke oprettet \"%s\" -> \"%s\""
+
+#: ../lib/sources/mozillasource.py:952
+#, python-format
+msgid "Mozilla bookmark folder created '%s'"
+msgstr "Mozilla-bogmærkemappe oprettet \"%s\""
+
+#: ../lib/sources/mozillasource.py:955
+#, python-format
+msgid "Mozilla bookmark deleted '%s'"
+msgstr "Mozilla-bogmærke slettet \"%s\""
+
+#: ../lib/sources/mozillasource.py:957
+#, python-format
+msgid "Mozilla bookmark folder deleted '%s'"
+msgstr "Mozilla-bogmærkemappe slettet \"%s\""
+
+#: ../lib/sources/mozillasource.py:960
+#, python-format
+msgid "Mozilla bookmark changed '%s' '%s'"
+msgstr "Mozilla-bogmærke ændret \"%s\" \"%s\""
+
+#: ../lib/sources/mozillasource.py:962
+#, python-format
+msgid "Mozilla bookmark folder changed '%s'"
+msgstr "Mozilla-bogmærkemappe ændret \"%s\""
+
+#: ../lib/sources/paneldelegate.py:56
+#, python-format
+msgid "Panel '%s' added"
+msgstr "Panel \"%s\" tilføjet"
+
+#: ../lib/sources/paneldelegate.py:62
+#, python-format
+msgid "Panel '%s' removed"
+msgstr "Panel \"%s\" fjernet"
+
+#: ../lib/sources/paneldelegate.py:68
+#, python-format
+msgid "Panel applet '%s' added"
+msgstr "Panelprogram \"%s\" tilføjet"
+
+#: ../lib/sources/paneldelegate.py:74
+#, python-format
+msgid "Panel applet '%s' removed"
+msgstr "Panelprogram \"%s\" fjernet"
+
+#: ../lib/sources/paneldelegate.py:80
+#, python-format
+msgid "Panel object '%s' added"
+msgstr "Panelobjekt \"%s\" tilføjet"
+
+#: ../lib/sources/paneldelegate.py:92
+#, python-format
+msgid "Panel object '%s' removed"
+msgstr "Panelobjekt \"%s\" fjernet"
+
+#: ../lib/sources/paneldelegate.py:373
+msgid "Panel File"
+msgstr "Panelfil"
+
+#: ../lib/storage.py:171
+#, python-format
+msgid "Failed to read file '%s': %s"
+msgstr "Kunne ikke læse fil \"%s\": %s"
+
+#: ../lib/storage.py:181
+#, python-format
+msgid "Failed to read metadata from '%s': %s"
+msgstr "Kunne ikke læse metadata fra \"%s\": %s"
+
+#: ../lib/storage.py:187
+#, python-format
+msgid "Invalid metadata section in '%s': %s"
+msgstr "Ugyldig metadata-sektion i \"%s\": %s"
+
+#: ../lib/storage.py:361
+#, python-format
+msgid "Cannot add non-existent file '%s'"
+msgstr "Kan ikke tilføje ikke eksisterende fil \"%s\""
+
+#: ../lib/storage.py:538
+#, python-format
+msgid "Profile is read-only %s"
+msgstr "Profilen kan kun læses %s"
+
+#: ../lib/unittests.py:38 ../lib/unittests.py:39
+msgid "Ignore WARNINGs"
+msgstr "Ignorer ADVARSLER"
+
+#: ../lib/unittests.py:61
+#, python-format
+msgid "Running %s tests"
+msgstr "Kører %s tests"
+
+#: ../lib/unittests.py:63
+#, python-format
+msgid "Running %s tests (%s)"
+msgstr "Kører %s tests (%s)"
+
+#: ../lib/unittests.py:70
+msgid "Success!"
+msgstr "Succes!"
+
+#: ../lib/userdb.py:50
+#, python-format
+msgid "invalid type for setting %s in %s"
+msgstr "ugyldig type for indstilling %s i %s"
+
+#: ../lib/userdb.py:210
+#, python-format
+msgid "No search based specified for %s"
+msgstr "Ingen søgebase angivet for %s"
+
+#: ../lib/userdb.py:213
+#, python-format
+msgid "No query filter specified for %s"
+msgstr "Intet forespørgselsfilter angivet for %s"
+
+#: ../lib/userdb.py:216
+#, python-format
+msgid "No result attribute specified for %s"
+msgstr "Ingen resultatattributter angivet for %s"
+
+#: ../lib/userdb.py:225
+msgid "Scope must be one of sub, base and one"
+msgstr "Området skal enten være under, basis og en"
+
+#: ../lib/userdb.py:245
+msgid "multiple_result must be one of first and random"
+msgstr "flere _resultater skal enten være første og tilfældig"
+
+#: ../lib/userdb.py:337
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "Kunne ikke åbne %s for at skrive til den"
+
+#: ../lib/userdb.py:350
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "Kunne ikke gemme brugerdatabasen til %s"
+
+#: ../lib/userdb.py:373 ../lib/userdb.py:408
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "Fil %s er ikke en profilkonfiguration"
+
+#: ../lib/userdb.py:380
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "Kunne ikke tilføje den forvalgte profil %s til konfigurationen"
+
+#: ../lib/userdb.py:416
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "Kunne ikke tilføje bruger %s til profilkonfiguration"
+
+#: ../lib/userdb.py:447
+msgid "Failed to get the user list"
+msgstr "Kunne ikke hente brugerlisten"
+
+#: ../lib/util.py:125
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"Kunne ikke finde hjemmemappe: ikke indstillet i /etc/passwd og ingen værdi "
+"for $HOME i miljøet"
+
+#: ../lib/util.py:138
+msgid ""
+"Cannot find username: not set in /etc/passwd and no value for $USER in "
+"environment"
+msgstr ""
+"Kunne ikke finde brugernavn: ikke indstillet i /etc/passwd og ingen værdi "
+"for $USER i miljøet"
