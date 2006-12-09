@@ -1,3 +1,8 @@
+2006-12-09  Thierry Randrianiriana  <randrianiriana@gmail.com>
+
+	* po/mg.po: Added Malagasy translation
+	* po/LINGUAS: Added 'mg'
+
 2006-12-08  Kjartan Maraas  <kmaraas@gnome.org>
 
 	* admin-tool/sabayon.glade: Mark a string as translatable.
@@ -93,7 +98,7 @@ Thu Sep 28 10:15:07 CEST 2006 Daniel Veillard <veillard@redhat.com>
 	* configure.ac:
 	Use po/LINGUAS (#338011)
 	Patch from Przemyslaw Grzegorczyk
-	 
+
 2006-04-23  Kjartan Maraas <kmaraas@gnome.org>
 
 	* configure.ac: Unbreak the build.
@@ -110,7 +115,7 @@ Thu Sep 28 10:15:07 CEST 2006 Daniel Veillard <veillard@redhat.com>
 2006-04-11  William Lachance  <wrlach@gmail.com>
 
 	* lib/config.py.in: Fix breakage.
-	
+
 2006-04-05  Pema Geyleg  <pema.geyleg@gmail.com>
 
 	* configure.ac: Added dz (Dzongkha) to ALL_LINGUAS.
@@ -161,7 +166,7 @@ Thu Sep 28 10:15:07 CEST 2006 Daniel Veillard <veillard@redhat.com>
 	* configure.ac: Added "ku" to ALL_LINGUAS.
 
 2006-02-16  Kang Jeong-Hee  <keizie@gmail.co>
-	
+
 	* configure.in: Added "ko" to ALL_LINGUAS.
 
 2006-01-31  Elijah Newren  <newren gmail com>
@@ -170,7 +175,7 @@ Thu Sep 28 10:15:07 CEST 2006 Daniel Veillard <veillard@redhat.com>
 	Post release version bump to 2.12.4
 
 ==================== 2.12.3 ====================
-	
+
 2006-01-31  Elijah Newren  <newren gmail com>
 
 	* NEWS: 2.12.3 release
@@ -182,14 +187,14 @@ Thu Sep 28 10:15:07 CEST 2006 Daniel Veillard <veillard@redhat.com>
 2006-01-24  Clytie Siddall <clytie@riverland.net.au>
 
 	* configure.in	Added vi in ALL_LINGUAS line.
-	
+
 	2005-12-30  Slobodan D. Sredojevic  <ssl@uns.ns.ac.yu>
 
 	* configure.ac: Add 'sr' and 'sr@Latn' to ALL_LINGUAS
 
 2005-12-28  William Lachance <wrlach@gmail.com>
 
-	* configure.ac lib/config.py.in lib/Makefile.am: 
+	* configure.ac lib/config.py.in lib/Makefile.am:
 	Don't assume that the Xnest binary is '/usr/X11R6/bin/Xnest':
 	detect its location automatically. Also make configure fail if
 	we can't find it, since it no longer has a canonical location.
@@ -214,7 +219,7 @@ Thu Sep 28 10:15:07 CEST 2006 Daniel Veillard <veillard@redhat.com>
 
 	* configure.ac: Add "pa" Punjabi to ALL_LINGUAS
 
-2005-11-20  Ilkka Tuohela <hile@iki.fi> 
+2005-11-20  Ilkka Tuohela <hile@iki.fi>
 
 	* configure.ac: Added 'fi' (Finnish) to ALL_LINGUAS.
 
@@ -228,7 +233,7 @@ Thu Sep 28 10:15:07 CEST 2006 Daniel Veillard <veillard@redhat.com>
 	Post release version bump
 
 ==================== 2.12.2 ====================
-	
+
 2005-11-17  Alexander Larsson  <alexl@redhat.com>
 
 	* configure.ac:
@@ -251,11 +256,11 @@ Thu Sep 28 10:15:07 CEST 2006 Daniel Veillard <veillard@redhat.com>
 
 	* AUTHORS:
 	Add me
-	
+
 	* Makefile.am:
 	* sabayon.schema:
 	Add LDAP example schema
-	
+
 	* doc/Makefile.am:
 	* doc/config.html:
 	* doc/flat.html:
@@ -269,7 +274,7 @@ Thu Sep 28 10:15:07 CEST 2006 Daniel Veillard <veillard@redhat.com>
 
 	* lib/userdb.py:
 	Initial ldap support
-	
+
 	* sabayon.spec.in:
 	Require python-ldap
 
@@ -293,17 +298,17 @@ Thu Sep 28 10:15:07 CEST 2006 Daniel Veillard <veillard@redhat.com>
 	* admin-tool/sessionwindow.py:
 	* lib/userprofile.py:
 	Add method mergo_old_change to ProfileChange and call it
-	
+
 	* lib/sources/filessource.py:
 	Use the merging to make delete changes remove a create change
 	from this session.
 	Fix delete change events
-	
+
 	* lib/config.py.in:
 	Ignore files ~/.config and ~/.local.
 
 ==================== 2.12.1 ====================
-	
+
 2005-11-07  Alexander Larsson  <alexl@redhat.com>
 
 	* NEWS:
@@ -326,10 +331,10 @@ Thu Sep 28 10:15:07 CEST 2006 Daniel Veillard <veillard@redhat.com>
 
 	* sabayon.spec.in:
 	Update for changes
-	
+
 	* lib/sources/mozillasource.py:
 	Fix bug that caused multiple files in profile to be mishandled
-	
+
 	* lib/util.py:
 	debug prints for "all" gets mask 0xFFFFFFFF
 
@@ -338,7 +343,7 @@ Thu Sep 28 10:15:07 CEST 2006 Daniel Veillard <veillard@redhat.com>
 	* lib/protosession.py:
 	Generate our own cookie instead of reusing the one from the
 	parent display. (#318810)
-	
+
 	* lib/util.py:
 	Add function to generate random strings
 
@@ -346,7 +351,7 @@ Thu Sep 28 10:15:07 CEST 2006 Daniel Veillard <veillard@redhat.com>
 
 	* lib/sources/mozillasource.py:
 	Don't strip comments from inside strings
-	
+
 	* lib/unittests.py:
 	Add mozillasource tests
 
@@ -367,10 +372,10 @@ Thu Sep 28 10:15:07 CEST 2006 Daniel Veillard <veillard@redhat.com>
 	Display panel launcher files.
 
 2005-11-02  Alexander Larsson  <alexl@redhat.com>
-	
+
 	* lib/userprofile.py:
 	Add get_path_description to delegates
-	
+
 	* lib/sources/paneldelegate.py:
 	Implement get_path_description for panel delegate.
 	Remove launchers from storage on removal.
@@ -385,7 +390,7 @@ Thu Sep 28 10:15:07 CEST 2006 Daniel Veillard <veillard@redhat.com>
 	* admin-tool/lockdown/__init__.py:
 	* admin-tool/lockdown/config.py:
 	Set up for pessulus import.
-	
+
 	* admin-tool/lockdown/disabledapplets.py:
 	* admin-tool/lockdown/icons.py:
 	* admin-tool/lockdown/lockdownapplier.py:
@@ -395,18 +400,18 @@ Thu Sep 28 10:15:07 CEST 2006 Daniel Veillard <veillard@redhat.com>
 	* admin-tool/lockdown/safeprotocols.py:
 	* admin-tool/lockdown/simpleeditabletreeview.py:
 	Initial pessulus import (ChangeLog entry 2005-11-02)
-	
+
 	* admin-tool/lockdownwindow.py:
 	* admin-tool/lockdownappliersabayon.py:
 	* admin-tool/sessionwindow.py:
 	Remove lockdown window and move sabayon applier
 	code to its own file.
-	
+
 	* lib/Makefile.am:
 	* lib/config.py.in:
 	* lib/util.py:
 	Add and use LOCALEDIR
-	
+
 	* lib/sources/gconfsource.py:
 	Implement set_gconf_list.
 
@@ -416,7 +421,7 @@ Thu Sep 28 10:15:07 CEST 2006 Daniel Veillard <veillard@redhat.com>
 	Start monitory delegates after sources, needed because
 	the panel delegate needs the gconf source to initialize
 	the gconf path file.
-	
+
 	* lib/sources/paneldelegate.py:
 	Handle files added when you add panel launchers.
 
@@ -434,19 +439,19 @@ Thu Sep 28 10:15:07 CEST 2006 Daniel Veillard <veillard@redhat.com>
 	New lockdown window.
 	Simple initial version, using an applier abstraction so that we
 	can plug in Pessulus later.
-	
+
 	* lib/userprofile.py:
 	Add get_mandatory method to ProfileChange
-	
+
 	* admin-tool/sessionwindow.py:
 	Use the lockdown window.
 	Add changed parameter to changed signal of change model
 	Add find method for chage model
 	Get mandatory setting from change event if set
-	
+
 	* admin-tool/changeswindow.py:
 	Emit changed when changing the mandatory setting of a change
-	
+
 	* lib/sources/gconfsource.py:
 	Add gconf helper for lockdown settings
 
@@ -461,10 +466,10 @@ Thu Sep 28 10:15:07 CEST 2006 Daniel Veillard <veillard@redhat.com>
 
 	* README:
 	Add comment about gconf 2.12.1 requirement for enforce mandatory
-	
+
 	* admin-tool/sabayon.desktop.in:
 	Better name
-	
+
 	* admin-tool/changeswindow.py:
 	* admin-tool/editorwindow.py:
 	* admin-tool/fileviewer.py:
@@ -479,17 +484,17 @@ Thu Sep 28 10:15:07 CEST 2006 Daniel Veillard <veillard@redhat.com>
 
 	* admin-tool/sabayon-apply:
 	Add -s argument to mean "nested sabayon session"
-	
+
 	* admin-tool/sessionwindow.py:
 	Add Enforce mandatory toggle menu item. You can use
 	this to edit a settting that you earlier set as mandatory.
-	
+
 	* lib/config.py.in:
 	Ignore directory .gconf.xml.mandatory-alt
-	
+
 	* lib/protosession.py:
 	Pass -s to apply tool
-	
+
 	* lib/sources/filessource.py:
 	* lib/sources/mozillasource.py:
 	* lib/sources/paneldelegate.py:
@@ -497,10 +502,10 @@ Thu Sep 28 10:15:07 CEST 2006 Daniel Veillard <veillard@redhat.com>
 	* lib/userprofile.py:
 	Add set_enforce_mandatory() call and is_sabayon_session argument
 	to apply()
-	
+
 	* lib/storage.py:
 	Allow you to use different source name when adding file
-	
+
 	* lib/sources/gconfsource.py:
 	Implement set_enforce_mandatory() by having two mandatory trees
 	at different places in the stack and moving between them.
@@ -527,10 +532,10 @@ Thu Sep 28 10:15:07 CEST 2006 Daniel Veillard <veillard@redhat.com>
 	* admin-tool/sabayon-session:
 	* lib/userprofile.py:
 	Find correct pygtk version if installed in a non-default place.
-	
+
 2005-10-20  Sebastien Bacher  <seb128@debian.org>
 
-	* lib/Makefile.am: fix a typo with the sed command used 
+	* lib/Makefile.am: fix a typo with the sed command used
 	  to set the session name (Closes: #319314).
 
 2005-10-11  Mark McLoughlin  <mark@skynet.ie>
@@ -564,7 +569,7 @@ Wed Sep 21 10:53:17 CEST 2005 Daniel Veillard <veillard@redhat.com>
 
 	* lib/protosession.py: create a copy of os.envrion
 	before modifying it.
-	
+
 	* sabayon.spec.in: sync some changes from downstream.
 
 2005-08-10  Maxim Dziumanenko <mvd@mylinux.ua>
@@ -592,11 +597,11 @@ Wed Sep 21 10:53:17 CEST 2005 Daniel Veillard <veillard@redhat.com>
 	Bug #310514
 
 	* lib/config.py.in: add GCONF_KEYS_TO_IGNORE
-	
+
 	* lib/sources/gconfsource.py: ignore notifications
 	of changes to keys which match any pattern in
 	GCONF_KEYS_TO_IGNORE
-	
+
 2005-08-01  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/config.py.in: looks like .ICEauthority gets
@@ -649,9 +654,9 @@ Wed Sep 21 10:53:17 CEST 2005 Daniel Veillard <veillard@redhat.com>
 
 2005-07-29  Mark McLoughlin  <markmc@redhat.com>
 
-	* lib/config.py.in: add ".fonts.cache-1*" to 
+	* lib/config.py.in: add ".fonts.cache-1*" to
 	files-to-ignore.
-	
+
 	* lib/dirmonitor.py:
 	(DirectoryMonitor.__should_ignore_dir),
 	(DirectoryMonitor.__should_ignore_file): add support
@@ -677,7 +682,7 @@ Fri Jul 29 12:09:38 CEST 2005 Daniel Veillard <veillard@redhat.com>
 	* lib/userdb.py:
 	(UserDatabase.__profile_name_to_location): make the debug
 	spew a bit more clear.
-	
+
 	* admin-tool/sabayon-apply, lib/userprofile.py: make
 	the debug spew not crash if the profile name contains
 	a '%' character.
@@ -696,7 +701,7 @@ Thu Jul 28 11:14:59 CEST 2005 Daniel Veillard <veillard@redhat.com>
 
 	Fixes bug #311798
 
-	* lib/config.py.in: add ~/.thumbnails to 
+	* lib/config.py.in: add ~/.thumbnails to
 	directories-to-ignore
 
 2005-07-27  Mark McLoughlin  <markmc@redhat.com>
@@ -735,7 +740,7 @@ Thu Jul 28 11:14:59 CEST 2005 Daniel Veillard <veillard@redhat.com>
 
 2005-07-14  William Lachance  <wrlach@gmail.com>
 
-	* admin-tool/changeswindow.py: Desensitize "mandatory" 
+	* admin-tool/changeswindow.py: Desensitize "mandatory"
 	column in changes window if ignore is selected. Fixes
 	bug #305786.
 
@@ -760,7 +765,7 @@ Sun Jul  3 11:31:26 CEST 2005 Daniel Veillard <veillard@redhat.com>
 
 	* admin-tool/sessionwidget.py: fixup debug spew and
 	send the modifier state with button events.
-	
+
 	* lib/xlib.c:
 	(xlib_send_button_event): allow sending the modifier
 	state.
@@ -791,14 +796,14 @@ Sun Jul  3 11:31:26 CEST 2005 Daniel Veillard <veillard@redhat.com>
 
 	* admin-tool/sessionwindow.py: add a Statusbar and
 	remove the changes list.
-	
+
 	* admin-tool/changeswindow.py: split out the changes
 	list here.
-	
+
 	* admin-tool/Makefile.am: add changeswindow.py.
 
 	* admin-tool/sabayon.glade: remove the session window.
-	
+
 	* lib/storage.py: fix debug spew.
 
 2005-06-22  Mark McLoughlin  <markmc@redhat.com>
@@ -818,9 +823,9 @@ Sun Jul  3 11:31:26 CEST 2005 Daniel Veillard <veillard@redhat.com>
 
 	* admin-tool/sessionwindow.py: use gtk.UIManager()
 	for menus.
-	
+
 	* admin-tool/sabayon.glade: remove menus.
-	
+
 	* admin-tool/editorwindow.py: fix debug spew.
 
 2005-06-21  Mark McLoughlin  <markmc@redhat.com>
@@ -839,37 +844,37 @@ Sun Jul  3 11:31:26 CEST 2005 Daniel Veillard <veillard@redhat.com>
 	* admin-tool/sabayon-session: add this back again.
 	The session window now runs as the sabayon user
 	rather than as root.
-	
+
 	* admin-tool/Makefile.am: add sabayon-session; remove
 	sabayon-monitor and monitorwindow.py
-	
+
 	* admin-tool/profilesdialog.py: run sabayon-session
 	as the sabayon user. Need to setup the temporary homedir,
 	copy/chown the xauth file and copy/chown the profile
 	beforehand.
-	
+
 	* admin-tool/sabayon: check to see if the sabayon user
 	exists and pop up an error if not.
-	
+
 	* admin-tool/sabayon.glade: re-name some widgets; pack
 	the monitor output at the end of the vbox so we can
 	stick the session widget in there.
-	
+
 	* admin-tool/sessionwindow.py: merge everything from
 	monitorwindow.py in here and add a save confirmation
 	dialog.
 
 	* admin-tool/monitorwindow.py: remove.
-	
+
 	* lib/config.py.in: add SESSION_TOOL_ARGV and rename
 	ADMIN_TOOL_TIMEOUT to XNEST_USR1_TIMEOUT.
-	
+
 	* lib/protosession.py: substantially re-work so as to
 	split up the code into the stuff that needs to be run
 	by sabayon as root and the stuff that gets run by
 	sabayon-session as the sabayon user. Also, don't
 	run sabayon-monitor anymore.
-	
+
 	* lib/dirmonitor.py, lib/storage.py: fix debug spew.
 
 2005-06-21  Mark McLoughlin  <markmc@redhat.com>
@@ -909,11 +914,11 @@ Sun Jul  3 11:31:26 CEST 2005 Daniel Veillard <veillard@redhat.com>
 	     Xnest window.
 
 	* admin-tool/sessionwidget.py: implement SessionWidget
-	
+
 	* admin-tool/sessionwindow.py: use sessionwidget
-	
+
 	* admin-tool/Makefile.am: add sessionwidget.py
-	
+
 	* lib/xlib.c:
 	(xlib_send_key_event), (xlib_send_button_event),
 	(xlib_send_motion_event), (xlib_send_crossing_event):
@@ -926,10 +931,10 @@ Sun Jul  3 11:31:26 CEST 2005 Daniel Veillard <veillard@redhat.com>
 2005-06-17  John Dennis  <jdennis@redhat.com>
 
 	Fixes for bug #305778
-	
+
 	* admin-tool/editorwindow.py: in ProfileModel:reload if get_source
 	fails try calling get_delegate
-	  
+
 	* lib/storage.py: break extract() into two parts, new function
 	get_extract_src_path() computes the path to the file/directory
 	requested for extraction, extract() now calls
@@ -937,10 +942,10 @@ Sun Jul  3 11:31:26 CEST 2005 Daniel Veillard <veillard@redhat.com>
 	operation. get_extract_src_path() can now be used by other code to
 	get a path to the file in the profile without having to copy to a
 	destination, this is useful if all you want to do is read the file.
-	
+
 	* lib/userprofile.py: add UserProfile:get_delegate &
 	ProfileSource:get_delegate()
-	
+
 	* lib/sources/mozillasource.py: remove internationalization of
 	Firefox name, implement get_path_description
 
@@ -953,7 +958,7 @@ Sun Jul  3 11:31:26 CEST 2005 Daniel Veillard <veillard@redhat.com>
 	(SessionWindow.__handle_key_press),
 	(SessionWindow.__handle_key_press): improve debug
 	spew.
-	
+
 	* lib/config.py.in: pass through metacity debug
 	environment variables to the prototype session.
 
@@ -993,20 +998,20 @@ Sun Jul  3 11:31:26 CEST 2005 Daniel Veillard <veillard@redhat.com>
 	with Alt now. Its probably a metacity bug.
 
 	* acinclude.m4: add AM_CHECK_PYTHON_HEADERS
-	
+
 	* autogen.sh: use the autogen from gnome-common.
-	
+
 	* configure.ac: check for python headers, gtk+, pygobject,
 	C compiler etc. etc.
-	
+
 	* lib/Makefile.am: build the xlib module.
-	 
+
 	* lib/xlib.c: (xlib_send_key_event), (initxlib): add simple
 	module with a wrapper for XSendEvent()
-	
+
 	* admin-tool/sessionwindow.py: make the toplevel focusable
 	and re-send key press/release events with xlib.send_key_event()
-	
+
 	* lib/protosession.py, lib/util.py: don't override builtin
 	str() in exception handler (don't ask me ... wtf?)
 
@@ -1033,7 +1038,7 @@ Sun Jul  3 11:31:26 CEST 2005 Daniel Veillard <veillard@redhat.com>
 
 	* lib/protosession.py:
 	(ProtoSession.__start_session): set $SABAYON_SESSION_RUNNING
-	
+
 	* admin-tool/sabayon: pop up an error dialog if
 	$SABAYON_SESSION_RUNNING is set.
 
@@ -1059,24 +1064,24 @@ Fri Jun 10 22:20:01 CEST 2005 Daniel Veillard <veillard@redhat.com>
 
 	* admin-tool/Makefile.am: add sessionwindow.py and
 	remove sabayon-session.
-	
+
 	* lib/protosession.py: allow passing a parent window id
 	which Xnest should embed itself in.
-	
+
 	* admin-tool/sessionwindow.py: add. Creates a toplevel
 	window and embeds Xnest in it.
-	
+
 	* admin-tool/profilesdialog.py: open a SessionWindow
 	rather than running sabayon-session
-	
+
 	* admin-tool/sabayon-session: remove. I don't think
-	we've needed to run the protosession code from a 
+	we've needed to run the protosession code from a
 	separate process for quite a while now. The original
 	problem was that we couldn't open an X connection
 	with the Xnest server if we already had an open X
 	connection, but we solved that with the open_x_connection()
 	hack in protosession.py (I think)
-	
+
 	* lib/config.py.in: remove SESSION_TOOL_ARGV
 
 2005-06-10  Mark McLoughlin  <markmc@redhat.com>
@@ -1127,13 +1132,13 @@ Fri Jun 10 22:20:01 CEST 2005 Daniel Veillard <veillard@redhat.com>
 	* admin-tool/profilesdialog.py:
 	(ProfilesDialog.__delete_currently_selected): remove
 	any references to the profile from userdb too.
-	
+
 2005-06-08  Mark McLoughlin  <markmc@redhat.com>
-	
+
 	* admin-tool/profilesdialog.py:
 	(ProfilesModel.reload): use UserDatabase.get_profiles()
 	(ProfilesDialog.__make_unique_profile_name): ditto
-	
+
 	* lib/userdb.py: use config.PROFILESDIR rather
 	than /etc/desktop-profiles
 
@@ -1146,9 +1151,9 @@ Fri Jun 10 22:20:01 CEST 2005 Daniel Veillard <veillard@redhat.com>
 	(ProfilesDialog.__make_unique_profile_name): if the
 	profile name already exists, make it unique by adding
 	an integer in parenthesis to the name.
-	
+
 2005-06-08  Mark McLoughlin  <markmc@redhat.com>
-	
+
 	* admin-tool/profilesdialog.py:
 	(ProfilesModel.reload): sort the profiles list
 	(ProfilesDialog.__delete_currently_selected): select
@@ -1178,7 +1183,7 @@ Fri Jun  3 15:06:31 CEST 2005 Daniel Veillard <veillard@redhat.com>
 
 	* admin-tool/Makefile.am: install the icon in
 	$(datadir)/icons/hicolor/48x48/apps
-	
+
 	* admin-tool/profilesdialog.py,
 	  admin-tool/usersdialog.py: set the icon name
 	on the users and profiles windows.
@@ -1212,7 +1217,7 @@ Thu May 19 13:52:09 CEST 2005 Daniel Veillard <veillard@redhat.com>
 2005-05-18  Mark McLoughlin  <markmc@redhat.com>
 
 	* configure.in: Version 0.18.
-	
+
 2005-05-18  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/cache.py: not everyone want's to use DV's homedir :-)
@@ -1238,7 +1243,7 @@ Tue May 17 17:49:48 CEST 2005 Daniel Veillard <veillard@redhat.com>
 
 Tue May 17 14:33:55 CEST 2005 Daniel Veillard <veillard@redhat.com>
 
-	* lib/cache.py lib/util.py: added regression testing to the cache 
+	* lib/cache.py lib/util.py: added regression testing to the cache
 	  module, fixed a few bugs, integrated in the debugging API, but
 	  not plugged yet.
 
@@ -1255,7 +1260,7 @@ Mon May 16 19:21:37 CEST 2005 Daniel Veillard <veillard@redhat.com>
 2005-05-12  Mark McLoughlin  <markmc@redhat.com>
 
 	* doc/flat.html: fix invalid html.
-	
+
 	* doc/index.html: rebuild.
 
 2005-05-12  Mark McLoughlin  <markmc@redhat.com>
@@ -1263,19 +1268,19 @@ Mon May 16 19:21:37 CEST 2005 Daniel Veillard <veillard@redhat.com>
 	Add a dialog for associating users with profiles.
 
 	* admin-tool/Makefile.am: add usersdialog.py
-	
+
 	* admin-tool/usersdialog.py: dialog from which you
 	can make a profile the default profile or assign
 	that profile to users.
-	
+
 	* admin-tool/profilesdialog.py: add a "Users" button
 	and popup the dialog when clicked.
-	
+
 	* admin-tool/sabayon.glade: add the new dialog and
 	button.
-	
+
 	* lib/unittests.py: add userdb.
-	
+
 	* lib/userdb.py: implement get_default_profile() and
 	set set_default_profile(). Add a "profile_location"
 	arg to get_profile() and get_default_profile() which
@@ -1283,7 +1288,7 @@ Mon May 16 19:21:37 CEST 2005 Daniel Veillard <veillard@redhat.com>
 	the profile. Add a "ignore_default" arg to get_profile()
 	which causes it to not return the default profile if
 	no profile is explicitly set for that user.
-	
+
 	* admin-tool/userswindow.py: goodness, I'd forgotten
 	I'd ever written this junk.
 
@@ -1297,7 +1302,7 @@ Mon May 16 19:21:37 CEST 2005 Daniel Veillard <veillard@redhat.com>
 	* admin-tool/sabayon.glade: move the New/Delete
 	buttons to under the profiles list and rename
 	them to Add/Remove.
-	
+
 	* admin-tool/profilesdialog.py: new/delete to
 	add/remove renaming.
 
@@ -1332,7 +1337,7 @@ Tue May 10 16:11:10 CEST 2005 Daniel Veillard <veillard@redhat.com>
 2005-05-09  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/usermod.py: don't import errno.
-	
+
 	* lib/util.py:
 	(uninterruptible_spawnve): if env is None, call
 	os.spawnv() since os.spawnve() seems to dislike
@@ -1345,7 +1350,7 @@ Tue May 10 16:11:10 CEST 2005 Daniel Veillard <veillard@redhat.com>
 	* lib/util.py:
 	(uninterruptible_spawnv),
 	(uninterruptible_spawnve): ... here
-	
+
 	* admin-tool/profilesdialog.py,
 	  lib/protosession.py: use uninterruptible variant
 	of os.spawnv() here too.
@@ -1405,7 +1410,7 @@ Tue May 10 16:11:10 CEST 2005 Daniel Veillard <veillard@redhat.com>
 	originial bookmark order.
 
 	Move DictCompare from mozillasource.py to util.py so it can be shared.
-	
+
 2005-03-31  John Dennis  <jdennis@redhat.com>
 
 	* lib/mozilla_bookmarks.py
@@ -1417,11 +1422,11 @@ Tue May 10 16:11:10 CEST 2005 Daniel Veillard <veillard@redhat.com>
 	Clean up home_dir initialization
 	Mozilla_bookmarks now python stand alone for testing, not sh standalone
 	Can now compare and generate differences between two bookmark files.
-	Can now write out bookmark file from data structure (note, the 
+	Can now write out bookmark file from data structure (note, the
 	original ordering is not fully preserved, this needs to be fixed.
 	Attributes written out can now be filtered.
 	Rework add_file method.
-	
+
 2005-03-30  John Dennis  <jdennis@redhat.com>
 
 	* lib/mozilla_bookmarks.py: Add new python file for mozilla
@@ -1449,19 +1454,19 @@ Sat Mar 26 17:37:45 CET 2005 Daniel Veillard <veillard@redhat.com>
 2005-03-24  Mark McLoughlin  <markmc@redhat.com>
 
 	* configure.ac: Version 0.17.
-	
+
 2005-03-24  Mark McLoughlin  <markmc@redhat.com>
 
 	* configure.ac: add --with-prototype-user=<username>,
 	defaults to "sabayon"
-	
+
 	* lib/Makefile.am, lib/config.py.in: set PROTOTYPE_USER
 	to whatever was passed to configure.
-	
+
 	* sabayon.spec.in: use --with-prototype-user.
-	
+
 	* doc/site.xsl: add link to Fedora Extras repository.
-	
+
 	* doc/*.html: rebuild.
 
 2005-03-23  John Dennis  <jdennis@redhat.com>
@@ -1471,7 +1476,7 @@ Sat Mar 26 17:37:45 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* lib/paneldelegate.py: add start_monitoring and stop_monitoring
 	stub routines
-	
+
 	* lib/util.py: Add ability for a modules debug flag to be a hex
 	mask. Thus debug output can be limited not only to specific
 	modules, but also to specific classes of debug messages in a
@@ -1518,18 +1523,18 @@ Sat Mar 26 17:37:45 CET 2005 Daniel Veillard <veillard@redhat.com>
 2005-03-18  Mark McLoughlin  <markmc@redhat.com>
 
 	* configure.ac: post-release bump to 0.17.
-	
+
 ==================== 0.16 ====================
 
 2005-03-18  Mark McLoughlin  <markmc@redhat.com>
 
 	* configure.ac: Version 0.16.
-	
+
 2005-03-18  Mark McLoughlin  <markmc@redhat.com>
-	
+
 	* lib/userprofile.py: import sources from the
 	sources module.
-	
+
 	* lib/sources/filessource.py,
 	  lib/sources/gconfsource.py,
 	  lib/sources/mozillasource.py,
@@ -1541,7 +1546,7 @@ Sat Mar 26 17:37:45 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* lib/sources/__init__.py: module init script
 	for the sources module.
-	
+
 	* lib/sources/Makefile.am: install __init__.py
 
 2005-03-18  Mark McLoughlin  <markmc@redhat.com>
@@ -1572,30 +1577,30 @@ Sat Mar 26 17:37:45 CET 2005 Daniel Veillard <veillard@redhat.com>
 	in libdir/python/site-packages/sabayon, remove the
 	wrapper scripts and install the python main scripts
 	in sbindir/libexec etc.
-	
+
 	* admin-tool/sabayon: renamed from sabayon.py
 
 	* admin-tool/sabayon-apply: renamed from sabayon-apply.py.
-	
+
 	* admin-tool/sabayon-monitor: renamed from sabayon-monitor.py.
-	
+
 	* admin-tool/sabayon-session: renamed from sabayon-session.py.
-	
+
 	* lib/Makefile.am: install __init__.py and install
 	python files in libdir/python/site-packages/sabayon.
-	
+
 	* lib/__init__.py: empty module init script.
-	
+
 	* lib/config.py.in: remove GLADEDIR and MODULEPATH foo.
-	
+
 	* lib/dirmonitor.py: make the unit tests pass.
-	
+
 	* lib/sources/Makefile.am: change install locatio of python
 	files.
-	
+
 	* lib/userprofile.py: re-work the module loader to figure
 	out the module load path itself at runtime.
-	
+
 	* sabayon.spec.in: package the python stuff according
 	to Fedora Extras guidelines.
 
@@ -1659,7 +1664,7 @@ Wed Mar 16 19:40:03 CET 2005 Daniel Veillard <veillard@redhat.com>
 2005-03-16  Mark McLoughlin  <markmc@redhat.com>
 
 	* admin-tool/Makefile.am: add userswindow.py
-	
+
 	* lib/Makefile.am: add userdb.py
 
 2005-03-16  Mark McLoughlin  <markmc@redhat.com>
@@ -1670,10 +1675,10 @@ Wed Mar 16 19:40:03 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* lib/protosession.py: set $DISABLE_SABAYON_XINITRC
 	when running our protosession.
-	
+
 	* admin-tool/sabayon-xinitrc.sh.in: don't run
 	sabayon-apply if $DISABLE_SABAYON_XINITRC is set.
-	
+
 	* lib/userdb.py: add silly impl. of the stubs for
 	testing.
 
@@ -1681,10 +1686,10 @@ Wed Mar 16 19:40:03 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* configure.ac: set XINITRCDIR and INSTALL_XINITRC_SCRIPT
 	on Fedora.
-	
+
 	* admin-tool/sabayon-xinitrc.sh.in: add xinitrc script
 	to run sabayon-apply at login.
-	
+
 	* admin-tool/Makefile.am: install sabayon-xinitrc.sh.
 
 2005-03-15  John Dennis  <jdennis@redhat.com>
@@ -1701,7 +1706,7 @@ Wed Mar 16 19:40:03 CET 2005 Daniel Veillard <veillard@redhat.com>
 	this). apply now knows the difference between javascript
 	preference files and other files. apply now merges javascript
 	prefs into the default profile's prefs.js respecting the mandatory
-	flag. 
+	flag.
 
 	Issues: What to do with multiple firefox profiles? At the moment
 	we only apply to the default firefox profile. Perhaps the apply
@@ -1742,7 +1747,7 @@ Wed Mar 16 19:40:03 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 2005-03-14  William Lachance <wrlach@gmail.com>
 
-	* configure.ac: Not finding xnest should be a warning, not an error. 
+	* configure.ac: Not finding xnest should be a warning, not an error.
 	Check for distro, and set path to Xsession accordingly (bug #168123).
 
 	* lib/config.py.in: Don't hard code Xsession, make it a build-time
@@ -1788,12 +1793,12 @@ Sun Mar 13 08:11:04 CET 2005 Daniel Veillard <veillard@redhat.com>
 	methods.
 	(UserProfile.apply): invoke sync_changes() on each
 	of the delegates after invoking it on the source.
-	
+
 	* lib/sources/mozillasource.py:
 	(MozillaDelegate.sync_changes),
 	(MozillaDelegate.commit_change),
 	(MozillaDelegate.apply): add empty stubs.
-	
+
 	* lib/sources/paneldelegate.py:
 	(PanelDelegate.sync_changes): add empty stub.
 
@@ -1810,46 +1815,46 @@ Thu Mar 10 16:39:38 CET 2005 Daniel Veillard <veillard@redhat.com>
 2005-03-10  Mark McLoughlin  <markmc@redhat.com>
 
 	* configure.in: Version 0.15.
-	
+
 2005-03-10  Mark McLoughlin  <markmc@redhat.com>
 
 	* admin-tool/fileviewer.py: an even cheesier
 	text file viewer to go along with the cheesy
 	GConf viewer.
-	
+
 	* admin-tool/Makefile.am: add fileviewer.py
-	
+
 	* admin-tool/editorwindow.py: hook it up.
 
 2005-03-09  Mark McLoughlin  <markmc@redhat.com>
 
 	* admin-tool/gconfviewer.py: cheesy view-only
 	gconf-editor type thing.
-	
+
 	* admin-tool/Makefile.am: add gconfviewer.py
-	
+
 	* admin-tool/editorwindow.py: show the GConf
 	viewer when a GConf element is activated.
-	
+
 	* lib/sources/gconfsource.py: fix silly.
 
 2005-03-09  Mark McLoughlin  <markmc@redhat.com>
-	
+
 	* lib/userprofile.py:
 	(ProfileSource.get_path_description): add stub for
 	sources to implement giving descriptions for their
 	paths.
 	(UserProfile.get_source): lookup a source by name.
-	
+
 	* lib/sources/filessource.py:
 	(FilesSource.get_path_description): return
 	a description for menu files.
-	
+
 	* lib/sources/gconfsource.py:
 	(GConfSource.get_path_description): return
 	descriptions for .gconf.xml.defaults and
 	.gconf.xml.mandatory.
-	
+
 	* admin-tool/editorwindow.py: Display the description
 	for the path rather than the path itself.
 
@@ -1881,7 +1886,7 @@ Tue Mar  8 14:55:42 CET 2005 Daniel Veillard <veillard@redhat.com>
 	(ProfileStorage.get_source),
 	(ProfileStorage.revert): implement.
 	(run_unit_tests): yet more unit tests.
-	
+
 	* admin-tool/editorwindow.py: allow reverting to
 	previous versions of the profile.
 
@@ -1891,10 +1896,10 @@ Tue Mar  8 14:55:42 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* lib/storage.py: save a timestamp rather than date
 	string for each revision.
-	
+
 	* admin-tool/editorwindow.py: format the timestamp
 	according to the locale.
-	
+
 	* lib/util.py:
 	(init_gettext): call setlocale()
 
@@ -1922,7 +1927,7 @@ Mon Mar  7 15:45:12 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* admin-tool/editorwindow.py: add a combo to allow
 	selecting the profile revision.
-	
+
 	* lib/storage.py:
 	(ProfileStorage.get_revision): return the date along
 	with the revision in a tuple.
@@ -1936,7 +1941,7 @@ Sun Mar  6 11:49:38 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* admin-tool/editorwindow.py: convert to using
 	gtk.UIManager.
-	
+
 	* admin-tool/sabayon.glade: remove the editor
 	window.
 
@@ -1946,20 +1951,20 @@ Sun Mar  6 11:49:38 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* admin-tool/saveconfirm.py: HIG save confirmation
 	dialog. Mostly copied from GEdit.
-	
+
 	* admin-tool/editorwindow.py: hook up the save
 	confirmation dialog.
 
 2005-03-03  Mark McLoughlin  <markmc@redhat.com>
 
 	* admin-tool/sabayon.glade: add a "Delete" menu item.
-	
+
 	* admin-tool/editorwindow.py:
 	(ProfileModel.reload): implement reloading the model.
 	(ProfileEditorWindow.__handle_key_press),
 	(ProfileEditorWindow.__handle_delete): hook up the
 	delete key and menu item.
-	
+
 	* admin-tool/profilesdialog.py:
 	(ProfilesDialog.__handle_key_press): hook up the
 	delete key.
@@ -1968,10 +1973,10 @@ Sun Mar  6 11:49:38 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* admin-tool/sabayon.glade: add a "Clear History"
 	menu item.
-	
+
 	* admin-tool/editorwindow.py: hook up "Clear History"
 	and "Save".
-	
+
 	* lib/storage.py:
 	(ProfileStorage.clear_revisions): implement clear
 	revision history.
@@ -1983,29 +1988,29 @@ Sun Mar  6 11:49:38 CET 2005 Daniel Veillard <veillard@redhat.com>
 	* admin-tool/editorwindow.py: add a silly little
 	placeholder viewer for the contents of the profile.
 	Lots more work to be done here.
-	
+
 	* admin-tool/profilesdialog.py: add a "Properties"
 	button and hook up the editor window.
-	
+
 	* admin-tool/sabayon.glade: add the properties button
 	and the editor window.
-	
+
 	* admin-tool/Makefile.am: add editorwindow.py
 
 2005-03-02  Mark McLoughlin  <markmc@redhat.com>
 
 	* admin-tool/monitorwindow.py: move about dialog
 	stuff to
-	
+
 	* admin-tool/aboutdialog.py: here.
-	
+
 	* admin-tool/Makefile.am: add aboutdialog.py
 
 2005-03-01  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/sources/filessource.py:
 	(commit): set the "mandatory" attribute correctly.
-	
+
 	* lib/sources/gconfsource.py:
 	(apply): fix check to see if the GConf dirs are in
 	the profile storage.
@@ -2023,14 +2028,14 @@ Sun Mar  6 11:49:38 CET 2005 Daniel Veillard <veillard@redhat.com>
 	exist.
 	(save.zip_directory): remove unused param.
 	(save): consolidate duplicate code paths
-	
+
 	* lib/sources/gconfsource.py:
 	(sync): only add directories to storage if they exist.
 	(apply): only extract directories if they exist.
-	
+
 	* lib/sources/filessource.py: don't pre-format the
 	debugging string since the path can contain '%'
-	
+
 	* lib/sources/paneldelegate.py: ditto.
 
 2005-03-01  Mark McLoughlin  <markmc@redhat.com>
@@ -2042,12 +2047,12 @@ Sun Mar  6 11:49:38 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* admin-tool/profilesdialog.py: fix bug with cancel
 	on the new profile dialog.
-	
+
 	* lib/config.py.in: move the Xnest window name to
-	
+
 	* lib/protosession.py: here so we don't try and
 	reference _() before its defined.
-	
+
 	* lib/storage.py: add a needs_saving flag so that
 	saving an empty and non-existant profile works.
 
@@ -2056,23 +2061,23 @@ Sun Mar  6 11:49:38 CET 2005 Daniel Veillard <veillard@redhat.com>
 	* admin-tool/profilesdialog.py:
 	(__create_new_profile): upd to use new ProfileStorage
 	API.
-	
+
 	* admin-tool/monitorwindow.py,
 	  admin-tool/sabayon-apply.py,
 	  admin-tool/sabayon-session.py,
 	  admin-tool/sabayon-monitor.py: pass about
 	the profile name instead of the profile path.
-	
-	
+
+
 	* lib/storage.py: allow a profile name to be an
 	absolute path. Kill "running_unit_tests" hack.
-	
+
 	* lib/sources/filessource.py,
 	  lib/sources/gconfsource.py,
 	  lib/userprofile.py:
 	(run_unit_tests): fix to work with new ProfileStoage
 	API.
-	
+
 	* lib/README.storage: remove, its out of date
 	and we've inline docs now.
 
@@ -2088,17 +2093,17 @@ Sun Mar  6 11:49:38 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* lib/util.py:
 	(init_gettext): add function to call gettext.install()
-	
+
 	* admin-tool/sabayon-apply.py,
 	  admin-tool/sabayon-monitor.py,
 	  admin-tool/sabayon-session.py,
 	  admin-tool/sabayon.py: call util.init_gettext()
-	
+
 	* lib/Makefile.am: subst some more variables into
 	config.py.
-	
+
 	* lib/config.py.in: add PACKAGE and use os.path.join()
-	
+
 	* admin-tool/monitorwindow.py,
 	  admin-tool/profilesdialog.py,
 	  lib/dirmonitor.py,
@@ -2133,14 +2138,14 @@ Sun Mar  6 11:49:38 CET 2005 Daniel Veillard <veillard@redhat.com>
 	  lib/sources/testsource.py,
 	  lib/userprofile.py: Fixup to use the new ProfileStorage
 	API.
-	
+
 	* lib/config.py.in: add .gconf.xml.defaults and
 	.gconf.xml.mandatory to the list of dirs to ignore.
-	
+
 Tue Feb 22 03:10:20 CET 2005 William Lachance <wlach@nit.ca>
 
 	* autogen.sh configure.ac: Properly check for xnest #168124
-	
+
 Mon Feb 21 11:48:20 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* doc/helping.html: one more Evince->Sabaon cleanup bug #168000
@@ -2184,7 +2189,7 @@ Sun Feb 20 00:11:09 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 2005-02-17  Mark McLoughlin  <markmc@redhat.com>
 
-	* sabayon.spec.in: copy GDM's method of creating 
+	* sabayon.spec.in: copy GDM's method of creating
 	the sabayon user.
 
 2005-02-17  Mark McLoughlin  <markmc@redhat.com>
@@ -2201,18 +2206,18 @@ Sun Feb 20 00:11:09 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* admin-tool/sabayon.glade: remove the splitter
 	for now - we're not using the text view yet.
-	
+
 	* lib/config.py.in: add ADMIN_TOOL_TIMEOUT
-	
+
 	* lib/protosession.py: and use it here.
-	
+
 	* lib/sources/gconfsource.py:
 	(GConfChange): store the key and value rather
 	than the entry so we can unset the value if
 	we wish.
-	
+
 	* lib/sources/paneldelegate.py: upd.
-	
+
 	* sabayon.spec.in: create /etc/gconf/2/local-defaults.path
 	and /etc/gconf/2/local-mandatory.path
 
@@ -2220,7 +2225,7 @@ Sun Feb 20 00:11:09 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* lib/protosession.py: clobber all process running
 	as the prototype user before starting the new session.
-	
+
 	* lib/config.py.in: add CLOBBER_USER_PROCESSES
 
 2005-02-17  Mark McLoughlin  <markmc@redhat.com>
@@ -2230,12 +2235,12 @@ Sun Feb 20 00:11:09 CET 2005 Daniel Veillard <veillard@redhat.com>
 	in the GConf database to the ProfileStorage.
 	(GConfSource.apply): copy the GConf database out
 	from the ProfileStorage temporary install location.
-	
+
 	* lib/sources/filessource.py: fix typo.
-	
+
 	* lib/util.py:
 	(debug_print): only take a pre-formatted string.
-	
+
 	* lib/storage.py:
 	(ProfileStorage.delete_file): use list.remove() instead
 	of non-existant	list.delete()
@@ -2249,9 +2254,9 @@ Sun Feb 20 00:11:09 CET 2005 Daniel Veillard <veillard@redhat.com>
 2005-02-16  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/config.py.in: upd Xnest command line.
-	
+
 	* lib/sources/filessource.py: fix typos.
-	
+
 	* sabayon.spec.in: don't set the homedir to
 	/var/sabayon - we don't use that anymore.
 
@@ -2260,13 +2265,13 @@ Sun Feb 20 00:11:09 CET 2005 Daniel Veillard <veillard@redhat.com>
 	* lib/userprofile.py:
 	(ProfileChange): kill get_name(), get_type() and
 	get_value(). Add get_id() and get_short_description().
-	
+
 	* lib/sources/filessource.py,
 	  lib/sources/gconfsource.py,
 	  lib/sources/mozillasource.py,
 	  lib/sources/paneldelegate.py,
 	  lib/sources/testsource.py: impl. new functions.
-	
+
 	* admin-tool/monitorwindow.py: update for ProfileChange
 	changes.
 
@@ -2281,15 +2286,15 @@ Sun Feb 20 00:11:09 CET 2005 Daniel Veillard <veillard@redhat.com>
 2005-02-16  Mark McLoughlin  <markmc@redhat.com>
 
 	* admin-tool/sabayon.glade: add an about menu item.
-	
+
 	* admin-tool/monitorwindow.py: hook up the about
 	dialog.
-	
+
 	* admin-tool/profilesdialog.py: set the window icon.
-	
+
 	* lib/Makefile.am, lib/config.py.in: add VERSION to
 	the config.
-	
+
 	* lib/usermod.py: add a FIXME.
 
 2005-02-16  Mark McLoughlin  <markmc@redhat.com>
@@ -2300,17 +2305,17 @@ Sun Feb 20 00:11:09 CET 2005 Daniel Veillard <veillard@redhat.com>
 2005-02-16  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/config.py.in: add PROTOTYPE_USER.
-	
+
 	* admin-tool/profilesdialog.py: use it here.
 
 2005-02-16  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/config.py.in: add SKEL_HOMEDIR.
-	
+
 	* lib/usermod.py:
 	(create_temporary_homedir): copy the contents of
 	/etc/skel when creating the homedir.
-	
+
 	* lib/protosession.py:
 	(__start_session): fix uid/gid mixup
 	(__setup_shell_and_homedir):
@@ -2320,18 +2325,18 @@ Sun Feb 20 00:11:09 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* lib/protosession.py: create a temporary homedir
 	before starting the session and delete it after.
-	
+
 	* lib/usermod.py:
 	(set_shell), (set_homedir): split these out
 	into their own module. We'll prolly need to
 	implement them differently for other distros.
 
 	* lib/Makefile.am: add usermod.py.
-	
+
 	* lib/util.py: add usermod debugging.
-	
+
 	* lib/config.py.in: re-name/re-organize a few things.
-	
+
 	* lib/dirmonitor.py: add IO_PRI to the io_watch and
 	fill in the other arguments in the callback.
 
@@ -2343,14 +2348,14 @@ Sun Feb 20 00:11:09 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* configure.ac: subst the expanded value of
 	$(sbindir) and output sabayon.console. Hack copied
-	from gdm. 
+	from gdm.
 
 	* admin-tool/Makefile.am: don't build sabayon.console here.
-	
+
 	* admin-tool/sabayon.console.in: use $(EXPANDED_SABAYON_DIR)
-	
+
 	* lib/sources/Makefile.am: install in the right directory.
-	
+
 	* sabayon.spec.in: update to include icon, .desktop file,
 	usermode stuff, localizations etc.
 
@@ -2366,15 +2371,15 @@ Sun Feb 20 00:11:09 CET 2005 Daniel Veillard <veillard@redhat.com>
 	* admin-tool/sabayon-apply.in,
 	  admin-tool/sabayon-apply.py: add tool which applies
 	a profile.
-	
+
 	* admin-tool/Makefile.am: add sabayon-apply.
-	
+
 	* lib/config.py.in: s/SESSION_TOOL_PATH/SESSION_TOOL_ARGV/
 	and add APPLY_TOOL_ARGV.
-	
+
 	* lib/protosession.py: run sabayon-apply instead of
 	trying to do it directly.
-	
+
 	* admin-tool/profilesdialog.py: use SESSION_TOOL_ARGV
 	instead of SESSION_TOOL_PATH.
 
@@ -2384,19 +2389,19 @@ Sun Feb 20 00:11:09 CET 2005 Daniel Veillard <veillard@redhat.com>
 	which should be passed through unmodified when
 	starting the prototype session. Include SABAYON_DEBUG
 	in the list.
-	
+
 	* lib/protosession.py: use the list here.
-	
+
 	* lib/dirmonitor.py: add debug spew, fix a bug
 	with ignorationism.
-	
+
 	* lib/sources/filessource.py,
 	  lib/sources/paneldelegate.py,
 	  lib/storage.py,
 	  lib/userprofile.py: more debug spew.
-	
+
 	* lib/util.py: add pid to debug spew.
-	
+
 	* admin-tool/monitorwindow.py,
 	  admin-tool/profilesdialog.py: yet more spewage.
 
@@ -2411,44 +2416,44 @@ Sun Feb 20 00:11:09 CET 2005 Daniel Veillard <veillard@redhat.com>
 	* lib/util.py: (debug_print): add "admin-tool" key.
 
 	* admin-tool/profilesdialog.py: hook up debugging.
-	
+
 	* lib/protosession.py: ditto.
-	
+
 2005-02-14  Mark McLoughlin  <markmc@redhat.com>
-	
+
 	* lib/protosession.py: pass the profile file
 	to sabayon-monitor when launching it.
-	
+
 	* admin-tool/sabayon-monitor.py: barf if we're
 	not passed an argument
-	
+
 2005-02-14  Mark McLoughlin  <markmc@redhat.com>
 
 	Add a SABAYON_DEBUG env variable. Run with
 	SABAYON_DEBUG=help to see allowable values.
 
 	* lib/util.py: add debug_print() foo.
-	
+
 	* lib/storage.py: use it here.
 
 2005-02-14  Mark McLoughlin  <markmc@redhat.com>
 
 	Try to fix the build mess.
-	
-	* configure.ac: 
+
+	* configure.ac:
 	Use AM_PATH_PYTHON instead of random copied and pasted
 	crackrock.
 	Add --enable-consolehelper and check for PAM prefix. Both
 	copied from GDM.
-	
+
 	* admin-tool/Makefile.am:
 	Use the SCRIPTS primary for the wrapper scripts and the
 	PYTHON primary for python files.
 	Generate sabayon.console so we get the right path.
 	Copy GDM's consolehelper install stuff.
-	
+
 	* admin-tool/sabayon.console.in: copy from sabayon.console.
-	
+
 	* lib/Makefile.am,
 	  lib/sources/Makefile.am: use the PYTHON primary for
 	python files.
@@ -2463,7 +2468,7 @@ Sun Feb 20 00:11:09 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	Don't require GNOME (causes lots of debug warnings at
 	sabayon startup).
-	
+
 	* lib/sources/gconfsource.py:
 
 	Change self.get_committing_client() call to the function name
@@ -2473,14 +2478,14 @@ Sun Feb 20 00:11:09 CET 2005 Daniel Veillard <veillard@redhat.com>
 2005-02-13  Seth Nickell  <seth@gnome.org>
 
 	* admin-tool/Makefile.am:
-	* admin-tool/sabayon.desktop.in: 
+	* admin-tool/sabayon.desktop.in:
 
 	Initial .desktop file for Sabayon
-	
-	* admin-tool/sabayon.png: 
+
+	* admin-tool/sabayon.png:
 
 	Placeholder icon...10 bonus points if you can tell what it is
-	
+
 	* admin-tool/sabayon.console:
 	* admin-tool/sabayon.pam:
 
@@ -2491,7 +2496,7 @@ Sun Feb 20 00:11:09 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* admin-tool/profilesdialog.py:
 
-	Throw up an explanatory (but not helpful...) error alert if the 
+	Throw up an explanatory (but not helpful...) error alert if the
 	sabayon user account does not exist. We should really offer to
 	create it.
 
@@ -2505,10 +2510,10 @@ Sun Feb 20 00:11:09 CET 2005 Daniel Veillard <veillard@redhat.com>
 	(DirectoryMonitor.__handle_gamin_event),
 	(DirectoryMonitor.monitor_dir): ignore stuff.
 	(run_unit_tests): test out new foo.
-	
+
 	* lib/config.py.in: add lists of files and directories
 	to ignore.
-	
+
 	* lib/sources/filessource.py: hook up lists.
 
 2005-02-11  Mark McLoughlin  <markmc@redhat.com>
@@ -2520,7 +2525,7 @@ Sun Feb 20 00:11:09 CET 2005 Daniel Veillard <veillard@redhat.com>
 	* lib/userprofile.py:
 	(UserProfile.apply): call apply() on all delegates
 	for each source too.
-	
+
 	* lib/sources/paneldelegate.py:
 	(PanelDelegate.apply): add - it doesn't need to do anything, though.
 
@@ -2529,7 +2534,7 @@ Sun Feb 20 00:11:09 CET 2005 Daniel Veillard <veillard@redhat.com>
 	* lib/sources/gconfsource.py:
 	(recursive_unset): add - it turns out gconf_client_recursive_unset()
 	isn't wrapped either.
-	
+
 	* lib/sources/paneldelegate.py:
 	(PanelDelegate.__commit_removed_changed): make it work.
 	(run_unit_tests): make sure committing is actually doing something.
@@ -2537,7 +2542,7 @@ Sun Feb 20 00:11:09 CET 2005 Daniel Veillard <veillard@redhat.com>
 2005-02-11  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/config.py.in: add PANEL_KEY_BASE.
-	
+
 	* lib/sources/paneldelegate.py: use it, instead of hardcoding
 	/apps/panel - older versions use /apps/panel/profiles/default.
 
@@ -2548,7 +2553,7 @@ Sun Feb 20 00:11:09 CET 2005 Daniel Veillard <veillard@redhat.com>
 	use gconftool to do the job.
 	(get_client_and_address_for_path): we want the address rather than
 	engine now.
-	
+
 	* lib/sources/paneldelegate.py:
 	(PanelDelegate.__handle_id_list_change): remove all the added/removed
 	functions and do it generically here.
@@ -2563,7 +2568,7 @@ Sun Feb 20 00:11:09 CET 2005 Daniel Veillard <veillard@redhat.com>
 	* lib/sources/gconfsource.py:
 	(GConfSource.__get_client): rename to get_committing_client()
 	and export. Also make it return a (client, engine) tupple.
-	
+
 	* lib/sources/paneldelegate.py:
 	Store cached panel configuration in objects rather than tupples.
 	Add added/removed flags for each panel/applet etc. If an applet
@@ -2601,13 +2606,13 @@ Thu Feb 10 18:33:48 CET 2005 Daniel Veillard <veillard@redhat.com>
 	to implement.
 	(ProfileSource.commit_change): if a change is associated
 	with a delegate, commit the change via the delegate.
-	
+
 	* lib/sources/filessource.py:
 	(FilesSource.commit_change): chain up to ProfileSource.commit_change.
-	
+
 	* lib/sources/gconfsource.py:
 	(GConfSource.commit_change): ditto.
-	
+
 	* lib/sources/paneldelegate.py: associate changes with the delegate
 	and add a commit_change() stub. Just need to figure out how in hell
 	to do it now.
@@ -2648,14 +2653,14 @@ Thu Feb 10 10:57:20 CET 2005 Daniel Veillard <veillard@redhat.com>
 	the prototype session and copy it back when
 	finished.
 	(create_new_profile): remove hackiness.
-	
+
 	* lib/sources/gconfsource.py: don't import
 	tempfile and shutil, not needed.
 
 2005-02-09  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/config.py.in: add path to sabayon-session.
-	
+
 	* admin-tool/profilesdialog.py: use it.
 
 2005-02-09  Mark McLoughlin  <markmc@redhat.com>
@@ -2675,7 +2680,7 @@ Thu Feb 10 10:57:20 CET 2005 Daniel Veillard <veillard@redhat.com>
 	have a child process hold open a dummy X connection
 	on Xnest.
 	(main): remove - its been moved to sabayon-session.
-	
+
 	* lib/config.py.in: upd for admin-tool renaming.
 
 2005-02-09  Mark McLoughlin  <markmc@redhat.com>
@@ -2686,25 +2691,25 @@ Thu Feb 10 10:57:20 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* admin-tool/Makefile.am: add sabayon-monitor and
 	sabayon-session.
-	
+
 	* admin-tool/profilesdialog.py:
 	(edit_button_clicked): run sabayon session since
 	ProtoSession has problems if there's an existing
 	X display already open.
 	(create_new_profile): temporary hack to make the profile
 	writable by the prototype user. Will fix soon.
-	
+
 	* admin-tool/sabayon-monitor.in,
 	  admin-tool/sabayon-monitor.py: re-name sabayon to
 	sabayon-monitor.
-	
+
 	* admin-tool/sabayon-session.in,
 	  admin-tool/sabayon-session.py: script to run a
 	prototype session.
-	
+
 	* admin-tool/sabayon.py: launch the profiles editor
 	from here.
-	
+
 	* admin-tool/profilesdialog.in: remove
 
 Tue Feb  8 17:12:02 CET 2005 Daniel Veillard <veillard@redhat.com>
@@ -2725,12 +2730,12 @@ Tue Feb  8 11:51:19 CET 2005 Daniel Veillard <veillard@redhat.com>
 2005-02-05  Seth Nickell  <seth@gnome.org>
 
 	* lib/sources/mozillasource.py:
-	If there's only one profile, its the default even if it 
+	If there's only one profile, its the default even if it
 	doesn't have the Default=1 flag. This makes mozillasource.py
 	work on stock (to Fedora at least) Firefox installs,
 	where the auto-generated profile doesn't have the Default=
 	flag set.
-	
+
 2005-02-05  Seth Nickell  <seth@gnome.org>
 
 	* admin-tool/sabayon.glade:
@@ -2771,7 +2776,7 @@ Tue Feb  8 11:51:19 CET 2005 Daniel Veillard <veillard@redhat.com>
 	  lib/sources/filessource.py,
 	  lib/sources/gconfsource.py,
 	  lib/userprofile.py: update for above change.
-	
+
 	* lib/sources/mozillasource.py: get_source() takes
 	a ProfileStorage not profile_path
 
@@ -2779,22 +2784,22 @@ Tue Feb  8 11:51:19 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* admin-tool/profilesdialog.py: start implementing
 	profiles manager dialog.
-	
+
 	* admin-tool/sabayon.glade: add profiles dialog.
-	
+
 	* lib/Makefile.am, lib/config.py.in: add some more
 	variables.
-	
+
 	* lib/protosession.py: move some variables to config.py
 
 2005-02-02  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/protosession.py: apply the profile before
 	launching the session.
-	
+
 	* lib/storage.py: don't throw an exception if asked
 	to install when the profile doesn't yet exist.
-	
+
 	* lib/userprofile.py: don't ignore exceptions from
 	ProfileStorage.install()
 
@@ -2806,7 +2811,7 @@ Tue Feb  8 11:51:19 CET 2005 Daniel Veillard <veillard@redhat.com>
 2005-02-02  Mark McLoughlin  <markmc@redhat.com>
 
 	* README: add bit about bug #154779
-	
+
 	* lib/storage.py:
 	(print_exception): remove, unused.
 	(ProfileStorage.__init__): add directory to constructor.
@@ -2822,19 +2827,19 @@ Tue Feb  8 11:51:19 CET 2005 Daniel Veillard <veillard@redhat.com>
 	(run_unit_tests): re-work so we don't use the home dir,
 	not spew debugging, test things a bit more and crap out
 	if something fails
-	
+
 	* lib/README.storage: update.
-	
-	* lib/sources/filessource.py: lots of fixing, commiting 
+
+	* lib/sources/filessource.py: lots of fixing, commiting
 	and applying work now.
-	
+
 	* lib/sources/gconfsource.py: update for ProfileStorage
 	changes.
-	
+
 	* lib/userprofile.py:
 	(UserProfile.__init__): update for storage changes.
 	(UserProfile.sync_changes): sync storage to disk.
-	
+
 	* lib/util.py:
 	(set_home_dir_for_unit_tests): add to make writing
 	unit tests easier.
@@ -2850,7 +2855,7 @@ Tue Feb  8 11:51:19 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* lib/protosession.py: launch the admin tool an
 	arbtrary 5 seconds after starting the session.
-	
+
 	* lib/userprofile.py: allow the delegate not to
 	emit any changes of its own.
 
@@ -2930,22 +2935,22 @@ Fri Jan 28 11:20:03 CET 2005 Daniel Veillard <veillard@redhat.com>
 	* lib/userprofile.py: introduce the concept of a
 	"delegate" - a helper class to give a higher level
 	interpretation of some changes from a given source.
-	
+
 	* lib/sources/paneldelegate.py: an implementation
 	of the helper class for the panel's config - so, e.g.,
 	when you added an applet you get "applet added" rather
 	than a whole bunch of GConf keys changed.
-	
+
 	* lib/sources/Makefile.am: add paneldelegate.py.
-	
+
 	* lib/sources/filessource.py,
 	  lib/sources/gconfsource.py,
 	  lib/sources/mozillasource.py: update.
-	
+
 	* lib/unittests.py,
 	  lib/sources/testsource.py: hook up some more unit
 	tests.
-	
+
 2005-01-24  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/storage-modules/: rename to lib/sources -
@@ -2973,7 +2978,7 @@ Fri Jan 21 12:00:42 CET 2005 Daniel Veillard <veillard@redhat.com>
 2005-01-21  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/userprofile.py: last few bits of the grand re-naming.
-	
+
 	* lib/storage-modules/mozillasource.py: disable for now.
 
 Thu Jan 20 21:44:31 CET 2005 Daniel Veillard <veillard@redhat.com>
@@ -2994,19 +2999,19 @@ Thu Jan 20 21:44:31 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* admin-tool/Makefile.am: install glade file
 	in $pkgdatadir/glade, generate user-profile-admin.
-	
+
 	* admin-tool/user-profile-admin: remove.
-	
+
 	* admin-tool/user-profile-admin.in: add - generated
 	now with correct prefix.
-	
+
 	* lib/Makefile.am: add some missing files, generate
 	config.py.
-	
+
 	* lib/config.py: remove
-	
+
 	* lib/config.py.in: add - generates config.py.
-	
+
 	* lib/modules/Makefile.am: add filesprofile.py
 
 Thu Jan 20 15:30:04 CET 2005 Daniel Veillard <veillard@redhat.com>
@@ -3014,13 +3019,13 @@ Thu Jan 20 15:30:04 CET 2005 Daniel Veillard <veillard@redhat.com>
 	* lib/README.package lib/package.py: added a get_directory() entry point
 	* admin-tool/monitorwindow.py admin-tool/user-profile-admin.py:
 	  moving profile file intialization down to UserProfile() init
-	* lib/userprofile.py lib/modules/filesprofile.py 
+	* lib/userprofile.py lib/modules/filesprofile.py
 	  lib/modules/gconfprofile.py lib/modules/testmodule.py: adding the
 	  self.profile_storage coming from the storage module, replacing
 	  bascially self.profile_path by self.profile_storage.get_directory().
 	  The modules creation routines now take a storage object argument
 	  instead of a storage path.
-	  
+
 2005-01-20  Mark McLoughlin  <markmc@redhat.com>
 
 	* admin-tool/monitorwindow.py: add a mandatory toggle,
@@ -3038,21 +3043,21 @@ Thu Jan 20 13:32:28 CET 2005 Daniel Veillard <veillard@redhat.com>
 	remove existing changes to the same item from the model
 	before prepending the new one.
 	(ProfileMonitorWindow): hook up the menu items.
-	
+
 	* admin-tool/user-profile-admin.glade: add a "Commit"
 	menu item.
 
 2005-01-20  Mark McLoughlin  <markmc@redhat.com>
 
 	* lib/modules/filesprofile.py: add "files" backend
-	
+
 	* lib/dirmonitor.py: remove the timeout when we've
 	completed our tests so we don't screw over other
 	tests.
-	
+
 	* lib/modules/gconfprofile.py: user util.get_home_dir()
 	and util.get_user_name ()
-	
+
 	* lib/unittests.py: hook up more tests.
 
 Thu Jan 20 11:28:50 CET 2005 Daniel Veillard <veillard@redhat.com>
@@ -3083,4 +3088,3 @@ Wed Jan 19 11:15:04 CET 2005 Daniel Veillard <veillard@redhat.com>
 
 	* lib/Makefile.am lib/package.py: integrated the package lib in the
 	  tree
-
