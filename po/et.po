@@ -1,17 +1,17 @@
 # Sabayon'i eesti keele tõlge.
 # Estonian translation of Sabayon.
 #
-# Copyright (C) 2006, The Gnome Project.
+# Copyright (C) 2006, 2007, The GNOME Project.
 # This file is distributed under the same license as the pessulus package.
 #
-# Ivar Smolin <okul@linux.ee>, 2006.
+# Ivar Smolin <okul@linux.ee>, 2006, 2007.
 # Priit Laes <amd@store20.com>, 2006.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-08-10 00:43+0200\n"
+"POT-Creation-Date: 2007-01-02 03:06+0000\n"
 "PO-Revision-Date: 2006-09-14 12:47+0300\n"
 "Last-Translator: Ivar Smolin <okul@linux.ee>\n"
 "Language-Team: Estonian <gnome-et@linux.ee>\n"
@@ -27,7 +27,7 @@ msgstr "Programm kasutajaprofiilide loomiseks ja muutmiseks"
 #: ../admin-tool/aboutdialog.py:64
 msgid "translator-credits"
 msgstr ""
-"Ivar Smolin <okul@linux.ee>, 2006.\n"
+"Ivar Smolin <okul@linux.ee>, 2006, 2007.\n"
 "Priit Laes <amd@store20.com>, 2006."
 
 #: ../admin-tool/changeswindow.py:48
@@ -43,8 +43,7 @@ msgstr "Eira"
 msgid "Lock"
 msgstr "Lukusta"
 
-#: ../admin-tool/changeswindow.py:118
-#: ../admin-tool/editorwindow.py:222
+#: ../admin-tool/changeswindow.py:118 ../admin-tool/editorwindow.py:222
 msgid "Description"
 msgstr "Kirjeldus"
 
@@ -53,18 +52,15 @@ msgstr "Kirjeldus"
 msgid "Profile %s"
 msgstr "Profiil %s"
 
-#: ../admin-tool/editorwindow.py:187
-#: ../admin-tool/sessionwindow.py:172
+#: ../admin-tool/editorwindow.py:187 ../admin-tool/sessionwindow.py:172
 msgid "_Profile"
 msgstr "_Profiil"
 
-#: ../admin-tool/editorwindow.py:188
-#: ../admin-tool/sessionwindow.py:173
+#: ../admin-tool/editorwindow.py:188 ../admin-tool/sessionwindow.py:173
 msgid "_Save"
 msgstr "_Salvesta"
 
-#: ../admin-tool/editorwindow.py:188
-#: ../admin-tool/sessionwindow.py:173
+#: ../admin-tool/editorwindow.py:188 ../admin-tool/sessionwindow.py:173
 msgid "Save profile"
 msgstr "Profiili salvestamine"
 
@@ -72,13 +68,11 @@ msgstr "Profiili salvestamine"
 msgid "_Close"
 msgstr "Su_lge"
 
-#: ../admin-tool/editorwindow.py:189
-#: ../admin-tool/sessionwindow.py:174
+#: ../admin-tool/editorwindow.py:189 ../admin-tool/sessionwindow.py:174
 msgid "Close the current window"
 msgstr "Käesoleva akna sulgemine"
 
-#: ../admin-tool/editorwindow.py:190
-#: ../admin-tool/sessionwindow.py:175
+#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
 msgid "_Edit"
 msgstr "_Redigeerimine"
 
@@ -90,33 +84,27 @@ msgstr "_Kustuta"
 msgid "Delete item"
 msgstr "Kirje kustutamine"
 
-#: ../admin-tool/editorwindow.py:192
-#: ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:192 ../admin-tool/sessionwindow.py:178
 msgid "_Help"
 msgstr "_Abi"
 
-#: ../admin-tool/editorwindow.py:193
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:193 ../admin-tool/sessionwindow.py:179
 msgid "_About"
 msgstr "_Programmist lähemalt"
 
-#: ../admin-tool/editorwindow.py:193
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:193 ../admin-tool/sessionwindow.py:179
 msgid "About Sabayon"
 msgstr "Sabayon'ist lähemalt"
 
-#: ../admin-tool/editorwindow.py:252
-#: ../lib/sources/gconfsource.py:121
+#: ../admin-tool/editorwindow.py:252 ../lib/sources/gconfsource.py:121
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:256
-#: ../lib/sources/filessource.py:76
+#: ../admin-tool/editorwindow.py:256 ../lib/sources/filessource.py:76
 msgid "Files"
 msgstr "Failid"
 
-#: ../admin-tool/editorwindow.py:256
-#: ../admin-tool/lockdown/pessulus.glade.h:7
+#: ../admin-tool/editorwindow.py:256 ../admin-tool/lockdown/pessulus.glade.h:7
 #: ../lib/sources/paneldelegate.py:132
 msgid "Panel"
 msgstr "Paneel"
@@ -126,8 +114,7 @@ msgstr "Paneel"
 msgid "Profile file: %s"
 msgstr "Profiilifail: %s"
 
-#: ../admin-tool/gconfviewer.py:57
-#: ../admin-tool/gconfviewer.py:76
+#: ../admin-tool/gconfviewer.py:57 ../admin-tool/gconfviewer.py:76
 msgid "<no type>"
 msgstr "<tüüp puudub>"
 
@@ -168,8 +155,7 @@ msgstr "paar"
 msgid "Profile settings: %s"
 msgstr "Profiili sätted: %s"
 
-#: ../admin-tool/gconfviewer.py:110
-#: ../admin-tool/profilesdialog.py:313
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:313
 #: ../admin-tool/usersdialog.py:83
 msgid "Name"
 msgstr "Nimi"
@@ -290,20 +276,28 @@ msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:44
-msgid "Your account does not have permissions to run the Desktop User Profiles tool"
-msgstr "Sinu kontol pole piisavalt õiguseid, et käivitada töölauakasutajate profiilide tööriista"
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr ""
+"Sinu kontol pole piisavalt õiguseid, et käivitada töölauakasutajate "
+"profiilide tööriista"
 
 #: ../admin-tool/sabayon:45
-msgid "Administrator level permissions are needed to run this program because it can modify system files."
+msgid ""
+"Administrator level permissions are needed to run this program because it "
+"can modify system files."
 msgstr ""
-"Selle programmi käivitamiseks peavad olema halduri taseme õigused kuna see programm võib muuta süsteemseid faile."
+"Selle programmi käivitamiseks peavad olema halduri taseme õigused kuna see "
+"programm võib muuta süsteemseid faile."
 
 #: ../admin-tool/sabayon:50
 msgid "Desktop User Profiles tool is already running"
 msgstr "Tööriist töölauakasutajate profiilide redigeerimiseks juba töötab."
 
 #: ../admin-tool/sabayon:51
-msgid "You may not use Desktop User Profiles tool from within a profile editing session"
+msgid ""
+"You may not use Desktop User Profiles tool from within a profile editing "
+"session"
 msgstr ""
 "Sa ei tohi töölauakasutajate profiilide tööriista kasutada profiilide "
 "redigeerimise seansis."
@@ -315,10 +309,13 @@ msgstr "Kasutajakontot '%s' ei leitud"
 
 #: ../admin-tool/sabayon:59
 #, c-format
-msgid "Sabayon requires a special user account '%s' to be present on this computer. Try again after creating the account (using, for example, the 'adduser' command)"
+msgid ""
+"Sabayon requires a special user account '%s' to be present on this computer. "
+"Try again after creating the account (using, for example, the 'adduser' "
+"command)"
 msgstr ""
-"Sabayon'il on vaja, et selles arvutis oleks eriotstarbeline kasutajakonto "
-"'%s'. Proovi pärast konto loomist uuesti (konto saab luua näiteks 'adduser' "
+"Sabayon'il on vaja, et selles arvutis oleks eriotstarbeline kasutajakonto '%"
+"s'. Proovi pärast konto loomist uuesti (konto saab luua näiteks 'adduser' "
 "käsuga)."
 
 #: ../admin-tool/sabayon-apply:39
@@ -340,8 +337,7 @@ msgstr "Kasutamine: %s <profiili-nimi> <profiili-rada> <kuva-number>\n"
 msgid "Establish and Edit Profiles for Users"
 msgstr "Kasutajaprofiilide loomine ja muutmine"
 
-#: ../admin-tool/sabayon.desktop.in.h:2
-#: ../admin-tool/sabayon.glade.h:4
+#: ../admin-tool/sabayon.desktop.in.h:2 ../admin-tool/sabayon.glade.h:4
 msgid "User Profile Editor"
 msgstr "Kasutajaprofiili redaktor"
 
@@ -362,14 +358,18 @@ msgid "_Base on:"
 msgstr "Millel _põhineb:"
 
 #: ../admin-tool/sabayon.glade.h:6
+msgid "_Details"
+msgstr "Ü_ksikasjad"
+
+#: ../admin-tool/sabayon.glade.h:7
 msgid "_Profiles:"
 msgstr "_Profiilid:"
 
-#: ../admin-tool/sabayon.glade.h:7
+#: ../admin-tool/sabayon.glade.h:8
 msgid "_Users"
 msgstr "Kas_utajad"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.glade.h:9
 msgid "_Users:"
 msgstr "Kas_utajad:"
 
@@ -384,43 +384,80 @@ msgstr "Salvestada enne sulgemist profiili \"%s\" muudatused?"
 
 #: ../admin-tool/saveconfirm.py:45
 #, python-format
-msgid "If you don't save, changes from the last %ld second will be permanently lost."
-msgid_plural "If you don't save, changes from the last %ld seconds will be permanently lost."
-msgstr[0] "Kui Sa ei salvesta, siis viimase %ld sekundi jooksul tehtud muudatused lähevad jäädavalt kaotsi"
-msgstr[1] "Kui Sa ei salvesta, siis viimase %ld sekundi jooksul tehtud muudatused lähevad jäädavalt kaotsi"
+msgid ""
+"If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld seconds will be permanently "
+"lost."
+msgstr[0] ""
+"Kui Sa ei salvesta, siis viimase %ld sekundi jooksul tehtud muudatused "
+"lähevad jäädavalt kaotsi"
+msgstr[1] ""
+"Kui Sa ei salvesta, siis viimase %ld sekundi jooksul tehtud muudatused "
+"lähevad jäädavalt kaotsi"
 
 #: ../admin-tool/saveconfirm.py:51
-msgid "If you don't save, changes from the last minute will be permanently lost."
-msgstr "Kui Sa ei salvesta, siis viimase minuti jooksul tehtud muudatused lähevad jäädavalt kaotsi"
+msgid ""
+"If you don't save, changes from the last minute will be permanently lost."
+msgstr ""
+"Kui Sa ei salvesta, siis viimase minuti jooksul tehtud muudatused lähevad "
+"jäädavalt kaotsi"
 
 #: ../admin-tool/saveconfirm.py:55
 #, python-format
-msgid "If you don't save, changes from the last minute and %ld second will be permanently lost."
-msgid_plural "If you don't save, changes from the last minute and %ld seconds will be permanently lost."
-msgstr[0] "Kui Sa ei salvesta, siis viimase minuti ja %ld sekundi jooksul tehtud muudatused lähevad jäädavalt kaotsi"
-msgstr[1] "Kui Sa ei salvesta, siis viimase minuti ja %ld sekundi jooksul tehtud muudatused lähevad jäädavalt kaotsi"
+msgid ""
+"If you don't save, changes from the last minute and %ld second will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last minute and %ld seconds will be "
+"permanently lost."
+msgstr[0] ""
+"Kui Sa ei salvesta, siis viimase minuti ja %ld sekundi jooksul tehtud "
+"muudatused lähevad jäädavalt kaotsi"
+msgstr[1] ""
+"Kui Sa ei salvesta, siis viimase minuti ja %ld sekundi jooksul tehtud "
+"muudatused lähevad jäädavalt kaotsi"
 
 #: ../admin-tool/saveconfirm.py:62
 #, python-format
-msgid "If you don't save, changes from the last %ld minute will be permanently lost."
-msgid_plural "If you don't save, changes from the last %ld minutes will be permanently lost."
-msgstr[0] "Kui Sa ei salvesta, siis viimase minuti jooksul tehtud muudatused lähevad jäädavalt kaotsi"
-msgstr[1] "Kui Sa ei salvesta, siis viimase %ld minuti jooksul tehtud muudatused lähevad jäädavalt kaotsi"
+msgid ""
+"If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld minutes will be permanently "
+"lost."
+msgstr[0] ""
+"Kui Sa ei salvesta, siis viimase minuti jooksul tehtud muudatused lähevad "
+"jäädavalt kaotsi"
+msgstr[1] ""
+"Kui Sa ei salvesta, siis viimase %ld minuti jooksul tehtud muudatused "
+"lähevad jäädavalt kaotsi"
 
-#: ../admin-tool/saveconfirm.py:71
-#: ../admin-tool/saveconfirm.py:81
+#: ../admin-tool/saveconfirm.py:71 ../admin-tool/saveconfirm.py:81
 #, python-format
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "Kui Sa ei salvesta, siis viimase tunni jooksul tehtud muudatused lähevad jäädavalt kaotsi"
-msgstr[1] "Kui Sa ei salvesta, siis viimase %d tunni jooksul tehtud muudatused lähevad jäädavalt kaotsi"
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] ""
+"Kui Sa ei salvesta, siis viimase tunni jooksul tehtud muudatused lähevad "
+"jäädavalt kaotsi"
+msgstr[1] ""
+"Kui Sa ei salvesta, siis viimase %d tunni jooksul tehtud muudatused lähevad "
+"jäädavalt kaotsi"
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
-msgid "If you don't save, changes from the last hour and %d minute will be permanently lost."
-msgid_plural "If you don't save, changes from the last hour and %d minutes will be permanently lost."
-msgstr[0] "Kui Sa ei salvesta, siis viimase tunni ja %d minuti jooksul tehtud muudatused lähevad jäädavalt kaotsi"
-msgstr[1] "Kui Sa ei salvesta, siis viimase tunni ja %d minuti jooksul tehtud muudatused lähevad jäädavalt kaotsi"
+msgid ""
+"If you don't save, changes from the last hour and %d minute will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last hour and %d minutes will be "
+"permanently lost."
+msgstr[0] ""
+"Kui Sa ei salvesta, siis viimase tunni ja %d minuti jooksul tehtud "
+"muudatused lähevad jäädavalt kaotsi"
+msgstr[1] ""
+"Kui Sa ei salvesta, siis viimase tunni ja %d minuti jooksul tehtud "
+"muudatused lähevad jäädavalt kaotsi"
 
 #: ../admin-tool/sessionwindow.py:151
 #, python-format
@@ -594,13 +631,11 @@ msgstr "Mozilla võti '%s' ei ole seatud"
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Mozilla võti '%s' uus väärtus on '%s'"
 
-#: ../lib/sources/mozillasource.py:163
-#: ../lib/sources/mozillasource.py:173
+#: ../lib/sources/mozillasource.py:163 ../lib/sources/mozillasource.py:173
 msgid "Web browser preferences"
 msgstr "Veebisirvija eelistused"
 
-#: ../lib/sources/mozillasource.py:165
-#: ../lib/sources/mozillasource.py:175
+#: ../lib/sources/mozillasource.py:165 ../lib/sources/mozillasource.py:175
 msgid "Web browser bookmarks"
 msgstr "Veebisirvija järjehoidjad"
 
@@ -716,8 +751,7 @@ msgstr "Olematut faili '%s' pole võimalik lisada"
 msgid "Profile is read-only %s"
 msgstr "Profiil %s on ainult lugemisõigustega"
 
-#: ../lib/unittests.py:38
-#: ../lib/unittests.py:39
+#: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
 msgstr "Eira HOIATUSi"
 
@@ -773,8 +807,7 @@ msgstr "%s pole võimalik kirjutamiseks avada"
 msgid "Failed to save UserDatabase to %s"
 msgstr "Kasutajate andmebaasi salvestamine asukohta %s ebaõnnestus"
 
-#: ../lib/userdb.py:373
-#: ../lib/userdb.py:408
+#: ../lib/userdb.py:373 ../lib/userdb.py:408
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Fail %s pole profiili seadistusfail"
@@ -794,9 +827,17 @@ msgid "Failed to get the user list"
 msgstr "Tõrge kasutajaloendi hankimisel"
 
 #: ../lib/util.py:125
-msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
-msgstr "Kodukataloogi pole võimalik leida: seda pole määratud ei /etc/passwd failis ega ka keskkonnamuutujas $HOME"
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"Kodukataloogi pole võimalik leida: seda pole määratud ei /etc/passwd failis "
+"ega ka keskkonnamuutujas $HOME"
 
 #: ../lib/util.py:138
-msgid "Cannot find username: not set in /etc/passwd and no value for $USER in environment"
-msgstr "Kasutajanime pole võimalik leida: seda pole määratud ei /etc/passwd failis ega ka keskkonnamuutujas $USER"
+msgid ""
+"Cannot find username: not set in /etc/passwd and no value for $USER in "
+"environment"
+msgstr ""
+"Kasutajanime pole võimalik leida: seda pole määratud ei /etc/passwd failis "
+"ega ka keskkonnamuutujas $USER"
