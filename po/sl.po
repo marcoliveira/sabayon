@@ -1,18 +1,19 @@
 # Slovenian translation of sabayon.
-# Copyright (C) 2005-2006 Free Software Foundation, Inc.
+# Copyright (C) 2005-2007 Free Software Foundation, Inc.
 # This file is distributed under the same license as the sabayon package.
 #
 # Matej Urbančič <matej.urban@gmail.com>, 2005.
 # Matjaž Horvat <m@owca.info>, 2006.
+# Matej Urbančič <matej.urban@gmail.com>, 2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-08-24 08:51+0200\n"
-"PO-Revision-Date: 2006-08-24 21:29+0100\n"
+"POT-Creation-Date: 2007-01-02 03:06+0000\n"
+"PO-Revision-Date: 2007-01-16 21:47+0100\n"
 "Last-Translator: Matic Žgur <mr.zgur@gmail.com>\n"
-"Language-Team: Slovenian\n"
+"Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,6 +21,7 @@ msgstr ""
 "X-Poedit-Country: SLOVENIA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Krusader\n"
+"X-Poedit-Language: Slovenian\n"
 
 #: ../admin-tool/aboutdialog.py:61
 msgid "Program to establish and edit profiles for users"
@@ -62,7 +64,7 @@ msgstr "_Profil"
 #: ../admin-tool/editorwindow.py:188
 #: ../admin-tool/sessionwindow.py:173
 msgid "_Save"
-msgstr "Shrani"
+msgstr "_Shrani"
 
 #: ../admin-tool/editorwindow.py:188
 #: ../admin-tool/sessionwindow.py:173
@@ -85,7 +87,7 @@ msgstr "_Uredi"
 
 #: ../admin-tool/editorwindow.py:191
 msgid "_Delete"
-msgstr "Zbriši"
+msgstr "_Zbriši"
 
 #: ../admin-tool/editorwindow.py:191
 msgid "Delete item"
@@ -99,7 +101,7 @@ msgstr "_Pomoč"
 #: ../admin-tool/editorwindow.py:193
 #: ../admin-tool/sessionwindow.py:179
 msgid "_About"
-msgstr "O programu"
+msgstr "_O programu"
 
 #: ../admin-tool/editorwindow.py:193
 #: ../admin-tool/sessionwindow.py:179
@@ -142,7 +144,7 @@ msgstr "niz"
 
 #: ../admin-tool/gconfviewer.py:64
 msgid "integer"
-msgstr "število"
+msgstr "celo število"
 
 #: ../admin-tool/gconfviewer.py:66
 msgid "float"
@@ -357,14 +359,18 @@ msgid "_Base on:"
 msgstr "_Temelji na:"
 
 #: ../admin-tool/sabayon.glade.h:6
+msgid "_Details"
+msgstr "_Podrobnosti"
+
+#: ../admin-tool/sabayon.glade.h:7
 msgid "_Profiles:"
 msgstr "_Profili:"
 
-#: ../admin-tool/sabayon.glade.h:7
+#: ../admin-tool/sabayon.glade.h:8
 msgid "_Users"
 msgstr "_Uporabniki"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.glade.h:9
 msgid "_Users:"
 msgstr "_Uporabniki:"
 
@@ -486,15 +492,15 @@ msgstr "Pričakovan dogodek: %s %s"
 
 #: ../lib/protosession.py:140
 msgid "Unable to find a free X display"
-msgstr "Ni bilo moč najti prostega zaslona X"
+msgstr "Ni mogoče najti prostega zaslona X"
 
 #: ../lib/protosession.py:407
 msgid "Failed to start Xnest: timed out waiting for USR1 signal"
-msgstr "Ni bilo moč zagnati Xnesta: čas čakanja na signal USR1 je potekel"
+msgstr "Zagon Xnesta ni uspel: čas čakanja na signal USR1 je potekel"
 
 #: ../lib/protosession.py:409
 msgid "Failed to start Xnest: died during startup"
-msgstr "Ni bilo moč zagnati Xnesta: umrl med zagonom"
+msgstr "Zagon Xnesta ni uspel: umrl med zagonom"
 
 #: ../lib/sources/filessource.py:66
 #, python-format
