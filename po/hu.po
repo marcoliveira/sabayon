@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-08-15 12:36+0200\n"
-"PO-Revision-Date: 2007-01-15 21:44+0100\n"
+"POT-Creation-Date: 2007-01-15 20:45+0000\n"
+"PO-Revision-Date: 2007-01-18 00:50+0100\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <gnome@gnome.hu>\n"
 "MIME-Version: 1.0\n"
@@ -333,7 +333,7 @@ msgstr "Felhasználók profiljainak létesítése és szerkesztése"
 
 #: ../admin-tool/sabayon.desktop.in.h:2 ../admin-tool/sabayon.glade.h:4
 msgid "User Profile Editor"
-msgstr "Profilszerkesztő használata"
+msgstr "Felhasználói profilok szerkesztése"
 
 #: ../admin-tool/sabayon.glade.h:1
 msgid "Add Profile"
@@ -352,14 +352,18 @@ msgid "_Base on:"
 msgstr "_Alapuljon ezen:"
 
 #: ../admin-tool/sabayon.glade.h:6
+msgid "_Details"
+msgstr "_Részletek"
+
+#: ../admin-tool/sabayon.glade.h:7
 msgid "_Profiles:"
 msgstr "_Profilok:"
 
-#: ../admin-tool/sabayon.glade.h:7
+#: ../admin-tool/sabayon.glade.h:8
 msgid "_Users"
 msgstr "_Felhasználók"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.glade.h:9
 msgid "_Users:"
 msgstr "_Felhasználók:"
 
@@ -424,7 +428,9 @@ msgstr[1] ""
 msgid "If you don't save, changes from the last hour will be permanently lost."
 msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
 msgstr[0] "Ha nem menti, akkor az elmúlt órában történt változások véglegesen elvesznek."
-msgstr[1] "Ha nem menti, akkor az elmúlt %d órában történt változások véglegesen elvesznek."
+msgstr[1] ""
+"Ha nem menti, akkor az elmúlt %d órában történt változások véglegesen "
+"elvesznek."
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
