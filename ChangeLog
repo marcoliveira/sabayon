@@ -1,3 +1,24 @@
+2007-01-17  Federico Mena Quintero  <federico@novell.com>
+
+	Fix bug #320589 - use long descriptions for changes to the panel,
+	instead of generic "%s added to panel".
+
+	* lib/sources/paneldelegate.py
+	(PanelAppletAddedChange.get_short_description): Use long
+	descriptions, like "Applet %s added to top panel".
+	(PanelAppletRemovedChange.get_short_description): Likewise,
+	"Applet %s removed from left panel".
+	(PanelObjectAddedChange.get_short_description): Likewise, 
+	"%s added to right panel".
+	(PanelObjectRemovedChange.get_short_description): Likewise,
+	"%s removed from bottom panel".
+	(PanelDelegate.__init__): Store the orientation of the panel so
+	that we can use it from the applet/object delegates.
+	(PanelDelegate.__init__): Find the human-readable name of the
+	applet by querying bonobo-activation.
+	(PanelDelegate.__init__): Compute a human-readable name from the
+	object's type.
+
 2007-01-11  Federico Mena Quintero  <federico@novell.com>
 
 	* MAINTAINERS: Update to proper format, add myself, removed Alex.

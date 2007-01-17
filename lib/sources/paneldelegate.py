@@ -19,6 +19,8 @@
 import os
 import gconf
 import gconfsource
+import bonobo
+import xdg.DesktopEntry
 
 try:
     import userprofile
@@ -43,12 +45,6 @@ class PanelChange (userprofile.ProfileChange):
     def commit_change (self, mandatory):
         pass
 
-#
-# FIXME: these short descriptions are lame, should be:
-#  "Battery applet added to top panel"
-#  "Launcher (gnome-terminal) added to bottom panel" etc.
-#
-
 class PanelAddedChange (PanelChange):
     def __init__ (self, source, delegate, id):
         PanelChange.__init__ (self, source, delegate, id)
@@ -65,19 +61,64 @@ class PanelAppletAddedChange (PanelChange):
     def __init__ (self, source, delegate, id):
         PanelChange.__init__ (self, source, delegate, id)
     def get_short_description (self):
-        return _("Panel applet '%s' added") % self.id
+		# FIXME: This only works if panel object type is bonobo-applet. Are all applets bonobo-applets ?
+		panel_applet = self.delegate.PanelApplet(self.id)
+		toplevel_id = panel_applet.toplevel_id
+		name = panel_applet.name
+		
+		panel_toplevel = self.delegate.PanelToplevel(toplevel_id)
+		panel_orientation = panel_toplevel.orientation
+
+		if panel_orientation == "top":
+			return _("Applet %s added to top panel") % name
+		elif panel_orientation == "bottom":
+			return _("Applet %s added to bottom panel") % name
+		elif panel_orientation == "left":
+			return _("Applet %s added to left panel") % name
+		else:
+			return _("Applet %s added to right panel") % name
 
 class PanelAppletRemovedChange (PanelChange):
     def __init__ (self, source, delegate, id):
         PanelChange.__init__ (self, source, delegate, id)
     def get_short_description (self):
-        return _("Panel applet '%s' removed") % self.id
+		# FIXME: This only works if panel object type is bonobo-applet. Are all applets bonobo-applets ?
+		panel_applet = self.delegate.PanelApplet(self.id)
+		toplevel_id = panel_applet.toplevel_id
+		name = panel_applet.name
+
+		panel_toplevel = self.delegate.PanelToplevel(toplevel_id)
+		panel_orientation = panel_toplevel.orientation
+
+		if panel_orientation == "top":
+			return _("Applet %s removed from top panel") % name
+		elif panel_orientation == "bottom":
+			return _("Applet %s removed from bottom panel") % name
+		elif panel_orientation == "left":
+			return _("Applet %s removed from left panel") % name
+		else:
+			return _("Applet %s removed from right panel") % name
 
 class PanelObjectAddedChange (PanelChange):
     def __init__ (self, source, delegate, id):
         PanelChange.__init__ (self, source, delegate, id)
     def get_short_description (self):
-        return _("Panel object '%s' added") % self.id
+		panel_object = self.delegate.PanelObject(self.id)	
+		toplevel_id = panel_object.toplevel_id
+		name = panel_object.name
+
+		panel_toplevel = self.delegate.PanelToplevel(toplevel_id)
+		panel_orientation = panel_toplevel.orientation
+
+		if panel_orientation == "top":
+			return _("%s added to top panel") % name
+		elif panel_orientation == "bottom":
+			return _("%s added to bottom panel") % name
+		elif panel_orientation == "left":
+			return _("%s added to left panel") % name
+		else:
+			return _("%s added to right panel") % name
+
     def commit_change (self, mandatory):
         # Might have to commit a launcher file
         launcher = self.delegate.client.get_string (PANEL_KEY_BASE + "/objects/" + self.id + "/launcher_location")
@@ -89,7 +130,22 @@ class PanelObjectRemovedChange (PanelChange):
     def __init__ (self, source, delegate, id):
         PanelChange.__init__ (self, source, delegate, id)
     def get_short_description (self):
-        return _("Panel object '%s' removed") % self.id
+		panel_object = self.delegate.PanelObject(self.id)	
+		toplevel_id = panel_object.toplevel_id
+		name = panel_object.name
+
+		panel_toplevel = self.delegate.PanelToplevel(toplevel_id)
+		panel_orientation = panel_toplevel.orientation
+
+		if panel_orientation == "top":
+			return _("%s removed from top panel") % name
+		elif panel_orientation == "bottom":
+			return _("%s removed from bottom panel") % name
+		elif panel_orientation == "left":
+			return _("%s removed from left panel") % name
+		else:
+			return _("%s removed from right panel") % name
+
     def commit_change (self, mandatory):
         launcher = self.delegate.client.get_string (PANEL_KEY_BASE + "/objects/" + self.id + "/launcher_location")
         if launcher and launcher[0] != '/':
@@ -102,31 +158,68 @@ class PanelDelegate (userprofile.SourceDelegate):
             self.id      = id
             self.added   = added
             self.removed = removed
+            self.client = gconf.client_get_default ()	
     
     class PanelToplevel (PanelThing):
         def __init__ (self, id, added = False, removed = False):
             PanelDelegate.PanelThing.__init__ (self, id, added, removed)
             
-            # FIXME: which attributes do we really need?
+            self.orientation = self.client.get_string (PANEL_KEY_BASE + "/toplevels/" + id + "/orientation")
+            
+			# FIXME: which of the following attributes do we really need?
             # self.name        = self.client.get_string (PANEL_KEY_BASE + "/toplevels/" + toplevel_id + "/name")
-            # self.orientation = self.client.get_string (PANEL_KEY_BASE + "/toplevels/" + toplevel_id + "/orientation")
             # self.expand      = self.client.get_bool   (PANEL_KEY_BASE + "/toplevels/" + toplevel_id + "/expand")
 
     class PanelApplet (PanelThing):
         def __init__ (self, id, added = False, removed = False):
-            PanelDelegate.PanelThing.__init__ (self, id, added, removed)
-            
-            # FIXME: which attributes do we really need?
-            # self.toplevel_id = self.client.get_string (PANEL_KEY_BASE + "/applets/" + applet_id + "/toplevel_id")
-            # self.bonobo_iid  = self.client.get_string (PANEL_KEY_BASE + "/applets/" + applet_id + "/bonobo_iid")
+			PanelDelegate.PanelThing.__init__ (self, id, added, removed)
+			
+			self.toplevel_id = self.client.get_string (PANEL_KEY_BASE + "/applets/" + id + "/toplevel_id")
+			self.bonobo_iid  = self.client.get_string (PANEL_KEY_BASE + "/applets/" + id + "/bonobo_iid")
+			
+			applet = bonobo.activation.query("iid == '" + self.bonobo_iid + "'" )
+			for i in applet:
+				for prop in i.props:
+					if prop.name == "name":
+						self.name = prop.v.value_string #FIXME: This probably won't return localised names	
+
+
 
     class PanelObject (PanelThing):
-        def __init__ (self, id, added = False, removed = False):
-            PanelDelegate.PanelThing.__init__ (self, id, added, removed)
-            
-            # FIXME: which attributes do we really need?
-            # self.toplevel_id = self.client.get_string (PANEL_KEY_BASE + "/objects/" + object_id + "/toplevel_id")
-            # self.object_type = self.client.get_string (PANEL_KEY_BASE + "/objects/" + object_id + "/object_type")
+	def __init__ (self, id, added = False, removed = False):
+		PanelDelegate.PanelThing.__init__ (self, id, added, removed)
+   
+		self.toplevel_id = self.client.get_string (PANEL_KEY_BASE + "/objects/" + id + "/toplevel_id")
+		self.object_type = self.client.get_string (PANEL_KEY_BASE + "/objects/" + id + "/object_type")
+	
+		if self.object_type == "drawer-object":
+			self.name = _("Drawer")
+		elif self.object_type == "menu-object":
+			self.name = _("Main Menu")
+		elif self.object_type == "launcher-object":
+			launcher_location = self.client.get_string (PANEL_KEY_BASE + "/objects/" + id + "/launcher_location")
+			if launcher_location[0] == '/':
+				desktop_file = launcher_location
+			elif launcher_location[0:7] == "file://": # See what happens when you drag and drop from the menu
+				desktop_file = launcher_location[7:]
+			else:
+				desktop_file = PANEL_LAUNCHER_DIR + "/" + launcher_location
+			launcher = xdg.DesktopEntry.DesktopEntry(desktop_file)
+			self.name = launcher.getName() + _(" launcher")
+		elif self.object_type == "action-applet":
+			action_type = self.client.get_string (PANEL_KEY_BASE + "/objects/" + id + "/action_type")
+			if action_type == "lock":
+				self.name = _("Lock Screen button")
+			elif action_type == "logout":
+				self.name = _("Logout button")
+			elif action_type == "run":
+				self.name = _("Run Appliction button")
+			elif action_type == "search":
+				self.name = _("Search button")
+			else:
+				self.name = _("Screenshot button")
+		else:
+			self.name = _("Menu Bar")
 
     def __init__ (self, source):
         userprofile.SourceDelegate.__init__ (self, _("Panel"), source, PANEL_KEY_BASE)
