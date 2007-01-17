@@ -59,7 +59,7 @@ class ProfileChangesModel (gtk.ListStore):
     __gsignals__ = {
         "changed" : (gobject.SIGNAL_RUN_LAST, gobject.TYPE_NONE, (userprofile.ProfileChange, ))
         }
-        
+
     (
         COLUMN_CHANGE,
         COLUMN_IGNORE,
@@ -79,7 +79,7 @@ class ProfileChangesModel (gtk.ListStore):
         self.profile = profile
         self.profile.connect ("changed", self.handle_profile_change)
 
-    
+
     def handle_profile_change (self, profile, new_change):
         default_mandatory = False
         ignore = new_change.get_ignore_default ()
@@ -128,7 +128,7 @@ class ProfileChangesModel (gtk.ListStore):
                 return iter
             iter = next
         return None
-    
+
 
 gobject.type_register (ProfileChangesModel)
 
@@ -163,10 +163,10 @@ class SessionWindow:
 
         self.__set_needs_saving (False)
 
-        
+
     def __add_widget (self, ui_manager, widget):
         self.box.pack_start (widget, False, False, 0)
-        
+
     def __setup_menus (self):
         actions = [
             ("ProfileMenu", None,            _("_Profile")),
@@ -184,7 +184,7 @@ class SessionWindow:
         action_group = gtk.ActionGroup ("WindowActions")
         action_group.add_actions (actions)
         action_group.add_toggle_actions (toggle_actions)
-        
+
         self.ui_manager = gtk.UIManager ()
         self.ui_manager.insert_action_group (action_group, 0)
         self.ui_manager.connect ("add-widget", self.__add_widget)
@@ -194,7 +194,7 @@ class SessionWindow:
         self.window.add_accel_group (self.ui_manager.get_accel_group ())
 
         self.save_action = action_group.get_action ("Save")
-    
+
     def __set_needs_saving (self, needs_saving):
         if needs_saving:
             if not self.last_save_time:
@@ -203,26 +203,41 @@ class SessionWindow:
         else:
             self.last_save_time = 0
             self.save_action.set_sensitive (False)
-            
+
     def __changes_model_changed (self, model, change):
         self.__set_needs_saving (not model.get_iter_first () is None)
-        
+
     def __do_save (self):
+        # The changes model stores changes in reverse chronological order, so that
+        # the latest changes are always visible at the top of the window.  To apply
+        # the changes, we need them in chronological order.  So, we collect
+        # all the changes and reverse that list before committing the changes.
+
+        all_changes = []
         iter = self.changes_model.get_iter_first ()
         while iter:
             change    = self.changes_model[iter][ProfileChangesModel.COLUMN_CHANGE]
             ignore    = self.changes_model[iter][ProfileChangesModel.COLUMN_IGNORE]
             mandatory = self.changes_model[iter][ProfileChangesModel.COLUMN_MANDATORY]
+            all_changes.append ((change, ignore, mandatory))
+            iter = self.changes_model.iter_next (iter)
 
+        all_changes.reverse ()
+
+        # Commit the changes!
+
+        for (change, ignore, mandatory) in all_changes:
             if not ignore:
                 dprint ("Committing: %s, mandatory = %s", change.get_id (), mandatory)
                 try:
                     change.get_source ().commit_change (change, mandatory)
                 except:
                     util.print_exception ()
-                
-            iter = self.changes_model.iter_next (iter)
-        
+                    import sys
+                    sys.exit (1)
+
+        # Done
+
         self.changes_model.clear ()
         self.profile.sync_changes ()
 
@@ -239,12 +254,12 @@ class SessionWindow:
                 return False
             if response == gtk.RESPONSE_YES:
                 self.__do_save ()
-        
+
         return True
-    
+
     def __handle_save (self, action):
         self.__do_save ()
-        
+
     def __handle_quit (self, action):
         if self.__do_saveconfirm ():
             self.window.destroy ()
@@ -268,16 +283,16 @@ class SessionWindow:
         if not self.lockdown_window:
             applier = LockdownApplierSabayon (self.profile, self.changes_model)
             self.lockdown_window = lockdowndialog.PessulusMainDialog (applier, False)
-            self.lockdown_window.window.set_title (_("Lockdown settings for %s")%self.profile_name) 
+            self.lockdown_window.window.set_title (_("Lockdown settings for %s")%self.profile_name)
         self.lockdown_window.window.present ()
-        
+
 
     def __handle_enforce_mandatory (self, action):
         self.profile.set_enforce_mandatory (action.get_active())
-    
+
     def __session_finished (self, session):
         self.window.destroy ()
-        
+
     def __session_mapped (self, session_widget, event):
         dprint ("Session widget mapped; starting prototype session")
         self.session_widget.disconnect (self.mapped_handler_id)
@@ -288,7 +303,7 @@ class SessionWindow:
 
     def __setup_session (self):
         self.session = protosession.ProtoSession (self.profile_name, self.display_number)
-        
+
         self.session.apply_profile ()
         self.profile.start_monitoring ()
         screen = gtk.gdk.screen_get_default ()
@@ -296,7 +311,7 @@ class SessionWindow:
         height = (screen.get_height () * 3) / 4
 
         dprint ("Creating %dx%d session wiget", width, height)
-        
+
         self.session_widget = sessionwidget.SessionWidget (width, height)
         self.box.pack_start (self.session_widget, True, True)
         self.mapped_handler_id = self.session_widget.connect ("map-event", self.__session_mapped)

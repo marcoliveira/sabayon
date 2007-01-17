@@ -1,5 +1,21 @@
 2007-01-17  Federico Mena Quintero  <federico@novell.com>
 
+	* admin-tool/sessionwindow.py (SessionWindow.__do_save): The changes model
+	stores changes in reverse chronological order, so that the latest
+	changes are always visible at the top of the window.  To apply the
+	changes, we need them in chronological order.  So, we collect all
+	the changes and reverse that list before committing the
+	changes.  Also, do *not* let exceptions pass through!  Abort
+	immediately if we get an exception while committing.  This is part
+	of the fix for https://bugzilla.novell.com/show_bug.cgi?id=230018:
+	user profiles are not saved correctly because Sabayon thinks some
+	files are missing.
+
+	* lib/sources/mozillasource.py (MozillaDelegate.is_profile_file):
+	Ensure that we have an ini_file before invoking methods on it!
+
+2007-01-17  Federico Mena Quintero  <federico@novell.com>
+
 	Fix bug #320589 - use long descriptions for changes to the panel,
 	instead of generic "%s added to panel".
 

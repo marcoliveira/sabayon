@@ -192,7 +192,7 @@ class MozillaDelegate(userprofile.SourceDelegate):
             return False
 
     def is_profile_file(self, rel_path):
-        if self.ini_file.is_valid():
+        if self.ini_file and self.ini_file.is_valid():
             rel_dir = os.path.dirname(rel_path)
             for profile in self.ini_file.get_profiles():
                 profile_rel_dir = profile.get_rel_dir()
