@@ -1,16 +1,16 @@
 # Swedish messages for sabayon.
-# Copyright (C) 2005-2006 Free Software Foundation, Inc.
-# Daniel Nylander <po@danielnylander.se>, 2006.
+# Copyright (C) 2005, 2006, 2007 Free Software Foundation, Inc.
+# Daniel Nylander <po@danielnylander.se>, 2006, 2007.
 # Christian Rose <menthos@menthos.com>, 2005.
 #
-# $Id$
+# $Id: sv.po,v 1.11 2006/12/10 18:20:00 dnylande Exp $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-12-10 03:11+0100\n"
-"PO-Revision-Date: 2006-12-10 09:43+0100\n"
+"POT-Creation-Date: 2007-01-17 23:57+0000\n"
+"PO-Revision-Date: 2007-01-18 19:38+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -118,7 +118,7 @@ msgstr "Filer"
 
 #: ../admin-tool/editorwindow.py:256
 #: ../admin-tool/lockdown/pessulus.glade.h:7
-#: ../lib/sources/paneldelegate.py:132
+#: ../lib/sources/paneldelegate.py:225
 msgid "Panel"
 msgstr "Panel"
 
@@ -454,7 +454,7 @@ msgstr "Tvinga som obligatorisk"
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Tvinga obligatoriska inställningar i redigeringssessionen"
 
-#: ../admin-tool/sessionwindow.py:271
+#: ../admin-tool/sessionwindow.py:286
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Inlåsningsinställningar för %s"
@@ -656,37 +656,133 @@ msgstr "Mozilla-bokmärke ändrades \"%s\" \"%s\""
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mozilla-bokmärkesmapp ändrades \"%s\""
 
-#: ../lib/sources/paneldelegate.py:56
+#: ../lib/sources/paneldelegate.py:52
 #, python-format
 msgid "Panel '%s' added"
 msgstr "Panelen \"%s\" lades till"
 
-#: ../lib/sources/paneldelegate.py:62
+#: ../lib/sources/paneldelegate.py:58
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "Panelen \"%s\" togs bort"
 
-#: ../lib/sources/paneldelegate.py:68
+#: ../lib/sources/paneldelegate.py:73
 #, python-format
-msgid "Panel applet '%s' added"
-msgstr "Panelprogrammet \"%s\" lades till"
+msgid "Applet %s added to top panel"
+msgstr "Panelprogrammet %s lades till i överpanelen"
 
-#: ../lib/sources/paneldelegate.py:74
+#: ../lib/sources/paneldelegate.py:75
 #, python-format
-msgid "Panel applet '%s' removed"
-msgstr "Panelprogrammet \"%s\" togs bort"
+msgid "Applet %s added to bottom panel"
+msgstr "Panelprogrammet %s lades till i nederpanelen"
 
-#: ../lib/sources/paneldelegate.py:80
+#: ../lib/sources/paneldelegate.py:77
 #, python-format
-msgid "Panel object '%s' added"
-msgstr "Panelobjektet \"%s\" lades till"
+msgid "Applet %s added to left panel"
+msgstr "Panelprogrammet %s lades till i vänstra panelen"
 
-#: ../lib/sources/paneldelegate.py:92
+#: ../lib/sources/paneldelegate.py:79
 #, python-format
-msgid "Panel object '%s' removed"
-msgstr "Panelobjektet \"%s\" togs bort"
+msgid "Applet %s added to right panel"
+msgstr "Panelprogrammet %s lades till i högra panelen"
 
-#: ../lib/sources/paneldelegate.py:373
+#: ../lib/sources/paneldelegate.py:94
+#, python-format
+msgid "Applet %s removed from top panel"
+msgstr "Panelprogrammet %s togs bort från överpanelen"
+
+#: ../lib/sources/paneldelegate.py:96
+#, python-format
+msgid "Applet %s removed from bottom panel"
+msgstr "Panelprogrammet %s togs bort från nederpanelen"
+
+#: ../lib/sources/paneldelegate.py:98
+#, python-format
+msgid "Applet %s removed from left panel"
+msgstr "Panelprogrammet %s togs bort från vänstra panelen"
+
+#: ../lib/sources/paneldelegate.py:100
+#, python-format
+msgid "Applet %s removed from right panel"
+msgstr "Panelprogrammet %s togs bort från högra panelen"
+
+#: ../lib/sources/paneldelegate.py:114
+#, python-format
+msgid "%s added to top panel"
+msgstr "%s lades till i överpanelen"
+
+#: ../lib/sources/paneldelegate.py:116
+#, python-format
+msgid "%s added to bottom panel"
+msgstr "%s lades till i nederpanelen"
+
+#: ../lib/sources/paneldelegate.py:118
+#, python-format
+msgid "%s added to left panel"
+msgstr "%s lades till i vänstra panelen"
+
+#: ../lib/sources/paneldelegate.py:120
+#, python-format
+msgid "%s added to right panel"
+msgstr "%s lades till i högra panelen"
+
+#: ../lib/sources/paneldelegate.py:141
+#, python-format
+msgid "%s removed from top panel"
+msgstr "%s togs bort från överpanelen"
+
+#: ../lib/sources/paneldelegate.py:143
+#, python-format
+msgid "%s removed from bottom panel"
+msgstr "%s togs bort från nederpanelen"
+
+#: ../lib/sources/paneldelegate.py:145
+#, python-format
+msgid "%s removed from left panel"
+msgstr "%s togs bort från vänstra panelen"
+
+#: ../lib/sources/paneldelegate.py:147
+#, python-format
+msgid "%s removed from right panel"
+msgstr "%s togs bort från högra panelen"
+
+#: ../lib/sources/paneldelegate.py:196
+msgid "Drawer"
+msgstr "Låda"
+
+#: ../lib/sources/paneldelegate.py:198
+msgid "Main Menu"
+msgstr "Huvudmeny"
+
+#: ../lib/sources/paneldelegate.py:208
+msgid " launcher"
+msgstr " programstartare"
+
+#: ../lib/sources/paneldelegate.py:212
+msgid "Lock Screen button"
+msgstr "Lås skärm-knapp"
+
+#: ../lib/sources/paneldelegate.py:214
+msgid "Logout button"
+msgstr "Logga ut-knapp"
+
+#: ../lib/sources/paneldelegate.py:216
+msgid "Run Appliction button"
+msgstr "Kör program-knapp"
+
+#: ../lib/sources/paneldelegate.py:218
+msgid "Search button"
+msgstr "Sök-knapp"
+
+#: ../lib/sources/paneldelegate.py:220
+msgid "Screenshot button"
+msgstr "Skärmbild-knapp"
+
+#: ../lib/sources/paneldelegate.py:222
+msgid "Menu Bar"
+msgstr "Menyrad"
+
+#: ../lib/sources/paneldelegate.py:466
 msgid "Panel File"
 msgstr "Panelfil"
 
@@ -802,6 +898,14 @@ msgstr "Kan inte hitta hemkatalog: inte inställd i /etc/passwd och inget värde
 msgid "Cannot find username: not set in /etc/passwd and no value for $USER in environment"
 msgstr "Kan inte hitta användarnamn: inte inställd i /etc/passwd och inget värde för $HOME i miljön"
 
+#~ msgid "Panel applet '%s' added"
+#~ msgstr "Panelprogrammet \"%s\" lades till"
+#~ msgid "Panel applet '%s' removed"
+#~ msgstr "Panelprogrammet \"%s\" togs bort"
+#~ msgid "Panel object '%s' added"
+#~ msgstr "Panelobjektet \"%s\" lades till"
+#~ msgid "Panel object '%s' removed"
+#~ msgstr "Panelobjektet \"%s\" togs bort"
 #~ msgid "All Your Settings Are Belong To Us"
 #~ msgstr "Alla dina inställningar oss tillhör"
 #~ msgid "Clear revision history"
