@@ -1,3 +1,8 @@
+2007-01-18  Federico Mena Quintero  <federico@novell.com>
+
+	* lib/sources/filessource.py (FilesSource.__handle_monitor_event):
+	Also notice creation/removal of directories.  Fixes bug #395505.
+
 2007-01-17  Federico Mena Quintero  <federico@novell.com>
 
 	* admin-tool/sessionwindow.py (SessionWindow.__do_save): The changes model

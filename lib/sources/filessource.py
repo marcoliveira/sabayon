@@ -82,7 +82,7 @@ class FilesSource (userprofile.ProfileSource):
         self.monitor.set_files_to_ignore (FILES_TO_IGNORE)
 
     def __handle_monitor_event (self, path, event):
-        if event == dirmonitor.DELETED or os.path.isfile (path):
+        if event == dirmonitor.DELETED or os.path.isfile (path) or os.path.isdir (path):
             # FIXME: sanity check input (e.g. is change actually in homedir/?)
             rel_path = path[len (self.home_dir):].lstrip ("/")
             dprint ("Emitting event '%s' on file '%s'",
