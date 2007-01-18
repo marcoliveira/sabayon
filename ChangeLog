@@ -1,5 +1,12 @@
 2007-01-18  Federico Mena Quintero  <federico@novell.com>
 
+	* lib/sources/gconfsource.py: 
+	* lib/sources/paneldelegate.py: Use subprocess.call() instead of
+	os.call() so that we don't use unrobust shell quoting.  Patch
+	taken from https://bugzilla.novell.com/show_bug.cgi?id=184919.
+
+2007-01-18  Federico Mena Quintero  <federico@novell.com>
+
 	* lib/sources/filessource.py (FilesSource.__handle_monitor_event):
 	Also notice creation/removal of directories.  Fixes bug #395505.
 

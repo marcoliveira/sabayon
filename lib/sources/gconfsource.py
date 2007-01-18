@@ -24,6 +24,7 @@ import errno
 import gobject
 import gconf
 import fnmatch
+import subprocess
 
 try:
     import userprofile
@@ -41,7 +42,7 @@ def dprint (fmt, *args):
 
 # gconf_engine_associate_schema() isn't wrapped
 def associate_schema (config_source, key, schema_key):
-    os.system ("gconftool-2 --config-source='%s' --apply-schema %s %s" % (config_source, schema_key, key))
+    subprocess.call (["gconftool-2", "--config-source=%s" % (config_source), "--apply-schema", "%s" % (schema_key), "%s" % (key)])
 
 def copy_tree (src_client, dst_client, dir):
     for entry in src_client.all_entries (dir):
@@ -230,7 +231,7 @@ class GConfSource (userprofile.ProfileSource):
         # FIXME: it would be nicer if we just wrote directly
         #        to the defaults and mandatory sources
         #dprint ("Shutting down gconfd in order to sync changes to disk")
-        #os.system ("gconftool-2 --shutdown")
+        #subprocess.call (["gconftool-2", "--shutdown"])
         if self.defaults_client:
             self.defaults_client.suggest_sync();
         if self.mandatory_client:
@@ -318,7 +319,7 @@ class GConfSource (userprofile.ProfileSource):
         #        if we could guarantee that there wasn't a gconfd already
         #        running.
         dprint ("Shutting down gconfd so it kill pick up new paths")
-        os.system ("gconftool-2 --shutdown")
+        subprocess.call (["gconftool-2", "--shutdown"])
 
     def add_gconf_notify (self, key, handler, data):
         return self.client.notify_add (key, handler, data)
@@ -383,13 +384,13 @@ def run_unit_tests ():
         pass
 
     # Need to shutdown the daemon to ensure its not using stale paths
-    os.system ("gconftool-2 --shutdown")
+    subprocess.call (["gconftool-2", "--shutdown"])
     time.sleep (1)
 
     # Make sure there's no stale keys from a previous run
     # FIXME: gconf_client_recursive_unset() has no wrapping
     # source.client.recursive_unset ("/tmp/test-gconfprofile")
-    os.system ("gconftool-2 --recursive-unset /tmp/test-gconfprofile")
+    subprocess.call (["gconftool-2", "--recursive-unset", "/tmp/test-gconfprofile"])
     time.sleep (1)
 
     global changes
@@ -433,7 +434,7 @@ def run_unit_tests ():
     assert changes[0].key == "/tmp/test-gconfprofile/t1"
 
     # source.client.recursive_unset ("/tmp/test-gconfprofile")
-    os.system ("gconftool-2 --recursive-unset /tmp/test-gconfprofile")
+    subprocess.call (["gconftool-2", "--recursive-unset", "/tmp/test-gconfprofile"])
     
     source.sync_changes ()
     source.apply (False)
@@ -462,7 +463,7 @@ def run_unit_tests ():
 
     # Shutdown the daemon and remove the path files so we don't screw
     # too much with the running session
-    os.system ("gconftool-2 --shutdown")
+    subprocess.call (["gconftool-2", "--shutdown"])
     time.sleep (1)
 
     os.remove (os.path.join (util.get_home_dir (), ".gconf.path.defaults"))

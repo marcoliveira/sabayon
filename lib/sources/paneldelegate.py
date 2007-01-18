@@ -19,6 +19,7 @@
 import os
 import gconf
 import gconfsource
+import subprocess
 import bonobo
 import xdg.DesktopEntry
 
@@ -500,9 +501,9 @@ def run_unit_tests ():
     import shutil
 
     # Clear out any cruft
-    os.system ("gconftool-2 --recursive-unset %s/toplevels/foo" % PANEL_KEY_BASE)
-    os.system ("gconftool-2 --recursive-unset %s/objects/foo" % PANEL_KEY_BASE)
-    os.system ("gconftool-2 --recursive-unset %s/applets/foo" % PANEL_KEY_BASE)
+    subprocess.call (["gconftool-2", "--recursive-unset", "%s/toplevels/foo" % PANEL_KEY_BASE])
+    subprocess.call (["gconftool-2", "--recursive-unset", "%s/objects/foo" % PANEL_KEY_BASE])
+    subprocess.call (["gconftool-2", "--recursive-unset", "%s/applets/foo" % PANEL_KEY_BASE])
     time.sleep (1)
 
     client = gconf.client_get_default ()
@@ -637,7 +638,7 @@ def run_unit_tests ():
 
     source.commit_change (changes[PANEL_ADDED], False)
     
-    os.system ("gconftool-2 --shutdown")
+    subprocess.call (["gconftool-2", "--shutdown"])
     time.sleep (1)
 
     assert os.access (os.path.join (temp_path, ".gconf.xml.defaults/apps/panel/general/%gconf.xml"), os.F_OK)
@@ -693,14 +694,14 @@ def run_unit_tests ():
     source.commit_change (changes[PANEL_REMOVED], False)
 
     dprint ("Committed changes to %s", temp_path)
-    os.system ("gconftool-2 --shutdown")
+    subprocess.call (["gconftool-2", "--shutdown"])
     time.sleep (1)
     
     assert not os.access (os.path.join (temp_path, ".gconf.xml.defaults/apps/panel/toplevels/foo/%gconf.xml"), os.F_OK)
 
     # Bye, bye cruft
-    os.system ("gconftool-2 --recursive-unset %s/toplevels/foo" % PANEL_KEY_BASE)
-    os.system ("gconftool-2 --recursive-unset %s/objects/foo" % PANEL_KEY_BASE)
-    os.system ("gconftool-2 --recursive-unset %s/applets/foo" % PANEL_KEY_BASE)
+    subprocess.call (["gconftool-2", "--recursive-unset", "%s/toplevels/foo" % PANEL_KEY_BASE])
+    subprocess.call (["gconftool-2", "--recursive-unset", "%s/objects/foo" % PANEL_KEY_BASE])
+    subprocess.call (["gconftool-2", "--recursive-unset", "%s/applets/foo" % PANEL_KEY_BASE])
 
     shutil.rmtree (temp_path, True)
