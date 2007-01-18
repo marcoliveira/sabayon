@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-15 20:45+0000\n"
-"PO-Revision-Date: 2007-01-18 00:50+0100\n"
+"POT-Creation-Date: 2007-01-17 23:57+0000\n"
+"PO-Revision-Date: 2007-01-18 01:30+0100\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <gnome@gnome.hu>\n"
 "MIME-Version: 1.0\n"
@@ -100,7 +100,7 @@ msgid "Files"
 msgstr "Fájlok"
 
 #: ../admin-tool/editorwindow.py:256 ../admin-tool/lockdown/pessulus.glade.h:7
-#: ../lib/sources/paneldelegate.py:132
+#: ../lib/sources/paneldelegate.py:225
 msgid "Panel"
 msgstr "Panel"
 
@@ -480,7 +480,7 @@ msgstr "Kötelezőek kikényszerítése"
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Kötelező beállítások kikényszerítése a szerkesztő munkamenetben"
 
-#: ../admin-tool/sessionwindow.py:271
+#: ../admin-tool/sessionwindow.py:286
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "%s zárolási beállításai"
@@ -682,37 +682,133 @@ msgstr "Mozilla könyvjelző megváltoztatva: \"%s\" \"%s\""
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mozilla könyvjelzőmappa megváltoztatva: \"%s\""
 
-#: ../lib/sources/paneldelegate.py:56
+#: ../lib/sources/paneldelegate.py:52
 #, python-format
 msgid "Panel '%s' added"
 msgstr "\"%s\" panel hozzáadva"
 
-#: ../lib/sources/paneldelegate.py:62
+#: ../lib/sources/paneldelegate.py:58
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "\"%s\" panel eltávolítva"
 
-#: ../lib/sources/paneldelegate.py:68
+#: ../lib/sources/paneldelegate.py:73
 #, python-format
-msgid "Panel applet '%s' added"
-msgstr "\"%s\" panel-kisalkalmazás hozzáadva"
+msgid "Applet %s added to top panel"
+msgstr "A(z) %s kisalkalmazás hozzáadva a felső panelhez"
 
-#: ../lib/sources/paneldelegate.py:74
+#: ../lib/sources/paneldelegate.py:75
 #, python-format
-msgid "Panel applet '%s' removed"
-msgstr "\"%s\" panel-kisalkalmazás eltávolítva"
+msgid "Applet %s added to bottom panel"
+msgstr "A(z) %s kisalkalmazás hozzáadva az alsó panelhez"
 
-#: ../lib/sources/paneldelegate.py:80
+#: ../lib/sources/paneldelegate.py:77
 #, python-format
-msgid "Panel object '%s' added"
-msgstr "\"%s\" panelobjektum hozzáadva"
+msgid "Applet %s added to left panel"
+msgstr "A(z) %s kisalkalmazás hozzáadva a bal panelhez"
 
-#: ../lib/sources/paneldelegate.py:92
+#: ../lib/sources/paneldelegate.py:79
 #, python-format
-msgid "Panel object '%s' removed"
-msgstr "\"%s\" panelobjektum eltávolítva"
+msgid "Applet %s added to right panel"
+msgstr "A(z) %s kisalkalmazás hozzáadva a jobb panelhez"
 
-#: ../lib/sources/paneldelegate.py:373
+#: ../lib/sources/paneldelegate.py:94
+#, python-format
+msgid "Applet %s removed from top panel"
+msgstr "A(z) %s kisalkalmazás eltávolítva a felső panelról"
+
+#: ../lib/sources/paneldelegate.py:96
+#, python-format
+msgid "Applet %s removed from bottom panel"
+msgstr "A(z) %s kisalkalmazás eltávolítva az alsó panelról"
+
+#: ../lib/sources/paneldelegate.py:98
+#, python-format
+msgid "Applet %s removed from left panel"
+msgstr "A(z) %s kisalkalmazás eltávolítva a bal panelról"
+
+#: ../lib/sources/paneldelegate.py:100
+#, python-format
+msgid "Applet %s removed from right panel"
+msgstr "A(z) %s kisalkalmazás eltávolítva a jobb panelról"
+
+#: ../lib/sources/paneldelegate.py:114
+#, python-format
+msgid "%s added to top panel"
+msgstr "%s hozzáadva a felső panelhez"
+
+#: ../lib/sources/paneldelegate.py:116
+#, python-format
+msgid "%s added to bottom panel"
+msgstr "%s hozzáadva az alsó panelhez"
+
+#: ../lib/sources/paneldelegate.py:118
+#, python-format
+msgid "%s added to left panel"
+msgstr "%s hozzáadva a bal panelhez"
+
+#: ../lib/sources/paneldelegate.py:120
+#, python-format
+msgid "%s added to right panel"
+msgstr "%s hozzáadva a jobb panelhez"
+
+#: ../lib/sources/paneldelegate.py:141
+#, python-format
+msgid "%s removed from top panel"
+msgstr "%s eltávolítva a felső panelról"
+
+#: ../lib/sources/paneldelegate.py:143
+#, python-format
+msgid "%s removed from bottom panel"
+msgstr "%s eltávolítva az alsó panelról"
+
+#: ../lib/sources/paneldelegate.py:145
+#, python-format
+msgid "%s removed from left panel"
+msgstr "%s eltávolítva a bal panelról"
+
+#: ../lib/sources/paneldelegate.py:147
+#, python-format
+msgid "%s removed from right panel"
+msgstr "%s eltávolítva a jobb panelról"
+
+#: ../lib/sources/paneldelegate.py:196
+msgid "Drawer"
+msgstr "Fiók"
+
+#: ../lib/sources/paneldelegate.py:198
+msgid "Main Menu"
+msgstr "Főmenü"
+
+#: ../lib/sources/paneldelegate.py:208
+msgid " launcher"
+msgstr " alkalmazásindító"
+
+#: ../lib/sources/paneldelegate.py:212
+msgid "Lock Screen button"
+msgstr "Képernyő zárolása gomb"
+
+#: ../lib/sources/paneldelegate.py:214
+msgid "Logout button"
+msgstr "Kijelentkezés gomb"
+
+#: ../lib/sources/paneldelegate.py:216
+msgid "Run Appliction button"
+msgstr "Alkalmazás futtatása gomb"
+
+#: ../lib/sources/paneldelegate.py:218
+msgid "Search button"
+msgstr "Keresés gomb"
+
+#: ../lib/sources/paneldelegate.py:220
+msgid "Screenshot button"
+msgstr "Képernyőkép gomb"
+
+#: ../lib/sources/paneldelegate.py:222
+msgid "Menu Bar"
+msgstr "Menüsáv"
+
+#: ../lib/sources/paneldelegate.py:466
 msgid "Panel File"
 msgstr "Panelfájl"
 
