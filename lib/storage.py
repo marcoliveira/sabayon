@@ -461,6 +461,34 @@ class ProfileStorage:
         by @path should be extracted. Any subdirectories of @dst_dir
         specified by @path will be created.
         """
+
+        def copy_preserving_permissions (src, dest):
+            # The temporary home directory may have gotten files from
+            # /etc/skel which are read-only *and* which are also
+            # present in the saved user profile.  Doing shutil.copy2()
+            # on them would yield an exception, since they are
+            # read-only in the temporary home directory.  So, first we
+            # preserve the mode of those files, then delete them,
+            # write new versions, and restore the mode.
+
+            got_stat = False
+            try:
+                buf = os.stat (dest)
+                got_stat = True
+            except OSError, err:
+                if err.errno != errno.ENOENT:
+                    raise err
+
+            if got_stat:
+                os.unlink (dest) # FIXME: this could fail, but that would be because the parent
+                                 # directory is not writable.  Then we have bigger problems, anyway.
+
+            # FIXME: we lose the "original" permissions, mtime, etc. with ZIP files.
+            shutil.copy2 (src, dest)
+
+            if got_stat:
+                os.chmod (dest, buf.st_mode)
+            
         dprint ("Extracting '%s' to '%s'", path, dst_dir)
         
         self.__unpack ()
@@ -475,7 +503,8 @@ class ProfileStorage:
                 dirname = os.path.dirname (dst_path)
                 if not os.path.exists (dirname):
                     os.makedirs (dirname)
-                shutil.copy2 (os.path.join (self.temp_path, path), dst_path)
+
+                copy_preserving_permissions (os.path.join (self.temp_path, path), dst_path)
 
     def list (self, source = None):
         """List the current contents of the profile.
