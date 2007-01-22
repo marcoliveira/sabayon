@@ -2,11 +2,11 @@
 Version 2.17.90
 ===============
 
-  Code name
+  Code name:
 
 	* "Soup for the troops"
 
-  Features
+  Features:
 
 	* Sabayon comes back from the dead.  It's dark, mysterious,
           and *pissed off*.
@@ -14,7 +14,7 @@ Version 2.17.90
 	* Has a chance of working; there were major bugs in how the
           list of configuration changes gets applied.
 
-  Fixes
+  Fixes:
 
 	* Many installation and build system fixes, including fixes
           for 64-bit platforms (Alex Larsson, Kjartan Maraas)
@@ -27,7 +27,7 @@ Version 2.17.90
 	  (Sayamindu Dasgupta)
 
 	* https://bugzilla.novell.com/show_bug.cgi?id=230018
-	  Commit the list of configuration changes in the right order
+	  Commit the list of configuration changes in the right order.
 	  (Federico Mena-Quintero)
 
 	* http://bugzilla.gnome.org/show_bug.cgi?id=395505
@@ -42,12 +42,48 @@ Version 2.17.90
 
 	* Fixes for translations (Kjartan Maraas)
 
-  Translators
+  New documentation:
 
+	* API reference: http://sayamindu.randomink.org/sabayon_docs/
+	  (Sayamindu Dasgupta)
+
+	* Scripting Sabayon with Python: http://live.gnome.org/PythonSabayon
+	  (Sayamindu Dasgupta)
+
+  Translators:
+
+	* Djihed Afifi (ar)
+	* Jamil Ahmed (bn)
+	* Runa Bhattacharjee (bn_IN)
+	* Josep Puigdemont i Casamajó (ca)
+	* Martin Willemoes Hansen (da)
+	* Hendrik Richter (de)
+	* Francisco Javier F. Serrador (es)
+	* Priit Laes, Ivar Smolin (et)
+	* David Lodge (en_GB)
+	* Inaki Larranaga (eu)
+	* Meelad Zakaria, Sanaz Shahrokni (fa)
+	* Ilkka Tuohela (fi)
+	* Ankit Patel (gu)
+	* Gabor Kelemen (hu)
+	* Raivis Dejus (lv)
 	* Thierry Randrianiriana (mg)
-	* Jovan Naumovski (sl)
-		
-  Edification
+	* Jovan Naumovski (mk)
+	* Ani Peter (ml)
+	* Sanlig Badral, Munkhtugs (mn)
+	* Kjartan Maraas (nb)
+	* Pawan Chitrakar (ne)
+	* Tino Meinen (nl)
+	* Subhransu Behera (or)
+	* Andrzej Polatyński (pl)
+	* Raphael Higino (pt_BR)
+	* Matic Žgur (sl)
+	* Daniel Nylander (sv)
+	* Theppitak Karoonboonyanan (th)
+	* Deniz Kocak (tr)
+	* Clytie Siddall (vi)
+
+  Edification:
 
 	* http://www.italydownunder.com.au/issuefive/dolcevita.html
 
@@ -58,7 +94,7 @@ Version 2.12.4
   Features
 
 	* Add support for Frugalware Linux
-	
+
   Fixes
 
 	* distribute schema
@@ -122,7 +158,7 @@ Version 2.12.1
 	* Lockdown settings editor, based on Pessulus (Vincent Untz and Alex)
 	* Better handling of panel lauchers (Alex)
 	* Removed versioning support. Simplified UI and profile format. (Alex)
-	  
+
   Fixes
 
 	* Fix typo in session name replacement (Sebastien Bacher)
@@ -138,7 +174,7 @@ Version 2.12.1
 	* Better window titles (Alex)
 	* Moved ~/.profile_cache to ~/.sabayon/profile_cache (Alex)
 	* SABAYON_DEBUG=all now sets a full mask (Alex)
-  
+
   Translators
 
 	* Adam Weinberger (en_CA)
@@ -176,7 +212,7 @@ Version 2.11.90
  	+ Move the changes window out of the session (Mark)
 	+ No spew of changes at session start with GNOME 2.12 (Mark)
 
-  Fixes 
+  Fixes
 
 	+ Allow ignoring changes to specific GConf keys (Mark)
 	+ Fix weirdness with window stacking order (Mark)
