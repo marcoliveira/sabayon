@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-12-28 18:17+0000\n"
-"PO-Revision-Date: 2006-12-28 18:17-0000\n"
+"POT-Creation-Date: 2007-01-23 19:34+0000\n"
+"PO-Revision-Date: 2007-01-23 19:34-0000\n"
 "Last-Translator: David Lodge <dave@cirt.net>\n"
 "Language-Team: English (British) <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -102,7 +102,7 @@ msgid "About Sabayon"
 msgstr "About Sabayon"
 
 #: ../admin-tool/editorwindow.py:252
-#: ../lib/sources/gconfsource.py:121
+#: ../lib/sources/gconfsource.py:122
 msgid "GConf"
 msgstr "GConf"
 
@@ -113,7 +113,7 @@ msgstr "Files"
 
 #: ../admin-tool/editorwindow.py:256
 #: ../admin-tool/lockdown/pessulus.glade.h:7
-#: ../lib/sources/paneldelegate.py:132
+#: ../lib/sources/paneldelegate.py:226
 msgid "Panel"
 msgstr "Panel"
 
@@ -449,7 +449,7 @@ msgstr "Enforce Mandatory"
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Enforce mandatory settings in the editing session"
 
-#: ../admin-tool/sessionwindow.py:271
+#: ../admin-tool/sessionwindow.py:286
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Lockdown settings for %s"
@@ -520,56 +520,56 @@ msgstr "System Settings menu"
 msgid "Start Here menu"
 msgstr "Start Here menu"
 
-#: ../lib/sources/gconfsource.py:87
+#: ../lib/sources/gconfsource.py:88
 #, python-format
 msgid "GConf key '%s' unset"
 msgstr "GConf key '%s' unset"
 
-#: ../lib/sources/gconfsource.py:89
+#: ../lib/sources/gconfsource.py:90
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
 msgstr "GConf key '%s' set to string '%s'"
 
-#: ../lib/sources/gconfsource.py:91
+#: ../lib/sources/gconfsource.py:92
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
 msgstr "GConf key '%s' set to integer '%s'"
 
-#: ../lib/sources/gconfsource.py:93
+#: ../lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
 msgstr "GConf key '%s' set to float '%s'"
 
-#: ../lib/sources/gconfsource.py:95
+#: ../lib/sources/gconfsource.py:96
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
 msgstr "GConf key '%s' set to boolean '%s'"
 
-#: ../lib/sources/gconfsource.py:97
+#: ../lib/sources/gconfsource.py:98
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
 msgstr "GConf key '%s' set to schema '%s'"
 
-#: ../lib/sources/gconfsource.py:99
+#: ../lib/sources/gconfsource.py:100
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
 msgstr "GConf key '%s' set to list '%s'"
 
-#: ../lib/sources/gconfsource.py:101
+#: ../lib/sources/gconfsource.py:102
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
 msgstr "GConf key '%s' set to pair '%s'"
 
-#: ../lib/sources/gconfsource.py:103
+#: ../lib/sources/gconfsource.py:104
 #, python-format
 msgid "GConf key '%s' set to '%s'"
 msgstr "GConf key '%s' set to '%s'"
 
-#: ../lib/sources/gconfsource.py:134
+#: ../lib/sources/gconfsource.py:135
 msgid "Default GConf settings"
 msgstr "Default GConf settings"
 
-#: ../lib/sources/gconfsource.py:136
+#: ../lib/sources/gconfsource.py:137
 msgid "Mandatory GConf settings"
 msgstr "Mandatory GConf settings"
 
@@ -651,37 +651,133 @@ msgstr "Mozilla bookmark changed '%s' '%s'"
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mozilla bookmark folder changed '%s'"
 
-#: ../lib/sources/paneldelegate.py:56
+#: ../lib/sources/paneldelegate.py:53
 #, python-format
 msgid "Panel '%s' added"
 msgstr "Panel '%s' added"
 
-#: ../lib/sources/paneldelegate.py:62
+#: ../lib/sources/paneldelegate.py:59
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "Panel '%s' removed"
 
-#: ../lib/sources/paneldelegate.py:68
-#, python-format
-msgid "Panel applet '%s' added"
-msgstr "Panel applet '%s' added"
-
 #: ../lib/sources/paneldelegate.py:74
 #, python-format
-msgid "Panel applet '%s' removed"
-msgstr "Panel applet '%s' removed"
+msgid "Applet %s added to top panel"
+msgstr "Applet %s added to top panel"
+
+#: ../lib/sources/paneldelegate.py:76
+#, python-format
+msgid "Applet %s added to bottom panel"
+msgstr "Applet %s added to bottom panel"
+
+#: ../lib/sources/paneldelegate.py:78
+#, python-format
+msgid "Applet %s added to left panel"
+msgstr "Applet %s added to left panel"
 
 #: ../lib/sources/paneldelegate.py:80
 #, python-format
-msgid "Panel object '%s' added"
-msgstr "Panel object '%s' added"
+msgid "Applet %s added to right panel"
+msgstr "Applet %s added to right panel"
 
-#: ../lib/sources/paneldelegate.py:92
+#: ../lib/sources/paneldelegate.py:95
 #, python-format
-msgid "Panel object '%s' removed"
-msgstr "Panel object '%s' removed"
+msgid "Applet %s removed from top panel"
+msgstr "Applet %s removed from top panel"
 
-#: ../lib/sources/paneldelegate.py:373
+#: ../lib/sources/paneldelegate.py:97
+#, python-format
+msgid "Applet %s removed from bottom panel"
+msgstr "Applet %s removed from bottom panel"
+
+#: ../lib/sources/paneldelegate.py:99
+#, python-format
+msgid "Applet %s removed from left panel"
+msgstr "Applet %s removed from left panel"
+
+#: ../lib/sources/paneldelegate.py:101
+#, python-format
+msgid "Applet %s removed from right panel"
+msgstr "Applet %s removed from right panel"
+
+#: ../lib/sources/paneldelegate.py:115
+#, python-format
+msgid "%s added to top panel"
+msgstr "%s added to top panel"
+
+#: ../lib/sources/paneldelegate.py:117
+#, python-format
+msgid "%s added to bottom panel"
+msgstr "%s added to bottom panel"
+
+#: ../lib/sources/paneldelegate.py:119
+#, python-format
+msgid "%s added to left panel"
+msgstr "%s added to left panel"
+
+#: ../lib/sources/paneldelegate.py:121
+#, python-format
+msgid "%s added to right panel"
+msgstr "%s added to right panel"
+
+#: ../lib/sources/paneldelegate.py:142
+#, python-format
+msgid "%s removed from top panel"
+msgstr "%s removed from top panel"
+
+#: ../lib/sources/paneldelegate.py:144
+#, python-format
+msgid "%s removed from bottom panel"
+msgstr "%s removed from bottom panel"
+
+#: ../lib/sources/paneldelegate.py:146
+#, python-format
+msgid "%s removed from left panel"
+msgstr "%s removed from left panel"
+
+#: ../lib/sources/paneldelegate.py:148
+#, python-format
+msgid "%s removed from right panel"
+msgstr "%s removed from right panel"
+
+#: ../lib/sources/paneldelegate.py:197
+msgid "Drawer"
+msgstr "Drawer"
+
+#: ../lib/sources/paneldelegate.py:199
+msgid "Main Menu"
+msgstr "Main Menu"
+
+#: ../lib/sources/paneldelegate.py:209
+msgid " launcher"
+msgstr " launcher"
+
+#: ../lib/sources/paneldelegate.py:213
+msgid "Lock Screen button"
+msgstr "Lock Screen button"
+
+#: ../lib/sources/paneldelegate.py:215
+msgid "Logout button"
+msgstr "Logout button"
+
+#: ../lib/sources/paneldelegate.py:217
+msgid "Run Appliction button"
+msgstr "Run Appliction button"
+
+#: ../lib/sources/paneldelegate.py:219
+msgid "Search button"
+msgstr "Search button"
+
+#: ../lib/sources/paneldelegate.py:221
+msgid "Screenshot button"
+msgstr "Screenshot button"
+
+#: ../lib/sources/paneldelegate.py:223
+msgid "Menu Bar"
+msgstr "Menu Bar"
+
+#: ../lib/sources/paneldelegate.py:467
 msgid "Panel File"
 msgstr "Panel File"
 
@@ -705,7 +801,7 @@ msgstr "Invalid metadata section in '%s': %s"
 msgid "Cannot add non-existent file '%s'"
 msgstr "Cannot add non-existent file '%s'"
 
-#: ../lib/storage.py:538
+#: ../lib/storage.py:567
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Profile is read-only %s"
@@ -795,6 +891,14 @@ msgstr "Cannot find home directory: not set in /etc/passwd and no value for $HOM
 msgid "Cannot find username: not set in /etc/passwd and no value for $USER in environment"
 msgstr "Cannot find username: not set in /etc/passwd and no value for $USER in environment"
 
+#~ msgid "Panel applet '%s' added"
+#~ msgstr "Panel applet '%s' added"
+#~ msgid "Panel applet '%s' removed"
+#~ msgstr "Panel applet '%s' removed"
+#~ msgid "Panel object '%s' added"
+#~ msgstr "Panel object '%s' added"
+#~ msgid "Panel object '%s' removed"
+#~ msgstr "Panel object '%s' removed"
 #~ msgid "All Your Settings Are Belong To Us"
 #~ msgstr "All Your Settings Are Belong To Us"
 #~ msgid "Clear revision history"
