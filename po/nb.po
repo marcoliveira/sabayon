@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon 0.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-12-08 19:02+0100\n"
-"PO-Revision-Date: 2006-12-08 19:03+0100\n"
+"POT-Creation-Date: 2007-01-24 10:31+0100\n"
+"PO-Revision-Date: 2007-01-24 10:35+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian Bokmaal <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -90,7 +90,7 @@ msgstr "_Om"
 msgid "About Sabayon"
 msgstr "Om Sabayon"
 
-#: ../admin-tool/editorwindow.py:252 ../lib/sources/gconfsource.py:121
+#: ../admin-tool/editorwindow.py:252 ../lib/sources/gconfsource.py:122
 msgid "GConf"
 msgstr "GConf"
 
@@ -99,7 +99,7 @@ msgid "Files"
 msgstr "Filer"
 
 #: ../admin-tool/editorwindow.py:256 ../admin-tool/lockdown/pessulus.glade.h:7
-#: ../lib/sources/paneldelegate.py:132
+#: ../lib/sources/paneldelegate.py:226
 msgid "Panel"
 msgstr "Panel"
 
@@ -475,7 +475,7 @@ msgstr "Bruk tvungne"
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Bruk tvungne innstillinger i redigeringssesjonen"
 
-#: ../admin-tool/sessionwindow.py:271
+#: ../admin-tool/sessionwindow.py:286
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Innstillinger for nedlåsing for %s"
@@ -546,56 +546,56 @@ msgstr "Meny for systeminnstillinger"
 msgid "Start Here menu"
 msgstr "Start her-meny"
 
-#: ../lib/sources/gconfsource.py:87
+#: ../lib/sources/gconfsource.py:88
 #, python-format
 msgid "GConf key '%s' unset"
 msgstr "GConf-nøkkel «%s» nullstilt"
 
-#: ../lib/sources/gconfsource.py:89
+#: ../lib/sources/gconfsource.py:90
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
 msgstr "GConf-nøkkel «%s» satt til streng «%s»"
 
-#: ../lib/sources/gconfsource.py:91
+#: ../lib/sources/gconfsource.py:92
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
 msgstr "GConf-nøkkel «%s» satt til heltall «%s»"
 
-#: ../lib/sources/gconfsource.py:93
+#: ../lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
 msgstr "GConf-nøkkel «%s» satt til flyttall «%s»"
 
-#: ../lib/sources/gconfsource.py:95
+#: ../lib/sources/gconfsource.py:96
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
 msgstr "GConf-nøkkel «%s» satt til boolsk verdi «%s»"
 
-#: ../lib/sources/gconfsource.py:97
+#: ../lib/sources/gconfsource.py:98
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
 msgstr "GConf-nøkkel «%s» satt til schema «%s»"
 
-#: ../lib/sources/gconfsource.py:99
+#: ../lib/sources/gconfsource.py:100
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
 msgstr "GConf-nøkkel «%s» satt til liste «%s»"
 
-#: ../lib/sources/gconfsource.py:101
+#: ../lib/sources/gconfsource.py:102
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
 msgstr "GConf-nøkkel «%s» satt til par «%s»"
 
-#: ../lib/sources/gconfsource.py:103
+#: ../lib/sources/gconfsource.py:104
 #, python-format
 msgid "GConf key '%s' set to '%s'"
 msgstr "GConf-nøkkel «%s» satt til «%s»"
 
-#: ../lib/sources/gconfsource.py:134
+#: ../lib/sources/gconfsource.py:135
 msgid "Default GConf settings"
 msgstr "Forvalgte innstillinger for GConf"
 
-#: ../lib/sources/gconfsource.py:136
+#: ../lib/sources/gconfsource.py:137
 msgid "Mandatory GConf settings"
 msgstr "Tvungne GConf-innstillinger"
 
@@ -675,37 +675,133 @@ msgstr "Mozilla-bokmerke endret «%s» «%s»"
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Bokmerkemappe for Mozilla endret «%s»"
 
-#: ../lib/sources/paneldelegate.py:56
+#: ../lib/sources/paneldelegate.py:53
 #, python-format
 msgid "Panel '%s' added"
 msgstr "Panel «%s» lagt til"
 
-#: ../lib/sources/paneldelegate.py:62
+#: ../lib/sources/paneldelegate.py:59
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "Panel «%s» fjernet"
 
-#: ../lib/sources/paneldelegate.py:68
-#, python-format
-msgid "Panel applet '%s' added"
-msgstr "Panelprogram «%s» lagt til"
-
 #: ../lib/sources/paneldelegate.py:74
 #, python-format
-msgid "Panel applet '%s' removed"
-msgstr "Panelprogram «%s» fjernet"
+msgid "Applet %s added to top panel"
+msgstr "Panelprogram %s lagt til på det øverste panelet"
+
+#: ../lib/sources/paneldelegate.py:76
+#, python-format
+msgid "Applet %s added to bottom panel"
+msgstr "Panelprogram %s lagt til på det nederste panelet"
+
+#: ../lib/sources/paneldelegate.py:78
+#, python-format
+msgid "Applet %s added to left panel"
+msgstr "Panelprogram %s lagt til på venstre panel"
 
 #: ../lib/sources/paneldelegate.py:80
 #, python-format
-msgid "Panel object '%s' added"
-msgstr "Panelobjekt «%s» lagt til"
+msgid "Applet %s added to right panel"
+msgstr "Panelprogram %s lagt til på høyre panel"
 
-#: ../lib/sources/paneldelegate.py:92
+#: ../lib/sources/paneldelegate.py:95
 #, python-format
-msgid "Panel object '%s' removed"
-msgstr "Panelobjekt «%s» fjernet"
+msgid "Applet %s removed from top panel"
+msgstr "Panelprogram %s fjernet fra det øverste panelet"
 
-#: ../lib/sources/paneldelegate.py:373
+#: ../lib/sources/paneldelegate.py:97
+#, python-format
+msgid "Applet %s removed from bottom panel"
+msgstr "Panelprogram %s fjernet fra det nederste panelet"
+
+#: ../lib/sources/paneldelegate.py:99
+#, python-format
+msgid "Applet %s removed from left panel"
+msgstr "Panelprogram %s fjernet fra venstre panel"
+
+#: ../lib/sources/paneldelegate.py:101
+#, python-format
+msgid "Applet %s removed from right panel"
+msgstr "Panelprogram %s fjernet fra høyre panel"
+
+#: ../lib/sources/paneldelegate.py:115
+#, python-format
+msgid "%s added to top panel"
+msgstr "%s lagt til på det øverste panelet"
+
+#: ../lib/sources/paneldelegate.py:117
+#, python-format
+msgid "%s added to bottom panel"
+msgstr "%s lagt til på det nederste panelet"
+
+#: ../lib/sources/paneldelegate.py:119
+#, python-format
+msgid "%s added to left panel"
+msgstr "%s lagt til på venstre panel"
+
+#: ../lib/sources/paneldelegate.py:121
+#, python-format
+msgid "%s added to right panel"
+msgstr "%s lagt til på høyre panel"
+
+#: ../lib/sources/paneldelegate.py:142
+#, python-format
+msgid "%s removed from top panel"
+msgstr "%s fjernet fra det øverste panelet"
+
+#: ../lib/sources/paneldelegate.py:144
+#, python-format
+msgid "%s removed from bottom panel"
+msgstr "%s fjernet fra det nederste panelet"
+
+#: ../lib/sources/paneldelegate.py:146
+#, python-format
+msgid "%s removed from left panel"
+msgstr "%s fjernet fra venstre panel"
+
+#: ../lib/sources/paneldelegate.py:148
+#, python-format
+msgid "%s removed from right panel"
+msgstr "%s fjernet fra høyre panel"
+
+#: ../lib/sources/paneldelegate.py:197
+msgid "Drawer"
+msgstr "Skuff"
+
+#: ../lib/sources/paneldelegate.py:199
+msgid "Main Menu"
+msgstr "Hovedmeny"
+
+#: ../lib/sources/paneldelegate.py:209
+msgid " launcher"
+msgstr " oppstarter"
+
+#: ../lib/sources/paneldelegate.py:213
+msgid "Lock Screen button"
+msgstr "Knapp som låser skjermen"
+
+#: ../lib/sources/paneldelegate.py:215
+msgid "Logout button"
+msgstr "Knapp som logger brukeren ut"
+
+#: ../lib/sources/paneldelegate.py:217
+msgid "Run Appliction button"
+msgstr "Knapp som kjører program"
+
+#: ../lib/sources/paneldelegate.py:219
+msgid "Search button"
+msgstr "Søkeknapp"
+
+#: ../lib/sources/paneldelegate.py:221
+msgid "Screenshot button"
+msgstr "Knapp for skjermdump"
+
+#: ../lib/sources/paneldelegate.py:223
+msgid "Menu Bar"
+msgstr "Menylinje"
+
+#: ../lib/sources/paneldelegate.py:467
 msgid "Panel File"
 msgstr "Panelfil"
 
@@ -729,7 +825,7 @@ msgstr "Ugyldig metadatakomponent i «%s»: %s"
 msgid "Cannot add non-existent file '%s'"
 msgstr "Kan ikke legge til ikke-eksisterende fil «%s»"
 
-#: ../lib/storage.py:538
+#: ../lib/storage.py:567
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Profilen er skrivebeskyttet %s"
