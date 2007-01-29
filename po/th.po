@@ -1,7 +1,7 @@
 # Thai translation of sabayon.
-# Copyright (C) 2005 Free Software Foundation, Inc.
+# Copyright (C) 2005-2007 Free Software Foundation, Inc.
 # This file is distributed under the same license as the sabayon package.
-# Theppitak Karoonboonyanan <thep@linux.thai.net>, 2005.
+# Theppitak Karoonboonyanan <thep@linux.thai.net>, 2005-2007.
 # 
 # TRANSLATOR NOTE:
 # Thai has no plural form. But we use nplurals=2 here because some messages
@@ -24,8 +24,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon 2.12.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-08-27 21:36+0700\n"
-"PO-Revision-Date: 2006-08-27 21:40+0700\n"
+"POT-Creation-Date: 2007-01-29 19:44+0700\n"
+"PO-Revision-Date: 2007-01-29 19:57+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <l10n@opentle.org>\n"
 "MIME-Version: 1.0\n"
@@ -107,7 +107,7 @@ msgstr "เ_กี่ยวกับ"
 msgid "About Sabayon"
 msgstr "เกี่ยวกับ Sabayon"
 
-#: admin-tool/editorwindow.py:252 lib/sources/gconfsource.py:121
+#: admin-tool/editorwindow.py:252 lib/sources/gconfsource.py:122
 msgid "GConf"
 msgstr "GConf"
 
@@ -116,7 +116,7 @@ msgid "Files"
 msgstr "แฟ้ม"
 
 #: admin-tool/editorwindow.py:256 admin-tool/lockdown/pessulus.glade.h:7
-#: lib/sources/paneldelegate.py:132
+#: lib/sources/paneldelegate.py:226
 msgid "Panel"
 msgstr "พาเนล"
 
@@ -362,14 +362,18 @@ msgid "_Base on:"
 msgstr "สร้าง_จาก:"
 
 #: admin-tool/sabayon.glade.h:6
+msgid "_Details"
+msgstr "_รายละเอียด"
+
+#: admin-tool/sabayon.glade.h:7
 msgid "_Profiles:"
 msgstr "โ_พรไฟล์:"
 
-#: admin-tool/sabayon.glade.h:7
+#: admin-tool/sabayon.glade.h:8
 msgid "_Users"
 msgstr "_ผู้ใช้"
 
-#: admin-tool/sabayon.glade.h:8
+#: admin-tool/sabayon.glade.h:9
 msgid "_Users:"
 msgstr "_ผู้ใช้:"
 
@@ -470,7 +474,7 @@ msgstr "ใช้ค่าตั้งบังคับ"
 msgid "Enforce mandatory settings in the editing session"
 msgstr "บังคับใช้ค่าตั้งบังคับกับวาระที่กำลังแก้ไข"
 
-#: admin-tool/sessionwindow.py:271
+#: admin-tool/sessionwindow.py:286
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "ค่าตั้งการจำกัดการใช้งานสำหรับ %s"
@@ -541,56 +545,56 @@ msgstr "เมนูค่าตั้งระบบ"
 msgid "Start Here menu"
 msgstr "เมนูเริ่มต้น"
 
-#: lib/sources/gconfsource.py:87
+#: lib/sources/gconfsource.py:88
 #, python-format
 msgid "GConf key '%s' unset"
 msgstr "ล้างค่าคีย์ GConf '%s' แล้ว"
 
-#: lib/sources/gconfsource.py:89
+#: lib/sources/gconfsource.py:90
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
 msgstr "ตั้งค่าคีย์ GConf '%s' เป็นสตริง '%s' แล้ว"
 
-#: lib/sources/gconfsource.py:91
+#: lib/sources/gconfsource.py:92
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
 msgstr "ตั้งค่าคีย์ GConf '%s' เป็นจำนวนเต็ม '%s' แล้ว"
 
-#: lib/sources/gconfsource.py:93
+#: lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
 msgstr "ตั้งค่าคีย์ GConf '%s' เป็นเลขทศนิยม '%s' แล้ว"
 
-#: lib/sources/gconfsource.py:95
+#: lib/sources/gconfsource.py:96
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
 msgstr "ตั้งค่าคีย์ GConf '%s' เป็นบูลีน '%s' แล้ว"
 
-#: lib/sources/gconfsource.py:97
+#: lib/sources/gconfsource.py:98
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
 msgstr "ตั้งค่าคีย์ GConf '%s' เป็น schema '%s' แล้ว"
 
-#: lib/sources/gconfsource.py:99
+#: lib/sources/gconfsource.py:100
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
 msgstr "ตั้งค่าคีย์ GConf '%s' เป็นรายการ '%s' แล้ว"
 
-#: lib/sources/gconfsource.py:101
+#: lib/sources/gconfsource.py:102
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
 msgstr "ตั้งค่าคีย์ GConf '%s' เป็นคู่ '%s' แล้ว"
 
-#: lib/sources/gconfsource.py:103
+#: lib/sources/gconfsource.py:104
 #, python-format
 msgid "GConf key '%s' set to '%s'"
 msgstr "ตั้งค่าคีย์ GConf '%s' เป็น '%s' แล้ว"
 
-#: lib/sources/gconfsource.py:134
+#: lib/sources/gconfsource.py:135
 msgid "Default GConf settings"
 msgstr "ค่าตั้ง GConf ปริยาย"
 
-#: lib/sources/gconfsource.py:136
+#: lib/sources/gconfsource.py:137
 msgid "Mandatory GConf settings"
 msgstr "ค่าตั้ง GConf บังคับ"
 
@@ -670,37 +674,133 @@ msgstr "เปลี่ยนแปลงที่คั่นหน้า Mozil
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "เปลี่ยนแปลงโฟลเดอร์ที่คั่นหน้า Mozilla '%s' แล้ว"
 
-#: lib/sources/paneldelegate.py:56
+#: lib/sources/paneldelegate.py:53
 #, python-format
 msgid "Panel '%s' added"
 msgstr "เพิ่มพาเนล '%s' แล้ว"
 
-#: lib/sources/paneldelegate.py:62
+#: lib/sources/paneldelegate.py:59
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "ลบพาเนล '%s' แล้ว"
 
-#: lib/sources/paneldelegate.py:68
-#, python-format
-msgid "Panel applet '%s' added"
-msgstr "เพิ่มแอพเพล็ต '%s' แล้ว"
-
 #: lib/sources/paneldelegate.py:74
 #, python-format
-msgid "Panel applet '%s' removed"
-msgstr "ลบแอพเพล็ต '%s' แล้ว"
+msgid "Applet %s added to top panel"
+msgstr "เพิ่มแอพเพล็ต %s ในพาเนลด้านบนแล้ว"
+
+#: lib/sources/paneldelegate.py:76
+#, python-format
+msgid "Applet %s added to bottom panel"
+msgstr "เพิ่มแอพเพล็ต %s ในพาเนลด้านล่างแล้ว"
+
+#: lib/sources/paneldelegate.py:78
+#, python-format
+msgid "Applet %s added to left panel"
+msgstr "เพิ่มแอพเพล็ต %s ในพาเนลด้านซ้ายแล้ว"
 
 #: lib/sources/paneldelegate.py:80
 #, python-format
-msgid "Panel object '%s' added"
-msgstr "เพิ่มวัตถุพาเนล '%s' แล้ว"
+msgid "Applet %s added to right panel"
+msgstr "เพิ่มแอพเพล็ต %s ในพาเนลด้านขวาแล้ว"
 
-#: lib/sources/paneldelegate.py:92
+#: lib/sources/paneldelegate.py:95
 #, python-format
-msgid "Panel object '%s' removed"
-msgstr "ลบวัตถุพาเนล '%s' แล้ว"
+msgid "Applet %s removed from top panel"
+msgstr "ลบแอพเพล็ต %s ออกจากพาเนลด้านบนแล้ว"
 
-#: lib/sources/paneldelegate.py:373
+#: lib/sources/paneldelegate.py:97
+#, python-format
+msgid "Applet %s removed from bottom panel"
+msgstr "ลบแอพเพล็ต %s ออกจากพาเนลด้านล่างแล้ว"
+
+#: lib/sources/paneldelegate.py:99
+#, python-format
+msgid "Applet %s removed from left panel"
+msgstr "ลบแอพเพล็ต %s ออกจากพาเนลด้านซ้ายแล้ว"
+
+#: lib/sources/paneldelegate.py:101
+#, python-format
+msgid "Applet %s removed from right panel"
+msgstr "ลบแอพเพล็ต %s ออกจากพาเนลด้านขวาแล้ว"
+
+#: lib/sources/paneldelegate.py:115
+#, python-format
+msgid "%s added to top panel"
+msgstr "เพิ่ม %s ในพาเนลด้านบนแล้ว"
+
+#: lib/sources/paneldelegate.py:117
+#, python-format
+msgid "%s added to bottom panel"
+msgstr "เพิ่ม %s ในพาเนลด้านล่างแล้ว"
+
+#: lib/sources/paneldelegate.py:119
+#, python-format
+msgid "%s added to left panel"
+msgstr "เพิ่ม %s ในพาเนลด้านซ้ายแล้ว"
+
+#: lib/sources/paneldelegate.py:121
+#, python-format
+msgid "%s added to right panel"
+msgstr "เพิ่ม %s ในพาเนลด้านขวาแล้ว"
+
+#: lib/sources/paneldelegate.py:142
+#, python-format
+msgid "%s removed from top panel"
+msgstr "ลบ %s ออกจากพาเนลด้านบนแล้ว"
+
+#: lib/sources/paneldelegate.py:144
+#, python-format
+msgid "%s removed from bottom panel"
+msgstr "ลบ %s ออกจากพาเนลด้านล่างแล้ว"
+
+#: lib/sources/paneldelegate.py:146
+#, python-format
+msgid "%s removed from left panel"
+msgstr "ลบ %s ออกจากพาเนลด้านซ้ายแล้ว"
+
+#: lib/sources/paneldelegate.py:148
+#, python-format
+msgid "%s removed from right panel"
+msgstr "ลบ %s ออกจากพาเนลด้านขวาแล้ว"
+
+#: lib/sources/paneldelegate.py:197
+msgid "Drawer"
+msgstr "ลิ้นชัก"
+
+#: lib/sources/paneldelegate.py:199
+msgid "Main Menu"
+msgstr "เมนูหลัก"
+
+#: lib/sources/paneldelegate.py:209
+msgid " launcher"
+msgstr ""
+
+#: lib/sources/paneldelegate.py:213
+msgid "Lock Screen button"
+msgstr "ปุ่มล็อคหน้าจอ"
+
+#: lib/sources/paneldelegate.py:215
+msgid "Logout button"
+msgstr "ปุ่มออกจากระบบ"
+
+#: lib/sources/paneldelegate.py:217
+msgid "Run Appliction button"
+msgstr "ปุ่มเรียกโปรแกรม"
+
+#: lib/sources/paneldelegate.py:219
+msgid "Search button"
+msgstr "ปุ่มค้นหา"
+
+#: lib/sources/paneldelegate.py:221
+msgid "Screenshot button"
+msgstr "ปุ่มจับภาพหน้าจอ"
+
+#: lib/sources/paneldelegate.py:223
+msgid "Menu Bar"
+msgstr "แถบเมนู"
+
+#: lib/sources/paneldelegate.py:467
 msgid "Panel File"
 msgstr "แฟ้มพาเนล"
 
@@ -724,7 +824,7 @@ msgstr "หัวข้อ metadata ไม่ถูกต้องใน '%s' : 
 msgid "Cannot add non-existent file '%s'"
 msgstr "ไม่สามารถเพิ่มแฟ้ม '%s' ที่ไม่มีอยู่ได้"
 
-#: lib/storage.py:538
+#: lib/storage.py:567
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "โพรไฟล์ %s ห้ามเขียน"
@@ -818,3 +918,15 @@ msgid ""
 "environment"
 msgstr ""
 "หาชื่อผู้ใช้ไม่พบ: ไม่ได้กำหนดใน /etc/passwd และไม่ได้กำหนดค่า $USER ในตัวแปรสภาพแวดล้อม"
+
+#~ msgid "Panel applet '%s' added"
+#~ msgstr "เพิ่มแอพเพล็ต '%s' แล้ว"
+
+#~ msgid "Panel applet '%s' removed"
+#~ msgstr "ลบแอพเพล็ต '%s' แล้ว"
+
+#~ msgid "Panel object '%s' added"
+#~ msgstr "เพิ่มวัตถุพาเนล '%s' แล้ว"
+
+#~ msgid "Panel object '%s' removed"
+#~ msgstr "ลบวัตถุพาเนล '%s' แล้ว"
