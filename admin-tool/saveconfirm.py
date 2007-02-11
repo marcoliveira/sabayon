@@ -78,7 +78,7 @@ class SaveConfirmationAlert (gtk.MessageDialog):
                                                   minutes) % minutes
         else:
             hours = seconds / 3600;
-            secondary_msg = gettext.ngettext ("If you don't save, changes from the last hour "
+            secondary_msg = gettext.ngettext ("If you don't save, changes from the last %d hour "
                                               "will be permanently lost.",
                                               "If you don't save, changes from the last %d hours "
                                               "will be permanently lost.",

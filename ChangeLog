@@ -1,3 +1,10 @@
+2007-02-11  Theppitak Karoonboonyanan  <thep@linux.thai.net>
+
+	* admin-tool/saveconfirm.py (SaveConfirmationAlert.__init__): Do not
+	overload singular form of formatted plural string with normal string,
+	to allow translation for certain languages with no plural concept.
+	Fixes bug #353236 - Overloaded plural strings.
+
 ==================== 2.17.90 ====================
 
 2007-01-22  Federico Mena Quintero  <federico@novell.com>
