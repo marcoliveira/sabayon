@@ -206,7 +206,7 @@ class PanelDelegate (userprofile.SourceDelegate):
 			else:
 				desktop_file = PANEL_LAUNCHER_DIR + "/" + launcher_location
 			launcher = xdg.DesktopEntry.DesktopEntry(desktop_file)
-			self.name = launcher.getName() + _(" launcher")
+			self.name = _("%s launcher") % launcher.getName()
 		elif self.object_type == "action-applet":
 			action_type = self.client.get_string (PANEL_KEY_BASE + "/objects/" + id + "/action_type")
 			if action_type == "lock":

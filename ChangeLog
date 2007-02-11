@@ -1,5 +1,11 @@
 2007-02-11  Theppitak Karoonboonyanan  <thep@linux.thai.net>
 
+	* lib/sources/paneldelegate.py (PanelObject.__init__): Fixes "X
+	launcher" string with grammar too specific for translation.
+	Fixes bug #402089 - String untranslatable due to too specific grammar.
+
+2007-02-11  Theppitak Karoonboonyanan  <thep@linux.thai.net>
+
 	* admin-tool/saveconfirm.py (SaveConfirmationAlert.__init__): Do not
 	overload singular form of formatted plural string with normal string,
 	to allow translation for certain languages with no plural concept.
