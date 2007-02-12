@@ -3,35 +3,18 @@
 # This file is distributed under the same license as the sabayon package.
 # Theppitak Karoonboonyanan <thep@linux.thai.net>, 2005-2007.
 # 
-# TRANSLATOR NOTE:
-# Thai has no plural form. But we use nplurals=2 here because some messages
-# with plural forms are actually shared with some non-c-format strings,
-# making it impossible to cover both with a single translation.
-#
-# For example:
-#
-# msgid ""
-# "If you don't save, changes from the last hour will be permanently lost."
-# msgid_plural ""
-# "If you don't save, changes from the last %d hours will be permanently lost."
-#
-# The singular msgid is used in two places, one as c-format chosen by 
-# ngettext(), and in the other as plain text. Translating it with a 
-# single msgstr[0] without separate plural version would always mess up
-# one of the two. Thus, we need nplurals=2 here for technical reason.
-# 
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon 2.12.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-29 19:44+0700\n"
-"PO-Revision-Date: 2007-01-29 19:57+0700\n"
+"POT-Creation-Date: 2007-02-12 10:33+0700\n"
+"PO-Revision-Date: 2007-02-12 12:34+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <l10n@opentle.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);"
+"Plural-Forms: nplurals=1; plural=0;"
 
 #: admin-tool/aboutdialog.py:61
 msgid "Program to establish and edit profiles for users"
@@ -394,7 +377,6 @@ msgid_plural ""
 "If you don't save, changes from the last %ld seconds will be permanently "
 "lost."
 msgstr[0] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดใน %ld วินาทีที่ผ่านมาจะสูญหายอย่างถาวร"
-msgstr[1] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดใน %ld วินาทีที่ผ่านมาจะสูญหายอย่างถาวร"
 
 #: admin-tool/saveconfirm.py:51
 msgid ""
@@ -410,7 +392,6 @@ msgid_plural ""
 "If you don't save, changes from the last minute and %ld seconds will be "
 "permanently lost."
 msgstr[0] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดในนาทีกับ %ld วินาทีที่ผ่านมาจะสูญหายอย่างถาวร"
-msgstr[1] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดในนาทีกับ %ld วินาทีที่ผ่านมาจะสูญหายอย่างถาวร"
 
 #: admin-tool/saveconfirm.py:62
 #, python-format
@@ -420,15 +401,10 @@ msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
 msgstr[0] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดใน %ld นาทีที่ผ่านมาจะสูญหายอย่างถาวร"
-msgstr[1] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดใน %ld นาทีที่ผ่านมาจะสูญหายอย่างถาวร"
 
-#: admin-tool/saveconfirm.py:71 admin-tool/saveconfirm.py:81
-#, python-format
+#: admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดในชั่วโมงที่ผ่านมาจะสูญหายอย่างถาวร"
-msgstr[1] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดใน %d ชั่วโมงที่ผ่านมาจะสูญหายอย่างถาวร"
+msgstr "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดในชั่วโมงที่ผ่านมาจะสูญหายอย่างถาวร"
 
 #: admin-tool/saveconfirm.py:74
 #, python-format
@@ -439,7 +415,14 @@ msgid_plural ""
 "If you don't save, changes from the last hour and %d minutes will be "
 "permanently lost."
 msgstr[0] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดในชั่วโมงกับ %d นาทีที่ผ่านมาจะสูญหายอย่างถาวร"
-msgstr[1] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดในชั่วโมงกับ %d นาทีที่ผ่านมาจะสูญหายอย่างถาวร"
+
+#: admin-tool/saveconfirm.py:81
+#, python-format
+msgid ""
+"If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดใน %d ชั่วโมงที่ผ่านมาจะสูญหายอย่างถาวร"
 
 #: admin-tool/sessionwindow.py:151
 #, python-format
@@ -773,8 +756,9 @@ msgid "Main Menu"
 msgstr "เมนูหลัก"
 
 #: lib/sources/paneldelegate.py:209
-msgid " launcher"
-msgstr ""
+#, python-format
+msgid "%s launcher"
+msgstr "ปุ่มเรียก %s"
 
 #: lib/sources/paneldelegate.py:213
 msgid "Lock Screen button"
