@@ -1,3 +1,16 @@
+2007-02-13  Theppitak Karoonboonyanan  <thep@linux.thai.net>
+
+	Merge from gnome-2-18 branch.
+
+	* admin-tool/saveconfirm.py (SaveConfirmationAlert.__init__): Do not
+	overload singular form of formatted plural string with normal string,
+	to allow translation for certain languages with no plural concept.
+	Fixes bug #353236 - Overloaded plural strings.
+
+	* lib/sources/paneldelegate.py (PanelObject.__init__): Fixes "X
+	launcher" string with grammar too specific for translation.
+	Fixes bug #402089 - String untranslatable due to too specific grammar.
+
 ==================== 2.17.90 ====================
 
 2007-01-22  Federico Mena Quintero  <federico@novell.com>
