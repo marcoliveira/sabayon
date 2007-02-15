@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-26 00:36+0100\n"
-"PO-Revision-Date: 2007-01-26 00:36+0100\n"
+"POT-Creation-Date: 2007-02-15 02:37+0100\n"
+"PO-Revision-Date: 2007-02-15 02:38+0100\n"
 "Last-Translator: Josep Puigdemont <josep.puigdemont@gmail.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
@@ -425,14 +425,9 @@ msgstr[0] ""
 msgstr[1] ""
 "Si no deseu, els canvis que hàgiu fet els darrers %ld minuts es perdran."
 
-#: ../admin-tool/saveconfirm.py:71 ../admin-tool/saveconfirm.py:81
-#, python-format
+#: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "Si no deseu, els canvis que hàgiu fet la darrera hora es perdran."
-msgstr[1] ""
-"Si no deseu, els canvis que hàgiu fet les darreres %d hores es perdran."
+msgstr "Si no deseu, els canvis fets la darrera hora es perdran per sempre."
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
@@ -446,6 +441,16 @@ msgstr[0] ""
 "Si no deseu, els canvis que hàgiu fet la darrera hora i %d minut es perdran."
 msgstr[1] ""
 "Si no deseu, els canvis que hàgiu fet la darrera hora %d minuts es perdran."
+
+#: ../admin-tool/saveconfirm.py:81
+#, python-format
+msgid ""
+"If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] "Si no deseu, els canvis fets la %d hora es perdran per sempre."
+msgstr[1] ""
+"Si no deseu, els canvis fets les darreres %d hores es perdran per sempre."
 
 #: ../admin-tool/sessionwindow.py:151
 #, python-format
@@ -780,8 +785,9 @@ msgid "Main Menu"
 msgstr "Menú principal"
 
 #: ../lib/sources/paneldelegate.py:209
-msgid " launcher"
-msgstr " llançadora"
+#, python-format
+msgid "%s launcher"
+msgstr "Llançadora de %s"
 
 #: ../lib/sources/paneldelegate.py:213
 msgid "Lock Screen button"
