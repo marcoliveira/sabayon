@@ -33,41 +33,56 @@
 
 if __name__ == '__main__':
     import sys
+    import optparse
     
+    from sabayon import debuglog
+    from sabayon import errors
     from sabayon import util
     from sabayon import userdb
 
-    EXIT_CODE_FATAL = 1
-    EXIT_CODE_RECOVERABLE = 2
+    def dprint (fmt, *args):
+        debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_SABAYON_APPLY, fmt % args)
+
+    def mprint (fmt, *args):
+        debuglog.debug_log (True, debuglog.DEBUG_LOG_DOMAIN_SABAYON_APPLY, fmt % args)
 
     try:
         util.init_gettext ()
 
-        # FIXME: argument handling sucks.
-        # Add --log-config=/tmp/sabayon-tmp-blahblah/sabayon-debug-log.conf (mode 0444)
+        option_parser = optparse.OptionParser (usage="usage: %prog [-s] [--log-config FILE] [--real-log-config FILE] [<profilename>]")
+        option_parser.add_option ("-s",
+                                  "--sabayon-session", dest="sabayon_session",
+                                  action="store_true", default=False)
+        option_parser.add_option ("--log-config", dest="log_config",
+                                  metavar="FILE",
+                                  help="Real file with options for debug log") # FIXME: say that "man sabayon" will give you the
+                                                                               # syntax for the debug log config file.
+        option_parser.add_option ("--real-log-config", dest="real_log_config",
+                                  metavar="FILE",
+                                  help="File to mention in the debug log as the source for its configuration")
 
-        is_sabayon_session = False
-        if len (sys.argv) >= 2:
-            if sys.argv[1] == "-s":
-                is_sabayon_session = True
-                sys.argv = sys.argv[:1] + sys.argv[2:]
+        options, args = option_parser.parse_args ()
 
-        if len (sys.argv) == 1:
+        is_sabayon_session = options.sabayon_session
+        log_config_filename = options.log_config
+        real_log_config_filename = options.real_log_config or "~/sabayon-debug-log.conf"
+
+        debuglog.debug_log_load_configuration (log_config_filename)
+
+        num_args = len (args)
+        if num_args == 0:
             user_name = util.get_user_name ()
             profile_name = userdb.get_database().get_profile (user_name)
             if not profile_name:
                 sys.stderr.write (_("No profile for user '%s' found\n") % user_name)
-                sys.exit (1)
-        elif len (sys.argv) == 2:
-            profile_name = sys.argv[1]
+                sys.exit (util.EXIT_CODE_FATAL)
+        elif num_args == 1:
+            profile_name = args[0]
         else:
-            sys.stderr.write (_("Usage: %s [<profile-name>]\n") % sys.argv[0])
-            sys.exit (1)
+            sys.stderr.write (_("Please use -h for usage options"))
+            sys.exit (util.EXIT_CODE_FATAL)
 
         from sabayon import userprofile
-
-        def dprint (fmt, *args):
-            util.debug_print (util.DEBUG_ADMINTOOL, fmt % args)
 
         dprint ("Applying profile '%s' for user '%s'",
                 profile_name, util.get_user_name ())
@@ -79,21 +94,8 @@ if __name__ == '__main__':
                 profile_name, util.get_user_name ())
 
         if errors.errors_have_recoverable_error ():
-            debuglog.debug_log (True, debuglog.DEBUG_LOG_DOMAIN_SABAYON_APPLY,
-                                "There were recoverable errors while applying the profile.")
-
-        # We are a helper program, so we *always* dump the log, since
-        # the caller program will know what to do with it:
-        # "sabayon-session" will pass it on to the parent "sabayon";
-        # xinitrc will log it to ~/.xsession-errors, etc.
-        debuglog.debug_log_dump_to_stderr ("~/sabayon-debug-log.conf") # FIXME: what's the real config filename?
-
-        if errors.errors_have_recoverable_error ():
-            sys.exit (EXIT_CODE_RECOVERABLE)
-        # else exit normally (exit code 0)
+            mprint ("There were recoverable errors while applying the profile.")
     except:
-        debuglog.debug_log (True, debuglog.DEBUG_LOG_DOMAIN_SABAYON_APPLY,
-                            "Fatal exception!  Exiting abnormally.")
-        debuglog.debug_log_current_exception (debuglog.DEBUG_LOG_DOMAIN_SABAYON_APPLY)
-        debuglog.debug_log_dump_to_stderr ("~/sabayon-debug-log.conf") # FIXME: what's the real config filename?
-        sys.exit (EXIT_CODE_FATAL)
+        errors.errors_exit_with_fatal_exception (debuglog.DEBUG_LOG_DOMAIN_SABAYON_APPLY, real_log_config_filename)
+
+    errors.errors_exit_helper_normally (real_log_config_filename);

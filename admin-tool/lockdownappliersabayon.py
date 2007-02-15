@@ -20,10 +20,11 @@ import gconf
 import util
 import sessionwindow
 
+import debuglog
 from sabayon.lockdown import lockdownapplier
 
 def dprint (fmt, *args):
-    util.debug_print (util.DEBUG_ADMINTOOL, fmt % args)
+    debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL, fmt % args)
 
 class LockdownMonitor:
     def __init__ (self, key, handler, data):

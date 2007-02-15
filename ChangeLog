@@ -1,3 +1,60 @@
+2007-02-15  Federico Mena Quintero  <federico@novell.com>
+
+	* lib/Makefile.am (PYTHON_FILES): Added debuglog.py, errors.py.
+
+	* lib/errors.py (errors_exit_helper_normally): New utility function to
+	exit normally from the helper programs, dumping the debug log as
+	appropriate.
+	(errors_exit_with_fatal_exception): New utility function to exit
+	when a fatal exception happens after dumping the debug log.
+
+	* admin-tool/sabayon-apply: Oops, import "debuglog" and "errors".
+	Use optparser for argument parsing.  Add --sabayon-session as an
+	alias for the -s option.  Add a --log-config option to specify
+	where to read the options for the debug log.  Use
+	errors_exit_normally() and errors_exit_with_fatal_exception().
+	(dprint): Use debuglog.debug_log().
+	(mprint): New function to print milestones.
+
+	* admin-tool/sabayon-session: Add the same toplevel logging
+	machinery as sabayon-apply.
+
+	* lib/util.py (EXIT_CODE_FATAL, EXIT_CODE_RECOVERABLE): Moved the
+	exit codes for the helper programs to here.
+	(init_debug_modules): Removed; moved the logic for deprecation
+	warnings to debug_log_load_configuration().  Also removed the
+	debug domains; moved them to debuglog.py.
+	(debug_print): Removed.
+
+	* lib/debuglog.py (DEBUG_LOG_DOMAIN_SABAYON_SESSION): New domain
+	for sabayon-session.  Move the debug log domains from util.py to
+	here.
+	(debug_log_load_configuration): Disble deprecation warnings unless
+	DEBUG_LOG_DOMAIN_DEPRECATED is enabled (moved from
+	util.py:init_debug_modules().
+
+	* admin-tool/profilesdialog.py (dprint): Use debuglog.debug_log
+	rather than debug_print()
+	* admin-tool/changeswindow.py (dprint): Likewise.
+	* admin-tool/lockdownappliersabayon.py (dprint): Likewise.
+	* admin-tool/sessionwindow.py (dprint): Likewise.
+	* admin-tool/editorwindow.py (dprint): Likewise.
+	* admin-tool/sessionwidget.py (dprint): Likewise.
+	* lib/sources/mozillasource.py (dprint): Likewise.
+	* lib/sources/paneldelegate.py (dprint): Likewise.
+	* lib/sources/gconfsource.py (dprint): Likewise.
+	* lib/sources/filessource.py (dprint): Likewise.
+	* lib/mozilla_bookmarks.py (dprint): Likewise.
+	* lib/userprofile.py (dprint): Likewise.
+	* lib/cache.py (dprint): Likewise.
+	* lib/storage.py (dprint): Likewise.
+	* lib/protosession.py (dprint): Likewise.
+	* lib/usermod.py (dprint): Likewise.
+	* lib/dirmonitor.py (dprint): Likewise.
+	* lib/userdb.py (dprint): Likewise.
+
+	* lib/sources/mozillasource.py (dwarn): Removed unused function.
+
 2007-02-14  Federico Mena Quintero  <federico@novell.com>
 
 	Start fixing bug #398479 - make errors visible to the user, and

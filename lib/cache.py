@@ -23,9 +23,10 @@ import stat
 import string
 import libxml2
 import StringIO
+import debuglog
 
 def dprint(fmt, *args):
-    util.debug_print (util.DEBUG_CACHE, fmt % args)
+    debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_CACHE, fmt % args)
 
 def get_home_dir():
     return util.get_home_dir()

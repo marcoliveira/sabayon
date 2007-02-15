@@ -31,10 +31,11 @@ import usersdialog
 import util
 import userdb
 import protosession
+import debuglog
 from config import *
 
 def dprint (fmt, *args):
-    util.debug_print (util.DEBUG_ADMINTOOL, fmt % args)
+    debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL, fmt % args)
 
 def _get_profile_path_for_name (profile_name):
     return os.path.join (PROFILESDIR, profile_name + ".zip")

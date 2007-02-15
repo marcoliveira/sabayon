@@ -4,11 +4,27 @@ import sys
 import threading
 import time
 import traceback
+import warnings
+import exceptions
 import ConfigParser
 
 DEBUG_LOG_DOMAIN_USER = "USER"
 
-DEBUG_LOG_DOMAIN_SABAYON_APPLY = "sabayon-apply"
+DEBUG_LOG_DOMAIN_SABAYON_APPLY   = "sabayon-apply"
+DEBUG_LOG_DOMAIN_SABAYON_SESSION = "sabayon-session"
+DEBUG_LOG_DOMAIN_DEPRECATED      = "deprecated"
+DEBUG_LOG_DOMAIN_USER_PROFILE    = "user-profile"
+DEBUG_LOG_DOMAIN_STORAGE         = "storage"
+DEBUG_LOG_DOMAIN_PROTO_SESSION   = "proto-session"
+DEBUG_LOG_DOMAIN_USERMOD         = "usermod"
+DEBUG_LOG_DOMAIN_DIR_MONITOR     = "dir-monitor"
+DEBUG_LOG_DOMAIN_GCONF_SOURCE    = "gconf-source"
+DEBUG_LOG_DOMAIN_PANEL_DELEGATE  = "panel-delegate"
+DEBUG_LOG_DOMAIN_FILES_SOURCE    = "files-source"
+DEBUG_LOG_DOMAIN_MOZILLA_SOURCE  = "mozilla-source"
+DEBUG_LOG_DOMAIN_ADMIN_TOOL      = "admin-tool"
+DEBUG_LOG_DOMAIN_USER_DB         = "user-db"
+DEBUG_LOG_DOMAIN_CACHE           = "cache"
 
 _debug_log_log = None
 _debug_log_the_lock = threading.Lock ()
@@ -115,6 +131,8 @@ class DebugLog:
 
     def load_configuration (self, filename):
         config = ConfigParser.ConfigParser ()
+
+        # FIXME we don't want to explode if the file cannot be read.
         config.read (filename)
 
         if config.has_option (self.SECTION_DEBUG_LOG, self.KEY_ENABLE_DOMAINS):
@@ -124,7 +142,7 @@ class DebugLog:
             self.set_max_lines_from_string (config.get (self.SECTION_DEBUG_LOG, self.KEY_MAX_LINES))
 
     def make_configuration_string (self):
-        config_str = "[%s]\n%s = %s" % (self.SECTION_DEBUG_LOG, self.KEY_MAX_LINES, self.ring_max_lines)
+        config_str = "[%s]\n%s = %s\n" % (self.SECTION_DEBUG_LOG, self.KEY_MAX_LINES, self.ring_max_lines)
 
         if len (self.domains) > 0:
             domains = self.domains.keys ()
@@ -222,12 +240,16 @@ def debug_log_current_exception (domain):
 def debug_log_load_configuration (config_filename):
     global _debug_log_log
 
-    if type (config_filename) != str:
-        raise TypeError ("config_filename must be a string")
+    if config_filename != None and type (config_filename) != str:
+        raise TypeError ("config_filename must be a string or None")
 
     _debug_log_lock ()
     try:
-        _debug_log_log.load_configuration (config_filename)
+        if config_filename:
+            _debug_log_log.load_configuration (config_filename)
+
+        if not _debug_log_log.is_domain_enabled (DEBUG_LOG_DOMAIN_DEPRECATED):
+            warnings.filterwarnings ("ignore", category = exceptions.DeprecationWarning)
     finally:
         _debug_log_unlock ()
 

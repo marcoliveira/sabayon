@@ -30,6 +30,7 @@ import saveconfirm
 import gconfviewer
 import fileviewer
 from config import *
+import debuglog
 
 _ui_string = '''
 <ui>
@@ -50,7 +51,7 @@ _ui_string = '''
 '''
 
 def dprint (fmt, *args):
-    util.debug_print (util.DEBUG_ADMINTOOL, fmt % args)
+    debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL, fmt % args)
 
 class ProfileModel (gtk.ListStore):
     (

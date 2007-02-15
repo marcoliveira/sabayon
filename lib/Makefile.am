@@ -18,18 +18,21 @@ xlib_la_SOURCES = xlib.c
 
 PYTHON_FILES =				\
 	__init__.py			\
-	userprofile.py			\
 	cache.py			\
 	config.py			\
-	storage.py			\
+	errors.py			\
+	debuglog.py			\
 	dirmonitor.py			\
 	mozilla_bookmarks.py		\
 	protosession.py			\
-	usermod.py			\
+	storage.py			\
 	userdb.py			\
+	usermod.py			\
+	userprofile.py			\
 	util.py
 
 NOINST_PYTHON_FILES =			\
+	test-debug-log.py		\
 	unittests.py
 
 EXTRA_DIST =				\

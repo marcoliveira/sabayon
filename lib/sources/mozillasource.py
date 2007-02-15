@@ -29,12 +29,14 @@ try:
     import userprofile
     import dirmonitor
     import mozilla_bookmarks
+    import debuglog
 except:
     from sabayon import util
     from sabayon import config
     from sabayon import userprofile
     from sabayon import dirmonitor
     from sabayon import mozilla_bookmarks
+    from sabayon import debuglog
 
 class file_state:
     (UNKNOWN,
@@ -55,6 +57,7 @@ sabayon_mandatory_pref_rel_path = os.path.join(firefox_rel_path, "sabayon-mandat
 sabayon_bookmark_rel_path = os.path.join(firefox_rel_path, "sabayon-bookmarks.html")
 sabayon_mandatory_bookmark_rel_path = os.path.join(firefox_rel_path, "sabayon-mandatory-bookmarks.html")
 
+# FIXME: these should be defined one place; see mozilla_bookmarks.py
 LOG_OPERATION           = 0x00001
 LOG_CHANGE              = 0x00002
 LOG_IGNORED_CHANGE      = 0x00004
@@ -67,10 +70,10 @@ LOG_DATA                = 0x00100
 LOG_VERBOSE             = 0x10000
 
 def dprint(mask, fmt, *args):
-    util.debug_print(util.DEBUG_MOZILLASOURCE, fmt % args, mask)
-
-def dwarn(fmt, *args):
-    print >> sys.stderr, "WARNING " + fmt % args
+    # FIXME: before debuglog was introduced, we could use the mask to filter
+    # which messages to log.  Now we don't use it anymore.  Is it still useful?
+    # If you change this, synchronize it with mozilla_bookmarks.py
+    debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_MOZILLA_SOURCE, fmt % args)
 
 bookmark_exclude_attrs = [re.compile("^id$"),
                           re.compile("^last_"),

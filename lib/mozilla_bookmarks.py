@@ -54,7 +54,7 @@ tag_info_dict = {
     'hr' : {'simple_tag'           : True},
 }
 
-# XXX - these should be defined one place
+# FIXME: these should be defined one place; see mozillasource.py
 LOG_OPERATION           = 0x00001
 LOG_CHANGE              = 0x00002
 LOG_IGNORED_CHANGE      = 0x00004
@@ -67,7 +67,10 @@ LOG_DATA                = 0x00100
 LOG_VERBOSE             = 0x10000
 
 def dprint(mask, fmt, *args):
-    util.debug_print(util.DEBUG_MOZILLASOURCE, fmt % args, mask)
+    # FIXME: before debuglog was introduced, we could use the mask to filter
+    # which messages to log.  Now we don't use it anymore.  Is it still useful?
+    # If you change this, synchronize it with mozillasource.py
+    debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_MOZILLA_SOURCE, fmt % args)
 
 class Bookmark:
     def __init__(self, folder, name):

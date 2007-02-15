@@ -28,6 +28,7 @@ import changeswindow
 import sessionwidget
 import saveconfirm
 import aboutdialog
+import debuglog
 from lockdownappliersabayon import LockdownApplierSabayon
 from sabayon.lockdown import maindialog as lockdowndialog
 from config import *
@@ -53,7 +54,7 @@ _ui_string = '''
 '''
 
 def dprint (fmt, *args):
-    util.debug_print (util.DEBUG_ADMINTOOL, fmt % args)
+    debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL, fmt % args)
 
 class ProfileChangesModel (gtk.ListStore):
     __gsignals__ = {

@@ -21,9 +21,10 @@ import gtk
 import gtk.gdk
 import util
 import userprofile
+import debuglog
 
 def dprint (fmt, *args):
-    util.debug_print (util.DEBUG_ADMINTOOL, fmt % args)
+    debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL, fmt % args)
 
 class PixbufToggleRenderer (gtk.CellRendererPixbuf):
     __gsignals__ = {

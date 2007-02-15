@@ -20,22 +20,52 @@
 
 if __name__ == '__main__':
     import sys
+    import optparse
     import pygtk; pygtk.require('2.0');
     import gtk
-    
+
+    from sabayon import debuglog
+    from sabayon import errors
     from sabayon import util
     from sabayon import sessionwindow
 
-    util.init_gettext ()
+    def dprint (fmt, *args):
+        debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_SABAYON_SESSION, fmt % args)
 
-    if len (sys.argv) != 4:
-        sys.stderr.write (_("Usage: %s <profile-name> <profile-path> <display-number>\n") % sys.argv[0])
-        sys.exit (1)
+    def mprint (fmt, *args):
+        debuglog.debug_log (True, debuglog.DEBUG_LOG_DOMAIN_SABAYON_SESSION, fmt % args)
 
-    (profile_name, profile_path, display_number) = sys.argv[1:4]
+    try:
+        util.init_gettext ()
 
-    window = sessionwindow.SessionWindow (profile_name, profile_path, display_number)
-    window.window.connect ("destroy", gtk.main_quit)
-    window.window.show ()
+        option_parser = optparse.OptionParser (usage="usage: %prog [--log-config FILE] [--real-log-config FILE] <profile_name> <profile_path> <display_number>")
+        option_parser.add_option ("--log-config", dest="log_config",
+                                  metavar="FILE",
+                                  help="Real file with options for debug log") # FIXME: say that "man sabayon" will give you the
+                                                                               # syntax for the debug log config file.
+        option_parser.add_option ("--real-log-config", dest="real_log_config",
+                                  metavar="FILE",
+                                  help="File to mention in the debug log as the source for its configuration")
 
-    gtk.main ()
+        options, args = option_parser.parse_args ()
+
+        log_config_filename = options.log_config
+        real_log_config_filename = options.real_log_config or "~/sabayon-debug-log.conf"
+
+        debuglog.debug_log_load_configuration (log_config_filename)
+
+        if len (args) != 3:
+            sys.stderr.write (_("Usage: %s <profile-name> <profile-path> <display-number>\n") % sys.argv[0])
+            sys.exit (util.EXIT_CODE_FATAL)
+
+        (profile_name, profile_path, display_number) = args
+
+        window = sessionwindow.SessionWindow (profile_name, profile_path, display_number)
+        window.window.connect ("destroy", gtk.main_quit)
+        window.window.show ()
+
+        gtk.main ()
+    except:
+        errors.errors_exit_with_fatal_exception (debuglog.DEBUG_LOG_DOMAIN_SABAYON_SESSION, real_log_config_filename)
+
+    errors.errors_exit_helper_normally (real_log_config_filename)

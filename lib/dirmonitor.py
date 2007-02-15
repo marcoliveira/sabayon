@@ -22,6 +22,7 @@ import gobject
 import gamin
 import util
 import fnmatch
+import debuglog
 
 N_WATCHES_LIMIT = 200
 
@@ -30,7 +31,7 @@ DELETED = gamin.GAMDeleted
 CREATED = gamin.GAMCreated
 
 def dprint (fmt, *args):
-    util.debug_print (util.DEBUG_DIRMONITOR, fmt % args)
+    debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_DIR_MONITOR, fmt % args)
 
 def event_to_string (event):
     if event == CHANGED:

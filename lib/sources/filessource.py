@@ -27,15 +27,17 @@ try:
     import storage
     import util
     from config import *
+    import debuglog
 except:
     from sabayon import userprofile
     from sabayon import dirmonitor
     from sabayon import storage
     from sabayon import util
     from sabayon.config import *
+    from sabayon import debuglog
 
 def dprint (fmt, *args):
-    util.debug_print (util.DEBUG_FILESSOURCE, fmt % args)
+    debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_FILES_SOURCE, fmt % args)
 
 class FilesChange (userprofile.ProfileChange):
     def __init__ (self, source, rel_path, event):
