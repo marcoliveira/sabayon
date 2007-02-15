@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-10 13:34+0000\n"
-"PO-Revision-Date: 2007-01-31 21:50+0000\n"
+"POT-Creation-Date: 2007-02-15 01:42+0000\n"
+"PO-Revision-Date: 2007-02-15 01:45+0000\n"
 "Last-Translator: Duarte Loreto <happyguy_pt@hotmail.com>\n"
 "Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -427,16 +427,10 @@ msgstr[1] ""
 "Se não gravar, as alterações dos últimos %ld minutos serão permanentemente "
 "perdidas."
 
-#: ../admin-tool/saveconfirm.py:71 ../admin-tool/saveconfirm.py:81
-#, python-format
+#: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] ""
+msgstr ""
 "Se não gravar, as alterações da última hora serão permanentemente perdidas."
-msgstr[1] ""
-"Se não gravar, as alterações das últimas %d horas serão permanentemente "
-"perdidas."
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
@@ -452,6 +446,18 @@ msgstr[0] ""
 msgstr[1] ""
 "Se não gravar, as alterações da última hora e %d minutos serão "
 "permanentemente perdidas."
+
+#: ../admin-tool/saveconfirm.py:81
+#, python-format
+msgid ""
+"If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] ""
+"Se não gravar, as alterações da última %d hora serão permanentemente perdidas."
+msgstr[1] ""
+"Se não gravar, as alterações das últimas %d horas serão permanentemente "
+"perdidas."
 
 #: ../admin-tool/sessionwindow.py:151
 #, python-format
@@ -785,8 +791,9 @@ msgid "Main Menu"
 msgstr "Menu Principal"
 
 #: ../lib/sources/paneldelegate.py:209
-msgid " launcher"
-msgstr " iniciador"
+#, python-format
+msgid "%s launcher"
+msgstr "iniciador do %s"
 
 #: ../lib/sources/paneldelegate.py:213
 msgid "Lock Screen button"
