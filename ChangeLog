@@ -1,3 +1,29 @@
+2007-02-14  Federico Mena Quintero  <federico@novell.com>
+
+	Start fixing bug #398479 - make errors visible to the user, and
+	keep a debug log that can be used for bug reports.
+
+	* admin-tool/sabayon: Include a comment with Emacs local variables
+	so that it picks up python-mode for this file.
+	* admin-tool/sabayon-apply: Likewise.
+
+	* admin-tool/sabayon-session: Likewise.
+
+	* lib/debuglog.py: New file for a ring buffer debug log, similar
+	to nautilus-debug-log.
+
+	* lib/test-debug-log.py: Simple test for the debug log mechanism.
+
+	* lib/errors.py: New file with utilities to log the presence of
+	recoverable errors.
+
+	* admin-tool/sabayon-apply: Dump the debug log when the program
+	finishes, so that the calling progrma will in turn log it
+	somewhere.  If there was a recoverable error during execution,
+	exit() with EXIT_CODE_RECOVERABLE=2 so that the calling program
+	will notify the admin.  If we get a fatal exception, which would
+	otherwise be uncaught, then exit() with EXIT_CODE_FATAL=1.
+
 2007-02-13  Theppitak Karoonboonyanan  <thep@linux.thai.net>
 
 	Merge from gnome-2-18 branch.
