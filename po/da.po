@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-10 23:24+0100\n"
-"PO-Revision-Date: 2007-02-04 15:40+0100\n"
-"Last-Translator: Kenneth Nielsen <k.nielsen81@gmail.com>\n"
+"POT-Creation-Date: 2007-02-17 16:17+0100\n"
+"PO-Revision-Date: 2007-02-17 16:16+0100\n"
+"Last-Translator: Lasse Bang Mikkelsen <lbm@fatalerror.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 # Jeg overvejede her først:
-# "Program til at lave og redigere i brugerprofiler", 
-# men efter at have undersøgt det viser det sig at det 
-# der henvises til som "profil" her er en mængde 
-# indstillinger, UD OVER det vi normalt betragter som 
-# en brugerprofil, så for ikke at brugerne skal kløjs 
+# "Program til at lave og redigere i brugerprofiler",
+# men efter at have undersøgt det viser det sig at det
+# der henvises til som "profil" her er en mængde
+# indstillinger, UD OVER det vi normalt betragter som
+# en brugerprofil, så for ikke at brugerne skal kløjs
 # i begreberne besluttede jeg mig for at beholde
 # den nuværende formulering
 #: ../admin-tool/aboutdialog.py:61
@@ -433,13 +433,9 @@ msgstr[0] "Hvis du ikke gemmer vil ændringer fra det sidste %ld minut gå tabt.
 msgstr[1] ""
 "Hvis du ikke gemmer vil ændringer fra de sidste %ld minutter gå tabt."
 
-#: ../admin-tool/saveconfirm.py:71 ../admin-tool/saveconfirm.py:81
-#, python-format
+#: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "Hvis du ikke gemmer vil ændringer fra den sidste time gå tabt."
-msgstr[1] "Hvis du ikke gemmer vil ændringer fra de sidste %ld timer gå tabt."
+msgstr "Hvis du ikke gemmer, vil ændringer fra den sidste time gå tabt."
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
@@ -454,6 +450,15 @@ msgstr[0] ""
 msgstr[1] ""
 "Hvis du ikke gemmer vil ændringer fra den sidste time og %ld minutter gå "
 "tabt."
+
+#: ../admin-tool/saveconfirm.py:81
+#, python-format
+msgid ""
+"If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] "Hvis du ikke gemmer, vil ændringer fra den sidste time gå tabt."
+msgstr[1] "Hvis du ikke gemmer, vil ændringer fra de sidste %d timer gå tabt."
 
 #: ../admin-tool/sessionwindow.py:151
 #, python-format
@@ -792,8 +797,9 @@ msgid "Main Menu"
 msgstr "Hovedmenu"
 
 #: ../lib/sources/paneldelegate.py:209
-msgid " launcher"
-msgstr " genvej"
+#, python-format
+msgid "%s launcher"
+msgstr "%s startgenvej"
 
 #: ../lib/sources/paneldelegate.py:213
 msgid "Lock Screen button"
