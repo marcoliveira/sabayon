@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-11-12 16:36+0100\n"
+"POT-Creation-Date: 2007-02-21 22:58+0100\n"
 "PO-Revision-Date: 2006-09-25 13:58+0200\n"
 "Last-Translator: Andrzej Polatyński <andrzej@datatel.net.pl>\n"
 "Language-Team: Polish <translators@gnomepl.org>\n"
@@ -91,7 +91,7 @@ msgstr "I_nformacje o"
 msgid "About Sabayon"
 msgstr "O Sabayon"
 
-#: ../admin-tool/editorwindow.py:252 ../lib/sources/gconfsource.py:121
+#: ../admin-tool/editorwindow.py:252 ../lib/sources/gconfsource.py:122
 msgid "GConf"
 msgstr "GConf"
 
@@ -100,7 +100,7 @@ msgid "Files"
 msgstr "Pliki"
 
 #: ../admin-tool/editorwindow.py:256 ../admin-tool/lockdown/pessulus.glade.h:7
-#: ../lib/sources/paneldelegate.py:132
+#: ../lib/sources/paneldelegate.py:226
 msgid "Panel"
 msgstr "Panel"
 
@@ -353,14 +353,18 @@ msgid "_Base on:"
 msgstr "_Na podstawie:"
 
 #: ../admin-tool/sabayon.glade.h:6
+msgid "_Details"
+msgstr "_Szczegóły"
+
+#: ../admin-tool/sabayon.glade.h:7
 msgid "_Profiles:"
 msgstr "_Profile:"
 
-#: ../admin-tool/sabayon.glade.h:7
+#: ../admin-tool/sabayon.glade.h:8
 msgid "_Users"
 msgstr "_Użytkownicy"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.glade.h:9
 msgid "_Users:"
 msgstr "_Użytkownicy:"
 
@@ -432,19 +436,10 @@ msgstr[2] ""
 "Jeżeli nie zapiszesz, zmiany z ostatnich %ld minut zostaną bezpowrotnie "
 "utracone."
 
-#: ../admin-tool/saveconfirm.py:71 ../admin-tool/saveconfirm.py:81
-#, python-format
+#: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] ""
+msgstr ""
 "Jeżeli nie zapiszesz, zmiany z ostatniej godziny zostaną bezpowrotnie "
-"utracone."
-msgstr[1] ""
-"Jeżeli nie zapiszesz, zmiany z ostatnich %d godzin zostaną bezpowrotnie "
-"utracone."
-msgstr[2] ""
-"Jeżeli nie zapiszesz, zmiany z ostatnich %d godzin zostaną bezpowrotnie "
 "utracone."
 
 #: ../admin-tool/saveconfirm.py:74
@@ -464,6 +459,22 @@ msgstr[1] ""
 msgstr[2] ""
 "Jeżeli nie zapiszesz, zmiany z ostatniej godziny i %d minut zostaną "
 "bezpowrotnie utracone."
+
+#: ../admin-tool/saveconfirm.py:81
+#, python-format
+msgid ""
+"If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] ""
+"Jeżeli nie zapiszesz, zmiany z ostatniej godziny zostaną bezpowrotnie "
+"utracone."
+msgstr[1] ""
+"Jeżeli nie zapiszesz, zmiany z ostatnich %d godzin zostaną bezpowrotnie "
+"utracone."
+msgstr[2] ""
+"Jeżeli nie zapiszesz, zmiany z ostatnich %d godzin zostaną bezpowrotnie "
+"utracone."
 
 #: ../admin-tool/sessionwindow.py:151
 #, python-format
@@ -498,7 +509,7 @@ msgstr "Ustawienia obowiązkowe"
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Wszelkie zmiany ustawień w tej sesji będą ustawieniami obowiązkowymi"
 
-#: ../admin-tool/sessionwindow.py:271
+#: ../admin-tool/sessionwindow.py:286
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Ustawienia blokowania dla %s"
@@ -571,57 +582,57 @@ msgstr "Menu ustawień systemu"
 msgid "Start Here menu"
 msgstr "Menu \"Zacznij tutaj\""
 
-#: ../lib/sources/gconfsource.py:87
+#: ../lib/sources/gconfsource.py:88
 #, python-format
 msgid "GConf key '%s' unset"
 msgstr "Usunięta wartość klucza GConf \"%s\""
 
-#: ../lib/sources/gconfsource.py:89
+#: ../lib/sources/gconfsource.py:90
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
 msgstr "Do klucza GConf \"%s\" przypisano wartość typu łańcuch znaków \"%s\""
 
-#: ../lib/sources/gconfsource.py:91
+#: ../lib/sources/gconfsource.py:92
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
 msgstr "Do klucza GConf \"%s\" przypisano wartość typu liczba całkowita \"%s\""
 
-#: ../lib/sources/gconfsource.py:93
+#: ../lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
 msgstr ""
 "Do klucza GConf \"%s\" przypisano wartość typu liczba rzeczywista \"%s\""
 
-#: ../lib/sources/gconfsource.py:95
+#: ../lib/sources/gconfsource.py:96
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
 msgstr "Do klucza GConf \"%s\" przypisano wartość typu logicznego \"%s\""
 
-#: ../lib/sources/gconfsource.py:97
+#: ../lib/sources/gconfsource.py:98
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
 msgstr "Do klucza GConf \"%s\" przypisano wartość typu schemat \"%s\""
 
-#: ../lib/sources/gconfsource.py:99
+#: ../lib/sources/gconfsource.py:100
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
 msgstr "Do klucza GConf \"%s\" przypisano wartość typu lista \"%s\""
 
-#: ../lib/sources/gconfsource.py:101
+#: ../lib/sources/gconfsource.py:102
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
 msgstr "Do klucza GConf \"%s\" przypisano wartość typu para \"%s\""
 
-#: ../lib/sources/gconfsource.py:103
+#: ../lib/sources/gconfsource.py:104
 #, python-format
 msgid "GConf key '%s' set to '%s'"
 msgstr "Do klucza GConf \"%s\" przypisano wartość \"%s\""
 
-#: ../lib/sources/gconfsource.py:134
+#: ../lib/sources/gconfsource.py:135
 msgid "Default GConf settings"
 msgstr "Domyślne ustawienia GConf"
 
-#: ../lib/sources/gconfsource.py:136
+#: ../lib/sources/gconfsource.py:137
 msgid "Mandatory GConf settings"
 msgstr "Obowiązkowe ustawienia GConf"
 
@@ -701,37 +712,134 @@ msgstr "Zmieniona zakładka Mozilli \"%s\" \"%s\""
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Zmieniony folder zakładek Mozilli \"%s\""
 
-#: ../lib/sources/paneldelegate.py:56
+#: ../lib/sources/paneldelegate.py:53
 #, python-format
 msgid "Panel '%s' added"
 msgstr "Dodany panel \"%s\""
 
-#: ../lib/sources/paneldelegate.py:62
+#: ../lib/sources/paneldelegate.py:59
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "Usunięty panel \"%s\""
 
-#: ../lib/sources/paneldelegate.py:68
-#, python-format
-msgid "Panel applet '%s' added"
-msgstr "Dodany aplet panelu \"%s\""
-
 #: ../lib/sources/paneldelegate.py:74
 #, python-format
-msgid "Panel applet '%s' removed"
-msgstr "Usunięty aplet panelu \"%s\""
+msgid "Applet %s added to top panel"
+msgstr "Do górnego panelu dodano aplet %s"
+
+#: ../lib/sources/paneldelegate.py:76
+#, python-format
+msgid "Applet %s added to bottom panel"
+msgstr "Do dolnego panelu dodano aplet %s"
+
+#: ../lib/sources/paneldelegate.py:78
+#, python-format
+msgid "Applet %s added to left panel"
+msgstr "Do lewego panelu dodano aplet %s"
 
 #: ../lib/sources/paneldelegate.py:80
 #, python-format
-msgid "Panel object '%s' added"
-msgstr "Dodany obiekt panelu \"%s\""
+msgid "Applet %s added to right panel"
+msgstr "Do prawego panelu dodano aplet %s"
 
-#: ../lib/sources/paneldelegate.py:92
+#: ../lib/sources/paneldelegate.py:95
 #, python-format
-msgid "Panel object '%s' removed"
-msgstr "Usunięty obiekt panelu \"%s\""
+msgid "Applet %s removed from top panel"
+msgstr "Z górnego panelu usunięto aplet %s"
 
-#: ../lib/sources/paneldelegate.py:373
+#: ../lib/sources/paneldelegate.py:97
+#, python-format
+msgid "Applet %s removed from bottom panel"
+msgstr "Z dolnego panelu usunięto aplet %s"
+
+#: ../lib/sources/paneldelegate.py:99
+#, python-format
+msgid "Applet %s removed from left panel"
+msgstr "Z lewego panelu usunięto aplet %s"
+
+#: ../lib/sources/paneldelegate.py:101
+#, python-format
+msgid "Applet %s removed from right panel"
+msgstr "Z prawego panelu usunięto aplet %s"
+
+#: ../lib/sources/paneldelegate.py:115
+#, python-format
+msgid "%s added to top panel"
+msgstr "Dodano %s do górnego panelu"
+
+#: ../lib/sources/paneldelegate.py:117
+#, python-format
+msgid "%s added to bottom panel"
+msgstr "Dodano %s do dolnego panelu"
+
+#: ../lib/sources/paneldelegate.py:119
+#, python-format
+msgid "%s added to left panel"
+msgstr "Dodano %s do lewego panelu"
+
+#: ../lib/sources/paneldelegate.py:121
+#, python-format
+msgid "%s added to right panel"
+msgstr "Dodano %s do prawego panelu"
+
+#: ../lib/sources/paneldelegate.py:142
+#, python-format
+msgid "%s removed from top panel"
+msgstr "Usunięto %s z górnego panelu"
+
+#: ../lib/sources/paneldelegate.py:144
+#, python-format
+msgid "%s removed from bottom panel"
+msgstr "Usunięto %s z dolnego panelu"
+
+#: ../lib/sources/paneldelegate.py:146
+#, python-format
+msgid "%s removed from left panel"
+msgstr "Usunięto %s z lewego panelu"
+
+#: ../lib/sources/paneldelegate.py:148
+#, python-format
+msgid "%s removed from right panel"
+msgstr "Usunięto %s z prawego panelu"
+
+#: ../lib/sources/paneldelegate.py:197
+msgid "Drawer"
+msgstr "Szuflada"
+
+#: ../lib/sources/paneldelegate.py:199
+msgid "Main Menu"
+msgstr "Menu główne"
+
+#: ../lib/sources/paneldelegate.py:209
+#, python-format
+msgid "%s launcher"
+msgstr "Aktywator %s"
+
+#: ../lib/sources/paneldelegate.py:213
+msgid "Lock Screen button"
+msgstr "Przycisk zablokowania ekranu"
+
+#: ../lib/sources/paneldelegate.py:215
+msgid "Logout button"
+msgstr "Przycisk wylogowania"
+
+#: ../lib/sources/paneldelegate.py:217
+msgid "Run Appliction button"
+msgstr "Przycisk uruchomienia programu"
+
+#: ../lib/sources/paneldelegate.py:219
+msgid "Search button"
+msgstr "Przycisk wyszukiwania"
+
+#: ../lib/sources/paneldelegate.py:221
+msgid "Screenshot button"
+msgstr "Przycisk zrzutu ekranu"
+
+#: ../lib/sources/paneldelegate.py:223
+msgid "Menu Bar"
+msgstr "Pasek menu"
+
+#: ../lib/sources/paneldelegate.py:467
 msgid "Panel File"
 msgstr "Plik panelu"
 
@@ -755,7 +863,7 @@ msgstr "Nieprawidłowa sekcja metadanych w \"%s\": %s"
 msgid "Cannot add non-existent file '%s'"
 msgstr "Nie można dodać nieistniejącego pliku \"%s\""
 
-#: ../lib/storage.py:538
+#: ../lib/storage.py:567
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Profil %s jest przeznaczony tylko do odczytu"
@@ -850,3 +958,15 @@ msgid ""
 msgstr ""
 "Nie można znaleźć nazwy użytkownika: brak wpisu w /etc/passwd i brak "
 "wartości w zmiennej środowiskowej $HOME"
+
+#~ msgid "Panel applet '%s' added"
+#~ msgstr "Dodany aplet panelu \"%s\""
+
+#~ msgid "Panel applet '%s' removed"
+#~ msgstr "Usunięty aplet panelu \"%s\""
+
+#~ msgid "Panel object '%s' added"
+#~ msgstr "Dodany obiekt panelu \"%s\""
+
+#~ msgid "Panel object '%s' removed"
+#~ msgstr "Usunięty obiekt panelu \"%s\""
