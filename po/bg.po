@@ -2,15 +2,15 @@
 # Copyright (C) 2005, 2007 Free Software Foundation, Inc.
 # This file is distributed under the same license as the sabayon package.
 # Rostislav Raykov <zbrox@i-space.org>, 2005.
-# Alexander Shopov <ash@contact.bg>, 2005.
+# Alexander Shopov <ash@contact.bg>, 2005, 2007.
 # Yavor Doganov <yavor@doganov.org>, 2007.
 #
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sabayon HEAD\n"
+"Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-31 07:37+0200\n"
+"POT-Creation-Date: 2007-02-23 01:11+0200\n"
 "PO-Revision-Date: 2007-01-23 19:08+0200\n"
 "Last-Translator: Yavor Doganov <yavor@doganov.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
@@ -429,14 +429,9 @@ msgstr[0] ""
 msgstr[1] ""
 "Промените от последните %ld минути ще бъдат загубени, ако не ги запазите."
 
-#: ../admin-tool/saveconfirm.py:71 ../admin-tool/saveconfirm.py:81
-#, python-format
+#: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "Промените от последния час ще бъдат загубени, ако не ги запазите."
-msgstr[1] ""
-"Промените от последните %d часа ще бъдат загубени, ако не ги запазите."
+msgstr "Промените от последния час ще бъдат загубени, ако не ги запазите."
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
@@ -450,7 +445,17 @@ msgstr[0] ""
 "Промените от последния час и %d минута ще бъдат загубени, ако не ги запазите."
 msgstr[1] ""
 "Промените от последния час и %d минути ще бъдат загубени, ако не ги запазите."
-"<"
+
+#: ../admin-tool/saveconfirm.py:81
+#, python-format
+msgid ""
+"If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] ""
+"Промените от последния %d час ще бъдат загубени, ако не ги запазите."
+msgstr[1] ""
+"Промените от последните %d часа ще бъдат загубени, ако не ги запазите."
 
 #: ../admin-tool/sessionwindow.py:151
 #, python-format
@@ -791,8 +796,9 @@ msgid "Main Menu"
 msgstr "Главно меню"
 
 #: ../lib/sources/paneldelegate.py:209
-msgid " launcher"
-msgstr " стартер"
+#, python-format
+msgid "%s launcher"
+msgstr "стартер на %s"
 
 #: ../lib/sources/paneldelegate.py:213
 msgid "Lock Screen button"
