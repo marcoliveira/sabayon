@@ -1,19 +1,19 @@
-# translation of sabayon.HEAD.mk.po to Macedonian
+# translation of sabayon.gnome-2-18.po to Macedonian
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER.
 #
 # Geore Zaharcev <aristotel@mt.net.mk>, 2005.
 # Арангел Ангов <ufo@linux.net.mk>, 2005.
 # Јован Наумовски <jove.mk@gmail.com>, 2005.
-# Arangel Angov <ufo@linux.net.mk>, 2005, 2006.
+# Arangel Angov <ufo@linux.net.mk>, 2005, 2006, 2007.
 # Jovan Naumovski <jovan@lugola.net>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: sabayon.HEAD.mk\n"
+"Project-Id-Version: sabayon.gnome-2-18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-12-09 15:44+0100\n"
-"PO-Revision-Date: 2006-12-09 17:29+0100\n"
-"Last-Translator: Jovan Naumovski <jovan@lugola.net>\n"
+"POT-Creation-Date: 2007-02-12 03:20+0000\n"
+"PO-Revision-Date: 2007-02-23 17:10+0100\n"
+"Last-Translator: Arangel Angov <ufo@linux.net.mk>\n"
 "Language-Team: Macedonian <ossm-members@hedona.on.net.mk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -89,13 +89,13 @@ msgstr "_Помош"
 
 #: ../admin-tool/editorwindow.py:193 ../admin-tool/sessionwindow.py:179
 msgid "_About"
-msgstr "_Во врска со"
+msgstr "_За"
 
 #: ../admin-tool/editorwindow.py:193 ../admin-tool/sessionwindow.py:179
 msgid "About Sabayon"
-msgstr "Во врска со Sabayon"
+msgstr "За Sabayon"
 
-#: ../admin-tool/editorwindow.py:252 ../lib/sources/gconfsource.py:121
+#: ../admin-tool/editorwindow.py:252 ../lib/sources/gconfsource.py:122
 msgid "GConf"
 msgstr "GConf"
 
@@ -104,7 +104,7 @@ msgid "Files"
 msgstr "Датотеки"
 
 #: ../admin-tool/editorwindow.py:256 ../admin-tool/lockdown/pessulus.glade.h:7
-#: ../lib/sources/paneldelegate.py:132
+#: ../lib/sources/paneldelegate.py:226
 msgid "Panel"
 msgstr "Табла"
 
@@ -436,18 +436,10 @@ msgstr[2] ""
 "Доколку не ги зачувате, промените во последните %ld минути тие ќе бидат "
 "трајно изгубени."
 
-#: ../admin-tool/saveconfirm.py:71 ../admin-tool/saveconfirm.py:81
-#, python-format
+#: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] ""
-"Доколку не ги зачувате, промените во последниот %d час тие ќе бидат трајно "
-"изгубени."
-msgstr[1] ""
-"Доколку не ги зачувате, промените во последните %d часа тие ќе бидат трајно "
-"изгубени."
-msgstr[2] ""
-"Доколку не ги зачувате, промените во последните %d часа тие ќе бидат трајно "
+msgstr ""
+"Доколку не ги зачувате промените од последниот час тие ќе бидат трајно "
 "изгубени."
 
 #: ../admin-tool/saveconfirm.py:74
@@ -467,6 +459,20 @@ msgstr[1] ""
 msgstr[2] ""
 "Доколку не ги зачувате, промените во последниот час и %d минути тие ќе бидат "
 "трајно изгубени."
+
+#: ../admin-tool/saveconfirm.py:81
+#, python-format
+msgid "If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] ""
+"Доколку не ги зачувате, промените од последниот %d час тие ќе бидат трајно "
+"изгубени."
+msgstr[1] ""
+"Доколку не ги зачувате, промените од последните %d часа тие ќе бидат трајно "
+"изгубени."
+msgstr[2] ""
+"Доколку не ги зачувате, промените од последните %d часа тие ќе бидат трајно "
+"изгубени."
 
 #: ../admin-tool/sessionwindow.py:151
 #, python-format
@@ -501,7 +507,7 @@ msgstr "Вклучи мандатно"
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Присили мандатни поставувања во сесијата за уредување"
 
-#: ../admin-tool/sessionwindow.py:271
+#: ../admin-tool/sessionwindow.py:286
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Заклучи поставувања за %s"
@@ -572,56 +578,56 @@ msgstr "Мени за Системски поставки"
 msgid "Start Here menu"
 msgstr "Мени за Почеток од овде"
 
-#: ../lib/sources/gconfsource.py:87
+#: ../lib/sources/gconfsource.py:88
 #, python-format
 msgid "GConf key '%s' unset"
 msgstr "Копчето за GConf '%s' непоставено"
 
-#: ../lib/sources/gconfsource.py:89
+#: ../lib/sources/gconfsource.py:90
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
 msgstr "Копчето за GConf '%s' поставено во низата '%s'"
 
-#: ../lib/sources/gconfsource.py:91
+#: ../lib/sources/gconfsource.py:92
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
 msgstr "Копчето за GConf '%s' поставено во интиџер '%s'"
 
-#: ../lib/sources/gconfsource.py:93
+#: ../lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
 msgstr "Копчето за GConf '%s' поставено да лебди '%s'"
 
-#: ../lib/sources/gconfsource.py:95
+#: ../lib/sources/gconfsource.py:96
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
 msgstr "Копчето за GConf '%s' поставено во boolean '%s'"
 
-#: ../lib/sources/gconfsource.py:97
+#: ../lib/sources/gconfsource.py:98
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
 msgstr "Копчето за GConf '%s' поставено во шема '%s'"
 
-#: ../lib/sources/gconfsource.py:99
+#: ../lib/sources/gconfsource.py:100
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
 msgstr "Копчето за GConf '%s' поставено во листа '%s'"
 
-#: ../lib/sources/gconfsource.py:101
+#: ../lib/sources/gconfsource.py:102
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
 msgstr "Копчето за GConf '%s' поставено во пар '%s'"
 
-#: ../lib/sources/gconfsource.py:103
+#: ../lib/sources/gconfsource.py:104
 #, python-format
 msgid "GConf key '%s' set to '%s'"
 msgstr "Копчето за GConf '%s' поставено во '%s'"
 
-#: ../lib/sources/gconfsource.py:134
+#: ../lib/sources/gconfsource.py:135
 msgid "Default GConf settings"
 msgstr "Стандардни GConf поставки"
 
-#: ../lib/sources/gconfsource.py:136
+#: ../lib/sources/gconfsource.py:137
 msgid "Mandatory GConf settings"
 msgstr "Мандатни GConf поставки"
 
@@ -701,37 +707,134 @@ msgstr "Обележувач за Mozilla променет '%s' '%s'"
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Папка за Mozilla обележувач променета '%s'"
 
-#: ../lib/sources/paneldelegate.py:56
+#: ../lib/sources/paneldelegate.py:53
 #, python-format
 msgid "Panel '%s' added"
 msgstr "Додадена '%s' табла"
 
-#: ../lib/sources/paneldelegate.py:62
+#: ../lib/sources/paneldelegate.py:59
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "Отстранета '%s' табла"
 
-#: ../lib/sources/paneldelegate.py:68
-#, python-format
-msgid "Panel applet '%s' added"
-msgstr "Додаден '%s' аплет за табла"
-
 #: ../lib/sources/paneldelegate.py:74
 #, python-format
-msgid "Panel applet '%s' removed"
-msgstr "Отстранет '%s' панел за табла"
+msgid "Applet %s added to top panel"
+msgstr "Аплетот %s е додаден на горниот панел"
+
+#: ../lib/sources/paneldelegate.py:76
+#, python-format
+msgid "Applet %s added to bottom panel"
+msgstr "Аплетот %s е додаден на долниот панел"
+
+#: ../lib/sources/paneldelegate.py:78
+#, python-format
+msgid "Applet %s added to left panel"
+msgstr "Аплетот %s е додаден на левиот панел"
 
 #: ../lib/sources/paneldelegate.py:80
 #, python-format
-msgid "Panel object '%s' added"
-msgstr "Додаден '%s' објект за табла"
+msgid "Applet %s added to right panel"
+msgstr "Аплетот %s е додаден на десниот панел"
 
-#: ../lib/sources/paneldelegate.py:92
+#: ../lib/sources/paneldelegate.py:95
 #, python-format
-msgid "Panel object '%s' removed"
-msgstr "Отстранет '%s' објект за табла"
+msgid "Applet %s removed from top panel"
+msgstr "Аплетот %s е отстранет од горниот панел"
 
-#: ../lib/sources/paneldelegate.py:373
+#: ../lib/sources/paneldelegate.py:97
+#, python-format
+msgid "Applet %s removed from bottom panel"
+msgstr "Аплетот %s е отстранет од долниот панел"
+
+#: ../lib/sources/paneldelegate.py:99
+#, python-format
+msgid "Applet %s removed from left panel"
+msgstr "Аплетот %s е отстранет од левиот панел"
+
+#: ../lib/sources/paneldelegate.py:101
+#, python-format
+msgid "Applet %s removed from right panel"
+msgstr "Аплетот %s е отстранет од десниот панел"
+
+#: ../lib/sources/paneldelegate.py:115
+#, python-format
+msgid "%s added to top panel"
+msgstr "%s е додаден на горниот панел"
+
+#: ../lib/sources/paneldelegate.py:117
+#, python-format
+msgid "%s added to bottom panel"
+msgstr "%s е додаден на долниот панел"
+
+#: ../lib/sources/paneldelegate.py:119
+#, python-format
+msgid "%s added to left panel"
+msgstr "%s е додаден на левиот панел"
+
+#: ../lib/sources/paneldelegate.py:121
+#, python-format
+msgid "%s added to right panel"
+msgstr "%s е додаден на десниот панел"
+
+#: ../lib/sources/paneldelegate.py:142
+#, python-format
+msgid "%s removed from top panel"
+msgstr "%s е отстранет од горниот панел"
+
+#: ../lib/sources/paneldelegate.py:144
+#, python-format
+msgid "%s removed from bottom panel"
+msgstr "%s е отстранет од долниот панел"
+
+#: ../lib/sources/paneldelegate.py:146
+#, python-format
+msgid "%s removed from left panel"
+msgstr "%s е отстранет од левиот панел"
+
+#: ../lib/sources/paneldelegate.py:148
+#, python-format
+msgid "%s removed from right panel"
+msgstr "%s е отстранет од десниот панел"
+
+#: ../lib/sources/paneldelegate.py:197
+msgid "Drawer"
+msgstr "Фиока"
+
+#: ../lib/sources/paneldelegate.py:199
+msgid "Main Menu"
+msgstr "Главно мени"
+
+#: ../lib/sources/paneldelegate.py:209
+#, python-format
+msgid "%s launcher"
+msgstr "Лансерот %s"
+
+#: ../lib/sources/paneldelegate.py:213
+msgid "Lock Screen button"
+msgstr "Копче за заклучување"
+
+#: ../lib/sources/paneldelegate.py:215
+msgid "Logout button"
+msgstr "Копче за одјава"
+
+#: ../lib/sources/paneldelegate.py:217
+msgid "Run Appliction button"
+msgstr "Пушти копче за апликации"
+
+#: ../lib/sources/paneldelegate.py:219
+msgid "Search button"
+msgstr "Копче за пребарување"
+
+#: ../lib/sources/paneldelegate.py:221
+msgid "Screenshot button"
+msgstr "Копче за слика од екранот"
+
+#: ../lib/sources/paneldelegate.py:223
+msgid "Menu Bar"
+msgstr "Лента со мени"
+
+#: ../lib/sources/paneldelegate.py:467
 msgid "Panel File"
 msgstr "Датотека со панел"
 
@@ -755,7 +858,7 @@ msgstr "Инвалиден мета податок оддел во'%s': %s"
 msgid "Cannot add non-existent file '%s'"
 msgstr "Не може да се додаде непостоечка датотека '%s'"
 
-#: ../lib/storage.py:538
+#: ../lib/storage.py:567
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Профилот е само за вчитување %s"
