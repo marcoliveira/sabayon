@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-17 23:57+0000\n"
-"PO-Revision-Date: 2007-01-18 01:30+0100\n"
+"POT-Creation-Date: 2007-02-12 03:20+0000\n"
+"PO-Revision-Date: 2007-02-25 16:08+0100\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <gnome@gnome.hu>\n"
 "MIME-Version: 1.0\n"
@@ -91,7 +91,7 @@ msgstr "_Névjegy"
 msgid "About Sabayon"
 msgstr "A Sabayon névjegye"
 
-#: ../admin-tool/editorwindow.py:252 ../lib/sources/gconfsource.py:121
+#: ../admin-tool/editorwindow.py:252 ../lib/sources/gconfsource.py:122
 msgid "GConf"
 msgstr "GConf"
 
@@ -100,7 +100,7 @@ msgid "Files"
 msgstr "Fájlok"
 
 #: ../admin-tool/editorwindow.py:256 ../admin-tool/lockdown/pessulus.glade.h:7
-#: ../lib/sources/paneldelegate.py:225
+#: ../lib/sources/paneldelegate.py:226
 msgid "Panel"
 msgstr "Panel"
 
@@ -209,7 +209,7 @@ msgstr "_Kilépés letiltása"
 
 #: ../admin-tool/lockdown/maindialog.py:58
 msgid "Disable _arbitrary URL"
-msgstr "Tetszőleges _URL-ek kikapcsolása"
+msgstr "Tetszőleges _URL címek kikapcsolása"
 
 #: ../admin-tool/lockdown/maindialog.py:59
 msgid "Disable _bookmark editing"
@@ -423,14 +423,9 @@ msgstr[1] ""
 "Ha nem menti, akkor az elmúlt %ld percben történt változások véglegesen "
 "elvesznek."
 
-#: ../admin-tool/saveconfirm.py:71 ../admin-tool/saveconfirm.py:81
-#, python-format
+#: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "Ha nem menti, akkor az elmúlt órában történt változások véglegesen elvesznek."
-msgstr[1] ""
-"Ha nem menti, akkor az elmúlt %d órában történt változások véglegesen "
-"elvesznek."
+msgstr "Ha nem menti, akkor az elmúlt órában történt változások véglegesen elvesznek."
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
@@ -446,6 +441,15 @@ msgstr[0] ""
 msgstr[1] ""
 "Ha nem menti, akkor az elmúlt egy órában és %d percben történt változások "
 "véglegesen elvesznek."
+
+#: ../admin-tool/saveconfirm.py:81
+#, python-format
+msgid "If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] "Ha nem menti, akkor az elmúlt %d órában történt változások véglegesen elvesznek."
+msgstr[1] ""
+"Ha nem menti, akkor az elmúlt %d órában történt változások véglegesen "
+"elvesznek."
 
 #: ../admin-tool/sessionwindow.py:151
 #, python-format
@@ -553,56 +557,56 @@ msgstr "Rendszerbeállítások menü"
 msgid "Start Here menu"
 msgstr "Kezdje itt menü"
 
-#: ../lib/sources/gconfsource.py:87
+#: ../lib/sources/gconfsource.py:88
 #, python-format
 msgid "GConf key '%s' unset"
 msgstr "\"%s\" GConf kulcs visszaállítva"
 
-#: ../lib/sources/gconfsource.py:89
+#: ../lib/sources/gconfsource.py:90
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
 msgstr "\"%s\" GConf kulcs beállítva \"%s\" karakterláncra"
 
-#: ../lib/sources/gconfsource.py:91
+#: ../lib/sources/gconfsource.py:92
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
 msgstr "\"%s\" GConf kulcs beállítva \"%s\" egész értékre"
 
-#: ../lib/sources/gconfsource.py:93
+#: ../lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
 msgstr "\"%s\" GConf kulcs beállítva \"%s\" lebegőpontos értékre"
 
-#: ../lib/sources/gconfsource.py:95
+#: ../lib/sources/gconfsource.py:96
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
 msgstr "\"%s\" GConf kulcs beállítva \"%s\" logikai értékre"
 
-#: ../lib/sources/gconfsource.py:97
+#: ../lib/sources/gconfsource.py:98
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
 msgstr "\"%s\" GConf kulcs beállítva \"%s\" sémára"
 
-#: ../lib/sources/gconfsource.py:99
+#: ../lib/sources/gconfsource.py:100
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
 msgstr "\"%s\" GConf kulcs beállítva \"%s\" listára"
 
-#: ../lib/sources/gconfsource.py:101
+#: ../lib/sources/gconfsource.py:102
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
 msgstr "\"%s\" GConf kulcs beállítva \"%s\" párra"
 
-#: ../lib/sources/gconfsource.py:103
+#: ../lib/sources/gconfsource.py:104
 #, python-format
 msgid "GConf key '%s' set to '%s'"
 msgstr "\"%s\" GConf kulcs beállítva a következőre: \"%s\""
 
-#: ../lib/sources/gconfsource.py:134
+#: ../lib/sources/gconfsource.py:135
 msgid "Default GConf settings"
 msgstr "Alapértelmezett GConf beállítások"
 
-#: ../lib/sources/gconfsource.py:136
+#: ../lib/sources/gconfsource.py:137
 msgid "Mandatory GConf settings"
 msgstr "Kötelező GConf beállítások"
 
@@ -682,133 +686,134 @@ msgstr "Mozilla könyvjelző megváltoztatva: \"%s\" \"%s\""
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mozilla könyvjelzőmappa megváltoztatva: \"%s\""
 
-#: ../lib/sources/paneldelegate.py:52
+#: ../lib/sources/paneldelegate.py:53
 #, python-format
 msgid "Panel '%s' added"
 msgstr "\"%s\" panel hozzáadva"
 
-#: ../lib/sources/paneldelegate.py:58
+#: ../lib/sources/paneldelegate.py:59
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "\"%s\" panel eltávolítva"
 
-#: ../lib/sources/paneldelegate.py:73
+#: ../lib/sources/paneldelegate.py:74
 #, python-format
 msgid "Applet %s added to top panel"
 msgstr "A(z) %s kisalkalmazás hozzáadva a felső panelhez"
 
-#: ../lib/sources/paneldelegate.py:75
+#: ../lib/sources/paneldelegate.py:76
 #, python-format
 msgid "Applet %s added to bottom panel"
 msgstr "A(z) %s kisalkalmazás hozzáadva az alsó panelhez"
 
-#: ../lib/sources/paneldelegate.py:77
+#: ../lib/sources/paneldelegate.py:78
 #, python-format
 msgid "Applet %s added to left panel"
 msgstr "A(z) %s kisalkalmazás hozzáadva a bal panelhez"
 
-#: ../lib/sources/paneldelegate.py:79
+#: ../lib/sources/paneldelegate.py:80
 #, python-format
 msgid "Applet %s added to right panel"
 msgstr "A(z) %s kisalkalmazás hozzáadva a jobb panelhez"
 
-#: ../lib/sources/paneldelegate.py:94
+#: ../lib/sources/paneldelegate.py:95
 #, python-format
 msgid "Applet %s removed from top panel"
 msgstr "A(z) %s kisalkalmazás eltávolítva a felső panelról"
 
-#: ../lib/sources/paneldelegate.py:96
+#: ../lib/sources/paneldelegate.py:97
 #, python-format
 msgid "Applet %s removed from bottom panel"
 msgstr "A(z) %s kisalkalmazás eltávolítva az alsó panelról"
 
-#: ../lib/sources/paneldelegate.py:98
+#: ../lib/sources/paneldelegate.py:99
 #, python-format
 msgid "Applet %s removed from left panel"
 msgstr "A(z) %s kisalkalmazás eltávolítva a bal panelról"
 
-#: ../lib/sources/paneldelegate.py:100
+#: ../lib/sources/paneldelegate.py:101
 #, python-format
 msgid "Applet %s removed from right panel"
 msgstr "A(z) %s kisalkalmazás eltávolítva a jobb panelról"
 
-#: ../lib/sources/paneldelegate.py:114
+#: ../lib/sources/paneldelegate.py:115
 #, python-format
 msgid "%s added to top panel"
 msgstr "%s hozzáadva a felső panelhez"
 
-#: ../lib/sources/paneldelegate.py:116
+#: ../lib/sources/paneldelegate.py:117
 #, python-format
 msgid "%s added to bottom panel"
 msgstr "%s hozzáadva az alsó panelhez"
 
-#: ../lib/sources/paneldelegate.py:118
+#: ../lib/sources/paneldelegate.py:119
 #, python-format
 msgid "%s added to left panel"
 msgstr "%s hozzáadva a bal panelhez"
 
-#: ../lib/sources/paneldelegate.py:120
+#: ../lib/sources/paneldelegate.py:121
 #, python-format
 msgid "%s added to right panel"
 msgstr "%s hozzáadva a jobb panelhez"
 
-#: ../lib/sources/paneldelegate.py:141
+#: ../lib/sources/paneldelegate.py:142
 #, python-format
 msgid "%s removed from top panel"
 msgstr "%s eltávolítva a felső panelról"
 
-#: ../lib/sources/paneldelegate.py:143
+#: ../lib/sources/paneldelegate.py:144
 #, python-format
 msgid "%s removed from bottom panel"
 msgstr "%s eltávolítva az alsó panelról"
 
-#: ../lib/sources/paneldelegate.py:145
+#: ../lib/sources/paneldelegate.py:146
 #, python-format
 msgid "%s removed from left panel"
 msgstr "%s eltávolítva a bal panelról"
 
-#: ../lib/sources/paneldelegate.py:147
+#: ../lib/sources/paneldelegate.py:148
 #, python-format
 msgid "%s removed from right panel"
 msgstr "%s eltávolítva a jobb panelról"
 
-#: ../lib/sources/paneldelegate.py:196
+#: ../lib/sources/paneldelegate.py:197
 msgid "Drawer"
 msgstr "Fiók"
 
-#: ../lib/sources/paneldelegate.py:198
+#: ../lib/sources/paneldelegate.py:199
 msgid "Main Menu"
 msgstr "Főmenü"
 
-#: ../lib/sources/paneldelegate.py:208
-msgid " launcher"
-msgstr " alkalmazásindító"
+#: ../lib/sources/paneldelegate.py:209
+#, python-format
+msgid "%s launcher"
+msgstr "%s alkalmazásindító"
 
-#: ../lib/sources/paneldelegate.py:212
+#: ../lib/sources/paneldelegate.py:213
 msgid "Lock Screen button"
 msgstr "Képernyő zárolása gomb"
 
-#: ../lib/sources/paneldelegate.py:214
+#: ../lib/sources/paneldelegate.py:215
 msgid "Logout button"
 msgstr "Kijelentkezés gomb"
 
-#: ../lib/sources/paneldelegate.py:216
+#: ../lib/sources/paneldelegate.py:217
 msgid "Run Appliction button"
 msgstr "Alkalmazás futtatása gomb"
 
-#: ../lib/sources/paneldelegate.py:218
+#: ../lib/sources/paneldelegate.py:219
 msgid "Search button"
 msgstr "Keresés gomb"
 
-#: ../lib/sources/paneldelegate.py:220
+#: ../lib/sources/paneldelegate.py:221
 msgid "Screenshot button"
 msgstr "Képernyőkép gomb"
 
-#: ../lib/sources/paneldelegate.py:222
+#: ../lib/sources/paneldelegate.py:223
 msgid "Menu Bar"
 msgstr "Menüsáv"
 
-#: ../lib/sources/paneldelegate.py:466
+#: ../lib/sources/paneldelegate.py:467
 msgid "Panel File"
 msgstr "Panelfájl"
 
@@ -832,7 +837,7 @@ msgstr "Érvénytelen metaadat-szakasz a következőben: \"%s\": %s"
 msgid "Cannot add non-existent file '%s'"
 msgstr "Nem lehet hozzáadni \"%s\" nem létező fájlt"
 
-#: ../lib/storage.py:538
+#: ../lib/storage.py:567
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "A profil csak olvasható %s"
