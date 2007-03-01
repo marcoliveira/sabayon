@@ -1,20 +1,21 @@
 # Bengali India translation of Sabayon.
-# Copyright (C) 2006 Free Software Foundation, Inc.
+# Copyright (C) 2006, 2007 Free Software Foundation, Inc.
 # This file is distributed under the same license as the Sabayon package.
 # Progga <progga@BengaLinux.Org>, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sabayon\n"
+"Project-Id-Version: sabayon.gnome-2-18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-08-04 07:58+0200\n"
-"PO-Revision-Date: 2006-08-04 18:56+0530\n"
+"POT-Creation-Date: 2007-02-12 03:20+0000\n"
+"PO-Revision-Date: 2007-03-01 19:05+0530\n"
 "Last-Translator: Runa Bhattacharjee <runabh@gmail.com>\n"
 "Language-Team: Bengali India\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
+"\n"
 "X-Generator: KBabel 1.9.1\n"
 
 # 3 untranslated messages.
@@ -25,8 +26,7 @@ msgstr "ব্যবহারকারীদের প্রোফাইল ন�
 #: ../admin-tool/aboutdialog.py:64
 msgid "translator-credits"
 msgstr ""
-"অঙ্কুর প্রকল্পের পক্ষে, "
-"প্রজ্ঞা [ progga@BengaLinux.Org ]\n"
+"অঙ্কুর প্রকল্পের পক্ষে, প্রজ্ঞা [ progga@BengaLinux.Org ]\n"
 "রুণা ভট্টাচার্য (runabh@gmail.com)"
 
 #: ../admin-tool/changeswindow.py:48
@@ -96,7 +96,7 @@ msgstr "পরিচিতি (_A)"
 msgid "About Sabayon"
 msgstr "Sabayon পরিচিতি"
 
-#: ../admin-tool/editorwindow.py:252 ../lib/sources/gconfsource.py:121
+#: ../admin-tool/editorwindow.py:252 ../lib/sources/gconfsource.py:122
 msgid "GConf"
 msgstr "GConf"
 
@@ -105,7 +105,7 @@ msgid "Files"
 msgstr "ফাইল"
 
 #: ../admin-tool/editorwindow.py:256 ../admin-tool/lockdown/pessulus.glade.h:7
-#: ../lib/sources/paneldelegate.py:132
+#: ../lib/sources/paneldelegate.py:226
 msgid "Panel"
 msgstr "প্যানেল"
 
@@ -279,13 +279,17 @@ msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:44
 msgid "Your account does not have permissions to run the Desktop User Profiles tool"
-msgstr "ডেস্কটপ ব্যবহারকারী প্রোফাইল ব্যবস্থা সঞ্চালনের জন্য প্রযোজ্য অনুমতি আপনার অ্যাকাউন্টে উপস্থিত নেই"
+msgstr ""
+"ডেস্কটপ ব্যবহারকারী প্রোফাইল ব্যবস্থা সঞ্চালনের জন্য প্রযোজ্য অনুমতি আপনার অ্যাকাউন্টে "
+"উপস্থিত নেই"
 
 #: ../admin-tool/sabayon:45
 msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
-msgstr "এই প্রোগ্রামের দ্বারা সিস্টেম ফাইল পরিবর্তনের সম্ভাবনার ফলে এটি সঞ্চালনের জন্য প্রশাসনিক অনুমতি আবশ্যক।"
+msgstr ""
+"এই প্রোগ্রামের দ্বারা সিস্টেম ফাইল পরিবর্তনের সম্ভাবনার ফলে এটি সঞ্চালনের জন্য "
+"প্রশাসনিক অনুমতি আবশ্যক।"
 
 #: ../admin-tool/sabayon:50
 msgid "Desktop User Profiles tool is already running"
@@ -295,7 +299,9 @@ msgstr "ডেস্কটপ ব্যবহারকারী প্রোফ�
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
-msgstr "প্রোফাইল সম্পাদনার সেশান চলাকালে ডেস্কটপ ব্যবহারকারী প্রোফাইল ব্যবস্থা চালানো সম্ভব নয়"
+msgstr ""
+"প্রোফাইল সম্পাদনার সেশান চলাকালে ডেস্কটপ ব্যবহারকারী প্রোফাইল ব্যবস্থা চালানো সম্ভব "
+"নয়"
 
 #: ../admin-tool/sabayon:58
 #, c-format
@@ -308,7 +314,10 @@ msgid ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
 "Try again after creating the account (using, for example, the 'adduser' "
 "command)"
-msgstr "Sabayon'র ক্ষেত্রে '%s' নামক একটি বিশেষ ব্যবহারকারীর অ্যাকউন্ট বর্তমান সিস্টেমে উপস্তিত থাকা আবশ্যক। অ্যাকাউন্ট নির্মাণ করে (যেমন 'adduser' কমান্ড প্রয়োগ করে) পুনরায় প্রচেষ্টা করুন"
+msgstr ""
+"Sabayon'র ক্ষেত্রে '%s' নামক একটি বিশেষ ব্যবহারকারীর অ্যাকউন্ট বর্তমান সিস্টেমে "
+"উপস্তিত থাকা আবশ্যক। অ্যাকাউন্ট নির্মাণ করে (যেমন 'adduser' কমান্ড প্রয়োগ করে) "
+"পুনরায় প্রচেষ্টা করুন"
 
 #: ../admin-tool/sabayon-apply:39
 #, c-format
@@ -351,14 +360,18 @@ msgid "_Base on:"
 msgstr "ভিত্তি করা হবে:(_B)"
 
 #: ../admin-tool/sabayon.glade.h:6
+msgid "_Details"
+msgstr "বিবরণ (_D)"
+
+#: ../admin-tool/sabayon.glade.h:7
 msgid "_Profiles:"
 msgstr "প্রোফাইল:(_P)"
 
-#: ../admin-tool/sabayon.glade.h:7
+#: ../admin-tool/sabayon.glade.h:8
 msgid "_Users"
 msgstr "ব্যবহারকারী (_U)"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.glade.h:9
 msgid "_Users:"
 msgstr "ব্যবহারকারী: (_U)"
 
@@ -392,8 +405,12 @@ msgid ""
 msgid_plural ""
 "If you don't save, changes from the last minute and %ld seconds will be "
 "permanently lost."
-msgstr[0] "সংরক্ষণ করা না হলে গত এক মিনিট ও %ld সেকেন্ডে করা সমস্ত পরিবর্তন স্থায়ীরূপে মুছে যাবে।"
-msgstr[1] "সংরক্ষণ করা না হলে গত এক মিনিট ও %ld সেকেন্ডে করা সমস্ত পরিবর্তন স্থায়ীরূপে মুছে যাবে।"
+msgstr[0] ""
+"সংরক্ষণ করা না হলে গত এক মিনিট ও %ld সেকেন্ডে করা সমস্ত পরিবর্তন স্থায়ীরূপে মুছে "
+"যাবে।"
+msgstr[1] ""
+"সংরক্ষণ করা না হলে গত এক মিনিট ও %ld সেকেন্ডে করা সমস্ত পরিবর্তন স্থায়ীরূপে মুছে "
+"যাবে।"
 
 #: ../admin-tool/saveconfirm.py:62
 #, python-format
@@ -404,12 +421,9 @@ msgid_plural ""
 msgstr[0] "সংরক্ষণ করা না হলে গত %ld মিনিটে করা সমস্ত পরিবর্তন স্থায়ীরূপে মুছে যাবে।"
 msgstr[1] "সংরক্ষণ করা না হলে গত %ld মিনিটে করা সমস্ত পরিবর্তন স্থায়ীরূপে মুছে যাবে।"
 
-#: ../admin-tool/saveconfirm.py:71 ../admin-tool/saveconfirm.py:81
-#, python-format
+#: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "সংরক্ষণ করা না হলে গত এক ঘন্টায় করা সমস্ত পরিবর্তন স্থায়ীরূপে মুছে যাবে।"
-msgstr[1] "সংরক্ষণ করা না হলে গত এক ঘন্টায় করা সমস্ত পরিবর্তন স্থায়ীরূপে মুছে যাবে।"
+msgstr "সংরক্ষণ করা না হলে গত এক ঘন্টায় করা সমস্ত পরিবর্তন স্থায়ীরূপে মুছে যাবে।"
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
@@ -421,6 +435,13 @@ msgid_plural ""
 "permanently lost."
 msgstr[0] "সংরক্ষণ করা না হলে গত এক ঘন্টা ও %d মিনিটে করা সমস্ত পরিবর্তন স্থায়ীরূপে মুছে যাবে।"
 msgstr[1] "সংরক্ষণ করা না হলে গত এক ঘন্টা ও %d মিনিটে করা সমস্ত পরিবর্তন স্থায়ীরূপে মুছে যাবে।"
+
+#: ../admin-tool/saveconfirm.py:81
+#, python-format
+msgid "If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] "সংরক্ষণ করা না হলে গত %d ঘন্টায় করা সমস্ত পরিবর্তন স্থায়ীরূপে মুছে যাবে।"
+msgstr[1] "সংরক্ষণ করা না হলে গত %d ঘন্টায় করা সমস্ত পরিবর্তন স্থায়ীরূপে মুছে যাবে।"
 
 #: ../admin-tool/sessionwindow.py:151
 #, python-format
@@ -458,7 +479,7 @@ msgid "Enforce mandatory settings in the editing session"
 msgstr "সম্পাদনা সেশানের জন্য বাধ্যতামূলক বৈশিষ্ট্য প্রয়োগ করুন"
 
 # FIXME
-#: ../admin-tool/sessionwindow.py:271
+#: ../admin-tool/sessionwindow.py:286
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "%s'র জন্য লক-ডাউন সংক্রান্ত বৈশিষ্ট্য"
@@ -530,57 +551,57 @@ msgstr "সিস্টেমের বৈশিষ্ট্যের মেন�
 msgid "Start Here menu"
 msgstr "প্রারম্ভিক মেনু"
 
-#: ../lib/sources/gconfsource.py:87
+#: ../lib/sources/gconfsource.py:88
 #, python-format
 msgid "GConf key '%s' unset"
 msgstr "GConf-কি '%s' নির্ধারিত হয়নি"
 
-#: ../lib/sources/gconfsource.py:89
+#: ../lib/sources/gconfsource.py:90
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
 msgstr "GConf-কি '%s'-র মান '%s' পংক্তি রূপে নির্ধারিত"
 
-#: ../lib/sources/gconfsource.py:91
+#: ../lib/sources/gconfsource.py:92
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
 msgstr "GConf-কি '%s'-র মান '%s' পূর্ণসংখ্যা রূপে নির্ধারিত"
 
-#: ../lib/sources/gconfsource.py:93
+#: ../lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
 msgstr "GConf-কি '%s'-র মান '%s' ভগ্নাংশ রূপে নির্ধারিত"
 
-#: ../lib/sources/gconfsource.py:95
+#: ../lib/sources/gconfsource.py:96
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
 msgstr "GConf-কি '%s'-র মান '%s' বুলিয়ান রূপে নির্ধারিত"
 
-#: ../lib/sources/gconfsource.py:97
+#: ../lib/sources/gconfsource.py:98
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
 msgstr "GConf-কি '%s'-র মান '%s' স্কিমা রূপে নির্ধারিত"
 
-#: ../lib/sources/gconfsource.py:99
+#: ../lib/sources/gconfsource.py:100
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
 msgstr "GConf-কি '%s'-র মান '%s' তালিকা রূপে নির্ধারিত"
 
-#: ../lib/sources/gconfsource.py:101
+#: ../lib/sources/gconfsource.py:102
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
 msgstr "GConf-কি '%s'-র মান '%s' জুটি রূপে নির্ধারিত"
 
-#: ../lib/sources/gconfsource.py:103
+#: ../lib/sources/gconfsource.py:104
 #, python-format
 msgid "GConf key '%s' set to '%s'"
 msgstr "GConf-কি '%s'-র মান '%s' রূপে নির্ধারিত"
 
-#: ../lib/sources/gconfsource.py:134
+#: ../lib/sources/gconfsource.py:135
 msgid "Default GConf settings"
 msgstr "GConf'র ডিফল্ট বৈশিষ্ট্য"
 
 # FIXME
-#: ../lib/sources/gconfsource.py:136
+#: ../lib/sources/gconfsource.py:137
 msgid "Mandatory GConf settings"
 msgstr "GConf'র আবশ্যক বৈশিষ্ট্য"
 
@@ -664,37 +685,134 @@ msgstr "Mozilla বুকমার্ক পরিবর্তিত হয়ে�
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mozilla বুকমার্ক ফোল্ডার পরিবর্তিত হয়েছে '%s'"
 
-#: ../lib/sources/paneldelegate.py:56
+#: ../lib/sources/paneldelegate.py:53
 #, python-format
 msgid "Panel '%s' added"
 msgstr "প্যানেল '%s' যোগ করা হয়েছে"
 
-#: ../lib/sources/paneldelegate.py:62
+#: ../lib/sources/paneldelegate.py:59
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "প্যানেল '%s' মুছে ফেলা হয়েছে"
 
-#: ../lib/sources/paneldelegate.py:68
-#, python-format
-msgid "Panel applet '%s' added"
-msgstr "প্যানেল অ্যাপ্লেট '%s' যোগ করা হয়েছে"
-
 #: ../lib/sources/paneldelegate.py:74
 #, python-format
-msgid "Panel applet '%s' removed"
-msgstr "প্যানেল অ্যাপ্লেট '%s' মুছে ফেলা হয়েছে"
+msgid "Applet %s added to top panel"
+msgstr "শীর্ষ প্যানেলে %s অ্যাপ্লেট যোগ করা হয়েছে"
+
+#: ../lib/sources/paneldelegate.py:76
+#, python-format
+msgid "Applet %s added to bottom panel"
+msgstr "নীচের প্যানেলে %s অ্যাপ্লেট যোগ করা হয়েছে"
+
+#: ../lib/sources/paneldelegate.py:78
+#, python-format
+msgid "Applet %s added to left panel"
+msgstr "বাঁদিকের প্যানেলে %s অ্যাপ্লেট যোগ করা হয়েছে"
 
 #: ../lib/sources/paneldelegate.py:80
 #, python-format
-msgid "Panel object '%s' added"
-msgstr "প্যানেল অবজেক্ট '%s' যোগ করা হয়েছে"
+msgid "Applet %s added to right panel"
+msgstr "ডানদিকের প্যানেলে %s অ্যাপ্লেট যোগ করা হয়েছে"
 
-#: ../lib/sources/paneldelegate.py:92
+#: ../lib/sources/paneldelegate.py:95
 #, python-format
-msgid "Panel object '%s' removed"
-msgstr "প্যানেল অবজেক্ট '%s' মুছে ফেলা হয়েছে"
+msgid "Applet %s removed from top panel"
+msgstr "শীর্ষ প্যানেল থেকে %s অ্যাপ্লেট মুছে ফেলা হয়েছে"
 
-#: ../lib/sources/paneldelegate.py:373
+#: ../lib/sources/paneldelegate.py:97
+#, python-format
+msgid "Applet %s removed from bottom panel"
+msgstr "নীচের প্যানেল থেকে %s অ্যাপ্লেট মুছে ফেলা হয়েছে"
+
+#: ../lib/sources/paneldelegate.py:99
+#, python-format
+msgid "Applet %s removed from left panel"
+msgstr "বাঁদিকের প্যানেল থেকে %s অ্যাপ্লেট মুছে ফেলা হয়েছে"
+
+#: ../lib/sources/paneldelegate.py:101
+#, python-format
+msgid "Applet %s removed from right panel"
+msgstr "ডানদিকের প্যানেল থেকে %s অ্যাপ্লেট মুছে ফেলা হয়েছে"
+
+#: ../lib/sources/paneldelegate.py:115
+#, python-format
+msgid "%s added to top panel"
+msgstr "শীর্ষ প্যানেলে %s যোগ করা হয়েছে"
+
+#: ../lib/sources/paneldelegate.py:117
+#, python-format
+msgid "%s added to bottom panel"
+msgstr "নীচের প্যানেলে %s যোগ করা হয়েছে"
+
+#: ../lib/sources/paneldelegate.py:119
+#, python-format
+msgid "%s added to left panel"
+msgstr "বাঁদিকের প্যানেলে %s যোগ করা হয়েছে"
+
+#: ../lib/sources/paneldelegate.py:121
+#, python-format
+msgid "%s added to right panel"
+msgstr "ডানদিকের প্যানেলে %s যোগ করা হয়েছে"
+
+#: ../lib/sources/paneldelegate.py:142
+#, python-format
+msgid "%s removed from top panel"
+msgstr "শীর্ষ প্যানেল থেকে %s মুছে ফেলা হয়েছে"
+
+#: ../lib/sources/paneldelegate.py:144
+#, python-format
+msgid "%s removed from bottom panel"
+msgstr "নীচের প্যানেল থেকে %s মুছে ফেলা হয়েছে"
+
+#: ../lib/sources/paneldelegate.py:146
+#, python-format
+msgid "%s removed from left panel"
+msgstr "বাঁদিকের প্যানেল থেকে %s মুছে ফেলা হয়েছে"
+
+#: ../lib/sources/paneldelegate.py:148
+#, python-format
+msgid "%s removed from right panel"
+msgstr "ডানদিকের প্যানেল থেকে %s মুছে ফেলা হয়েছে"
+
+#: ../lib/sources/paneldelegate.py:197
+msgid "Drawer"
+msgstr "ড্রয়ার"
+
+#: ../lib/sources/paneldelegate.py:199
+msgid "Main Menu"
+msgstr "প্রধান মেনু"
+
+#: ../lib/sources/paneldelegate.py:209
+#, python-format
+msgid "%s launcher"
+msgstr "%s লঞ্চার"
+
+#: ../lib/sources/paneldelegate.py:213
+msgid "Lock Screen button"
+msgstr "পর্দা লক করার বাটন"
+
+#: ../lib/sources/paneldelegate.py:215
+msgid "Logout button"
+msgstr "লগ-আউট বাটন"
+
+#: ../lib/sources/paneldelegate.py:217
+msgid "Run Appliction button"
+msgstr "অ্যাপলিকেশন সঞ্চালন বাটন"
+
+#: ../lib/sources/paneldelegate.py:219
+msgid "Search button"
+msgstr "অনুসন্ধান বাটন"
+
+#: ../lib/sources/paneldelegate.py:221
+msgid "Screenshot button"
+msgstr "স্ক্রিন-শটের বাটন"
+
+#: ../lib/sources/paneldelegate.py:223
+msgid "Menu Bar"
+msgstr "মেনু বার"
+
+#: ../lib/sources/paneldelegate.py:467
 msgid "Panel File"
 msgstr "প্যানেল ফাইল"
 
@@ -719,7 +837,7 @@ msgid "Cannot add non-existent file '%s'"
 msgstr "অনুপস্থিত ফাইল '%s' যোগ করতে ব্যর্থ"
 
 # FIXME
-#: ../lib/storage.py:538
+#: ../lib/storage.py:567
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "প্রোফাইল শুধুমাত্র পাঠযোগ্য %s"
@@ -805,11 +923,15 @@ msgstr "ব্যবহারকারীর তালিকা প্রাপ�
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "ব্যক্তিগত (home) ডিরেক্টরি পাওয়া যায়নি: /etc/passwd ফাইলে উল্লিখিত হয়নি ও পরিবেশের $HOME ভেরিয়েবলের মান অনুপস্থিত"
+msgstr ""
+"ব্যক্তিগত (home) ডিরেক্টরি পাওয়া যায়নি: /etc/passwd ফাইলে উল্লিখিত হয়নি ও "
+"পরিবেশের $HOME ভেরিয়েবলের মান অনুপস্থিত"
 
 #: ../lib/util.py:138
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
-msgstr "ব্যবহারকারীর নাম পাওয়া যায়নি: /etc/passwd ফাইলে উল্লিখিত হয়নি ও পরিবেশের $USER ভেরিয়েবলের মান অনুপস্থিত"
+msgstr ""
+"ব্যবহারকারীর নাম পাওয়া যায়নি: /etc/passwd ফাইলে উল্লিখিত হয়নি ও পরিবেশের $USER "
+"ভেরিয়েবলের মান অনুপস্থিত"
 
