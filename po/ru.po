@@ -1,165 +1,166 @@
-# translation of sabayon.HEAD.po to Russian
+# translation of ru.po to
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Leonid Kanter <leon@asplinux.ru>, 2006.
+# Leonid Kanter <leon@asplinux.ru>, 2006, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: sabayon.HEAD\n"
+"Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-02-20 09:00+0100\n"
-"PO-Revision-Date: 2006-02-21 14:12+0200\n"
+"POT-Creation-Date: 2007-03-05 15:46+0200\n"
+"PO-Revision-Date: 2007-03-05 15:34+0200\n"
 "Last-Translator: Leonid Kanter <leon@asplinux.ru>\n"
 "Language-Team:  <gnome-cyr@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: KBabel 1.11.1\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: KBabel 1.11.4\n"
 
-#: ../admin-tool/aboutdialog.py:63
+#: ../admin-tool/aboutdialog.py:61
 msgid "Program to establish and edit profiles for users"
 msgstr "Программа для установки и изменения профилей пользователей"
 
-#: ../admin-tool/aboutdialog.py:66
+#: ../admin-tool/aboutdialog.py:64
 msgid "translator-credits"
 msgstr "Леонид Кантер <leon@asplinux.ru>"
 
-#: ../admin-tool/changeswindow.py:50
+#: ../admin-tool/changeswindow.py:48
 #, python-format
 msgid "Changes in profile %s"
 msgstr "Изменения в профиле %s"
 
-#: ../admin-tool/changeswindow.py:106
+#: ../admin-tool/changeswindow.py:104
 msgid "Ignore"
 msgstr "Игнорировать"
 
-#: ../admin-tool/changeswindow.py:113
+#: ../admin-tool/changeswindow.py:111
 msgid "Lock"
 msgstr "Заблокировать"
 
-#: ../admin-tool/changeswindow.py:120 ../admin-tool/editorwindow.py:224
+#: ../admin-tool/changeswindow.py:118 ../admin-tool/editorwindow.py:222
 msgid "Description"
 msgstr "Описание"
 
-#: ../admin-tool/editorwindow.py:97
+#: ../admin-tool/editorwindow.py:95
 #, python-format
 msgid "Profile %s"
 msgstr "Профиль %s"
 
-#: ../admin-tool/editorwindow.py:189 ../admin-tool/sessionwindow.py:174
+#: ../admin-tool/editorwindow.py:187 ../admin-tool/sessionwindow.py:172
 msgid "_Profile"
 msgstr "_Профиль"
 
-#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
+#: ../admin-tool/editorwindow.py:188 ../admin-tool/sessionwindow.py:173
 msgid "_Save"
 msgstr "_Сохранить"
 
-#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
+#: ../admin-tool/editorwindow.py:188 ../admin-tool/sessionwindow.py:173
 msgid "Save profile"
 msgstr "Сохранить профиль"
 
-#: ../admin-tool/editorwindow.py:191
+#: ../admin-tool/editorwindow.py:189
 msgid "_Close"
 msgstr "_Закрыть"
 
-#: ../admin-tool/editorwindow.py:191 ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/editorwindow.py:189 ../admin-tool/sessionwindow.py:174
 msgid "Close the current window"
 msgstr "Закрыть текущее окно"
 
-#: ../admin-tool/editorwindow.py:192 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
 msgid "_Edit"
 msgstr "_Правка"
 
-#: ../admin-tool/editorwindow.py:193
+#: ../admin-tool/editorwindow.py:191
 msgid "_Delete"
 msgstr "_Удалить"
 
-#: ../admin-tool/editorwindow.py:193
+#: ../admin-tool/editorwindow.py:191
 msgid "Delete item"
 msgstr "Удалить элемент"
 
-#: ../admin-tool/editorwindow.py:194 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:192 ../admin-tool/sessionwindow.py:178
 msgid "_Help"
 msgstr "_Справка"
 
-#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/editorwindow.py:193 ../admin-tool/sessionwindow.py:179
 msgid "_About"
 msgstr "_О программе"
 
-#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/editorwindow.py:193 ../admin-tool/sessionwindow.py:179
 msgid "About Sabayon"
 msgstr "О программе Sabayon"
 
-#: ../admin-tool/editorwindow.py:254 ../lib/sources/gconfsource.py:123
+#: ../admin-tool/editorwindow.py:252 ../lib/sources/gconfsource.py:122
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:258 ../lib/sources/filessource.py:78
+#: ../admin-tool/editorwindow.py:256 ../lib/sources/filessource.py:76
 msgid "Files"
 msgstr "Файлы"
 
-#: ../admin-tool/editorwindow.py:258 ../admin-tool/lockdown/pessulus.glade.h:7
-#: ../lib/sources/paneldelegate.py:134
+#: ../admin-tool/editorwindow.py:256 ../admin-tool/lockdown/pessulus.glade.h:7
+#: ../lib/sources/paneldelegate.py:226
 msgid "Panel"
 msgstr "Панель"
 
-#: ../admin-tool/fileviewer.py:29
+#: ../admin-tool/fileviewer.py:27
 #, python-format
 msgid "Profile file: %s"
 msgstr "Файл профиля: %s"
 
-#: ../admin-tool/gconfviewer.py:59 ../admin-tool/gconfviewer.py:78
+#: ../admin-tool/gconfviewer.py:57 ../admin-tool/gconfviewer.py:76
 msgid "<no type>"
 msgstr "<нет типа>"
 
-#: ../admin-tool/gconfviewer.py:60
+#: ../admin-tool/gconfviewer.py:58
 msgid "<no value>"
 msgstr "<нет значения>"
 
-#: ../admin-tool/gconfviewer.py:64
+#: ../admin-tool/gconfviewer.py:62
 msgid "string"
 msgstr "строка"
 
-#: ../admin-tool/gconfviewer.py:66
+#: ../admin-tool/gconfviewer.py:64
 msgid "integer"
 msgstr "целое"
 
-#: ../admin-tool/gconfviewer.py:68
+#: ../admin-tool/gconfviewer.py:66
 msgid "float"
 msgstr "с плавающей запятой"
 
-#: ../admin-tool/gconfviewer.py:70
+#: ../admin-tool/gconfviewer.py:68
 msgid "boolean"
 msgstr "булево"
 
-#: ../admin-tool/gconfviewer.py:72
+#: ../admin-tool/gconfviewer.py:70
 msgid "schema"
 msgstr "схема"
 
-#: ../admin-tool/gconfviewer.py:74
+#: ../admin-tool/gconfviewer.py:72
 msgid "list"
 msgstr "список"
 
-#: ../admin-tool/gconfviewer.py:76
+#: ../admin-tool/gconfviewer.py:74
 msgid "pair"
 msgstr "пара"
 
-#: ../admin-tool/gconfviewer.py:88
+#: ../admin-tool/gconfviewer.py:86
 #, python-format
 msgid "Profile settings: %s"
 msgstr "Настройка профиля: %s"
 
-#: ../admin-tool/gconfviewer.py:112 ../admin-tool/profilesdialog.py:315
-#: ../admin-tool/usersdialog.py:85
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:313
+#: ../admin-tool/usersdialog.py:83
 msgid "Name"
 msgstr "Имя"
 
-#: ../admin-tool/gconfviewer.py:117
+#: ../admin-tool/gconfviewer.py:115
 msgid "Type"
 msgstr "Тип"
 
-#: ../admin-tool/gconfviewer.py:122
+#: ../admin-tool/gconfviewer.py:120
 msgid "Value"
 msgstr "Значение"
 
@@ -265,20 +266,25 @@ msgstr "Редактор изоляции"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:415
+#: ../admin-tool/profilesdialog.py:413
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:44
-msgid "Your account does not have permissions to run the Desktop User Profiles tool"
-msgstr "Ваша учетная запись не имеет права запуска утилиты изменения профилей пользователей"
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr ""
+"Ваша учетная запись не имеет права запуска утилиты изменения профилей "
+"пользователей"
 
 #: ../admin-tool/sabayon:45
 msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
-msgstr "Для выполнения этой программы необходимы права администратора, потому что она может изменить системные файлы."
+msgstr ""
+"Для выполнения этой программы необходимы права администратора, потому что "
+"она может изменить системные файлы."
 
 #: ../admin-tool/sabayon:50
 msgid "Desktop User Profiles tool is already running"
@@ -288,7 +294,9 @@ msgstr "Утилита управления профилями пользова�
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
-msgstr "Вы не можете использовать утилиту изменения профилей из сеанса изменения профилей"
+msgstr ""
+"Вы не можете использовать утилиту изменения профилей из сеанса изменения "
+"профилей"
 
 #: ../admin-tool/sabayon:58
 #, c-format
@@ -301,7 +309,9 @@ msgid ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
 "Try again after creating the account (using, for example, the 'adduser' "
 "command)"
-msgstr "Для работы программы Sabayon требуется специальная учетная запись \"%s\". Попробуйте еще раз после создания этой учетной записи."
+msgstr ""
+"Для работы программы Sabayon требуется специальная учетная запись \"%s\". "
+"Попробуйте еще раз после создания этой учетной записи."
 
 #: ../admin-tool/sabayon-apply:39
 #, c-format
@@ -343,41 +353,55 @@ msgid "_Base on:"
 msgstr "_Основан на:"
 
 #: ../admin-tool/sabayon.glade.h:6
+msgid "_Details"
+msgstr "_Сведения"
+
+#: ../admin-tool/sabayon.glade.h:7
 msgid "_Profiles:"
 msgstr "П_рофили:"
 
-#: ../admin-tool/sabayon.glade.h:7
+#: ../admin-tool/sabayon.glade.h:8
 msgid "_Users"
 msgstr "_Пользователи"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.glade.h:9
 msgid "_Users:"
 msgstr "_Пользователи:"
 
-#: ../admin-tool/saveconfirm.py:36
+#: ../admin-tool/saveconfirm.py:34
 msgid "Close _Without Saving"
 msgstr "Закрыть _без сохранения"
 
-#: ../admin-tool/saveconfirm.py:43
+#: ../admin-tool/saveconfirm.py:41
 #, python-format
 msgid "Save changes to profile \"%s\" before closing?"
 msgstr "Сохранить изменения профиля \"%s\" перед выходом?"
 
-#: ../admin-tool/saveconfirm.py:47
+#: ../admin-tool/saveconfirm.py:45
 #, python-format
-msgid "If you don't save, changes from the last %ld second will be permanently lost."
+msgid ""
+"If you don't save, changes from the last %ld second will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld seconds will be permanently "
 "lost."
-msgstr[0] "Если вы не сохраните, изменения за последнюю %ld секунду будут безвозвратно утеряны."
-msgstr[1] "Если вы не сохраните, изменения за последние %ld секунды будут безвозвратно утеряны."
-msgstr[2] "Если вы не сохраните, изменения за последние %ld секунд будут безвозвратно утеряны."
+msgstr[0] ""
+"Если вы не сохраните, изменения за последнюю %ld секунду будут безвозвратно "
+"утеряны."
+msgstr[1] ""
+"Если вы не сохраните, изменения за последние %ld секунды будут безвозвратно "
+"утеряны."
+msgstr[2] ""
+"Если вы не сохраните, изменения за последние %ld секунд будут безвозвратно "
+"утеряны."
 
-#: ../admin-tool/saveconfirm.py:53
-msgid "If you don't save, changes from the last minute will be permanently lost."
-msgstr "Если вы не сохраните, изменения за последнюю минуту будут безвозвратно утеряны."
+#: ../admin-tool/saveconfirm.py:51
+msgid ""
+"If you don't save, changes from the last minute will be permanently lost."
+msgstr ""
+"Если вы не сохраните, изменения за последнюю минуту будут безвозвратно "
+"утеряны."
 
-#: ../admin-tool/saveconfirm.py:57
+#: ../admin-tool/saveconfirm.py:55
 #, python-format
 msgid ""
 "If you don't save, changes from the last minute and %ld second will be "
@@ -385,29 +409,39 @@ msgid ""
 msgid_plural ""
 "If you don't save, changes from the last minute and %ld seconds will be "
 "permanently lost."
-msgstr[0] "Если вы не сохраните, изменения за последнюю минуту и %ld секунду будут безвозвратно утеряны."
-msgstr[1] "Если вы не сохраните, изменения за последнюю минуту и %ld секунды будут безвозвратно утеряны."
-msgstr[2] "Если вы не сохраните, изменения за последнюю минуту и %ld секунд будут безвозвратно утеряны."
+msgstr[0] ""
+"Если вы не сохраните, изменения за последнюю минуту и %ld секунду будут "
+"безвозвратно утеряны."
+msgstr[1] ""
+"Если вы не сохраните, изменения за последнюю минуту и %ld секунды будут "
+"безвозвратно утеряны."
+msgstr[2] ""
+"Если вы не сохраните, изменения за последнюю минуту и %ld секунд будут "
+"безвозвратно утеряны."
 
-#: ../admin-tool/saveconfirm.py:64
+#: ../admin-tool/saveconfirm.py:62
 #, python-format
-msgid "If you don't save, changes from the last %ld minute will be permanently lost."
+msgid ""
+"If you don't save, changes from the last %ld minute will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
-msgstr[0] "Если вы не сохраните, изменения за последнюю %ld минуту будут безвозвратно утеряны."
-msgstr[1] "Если вы не сохраните, изменения за последние %ld минуты будут безвозвратно утеряны."
-msgstr[2] "Если вы не сохраните, изменения за последние %ld минут будут безвозвратно утеряны."
+msgstr[0] ""
+"Если вы не сохраните, изменения за последнюю %ld минуту будут безвозвратно "
+"утеряны."
+msgstr[1] ""
+"Если вы не сохраните, изменения за последние %ld минуты будут безвозвратно "
+"утеряны."
+msgstr[2] ""
+"Если вы не сохраните, изменения за последние %ld минут будут безвозвратно "
+"утеряны."
 
-#: ../admin-tool/saveconfirm.py:73 ../admin-tool/saveconfirm.py:83
-#, python-format
+#: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "Если вы не сохраните, изменения за последний %ld час будут безвозвратно утеряны."
-msgstr[1] "Если вы не сохраните, изменения за последние %ld часа будут безвозвратно утеряны."
-msgstr[2] "Если вы не сохраните, изменения за последние %ld часов будут безвозвратно утеряны."
+msgstr ""
+"Если вы не сохраните, изменения за последний час будут безвозвратно утеряны."
 
-#: ../admin-tool/saveconfirm.py:76
+#: ../admin-tool/saveconfirm.py:74
 #, python-format
 msgid ""
 "If you don't save, changes from the last hour and %d minute will be "
@@ -415,298 +449,417 @@ msgid ""
 msgid_plural ""
 "If you don't save, changes from the last hour and %d minutes will be "
 "permanently lost."
-msgstr[0] "Если вы не сохраните, изменения за последний час и %d минуту будут безвозвратно утеряны."
-msgstr[1] "Если вы не сохраните, изменения за последний час и %d минуты будут безвозвратно утеряны."
-msgstr[2] "Если вы не сохраните, изменения за последний час и %d минут будут безвозвратно утеряны."
+msgstr[0] ""
+"Если вы не сохраните, изменения за последний час и %d минуту будут "
+"безвозвратно утеряны."
+msgstr[1] ""
+"Если вы не сохраните, изменения за последний час и %d минуты будут "
+"безвозвратно утеряны."
+msgstr[2] ""
+"Если вы не сохраните, изменения за последний час и %d минут будут "
+"безвозвратно утеряны."
 
-#: ../admin-tool/sessionwindow.py:153
+#: ../admin-tool/saveconfirm.py:81
+#, python-format
+msgid ""
+"If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] ""
+"Если вы не сохраните, изменения за последний %d час будут безвозвратно "
+"утеряны."
+msgstr[1] ""
+"Если вы не сохраните, изменения за последние %d часа будут безвозвратно "
+"утеряны."
+msgstr[2] ""
+"Если вы не сохраните, изменения за последние %d часов будут безвозвратно "
+"утеряны."
+
+#: ../admin-tool/sessionwindow.py:151
 #, python-format
 msgid "Editing profile %s"
 msgstr "Изменениt профиля %s"
 
-#: ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/sessionwindow.py:174
 msgid "_Quit"
 msgstr "В_ыход"
 
-#: ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/sessionwindow.py:176
 msgid "_Changes"
 msgstr "_Изменения"
 
-#: ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/sessionwindow.py:176
 msgid "Edit changes"
 msgstr "Правка изменений"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:177
 msgid "_Lockdown"
 msgstr "_Заблокировать"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:177
 msgid "Edit Lockdown settings"
 msgstr "Изменить параметры блокировки"
 
-#: ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/sessionwindow.py:182
 msgid "Enforce Mandatory"
 msgstr "Навязывать принудительные параметры"
 
-#: ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/sessionwindow.py:182
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Навязывать принудительные параметры в сеансе редактирования"
 
-#: ../admin-tool/sessionwindow.py:273
+#: ../admin-tool/sessionwindow.py:286
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Параметры строгой изоляции для %s"
 
-#: ../admin-tool/usersdialog.py:67
+#: ../admin-tool/usersdialog.py:65
 #, python-format
 msgid "Users for profile %s"
 msgstr "Пользователи для профиля %s"
 
-#: ../admin-tool/usersdialog.py:95
+#: ../admin-tool/usersdialog.py:93
 msgid "Use This Profile"
 msgstr "Использовать этот профиль"
 
-#: ../lib/dirmonitor.py:151
+#: ../lib/dirmonitor.py:149
 #, python-format
 msgid "Failed to add monitor for %s"
 msgstr "Не удаётся добавить монитор на %s"
 
-#: ../lib/dirmonitor.py:231
+#: ../lib/dirmonitor.py:229
 #, python-format
 msgid "Expected event: %s %s"
 msgstr "Ожидаемое событие: %s %s"
 
-#: ../lib/protosession.py:142
+#: ../lib/protosession.py:140
 msgid "Unable to find a free X display"
 msgstr "Не удаётся найти свободный X-дисплей"
 
-#: ../lib/protosession.py:409
+#: ../lib/protosession.py:407
 msgid "Failed to start Xnest: timed out waiting for USR1 signal"
 msgstr "Не удаётся запустить Xnest: время ожидания сигнала USR1 истекло"
 
-#: ../lib/protosession.py:411
+#: ../lib/protosession.py:409
 msgid "Failed to start Xnest: died during startup"
 msgstr "Не удаётся запустить Xnest: умер при запуске"
 
-#: ../lib/sources/filessource.py:68
+#: ../lib/sources/filessource.py:66
 #, python-format
 msgid "File '%s' created"
 msgstr "Файл \"%s\" создан"
 
-#: ../lib/sources/filessource.py:70
+#: ../lib/sources/filessource.py:68
 #, python-format
 msgid "File '%s' deleted"
 msgstr "Файл \"%s\" удалён"
 
-#: ../lib/sources/filessource.py:72
+#: ../lib/sources/filessource.py:70
 #, python-format
 msgid "File '%s' changed"
 msgstr "Файл \"%s\" изменён"
 
-#: ../lib/sources/filessource.py:96
+#: ../lib/sources/filessource.py:94
 msgid "Applications menu"
 msgstr "Меню приложений"
 
-#: ../lib/sources/filessource.py:98
+#: ../lib/sources/filessource.py:96
 msgid "Preferences menu"
 msgstr "Меню параметров"
 
-#: ../lib/sources/filessource.py:100
+#: ../lib/sources/filessource.py:98
 msgid "Server Settings menu"
 msgstr "Меню параметров сервера"
 
-#: ../lib/sources/filessource.py:102
+#: ../lib/sources/filessource.py:100
 msgid "System Settings menu"
 msgstr "Меню системных параметров"
 
-#: ../lib/sources/filessource.py:104
+#: ../lib/sources/filessource.py:102
 msgid "Start Here menu"
 msgstr "Меню \"Начать здесь\""
 
-#: ../lib/sources/gconfsource.py:89
+#: ../lib/sources/gconfsource.py:88
 #, python-format
 msgid "GConf key '%s' unset"
 msgstr "Ключ GConf \"%s\" сброшен"
 
-#: ../lib/sources/gconfsource.py:91
+#: ../lib/sources/gconfsource.py:90
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
 msgstr "Ключ GConf \"%s\" установлен как строка \"%s\""
 
-#: ../lib/sources/gconfsource.py:93
+#: ../lib/sources/gconfsource.py:92
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
 msgstr "Ключ GConf \"%s\" установлен как целое \"%s\""
 
-#: ../lib/sources/gconfsource.py:95
+#: ../lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
 msgstr "Ключ GConf \"%s\" установлен как плавающее \"%s\""
 
-#: ../lib/sources/gconfsource.py:97
+#: ../lib/sources/gconfsource.py:96
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
 msgstr "Ключ GConf \"%s\" установлен как булево \"%s\""
 
-#: ../lib/sources/gconfsource.py:99
+#: ../lib/sources/gconfsource.py:98
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
 msgstr "Ключ GConf \"%s\" установлен как схема \"%s\""
 
-#: ../lib/sources/gconfsource.py:101
+#: ../lib/sources/gconfsource.py:100
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
 msgstr "Ключ GConf \"%s\" установлен как список \"%s\""
 
-#: ../lib/sources/gconfsource.py:103
+#: ../lib/sources/gconfsource.py:102
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
 msgstr "Ключ GConf \"%s\" установлен как пара \"%s\""
 
-#: ../lib/sources/gconfsource.py:105
+#: ../lib/sources/gconfsource.py:104
 #, python-format
 msgid "GConf key '%s' set to '%s'"
 msgstr "Ключ GConf \"%s\" установлен в \"%s\""
 
-#: ../lib/sources/gconfsource.py:136
+#: ../lib/sources/gconfsource.py:135
 msgid "Default GConf settings"
 msgstr "Параметры GConf по умолчанию"
 
-#: ../lib/sources/gconfsource.py:138
+#: ../lib/sources/gconfsource.py:137
 msgid "Mandatory GConf settings"
 msgstr "Принудительные параметры GConf"
 
-#: ../lib/sources/mozillasource.py:132
+#: ../lib/sources/mozillasource.py:130
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
 msgstr "Ключ Mozilla \"%s\" установлен в \"%s\""
 
-#: ../lib/sources/mozillasource.py:134
+#: ../lib/sources/mozillasource.py:132
 #, python-format
 msgid "Mozilla key '%s' unset"
 msgstr "Сброшен ключ Mozilla \"%s\""
 
-#: ../lib/sources/mozillasource.py:136
+#: ../lib/sources/mozillasource.py:134
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Ключ Mozilla \"%s\" изменён на \"%s\""
 
-#: ../lib/sources/mozillasource.py:165 ../lib/sources/mozillasource.py:175
+#: ../lib/sources/mozillasource.py:163 ../lib/sources/mozillasource.py:173
 msgid "Web browser preferences"
 msgstr "Параметры веб-браузера"
 
-#: ../lib/sources/mozillasource.py:167 ../lib/sources/mozillasource.py:177
+#: ../lib/sources/mozillasource.py:165 ../lib/sources/mozillasource.py:175
 msgid "Web browser bookmarks"
 msgstr "Закладки веб-браузера"
 
-#: ../lib/sources/mozillasource.py:169
+#: ../lib/sources/mozillasource.py:167
 msgid "Web browser profile list"
 msgstr "Список профилей веб-браузера"
 
-#: ../lib/sources/mozillasource.py:520
+#: ../lib/sources/mozillasource.py:518
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Файл не найден (%s)"
 
-#: ../lib/sources/mozillasource.py:871
+#: ../lib/sources/mozillasource.py:869
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "дублированное имя(%(name)s) в секции %(section)s"
 
-#: ../lib/sources/mozillasource.py:880
+#: ../lib/sources/mozillasource.py:878
 #, python-format
 msgid "redundant default in section %s"
 msgstr "повторяющееся значение по умолчанию в сеансе %s"
 
-#: ../lib/sources/mozillasource.py:897
+#: ../lib/sources/mozillasource.py:895
 msgid "no default profile"
 msgstr "нет профиля по умолчанию"
 
-#: ../lib/sources/mozillasource.py:952
+#: ../lib/sources/mozillasource.py:950
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Создана закладка Mozilla \"%s\" -> \"%s\""
 
-#: ../lib/sources/mozillasource.py:954
+#: ../lib/sources/mozillasource.py:952
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Создана закладка Mozilla \"%s\""
 
-#: ../lib/sources/mozillasource.py:957
+#: ../lib/sources/mozillasource.py:955
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Удалена закладка Mozilla \"%s\""
 
-#: ../lib/sources/mozillasource.py:959
+#: ../lib/sources/mozillasource.py:957
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Удалена папка закладок \"%s\""
 
-#: ../lib/sources/mozillasource.py:962
+#: ../lib/sources/mozillasource.py:960
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Закладка Mozilla изменена \"%s\" \"%s\""
 
-#: ../lib/sources/mozillasource.py:964
+#: ../lib/sources/mozillasource.py:962
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Папка закладок Mozilla изменена \"%s\""
 
-#: ../lib/sources/paneldelegate.py:58
+#: ../lib/sources/paneldelegate.py:53
 #, python-format
 msgid "Panel '%s' added"
 msgstr "Панель \"%s\" добавлена"
 
-#: ../lib/sources/paneldelegate.py:64
+#: ../lib/sources/paneldelegate.py:59
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "Панель \"%s\" удалена"
 
-#: ../lib/sources/paneldelegate.py:70
+#: ../lib/sources/paneldelegate.py:74
 #, python-format
-msgid "Panel applet '%s' added"
-msgstr "Апплет панели \"%s\" добавлен"
+msgid "Applet %s added to top panel"
+msgstr "Апплет %s добавлен на верхнюю панель"
 
 #: ../lib/sources/paneldelegate.py:76
 #, python-format
-msgid "Panel applet '%s' removed"
-msgstr "Апплет панели \"%s\" удалён"
+msgid "Applet %s added to bottom panel"
+msgstr "Апплет %s добавлен на нижнюю панель"
 
-#: ../lib/sources/paneldelegate.py:82
+#: ../lib/sources/paneldelegate.py:78
 #, python-format
-msgid "Panel object '%s' added"
-msgstr "Объект панели \"%s\" добавлен"
+msgid "Applet %s added to left panel"
+msgstr "Апплет %s добавлен на левую панель"
 
-#: ../lib/sources/paneldelegate.py:94
+#: ../lib/sources/paneldelegate.py:80
 #, python-format
-msgid "Panel object '%s' removed"
-msgstr "Объект панели \"%s\" удалён"
+msgid "Applet %s added to right panel"
+msgstr "Апплет %s добавлен на правую панель"
 
-#: ../lib/sources/paneldelegate.py:375
+#: ../lib/sources/paneldelegate.py:95
+#, python-format
+msgid "Applet %s removed from top panel"
+msgstr "Апплет %s удалён с верхней панели"
+
+#: ../lib/sources/paneldelegate.py:97
+#, python-format
+msgid "Applet %s removed from bottom panel"
+msgstr "Апплет %s удалён с нижней панели"
+
+#: ../lib/sources/paneldelegate.py:99
+#, python-format
+msgid "Applet %s removed from left panel"
+msgstr "Апплет %s удалён с левой панели"
+
+#: ../lib/sources/paneldelegate.py:101
+#, python-format
+msgid "Applet %s removed from right panel"
+msgstr "Апплет %s удалён с правой панели"
+
+#: ../lib/sources/paneldelegate.py:115
+#, python-format
+msgid "%s added to top panel"
+msgstr "%s добавлен на верхнюю панель"
+
+#: ../lib/sources/paneldelegate.py:117
+#, python-format
+msgid "%s added to bottom panel"
+msgstr "%s добавлен на нижнюю панель"
+
+#: ../lib/sources/paneldelegate.py:119
+#, python-format
+msgid "%s added to left panel"
+msgstr "%s добавлен на левую панель"
+
+#: ../lib/sources/paneldelegate.py:121
+#, python-format
+msgid "%s added to right panel"
+msgstr "%s добавлен на правую панель"
+
+#: ../lib/sources/paneldelegate.py:142
+#, python-format
+msgid "%s removed from top panel"
+msgstr "%s удалён с верхней панели"
+
+#: ../lib/sources/paneldelegate.py:144
+#, python-format
+msgid "%s removed from bottom panel"
+msgstr "%s удалён с нижней панели"
+
+#: ../lib/sources/paneldelegate.py:146
+#, python-format
+msgid "%s removed from left panel"
+msgstr "%s удалён с левой панели"
+
+#: ../lib/sources/paneldelegate.py:148
+#, python-format
+msgid "%s removed from right panel"
+msgstr "%s удалён с правой панели"
+
+#: ../lib/sources/paneldelegate.py:197
+msgid "Drawer"
+msgstr "Ящик"
+
+#: ../lib/sources/paneldelegate.py:199
+msgid "Main Menu"
+msgstr "Главное меню"
+
+#: ../lib/sources/paneldelegate.py:209
+#, python-format
+msgid "%s launcher"
+msgstr "кнопка запуска %s"
+
+#: ../lib/sources/paneldelegate.py:213
+msgid "Lock Screen button"
+msgstr "Кнопка блокирования экрана"
+
+#: ../lib/sources/paneldelegate.py:215
+msgid "Logout button"
+msgstr "Кнопка выхода из системы"
+
+#: ../lib/sources/paneldelegate.py:217
+msgid "Run Appliction button"
+msgstr "Меню запуска приложений"
+
+#: ../lib/sources/paneldelegate.py:219
+msgid "Search button"
+msgstr "Кнопка поиска"
+
+#: ../lib/sources/paneldelegate.py:221
+msgid "Screenshot button"
+msgstr "Кнопка снимка экрана"
+
+#: ../lib/sources/paneldelegate.py:223
+msgid "Menu Bar"
+msgstr "Панель меню"
+
+#: ../lib/sources/paneldelegate.py:467
 msgid "Panel File"
 msgstr "Файл панели"
 
-#: ../lib/storage.py:173
+#: ../lib/storage.py:171
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "Ошибка чтения файла \"%s\": %s"
 
-#: ../lib/storage.py:183
+#: ../lib/storage.py:181
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "Ошибка чтения метаданных из \"%s\": %s"
 
-#: ../lib/storage.py:189
+#: ../lib/storage.py:187
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "Неверная секция метаданных в \"%s\": %s"
 
-#: ../lib/storage.py:363
+#: ../lib/storage.py:361
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Не удаётся добавить несуществующий файл \"%s\""
 
-#: ../lib/storage.py:540
+#: ../lib/storage.py:567
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Профиль только для чтения %s"
@@ -729,72 +882,75 @@ msgstr "Выполняются тесты %s (%s)"
 msgid "Success!"
 msgstr "Удалось!"
 
-#: ../lib/userdb.py:52
+#: ../lib/userdb.py:50
 #, python-format
 msgid "invalid type for setting %s in %s"
 msgstr "неверный тип для установки %s в %s"
 
-#: ../lib/userdb.py:212
+#: ../lib/userdb.py:210
 #, python-format
 msgid "No search based specified for %s"
 msgstr "Поиск не указан для %s"
 
-#: ../lib/userdb.py:215
+#: ../lib/userdb.py:213
 #, python-format
 msgid "No query filter specified for %s"
 msgstr "Фильтр запроса не указан для %s"
 
-#: ../lib/userdb.py:218
+#: ../lib/userdb.py:216
 #, python-format
 msgid "No result attribute specified for %s"
 msgstr "Атрибут результата не указан для %s"
 
-#: ../lib/userdb.py:227
+#: ../lib/userdb.py:225
 msgid "Scope must be one of sub, base and one"
 msgstr "Scope должен быть одним из sub, base и one"
 
-#: ../lib/userdb.py:247
+#: ../lib/userdb.py:245
 msgid "multiple_result must be one of first and random"
 msgstr "multiple_result должен быть одним из first или random"
 
-#: ../lib/userdb.py:339
+#: ../lib/userdb.py:337
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Не удаётся открыть %s для записи"
 
-#: ../lib/userdb.py:352
+#: ../lib/userdb.py:350
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Не удаётся сохранить UserDatabase в %s"
 
-#: ../lib/userdb.py:375 ../lib/userdb.py:410
+#: ../lib/userdb.py:373 ../lib/userdb.py:408
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Файл %s не является конфигурацией профиля"
 
-#: ../lib/userdb.py:382
+#: ../lib/userdb.py:380
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Не удаётся добавить профиль %s в конфигурацию"
 
-#: ../lib/userdb.py:418
+#: ../lib/userdb.py:416
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Не удаётся добавить пользователя %s в конфигурацию профиля"
 
-#: ../lib/userdb.py:449
+#: ../lib/userdb.py:447
 msgid "Failed to get the user list"
 msgstr "Не удаётся получить список пользователей"
 
-#: ../lib/util.py:127
+#: ../lib/util.py:125
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "Не удаётся найти домашний каталог: не установлен ни в /etc/passwd, ни в переменной окружения $HOME."
+msgstr ""
+"Не удаётся найти домашний каталог: не установлен ни в /etc/passwd, ни в "
+"переменной окружения $HOME."
 
-#: ../lib/util.py:140
+#: ../lib/util.py:138
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
-msgstr "Не удаётся найти имя пользователя: не установлено ни в /etc/passwd, ни в переменной окружения $USER."
-
+msgstr ""
+"Не удаётся найти имя пользователя: не установлено ни в /etc/passwd, ни в "
+"переменной окружения $USER."
