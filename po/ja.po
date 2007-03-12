@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-01 22:09+0900\n"
-"PO-Revision-Date: 2007-02-01 22:09+0900\n"
+"POT-Creation-Date: 2007-03-12 23:34+0900\n"
+"PO-Revision-Date: 2007-03-12 23:33+0900\n"
 "Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -385,13 +385,13 @@ msgid ""
 msgid_plural ""
 "If you don't save, changes from the last %ld seconds will be permanently "
 "lost."
-msgstr[0] "保存しないと、%ld秒前からの変更が完全に失われます。"
-msgstr[1] "保存しないと、%ld秒前からの変更が完全に失われます。"
+msgstr[0] "保存しないと %ld秒前からの変更を完全に失うことになります。"
+msgstr[1] "保存しないと %ld秒前からの変更を完全に失うことになります。"
 
 #: ../admin-tool/saveconfirm.py:51
 msgid ""
 "If you don't save, changes from the last minute will be permanently lost."
-msgstr "保存しないと、1分前からの変更が完全に失われます。"
+msgstr "保存しないと 1分前からの変更を完全に失うことになります。"
 
 #: ../admin-tool/saveconfirm.py:55
 #, python-format
@@ -401,8 +401,8 @@ msgid ""
 msgid_plural ""
 "If you don't save, changes from the last minute and %ld seconds will be "
 "permanently lost."
-msgstr[0] "保存しないと、1分 %ld秒前からの変更が完全に失われます。"
-msgstr[1] "保存しないと、1分 %ld秒前からの変更が完全に失われます。"
+msgstr[0] "保存しないと 1分 %ld秒前からの変更を完全に失うことになります。"
+msgstr[1] "保存しないと 1分 %ld秒前からの変更を完全に失うことになります。"
 
 #: ../admin-tool/saveconfirm.py:62
 #, python-format
@@ -411,16 +411,12 @@ msgid ""
 msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
-msgstr[0] "保存しないと、%ld分前からの変更が完全に失われます。"
-msgstr[1] "保存しないと、%ld分前からの変更が完全に失われます。"
+msgstr[0] "保存しないと %ld分前からの変更を完全に失うことになります。"
+msgstr[1] "保存しないと %ld分前からの変更を完全に失うことになります。"
 
-#: ../admin-tool/saveconfirm.py:71 ../admin-tool/saveconfirm.py:81
-#, python-format
+#: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "保存しないと、1時間前からの変更が完全に失われます。"
-msgstr[1] "保存しないと、%d時間前からの変更が完全に失われます。"
+msgstr "保存しないと 1時間前からの変更を完全に失うことになります。"
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
@@ -430,8 +426,17 @@ msgid ""
 msgid_plural ""
 "If you don't save, changes from the last hour and %d minutes will be "
 "permanently lost."
-msgstr[0] "保存しないと、1時間 %d分前からの変更が完全に失われます。"
-msgstr[1] "保存しないと、1時間 %d分前からの変更が完全に失われます。"
+msgstr[0] "保存しないと 1時間 %d分前からの変更を完全に失うことになります。"
+msgstr[1] "保存しないと 1時間 %d分前からの変更を完全に失うことになります。"
+
+#: ../admin-tool/saveconfirm.py:81
+#, python-format
+msgid ""
+"If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] "保存しないと %d時間前からの変更を完全に失うことになります。"
+msgstr[1] "保存しないと %d時間前からの変更を完全に失うことになります。"
 
 #: ../admin-tool/sessionwindow.py:151
 #, python-format
@@ -765,8 +770,9 @@ msgid "Main Menu"
 msgstr "メイン・メニュー"
 
 #: ../lib/sources/paneldelegate.py:209
-msgid " launcher"
-msgstr "ランチャ"
+#, python-format
+msgid "%s launcher"
+msgstr "%s のランチャ"
 
 #: ../lib/sources/paneldelegate.py:213
 msgid "Lock Screen button"
