@@ -21,7 +21,6 @@ import gconf
 import gconfsource
 import subprocess
 import bonobo
-import xdg.DesktopEntry
 
 try:
     import userprofile
@@ -205,8 +204,10 @@ class PanelDelegate (userprofile.SourceDelegate):
 				desktop_file = launcher_location[7:]
 			else:
 				desktop_file = PANEL_LAUNCHER_DIR + "/" + launcher_location
-			launcher = xdg.DesktopEntry.DesktopEntry(desktop_file)
-			self.name = _("%s launcher") % launcher.getName()
+
+                        # FIXME: we need to use xdg.DesktopEntry to extract the localized name
+                        # http://bugzilla.gnome.org/show_bug.cgi?id=397742
+                        self.name = _("%s launcher") % launcher_location
 		elif self.object_type == "action-applet":
 			action_type = self.client.get_string (PANEL_KEY_BASE + "/objects/" + id + "/action_type")
 			if action_type == "lock":

@@ -233,8 +233,8 @@ class SessionWindow:
                     change.get_source ().commit_change (change, mandatory)
                 except:
                     util.print_exception ()
-                    import sys
-                    sys.exit (1)
+#                    import sys
+#                    sys.exit (1)
 
         # Done
 

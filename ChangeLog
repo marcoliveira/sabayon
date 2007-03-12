@@ -1,3 +1,23 @@
+==================== 2.18.0 ====================
+
+2007-03-12  Federico Mena Quintero  <federico@novell.com>
+
+	Released sabayon-2.18.0.
+
+	* configure.ac: Updated version to 2.18.0.
+
+	* NEWS: Updated for 2.18.0.
+
+	* lib/sources/paneldelegate.py (PanelDelegate.__init__): As a
+	temporary fix for bug #397742, use the plain launcher_location as
+	part of the "%s launcher" string, instead of trying to use
+	xdg.DesktopEntry, as the latter is not included in most
+	distributions yet.  We'll fix this the right way later.
+
+	* admin-tool/sessionwindow.py (SessionWindow.__do_save): Don't
+	sys.exit(1) for now if an error occurs while committing the
+	change; i.e. be as lenient as we used to be.
+
 2007-02-11  Theppitak Karoonboonyanan  <thep@linux.thai.net>
 
 	* lib/sources/paneldelegate.py (PanelObject.__init__): Fixes "X
