@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD.ta\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-08-04 00:20+0200\n"
+"POT-Creation-Date: 2007-02-12 03:20+0000\n"
 "PO-Revision-Date: 2006-08-10 17:33+0530\n"
 "Last-Translator: drtvasudevan <agnihot3@gmail.com>\n"
 "Language-Team: tamil <en@li.org>\n"
@@ -93,7 +93,7 @@ msgstr "இதனை பற்றி (_A)"
 msgid "About Sabayon"
 msgstr "Sabayon பற்றி"
 
-#: ../admin-tool/editorwindow.py:252 ../lib/sources/gconfsource.py:121
+#: ../admin-tool/editorwindow.py:252 ../lib/sources/gconfsource.py:122
 msgid "GConf"
 msgstr "ஜிகான்ஃப்"
 
@@ -102,7 +102,7 @@ msgid "Files"
 msgstr "கோப்புகள்"
 
 #: ../admin-tool/editorwindow.py:256 ../admin-tool/lockdown/pessulus.glade.h:7
-#: ../lib/sources/paneldelegate.py:132
+#: ../lib/sources/paneldelegate.py:226
 msgid "Panel"
 msgstr "பலகை"
 
@@ -273,14 +273,18 @@ msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:44
-msgid "Your account does not have permissions to run the Desktop User Profiles tool"
-msgstr "உங்கள் கணக்குக்கு மேல்திரை பயனர் வரிவுரு அமைப்பு கருவியை பயன்படுத்தும் அனுமதி இல்லை"
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr ""
+"உங்கள் கணக்குக்கு மேல்திரை பயனர் வரிவுரு அமைப்பு கருவியை பயன்படுத்தும் அனுமதி இல்லை"
 
 #: ../admin-tool/sabayon:45
 msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
-msgstr "அமைப்பு கோப்புகளை இது மாற்றக் கூடும் ஆகையால் இந்த நிரலை இயக்க நிர்வாக தகுதி உள்ள அனுமதி தேவை"
+msgstr ""
+"அமைப்பு கோப்புகளை இது மாற்றக் கூடும் ஆகையால் இந்த நிரலை இயக்க நிர்வாக தகுதி உள்ள "
+"அனுமதி தேவை"
 
 #: ../admin-tool/sabayon:50
 msgid "Desktop User Profiles tool is already running"
@@ -290,7 +294,9 @@ msgstr "மேல்மேடை பயனர் விவரக்குறி�
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
-msgstr "மேல்திரை பயனர் வரிவுரு அமைப்பு கருவி ஐ ஒரு வரிவுரு திருத்த அமர்வில் இருக்கும் போது இயக்க இயலாது"
+msgstr ""
+"மேல்திரை பயனர் வரிவுரு அமைப்பு கருவி ஐ ஒரு வரிவுரு திருத்த அமர்வில் இருக்கும் போது "
+"இயக்க இயலாது"
 
 #: ../admin-tool/sabayon:58
 #, c-format
@@ -303,7 +309,9 @@ msgid ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
 "Try again after creating the account (using, for example, the 'adduser' "
 "command)"
-msgstr "சபாயோனுக்கு இந்த கணிணியில் %s என்ற சிறப்பு கணக்கு தேவை. அதை உருவாக்கி விட்டு (உதாரணமபக பயனர் சேர் கட்டளை கொடுத்து) பிறகு மீண்டும் முயற்சிக்கவும்"
+msgstr ""
+"சபாயோனுக்கு இந்த கணிணியில் %s என்ற சிறப்பு கணக்கு தேவை. அதை உருவாக்கி விட்டு "
+"(உதாரணமபக பயனர் சேர் கட்டளை கொடுத்து) பிறகு மீண்டும் முயற்சிக்கவும்"
 
 #: ../admin-tool/sabayon-apply:39
 #, c-format
@@ -345,14 +353,18 @@ msgid "_Base on:"
 msgstr "அடிப்படையில்: (_B)"
 
 #: ../admin-tool/sabayon.glade.h:6
+msgid "_Details"
+msgstr ""
+
+#: ../admin-tool/sabayon.glade.h:7
 msgid "_Profiles:"
 msgstr "வரிவுருக்கள்: (_P)"
 
-#: ../admin-tool/sabayon.glade.h:7
+#: ../admin-tool/sabayon.glade.h:8
 msgid "_Users"
 msgstr "பயனர்கள் (_U)"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.glade.h:9
 msgid "_Users:"
 msgstr "பயனர்கள்: (_U)"
 
@@ -367,15 +379,19 @@ msgstr "வரிவுரு  \"%s\" க்கான மாற்றங்க�
 
 #: ../admin-tool/saveconfirm.py:45
 #, python-format
-msgid "If you don't save, changes from the last %ld second will be permanently lost."
+msgid ""
+"If you don't save, changes from the last %ld second will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld seconds will be permanently "
 "lost."
-msgstr[0] "நீங்கள் சேமிக்காவிட்டால் கடைசி %ld  நொடியில் செய்த மாற்றங்களை நிரந்தரமாக இழக்க நேரும்."
-msgstr[1] "நீங்கள் சேமிக்காவிட்டால் கடைசி %ld  நொடிகளில் செய்த மாற்றங்களை நிரந்தரமாக இழக்க நேரும்."
+msgstr[0] ""
+"நீங்கள் சேமிக்காவிட்டால் கடைசி %ld  நொடியில் செய்த மாற்றங்களை நிரந்தரமாக இழக்க நேரும்."
+msgstr[1] ""
+"நீங்கள் சேமிக்காவிட்டால் கடைசி %ld  நொடிகளில் செய்த மாற்றங்களை நிரந்தரமாக இழக்க நேரும்."
 
 #: ../admin-tool/saveconfirm.py:51
-msgid "If you don't save, changes from the last minute will be permanently lost."
+msgid ""
+"If you don't save, changes from the last minute will be permanently lost."
 msgstr "நீங்கள் சேமிக்காவிட்டால் கடைசி நிமிடத்தில் செய்த மாற்றங்களை நிரந்தரமாக இழக்க நேரும்."
 
 #: ../admin-tool/saveconfirm.py:55
@@ -386,24 +402,29 @@ msgid ""
 msgid_plural ""
 "If you don't save, changes from the last minute and %ld seconds will be "
 "permanently lost."
-msgstr[0] "நீங்கள் சேமிக்காவிட்டால் கடைசி நிமிடம் %ld  நொடியில் செய்த மாற்றங்களை நிரந்தரமாக இழக்க நேரும். "
-msgstr[1] "நீங்கள் சேமிக்காவிட்டால் கடைசி நிமிடம் %ld  நொடிகளில் செய்த மாற்றங்களை நிரந்தரமாக இழக்க நேரும். "
+msgstr[0] ""
+"நீங்கள் சேமிக்காவிட்டால் கடைசி நிமிடம் %ld  நொடியில் செய்த மாற்றங்களை நிரந்தரமாக இழக்க "
+"நேரும். "
+msgstr[1] ""
+"நீங்கள் சேமிக்காவிட்டால் கடைசி நிமிடம் %ld  நொடிகளில் செய்த மாற்றங்களை நிரந்தரமாக இழக்க "
+"நேரும். "
 
 #: ../admin-tool/saveconfirm.py:62
 #, python-format
-msgid "If you don't save, changes from the last %ld minute will be permanently lost."
+msgid ""
+"If you don't save, changes from the last %ld minute will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
-msgstr[0] "நீங்கள் சேமிக்காவிட்டால் கடைசி %ld நிமிடத்தில் செய்த மாற்றங்களை நிரந்தரமாக இழக்க நேரும். "
-msgstr[1] "நீங்கள் சேமிக்காவிட்டால் கடைசி %ld நிமிடங்களில் செய்த மாற்றங்களை நிரந்தரமாக இழக்க நேரும். "
+msgstr[0] ""
+"நீங்கள் சேமிக்காவிட்டால் கடைசி %ld நிமிடத்தில் செய்த மாற்றங்களை நிரந்தரமாக இழக்க நேரும். "
+msgstr[1] ""
+"நீங்கள் சேமிக்காவிட்டால் கடைசி %ld நிமிடங்களில் செய்த மாற்றங்களை நிரந்தரமாக இழக்க நேரும். "
 
-#: ../admin-tool/saveconfirm.py:71 ../admin-tool/saveconfirm.py:81
-#, python-format
+#: ../admin-tool/saveconfirm.py:71
+#, fuzzy
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "நீங்கள் சேமிக்காவிட்டால் கடைசி மணியில் செய்த மாற்றங்களை நிரந்தரமாக இழக்க நேரும். . "
-msgstr[1] "நீங்கள் சேமிக்காவிட்டால் கடைசி %d மணிகளில் செய்த மாற்றங்களை நிரந்தரமாக இழக்க நேரும். "
+msgstr "நீங்கள் சேமிக்காவிட்டால் கடைசி மணியில் செய்த மாற்றங்களை நிரந்தரமாக இழக்க நேரும். . "
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
@@ -413,8 +434,23 @@ msgid ""
 msgid_plural ""
 "If you don't save, changes from the last hour and %d minutes will be "
 "permanently lost."
-msgstr[0] "நீங்கள் சேமிக்காவிட்டால் கடைசி மணி %d நிமிடத்தில் செய்த மாற்றங்களை நிரந்தரமாக இழக்க நேரும். "
-msgstr[1] "நீங்கள் சேமிக்காவிட்டால் கடைசி மணி %d நிமிடங்களில் செய்த மாற்றங்களை நிரந்தரமாக இழக்க நேரும். "
+msgstr[0] ""
+"நீங்கள் சேமிக்காவிட்டால் கடைசி மணி %d நிமிடத்தில் செய்த மாற்றங்களை நிரந்தரமாக இழக்க "
+"நேரும். "
+msgstr[1] ""
+"நீங்கள் சேமிக்காவிட்டால் கடைசி மணி %d நிமிடங்களில் செய்த மாற்றங்களை நிரந்தரமாக இழக்க "
+"நேரும். "
+
+#: ../admin-tool/saveconfirm.py:81
+#, fuzzy, python-format
+msgid ""
+"If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] ""
+"நீங்கள் சேமிக்காவிட்டால் கடைசி மணியில் செய்த மாற்றங்களை நிரந்தரமாக இழக்க நேரும். . "
+msgstr[1] ""
+"நீங்கள் சேமிக்காவிட்டால் கடைசி %d மணிகளில் செய்த மாற்றங்களை நிரந்தரமாக இழக்க நேரும். "
 
 #: ../admin-tool/sessionwindow.py:151
 #, python-format
@@ -449,7 +485,7 @@ msgstr "அவசியத்தை வலியுறுத்து"
 msgid "Enforce mandatory settings in the editing session"
 msgstr "திருத்தல் அமர்வுகளில் அவசிய அமைவுகளை வலியுறுத்து"
 
-#: ../admin-tool/sessionwindow.py:271
+#: ../admin-tool/sessionwindow.py:286
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "%s இன் அமைவுகளை பூட்டு "
@@ -520,56 +556,56 @@ msgstr "கணினி அமைவுகள் பட்டி"
 msgid "Start Here menu"
 msgstr "பட்டியை இங்கு தொடங்கவும்"
 
-#: ../lib/sources/gconfsource.py:87
+#: ../lib/sources/gconfsource.py:88
 #, python-format
 msgid "GConf key '%s' unset"
 msgstr "ஜிகான்ஃப் விசை '%s' அமைக்கப்படவில்லை"
 
-#: ../lib/sources/gconfsource.py:89
+#: ../lib/sources/gconfsource.py:90
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
 msgstr "ஜிகான்ஃப் விசை '%s' சரம் '%s'ல் அமைக்கிறது"
 
-#: ../lib/sources/gconfsource.py:91
+#: ../lib/sources/gconfsource.py:92
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
 msgstr "ஜிகான்ஃப் விசை '%s' முழு எண் '%s'ல் அமைக்கிறது"
 
-#: ../lib/sources/gconfsource.py:93
+#: ../lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
 msgstr "ஜிகான்ஃப் விசை '%s' மிதவை '%s'ல் அமைக்கிறது"
 
-#: ../lib/sources/gconfsource.py:95
+#: ../lib/sources/gconfsource.py:96
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
 msgstr "ஜிகான்ஃப் விசை '%s' பூலியன் '%s'ல் அமைக்கிறது"
 
-#: ../lib/sources/gconfsource.py:97
+#: ../lib/sources/gconfsource.py:98
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
 msgstr "ஜிகான்ஃப் விசை '%s' அமைப்பு முறை '%s'ல் அமைக்கிறது"
 
-#: ../lib/sources/gconfsource.py:99
+#: ../lib/sources/gconfsource.py:100
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
 msgstr "ஜிகான்ஃப் விசை '%s' பட்டியல் '%s'ல் அமைக்கிறது"
 
-#: ../lib/sources/gconfsource.py:101
+#: ../lib/sources/gconfsource.py:102
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
 msgstr "ஜிகான்ஃப் விசை '%s' ஜோடி '%s'ல் அமைக்கிறது"
 
-#: ../lib/sources/gconfsource.py:103
+#: ../lib/sources/gconfsource.py:104
 #, python-format
 msgid "GConf key '%s' set to '%s'"
 msgstr "ஜிகான்ஃப் விசை '%s' '%s'ல் அமைக்கிறது"
 
-#: ../lib/sources/gconfsource.py:134
+#: ../lib/sources/gconfsource.py:135
 msgid "Default GConf settings"
 msgstr "முன்னிருப்பு ஜிகான்ஃப்அமைவுகள்"
 
-#: ../lib/sources/gconfsource.py:136
+#: ../lib/sources/gconfsource.py:137
 msgid "Mandatory GConf settings"
 msgstr "அவசிய ஜிகான்ஃப் அமைவுகள்"
 
@@ -649,37 +685,135 @@ msgstr "மோசில்லா புத்தகக்குறி மாற�
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "மோசில்லா புத்தகக்குறி அடைவு மாற்றப்பட்டது '%s'"
 
-#: ../lib/sources/paneldelegate.py:56
+#: ../lib/sources/paneldelegate.py:53
 #, python-format
 msgid "Panel '%s' added"
 msgstr "பலகை '%s' சேர்க்கப்பட்டது"
 
-#: ../lib/sources/paneldelegate.py:62
+#: ../lib/sources/paneldelegate.py:59
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "பலகை '%s' நீக்கப்பட்டது"
 
-#: ../lib/sources/paneldelegate.py:68
-#, python-format
-msgid "Panel applet '%s' added"
-msgstr "பலகை குறுநிரல் '%s' சேர்க்கப்பட்டது"
-
 #: ../lib/sources/paneldelegate.py:74
 #, python-format
-msgid "Panel applet '%s' removed"
-msgstr "பலகை குறுநிரல் '%s' நீக்கப்பட்டது"
+msgid "Applet %s added to top panel"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:76
+#, python-format
+msgid "Applet %s added to bottom panel"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:78
+#, python-format
+msgid "Applet %s added to left panel"
+msgstr ""
 
 #: ../lib/sources/paneldelegate.py:80
 #, python-format
-msgid "Panel object '%s' added"
-msgstr "பலகை பொருள் '%s' சேர்க்கப்பட்டது"
+msgid "Applet %s added to right panel"
+msgstr ""
 
-#: ../lib/sources/paneldelegate.py:92
+#: ../lib/sources/paneldelegate.py:95
 #, python-format
-msgid "Panel object '%s' removed"
-msgstr "பலகை பொருள் '%s' நீக்கப்பட்டது"
+msgid "Applet %s removed from top panel"
+msgstr ""
 
-#: ../lib/sources/paneldelegate.py:373
+#: ../lib/sources/paneldelegate.py:97
+#, python-format
+msgid "Applet %s removed from bottom panel"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:99
+#, python-format
+msgid "Applet %s removed from left panel"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:101
+#, python-format
+msgid "Applet %s removed from right panel"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:115
+#, python-format
+msgid "%s added to top panel"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:117
+#, python-format
+msgid "%s added to bottom panel"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:119
+#, python-format
+msgid "%s added to left panel"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:121
+#, python-format
+msgid "%s added to right panel"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:142
+#, python-format
+msgid "%s removed from top panel"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:144
+#, python-format
+msgid "%s removed from bottom panel"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:146
+#, python-format
+msgid "%s removed from left panel"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:148
+#, python-format
+msgid "%s removed from right panel"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:197
+msgid "Drawer"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:199
+msgid "Main Menu"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:209
+#, python-format
+msgid "%s launcher"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:213
+msgid "Lock Screen button"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:215
+msgid "Logout button"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:217
+#, fuzzy
+msgid "Run Appliction button"
+msgstr "பயன்பாடு பட்டி"
+
+#: ../lib/sources/paneldelegate.py:219
+msgid "Search button"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:221
+msgid "Screenshot button"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:223
+msgid "Menu Bar"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:467
 msgid "Panel File"
 msgstr "பலகை கோப்பு"
 
@@ -703,7 +837,7 @@ msgstr "'%s'ல் தவறான மெட்டா தரவு பிரி�
 msgid "Cannot add non-existent file '%s'"
 msgstr "ஏற்கனவே இல்லாத கோப்பு '%s'ஐ சேமிக்க இயலாது"
 
-#: ../lib/storage.py:538
+#: ../lib/storage.py:567
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "விவரக்குறிப்பினை வாசிக்க மட்டும் முடியும் %s"
@@ -787,11 +921,26 @@ msgstr "பயனர் பட்டியலை பெற முடியவி
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "வீட்டு அடைவை காண முடியவில்லை.  /etc/passwd அடைவில் அமையவில்லை. சுற்றுப் புற சூழலிலும் $HOME க்கு ஒரு மதிப்பும் காணப் பெறவில்லை."
+msgstr ""
+"வீட்டு அடைவை காண முடியவில்லை.  /etc/passwd அடைவில் அமையவில்லை. சுற்றுப் புற "
+"சூழலிலும் $HOME க்கு ஒரு மதிப்பும் காணப் பெறவில்லை."
 
 #: ../lib/util.py:138
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
-msgstr "பயனர் பெயரை காண முடியவில்லை. /etc/passwd அடைவில் அமையவில்லை. சுற்றுப் புற சூழலிலும் $USER க்கு ஒரு மதிப்பும் காணப் பெறவில்லை."
+msgstr ""
+"பயனர் பெயரை காண முடியவில்லை. /etc/passwd அடைவில் அமையவில்லை. சுற்றுப் புற சூழலிலும் "
+"$USER க்கு ஒரு மதிப்பும் காணப் பெறவில்லை."
 
+#~ msgid "Panel applet '%s' added"
+#~ msgstr "பலகை குறுநிரல் '%s' சேர்க்கப்பட்டது"
+
+#~ msgid "Panel applet '%s' removed"
+#~ msgstr "பலகை குறுநிரல் '%s' நீக்கப்பட்டது"
+
+#~ msgid "Panel object '%s' added"
+#~ msgstr "பலகை பொருள் '%s' சேர்க்கப்பட்டது"
+
+#~ msgid "Panel object '%s' removed"
+#~ msgstr "பலகை பொருள் '%s' நீக்கப்பட்டது"
