@@ -305,13 +305,36 @@ class SessionWindow:
     def __setup_session (self):
         self.session = protosession.ProtoSession (self.profile_name, self.display_number)
 
-        self.session.apply_profile ()
+        try:
+            self.session.apply_profile ()
+        except RecoverableApplyErrorException, e:
+            errors_log_recoverable_exception (e)
+            dialog = gtk.MessageDialog (parent = None,
+                                        flags = gtk.DIALOG_MODAL,
+                                        type = gtk.MESSAGE_ERROR,
+                                        buttons = gtk.BUTTONS_NONE,
+                                        message_format = _("There was a recoverable error while applying the "
+                                                           "user profile '%s'.  You can report this error now "
+                                                           "or try to continue editing the user profile."))
+            (REPORT, CONTINUE) = range (2)
+            dialog.add_button (_("_Report this error"), REPORT)
+            dialog.add_button (_("_Continue editing"), CONTINUE)
+            response = dialog.run ()
+            dialog.destroy ()
+
+            if response == REPORT:
+                raise # the toplevel will catch the RecoverableApplyErrorException and exit
+
+        except FatalApplyErrorException, e:
+            raise # FIXME: do we need any special processing?  Should we give the user
+                  # the option of continuing editing?
+        
         self.profile.start_monitoring ()
         screen = gtk.gdk.screen_get_default ()
         width  = (screen.get_width ()  * 3) / 4
         height = (screen.get_height () * 3) / 4
 
-        dprint ("Creating %dx%d session wiget", width, height)
+        dprint ("Creating %dx%d session widget", width, height)
 
         self.session_widget = sessionwidget.SessionWidget (width, height)
         self.box.pack_start (self.session_widget, True, True)

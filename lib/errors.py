@@ -2,6 +2,12 @@ import sys
 import util
 import debuglog
 
+class RecoverableApplyErrorException (Exception):
+    pass
+
+class FatalApplyErrorException (Exception):
+    pass
+
 _have_recoverable_error = False
 
 def errors_have_recoverable_error ():

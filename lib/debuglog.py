@@ -29,6 +29,12 @@ DEBUG_LOG_DOMAIN_CACHE           = "cache"
 _debug_log_log = None
 _debug_log_the_lock = threading.Lock ()
 
+def uprint (fmt, *args):
+    """Logs a non-milestone message in the USER domain.
+    @fmt: Format string for message.
+    @args: Arguments for format string."""
+    debug_log (False, DEBUG_LOG_DOMAIN_USER, fmt % args)
+
 class DebugLog:
     SECTION_DEBUG_LOG = "debug log"
     KEY_ENABLE_DOMAINS = "enable domains"

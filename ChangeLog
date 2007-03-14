@@ -1,3 +1,50 @@
+2007-03-14  Federico Mena Quintero  <federico@novell.com>
+
+	* admin-tool/profilesdialog.py
+	(ProfilesDialog.__edit_button_clicked): Log the start of the
+	editing process.
+	(ProfilesDialog.__session_finished): Log the end of the editing
+	process.
+	(Session.build_envp_for_child): New function; build the envp for
+	the child process here instead of in Session.start().
+	(Session.session_stderr_io_cb): New helper function; aggregates
+	the debug log from sabayon-session into our own log.
+	(Session.start): Set up the machinery to sniff the debug log from
+	the helper "sabayon-session" process and to aggregate it into our
+	own log.
+
+	* lib/debuglog.py (uprint): New public function; similar to
+	dprint() everywhere, but this one logs to the USER domain.
+
+	* lib/config.py.in: Note a FIXME; maybe some parameters like
+	DEFAULT_PATH should be passed to the "configure" script instead of
+	being hardcoded here.
+
+	* lib/errors.py (RecoverableApplyErrorException,
+	FatalApplyErrorException): New classes for throwing errors from
+	the "apply" process.
+
+	* lib/util.py (get_admin_log_config_filename):
+	(set_admin_log_config_filename): New functions to get/set the
+	human-readable filename for the log configuration.
+	(get_readable_log_config_filename):
+	(set_readable_log_config_filename): New functions to get/set the
+	log configuration filename that will be readable by Sabayon's
+	helper processes.
+
+	* admin-tool/sabayon-apply: Save the admin and readable log config
+	filenames.
+
+	* admin-tool/sabayon-session: Likewise.
+
+2007-03-07  Federico Mena Quintero  <federico@novell.com>
+
+	* admin-tool/sabayon-apply: Log the start/end of the apply process
+	as milestones instead of as normal messages.
+
+	* admin-tool/sabayon-session: Log milestones for the start/end of
+	the session window.
+
 2007-02-15  Federico Mena Quintero  <federico@novell.com>
 
 	* lib/Makefile.am (PYTHON_FILES): Added debuglog.py, errors.py.

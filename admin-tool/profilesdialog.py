@@ -37,6 +37,9 @@ from config import *
 def dprint (fmt, *args):
     debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL, fmt % args)
 
+def mprint (fmt, *args):
+    debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL, fmt % args)
+
 def _get_profile_path_for_name (profile_name):
     return os.path.join (PROFILESDIR, profile_name + ".zip")
 
@@ -44,10 +47,10 @@ class Session (gobject.GObject):
     __gsignals__ = {
         "finished" : (gobject.SIGNAL_RUN_LAST, gobject.TYPE_NONE, ())
         }
-        
+
     def __init__ (self, username, profile_name):
         gobject.GObject.__init__ (self)
-        
+
         self.username     = username
         self.profile_name = profile_name
         self.profile_path = _get_profile_path_for_name (profile_name)
@@ -57,8 +60,11 @@ class Session (gobject.GObject):
         self.user_profile_path = None
         self.temp_homedir      = None
 
-        self.session_pid         = 0
-        self.session_child_watch = 0
+        self.session_pid             = 0
+        self.session_child_watch     = 0
+        self.session_stderr          = None
+        self.session_stderr_watch_id = 0
+        self.session_log_str         = ""
 
     def __del__ (self):
         if self.temp_homedir:
@@ -81,7 +87,7 @@ class Session (gobject.GObject):
         os.close (fd)
 
         shutil.copy2 (xauthority, temp_path)
-        
+
         os.chown (temp_path, self.pw.pw_uid, self.pw.pw_gid)
 
         dprint ("Copied $XAUTHORITY (%s) temporarily to %s", xauthority, temp_path)
@@ -93,7 +99,7 @@ class Session (gobject.GObject):
         os.close (fd)
 
         shutil.copy2 (profile_path, user_path)
-        
+
         os.chown (user_path, self.pw.pw_uid, self.pw.pw_gid)
 
         dprint ("Copied %s temporarily to %s", profile_path, user_path)
@@ -108,69 +114,99 @@ class Session (gobject.GObject):
     def __session_child_watch_handler (self, pid, status):
         dprint ("sabayon-session died")
 
+        # FIXME: see if there were recoverable errors, or if it was a fatal exit
+
         protosession.reset_shell_and_homedir (self.username, self.temp_homedir)
         self.temp_homedir = None
 
         if self.temp_xauth_path:
             os.remove (self.temp_xauth_path)
             self.temp_xauth_path = None
-        
+
         self.__copy_from_user (self.user_profile_path, self.profile_path)
         self.user_profile_path = None
 
         self.session_pid         = 0
         self.session_child_watch = 0
 
+        gobject.source_remove (self.session_stderr_watch_id)
+        self.session_stderr_watch_id = 0
+
+        self.session_stderr.close ()
+        self.session_stderr = None
+
         self.emit ("finished")
-        
+
         return False
+
+    def build_envp_for_child (self):
+        # gobject.spawn_async() wants a sequence, not a dictionary, so we build a sequence...
+        new_environ = []
+        for key in PASSTHROUGH_ENVIRONMENT:
+            if os.environ.has_key (key):
+                new_environ.append ("%s=%s" % (key, os.environ[key]))
+
+        new_environ = new_environ + ["PATH=%s"     % DEFAULT_PATH,
+                                     "SHELL=%s"    % DEFAULT_SHELL,
+                                     "DISPLAY=%s"  % os,
+                                     "HOME=%s"     % self,
+                                     "LOGNAME=%s"  % self,
+                                     "USER=%s"     % self,
+                                     "USERNAME=%s" % self]
+
+        if self.temp_xauth_path:
+            new_environ.append ("XAUTHORITY=%s" % self.temp_xauth_path)
+
+        return new_environ
+
+    def session_stderr_io_cb (source_fd, condition, session):
+        if condition & G_IO_IN:
+            session.session_log_str = session.session_log_str + session.session_stderr.read ()
+
+        if condition & G_IO_HUP:
+            mprint ("========== BEGIN SABAYON-SESSION LOG ==========\n"
+                    "%s\n"
+                    "========== END SABAYON-SESSION LOG ==========",
+                    session.session_log_str)
+            return False
+
+        return True
 
     def start (self):
         self.user_profile_path = self.__copy_to_user (self.profile_path)
         self.temp_homedir = protosession.setup_shell_and_homedir (self.username)
         protosession.clobber_user_processes (self.username)
-        
+
         display_number = protosession.find_free_display ()
 
         self.temp_xauth_path = self.__copy_xauthority ()
 
-        self.session_pid = os.fork ()
-        if self.session_pid == 0: # Child process
+        def child_setup_fn ():
             os.setgid (self.pw.pw_gid)
             os.setuid (self.pw.pw_uid)
-
-            os.chdir (self.temp_homedir)
-
             os.setsid ()
             os.umask (022)
 
-            new_environ = {}
-            for key in PASSTHROUGH_ENVIRONMENT:
-                if os.environ.has_key (key):
-                    new_environ[key] = os.environ[key]
+        argv = SESSION_TOOL_ARGV + [ ("--admin-log-config=%s" % get_admin_log_config_filename ()),
+                                     ("--readable-log-config=%s" % get_readable_log_config_filename ()),
+                                     self.profile_name,
+                                     self.user_profile_path,
+                                     str (display_number) ]
+        envp = self.build_envp_for_child ()
+        cwd = self.temp_homedir
 
-            new_environ["PATH"]       = DEFAULT_PATH
-            new_environ["SHELL"]      = DEFAULT_SHELL
-            new_environ["DISPLAY"]    = os.environ["DISPLAY"]
-            new_environ["HOME"]       = self.temp_homedir
-            new_environ["LOGNAME"]    = self.pw.pw_name
-            new_environ["USER"]       = self.pw.pw_name
-            new_environ["USERNAME"]   = self.pw.pw_name
+        # FIXME: do we need any special processing if this throws an exception?
+        # We'll catch it in the toplevel and exit with a fatal error code, anyway.
+        (pid, None, None, stderr_fd) = gobject.spawn_async (argv, envp, cwd,
+                                                            0,			# flags
+                                                            child_setup_fn, self,
+                                                            None, None, True)	# stdin, stdout, stderr
 
-            if self.temp_xauth_path:
-                new_environ["XAUTHORITY"] = self.temp_xauth_path
-
-            dprint ("Child process env: %s" % new_environ)
-
-            argv = SESSION_TOOL_ARGV + [ self.profile_name, self.user_profile_path, str (display_number) ]
-
-            dprint ("Executing %s" % argv)
-            os.execve (SESSION_TOOL_ARGV[0], argv, new_environ)
-
-            # Shouldn't ever happen
-            sys.stderr.write ("Failed to launch sabayon-session")
-            os._exit (1)
-
+        self.session_pid = pid;
+        self.session_stderr = os.fdopen (stderr_fd)
+        self.session_stderr_watch_id = gobject.io_add_watch (stderr_fd,
+                                                             gobject.IO_IN | gobject.IO_HUP,
+                                                             session_stderr_io_cb, self)
         self.session_child_watch = gobject.child_watch_add (self.session_pid,
                                                             self.__session_child_watch_handler)
 
@@ -196,10 +232,10 @@ class ProfilesModel (gtk.ListStore):
 class AddProfileDialog:
     def __init__ (self, profiles_model):
         self.profiles_model = profiles_model
-        
+
         glade_file = os.path.join (GLADEDIR, "sabayon.glade")
         self.xml = gtk.glade.XML (glade_file, "add_profile_dialog")
-        
+
         self.dialog = self.xml.get_widget ("add_profile_dialog")
         self.dialog.connect ("destroy", gtk.main_quit)
         self.dialog.set_default_response (gtk.RESPONSE_ACCEPT)
@@ -211,7 +247,7 @@ class AddProfileDialog:
         self.name_entry = self.xml.get_widget ("add_profile_name_entry")
         self.name_entry.connect ("changed", self.__name_entry_changed)
         self.name_entry.set_activates_default (True)
-        
+
         self.base_combo = self.xml.get_widget ("add_profile_base_combo")
         self.base_combo.set_model (self.profiles_model)
         if self.profiles_model.get_iter_first () is None:
@@ -234,7 +270,7 @@ class AddProfileDialog:
         self.dialog.present ()
         response = self.dialog.run ()
         self.dialog.hide ()
-        
+
         if response != gtk.RESPONSE_ACCEPT:
             return (None, None)
 
@@ -243,13 +279,13 @@ class AddProfileDialog:
             base = self.profiles_model.get_value (row, ProfilesModel.COLUMN_NAME)
         else:
             base = None
-        
+
         return (self.name_entry.get_text (), base)
 
 class ProfilesDialog:
     def __init__ (self):
         assert os.geteuid () == 0
-        
+
         glade_file = os.path.join (GLADEDIR, "sabayon.glade")
         self.xml = gtk.glade.XML (glade_file, "profiles_dialog")
 
@@ -260,7 +296,7 @@ class ProfilesDialog:
 
         self.profiles_list = self.xml.get_widget ("profiles_list")
         self.__setup_profiles_list ()
-        
+
         self.profiles_list.connect ("key-press-event", self.__handle_key_press)
 
         self.add_button = self.xml.get_widget ("add_button")
@@ -268,19 +304,19 @@ class ProfilesDialog:
 
         self.remove_button = self.xml.get_widget ("remove_button")
         self.remove_button.connect ("clicked", self.__remove_button_clicked)
-        
+
         self.edit_button = self.xml.get_widget ("edit_button")
         self.__fix_button_align (self.edit_button)
         self.edit_button.connect ("clicked", self.__edit_button_clicked)
-        
+
         self.details_button = self.xml.get_widget ("details_button")
         self.__fix_button_align (self.details_button)
         self.details_button.connect ("clicked", self.__details_button_clicked)
-        
+
         self.users_button = self.xml.get_widget ("users_button")
         self.__fix_button_align (self.users_button)
         self.users_button.connect ("clicked", self.__users_button_clicked)
-        
+
         self.help_button = self.xml.get_widget ("help_button")
         self.help_button.hide ()
 
@@ -331,6 +367,7 @@ class ProfilesDialog:
         return model[row][ProfilesModel.COLUMN_NAME]
 
     def __session_finished (self, session):
+        uprint ("Finishing editing profile")
         self.dialog.set_sensitive (True)
 
     def __edit_button_clicked (self, button):
@@ -340,13 +377,14 @@ class ProfilesDialog:
 
             session = Session (PROTOTYPE_USER, profile_name)
             session.connect ("finished", self.__session_finished)
+            uprint ("Starting to edit profile '%s'", profile_name)
             session.start ()
 
     def __details_button_clicked (self, button):
         profile_name = self.__get_selected_profile ()
         if profile_name:
             editorwindow.ProfileEditorWindow (profile_name, self.dialog)
-        
+
     def __users_button_clicked (self, button):
         profile_name = self.__get_selected_profile ()
         if profile_name:
@@ -377,7 +415,7 @@ class ProfilesDialog:
             for user in db.get_users ():
                 if db.get_profile (user, False, True) == profile_name:
                     db.set_profile (user, None)
-            
+
             self.profiles_model.reload ()
 
             row = None
@@ -413,12 +451,12 @@ class ProfilesDialog:
             #
             name = _("%s (%s)") % (profile_name, idx)
             idx += 1
-        
+
         return name
 
     def __create_new_profile (self, profile_name, base_profile):
         profile_name = self.__make_unique_profile_name (profile_name)
-        
+
         if base_profile:
             base_storage = storage.ProfileStorage (base_profile)
             new_storage = base_storage.copy (profile_name)

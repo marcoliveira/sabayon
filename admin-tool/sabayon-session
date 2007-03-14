@@ -38,21 +38,24 @@ if __name__ == '__main__':
     try:
         util.init_gettext ()
 
-        option_parser = optparse.OptionParser (usage="usage: %prog [--log-config FILE] [--real-log-config FILE] <profile_name> <profile_path> <display_number>")
-        option_parser.add_option ("--log-config", dest="log_config",
+        option_parser = optparse.OptionParser (usage="usage: %prog [--admin-log-config FILE] [--readable-log-config FILE] <profile_name> <profile_path> <display_number>")
+        # FIXME: say that "man sabayon" will give you the
+        # syntax for the debug log config file.
+        option_parser.add_option ("--admin-log-config", dest="admin_log_config",
                                   metavar="FILE",
-                                  help="Real file with options for debug log") # FIXME: say that "man sabayon" will give you the
-                                                                               # syntax for the debug log config file.
-        option_parser.add_option ("--real-log-config", dest="real_log_config",
+                                  help="File with options for the debug log (readable by the system administrator)")
+        option_parser.add_option ("--readable-log-config", dest="readable_log_config",
                                   metavar="FILE",
-                                  help="File to mention in the debug log as the source for its configuration")
+                                  help="File with options for the debug log (readable by Sabayon's helper processes)")
 
         options, args = option_parser.parse_args ()
 
-        log_config_filename = options.log_config
-        real_log_config_filename = options.real_log_config or "~/sabayon-debug-log.conf"
+        admin_log_config_filename = options.admin_log_config or "~/sabayon-debug-log.conf"
+        readable_log_config_filename = options.readable_log_config or "~/sabayon-debug-log.conf"
 
-        debuglog.debug_log_load_configuration (log_config_filename)
+        debuglog.debug_log_load_configuration (readable_log_config_filename)
+        set_admin_log_config_filename (admin_log_config_filename)
+        set_readable_log_config_filename (readable_log_config_filename)
 
         if len (args) != 3:
             sys.stderr.write (_("Usage: %s <profile-name> <profile-path> <display-number>\n") % sys.argv[0])
@@ -60,12 +63,22 @@ if __name__ == '__main__':
 
         (profile_name, profile_path, display_number) = args
 
+        mprint ("Starting session window for profile_name='%s', profile_path='%s', display_number='%s'",
+                profile_name, profile_path, display_number)
+
         window = sessionwindow.SessionWindow (profile_name, profile_path, display_number)
         window.window.connect ("destroy", gtk.main_quit)
         window.window.show ()
 
-        gtk.main ()
-    except:
-        errors.errors_exit_with_fatal_exception (debuglog.DEBUG_LOG_DOMAIN_SABAYON_SESSION, real_log_config_filename)
+        mprint ("Entering main loop.  Wheeee!")
 
-    errors.errors_exit_helper_normally (real_log_config_filename)
+        gtk.main ()
+
+        mprint ("Terminating")
+    except RecoverableApplyErrorException:
+        pass # this will exit the program below
+    else:
+        errors.errors_exit_with_fatal_exception (debuglog.DEBUG_LOG_DOMAIN_SABAYON_SESSION,
+                                                 get_admin_log_config_filename ())
+
+    errors.errors_exit_helper_normally (get_admin_log_config_filename ())
