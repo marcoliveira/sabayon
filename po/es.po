@@ -2,22 +2,23 @@
 # Spanish/Spain translation of SABAYON.
 # Copyright (C) 2005 THE SABAYON'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the SABAYON package.
+#
+#
 # Jaime Iniesta Alemán <capitanplaneta@gmail.com>, 2005.
 # Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2005, 2006.
-#
-#
+# Daniel Baeyens <dbaeyens@warp.es>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-12-11 11:16+0100\n"
-"PO-Revision-Date: 2006-12-11 11:16+0100\n"
-"Last-Translator: Francisco Javier F. Serrador <serrador@cvs.gnome.org>\n"
+"POT-Creation-Date: 2007-03-27 17:43-0400\n"
+"PO-Revision-Date: 2007-02-15 17:00+0100\n"
+"Last-Translator: Daniel Baeyens <dbaeyens@warp.es>\n"
 "Language-Team: Spanish <traductores@es.gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #: ../admin-tool/aboutdialog.py:61
@@ -28,7 +29,8 @@ msgstr "Programa para establecer y editar perfiles para usuarios"
 msgid "translator-credits"
 msgstr ""
 "Jaime Iniesta Alemán <capitanplaneta@gmail.com>\n"
-"QA: Francisco Javier F. Serrador, <serrador@cvs.gnome.org>"
+"QA: Francisco Javier F. Serrador, <serrador@cvs.gnome.org>\n"
+"Daniel Baeyens Sicilia<dbaeyens@warp.es>"
 
 #: ../admin-tool/changeswindow.py:48
 #, python-format
@@ -96,7 +98,7 @@ msgstr "_Acerca de"
 msgid "About Sabayon"
 msgstr "Acerca de Sabayon"
 
-#: ../admin-tool/editorwindow.py:252 ../lib/sources/gconfsource.py:121
+#: ../admin-tool/editorwindow.py:252 ../lib/sources/gconfsource.py:122
 msgid "GConf"
 msgstr "GConf"
 
@@ -105,7 +107,7 @@ msgid "Files"
 msgstr "Archivos"
 
 #: ../admin-tool/editorwindow.py:256 ../admin-tool/lockdown/pessulus.glade.h:7
-#: ../lib/sources/paneldelegate.py:132
+#: ../lib/sources/paneldelegate.py:227
 msgid "Panel"
 msgstr "Panel"
 
@@ -415,8 +417,8 @@ msgstr[0] ""
 "Si no guarda, se perderán permanentemente los cambios del último minuto y %"
 "ld segundo."
 msgstr[1] ""
-"Si no guarda, se perderán permanentemente los cambios del último minuto y "
-"los %ld segundos."
+"Si no guarda, se perderán permanentemente los cambios del último minuto y %"
+"ld segundos."
 
 #: ../admin-tool/saveconfirm.py:62
 #, python-format
@@ -428,19 +430,13 @@ msgid_plural ""
 msgstr[0] ""
 "Si no guarda, se perderán permanentemente los cambios del último minuto."
 msgstr[1] ""
-"Si no guarda, se perderán permanentemente los cambios de los último %ld "
+"Si no guarda, se perderán permanentemente los cambios de los últimos %ld "
 "minutos."
 
-#: ../admin-tool/saveconfirm.py:71 ../admin-tool/saveconfirm.py:81
-#, python-format
+#: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] ""
+msgstr ""
 "Si no guarda, se perderán permanentemente los cambios de la última hora."
-msgstr[1] ""
-"Si no guarda, se perderán permanentemente los cambios de las últimas %d "
-"horas."
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
@@ -451,11 +447,24 @@ msgid_plural ""
 "If you don't save, changes from the last hour and %d minutes will be "
 "permanently lost."
 msgstr[0] ""
-"Si no guarda, se perderán permanentemente los cambios de la última hora y "
-"del %d minuto."
+"Si no guarda, se perderán permanentemente los cambios de la última hora y %d "
+"minuto."
 msgstr[1] ""
-"Si no guarda, se perderán permanentemente los cambios de la última hora y de "
-"los %d minutos."
+"Si no guarda, se perderán permanentemente los cambios de la última hora y %d "
+"minutos."
+
+#: ../admin-tool/saveconfirm.py:81
+#, python-format
+msgid ""
+"If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] ""
+"Si no guarda, se perderán permanentemente los cambios de las últimas %d "
+"horas."
+msgstr[1] ""
+"Si no guarda, se perderán permanentemente los cambios de las últimas %d "
+"horas."
 
 #: ../admin-tool/sessionwindow.py:151
 #, python-format
@@ -490,7 +499,7 @@ msgstr "Forzar obligatorios"
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Forzar ajustes obligatorios en la sesión de edición"
 
-#: ../admin-tool/sessionwindow.py:271
+#: ../admin-tool/sessionwindow.py:286
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Configuraciones restrigidas para %s"
@@ -562,56 +571,56 @@ msgstr "Menú de configuración del sistema"
 msgid "Start Here menu"
 msgstr "Menú «Empezar aquí»"
 
-#: ../lib/sources/gconfsource.py:87
+#: ../lib/sources/gconfsource.py:88
 #, python-format
 msgid "GConf key '%s' unset"
 msgstr "Clave de GConf «%s» no establecida"
 
-#: ../lib/sources/gconfsource.py:89
+#: ../lib/sources/gconfsource.py:90
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
 msgstr "Clave de GConf «%s» establecida a la cadena «%s»"
 
-#: ../lib/sources/gconfsource.py:91
+#: ../lib/sources/gconfsource.py:92
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
 msgstr "Clave de GConf «%s» establecida al entero «%s»"
 
-#: ../lib/sources/gconfsource.py:93
+#: ../lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
 msgstr "Clave de GConf «%s» establecida al real «%s»"
 
-#: ../lib/sources/gconfsource.py:95
+#: ../lib/sources/gconfsource.py:96
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
 msgstr "Clave de GConf «%s» establecida al booleano «%s»"
 
-#: ../lib/sources/gconfsource.py:97
+#: ../lib/sources/gconfsource.py:98
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
 msgstr "Clave de GConf «%s» establecida al esquema «%s»"
 
-#: ../lib/sources/gconfsource.py:99
+#: ../lib/sources/gconfsource.py:100
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
 msgstr "Clave de GConf «%s» establecida a la lista «%s»"
 
-#: ../lib/sources/gconfsource.py:101
+#: ../lib/sources/gconfsource.py:102
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
 msgstr "Clave de GConf «%s» establecida al par «%s»"
 
-#: ../lib/sources/gconfsource.py:103
+#: ../lib/sources/gconfsource.py:104
 #, python-format
 msgid "GConf key '%s' set to '%s'"
 msgstr "Clave de GConf «%s» establecida a «%s»"
 
-#: ../lib/sources/gconfsource.py:134
+#: ../lib/sources/gconfsource.py:135
 msgid "Default GConf settings"
 msgstr "Preferencias predeterminadas de GConf"
 
-#: ../lib/sources/gconfsource.py:136
+#: ../lib/sources/gconfsource.py:137
 msgid "Mandatory GConf settings"
 msgstr "Preferencias obligatorias de GConf"
 
@@ -691,49 +700,148 @@ msgstr "Se ha cambiado un marcador de Mozilla «%s» «%s»"
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Se ha cambiado una carpeta de marcadores de Mozilla «%s»"
 
-#: ../lib/sources/paneldelegate.py:56
+#: ../lib/sources/paneldelegate.py:52
 #, python-format
 msgid "Panel '%s' added"
 msgstr "Se ha añadido el panel «%s»"
 
-#: ../lib/sources/paneldelegate.py:62
+#: ../lib/sources/paneldelegate.py:58
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "Se ha quitado el panel «%s»"
 
-#: ../lib/sources/paneldelegate.py:68
+#: ../lib/sources/paneldelegate.py:73
 #, python-format
-msgid "Panel applet '%s' added"
-msgstr "Se ha añadido la miniaplicación «%s» del panel"
+msgid "Applet %s added to top panel"
+msgstr "Se ha añadido la miniaplicación %s al panel superior"
 
-#: ../lib/sources/paneldelegate.py:74
+#: ../lib/sources/paneldelegate.py:75
 #, python-format
-msgid "Panel applet '%s' removed"
-msgstr "Se ha quitado la miniaplicación «%s» del panel"
+msgid "Applet %s added to bottom panel"
+msgstr "Se ha añadido la miniaplicación %s al panel inferior"
 
-#: ../lib/sources/paneldelegate.py:80
+#: ../lib/sources/paneldelegate.py:77
 #, python-format
-msgid "Panel object '%s' added"
-msgstr "Se ha añadido el objeto «%s» del panel"
+msgid "Applet %s added to left panel"
+msgstr "Se ha añadido la miniaplicación %s al panel izquierdo"
 
-#: ../lib/sources/paneldelegate.py:92
+#: ../lib/sources/paneldelegate.py:79
 #, python-format
-msgid "Panel object '%s' removed"
-msgstr "Se ha quitado el objeto «%s» del panel"
+msgid "Applet %s added to right panel"
+msgstr "Se ha añadido la miniaplicación %s al panel derecho"
 
-#: ../lib/sources/paneldelegate.py:373
+#: ../lib/sources/paneldelegate.py:94
+#, python-format
+msgid "Applet %s removed from top panel"
+msgstr "Se ha eliminado la miniaplicación %s del panel superior"
+
+#: ../lib/sources/paneldelegate.py:96
+#, python-format
+msgid "Applet %s removed from bottom panel"
+msgstr "Se ha eliminado la miniaplicación %s del panel inferior"
+
+#: ../lib/sources/paneldelegate.py:98
+#, python-format
+msgid "Applet %s removed from left panel"
+msgstr "Se ha eliminado la miniaplicación %s del panel izquierdo"
+
+#: ../lib/sources/paneldelegate.py:100
+#, python-format
+msgid "Applet %s removed from right panel"
+msgstr "Se ha eliminado la miniaplicación %s del panel derecho"
+
+#: ../lib/sources/paneldelegate.py:114
+#, python-format
+msgid "%s added to top panel"
+msgstr "Se ha añadido %s al panel superior"
+
+#: ../lib/sources/paneldelegate.py:116
+#, python-format
+msgid "%s added to bottom panel"
+msgstr "Se ha añadido %s al panel inferior"
+
+#: ../lib/sources/paneldelegate.py:118
+#, python-format
+msgid "%s added to left panel"
+msgstr "Se ha añadido %s al panel izquierdo"
+
+#: ../lib/sources/paneldelegate.py:120
+#, python-format
+msgid "%s added to right panel"
+msgstr "Se ha añadido %s al panel derecho"
+
+#: ../lib/sources/paneldelegate.py:141
+#, python-format
+msgid "%s removed from top panel"
+msgstr "Se ha eliminado %s del panel superior"
+
+#: ../lib/sources/paneldelegate.py:143
+#, python-format
+msgid "%s removed from bottom panel"
+msgstr "Se ha eliminado %s del panel inferior"
+
+#: ../lib/sources/paneldelegate.py:145
+#, python-format
+msgid "%s removed from left panel"
+msgstr "Se ha eliminado %s del panel izquierdo"
+
+#: ../lib/sources/paneldelegate.py:147
+#, python-format
+msgid "%s removed from right panel"
+msgstr "Se ha eliminado %s del panel derecho"
+
+#: ../lib/sources/paneldelegate.py:196
+msgid "Drawer"
+msgstr "Cajón"
+
+#: ../lib/sources/paneldelegate.py:198
+msgid "Main Menu"
+msgstr "Menú Principal"
+
+#. FIXME: we need to use xdg.DesktopEntry to extract the localized name
+#. http://bugzilla.gnome.org/show_bug.cgi?id=397742
+#: ../lib/sources/paneldelegate.py:210
+#, python-format
+msgid "%s launcher"
+msgstr "Lanzador de %s"
+
+#: ../lib/sources/paneldelegate.py:214
+msgid "Lock Screen button"
+msgstr "Botón Bloquear la pantalla"
+
+#: ../lib/sources/paneldelegate.py:216
+msgid "Logout button"
+msgstr "Botón Salir..."
+
+#: ../lib/sources/paneldelegate.py:218
+msgid "Run Appliction button"
+msgstr "Botón Menú de aplicaciones"
+
+#: ../lib/sources/paneldelegate.py:220
+msgid "Search button"
+msgstr "Botón Buscar archivos..."
+
+#: ../lib/sources/paneldelegate.py:222
+msgid "Screenshot button"
+msgstr "Botón Captura de pantalla"
+
+#: ../lib/sources/paneldelegate.py:224
+msgid "Menu Bar"
+msgstr "Barra de menús"
+
+#: ../lib/sources/paneldelegate.py:468
 msgid "Panel File"
 msgstr "Archivo del panel"
 
 #: ../lib/storage.py:171
 #, python-format
 msgid "Failed to read file '%s': %s"
-msgstr "No se pudo leer el archivo «%s»: «%s»"
+msgstr "No se pudo leer el archivo «%s»: %s"
 
 #: ../lib/storage.py:181
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
-msgstr "No se pudieron leer los metadatos de «%s»: «%s»"
+msgstr "No se pudieron leer los metadatos de «%s»: %s»"
 
 #: ../lib/storage.py:187
 #, python-format
@@ -745,7 +853,7 @@ msgstr "Sección de metadatos inválida en «%s»: «%s»"
 msgid "Cannot add non-existent file '%s'"
 msgstr "No se ha podido añadir el archivo inexistente «%s»"
 
-#: ../lib/storage.py:538
+#: ../lib/storage.py:567
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "El perfil es de sólo lectura %s"
