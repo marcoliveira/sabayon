@@ -45,7 +45,7 @@ def errors_exit_helper_normally (log_config_filename):
     # the caller program will know what to do with it:
     # "sabayon-session" will pass it on to the parent "sabayon";
     # xinitrc will log it to ~/.xsession-errors, etc.
-    debuglog.debug_log_dump_to_stderr (log_config_filename)
+    debuglog.debug_log_dump_to_file (log_config_filename, sys.stderr)
 
     if errors_have_recoverable_error ():
         sys.exit (util.EXIT_CODE_RECOVERABLE)
@@ -64,5 +64,5 @@ def errors_exit_with_fatal_exception (domain, log_config_filename):
 
     debuglog.debug_log (True, domain, "Fatal exception!  Exiting abnormally.")
     debuglog.debug_log_current_exception (domain)
-    debuglog.debug_log_dump_to_stderr (log_config_filename)
+    debuglog.debug_log_dump_to_file (log_config_filename, sys.stderr)
     sys.exit (util.EXIT_CODE_FATAL)

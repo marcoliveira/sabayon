@@ -50,12 +50,16 @@ if __name__ == '__main__':
 
         options, args = option_parser.parse_args ()
 
-        admin_log_config_filename = options.admin_log_config or "~/sabayon-debug-log.conf"
-        readable_log_config_filename = options.readable_log_config or "~/sabayon-debug-log.conf"
+        admin_log_config_filename = options.admin_log_config or ("~/" + config.LOG_CONFIG_FILENAME)
+
+        if options.readable_log_config != None:
+            readable_log_config_filename = options.readable_log_config
+        else:
+            readable_log_config_filename = os.path.join (util.get_home_dir (), config.LOG_CONFIG_FILENAME)
 
         debuglog.debug_log_load_configuration (readable_log_config_filename)
-        set_admin_log_config_filename (admin_log_config_filename)
-        set_readable_log_config_filename (readable_log_config_filename)
+        util.set_admin_log_config_filename (admin_log_config_filename)
+        util.set_readable_log_config_filename (readable_log_config_filename)
 
         if len (args) != 3:
             sys.stderr.write (_("Usage: %s <profile-name> <profile-path> <display-number>\n") % sys.argv[0])
@@ -75,10 +79,10 @@ if __name__ == '__main__':
         gtk.main ()
 
         mprint ("Terminating")
-    except RecoverableApplyErrorException:
+    except errors.RecoverableApplyErrorException:
         pass # this will exit the program below
     else:
         errors.errors_exit_with_fatal_exception (debuglog.DEBUG_LOG_DOMAIN_SABAYON_SESSION,
-                                                 get_admin_log_config_filename ())
+                                                 util.get_admin_log_config_filename ())
 
-    errors.errors_exit_helper_normally (get_admin_log_config_filename ())
+    errors.errors_exit_helper_normally (util.get_admin_log_config_filename ())

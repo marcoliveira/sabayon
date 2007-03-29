@@ -159,11 +159,11 @@ class Session (gobject.GObject):
 
         return new_environ
 
-    def session_stderr_io_cb (source_fd, condition, session):
-        if condition & G_IO_IN:
+    def session_stderr_io_cb (self, source_fd, condition, session):
+        if condition & gobject.IO_IN:
             session.session_log_str = session.session_log_str + session.session_stderr.read ()
 
-        if condition & G_IO_HUP:
+        if condition & gobject.IO_HUP:
             mprint ("========== BEGIN SABAYON-SESSION LOG ==========\n"
                     "%s\n"
                     "========== END SABAYON-SESSION LOG ==========",
@@ -187,8 +187,10 @@ class Session (gobject.GObject):
             os.setsid ()
             os.umask (022)
 
-        argv = SESSION_TOOL_ARGV + [ ("--admin-log-config=%s" % get_admin_log_config_filename ()),
-                                     ("--readable-log-config=%s" % get_readable_log_config_filename ()),
+        # FIXME: get_readable_log_config_filename() doesn't work here.
+        # Create a temporary copy of the log config file and use *that*.
+        argv = SESSION_TOOL_ARGV + [ ("--admin-log-config=%s" % util.get_admin_log_config_filename ()),
+                                     ("--readable-log-config=%s" % util.get_readable_log_config_filename ()),
                                      self.profile_name,
                                      self.user_profile_path,
                                      str (display_number) ]
@@ -197,7 +199,7 @@ class Session (gobject.GObject):
 
         # FIXME: do we need any special processing if this throws an exception?
         # We'll catch it in the toplevel and exit with a fatal error code, anyway.
-        (pid, None, None, stderr_fd) = gobject.spawn_async (argv, envp, cwd,
+        (pid, oink, oink, stderr_fd) = gobject.spawn_async (argv, envp, cwd,
                                                             0,			# flags
                                                             child_setup_fn, self,
                                                             None, None, True)	# stdin, stdout, stderr
@@ -206,7 +208,7 @@ class Session (gobject.GObject):
         self.session_stderr = os.fdopen (stderr_fd)
         self.session_stderr_watch_id = gobject.io_add_watch (stderr_fd,
                                                              gobject.IO_IN | gobject.IO_HUP,
-                                                             session_stderr_io_cb, self)
+                                                             self.session_stderr_io_cb, self)
         self.session_child_watch = gobject.child_watch_add (self.session_pid,
                                                             self.__session_child_watch_handler)
 
@@ -367,7 +369,7 @@ class ProfilesDialog:
         return model[row][ProfilesModel.COLUMN_NAME]
 
     def __session_finished (self, session):
-        uprint ("Finishing editing profile")
+        debuglog.uprint ("Finishing editing profile")
         self.dialog.set_sensitive (True)
 
     def __edit_button_clicked (self, button):
@@ -377,7 +379,7 @@ class ProfilesDialog:
 
             session = Session (PROTOTYPE_USER, profile_name)
             session.connect ("finished", self.__session_finished)
-            uprint ("Starting to edit profile '%s'", profile_name)
+            debuglog.uprint ("Starting to edit profile '%s'", profile_name)
             session.start ()
 
     def __details_button_clicked (self, button):

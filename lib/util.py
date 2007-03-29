@@ -38,13 +38,13 @@ def get_admin_log_config_filename ():
     """Returns the human-readable filename used for log configuration,
     as stored with set_log_config_filename().  This is the file that the
     system administrator actually modifies to set up the log configuration."""
-    return _util_log_admin_config_filename
+    return _util_admin_log_config_filename
 
 def set_admin_log_config_filename (str):
     """Stores the filename of the human-readable configuration file which the
     system administrator used to set up the log configuration.  This can be
     queried back with get_admin_log_config_filename()."""
-    _util_log_admin_config_filename = str
+    _util_admin_log_config_filename = str
 
 def get_readable_log_config_filename ():
     """Returns the filename that the program actually used to read the log configuration,
@@ -61,12 +61,6 @@ def set_readable_log_config_filename (str):
     may need to be given a temporary file to read their log configuration (as root's
     human-readable file may not be readable by the helper processes)."""
     _util_readable_log_config_filename = str
-
-def debug_print (module, message, mask=~0):
-    assert debug_modules.has_key(module)
-    if not debug_modules[module][1] & mask:
-        return
-    print "(%d) %s: %s" % (os.getpid (), debug_modules[module][0], message)
 
 class GeneralError (Exception):
     def __init__ (self, msg):

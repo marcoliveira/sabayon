@@ -1,3 +1,53 @@
+2007-03-28  Federico Mena Quintero  <federico@novell.com>
+
+	* admin-tool/sabayon (readable_log_config_setup): New function.
+	Copies the log configuration to a world-readable file, as in
+	normal circumstances the "sabayon" user will not be able to read
+	root's own ~/sabayon-debug-log.conf.
+	(main): Capture fatal exceptions, log them, and terminate.
+	Capture recoverable errors, log them, and terminate gracefully.
+
+	* lib/errors.py (errors_exit_helper_normally): Use
+	debuglog.debug_log_dump_to_file() instead of
+	debug_log_dump_to_stderr().
+	(errors_exit_with_fatal_exception): Likewise.
+
+	* lib/util.py (debug_print): Really remove this (hadn't I deleted
+	it before!?).
+
+	* lib/debuglog.py (DebugLog.load_configuration): Removed stale comment.
+	(debug_log): Add documentation.
+	(debug_log_current_exception): Likewise.
+	(debug_log_load_configuration): Likewise.
+	(debug_log_is_domain_enabled): Likewise.
+	(debug_log_dump_as_list): Likewise.
+	(debug_log_dump_to_stderr): Likewise.
+	(debug_log_dump_configuration): New function; dumps the debug log
+	configuration to an open file.
+	(debug_log_dump_to_dated_file): New function; dumps the debug log
+	to a unique file.
+	(DebugLog.dump_configuration): New method to implement the above.
+	(debug_log_dump_to_file): Renamed from debug_log_dump_to_stderr();
+	now dumps the log to a given file.
+
+	* lib/config.py.in (LOG_CONFIG_FILENAME): New constant.
+	(BUG_TRACKING_SYSTEM): New constant, set to
+	"http://bugzilla.gnome.org".
+
+	* admin-tool/sabayon-session: Use config.LOG_CONFIG_FILENAME.
+	Compute an adequate fallback for the log config filename if none
+	is provided in the command line.
+
+	* admin-tool/sabayon-apply: Likewise.
+
+2007-03-22  Federico Mena Quintero  <federico@novell.com>
+
+	* admin-tool/sessionwindow.py
+	(SessionWindow.__handle_enforce_mandatory): Log a user action for
+	setting the enforce_mandatory option.
+	(SessionWindow.__handle_lockdown): Log a user action for bringing
+	up the Lockdown window.
+
 2007-03-14  Federico Mena Quintero  <federico@novell.com>
 
 	* admin-tool/profilesdialog.py

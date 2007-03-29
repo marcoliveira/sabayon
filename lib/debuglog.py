@@ -36,6 +36,15 @@ def uprint (fmt, *args):
     debug_log (False, DEBUG_LOG_DOMAIN_USER, fmt % args)
 
 class DebugLog:
+    """This class is internal.  Use the following functions instead:
+    debug_log()
+    debug_log_current_exception()
+    debug_log_load_configuration()
+    debug_log_is_domain_enabled()
+    debug_log_dump_as_list()
+    debug_log_dump_to_file()
+    debug_log_dump_configuration()"""
+
     SECTION_DEBUG_LOG = "debug log"
     KEY_ENABLE_DOMAINS = "enable domains"
     KEY_MAX_LINES = "max lines"
@@ -138,7 +147,6 @@ class DebugLog:
     def load_configuration (self, filename):
         config = ConfigParser.ConfigParser ()
 
-        # FIXME we don't want to explode if the file cannot be read.
         config.read (filename)
 
         if config.has_option (self.SECTION_DEBUG_LOG, self.KEY_ENABLE_DOMAINS):
@@ -146,6 +154,9 @@ class DebugLog:
 
         if config.has_option (self.SECTION_DEBUG_LOG, self.KEY_MAX_LINES):
             self.set_max_lines_from_string (config.get (self.SECTION_DEBUG_LOG, self.KEY_MAX_LINES))
+
+    def dump_configuration (self, file):
+        file.write (self.make_configuration_string ())
 
     def make_configuration_string (self):
         config_str = "[%s]\n%s = %s\n" % (self.SECTION_DEBUG_LOG, self.KEY_MAX_LINES, self.ring_max_lines)
@@ -208,6 +219,15 @@ def _debug_log_unlock ():
     _debug_log_the_lock.release ()
 
 def debug_log (is_milestone, domain, msg):
+    """Logs a message to the debug log.
+
+    @is_milestone: If True, the message will be logged unconditionally.  If False, the message
+    will only be logged if the specified log domain was enabled when reading the configuration
+    with debug_log_load_configuration().
+    @domain: The log domain, which determines whether a message is logged or not.
+    The "USER" domain is always enabled.
+    @msg: Message to log."""
+
     global _debug_log_log
 
     if type (domain) != str:
@@ -240,10 +260,20 @@ def debug_log (is_milestone, domain, msg):
         _debug_log_unlock ()
 
 def debug_log_current_exception (domain):
+    """Logs the current exception as a milestone.
+
+    @domain: Domain in which to log the exception.  This is only used for informational
+    purposes, since the exception will always be logged (it's a milestone)."""
+
     # Exceptions are always logged as milestones
     debug_log (True, domain, traceback.format_exc ())
 
 def debug_log_load_configuration (config_filename):
+    """Loads the configuration for the debug log from a file.  Does nothing if the file
+    does not exist or if it is unreadable.
+
+    @config_filename: Name of the file from which to read the configuration."""
+
     global _debug_log_log
 
     if config_filename != None and type (config_filename) != str:
@@ -260,6 +290,14 @@ def debug_log_load_configuration (config_filename):
         _debug_log_unlock ()
 
 def debug_log_is_domain_enabled (domain):
+    """Returns whether a certain domain is enabled in the debug log.
+    If generating a log message is an expensive operation, you can first use
+    this function to test whether the message needs to be logged at all.
+
+    @domain: Domain to query.  Note that the "USER" domain is always enabled.
+
+    Return value: True if the @domain is enabled for logging, False otherwise."""
+
     global _debug_log_log
 
     if type (domain) != str:
@@ -272,6 +310,19 @@ def debug_log_is_domain_enabled (domain):
         _debug_log_unlock ()
 
 def debug_log_dump_as_list (config_filename):
+    """Returns a list with the contents of the debug log, ready to be sent to
+    a file.  This list contains both the milestones and the actual ring buffer
+    used for logging.
+
+    @config_filename: The generated list has instructions on how to re-create the
+    debug log's configuration for a future run.  This string specifies the
+    name of the file in which that configuration should be specified; the
+    returned log will have instructions like "This configuration for the debug log
+    can be re-created by putting the following in @config_filename".
+
+    Return value: a list with the contents of the debug log, with one string item
+    per message."""
+
     global _debug_log_log
 
     if type (config_filename) != str:
@@ -285,6 +336,50 @@ def debug_log_dump_as_list (config_filename):
     finally:
         _debug_log_unlock ()
 
-def debug_log_dump_to_stderr (config_filename):
+def debug_log_dump_to_file (config_filename, file):
+    """Dumps the debug log to a file.
+
+    @config_filename: See the documentation for debug_log_dump_as_list() to
+    see how this argument is used.
+    @file: open file object in which to dump the log."""
+
     list = debug_log_dump_as_list (config_filename)
-    sys.stderr.writelines (list)
+    file.writelines (list)
+
+def debug_log_dump_configuration (file):
+    """Dumps the current configuration to the specified file object.
+
+    @file: File object, already open for writing."""
+
+    _debug_log_lock ()
+    try:
+        _debug_log_log.dump_configuration (file)
+    finally:
+        _debug_log_unlock ()
+
+def debug_log_dump_to_dated_file (config_filename):
+    """Dumps the debug log to a unique file, convenient for reading by the user.
+
+    @config_filename: See the documentation for debug_log_dump_as_list() to
+    see how this argument is used.
+
+    Return value: string with the name of the generated file."""
+
+    time = time.localtime ()
+
+    basename = ("sabayon-debug-log-%s-%04d-%02d-%02d-%02d-%02d-%02d.txt" %
+                (os.getpid (),
+                 time.tm_year,
+                 time.tm_mon,
+                 time.tm_day,
+                 time.tm_hour,
+                 time.tm_min,
+                 time.tm_sec))
+
+    name = os.path.join (util.get_home_dir (), basename)
+
+    file = open (name, "w")
+    debug_log_dump_configuration (file)
+    file.close ()
+
+    return name

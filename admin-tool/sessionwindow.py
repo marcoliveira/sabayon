@@ -282,14 +282,19 @@ class SessionWindow:
 
     def __handle_lockdown (self, action):
         if not self.lockdown_window:
+            uprint ("Creating new Lockdown window")
             applier = LockdownApplierSabayon (self.profile, self.changes_model)
             self.lockdown_window = lockdowndialog.PessulusMainDialog (applier, False)
             self.lockdown_window.window.set_title (_("Lockdown settings for %s")%self.profile_name)
+        else:
+            uprint ("Presenting existing Lockdown window")
+
         self.lockdown_window.window.present ()
 
-
     def __handle_enforce_mandatory (self, action):
-        self.profile.set_enforce_mandatory (action.get_active())
+        active = action.get_active ()
+        uprint ("Setting enforce_mandatory to %s", active)
+        self.profile.set_enforce_mandatory ()
 
     def __session_finished (self, session):
         self.window.destroy ()
@@ -307,7 +312,7 @@ class SessionWindow:
 
         try:
             self.session.apply_profile ()
-        except RecoverableApplyErrorException, e:
+        except errors.RecoverableApplyErrorException, e:
             errors_log_recoverable_exception (e)
             dialog = gtk.MessageDialog (parent = None,
                                         flags = gtk.DIALOG_MODAL,
@@ -325,7 +330,7 @@ class SessionWindow:
             if response == REPORT:
                 raise # the toplevel will catch the RecoverableApplyErrorException and exit
 
-        except FatalApplyErrorException, e:
+        except errors.FatalApplyErrorException, e:
             raise # FIXME: do we need any special processing?  Should we give the user
                   # the option of continuing editing?
         
