@@ -38,12 +38,14 @@ def get_admin_log_config_filename ():
     """Returns the human-readable filename used for log configuration,
     as stored with set_log_config_filename().  This is the file that the
     system administrator actually modifies to set up the log configuration."""
+    global _util_admin_log_config_filename
     return _util_admin_log_config_filename
 
 def set_admin_log_config_filename (str):
     """Stores the filename of the human-readable configuration file which the
     system administrator used to set up the log configuration.  This can be
     queried back with get_admin_log_config_filename()."""
+    global _util_admin_log_config_filename
     _util_admin_log_config_filename = str
 
 def get_readable_log_config_filename ():
@@ -52,6 +54,7 @@ def get_readable_log_config_filename ():
     filename from get_admin_log_config_filename(), since the helper processes in Sabayon
     may need to be given a temporary file to read their log configuration (as root's
     human-readable file may not be readable by the helper processes)."""
+    global _util_readable_log_config_filename
     return _util_readable_log_config_filename
 
 def set_readable_log_config_filename (str):
@@ -60,6 +63,7 @@ def set_readable_log_config_filename (str):
     filename from get_admin_log_config_filename(), since the helper processes in Sabayon
     may need to be given a temporary file to read their log configuration (as root's
     human-readable file may not be readable by the helper processes)."""
+    global _util_readable_log_config_filename
     _util_readable_log_config_filename = str
 
 class GeneralError (Exception):

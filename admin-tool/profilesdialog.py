@@ -32,6 +32,7 @@ import util
 import userdb
 import protosession
 import debuglog
+import errors
 from config import *
 
 def dprint (fmt, *args):
@@ -112,10 +113,33 @@ class Session (gobject.GObject):
         dprint ("Moved %s back from %s", user_path, profile_path)
 
     def __session_child_watch_handler (self, pid, status):
-        dprint ("sabayon-session died")
+        if not os.WIFEXITED (status):
+            exit_code = util.EXIT_CODE_FATAL
 
-        # FIXME: see if there were recoverable errors, or if it was a fatal exit
+            if os.WIFSIGNALED (status):
+                signal_num = os.WTERMSIG (status)
 
+                mprint ("sabayon-session exited with SIGNAL %s", signal_num)
+            else:
+                mprint ("sabayon-session exited for an unknown reason")
+        else:
+            exit_code = os.WEXITSTATUS (status)
+
+            if exit_code == util.EXIT_CODE_NORMAL:
+                mprint ("sabayon-session exited normally")
+                success = True
+            elif exit_code == util.EXIT_CODE_RECOVERABLE:
+                errors.errors_log_recoverable_error (debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL,
+                                                     "sabayon-session exited with RECOVERABLE exit status")
+                # FIXME: throw a warning dialog
+            else:
+                raise errors.FatalApplyErrorException (_("There was a fatal error while editing the session"))
+                mprint ("sabayon-session exited with a FATAL ERROR (exit code %s)", exit_code)
+
+        if exit_code != util.EXIT_CODE_NORMAL:
+            pass
+
+        protosession.clobber_user_processes (self.username)
         protosession.reset_shell_and_homedir (self.username, self.temp_homedir)
         self.temp_homedir = None
 
@@ -181,7 +205,7 @@ class Session (gobject.GObject):
 
         self.temp_xauth_path = self.__copy_xauthority ()
 
-        def child_setup_fn ():
+        def child_setup_fn (self):
             os.setgid (self.pw.pw_gid)
             os.setuid (self.pw.pw_uid)
             os.setsid ()
@@ -200,7 +224,7 @@ class Session (gobject.GObject):
         # FIXME: do we need any special processing if this throws an exception?
         # We'll catch it in the toplevel and exit with a fatal error code, anyway.
         (pid, oink, oink, stderr_fd) = gobject.spawn_async (argv, envp, cwd,
-                                                            0,			# flags
+                                                            gobject.SPAWN_DO_NOT_REAP_CHILD,
                                                             child_setup_fn, self,
                                                             None, None, True)	# stdin, stdout, stderr
 

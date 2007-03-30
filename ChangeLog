@@ -1,3 +1,28 @@
+2007-03-29  Federico Mena Quintero  <federico@novell.com>
+
+	* lib/errors.py (errors_log_recoverable_error): New function.
+	(errors_log_recoverable_exception): Use errors_log_recoverable_error().
+
+	* lib/debuglog.py (debug_log_dump_to_dated_file): Don't reuse the
+	"time" module name as a variable name.  Also, it's tm_mday, not tm_day.
+
+	* admin-tool/profilesdialog.py
+	(Session.__session_child_watch_handler): Log termination of the
+	child session as a milestone; deal with the possible exit codes.
+	(Session.__session_child_watch_handler): Clobber the user
+	processes so that we don't race with gconfd (merged from a Novell patch).
+
+	* admin-tool/sabayon (main): Oops, "try/else" is not the same as
+	"try/except" --- I really want to catch any other exceptions.
+
+	* admin-tool/sabayon-session (main): Likewise.
+
+	* lib/util.py (get_admin_log_config_filename): Sigh, use "global"
+	for _util_admin_log_config_filename.  Proper scoping, pretty please?
+	(set_admin_log_config_filename): Likewise.
+	(get_readable_log_config_filename): Likewise.
+	(set_readable_log_config_filename): Likewise.
+
 2007-03-28  Federico Mena Quintero  <federico@novell.com>
 
 	* admin-tool/sabayon (readable_log_config_setup): New function.

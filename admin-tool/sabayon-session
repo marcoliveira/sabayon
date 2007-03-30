@@ -81,7 +81,7 @@ if __name__ == '__main__':
         mprint ("Terminating")
     except errors.RecoverableApplyErrorException:
         pass # this will exit the program below
-    else:
+    except:
         errors.errors_exit_with_fatal_exception (debuglog.DEBUG_LOG_DOMAIN_SABAYON_SESSION,
                                                  util.get_admin_log_config_filename ())
 

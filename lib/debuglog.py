@@ -7,6 +7,7 @@ import traceback
 import warnings
 import exceptions
 import ConfigParser
+import util
 
 DEBUG_LOG_DOMAIN_USER = "USER"
 
@@ -256,6 +257,8 @@ def debug_log (is_milestone, domain, msg):
 
         if is_milestone:
             _debug_log_log.add_to_milestones (msg)
+
+        print msg
     finally:
         _debug_log_unlock ()
 
@@ -365,16 +368,16 @@ def debug_log_dump_to_dated_file (config_filename):
 
     Return value: string with the name of the generated file."""
 
-    time = time.localtime ()
+    t = time.localtime ()
 
     basename = ("sabayon-debug-log-%s-%04d-%02d-%02d-%02d-%02d-%02d.txt" %
                 (os.getpid (),
-                 time.tm_year,
-                 time.tm_mon,
-                 time.tm_day,
-                 time.tm_hour,
-                 time.tm_min,
-                 time.tm_sec))
+                 t.tm_year,
+                 t.tm_mon,
+                 t.tm_mday,
+                 t.tm_hour,
+                 t.tm_min,
+                 t.tm_sec))
 
     name = os.path.join (util.get_home_dir (), basename)
 

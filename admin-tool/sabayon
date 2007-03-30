@@ -105,12 +105,13 @@ if __name__ == '__main__':
         dialog = profilesdialog.ProfilesDialog ()
 
         mprint ("Going to main loop!")
+
         gtk.main ()
 
         mprint ("Terminating")
     except errors.RecoverableApplyErrorException:
         pass # this will exit the program below
-    else:
+    except:
         mprint ("Fatal exception!  Exiting abnormally.")
         debuglog.debug_log_current_exception (debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL)
         log_filename = debuglog.debug_log_dump_to_dated_file (util.get_admin_log_config_filename ())
@@ -126,7 +127,7 @@ if __name__ == '__main__':
         dialog.destroy ()
         sys.exit (util.EXIT_CODE_FATAL)
 
-    if errors_have_recoverable_error ():
+    if errors.errors_have_recoverable_error ():
         mprint ("Exiting normally; we had a recoverable error")
         log_filename = debuglog.debug_log_dump_to_dated_file (util.get_admin_log_config_filename ())
 
