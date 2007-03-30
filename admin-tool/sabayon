@@ -32,6 +32,8 @@ from sabayon import errors
 
 tmp_readable_log_config_file = None
 
+debuglog._debug_log_is_sabayon = True
+
 def readable_log_config_setup ():
     # The file which defines the configuration for the debug log may
     # only be readable by root.  So, we copy it to a world-readable
@@ -112,6 +114,10 @@ if __name__ == '__main__':
     except errors.RecoverableApplyErrorException:
         pass # this will exit the program below
     except:
+        pass # this will exit the program below
+
+    if errors.errors_have_fatal_error ():
+        print "SABAYON TOPLEVEL: GOT A FATAL EXCEPTION"
         mprint ("Fatal exception!  Exiting abnormally.")
         debuglog.debug_log_current_exception (debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL)
         log_filename = debuglog.debug_log_dump_to_dated_file (util.get_admin_log_config_filename ())
@@ -126,8 +132,7 @@ if __name__ == '__main__':
         dialog.run ()
         dialog.destroy ()
         sys.exit (util.EXIT_CODE_FATAL)
-
-    if errors.errors_have_recoverable_error ():
+    elif errors.errors_have_recoverable_error ():
         mprint ("Exiting normally; we had a recoverable error")
         log_filename = debuglog.debug_log_dump_to_dated_file (util.get_admin_log_config_filename ())
 

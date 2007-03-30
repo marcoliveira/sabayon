@@ -10,6 +10,8 @@ class FatalApplyErrorException (Exception):
 
 _have_recoverable_error = False
 
+_have_fatal_error = False
+
 def errors_have_recoverable_error ():
     """Used to see if there was a recoverable error reported with
     errors_log_recoverable_exception() or errors_log_recoverable_error().
@@ -17,6 +19,7 @@ def errors_have_recoverable_error ():
     Return value: True if errors_log_recoverable_exception() has been called;
     False otherwise."""
 
+    global _have_recoverable_error
     return _have_recoverable_error
 
 def errors_log_recoverable_error (domain, msg):
@@ -27,8 +30,31 @@ def errors_log_recoverable_error (domain, msg):
     @domain: name of debug log domain
     @msg: message to print to the debug log""" 
 
+    global _have_recoverable_error
     _have_recoverable_error = True
-    debug_log (True, domain, "Got recoverable error: %s" % msg)
+    debuglog.debug_log (True, domain, "Got recoverable error: %s" % msg)
+
+def errors_have_fatal_error ():
+    """Used to see if there was a fatal error reported with
+    errors_log_fatal_error().
+
+    Return value: True if errors_log_fatal_error() has been called;
+    False otherwise."""
+
+    global _have_fatal_error
+    return _have_fatal_error
+
+def errors_log_fatal_error (domain, msg):
+    """Records the presence of a fatal error to the debug log
+    (see debuglog).  This condition can be checked later with
+    errors_have_fatal_error().
+
+    @domain: name of debug log domain
+    @msg: message to print to the debug log""" 
+
+    global _have_fatal_error
+    _have_fatal_error = True
+    debuglog.debug_log (True, domain, "Got fatal error: %s" % msg)
 
 def errors_log_recoverable_exception (domain, msg):
     """Reports the current exception to the debug log (see debuglog), and records
@@ -39,7 +65,7 @@ def errors_log_recoverable_exception (domain, msg):
     @msg: message to print to the debug log in addition to the current exception""" 
 
     errors_log_recoverable_error (domain, msg)
-    debug_log_current_exception (domain)
+    debuglog.debug_log_current_exception (domain)
 
 def errors_exit_helper_normally (log_config_filename):
     """Used only from helper programs for Sabayon.  First, this dumps the debug log

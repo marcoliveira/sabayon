@@ -125,6 +125,11 @@ class Session (gobject.GObject):
         else:
             exit_code = os.WEXITSTATUS (status)
 
+            # Here we cannot throw an exception for the error cases,
+            # since we are a callback running out of the Glib main
+            # loop.  So we have to set a flag and let the code
+            # *outside* the main loop pick it up.
+
             if exit_code == util.EXIT_CODE_NORMAL:
                 mprint ("sabayon-session exited normally")
                 success = True
@@ -133,11 +138,8 @@ class Session (gobject.GObject):
                                                      "sabayon-session exited with RECOVERABLE exit status")
                 # FIXME: throw a warning dialog
             else:
-                raise errors.FatalApplyErrorException (_("There was a fatal error while editing the session"))
-                mprint ("sabayon-session exited with a FATAL ERROR (exit code %s)", exit_code)
-
-        if exit_code != util.EXIT_CODE_NORMAL:
-            pass
+                errors.errors_log_fatal_error (debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL,
+                                               "sabayon-session exited with a FATAL ERROR (exit code %s)" % exit_code)
 
         protosession.clobber_user_processes (self.username)
         protosession.reset_shell_and_homedir (self.username, self.temp_homedir)
@@ -185,7 +187,9 @@ class Session (gobject.GObject):
 
     def session_stderr_io_cb (self, source_fd, condition, session):
         if condition & gobject.IO_IN:
-            session.session_log_str = session.session_log_str + session.session_stderr.read ()
+            s = session.session_stderr.read ()
+            session.session_log_str = session.session_log_str + s
+            print "%s: got from sabayon-session stderr: \n<BEGIN SABAYON-SESSION STDERR>%s\n<END SABAYON-SESSION STDERR>" % (os.getpid (), s)
 
         if condition & gobject.IO_HUP:
             mprint ("========== BEGIN SABAYON-SESSION LOG ==========\n"

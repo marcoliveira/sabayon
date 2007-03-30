@@ -1,3 +1,26 @@
+2007-03-30  Federico Mena Quintero  <federico@novell.com>
+
+	* admin-tool/sabayon (main): Use errors.errors_have_fatal_error()
+	instead of catching fatal exceptions.
+
+	* admin-tool/profilesdialog.py
+	(Session.__session_child_watch_handler): Use
+	errors.errors_log_fatal_error() instead of throwing an exception.
+	We cannot throw an exception since we are a callback inside
+	gtk_main().
+
+	* lib/errors.py (errors_have_recoverable_error): Use global
+	_have_recoverable_error.  Broken scoping strikes again!
+	(errors_log_recoverable_error): Likewise.
+	(errors_have_fatal_error): New function.
+	(errors_log_fatal_error): New function.
+	(*): Oops, use debuglog.*
+
+	* lib/debuglog.py (debug_log_dump_to_dated_file): Don't put the
+	pid in the log's file name; just the date/time is enough.
+	(DebugLog.dump_milestones_to_list): Print the process name in the headers.
+	(DebugLog.dump_ring_buffer_to_list): Likewise.
+
 2007-03-29  Federico Mena Quintero  <federico@novell.com>
 
 	* lib/errors.py (errors_log_recoverable_error): New function.

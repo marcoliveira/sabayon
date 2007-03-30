@@ -487,6 +487,8 @@ class ProtoSession (gobject.GObject):
         return_code = pipe.wait ()
         stderr_str = pipe.stderr.read ()
 
+        print "<BEGIN SABAYON-APPLY STDERR>\n%s\n<END SABAYON-APPLY STDERR>" % stderr_str
+
         if return_code == util.EXIT_CODE_NORMAL:
             mprint ("Finished running sabayon-apply with normal exit status")
             pass

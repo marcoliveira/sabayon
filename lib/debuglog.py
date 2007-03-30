@@ -30,6 +30,8 @@ DEBUG_LOG_DOMAIN_CACHE           = "cache"
 _debug_log_log = None
 _debug_log_the_lock = threading.Lock ()
 
+_debug_log_is_sabayon = False
+
 def uprint (fmt, *args):
     """Logs a non-milestone message in the USER domain.
     @fmt: Format string for message.
@@ -178,26 +180,32 @@ class DebugLog:
         list.append (self.make_configuration_string ())
 
     def dump_milestones_to_list (self, list, config_filename):
-        list.append ("===== BEGIN MILESTONES =====\n")
+        list.append ("===== BEGIN MILESTONES (%s) =====\n" % sys.argv[0])
+
+        pid = os.getpid ()
 
         for s in self.milestones:
             list.append (s + "\n")
+            print "%s: dumping '%s'" % (pid, s)
 
-        list.append ("===== END MILESTONES =====\n")
+        list.append ("===== END MILESTONES (%s) =====\n" % sys.argv[0])
 
     def dump_ring_buffer_to_list (self, list, config_):
-        list.append ("===== BEGIN RING BUFFER =====\n")
+        list.append ("===== BEGIN RING BUFFER (%s) =====\n" % sys.argv[0])
 
         if self.ring_num_lines == self.ring_max_lines:
             start_index = self.ring_next_index
         else:
             start_index = 0
 
+        pid = os.getpid ()
+
         for i in range (self.ring_num_lines):
             idx = (start_index + i) % self.ring_max_lines
             list.append (self.ring_buffer[idx] + "\n")
+            print "%s: dumping '%s'" % (pid, self.ring_buffer[idx])
 
-        list.append ("===== END RING BUFFER =====\n")
+        list.append ("===== END RING BUFFER (%s) =====\n" % sys.argv[0])
 
     def dump_to_list (self, list, config_filename):
         self.dump_milestones_to_list (list, config_filename)
@@ -258,7 +266,9 @@ def debug_log (is_milestone, domain, msg):
         if is_milestone:
             _debug_log_log.add_to_milestones (msg)
 
-        print msg
+        global _debug_log_is_sabayon
+        if _debug_log_is_sabayon:
+            print "sabayon: %s" % msg
     finally:
         _debug_log_unlock ()
 
@@ -370,9 +380,8 @@ def debug_log_dump_to_dated_file (config_filename):
 
     t = time.localtime ()
 
-    basename = ("sabayon-debug-log-%s-%04d-%02d-%02d-%02d-%02d-%02d.txt" %
-                (os.getpid (),
-                 t.tm_year,
+    basename = ("sabayon-debug-log-%04d-%02d-%02d-%02d-%02d-%02d.txt" %
+                (t.tm_year,
                  t.tm_mon,
                  t.tm_mday,
                  t.tm_hour,
