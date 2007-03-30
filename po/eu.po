@@ -1,22 +1,21 @@
-# translation of eu.po to Basque
+# translation of sabayon.gnome-2-18.po to Basque
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
-# Iñaki Larrañaga <dooteo@euskalgnu.org>, 2006.
 #
+# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2006, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: eu\n"
+"Project-Id-Version: sabayon.gnome-2-18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-08-07 18:12+0000\n"
-"PO-Revision-Date: 2006-02-23 11:33+0100\n"
-"Last-Translator: Iñaki Larrañaga <dooteo@euskalgnu.org>\n"
+"POT-Creation-Date: 2007-03-30 17:41+0200\n"
+"PO-Revision-Date: 2007-03-29 13:32+0200\n"
+"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
 "Language-Team: Basque <itzulpena@euskalgnu.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.10.2\n"
+"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
 
 #: ../admin-tool/aboutdialog.py:61
 msgid "Program to establish and edit profiles for users"
@@ -92,7 +91,7 @@ msgstr "Honi _buruz"
 msgid "About Sabayon"
 msgstr "Sabayon-i buruz"
 
-#: ../admin-tool/editorwindow.py:252 ../lib/sources/gconfsource.py:121
+#: ../admin-tool/editorwindow.py:252 ../lib/sources/gconfsource.py:122
 msgid "GConf"
 msgstr "GConf"
 
@@ -101,7 +100,7 @@ msgid "Files"
 msgstr "Fitxategiak"
 
 #: ../admin-tool/editorwindow.py:256 ../admin-tool/lockdown/pessulus.glade.h:7
-#: ../lib/sources/paneldelegate.py:132
+#: ../lib/sources/paneldelegate.py:227
 msgid "Panel"
 msgstr "Panela"
 
@@ -354,14 +353,18 @@ msgid "_Base on:"
 msgstr "_Oinarria:"
 
 #: ../admin-tool/sabayon.glade.h:6
+msgid "_Details"
+msgstr "_Xehetasunak"
+
+#: ../admin-tool/sabayon.glade.h:7
 msgid "_Profiles:"
 msgstr "_Profilak:"
 
-#: ../admin-tool/sabayon.glade.h:7
+#: ../admin-tool/sabayon.glade.h:8
 msgid "_Users"
 msgstr "_Erabiltzaileak"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.glade.h:9
 msgid "_Users:"
 msgstr "_Erabiltzaileak:"
 
@@ -418,14 +421,9 @@ msgstr[0] ""
 msgstr[1] ""
 "Ez baduzu gordetzen, azken %ld minutuko aldaketak betirako galduko dira."
 
-#: ../admin-tool/saveconfirm.py:71 ../admin-tool/saveconfirm.py:81
-#, python-format
+#: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "Ez baduzu gordetzen, azken orduko aldaketak betirako galduko dira."
-msgstr[1] ""
-"Ez baduzu gordetzen, azken %d orduko aldaketak betirako galduko dira."
+msgstr "Ez baduzu gordetzen, azken orduko aldaketak betirako galduko dira."
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
@@ -441,6 +439,17 @@ msgstr[0] ""
 msgstr[1] ""
 "Ez baduzu gordetzen, azken orduko eta %d minutuko aldaketak betirako galduko "
 "dira."
+
+#: ../admin-tool/saveconfirm.py:81
+#, python-format
+msgid ""
+"If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] ""
+"Ez baduzu gordetzen, azken ordu %d-eko aldaketak betirako galduko dira."
+msgstr[1] ""
+"Ez baduzu gordetzen, azken %d orduko aldaketak betirako galduko dira."
 
 #: ../admin-tool/sessionwindow.py:151
 #, python-format
@@ -475,7 +484,7 @@ msgstr "Derrigortu beharrezkoak"
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Derrigortu beharrezko ezarpenak edizioko saioan"
 
-#: ../admin-tool/sessionwindow.py:271
+#: ../admin-tool/sessionwindow.py:286
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Blokeatu %s(r)en ezarpenak"
@@ -547,56 +556,56 @@ msgstr "Sistemako ezarpenen menua"
 msgid "Start Here menu"
 msgstr "'Hasi hemen' menua"
 
-#: ../lib/sources/gconfsource.py:87
+#: ../lib/sources/gconfsource.py:88
 #, python-format
 msgid "GConf key '%s' unset"
 msgstr "GConf-eko '%s' gakoa ezarri gabe"
 
-#: ../lib/sources/gconfsource.py:89
+#: ../lib/sources/gconfsource.py:90
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
 msgstr "GConf-eko '%s' gakoa '%s' katearekin ezarrita"
 
-#: ../lib/sources/gconfsource.py:91
+#: ../lib/sources/gconfsource.py:92
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
 msgstr "GConf-eko '%s' gakoa '%s' osokoarekin ezarrita"
 
-#: ../lib/sources/gconfsource.py:93
+#: ../lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
 msgstr "GConf-eko '%s' gakoa '%s' mugikorrarekin ezarrita"
 
-#: ../lib/sources/gconfsource.py:95
+#: ../lib/sources/gconfsource.py:96
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
 msgstr "GConf-eko '%s' gakoa '%s' boolearrarekin ezarrita"
 
-#: ../lib/sources/gconfsource.py:97
+#: ../lib/sources/gconfsource.py:98
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
 msgstr "GConf-eko '%s' gakoa '%s' eskemarekin ezarrita"
 
-#: ../lib/sources/gconfsource.py:99
+#: ../lib/sources/gconfsource.py:100
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
 msgstr "GConf-eko '%s' gakoa '%s' zerrendarekin ezarrita"
 
-#: ../lib/sources/gconfsource.py:101
+#: ../lib/sources/gconfsource.py:102
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
 msgstr "GConf-eko '%s' gakoa '%s' bikotearekin ezarrita"
 
-#: ../lib/sources/gconfsource.py:103
+#: ../lib/sources/gconfsource.py:104
 #, python-format
 msgid "GConf key '%s' set to '%s'"
 msgstr "GConf-eko '%s' gakoa '%s'(r)ekin ezarrita"
 
-#: ../lib/sources/gconfsource.py:134
+#: ../lib/sources/gconfsource.py:135
 msgid "Default GConf settings"
 msgstr "GConf-eko ezarpen lehenetsiak"
 
-#: ../lib/sources/gconfsource.py:136
+#: ../lib/sources/gconfsource.py:137
 msgid "Mandatory GConf settings"
 msgstr "Beharrezko GConf-eko ezarpenak"
 
@@ -676,37 +685,136 @@ msgstr "Mozilla-ren '%s' laster-marka aldatu da: '%s'"
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mozilla-ren laster-marken karpeta aldatu da: '%s'"
 
-#: ../lib/sources/paneldelegate.py:56
+#: ../lib/sources/paneldelegate.py:52
 #, python-format
 msgid "Panel '%s' added"
 msgstr "'%s' panela gehitu da"
 
-#: ../lib/sources/paneldelegate.py:62
+#: ../lib/sources/paneldelegate.py:58
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "'%s' panela kendu da"
 
-#: ../lib/sources/paneldelegate.py:68
+#: ../lib/sources/paneldelegate.py:73
 #, python-format
-msgid "Panel applet '%s' added"
-msgstr "Paneleko '%s' applet-a gehitu da"
+msgid "Applet %s added to top panel"
+msgstr "%s applet-a goiko panelean gehituta"
 
-#: ../lib/sources/paneldelegate.py:74
+#: ../lib/sources/paneldelegate.py:75
 #, python-format
-msgid "Panel applet '%s' removed"
-msgstr "Paneleko '%s' applet-a kendu da"
+msgid "Applet %s added to bottom panel"
+msgstr "%s applet-a beheko panelean gehituta"
 
-#: ../lib/sources/paneldelegate.py:80
+#: ../lib/sources/paneldelegate.py:77
 #, python-format
-msgid "Panel object '%s' added"
-msgstr "Panel '%s' objektua gehitu da"
+msgid "Applet %s added to left panel"
+msgstr "%s applet-a ezkerreko panelean gehituta"
 
-#: ../lib/sources/paneldelegate.py:92
+#: ../lib/sources/paneldelegate.py:79
 #, python-format
-msgid "Panel object '%s' removed"
-msgstr "Paneleko '%s' objektua kendu da"
+msgid "Applet %s added to right panel"
+msgstr "%s applet-a eskuineko panelean gehituta"
 
-#: ../lib/sources/paneldelegate.py:373
+#: ../lib/sources/paneldelegate.py:94
+#, python-format
+msgid "Applet %s removed from top panel"
+msgstr "%s applet-a goiko paneletik kenduta"
+
+#: ../lib/sources/paneldelegate.py:96
+#, python-format
+msgid "Applet %s removed from bottom panel"
+msgstr "%s applet-a beheko paneletik kenduta"
+
+#: ../lib/sources/paneldelegate.py:98
+#, python-format
+msgid "Applet %s removed from left panel"
+msgstr "%s applet-a ezkerreko paneletik kenduta"
+
+#: ../lib/sources/paneldelegate.py:100
+#, python-format
+msgid "Applet %s removed from right panel"
+msgstr "%s applet-a eskuineko paneletik kenduta"
+
+#: ../lib/sources/paneldelegate.py:114
+#, python-format
+msgid "%s added to top panel"
+msgstr "%s goiko panelera gehituta"
+
+#: ../lib/sources/paneldelegate.py:116
+#, python-format
+msgid "%s added to bottom panel"
+msgstr "%s beheko panelera gehituta"
+
+#: ../lib/sources/paneldelegate.py:118
+#, python-format
+msgid "%s added to left panel"
+msgstr "%s ezkerreko panelera gehituta"
+
+#: ../lib/sources/paneldelegate.py:120
+#, python-format
+msgid "%s added to right panel"
+msgstr "%s eskuineko panelera gehituta"
+
+#: ../lib/sources/paneldelegate.py:141
+#, python-format
+msgid "%s removed from top panel"
+msgstr "%s goiko paneletik kenduta"
+
+#: ../lib/sources/paneldelegate.py:143
+#, python-format
+msgid "%s removed from bottom panel"
+msgstr "%s beheko paneletik kenduta"
+
+#: ../lib/sources/paneldelegate.py:145
+#, python-format
+msgid "%s removed from left panel"
+msgstr "%s ezkerreko paneletik kenduta"
+
+#: ../lib/sources/paneldelegate.py:147
+#, python-format
+msgid "%s removed from right panel"
+msgstr "%s eskuineko paneletik kenduta"
+
+#: ../lib/sources/paneldelegate.py:196
+msgid "Drawer"
+msgstr "Tiradera"
+
+#: ../lib/sources/paneldelegate.py:198
+msgid "Main Menu"
+msgstr "Menu nagusia"
+
+#. FIXME: we need to use xdg.DesktopEntry to extract the localized name
+#. http://bugzilla.gnome.org/show_bug.cgi?id=397742
+#: ../lib/sources/paneldelegate.py:210
+#, python-format
+msgid "%s launcher"
+msgstr "%s abiarazlea"
+
+#: ../lib/sources/paneldelegate.py:214
+msgid "Lock Screen button"
+msgstr "Pantaila blokeatzeko botoia"
+
+#: ../lib/sources/paneldelegate.py:216
+msgid "Logout button"
+msgstr "Saio-amaierako botoia"
+
+#: ../lib/sources/paneldelegate.py:218
+msgid "Run Appliction button"
+msgstr "Aplikazioa exekutatzeko botoia"
+
+#: ../lib/sources/paneldelegate.py:220
+msgid "Search button"
+msgstr "Bilaketa-botoia"
+
+#: ../lib/sources/paneldelegate.py:222
+msgid "Screenshot button"
+msgstr "Pantaila kapturaren botoia"
+
+#: ../lib/sources/paneldelegate.py:224
+msgid "Menu Bar"
+msgstr "Menu-barra"
+
+#: ../lib/sources/paneldelegate.py:468
 msgid "Panel File"
 msgstr "Panelaren fitxategia"
 
@@ -730,7 +838,7 @@ msgstr "'%s'(e)n metadatuen baliogabeko atala: %s"
 msgid "Cannot add non-existent file '%s'"
 msgstr "Ezin da existitzen ez den '%s' fitxategia gehitu"
 
-#: ../lib/storage.py:538
+#: ../lib/storage.py:567
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "'%s' profilea irakurtzeko soilik da"
