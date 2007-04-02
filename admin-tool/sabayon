@@ -32,8 +32,6 @@ from sabayon import errors
 
 tmp_readable_log_config_file = None
 
-debuglog._debug_log_is_sabayon = True
-
 def readable_log_config_setup ():
     # The file which defines the configuration for the debug log may
     # only be readable by root.  So, we copy it to a world-readable
@@ -105,22 +103,23 @@ if __name__ == '__main__':
     try:
         mprint ("Creating profiles dialog")
         dialog = profilesdialog.ProfilesDialog ()
-
-        mprint ("Going to main loop!")
-
-        gtk.main ()
-
-        mprint ("Terminating")
-    except errors.RecoverableApplyErrorException:
-        pass # this will exit the program below
     except:
-        pass # this will exit the program below
+        errors.errors_log_fatal_error (debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL,
+                                       "Fatal exception while creating the profiles dialog; will exit abnormally.")
+        debuglog.debug_log_current_exception (debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL)
+    else:
+        # We put the call to gtk.main() *outside* the "try" block,
+        # since exceptions thrown in callbacks will not get caught
+        # here here (i.e.  the C stack won't be unrolled when an
+        # exception happens).
+        mprint ("Starting main loop")
+        gtk.main ()
+        mprint ("Terminating main loop")
 
     if errors.errors_have_fatal_error ():
-        print "SABAYON TOPLEVEL: GOT A FATAL EXCEPTION"
-        mprint ("Fatal exception!  Exiting abnormally.")
-        debuglog.debug_log_current_exception (debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL)
+        mprint ("Exiting abnormally; dumping log due to a fatal error")
         log_filename = debuglog.debug_log_dump_to_dated_file (util.get_admin_log_config_filename ())
+        sys.stderr.write ("Dumped debug log to %s\n" % log_filename)
 
         dialog = gtk.MessageDialog (parent = None,
                                     flags = 0,
@@ -133,8 +132,9 @@ if __name__ == '__main__':
         dialog.destroy ()
         sys.exit (util.EXIT_CODE_FATAL)
     elif errors.errors_have_recoverable_error ():
-        mprint ("Exiting normally; we had a recoverable error")
+        mprint ("Exiting normally; dumping log due to a recoverable error")
         log_filename = debuglog.debug_log_dump_to_dated_file (util.get_admin_log_config_filename ())
+        sys.stderr.write ("Dumped debug log to %s\n" % log_filename)
 
         dialog = gtk.MessageDialog (parent = None,
                                     flags = 0,

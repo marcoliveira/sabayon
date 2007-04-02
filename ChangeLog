@@ -1,3 +1,18 @@
+2007-04-02  Federico Mena Quintero  <federico@novell.com>
+
+	* admin-tool/sabayon (show_error_dialog): Put the call to
+	gtk.main() outside the main "try" block.  Fix the way errors are
+	captured.
+
+	* admin-tool/profilesdialog.py
+	(Session.__session_child_watch_handler): Exit the main loop if we
+	get a fatal error, so that the toplevel 'sabayon' will catch the
+	error as soon as possible.
+	(mprint): Log as milestone, sigh.
+
+	* lib/debuglog.py (debug_log_dump_to_dated_file): Doh, call
+	debug_log_dump_to_file(), not debug_log_dump_configuration()!
+
 2007-03-30  Federico Mena Quintero  <federico@novell.com>
 
 	* admin-tool/sabayon (main): Use errors.errors_have_fatal_error()

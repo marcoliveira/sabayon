@@ -39,7 +39,7 @@ def dprint (fmt, *args):
     debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL, fmt % args)
 
 def mprint (fmt, *args):
-    debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL, fmt % args)
+    debuglog.debug_log (True, debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL, fmt % args)
 
 def _get_profile_path_for_name (profile_name):
     return os.path.join (PROFILESDIR, profile_name + ".zip")
@@ -140,6 +140,7 @@ class Session (gobject.GObject):
             else:
                 errors.errors_log_fatal_error (debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL,
                                                "sabayon-session exited with a FATAL ERROR (exit code %s)" % exit_code)
+                gtk.main_quit () # so that the toplevel 'sabayon' will exit the main loop and show the fatal error
 
         protosession.clobber_user_processes (self.username)
         protosession.reset_shell_and_homedir (self.username, self.temp_homedir)
@@ -189,7 +190,7 @@ class Session (gobject.GObject):
         if condition & gobject.IO_IN:
             s = session.session_stderr.read ()
             session.session_log_str = session.session_log_str + s
-            print "%s: got from sabayon-session stderr: \n<BEGIN SABAYON-SESSION STDERR>%s\n<END SABAYON-SESSION STDERR>" % (os.getpid (), s)
+#            print "%s: got from sabayon-session stderr: \n<BEGIN SABAYON-SESSION STDERR>\n%s\n<END SABAYON-SESSION STDERR>" % (os.getpid (), s)
 
         if condition & gobject.IO_HUP:
             mprint ("========== BEGIN SABAYON-SESSION LOG ==========\n"

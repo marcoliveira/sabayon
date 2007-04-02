@@ -30,8 +30,6 @@ DEBUG_LOG_DOMAIN_CACHE           = "cache"
 _debug_log_log = None
 _debug_log_the_lock = threading.Lock ()
 
-_debug_log_is_sabayon = False
-
 def uprint (fmt, *args):
     """Logs a non-milestone message in the USER domain.
     @fmt: Format string for message.
@@ -186,7 +184,6 @@ class DebugLog:
 
         for s in self.milestones:
             list.append (s + "\n")
-            print "%s: dumping '%s'" % (pid, s)
 
         list.append ("===== END MILESTONES (%s) =====\n" % sys.argv[0])
 
@@ -203,7 +200,6 @@ class DebugLog:
         for i in range (self.ring_num_lines):
             idx = (start_index + i) % self.ring_max_lines
             list.append (self.ring_buffer[idx] + "\n")
-            print "%s: dumping '%s'" % (pid, self.ring_buffer[idx])
 
         list.append ("===== END RING BUFFER (%s) =====\n" % sys.argv[0])
 
@@ -222,7 +218,7 @@ def _debug_log_lock ():
     _debug_log_the_lock.acquire ()
 
     if not _debug_log_log:
-        _debug_log_log = DebugLog () # FIXME: do this here or in a debug_lock_init() function?
+        _debug_log_log = DebugLog ()
 
 def _debug_log_unlock ():
     _debug_log_the_lock.release ()
@@ -265,10 +261,6 @@ def debug_log (is_milestone, domain, msg):
 
         if is_milestone:
             _debug_log_log.add_to_milestones (msg)
-
-        global _debug_log_is_sabayon
-        if _debug_log_is_sabayon:
-            print "sabayon: %s" % msg
     finally:
         _debug_log_unlock ()
 
@@ -391,7 +383,7 @@ def debug_log_dump_to_dated_file (config_filename):
     name = os.path.join (util.get_home_dir (), basename)
 
     file = open (name, "w")
-    debug_log_dump_configuration (file)
+    debug_log_dump_to_file (config_filename, file)
     file.close ()
 
     return name
