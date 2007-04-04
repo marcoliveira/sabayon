@@ -22,6 +22,7 @@ import gtk.gdk
 import util
 import userprofile
 import debuglog
+import errors
 
 def dprint (fmt, *args):
     debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL, fmt % args)
@@ -65,6 +66,7 @@ class ChangesWindow:
 
         self.__setup_treeview ()
 
+    @errors.checked_callback
     def __mandatory_data_method (self, column, cell, model, iter):
         ignore = self.changes_model.get_value (iter,
                                                self.changes_model.COLUMN_IGNORE)
@@ -74,6 +76,7 @@ class ChangesWindow:
         else:
             cell.set_property ("mode", gtk.CELL_RENDERER_MODE_ACTIVATABLE)
             
+    @errors.checked_callback
     def __on_ignore_toggled (self, toggle, path):
         iter = self.changes_model.get_iter_from_string (path)
         ignore = self.changes_model.get_value (iter, self.changes_model.COLUMN_IGNORE)
@@ -82,6 +85,7 @@ class ChangesWindow:
 
         self.changes_model.set (iter, self.changes_model.COLUMN_IGNORE, ignore)
     
+    @errors.checked_callback
     def __on_mandatory_toggled (self, toggle, path):
         iter = self.changes_model.get_iter_from_string (path)
         mandatory = self.changes_model.get_value (iter, self.changes_model.COLUMN_MANDATORY)

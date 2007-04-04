@@ -28,6 +28,7 @@ try:
 except:
     from sets import Set as set
 
+from sabayon import errors
 import globalvar
 import simpleeditabletreeview
 
@@ -62,6 +63,7 @@ class PessulusSafeProtocols:
         self.sensitive = sensitive
         self.__update_sensitivity ()
 
+    @errors.checked_callback
     def __on_notified (self, data):
         (list, mandatory) = globalvar.applier.get_list (self.key,
                                                         gconf.VALUE_STRING)
@@ -72,11 +74,13 @@ class PessulusSafeProtocols:
         if mandatory != self.lockdownbutton.get ():
             self.lockdownbutton.set (mandatory)
 
+    @errors.checked_callback
     def __on_lockdownbutton_toggled (self, lockdownbutton, mandatory):
         globalvar.applier.set_list (self.key, gconf.VALUE_STRING,
                                     list (self.safe_protocols),
                                     mandatory)
 
+    @errors.checked_callback
     def __on_treeview_changed (self, simpleeditabletreeview, new_set):
         if new_set != self.safe_protocols:
             self.safe_protocols = new_set.copy ()
@@ -96,6 +100,7 @@ class PessulusSafeProtocols:
         self.__update_sensitivity ()
         self.simpleeditabletreeview.update_set (self.safe_protocols)
 
+    @errors.checked_callback
     def __on_destroyed (self, treeview):
         if self.notify_id:
             if globalvar.applier:

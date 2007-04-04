@@ -30,6 +30,7 @@ try:
 except:
     from sets import Set as set
 
+from sabayon import errors
 import globalvar
 import icons
 
@@ -154,11 +155,14 @@ class PessulusDisabledApplets:
         self.notify_id = globalvar.applier.notify_add (self.key,
                                                        self.__on_notified)
 
+    @errors.checked_callback
     def __on_screen_changed (self, widget, screen):
         self.icon_theme = gtk.icon_theme_get_for_screen (screen)
         self.__on_icontheme_changed (self.icon_theme)
 
+    @errors.checked_callback
     def __on_icontheme_changed (self, icontheme):
+        @errors.checked_callback
         def update_icon (model, path, iter, data):
             if model[iter][self.COLUMN_ICON_NAME] != "":
                 model[iter][self.COLUMN_ICON] = icons.load_icon (self.icon_theme, model[iter][self.COLUMN_ICON_NAME])
@@ -211,11 +215,13 @@ class PessulusDisabledApplets:
         column.pack_start (cell, True)
         column.set_attributes (cell, text = self.COLUMN_NAME)
 
+    @errors.checked_callback
     def __on_lockdownbutton_toggled (self, lockdownbutton, mandatory):
         globalvar.applier.set_list (self.key, gconf.VALUE_STRING,
                                     list (self.disabled_applets),
                                     mandatory)
 
+    @errors.checked_callback
     def __on_toggled (self, toggle, path):
         def toggle_value (model, iter, column):
             model[iter][column] = not model[iter][column]
@@ -237,6 +243,7 @@ class PessulusDisabledApplets:
                                         list (self.disabled_applets),
                                         self.lockdownbutton.get ())
 
+    @errors.checked_callback
     def __on_notified (self, data):
         (list, mandatory) = globalvar.applier.get_list (self.key,
                                                         gconf.VALUE_STRING)
@@ -256,6 +263,7 @@ class PessulusDisabledApplets:
         self.liststore.foreach (update_toggle, self)
         self.treeview.set_sensitive (globalvar.applier.key_is_writable (self.key))
 
+    @errors.checked_callback
     def __on_destroyed (self, treeview):
         if self.notify_id:
             if globalvar.applier:

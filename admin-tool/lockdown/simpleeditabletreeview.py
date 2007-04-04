@@ -24,6 +24,8 @@ import gobject
 import gtk
 import sys
 
+from sabayon import errors
+
 try:
     set
 except:
@@ -87,6 +89,7 @@ class PessulusSimpleEditableTreeview (gobject.GObject):
         # and don't edit it, it shouldn't be really added
         self.cell.connect("editing-canceled", self.__on_cell_editing_canceled)
 
+    @errors.checked_callback
     def __on_cell_edited (self, cell, path, new_text):
         self.editing = False
         self.__update_sensitivity ()
@@ -122,10 +125,12 @@ class PessulusSimpleEditableTreeview (gobject.GObject):
             self.__update_model ()
             self.emit ("changed", self.content_set)
 
+    @errors.checked_callback
     def __on_cell_editing_started (self, cell, editable, path):
         self.editing = True
         self.__update_sensitivity ()
 
+    @errors.checked_callback
     def __on_cell_editing_canceled (self, cell):
         self.editing = False
         self.__update_sensitivity ()
@@ -134,6 +139,7 @@ class PessulusSimpleEditableTreeview (gobject.GObject):
             del (self.liststore[self.new_edited_path])
             self.new_edited_path = None
 
+    @errors.checked_callback
     def __on_add_button_clicked (self, button):
         # add a row and start editing it
         iter = self.liststore.append ()
@@ -141,6 +147,7 @@ class PessulusSimpleEditableTreeview (gobject.GObject):
         self.treeview.set_cursor_on_cell (path, self.column, self.cell, True)
         self.new_edited_path = path
 
+    @errors.checked_callback
     def __on_edit_button_clicked (self, button):
         model, iter = self.treeview.get_selection ().get_selected ()
 
@@ -152,6 +159,7 @@ class PessulusSimpleEditableTreeview (gobject.GObject):
         path = model.get_path (iter)
         self.treeview.set_cursor_on_cell (path, self.column, self.cell, True)
 
+    @errors.checked_callback
     def __on_remove_button_clicked (self, button):
         model, iter = self.treeview.get_selection ().get_selected ()
 
@@ -185,6 +193,7 @@ class PessulusSimpleEditableTreeview (gobject.GObject):
         self.__update_model ()
         self.emit ("changed", self.content_set)
 
+    @errors.checked_callback
     def __on_treeselection_changed (self, treeselection):
         self.__update_sensitivity ()
 

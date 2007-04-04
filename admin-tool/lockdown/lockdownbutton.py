@@ -23,6 +23,7 @@
 import gobject
 import gtk
 
+from sabayon import errors
 import globalvar
 
 def load_image (name):
@@ -114,6 +115,7 @@ class PessulusLockdownButton (gobject.GObject):
                 self.button.remove (child)
             self.button.add (newimage)
 
+    @errors.checked_callback
     def __on_button_clicked (self, button):
         self.locked = not self.locked
         self.__update ()

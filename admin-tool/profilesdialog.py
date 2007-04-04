@@ -112,6 +112,7 @@ class Session (gobject.GObject):
         shutil.move (user_path, profile_path)
         dprint ("Moved %s back from %s", user_path, profile_path)
 
+    @errors.checked_callback
     def __session_child_watch_handler (self, pid, status):
         if not os.WIFEXITED (status):
             exit_code = util.EXIT_CODE_FATAL
@@ -175,17 +176,18 @@ class Session (gobject.GObject):
 
         new_environ = new_environ + ["PATH=%s"     % DEFAULT_PATH,
                                      "SHELL=%s"    % DEFAULT_SHELL,
-                                     "DISPLAY=%s"  % os,
-                                     "HOME=%s"     % self,
-                                     "LOGNAME=%s"  % self,
-                                     "USER=%s"     % self,
-                                     "USERNAME=%s" % self]
+                                     "DISPLAY=%s"  % os.environ["DISPLAY"],
+                                     "HOME=%s"     % self.temp_homedir,
+                                     "LOGNAME=%s"  % self.pw.pw_name,
+                                     "USER=%s"     % self.pw.pw_name,
+                                     "USERNAME=%s" % self.pw.pw_name]
 
         if self.temp_xauth_path:
             new_environ.append ("XAUTHORITY=%s" % self.temp_xauth_path)
 
         return new_environ
 
+    @errors.checked_callback
     def session_stderr_io_cb (self, source_fd, condition, session):
         if condition & gobject.IO_IN:
             s = session.session_stderr.read ()
@@ -288,6 +290,7 @@ class AddProfileDialog:
         self.base_combo.pack_start (renderer, True)
         self.base_combo.set_attributes (renderer, text = ProfilesModel.COLUMN_NAME)
 
+    @errors.checked_callback
     def __name_entry_changed (self, entry):
         text = entry.get_text ()
         if not text or text.isspace ():
@@ -383,9 +386,11 @@ class ProfilesDialog:
                                 text = ProfilesModel.COLUMN_NAME)
         self.profiles_list.append_column (c)
 
+    @errors.checked_callback
     def __dialog_response (self, dialog, response_id):
         dialog.destroy ()
 
+    @errors.checked_callback
     def __add_button_clicked (self, button):
         (profile_name, base_profile) = AddProfileDialog (self.profiles_model).run (self.dialog)
         if profile_name:
@@ -397,10 +402,12 @@ class ProfilesDialog:
             return None
         return model[row][ProfilesModel.COLUMN_NAME]
 
+    @errors.checked_callback
     def __session_finished (self, session):
         debuglog.uprint ("Finishing editing profile")
         self.dialog.set_sensitive (True)
 
+    @errors.checked_callback
     def __edit_button_clicked (self, button):
         profile_name = self.__get_selected_profile ()
         if profile_name:
@@ -411,11 +418,13 @@ class ProfilesDialog:
             debuglog.uprint ("Starting to edit profile '%s'", profile_name)
             session.start ()
 
+    @errors.checked_callback
     def __details_button_clicked (self, button):
         profile_name = self.__get_selected_profile ()
         if profile_name:
             editorwindow.ProfileEditorWindow (profile_name, self.dialog)
 
+    @errors.checked_callback
     def __users_button_clicked (self, button):
         profile_name = self.__get_selected_profile ()
         if profile_name:
@@ -461,9 +470,11 @@ class ProfilesDialog:
             if row:
                 self.profiles_list.get_selection ().select_iter (row)
 
+    @errors.checked_callback
     def __remove_button_clicked (self, button):
         self.__delete_currently_selected ()
 
+    @errors.checked_callback
     def __handle_key_press (self, profiles_list, event):
         if event.keyval in (gtk.keysyms.Delete, gtk.keysyms.KP_Delete):
             self.__delete_currently_selected ()
@@ -503,6 +514,7 @@ class ProfilesDialog:
                 return
             row = self.profiles_model.iter_next (row)
 
+    @errors.checked_callback
     def __profile_selection_changed (self, selection):
         profile_name = self.__get_selected_profile ()
         self.edit_button.set_sensitive (profile_name != None)

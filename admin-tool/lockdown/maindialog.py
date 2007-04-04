@@ -29,6 +29,7 @@ import gtk.glade
 
 from config import *
 
+from sabayon import errors
 import disabledapplets
 import lockdownbutton
 import lockdowncheckbutton
@@ -131,11 +132,13 @@ class PessulusMainDialog:
         checkbutton.connect ("toggled", self.__on_unsafeprotocols_toggled, hbox)
         self.__on_unsafeprotocols_toggled (checkbutton, hbox)
 
+    @errors.checked_callback
     def __on_unsafeprotocols_toggled (self, checkbutton, hbox):
         sensitive = checkbutton.get_active ()
         hbox.set_sensitive (sensitive)
         self.safeprotocols.set_sensitive (sensitive)
 
+    @errors.checked_callback
     def __on_dialog_response (self, dialog, response_id):
         if dialog == self.window and response_id == gtk.RESPONSE_HELP:
             return
@@ -144,6 +147,7 @@ class PessulusMainDialog:
         if self.quit_on_close:
             dialog.destroy ()
 
+    @errors.checked_callback
     def __on_dialog_destroy (self, dialog):
         for gconfdir in gconfdirs:
             globalvar.applier.remove_dir (gconfdir)

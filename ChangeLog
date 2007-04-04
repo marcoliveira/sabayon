@@ -1,3 +1,117 @@
+2007-04-03  Federico Mena Quintero  <federico@novell.com>
+
+	* lib/errors.py (checked_callback): New function decorator.  We
+	will use this to wrap all callbacks, so that we can catch
+	exceptions in callbacks and flag the presence of fatal errors.
+	These will in turn be caught outside the main loop, and we'll dump
+	the debug log as appropriate.
+
+	* admin-tool/lockdown/lockdowncheckbutton.py
+	(PessulusLockdownCheckbutton.__on_notified): Make this a checked callback.
+	(PessulusLockdownCheckbutton.__on_lockdownbutton_toggled): Likewise.
+	(PessulusLockdownCheckbutton.__on_check_toggled): Likewise.
+	(PessulusLockdownCheckbutton.__on_destroyed): Likewise.
+
+	* admin-tool/lockdown/lockdownbutton.py
+	(PessulusLockdownButton.__on_button_clicked): Likewise.
+
+	* admin-tool/lockdown/simpleeditabletreeview.py
+	(PessulusSimpleEditableTreeview.__on_cell_edited): Likewise.
+	(PessulusSimpleEditableTreeview.__on_cell_editing_started): Likewise.
+	(PessulusSimpleEditableTreeview.__on_cell_editing_canceled): Likewise.
+	(PessulusSimpleEditableTreeview.__on_add_button_clicked): Likewise.
+	(PessulusSimpleEditableTreeview.__on_edit_button_clicked): Likewise.
+	(PessulusSimpleEditableTreeview.__on_remove_button_clicked): Likewise.
+	(PessulusSimpleEditableTreeview.__on_treeselection_changed): Likewise.
+
+	* admin-tool/lockdown/disabledapplets.py
+	(PessulusDisabledApplets.__on_screen_changed): Likewise.
+	(PessulusDisabledApplets.__on_icontheme_changed): Likewise.
+	(PessulusDisabledApplets.update_icon): Likewise.
+	(PessulusDisabledApplets.__on_lockdownbutton_toggled): Likewise.
+	(PessulusDisabledApplets.__on_toggled): Likewise.
+	(PessulusDisabledApplets.__on_notified): Likewise.
+	(PessulusDisabledApplets.__on_destroyed): Likewise.
+
+	* admin-tool/lockdown/maindialog.py
+	(PessulusMainDialog.__on_dialog_response): Likewise.
+	(PessulusMainDialog.__on_dialog_destroy): Likewise.
+	(PessulusMainDialog.__on_unsafeprotocols_toggled): Likewise.
+
+	* admin-tool/lockdown/safeprotocols.py
+	(PessulusSafeProtocols.__on_notified): Likewise.
+	(PessulusSafeProtocols.__on_lockdownbutton_toggled): Likewise.
+	(PessulusSafeProtocols.__on_treeview_changed): Likewise.
+	(PessulusSafeProtocols.__on_destroyed): Likewise.
+
+	* admin-tool/aboutdialog.py (handle_delete): Likewise.
+	(handle_response): Likewise.
+
+	* admin-tool/changeswindow.py
+	(ChangesWindow.__mandatory_data_method): Likewise.
+	(ChangesWindow.__on_ignore_toggled): Likewise.
+	(ChangesWindow.__on_mandatory_toggled): Likewise.
+
+	* admin-tool/profilesdialog.py
+	(Session.__session_child_watch_handler): Likewise.
+	(Session.session_stderr_io_cb): Likewise.
+	(AddProfileDialog.__name_entry_changed): Likewise.
+	(ProfilesDialog.__dialog_response): Likewise.
+	(ProfilesDialog.__add_button_clicked): Likewise.
+	(ProfilesDialog.__session_finished): Likewise.
+	(ProfilesDialog.__edit_button_clicked): Likewise.
+	(ProfilesDialog.__details_button_clicked): Likewise.
+	(ProfilesDialog.__users_button_clicked): Likewise.
+	(ProfilesDialog.__remove_button_clicked): Likewise.
+	(ProfilesDialog.__handle_key_press): Likewise.
+	(ProfilesDialog.__profile_selection_changed): Likewise.
+
+	* admin-tool/lockdownappliersabayon.py
+	(LockdownApplierSabayon.__changes_model_changed): Likewise.
+
+	* admin-tool/sessionwindow.py
+	(ProfileChangesModel.handle_profile_change): Likewise.
+	(SessionWindow.__add_widget): Likewise.
+	(SessionWindow.__changes_model_changed): Likewise.
+	(SessionWindow.__handle_save): Likewise.
+	(SessionWindow.__handle_quit): Likewise.
+	(SessionWindow.__handle_delete_event): Likewise.
+	(SessionWindow.__handle_about): Likewise.
+	(SessionWindow.__handle_edit): Likewise.
+	(SessionWindow.__handle_lockdown): Likewise.
+	(SessionWindow.__handle_enforce_mandatory): Likewise.
+	(SessionWindow.__session_finished): Likewise.
+	(SessionWindow.__session_mapped): Likewise.
+	(SessionWindow.__update_statusbar): Likewise.
+	(SessionWindow.__update_resize_grip): Likewise.
+
+	* admin-tool/usersdialog.py (UsersDialog.__on_use_toggled): Likewise.
+	(UsersDialog.__all_check_toggled): Likewise.
+
+	* admin-tool/editorwindow.py
+	(ProfileEditorWindow.__handle_key_press): Likewise.
+	(ProfileEditorWindow.__handle_save): Likewise.
+	(ProfileEditorWindow.__handle_close): Likewise.
+	(ProfileEditorWindow.__handle_delete_event): Likewise.
+	(ProfileEditorWindow.__handle_delete): Likewise.
+	(ProfileEditorWindow.__handle_about): Likewise.
+	(ProfileEditorWindow.__treeview_selection_changed): Likewise.
+	(ProfileEditorWindow.__handle_row_activation): Likewise.
+
+2007-04-02  Federico Mena Quintero  <federico@novell.com>
+
+	* lib/protosession.py (ProtoSession.apply_profile): Use the right
+	namespace for get_*_log_config_filename().
+
+	* admin-tool/sessionwindow.py: import errors.
+	(*): uprint is really "debuglog.uprint".
+
+	* admin-tool/sabayon-apply: import os.
+
+	* admin-tool/profilesdialog.py (Session.build_envp_for_child):
+	Oops, fill the new_environ correctly from the variables we already
+	knew.
+
 2007-04-02  Federico Mena Quintero  <federico@novell.com>
 
 	* admin-tool/sabayon (show_error_dialog): Put the call to

@@ -468,8 +468,8 @@ class ProtoSession (gobject.GObject):
         
     def apply_profile (self):
         argv = APPLY_TOOL_ARGV + [ "-s", self.profile_file,
-                                   ("--admin-log-config=%s" % get_admin_log_config_filename ()),
-                                   ("--readable-log-config=%s" % get_readable_log_config_filename ()) ]
+                                   ("--admin-log-config=%s" % util.get_admin_log_config_filename ()),
+                                   ("--readable-log-config=%s" % util.get_readable_log_config_filename ()) ]
         mprint ("Running sabayon-apply: %s" % argv)
 
         try:

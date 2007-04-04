@@ -29,6 +29,7 @@ import sessionwidget
 import saveconfirm
 import aboutdialog
 import debuglog
+import errors
 from lockdownappliersabayon import LockdownApplierSabayon
 from sabayon.lockdown import maindialog as lockdowndialog
 from config import *
@@ -81,6 +82,7 @@ class ProfileChangesModel (gtk.ListStore):
         self.profile.connect ("changed", self.handle_profile_change)
 
 
+    @errors.checked_callback
     def handle_profile_change (self, profile, new_change):
         default_mandatory = False
         ignore = new_change.get_ignore_default ()
@@ -165,6 +167,7 @@ class SessionWindow:
         self.__set_needs_saving (False)
 
 
+    @errors.checked_callback
     def __add_widget (self, ui_manager, widget):
         self.box.pack_start (widget, False, False, 0)
 
@@ -205,6 +208,7 @@ class SessionWindow:
             self.last_save_time = 0
             self.save_action.set_sensitive (False)
 
+    @errors.checked_callback
     def __changes_model_changed (self, model, change):
         self.__set_needs_saving (not model.get_iter_first () is None)
 
@@ -258,19 +262,24 @@ class SessionWindow:
 
         return True
 
+    @errors.checked_callback
     def __handle_save (self, action):
         self.__do_save ()
 
+    @errors.checked_callback
     def __handle_quit (self, action):
         if self.__do_saveconfirm ():
             self.window.destroy ()
 
+    @errors.checked_callback
     def __handle_delete_event (self, window, event):
         return not self.__do_saveconfirm ()
 
+    @errors.checked_callback
     def __handle_about (self, action):
         aboutdialog.show_about_dialog (self.window)
 
+    @errors.checked_callback
     def __handle_edit (self, action):
         if not self.changes_window:
             self.changes_window = changeswindow.ChangesWindow (self.changes_model,
@@ -280,25 +289,29 @@ class SessionWindow:
                                                 gtk.Widget.hide_on_delete)
         self.changes_window.window.present ()
 
+    @errors.checked_callback
     def __handle_lockdown (self, action):
         if not self.lockdown_window:
-            uprint ("Creating new Lockdown window")
+            debuglog.uprint ("Creating new Lockdown window")
             applier = LockdownApplierSabayon (self.profile, self.changes_model)
             self.lockdown_window = lockdowndialog.PessulusMainDialog (applier, False)
             self.lockdown_window.window.set_title (_("Lockdown settings for %s")%self.profile_name)
         else:
-            uprint ("Presenting existing Lockdown window")
+            debuglog.uprint ("Presenting existing Lockdown window")
 
         self.lockdown_window.window.present ()
 
+    @errors.checked_callback
     def __handle_enforce_mandatory (self, action):
         active = action.get_active ()
-        uprint ("Setting enforce_mandatory to %s", active)
+        debuglog.uprint ("Setting enforce_mandatory to %s", active)
         self.profile.set_enforce_mandatory ()
 
+    @errors.checked_callback
     def __session_finished (self, session):
         self.window.destroy ()
 
+    @errors.checked_callback
     def __session_mapped (self, session_widget, event):
         dprint ("Session widget mapped; starting prototype session")
         self.session_widget.disconnect (self.mapped_handler_id)
@@ -346,12 +359,14 @@ class SessionWindow:
         self.mapped_handler_id = self.session_widget.connect ("map-event", self.__session_mapped)
         self.session_widget.show ()
 
+    @errors.checked_callback
     def __update_statusbar (self, model, change):
         if change:
             self.statusbar.pop (self.status_context_id)
             self.statusbar.push (self.status_context_id,
                                  change.get_short_description ())
 
+    @errors.checked_callback
     def __update_resize_grip (self, window, event):
         if event.changed_mask & gtk.gdk.WINDOW_STATE_MAXIMIZED:
             if event.new_window_state & gtk.gdk.WINDOW_STATE_MAXIMIZED:

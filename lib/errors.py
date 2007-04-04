@@ -102,3 +102,34 @@ def errors_exit_with_fatal_exception (domain, log_config_filename):
     debuglog.debug_log_current_exception (domain)
     debuglog.debug_log_dump_to_file (log_config_filename, sys.stderr)
     sys.exit (util.EXIT_CODE_FATAL)
+
+def checked_callback (domain):
+    """Used as a function decorator.  You should prefix *all* your callbacks with this decorator:
+
+    @checked_callback ("domain")
+    def my_callback (...):
+        ...
+
+    If an uncaught exception happens in the callback, the decorator will catch the exception,
+    call errors.errors_log_fatal_error() to flag the presence of a fatal error, and it will
+    also exit the main loop.  In turn, the main loop is expected to have this form:
+
+        gtk.main ()
+        if errors.errors_have_fatal_error ():
+            print "a fatal error occurred" # or anything else you want to do""" 
+
+    def catch_exceptions (func):
+        def wrapper (*args, **kwargs):
+            try:
+                func (*args, **kwargs)
+            except:
+                errors_log_fatal_error (domain, "Fatal exception in callback; exiting main loop")
+                debuglog.debug_log_current_exception (domain)
+                gtk.main_quit ()
+
+        wrapper.__name__ = func.__name__
+        wrapper.__doc__ = func.__doc__
+
+        return wrapper
+
+    return catch_exceptions
