@@ -1,3 +1,4 @@
+# translation of cs.po to Czech
 # Czech translation of gnome-2.14.
 # Copyright (C) 2005 sabayon'S COPYRIGHT HOLDER
 # Copyright (C) 2005, 2006 Miloslav Trmac <mitr@volny.cz>
@@ -9,161 +10,161 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sabayon HEAD\n"
+"Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-14 13:46+0200\n"
-"PO-Revision-Date: 2006-04-14 21:34+0200\n"
-"Last-Translator: Petr Tomeš <ptomes@gmail.com>\n"
-"Language-Team: Czech <cs@li.org>\n"
+"POT-Creation-Date: 2007-04-04 14:47+0200\n"
+"PO-Revision-Date: 2007-04-04 14:47+0200\n"
+"Last-Translator: \n"
+"Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms:  nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: KBabel 1.11.4\n"
 
-#: ../admin-tool/aboutdialog.py:63
+#: ../admin-tool/aboutdialog.py:61
 msgid "Program to establish and edit profiles for users"
 msgstr "Program pro vytvoření a úpravu profilů pro uživatele"
 
-#: ../admin-tool/aboutdialog.py:66
+#: ../admin-tool/aboutdialog.py:64
 msgid "translator-credits"
 msgstr "Lukáš Novotný <lukasnov@cvs.gnome.org>"
 
-#: ../admin-tool/changeswindow.py:50
+#: ../admin-tool/changeswindow.py:48
 #, python-format
 msgid "Changes in profile %s"
 msgstr "Změny v profilu %s"
 
-#: ../admin-tool/changeswindow.py:106
+#: ../admin-tool/changeswindow.py:104
 msgid "Ignore"
 msgstr "Ignorovat"
 
-#: ../admin-tool/changeswindow.py:113
+#: ../admin-tool/changeswindow.py:111
 msgid "Lock"
 msgstr "Zamknout"
 
-#: ../admin-tool/changeswindow.py:120 ../admin-tool/editorwindow.py:224
+#: ../admin-tool/changeswindow.py:118 ../admin-tool/editorwindow.py:222
 msgid "Description"
 msgstr "Popis"
 
-#: ../admin-tool/editorwindow.py:97
+#: ../admin-tool/editorwindow.py:95
 #, python-format
 msgid "Profile %s"
 msgstr "Profil %s"
 
-#: ../admin-tool/editorwindow.py:189 ../admin-tool/sessionwindow.py:174
+#: ../admin-tool/editorwindow.py:187 ../admin-tool/sessionwindow.py:172
 msgid "_Profile"
 msgstr "_Profil"
 
-#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
+#: ../admin-tool/editorwindow.py:188 ../admin-tool/sessionwindow.py:173
 msgid "_Save"
 msgstr "_Uložit"
 
-#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
+#: ../admin-tool/editorwindow.py:188 ../admin-tool/sessionwindow.py:173
 msgid "Save profile"
 msgstr "Uložit profil"
 
-#: ../admin-tool/editorwindow.py:191
+#: ../admin-tool/editorwindow.py:189
 msgid "_Close"
 msgstr "_Zavřít"
 
-#: ../admin-tool/editorwindow.py:191 ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/editorwindow.py:189 ../admin-tool/sessionwindow.py:174
 msgid "Close the current window"
 msgstr "Zavřít aktuální okno"
 
-#: ../admin-tool/editorwindow.py:192 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
 msgid "_Edit"
 msgstr "_Upravit"
 
-#: ../admin-tool/editorwindow.py:193
+#: ../admin-tool/editorwindow.py:191
 msgid "_Delete"
 msgstr "_Odstranit"
 
-#: ../admin-tool/editorwindow.py:193
+#: ../admin-tool/editorwindow.py:191
 msgid "Delete item"
 msgstr "Odstranit položku"
 
-#: ../admin-tool/editorwindow.py:194 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:192 ../admin-tool/sessionwindow.py:178
 msgid "_Help"
 msgstr "_Nápověda"
 
-#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/editorwindow.py:193 ../admin-tool/sessionwindow.py:179
 msgid "_About"
 msgstr "O _aplikaci"
 
-#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/editorwindow.py:193 ../admin-tool/sessionwindow.py:179
 msgid "About Sabayon"
 msgstr "O Sabayon"
 
-#: ../admin-tool/editorwindow.py:254 ../lib/sources/gconfsource.py:123
+#: ../admin-tool/editorwindow.py:252 ../lib/sources/gconfsource.py:122
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:258 ../lib/sources/filessource.py:78
+#: ../admin-tool/editorwindow.py:256 ../lib/sources/filessource.py:76
 msgid "Files"
 msgstr "Soubory"
 
-#: ../admin-tool/editorwindow.py:258 ../admin-tool/lockdown/pessulus.glade.h:7
-#: ../lib/sources/paneldelegate.py:134
+#: ../admin-tool/editorwindow.py:256 ../admin-tool/lockdown/pessulus.glade.h:7
+#: ../lib/sources/paneldelegate.py:226
 msgid "Panel"
 msgstr "Panel"
 
-#: ../admin-tool/fileviewer.py:29
+#: ../admin-tool/fileviewer.py:27
 #, python-format
 msgid "Profile file: %s"
 msgstr "Soubor profilu: %s"
 
-#: ../admin-tool/gconfviewer.py:59 ../admin-tool/gconfviewer.py:78
+#: ../admin-tool/gconfviewer.py:57 ../admin-tool/gconfviewer.py:76
 msgid "<no type>"
 msgstr "<žádný typ>"
 
-#: ../admin-tool/gconfviewer.py:60
+#: ../admin-tool/gconfviewer.py:58
 msgid "<no value>"
 msgstr "<žádná hodnota>"
 
-#: ../admin-tool/gconfviewer.py:64
+#: ../admin-tool/gconfviewer.py:62
 msgid "string"
 msgstr "řetězec"
 
-#: ../admin-tool/gconfviewer.py:66
+#: ../admin-tool/gconfviewer.py:64
 msgid "integer"
 msgstr "celé číslo"
 
-#: ../admin-tool/gconfviewer.py:68
+#: ../admin-tool/gconfviewer.py:66
 msgid "float"
 msgstr "číslo s plovoucí řádovou čárkou"
 
-#: ../admin-tool/gconfviewer.py:70
+#: ../admin-tool/gconfviewer.py:68
 msgid "boolean"
 msgstr "booleovská hodnota"
 
-#: ../admin-tool/gconfviewer.py:72
+#: ../admin-tool/gconfviewer.py:70
 msgid "schema"
 msgstr "schéma"
 
-#: ../admin-tool/gconfviewer.py:74
+#: ../admin-tool/gconfviewer.py:72
 msgid "list"
 msgstr "seznam"
 
-#: ../admin-tool/gconfviewer.py:76
+#: ../admin-tool/gconfviewer.py:74
 msgid "pair"
 msgstr "dvojice"
 
-#: ../admin-tool/gconfviewer.py:88
+#: ../admin-tool/gconfviewer.py:86
 #, python-format
 msgid "Profile settings: %s"
 msgstr "Nastavení profilu %s"
 
-#: ../admin-tool/gconfviewer.py:112 ../admin-tool/profilesdialog.py:315
-#: ../admin-tool/usersdialog.py:85
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:313
+#: ../admin-tool/usersdialog.py:83
 msgid "Name"
 msgstr "Název"
 
-#: ../admin-tool/gconfviewer.py:117
+#: ../admin-tool/gconfviewer.py:115
 msgid "Type"
 msgstr "Typ"
 
-#: ../admin-tool/gconfviewer.py:122
+#: ../admin-tool/gconfviewer.py:120
 msgid "Value"
 msgstr "Hodnota"
 
@@ -269,7 +270,7 @@ msgstr "Editor omezení práv"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:415
+#: ../admin-tool/profilesdialog.py:413
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -356,27 +357,31 @@ msgid "_Base on:"
 msgstr "_Založit na:"
 
 #: ../admin-tool/sabayon.glade.h:6
+msgid "_Details"
+msgstr "_Podrobnosti"
+
+#: ../admin-tool/sabayon.glade.h:7
 msgid "_Profiles:"
 msgstr "_Profily:"
 
-#: ../admin-tool/sabayon.glade.h:7
+#: ../admin-tool/sabayon.glade.h:8
 msgid "_Users"
 msgstr "_Uživatelé"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.glade.h:9
 msgid "_Users:"
 msgstr "_Uživatelé:"
 
-#: ../admin-tool/saveconfirm.py:36
+#: ../admin-tool/saveconfirm.py:34
 msgid "Close _Without Saving"
 msgstr "Zavřít _bez uložení"
 
-#: ../admin-tool/saveconfirm.py:43
+#: ../admin-tool/saveconfirm.py:41
 #, python-format
 msgid "Save changes to profile \"%s\" before closing?"
 msgstr "Uložit změny v profilu \"%s\" bez zavřením?"
 
-#: ../admin-tool/saveconfirm.py:47
+#: ../admin-tool/saveconfirm.py:45
 #, python-format
 msgid ""
 "If you don't save, changes from the last %ld second will be permanently lost."
@@ -390,12 +395,12 @@ msgstr[1] ""
 msgstr[2] ""
 "Pokud je neuložíte, budou změny za posledních %ld sekund navždy ztraceny."
 
-#: ../admin-tool/saveconfirm.py:53
+#: ../admin-tool/saveconfirm.py:51
 msgid ""
 "If you don't save, changes from the last minute will be permanently lost."
 msgstr "Pokud je neuložíte, budou změny za poslední minutu navždy ztraceny."
 
-#: ../admin-tool/saveconfirm.py:57
+#: ../admin-tool/saveconfirm.py:55
 #, python-format
 msgid ""
 "If you don't save, changes from the last minute and %ld second will be "
@@ -413,7 +418,7 @@ msgstr[2] ""
 "Pokud je neuložíte, budou změny za poslední minutu a %ld sekund navždy "
 "ztraceny."
 
-#: ../admin-tool/saveconfirm.py:64
+#: ../admin-tool/saveconfirm.py:62
 #, python-format
 msgid ""
 "If you don't save, changes from the last %ld minute will be permanently lost."
@@ -427,19 +432,13 @@ msgstr[1] ""
 msgstr[2] ""
 "Pokud je neuložíte, budou změny za posledních %ld minut navždy ztraceny."
 
-#: ../admin-tool/saveconfirm.py:73 ../admin-tool/saveconfirm.py:83
-#, python-format
+#: ../admin-tool/saveconfirm.py:71
+#, fuzzy
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] ""
+msgstr ""
 "Pokud je neuložíte, budou změny za poslední %ld hodinu navždy ztraceny."
-msgstr[1] ""
-"Pokud je neuložíte, budou změny za poslední %ld hodiny navždy ztraceny."
-msgstr[2] ""
-"Pokud je neuložíte, budou změny za posledních %ld hodin navždy ztraceny."
 
-#: ../admin-tool/saveconfirm.py:76
+#: ../admin-tool/saveconfirm.py:74
 #, python-format
 msgid ""
 "If you don't save, changes from the last hour and %d minute will be "
@@ -457,294 +456,404 @@ msgstr[2] ""
 "Pokud je neuložíte, budou změny za poslední hodinu a %ld minut navždy "
 "ztraceny."
 
-#: ../admin-tool/sessionwindow.py:153
+#: ../admin-tool/saveconfirm.py:81
+#, fuzzy, python-format
+msgid ""
+"If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] ""
+"Pokud je neuložíte, budou změny za poslední %ld hodinu navždy ztraceny."
+msgstr[1] ""
+"Pokud je neuložíte, budou změny za poslední %ld hodiny navždy ztraceny."
+msgstr[2] ""
+"Pokud je neuložíte, budou změny za posledních %ld hodin navždy ztraceny."
+
+#: ../admin-tool/sessionwindow.py:151
 #, python-format
 msgid "Editing profile %s"
 msgstr "Edituji profil %s"
 
-#: ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/sessionwindow.py:174
 msgid "_Quit"
 msgstr "U_končit"
 
-#: ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/sessionwindow.py:176
 msgid "_Changes"
 msgstr "_Změny"
 
-#: ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/sessionwindow.py:176
 msgid "Edit changes"
 msgstr "Upravit změny"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:177
 msgid "_Lockdown"
 msgstr "_Omezení práv"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:177
 msgid "Edit Lockdown settings"
 msgstr "Editace nastavení omezení práv"
 
-#: ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/sessionwindow.py:182
 msgid "Enforce Mandatory"
 msgstr "Vynucovat povinné"
 
-#: ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/sessionwindow.py:182
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Vynucovat povinná nastavení v upravovacím sezení"
 
-#: ../admin-tool/sessionwindow.py:273
+#: ../admin-tool/sessionwindow.py:286
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Nastavení omezení práv pro %s"
 
-#: ../admin-tool/usersdialog.py:67
+#: ../admin-tool/usersdialog.py:65
 #, python-format
 msgid "Users for profile %s"
 msgstr "Uživatelé pro profil %s"
 
-#: ../admin-tool/usersdialog.py:95
+#: ../admin-tool/usersdialog.py:93
 msgid "Use This Profile"
 msgstr "Používat tento profil"
 
-#: ../lib/dirmonitor.py:151
+#: ../lib/dirmonitor.py:149
 #, python-format
 msgid "Failed to add monitor for %s"
 msgstr "Nemohu přidat sledování pro %s"
 
-#: ../lib/dirmonitor.py:231
+#: ../lib/dirmonitor.py:229
 #, python-format
 msgid "Expected event: %s %s"
 msgstr "Očekávaná událost: %s %s"
 
-#: ../lib/protosession.py:142
+#: ../lib/protosession.py:140
 msgid "Unable to find a free X display"
 msgstr "Nemohu najít volný displej X"
 
-#: ../lib/protosession.py:409
+#: ../lib/protosession.py:407
 msgid "Failed to start Xnest: timed out waiting for USR1 signal"
 msgstr "Nemohu spustit Xnest: čas vypršel při čekání na signál USR1"
 
-#: ../lib/protosession.py:411
+#: ../lib/protosession.py:409
 msgid "Failed to start Xnest: died during startup"
 msgstr "Nemohu spustit Xnest: umřel při spouštění"
 
-#: ../lib/sources/filessource.py:68
+#: ../lib/sources/filessource.py:66
 #, python-format
 msgid "File '%s' created"
 msgstr "Soubor '%s' vytvořen"
 
-#: ../lib/sources/filessource.py:70
+#: ../lib/sources/filessource.py:68
 #, python-format
 msgid "File '%s' deleted"
 msgstr "Soubor '%s' odstraněn"
 
-#: ../lib/sources/filessource.py:72
+#: ../lib/sources/filessource.py:70
 #, python-format
 msgid "File '%s' changed"
 msgstr "Soubor '%s' změněn"
 
-#: ../lib/sources/filessource.py:96
+#: ../lib/sources/filessource.py:94
 msgid "Applications menu"
 msgstr "Nabídka Aplikace"
 
-#: ../lib/sources/filessource.py:98
+#: ../lib/sources/filessource.py:96
 msgid "Preferences menu"
 msgstr "Nabídka Nastavení"
 
-#: ../lib/sources/filessource.py:100
+#: ../lib/sources/filessource.py:98
 msgid "Server Settings menu"
 msgstr "Nabídka Nastavení serveru"
 
-#: ../lib/sources/filessource.py:102
+#: ../lib/sources/filessource.py:100
 msgid "System Settings menu"
 msgstr "Nabídka Nastavení systému"
 
-#: ../lib/sources/filessource.py:104
+#: ../lib/sources/filessource.py:102
 msgid "Start Here menu"
 msgstr "Nabídka Začněte zde"
 
-#: ../lib/sources/gconfsource.py:89
+#: ../lib/sources/gconfsource.py:88
 #, python-format
 msgid "GConf key '%s' unset"
 msgstr "Klíč GConf '%s' zrušen"
 
-#: ../lib/sources/gconfsource.py:91
+#: ../lib/sources/gconfsource.py:90
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
 msgstr "Klíč GConf '%s' nastaven na řetězec '%s'"
 
-#: ../lib/sources/gconfsource.py:93
+#: ../lib/sources/gconfsource.py:92
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
 msgstr "Klíč GConf '%s' nastaven na celé číslo '%s'"
 
-#: ../lib/sources/gconfsource.py:95
+#: ../lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
 msgstr "Klíč GConf '%s' nastaven na číslo '%s'"
 
-#: ../lib/sources/gconfsource.py:97
+#: ../lib/sources/gconfsource.py:96
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
 msgstr "Klíč GConf '%s' nastaven na booleovskou hodnotu '%s'"
 
-#: ../lib/sources/gconfsource.py:99
+#: ../lib/sources/gconfsource.py:98
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
 msgstr "Klíč GConf '%s' nastaven na schéma '%s'"
 
-#: ../lib/sources/gconfsource.py:101
+#: ../lib/sources/gconfsource.py:100
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
 msgstr "Klíč GConf '%s' nastaven na seznam '%s'"
 
-#: ../lib/sources/gconfsource.py:103
+#: ../lib/sources/gconfsource.py:102
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
 msgstr "Klíč GConf '%s' nastaven na dvojici '%s'"
 
-#: ../lib/sources/gconfsource.py:105
+#: ../lib/sources/gconfsource.py:104
 #, python-format
 msgid "GConf key '%s' set to '%s'"
 msgstr "Klíč GConf '%s' nastaven na '%s'"
 
-#: ../lib/sources/gconfsource.py:136
+#: ../lib/sources/gconfsource.py:135
 msgid "Default GConf settings"
 msgstr "Implicitní nastavení GConf"
 
-#: ../lib/sources/gconfsource.py:138
+#: ../lib/sources/gconfsource.py:137
 msgid "Mandatory GConf settings"
 msgstr "Povinná nastavení GConf"
 
-#: ../lib/sources/mozillasource.py:132
+#: ../lib/sources/mozillasource.py:130
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
 msgstr "Klíč Mozilly '%s' nastaven na '%s'"
 
-#: ../lib/sources/mozillasource.py:134
+#: ../lib/sources/mozillasource.py:132
 #, python-format
 msgid "Mozilla key '%s' unset"
 msgstr "Klíč Mozilly '%s' zrušen"
 
-#: ../lib/sources/mozillasource.py:136
+#: ../lib/sources/mozillasource.py:134
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Klíč Mozilly '%s' změněn na '%s'"
 
-#: ../lib/sources/mozillasource.py:165 ../lib/sources/mozillasource.py:175
+#: ../lib/sources/mozillasource.py:163 ../lib/sources/mozillasource.py:173
 msgid "Web browser preferences"
 msgstr "Nastavení WWW prohlížeče"
 
-#: ../lib/sources/mozillasource.py:167 ../lib/sources/mozillasource.py:177
+#: ../lib/sources/mozillasource.py:165 ../lib/sources/mozillasource.py:175
 msgid "Web browser bookmarks"
 msgstr "Záložky WWW prohlížeče"
 
-#: ../lib/sources/mozillasource.py:169
+#: ../lib/sources/mozillasource.py:167
 msgid "Web browser profile list"
 msgstr "Seznam profilů WWW prohlížeče"
 
-#: ../lib/sources/mozillasource.py:520
+#: ../lib/sources/mozillasource.py:518
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Soubor nenalezen (%s)"
 
-#: ../lib/sources/mozillasource.py:871
+#: ../lib/sources/mozillasource.py:869
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "duplikované jméno (%(name)s) v oddílu %(section)s"
 
-#: ../lib/sources/mozillasource.py:880
+#: ../lib/sources/mozillasource.py:878
 #, python-format
 msgid "redundant default in section %s"
 msgstr "redundantní implicitní v oddílu %s"
 
-#: ../lib/sources/mozillasource.py:897
+#: ../lib/sources/mozillasource.py:895
 msgid "no default profile"
 msgstr "žádný implicitní profil"
 
-#: ../lib/sources/mozillasource.py:952
+#: ../lib/sources/mozillasource.py:950
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Záložka Mozilly vytvořena '%s' -> '%s'"
 
-#: ../lib/sources/mozillasource.py:954
+#: ../lib/sources/mozillasource.py:952
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Složka záložek Mozilly '%s' vytvořena"
 
-#: ../lib/sources/mozillasource.py:957
+#: ../lib/sources/mozillasource.py:955
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Záložka Mozilly '%s' odstraněna"
 
-#: ../lib/sources/mozillasource.py:959
+#: ../lib/sources/mozillasource.py:957
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Složka záložek Mozilly '%s' odstraněna"
 
-#: ../lib/sources/mozillasource.py:962
+#: ../lib/sources/mozillasource.py:960
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Záložka Mozilly změněna '%s' '%s'"
 
-#: ../lib/sources/mozillasource.py:964
+#: ../lib/sources/mozillasource.py:962
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Složka záložek Mozilly změněna '%s'"
 
-#: ../lib/sources/paneldelegate.py:58
+#: ../lib/sources/paneldelegate.py:53
 #, python-format
 msgid "Panel '%s' added"
 msgstr "Panel '%s' přidán"
 
-#: ../lib/sources/paneldelegate.py:64
+#: ../lib/sources/paneldelegate.py:59
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "Panel '%s' odstraněn"
 
-#: ../lib/sources/paneldelegate.py:70
+#: ../lib/sources/paneldelegate.py:74
 #, python-format
-msgid "Panel applet '%s' added"
-msgstr "Aplet panelu '%s' přidán"
+msgid "Applet %s added to top panel"
+msgstr ""
 
 #: ../lib/sources/paneldelegate.py:76
 #, python-format
-msgid "Panel applet '%s' removed"
-msgstr "Aplet panelu '%s' odstraněn"
+msgid "Applet %s added to bottom panel"
+msgstr ""
 
-#: ../lib/sources/paneldelegate.py:82
+#: ../lib/sources/paneldelegate.py:78
 #, python-format
-msgid "Panel object '%s' added"
-msgstr "Objekt panelu '%s' přidán"
+msgid "Applet %s added to left panel"
+msgstr ""
 
-#: ../lib/sources/paneldelegate.py:94
+#: ../lib/sources/paneldelegate.py:80
 #, python-format
-msgid "Panel object '%s' removed"
-msgstr "Objekt panelu '%s' odstraněn"
+msgid "Applet %s added to right panel"
+msgstr ""
 
-#: ../lib/sources/paneldelegate.py:375
+#: ../lib/sources/paneldelegate.py:95
+#, python-format
+msgid "Applet %s removed from top panel"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:97
+#, python-format
+msgid "Applet %s removed from bottom panel"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:99
+#, python-format
+msgid "Applet %s removed from left panel"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:101
+#, python-format
+msgid "Applet %s removed from right panel"
+msgstr "Applet %s byl odstraněn z horního panelu"
+
+#: ../lib/sources/paneldelegate.py:115
+#, python-format
+msgid "%s added to top panel"
+msgstr "%s byl přidán do horního panelu"
+
+#: ../lib/sources/paneldelegate.py:117
+#, python-format
+msgid "%s added to bottom panel"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:119
+#, python-format
+msgid "%s added to left panel"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:121
+#, python-format
+msgid "%s added to right panel"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:142
+#, python-format
+msgid "%s removed from top panel"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:144
+#, python-format
+msgid "%s removed from bottom panel"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:146
+#, python-format
+msgid "%s removed from left panel"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:148
+#, python-format
+msgid "%s removed from right panel"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:197
+msgid "Drawer"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:199
+msgid "Main Menu"
+msgstr "Hlavní nabídka"
+
+#: ../lib/sources/paneldelegate.py:209
+#, python-format
+msgid "%s launcher"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:213
+msgid "Lock Screen button"
+msgstr "Tlačítko uzamčení obrazovky"
+
+#: ../lib/sources/paneldelegate.py:215
+msgid "Logout button"
+msgstr "Tlačítko odhlášení"
+
+#: ../lib/sources/paneldelegate.py:217
+msgid "Run Appliction button"
+msgstr "Tlačítko spouštění aplikace"
+
+#: ../lib/sources/paneldelegate.py:219
+msgid "Search button"
+msgstr "Tlačítko hledání"
+
+#: ../lib/sources/paneldelegate.py:221
+msgid "Screenshot button"
+msgstr "Tlačítko snímku obrazovky"
+
+#: ../lib/sources/paneldelegate.py:223
+msgid "Menu Bar"
+msgstr "Lišta nabídky"
+
+#: ../lib/sources/paneldelegate.py:467
 msgid "Panel File"
 msgstr "Soubor panelu"
 
-#: ../lib/storage.py:173
+#: ../lib/storage.py:171
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "Nemohu číst soubor '%s': %s"
 
-#: ../lib/storage.py:183
+#: ../lib/storage.py:181
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "Nemohu číst metadata z '%s': %s"
 
-#: ../lib/storage.py:189
+#: ../lib/storage.py:187
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "Neplatný oddíl metadat v '%s': %s"
 
-#: ../lib/storage.py:363
+#: ../lib/storage.py:361
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Nemohu přidat neexistující soubor '%s'"
 
-#: ../lib/storage.py:540
+#: ../lib/storage.py:567
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Profil je jen pro čtení %s"
@@ -767,64 +876,64 @@ msgstr "Spouštím testy %s (%s)"
 msgid "Success!"
 msgstr "Úspěch!"
 
-#: ../lib/userdb.py:52
+#: ../lib/userdb.py:50
 #, python-format
 msgid "invalid type for setting %s in %s"
 msgstr "neplatný typ pro nastavení %s v %s"
 
-#: ../lib/userdb.py:212
+#: ../lib/userdb.py:210
 #, python-format
 msgid "No search based specified for %s"
 msgstr "Neupřesněné základní vyhledávání pro %s"
 
-#: ../lib/userdb.py:215
+#: ../lib/userdb.py:213
 #, python-format
 msgid "No query filter specified for %s"
 msgstr "Neurčený dotaz filtru pro %s"
 
-#: ../lib/userdb.py:218
+#: ../lib/userdb.py:216
 #, python-format
 msgid "No result attribute specified for %s"
 msgstr "Nespecifikovaný výsledek pro vlastnost %s"
 
-#: ../lib/userdb.py:227
+#: ../lib/userdb.py:225
 msgid "Scope must be one of sub, base and one"
 msgstr "Rozsah musí být jedno z sub, base a one"
 
-#: ../lib/userdb.py:247
+#: ../lib/userdb.py:245
 msgid "multiple_result must be one of first and random"
 msgstr "multiple_result musí být jedno z first a random"
 
-#: ../lib/userdb.py:339
+#: ../lib/userdb.py:337
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Nemohu otevřít %s pro zápis"
 
-#: ../lib/userdb.py:352
+#: ../lib/userdb.py:350
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Nemohu uložit UserDatabase do %s"
 
-#: ../lib/userdb.py:375 ../lib/userdb.py:410
+#: ../lib/userdb.py:373 ../lib/userdb.py:408
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Soubor %s není nastavení profilu"
 
-#: ../lib/userdb.py:382
+#: ../lib/userdb.py:380
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Nemohu přidat implicitní profil %s do nastavení"
 
-#: ../lib/userdb.py:418
+#: ../lib/userdb.py:416
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Nemohu přidat uživatele %s do nastavení profilu"
 
-#: ../lib/userdb.py:449
+#: ../lib/userdb.py:447
 msgid "Failed to get the user list"
 msgstr "Nemohu získat seznam uživatelů"
 
-#: ../lib/util.py:127
+#: ../lib/util.py:125
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -832,62 +941,10 @@ msgstr ""
 "Nemohu najít domovský adresář: nenastaven v /etc/passwd a žádná hodnota "
 "$HOME v prostředí"
 
-#: ../lib/util.py:140
+#: ../lib/util.py:138
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr ""
 "Nemohu najít jméno uživatele: nenastaveno v /etc/passwd a žádná hodnota "
 "$USER v prostředí"
-
-#~ msgid "Clear revision history"
-#~ msgstr "Vymazat historii verzí"
-
-#~ msgid "_Version:"
-#~ msgstr "_Verze:"
-
-#~ msgid "Version"
-#~ msgstr "Verze"
-
-#~ msgid "Desktop User Profiles"
-#~ msgstr "Profily uživatelů pracovní plochy"
-
-#~ msgid "'xauth list' returned error"
-#~ msgstr "'xauth list' vrátil chybu"
-
-#~ msgid "'xauth list' returned no records or records in unknown format"
-#~ msgstr ""
-#~ "'xauth list' nevrátil žádné záznamy nebo vrátil záznamy v neznámém formátu"
-
-#~ msgid "No current revision"
-#~ msgstr "Žádná aktuální verze"
-
-#~ msgid "'%(path)s' does not exist in profile revision '%(profile_revision)s'"
-#~ msgstr "'%(path)s' neexistuje ve verzi profilu '%(profile_revision)s'"
-
-#~ msgid "Not a valid profile revision"
-#~ msgstr "Není to platná verze profilu"
-
-#~ msgid "Usage: %s <profile-name>\n"
-#~ msgstr "Použití: %s <název-profilu>\n"
-
-#~ msgid "User '%s' does not exist"
-#~ msgstr "Uživatel '%s' neexistuje"
-
-#~ msgid "Your account does not have permissions to run sabayon-session."
-#~ msgstr "Váš účet nemá oprávnění spustit sabayon-session."
-
-#~ msgid "C_reate"
-#~ msgstr "_Vytvořit"
-
-#~ msgid "None"
-#~ msgstr "Žádný"
-
-#~ msgid "default path (%s) does not exist"
-#~ msgstr "implicitní cesta (%s) neexistuje"
-
-#~ msgid "default path (%s) is not a directory"
-#~ msgstr "implicitní cesta (%s) není adresář"
-
-#~ msgid "_Commit"
-#~ msgstr "_Potvrdit"
