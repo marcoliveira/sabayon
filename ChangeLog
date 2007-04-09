@@ -1,3 +1,24 @@
+2007-04-09  Federico Mena Quintero  <federico@novell.com>
+
+	* lib/errors.py: Oops, import gtk for gtk.main_quit() in
+	catch_exceptions().
+	(FatalApplyErrorException.wrapper): Oops, return the func()'s
+	own return value.
+
+	* lib/debuglog.py (DEBUG_LOG_DOMAIN_PESSULUS): New debug domain.
+
+	* admin-tool/sabayon-session (main): Use the same structure for
+	handling exceptions before the main loop as in the main "sabayon"
+	program.  Catch errors that happen during the main loop after the
+	main "try" block.
+
+	* */*: Oops, add the right debug domains to places where the
+	errors.checked_callback decorator is used.
+
+	* admin-tool/sessionwindow.py (SessionWindow.__do_save): Don't
+	sys.exit() if we get an exception while commiting a change;
+	instead, log a recoverable exception.
+
 2007-04-03  Federico Mena Quintero  <federico@novell.com>
 
 	* lib/errors.py (checked_callback): New function decorator.  We

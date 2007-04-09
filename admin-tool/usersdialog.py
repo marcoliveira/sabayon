@@ -22,6 +22,7 @@ import gtk
 import gtk.glade
 import userdb
 import errors
+import debuglog
 
 from config import *
 
@@ -99,7 +100,7 @@ class UsersDialog:
         response = self.dialog.run ()
         self.dialog.hide ()
 
-    @errors.checked_callback
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __on_use_toggled (self, toggle, path):
         iter = self.users_model.get_iter_from_string (path)
         apply = self.users_model.get_value (iter, UsersModel.COLUMN_APPLY)
@@ -115,7 +116,7 @@ class UsersDialog:
         else:
             self.userdb.set_profile (username, None)
 
-    @errors.checked_callback
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __all_check_toggled (self, toggle):
         apply_to_all = self.all_check.get_active ()
         self.users_list.set_sensitive (not apply_to_all)

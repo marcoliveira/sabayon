@@ -144,12 +144,12 @@ class ProfileEditorWindow:
         self.storage.remove (model[row][ProfileModel.COLUMN_PATH])
         self.__set_needs_saving (True)
 
-    @errors.checked_callback
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __handle_key_press (self, treeview, event):
         if event.keyval in (gtk.keysyms.Delete, gtk.keysyms.KP_Delete):
             self.__delete_currently_selected ()
         
-    @errors.checked_callback
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __handle_save (self, action):
         self.storage.save ()
         self.__set_needs_saving (False)
@@ -170,20 +170,20 @@ class ProfileEditorWindow:
         
         return True
         
-    @errors.checked_callback
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __handle_close (self, action):
         if self.__do_saveconfirm ():
             self.window.destroy ()
 
-    @errors.checked_callback
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __handle_delete_event (self, window, event):
         return not self.__do_saveconfirm ()
 
-    @errors.checked_callback
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __handle_delete (self, action):
         self.__delete_currently_selected ()
         
-    @errors.checked_callback
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __handle_about (self, action):
         aboutdialog.show_about_dialog (self.window)
 
@@ -235,7 +235,7 @@ class ProfileEditorWindow:
         self.treeview.connect ("key-press-event", self.__handle_key_press)
         self.treeview.connect ("row-activated",   self.__handle_row_activation)
 
-    @errors.checked_callback
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __treeview_selection_changed (self, selection):
         (model, row) = selection.get_selected ()
         if not row:
@@ -246,7 +246,7 @@ class ProfileEditorWindow:
 
         self.delete_action.set_sensitive (True)
 
-    @errors.checked_callback
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __handle_row_activation (self, treeview, tree_path, column):
         iter = self.profile_model.get_iter (tree_path)
         path = self.profile_model[iter][ProfileModel.COLUMN_PATH]

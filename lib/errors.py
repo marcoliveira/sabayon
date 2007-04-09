@@ -1,4 +1,5 @@
 import sys
+import gtk
 import util
 import debuglog
 
@@ -121,7 +122,7 @@ def checked_callback (domain):
     def catch_exceptions (func):
         def wrapper (*args, **kwargs):
             try:
-                func (*args, **kwargs)
+                return func (*args, **kwargs)
             except:
                 errors_log_fatal_error (domain, "Fatal exception in callback; exiting main loop")
                 debuglog.debug_log_current_exception (domain)

@@ -43,7 +43,7 @@ class LockdownApplierSabayon (lockdownapplier.PessulusLockdownApplier):
 
         self.changes_model.connect ("changed", self.__changes_model_changed)
 
-    @errors.checked_callback
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL)
     def __changes_model_changed (self, model, change):
         if change == None or change.get_source () != self.source:
             return

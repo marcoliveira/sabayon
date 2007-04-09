@@ -110,7 +110,7 @@ if __name__ == '__main__':
     else:
         # We put the call to gtk.main() *outside* the "try" block,
         # since exceptions thrown in callbacks will not get caught
-        # here here (i.e.  the C stack won't be unrolled when an
+        # here (i.e.  the C stack won't be unrolled when an
         # exception happens).
         mprint ("Starting main loop")
         gtk.main ()

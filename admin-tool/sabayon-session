@@ -74,16 +74,28 @@ if __name__ == '__main__':
         window = sessionwindow.SessionWindow (profile_name, profile_path, display_number)
         window.window.connect ("destroy", gtk.main_quit)
         window.window.show ()
-
-        mprint ("Entering main loop.  Wheeee!")
-
-        gtk.main ()
-
-        mprint ("Terminating")
     except errors.RecoverableApplyErrorException:
+        print "sabayon-session recoverable pre-main-loop"
         pass # this will exit the program below
     except:
+        print "sabayon-session fatal pre-main-loop"
         errors.errors_exit_with_fatal_exception (debuglog.DEBUG_LOG_DOMAIN_SABAYON_SESSION,
                                                  util.get_admin_log_config_filename ())
+    else:
+        # We put the call to gtk.main() *outside* the "try" block,
+        # since exceptions thrown in callbacks will not get caught
+        # here (i.e.  the C stack won't be unrolled when an
+        # exception happens).
+        mprint ("Entering main loop.  Wheeee!")
+        gtk.main ()
+        print "sabayon-session out of main loop"
+        mprint ("Terminating")
 
-    errors.errors_exit_helper_normally (util.get_admin_log_config_filename ())
+    if errors.errors_have_fatal_error ():
+        print "sabayon-session out of main loop fatal error"
+        mprint ("Exiting abnormally; dumping log due to a fatal error")
+        debuglog.debug_log_dump_to_file (util.get_admin_log_config_filename (), sys.stderr)
+        sys.exit (util.EXIT_CODE_FATAL)
+    else:
+        print "sabayon-session out of main loop normal/recoverable termination"
+        errors.errors_exit_helper_normally (util.get_admin_log_config_filename ())
