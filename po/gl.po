@@ -1,21 +1,23 @@
-# translation of sabayon.gl.po to 
+# translation of gl.po to Galego
+# translation of sabayon.gl.po to
 # translation of sabayon.gl.po to
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER, 2005.
 #
+# Ignacio Casal Quinteiro <icq@cvs.gnome.org>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: sabayon.gl\n"
+"Project-Id-Version: gl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-12-04 16:00+0100\n"
-"PO-Revision-Date: 2005-11-27 13:00+0100\n"
-"Last-Translator: \n"
-"Language-Team:  <es@li.org>\n"
+"POT-Creation-Date: 2007-04-10 11:40+0200\n"
+"PO-Revision-Date: 2007-04-10 11:45+0200\n"
+"Last-Translator: Ignacio Casal Quinteiro <icq@cvs.gnome.org>\n"
+"Language-Team: Galego <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../admin-tool/aboutdialog.py:61
 msgid "Program to establish and edit profiles for users"
@@ -23,8 +25,9 @@ msgstr "Programa para establecer e editar perfís para usuarios"
 
 #: ../admin-tool/aboutdialog.py:64
 msgid "translator-credits"
-msgstr "Ignacio Casal Quinteiro <nacho.resa@gmail.com>\n"
-       "Proxecto Trasno"
+msgstr ""
+"Ignacio Casal Quinteiro <nacho.resa@gmail.com>\n"
+"Proxecto Trasno"
 
 #: ../admin-tool/changeswindow.py:48
 #, python-format
@@ -92,7 +95,7 @@ msgstr "_Sobre"
 msgid "About Sabayon"
 msgstr "Sobre o Sabayon"
 
-#: ../admin-tool/editorwindow.py:252 ../lib/sources/gconfsource.py:121
+#: ../admin-tool/editorwindow.py:252 ../lib/sources/gconfsource.py:122
 msgid "GConf"
 msgstr "GConf"
 
@@ -101,7 +104,7 @@ msgid "Files"
 msgstr "Ficheiros"
 
 #: ../admin-tool/editorwindow.py:256 ../admin-tool/lockdown/pessulus.glade.h:7
-#: ../lib/sources/paneldelegate.py:132
+#: ../lib/sources/paneldelegate.py:227
 msgid "Panel"
 msgstr "Panel"
 
@@ -272,17 +275,18 @@ msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:44
-msgid ""
-"Your account does not have permissions to run the Desktop User Profiles tool"
-msgstr "A súa conta non ten permisos para executar a ferramenta de perfís de "
-       "usuario do escritorio"
+msgid "Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr ""
+"A súa conta non ten permisos para executar a ferramenta de perfís de usuario "
+"do escritorio"
 
 #: ../admin-tool/sabayon:45
 msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
-msgstr "Necesítanse permisos no nivel do administrador para executar este "
-       "programa, xa que pode modificar ficheiros do sistema."
+msgstr ""
+"Necesítanse permisos no nivel do administrador para executar este programa, "
+"xa que pode modificar ficheiros do sistema."
 
 #: ../admin-tool/sabayon:50
 msgid "Desktop User Profiles tool is already running"
@@ -292,8 +296,9 @@ msgstr "A ferramenta de perfís de usuario do escritorio xa está en execución"
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
-msgstr "Non debe usar a ferramenta de perfís de usuario de escritorio desde "
-       "dentro dunha sesión de edición de perfil"
+msgstr ""
+"Non debe usar a ferramenta de perfís de usuario de escritorio desde dentro "
+"dunha sesión de edición de perfil"
 
 #: ../admin-tool/sabayon:58
 #, c-format
@@ -306,9 +311,10 @@ msgid ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
 "Try again after creating the account (using, for example, the 'adduser' "
 "command)"
-msgstr "O Sabayon require unha conta de usuario especial '%s' para este "
-       "computador. Ténteo de novo despois de crear a conta (usando, por "
-       "exemplo, o comando 'adduser')"
+msgstr ""
+"O Sabayon require unha conta de usuario especial '%s' para este computador. "
+"Ténteo de novo despois de crear a conta (usando, por exemplo, o comando "
+"'adduser')"
 
 #: ../admin-tool/sabayon-apply:39
 #, c-format
@@ -323,8 +329,7 @@ msgstr "Uso: %s [<nome-do-perfil>]\n"
 #: ../admin-tool/sabayon-session:32
 #, c-format
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
-msgstr "Uso: %s <nome-do-perfil> <camiño-do-perfil> <número-"
-       "de-visualización>\n"
+msgstr "Uso: %s <nome-do-perfil> <camiño-do-perfil> <número-de-visualización>\n"
 
 #: ../admin-tool/sabayon.desktop.in.h:1
 msgid "Establish and Edit Profiles for Users"
@@ -351,14 +356,18 @@ msgid "_Base on:"
 msgstr "_Basear en:"
 
 #: ../admin-tool/sabayon.glade.h:6
+msgid "_Details"
+msgstr "_Detalles"
+
+#: ../admin-tool/sabayon.glade.h:7
 msgid "_Profiles:"
 msgstr "_Perfís:"
 
-#: ../admin-tool/sabayon.glade.h:7
+#: ../admin-tool/sabayon.glade.h:8
 msgid "_Users"
 msgstr "_Usuarios"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.glade.h:9
 msgid "_Users:"
 msgstr "_Usuarios:"
 
@@ -373,21 +382,22 @@ msgstr "Quere gardar as modificacións do perfil \"%s\" antes de pechar?"
 
 #: ../admin-tool/saveconfirm.py:45
 #, python-format
-msgid ""
-"If you don't save, changes from the last %ld second will be permanently lost."
+msgid "If you don't save, changes from the last %ld second will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld seconds will be permanently "
 "lost."
-msgstr[0] "Se non garda, as modificacións desde o último %ld segundo perderanse "
-       "permanentemente."
-msgstr[1] "Se non garda, as modificacións desde os últimos %ld segundos "
-       "perderanse permanentemente."
+msgstr[0] ""
+"Se non garda, as modificacións desde o último %ld segundo perderanse "
+"permanentemente."
+msgstr[1] ""
+"Se non garda, as modificacións desde os últimos %ld segundos perderanse "
+"permanentemente."
 
 #: ../admin-tool/saveconfirm.py:51
-msgid ""
-"If you don't save, changes from the last minute will be permanently lost."
-msgstr "Se non garda, as modificacións desde o último minuto perderanse "
-       "permanentemente."
+msgid "If you don't save, changes from the last minute will be permanently lost."
+msgstr ""
+"Se non garda, as modificacións desde o último minuto perderanse "
+"permanentemente."
 
 #: ../admin-tool/saveconfirm.py:55
 #, python-format
@@ -397,32 +407,29 @@ msgid ""
 msgid_plural ""
 "If you don't save, changes from the last minute and %ld seconds will be "
 "permanently lost."
-msgstr[0] "Se non garda, as modificacións desde o último minuto e %ld segundo "
-       "perderanse permanentemente."
-msgstr[1] "Se non garda, os cambios desde o último minuto e %ld segundos "
-       "perderanse permanentemente."
+msgstr[0] ""
+"Se non garda, as modificacións desde o último minuto e %ld segundo "
+"perderanse permanentemente."
+msgstr[1] ""
+"Se non garda, os cambios desde o último minuto e %ld segundos perderanse "
+"permanentemente."
 
 #: ../admin-tool/saveconfirm.py:62
 #, python-format
-msgid ""
-"If you don't save, changes from the last %ld minute will be permanently lost."
+msgid "If you don't save, changes from the last %ld minute will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
-msgstr[0] "Se non garda, os cambios desde o último %ld minuto perderanse "
-       "permanentemente."
-msgstr[1] "Se non garda, os cambios desde os últimos %ld minutos perderanse "
-       "permanentemente."
+msgstr[0] ""
+"Se non garda, os cambios desde o último %ld minuto perderanse "
+"permanentemente."
+msgstr[1] ""
+"Se non garda, os cambios desde os últimos %ld minutos perderanse "
+"permanentemente."
 
-#: ../admin-tool/saveconfirm.py:71 ../admin-tool/saveconfirm.py:81
-#, python-format
+#: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "Se non garda, os cambios desde a última hora perderanse "
-       "permanentemente."
-msgstr[1] "Se non garda, os cambios desde as últimas %d horas perderanse "
-       "permanentemente."
+msgstr "Se non garda, os cambios desde a última hora perderanse permanentemente."
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
@@ -432,10 +439,21 @@ msgid ""
 msgid_plural ""
 "If you don't save, changes from the last hour and %d minutes will be "
 "permanently lost."
-msgstr[0] "Se non garda, os cambios desde a última hora e %d minuto perderanse "
-       "permanentemente."
-msgstr[1] "Se non garda, os cambios desde a última hora e %d minutos perderanse "
-       "permanentemente."
+msgstr[0] ""
+"Se non garda, os cambios desde a última hora e %d minuto perderanse "
+"permanentemente."
+msgstr[1] ""
+"Se non garda, os cambios desde a última hora e %d minutos perderanse "
+"permanentemente."
+
+#: ../admin-tool/saveconfirm.py:81
+#, python-format
+msgid "If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] "Se non garda, os cambios desde a última hora perderanse permanentemente."
+msgstr[1] ""
+"Se non garda, os cambios desde as últimas %d horas perderanse "
+"permanentemente."
 
 #: ../admin-tool/sessionwindow.py:151
 #, python-format
@@ -470,7 +488,7 @@ msgstr "Aplicar os obrigatorios"
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Aplicar as configuracións obrigatorias na sesión de edición"
 
-#: ../admin-tool/sessionwindow.py:271
+#: ../admin-tool/sessionwindow.py:286
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Bloquear a configuración de %s"
@@ -541,56 +559,56 @@ msgstr "Menú de configuración do sistema"
 msgid "Start Here menu"
 msgstr "Menú Comezar aquí"
 
-#: ../lib/sources/gconfsource.py:87
+#: ../lib/sources/gconfsource.py:88
 #, python-format
 msgid "GConf key '%s' unset"
 msgstr "Chave do GConf '%s' non definida"
 
-#: ../lib/sources/gconfsource.py:89
+#: ../lib/sources/gconfsource.py:90
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
 msgstr "Chave do GConf '%s' definida para a cadea '%s'"
 
-#: ../lib/sources/gconfsource.py:91
+#: ../lib/sources/gconfsource.py:92
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
 msgstr "Chave do GConf '%s' definida para o enteiro '%s'"
 
-#: ../lib/sources/gconfsource.py:93
+#: ../lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
 msgstr "Chave do GConf '%s' definida para o flotante '%s'"
 
-#: ../lib/sources/gconfsource.py:95
+#: ../lib/sources/gconfsource.py:96
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
 msgstr "Chave do GConf '%s' definida para o booleano '%s'"
 
-#: ../lib/sources/gconfsource.py:97
+#: ../lib/sources/gconfsource.py:98
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
 msgstr "Chave do GConf '%s' definida para o esquema '%s'"
 
-#: ../lib/sources/gconfsource.py:99
+#: ../lib/sources/gconfsource.py:100
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
 msgstr "Chave do GConf '%s' definida para a lista '%s'"
 
-#: ../lib/sources/gconfsource.py:101
+#: ../lib/sources/gconfsource.py:102
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
 msgstr "Chave do GConf '%s' definida para o par '%s'"
 
-#: ../lib/sources/gconfsource.py:103
+#: ../lib/sources/gconfsource.py:104
 #, python-format
 msgid "GConf key '%s' set to '%s'"
 msgstr "Chave do GConf '%s' definida para '%s'"
 
-#: ../lib/sources/gconfsource.py:134
+#: ../lib/sources/gconfsource.py:135
 msgid "Default GConf settings"
 msgstr "Configuración predeterminada do GConf"
 
-#: ../lib/sources/gconfsource.py:136
+#: ../lib/sources/gconfsource.py:137
 msgid "Mandatory GConf settings"
 msgstr "Configuración obrigatoria do GConf"
 
@@ -670,37 +688,136 @@ msgstr "Modificouse un marcador de Mozilla '%s' '%s'"
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Modificouse un cartafol de marcadores de Mozilla '%s'"
 
-#: ../lib/sources/paneldelegate.py:56
+#: ../lib/sources/paneldelegate.py:52
 #, python-format
 msgid "Panel '%s' added"
 msgstr "Engadiuse o panel '%s'"
 
-#: ../lib/sources/paneldelegate.py:62
+#: ../lib/sources/paneldelegate.py:58
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "Eliminouse o panel '%s'"
 
-#: ../lib/sources/paneldelegate.py:68
+#: ../lib/sources/paneldelegate.py:73
 #, python-format
-msgid "Panel applet '%s' added"
-msgstr "Engadiuse a miniaplicación '%s' de panel"
+msgid "Applet %s added to top panel"
+msgstr "Engadiuse a applet %s ao panel superior"
 
-#: ../lib/sources/paneldelegate.py:74
+#: ../lib/sources/paneldelegate.py:75
 #, python-format
-msgid "Panel applet '%s' removed"
-msgstr "Eliminouse a miniaplicación '%s' de panel"
+msgid "Applet %s added to bottom panel"
+msgstr "Engadiuse a applet %s ao panel inferior"
 
-#: ../lib/sources/paneldelegate.py:80
+#: ../lib/sources/paneldelegate.py:77
 #, python-format
-msgid "Panel object '%s' added"
-msgstr "Engadiuse o obxecto '%s' de panel"
+msgid "Applet %s added to left panel"
+msgstr "Engadiuse a applet %s ao panel esquerdo"
 
-#: ../lib/sources/paneldelegate.py:92
+#: ../lib/sources/paneldelegate.py:79
 #, python-format
-msgid "Panel object '%s' removed"
-msgstr "Eliminouse o obxecto '%s' de panel"
+msgid "Applet %s added to right panel"
+msgstr "Engadiuse a applet %s ao panel dereito"
 
-#: ../lib/sources/paneldelegate.py:373
+#: ../lib/sources/paneldelegate.py:94
+#, python-format
+msgid "Applet %s removed from top panel"
+msgstr "Eliminouse a applet %s do panel superior"
+
+#: ../lib/sources/paneldelegate.py:96
+#, python-format
+msgid "Applet %s removed from bottom panel"
+msgstr "Eliminouse a applet %s do panel inferior"
+
+#: ../lib/sources/paneldelegate.py:98
+#, python-format
+msgid "Applet %s removed from left panel"
+msgstr "Eliminouse a applet %s do panel esquerdo"
+
+#: ../lib/sources/paneldelegate.py:100
+#, python-format
+msgid "Applet %s removed from right panel"
+msgstr "Eliminouse a applet %s do panel dereito"
+
+#: ../lib/sources/paneldelegate.py:114
+#, python-format
+msgid "%s added to top panel"
+msgstr "Engadiuse %s ao panel superior"
+
+#: ../lib/sources/paneldelegate.py:116
+#, python-format
+msgid "%s added to bottom panel"
+msgstr "Engadiuse %s ao panel inferior"
+
+#: ../lib/sources/paneldelegate.py:118
+#, python-format
+msgid "%s added to left panel"
+msgstr "Engadiuse %s ao panel esquerdo"
+
+#: ../lib/sources/paneldelegate.py:120
+#, python-format
+msgid "%s added to right panel"
+msgstr "Engadiuse %s ao panel dereito"
+
+#: ../lib/sources/paneldelegate.py:141
+#, python-format
+msgid "%s removed from top panel"
+msgstr "Eliminouse %s do panel superior"
+
+#: ../lib/sources/paneldelegate.py:143
+#, python-format
+msgid "%s removed from bottom panel"
+msgstr "Eliminouse %s do panel inferior"
+
+#: ../lib/sources/paneldelegate.py:145
+#, python-format
+msgid "%s removed from left panel"
+msgstr "Eliminouse %s do panel esquerdo"
+
+#: ../lib/sources/paneldelegate.py:147
+#, python-format
+msgid "%s removed from right panel"
+msgstr "Eliminouse %s do panel dereito"
+
+#: ../lib/sources/paneldelegate.py:196
+msgid "Drawer"
+msgstr "Caixón"
+
+#: ../lib/sources/paneldelegate.py:198
+msgid "Main Menu"
+msgstr "Menú principal"
+
+#. FIXME: we need to use xdg.DesktopEntry to extract the localized name
+#. http://bugzilla.gnome.org/show_bug.cgi?id=397742
+#: ../lib/sources/paneldelegate.py:210
+#, python-format
+msgid "%s launcher"
+msgstr "Lanzador de %s"
+
+#: ../lib/sources/paneldelegate.py:214
+msgid "Lock Screen button"
+msgstr "Botón Bloquear a pantalla"
+
+#: ../lib/sources/paneldelegate.py:216
+msgid "Logout button"
+msgstr "Botón Saír"
+
+#: ../lib/sources/paneldelegate.py:218
+msgid "Run Appliction button"
+msgstr "Botón Menú de aplicacións"
+
+#: ../lib/sources/paneldelegate.py:220
+msgid "Search button"
+msgstr "Botón Buscar"
+
+#: ../lib/sources/paneldelegate.py:222
+msgid "Screenshot button"
+msgstr "Botón Captura de pantalla"
+
+#: ../lib/sources/paneldelegate.py:224
+msgid "Menu Bar"
+msgstr "Barra de menús"
+
+#: ../lib/sources/paneldelegate.py:468
 msgid "Panel File"
 msgstr "Ficheiro de panel"
 
@@ -724,7 +841,7 @@ msgstr "Sección de metadatos non válida en '%s': %s"
 msgid "Cannot add non-existent file '%s'"
 msgstr "Non se pode engadir o ficheiro inexistente '%s'"
 
-#: ../lib/storage.py:538
+#: ../lib/storage.py:567
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "O perfil é só de lectura %s"
@@ -808,12 +925,15 @@ msgstr "Fallo ao obter a lista de usuario"
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "Non se pode localizar o directorio persoal: non está definido en "
-       "/etc/passwd e non hai ningún valor para $HOME no contorno"
+msgstr ""
+"Non se pode localizar o directorio persoal: non está definido en /etc/passwd "
+"e non hai ningún valor para $HOME no contorno"
 
 #: ../lib/util.py:138
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
-msgstr "Non se puido localizar o nome de usuario: non está definido en "
-       "/etc/passwd e non hai ningún valor para $USER no contorno"
+msgstr ""
+"Non se puido localizar o nome de usuario: non está definido en /etc/passwd e "
+"non hai ningún valor para $USER no contorno"
+
