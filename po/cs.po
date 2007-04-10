@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-04-04 14:47+0200\n"
-"PO-Revision-Date: 2007-04-04 14:47+0200\n"
+"POT-Creation-Date: 2007-04-10 14:32+0200\n"
+"PO-Revision-Date: 2007-04-10 14:32+0200\n"
 "Last-Translator: \n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -433,10 +433,10 @@ msgstr[2] ""
 "Pokud je neuložíte, budou změny za posledních %ld minut navždy ztraceny."
 
 #: ../admin-tool/saveconfirm.py:71
-#, fuzzy
 msgid "If you don't save, changes from the last hour will be permanently lost."
 msgstr ""
-"Pokud je neuložíte, budou změny za poslední %ld hodinu navždy ztraceny."
+"Pokud je neuložíte, budou změny provedené během poslední hodiny navždy "
+"ztraceny."
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
@@ -457,17 +457,20 @@ msgstr[2] ""
 "ztraceny."
 
 #: ../admin-tool/saveconfirm.py:81
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "If you don't save, changes from the last %d hour will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %d hours will be permanently lost."
 msgstr[0] ""
-"Pokud je neuložíte, budou změny za poslední %ld hodinu navždy ztraceny."
+"Pokud je neuložíte, budou změny provedené během poslední %d hodiny navždy "
+"ztraceny."
 msgstr[1] ""
-"Pokud je neuložíte, budou změny za poslední %ld hodiny navždy ztraceny."
+"Pokud je neuložíte, budou změny provedené během posledních %d hodin navždy "
+"ztraceny."
 msgstr[2] ""
-"Pokud je neuložíte, budou změny za posledních %ld hodin navždy ztraceny."
+"Pokud je neuložíte, budou změny provedené během posledních %d hodin navždy "
+"ztraceny."
 
 #: ../admin-tool/sessionwindow.py:151
 #, python-format
@@ -715,42 +718,42 @@ msgstr "Panel '%s' odstraněn"
 #: ../lib/sources/paneldelegate.py:74
 #, python-format
 msgid "Applet %s added to top panel"
-msgstr ""
+msgstr "Applet %s byl přidán do horního panelu"
 
 #: ../lib/sources/paneldelegate.py:76
 #, python-format
 msgid "Applet %s added to bottom panel"
-msgstr ""
+msgstr "Applet %s byl přidán do dolního panelu"
 
 #: ../lib/sources/paneldelegate.py:78
 #, python-format
 msgid "Applet %s added to left panel"
-msgstr ""
+msgstr "Applet %s byl přidán do levého panelu"
 
 #: ../lib/sources/paneldelegate.py:80
 #, python-format
 msgid "Applet %s added to right panel"
-msgstr ""
+msgstr "Applet %s byl přidán do pravého panelu"
 
 #: ../lib/sources/paneldelegate.py:95
 #, python-format
 msgid "Applet %s removed from top panel"
-msgstr ""
+msgstr "Applet %s byl odstraněn z horního panelu"
 
 #: ../lib/sources/paneldelegate.py:97
 #, python-format
 msgid "Applet %s removed from bottom panel"
-msgstr ""
+msgstr "Applet %s byl odstraněn z dolního panelu"
 
 #: ../lib/sources/paneldelegate.py:99
 #, python-format
 msgid "Applet %s removed from left panel"
-msgstr ""
+msgstr "Applet %s byl odstraněn z levého panelu"
 
 #: ../lib/sources/paneldelegate.py:101
 #, python-format
 msgid "Applet %s removed from right panel"
-msgstr "Applet %s byl odstraněn z horního panelu"
+msgstr "Applet %s byl odstraněn z pravého panelu"
 
 #: ../lib/sources/paneldelegate.py:115
 #, python-format
@@ -803,7 +806,7 @@ msgstr "Hlavní nabídka"
 #: ../lib/sources/paneldelegate.py:209
 #, python-format
 msgid "%s launcher"
-msgstr ""
+msgstr "%s spouštěč"
 
 #: ../lib/sources/paneldelegate.py:213
 msgid "Lock Screen button"
