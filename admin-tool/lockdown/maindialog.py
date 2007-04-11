@@ -136,6 +136,7 @@ class PessulusMainDialog:
     @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __on_unsafeprotocols_toggled (self, checkbutton, hbox):
         sensitive = checkbutton.get_active ()
+        debuglog.uprint ("PessulusMainDialog: setting unsafe protocols toggle to %s", sensitive)
         hbox.set_sensitive (sensitive)
         self.safeprotocols.set_sensitive (sensitive)
 

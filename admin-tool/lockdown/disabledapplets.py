@@ -234,11 +234,13 @@ class PessulusDisabledApplets:
         iid = self.liststore[iter][self.COLUMN_IID]
         if active:
             if iid not in self.disabled_applets:
+                debuglog.uprint ('adding "%s" to list of disabled applets', iid)
                 self.disabled_applets.add (iid)
                 globalvar.applier.set_list (self.key, gconf.VALUE_STRING,
                                             list (self.disabled_applets),
                                             self.lockdownbutton.get ())
         elif iid in self.disabled_applets:
+            debuglog.uprint ('removing "%s" from list of disabled applets', iid)
             self.disabled_applets.remove (iid)
             globalvar.applier.set_list (self.key, gconf.VALUE_STRING,
                                         list (self.disabled_applets),

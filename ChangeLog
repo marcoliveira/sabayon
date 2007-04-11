@@ -1,3 +1,31 @@
+2007-04-10  Federico Mena Quintero  <federico@novell.com>
+
+	* admin-tool/changeswindow.py (ChangesWindow.__on_ignore_toggled):
+	Log a user action.
+	(ChangesWindow.__on_mandatory_toggled): Likewise.
+
+	* admin-tool/lockdown/maindialog.py
+	(PessulusMainDialog.__on_unsafeprotocols_toggled): Log a user action.
+
+	* admin-tool/lockdown/disabledapplets.py
+	(PessulusDisabledApplets.toggle_value): Log a user action.
+
+	* admin-tool/lockdown/simpleeditabletreeview.py
+	(PessulusSimpleEditableTreeview.__on_cell_edited): Log a user
+	action.
+	(PessulusSimpleEditableTreeview.__on_add_button_clicked): Likewise.
+	(PessulusSimpleEditableTreeview.__on_edit_button_clicked): Likewise.
+	(PessulusSimpleEditableTreeview.__on_remove_button_clicked): Likewise.
+
+	* admin-tool/lockdown/lockdowncheckbutton.py
+	(PessulusLockdownCheckbutton.__on_lockdownbutton_toggled): Log a
+	user action.
+	(PessulusLockdownCheckbutton.__on_check_toggled): Likewise.
+
+	* admin-tool/sessionwindow.py
+	(SessionWindow.__handle_enforce_mandatory): Ahem, pass the
+	"active" parameter to profile.set_enforce_mandatory().
+
 2007-04-09  Federico Mena Quintero  <federico@novell.com>
 
 	* lib/errors.py: Oops, import gtk for gtk.main_quit() in

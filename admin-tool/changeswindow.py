@@ -80,8 +80,10 @@ class ChangesWindow:
     def __on_ignore_toggled (self, toggle, path):
         iter = self.changes_model.get_iter_from_string (path)
         ignore = self.changes_model.get_value (iter, self.changes_model.COLUMN_IGNORE)
-        
+        description = self.changes_model.get_value (iter, self.changes_model.COLUMN_DESCRIPTION)
+
         ignore = not ignore
+        debuglog.uprint ('ChangesWindow: setting "%s" to ignore=%s', description, ignore)
 
         self.changes_model.set (iter, self.changes_model.COLUMN_IGNORE, ignore)
     
@@ -89,8 +91,10 @@ class ChangesWindow:
     def __on_mandatory_toggled (self, toggle, path):
         iter = self.changes_model.get_iter_from_string (path)
         mandatory = self.changes_model.get_value (iter, self.changes_model.COLUMN_MANDATORY)
+        description = self.changes_model.get_value (iter, self.changes_model.COLUMN_DESCRIPTION)
         
         mandatory = not mandatory
+        debuglog.uprint ('ChangesWindow: setting "%s" to mandatory=%s', description, mandatory)
         
         if mandatory:
             lock_pixbuf = self.changes_model.locked_pixbuf

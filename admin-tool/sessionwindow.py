@@ -304,7 +304,7 @@ class SessionWindow:
     def __handle_enforce_mandatory (self, action):
         active = action.get_active ()
         debuglog.uprint ("Setting enforce_mandatory to %s", active)
-        self.profile.set_enforce_mandatory ()
+        self.profile.set_enforce_mandatory (active)
 
     @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL)
     def __session_finished (self, session):

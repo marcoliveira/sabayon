@@ -92,6 +92,8 @@ class PessulusSimpleEditableTreeview (gobject.GObject):
 
     @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __on_cell_edited (self, cell, path, new_text):
+        debuglog.uprint ('PessulusSimpleEditableTreeview: edited cell; new contents: "%s"', new_text)
+
         self.editing = False
         self.__update_sensitivity ()
 
@@ -142,6 +144,8 @@ class PessulusSimpleEditableTreeview (gobject.GObject):
 
     @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __on_add_button_clicked (self, button):
+        debuglog.uprint ("PessulusSimpleEditableTreeview: add button clicked")
+
         # add a row and start editing it
         iter = self.liststore.append ()
         path = self.liststore.get_path (iter)
@@ -150,6 +154,8 @@ class PessulusSimpleEditableTreeview (gobject.GObject):
 
     @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __on_edit_button_clicked (self, button):
+        debuglog.uprint ("PessulusSimpleEditableTreeview: edit button clicked")
+
         model, iter = self.treeview.get_selection ().get_selected ()
 
         # if nothing selected...
@@ -162,6 +168,8 @@ class PessulusSimpleEditableTreeview (gobject.GObject):
 
     @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __on_remove_button_clicked (self, button):
+        debuglog.uprint ("PessulusSimpleEditableTreeview: remove button clicked")
+
         model, iter = self.treeview.get_selection ().get_selected ()
 
         # if nothing selected...

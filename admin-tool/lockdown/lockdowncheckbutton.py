@@ -115,10 +115,12 @@ class PessulusLockdownCheckbutton:
 
     @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __on_lockdownbutton_toggled (self, lockdownbutton, mandatory):
+        debuglog.uprint ('lockdown button for "%s" set to %s', self.key, lockdownbutton.get ())
         self.__do_change ()
 
     @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __on_check_toggled (self, checkbutton):
+        debuglog.uprint ('option checkbutton for "%s" set to %s', self.key, checkbutton.get_active ())
         self.__do_change ()
 
     def __do_change (self):
