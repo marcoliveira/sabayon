@@ -1,3 +1,8 @@
+2007-04-12  Federico Mena Quintero  <federico@novell.com>
+
+	* admin-tool/sabayon-apply: Import userprofile before the rest, so
+	it can do its weird pygtk assertions.
+
 2007-04-10  Federico Mena Quintero  <federico@novell.com>
 
 	* admin-tool/changeswindow.py (ChangesWindow.__on_ignore_toggled):

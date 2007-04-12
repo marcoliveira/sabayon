@@ -36,6 +36,7 @@ if __name__ == '__main__':
     import sys
     import optparse
     
+    from sabayon import userprofile
     from sabayon import debuglog
     from sabayon import errors
     from sabayon import util
@@ -89,8 +90,6 @@ if __name__ == '__main__':
         else:
             sys.stderr.write (_("Please use -h for usage options"))
             sys.exit (util.EXIT_CODE_FATAL)
-
-        from sabayon import userprofile
 
         mprint ("Applying profile '%s' for user '%s'",
                 profile_name, util.get_user_name ())
