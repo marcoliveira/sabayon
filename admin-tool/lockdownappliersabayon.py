@@ -20,10 +20,12 @@ import gconf
 import util
 import sessionwindow
 
+import debuglog
+import errors
 from sabayon.lockdown import lockdownapplier
 
 def dprint (fmt, *args):
-    util.debug_print (util.DEBUG_ADMINTOOL, fmt % args)
+    debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL, fmt % args)
 
 class LockdownMonitor:
     def __init__ (self, key, handler, data):
@@ -41,6 +43,7 @@ class LockdownApplierSabayon (lockdownapplier.PessulusLockdownApplier):
 
         self.changes_model.connect ("changed", self.__changes_model_changed)
 
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL)
     def __changes_model_changed (self, model, change):
         if change == None or change.get_source () != self.source:
             return

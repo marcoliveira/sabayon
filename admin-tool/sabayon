@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+# -*- mode: python -*-
 #
 # Copyright (C) 2005 Red Hat, Inc.
 #
@@ -18,15 +18,44 @@
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #
 
-if __name__ == '__main__':
-    import os
-    import sys
-    import pwd
-    import pygtk; pygtk.require('2.0');
-    import gtk
+import os
+import sys
+import pwd
+import tempfile
+import pygtk; pygtk.require('2.0');
+import gtk
 
-    from sabayon import util
-    from sabayon import config
+from sabayon import util
+from sabayon import config
+from sabayon import debuglog
+from sabayon import errors
+
+tmp_readable_log_config_file = None
+
+def readable_log_config_setup ():
+    # The file which defines the configuration for the debug log may
+    # only be readable by root.  So, we copy it to a world-readable
+    # temporary file so that the helper processes can read it.
+
+    global tmp_readable_log_config_file
+    assert tmp_readable_log_config_file == None
+
+    tmp_readable_log_config_file = tempfile.NamedTemporaryFile ()
+    name = tmp_readable_log_config_file.name
+
+    debuglog.debug_log_dump_configuration (tmp_readable_log_config_file)
+    tmp_readable_log_config_file.flush ()
+
+    os.chmod (name, 0644)
+
+    util.set_readable_log_config_filename (name)
+
+if __name__ == '__main__':
+    def dprint (fmt, *args):
+        debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL, fmt % args)
+
+    def mprint (fmt, *args):
+        debuglog.debug_log (True, debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL, fmt % args)
 
     util.init_gettext ()
 
@@ -60,9 +89,65 @@ if __name__ == '__main__':
                              "on this computer. Try again after creating the account (using, "
                              "for example, the 'adduser' command)") % config.PROTOTYPE_USER)
         sys.exit (1)
-                        
-    from sabayon import profilesdialog
-    
-    dialog = profilesdialog.ProfilesDialog ()
 
-    gtk.main ()
+    from sabayon import profilesdialog
+
+    log_filename = os.path.join (util.get_home_dir (), config.LOG_CONFIG_FILENAME)
+    debuglog.debug_log_load_configuration (log_filename)
+
+    util.set_admin_log_config_filename (log_filename)
+    readable_log_config_setup ()
+
+    # Go!
+
+    try:
+        mprint ("Creating profiles dialog")
+        dialog = profilesdialog.ProfilesDialog ()
+    except:
+        errors.errors_log_fatal_error (debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL,
+                                       "Fatal exception while creating the profiles dialog; will exit abnormally.")
+        debuglog.debug_log_current_exception (debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL)
+    else:
+        # We put the call to gtk.main() *outside* the "try" block,
+        # since exceptions thrown in callbacks will not get caught
+        # here (i.e.  the C stack won't be unrolled when an
+        # exception happens).
+        mprint ("Starting main loop")
+        gtk.main ()
+        mprint ("Terminating main loop")
+
+    if errors.errors_have_fatal_error ():
+        mprint ("Exiting abnormally; dumping log due to a fatal error")
+        log_filename = debuglog.debug_log_dump_to_dated_file (util.get_admin_log_config_filename ())
+        sys.stderr.write ("Dumped debug log to %s\n" % log_filename)
+
+        dialog = gtk.MessageDialog (parent = None,
+                                    flags = 0,
+                                    type = gtk.MESSAGE_ERROR,
+                                    buttons = gtk.BUTTONS_CLOSE,
+                                    message_format = (_("A fatal error has occurred.  You can help us fix the problem "
+                                                        "by sending the log in %s to %s")
+                                                      % (log_filename, config.BUG_TRACKING_SYSTEM)))
+        dialog.run ()
+        dialog.destroy ()
+        sys.exit (util.EXIT_CODE_FATAL)
+    elif errors.errors_have_recoverable_error ():
+        mprint ("Exiting normally; dumping log due to a recoverable error")
+        log_filename = debuglog.debug_log_dump_to_dated_file (util.get_admin_log_config_filename ())
+        sys.stderr.write ("Dumped debug log to %s\n" % log_filename)
+
+        dialog = gtk.MessageDialog (parent = None,
+                                    flags = 0,
+                                    type = gtk.MESSAGE_ERROR,
+                                    buttons = gtk.BUTTONS_CLOSE,
+                                    message_format = (_("Sabayon will now exit.  There were some recoverable errors, "
+                                                        "and you can help us debug the problem "
+                                                        "by sending the log in %s to %s")
+                                                      % (log_filename, config.BUG_TRACKING_SYSTEM)))
+        dialog.run ()
+        dialog.destroy ()
+
+        sys.exit (util.EXIT_CODE_RECOVERABLE)
+    else:
+        mprint ("Exiting normally")
+        sys.exit (util.EXIT_CODE_NORMAL)

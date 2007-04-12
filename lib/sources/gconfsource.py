@@ -31,14 +31,16 @@ try:
     import storage
     import util
     from config import *
+    import debuglog
 except:
     from sabayon import userprofile
     from sabayon import storage
     from sabayon import util
     from sabayon.config import *
+    from sabayon import debuglog
 
 def dprint (fmt, *args):
-    util.debug_print (util.DEBUG_GCONFSOURCE, fmt % args)
+    debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_GCONF_SOURCE, fmt % args)
 
 # gconf_engine_associate_schema() isn't wrapped
 def associate_schema (config_source, key, schema_key):

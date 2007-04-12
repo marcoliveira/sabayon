@@ -25,6 +25,8 @@ import gtk
 import gconf
 import sys
 
+from sabayon import errors
+from sabayon import debuglog
 import globalvar
 import lockdownbutton
 
@@ -105,15 +107,20 @@ class PessulusLockdownCheckbutton:
         self.checkbutton.set_active (active)
         self.checkbutton.set_sensitive (globalvar.applier.key_is_writable (self.key))
 
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_PESSULUS)
     def __on_notified (self, data):
         (active, mandatory) = globalvar.applier.get_bool (self.key)
         if active != self.checkbutton.get_active () or mandatory != self.lockdownbutton.get ():
             self.__update_toggle ()
 
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __on_lockdownbutton_toggled (self, lockdownbutton, mandatory):
+        debuglog.uprint ('lockdown button for "%s" set to %s', self.key, lockdownbutton.get ())
         self.__do_change ()
 
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __on_check_toggled (self, checkbutton):
+        debuglog.uprint ('option checkbutton for "%s" set to %s', self.key, checkbutton.get_active ())
         self.__do_change ()
 
     def __do_change (self):
@@ -122,6 +129,7 @@ class PessulusLockdownCheckbutton:
                                         self.checkbutton.get_active (),
                                         self.lockdownbutton.get ())
 
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_PESSULUS)
     def __on_destroyed (self, checkbutton):
         if self.notify_id:
             if globalvar.applier:

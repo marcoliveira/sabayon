@@ -28,6 +28,8 @@ import changeswindow
 import sessionwidget
 import saveconfirm
 import aboutdialog
+import debuglog
+import errors
 from lockdownappliersabayon import LockdownApplierSabayon
 from sabayon.lockdown import maindialog as lockdowndialog
 from config import *
@@ -53,7 +55,7 @@ _ui_string = '''
 '''
 
 def dprint (fmt, *args):
-    util.debug_print (util.DEBUG_ADMINTOOL, fmt % args)
+    debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL, fmt % args)
 
 class ProfileChangesModel (gtk.ListStore):
     __gsignals__ = {
@@ -80,6 +82,7 @@ class ProfileChangesModel (gtk.ListStore):
         self.profile.connect ("changed", self.handle_profile_change)
 
 
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL)
     def handle_profile_change (self, profile, new_change):
         default_mandatory = False
         ignore = new_change.get_ignore_default ()
@@ -164,6 +167,7 @@ class SessionWindow:
         self.__set_needs_saving (False)
 
 
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL)
     def __add_widget (self, ui_manager, widget):
         self.box.pack_start (widget, False, False, 0)
 
@@ -204,6 +208,7 @@ class SessionWindow:
             self.last_save_time = 0
             self.save_action.set_sensitive (False)
 
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL)
     def __changes_model_changed (self, model, change):
         self.__set_needs_saving (not model.get_iter_first () is None)
 
@@ -232,9 +237,8 @@ class SessionWindow:
                 try:
                     change.get_source ().commit_change (change, mandatory)
                 except:
-                    util.print_exception ()
-                    import sys
-                    sys.exit (1)
+                    errors.errors_log_recoverable_exception (debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL,
+                                                             "got an exception while commiting a change")
 
         # Done
 
@@ -257,19 +261,24 @@ class SessionWindow:
 
         return True
 
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __handle_save (self, action):
         self.__do_save ()
 
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __handle_quit (self, action):
         if self.__do_saveconfirm ():
             self.window.destroy ()
 
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __handle_delete_event (self, window, event):
         return not self.__do_saveconfirm ()
 
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __handle_about (self, action):
         aboutdialog.show_about_dialog (self.window)
 
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __handle_edit (self, action):
         if not self.changes_window:
             self.changes_window = changeswindow.ChangesWindow (self.changes_model,
@@ -279,20 +288,29 @@ class SessionWindow:
                                                 gtk.Widget.hide_on_delete)
         self.changes_window.window.present ()
 
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __handle_lockdown (self, action):
         if not self.lockdown_window:
+            debuglog.uprint ("Creating new Lockdown window")
             applier = LockdownApplierSabayon (self.profile, self.changes_model)
             self.lockdown_window = lockdowndialog.PessulusMainDialog (applier, False)
             self.lockdown_window.window.set_title (_("Lockdown settings for %s")%self.profile_name)
+        else:
+            debuglog.uprint ("Presenting existing Lockdown window")
+
         self.lockdown_window.window.present ()
 
-
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __handle_enforce_mandatory (self, action):
-        self.profile.set_enforce_mandatory (action.get_active())
+        active = action.get_active ()
+        debuglog.uprint ("Setting enforce_mandatory to %s", active)
+        self.profile.set_enforce_mandatory (active)
 
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL)
     def __session_finished (self, session):
         self.window.destroy ()
 
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL)
     def __session_mapped (self, session_widget, event):
         dprint ("Session widget mapped; starting prototype session")
         self.session_widget.disconnect (self.mapped_handler_id)
@@ -304,25 +322,50 @@ class SessionWindow:
     def __setup_session (self):
         self.session = protosession.ProtoSession (self.profile_name, self.display_number)
 
-        self.session.apply_profile ()
+        try:
+            self.session.apply_profile ()
+        except errors.RecoverableApplyErrorException, e:
+            errors_log_recoverable_exception (e)
+            dialog = gtk.MessageDialog (parent = None,
+                                        flags = gtk.DIALOG_MODAL,
+                                        type = gtk.MESSAGE_ERROR,
+                                        buttons = gtk.BUTTONS_NONE,
+                                        message_format = _("There was a recoverable error while applying the "
+                                                           "user profile '%s'.  You can report this error now "
+                                                           "or try to continue editing the user profile."))
+            (REPORT, CONTINUE) = range (2)
+            dialog.add_button (_("_Report this error"), REPORT)
+            dialog.add_button (_("_Continue editing"), CONTINUE)
+            response = dialog.run ()
+            dialog.destroy ()
+
+            if response == REPORT:
+                raise # the toplevel will catch the RecoverableApplyErrorException and exit
+
+        except errors.FatalApplyErrorException, e:
+            raise # FIXME: do we need any special processing?  Should we give the user
+                  # the option of continuing editing?
+
         self.profile.start_monitoring ()
         screen = gtk.gdk.screen_get_default ()
         width  = (screen.get_width ()  * 3) / 4
         height = (screen.get_height () * 3) / 4
 
-        dprint ("Creating %dx%d session wiget", width, height)
+        dprint ("Creating %dx%d session widget", width, height)
 
         self.session_widget = sessionwidget.SessionWidget (width, height)
         self.box.pack_start (self.session_widget, True, True)
         self.mapped_handler_id = self.session_widget.connect ("map-event", self.__session_mapped)
         self.session_widget.show ()
 
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL)
     def __update_statusbar (self, model, change):
         if change:
             self.statusbar.pop (self.status_context_id)
             self.statusbar.push (self.status_context_id,
                                  change.get_short_description ())
 
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL)
     def __update_resize_grip (self, window, event):
         if event.changed_mask & gtk.gdk.WINDOW_STATE_MAXIMIZED:
             if event.new_window_state & gtk.gdk.WINDOW_STATE_MAXIMIZED:

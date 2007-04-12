@@ -27,15 +27,22 @@ import pwd
 import commands
 import binascii
 import struct
+import subprocess
 import tempfile
 import shutil
 import gobject
+import gtk
 import util
 import usermod
+import errors
 from config import *
+import debuglog
 
 def dprint (fmt, *args):
-    util.debug_print (util.DEBUG_PROTOSESSION, fmt % args)
+    debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_PROTO_SESSION, fmt % args)
+
+def mprint (fmt, *args):
+    debuglog.debug_log (True, debuglog.DEBUG_LOG_DOMAIN_PROTO_SESSION, fmt % args)
 
 class ProtoSessionError (Exception):
     pass
@@ -460,10 +467,49 @@ class ProtoSession (gobject.GObject):
 
         
     def apply_profile (self):
-        argv = APPLY_TOOL_ARGV + [ "-s", self.profile_file ]
-        dprint ("Running apply tool: %s" % argv)
-        util.uninterruptible_spawnve (os.P_WAIT, argv[0], argv, os.environ.copy ())
-    
+        argv = APPLY_TOOL_ARGV + [ "-s", self.profile_file,
+                                   ("--admin-log-config=%s" % util.get_admin_log_config_filename ()),
+                                   ("--readable-log-config=%s" % util.get_readable_log_config_filename ()) ]
+        mprint ("Running sabayon-apply: %s" % argv)
+
+        try:
+            pipe = subprocess.Popen (argv,
+                                     stderr = subprocess.PIPE,
+                                     env = os.environ)
+        except Exception, e:
+            raise errors.FatalApplyErrorException (_("Could not create the 'sabayon-apply' process: %s\n"
+                                                     "The command line used is '%s'\n"
+                                                     "Child traceback:\n%s") %
+                                                   (e.message,
+                                                    " ".join (argv),
+                                                    e.child_traceback))
+
+        return_code = pipe.wait ()
+        stderr_str = pipe.stderr.read ()
+
+#        print "<BEGIN SABAYON-APPLY STDERR>\n%s\n<END SABAYON-APPLY STDERR>" % stderr_str
+
+        if return_code == util.EXIT_CODE_NORMAL:
+            mprint ("Finished running sabayon-apply with normal exit status")
+            pass
+        elif return_code == util.EXIT_CODE_RECOVERABLE:
+            mprint ("Finished running sabayon-apply with RECOVERABLE exit status")
+            mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
+                    "%s\n"
+                    "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
+                    stderr_str)
+            raise errors.RecoverableApplyErrorException (_("There was a recoverable error while applying "
+                                                           "the user profile from '%s'.") % self.profile_file)
+        else:
+            # return_code == util.EXIT_CODE_FATAL or something else
+            mprint ("Finished running sabayon-apply with FATAL exit status")
+            mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
+                    "%s\n"
+                    "========== END SABAYON-APPLY LOG (FATAL) ==========",
+                    stderr_str)
+            raise errors.FatalApplyErrorException (_("There was a fatal error while applying the "
+                                                     "user profile from '%s'.") % self.profile_file)
+
     def start (self, parent_window):
         # Get an X server going
         self.__start_xnest (parent_window)

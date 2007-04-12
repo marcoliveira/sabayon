@@ -29,9 +29,10 @@ import urlparse
 import cache
 import util
 from config import *
+import debuglog
 
 def dprint (fmt, *args):
-    util.debug_print (util.DEBUG_STORAGE, fmt % args)
+    debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_STORAGE, fmt % args)
 
 def recursive_del (path):
     if not os.path.exists (path):

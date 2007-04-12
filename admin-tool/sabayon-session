@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+# -*- mode: python -*-
 #
 # Copyright (C) 2005 Red Hat, Inc.
 #
@@ -19,23 +19,83 @@
 #
 
 if __name__ == '__main__':
+    import os
     import sys
+    import optparse
     import pygtk; pygtk.require('2.0');
     import gtk
-    
+
+    from sabayon import debuglog
+    from sabayon import errors
     from sabayon import util
     from sabayon import sessionwindow
 
-    util.init_gettext ()
+    def dprint (fmt, *args):
+        debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_SABAYON_SESSION, fmt % args)
 
-    if len (sys.argv) != 4:
-        sys.stderr.write (_("Usage: %s <profile-name> <profile-path> <display-number>\n") % sys.argv[0])
-        sys.exit (1)
+    def mprint (fmt, *args):
+        debuglog.debug_log (True, debuglog.DEBUG_LOG_DOMAIN_SABAYON_SESSION, fmt % args)
 
-    (profile_name, profile_path, display_number) = sys.argv[1:4]
+    try:
+        util.init_gettext ()
 
-    window = sessionwindow.SessionWindow (profile_name, profile_path, display_number)
-    window.window.connect ("destroy", gtk.main_quit)
-    window.window.show ()
+        option_parser = optparse.OptionParser (usage="usage: %prog [--admin-log-config FILE] [--readable-log-config FILE] <profile_name> <profile_path> <display_number>")
+        # FIXME: say that "man sabayon" will give you the
+        # syntax for the debug log config file.
+        option_parser.add_option ("--admin-log-config", dest="admin_log_config",
+                                  metavar="FILE",
+                                  help="File with options for the debug log (readable by the system administrator)")
+        option_parser.add_option ("--readable-log-config", dest="readable_log_config",
+                                  metavar="FILE",
+                                  help="File with options for the debug log (readable by Sabayon's helper processes)")
 
-    gtk.main ()
+        options, args = option_parser.parse_args ()
+
+        admin_log_config_filename = options.admin_log_config or ("~/" + config.LOG_CONFIG_FILENAME)
+
+        if options.readable_log_config != None:
+            readable_log_config_filename = options.readable_log_config
+        else:
+            readable_log_config_filename = os.path.join (util.get_home_dir (), config.LOG_CONFIG_FILENAME)
+
+        debuglog.debug_log_load_configuration (readable_log_config_filename)
+        util.set_admin_log_config_filename (admin_log_config_filename)
+        util.set_readable_log_config_filename (readable_log_config_filename)
+
+        if len (args) != 3:
+            sys.stderr.write (_("Usage: %s <profile-name> <profile-path> <display-number>\n") % sys.argv[0])
+            sys.exit (util.EXIT_CODE_FATAL)
+
+        (profile_name, profile_path, display_number) = args
+
+        mprint ("Starting session window for profile_name='%s', profile_path='%s', display_number='%s'",
+                profile_name, profile_path, display_number)
+
+        window = sessionwindow.SessionWindow (profile_name, profile_path, display_number)
+        window.window.connect ("destroy", gtk.main_quit)
+        window.window.show ()
+    except errors.RecoverableApplyErrorException:
+        print "sabayon-session recoverable pre-main-loop"
+        pass # this will exit the program below
+    except:
+        print "sabayon-session fatal pre-main-loop"
+        errors.errors_exit_with_fatal_exception (debuglog.DEBUG_LOG_DOMAIN_SABAYON_SESSION,
+                                                 util.get_admin_log_config_filename ())
+    else:
+        # We put the call to gtk.main() *outside* the "try" block,
+        # since exceptions thrown in callbacks will not get caught
+        # here (i.e.  the C stack won't be unrolled when an
+        # exception happens).
+        mprint ("Entering main loop.  Wheeee!")
+        gtk.main ()
+        print "sabayon-session out of main loop"
+        mprint ("Terminating")
+
+    if errors.errors_have_fatal_error ():
+        print "sabayon-session out of main loop fatal error"
+        mprint ("Exiting abnormally; dumping log due to a fatal error")
+        debuglog.debug_log_dump_to_file (util.get_admin_log_config_filename (), sys.stderr)
+        sys.exit (util.EXIT_CODE_FATAL)
+    else:
+        print "sabayon-session out of main loop normal/recoverable termination"
+        errors.errors_exit_helper_normally (util.get_admin_log_config_filename ())

@@ -25,9 +25,10 @@ from config import *
 import storage
 import traceback
 import util
+import debuglog
 
 def dprint (fmt, *args):
-    util.debug_print (util.DEBUG_USERPROFILE, fmt % args)
+    debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_USER_PROFILE, fmt % args)
 
 class ModuleLoader:
     """Loads all python modules from a directory allows objects

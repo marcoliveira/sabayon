@@ -22,9 +22,10 @@ import tempfile
 import shutil
 import util
 from config import *
+import debuglog
 
 def dprint (fmt, *args):
-    util.debug_print (util.DEBUG_USERMOD, fmt % args)
+    debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_USERMOD, fmt % args)
 
 def set_shell (username, shell):
     argv = USERMOD_ARGV + [ "-s", shell, username ]

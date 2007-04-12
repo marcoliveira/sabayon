@@ -27,6 +27,7 @@ import cache
 import random
 import ldap
 import socket
+import debuglog
 
 defaultConf="""<profiles>
   <default profile=""/>
@@ -38,8 +39,7 @@ defaultConf="""<profiles>
 cache.initialize()
 
 def dprint (fmt, *args):
-    util.debug_print (util.DEBUG_USERDB, fmt % args)
-
+    debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_USER_DB, fmt % args)
 
 def get_setting (node, setting, default = None, convert_to = str):
     a = node.hasProp(setting)

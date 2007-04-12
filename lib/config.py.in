@@ -46,6 +46,7 @@ XNEST_USR1_TIMEOUT = 10
 #
 PROTOTYPE_USER = "@PROTOTYPE_USER@"
 
+# FIXME: should all of these be options passed to the "configure" script?
 DEFAULT_PATH  = "/usr/local/bin:/usr/bin:/bin:/usr/X11R6/bin"
 DEFAULT_SHELL = "/bin/bash"
 NOLOGIN_SHELL = "/sbin/nologin"
@@ -123,3 +124,7 @@ GCONF_KEYS_TO_IGNORE = [
     "/apps/panel/general/profiles_migrated"
     "/desktop/gnome/peripherals/keyboard/kbd.sysbackup/*",
 ]
+
+LOG_CONFIG_FILENAME = "sabayon-debug-log.conf"
+
+BUG_TRACKING_SYSTEM = "http://bugzilla.gnome.org"

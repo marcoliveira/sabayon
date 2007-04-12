@@ -17,6 +17,8 @@
 #
 
 import gtk
+import errors
+import debuglog
 from config import *
 
 #
@@ -65,11 +67,13 @@ def show_about_dialog (parent_window = None):
 
     # about_dialog.set_documenters        (documenters)
 
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def handle_delete (about, event):
         about.hide ()
         return True
     about_dialog.connect ("delete-event", handle_delete)
 
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def handle_response (about, response):
         about.hide ()
     about_dialog.connect ("response", handle_response)

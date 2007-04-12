@@ -23,82 +23,48 @@ import pwd
 import gettext
 import locale
 import errno
-import warnings
-import exceptions
 import random
 from config import *
 
-(
-    DEBUG_DEPRECATED,
-    DEBUG_USERPROFILE,
-    DEBUG_STORAGE,
-    DEBUG_PROTOSESSION,
-    DEBUG_USERMOD,
-    DEBUG_DIRMONITOR,
-    DEBUG_GCONFSOURCE,
-    DEBUG_PANELDELEGATE,
-    DEBUG_FILESSOURCE,
-    DEBUG_MOZILLASOURCE,
-    DEBUG_ADMINTOOL,
-    DEBUG_USERDB,
-    DEBUG_CACHE,
-) = range (13)
+# Standard exit codes for helper programs (sabayon-apply, sabayon-session)
+EXIT_CODE_NORMAL = 0
+EXIT_CODE_FATAL = 1
+EXIT_CODE_RECOVERABLE = 2
 
-debug_modules = {
-    DEBUG_DEPRECATED    : ("deprecated",     False),
-    DEBUG_USERPROFILE   : ("user-profile",   False),
-    DEBUG_STORAGE       : ("storage",        False),
-    DEBUG_PROTOSESSION  : ("proto-session",  False),
-    DEBUG_USERMOD       : ("usermod",        False),
-    DEBUG_DIRMONITOR    : ("dir-monitor",    False),
-    DEBUG_GCONFSOURCE   : ("gconf-source",   False),
-    DEBUG_PANELDELEGATE : ("panel-delegate", False),
-    DEBUG_FILESSOURCE   : ("files-source",   False),
-    DEBUG_MOZILLASOURCE : ("mozilla-source", False),
-    DEBUG_ADMINTOOL     : ("admin-tool",     False),
-    DEBUG_USERDB        : ("user-db",        False),
-    DEBUG_CACHE         : ("cache",          False),
-}
+_util_admin_log_config_filename = None
+_util_readable_log_config_filename = None
 
-def init_debug_modules ():
-    debug_value = os.getenv ("SABAYON_DEBUG")
-    if not debug_value:
-        warnings.filterwarnings ("ignore", category = exceptions.DeprecationWarning)
-        return
+def get_admin_log_config_filename ():
+    """Returns the human-readable filename used for log configuration,
+    as stored with set_log_config_filename().  This is the file that the
+    system administrator actually modifies to set up the log configuration."""
+    global _util_admin_log_config_filename
+    return _util_admin_log_config_filename
 
-    if debug_value == "help":
-        print "Valid options for the SABAYON_DEBUG environment variable are:\n"
-        print "    all"
-        for module in debug_modules:
-            print "    %s" % debug_modules[module][0]
-        print "You may supply a list of modules separated by a colon (:)"
-        print "You may also supply an optional hex debug mask to a module, e.g. foo=0xF8"
-        sys.exit (1)
-    elif debug_value == "all":
-        for module in debug_modules:
-            debug_modules[module] = (debug_modules[module][0], 0xFFFFFFFF)
-    else:
-        for item in debug_value.split (":"):
-            item = item.split("=")
-            key = item[0]
-            value = True
-            if len(item) > 1:
-                value = int(item[1],16)
-            for module in debug_modules:
-                if debug_modules[module][0] == key:
-                    debug_modules[module] = (key, value)
-                    break
+def set_admin_log_config_filename (str):
+    """Stores the filename of the human-readable configuration file which the
+    system administrator used to set up the log configuration.  This can be
+    queried back with get_admin_log_config_filename()."""
+    global _util_admin_log_config_filename
+    _util_admin_log_config_filename = str
 
-    if not debug_modules[DEBUG_DEPRECATED][1]:
-        warnings.filterwarnings ("ignore", category = exceptions.DeprecationWarning)
+def get_readable_log_config_filename ():
+    """Returns the filename that the program actually used to read the log configuration,
+    as stored with set_readable_log_config_filename().  This may be different from the
+    filename from get_admin_log_config_filename(), since the helper processes in Sabayon
+    may need to be given a temporary file to read their log configuration (as root's
+    human-readable file may not be readable by the helper processes)."""
+    global _util_readable_log_config_filename
+    return _util_readable_log_config_filename
 
-init_debug_modules ()
-
-def debug_print (module, message, mask=~0):
-    assert debug_modules.has_key(module)
-    if not debug_modules[module][1] & mask:
-        return
-    print "(%d) %s: %s" % (os.getpid (), debug_modules[module][0], message)
+def set_readable_log_config_filename (str):
+    """Stores the filename that the program actually used to read the log configuration.
+    This can be queried back with get_readable_log_config_filename().  This may be different from the
+    filename from get_admin_log_config_filename(), since the helper processes in Sabayon
+    may need to be given a temporary file to read their log configuration (as root's
+    human-readable file may not be readable by the helper processes)."""
+    global _util_readable_log_config_filename
+    _util_readable_log_config_filename = str
 
 class GeneralError (Exception):
     def __init__ (self, msg):

@@ -27,13 +27,15 @@ try:
     import userprofile
     import util
     from config import *
+    import debuglog
 except:
     from sabayon import userprofile
     from sabayon import util
     from sabayon.config import *
+    from sabayon import debuglog
 
 def dprint (fmt, *args):
-    util.debug_print (util.DEBUG_PANELDELEGATE, fmt % args)
+    debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_PANEL_DELEGATE, fmt % args)
 
 PANEL_LAUNCHER_DIR = ".gnome2/panel2.d/default/launchers"
 

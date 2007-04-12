@@ -1,3 +1,420 @@
+2007-04-12  Federico Mena Quintero  <federico@novell.com>
+
+	* Merged the debug-log branch into trunk (its ChangeLog follows):
+
+2007-04-12  Federico Mena Quintero  <federico@novell.com>
+
+	* admin-tool/sabayon-apply: Import userprofile before the rest, so
+	it can do its weird pygtk assertions.
+
+2007-04-10  Federico Mena Quintero  <federico@novell.com>
+
+	* admin-tool/changeswindow.py (ChangesWindow.__on_ignore_toggled):
+	Log a user action.
+	(ChangesWindow.__on_mandatory_toggled): Likewise.
+
+	* admin-tool/lockdown/maindialog.py
+	(PessulusMainDialog.__on_unsafeprotocols_toggled): Log a user action.
+
+	* admin-tool/lockdown/disabledapplets.py
+	(PessulusDisabledApplets.toggle_value): Log a user action.
+
+	* admin-tool/lockdown/simpleeditabletreeview.py
+	(PessulusSimpleEditableTreeview.__on_cell_edited): Log a user
+	action.
+	(PessulusSimpleEditableTreeview.__on_add_button_clicked): Likewise.
+	(PessulusSimpleEditableTreeview.__on_edit_button_clicked): Likewise.
+	(PessulusSimpleEditableTreeview.__on_remove_button_clicked): Likewise.
+
+	* admin-tool/lockdown/lockdowncheckbutton.py
+	(PessulusLockdownCheckbutton.__on_lockdownbutton_toggled): Log a
+	user action.
+	(PessulusLockdownCheckbutton.__on_check_toggled): Likewise.
+
+	* admin-tool/sessionwindow.py
+	(SessionWindow.__handle_enforce_mandatory): Ahem, pass the
+	"active" parameter to profile.set_enforce_mandatory().
+
+2007-04-09  Federico Mena Quintero  <federico@novell.com>
+
+	* lib/errors.py: Oops, import gtk for gtk.main_quit() in
+	catch_exceptions().
+	(FatalApplyErrorException.wrapper): Oops, return the func()'s
+	own return value.
+
+	* lib/debuglog.py (DEBUG_LOG_DOMAIN_PESSULUS): New debug domain.
+
+	* admin-tool/sabayon-session (main): Use the same structure for
+	handling exceptions before the main loop as in the main "sabayon"
+	program.  Catch errors that happen during the main loop after the
+	main "try" block.
+
+	* */*: Oops, add the right debug domains to places where the
+	errors.checked_callback decorator is used.
+
+	* admin-tool/sessionwindow.py (SessionWindow.__do_save): Don't
+	sys.exit() if we get an exception while commiting a change;
+	instead, log a recoverable exception.
+
+2007-04-03  Federico Mena Quintero  <federico@novell.com>
+
+	* lib/errors.py (checked_callback): New function decorator.  We
+	will use this to wrap all callbacks, so that we can catch
+	exceptions in callbacks and flag the presence of fatal errors.
+	These will in turn be caught outside the main loop, and we'll dump
+	the debug log as appropriate.
+
+	* admin-tool/lockdown/lockdowncheckbutton.py
+	(PessulusLockdownCheckbutton.__on_notified): Make this a checked callback.
+	(PessulusLockdownCheckbutton.__on_lockdownbutton_toggled): Likewise.
+	(PessulusLockdownCheckbutton.__on_check_toggled): Likewise.
+	(PessulusLockdownCheckbutton.__on_destroyed): Likewise.
+
+	* admin-tool/lockdown/lockdownbutton.py
+	(PessulusLockdownButton.__on_button_clicked): Likewise.
+
+	* admin-tool/lockdown/simpleeditabletreeview.py
+	(PessulusSimpleEditableTreeview.__on_cell_edited): Likewise.
+	(PessulusSimpleEditableTreeview.__on_cell_editing_started): Likewise.
+	(PessulusSimpleEditableTreeview.__on_cell_editing_canceled): Likewise.
+	(PessulusSimpleEditableTreeview.__on_add_button_clicked): Likewise.
+	(PessulusSimpleEditableTreeview.__on_edit_button_clicked): Likewise.
+	(PessulusSimpleEditableTreeview.__on_remove_button_clicked): Likewise.
+	(PessulusSimpleEditableTreeview.__on_treeselection_changed): Likewise.
+
+	* admin-tool/lockdown/disabledapplets.py
+	(PessulusDisabledApplets.__on_screen_changed): Likewise.
+	(PessulusDisabledApplets.__on_icontheme_changed): Likewise.
+	(PessulusDisabledApplets.update_icon): Likewise.
+	(PessulusDisabledApplets.__on_lockdownbutton_toggled): Likewise.
+	(PessulusDisabledApplets.__on_toggled): Likewise.
+	(PessulusDisabledApplets.__on_notified): Likewise.
+	(PessulusDisabledApplets.__on_destroyed): Likewise.
+
+	* admin-tool/lockdown/maindialog.py
+	(PessulusMainDialog.__on_dialog_response): Likewise.
+	(PessulusMainDialog.__on_dialog_destroy): Likewise.
+	(PessulusMainDialog.__on_unsafeprotocols_toggled): Likewise.
+
+	* admin-tool/lockdown/safeprotocols.py
+	(PessulusSafeProtocols.__on_notified): Likewise.
+	(PessulusSafeProtocols.__on_lockdownbutton_toggled): Likewise.
+	(PessulusSafeProtocols.__on_treeview_changed): Likewise.
+	(PessulusSafeProtocols.__on_destroyed): Likewise.
+
+	* admin-tool/aboutdialog.py (handle_delete): Likewise.
+	(handle_response): Likewise.
+
+	* admin-tool/changeswindow.py
+	(ChangesWindow.__mandatory_data_method): Likewise.
+	(ChangesWindow.__on_ignore_toggled): Likewise.
+	(ChangesWindow.__on_mandatory_toggled): Likewise.
+
+	* admin-tool/profilesdialog.py
+	(Session.__session_child_watch_handler): Likewise.
+	(Session.session_stderr_io_cb): Likewise.
+	(AddProfileDialog.__name_entry_changed): Likewise.
+	(ProfilesDialog.__dialog_response): Likewise.
+	(ProfilesDialog.__add_button_clicked): Likewise.
+	(ProfilesDialog.__session_finished): Likewise.
+	(ProfilesDialog.__edit_button_clicked): Likewise.
+	(ProfilesDialog.__details_button_clicked): Likewise.
+	(ProfilesDialog.__users_button_clicked): Likewise.
+	(ProfilesDialog.__remove_button_clicked): Likewise.
+	(ProfilesDialog.__handle_key_press): Likewise.
+	(ProfilesDialog.__profile_selection_changed): Likewise.
+
+	* admin-tool/lockdownappliersabayon.py
+	(LockdownApplierSabayon.__changes_model_changed): Likewise.
+
+	* admin-tool/sessionwindow.py
+	(ProfileChangesModel.handle_profile_change): Likewise.
+	(SessionWindow.__add_widget): Likewise.
+	(SessionWindow.__changes_model_changed): Likewise.
+	(SessionWindow.__handle_save): Likewise.
+	(SessionWindow.__handle_quit): Likewise.
+	(SessionWindow.__handle_delete_event): Likewise.
+	(SessionWindow.__handle_about): Likewise.
+	(SessionWindow.__handle_edit): Likewise.
+	(SessionWindow.__handle_lockdown): Likewise.
+	(SessionWindow.__handle_enforce_mandatory): Likewise.
+	(SessionWindow.__session_finished): Likewise.
+	(SessionWindow.__session_mapped): Likewise.
+	(SessionWindow.__update_statusbar): Likewise.
+	(SessionWindow.__update_resize_grip): Likewise.
+
+	* admin-tool/usersdialog.py (UsersDialog.__on_use_toggled): Likewise.
+	(UsersDialog.__all_check_toggled): Likewise.
+
+	* admin-tool/editorwindow.py
+	(ProfileEditorWindow.__handle_key_press): Likewise.
+	(ProfileEditorWindow.__handle_save): Likewise.
+	(ProfileEditorWindow.__handle_close): Likewise.
+	(ProfileEditorWindow.__handle_delete_event): Likewise.
+	(ProfileEditorWindow.__handle_delete): Likewise.
+	(ProfileEditorWindow.__handle_about): Likewise.
+	(ProfileEditorWindow.__treeview_selection_changed): Likewise.
+	(ProfileEditorWindow.__handle_row_activation): Likewise.
+
+2007-04-02  Federico Mena Quintero  <federico@novell.com>
+
+	* lib/protosession.py (ProtoSession.apply_profile): Use the right
+	namespace for get_*_log_config_filename().
+
+	* admin-tool/sessionwindow.py: import errors.
+	(*): uprint is really "debuglog.uprint".
+
+	* admin-tool/sabayon-apply: import os.
+
+	* admin-tool/profilesdialog.py (Session.build_envp_for_child):
+	Oops, fill the new_environ correctly from the variables we already
+	knew.
+
+2007-04-02  Federico Mena Quintero  <federico@novell.com>
+
+	* admin-tool/sabayon (show_error_dialog): Put the call to
+	gtk.main() outside the main "try" block.  Fix the way errors are
+	captured.
+
+	* admin-tool/profilesdialog.py
+	(Session.__session_child_watch_handler): Exit the main loop if we
+	get a fatal error, so that the toplevel 'sabayon' will catch the
+	error as soon as possible.
+	(mprint): Log as milestone, sigh.
+
+	* lib/debuglog.py (debug_log_dump_to_dated_file): Doh, call
+	debug_log_dump_to_file(), not debug_log_dump_configuration()!
+
+2007-03-30  Federico Mena Quintero  <federico@novell.com>
+
+	* admin-tool/sabayon (main): Use errors.errors_have_fatal_error()
+	instead of catching fatal exceptions.
+
+	* admin-tool/profilesdialog.py
+	(Session.__session_child_watch_handler): Use
+	errors.errors_log_fatal_error() instead of throwing an exception.
+	We cannot throw an exception since we are a callback inside
+	gtk_main().
+
+	* lib/errors.py (errors_have_recoverable_error): Use global
+	_have_recoverable_error.  Broken scoping strikes again!
+	(errors_log_recoverable_error): Likewise.
+	(errors_have_fatal_error): New function.
+	(errors_log_fatal_error): New function.
+	(*): Oops, use debuglog.*
+
+	* lib/debuglog.py (debug_log_dump_to_dated_file): Don't put the
+	pid in the log's file name; just the date/time is enough.
+	(DebugLog.dump_milestones_to_list): Print the process name in the headers.
+	(DebugLog.dump_ring_buffer_to_list): Likewise.
+
+2007-03-29  Federico Mena Quintero  <federico@novell.com>
+
+	* lib/errors.py (errors_log_recoverable_error): New function.
+	(errors_log_recoverable_exception): Use errors_log_recoverable_error().
+
+	* lib/debuglog.py (debug_log_dump_to_dated_file): Don't reuse the
+	"time" module name as a variable name.  Also, it's tm_mday, not tm_day.
+
+	* admin-tool/profilesdialog.py
+	(Session.__session_child_watch_handler): Log termination of the
+	child session as a milestone; deal with the possible exit codes.
+	(Session.__session_child_watch_handler): Clobber the user
+	processes so that we don't race with gconfd (merged from a Novell patch).
+
+	* admin-tool/sabayon (main): Oops, "try/else" is not the same as
+	"try/except" --- I really want to catch any other exceptions.
+
+	* admin-tool/sabayon-session (main): Likewise.
+
+	* lib/util.py (get_admin_log_config_filename): Sigh, use "global"
+	for _util_admin_log_config_filename.  Proper scoping, pretty please?
+	(set_admin_log_config_filename): Likewise.
+	(get_readable_log_config_filename): Likewise.
+	(set_readable_log_config_filename): Likewise.
+
+2007-03-28  Federico Mena Quintero  <federico@novell.com>
+
+	* admin-tool/sabayon (readable_log_config_setup): New function.
+	Copies the log configuration to a world-readable file, as in
+	normal circumstances the "sabayon" user will not be able to read
+	root's own ~/sabayon-debug-log.conf.
+	(main): Capture fatal exceptions, log them, and terminate.
+	Capture recoverable errors, log them, and terminate gracefully.
+
+	* lib/errors.py (errors_exit_helper_normally): Use
+	debuglog.debug_log_dump_to_file() instead of
+	debug_log_dump_to_stderr().
+	(errors_exit_with_fatal_exception): Likewise.
+
+	* lib/util.py (debug_print): Really remove this (hadn't I deleted
+	it before!?).
+
+	* lib/debuglog.py (DebugLog.load_configuration): Removed stale comment.
+	(debug_log): Add documentation.
+	(debug_log_current_exception): Likewise.
+	(debug_log_load_configuration): Likewise.
+	(debug_log_is_domain_enabled): Likewise.
+	(debug_log_dump_as_list): Likewise.
+	(debug_log_dump_to_stderr): Likewise.
+	(debug_log_dump_configuration): New function; dumps the debug log
+	configuration to an open file.
+	(debug_log_dump_to_dated_file): New function; dumps the debug log
+	to a unique file.
+	(DebugLog.dump_configuration): New method to implement the above.
+	(debug_log_dump_to_file): Renamed from debug_log_dump_to_stderr();
+	now dumps the log to a given file.
+
+	* lib/config.py.in (LOG_CONFIG_FILENAME): New constant.
+	(BUG_TRACKING_SYSTEM): New constant, set to
+	"http://bugzilla.gnome.org".
+
+	* admin-tool/sabayon-session: Use config.LOG_CONFIG_FILENAME.
+	Compute an adequate fallback for the log config filename if none
+	is provided in the command line.
+
+	* admin-tool/sabayon-apply: Likewise.
+
+2007-03-22  Federico Mena Quintero  <federico@novell.com>
+
+	* admin-tool/sessionwindow.py
+	(SessionWindow.__handle_enforce_mandatory): Log a user action for
+	setting the enforce_mandatory option.
+	(SessionWindow.__handle_lockdown): Log a user action for bringing
+	up the Lockdown window.
+
+2007-03-14  Federico Mena Quintero  <federico@novell.com>
+
+	* admin-tool/profilesdialog.py
+	(ProfilesDialog.__edit_button_clicked): Log the start of the
+	editing process.
+	(ProfilesDialog.__session_finished): Log the end of the editing
+	process.
+	(Session.build_envp_for_child): New function; build the envp for
+	the child process here instead of in Session.start().
+	(Session.session_stderr_io_cb): New helper function; aggregates
+	the debug log from sabayon-session into our own log.
+	(Session.start): Set up the machinery to sniff the debug log from
+	the helper "sabayon-session" process and to aggregate it into our
+	own log.
+
+	* lib/debuglog.py (uprint): New public function; similar to
+	dprint() everywhere, but this one logs to the USER domain.
+
+	* lib/config.py.in: Note a FIXME; maybe some parameters like
+	DEFAULT_PATH should be passed to the "configure" script instead of
+	being hardcoded here.
+
+	* lib/errors.py (RecoverableApplyErrorException,
+	FatalApplyErrorException): New classes for throwing errors from
+	the "apply" process.
+
+	* lib/util.py (get_admin_log_config_filename):
+	(set_admin_log_config_filename): New functions to get/set the
+	human-readable filename for the log configuration.
+	(get_readable_log_config_filename):
+	(set_readable_log_config_filename): New functions to get/set the
+	log configuration filename that will be readable by Sabayon's
+	helper processes.
+
+	* admin-tool/sabayon-apply: Save the admin and readable log config
+	filenames.
+
+	* admin-tool/sabayon-session: Likewise.
+
+2007-03-07  Federico Mena Quintero  <federico@novell.com>
+
+	* admin-tool/sabayon-apply: Log the start/end of the apply process
+	as milestones instead of as normal messages.
+
+	* admin-tool/sabayon-session: Log milestones for the start/end of
+	the session window.
+
+2007-02-15  Federico Mena Quintero  <federico@novell.com>
+
+	* lib/Makefile.am (PYTHON_FILES): Added debuglog.py, errors.py.
+
+	* lib/errors.py (errors_exit_helper_normally): New utility function to
+	exit normally from the helper programs, dumping the debug log as
+	appropriate.
+	(errors_exit_with_fatal_exception): New utility function to exit
+	when a fatal exception happens after dumping the debug log.
+
+	* admin-tool/sabayon-apply: Oops, import "debuglog" and "errors".
+	Use optparser for argument parsing.  Add --sabayon-session as an
+	alias for the -s option.  Add a --log-config option to specify
+	where to read the options for the debug log.  Use
+	errors_exit_normally() and errors_exit_with_fatal_exception().
+	(dprint): Use debuglog.debug_log().
+	(mprint): New function to print milestones.
+
+	* admin-tool/sabayon-session: Add the same toplevel logging
+	machinery as sabayon-apply.
+
+	* lib/util.py (EXIT_CODE_FATAL, EXIT_CODE_RECOVERABLE): Moved the
+	exit codes for the helper programs to here.
+	(init_debug_modules): Removed; moved the logic for deprecation
+	warnings to debug_log_load_configuration().  Also removed the
+	debug domains; moved them to debuglog.py.
+	(debug_print): Removed.
+
+	* lib/debuglog.py (DEBUG_LOG_DOMAIN_SABAYON_SESSION): New domain
+	for sabayon-session.  Move the debug log domains from util.py to
+	here.
+	(debug_log_load_configuration): Disble deprecation warnings unless
+	DEBUG_LOG_DOMAIN_DEPRECATED is enabled (moved from
+	util.py:init_debug_modules().
+
+	* admin-tool/profilesdialog.py (dprint): Use debuglog.debug_log
+	rather than debug_print()
+	* admin-tool/changeswindow.py (dprint): Likewise.
+	* admin-tool/lockdownappliersabayon.py (dprint): Likewise.
+	* admin-tool/sessionwindow.py (dprint): Likewise.
+	* admin-tool/editorwindow.py (dprint): Likewise.
+	* admin-tool/sessionwidget.py (dprint): Likewise.
+	* lib/sources/mozillasource.py (dprint): Likewise.
+	* lib/sources/paneldelegate.py (dprint): Likewise.
+	* lib/sources/gconfsource.py (dprint): Likewise.
+	* lib/sources/filessource.py (dprint): Likewise.
+	* lib/mozilla_bookmarks.py (dprint): Likewise.
+	* lib/userprofile.py (dprint): Likewise.
+	* lib/cache.py (dprint): Likewise.
+	* lib/storage.py (dprint): Likewise.
+	* lib/protosession.py (dprint): Likewise.
+	* lib/usermod.py (dprint): Likewise.
+	* lib/dirmonitor.py (dprint): Likewise.
+	* lib/userdb.py (dprint): Likewise.
+
+	* lib/sources/mozillasource.py (dwarn): Removed unused function.
+
+2007-02-14  Federico Mena Quintero  <federico@novell.com>
+
+	Start fixing bug #398479 - make errors visible to the user, and
+	keep a debug log that can be used for bug reports.
+
+	* admin-tool/sabayon: Include a comment with Emacs local variables
+	so that it picks up python-mode for this file.
+	* admin-tool/sabayon-apply: Likewise.
+
+	* admin-tool/sabayon-session: Likewise.
+
+	* lib/debuglog.py: New file for a ring buffer debug log, similar
+	to nautilus-debug-log.
+
+	* lib/test-debug-log.py: Simple test for the debug log mechanism.
+
+	* lib/errors.py: New file with utilities to log the presence of
+	recoverable errors.
+
+	* admin-tool/sabayon-apply: Dump the debug log when the program
+	finishes, so that the calling progrma will in turn log it
+	somewhere.  If there was a recoverable error during execution,
+	exit() with EXIT_CODE_RECOVERABLE=2 so that the calling program
+	will notify the admin.  If we get a fatal exception, which would
+	otherwise be uncaught, then exit() with EXIT_CODE_FATAL=1.
+
+	* This is the end of the debug-log branch.
+
 2007-02-13  Theppitak Karoonboonyanan  <thep@linux.thai.net>
 
 	Merge from gnome-2-18 branch.
