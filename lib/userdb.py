@@ -47,7 +47,8 @@ def get_setting (node, setting, default = None, convert_to = str):
         try:
             return convert_to (a.content)
         except:
-            raise UserDatabaseException(_("invalid type for setting %s in %s") % (setting, node.nodePath()))
+	    np = node.nodePath()
+            raise UserDatabaseException(_("invalid type for setting %(setting)s in %(np)s") % (setting, np))
     return default
 
 def expand_string (string, attrs):
