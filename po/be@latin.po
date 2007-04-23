@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-04-14 21:01+0300\n"
-"PO-Revision-Date: 2007-04-14 21:11+0300\n"
+"POT-Creation-Date: 2007-04-23 19:42+0300\n"
+"PO-Revision-Date: 2007-04-23 19:43+0300\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: i18n@mova.org <i18n@mova.org>\n"
 "MIME-Version: 1.0\n"
@@ -879,61 +879,61 @@ msgstr "Praviadzieńnie testaŭ %s (%s)"
 msgid "Success!"
 msgstr "Test paśpiachova zavieršany!"
 
-#: ../lib/userdb.py:50
+#: ../lib/userdb.py:51
 #, python-format
-msgid "invalid type for setting %s in %s"
-msgstr "niapravilny typ nałady %s u %s"
+msgid "invalid type for setting %(setting)s in %(np)s"
+msgstr "niapravilny typ nałady %(setting)s u %(np)s"
 
-#: ../lib/userdb.py:210
+#: ../lib/userdb.py:211
 #, python-format
 msgid "No search based specified for %s"
 msgstr "Nie akreślili padstavy pošuku dla %s"
 
-#: ../lib/userdb.py:213
+#: ../lib/userdb.py:214
 #, python-format
 msgid "No query filter specified for %s"
 msgstr "Nie akreślili filtru zapytaŭ dla %s"
 
-#: ../lib/userdb.py:216
+#: ../lib/userdb.py:217
 #, python-format
 msgid "No result attribute specified for %s"
 msgstr "Nie akreślili vynikovaha atrybutu dla %s"
 
-#: ../lib/userdb.py:225
+#: ../lib/userdb.py:226
 msgid "Scope must be one of sub, base and one"
 msgstr "Abšar musić mieć adnu z vartaściaŭ \"sub\", \"base\" albo \"one\""
 
-#: ../lib/userdb.py:245
+#: ../lib/userdb.py:246
 msgid "multiple_result must be one of first and random"
 msgstr "\"multiple_result\" musić mieć adnu z vartaściaŭ \"first\" albo \"random\""
 
-#: ../lib/userdb.py:337
+#: ../lib/userdb.py:338
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Niemahčyma adčynić %s, kab zapisać"
 
-#: ../lib/userdb.py:350
+#: ../lib/userdb.py:351
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Niemahčyma zapisać UserDatabase u %s"
 
-#: ../lib/userdb.py:373
-#: ../lib/userdb.py:408
+#: ../lib/userdb.py:374
+#: ../lib/userdb.py:409
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Fajł %s nie źjaŭlajecca kanfihuracyjaj profilu"
 
-#: ../lib/userdb.py:380
+#: ../lib/userdb.py:381
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Niemahčyma dadać zmoŭčany profil %s da kanfihuracyi"
 
-#: ../lib/userdb.py:416
+#: ../lib/userdb.py:417
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Niemahčyma dadać karystalnika %s da kanfihuracyi profilu"
 
-#: ../lib/userdb.py:447
+#: ../lib/userdb.py:448
 msgid "Failed to get the user list"
 msgstr "Niemahčyma atrymać śpis karystalnikaŭ"
 
