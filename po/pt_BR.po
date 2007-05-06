@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the sabayon package.
 # Raphael Higino <phhigino@gmail.com>, 2005-2007.
 # Leonardo Ferreira Fontenelle <leo.fontenelle@gmail.com>, 2007
+# Washington Lins <washington-lins@uol.com.br>, 2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-09 03:45-0300\n"
-"PO-Revision-Date: 2007-03-09 03:28-0300\n"
-"Last-Translator: Leonardo Ferreira Fontenelle <leo.fontenelle@gmail.com>\n"
+"POT-Creation-Date: 2007-05-05 22:54-0300\n"
+"PO-Revision-Date: 2007-04-08 09:36-0400\n"
+"Last-Translator: Washington Lins <washington-lins@uol.com.br>\n"
 "Language-Team: Brazilian Portuguese <gnome-l10n-br@listas.cipsga.org.br>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -102,7 +103,7 @@ msgid "Files"
 msgstr "Arquivos"
 
 #: ../admin-tool/editorwindow.py:256 ../admin-tool/lockdown/pessulus.glade.h:7
-#: ../lib/sources/paneldelegate.py:226
+#: ../lib/sources/paneldelegate.py:227
 msgid "Panel"
 msgstr "Painel"
 
@@ -694,134 +695,136 @@ msgstr "Alterado marcador do Mozilla \"%s\" \"%s\""
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Alterada pasta de marcadores do Mozilla \"%s\""
 
-#: ../lib/sources/paneldelegate.py:53
+#: ../lib/sources/paneldelegate.py:52
 #, python-format
 msgid "Panel '%s' added"
 msgstr "O painel \"%s\" foi adicionado"
 
-#: ../lib/sources/paneldelegate.py:59
+#: ../lib/sources/paneldelegate.py:58
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "O painel \"%s\" foi removido"
 
-#: ../lib/sources/paneldelegate.py:74
+#: ../lib/sources/paneldelegate.py:73
 #, python-format
 msgid "Applet %s added to top panel"
 msgstr "Miniaplicativo %s adicionado ao painel superior"
 
-#: ../lib/sources/paneldelegate.py:76
+#: ../lib/sources/paneldelegate.py:75
 #, python-format
 msgid "Applet %s added to bottom panel"
 msgstr "Miniaplicativo %s adicionado ao painel inferior"
 
-#: ../lib/sources/paneldelegate.py:78
+#: ../lib/sources/paneldelegate.py:77
 #, python-format
 msgid "Applet %s added to left panel"
 msgstr "Miniaplicativo %s adicinado ao painel esquerdo"
 
-#: ../lib/sources/paneldelegate.py:80
+#: ../lib/sources/paneldelegate.py:79
 #, python-format
 msgid "Applet %s added to right panel"
 msgstr "Miniaplicativo %s adicinado ao painel direito"
 
-#: ../lib/sources/paneldelegate.py:95
+#: ../lib/sources/paneldelegate.py:94
 #, python-format
 msgid "Applet %s removed from top panel"
 msgstr "Miniaplicativo %s removido do painel superior"
 
-#: ../lib/sources/paneldelegate.py:97
+#: ../lib/sources/paneldelegate.py:96
 #, python-format
 msgid "Applet %s removed from bottom panel"
 msgstr "Miniaplicativo %s removido do painel inferior"
 
-#: ../lib/sources/paneldelegate.py:99
+#: ../lib/sources/paneldelegate.py:98
 #, python-format
 msgid "Applet %s removed from left panel"
 msgstr "Miniaplicativo %s removido do painel esquerdo"
 
-#: ../lib/sources/paneldelegate.py:101
+#: ../lib/sources/paneldelegate.py:100
 #, python-format
 msgid "Applet %s removed from right panel"
 msgstr "Miniaplicativo %s removido do painel direito"
 
-#: ../lib/sources/paneldelegate.py:115
+#: ../lib/sources/paneldelegate.py:114
 #, python-format
 msgid "%s added to top panel"
 msgstr "%s adicionado ao painel superior"
 
-#: ../lib/sources/paneldelegate.py:117
+#: ../lib/sources/paneldelegate.py:116
 #, python-format
 msgid "%s added to bottom panel"
 msgstr "%s adicionado ao painel inferior"
 
-#: ../lib/sources/paneldelegate.py:119
+#: ../lib/sources/paneldelegate.py:118
 #, python-format
 msgid "%s added to left panel"
 msgstr "%s adicionado ao painel esquerdo"
 
-#: ../lib/sources/paneldelegate.py:121
+#: ../lib/sources/paneldelegate.py:120
 #, python-format
 msgid "%s added to right panel"
 msgstr "%s adicionado ao painel direito"
 
-#: ../lib/sources/paneldelegate.py:142
+#: ../lib/sources/paneldelegate.py:141
 #, python-format
 msgid "%s removed from top panel"
 msgstr "%s removido do painel superior"
 
-#: ../lib/sources/paneldelegate.py:144
+#: ../lib/sources/paneldelegate.py:143
 #, python-format
 msgid "%s removed from bottom panel"
 msgstr "%s removido do painel inferior"
 
-#: ../lib/sources/paneldelegate.py:146
+#: ../lib/sources/paneldelegate.py:145
 #, python-format
 msgid "%s removed from left panel"
 msgstr "%s removido do painel esquerdo"
 
-#: ../lib/sources/paneldelegate.py:148
+#: ../lib/sources/paneldelegate.py:147
 #, python-format
 msgid "%s removed from right panel"
 msgstr "%s removido do painel direito"
 
-#: ../lib/sources/paneldelegate.py:197
+#: ../lib/sources/paneldelegate.py:196
 msgid "Drawer"
 msgstr "Gaveta"
 
-#: ../lib/sources/paneldelegate.py:199
+#: ../lib/sources/paneldelegate.py:198
 msgid "Main Menu"
 msgstr "Menu Principal"
 
-#: ../lib/sources/paneldelegate.py:209
+#. FIXME: we need to use xdg.DesktopEntry to extract the localized name
+#. http://bugzilla.gnome.org/show_bug.cgi?id=397742
+#: ../lib/sources/paneldelegate.py:210
 #, python-format
 msgid "%s launcher"
 msgstr "Lançador %s"
 
-#: ../lib/sources/paneldelegate.py:213
+#: ../lib/sources/paneldelegate.py:214
 msgid "Lock Screen button"
 msgstr "Botão Travar Tela"
 
-#: ../lib/sources/paneldelegate.py:215
+#: ../lib/sources/paneldelegate.py:216
 msgid "Logout button"
 msgstr "Botão Sair do GNOME"
 
-#: ../lib/sources/paneldelegate.py:217
+#: ../lib/sources/paneldelegate.py:218
 msgid "Run Appliction button"
 msgstr "Botão Executar Aplicação"
 
-#: ../lib/sources/paneldelegate.py:219
+#: ../lib/sources/paneldelegate.py:220
 msgid "Search button"
-msgstr "Botão Procurar"
+msgstr "Pesquisar"
 
-#: ../lib/sources/paneldelegate.py:221
+#: ../lib/sources/paneldelegate.py:222
 msgid "Screenshot button"
 msgstr "Botão Capturar Imagem da Tela"
 
-#: ../lib/sources/paneldelegate.py:223
+#: ../lib/sources/paneldelegate.py:224
 msgid "Menu Bar"
 msgstr "Barra de Menu"
 
-#: ../lib/sources/paneldelegate.py:467
+#: ../lib/sources/paneldelegate.py:468
 msgid "Panel File"
 msgstr "Arquivo de Painel"
 
@@ -877,7 +880,7 @@ msgstr "tipo inválido para configuração %s em %s"
 #: ../lib/userdb.py:210
 #, python-format
 msgid "No search based specified for %s"
-msgstr "Nenhuma base de busca especificada para %s"
+msgstr "Nenhuma base de pesquisa especificada para %s"
 
 #: ../lib/userdb.py:213
 #, python-format
