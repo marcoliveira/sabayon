@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon 0.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-05-08 12:31+0200\n"
-"PO-Revision-Date: 2007-05-08 12:33+0200\n"
+"POT-Creation-Date: 2007-06-04 12:45+0200\n"
+"PO-Revision-Date: 2007-06-04 12:47+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian Bokmaal <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -315,14 +315,18 @@ msgstr ""
 msgid ""
 "A fatal error has occurred.  You can help us fix the problem by sending the "
 "log in %s to %s"
-msgstr "En fatal feil har oppstått. Du kan hjelpe oss å rette feilen ved å sende loggen i %s til %s"
+msgstr ""
+"En fatal feil har oppstått. Du kan hjelpe oss å rette feilen ved å sende "
+"loggen i %s til %s"
 
 #: ../admin-tool/sabayon:143
 #, c-format
 msgid ""
 "Sabayon will now exit.  There were some recoverable errors, and you can help "
 "us debug the problem by sending the log in %s to %s"
-msgstr "Sabayon vil nå avslutte. Det oppsto noen feil underveis og du kan hjelpe oss med feilsøking ved å sende loggen i %s til %s"
+msgstr ""
+"Sabayon vil nå avslutte. Det oppsto noen feil underveis og du kan hjelpe oss "
+"med feilsøking ved å sende loggen i %s til %s"
 
 #: ../admin-tool/sabayon-apply:86
 #, c-format
@@ -503,7 +507,7 @@ msgstr "Innstillinger for nedlåsing for %s"
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
 "report this error now or try to continue editing the user profile."
-msgstr ""
+msgstr "Det oppsto en feil under bruk av brukerprofil «%s». Du kan rapportere denne feilen nå eller fortsette å redigere brukerprofilen."
 
 #: ../admin-tool/sessionwindow.py:337
 msgid "_Report this error"
@@ -552,17 +556,21 @@ msgid ""
 "Child traceback:\n"
 "%s"
 msgstr ""
+"Kunne ikke opprette prosessen «sabayon-apply»: %s\n"
+"Kommandolinjen som ble brukt er «%s»\n"
+"Liste med funksjonskall:\n"
+"%s"
 
 #: ../lib/protosession.py:501
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from '%s'."
-msgstr ""
+msgstr "Det oppsto en feil under bruk av brukerprofil fra «%s»."
 
 #: ../lib/protosession.py:510
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
-msgstr ""
+msgstr "Det oppsto en fatal feil ved bruk av brukerprofil fra «%s»."
 
 #: ../lib/sources/filessource.py:68
 #, python-format
