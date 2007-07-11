@@ -1,5 +1,8 @@
 2007-07-11  Federico Mena Quintero  <federico@novell.com>
 
+	* admin-tool/sabayon.desktop.in (Exec): Use gnomesu since we must
+	run as root.
+
 	* lib/config.py.in (DIRECTORIES_TO_IGNORE): Add .beagle
 
 2007-04-16  Funda Wang  <fundawang@gmail.com>
