@@ -1,5 +1,15 @@
 2007-07-11  Federico Mena Quintero  <federico@novell.com>
 
+	Patch from https://bugzilla.novell.com/show_bug.cgi?id=173929
+
+	* admin-tool/sabayon-apply: If we are sabayon-controlled, first
+	delete .gconf.xml.{defaults,mandatory} so that removals of
+	lockdown keys will be honored.
+
+	* lib/userdb.py (UserDatabase.is_sabayon_controlled): New function.
+
+2007-07-11  Federico Mena Quintero  <federico@novell.com>
+
 	Patches from https://bugzilla.novell.com/show_bug.cgi?id=230018
 	and https://bugzilla.novell.com/show_bug.cgi?id=268903
 

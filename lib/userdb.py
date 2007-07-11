@@ -436,6 +436,26 @@ class UserDatabase:
 	# TODO: also list remote profiles as found in self.doc
 	return list
 
+    def is_sabayon_controlled (self, username):
+        """Return True if user's configuration was ever under Sabayon's
+        control.
+        """
+        profile = self.__ldap_query ("profilemap", {"u":username, "h":socket.getfqdn()})
+
+        if profile:
+            return True
+        
+        try:
+            query = "/profiles/user[@name='%s']" % username
+            user = self.doc.xpathEval(query)[0]
+        except:
+            return False
+
+        if user:
+            return True
+
+        return False
+
     def get_users (self):
         """Return the list of users on the system. These should
         be real users - i.e. should not include system users
