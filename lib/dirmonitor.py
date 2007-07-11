@@ -49,16 +49,18 @@ class DirectoryMonitor:
         self.directory = directory
         self.callback = callback
         self.data = data
-	self.watches = {}
+	self.watches = {} # maps filename => gnome_vfs_monitor handle
         self.too_many_watches = False
         self.dirs_to_ignore = []
         self.files_to_ignore = []
 
     def set_directories_to_ignore (self, dirs):
+        assert len (self.watches) == 0
         self.dirs_to_ignore = dirs
         dprint ("Ignoring directories %s", self.dirs_to_ignore)
 
     def set_files_to_ignore (self, files):
+        assert len (self.watches) == 0
         self.files_to_ignore = files
         dprint ("Ignoring files %s", self.files_to_ignore)
 
@@ -66,6 +68,7 @@ class DirectoryMonitor:
     # call the user level processing
     #
     def __invoke_callback (self, path, event):
+        dprint ("Invoking callback for %s - %s", path, event_to_string (event))
         if self.data:
             self.callback (path, event, self.data)
         else:
@@ -85,18 +88,21 @@ class DirectoryMonitor:
             
             dprint ("Got gnomevfs event '%s' on '%s'", event_to_string (event), path)
 
-	    if event == CREATED and os.path.isdir (path):
-		self.__monitor_dir_recurse (path, True)
-	    elif event == DELETED:
-                if path != self.directory and self.watches.has_key (path):
-                    gnomevfs.monitor_cancel (self.watches [path])
-                    del self.watches[path]
-                    if len (self.watches) < N_WATCHES_LIMIT:
-                        self.too_many_watches = False
-
             if not self.__should_ignore_dir (path) and \
                not self.__should_ignore_file (path):
                 self.__invoke_callback (path, event)
+
+                if event == CREATED and os.path.isdir (path):
+                    self.__monitor_dir_recurse (path, True)
+                elif event == DELETED:
+                    if path != self.directory and self.watches.has_key (path):
+                        dprint ("Deleting watch for '%s' since it got deleted", path)
+                        gnomevfs.monitor_cancel (self.watches [path])
+                        del self.watches[path]
+                        if len (self.watches) < N_WATCHES_LIMIT:
+                            self.too_many_watches = False
+            else:
+                dprint ("Not calling callback for '%s' nor recursing in it since it is an ignored dir/file", path)
 
     def __should_ignore_dir (self, dir):
         dir = os.path.normpath (dir)
@@ -105,7 +111,6 @@ class DirectoryMonitor:
             ignore_path = os.path.normpath (os.path.join (self.directory, ignore_dir))
 
             if fnmatch.fnmatch (dir, ignore_path):
-                dprint ("Ignoring directory '%s'", dir)
                 return True
 
         parent = os.path.dirname (dir)
@@ -120,7 +125,6 @@ class DirectoryMonitor:
         for ignore_file in self.files_to_ignore:
             ignore_path = os.path.normpath (os.path.join (self.directory, ignore_file))
             if fnmatch.fnmatch (file, ignore_path):
-                dprint ("Ignoring file '%s'", file)
                 return True
         return self.__should_ignore_dir (os.path.dirname (file))
 
@@ -133,35 +137,42 @@ class DirectoryMonitor:
                 self.too_many_watches = True
             return
 
-        if self.__should_ignore_dir (dir):
-            return
-        
         try:
             self.watches [dir] = gnomevfs.monitor_add (dir, gnomevfs.MONITOR_DIRECTORY, self.__handle_gnomevfs_event)
+            dprint ("Added directory watch for '%s'", dir)
         except:
             print ("Failed to add monitor for %s") % (dir)
 	    util.print_exception ()
 
     def __monitor_dir_recurse (self, dir, new_dir = False):
         if self.too_many_watches:
+            dprint ("Skipping recursion on '%s', as there are already too many watches", dir)
             return
+
+        if self.__should_ignore_dir (dir):
+            dprint ("Skipping recursion on '%s'; it is an ignored directory", dir)
+            return
+
         if dir != self.directory:
             self.__monitor_dir (dir)
+
         for entry in os.listdir (dir):
             path = os.path.join (dir, entry)
             if self.__should_ignore_dir (path) or \
                self.__should_ignore_file (path):
+                dprint ("Skipping callback and recursion on '%s'; it is an ignored file/dir", path)
                 continue
-            if new_dir:
-                self.__invoke_callback (path, CREATED)
+
+            self.__invoke_callback (path, CREATED)
+
             if os.path.isdir (path):
                 self.__monitor_dir_recurse (path, new_dir)
                     
     def start (self):
         dprint ("Starting to recursively monitor '%s'", self.directory)
-
         self.__monitor_dir (self.directory)
         self.__monitor_dir_recurse (self.directory)
+        dprint ("Ending recursive scan of '%s'; all monitors are in place now", self.directory)
 
     def stop (self):
         dprint ("Stopping recursive monitoring of '%s'", self.directory)

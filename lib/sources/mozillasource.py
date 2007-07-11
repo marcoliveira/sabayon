@@ -207,6 +207,7 @@ class MozillaDelegate(userprofile.SourceDelegate):
 
     def handle_change(self, change):
         rel_path = change.get_id()
+        dprint (LOG_CHANGE, "handle_change: rel_path='%s'", rel_path)
         #
         # INI File
         #

@@ -1,6 +1,31 @@
 2007-07-11  Federico Mena Quintero  <federico@novell.com>
 
-	* lib/dirmonitor.py: Use gnome-vfs for monitoring instead of gamin.
+	Patches from https://bugzilla.novell.com/show_bug.cgi?id=230018
+	and https://bugzilla.novell.com/show_bug.cgi?id=268903
+
+	* lib/dirmonitor.py (DirectoryMonitor.__handle_gnomevfs_event): If
+	we get an event for a directory, call the callback before
+	recursing into the directory and adding watches to it.  This way
+	the log of changes will be in the correct order (it needs to know
+	that a dir is created before its subdirs are).
+	(DirectoryMonitor.__should_ignore_dir): Don't print here whether
+	we ignore the directory.
+	(DirectoryMonitor.__should_ignore_file): Likewise.
+	(DirectoryMonitor.__handle_gnomevfs_event): Print it here instead.
+	(DirectoryMonitor.__monitor_dir_recurse): Likewise.
+	(DirectoryMonitor.__monitor_dir_recurse): Always invoke the
+	callback.
+	(DirectoryMonitor.set_directories_to_ignore): Assert that we don't
+	have any watches yet.
+	(DirectoryMonitor.set_files_to_ignore): Likewise.
+
+	* lib/sources/mozillasource.py (MozillaDelegate.handle_change):
+	Log this.
+
+2007-07-11  Federico Mena Quintero  <federico@novell.com>
+
+	* lib/dirmonitor.py: Use gnome-vfs for monitoring instead of
+	gamin.  Patch from http://bugzilla.gnome.org/show_bug.cgi?id=340488
 
 2007-07-11  Federico Mena Quintero  <federico@novell.com>
 
