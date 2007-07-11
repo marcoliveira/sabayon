@@ -1,5 +1,9 @@
 2007-07-11  Federico Mena Quintero  <federico@novell.com>
 
+	* lib/dirmonitor.py: Use gnome-vfs for monitoring instead of gamin.
+
+2007-07-11  Federico Mena Quintero  <federico@novell.com>
+
 	* admin-tool/sabayon.desktop.in (Exec): Use gnomesu since we must
 	run as root.
 

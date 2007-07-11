@@ -19,16 +19,17 @@
 import os
 import os.path
 import gobject
-import gamin
+import gnomevfs
 import util
 import fnmatch
 import debuglog
+import urllib
 
 N_WATCHES_LIMIT = 200
 
-CHANGED = gamin.GAMChanged
-DELETED = gamin.GAMDeleted
-CREATED = gamin.GAMCreated
+CHANGED = gnomevfs.MONITOR_EVENT_CHANGED
+DELETED = gnomevfs.MONITOR_EVENT_DELETED
+CREATED = gnomevfs.MONITOR_EVENT_CREATED
 
 def dprint (fmt, *args):
     debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_DIR_MONITOR, fmt % args)
@@ -48,21 +49,16 @@ class DirectoryMonitor:
         self.directory = directory
         self.callback = callback
         self.data = data
-	self.mon = None
 	self.watches = {}
         self.too_many_watches = False
-	self.fd = -1
-	self.io_watch = None
         self.dirs_to_ignore = []
         self.files_to_ignore = []
 
     def set_directories_to_ignore (self, dirs):
-        assert self.mon == None
         self.dirs_to_ignore = dirs
         dprint ("Ignoring directories %s", self.dirs_to_ignore)
 
     def set_files_to_ignore (self, files):
-        assert self.mon == None
         self.files_to_ignore = files
         dprint ("Ignoring files %s", self.files_to_ignore)
 
@@ -76,33 +72,27 @@ class DirectoryMonitor:
             self.callback (path, event)
 
     #
-    # Called from the main loop when we have data
+    # Processing of a gnomevfs callback
     #
-    def __pending_data (self, fd, condition):
-	try:
-	    ret = self.mon.handle_events ()
-	except:
-	    util.print_exception ()
-	return True
-        
-    #
-    # Processing of a gamin callback
-    #
-    def __handle_gamin_event (self, path, event, monitor_file):
+    def __handle_gnomevfs_event (self, dir_uri, file_uri, event):
         if event == CHANGED or event == DELETED or event == CREATED:
-            if not os.path.isabs (path):
-		path = os.path.join (monitor_file, path)
+            # Strip 'file://' and replace %xx with equivalent characters.
+            path = file_uri [7:]
+            path = urllib.unquote (path)
 
-            dprint ("Got gamin event '%s' on '%s'", event_to_string (event), path)
+            # Strip trailing '/'.
+            path = os.path.normpath (path)
+            
+            dprint ("Got gnomevfs event '%s' on '%s'", event_to_string (event), path)
 
 	    if event == CREATED and os.path.isdir (path):
 		self.__monitor_dir_recurse (path, True)
 	    elif event == DELETED:
                 if path != self.directory and self.watches.has_key (path):
+                    gnomevfs.monitor_cancel (self.watches [path])
                     del self.watches[path]
                     if len (self.watches) < N_WATCHES_LIMIT:
                         self.too_many_watches = False
-                    self.mon.stop_watch (path)
 
             if not self.__should_ignore_dir (path) and \
                not self.__should_ignore_file (path):
@@ -135,6 +125,8 @@ class DirectoryMonitor:
         return self.__should_ignore_dir (os.path.dirname (file))
 
     def __monitor_dir (self, dir):
+        dir = os.path.normpath (dir)
+        
         if len (self.watches) >= N_WATCHES_LIMIT:
             if not self.too_many_watches:
                 print "Too many directories to watch on %s" % (self.directory)
@@ -145,9 +137,9 @@ class DirectoryMonitor:
             return
         
         try:
-            self.mon.watch_directory (dir, self.__handle_gamin_event, dir)
+            self.watches [dir] = gnomevfs.monitor_add (dir, gnomevfs.MONITOR_DIRECTORY, self.__handle_gnomevfs_event)
         except:
-            print _("Failed to add monitor for %s") % (dir)
+            print ("Failed to add monitor for %s") % (dir)
 	    util.print_exception ()
 
     def __monitor_dir_recurse (self, dir, new_dir = False):
@@ -166,39 +158,16 @@ class DirectoryMonitor:
                 self.__monitor_dir_recurse (path, new_dir)
                     
     def start (self):
-        if self.mon != None:
-	    return
-
         dprint ("Starting to recursively monitor '%s'", self.directory)
 
-	self.mon = gamin.WatchMonitor ()
-	# ignore (End)Exists events since we scan the tree ourselves
-	try:
-	    self.mon.no_exists ()
-	except:
-	    pass
-	self.fd = self.mon.get_fd ()
-	self.io_watch = gobject.io_add_watch (self.fd,
-                                              gobject.IO_IN|gobject.IO_PRI,
-                                              self.__pending_data)
         self.__monitor_dir (self.directory)
         self.__monitor_dir_recurse (self.directory)
 
     def stop (self):
-        if self.mon == None:
-	    return
-
         dprint ("Stopping recursive monitoring of '%s'", self.directory)
 
         for path in self.watches:
-            self.mon.stop_watch (path)
-        
-        gobject.source_remove (self.io_watch)
-	self.io_watch = 0
-        
-	self.mon.disconnect ()
-	self.mon = None
-	self.fd = -1
+            gnomevfs.monitor_cancel (self.watches [path])
 
 def run_unit_tests ():
     import tempfile
@@ -227,7 +196,7 @@ def run_unit_tests ():
     expected = []
     def should_not_be_reached (expected):
         for (path, event) in expected:
-            print _("Expected event: %s %s") % (path, event_to_string (event))
+            print ("Expected event: %s %s") % (path, event_to_string (event))
         assert False
         return True
     timeout = gobject.timeout_add (5 * 1000, should_not_be_reached, expected)
