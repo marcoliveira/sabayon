@@ -476,6 +476,8 @@ class UserDatabase:
 		    continue
 		if user[6] == "" or string.find(user[6], "nologin") != -1:
 		    continue
+                if user[0][len (user[0]) - 1] == "$":  # ADS hosts
+                    continue
 		list.append(user[0])
 	    except:
 		pass

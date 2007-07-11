@@ -1,5 +1,13 @@
 2007-07-11  Federico Mena Quintero  <federico@novell.com>
 
+	Patch from https://bugzilla.novell.com/show_bug.cgi?id=176830
+
+	* lib/userdb.py (UserDatabase.get_users): Ignore usernames that
+	end in "$" - these are Active Directory hosts, and we should not
+	display them.
+
+2007-07-11  Federico Mena Quintero  <federico@novell.com>
+
 	Patch from https://bugzilla.novell.com/show_bug.cgi?id=173929
 
 	* admin-tool/sabayon-apply: If we are sabayon-controlled, first
