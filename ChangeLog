@@ -1,3 +1,12 @@
+2007-07-12  Federico Mena Quintero  <federico@novell.com>
+
+	* admin-tool/lockdown/disabledapplets.py
+	(PessulusDisabledApplets.__fill_liststore): Workaround for
+	https://bugzilla.novell.com/show_bug.cgi?id=256938 --- applets
+	which don't have translated .server files (from bonobo-activation)
+	will cause the "disabled applets" part of the lockdown dialog to
+	fail.  If there is no trnslation, just use the applet's IID.
+
 2007-07-11  Federico Mena Quintero  <federico@novell.com>
 
 	Patch from https://bugzilla.novell.com/show_bug.cgi?id=176830

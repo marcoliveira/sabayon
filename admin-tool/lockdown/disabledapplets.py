@@ -189,9 +189,15 @@ class PessulusDisabledApplets:
                 elif prop.name == "panel:icon":
                     icon = prop.v.value_string
             iter = self.liststore.append ()
+
+            if name == None:
+                name = applet.iid
+            else:
+                name = name + " (" + applet.iid + ")"
+
             self.liststore.set (iter,
                                 self.COLUMN_IID, applet.iid,
-                                self.COLUMN_NAME, name + " (" + applet.iid + ")",
+                                self.COLUMN_NAME, name,
                                 self.COLUMN_ICON_NAME, icon,
                                 self.COLUMN_ICON, icons.load_icon (self.icon_theme, icon))
 
