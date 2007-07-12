@@ -336,13 +336,26 @@ class GConfSource (userprofile.ProfileSource):
             return True
         return False
 
+    def set_value (self, key, gconf_value, mandatory):
+        change = GConfChange (self, key, gconf_value)
+        change.set_mandatory (mandatory)
+        self.client.set (key, gconf_value)
+        self.emit_change (change)
+
     def set_gconf_boolean (self, key, value, mandatory):
         gconf_value = gconf.Value (gconf.VALUE_BOOL)
         gconf_value.set_bool (value)
-        change = GConfChange (self, key, gconf_value)
-        change.set_mandatory (mandatory)
-        self.client.set_bool (key, value)
-        self.emit_change (change)
+        self.set_value (key, gconf_value, mandatory);
+
+    def set_gconf_int (self, key, value, mandatory):
+        gconf_value = gconf.Value (gconf.VALUE_INT)
+        gconf_value.set_int (value)
+        self.set_value (key, gconf_value, mandatory);
+
+    def set_gconf_string (self, key, value, mandatory):
+        gconf_value = gconf.Value (gconf.VALUE_STRING)
+        gconf_value.set_string (value)
+        self.set_value (key, gconf_value, mandatory);
 
     def set_gconf_list (self, key, list_type, value, mandatory):
         gconf_value = gconf.Value (gconf.VALUE_LIST)
@@ -356,10 +369,7 @@ class GConfSource (userprofile.ProfileSource):
             list.append (item_value)
         gconf_value.set_list_type (list_type)
         gconf_value.set_list (list)
-        change = GConfChange (self, key, gconf_value)
-        change.set_mandatory (mandatory)
-        self.client.set_list (key, list_type, value)
-        self.emit_change (change)
+        self.set_value (key, gconf_value, mandatory);
 
 gobject.type_register (GConfSource)
 

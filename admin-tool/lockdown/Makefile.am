@@ -7,6 +7,7 @@ PESSULUSPYTHON= \
         lockdownapplier.py      \
         lockdownbutton.py       \
         lockdowncheckbutton.py  \
+        lockdowncombo.py  	\
         maindialog.py           \
         safeprotocols.py        \
         simpleeditabletreeview.py

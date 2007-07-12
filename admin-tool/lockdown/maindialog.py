@@ -34,6 +34,7 @@ from sabayon import debuglog
 import disabledapplets
 import lockdownbutton
 import lockdowncheckbutton
+import lockdowncombo
 import globalvar
 import safeprotocols
 
@@ -41,6 +42,7 @@ gettext.install (PACKAGE, LOCALEDIR)
 
 gconfdirs = [
 "/desktop/gnome/lockdown",
+"/apps/openoffice/lockdown",
 "/apps/epiphany/lockdown",
 "/apps/panel/global"
 ]
@@ -63,7 +65,48 @@ lockdownbuttons = (
     ( "/apps/epiphany/lockdown/disable_javascript_chrome", _("Disable _javascript chrome"), "vbox9" ),
     ( "/apps/epiphany/lockdown/disable_toolbar_editing", _("Disable _toolbar editing"), "vbox9" ),
     ( "/apps/epiphany/lockdown/fullscreen", _("_Fullscreen"), "vbox9" ),
-    ( "/apps/epiphany/lockdown/hide_menubar", _("Hide _menubar"), "vbox9" )
+    ( "/apps/epiphany/lockdown/hide_menubar", _("Hide _menubar"), "vbox9" ),
+
+    ( "/apps/openoffice/lockdown/remove_personal_info_on_save", _("Remove personal info from doc. on save"), "ooosecurity" ),
+    ( "/apps/openoffice/lockdown/warn_info_create_pdf", _("Warn if macro creates PDF"), "ooosecurity" ),
+    ( "/apps/openoffice/lockdown/warn_info_printing",   _("Warn if macro prints"), "ooosecurity" ),
+    ( "/apps/openoffice/lockdown/warn_info_saving", _("Warn if macro saves doc"), "ooosecurity" ),
+    ( "/apps/openoffice/lockdown/warn_info_signing", _("Warn if macro signs doc"), "ooosecurity" ),
+    ( "/apps/openoffice/lockdown/recommend_password_on_save", _("Recommend password on save"), "ooosecurity" ),
+
+    ( "/apps/openoffice/auto_save", _("Enable auto-save"), "oooio" ),
+#    ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
+    ( "/apps/openoffice/printing_modifies_doc", _("Printing modifies document"), "oooio" ),
+    ( "/apps/openoffice/use_system_file_dialog", _("Use system file chooser"), "oooio" ),
+    ( "/apps/openoffice/create_backup", _("Create backup copy on save"), "oooio" ),
+    ( "/apps/openoffice/warn_alien_format", _("Warn for external formats"), "oooio" ),
+
+    ( "/apps/openoffice/use_opengl", _("Use Open GL"), "oooui" ),
+    ( "/apps/openoffice/use_system_font", _("Use system font"), "oooui" ),
+    ( "/apps/openoffice/use_font_anti_aliasing", _("Use anti-aliasing"), "oooui" ),
+    ( "/apps/openoffice/lockdown/disable_ui_customization", _("Disable UI customization"), "oooui" ),
+    ( "/apps/openoffice/show_menu_inactive_items", _("Show insensitive menu items"), "oooui" ),
+    ( "/apps/openoffice/show_font_preview", _("Show font preview"), "oooui" ),
+    ( "/apps/openoffice/show_font_history", _("Show font history") , "oooui" ),
+    ( "/apps/openoffice/show_menu_icons", _("Show icons in menus"), "oooui" ),
+# Unclear / minority:
+#   ( "/apps/openoffice/optimize_opengl", , "oooui" ),
+#   ( "/apps/openoffice/font_anti_aliasing_min_pixel", , "oooui" ),
+)
+
+lockdowncombos = (
+    ( "/apps/openoffice/lockdown/macro_security_level", "macroSecurityLevel", "int",
+      [ "3", "2", "1", "0" ] ),
+    ( "/apps/openoffice/writer_default_document_format", "writerDefaultFormat", "string",
+      [ "writer8", "MS Word 97", "StarOffice XML (Writer)" ] ),
+    ( "/apps/openoffice/calc_default_document_format", "calcDefaultFormat", "string",
+      [ "calc8", "MS Excel 97", "StarOffice XML (Calc)" ] ),
+    ( "/apps/openoffice/impress_default_document_format", "impressDefaultFormat", "string",
+      [ "impress8", "MS PowerPoint 97", "StarOffice XML (Impress)" ] ),
+    ( "/apps/openoffice/icon_size", "defaultIconSize", "int",
+      [ "2", "1", "0" ] ),
+    ( "/apps/openoffice/undo_steps", "undoSteps", "int",
+      [ "5", "10", "25", "50" ] )
 )
 
 class PessulusMainDialog:
@@ -79,6 +122,7 @@ class PessulusMainDialog:
         self.glade_file = os.path.join (GLADEDIR, "pessulus.glade")
         self.xml = gtk.glade.XML (self.glade_file, "dialogEditor", PACKAGE)
 
+        self.__init_combos ()
         self.__init_checkbuttons ()
         self.__init_disabledapplets ()
         self.__init_safeprotocols ()
@@ -101,6 +145,12 @@ class PessulusMainDialog:
                                                                           string)
             box = self.xml.get_widget (box_str)
             box.pack_start (button.get_widget (), False)
+
+    def __init_combos (self):
+        for (key, combo_str, type, value_list) in lockdowncombos:
+            combo = self.xml.get_widget (combo_str)
+            button = self.xml.get_widget (combo_str + "Button")
+            lockdowncombo.PessulusLockdownCombo.attach (combo, button, key, type, value_list)
 
     def __init_disabledapplets (self):
         treeview = self.xml.get_widget ("treeviewDisabledApplets")
