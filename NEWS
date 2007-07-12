@@ -1,3 +1,142 @@
+==============
+Version 2.19.1
+==============
+
+  Code name:
+
+	* "Back to the present"
+
+  Changes:
+
+	* We have a new debug log architecture.  Sabayon will create a
+	  debug log under ~ when an error occurs.  You can attach this log to
+	  bug reports (Federico Mena Quintero).
+
+	* We now support lockdown for OpenOffice.org (Michael Meeks):
+		http://bugzilla.gnome.org/show_bug.cgi?id=320592
+
+	* We use gnome-vfs instead of gamin for monitoring file
+	  changes, and monitoring in general is a lot more robust.
+		http://bugzilla.gnome.org/show_bug.cgi?id=340488
+
+  Fixes:
+
+	* Honor removed lockdown keys in GConf (Hans Petter Jansson):
+		https://bugzilla.novell.com/show_bug.cgi?id=173929
+
+	* Use gnomesu in sabayon.desktop's "Exec" line (Hans Petter Jansson):
+		http://bugzilla.gnome.org/show_bug.cgi?id=424331
+
+	* Ignore ~/.beagle (Federico Mena Quintero).
+
+	* If we are in an Active Directory session, don't list AD
+	  hostnames in the user list (Hans Petter Jansson):
+		https://bugzilla.novell.com/show_bug.cgi?id=176830
+
+	* The lockdown dialog no longer fails if there are applets
+	  with missing translations (Federico Mena Quintero):
+		https://bugzilla.novell.com/show_bug.cgi?id=256938
+
+	* Translation fixes (Theppitak Karoonboonyanan, Funda Wang).
+
+  Translators:
+
+	* Djihed Afifi, Khaled Hosny (ar)
+	* Ales Navicki, Ihar Hrachyshka (be@latin)
+	* Alexander Shopov (bg)
+	* Runa Bhattacharjee (bn_IN)
+	* Josep Puigdemont i Casamajó (ca)
+	* Jakub Friedl (cs)
+	* Kenneth Nielsen, Lasse Bang Mikkelsen (da)
+	* Hendrik Richter (de)
+	* Pema Geyleg (dz)
+	* Athanasios Lefteris (el)
+	* David Lodge (en_GB)
+	* Roberto Majadas, Jorge González (es)
+	* Ivar Smolin (et)
+	* Ilkka Tuohela (fi)
+	* Stéphane Raimbault, Damien Durand (fr)
+	* Ignacio Casal Quinteiro (gl)
+	* Ankit Patel (gu)
+	* Gabor Kelemen (hu)
+	* Takeshi AIHANA (ja)
+	* Young-Ho Cha (ko)
+	* Gintautas Miliauskas (lt)
+	* Kjartan Maraas (nb)
+	* Subhransu Behera (or)
+	* Artur Flinta, GNOME PL team (pl)
+	* Duarte Loreto (pt)
+	* Washington Lins, Leonardo Ferreira Fontenelle (pt_BR)
+	* Matic Žgur (sl)
+	* Daniel Nylander (sv)
+	* Theppitak Karoonboonyanan (th)
+	* Maxim Dziumanenko (uk)
+	* Yang Zhang (zh_CN)
+	* Chao-Hsiung Liao, Woodman Tuen (zh_HK, zh_TW)
+
+==============
+Version 2.18.1
+==============
+
+  Fixes:
+
+	* Fixed a broken Arabic translation (Djihed Afifi).
+
+==============
+Version 2.18.0
+==============
+
+  Code name:
+
+	* "Not enough love"
+
+  Fixes:
+
+	* Better localization (Theppitak Karoonboonyanan):
+		http://bugzilla.gnome.org/show_bug.cgi?id=353236
+		http://bugzilla.gnome.org/show_bug.cgi?id=402089
+
+	* Temporary fix to work on distributions which don't have the
+	  xdg.DesktopEntry module for Python (Federico Mena-Quintero):
+		http://bugzilla.gnome.org/show_bug.cgi?id=397742
+
+	* Be as lenient as we used to be while committing the changes
+	  in a profile, instead of aborting immediately 
+	  (Federico Mena-Quintero).
+
+  Translators:
+
+	* Djihed Afifi (ar)
+	* Alexander Shopov (bg)
+	* Runa Bhattacharjee (bn_IN)
+	* Josep Puigdemont i Casamajó (ca)
+	* Lasse Bang Mikkelsen (da)
+	* Hendrik Richter (de)
+	* David Lodge (en_GB)
+	* Priit Laes (et)
+	* Ilkka Tuohela (fi)
+	* Stéphane Raimbault (fr)
+	* Ankit Patel (gu)
+	* Gabor Kelemen (hu)
+	* Takeshi AIHANA (ja)
+	* Changwoo Ryu (ko)
+	* Gintautas Miliauskas (lt)
+	* Ani Peter (ml)
+	* Kjartan Maraas (nb)
+	* Wouter Bolsterlee (nl)
+	* Artur Flinta (pl)
+	* Duarte Loreto (pt)
+	* Leonardo Ferreira Fontenelle (pt_BR)
+	* Leonid Kanter (ru)
+	* Matic Žgur (sl)
+	* Laurent Dhima (sq)
+	* Daniel Nylander (sv)
+	* I Felix (ta)
+	* Theppitak Karoonboonyanan (th)
+	* Maxim Dziumanenko (uk)
+	* Nguyễn Thái Ngọc Duy / Phạm Thành Long (vi)
+	* Abel Cheung / Woodman Tuen (zh_HK, zh_TW)
+
 ===============
 Version 2.17.90
 ===============

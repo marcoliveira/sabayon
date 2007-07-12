@@ -1,4 +1,4 @@
-AC_INIT([sabayon], [2.17.90],
+AC_INIT([sabayon], [2.19.1],
         [http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon])
 AC_CONFIG_SRCDIR(lib/userprofile.py)
 
