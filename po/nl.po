@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-12-11 16:11+0100\n"
-"PO-Revision-Date: 2006-12-11 18:55+0100\n"
-"Last-Translator: Tino Meinen <a.t.meinen@chello.nl>\n"
+"POT-Creation-Date: 2007-07-13 03:16+0100\n"
+"PO-Revision-Date: 2007-07-16 22:08+0100\n"
+"Last-Translator: Vincent van Adrighem <adrighem@gnome.org>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,97 +17,110 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 # programma voor het maken en bewerken van profielen voor gebruikers
-#: ../admin-tool/aboutdialog.py:61
+#: ../admin-tool/aboutdialog.py:63
 msgid "Program to establish and edit profiles for users"
-msgstr "Programma om profielen voor gebruikers te maken en te bewerken"
+msgstr "Programma voor het maken en bewerken van gebruikersprofielen"
 
-#: ../admin-tool/aboutdialog.py:64
+#: ../admin-tool/aboutdialog.py:66
 msgid "translator-credits"
 msgstr ""
 "Tino Meinen\n"
 "Taco Witte\n"
+"Vincent van Adrighem\n"
 "\n"
 "Kijk voor meer informatie op http://nl.gnome.org/"
 
-#: ../admin-tool/changeswindow.py:48
+#: ../admin-tool/changeswindow.py:50
 #, python-format
 msgid "Changes in profile %s"
 msgstr "Wijzigingen in profiel %s"
 
-#: ../admin-tool/changeswindow.py:104
+#: ../admin-tool/changeswindow.py:113
 msgid "Ignore"
 msgstr "Negeren"
 
 # vastzetten/vergrendelen/beveiligen
 # /lock/lockdown/lockdown editor/lockdown settings/
-#: ../admin-tool/changeswindow.py:111
+#: ../admin-tool/changeswindow.py:120
 msgid "Lock"
 msgstr "Vergrendelen"
 
-#: ../admin-tool/changeswindow.py:118 ../admin-tool/editorwindow.py:222
+#: ../admin-tool/changeswindow.py:127
+#: ../admin-tool/editorwindow.py:230
 msgid "Description"
 msgstr "Omschrijving"
 
-#: ../admin-tool/editorwindow.py:95
+#: ../admin-tool/editorwindow.py:97
 #, python-format
 msgid "Profile %s"
 msgstr "Profiel %s"
 
-#: ../admin-tool/editorwindow.py:187 ../admin-tool/sessionwindow.py:172
+#: ../admin-tool/editorwindow.py:195
+#: ../admin-tool/sessionwindow.py:176
 msgid "_Profile"
 msgstr "_Profiel"
 
-#: ../admin-tool/editorwindow.py:188 ../admin-tool/sessionwindow.py:173
+#: ../admin-tool/editorwindow.py:196
+#: ../admin-tool/sessionwindow.py:177
 msgid "_Save"
 msgstr "Op_slaan"
 
-#: ../admin-tool/editorwindow.py:188 ../admin-tool/sessionwindow.py:173
+#: ../admin-tool/editorwindow.py:196
+#: ../admin-tool/sessionwindow.py:177
 msgid "Save profile"
 msgstr "Profiel opslaan"
 
-#: ../admin-tool/editorwindow.py:189
+#: ../admin-tool/editorwindow.py:197
 msgid "_Close"
 msgstr "Sl_uiten"
 
-#: ../admin-tool/editorwindow.py:189 ../admin-tool/sessionwindow.py:174
+#: ../admin-tool/editorwindow.py:197
+#: ../admin-tool/sessionwindow.py:178
 msgid "Close the current window"
 msgstr "Het huidige venster sluiten"
 
-#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
+#: ../admin-tool/editorwindow.py:198
+#: ../admin-tool/sessionwindow.py:179
 msgid "_Edit"
 msgstr "Be_werken"
 
-#: ../admin-tool/editorwindow.py:191
+#: ../admin-tool/editorwindow.py:199
 msgid "_Delete"
 msgstr "_Verwijderen"
 
 # item/element
-#: ../admin-tool/editorwindow.py:191
+#: ../admin-tool/editorwindow.py:199
 msgid "Delete item"
 msgstr "Element verwijderen"
 
-#: ../admin-tool/editorwindow.py:192 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:200
+#: ../admin-tool/sessionwindow.py:182
 msgid "_Help"
 msgstr "_Hulp"
 
-#: ../admin-tool/editorwindow.py:193 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:201
+#: ../admin-tool/sessionwindow.py:183
 msgid "_About"
 msgstr "In_fo"
 
-#: ../admin-tool/editorwindow.py:193 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:201
+#: ../admin-tool/sessionwindow.py:183
 msgid "About Sabayon"
 msgstr "Over Sabayon"
 
-#: ../admin-tool/editorwindow.py:252 ../lib/sources/gconfsource.py:121
+#: ../admin-tool/editorwindow.py:262
+#: ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:256 ../lib/sources/filessource.py:76
+#: ../admin-tool/editorwindow.py:266
+#: ../lib/sources/filessource.py:78
 msgid "Files"
 msgstr "Bestanden"
 
-#: ../admin-tool/editorwindow.py:256 ../admin-tool/lockdown/pessulus.glade.h:7
-#: ../lib/sources/paneldelegate.py:132
+#: ../admin-tool/editorwindow.py:266
+#: ../admin-tool/lockdown/pessulus.glade.h:39
+#: ../lib/sources/paneldelegate.py:228
 msgid "Panel"
 msgstr "Paneel"
 
@@ -116,7 +129,8 @@ msgstr "Paneel"
 msgid "Profile file: %s"
 msgstr "Profielbestand: %s"
 
-#: ../admin-tool/gconfviewer.py:57 ../admin-tool/gconfviewer.py:76
+#: ../admin-tool/gconfviewer.py:57
+#: ../admin-tool/gconfviewer.py:76
 msgid "<no type>"
 msgstr "<geen soort>"
 
@@ -158,8 +172,9 @@ msgstr "paar"
 msgid "Profile settings: %s"
 msgstr "Profielinstellingen: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:313
-#: ../admin-tool/usersdialog.py:83
+#: ../admin-tool/gconfviewer.py:110
+#: ../admin-tool/profilesdialog.py:384
+#: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Naam"
 
@@ -171,11 +186,11 @@ msgstr "Soort"
 msgid "Value"
 msgstr "Waarde"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:99
+#: ../admin-tool/lockdown/lockdownbutton.py:101
 msgid "Click to make this setting not mandatory"
 msgstr "Klik om deze instelling niet verplicht te maken"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:101
+#: ../admin-tool/lockdown/lockdownbutton.py:103
 msgid "Click to make this setting mandatory"
 msgstr "Klik om deze instelling verplicht te maken"
 
@@ -183,94 +198,291 @@ msgstr "Klik om deze instelling verplicht te maken"
 # uitzetten/niet gebruiken/verbieden/onmogelijk maken/mag niet.../kan niet.../
 # bij de ene optie is verbieden beter, bij de andere onmogelijk maken beter, of uitzetten.
 # voorlopig steeds dezelfde vertaling gebruikt, uitzetten wat de beste oplossing is.
-#: ../admin-tool/lockdown/maindialog.py:47
+#: ../admin-tool/lockdown/maindialog.py:51
 msgid "Disable _command line"
 msgstr "_Opdrachtregel uitzetten"
 
 # onmogelijk maken
-#: ../admin-tool/lockdown/maindialog.py:48
+#: ../admin-tool/lockdown/maindialog.py:52
 msgid "Disable _printing"
 msgstr "_Afdrukken uitzetten"
 
-#: ../admin-tool/lockdown/maindialog.py:49
+#: ../admin-tool/lockdown/maindialog.py:53
 msgid "Disable print _setup"
 msgstr "A_fdrukinstellingen uitzetten"
 
-#: ../admin-tool/lockdown/maindialog.py:50
+#: ../admin-tool/lockdown/maindialog.py:54
 msgid "Disable save to _disk"
 msgstr "Op_slaan naar schijf uitzetten"
 
-#: ../admin-tool/lockdown/maindialog.py:52
+#: ../admin-tool/lockdown/maindialog.py:56
 msgid "_Lock down the panels"
 msgstr "_Panelen vergrendelen"
 
-#: ../admin-tool/lockdown/maindialog.py:53
+#: ../admin-tool/lockdown/maindialog.py:57
 msgid "Disable force _quit"
 msgstr "_Geforceerd afsluiten uitzetten"
 
-#: ../admin-tool/lockdown/maindialog.py:54
+#: ../admin-tool/lockdown/maindialog.py:58
 msgid "Disable lock _screen"
 msgstr "S_chermvergrendeling uitzetten"
 
-#: ../admin-tool/lockdown/maindialog.py:55
+#: ../admin-tool/lockdown/maindialog.py:59
 msgid "Disable log _out"
 msgstr "Af_melden uitzetten"
 
-#: ../admin-tool/lockdown/maindialog.py:57
+#: ../admin-tool/lockdown/maindialog.py:61
 msgid "Disable _quit"
 msgstr "_Afsluiten uitzetten"
 
-#: ../admin-tool/lockdown/maindialog.py:58
+#: ../admin-tool/lockdown/maindialog.py:62
 msgid "Disable _arbitrary URL"
 msgstr "_Willekeurige URL uitzetten"
 
-#: ../admin-tool/lockdown/maindialog.py:59
+#: ../admin-tool/lockdown/maindialog.py:63
 msgid "Disable _bookmark editing"
 msgstr "_Bladwijzers bewerken uitzetten"
 
-#: ../admin-tool/lockdown/maindialog.py:60
+#: ../admin-tool/lockdown/maindialog.py:64
 msgid "Disable _history"
 msgstr "G_eschiedenis uitzetten"
 
-#: ../admin-tool/lockdown/maindialog.py:61
+#: ../admin-tool/lockdown/maindialog.py:65
 msgid "Disable _javascript chrome"
 msgstr "_Javascript chrome uitzetten"
 
-#: ../admin-tool/lockdown/maindialog.py:62
+#: ../admin-tool/lockdown/maindialog.py:66
 msgid "Disable _toolbar editing"
 msgstr "_Werkbalk bewerken uitzetten"
 
-#: ../admin-tool/lockdown/maindialog.py:63
+#: ../admin-tool/lockdown/maindialog.py:67
 msgid "_Fullscreen"
 msgstr "_Volledig scherm"
 
-#: ../admin-tool/lockdown/maindialog.py:64
+#: ../admin-tool/lockdown/maindialog.py:68
 msgid "Hide _menubar"
 msgstr "_Werkbalk verbergen"
 
+#: ../admin-tool/lockdown/maindialog.py:70
+msgid "Remove personal info from doc. on save"
+msgstr "Persoonlijke gegevens uit doc. verwijderen bij opslaan"
+
+#: ../admin-tool/lockdown/maindialog.py:71
+msgid "Warn if macro creates PDF"
+msgstr "Waarschuwen als macro PDF maakt"
+
+#: ../admin-tool/lockdown/maindialog.py:72
+msgid "Warn if macro prints"
+msgstr "Waarschuwen als macro iets afdrukt"
+
+#: ../admin-tool/lockdown/maindialog.py:73
+msgid "Warn if macro saves doc"
+msgstr "Waarschuwen als macro doc opslaat"
+
+#: ../admin-tool/lockdown/maindialog.py:74
+msgid "Warn if macro signs doc"
+msgstr "Waarschuwen als macro doc ondertekent"
+
+#: ../admin-tool/lockdown/maindialog.py:75
+msgid "Recommend password on save"
+msgstr "Wachtwoord aanbevelen bij opslaan"
+
+#: ../admin-tool/lockdown/maindialog.py:77
+msgid "Enable auto-save"
+msgstr "Auto-opslaan inschakelen"
+
+#. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
+#: ../admin-tool/lockdown/maindialog.py:79
+msgid "Printing modifies document"
+msgstr "Afdrukken past het document aan"
+
+#: ../admin-tool/lockdown/maindialog.py:80
+msgid "Use system file chooser"
+msgstr "Algemene bestandsbeheer van systeem gebruiken"
+
+#: ../admin-tool/lockdown/maindialog.py:81
+msgid "Create backup copy on save"
+msgstr "Backup maken bij opslaan"
+
+#: ../admin-tool/lockdown/maindialog.py:82
+msgid "Warn for external formats"
+msgstr "Waarschuwen bij vreemde documenttypen"
+
+#: ../admin-tool/lockdown/maindialog.py:84
+msgid "Use Open GL"
+msgstr "OpenGL gebruiken"
+
+#: ../admin-tool/lockdown/maindialog.py:85
+msgid "Use system font"
+msgstr "Systeemlettertype gebruiken"
+
+#: ../admin-tool/lockdown/maindialog.py:86
+msgid "Use anti-aliasing"
+msgstr "Lettertypen gladmaken"
+
+# disable:
+# uitzetten/niet gebruiken/verbieden/onmogelijk maken/mag niet.../kan niet.../
+# bij de ene optie is verbieden beter, bij de andere onmogelijk maken beter, of uitzetten.
+# voorlopig steeds dezelfde vertaling gebruikt, uitzetten wat de beste oplossing is.
+#: ../admin-tool/lockdown/maindialog.py:87
+msgid "Disable UI customization"
+msgstr "Aanpassingen aan de gebruikersinterface verbieden"
+
+#: ../admin-tool/lockdown/maindialog.py:88
+msgid "Show insensitive menu items"
+msgstr "Niet-selecteerbare menu-items toch weergeven"
+
+#: ../admin-tool/lockdown/maindialog.py:89
+msgid "Show font preview"
+msgstr "Voorbeeld van lettertype geven"
+
+#: ../admin-tool/lockdown/maindialog.py:90
+msgid "Show font history"
+msgstr "Geschiedenis van lettertypekeuze weergeven"
+
+#: ../admin-tool/lockdown/maindialog.py:91
+msgid "Show icons in menus"
+msgstr "Pictogrammen in menu's weergeven"
+
 #: ../admin-tool/lockdown/pessulus.glade.h:1
+msgid ""
+"\n"
+"5\n"
+"10\n"
+"25\n"
+"50"
+msgstr ""
+"\n"
+"5\n"
+"10\n"
+"25\n"
+"50"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:6
+msgid ""
+"\n"
+"Automatic\n"
+"Large\n"
+"Small"
+msgstr ""
+"\n"
+"Automatisch\n"
+"Groot\n"
+"Klein"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:10
+msgid ""
+"\n"
+"OpenDocument (.odp)\n"
+"PowerPoint 97+ (.ppt)\n"
+"OpenOffice 1.1 (.sxi)"
+msgstr ""
+"\n"
+"OpenDocument (.odp)\n"
+"PowerPoint 97+ (.ppt)\n"
+"OpenOffice 1.1 (.sxi)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:14
+msgid ""
+"\n"
+"OpenDocument (.ods)\n"
+"Excel 97+ (.xls)\n"
+"OpenOffice 1.1 (.sxc)"
+msgstr ""
+"\n"
+"OpenDocument (.ods)\n"
+"Excel 97+ (.xls)\n"
+"OpenOffice 1.1 (.sxc)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:18
+msgid ""
+"\n"
+"OpenDocument (.odt)\n"
+"Word 97+ (.doc)\n"
+"OpenOffice 1.1 (.sxw)"
+msgstr ""
+"\n"
+"OpenDocument (.odt)\n"
+"Word 97+ (.doc)\n"
+"OpenOffice 1.1 (.sxw)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:22
+msgid ""
+"\n"
+"Very High\n"
+"High\n"
+"Medium\n"
+"Low"
+msgstr ""
+"\n"
+"Erg veel\n"
+"Veel\n"
+"Normaal\n"
+"Weinig"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:27
 msgid "<b>Disabled Applets</b>"
 msgstr "<b>Uitgezette applets</b>"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:2
+#: ../admin-tool/lockdown/pessulus.glade.h:28
 msgid "<b>Safe Protocols</b>"
 msgstr "<b>Veilige protocols</b>"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:3
+#: ../admin-tool/lockdown/pessulus.glade.h:29
+msgid "Calc default format:"
+msgstr "Standaard documenttype van Calc:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:30
+msgid "Default icon size"
+msgstr "Standaard pictogramafmetingen"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:31
 msgid "Disable _unsafe protocols"
 msgstr "On_veilige protocols uitzetten"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:4
+#: ../admin-tool/lockdown/pessulus.glade.h:32
 msgid "Epiphany Web Browser"
 msgstr "Epiphany webbrowser"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:5
+#: ../admin-tool/lockdown/pessulus.glade.h:33
 msgid "General"
 msgstr "Algemeen"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:6
+#: ../admin-tool/lockdown/pessulus.glade.h:34
+msgid "Impress default format:"
+msgstr "Standaard documenttype van Impress:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:35
+msgid "Load / Save"
+msgstr "Openen / Opslaan"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:36
 msgid "Lockdown Editor"
 msgstr "Vergrendelingseditor"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:37
+msgid "Macro Security Level:"
+msgstr "Beveiligingsniveau macro's:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:38
+msgid "OpenOffice"
+msgstr "OpenOffice"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:40
+msgid "Security"
+msgstr "Beveiliging"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:41
+msgid "Undo Steps:"
+msgstr "Ongedaan maken:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:42
+msgid "User Interface"
+msgstr "Gebruikersinterface"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:43
+msgid "Writer default format:"
+msgstr "Standaard documenttype van Writer:"
 
 #.
 #. Translators: this string specifies how a profile
@@ -278,65 +490,57 @@ msgstr "Vergrendelingseditor"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:413
+#: ../admin-tool/profilesdialog.py:494
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../admin-tool/sabayon:44
-msgid ""
-"Your account does not have permissions to run the Desktop User Profiles tool"
-msgstr ""
-"U heeft niet de benodigde rechten om het Gebruikersprofielen programma uit "
-"te voeren"
+#: ../admin-tool/sabayon:73
+msgid "Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr "U heeft niet de benodigde rechten om het Gebruikersprofielen programma uit te voeren"
 
-#: ../admin-tool/sabayon:45
-msgid ""
-"Administrator level permissions are needed to run this program because it "
-"can modify system files."
-msgstr ""
-"Voor het uitvoeren van dit programma zijn systeembeheerderrechten nodig "
-"omdat het systeembestanden kan wijzigen."
+#: ../admin-tool/sabayon:74
+msgid "Administrator level permissions are needed to run this program because it can modify system files."
+msgstr "Voor het uitvoeren van dit programma zijn systeembeheerderrechten nodig omdat het systeembestanden kan wijzigen."
 
-#: ../admin-tool/sabayon:50
+#: ../admin-tool/sabayon:79
 msgid "Desktop User Profiles tool is already running"
 msgstr "Het Gebruikersprofielen programma draait al"
 
-#: ../admin-tool/sabayon:51
-msgid ""
-"You may not use Desktop User Profiles tool from within a profile editing "
-"session"
-msgstr ""
-"U kunt het Gebruikersprofielen programma niet vanuit een profielbewerksessie "
-"gebruiken"
+#: ../admin-tool/sabayon:80
+msgid "You may not use Desktop User Profiles tool from within a profile editing session"
+msgstr "U kunt het Gebruikersprofielen programma niet vanuit een profielbewerksessie gebruiken"
 
-#: ../admin-tool/sabayon:58
+#: ../admin-tool/sabayon:87
 #, c-format
 msgid "User account '%s' was not found"
 msgstr "Gebruikersaccount '%s' is niet gevonden"
 
-#: ../admin-tool/sabayon:59
+#: ../admin-tool/sabayon:88
 #, c-format
-msgid ""
-"Sabayon requires a special user account '%s' to be present on this computer. "
-"Try again after creating the account (using, for example, the 'adduser' "
-"command)"
-msgstr ""
-"Sabayon heeft een speciaal gebruikersaccount '%s' nodig op deze computer. "
-"Maak dit account aan (met bijv. de 'adduser' opdracht) en probeer het "
-"nogmaals."
+msgid "Sabayon requires a special user account '%s' to be present on this computer. Try again after creating the account (using, for example, the 'adduser' command)"
+msgstr "Sabayon heeft een speciaal gebruikersaccount '%s' nodig op deze computer. Maak dit account aan (met bijv. de 'adduser' opdracht) en probeer het nogmaals."
 
-#: ../admin-tool/sabayon-apply:39
+#: ../admin-tool/sabayon:128
+#, c-format
+msgid "A fatal error has occurred.  You can help us fix the problem by sending the log in %s to %s"
+msgstr "Er is een fout opgetreden. U kunt ons helpen om dit probleem op te lossen door het logbestand in %s te sturen aan %s"
+
+#: ../admin-tool/sabayon:143
+#, c-format
+msgid "Sabayon will now exit.  There were some recoverable errors, and you can help us debug the problem by sending the log in %s to %s"
+msgstr "Sabayon wordt nu afgesloten. Er zijn enkele fouten opgetreden en u kunt ons helpen bij het oplossen ervan door het logbestand in %s te sturen aan %s"
+
+#: ../admin-tool/sabayon-apply:96
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Er is geen profiel gevonden voor gebruiker '%s'\n"
 
-#: ../admin-tool/sabayon-apply:44
-#, c-format
-msgid "Usage: %s [<profile-name>]\n"
-msgstr "Gebruik: %s [<profielnaam>]\n"
+#: ../admin-tool/sabayon-apply:101
+msgid "Please use -h for usage options"
+msgstr "Gebruik -h voor opties"
 
-#: ../admin-tool/sabayon-session:32
+#: ../admin-tool/sabayon-session:66
 #, c-format
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
 msgstr "Gebruik: %s <profielnaam> <profielpad> <schermnummer>\n"
@@ -347,7 +551,8 @@ msgid "Establish and Edit Profiles for Users"
 msgstr "Profielen maken en bewerken"
 
 # user niet meevertaald
-#: ../admin-tool/sabayon.desktop.in.h:2 ../admin-tool/sabayon.glade.h:4
+#: ../admin-tool/sabayon.desktop.in.h:2
+#: ../admin-tool/sabayon.glade.h:4
 msgid "User Profile Editor"
 msgstr "Profieleditor"
 
@@ -394,377 +599,469 @@ msgstr "Veranderingen aan profiel \"%s\" opslaan voor het sluiten?"
 
 #: ../admin-tool/saveconfirm.py:45
 #, python-format
-msgid ""
-"If you don't save, changes from the last %ld second will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld seconds will be permanently "
-"lost."
-msgstr[0] ""
-"Als u niet opslaat zullen de veranderingen van de laatste %ld seconde "
-"permanent verloren gaan."
-msgstr[1] ""
-"Als u niet opslaat zullen de veranderingen van de laatste %ld seconden "
-"permanent verloren gaan."
+msgid "If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural "If you don't save, changes from the last %ld seconds will be permanently lost."
+msgstr[0] "Als u niet opslaat zullen de veranderingen van de laatste %ld seconde permanent verloren gaan."
+msgstr[1] "Als u niet opslaat zullen de veranderingen van de laatste %ld seconden permanent verloren gaan."
 
 #: ../admin-tool/saveconfirm.py:51
-msgid ""
-"If you don't save, changes from the last minute will be permanently lost."
-msgstr ""
-"Als u niet opslaat zullen de veranderingen van de laatste minuut permanent "
-"verloren gaan."
+msgid "If you don't save, changes from the last minute will be permanently lost."
+msgstr "Als u niet opslaat zullen de veranderingen van de laatste minuut permanent verloren gaan."
 
 #: ../admin-tool/saveconfirm.py:55
 #, python-format
-msgid ""
-"If you don't save, changes from the last minute and %ld second will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last minute and %ld seconds will be "
-"permanently lost."
-msgstr[0] ""
-"Als u niet opslaat zullen de veranderingen van de laatste minuut en %ld "
-"seconde permanent verloren gaan."
-msgstr[1] ""
-"Als u niet opslaat zullen de veranderingen van de laatste minuut en %ld "
-"seconden permanent verloren gaan."
+msgid "If you don't save, changes from the last minute and %ld second will be permanently lost."
+msgid_plural "If you don't save, changes from the last minute and %ld seconds will be permanently lost."
+msgstr[0] "Als u niet opslaat zullen de veranderingen van de laatste minuut en %ld seconde permanent verloren gaan."
+msgstr[1] "Als u niet opslaat zullen de veranderingen van de laatste minuut en %ld seconden permanent verloren gaan."
 
 #: ../admin-tool/saveconfirm.py:62
 #, python-format
-msgid ""
-"If you don't save, changes from the last %ld minute will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld minutes will be permanently "
-"lost."
-msgstr[0] ""
-"Als u niet opslaat zullen de veranderingen van de laatste %ld minuut "
-"permanent verloren gaan."
-msgstr[1] ""
-"Als u niet opslaat zullen de veranderingen van de laatste %ld minuten "
-"permanent verloren gaan."
+msgid "If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural "If you don't save, changes from the last %ld minutes will be permanently lost."
+msgstr[0] "Als u niet opslaat zullen de veranderingen van de laatste %ld minuut permanent verloren gaan."
+msgstr[1] "Als u niet opslaat zullen de veranderingen van de laatste %ld minuten permanent verloren gaan."
 
-#: ../admin-tool/saveconfirm.py:71 ../admin-tool/saveconfirm.py:81
-#, python-format
+#: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] ""
-"Als u niet opslaat zullen de veranderingen van het laatste uur permanent "
-"verloren gaan."
-msgstr[1] ""
-"Als u niet opslaat zullen de veranderingen van de laatste %d uren permanent "
-"verloren gaan."
+msgstr "Als u dit niet opslaat zullen de veranderingen van het laatste uur permanent verloren gaan."
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
-msgid ""
-"If you don't save, changes from the last hour and %d minute will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last hour and %d minutes will be "
-"permanently lost."
-msgstr[0] ""
-"Als u niet opslaat zullen de veranderingen van het laatste uur en %d minuut "
-"permanent verloren gaan."
-msgstr[1] ""
-"Als u niet opslaat zullen de veranderingen van het laatste uur en %d minuten "
-"permanent verloren gaan."
+msgid "If you don't save, changes from the last hour and %d minute will be permanently lost."
+msgid_plural "If you don't save, changes from the last hour and %d minutes will be permanently lost."
+msgstr[0] "Als u niet opslaat zullen de veranderingen van het laatste uur en %d minuut permanent verloren gaan."
+msgstr[1] "Als u niet opslaat zullen de veranderingen van het laatste uur en %d minuten permanent verloren gaan."
+
+#: ../admin-tool/saveconfirm.py:81
+#, python-format
+msgid "If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] "Als u dit niet opslaat zullen de veranderingen van de laatste %d uur permanent verloren gaan."
+msgstr[1] "Als u niet opslaat zullen de veranderingen van de laatste %d uren permanent verloren gaan."
 
 # is dit de venstertitel?
 # bewerking van profiel/bewerken van profiel
-#: ../admin-tool/sessionwindow.py:151
+#: ../admin-tool/sessionwindow.py:154
 #, python-format
 msgid "Editing profile %s"
 msgstr "Bewerken van profiel %s"
 
-#: ../admin-tool/sessionwindow.py:174
+#: ../admin-tool/sessionwindow.py:178
 msgid "_Quit"
 msgstr "A_fsluiten"
 
-#: ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/sessionwindow.py:180
 msgid "_Changes"
 msgstr "_Veranderingen"
 
-#: ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/sessionwindow.py:180
 msgid "Edit changes"
 msgstr "Veranderingen bewerken"
 
-#: ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Lockdown"
 msgstr "_Vergrendelen"
 
-#: ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/sessionwindow.py:181
 msgid "Edit Lockdown settings"
 msgstr "Vergrendelingsinstellingen bewerken"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:186
 msgid "Enforce Mandatory"
 msgstr "Verplichte instellingen"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:186
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Verplichte instellingen gebruiken in de bewerkingssessie"
 
-#: ../admin-tool/sessionwindow.py:271
+#: ../admin-tool/sessionwindow.py:297
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Vergrendelingsinstellingen voor %s"
 
+#: ../admin-tool/sessionwindow.py:333
+#, python-format
+msgid "There was a recoverable error while applying the user profile '%s'.  You can report this error now or try to continue editing the user profile."
+msgstr "Er is een fout opgetreden tijdens het toepassen van het profiel '%s'. U kunt dit probleem nu melden of proberen door te gaan met het bewerken van het gebruikersprofiel."
+
+#: ../admin-tool/sessionwindow.py:337
+msgid "_Report this error"
+msgstr "_Fout melden"
+
+#: ../admin-tool/sessionwindow.py:338
+msgid "_Continue editing"
+msgstr "_Doorgaan met bewerken"
+
 # voor/van
-#: ../admin-tool/usersdialog.py:65
+#: ../admin-tool/usersdialog.py:67
 #, python-format
 msgid "Users for profile %s"
 msgstr "Gebruikers voor profiel %s"
 
-#: ../admin-tool/usersdialog.py:93
+#: ../admin-tool/usersdialog.py:95
 msgid "Use This Profile"
 msgstr "Dit profiel gebruiken"
 
-#: ../lib/dirmonitor.py:149
-#, python-format
-msgid "Failed to add monitor for %s"
-msgstr "Het toevoegen van een beeldscherm voor %s is mislukt"
-
-#: ../lib/dirmonitor.py:229
-#, python-format
-msgid "Expected event: %s %s"
-msgstr "Verwachte gebeurtenis: %s %s"
-
-#: ../lib/protosession.py:140
+#: ../lib/protosession.py:147
 msgid "Unable to find a free X display"
 msgstr "Kan geen vrij X-scherm vinden"
 
-#: ../lib/protosession.py:407
+#: ../lib/protosession.py:414
 msgid "Failed to start Xnest: timed out waiting for USR1 signal"
 msgstr "Kon Xnest niet starten: time-out bij wachten op USR1-signaal"
 
-#: ../lib/protosession.py:409
+#: ../lib/protosession.py:416
 msgid "Failed to start Xnest: died during startup"
 msgstr "Kon Xnest niet starten: gedood tijdens opstarten"
 
-#: ../lib/sources/filessource.py:66
+#: ../lib/protosession.py:480
+#, python-format
+msgid ""
+"Could not create the 'sabayon-apply' process: %s\n"
+"The command line used is '%s'\n"
+"Child traceback:\n"
+"%s"
+msgstr ""
+"Kan het 'sabayon-apply'-proces niet starten: %s\n"
+"De gebruikte opdrachtregel is '%s'\n"
+"Traceback:\n"
+"%s"
+
+#: ../lib/protosession.py:501
+#, python-format
+msgid "There was a recoverable error while applying the user profile from '%s'."
+msgstr "Er is een fout opgetreden tijdens toepassen van het gebruikersprofiel van '%s'."
+
+#: ../lib/protosession.py:510
+#, python-format
+msgid "There was a fatal error while applying the user profile from '%s'."
+msgstr "Er is een onoplosbare fout opgetreden tijdens toepassen van het gebruikersprofiel van '%s'."
+
+#: ../lib/sources/filessource.py:68
 #, python-format
 msgid "File '%s' created"
 msgstr "Bestand '%s' aangemaakt"
 
-#: ../lib/sources/filessource.py:68
+#: ../lib/sources/filessource.py:70
 #, python-format
 msgid "File '%s' deleted"
 msgstr "Bestand '%s' verwijderd"
 
-#: ../lib/sources/filessource.py:70
+#: ../lib/sources/filessource.py:72
 #, python-format
 msgid "File '%s' changed"
 msgstr "Bestand '%s' gewijzigd"
 
-#: ../lib/sources/filessource.py:94
+#: ../lib/sources/filessource.py:96
 msgid "Applications menu"
 msgstr "Toepassingen-menu"
 
-#: ../lib/sources/filessource.py:96
+#: ../lib/sources/filessource.py:98
 msgid "Preferences menu"
 msgstr "Voorkeuren-menu"
 
-#: ../lib/sources/filessource.py:98
+#: ../lib/sources/filessource.py:100
 msgid "Server Settings menu"
 msgstr "Serverinstellingen-menu"
 
-#: ../lib/sources/filessource.py:100
+#: ../lib/sources/filessource.py:102
 msgid "System Settings menu"
 msgstr "Systeeminstellingen-menu"
 
-#: ../lib/sources/filessource.py:102
+#: ../lib/sources/filessource.py:104
 msgid "Start Here menu"
 msgstr "Begin hier-menu"
 
-#: ../lib/sources/gconfsource.py:87
+#: ../lib/sources/gconfsource.py:90
 #, python-format
 msgid "GConf key '%s' unset"
 msgstr "GConf-sleutel '%s' opnieuw ingesteld"
 
-#: ../lib/sources/gconfsource.py:89
+#: ../lib/sources/gconfsource.py:92
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
 msgstr "GConf-sleutel '%s' ingesteld op '%s'"
 
-#: ../lib/sources/gconfsource.py:91
+#: ../lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
 msgstr "GConf-sleutel '%s' ingesteld op geheel getal '%s'"
 
-#: ../lib/sources/gconfsource.py:93
+#: ../lib/sources/gconfsource.py:96
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
 msgstr "GConf-sleutel '%s' ingesteld op reëel getal '%s'"
 
-#: ../lib/sources/gconfsource.py:95
+#: ../lib/sources/gconfsource.py:98
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
 msgstr "GConf-sleutel '%s' ingesteld op booleaan '%s'"
 
-#: ../lib/sources/gconfsource.py:97
+#: ../lib/sources/gconfsource.py:100
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
 msgstr "GConf-sleutel '%s' ingesteld op schema '%s'"
 
-#: ../lib/sources/gconfsource.py:99
+#: ../lib/sources/gconfsource.py:102
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
 msgstr "GConf-sleutel '%s' ingesteld op lijst '%s'"
 
-#: ../lib/sources/gconfsource.py:101
+#: ../lib/sources/gconfsource.py:104
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
 msgstr "GConf-sleutel '%s' ingesteld op paar '%s'"
 
-#: ../lib/sources/gconfsource.py:103
+#: ../lib/sources/gconfsource.py:106
 #, python-format
 msgid "GConf key '%s' set to '%s'"
 msgstr "GConf-sleutel '%s' ingesteld op '%s'"
 
-#: ../lib/sources/gconfsource.py:134
+#: ../lib/sources/gconfsource.py:137
 msgid "Default GConf settings"
 msgstr "Standaard GConf-instellingen"
 
-#: ../lib/sources/gconfsource.py:136
+#: ../lib/sources/gconfsource.py:139
 msgid "Mandatory GConf settings"
 msgstr "Verplichte GConf-instellingen"
 
-#: ../lib/sources/mozillasource.py:130
+#: ../lib/sources/mozillasource.py:133
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
 msgstr "Mozilla-sleutel '%s' ingesteld op '%s'"
 
-#: ../lib/sources/mozillasource.py:132
+#: ../lib/sources/mozillasource.py:135
 #, python-format
 msgid "Mozilla key '%s' unset"
 msgstr "Mozilla-sleutel '%s' opnieuw ingesteld"
 
-#: ../lib/sources/mozillasource.py:134
+#: ../lib/sources/mozillasource.py:137
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Mozilla-sleutel '%s' veranderd in '%s'"
 
-#: ../lib/sources/mozillasource.py:163 ../lib/sources/mozillasource.py:173
+#: ../lib/sources/mozillasource.py:166
+#: ../lib/sources/mozillasource.py:176
 msgid "Web browser preferences"
 msgstr "Web browser voorkeuren"
 
-#: ../lib/sources/mozillasource.py:165 ../lib/sources/mozillasource.py:175
+#: ../lib/sources/mozillasource.py:168
+#: ../lib/sources/mozillasource.py:178
 msgid "Web browser bookmarks"
 msgstr "Web browser bladwijzers"
 
-#: ../lib/sources/mozillasource.py:167
+#: ../lib/sources/mozillasource.py:170
 msgid "Web browser profile list"
 msgstr "Web browser profielenlijst"
 
-#: ../lib/sources/mozillasource.py:518
+#: ../lib/sources/mozillasource.py:522
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Bestand niet gevonden (%s)"
 
-#: ../lib/sources/mozillasource.py:869
+#: ../lib/sources/mozillasource.py:873
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "dubbele naam(%(name)s) in paragraaf %(section)s"
 
-#: ../lib/sources/mozillasource.py:878
+#: ../lib/sources/mozillasource.py:882
 #, python-format
 msgid "redundant default in section %s"
 msgstr "overbodige standaardinstelling in paragraaf %s"
 
-#: ../lib/sources/mozillasource.py:895
+#: ../lib/sources/mozillasource.py:899
 msgid "no default profile"
 msgstr "geen standaard profiel"
 
-#: ../lib/sources/mozillasource.py:950
+#: ../lib/sources/mozillasource.py:954
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Mozilla bladwijzer '%s' -> '%s' aangemaakt"
 
-#: ../lib/sources/mozillasource.py:952
+#: ../lib/sources/mozillasource.py:956
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Mozilla bladwijzermap '%s' aangemaakt"
 
-#: ../lib/sources/mozillasource.py:955
+#: ../lib/sources/mozillasource.py:959
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Mozilla bladwijzer '%s' verwijderd"
 
-#: ../lib/sources/mozillasource.py:957
+#: ../lib/sources/mozillasource.py:961
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Mozilla bladwijzermap '%s' verwijderd"
 
-#: ../lib/sources/mozillasource.py:960
+#: ../lib/sources/mozillasource.py:964
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Mozilla bladwijzer veranderd '%s' '%s'"
 
-#: ../lib/sources/mozillasource.py:962
+#: ../lib/sources/mozillasource.py:966
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mozilla bladwijzermap '%s' veranderd"
 
-#: ../lib/sources/paneldelegate.py:56
+#: ../lib/sources/paneldelegate.py:55
 #, python-format
 msgid "Panel '%s' added"
 msgstr "Paneel '%s' toegevoegd"
 
-#: ../lib/sources/paneldelegate.py:62
+#: ../lib/sources/paneldelegate.py:61
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "Paneel '%s' verwijderd"
 
-#: ../lib/sources/paneldelegate.py:68
+#: ../lib/sources/paneldelegate.py:76
 #, python-format
-msgid "Panel applet '%s' added"
-msgstr "Paneel applet '%s' toegevoegd"
+msgid "Applet %s added to top panel"
+msgstr "Applet %s toegevoegd aan bovenpaneel"
 
-#: ../lib/sources/paneldelegate.py:74
+#: ../lib/sources/paneldelegate.py:78
 #, python-format
-msgid "Panel applet '%s' removed"
-msgstr "Paneel applet '%s' verwijderd"
+msgid "Applet %s added to bottom panel"
+msgstr "Applet %s toegevoegd aan benedenpaneel"
 
 #: ../lib/sources/paneldelegate.py:80
 #, python-format
-msgid "Panel object '%s' added"
-msgstr "Paneelobject '%s' toegevoegd"
+msgid "Applet %s added to left panel"
+msgstr "Applet %s toegevoegd aan linker paneel"
 
-#: ../lib/sources/paneldelegate.py:92
+#: ../lib/sources/paneldelegate.py:82
 #, python-format
-msgid "Panel object '%s' removed"
-msgstr "Paneelobject '%s' verwijderd"
+msgid "Applet %s added to right panel"
+msgstr "Applet %s toegevoegd aan rechter paneel"
 
-#: ../lib/sources/paneldelegate.py:373
+#: ../lib/sources/paneldelegate.py:97
+#, python-format
+msgid "Applet %s removed from top panel"
+msgstr "Applet %s verwijderd van bovenpaneel"
+
+#: ../lib/sources/paneldelegate.py:99
+#, python-format
+msgid "Applet %s removed from bottom panel"
+msgstr "Applet %s verwijderd van benedenpaneel"
+
+#: ../lib/sources/paneldelegate.py:101
+#, python-format
+msgid "Applet %s removed from left panel"
+msgstr "Applet %s verwijderd van linker paneel"
+
+#: ../lib/sources/paneldelegate.py:103
+#, python-format
+msgid "Applet %s removed from right panel"
+msgstr "Applet %s verwijderd van rechter paneel"
+
+#: ../lib/sources/paneldelegate.py:117
+#, python-format
+msgid "%s added to top panel"
+msgstr "%s toegevoegd aan bovenpaneel"
+
+#: ../lib/sources/paneldelegate.py:119
+#, python-format
+msgid "%s added to bottom panel"
+msgstr "%s toegevoegd aan benedenpaneel"
+
+#: ../lib/sources/paneldelegate.py:121
+#, python-format
+msgid "%s added to left panel"
+msgstr "%s toegevoegd aan linker paneel"
+
+#: ../lib/sources/paneldelegate.py:123
+#, python-format
+msgid "%s added to right panel"
+msgstr "%s toegevoegd aan rechter paneel"
+
+#: ../lib/sources/paneldelegate.py:144
+#, python-format
+msgid "%s removed from top panel"
+msgstr "%s verwijderd van bovenpaneel"
+
+#: ../lib/sources/paneldelegate.py:146
+#, python-format
+msgid "%s removed from bottom panel"
+msgstr "%s verwijderd van benedenpaneel"
+
+#: ../lib/sources/paneldelegate.py:148
+#, python-format
+msgid "%s removed from left panel"
+msgstr "%s verwijderd van linker paneel"
+
+#: ../lib/sources/paneldelegate.py:150
+#, python-format
+msgid "%s removed from right panel"
+msgstr "%s verwijderd van rechter paneel"
+
+#: ../lib/sources/paneldelegate.py:199
+msgid "Drawer"
+msgstr "Lade"
+
+#: ../lib/sources/paneldelegate.py:201
+msgid "Main Menu"
+msgstr "Hoofdmenu"
+
+#: ../lib/sources/paneldelegate.py:211
+#, python-format
+msgid "%s launcher"
+msgstr "%s starter"
+
+#: ../lib/sources/paneldelegate.py:215
+msgid "Lock Screen button"
+msgstr "Knop om scherm te vergrendelen"
+
+#: ../lib/sources/paneldelegate.py:217
+msgid "Logout button"
+msgstr "Afmeldknop"
+
+#: ../lib/sources/paneldelegate.py:219
+msgid "Run Appliction button"
+msgstr "'Opdracht uitvoeren'-knop"
+
+#: ../lib/sources/paneldelegate.py:221
+msgid "Search button"
+msgstr "Zoekknop"
+
+#: ../lib/sources/paneldelegate.py:223
+msgid "Screenshot button"
+msgstr "Schermafdrukknop"
+
+#: ../lib/sources/paneldelegate.py:225
+msgid "Menu Bar"
+msgstr "Menubalk"
+
+#: ../lib/sources/paneldelegate.py:469
 msgid "Panel File"
 msgstr "Paneelbestand"
 
-#: ../lib/storage.py:171
+#: ../lib/storage.py:172
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "Lezen van bestand '%s' mislukt: %s"
 
-#: ../lib/storage.py:181
+#: ../lib/storage.py:182
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "Lezen van metagegevens van '%s' mislukt: %s"
 
-#: ../lib/storage.py:187
+#: ../lib/storage.py:188
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "Ongeldige metagegevensparagraaf in '%s': %s"
 
-#: ../lib/storage.py:361
+#: ../lib/storage.py:362
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Kan niet-bestaand bestand '%s' niet toevoegen"
 
-#: ../lib/storage.py:538
+#: ../lib/storage.py:568
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Profiel %s is alleen-lezen"
 
-#: ../lib/unittests.py:38 ../lib/unittests.py:39
+#: ../lib/unittests.py:38
+#: ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
 msgstr "WAARSCHUWINGen negeren"
 
@@ -783,107 +1080,106 @@ msgstr "Bezig met uitvoeren %s controles (%s)"
 msgid "Success!"
 msgstr "Gelukt!"
 
-#: ../lib/userdb.py:50
+#: ../lib/userdb.py:51
 #, python-format
-msgid "invalid type for setting %s in %s"
-msgstr "ongeldige soort voor instelling %s in %s"
+msgid "invalid type for setting %(setting)s in %(np)s"
+msgstr "ongeldige soort voor instelling %(setting)s in %(np)s"
 
 # aangegeven/opgegegeven/gespecificeerd/gekozen
 # BUG?: No search based ipv No search base
-#: ../lib/userdb.py:210
+#: ../lib/userdb.py:211
 #, python-format
 msgid "No search based specified for %s"
 msgstr "Geen zoekbasis aangegeven voor %s"
 
-#: ../lib/userdb.py:213
+#: ../lib/userdb.py:214
 #, python-format
 msgid "No query filter specified for %s"
 msgstr "Geen zoekfilter aangegeven voor %s"
 
-#: ../lib/userdb.py:216
+#: ../lib/userdb.py:217
 #, python-format
 msgid "No result attribute specified for %s"
 msgstr "Geen resultaatattribuut aangegeven voor %s"
 
-#: ../lib/userdb.py:225
+#: ../lib/userdb.py:226
 msgid "Scope must be one of sub, base and one"
 msgstr "Scope moet zijn: sub, base of one"
 
-#: ../lib/userdb.py:245
+#: ../lib/userdb.py:246
 msgid "multiple_result must be one of first and random"
 msgstr "multiple_result moet zijn: first of random"
 
-#: ../lib/userdb.py:337
+#: ../lib/userdb.py:338
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Kon %s niet openen om te schrijven"
 
-#: ../lib/userdb.py:350
+#: ../lib/userdb.py:351
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Opslaan van UserDatabase in %s mislukt"
 
-#: ../lib/userdb.py:373 ../lib/userdb.py:408
+#: ../lib/userdb.py:374
+#: ../lib/userdb.py:409
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Bestand %s is geen profielconfiguratie"
 
-#: ../lib/userdb.py:380
+#: ../lib/userdb.py:381
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Toevoegen van standaardprofiel %s aan configuratie mislukt"
 
-#: ../lib/userdb.py:416
+#: ../lib/userdb.py:417
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Toevoegen van gebruiker %s aan profielconfiguratie mislukt"
 
-#: ../lib/userdb.py:447
+#: ../lib/userdb.py:468
 msgid "Failed to get the user list"
 msgstr "Opvragen van gebruikerslijst mislukt"
 
-#: ../lib/util.py:125
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"Kan de persoonlijke map niet vinden: deze is niet ingesteld in /etc/passwd "
-"en ook niet in de omgeving als $HOME"
+#: ../lib/util.py:91
+msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+msgstr "Kan de persoonlijke map niet vinden: deze is niet ingesteld in /etc/passwd en ook niet in de omgeving als $HOME"
 
-#: ../lib/util.py:138
-msgid ""
-"Cannot find username: not set in /etc/passwd and no value for $USER in "
-"environment"
-msgstr ""
-"Kan gebruikersnaam niet vinden: deze is niet ingesteld in /etc/passwd en ook "
-"niet in de omgeving als $USER"
+#: ../lib/util.py:104
+msgid "Cannot find username: not set in /etc/passwd and no value for $USER in environment"
+msgstr "Kan gebruikersnaam niet vinden: deze is niet ingesteld in /etc/passwd en ook niet in de omgeving als $USER"
 
+#~ msgid "Usage: %s [<profile-name>]\n"
+#~ msgstr "Gebruik: %s [<profielnaam>]\n"
+#~ msgid "Failed to add monitor for %s"
+#~ msgstr "Het toevoegen van een beeldscherm voor %s is mislukt"
+#~ msgid "Expected event: %s %s"
+#~ msgstr "Verwachte gebeurtenis: %s %s"
+#~ msgid "Panel applet '%s' added"
+#~ msgstr "Paneel applet '%s' toegevoegd"
+#~ msgid "Panel applet '%s' removed"
+#~ msgstr "Paneel applet '%s' verwijderd"
+#~ msgid "Panel object '%s' added"
+#~ msgstr "Paneelobject '%s' toegevoegd"
+#~ msgid "Panel object '%s' removed"
+#~ msgstr "Paneelobject '%s' verwijderd"
 #~ msgid "All Your Settings Are Belong To Us"
 #~ msgstr "All Your Settings Are Belong To Us"
-
 #~ msgid "Clear revision history"
 #~ msgstr "Herzieningsgeschiedenis wissen"
-
 #~ msgid "_Version:"
 #~ msgstr "_Versie:"
-
 #~ msgid "Version"
 #~ msgstr "Versie"
-
 #~ msgid "Desktop User Profiles"
 #~ msgstr "Gebruikersprofielen"
-
 #~ msgid "'xauth list' returned error"
 #~ msgstr "'xauth list' gaf een fout"
-
 #~ msgid "'xauth list' returned no records or records in unknown format"
 #~ msgstr "'xauth list' gaf geen lijst of een onbekend soort lijst terug"
-
 #~ msgid "No current revision"
 #~ msgstr "Geen huidige herziening"
-
 #~ msgid "'%(path)s' does not exist in profile revision '%(profile_revision)s'"
 #~ msgstr "'%(path)s' bestaat niet in profielherziening '%(profile_revision)s'"
-
 #~ msgid "Not a valid profile revision"
 #~ msgstr "Geen geldige profielherziening"
+
