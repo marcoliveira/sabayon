@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon 2.12.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-13 03:16+0100\n"
-"PO-Revision-Date: 2007-07-21 15:21+0700\n"
+"POT-Creation-Date: 2007-07-21 16:07+0700\n"
+"PO-Revision-Date: 2007-07-21 16:09+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../admin-tool/aboutdialog.py:63
 msgid "Program to establish and edit profiles for users"
@@ -586,7 +586,10 @@ msgstr "บันทึกการเปลี่ยนแปลงในโพ
 #, python-format
 msgid ""
 "If you don't save, changes from the last %ld second will be permanently lost."
-msgstr "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดใน %ld วินาทีที่ผ่านมาจะสูญหายอย่างถาวร"
+msgid_plural ""
+"If you don't save, changes from the last %ld seconds will be permanently "
+"lost."
+msgstr[0] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดใน %ld วินาทีที่ผ่านมาจะสูญหายอย่างถาวร"
 
 #: ../admin-tool/saveconfirm.py:51
 msgid ""
@@ -598,13 +601,19 @@ msgstr "ถ้าคุณไม่บันทึก การแก้ไข�
 msgid ""
 "If you don't save, changes from the last minute and %ld second will be "
 "permanently lost."
-msgstr "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดในนาทีกับ %ld วินาทีที่ผ่านมาจะสูญหายอย่างถาวร"
+msgid_plural ""
+"If you don't save, changes from the last minute and %ld seconds will be "
+"permanently lost."
+msgstr[0] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดในนาทีกับ %ld วินาทีที่ผ่านมาจะสูญหายอย่างถาวร"
 
 #: ../admin-tool/saveconfirm.py:62
 #, python-format
 msgid ""
 "If you don't save, changes from the last %ld minute will be permanently lost."
-msgstr "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดใน %ld นาทีที่ผ่านมาจะสูญหายอย่างถาวร"
+msgid_plural ""
+"If you don't save, changes from the last %ld minutes will be permanently "
+"lost."
+msgstr[0] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดใน %ld นาทีที่ผ่านมาจะสูญหายอย่างถาวร"
 
 #: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
@@ -615,13 +624,18 @@ msgstr "ถ้าคุณไม่บันทึก การแก้ไข�
 msgid ""
 "If you don't save, changes from the last hour and %d minute will be "
 "permanently lost."
-msgstr "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดในชั่วโมงกับ %d นาทีที่ผ่านมาจะสูญหายอย่างถาวร"
+msgid_plural ""
+"If you don't save, changes from the last hour and %d minutes will be "
+"permanently lost."
+msgstr[0] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดในชั่วโมงกับ %d นาทีที่ผ่านมาจะสูญหายอย่างถาวร"
 
 #: ../admin-tool/saveconfirm.py:81
 #, python-format
 msgid ""
 "If you don't save, changes from the last %d hour will be permanently lost."
-msgstr "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดใน %d ชั่วโมงที่ผ่านมาจะสูญหายอย่างถาวร"
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดใน %d ชั่วโมงที่ผ่านมาจะสูญหายอย่างถาวร"
 
 #: ../admin-tool/sessionwindow.py:154
 #, python-format
