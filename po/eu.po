@@ -1,107 +1,109 @@
 # translation of eu.po to Basque
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
-# Iñaki Larrañaga <dooteo@euskalgnu.org>, 2006.
 #
+# Iñaki Larrañaga <dooteo@euskalgnu.org>, 2006.
+# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2007.
+# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-08-07 18:12+0000\n"
-"PO-Revision-Date: 2006-02-23 11:33+0100\n"
-"Last-Translator: Iñaki Larrañaga <dooteo@euskalgnu.org>\n"
-"Language-Team: Basque <itzulpena@euskalgnu.org>\n"
+"POT-Creation-Date: 2007-07-25 17:21+0200\n"
+"PO-Revision-Date: 2007-07-25 18:20+0200\n"
+"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
+"Language-Team: Basque <eu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.10.2\n"
+"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-
-#: ../admin-tool/aboutdialog.py:61
+#: ../admin-tool/aboutdialog.py:63
 msgid "Program to establish and edit profiles for users"
 msgstr "Erabiltzaileen profilak ezartzeko eta editatzeko aplikazioa"
 
-#: ../admin-tool/aboutdialog.py:64
+#: ../admin-tool/aboutdialog.py:66
 msgid "translator-credits"
 msgstr "Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>"
 
-#: ../admin-tool/changeswindow.py:48
+#: ../admin-tool/changeswindow.py:50
 #, python-format
 msgid "Changes in profile %s"
 msgstr "Aldaketak %s profilan"
 
-#: ../admin-tool/changeswindow.py:104
+#: ../admin-tool/changeswindow.py:113
 msgid "Ignore"
 msgstr "Ez ikusi egin"
 
-#: ../admin-tool/changeswindow.py:111
+#: ../admin-tool/changeswindow.py:120
 msgid "Lock"
 msgstr "Blokeatu"
 
-#: ../admin-tool/changeswindow.py:118 ../admin-tool/editorwindow.py:222
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:230
 msgid "Description"
 msgstr "Azalpena"
 
-#: ../admin-tool/editorwindow.py:95
+#: ../admin-tool/editorwindow.py:97
 #, python-format
 msgid "Profile %s"
 msgstr "%s profila"
 
-#: ../admin-tool/editorwindow.py:187 ../admin-tool/sessionwindow.py:172
+#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:176
 msgid "_Profile"
 msgstr "_Profila"
 
-#: ../admin-tool/editorwindow.py:188 ../admin-tool/sessionwindow.py:173
+#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
 msgid "_Save"
 msgstr "_Gorde"
 
-#: ../admin-tool/editorwindow.py:188 ../admin-tool/sessionwindow.py:173
+#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
 msgid "Save profile"
 msgstr "Gorde profila"
 
-#: ../admin-tool/editorwindow.py:189
+#: ../admin-tool/editorwindow.py:197
 msgid "_Close"
 msgstr "It_xi"
 
-#: ../admin-tool/editorwindow.py:189 ../admin-tool/sessionwindow.py:174
+#: ../admin-tool/editorwindow.py:197 ../admin-tool/sessionwindow.py:178
 msgid "Close the current window"
 msgstr "Itxi uneko leihoa"
 
-#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
+#: ../admin-tool/editorwindow.py:198 ../admin-tool/sessionwindow.py:179
 msgid "_Edit"
 msgstr "_Editatu"
 
-#: ../admin-tool/editorwindow.py:191
+#: ../admin-tool/editorwindow.py:199
 msgid "_Delete"
 msgstr "E_zabatu"
 
-#: ../admin-tool/editorwindow.py:191
+#: ../admin-tool/editorwindow.py:199
 msgid "Delete item"
 msgstr "Ezabatu elementua"
 
-#: ../admin-tool/editorwindow.py:192 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:200 ../admin-tool/sessionwindow.py:182
 msgid "_Help"
 msgstr "_Laguntza"
 
-#: ../admin-tool/editorwindow.py:193 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
 msgid "_About"
 msgstr "Honi _buruz"
 
-#: ../admin-tool/editorwindow.py:193 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
 msgid "About Sabayon"
 msgstr "Sabayon-i buruz"
 
-#: ../admin-tool/editorwindow.py:252 ../lib/sources/gconfsource.py:121
+#: ../admin-tool/editorwindow.py:262 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:256 ../lib/sources/filessource.py:76
+#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:78
 msgid "Files"
 msgstr "Fitxategiak"
 
-#: ../admin-tool/editorwindow.py:256 ../admin-tool/lockdown/pessulus.glade.h:7
-#: ../lib/sources/paneldelegate.py:132
+#: ../admin-tool/editorwindow.py:266
+#: ../admin-tool/lockdown/pessulus.glade.h:39
+#: ../lib/sources/paneldelegate.py:228
 msgid "Panel"
 msgstr "Panela"
 
@@ -151,8 +153,8 @@ msgstr "bikotea"
 msgid "Profile settings: %s"
 msgstr "Profilaren ezarpenak: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:313
-#: ../admin-tool/usersdialog.py:83
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:384
+#: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Izena"
 
@@ -164,101 +166,295 @@ msgstr "Mota"
 msgid "Value"
 msgstr "Balioa"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:99
+#: ../admin-tool/lockdown/lockdownbutton.py:101
 msgid "Click to make this setting not mandatory"
 msgstr "Egin klik ezarpen hau beharrezkoa ez izateko"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:101
+#: ../admin-tool/lockdown/lockdownbutton.py:103
 msgid "Click to make this setting mandatory"
 msgstr "Egin klik ezarpen hau beharrezkoa izateko"
 
-#: ../admin-tool/lockdown/maindialog.py:47
+#: ../admin-tool/lockdown/maindialog.py:51
 msgid "Disable _command line"
 msgstr "Desgaitu _komando-lerroa"
 
-#: ../admin-tool/lockdown/maindialog.py:48
+#: ../admin-tool/lockdown/maindialog.py:52
 msgid "Disable _printing"
 msgstr "Desgaitu _inprimatzea"
 
-#: ../admin-tool/lockdown/maindialog.py:49
+#: ../admin-tool/lockdown/maindialog.py:53
 msgid "Disable print _setup"
 msgstr "Desgaitu inprimatze-ezarpenak"
 
-#: ../admin-tool/lockdown/maindialog.py:50
+#: ../admin-tool/lockdown/maindialog.py:54
 msgid "Disable save to _disk"
 msgstr "Desgaitu _diskoan gordetzea"
 
-#: ../admin-tool/lockdown/maindialog.py:52
+#: ../admin-tool/lockdown/maindialog.py:56
 msgid "_Lock down the panels"
 msgstr "_Blokeatu panelak"
 
-#: ../admin-tool/lockdown/maindialog.py:53
+#: ../admin-tool/lockdown/maindialog.py:57
 msgid "Disable force _quit"
 msgstr "Desgaitu derrigorrez _irtetzea"
 
-#: ../admin-tool/lockdown/maindialog.py:54
+#: ../admin-tool/lockdown/maindialog.py:58
 msgid "Disable lock _screen"
 msgstr "Desgaitu p_antaila blokeatzea"
 
-#: ../admin-tool/lockdown/maindialog.py:55
+#: ../admin-tool/lockdown/maindialog.py:59
 msgid "Disable log _out"
 msgstr "Desgaitu _saioa amaitzea"
 
-#: ../admin-tool/lockdown/maindialog.py:57
+#: ../admin-tool/lockdown/maindialog.py:61
 msgid "Disable _quit"
 msgstr "Desgaitu _irtetzea"
 
-#: ../admin-tool/lockdown/maindialog.py:58
+#: ../admin-tool/lockdown/maindialog.py:62
 msgid "Disable _arbitrary URL"
 msgstr "Desgaitu URL _arbitrarioa"
 
-#: ../admin-tool/lockdown/maindialog.py:59
+#: ../admin-tool/lockdown/maindialog.py:63
 msgid "Disable _bookmark editing"
 msgstr "Desgaitu _lastermarkak editatzea"
 
-#: ../admin-tool/lockdown/maindialog.py:60
+#: ../admin-tool/lockdown/maindialog.py:64
 msgid "Disable _history"
 msgstr "Desgaitu _historia"
 
-#: ../admin-tool/lockdown/maindialog.py:61
+#: ../admin-tool/lockdown/maindialog.py:65
 msgid "Disable _javascript chrome"
 msgstr "Desgaitu _javascript chrome"
 
-#: ../admin-tool/lockdown/maindialog.py:62
+#: ../admin-tool/lockdown/maindialog.py:66
 msgid "Disable _toolbar editing"
 msgstr "DEsgaitu _tresna-barra editatzea"
 
-#: ../admin-tool/lockdown/maindialog.py:63
+#: ../admin-tool/lockdown/maindialog.py:67
 msgid "_Fullscreen"
 msgstr "_Pantaila osoa"
 
-#: ../admin-tool/lockdown/maindialog.py:64
+#: ../admin-tool/lockdown/maindialog.py:68
 msgid "Hide _menubar"
 msgstr "Ezkutatu _menu-barra"
 
+#: ../admin-tool/lockdown/maindialog.py:70
+msgid "Remove personal info from doc. on save"
+msgstr "Kendu datu pertsonalak dokumentutik gordetzean"
+
+#: ../admin-tool/lockdown/maindialog.py:71
+msgid "Warn if macro creates PDF"
+msgstr "Abisatu makroak PDFa sortzean"
+
+#: ../admin-tool/lockdown/maindialog.py:72
+msgid "Warn if macro prints"
+msgstr "Abisatu makroak inprimatzean"
+
+#: ../admin-tool/lockdown/maindialog.py:73
+msgid "Warn if macro saves doc"
+msgstr "Abisatu makroak dokumentua gordetzean"
+
+#: ../admin-tool/lockdown/maindialog.py:74
+msgid "Warn if macro signs doc"
+msgstr "Abisatu makroak dokumentua sinatzean"
+
+#: ../admin-tool/lockdown/maindialog.py:75
+msgid "Recommend password on save"
+msgstr "Gomendatu pasahitza gordetzean"
+
+#: ../admin-tool/lockdown/maindialog.py:77
+msgid "Enable auto-save"
+msgstr "Gaitu automatikoki gordetzea"
+
+#. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
+#: ../admin-tool/lockdown/maindialog.py:79
+msgid "Printing modifies document"
+msgstr "Inprimatzeak dokumentua aldatzen du"
+
+#: ../admin-tool/lockdown/maindialog.py:80
+msgid "Use system file chooser"
+msgstr "Erabili sistemako fitxategi-hautatzailea"
+
+#: ../admin-tool/lockdown/maindialog.py:81
+msgid "Create backup copy on save"
+msgstr "Sortu babes-kopia gordetzean"
+
+#: ../admin-tool/lockdown/maindialog.py:82
+msgid "Warn for external formats"
+msgstr "Abisatu kanpoko formatuetaz"
+
+#: ../admin-tool/lockdown/maindialog.py:84
+msgid "Use Open GL"
+msgstr "Erabili Open GL"
+
+#: ../admin-tool/lockdown/maindialog.py:85
+msgid "Use system font"
+msgstr "Erabili sistemako letra-tipoa"
+
+#: ../admin-tool/lockdown/maindialog.py:86
+msgid "Use anti-aliasing"
+msgstr "Erabili anti-aliasing"
+
+#: ../admin-tool/lockdown/maindialog.py:87
+msgid "Disable UI customization"
+msgstr "Desgaitu interfazea pertsonalizatzea"
+
+#: ../admin-tool/lockdown/maindialog.py:88
+msgid "Show insensitive menu items"
+msgstr "Erakutsi sentikortasun gabe menuko elementuak"
+
+#: ../admin-tool/lockdown/maindialog.py:89
+msgid "Show font preview"
+msgstr "Erakutsi letra-tipoaren aurrebista"
+
+#: ../admin-tool/lockdown/maindialog.py:90
+msgid "Show font history"
+msgstr "Erakutsi letra-tipoaren historia"
+
+#: ../admin-tool/lockdown/maindialog.py:91
+msgid "Show icons in menus"
+msgstr "Erakutsi ikonoak menuetan"
+
 #: ../admin-tool/lockdown/pessulus.glade.h:1
+msgid ""
+"\n"
+"5\n"
+"10\n"
+"25\n"
+"50"
+msgstr ""
+"\n"
+"5\n"
+"10\n"
+"25\n"
+"50"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:6
+msgid ""
+"\n"
+"Automatic\n"
+"Large\n"
+"Small"
+msgstr ""
+"\n"
+"Automatikoa\n"
+"Handia\n"
+"Txikia"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:10
+msgid ""
+"\n"
+"OpenDocument (.odp)\n"
+"PowerPoint 97+ (.ppt)\n"
+"OpenOffice 1.1 (.sxi)"
+msgstr ""
+"\n"
+"OpenDocument (.odp)\n"
+"PowerPoint 97+ (.ppt)\n"
+"OpenOffice 1.1 (.sxi)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:14
+msgid ""
+"\n"
+"OpenDocument (.ods)\n"
+"Excel 97+ (.xls)\n"
+"OpenOffice 1.1 (.sxc)"
+msgstr ""
+"\n"
+"OpenDocument (.ods)\n"
+"Excel 97+ (.xls)\n"
+"OpenOffice 1.1 (.sxc)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:18
+msgid ""
+"\n"
+"OpenDocument (.odt)\n"
+"Word 97+ (.doc)\n"
+"OpenOffice 1.1 (.sxw)"
+msgstr ""
+"\n"
+"OpenDocument (.odt)\n"
+"Word 97+ (.doc)\n"
+"OpenOffice 1.1 (.sxw)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:22
+msgid ""
+"\n"
+"Very High\n"
+"High\n"
+"Medium\n"
+"Low"
+msgstr ""
+"\n"
+"Oso altua\n"
+"Altua\n"
+"Tartekoa\n"
+"Baxua"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:27
 msgid "<b>Disabled Applets</b>"
 msgstr "<b>Desgaitu applet-ak</b>"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:2
+#: ../admin-tool/lockdown/pessulus.glade.h:28
 msgid "<b>Safe Protocols</b>"
 msgstr "<b>Protokolo seguruak</b>"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:3
+#: ../admin-tool/lockdown/pessulus.glade.h:29
+msgid "Calc default format:"
+msgstr ""
+
+#: ../admin-tool/lockdown/pessulus.glade.h:30
+msgid "Default icon size"
+msgstr "Ikono-tamaina lehenetsia"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:31
 msgid "Disable _unsafe protocols"
 msgstr "Desgaitu protokolo _ez seguruak"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:4
+#: ../admin-tool/lockdown/pessulus.glade.h:32
 msgid "Epiphany Web Browser"
 msgstr "Epiphany web arakatzailea"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:5
+#: ../admin-tool/lockdown/pessulus.glade.h:33
 msgid "General"
 msgstr "Orokorra"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:6
+#: ../admin-tool/lockdown/pessulus.glade.h:34
+msgid "Impress default format:"
+msgstr ""
+
+#: ../admin-tool/lockdown/pessulus.glade.h:35
+msgid "Load / Save"
+msgstr "Kargatu / Gorde"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:36
 msgid "Lockdown Editor"
 msgstr "Blokeatu editorea"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:37
+msgid "Macro Security Level:"
+msgstr "Makroen segurtasun-maila:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:38
+#, fuzzy
+msgid "OpenOffice"
+msgstr "OpenOffice.org"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:40
+msgid "Security"
+msgstr "Segurtasuna"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:41
+msgid "Undo Steps:"
+msgstr "Desegite-urratsak:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:42
+msgid "User Interface"
+msgstr "Interfazea"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:43
+msgid "Writer default format:"
+msgstr ""
 
 #.
 #. Translators: this string specifies how a profile
@@ -266,19 +462,18 @@ msgstr "Blokeatu editorea"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:413
+#: ../admin-tool/profilesdialog.py:494
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../admin-tool/sabayon:44
-msgid ""
-"Your account does not have permissions to run the Desktop User Profiles tool"
+#: ../admin-tool/sabayon:73
+msgid "Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr ""
 "Zure kontuak ez ditu nahikoa baimen 'Mahaigaineko erabiltzaileen profilak' "
 "tresna exekutatzeko"
 
-#: ../admin-tool/sabayon:45
+#: ../admin-tool/sabayon:74
 msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
@@ -286,11 +481,11 @@ msgstr ""
 "Administratzaile mailako baimenak behar dira programa hau exekutatzeko, "
 "sistemako fitxategiak alda baititzake."
 
-#: ../admin-tool/sabayon:50
+#: ../admin-tool/sabayon:79
 msgid "Desktop User Profiles tool is already running"
 msgstr "'Mahaigaineko erabiltzaileen profilak' tresna jadanik exekutatzen dago"
 
-#: ../admin-tool/sabayon:51
+#: ../admin-tool/sabayon:80
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
@@ -298,12 +493,12 @@ msgstr ""
 "Profilak editatzeko saiotik ez zenuke erabili behar 'Mahaigaineko "
 "erabiltzaileen profilak' tresna"
 
-#: ../admin-tool/sabayon:58
+#: ../admin-tool/sabayon:87
 #, c-format
 msgid "User account '%s' was not found"
 msgstr "'%s' erabiltzaile-kontua ez da aurkitu"
 
-#: ../admin-tool/sabayon:59
+#: ../admin-tool/sabayon:88
 #, c-format
 msgid ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
@@ -314,17 +509,30 @@ msgstr ""
 "eskatzen du. Saiatu berriro kontua sortu ondoren (erabili 'adduser' bezalako "
 "komando bat)"
 
-#: ../admin-tool/sabayon-apply:39
+#: ../admin-tool/sabayon:128
+#, c-format
+msgid ""
+"A fatal error has occurred.  You can help us fix the problem by sending the "
+"log in %s to %s"
+msgstr "Errore larria gertatu da. Arazoa konpontzen lagun gaitzakezu %s(e)ngo egunkaria hona bidaliz: %s"
+
+#: ../admin-tool/sabayon:143
+#, c-format
+msgid ""
+"Sabayon will now exit.  There were some recoverable errors, and you can help "
+"us debug the problem by sending the log in %s to %s"
+msgstr "Sabayon irten egingo da. Zenbait errore berreskuragarri daude, eta arazoa arazten lagun gaitzakezu %s(e)ngo egunkaria hona bidaliz: %s"
+
+#: ../admin-tool/sabayon-apply:96
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Ez da '%s' erabiltzailearen profilik aurkitu\n"
 
-#: ../admin-tool/sabayon-apply:44
-#, c-format
-msgid "Usage: %s [<profile-name>]\n"
-msgstr "Erabilera: %s [<profil-izena>]\n"
+#: ../admin-tool/sabayon-apply:101
+msgid "Please use -h for usage options"
+msgstr "Erabili '-h' aukera erabilgarriak ikusteko"
 
-#: ../admin-tool/sabayon-session:32
+#: ../admin-tool/sabayon-session:66
 #, c-format
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
 msgstr "Erabilera: %s <profil-izena> <profil-bidea> <pantaila-zenbakia>\n"
@@ -354,14 +562,18 @@ msgid "_Base on:"
 msgstr "_Oinarria:"
 
 #: ../admin-tool/sabayon.glade.h:6
+msgid "_Details"
+msgstr "_Xehetasunak"
+
+#: ../admin-tool/sabayon.glade.h:7
 msgid "_Profiles:"
 msgstr "_Profilak:"
 
-#: ../admin-tool/sabayon.glade.h:7
+#: ../admin-tool/sabayon.glade.h:8
 msgid "_Users"
 msgstr "_Erabiltzaileak"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.glade.h:9
 msgid "_Users:"
 msgstr "_Erabiltzaileak:"
 
@@ -376,19 +588,15 @@ msgstr "Gorde aldaketak \"%s\" profilan itxi aurretik?"
 
 #: ../admin-tool/saveconfirm.py:45
 #, python-format
-msgid ""
-"If you don't save, changes from the last %ld second will be permanently lost."
+msgid "If you don't save, changes from the last %ld second will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld seconds will be permanently "
 "lost."
-msgstr[0] ""
-"Ez baduzu gordetzen, azken segundo %ld-eko aldaketak betirako galduko dira."
-msgstr[1] ""
-"Ez baduzu gordetzen, azken %ld segundoko aldaketak betirako galduko dira."
+msgstr[0] "Ez baduzu gordetzen, azken segundo %ld-eko aldaketak betirako galduko dira."
+msgstr[1] "Ez baduzu gordetzen, azken %ld segundoko aldaketak betirako galduko dira."
 
 #: ../admin-tool/saveconfirm.py:51
-msgid ""
-"If you don't save, changes from the last minute will be permanently lost."
+msgid "If you don't save, changes from the last minute will be permanently lost."
 msgstr "Ez baduzu gordetzen, azken minutuko aldaketak betirako galduko dira."
 
 #: ../admin-tool/saveconfirm.py:55
@@ -408,24 +616,16 @@ msgstr[1] ""
 
 #: ../admin-tool/saveconfirm.py:62
 #, python-format
-msgid ""
-"If you don't save, changes from the last %ld minute will be permanently lost."
+msgid "If you don't save, changes from the last %ld minute will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
-msgstr[0] ""
-"Ez baduzu gordetzen, azken %ld minutuko aldaketak betirako galduko dira."
-msgstr[1] ""
-"Ez baduzu gordetzen, azken %ld minutuko aldaketak betirako galduko dira."
+msgstr[0] "Ez baduzu gordetzen, azken %ld minutuko aldaketak betirako galduko dira."
+msgstr[1] "Ez baduzu gordetzen, azken %ld minutuko aldaketak betirako galduko dira."
 
-#: ../admin-tool/saveconfirm.py:71 ../admin-tool/saveconfirm.py:81
-#, python-format
+#: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "Ez baduzu gordetzen, azken orduko aldaketak betirako galduko dira."
-msgstr[1] ""
-"Ez baduzu gordetzen, azken %d orduko aldaketak betirako galduko dira."
+msgstr "Ez baduzu gordetzen, azken orduko aldaketak betirako galduko dira."
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
@@ -442,295 +642,430 @@ msgstr[1] ""
 "Ez baduzu gordetzen, azken orduko eta %d minutuko aldaketak betirako galduko "
 "dira."
 
-#: ../admin-tool/sessionwindow.py:151
+#: ../admin-tool/saveconfirm.py:81
+#, python-format
+msgid "If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] "Ez baduzu gordetzen, azken ordu %d-eko aldaketak betirako galduko dira."
+msgstr[1] "Ez baduzu gordetzen, azken %d orduko aldaketak betirako galduko dira."
+
+#: ../admin-tool/sessionwindow.py:154
 #, python-format
 msgid "Editing profile %s"
 msgstr "%s profila editatzen"
 
-#: ../admin-tool/sessionwindow.py:174
+#: ../admin-tool/sessionwindow.py:178
 msgid "_Quit"
 msgstr "I_rten"
 
-#: ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/sessionwindow.py:180
 msgid "_Changes"
 msgstr "_Aldaketak"
 
-#: ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/sessionwindow.py:180
 msgid "Edit changes"
 msgstr "Editatu aldaketak"
 
-#: ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Lockdown"
 msgstr "_Blokeatu"
 
-#: ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/sessionwindow.py:181
 msgid "Edit Lockdown settings"
 msgstr "Editatu blokeatutako ezarpenak"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:186
 msgid "Enforce Mandatory"
 msgstr "Derrigortu beharrezkoak"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:186
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Derrigortu beharrezko ezarpenak edizioko saioan"
 
-#: ../admin-tool/sessionwindow.py:271
+#: ../admin-tool/sessionwindow.py:297
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Blokeatu %s(r)en ezarpenak"
 
-#: ../admin-tool/usersdialog.py:65
+#: ../admin-tool/sessionwindow.py:333
+#, python-format
+msgid ""
+"There was a recoverable error while applying the user profile '%s'.  You can "
+"report this error now or try to continue editing the user profile."
+msgstr ""
+"Errore berreskuragarria gertatu da '%s' erabiltzailearen profila aplikatzean. "
+"Errore honi buruz berri eman dezakezu orain, edo erabiltzailearen profila "
+"editatzen jarrai dezakezu."
+
+#: ../admin-tool/sessionwindow.py:337
+msgid "_Report this error"
+msgstr "_Eman errorearen berri"
+
+#: ../admin-tool/sessionwindow.py:338
+msgid "_Continue editing"
+msgstr "_Jarraitu editatzen"
+
+#: ../admin-tool/usersdialog.py:67
 #, python-format
 msgid "Users for profile %s"
 msgstr "%s profilaren erabiltzaileak"
 
-#: ../admin-tool/usersdialog.py:93
+#: ../admin-tool/usersdialog.py:95
 msgid "Use This Profile"
 msgstr "Erabili profil hau"
 
-#: ../lib/dirmonitor.py:149
-#, python-format
-msgid "Failed to add monitor for %s"
-msgstr "Huts egin du %s(e)n monitorea gehitzean"
-
-#: ../lib/dirmonitor.py:229
-#, python-format
-msgid "Expected event: %s %s"
-msgstr "Esperotako gertaera: %s %s"
-
-#: ../lib/protosession.py:140
+#: ../lib/protosession.py:147
 msgid "Unable to find a free X display"
 msgstr "Ezin da X pantaila librerik aurkitu"
 
-#: ../lib/protosession.py:407
+#: ../lib/protosession.py:414
 msgid "Failed to start Xnest: timed out waiting for USR1 signal"
-msgstr ""
-"Huts egin du Xnest abiaraztean: denbora gainditu du USR1 seinalearen zai"
+msgstr "Huts egin du Xnest abiaraztean: denbora gainditu du USR1 seinalearen zai"
 
-#: ../lib/protosession.py:409
+#: ../lib/protosession.py:416
 msgid "Failed to start Xnest: died during startup"
 msgstr "Huts egin du Xnest abiaraztean: abioan hil egin da"
 
-#: ../lib/sources/filessource.py:66
+#: ../lib/protosession.py:480
+#, python-format
+msgid ""
+"Could not create the 'sabayon-apply' process: %s\n"
+"The command line used is '%s'\n"
+"Child traceback:\n"
+"%s"
+msgstr ""
+"Ezin izan da 'sabayon-apply' prozesua sortu: %s\n"
+"Erabilitako komandoa: %s\n"
+"Arazketa:\n"
+"%s"
+
+#: ../lib/protosession.py:501
+#, python-format
+msgid "There was a recoverable error while applying the user profile from '%s'."
+msgstr "Errore berreskuragarria gertatu da erabiltzailearen profila '%s'(e)ndik aplikatzean."
+
+#: ../lib/protosession.py:510
+#, python-format
+msgid "There was a fatal error while applying the user profile from '%s'."
+msgstr "Errore larria gertatu da erabiltzailearen profila '%s'(e)ndik aplikatzean."
+
+#: ../lib/sources/filessource.py:68
 #, python-format
 msgid "File '%s' created"
 msgstr "'%s' fitxategia sortu da"
 
-#: ../lib/sources/filessource.py:68
+#: ../lib/sources/filessource.py:70
 #, python-format
 msgid "File '%s' deleted"
 msgstr "'%s' fitxategia ezabatu da"
 
-#: ../lib/sources/filessource.py:70
+#: ../lib/sources/filessource.py:72
 #, python-format
 msgid "File '%s' changed"
 msgstr "'%s' fitxategia aldatu da"
 
-#: ../lib/sources/filessource.py:94
+#: ../lib/sources/filessource.py:96
 msgid "Applications menu"
 msgstr "Aplikazioen menua"
 
-#: ../lib/sources/filessource.py:96
+#: ../lib/sources/filessource.py:98
 msgid "Preferences menu"
 msgstr "Hobespenen menua"
 
-#: ../lib/sources/filessource.py:98
+#: ../lib/sources/filessource.py:100
 msgid "Server Settings menu"
 msgstr "Zerbitzariaren ezarpenen menua"
 
-#: ../lib/sources/filessource.py:100
+#: ../lib/sources/filessource.py:102
 msgid "System Settings menu"
 msgstr "Sistemako ezarpenen menua"
 
-#: ../lib/sources/filessource.py:102
+#: ../lib/sources/filessource.py:104
 msgid "Start Here menu"
 msgstr "'Hasi hemen' menua"
 
-#: ../lib/sources/gconfsource.py:87
+#: ../lib/sources/gconfsource.py:90
 #, python-format
 msgid "GConf key '%s' unset"
 msgstr "GConf-eko '%s' gakoa ezarri gabe"
 
-#: ../lib/sources/gconfsource.py:89
+#: ../lib/sources/gconfsource.py:92
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
 msgstr "GConf-eko '%s' gakoa '%s' katearekin ezarrita"
 
-#: ../lib/sources/gconfsource.py:91
+#: ../lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
 msgstr "GConf-eko '%s' gakoa '%s' osokoarekin ezarrita"
 
-#: ../lib/sources/gconfsource.py:93
+#: ../lib/sources/gconfsource.py:96
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
 msgstr "GConf-eko '%s' gakoa '%s' mugikorrarekin ezarrita"
 
-#: ../lib/sources/gconfsource.py:95
+#: ../lib/sources/gconfsource.py:98
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
 msgstr "GConf-eko '%s' gakoa '%s' boolearrarekin ezarrita"
 
-#: ../lib/sources/gconfsource.py:97
+#: ../lib/sources/gconfsource.py:100
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
 msgstr "GConf-eko '%s' gakoa '%s' eskemarekin ezarrita"
 
-#: ../lib/sources/gconfsource.py:99
+#: ../lib/sources/gconfsource.py:102
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
 msgstr "GConf-eko '%s' gakoa '%s' zerrendarekin ezarrita"
 
-#: ../lib/sources/gconfsource.py:101
+#: ../lib/sources/gconfsource.py:104
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
 msgstr "GConf-eko '%s' gakoa '%s' bikotearekin ezarrita"
 
-#: ../lib/sources/gconfsource.py:103
+#: ../lib/sources/gconfsource.py:106
 #, python-format
 msgid "GConf key '%s' set to '%s'"
 msgstr "GConf-eko '%s' gakoa '%s'(r)ekin ezarrita"
 
-#: ../lib/sources/gconfsource.py:134
+#: ../lib/sources/gconfsource.py:137
 msgid "Default GConf settings"
 msgstr "GConf-eko ezarpen lehenetsiak"
 
-#: ../lib/sources/gconfsource.py:136
+#: ../lib/sources/gconfsource.py:139
 msgid "Mandatory GConf settings"
 msgstr "Beharrezko GConf-eko ezarpenak"
 
-#: ../lib/sources/mozillasource.py:130
+#: ../lib/sources/mozillasource.py:133
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
 msgstr "Mozilla-ren '%s' gakoa '%s'(r)ekin ezarrita"
 
-#: ../lib/sources/mozillasource.py:132
+#: ../lib/sources/mozillasource.py:135
 #, python-format
 msgid "Mozilla key '%s' unset"
 msgstr "Mozilla-ren '%s' gakoa ezarri gabe"
 
-#: ../lib/sources/mozillasource.py:134
+#: ../lib/sources/mozillasource.py:137
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Mozilla-ren '%s' gakoa '%s'(r)ekin aldatua"
 
-#: ../lib/sources/mozillasource.py:163 ../lib/sources/mozillasource.py:173
+#: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
 msgid "Web browser preferences"
 msgstr "Web arakatzailearen hobespenak"
 
-#: ../lib/sources/mozillasource.py:165 ../lib/sources/mozillasource.py:175
+#: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
 msgid "Web browser bookmarks"
 msgstr "Web arakatzailearen laster-markak"
 
-#: ../lib/sources/mozillasource.py:167
+#: ../lib/sources/mozillasource.py:170
 msgid "Web browser profile list"
 msgstr "Web arakatzailearen profil-zerrenda"
 
-#: ../lib/sources/mozillasource.py:518
+#: ../lib/sources/mozillasource.py:522
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Ez da fitxategia aurkitu (%s)"
 
-#: ../lib/sources/mozillasource.py:869
+#: ../lib/sources/mozillasource.py:873
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "bikoiztutako izena (%(name)s) %(section)s atalean"
 
-#: ../lib/sources/mozillasource.py:878
+#: ../lib/sources/mozillasource.py:882
 #, python-format
 msgid "redundant default in section %s"
 msgstr "lehenespen erredundantea %s atalean"
 
-#: ../lib/sources/mozillasource.py:895
+#: ../lib/sources/mozillasource.py:899
 msgid "no default profile"
 msgstr "ez dago profil lehenetsirik"
 
-#: ../lib/sources/mozillasource.py:950
+#: ../lib/sources/mozillasource.py:954
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Mozilla-ren laster-marka sortu da: '%s' -> '%s'"
 
-#: ../lib/sources/mozillasource.py:952
+#: ../lib/sources/mozillasource.py:956
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Mozilla-ren laster-marken karpeta sortu da: '%s'"
 
-#: ../lib/sources/mozillasource.py:955
+#: ../lib/sources/mozillasource.py:959
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Mozilla-ren laster-marka ezabatu da: '%s'"
 
-#: ../lib/sources/mozillasource.py:957
+#: ../lib/sources/mozillasource.py:961
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Mozilla-ren laster-marken karpeta ezabatu da: '%s'"
 
-#: ../lib/sources/mozillasource.py:960
+#: ../lib/sources/mozillasource.py:964
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Mozilla-ren '%s' laster-marka aldatu da: '%s'"
 
-#: ../lib/sources/mozillasource.py:962
+#: ../lib/sources/mozillasource.py:966
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mozilla-ren laster-marken karpeta aldatu da: '%s'"
 
-#: ../lib/sources/paneldelegate.py:56
+#: ../lib/sources/paneldelegate.py:55
 #, python-format
 msgid "Panel '%s' added"
 msgstr "'%s' panela gehitu da"
 
-#: ../lib/sources/paneldelegate.py:62
+#: ../lib/sources/paneldelegate.py:61
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "'%s' panela kendu da"
 
-#: ../lib/sources/paneldelegate.py:68
+#: ../lib/sources/paneldelegate.py:76
 #, python-format
-msgid "Panel applet '%s' added"
-msgstr "Paneleko '%s' applet-a gehitu da"
+msgid "Applet %s added to top panel"
+msgstr "%s applet-a goiko panelari gehituta"
 
-#: ../lib/sources/paneldelegate.py:74
+#: ../lib/sources/paneldelegate.py:78
 #, python-format
-msgid "Panel applet '%s' removed"
-msgstr "Paneleko '%s' applet-a kendu da"
+msgid "Applet %s added to bottom panel"
+msgstr "%s applet-a beheko panelari gehituta"
 
 #: ../lib/sources/paneldelegate.py:80
 #, python-format
-msgid "Panel object '%s' added"
-msgstr "Panel '%s' objektua gehitu da"
+msgid "Applet %s added to left panel"
+msgstr "%s applet-a ezkerreko panelari gehituta"
 
-#: ../lib/sources/paneldelegate.py:92
+#: ../lib/sources/paneldelegate.py:82
 #, python-format
-msgid "Panel object '%s' removed"
-msgstr "Paneleko '%s' objektua kendu da"
+msgid "Applet %s added to right panel"
+msgstr "%s applet-a eskuineko panelari gehituta"
 
-#: ../lib/sources/paneldelegate.py:373
+#: ../lib/sources/paneldelegate.py:97
+#, python-format
+msgid "Applet %s removed from top panel"
+msgstr "%s applet-a goiko paneletik kenduta"
+
+#: ../lib/sources/paneldelegate.py:99
+#, python-format
+msgid "Applet %s removed from bottom panel"
+msgstr "%s applet-a azpiko paneletik kenduta"
+
+#: ../lib/sources/paneldelegate.py:101
+#, python-format
+msgid "Applet %s removed from left panel"
+msgstr "%s applet-a ezkerrko paneletik kenduta"
+
+#: ../lib/sources/paneldelegate.py:103
+#, python-format
+msgid "Applet %s removed from right panel"
+msgstr "%s applet-a eskuineko paneletik kenduta"
+
+#: ../lib/sources/paneldelegate.py:117
+#, python-format
+msgid "%s added to top panel"
+msgstr "%s goiko panelari gehituta"
+
+#: ../lib/sources/paneldelegate.py:119
+#, python-format
+msgid "%s added to bottom panel"
+msgstr "%s beheko panelari gehituta"
+
+#: ../lib/sources/paneldelegate.py:121
+#, python-format
+msgid "%s added to left panel"
+msgstr "%s ezkerreko panelari gehituta"
+
+#: ../lib/sources/paneldelegate.py:123
+#, python-format
+msgid "%s added to right panel"
+msgstr "%s eskuineko panelari gehituta"
+
+#: ../lib/sources/paneldelegate.py:144
+#, python-format
+msgid "%s removed from top panel"
+msgstr "%s goiko paneletik kenduta"
+
+#: ../lib/sources/paneldelegate.py:146
+#, python-format
+msgid "%s removed from bottom panel"
+msgstr "%s beheko paneletik kenduta"
+
+#: ../lib/sources/paneldelegate.py:148
+#, python-format
+msgid "%s removed from left panel"
+msgstr "%s ezkerreko paneletik kenduta"
+
+#: ../lib/sources/paneldelegate.py:150
+#, python-format
+msgid "%s removed from right panel"
+msgstr "%s eskuineko paneletik kenduta"
+
+#: ../lib/sources/paneldelegate.py:199
+msgid "Drawer"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:201
+msgid "Main Menu"
+msgstr "Menu nagusia"
+
+#: ../lib/sources/paneldelegate.py:211
+#, python-format
+msgid "%s launcher"
+msgstr "%s abiarazlea"
+
+#: ../lib/sources/paneldelegate.py:215
+msgid "Lock Screen button"
+msgstr "'Blokeatu pantaila' botoia"
+
+#: ../lib/sources/paneldelegate.py:217
+msgid "Logout button"
+msgstr "'Saio-amaiera' botoia"
+
+#: ../lib/sources/paneldelegate.py:219
+#, fuzzy
+msgid "Run Appliction button"
+msgstr "'Exekutatu aplikazioa' botoia"
+
+#: ../lib/sources/paneldelegate.py:221
+msgid "Search button"
+msgstr "'Bilatu' botoia"
+
+#: ../lib/sources/paneldelegate.py:223
+msgid "Screenshot button"
+msgstr "'Pantaila-argazkia' botoia"
+
+#: ../lib/sources/paneldelegate.py:225
+msgid "Menu Bar"
+msgstr "Menu-barra"
+
+#: ../lib/sources/paneldelegate.py:469
 msgid "Panel File"
 msgstr "Panelaren fitxategia"
 
-#: ../lib/storage.py:171
+#: ../lib/storage.py:172
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "Huts egin du '%s' fitxategia irakurtzean: %s"
 
-#: ../lib/storage.py:181
+#: ../lib/storage.py:182
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "Huts egin du '%s'(e)ko meta-datuak irakurtzean: %s"
 
-#: ../lib/storage.py:187
+#: ../lib/storage.py:188
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "'%s'(e)n metadatuen baliogabeko atala: %s"
 
-#: ../lib/storage.py:361
+#: ../lib/storage.py:362
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Ezin da existitzen ez den '%s' fitxategia gehitu"
 
-#: ../lib/storage.py:538
+#: ../lib/storage.py:568
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "'%s' profilea irakurtzeko soilik da"
@@ -753,64 +1088,64 @@ msgstr "%s probak exekutatzen (%s)"
 msgid "Success!"
 msgstr "Ondo egin da!"
 
-#: ../lib/userdb.py:50
+#: ../lib/userdb.py:51
 #, python-format
-msgid "invalid type for setting %s in %s"
-msgstr "%s ezarpenaren mota baliogabea %s(e)n"
+msgid "invalid type for setting %(setting)s in %(np)s"
+msgstr "%(setting)s ezarpenaren mota baliogabea %(np)s"
 
-#: ../lib/userdb.py:210
+#: ../lib/userdb.py:211
 #, python-format
 msgid "No search based specified for %s"
 msgstr "Ez da %s(r)en bilaketa-oinarririk zehaztu"
 
-#: ../lib/userdb.py:213
+#: ../lib/userdb.py:214
 #, python-format
 msgid "No query filter specified for %s"
 msgstr "Ez da %s(r)en kontsulta-iragazkirik zehaztu"
 
-#: ../lib/userdb.py:216
+#: ../lib/userdb.py:217
 #, python-format
 msgid "No result attribute specified for %s"
 msgstr "Ez da '%s'(r)en emaitz-atributurik zehaztu"
 
-#: ../lib/userdb.py:225
+#: ../lib/userdb.py:226
 msgid "Scope must be one of sub, base and one"
 msgstr "Esparruak hauetariko bat izan behar du: 'sub', 'base' edo 'one' "
 
-#: ../lib/userdb.py:245
+#: ../lib/userdb.py:246
 msgid "multiple_result must be one of first and random"
 msgstr "multiple_result bakarra eta ausazkoa izan behar du"
 
-#: ../lib/userdb.py:337
+#: ../lib/userdb.py:338
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Ezin izan da %s idazteko ireki"
 
-#: ../lib/userdb.py:350
+#: ../lib/userdb.py:351
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Huts eign du UserDatabase %s(e)n gordetzean"
 
-#: ../lib/userdb.py:373 ../lib/userdb.py:408
+#: ../lib/userdb.py:374 ../lib/userdb.py:409
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "%s fitxategia ez da profil-konfiguraziokoa"
 
-#: ../lib/userdb.py:380
+#: ../lib/userdb.py:381
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Huts egin du %s profil lehenetsia konfigurazioari gehitzean"
 
-#: ../lib/userdb.py:416
+#: ../lib/userdb.py:417
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Huts eign du %s erabiltzailea profilaren konfigurazioari gehitzean"
 
-#: ../lib/userdb.py:447
+#: ../lib/userdb.py:468
 msgid "Failed to get the user list"
 msgstr "Huts egin du erabiltzaileen zerrenda lortzean"
 
-#: ../lib/util.py:125
+#: ../lib/util.py:91
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -818,10 +1153,11 @@ msgstr ""
 "Ezin izan da etxeko direktorioa aurkitu: ez dago /etc/passwd-en ezarrita, "
 "ezta ere inguruneko $HOME aldagaian"
 
-#: ../lib/util.py:138
+#: ../lib/util.py:104
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr ""
 "Ezin da erabiltzaile-izena aurkitu: ez dago /etc/passwd fitxategian ezarrita "
 "eta ez dago baliorik inguruneko $USER aldagaian"
+
