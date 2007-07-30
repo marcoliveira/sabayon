@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon 2.14.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-06-23 08:18+0200\n"
-"PO-Revision-Date: 2007-06-23 08:32+0200\n"
+"POT-Creation-Date: 2007-07-30 19:53+0200\n"
+"PO-Revision-Date: 2007-07-30 22:07+0200\n"
 "Last-Translator: Stéphane Raimbault <stephane.raimbault@gmail.com>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../admin-tool/aboutdialog.py:63
 msgid "Program to establish and edit profiles for users"
-msgstr "Programme de création et d'édition de profils pour les utilisateurs"
+msgstr "Application pour établir et éditer les profils utilisateurs"
 
 #: ../admin-tool/aboutdialog.py:66
 msgid "translator-credits"
@@ -74,7 +74,7 @@ msgstr "_Fermer"
 
 #: ../admin-tool/editorwindow.py:197 ../admin-tool/sessionwindow.py:178
 msgid "Close the current window"
-msgstr "Fermer la fenêtre active"
+msgstr "Ferme la fenêtre active"
 
 #: ../admin-tool/editorwindow.py:198 ../admin-tool/sessionwindow.py:179
 msgid "_Edit"
@@ -108,7 +108,8 @@ msgstr "GConf"
 msgid "Files"
 msgstr "Fichiers"
 
-#: ../admin-tool/editorwindow.py:266 ../admin-tool/lockdown/pessulus.glade.h:7
+#: ../admin-tool/editorwindow.py:266
+#: ../admin-tool/lockdown/pessulus.glade.h:39
 #: ../lib/sources/paneldelegate.py:228
 msgid "Panel"
 msgstr "Tableau de bord"
@@ -180,93 +181,290 @@ msgstr "Cliquez pour rendre ce paramètre non-obligatoire"
 msgid "Click to make this setting mandatory"
 msgstr "Cliquez pour rendre ce paramètre obligatoire"
 
-#: ../admin-tool/lockdown/maindialog.py:49
+#: ../admin-tool/lockdown/maindialog.py:51
 msgid "Disable _command line"
 msgstr "Désactiver la ligne de _commande"
 
-#: ../admin-tool/lockdown/maindialog.py:50
+#: ../admin-tool/lockdown/maindialog.py:52
 msgid "Disable _printing"
 msgstr "Désactiver l'im_pression"
 
-#: ../admin-tool/lockdown/maindialog.py:51
+#: ../admin-tool/lockdown/maindialog.py:53
 msgid "Disable print _setup"
 msgstr "Dé_sactiver la configuration de l'impression"
 
-#: ../admin-tool/lockdown/maindialog.py:52
+#: ../admin-tool/lockdown/maindialog.py:54
 msgid "Disable save to _disk"
 msgstr "Désactiver l'enregistrement sur le _disque"
 
-#: ../admin-tool/lockdown/maindialog.py:54
+#: ../admin-tool/lockdown/maindialog.py:56
 msgid "_Lock down the panels"
 msgstr "_Verrouiller les tableaux de bord"
 
-#: ../admin-tool/lockdown/maindialog.py:55
+#: ../admin-tool/lockdown/maindialog.py:57
 msgid "Disable force _quit"
 msgstr "Désactiver forcer à _quitter"
 
-#: ../admin-tool/lockdown/maindialog.py:56
+#: ../admin-tool/lockdown/maindialog.py:58
 msgid "Disable lock _screen"
 msgstr "Dé_sactiver le verrouillage de l'écran"
 
-#: ../admin-tool/lockdown/maindialog.py:57
+#: ../admin-tool/lockdown/maindialog.py:59
 msgid "Disable log _out"
 msgstr "Désactiver la fermeture de sessi_on"
 
-#: ../admin-tool/lockdown/maindialog.py:59
+#: ../admin-tool/lockdown/maindialog.py:61
 msgid "Disable _quit"
 msgstr "Désactiver _quitter"
 
-#: ../admin-tool/lockdown/maindialog.py:60
+#: ../admin-tool/lockdown/maindialog.py:62
 msgid "Disable _arbitrary URL"
 msgstr "Désactiver les URLs _arbitraires"
 
-#: ../admin-tool/lockdown/maindialog.py:61
+#: ../admin-tool/lockdown/maindialog.py:63
 msgid "Disable _bookmark editing"
 msgstr "Désactiver l'édition des _signets"
 
-#: ../admin-tool/lockdown/maindialog.py:62
+#: ../admin-tool/lockdown/maindialog.py:64
 msgid "Disable _history"
 msgstr "Désactiver l'_historique"
 
-#: ../admin-tool/lockdown/maindialog.py:63
+#: ../admin-tool/lockdown/maindialog.py:65
 msgid "Disable _javascript chrome"
 msgstr "Désactiver le chrome _JavaScript"
 
-#: ../admin-tool/lockdown/maindialog.py:64
+#: ../admin-tool/lockdown/maindialog.py:66
 msgid "Disable _toolbar editing"
-msgstr "Désactiver l'édition des barres d'ou_tils"
+msgstr "Désactiver la modification de la barre d'ou_tils"
 
-#: ../admin-tool/lockdown/maindialog.py:65
+#: ../admin-tool/lockdown/maindialog.py:67
 msgid "_Fullscreen"
 msgstr "_Plein écran"
 
-#: ../admin-tool/lockdown/maindialog.py:66
+#: ../admin-tool/lockdown/maindialog.py:68
 msgid "Hide _menubar"
-msgstr "Cacher le _menu"
+msgstr "Masquer la _barre de menu"
+
+# #461110
+#: ../admin-tool/lockdown/maindialog.py:70
+msgid "Remove personal info from doc. on save"
+msgstr "Supprimer les infos personnelles des doc. à l'enregistrement"
+
+#: ../admin-tool/lockdown/maindialog.py:71
+msgid "Warn if macro creates PDF"
+msgstr "Avertir si la macro crée des PDF"
+
+#: ../admin-tool/lockdown/maindialog.py:72
+msgid "Warn if macro prints"
+msgstr "Avertir si la macro imprime"
+
+#: ../admin-tool/lockdown/maindialog.py:73
+msgid "Warn if macro saves doc"
+msgstr "Avertir si la macro enregistre des documents"
+
+#: ../admin-tool/lockdown/maindialog.py:74
+msgid "Warn if macro signs doc"
+msgstr "Avertir si la macro signe des documents"
+
+#: ../admin-tool/lockdown/maindialog.py:75
+msgid "Recommend password on save"
+msgstr "Recommander un mot de passe à l'enregistrement"
+
+#: ../admin-tool/lockdown/maindialog.py:77
+msgid "Enable auto-save"
+msgstr "Activer la sauvegarde automatique"
+
+#. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
+#: ../admin-tool/lockdown/maindialog.py:79
+msgid "Printing modifies document"
+msgstr "L'impression modifie le document"
+
+#: ../admin-tool/lockdown/maindialog.py:80
+msgid "Use system file chooser"
+msgstr "Utiliser le sélecteur de fichier système"
+
+#: ../admin-tool/lockdown/maindialog.py:81
+msgid "Create backup copy on save"
+msgstr "Créer des copies de sauvegarde à l'enregistrement"
+
+#: ../admin-tool/lockdown/maindialog.py:82
+msgid "Warn for external formats"
+msgstr "Avertir au sujet des formats externes"
+
+# See #461902
+#: ../admin-tool/lockdown/maindialog.py:84
+msgid "Use Open GL"
+msgstr "Utiliser OpenGL"
+
+#: ../admin-tool/lockdown/maindialog.py:85
+msgid "Use system font"
+msgstr "Utiliser les polices système"
+
+#: ../admin-tool/lockdown/maindialog.py:86
+msgid "Use anti-aliasing"
+msgstr "Utiliser le lissage"
+
+# UI est anglais, IU est peu courant, IHM ?
+#: ../admin-tool/lockdown/maindialog.py:87
+msgid "Disable UI customization"
+msgstr "Désactiver la personnalisation de l'IHM"
+
+#: ../admin-tool/lockdown/maindialog.py:88
+msgid "Show insensitive menu items"
+msgstr "Afficher les éléments de menu insensibles"
+
+#: ../admin-tool/lockdown/maindialog.py:89
+msgid "Show font preview"
+msgstr "Afficher l'aperçu des polices"
+
+#: ../admin-tool/lockdown/maindialog.py:90
+msgid "Show font history"
+msgstr "Afficher l'historique des polices"
+
+#: ../admin-tool/lockdown/maindialog.py:91
+msgid "Show icons in menus"
+msgstr "Afficher les icônes dans les menus"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:1
+msgid ""
+"\n"
+"5\n"
+"10\n"
+"25\n"
+"50"
+msgstr ""
+"\n"
+"5\n"
+"10\n"
+"25\n"
+"50"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:6
+msgid ""
+"\n"
+"Automatic\n"
+"Large\n"
+"Small"
+msgstr ""
+"\n"
+"Automatique\n"
+"Grand\n"
+"Petit"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:10
+msgid ""
+"\n"
+"OpenDocument (.odp)\n"
+"PowerPoint 97+ (.ppt)\n"
+"OpenOffice 1.1 (.sxi)"
+msgstr ""
+"\n"
+"OpenDocument (.odp)\n"
+"Excel 97+ (.xls)\n"
+"OpenOffice 1.1 (.sxc)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:14
+msgid ""
+"\n"
+"OpenDocument (.ods)\n"
+"Excel 97+ (.xls)\n"
+"OpenOffice 1.1 (.sxc)"
+msgstr ""
+"\n"
+"OpenDocument (.ods)\n"
+"Excel 97+ (.xls)\n"
+"OpenOffice 1.1 (.sxc)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:18
+msgid ""
+"\n"
+"OpenDocument (.odt)\n"
+"Word 97+ (.doc)\n"
+"OpenOffice 1.1 (.sxw)"
+msgstr ""
+"\n"
+"OpenDocument (.odt)\n"
+"Word 97+ (.doc)\n"
+"OpenOffice 1.1 (.sxw)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:22
+msgid ""
+"\n"
+"Very High\n"
+"High\n"
+"Medium\n"
+"Low"
+msgstr ""
+"\n"
+"Trés élevé\n"
+"Élevé\n"
+"Moyen\n"
+"Faible"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:27
 msgid "<b>Disabled Applets</b>"
 msgstr "<b>Applets désactivés</b>"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:2
+#: ../admin-tool/lockdown/pessulus.glade.h:28
 msgid "<b>Safe Protocols</b>"
 msgstr "<b>Protocoles sécurisés</b>"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:3
+#: ../admin-tool/lockdown/pessulus.glade.h:29
+msgid "Calc default format:"
+msgstr "Format de fichier par défaut de Calc :"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:30
+msgid "Default icon size"
+msgstr "Taille par défaut des icônes"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:31
 msgid "Disable _unsafe protocols"
 msgstr "Désactiver les protocoles non-sécurisés"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:4
+#: ../admin-tool/lockdown/pessulus.glade.h:32
 msgid "Epiphany Web Browser"
 msgstr "Navigateur Web Epiphany"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:5
+#: ../admin-tool/lockdown/pessulus.glade.h:33
 msgid "General"
 msgstr "Général"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:6
+#: ../admin-tool/lockdown/pessulus.glade.h:34
+msgid "Impress default format:"
+msgstr "Format de fichier par défaut de Impress :"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:35
+msgid "Load / Save"
+msgstr "Charger / Enregistrer"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:36
 msgid "Lockdown Editor"
 msgstr "Éditeur de verrouillage"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:37
+msgid "Macro Security Level:"
+msgstr "Niveau de sécurité de la macro :"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:38
+msgid "OpenOffice"
+msgstr "OpenOffice"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:40
+msgid "Security"
+msgstr "Sécurité"
+
+# Voir #461110
+#: ../admin-tool/lockdown/pessulus.glade.h:41
+msgid "Undo Steps:"
+msgstr "Nombre d'annulations autorisées :"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:42
+msgid "User Interface"
+msgstr "Interface utilisateur"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:43
+msgid "Writer default format:"
+msgstr "Format de fichier par défaut de Writer :"
 
 #.
 #. Translators: this string specifies how a profile
@@ -309,7 +507,7 @@ msgstr ""
 #: ../admin-tool/sabayon:87
 #, c-format
 msgid "User account '%s' was not found"
-msgstr "Compte utilisateur « %s » non trouvé"
+msgstr "Le compte utilisateur « %s » n'a pas été trouvé"
 
 #: ../admin-tool/sabayon:88
 #, c-format
@@ -327,21 +525,26 @@ msgstr ""
 msgid ""
 "A fatal error has occurred.  You can help us fix the problem by sending the "
 "log in %s to %s"
-msgstr "Une erreur fatale est survenue. Vous pouvez nous aider à corriger le problème en envoyant la trace dans %s à %s"
+msgstr ""
+"Une erreur fatale est survenue. Vous pouvez nous aider à corriger le "
+"problème en envoyant la trace dans %s à %s"
 
 #: ../admin-tool/sabayon:143
 #, c-format
 msgid ""
 "Sabayon will now exit.  There were some recoverable errors, and you can help "
 "us debug the problem by sending the log in %s to %s"
-msgstr "Sabayon va maintenant s'interrompre. Quelques erreurs récupérables sont survenues, vous pouvez nous aider à corriger le problème en envoyant la trace dans %s à %s"
+msgstr ""
+"Sabayon va maintenant s'interrompre. Quelques erreurs récupérables sont "
+"survenues, vous pouvez nous aider à corriger le problème en envoyant la "
+"trace dans %s à %s"
 
-#: ../admin-tool/sabayon-apply:86
+#: ../admin-tool/sabayon-apply:96
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Aucun profil n'a été trouvé pour l'utilisateur « %s »\n"
 
-#: ../admin-tool/sabayon-apply:91
+#: ../admin-tool/sabayon-apply:101
 msgid "Please use -h for usage options"
 msgstr "Utilisez -h pour les options d'utilisation"
 
@@ -393,7 +596,7 @@ msgstr "_Utilisateurs :"
 
 #: ../admin-tool/saveconfirm.py:34
 msgid "Close _Without Saving"
-msgstr "_Ne pas enregistrer"
+msgstr "Fermer _sans enregistrer"
 
 #: ../admin-tool/saveconfirm.py:41
 #, python-format
@@ -412,9 +615,7 @@ msgid_plural ""
 msgstr[0] ""
 "Si vous n'enregistrez pas, les modifications effectuées depuis %ld seconde "
 "seront définitivement perdues."
-msgstr[1] ""
-"Si vous n'enregistrez pas, les modifications effectuées ces %ld dernières "
-"secondes seront définitivement perdues."
+msgstr[1] "Si vous n'enregistrez pas, les modifications effectuées ces %ld dernières secondes seront définitivement perdues."
 
 #: ../admin-tool/saveconfirm.py:51
 msgid ""
@@ -529,7 +730,10 @@ msgstr "Paramètres de verrouillage pour %s"
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
 "report this error now or try to continue editing the user profile."
-msgstr "Une erreur récupérable est survenue en appliquant le profil d'utilisateur « %s ». Vous pouvez rapporter cette erreur maintenant ou essayer de continuer à éditer le profil utilisateur."
+msgstr ""
+"Une erreur récupérable est survenue en appliquant le profil d'utilisateur « %"
+"s ». Vous pouvez rapporter cette erreur maintenant ou essayer de continuer à "
+"éditer le profil utilisateur."
 
 #: ../admin-tool/sessionwindow.py:337
 msgid "_Report this error"
@@ -537,7 +741,7 @@ msgstr "_Rapporter cette erreur"
 
 #: ../admin-tool/sessionwindow.py:338
 msgid "_Continue editing"
-msgstr "_Continuer d'éditer"
+msgstr "_Poursuivre l'édition"
 
 #: ../admin-tool/usersdialog.py:67
 #, python-format
@@ -547,16 +751,6 @@ msgstr "Utilisateurs pour le profil %s"
 #: ../admin-tool/usersdialog.py:95
 msgid "Use This Profile"
 msgstr "Utiliser ce profil"
-
-#: ../lib/dirmonitor.py:150
-#, python-format
-msgid "Failed to add monitor for %s"
-msgstr "Impossible d'ajouter un moniteur pour %s"
-
-#: ../lib/dirmonitor.py:230
-#, python-format
-msgid "Expected event: %s %s"
-msgstr "Événement attendu : %s %s"
 
 #: ../lib/protosession.py:147
 msgid "Unable to find a free X display"
@@ -587,12 +781,15 @@ msgstr ""
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from '%s'."
-msgstr "Une erreur récupérable est survenue en appliquant le profil utilisateur de « %s »."
+msgstr ""
+"Une erreur récupérable est survenue en appliquant le profil utilisateur de "
+"« %s »."
 
 #: ../lib/protosession.py:510
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
-msgstr "Une erreur fatale est survenue en appliquant le profil utilisateur de « %s »."
+msgstr ""
+"Une erreur fatale est survenue en appliquant le profil utilisateur de « %s »."
 
 #: ../lib/sources/filessource.py:68
 #, python-format
@@ -709,51 +906,51 @@ msgstr "Signets du navigateur Web"
 msgid "Web browser profile list"
 msgstr "Liste de profil du navigateur Web"
 
-#: ../lib/sources/mozillasource.py:521
+#: ../lib/sources/mozillasource.py:522
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Fichier non trouvé (%s)"
 
-#: ../lib/sources/mozillasource.py:872
+#: ../lib/sources/mozillasource.py:873
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "doublon de nom (%(name)s) dans la section %(section)s"
 
-#: ../lib/sources/mozillasource.py:881
+#: ../lib/sources/mozillasource.py:882
 #, python-format
 msgid "redundant default in section %s"
 msgstr "défaut redondant dans la section %s"
 
-#: ../lib/sources/mozillasource.py:898
+#: ../lib/sources/mozillasource.py:899
 msgid "no default profile"
 msgstr "aucun profil par défaut"
 
-#: ../lib/sources/mozillasource.py:953
+#: ../lib/sources/mozillasource.py:954
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Signet de Mozilla créé « %s » -> « %s »"
 
-#: ../lib/sources/mozillasource.py:955
+#: ../lib/sources/mozillasource.py:956
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Dossier de signet de Mozilla créé « %s »"
 
-#: ../lib/sources/mozillasource.py:958
+#: ../lib/sources/mozillasource.py:959
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Signet de Mozilla supprimé « %s »"
 
-#: ../lib/sources/mozillasource.py:960
+#: ../lib/sources/mozillasource.py:961
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Dossier de signet de Mozilla supprimé « %s »"
 
-#: ../lib/sources/mozillasource.py:963
+#: ../lib/sources/mozillasource.py:964
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Signet de Mozilla modifié « %s » « %s »"
 
-#: ../lib/sources/mozillasource.py:965
+#: ../lib/sources/mozillasource.py:966
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Dossier de signet de Mozilla modifié « %s »"
@@ -869,6 +1066,7 @@ msgstr "Bouton Vérouiller l'écran"
 msgid "Logout button"
 msgstr "Bouton Déconnexion"
 
+# Voir #400394
 #: ../lib/sources/paneldelegate.py:219
 msgid "Run Appliction button"
 msgstr "Bouton Lancer une application"
@@ -945,7 +1143,7 @@ msgstr "Aucune base de recherche n'a été spécifiée pour %s"
 #: ../lib/userdb.py:214
 #, python-format
 msgid "No query filter specified for %s"
-msgstr "Aucun filtre n'a été spécifié pour la demande %s"
+msgstr "Aucun filtre n'a été spécifié pour %s"
 
 #: ../lib/userdb.py:217
 #, python-format
@@ -985,7 +1183,7 @@ msgstr "Impossible d'ajouter le profil par défaut %s à la configuration"
 msgid "Failed to add user %s to profile configuration"
 msgstr "Impossible d'ajouter l'utilisateur %s à la configuration du profil"
 
-#: ../lib/userdb.py:448
+#: ../lib/userdb.py:468
 msgid "Failed to get the user list"
 msgstr "Impossible d'obtenir la liste des utilisateurs"
 
@@ -1004,6 +1202,3 @@ msgid ""
 msgstr ""
 "Impossible de localiser le nom de l'utilisateur : non défini dans /etc/"
 "passwd et la variable d'environnement $USER n'est pas définie"
-
-#~ msgid "Usage: %s [<profile-name>]\n"
-#~ msgstr "Utilisation : %s [<nom-du-profil>]\n"
