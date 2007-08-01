@@ -8,14 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD.gu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-04-16 16:45+0100\n"
-"PO-Revision-Date: 2007-07-04 15:51+0530\n"
+"POT-Creation-Date: 2007-07-13 03:16+0100\n"
+"PO-Revision-Date: 2007-08-01 18:44+0530\n"
 "Last-Translator: Ankit Patel <ankit@redhat.com>\n"
 "Language-Team: Gujarati <fedora-trans-gu@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=2; plural=(n!=1);\n\n"
+"\n"
 "\n"
 "\n"
 "\n"
@@ -104,7 +105,8 @@ msgstr "GConf"
 msgid "Files"
 msgstr "ફાઈલો"
 
-#: ../admin-tool/editorwindow.py:266 ../admin-tool/lockdown/pessulus.glade.h:7
+#: ../admin-tool/editorwindow.py:266
+#: ../admin-tool/lockdown/pessulus.glade.h:39
 #: ../lib/sources/paneldelegate.py:228
 msgid "Panel"
 msgstr "પેનલ"
@@ -176,93 +178,286 @@ msgstr "આ સુયોજનોને ફરજીયાત નહિં બ�
 msgid "Click to make this setting mandatory"
 msgstr "આ સુયોજનો ફરજીયાત બનાવવા માટે ક્લિક કરો"
 
-#: ../admin-tool/lockdown/maindialog.py:49
+#: ../admin-tool/lockdown/maindialog.py:51
 msgid "Disable _command line"
 msgstr "આદેશ વાક્ય નિષ્ક્રિય કરો (_c)"
 
-#: ../admin-tool/lockdown/maindialog.py:50
+#: ../admin-tool/lockdown/maindialog.py:52
 msgid "Disable _printing"
 msgstr "છાપવાનું નિષ્ક્રિય કરો (_p)"
 
-#: ../admin-tool/lockdown/maindialog.py:51
+#: ../admin-tool/lockdown/maindialog.py:53
 msgid "Disable print _setup"
 msgstr "છાપન સુયોજન નિષ્ક્રિય કરો (_s)"
 
-#: ../admin-tool/lockdown/maindialog.py:52
+#: ../admin-tool/lockdown/maindialog.py:54
 msgid "Disable save to _disk"
 msgstr "ડિસ્કમાં સંગ્રહો નિષ્ક્રિય કરો (_d)"
 
-#: ../admin-tool/lockdown/maindialog.py:54
+#: ../admin-tool/lockdown/maindialog.py:56
 msgid "_Lock down the panels"
 msgstr "પેનલોને તાળું મારો (_L)"
 
-#: ../admin-tool/lockdown/maindialog.py:55
+#: ../admin-tool/lockdown/maindialog.py:57
 msgid "Disable force _quit"
 msgstr "બહાર નીકળવા દબાણ કરો નિષ્ક્રિય કરો (_q)"
 
-#: ../admin-tool/lockdown/maindialog.py:56
+#: ../admin-tool/lockdown/maindialog.py:58
 msgid "Disable lock _screen"
 msgstr "સ્ક્રીનને તાળું મારો નિષ્ક્રિય કરો (_s)"
 
-#: ../admin-tool/lockdown/maindialog.py:57
+#: ../admin-tool/lockdown/maindialog.py:59
 msgid "Disable log _out"
 msgstr "બહાર નીકળો નિષ્ક્રિય કરો (_o)"
 
-#: ../admin-tool/lockdown/maindialog.py:59
+#: ../admin-tool/lockdown/maindialog.py:61
 msgid "Disable _quit"
 msgstr "બંધ કરો નિષ્ક્રિય કરો (_q)"
 
-#: ../admin-tool/lockdown/maindialog.py:60
+#: ../admin-tool/lockdown/maindialog.py:62
 msgid "Disable _arbitrary URL"
 msgstr "આર્બીટરી URL નિષ્ક્રિય કરો (_a)"
 
-#: ../admin-tool/lockdown/maindialog.py:61
+#: ../admin-tool/lockdown/maindialog.py:63
 msgid "Disable _bookmark editing"
 msgstr "બુકમાર્ક સંપાદન નિષ્ક્રિય કરો (_b)"
 
-#: ../admin-tool/lockdown/maindialog.py:62
+#: ../admin-tool/lockdown/maindialog.py:64
 msgid "Disable _history"
 msgstr "ઈતિહાસ નિષ્ક્રિય કરો (_h)"
 
-#: ../admin-tool/lockdown/maindialog.py:63
+#: ../admin-tool/lockdown/maindialog.py:65
 msgid "Disable _javascript chrome"
 msgstr "જાવાસ્ક્રિપ્ટ ક્રોમ નિષ્ક્રિય કરો (_j)"
 
-#: ../admin-tool/lockdown/maindialog.py:64
+#: ../admin-tool/lockdown/maindialog.py:66
 msgid "Disable _toolbar editing"
 msgstr "સાધનપટ્ટી સંપાદન નિષ્ક્રિય કરો (_t)"
 
-#: ../admin-tool/lockdown/maindialog.py:65
+#: ../admin-tool/lockdown/maindialog.py:67
 msgid "_Fullscreen"
 msgstr "પૂર્ણસ્ક્રીન (_F)"
 
-#: ../admin-tool/lockdown/maindialog.py:66
+#: ../admin-tool/lockdown/maindialog.py:68
 msgid "Hide _menubar"
 msgstr "મેનુપટ્ટી છુપાવો (_m)"
 
+#: ../admin-tool/lockdown/maindialog.py:70
+msgid "Remove personal info from doc. on save"
+msgstr "સંગ્રહ કરવા પર દસ્તાવેજમાંથી વ્યક્તિગત જાણકારી દૂર કરો"
+
+#: ../admin-tool/lockdown/maindialog.py:71
+msgid "Warn if macro creates PDF"
+msgstr "ચેતવો જો મેક્રો PDF બનાવે"
+
+#: ../admin-tool/lockdown/maindialog.py:72
+msgid "Warn if macro prints"
+msgstr "જો મેક્રો છપાય તો ચેતવો"
+
+#: ../admin-tool/lockdown/maindialog.py:73
+msgid "Warn if macro saves doc"
+msgstr "ચેતવો જો મેક્રો દસ્તાવેજ સંગ્રહે"
+
+#: ../admin-tool/lockdown/maindialog.py:74
+msgid "Warn if macro signs doc"
+msgstr "ચેતવો જો મેક્રો દસ્તાવેજ સહી કરે"
+
+#: ../admin-tool/lockdown/maindialog.py:75
+msgid "Recommend password on save"
+msgstr "સંગ્રહવા પર પાસવર્ડનો આગ્રહ રાખો"
+
+#: ../admin-tool/lockdown/maindialog.py:77
+msgid "Enable auto-save"
+msgstr "આપોઆપ-સંગ્રહો સક્રિય કરો"
+
+#. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
+#: ../admin-tool/lockdown/maindialog.py:79
+msgid "Printing modifies document"
+msgstr "છાપન દસ્તાવેજને સુધારે છે"
+
+#: ../admin-tool/lockdown/maindialog.py:80
+msgid "Use system file chooser"
+msgstr "સિસ્ટમ ફાઈલ પસંદગીકારક વાપરો"
+
+#: ../admin-tool/lockdown/maindialog.py:81
+msgid "Create backup copy on save"
+msgstr "સંગ્રહવા પર બેકઅપ નકલ બનાવો"
+
+#: ../admin-tool/lockdown/maindialog.py:82
+msgid "Warn for external formats"
+msgstr "બાહ્ય બંધારણો માટે ચેતવો"
+
+#: ../admin-tool/lockdown/maindialog.py:84
+msgid "Use Open GL"
+msgstr "Open GL વાપરો"
+
+#: ../admin-tool/lockdown/maindialog.py:85
+msgid "Use system font"
+msgstr "સિસ્ટમ ફોન્ટ વાપરો"
+
+#: ../admin-tool/lockdown/maindialog.py:86
+msgid "Use anti-aliasing"
+msgstr "એન્ટી-એલિઆઝીંગ વાપરો"
+
+#: ../admin-tool/lockdown/maindialog.py:87
+msgid "Disable UI customization"
+msgstr "UI વૈવિધ્યપણું નિષ્ક્રિય કરો"
+
+#: ../admin-tool/lockdown/maindialog.py:88
+msgid "Show insensitive menu items"
+msgstr "હેતુસરની મેનુ વસ્તુઓ બતાવો"
+
+#: ../admin-tool/lockdown/maindialog.py:89
+msgid "Show font preview"
+msgstr "ફોન્ટ પૂર્વદર્શન બતાવો"
+
+#: ../admin-tool/lockdown/maindialog.py:90
+msgid "Show font history"
+msgstr "ફોન્ટ ઈતિહાસ બતાવો"
+
+#: ../admin-tool/lockdown/maindialog.py:91
+msgid "Show icons in menus"
+msgstr "મેનુઓમાં ચિહ્નો બતાવો"
+
 #: ../admin-tool/lockdown/pessulus.glade.h:1
+msgid ""
+"\n"
+"5\n"
+"10\n"
+"25\n"
+"50"
+msgstr ""
+"\n"
+"5\n"
+"10\n"
+"25\n"
+"50"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:6
+msgid ""
+"\n"
+"Automatic\n"
+"Large\n"
+"Small"
+msgstr ""
+"\n"
+"આપોઆપ\n"
+"મોટું\n"
+"નાનું"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:10
+msgid ""
+"\n"
+"OpenDocument (.odp)\n"
+"PowerPoint 97+ (.ppt)\n"
+"OpenOffice 1.1 (.sxi)"
+msgstr ""
+"\n"
+"OpenDocument (.odp)\n"
+"PowerPoint 97+ (.ppt)\n"
+"OpenOffice 1.1 (.sxi)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:14
+msgid ""
+"\n"
+"OpenDocument (.ods)\n"
+"Excel 97+ (.xls)\n"
+"OpenOffice 1.1 (.sxc)"
+msgstr ""
+"\n"
+"OpenDocument (.ods)\n"
+"Excel 97+ (.xls)\n"
+"OpenOffice 1.1 (.sxc)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:18
+msgid ""
+"\n"
+"OpenDocument (.odt)\n"
+"Word 97+ (.doc)\n"
+"OpenOffice 1.1 (.sxw)"
+msgstr ""
+"\n"
+"OpenDocument (.odt)\n"
+"Word 97+ (.doc)\n"
+"OpenOffice 1.1 (.sxw)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:22
+msgid ""
+"\n"
+"Very High\n"
+"High\n"
+"Medium\n"
+"Low"
+msgstr ""
+"\n"
+"ખૂબ ઊંચુ\n"
+"ઊંચુ\n"
+"મધ્યમ\n"
+"નીચું"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:27
 msgid "<b>Disabled Applets</b>"
 msgstr "<b>નિષ્ક્રિયકૃત એપ્લેટો</b>"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:2
+#: ../admin-tool/lockdown/pessulus.glade.h:28
 msgid "<b>Safe Protocols</b>"
 msgstr "<b>સુરક્ષિત પ્રોટોકોલો</b>"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:3
+#: ../admin-tool/lockdown/pessulus.glade.h:29
+msgid "Calc default format:"
+msgstr "Calc મૂળભૂત બંધારણ:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:30
+msgid "Default icon size"
+msgstr "મૂળભૂત ચિહ્ન માપ"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:31
 msgid "Disable _unsafe protocols"
 msgstr "અસુરક્ષિત પ્રોટોકોલો નિષ્ક્રિય કરો (_u)"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:4
+#: ../admin-tool/lockdown/pessulus.glade.h:32
 msgid "Epiphany Web Browser"
 msgstr "એપીફની વેબ બ્રાઉઝર"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:5
+#: ../admin-tool/lockdown/pessulus.glade.h:33
 msgid "General"
 msgstr "સામાન્ય"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:6
+#: ../admin-tool/lockdown/pessulus.glade.h:34
+msgid "Impress default format:"
+msgstr "રજૂઆત મૂળભૂત બંધારણ:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:35
+msgid "Load / Save"
+msgstr "લાવો / સંગ્રહો"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:36
 msgid "Lockdown Editor"
 msgstr "સંપાદક તાળું મારો"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:37
+msgid "Macro Security Level:"
+msgstr "મેક્રો સુરક્ષા સ્તર:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:38
+msgid "OpenOffice"
+msgstr "OpenOffice"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:40
+msgid "Security"
+msgstr "સુરક્ષા"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:41
+msgid "Undo Steps:"
+msgstr "પગલાંઓ રદ કરો:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:42
+msgid "User Interface"
+msgstr "વપરાશકર્તા ઈન્ટરફેસ"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:43
+msgid "Writer default format:"
+msgstr "લેખન મૂળભૂત બંધારણ:"
 
 #.
 #. Translators: this string specifies how a profile
@@ -324,14 +519,16 @@ msgstr "ઘાતક ભૂલ ઉદ્ભવી છે.  તમે અમન�
 msgid ""
 "Sabayon will now exit.  There were some recoverable errors, and you can help "
 "us debug the problem by sending the log in %s to %s"
-msgstr "Sabayon હવે બંધ થઈ જશે.  ત્યાં અમુક પુનઃપ્રાપ્ય ભૂલો હતી, અને તમે અમને સમસ્યાને ડિબગ કરવામાં મદદ કરી શકો છો પ્રવેશ %s ને %s માં મોકલીને"
+msgstr ""
+"Sabayon હવે બંધ થઈ જશે.  ત્યાં અમુક પુનઃપ્રાપ્ય ભૂલો હતી, અને તમે અમને સમસ્યાને ડિબગ કરવામાં "
+"મદદ કરી શકો છો પ્રવેશ %s ને %s માં મોકલીને"
 
-#: ../admin-tool/sabayon-apply:86
+#: ../admin-tool/sabayon-apply:96
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "વપરાશકર્તા '%s' માટે કોઈ રૂપરેખા મળી નહિં\n"
 
-#: ../admin-tool/sabayon-apply:91
+#: ../admin-tool/sabayon-apply:101
 msgid "Please use -h for usage options"
 msgstr "વપરાશ વિકલ્પો માટે મહેરબાની કરીને -h વાપરો"
 
@@ -487,7 +684,9 @@ msgstr "%s માટે સુયોજનોને તાળું મારો
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
 "report this error now or try to continue editing the user profile."
-msgstr "વપરાશકર્તા રૂપરેખા '%s' લાગુ પાડતી વખતે ત્યાં પુનઃપ્રાપ્ય ભૂલો હતી.  તમે આ ભૂલનો હવે અહેવાલ આપી શકો છો અથવા વપરાશકર્તા રૂપરેખામાં ફેરફાર કરવાનું ચાલુ રાખવાનો પ્રયાસ કરી શકો છો."
+msgstr ""
+"વપરાશકર્તા રૂપરેખા '%s' લાગુ પાડતી વખતે ત્યાં પુનઃપ્રાપ્ય ભૂલો હતી.  તમે આ ભૂલનો હવે અહેવાલ "
+"આપી શકો છો અથવા વપરાશકર્તા રૂપરેખામાં ફેરફાર કરવાનું ચાલુ રાખવાનો પ્રયાસ કરી શકો છો."
 
 #: ../admin-tool/sessionwindow.py:337
 msgid "_Report this error"
@@ -505,16 +704,6 @@ msgstr "રૂપરેખા %s માટે વપરાશકર્તાઓ"
 #: ../admin-tool/usersdialog.py:95
 msgid "Use This Profile"
 msgstr "આ રૂપરેખા વાપરો"
-
-#: ../lib/dirmonitor.py:150
-#, python-format
-msgid "Failed to add monitor for %s"
-msgstr "%s માટે મોનીટર ઉમેરવામાં નિષ્ફળ"
-
-#: ../lib/dirmonitor.py:230
-#, python-format
-msgid "Expected event: %s %s"
-msgstr "ઈચ્છિત ઘટના: %s %s"
 
 #: ../lib/protosession.py:147
 msgid "Unable to find a free X display"
@@ -666,51 +855,51 @@ msgstr "વેબ બ્રાઉઝર બુકમાર્કો"
 msgid "Web browser profile list"
 msgstr "વેબ બ્રાઉઝર રૂપરેખા યાદી"
 
-#: ../lib/sources/mozillasource.py:521
+#: ../lib/sources/mozillasource.py:522
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "ફાઈલ મળી નહિં (%s)"
 
-#: ../lib/sources/mozillasource.py:872
+#: ../lib/sources/mozillasource.py:873
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "નકલી નામ(%(name)s) એ વિભાગ %(section)s માં"
 
-#: ../lib/sources/mozillasource.py:881
+#: ../lib/sources/mozillasource.py:882
 #, python-format
 msgid "redundant default in section %s"
 msgstr "વિભાગ %s માં રીડન્ડન્ટ મૂળભૂત"
 
-#: ../lib/sources/mozillasource.py:898
+#: ../lib/sources/mozillasource.py:899
 msgid "no default profile"
 msgstr "કોઈ મૂળભૂત રૂપરેખા નથી"
 
-#: ../lib/sources/mozillasource.py:953
+#: ../lib/sources/mozillasource.py:954
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "મોઝિલ્લા બુકમાર્ક '%s' -> '%s' બની"
 
-#: ../lib/sources/mozillasource.py:955
+#: ../lib/sources/mozillasource.py:956
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "મોઝિલ્લા બુકમાર્ક ફોલ્ડર બન્યું '%s'"
 
-#: ../lib/sources/mozillasource.py:958
+#: ../lib/sources/mozillasource.py:959
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "મોઝિલ્લા બુકમાર્ક કાઢી નંખાયુ '%s'"
 
-#: ../lib/sources/mozillasource.py:960
+#: ../lib/sources/mozillasource.py:961
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "મોઝિલ્લા બુકમાર્ક ફોલ્ડર કાઢી નંખાયું '%s'"
 
-#: ../lib/sources/mozillasource.py:963
+#: ../lib/sources/mozillasource.py:964
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "મોઝિલ્લા બુકમાર્ક બદલાઈ ગઈ '%s' '%s'"
 
-#: ../lib/sources/mozillasource.py:965
+#: ../lib/sources/mozillasource.py:966
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "મોઝિલ્લા બુકમાર્ક ફોલ્ડર બદલાઈ ગયું '%s'"
@@ -942,7 +1131,7 @@ msgstr "મૂળભૂત રૂપરેખા %s ને રૂપરેખા
 msgid "Failed to add user %s to profile configuration"
 msgstr "વપરાશકર્તા %s ને રૂપરેખા રૂપરેખાંકનમાં ઉમેરવામાં નિષ્ફળ"
 
-#: ../lib/userdb.py:448
+#: ../lib/userdb.py:468
 msgid "Failed to get the user list"
 msgstr "વપરાશકર્તા યાદી મેળવવામાં નિષ્ફળ"
 
