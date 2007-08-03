@@ -1,17 +1,17 @@
+# translation of sabayon.HEAD.tr.po to Turkish
+# Baris Cicek <baris@teamforce.name.tr>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: 2006-08-13 23:57+0200\n"
-"Last-Translator: Deniz Koçak <lenduha@gmail.com>\n"
-"Language-Team: gnome-turk <gnome-turk@gnome.org>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-08-03 19:19+0300\n"
+"PO-Revision-Date: 2007-08-03 19:17+0300\n"
+"Last-Translator: Baris Cicek <baris@teamforce.name.tr>\n"
+"Language-Team: Turkish <gnome-turk@gnome.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Turkish\n"
-"X-Poedit-Country: TURKEY\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms:  nplurals=1; plural=0;\n"
 
 #: ../admin-tool/aboutdialog.py:63
 msgid "Program to establish and edit profiles for users"
@@ -19,23 +19,22 @@ msgstr "Kullanıcılar için profil tanımlama ve yayınlama programı"
 
 #: ../admin-tool/aboutdialog.py:66
 msgid "translator-credits"
-msgstr "Deniz Koçak <lenduha@gmail.com>"
+msgstr "Barış Çiçek <baris@teamforce.name.tr>\nDeniz Koçak <lenduha@gmail.com>"
 
 #: ../admin-tool/changeswindow.py:50
 #, python-format
 msgid "Changes in profile %s"
 msgstr "%s profilindeki değişiklikler"
 
-#: ../admin-tool/changeswindow.py:106
+#: ../admin-tool/changeswindow.py:113
 msgid "Ignore"
 msgstr "Yoksay"
 
-#: ../admin-tool/changeswindow.py:113
+#: ../admin-tool/changeswindow.py:120
 msgid "Lock"
 msgstr "Kilit"
 
-#: ../admin-tool/changeswindow.py:120
-#: ../admin-tool/editorwindow.py:224
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:230
 msgid "Description"
 msgstr "Tanım"
 
@@ -44,230 +43,411 @@ msgstr "Tanım"
 msgid "Profile %s"
 msgstr "Profil %s"
 
-#: ../admin-tool/editorwindow.py:189
-#: ../admin-tool/sessionwindow.py:174
+#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:176
 msgid "_Profile"
 msgstr "_Profil"
 
-#: ../admin-tool/editorwindow.py:190
-#: ../admin-tool/sessionwindow.py:175
+#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
 msgid "_Save"
 msgstr "_Kaydet"
 
-#: ../admin-tool/editorwindow.py:190
-#: ../admin-tool/sessionwindow.py:175
+#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
 msgid "Save profile"
 msgstr "Profili kaydet"
 
-#: ../admin-tool/editorwindow.py:191
+#: ../admin-tool/editorwindow.py:197
 msgid "_Close"
 msgstr "_Kapat"
 
-#: ../admin-tool/editorwindow.py:191
-#: ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/editorwindow.py:197 ../admin-tool/sessionwindow.py:178
 msgid "Close the current window"
-msgstr "Şimdiki pencereyi kapat"
+msgstr "Mevcut pencereyi kapat"
 
-#: ../admin-tool/editorwindow.py:192
-#: ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:198 ../admin-tool/sessionwindow.py:179
 msgid "_Edit"
 msgstr "_Düzenle"
 
-#: ../admin-tool/editorwindow.py:193
+#: ../admin-tool/editorwindow.py:199
 msgid "_Delete"
 msgstr "_Sil"
 
-#: ../admin-tool/editorwindow.py:193
+#: ../admin-tool/editorwindow.py:199
 msgid "Delete item"
 msgstr "Ögeyi sil"
 
-#: ../admin-tool/editorwindow.py:194
-#: ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:200 ../admin-tool/sessionwindow.py:182
 msgid "_Help"
 msgstr "_Yardım"
 
-#: ../admin-tool/editorwindow.py:195
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
 msgid "_About"
-msgstr "_Hkkında"
+msgstr "_Hakkında"
 
-#: ../admin-tool/editorwindow.py:195
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
 msgid "About Sabayon"
-msgstr "Sabayon hakkında"
+msgstr "Sabayon Hakkında"
 
-#: ../admin-tool/editorwindow.py:254
-#: ../lib/sources/gconfsource.py:123
+#: ../admin-tool/editorwindow.py:262 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:258
-#: ../lib/sources/filessource.py:78
+#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:78
 msgid "Files"
 msgstr "Dosyalar"
 
-#: ../admin-tool/editorwindow.py:258
-#: ../admin-tool/lockdown/pessulus.glade.h:7
-#: ../lib/sources/paneldelegate.py:134
+#: ../admin-tool/editorwindow.py:266
+#: ../admin-tool/lockdown/pessulus.glade.h:39
+#: ../lib/sources/paneldelegate.py:228
 msgid "Panel"
 msgstr "Panel"
 
-#: ../admin-tool/fileviewer.py:29
+#: ../admin-tool/fileviewer.py:27
 #, python-format
 msgid "Profile file: %s"
 msgstr "Profil dosyası: %s"
 
-#: ../admin-tool/gconfviewer.py:59
-#: ../admin-tool/gconfviewer.py:78
+#: ../admin-tool/gconfviewer.py:57 ../admin-tool/gconfviewer.py:76
 msgid "<no type>"
 msgstr "<tür yok>"
 
-#: ../admin-tool/gconfviewer.py:60
+#: ../admin-tool/gconfviewer.py:58
 msgid "<no value>"
 msgstr "<değer yok>"
 
-#: ../admin-tool/gconfviewer.py:64
+#: ../admin-tool/gconfviewer.py:62
 msgid "string"
 msgstr "dizgi"
 
-#: ../admin-tool/gconfviewer.py:66
+#: ../admin-tool/gconfviewer.py:64
 msgid "integer"
 msgstr "tamsayı"
 
-#: ../admin-tool/gconfviewer.py:68
+#: ../admin-tool/gconfviewer.py:66
 msgid "float"
-msgstr "Gerçel sayı"
+msgstr "gerçel sayı"
+
+#: ../admin-tool/gconfviewer.py:68
+msgid "boolean"
+msgstr "mantıksal değer"
 
 #: ../admin-tool/gconfviewer.py:70
-msgid "boolean"
-msgstr "Mantıksal değer"
-
-#: ../admin-tool/gconfviewer.py:72
 msgid "schema"
 msgstr "şema"
 
-#: ../admin-tool/gconfviewer.py:74
+#: ../admin-tool/gconfviewer.py:72
 msgid "list"
 msgstr "liste"
 
-#: ../admin-tool/gconfviewer.py:76
+#: ../admin-tool/gconfviewer.py:74
 msgid "pair"
 msgstr "çift"
 
-#: ../admin-tool/gconfviewer.py:88
+#: ../admin-tool/gconfviewer.py:86
 #, python-format
 msgid "Profile settings: %s"
 msgstr "Profil ayarları: %s"
 
-#: ../admin-tool/gconfviewer.py:112
-#: ../admin-tool/profilesdialog.py:315
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:384
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Ad"
 
-#: ../admin-tool/gconfviewer.py:117
+#: ../admin-tool/gconfviewer.py:115
 msgid "Type"
 msgstr "Tür"
 
-#: ../admin-tool/gconfviewer.py:122
+#: ../admin-tool/gconfviewer.py:120
 msgid "Value"
 msgstr "Değer"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:99
+#: ../admin-tool/lockdown/lockdownbutton.py:101
 msgid "Click to make this setting not mandatory"
 msgstr "Bu ayarı zorunlu yapmamak için tıklayın"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:101
+#: ../admin-tool/lockdown/lockdownbutton.py:103
 msgid "Click to make this setting mandatory"
 msgstr "Bu ayarı zorunlu yapmak için tıklayın"
 
-#: ../admin-tool/lockdown/maindialog.py:47
+#: ../admin-tool/lockdown/maindialog.py:51
 msgid "Disable _command line"
-msgstr "_Komut satırını kapat"
-
-#: ../admin-tool/lockdown/maindialog.py:48
-msgid "Disable _printing"
-msgstr "_Yazdırmayı kapat"
-
-#: ../admin-tool/lockdown/maindialog.py:49
-msgid "Disable print _setup"
-msgstr "Yazıcı _kurmayı kapat"
-
-#: ../admin-tool/lockdown/maindialog.py:50
-msgid "Disable save to _disk"
-msgstr "_Diske kaydet'i kapat"
+msgstr "_Komut satırını etkinsizleştir"
 
 #: ../admin-tool/lockdown/maindialog.py:52
+msgid "Disable _printing"
+msgstr "_Yazdırmayı etkinsizleştir"
+
+#: ../admin-tool/lockdown/maindialog.py:53
+msgid "Disable print _setup"
+msgstr "Yazıcı _kurmayı etkinsizleştir"
+
+#: ../admin-tool/lockdown/maindialog.py:54
+msgid "Disable save to _disk"
+msgstr "_Diske kaydemeyi etkinsizleştir"
+
+#: ../admin-tool/lockdown/maindialog.py:56
 msgid "_Lock down the panels"
 msgstr "Panelleri _kilitle"
 
-#: ../admin-tool/lockdown/maindialog.py:53
-msgid "Disable force _quit"
-msgstr "_Zorla çıkış'ı kapat"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "Disable lock _screen"
-msgstr "_Ekranı kilitle'yi kapat"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable log _out"
-msgstr "_Çıkış'ı etkisizleştir"
-
 #: ../admin-tool/lockdown/maindialog.py:57
-msgid "Disable _quit"
-msgstr "Çı_kış'ı etkisizleştir"
+msgid "Disable force _quit"
+msgstr "_Zorla çıkmayı etkinsizleştir"
 
 #: ../admin-tool/lockdown/maindialog.py:58
-msgid "Disable _arbitrary URL"
-msgstr "İsteğe _bağlı URL'yi kapat"
+msgid "Disable lock _screen"
+msgstr "_Ekranı kilitlemeyi etkinsizleştir"
 
 #: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable _bookmark editing"
-msgstr "Ye_r imi düzenlemeyi kapat"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable _history"
-msgstr "_Geçmişi kapat"
+msgid "Disable log _out"
+msgstr "Oturum _çıkışını etkisizleştir"
 
 #: ../admin-tool/lockdown/maindialog.py:61
-msgid "Disable _javascript chrome"
-msgstr "_javascript chrome'u etkisizleştir"
+msgid "Disable _quit"
+msgstr "Program çı_kışını etkisizleştir"
 
 #: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _toolbar editing"
-msgstr "_Araç çubuğu düzenleme'yi kapat"
+msgid "Disable _arbitrary URL"
+msgstr "İsteğe _bağlı URL'yi etkinsizleştir"
 
 #: ../admin-tool/lockdown/maindialog.py:63
+msgid "Disable _bookmark editing"
+msgstr "Ye_r imi düzenlemeyi etkinsizleştir"
+
+#: ../admin-tool/lockdown/maindialog.py:64
+msgid "Disable _history"
+msgstr "_Geçmişi etkinsizleştir"
+
+#: ../admin-tool/lockdown/maindialog.py:65
+msgid "Disable _javascript chrome"
+msgstr "_Javascript chrome'u etkisizleştir"
+
+#: ../admin-tool/lockdown/maindialog.py:66
+msgid "Disable _toolbar editing"
+msgstr "_Araç çubuğu düzenlemeyi kapat"
+
+#: ../admin-tool/lockdown/maindialog.py:67
 msgid "_Fullscreen"
 msgstr "_Tam ekran"
 
-#: ../admin-tool/lockdown/maindialog.py:64
+#: ../admin-tool/lockdown/maindialog.py:68
 msgid "Hide _menubar"
 msgstr "_Menü çubuğunu gizle"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:1
-msgid "<b>Disabled Applets</b>"
-msgstr "<b>Kapalı Uygulamacıklar</b>"
+#: ../admin-tool/lockdown/maindialog.py:70
+msgid "Remove personal info from doc. on save"
+msgstr "Kaydederken belgeden kişisel bilgileri sil"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:2
+#: ../admin-tool/lockdown/maindialog.py:71
+msgid "Warn if macro creates PDF"
+msgstr "Eğer makro bir PDF oluşturuyorsa uyar"
+
+#: ../admin-tool/lockdown/maindialog.py:72
+msgid "Warn if macro prints"
+msgstr "Eğer makro yazdırıyorsa uyar"
+
+#: ../admin-tool/lockdown/maindialog.py:73
+msgid "Warn if macro saves doc"
+msgstr "Eğer makro belgeyi kaydediyorsa uyar"
+
+#: ../admin-tool/lockdown/maindialog.py:74
+msgid "Warn if macro signs doc"
+msgstr "Eğer makro belgeyi imzalıyorsa uyar"
+
+#: ../admin-tool/lockdown/maindialog.py:75
+msgid "Recommend password on save"
+msgstr "Kaydederken parola öner"
+
+#: ../admin-tool/lockdown/maindialog.py:77
+msgid "Enable auto-save"
+msgstr "Otomatik kaydetmeyi etkinleştir"
+
+#. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
+#: ../admin-tool/lockdown/maindialog.py:79
+msgid "Printing modifies document"
+msgstr "Yazdırma belgeyi değiştirir"
+
+#: ../admin-tool/lockdown/maindialog.py:80
+msgid "Use system file chooser"
+msgstr "Sistem dosya seçicisini kullan"
+
+#: ../admin-tool/lockdown/maindialog.py:81
+msgid "Create backup copy on save"
+msgstr "Kaydederken yedek kopya oluştur"
+
+#: ../admin-tool/lockdown/maindialog.py:82
+msgid "Warn for external formats"
+msgstr "Harici biçimler için uyar"
+
+#: ../admin-tool/lockdown/maindialog.py:84
+msgid "Use Open GL"
+msgstr "Open GL kullan"
+
+#: ../admin-tool/lockdown/maindialog.py:85
+msgid "Use system font"
+msgstr "Sistem yazıtipini kullan"
+
+#: ../admin-tool/lockdown/maindialog.py:86
+msgid "Use anti-aliasing"
+msgstr "Yazıtipi yumuşatmayı kullan"
+
+#: ../admin-tool/lockdown/maindialog.py:87
+msgid "Disable UI customization"
+msgstr "Kullanıcı arabirimi özelleştirmeyi etkinsizleştir"
+
+#: ../admin-tool/lockdown/maindialog.py:88
+msgid "Show insensitive menu items"
+msgstr "Yoğun kullanılan menü öğelerini göster"
+
+#: ../admin-tool/lockdown/maindialog.py:89
+msgid "Show font preview"
+msgstr "Yazıtipi önizlemesini göster"
+
+#: ../admin-tool/lockdown/maindialog.py:90
+msgid "Show font history"
+msgstr "Yazıtipi geçmişini göster"
+
+#: ../admin-tool/lockdown/maindialog.py:91
+msgid "Show icons in menus"
+msgstr "Menülerde simgeleri göster"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:1
+msgid ""
+"\n"
+"5\n"
+"10\n"
+"25\n"
+"50"
+msgstr ""
+"\n"
+"5\n"
+"10\n"
+"25\n"
+"50"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:6
+msgid ""
+"\n"
+"Automatic\n"
+"Large\n"
+"Small"
+msgstr ""
+"\n"
+"Otomatik\n"
+"Büyük\n"
+"Küçük"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:10
+msgid ""
+"\n"
+"OpenDocument (.odp)\n"
+"PowerPoint 97+ (.ppt)\n"
+"OpenOffice 1.1 (.sxi)"
+msgstr ""
+"\n"
+"OpenDocument (.odp)\n"
+"PowerPoint 97+ (.ppt)\n"
+"OpenOffice 1.1 (.sxi)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:14
+msgid ""
+"\n"
+"OpenDocument (.ods)\n"
+"Excel 97+ (.xls)\n"
+"OpenOffice 1.1 (.sxc)"
+msgstr ""
+"\n"
+"OpenDocument (.ods)\n"
+"Excel 97+ (.xls)\n"
+"OpenOffice 1.1 (.sxc)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:18
+msgid ""
+"\n"
+"OpenDocument (.odt)\n"
+"Word 97+ (.doc)\n"
+"OpenOffice 1.1 (.sxw)"
+msgstr ""
+"\n"
+"OpenDocument (.odt)\n"
+"Word 97+ (.doc)\n"
+"OpenOffice 1.1 (.sxw)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:22
+msgid ""
+"\n"
+"Very High\n"
+"High\n"
+"Medium\n"
+"Low"
+msgstr ""
+"\n"
+"Çok Yüksek\n"
+"Yüksek\n"
+"Orta\n"
+"Düşük"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:27
+msgid "<b>Disabled Applets</b>"
+msgstr "<b>Etkin Olmayan Uygulamacıklar</b>"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:28
 msgid "<b>Safe Protocols</b>"
 msgstr "<b>Güvenli Protokoller</b>"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:3
+#: ../admin-tool/lockdown/pessulus.glade.h:29
+msgid "Calc default format:"
+msgstr "Calc ön tanımlı biçimi:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:30
+msgid "Default icon size"
+msgstr "Öntanımlı simge boyutu"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:31
 msgid "Disable _unsafe protocols"
 msgstr "_Güvensiz protokolleri etkisizleştir"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:4
+#: ../admin-tool/lockdown/pessulus.glade.h:32
 msgid "Epiphany Web Browser"
 msgstr "Epiphany Web Tarayıcı"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:5
+#: ../admin-tool/lockdown/pessulus.glade.h:33
 msgid "General"
 msgstr "Genel"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:6
+#: ../admin-tool/lockdown/pessulus.glade.h:34
+msgid "Impress default format:"
+msgstr "Impress öntanımlı biçimi:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:35
+msgid "Load / Save"
+msgstr "Yükle / Kaydet"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:36
 msgid "Lockdown Editor"
 msgstr "Kilitleme Düzenleyicisi"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:37
+msgid "Macro Security Level:"
+msgstr "Makro Güvenlik Seviyesi:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:38
+msgid "OpenOffice"
+msgstr "OpenOffice"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:40
+msgid "Security"
+msgstr "Güvenlik"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:41
+msgid "Undo Steps:"
+msgstr "Geri Alma Adımları:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:42
+msgid "User Interface"
+msgstr "Kullanıcı Arabirimi"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:43
+msgid "Writer default format:"
+msgstr "Writer öntanımlı biçimi:"
 
 #.
 #. Translators: this string specifies how a profile
@@ -275,58 +455,92 @@ msgstr "Kilitleme Düzenleyicisi"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:415
+#: ../admin-tool/profilesdialog.py:494
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../admin-tool/sabayon:44
-msgid "Your account does not have permissions to run the Desktop User Profiles tool"
-msgstr "Hesabınız Masaüstü Kullanıcı Profiller'i aracını kullanabilmesi için yeterli izne sahip değil"
+#: ../admin-tool/sabayon:73
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr ""
+"Hesabınız Masaüstü Kullanıcı Profiller'i aracını kullanabilmesi için yeterli "
+"izne sahip değil"
 
-#: ../admin-tool/sabayon:45
-msgid "Administrator level permissions are needed to run this program because it can modify system files."
-msgstr "Bu program sistem dosyalarını değiştirebildiğinden çalıştırılabilmesi için yönetici seviyesinde izinlere gerek vardır."
+#: ../admin-tool/sabayon:74
+msgid ""
+"Administrator level permissions are needed to run this program because it "
+"can modify system files."
+msgstr ""
+"Bu program sistem dosyalarını değiştirebildiğinden çalıştırılabilmesi için "
+"yönetici seviyesinde izinlere ihtiyaç duyar."
 
-#: ../admin-tool/sabayon:50
+#: ../admin-tool/sabayon:79
 msgid "Desktop User Profiles tool is already running"
 msgstr "Masaüstü Kullanıcı Profilleri aracı zaten çalışmakta"
 
-#: ../admin-tool/sabayon:51
-msgid "You may not use Desktop User Profiles tool from within a profile editing session"
-msgstr "Bir profil düzenleme oturumu sırasında Masaüstü Kullanıcı Profilleri aracını kullanamazsınız"
+#: ../admin-tool/sabayon:80
+msgid ""
+"You may not use Desktop User Profiles tool from within a profile editing "
+"session"
+msgstr ""
+"Bir profil düzenleme oturumu sırasında Masaüstü Kullanıcı Profilleri aracını "
+"kullanmamalısınız"
 
-#: ../admin-tool/sabayon:58
+#: ../admin-tool/sabayon:87
 #, c-format
 msgid "User account '%s' was not found"
 msgstr "Kullanıcı hesabı '%s' bulunamadı"
 
-#: ../admin-tool/sabayon:59
+#: ../admin-tool/sabayon:88
 #, c-format
-msgid "Sabayon requires a special user account '%s' to be present on this computer. Try again after creating the account (using, for example, the 'adduser' command)"
-msgstr "Sabayon bu bilgisayarda bulunması gereken özel bir '%s' kullanıcı hesabına ihtiyaç duyuyor. Kullanıcıyı oluşturduktan sonra (örneğin, 'adduser' komutunu kullanarak) tekrar deneyin."
+msgid ""
+"Sabayon requires a special user account '%s' to be present on this computer. "
+"Try again after creating the account (using, for example, the 'adduser' "
+"command)"
+msgstr ""
+"Sabayon bu bilgisayarda bulunması gereken özel bir '%s' kullanıcı hesabına "
+"ihtiyaç duyuyor. Kullanıcıyı oluşturduktan sonra (örneğin, 'adduser' "
+"komutunu kullanarak) tekrar deneyin."
 
-#: ../admin-tool/sabayon-apply:39
+#: ../admin-tool/sabayon:128
+#, c-format
+msgid ""
+"A fatal error has occurred.  You can help us fix the problem by sending the "
+"log in %s to %s"
+msgstr ""
+"Önemli bir hata oluştu.  Bu problemi çözmemize %s girişini %s konumuna "
+"göndererek yardımcı olabilirsiniz."
+
+#: ../admin-tool/sabayon:143
+#, c-format
+msgid ""
+"Sabayon will now exit.  There were some recoverable errors, and you can help "
+"us debug the problem by sending the log in %s to %s"
+msgstr ""
+"Sabayon şimdi sonlanacak. Bazı düzeltilebilecek hatalar oluştu, ve bize bu "
+"hataları ayıklamamıza yardımcı olmak amacıyla %s girişini %s konumuna "
+"göndererek yardımcı olabilirsiniz"
+
+#: ../admin-tool/sabayon-apply:96
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "'%s' kullanıcısı için bir profil yok\n"
 
-#: ../admin-tool/sabayon-apply:44
-#, c-format
-msgid "Usage: %s [<profile-name>]\n"
-msgstr "Kullanım: %s [<profil-adı>]\n"
+#: ../admin-tool/sabayon-apply:101
+msgid "Please use -h for usage options"
+msgstr "Lütfen kullanım seçenekleri için -h kullanın"
 
-#: ../admin-tool/sabayon-session:32
+#: ../admin-tool/sabayon-session:66
 #, c-format
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
-msgstr "Kullanımı: %s <profil-adı> <profil-yolu> <gösterim-numarası>\n"
+msgstr "Kullanım: %s <profil-adı> <profil-yolu> <görüntü-numarası>\n"
 
 #: ../admin-tool/sabayon.desktop.in.h:1
 msgid "Establish and Edit Profiles for Users"
-msgstr "Kullanıcılar için profilleri tanımla ve yayınla"
+msgstr "Kullanıcılar için Profilleri Tanımla ve Yayınla"
 
-#: ../admin-tool/sabayon.desktop.in.h:2
-#: ../admin-tool/sabayon.glade.h:4
+#: ../admin-tool/sabayon.desktop.in.h:2 ../admin-tool/sabayon.glade.h:4
 msgid "User Profile Editor"
 msgstr "Kullanıcı Profil Düzenleyicisi"
 
@@ -347,144 +561,214 @@ msgid "_Base on:"
 msgstr "_Baz alınan:"
 
 #: ../admin-tool/sabayon.glade.h:6
+msgid "_Details"
+msgstr "_Ayrıntılar"
+
+#: ../admin-tool/sabayon.glade.h:7
 msgid "_Profiles:"
 msgstr "_Profiller:"
 
-#: ../admin-tool/sabayon.glade.h:7
+#: ../admin-tool/sabayon.glade.h:8
 msgid "_Users"
 msgstr "_Kullanıcılar"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.glade.h:9
 msgid "_Users:"
 msgstr "_Kullanıcılar:"
 
-#: ../admin-tool/saveconfirm.py:36
+#: ../admin-tool/saveconfirm.py:34
 msgid "Close _Without Saving"
 msgstr "Kay_detmeden Kapat"
 
-#: ../admin-tool/saveconfirm.py:43
+#: ../admin-tool/saveconfirm.py:41
 #, python-format
 msgid "Save changes to profile \"%s\" before closing?"
 msgstr "Kapatmadan önce değişiklikler \"%s\" profiline kaydedilsin mi?"
 
-#: ../admin-tool/saveconfirm.py:47
+#: ../admin-tool/saveconfirm.py:45
 #, python-format
-msgid "If you don't save, changes from the last %ld second will be permanently lost."
-msgid_plural "If you don't save, changes from the last %ld seconds will be permanently lost."
-msgstr[0] "Eğer kaydetmezseniz, son %ld saniyeden sonraki değişiklikler kalıcı olarak kaybolacaktır."
+msgid ""
+"If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld seconds will be permanently "
+"lost."
+msgstr[0] ""
+"Eğer kaydetmezseniz, son %ld saniyeden sonraki değişiklikler kalıcı olarak "
+"kaybolacaktır."
 
-#: ../admin-tool/saveconfirm.py:53
-msgid "If you don't save, changes from the last minute will be permanently lost."
-msgstr "Eğer kaydetmezseniz, son dakikadan sonraki değişiklikler kalıcı olarak kaybolacaktır."
+#: ../admin-tool/saveconfirm.py:51
+msgid ""
+"If you don't save, changes from the last minute will be permanently lost."
+msgstr ""
+"Eğer kaydetmezseniz, son dakikadan sonraki değişiklikler kalıcı olarak "
+"kaybolacaktır."
 
-#: ../admin-tool/saveconfirm.py:57
+#: ../admin-tool/saveconfirm.py:55
 #, python-format
-msgid "If you don't save, changes from the last minute and %ld second will be permanently lost."
-msgid_plural "If you don't save, changes from the last minute and %ld seconds will be permanently lost."
-msgstr[0] "Eğer kaydetmeseniz, son bir dakika ve %ld saniyeden sonraki değişiklikler kalıcı olarak kaybolacaktır."
+msgid ""
+"If you don't save, changes from the last minute and %ld second will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last minute and %ld seconds will be "
+"permanently lost."
+msgstr[0] ""
+"Eğer kaydetmezseniz, son bir dakika ve %ld saniyeden sonraki değişiklikler "
+"kalıcı olarak kaybolacaktır."
 
-#: ../admin-tool/saveconfirm.py:64
+#: ../admin-tool/saveconfirm.py:62
 #, python-format
-msgid "If you don't save, changes from the last %ld minute will be permanently lost."
-msgid_plural "If you don't save, changes from the last %ld minutes will be permanently lost."
-msgstr[0] "Eğer kaydetmezseniz, son %ld dakikadan sonraki değişiklikler kalıcı olarak kaybolacaktır."
+msgid ""
+"If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld minutes will be permanently "
+"lost."
+msgstr[0] ""
+"Eğer kaydetmezseniz, son %ld dakikadan sonraki değişiklikler kalıcı olarak "
+"kaybolacaktır."
 
-#: ../admin-tool/saveconfirm.py:73
-#: ../admin-tool/saveconfirm.py:83
-#, python-format
+#: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "Eğer kaydetmezseniz, son %d saatten sonraki değişiklikler kalıcı olarak kaybolacaktır."
+msgstr ""
+"Eğer kaydetmezseniz, son %d saatten sonraki değişiklikler kalıcı olarak "
+"kaybolacaktır."
 
-#: ../admin-tool/saveconfirm.py:76
+#: ../admin-tool/saveconfirm.py:74
 #, python-format
-msgid "If you don't save, changes from the last hour and %d minute will be permanently lost."
-msgid_plural "If you don't save, changes from the last hour and %d minutes will be permanently lost."
-msgstr[0] "Eğer kaydetmezseniz,  son saat ve %d dakikadan sonraki değişiklikler kalıcı olarak kaybolacaktır."
+msgid ""
+"If you don't save, changes from the last hour and %d minute will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last hour and %d minutes will be "
+"permanently lost."
+msgstr[0] ""
+"Eğer kaydetmezseniz,  son bir saat ve %d dakikadan sonraki değişiklikler "
+"kalıcı olarak kaybolacaktır."
 
-#: ../admin-tool/sessionwindow.py:153
+#: ../admin-tool/saveconfirm.py:81
+#, python-format
+msgid ""
+"If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] ""
+"Eğer kaydetmezseniz, son %d saatten sonraki değişiklikler kalıcı olarak "
+"kaybolacaktır."
+
+#: ../admin-tool/sessionwindow.py:154
 #, python-format
 msgid "Editing profile %s"
 msgstr "%s profili düzenleniyor"
 
-#: ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/sessionwindow.py:178
 msgid "_Quit"
 msgstr "Çı_k"
 
-#: ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/sessionwindow.py:180
 msgid "_Changes"
 msgstr "_Değişiklikler"
 
-#: ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/sessionwindow.py:180
 msgid "Edit changes"
 msgstr "Değişiklikleri düzenle"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Lockdown"
 msgstr "_Kilitleme"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:181
 msgid "Edit Lockdown settings"
 msgstr "Kilitleme ayarlarını düzenle"
 
-#: ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/sessionwindow.py:186
 msgid "Enforce Mandatory"
 msgstr "Zorunlu Yaptır"
 
-#: ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/sessionwindow.py:186
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Düzenleme oturumunda zorunlu ayarları uygula"
 
-#: ../admin-tool/sessionwindow.py:273
+#: ../admin-tool/sessionwindow.py:297
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "%s için kilitleme ayarları"
 
+#: ../admin-tool/sessionwindow.py:333
+#, python-format
+msgid ""
+"There was a recoverable error while applying the user profile '%s'.  You can "
+"report this error now or try to continue editing the user profile."
+msgstr ""
+"'%s' kullanıcı profilini uygularken düzeltilebilir bir hata oluştu.  Bu "
+"hatayı şimdi bildirebilir ya da kullanıcı profilini düzenlemeye devam "
+"edebilirsiniz."
+
+#: ../admin-tool/sessionwindow.py:337
+msgid "_Report this error"
+msgstr "_Bu hatayı bildir"
+
+#: ../admin-tool/sessionwindow.py:338
+msgid "_Continue editing"
+msgstr "_Düzenlemeye devam et"
+
 #: ../admin-tool/usersdialog.py:67
 #, python-format
 msgid "Users for profile %s"
-msgstr "%s profili için kullanıcılar"
+msgstr "Profil %s için kullanıcılar"
 
 #: ../admin-tool/usersdialog.py:95
 msgid "Use This Profile"
 msgstr "Bu Profili Kullan"
 
-#: ../lib/dirmonitor.py:151
-#, python-format
-msgid "Failed to add monitor for %s"
-msgstr "%s için ekran ekleme başarısız"
-
-#: ../lib/dirmonitor.py:231
-#, python-format
-msgid "Expected event: %s %s"
-msgstr "Beklenen olay: %s %s"
-
-#: ../lib/protosession.py:142
+#: ../lib/protosession.py:147
 msgid "Unable to find a free X display"
 msgstr "Boş bir X ekranı bulunamadı"
 
-#: ../lib/protosession.py:409
+#: ../lib/protosession.py:414
 msgid "Failed to start Xnest: timed out waiting for USR1 signal"
 msgstr "Xnest başlatılması başarısız: USR1 sinyali beklenirken zaman aşımı"
 
-#: ../lib/protosession.py:411
+#: ../lib/protosession.py:416
 msgid "Failed to start Xnest: died during startup"
 msgstr "Xnest başlatılması başarısız: başlama sırasında öldü"
+
+#: ../lib/protosession.py:480
+#, python-format
+msgid ""
+"Could not create the 'sabayon-apply' process: %s\n"
+"The command line used is '%s'\n"
+"Child traceback:\n"
+"%s"
+msgstr ""
+"'sabayon-apply' süreci oluşturulamadı: %s\n"
+"Komut satırı '%s' kullanıldı\n"
+"Alt sürec geri takibi:\n"
+"%s"
+
+#: ../lib/protosession.py:501
+#, python-format
+msgid ""
+"There was a recoverable error while applying the user profile from '%s'."
+msgstr "Kullanıcı profili '%s' uygulanırken düzeltilebilir bir hata oluştu."
+
+#: ../lib/protosession.py:510
+#, python-format
+msgid "There was a fatal error while applying the user profile from '%s'."
+msgstr "Kullanıcı profili '%s' uygulanırken önemli bir hata oluştu."
 
 #: ../lib/sources/filessource.py:68
 #, python-format
 msgid "File '%s' created"
-msgstr "'%s' dosyası oluşturuldu"
+msgstr "Dosya '%s' oluşturuldu"
 
 #: ../lib/sources/filessource.py:70
 #, python-format
 msgid "File '%s' deleted"
-msgstr "'%s' dosyası silindi"
+msgstr "Dosya '%s' silindi"
 
 #: ../lib/sources/filessource.py:72
 #, python-format
 msgid "File '%s' changed"
-msgstr "'%s' dosyası değişti"
+msgstr "Dosya '%s' değişti"
 
 #: ../lib/sources/filessource.py:96
 msgid "Applications menu"
@@ -492,7 +776,7 @@ msgstr "Uygulamalar menüsü"
 
 #: ../lib/sources/filessource.py:98
 msgid "Preferences menu"
-msgstr "Tercihler Menüsü"
+msgstr "Tercihler menüsü"
 
 #: ../lib/sources/filessource.py:100
 msgid "Server Settings menu"
@@ -506,198 +790,292 @@ msgstr "Sistem Ayarları menüsü"
 msgid "Start Here menu"
 msgstr "Buradan Başlayın menüsü"
 
-#: ../lib/sources/gconfsource.py:89
+#: ../lib/sources/gconfsource.py:90
 #, python-format
 msgid "GConf key '%s' unset"
-msgstr "GConf anahtarı '%s' belirtilmemiş"
+msgstr "GConf anahtarı '%s' kaldırıldı"
 
-#: ../lib/sources/gconfsource.py:91
+#: ../lib/sources/gconfsource.py:92
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
 msgstr "GConf anahtarı '%s' '%s' dizgesi yapıldı"
 
-#: ../lib/sources/gconfsource.py:93
+#: ../lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
 msgstr "GConf anahtarı '%s' tamsayı '%s' yapıldı"
 
-#: ../lib/sources/gconfsource.py:95
+#: ../lib/sources/gconfsource.py:96
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
 msgstr "GConf anahtarı '%s' gerçel sayı '%s' yapıldı"
 
-#: ../lib/sources/gconfsource.py:97
+#: ../lib/sources/gconfsource.py:98
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
 msgstr "GConf anahtarı '%s' mantıksal değer '%s' yapıldı"
 
-#: ../lib/sources/gconfsource.py:99
+#: ../lib/sources/gconfsource.py:100
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
 msgstr "GConf anahtarı '%s' şema '%s' yapıldı"
 
-#: ../lib/sources/gconfsource.py:101
+#: ../lib/sources/gconfsource.py:102
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
 msgstr "GConf anahtarı '%s' liste '%s' yapıldı"
 
-#: ../lib/sources/gconfsource.py:103
+#: ../lib/sources/gconfsource.py:104
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
 msgstr "GConf anahtarı '%s' '%s' çifti yapıldı"
 
-#: ../lib/sources/gconfsource.py:105
+#: ../lib/sources/gconfsource.py:106
 #, python-format
 msgid "GConf key '%s' set to '%s'"
 msgstr "GConf anahtarı '%s' '%s' yapıldı"
 
-#: ../lib/sources/gconfsource.py:136
+#: ../lib/sources/gconfsource.py:137
 msgid "Default GConf settings"
 msgstr "Öntanımlı GConf ayarları"
 
-#: ../lib/sources/gconfsource.py:138
+#: ../lib/sources/gconfsource.py:139
 msgid "Mandatory GConf settings"
 msgstr "Zorunlu GConf ayarları"
 
-#: ../lib/sources/mozillasource.py:132
+#: ../lib/sources/mozillasource.py:133
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
-msgstr "Mozilla abahtarı '%s' '%s' yapıldı"
+msgstr "Mozilla anahtarı '%s' '%s' yapıldı"
 
-#: ../lib/sources/mozillasource.py:134
+#: ../lib/sources/mozillasource.py:135
 #, python-format
 msgid "Mozilla key '%s' unset"
-msgstr "Mozilla anahtarı '%s' belirtilmemiş"
+msgstr "Mozilla anahtarı '%s' kaldırıldı"
 
-#: ../lib/sources/mozillasource.py:136
+#: ../lib/sources/mozillasource.py:137
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Mozilla anahtarı '%s' '%s' olarak değiştirildi"
 
-#: ../lib/sources/mozillasource.py:165
-#: ../lib/sources/mozillasource.py:175
+#: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
 msgid "Web browser preferences"
 msgstr "Web tarayıcı tercihleri"
 
-#: ../lib/sources/mozillasource.py:167
-#: ../lib/sources/mozillasource.py:177
+#: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
 msgid "Web browser bookmarks"
 msgstr "Web tarayıcı yer imleri"
 
-#: ../lib/sources/mozillasource.py:169
+#: ../lib/sources/mozillasource.py:170
 msgid "Web browser profile list"
 msgstr "Web tarayıcı profil listesi"
 
-#: ../lib/sources/mozillasource.py:520
+#: ../lib/sources/mozillasource.py:522
 #, python-format
 msgid "File Not Found (%s)"
-msgstr "Dosya bulunamadı (%s)"
+msgstr "Dosya Bulunamadı (%s)"
 
-#: ../lib/sources/mozillasource.py:871
+#: ../lib/sources/mozillasource.py:873
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
-msgstr "%(section)s bölümleri içinde eş name(%(name)s)"
+msgstr "%(section)s bölümleri içinde eş işim (%(name)s)"
 
-#: ../lib/sources/mozillasource.py:880
+#: ../lib/sources/mozillasource.py:882
 #, python-format
 msgid "redundant default in section %s"
 msgstr "%s bölümü içinde gereksiz öntanımlı"
 
-#: ../lib/sources/mozillasource.py:897
+#: ../lib/sources/mozillasource.py:899
 msgid "no default profile"
-msgstr "Öntanımlı profil yok"
+msgstr "öntanımlı profil yok"
 
-#: ../lib/sources/mozillasource.py:952
+#: ../lib/sources/mozillasource.py:954
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Mozilla yer imi oluşturuldu '%s' -> '%s'"
 
-#: ../lib/sources/mozillasource.py:954
+#: ../lib/sources/mozillasource.py:956
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
-msgstr "Mozilla yer imleri dizini oluşturuldu '%s'"
+msgstr "Mozilla yer imleri klasörü oluşturuldu '%s'"
 
-#: ../lib/sources/mozillasource.py:957
+#: ../lib/sources/mozillasource.py:959
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Mozilla yer imi silindi '%s'"
 
-#: ../lib/sources/mozillasource.py:959
+#: ../lib/sources/mozillasource.py:961
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
-msgstr "Mozilla yer imleri dizini silindi '%s'"
+msgstr "Mozilla yer imleri klasörü silindi '%s'"
 
-#: ../lib/sources/mozillasource.py:962
+#: ../lib/sources/mozillasource.py:964
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Mozilla yer imi değiştirildi '%s' -> '%s'"
 
-#: ../lib/sources/mozillasource.py:964
+#: ../lib/sources/mozillasource.py:966
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
-msgstr "Mozilla yer imleri dizini değiştirildi '%s'"
+msgstr "Mozilla yer imleri klasörü değiştirildi '%s'"
 
-#: ../lib/sources/paneldelegate.py:58
+#: ../lib/sources/paneldelegate.py:55
 #, python-format
 msgid "Panel '%s' added"
 msgstr "Panel '%s' eklendi"
 
-#: ../lib/sources/paneldelegate.py:64
+#: ../lib/sources/paneldelegate.py:61
 #, python-format
 msgid "Panel '%s' removed"
-msgstr "Panel '%s' çıkarıldı"
-
-#: ../lib/sources/paneldelegate.py:70
-#, python-format
-msgid "Panel applet '%s' added"
-msgstr "Panel programcığı '%s' eklendi"
+msgstr "Panel '%s' silindi"
 
 #: ../lib/sources/paneldelegate.py:76
 #, python-format
-msgid "Panel applet '%s' removed"
-msgstr "Panel programcığı '%s' çıkarıldı"
+msgid "Applet %s added to top panel"
+msgstr "Uygulamacık %s üst panele eklendi"
+
+#: ../lib/sources/paneldelegate.py:78
+#, python-format
+msgid "Applet %s added to bottom panel"
+msgstr "Uygulamacık %s alt panele eklendi"
+
+#: ../lib/sources/paneldelegate.py:80
+#, python-format
+msgid "Applet %s added to left panel"
+msgstr "Uygulamacık %s sol panele eklendi"
 
 #: ../lib/sources/paneldelegate.py:82
 #, python-format
-msgid "Panel object '%s' added"
-msgstr "Panel nesnesi '%s' eklendi"
+msgid "Applet %s added to right panel"
+msgstr "Uygulamacık %s sağ panele eklendi"
 
-#: ../lib/sources/paneldelegate.py:94
+#: ../lib/sources/paneldelegate.py:97
 #, python-format
-msgid "Panel object '%s' removed"
-msgstr "Panel nesnesi '%s' çıkarıldı"
+msgid "Applet %s removed from top panel"
+msgstr "Uygulamacık %s üst panelden silindi"
 
-#: ../lib/sources/paneldelegate.py:375
+#: ../lib/sources/paneldelegate.py:99
+#, python-format
+msgid "Applet %s removed from bottom panel"
+msgstr "Uygulamacık %s alt panelden silindi"
+
+#: ../lib/sources/paneldelegate.py:101
+#, python-format
+msgid "Applet %s removed from left panel"
+msgstr "Uygulamacık %s sol panelden silindi"
+
+#: ../lib/sources/paneldelegate.py:103
+#, python-format
+msgid "Applet %s removed from right panel"
+msgstr "Uygulamacık %s sağ panelden silindi"
+
+#: ../lib/sources/paneldelegate.py:117
+#, python-format
+msgid "%s added to top panel"
+msgstr "%s üst panele eklendi"
+
+#: ../lib/sources/paneldelegate.py:119
+#, python-format
+msgid "%s added to bottom panel"
+msgstr "%s alt panele eklendi"
+
+#: ../lib/sources/paneldelegate.py:121
+#, python-format
+msgid "%s added to left panel"
+msgstr "%s sol panele eklendi"
+
+#: ../lib/sources/paneldelegate.py:123
+#, python-format
+msgid "%s added to right panel"
+msgstr "%s sağ panele eklendi"
+
+#: ../lib/sources/paneldelegate.py:144
+#, python-format
+msgid "%s removed from top panel"
+msgstr "%s üst panelden silindi"
+
+#: ../lib/sources/paneldelegate.py:146
+#, python-format
+msgid "%s removed from bottom panel"
+msgstr "%s alt panelden silindi"
+
+#: ../lib/sources/paneldelegate.py:148
+#, python-format
+msgid "%s removed from left panel"
+msgstr "%s sol panelden silindi"
+
+#: ../lib/sources/paneldelegate.py:150
+#, python-format
+msgid "%s removed from right panel"
+msgstr "%s sağ panelden silindi"
+
+#: ../lib/sources/paneldelegate.py:199
+msgid "Drawer"
+msgstr "Çekmece"
+
+#: ../lib/sources/paneldelegate.py:201
+msgid "Main Menu"
+msgstr "Ana Menü"
+
+#: ../lib/sources/paneldelegate.py:211
+#, python-format
+msgid "%s launcher"
+msgstr "%s başlatıcısı"
+
+#: ../lib/sources/paneldelegate.py:215
+msgid "Lock Screen button"
+msgstr "Ekranı Kilitle düğmesi"
+
+#: ../lib/sources/paneldelegate.py:217
+msgid "Logout button"
+msgstr "Çıkış düğmesi"
+
+#: ../lib/sources/paneldelegate.py:219
+msgid "Run Application button"
+msgstr "Uygulama Çalıştır düğmesi"
+
+#: ../lib/sources/paneldelegate.py:221
+msgid "Search button"
+msgstr "Ara düğmesi"
+
+#: ../lib/sources/paneldelegate.py:223
+msgid "Screenshot button"
+msgstr "Ekran Görüntüsü düğmesi"
+
+#: ../lib/sources/paneldelegate.py:225
+msgid "Menu Bar"
+msgstr "Menü Çubuğu"
+
+#: ../lib/sources/paneldelegate.py:469
 msgid "Panel File"
 msgstr "Panel Dosyası"
 
-#: ../lib/storage.py:173
+#: ../lib/storage.py:172
 #, python-format
 msgid "Failed to read file '%s': %s"
-msgstr "Dosya okuma başarısız '%s': %s"
+msgstr "Dosya '%s' okunurken başarısız olundu: %s"
 
-#: ../lib/storage.py:183
+#: ../lib/storage.py:182
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
-msgstr "'%s'den metadata okunurken başarısız olundu: %s"
+msgstr "'%s' dosyasından metadata okunurken başarısız olundu: %s"
 
-#: ../lib/storage.py:189
+#: ../lib/storage.py:188
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "'%s' içinde geçersiz metadata bölümü: %s"
 
-#: ../lib/storage.py:363
+#: ../lib/storage.py:362
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Var olmayan '%s' dosyası eklenemiyor"
 
-#: ../lib/storage.py:540
+#: ../lib/storage.py:568
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Profil salt okunur %s"
 
-#: ../lib/unittests.py:38
-#: ../lib/unittests.py:39
+#: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
 msgstr "UYARI'ları yoksay"
 
@@ -715,69 +1093,75 @@ msgstr "%s denemeleri çalıştırılıyor (%s)"
 msgid "Success!"
 msgstr "Başarılı!"
 
-#: ../lib/userdb.py:52
+#: ../lib/userdb.py:51
 #, python-format
-msgid "invalid type for setting %s in %s"
-msgstr "%s ayarı için %s içindeki geçersiz tür"
+msgid "invalid type for setting %(setting)s in %(np)s"
+msgstr "%(np)s içindeki %(setting)s için geçersiz tür"
 
-#: ../lib/userdb.py:212
+#: ../lib/userdb.py:211
 #, python-format
 msgid "No search based specified for %s"
 msgstr "%s için bir arama tabanı belirtilmedi"
 
-#: ../lib/userdb.py:215
+#: ../lib/userdb.py:214
 #, python-format
 msgid "No query filter specified for %s"
 msgstr "%s için sorgu filtresi belirtilmedi"
 
-#: ../lib/userdb.py:218
+#: ../lib/userdb.py:217
 #, python-format
 msgid "No result attribute specified for %s"
-msgstr "%s için sonuç niteliği belirtilmemiş"
+msgstr "%s için sonuç özniteliği belirtilmedi"
 
-#: ../lib/userdb.py:227
+#: ../lib/userdb.py:226
 msgid "Scope must be one of sub, base and one"
 msgstr "Kapsam alt, temel ve tek seçeneklerinden biri olmalı"
 
-#: ../lib/userdb.py:247
+#: ../lib/userdb.py:246
 msgid "multiple_result must be one of first and random"
 msgstr "multiple_result ilklerden biri ve rastgele olmalı"
 
-#: ../lib/userdb.py:339
+#: ../lib/userdb.py:338
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "%s yazma işlemi için açılamadı"
 
-#: ../lib/userdb.py:352
+#: ../lib/userdb.py:351
 #, python-format
 msgid "Failed to save UserDatabase to %s"
-msgstr "Kullanıcı veri tabanı %s 'e kaydedilirken başarısız olundu"
+msgstr "Kullanıcı veri tabanı %s konumuna kaydedilirken başarısız olundu"
 
-#: ../lib/userdb.py:375
-#: ../lib/userdb.py:410
+#: ../lib/userdb.py:374 ../lib/userdb.py:409
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "%s dosyası bir profil yapılandırması değil"
 
-#: ../lib/userdb.py:382
+#: ../lib/userdb.py:381
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Öntanımlı profil %s yapılandırmaya eklenirken başarısız olundu"
 
-#: ../lib/userdb.py:418
+#: ../lib/userdb.py:417
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "%s kullanıcısını profil yapıladırmasına ekleme başarısız"
 
-#: ../lib/userdb.py:449
+#: ../lib/userdb.py:468
 msgid "Failed to get the user list"
 msgstr "Kullanıcı listesi alınırken başarısız olundu"
 
-#: ../lib/util.py:127
-msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
-msgstr "Başlangıç dizini bulunamıyor: /etc/passwd dosyasında belirtilmemiş ve ortamdaki $HOME için bir değer verilmemiş olabilir "
+#: ../lib/util.py:91
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"Başlangıç dizini bulunamıyor: /etc/passwd dosyasında belirtilmemiş ve "
+"ortamdaki $HOME için bir değer verilmemiş olabilir "
 
-#: ../lib/util.py:140
-msgid "Cannot find username: not set in /etc/passwd and no value for $USER in environment"
-msgstr "Kullanıcı adı bulunamadı: /etc/passwd dosyasında belirtilmemiş ve $USER ortam değişkeninin değeri yok"
-
+#: ../lib/util.py:104
+msgid ""
+"Cannot find username: not set in /etc/passwd and no value for $USER in "
+"environment"
+msgstr ""
+"Kullanıcı adı bulunamadı: /etc/passwd dosyasında belirtilmemiş ve $USER "
+"ortam değişkeninin değeri yok"
