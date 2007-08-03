@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the Sabayon package.
 #
 # Progga <progga@BengaLinux.Org>, 2006.
-# Runa Bhattacharjee <runab@gmail.com>, 2007.
+# Runa Bhattacharjee <runabh@gmail.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: sabayon\n"
+"Project-Id-Version: Sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-04-16 16:45+0100\n"
-"PO-Revision-Date: 2007-07-10 11:55+0530\n"
+"POT-Creation-Date: 2007-07-13 03:16+0100\n"
+"PO-Revision-Date: 2007-08-03 10:58+0530\n"
 "Last-Translator: Runa Bhattacharjee <runabh@gmail.com>\n"
-"Language-Team: Bengali (India) <en@li.org>\n"
+"Language-Team: Bengali India\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -105,7 +105,8 @@ msgstr "GConf"
 msgid "Files"
 msgstr "ফাইল"
 
-#: ../admin-tool/editorwindow.py:266 ../admin-tool/lockdown/pessulus.glade.h:7
+#: ../admin-tool/editorwindow.py:266
+#: ../admin-tool/lockdown/pessulus.glade.h:39
 #: ../lib/sources/paneldelegate.py:228
 msgid "Panel"
 msgstr "প্যানেল"
@@ -177,95 +178,288 @@ msgstr "চিহ্নিত বৈশিষ্ট্য আবশ্যকর�
 msgid "Click to make this setting mandatory"
 msgstr "চিহ্নিত বৈশিষ্ট্য আবশ্যকরূপে প্রয়োগ করার জন্য ক্লিক করুন"
 
-#: ../admin-tool/lockdown/maindialog.py:49
+#: ../admin-tool/lockdown/maindialog.py:51
 msgid "Disable _command line"
 msgstr "কমান্ড-লাইন থেকে ব্যবহার নিষ্ক্রিয় করুন (_c)"
 
-#: ../admin-tool/lockdown/maindialog.py:50
+#: ../admin-tool/lockdown/maindialog.py:52
 msgid "Disable _printing"
 msgstr "প্রিন্ট ব্যবস্থা নিষ্ক্রিয় করুন (_p)"
 
-#: ../admin-tool/lockdown/maindialog.py:51
+#: ../admin-tool/lockdown/maindialog.py:53
 msgid "Disable print _setup"
 msgstr "প্রিন্ট ব্যবস্থার বৈশিষ্ট্য নির্ধারণ নিষ্ক্রিয় করুন (_s)"
 
-#: ../admin-tool/lockdown/maindialog.py:52
+#: ../admin-tool/lockdown/maindialog.py:54
 msgid "Disable save to _disk"
 msgstr "ডিস্কে সংরক্ষণের সুবিধা নিষ্ক্রিয় করুন (_d)"
 
 # FIXME
-#: ../admin-tool/lockdown/maindialog.py:54
+#: ../admin-tool/lockdown/maindialog.py:56
 msgid "_Lock down the panels"
 msgstr "প্যানেল লক-ডাউন করুন (_L)"
 
-#: ../admin-tool/lockdown/maindialog.py:55
+#: ../admin-tool/lockdown/maindialog.py:57
 msgid "Disable force _quit"
 msgstr "বাধ্যতামূলক প্রস্থান নিষ্ক্রিয় করুন (_q)"
 
-#: ../admin-tool/lockdown/maindialog.py:56
+#: ../admin-tool/lockdown/maindialog.py:58
 msgid "Disable lock _screen"
 msgstr "পর্দা লক করার সুবিধা নিষ্ক্রিয় করুন (_s)"
 
-#: ../admin-tool/lockdown/maindialog.py:57
+#: ../admin-tool/lockdown/maindialog.py:59
 msgid "Disable log _out"
 msgstr "লগ-আউট নিষ্ক্রিয় করুন (_o)"
 
-#: ../admin-tool/lockdown/maindialog.py:59
+#: ../admin-tool/lockdown/maindialog.py:61
 msgid "Disable _quit"
 msgstr "প্রস্থানের সুবিধা নিষ্ক্রিয় করুন (_q)"
 
-#: ../admin-tool/lockdown/maindialog.py:60
+#: ../admin-tool/lockdown/maindialog.py:62
 msgid "Disable _arbitrary URL"
 msgstr "যথেচ্ছ URL-র ব্যবহার নিষ্ক্রিয় করুন (_a)"
 
-#: ../admin-tool/lockdown/maindialog.py:61
+#: ../admin-tool/lockdown/maindialog.py:63
 msgid "Disable _bookmark editing"
 msgstr "বুকমার্ক সম্পাদনা নিষ্ক্রিয় করুন (_b)"
 
-#: ../admin-tool/lockdown/maindialog.py:62
+#: ../admin-tool/lockdown/maindialog.py:64
 msgid "Disable _history"
 msgstr "পূর্ববর্তী তথ্য সংরক্ষণ নিষ্ক্রিয় করুন (_h)"
 
-#: ../admin-tool/lockdown/maindialog.py:63
+#: ../admin-tool/lockdown/maindialog.py:65
 msgid "Disable _javascript chrome"
 msgstr "javscript chrome নিষ্ক্রিয় করুন (_j)"
 
-#: ../admin-tool/lockdown/maindialog.py:64
+#: ../admin-tool/lockdown/maindialog.py:66
 msgid "Disable _toolbar editing"
 msgstr "টুল-বার সম্পাদনা নিষ্ক্রিয় করুন (_t)"
 
-#: ../admin-tool/lockdown/maindialog.py:65
+#: ../admin-tool/lockdown/maindialog.py:67
 msgid "_Fullscreen"
 msgstr "সম্পূর্ণ পর্দাজুড়ে প্রদর্শন (_F)"
 
-#: ../admin-tool/lockdown/maindialog.py:66
+#: ../admin-tool/lockdown/maindialog.py:68
 msgid "Hide _menubar"
 msgstr "মেনু-বার আড়াল করা হবে (_m)"
 
+#: ../admin-tool/lockdown/maindialog.py:70
+msgid "Remove personal info from doc. on save"
+msgstr "সংরক্ষণ করার সময় ডকুমেন্ট থেকে ব্যক্তিগত তথ্য মুছে ফেলা হবে"
+
+#: ../admin-tool/lockdown/maindialog.py:71
+msgid "Warn if macro creates PDF"
+msgstr "macro দ্বারা PDF নির্মাণ করা হলে সতর্কবার্তা প্রদর্শন করা হবে"
+
+#: ../admin-tool/lockdown/maindialog.py:72
+msgid "Warn if macro prints"
+msgstr "macro দ্বারা প্রিন্ট করা হলে সতর্কবার্তা প্রদর্শন করা হবে"
+
+#: ../admin-tool/lockdown/maindialog.py:73
+msgid "Warn if macro saves doc"
+msgstr "macro দ্বারা তথ্য সংরক্ষণ করা হলে সতর্কবার্তা প্রদর্শন করা হবে"
+
+#: ../admin-tool/lockdown/maindialog.py:74
+msgid "Warn if macro signs doc"
+msgstr "macro দ্বারা ডকুমেন্ট স্বাক্ষরিত হলে সতর্কবার্তা প্রদর্শন করা হবে"
+
+#: ../admin-tool/lockdown/maindialog.py:75
+msgid "Recommend password on save"
+msgstr "সংরক্ষণের সময় পাসওয়ার্ড ব্যবহারের উপদেশ দেওয়া হবে"
+
+#: ../admin-tool/lockdown/maindialog.py:77
+msgid "Enable auto-save"
+msgstr "স্বয়ংক্রিয় সংরক্ষণ প্রক্রিয়া সক্রিয় করা হবে"
+
+#. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
+#: ../admin-tool/lockdown/maindialog.py:79
+msgid "Printing modifies document"
+msgstr "প্রিন্ট কর্মের ফলে ডকুমেন্ট পরিবর্তন করা হবে"
+
+#: ../admin-tool/lockdown/maindialog.py:80
+msgid "Use system file chooser"
+msgstr "সিস্টেম ফাইল নির্বাচন ব্যবস্থা প্রয়োগ করা হবে"
+
+#: ../admin-tool/lockdown/maindialog.py:81
+msgid "Create backup copy on save"
+msgstr "সংরক্ষণের সময় ব্যাক-আপ কপি নির্মাণ করা হবে"
+
+#: ../admin-tool/lockdown/maindialog.py:82
+msgid "Warn for external formats"
+msgstr "বহিস্থিত বিন্যাসের ক্ষেত্রে সতর্কবার্তা প্রদর্শন করা হবে"
+
+#: ../admin-tool/lockdown/maindialog.py:84
+msgid "Use Open GL"
+msgstr "Open GL ব্যবহার করা হবে"
+
+#: ../admin-tool/lockdown/maindialog.py:85
+msgid "Use system font"
+msgstr "সিস্টেমের ফন্ট ব্যবহার করা হবে"
+
+#: ../admin-tool/lockdown/maindialog.py:86
+msgid "Use anti-aliasing"
+msgstr "অ্যান্ট-অ্যালায়েসিং ব্যবহার করা হবে"
+
+#: ../admin-tool/lockdown/maindialog.py:87
+msgid "Disable UI customization"
+msgstr "পছন্দ অনুসারে UI পরিবর্তন নিষ্ক্রিয় করা হবে"
+
+#: ../admin-tool/lockdown/maindialog.py:88
+msgid "Show insensitive menu items"
+msgstr "মেনুর অসংবেদনশীল বস্তু প্রদর্শন করা হবে"
+
+#: ../admin-tool/lockdown/maindialog.py:89
+msgid "Show font preview"
+msgstr "ফন্টের পূর্বরূপ প্রদর্শন করা হবে"
+
+#: ../admin-tool/lockdown/maindialog.py:90
+msgid "Show font history"
+msgstr "ফন্টের পূর্ববর্তী তথ্য প্রদর্শন করা হবে"
+
+#: ../admin-tool/lockdown/maindialog.py:91
+msgid "Show icons in menus"
+msgstr "মেনুর মধ্যে আইকন প্রদর্শন করা হবে"
+
 #: ../admin-tool/lockdown/pessulus.glade.h:1
+msgid ""
+"\n"
+"5\n"
+"10\n"
+"25\n"
+"50"
+msgstr ""
+"\n"
+"৫\n"
+"১০\n"
+"২৫\n"
+"৫০"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:6
+msgid ""
+"\n"
+"Automatic\n"
+"Large\n"
+"Small"
+msgstr ""
+"\n"
+"স্বয়ংক্রিয়\n"
+"বৃহৎ\n"
+"ক্ষুদ্র"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:10
+msgid ""
+"\n"
+"OpenDocument (.odp)\n"
+"PowerPoint 97+ (.ppt)\n"
+"OpenOffice 1.1 (.sxi)"
+msgstr ""
+"\n"
+"OpenDocument (.odp)\n"
+"PowerPoint 97+ (.ppt)\n"
+"OpenOffice 1.1 (.sxi)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:14
+msgid ""
+"\n"
+"OpenDocument (.ods)\n"
+"Excel 97+ (.xls)\n"
+"OpenOffice 1.1 (.sxc)"
+msgstr ""
+"\n"
+"OpenDocument (.ods)\n"
+"Excel 97+ (.xls)\n"
+"OpenOffice 1.1 (.sxc)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:18
+msgid ""
+"\n"
+"OpenDocument (.odt)\n"
+"Word 97+ (.doc)\n"
+"OpenOffice 1.1 (.sxw)"
+msgstr ""
+"\n"
+"OpenDocument (.odt)\n"
+"Word 97+ (.doc)\n"
+"OpenOffice 1.1 (.sxw)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:22
+msgid ""
+"\n"
+"Very High\n"
+"High\n"
+"Medium\n"
+"Low"
+msgstr ""
+"\n"
+"অতি উচ্চ\n"
+"উচ্চ\n"
+"মাঝারি\n"
+"নিম্ন"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:27
 msgid "<b>Disabled Applets</b>"
 msgstr "<b>নিষ্ক্রিয় অ্যাপলেট</b>"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:2
+#: ../admin-tool/lockdown/pessulus.glade.h:28
 msgid "<b>Safe Protocols</b>"
 msgstr "<b>নিরাপদ প্রোটোকল</b>"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:3
+#: ../admin-tool/lockdown/pessulus.glade.h:29
+msgid "Calc default format:"
+msgstr "Calc-র ডিফল্ট বিন্যাস:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:30
+msgid "Default icon size"
+msgstr "আইকনের ডিফল্ট মাপ"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:31
 msgid "Disable _unsafe protocols"
 msgstr "অসুরক্ষিত প্রোটোকল নিষ্ক্রিয় করুন (_u)"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:4
+#: ../admin-tool/lockdown/pessulus.glade.h:32
 msgid "Epiphany Web Browser"
 msgstr "Epiphany ওয়েব-ব্রাউজার"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:5
+#: ../admin-tool/lockdown/pessulus.glade.h:33
 msgid "General"
 msgstr "সাধারণ"
 
+#: ../admin-tool/lockdown/pessulus.glade.h:34
+msgid "Impress default format:"
+msgstr "Impress-র ডিফল্ট বিন্যাস:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:35
+msgid "Load / Save"
+msgstr "লোড / সংরক্ষণ করুন"
+
 # FIXME
-#: ../admin-tool/lockdown/pessulus.glade.h:6
+#: ../admin-tool/lockdown/pessulus.glade.h:36
 msgid "Lockdown Editor"
 msgstr "লক-ডাউন সম্পাদন ব্যবস্থা"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:37
+msgid "Macro Security Level:"
+msgstr "ম্যাক্রোর নিরাপত্তার মাত্রা:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:38
+msgid "OpenOffice"
+msgstr "OpenOffice"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:40
+msgid "Security"
+msgstr "নিরাপত্তা"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:41
+msgid "Undo Steps:"
+msgstr "সঞ্চালিত কর্মের ধাপ বাতিল করা হবে:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:42
+msgid "User Interface"
+msgstr "ইউজার ইন্টারফেস"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:43
+msgid "Writer default format:"
+msgstr "Writer-র ডিফল্ট বিন্যাস:"
 
 #.
 #. Translators: this string specifies how a profile
@@ -325,21 +519,25 @@ msgstr ""
 msgid ""
 "A fatal error has occurred.  You can help us fix the problem by sending the "
 "log in %s to %s"
-msgstr "গুরুতর সমস্যা উৎপন্ন হয়েছে। %s-র মধ্যে উপস্থিত লগ, %s-এ পাঠিয়ে এই সমস্যা সমাধানে সহায়তা করুন।"
+msgstr ""
+"গুরুতর সমস্যা উৎপন্ন হয়েছে। %s-র মধ্যে উপস্থিত লগ, %s-এ পাঠিয়ে এই সমস্যা সমাধানে "
+"সহায়তা করুন।"
 
 #: ../admin-tool/sabayon:143
 #, c-format
 msgid ""
 "Sabayon will now exit.  There were some recoverable errors, and you can help "
 "us debug the problem by sending the log in %s to %s"
-msgstr "Sabayon বন্ধ করা হবে। কয়েকটি সমাধান যোগ্য সমস্যা উৎপন্ন হয়েছে এবং %s-র মধ্যে উপস্থিত লগ, %s-এ পাঠিয়ে এই সমস্যা ডিবাগ করতে সহায়তা করুন।"
+msgstr ""
+"Sabayon বন্ধ করা হবে। কয়েকটি সমাধান যোগ্য সমস্যা উৎপন্ন হয়েছে এবং %s-র মধ্যে "
+"উপস্থিত লগ, %s-এ পাঠিয়ে এই সমস্যা ডিবাগ করতে সহায়তা করুন।"
 
-#: ../admin-tool/sabayon-apply:86
+#: ../admin-tool/sabayon-apply:96
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "'%s' ব্যবহারকারীর প্রোফাইল পাওয়া যায়নি\n"
 
-#: ../admin-tool/sabayon-apply:91
+#: ../admin-tool/sabayon-apply:101
 msgid "Please use -h for usage options"
 msgstr "ব্যবহারযোগ্য বিভিন্ন বিকল্প দেখতে -h প্রয়োগ করুন"
 
@@ -502,7 +700,10 @@ msgstr "%s-র জন্য লক-ডাউন সংক্রান্ত ব�
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
 "report this error now or try to continue editing the user profile."
-msgstr "'%s' ব্যবহারকারীর প্রোফাইল প্রয়োগকালে একটি সমাধানযোগ্য সমস্থা উৎপন্ন হয়েছে। এই সমস্যা সম্বন্ধে এই মুহূর্তে সূচিত করা যাবে অথবা ব্যবহারকারীর প্রোফাইল পরিবর্তনের প্রচেষ্টা করুন।"
+msgstr ""
+"'%s' ব্যবহারকারীর প্রোফাইল প্রয়োগকালে একটি সমাধানযোগ্য সমস্থা উৎপন্ন হয়েছে। এই "
+"সমস্যা সম্বন্ধে এই মুহূর্তে সূচিত করা যাবে অথবা ব্যবহারকারীর প্রোফাইল পরিবর্তনের "
+"প্রচেষ্টা করুন।"
 
 #: ../admin-tool/sessionwindow.py:337
 msgid "_Report this error"
@@ -520,16 +721,6 @@ msgstr "প্রোফাইল %s-র ব্যবহারকারী"
 #: ../admin-tool/usersdialog.py:95
 msgid "Use This Profile"
 msgstr "চিহ্নিত প্রোফাইল ব্যবহার করা হবে"
-
-#: ../lib/dirmonitor.py:150
-#, python-format
-msgid "Failed to add monitor for %s"
-msgstr "%s-র নিরীক্ষণ ব্যবস্থা যোগ করতে ব্যর্থ"
-
-#: ../lib/dirmonitor.py:230
-#, python-format
-msgid "Expected event: %s %s"
-msgstr "প্রত্যাশিত ইভেন্ট: %s %s"
 
 #: ../lib/protosession.py:147
 msgid "Unable to find a free X display"
@@ -683,55 +874,55 @@ msgstr "ওয়েব ব্রাউজারের বুকমার্ক"
 msgid "Web browser profile list"
 msgstr "ওয়েব ব্রাউজারের প্রোফাইলের তালিকা"
 
-#: ../lib/sources/mozillasource.py:521
+#: ../lib/sources/mozillasource.py:522
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "ফাইল পাওয়া যায়নি (%s)"
 
 # FIXME: ভাল শোনাচ্ছে না :-(
-#: ../lib/sources/mozillasource.py:872
+#: ../lib/sources/mozillasource.py:873
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "এক নাম (%(name)s) %(section)s বিভাগে একাধিকবার উপস্থিত রয়েছে"
 
 # FIXME
-#: ../lib/sources/mozillasource.py:881
+#: ../lib/sources/mozillasource.py:882
 #, python-format
 msgid "redundant default in section %s"
 msgstr "%s বিভাগে অপ্রয়োজনীয় ডিফল্ট মান উপস্থিত"
 
-#: ../lib/sources/mozillasource.py:898
+#: ../lib/sources/mozillasource.py:899
 msgid "no default profile"
 msgstr "ডিফল্ট প্রোফাইল অনুপস্থিত"
 
 # FIXME
-#: ../lib/sources/mozillasource.py:953
+#: ../lib/sources/mozillasource.py:954
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Mozilla বুকমার্ক নির্মিত হয়েছে '%s' -> '%s'"
 
-#: ../lib/sources/mozillasource.py:955
+#: ../lib/sources/mozillasource.py:956
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Mozilla বুকমার্ক ফোল্ডার নির্মিত হয়েছে '%s'"
 
-#: ../lib/sources/mozillasource.py:958
+#: ../lib/sources/mozillasource.py:959
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Mozilla বুকমার্ক মুছে ফেলা হয়েছে '%s'"
 
-#: ../lib/sources/mozillasource.py:960
+#: ../lib/sources/mozillasource.py:961
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Mozilla বুকমার্ক ফোল্ডার মুছে ফেলা হয়েছে '%s'"
 
-#: ../lib/sources/mozillasource.py:963
+#: ../lib/sources/mozillasource.py:964
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Mozilla বুকমার্ক পরিবর্তিত হয়েছে '%s' '%s'"
 
 # FIXME
-#: ../lib/sources/mozillasource.py:965
+#: ../lib/sources/mozillasource.py:966
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mozilla বুকমার্ক ফোল্ডার পরিবর্তিত হয়েছে '%s'"
@@ -966,7 +1157,7 @@ msgstr "কনফিগারেশনের মধ্যে ডিফল্ট 
 msgid "Failed to add user %s to profile configuration"
 msgstr "প্রোফাইল কনফিগারেশনের মধ্যে %s ব্যবহারকারীর তথ্য যোগ করতে ব্যর্থ"
 
-#: ../lib/userdb.py:448
+#: ../lib/userdb.py:468
 msgid "Failed to get the user list"
 msgstr "ব্যবহারকারীর তালিকা প্রাপ্ত করতে ব্যর্থ"
 
