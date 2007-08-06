@@ -1,6 +1,7 @@
 SUBDIRS =			\
 	lib			\
 	admin-tool		\
+	data			\
 	doc			\
 	po
 

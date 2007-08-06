@@ -1,3 +1,16 @@
+2007-08-06  Federico Mena Quintero  <federico@novell.com>
+
+	* data/icons/*: New, sexy icon files from Alberto Ruiz
+	<aruiz@gnome.org> and Andreas Nilsson <andreas@andreasn.se>.
+
+	* configure.ac (AC_CONFIG_FILES): Add the data/icons Makefiles.
+
+	* Makefile.am (SUBDIRS): Add the "data" directory.
+
+	* admin-tool/Makefile.am: Remove the icon installation stuff.
+
+	* admin-tool/sabayon.png: Removed the old icon.  Wheeeee!
+
 ==================== 2.19.1 ====================
 
 2007-07-12  Federico Mena Quintero  <federico@novell.com>

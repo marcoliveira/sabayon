@@ -18,9 +18,6 @@ PYTHON_FILES =				\
 GLADE_FILES =				\
 	sabayon.glade
 
-ICON_FILES =				\
-	sabayon.png
-
 desktopdir        = $(datadir)/applications
 desktop_in_files = sabayon.desktop.in
 desktop_DATA     = $(desktop_in_files:.desktop.in=.desktop)
@@ -28,7 +25,6 @@ desktop_DATA     = $(desktop_in_files:.desktop.in=.desktop)
 EXTRA_DIST =				\
 	$(PYTHON_FILES)			\
 	$(GLADE_FILES)			\
-	$(ICON_FILES)			\
 	$(desktop_in_files)		\
 	$(desktop_DATA)			\
 	sabayon				\
@@ -40,9 +36,6 @@ EXTRA_DIST =				\
 
 gladedir   = $(pkgdatadir)/glade
 glade_DATA = $(GLADE_FILES)
-
-icondir    = $(datadir)/icons/hicolor/48x48/apps
-icon_DATA  = $(ICON_FILES)
 
 bin_SCRIPTS = sabayon
 sbin_SCRIPTS = sabayon-apply
