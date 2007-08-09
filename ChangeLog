@@ -1,3 +1,10 @@
+2007-08-09  Federico Mena Quintero  <federico@novell.com>
+
+	* data/icons/Makefile.am (install-data-hook uninstall-hook): Run
+	gtk-update-icon-cache.  Patch from Christian Kirbach
+	<Christian.Kirbach%40googlemail.com>.  Fixes
+	http://bugzilla.gnome.org/show_bug.cgi?id=436107
+
 2007-08-06  Federico Mena Quintero  <federico@novell.com>
 
 	* data/icons/*: New, sexy icon files from Alberto Ruiz
