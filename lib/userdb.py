@@ -476,7 +476,7 @@ class UserDatabase:
 		    continue
 		if user[6] == "" or string.find(user[6], "nologin") != -1:
 		    continue
-                if user[0][len (user[0]) - 1] == "$":  # ADS hosts
+                if user[0][len (user[0]) - 1] == "$":  # Active Directory hosts end in "$"; we don't want to show those as users
                     continue
 		list.append(user[0])
 	    except:
