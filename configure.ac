@@ -131,9 +131,10 @@ else
       XINITRC_SYSCONFDIR=""
       ;;
     suse)
-      XSESSION="/etc/opt/gnome/gdm/Xsession"
-      install_xinitrc_script="no"
-      XINITRC_SYSCONFDIR="/etc/X11/xinit/xinitrc.d"
+      XSESSION="/etc/gdm/Xsession"
+      SESSION_NAME="gnome"
+      install_xinitrc_script="yes"
+      XINITRC_SYSCONFDIR="/X11/xinit/xinitrc.d"
       ;;
     mandriva)
       XSESSION="/etc/X11/xdm/Xsession"
