@@ -216,7 +216,7 @@ class PanelDelegate (userprofile.SourceDelegate):
 			elif action_type == "logout":
 				self.name = _("Logout button")
 			elif action_type == "run":
-				self.name = _("Run Appliction button")
+				self.name = _("Run Application button")
 			elif action_type == "search":
 				self.name = _("Search button")
 			else:

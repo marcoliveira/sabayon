@@ -1,5 +1,12 @@
 2007-08-13  Federico Mena Quintero  <federico@novell.com>
 
+	* lib/sources/paneldelegate.py (PanelDelegate.__init__): Fix
+	"Appliction" typo.  Patch by Baris Cicek
+	<baris@teamforce.name.tr>; fixes
+	http://bugzilla.gnome.org/show_bug.cgi?id=463177
+
+2007-08-13  Federico Mena Quintero  <federico@novell.com>
+
 	* admin-tool/sabayon-apply: Import our config module.
 
 	* admin-tool/sabayon-session: Likewise.
