@@ -4,6 +4,11 @@
 
 	Released sabayon-2.19.2.
 
+	* lib/config.py.in (DIRECTORIES_TO_IGNORE): Ignore .wapi,
+	.fontconfig, .gstreamer-0.10.
+
+2007-08-14  Federico Mena Quintero  <federico@novell.com>
+
 	* admin-tool/sabayon.desktop.in (Categories): Remove
 	"Application", add "GTK".  Patch by Christian Kirbach
 	<Christian.Kirbach@googlemail.com>; fixes
