@@ -1,3 +1,13 @@
+2007-08-14  Federico Mena Quintero  <federico@novell.com>
+
+	* configure.ac: Add a requirement for pygobject 2.12.0 or later
+	for pygobject.filename_display_name().
+
+	* lib/sources/filessource.py (FilesChange.get_short_description):
+	Convert the filename to UTF-8 before generating a string for
+	display.  Patch by Will Lachance <wrlach@gmail.com>.  Fixes
+	http://bugzilla.gnome.org/show_bug.cgi?id=320968
+
 2007-08-13  Federico Mena Quintero  <federico@novell.com>
 
 	* lib/sources/paneldelegate.py (PanelDelegate.__init__): Fix

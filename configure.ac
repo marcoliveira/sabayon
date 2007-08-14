@@ -31,6 +31,20 @@ AM_CHECK_PYTHON_HEADERS(,[AC_MSG_ERROR([Can't locate python headers])])
 
 # Check for GDK/X11 and PyGObject
 PKG_CHECK_MODULES(XLIB_MODULE, gdk-x11-2.0 pygobject-2.0)
+
+PYGOBJECT_REQUIRED_VERSION=2.12.0
+AC_MSG_CHECKING(for pygobject $PYGOBJECT_REQUIRED_VERSION or greater)
+if $PKG_CONFIG --atleast-version $PYGOBJECT_REQUIRED_VERSION pygobject-2.0
+then
+  AC_MSG_RESULT(found)
+else
+  AC_MSG_ERROR([
+*** pygobject $PYGOBJECT_REQUIRED_VERSION or greater is required.  You can
+*** always get the latest version from http://www.pygtk.org/
+  ])
+fi
+  
+
 AC_SUBST(XLIB_MODULE_CFLAGS)
 AC_SUBST(XLIB_MODULE_LIBS)
 

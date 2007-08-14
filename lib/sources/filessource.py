@@ -64,12 +64,13 @@ class FilesChange (userprofile.ProfileChange):
         return False
 
     def get_short_description (self):
+        utf8_rel_path = gobject.filename_display_name (self.rel_path)
         if self.event == dirmonitor.CREATED:
-            return _("File '%s' created") % self.rel_path
+            return _("File '%s' created") % utf8_rel_path
         elif self.event == dirmonitor.DELETED:
-            return _("File '%s' deleted") % self.rel_path
+            return _("File '%s' deleted") % utf8_rel_path
         elif self.event == dirmonitor.CHANGED:
-            return _("File '%s' changed") % self.rel_path
+            return _("File '%s' changed") % utf8_rel_path
 
 gobject.type_register (FilesChange)
 
