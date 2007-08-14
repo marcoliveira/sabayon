@@ -38,6 +38,7 @@ if __name__ == '__main__':
     import shutil
     
     from sabayon import userprofile
+    from sabayon import config
     from sabayon import debuglog
     from sabayon import errors
     from sabayon import util
@@ -49,24 +50,24 @@ if __name__ == '__main__':
     def mprint (fmt, *args):
         debuglog.debug_log (True, debuglog.DEBUG_LOG_DOMAIN_SABAYON_APPLY, fmt % args)
 
+    util.init_gettext ()
+
+    option_parser = optparse.OptionParser (usage="usage: %prog [-s] [--admin-log-config FILE] [--readable-log-config FILE] [<profilename>]")
+    option_parser.add_option ("-s",
+                              "--sabayon-session", dest="sabayon_session",
+                              action="store_true", default=False)
+    # FIXME: say that "man sabayon" will give you the
+    # syntax for the debug log config file.
+    option_parser.add_option ("--admin-log-config", dest="admin_log_config",
+                              metavar="FILE",
+                              help="File with options for the debug log (readable by the system administrator)")
+    option_parser.add_option ("--readable-log-config", dest="readable_log_config",
+                              metavar="FILE",
+                              help="File with options for the debug log (readable by Sabayon's helper processes)")
+
+    options, args = option_parser.parse_args ()
+
     try:
-        util.init_gettext ()
-
-        option_parser = optparse.OptionParser (usage="usage: %prog [-s] [--admin-log-config FILE] [--readable-log-config FILE] [<profilename>]")
-        option_parser.add_option ("-s",
-                                  "--sabayon-session", dest="sabayon_session",
-                                  action="store_true", default=False)
-        # FIXME: say that "man sabayon" will give you the
-        # syntax for the debug log config file.
-        option_parser.add_option ("--admin-log-config", dest="admin_log_config",
-                                  metavar="FILE",
-                                  help="File with options for the debug log (readable by the system administrator)")
-        option_parser.add_option ("--readable-log-config", dest="readable_log_config",
-                                  metavar="FILE",
-                                  help="File with options for the debug log (readable by Sabayon's helper processes)")
-
-        options, args = option_parser.parse_args ()
-
         is_sabayon_session = options.sabayon_session
         admin_log_config_filename = options.admin_log_config or ("~/" + config.LOG_CONFIG_FILENAME)
 

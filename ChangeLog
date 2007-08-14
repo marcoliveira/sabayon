@@ -1,5 +1,20 @@
 2007-08-13  Federico Mena Quintero  <federico@novell.com>
 
+	* admin-tool/sabayon-apply: Import our config module.
+
+	* admin-tool/sabayon-session: Likewise.
+
+	* admin-tool/sabayon-apply (main): Start the toplevel "try" block
+	right after the call to option_parser.parse_args(); if it exits
+	due to being passed --help, we don't want our exception handler to
+	be called.  Thanks to Colin Watson <cjwatson@debian.org> for
+	catching this.  Fixes http://bugzilla.gnome.org/show_bug.cgi?id=458731
+
+	* admin-tool/sabayon-session (main): Likewise.
+	(main): Removed leftover "print" statements for debugging.
+
+2007-08-13  Federico Mena Quintero  <federico@novell.com>
+
 	* admin-tool/sabayon.desktop.in (Icon): Oops, make this just
 	"sabayon", not "sabayon.png".
 

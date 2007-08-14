@@ -26,6 +26,7 @@ if __name__ == '__main__':
     import gtk
 
     from sabayon import debuglog
+    from sabayon import config
     from sabayon import errors
     from sabayon import util
     from sabayon import sessionwindow
@@ -36,21 +37,21 @@ if __name__ == '__main__':
     def mprint (fmt, *args):
         debuglog.debug_log (True, debuglog.DEBUG_LOG_DOMAIN_SABAYON_SESSION, fmt % args)
 
+    util.init_gettext ()
+
+    option_parser = optparse.OptionParser (usage="usage: %prog [--admin-log-config FILE] [--readable-log-config FILE] <profile_name> <profile_path> <display_number>")
+    # FIXME: say that "man sabayon" will give you the
+    # syntax for the debug log config file.
+    option_parser.add_option ("--admin-log-config", dest="admin_log_config",
+                              metavar="FILE",
+                              help="File with options for the debug log (readable by the system administrator)")
+    option_parser.add_option ("--readable-log-config", dest="readable_log_config",
+                              metavar="FILE",
+                              help="File with options for the debug log (readable by Sabayon's helper processes)")
+
+    options, args = option_parser.parse_args ()
+
     try:
-        util.init_gettext ()
-
-        option_parser = optparse.OptionParser (usage="usage: %prog [--admin-log-config FILE] [--readable-log-config FILE] <profile_name> <profile_path> <display_number>")
-        # FIXME: say that "man sabayon" will give you the
-        # syntax for the debug log config file.
-        option_parser.add_option ("--admin-log-config", dest="admin_log_config",
-                                  metavar="FILE",
-                                  help="File with options for the debug log (readable by the system administrator)")
-        option_parser.add_option ("--readable-log-config", dest="readable_log_config",
-                                  metavar="FILE",
-                                  help="File with options for the debug log (readable by Sabayon's helper processes)")
-
-        options, args = option_parser.parse_args ()
-
         admin_log_config_filename = options.admin_log_config or ("~/" + config.LOG_CONFIG_FILENAME)
 
         if options.readable_log_config != None:
@@ -75,10 +76,8 @@ if __name__ == '__main__':
         window.window.connect ("destroy", gtk.main_quit)
         window.window.show ()
     except errors.RecoverableApplyErrorException:
-        print "sabayon-session recoverable pre-main-loop"
         pass # this will exit the program below
     except:
-        print "sabayon-session fatal pre-main-loop"
         errors.errors_exit_with_fatal_exception (debuglog.DEBUG_LOG_DOMAIN_SABAYON_SESSION,
                                                  util.get_admin_log_config_filename ())
     else:
@@ -88,14 +87,11 @@ if __name__ == '__main__':
         # exception happens).
         mprint ("Entering main loop.  Wheeee!")
         gtk.main ()
-        print "sabayon-session out of main loop"
         mprint ("Terminating")
 
     if errors.errors_have_fatal_error ():
-        print "sabayon-session out of main loop fatal error"
         mprint ("Exiting abnormally; dumping log due to a fatal error")
         debuglog.debug_log_dump_to_file (util.get_admin_log_config_filename (), sys.stderr)
         sys.exit (util.EXIT_CODE_FATAL)
     else:
-        print "sabayon-session out of main loop normal/recoverable termination"
         errors.errors_exit_helper_normally (util.get_admin_log_config_filename ())
