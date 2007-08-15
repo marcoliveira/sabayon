@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon 2.14.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-30 19:53+0200\n"
-"PO-Revision-Date: 2007-07-30 22:07+0200\n"
+"POT-Creation-Date: 2007-08-15 14:57+0200\n"
+"PO-Revision-Date: 2007-08-15 14:57+0200\n"
 "Last-Translator: Stéphane Raimbault <stephane.raimbault@gmail.com>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -104,7 +104,7 @@ msgstr "À propos de Sabayon"
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:78
+#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:79
 msgid "Files"
 msgstr "Fichiers"
 
@@ -539,16 +539,16 @@ msgstr ""
 "survenues, vous pouvez nous aider à corriger le problème en envoyant la "
 "trace dans %s à %s"
 
-#: ../admin-tool/sabayon-apply:96
+#: ../admin-tool/sabayon-apply:98
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Aucun profil n'a été trouvé pour l'utilisateur « %s »\n"
 
-#: ../admin-tool/sabayon-apply:101
+#: ../admin-tool/sabayon-apply:103
 msgid "Please use -h for usage options"
 msgstr "Utilisez -h pour les options d'utilisation"
 
-#: ../admin-tool/sabayon-session:66
+#: ../admin-tool/sabayon-session:67
 #, c-format
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
 msgstr ""
@@ -615,7 +615,9 @@ msgid_plural ""
 msgstr[0] ""
 "Si vous n'enregistrez pas, les modifications effectuées depuis %ld seconde "
 "seront définitivement perdues."
-msgstr[1] "Si vous n'enregistrez pas, les modifications effectuées ces %ld dernières secondes seront définitivement perdues."
+msgstr[1] ""
+"Si vous n'enregistrez pas, les modifications effectuées ces %ld dernières "
+"secondes seront définitivement perdues."
 
 #: ../admin-tool/saveconfirm.py:51
 msgid ""
@@ -791,38 +793,38 @@ msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr ""
 "Une erreur fatale est survenue en appliquant le profil utilisateur de « %s »."
 
-#: ../lib/sources/filessource.py:68
+#: ../lib/sources/filessource.py:69
 #, python-format
 msgid "File '%s' created"
 msgstr "Fichier « %s » créé"
 
-#: ../lib/sources/filessource.py:70
+#: ../lib/sources/filessource.py:71
 #, python-format
 msgid "File '%s' deleted"
 msgstr "Fichier « %s » supprimé"
 
-#: ../lib/sources/filessource.py:72
+#: ../lib/sources/filessource.py:73
 #, python-format
 msgid "File '%s' changed"
 msgstr "Fichier « %s » modifié"
 
-#: ../lib/sources/filessource.py:96
+#: ../lib/sources/filessource.py:97
 msgid "Applications menu"
 msgstr "Menu Applications"
 
-#: ../lib/sources/filessource.py:98
+#: ../lib/sources/filessource.py:99
 msgid "Preferences menu"
 msgstr "Menu Préférences"
 
-#: ../lib/sources/filessource.py:100
+#: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
 msgstr "Menu Administration réseau"
 
-#: ../lib/sources/filessource.py:102
+#: ../lib/sources/filessource.py:103
 msgid "System Settings menu"
 msgstr "Menu Administration système"
 
-#: ../lib/sources/filessource.py:104
+#: ../lib/sources/filessource.py:105
 msgid "Start Here menu"
 msgstr "Menu Démarrage"
 
@@ -1066,9 +1068,8 @@ msgstr "Bouton Vérouiller l'écran"
 msgid "Logout button"
 msgstr "Bouton Déconnexion"
 
-# Voir #400394
 #: ../lib/sources/paneldelegate.py:219
-msgid "Run Appliction button"
+msgid "Run Application button"
 msgstr "Bouton Lancer une application"
 
 #: ../lib/sources/paneldelegate.py:221
