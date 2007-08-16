@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-04-16 16:45+0100\n"
-"PO-Revision-Date: 2007-06-02 10:57+0300\n"
+"POT-Creation-Date: 2007-07-13 03:16+0100\n"
+"PO-Revision-Date: 2007-08-01 18:00+0300\n"
 "Last-Translator: Ivar Smolin <okul@linux.ee>\n"
 "Language-Team: Estonian <gnome-et@linux.ee>\n"
 "MIME-Version: 1.0\n"
@@ -104,7 +104,8 @@ msgstr "GConf"
 msgid "Files"
 msgstr "Failid"
 
-#: ../admin-tool/editorwindow.py:266 ../admin-tool/lockdown/pessulus.glade.h:7
+#: ../admin-tool/editorwindow.py:266
+#: ../admin-tool/lockdown/pessulus.glade.h:39
 #: ../lib/sources/paneldelegate.py:228
 msgid "Panel"
 msgstr "Paneel"
@@ -176,93 +177,286 @@ msgstr "Kliki, et muuta see säte mittekohustuslikuks"
 msgid "Click to make this setting mandatory"
 msgstr "Kliki, et muuta see säte kohustuslikuks"
 
-#: ../admin-tool/lockdown/maindialog.py:49
+#: ../admin-tool/lockdown/maindialog.py:51
 msgid "Disable _command line"
 msgstr "_Käsurida keelatud"
 
-#: ../admin-tool/lockdown/maindialog.py:50
+#: ../admin-tool/lockdown/maindialog.py:52
 msgid "Disable _printing"
 msgstr "_Printimine keelatud"
 
-#: ../admin-tool/lockdown/maindialog.py:51
+#: ../admin-tool/lockdown/maindialog.py:53
 msgid "Disable print _setup"
 msgstr "Pri_ntimissätete muutmine keelatud"
 
-#: ../admin-tool/lockdown/maindialog.py:52
+#: ../admin-tool/lockdown/maindialog.py:54
 msgid "Disable save to _disk"
 msgstr "Ke_ttale salvestamine keelatud"
 
-#: ../admin-tool/lockdown/maindialog.py:54
+#: ../admin-tool/lockdown/maindialog.py:56
 msgid "_Lock down the panels"
 msgstr "_Paneelid on lukus"
 
-#: ../admin-tool/lockdown/maindialog.py:55
+#: ../admin-tool/lockdown/maindialog.py:57
 msgid "Disable force _quit"
 msgstr "_Jõuga sulgemine keelatud"
 
-#: ../admin-tool/lockdown/maindialog.py:56
+#: ../admin-tool/lockdown/maindialog.py:58
 msgid "Disable lock _screen"
 msgstr "_Ekraani lukustamine keelatud"
 
-#: ../admin-tool/lockdown/maindialog.py:57
+#: ../admin-tool/lockdown/maindialog.py:59
 msgid "Disable log _out"
 msgstr "_Väljalogimine keelatud"
 
-#: ../admin-tool/lockdown/maindialog.py:59
+#: ../admin-tool/lockdown/maindialog.py:61
 msgid "Disable _quit"
 msgstr "_Väljumine keelatud"
 
-#: ../admin-tool/lockdown/maindialog.py:60
+#: ../admin-tool/lockdown/maindialog.py:62
 msgid "Disable _arbitrary URL"
 msgstr "Keela _suvalised URL-id"
 
-#: ../admin-tool/lockdown/maindialog.py:61
+#: ../admin-tool/lockdown/maindialog.py:63
 msgid "Disable _bookmark editing"
 msgstr "Järje_hoidjate redigeerimine keelatud"
 
-#: ../admin-tool/lockdown/maindialog.py:62
+#: ../admin-tool/lockdown/maindialog.py:64
 msgid "Disable _history"
 msgstr "A_jalugu keelatud"
 
-#: ../admin-tool/lockdown/maindialog.py:63
+#: ../admin-tool/lockdown/maindialog.py:65
 msgid "Disable _javascript chrome"
 msgstr "_Javascript chrome keelatud"
 
-#: ../admin-tool/lockdown/maindialog.py:64
+#: ../admin-tool/lockdown/maindialog.py:66
 msgid "Disable _toolbar editing"
 msgstr "_Tööriistariba redigeerimine keelatud"
 
-#: ../admin-tool/lockdown/maindialog.py:65
+#: ../admin-tool/lockdown/maindialog.py:67
 msgid "_Fullscreen"
 msgstr "_Täisekraan"
 
-#: ../admin-tool/lockdown/maindialog.py:66
+#: ../admin-tool/lockdown/maindialog.py:68
 msgid "Hide _menubar"
 msgstr "Menüüriba _peidus"
 
+#: ../admin-tool/lockdown/maindialog.py:70
+msgid "Remove personal info from doc. on save"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:71
+msgid "Warn if macro creates PDF"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:72
+msgid "Warn if macro prints"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:73
+msgid "Warn if macro saves doc"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:74
+msgid "Warn if macro signs doc"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:75
+msgid "Recommend password on save"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:77
+msgid "Enable auto-save"
+msgstr ""
+
+#. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
+#: ../admin-tool/lockdown/maindialog.py:79
+msgid "Printing modifies document"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:80
+msgid "Use system file chooser"
+msgstr "Kasutatakse süsteemset failivalijat"
+
+#: ../admin-tool/lockdown/maindialog.py:81
+msgid "Create backup copy on save"
+msgstr "Salvestamisel luuakse varukoopia"
+
+#: ../admin-tool/lockdown/maindialog.py:82
+msgid "Warn for external formats"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:84
+msgid "Use Open GL"
+msgstr "Kasutatakse Open GL'i"
+
+#: ../admin-tool/lockdown/maindialog.py:85
+msgid "Use system font"
+msgstr "Kasutatakse süsteemset kirjatüüpi"
+
+#: ../admin-tool/lockdown/maindialog.py:86
+msgid "Use anti-aliasing"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:87
+msgid "Disable UI customization"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:88
+msgid "Show insensitive menu items"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:89
+msgid "Show font preview"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:90
+msgid "Show font history"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:91
+msgid "Show icons in menus"
+msgstr "Menüüdes näidatakse ikoone"
+
 #: ../admin-tool/lockdown/pessulus.glade.h:1
+msgid ""
+"\n"
+"5\n"
+"10\n"
+"25\n"
+"50"
+msgstr ""
+"\n"
+"5\n"
+"10\n"
+"25\n"
+"50"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:6
+msgid ""
+"\n"
+"Automatic\n"
+"Large\n"
+"Small"
+msgstr ""
+"\n"
+"Automaatne\n"
+"Suur\n"
+"Väike"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:10
+msgid ""
+"\n"
+"OpenDocument (.odp)\n"
+"PowerPoint 97+ (.ppt)\n"
+"OpenOffice 1.1 (.sxi)"
+msgstr ""
+"\n"
+"OpenDocument (.odp)\n"
+"PowerPoint 97+ (.ppt)\n"
+"OpenOffice 1.1 (.sxi)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:14
+msgid ""
+"\n"
+"OpenDocument (.ods)\n"
+"Excel 97+ (.xls)\n"
+"OpenOffice 1.1 (.sxc)"
+msgstr ""
+"\n"
+"OpenDocument (.ods)\n"
+"Excel 97+ (.xls)\n"
+"OpenOffice 1.1 (.sxc)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:18
+msgid ""
+"\n"
+"OpenDocument (.odt)\n"
+"Word 97+ (.doc)\n"
+"OpenOffice 1.1 (.sxw)"
+msgstr ""
+"\n"
+"OpenDocument (.odt)\n"
+"Word 97+ (.doc)\n"
+"OpenOffice 1.1 (.sxw)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:22
+msgid ""
+"\n"
+"Very High\n"
+"High\n"
+"Medium\n"
+"Low"
+msgstr ""
+"\n"
+"Väga kõrge\n"
+"Kõrge\n"
+"Keskmine\n"
+"Madal"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:27
 msgid "<b>Disabled Applets</b>"
 msgstr "<b>Keelatud rakendid</b>"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:2
+#: ../admin-tool/lockdown/pessulus.glade.h:28
 msgid "<b>Safe Protocols</b>"
 msgstr "<b>Ohutud protokollid</b>"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:3
+#: ../admin-tool/lockdown/pessulus.glade.h:29
+msgid "Calc default format:"
+msgstr "Calci vaikimisi vorming:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:30
+msgid "Default icon size"
+msgstr "Ikooni vaikimisi suurus"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:31
 msgid "Disable _unsafe protocols"
 msgstr "Ohtlik_ud protokollid keelatud"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:4
+#: ../admin-tool/lockdown/pessulus.glade.h:32
 msgid "Epiphany Web Browser"
 msgstr "Epiphany veebisirvija"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:5
+#: ../admin-tool/lockdown/pessulus.glade.h:33
 msgid "General"
 msgstr "Üldine"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:6
+#: ../admin-tool/lockdown/pessulus.glade.h:34
+msgid "Impress default format:"
+msgstr "Impressi vaikimisi vorming:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:35
+msgid "Load / Save"
+msgstr "Laadimine / salvestamine"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:36
 msgid "Lockdown Editor"
 msgstr "Lukustusredaktor"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:37
+msgid "Macro Security Level:"
+msgstr "Makrode turvatase:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:38
+msgid "OpenOffice"
+msgstr "OpenOffice"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:40
+msgid "Security"
+msgstr "Turvalisus"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:41
+msgid "Undo Steps:"
+msgstr ""
+
+#: ../admin-tool/lockdown/pessulus.glade.h:42
+msgid "User Interface"
+msgstr "Kasutajaliides"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:43
+msgid "Writer default format:"
+msgstr "Writeri vaikimisi vorming:"
 
 #.
 #. Translators: this string specifies how a profile
@@ -332,14 +526,14 @@ msgid ""
 "us debug the problem by sending the log in %s to %s"
 msgstr ""
 
-#: ../admin-tool/sabayon-apply:86
+#: ../admin-tool/sabayon-apply:96
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Kasutajale '%s' ei leitud profiili\n"
 
-#: ../admin-tool/sabayon-apply:91
+#: ../admin-tool/sabayon-apply:101
 msgid "Please use -h for usage options"
-msgstr "Kasutusspikri vaatamiseks kasuta palun võtit -h" 
+msgstr "Kasutusspikri vaatamiseks kasuta palun võtit -h"
 
 #: ../admin-tool/sabayon-session:66
 #, c-format
@@ -541,16 +735,6 @@ msgstr "Profiili %s kasutajad"
 msgid "Use This Profile"
 msgstr "Kasuta seda profiili"
 
-#: ../lib/dirmonitor.py:150
-#, python-format
-msgid "Failed to add monitor for %s"
-msgstr "Tõrge  %s jaoks monitori lisamisel"
-
-#: ../lib/dirmonitor.py:230
-#, python-format
-msgid "Expected event: %s %s"
-msgstr "Oodatud sündmus: %s %s"
-
 #: ../lib/protosession.py:147
 msgid "Unable to find a free X display"
 msgstr "X'i vaba kuva pole võimalik leida"
@@ -702,51 +886,51 @@ msgstr "Veebisirvija järjehoidjad"
 msgid "Web browser profile list"
 msgstr "Veebisirvija profiilide loend"
 
-#: ../lib/sources/mozillasource.py:521
+#: ../lib/sources/mozillasource.py:522
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Faili ei leitud (%s)"
 
-#: ../lib/sources/mozillasource.py:872
+#: ../lib/sources/mozillasource.py:873
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "korduvad nimed (%(name)s) osas %(section)s"
 
-#: ../lib/sources/mozillasource.py:881
+#: ../lib/sources/mozillasource.py:882
 #, python-format
 msgid "redundant default in section %s"
 msgstr "liiane vaikeväärtus sektsioonis %s"
 
-#: ../lib/sources/mozillasource.py:898
+#: ../lib/sources/mozillasource.py:899
 msgid "no default profile"
 msgstr "vaikimisi profiili pole"
 
-#: ../lib/sources/mozillasource.py:953
+#: ../lib/sources/mozillasource.py:954
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Mozilla järjehoidja on loodud: '%s' -> '%s'"
 
-#: ../lib/sources/mozillasource.py:955
+#: ../lib/sources/mozillasource.py:956
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Mozilla järjehoidjate kaust '%s' loodud"
 
-#: ../lib/sources/mozillasource.py:958
+#: ../lib/sources/mozillasource.py:959
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Mozilla järjehoidja '%s' on kustutatud"
 
-#: ../lib/sources/mozillasource.py:960
+#: ../lib/sources/mozillasource.py:961
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Mozilla järjehoidjate kaust '%s' on kustutatud"
 
-#: ../lib/sources/mozillasource.py:963
+#: ../lib/sources/mozillasource.py:964
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Mozilla järjehoidja '%s' on muudetud: '%s'"
 
-#: ../lib/sources/mozillasource.py:965
+#: ../lib/sources/mozillasource.py:966
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mozilla järjehoidjate uus kaust on '%s'"
@@ -978,7 +1162,7 @@ msgstr "Vaikimisi profiili %s lisamine häälestusse ebaõnnestus"
 msgid "Failed to add user %s to profile configuration"
 msgstr "Kasutaja %s lisamine profiili häälestusse ebaõnnestus"
 
-#: ../lib/userdb.py:448
+#: ../lib/userdb.py:468
 msgid "Failed to get the user list"
 msgstr "Tõrge kasutajaloendi hankimisel"
 
