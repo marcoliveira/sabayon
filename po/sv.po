@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-17 09:03+0200\n"
-"PO-Revision-Date: 2007-08-17 09:03+0100\n"
+"POT-Creation-Date: 2007-08-24 01:20+0200\n"
+"PO-Revision-Date: 2007-08-24 01:24+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -115,8 +115,8 @@ msgid "Files"
 msgstr "Filer"
 
 #: ../admin-tool/editorwindow.py:266
-#: ../admin-tool/lockdown/pessulus.glade.h:39
-#: ../lib/sources/paneldelegate.py:228
+#: ../admin-tool/lockdown/pessulus.glade.h:41
+#: ../lib/sources/paneldelegate.py:229
 msgid "Panel"
 msgstr "Panel"
 
@@ -253,80 +253,82 @@ msgstr "_Helskärm"
 msgid "Hide _menubar"
 msgstr "Dölj _menyrad"
 
-#: ../admin-tool/lockdown/maindialog.py:70
-msgid "Remove personal info from doc. on save"
-msgstr "Ta bort personlig information från dok. vid sparning"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Warn if macro creates PDF"
-msgstr "Varna om makro skapar PDF"
-
+#. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
+#. This can be used to disable this, for when you don't want people to know you created the document.
 #: ../admin-tool/lockdown/maindialog.py:72
-msgid "Warn if macro prints"
-msgstr "Varna om makro skriver ut"
+msgid "Remove personal info from documents when saving them"
+msgstr "Ta bort personlig information från dokument när de sparas"
 
 #: ../admin-tool/lockdown/maindialog.py:73
-msgid "Warn if macro saves doc"
-msgstr "Varna om makro sparar dokument"
+msgid "Warn if macro tries to create a PDF"
+msgstr "Varna om makro försöker skapa en PDF"
 
 #: ../admin-tool/lockdown/maindialog.py:74
-msgid "Warn if macro signs doc"
-msgstr "Varna om makro signerar dokument"
+msgid "Warn if macro tries to print a document"
+msgstr "Varna om makro försöker skriva ut ett dokument"
 
 #: ../admin-tool/lockdown/maindialog.py:75
-msgid "Recommend password on save"
-msgstr "Rekommendera lösenord vid sparning"
+msgid "Warn if macro tries to save a document"
+msgstr "Varna om makro försöker spara ett dokument"
+
+#: ../admin-tool/lockdown/maindialog.py:76
+msgid "Warn if macro tries to sign a document"
+msgstr "Varna om makro försöker att signera ett dokument"
 
 #: ../admin-tool/lockdown/maindialog.py:77
+msgid "Recommend password when saving a document"
+msgstr "Rekommendera lösenord när ett dokument sparas"
+
+#: ../admin-tool/lockdown/maindialog.py:79
 msgid "Enable auto-save"
 msgstr "Aktivera automatisk sparning"
 
 #. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
-#: ../admin-tool/lockdown/maindialog.py:79
-msgid "Printing modifies document"
-msgstr "Utskrift ändrar dokument"
-
-#: ../admin-tool/lockdown/maindialog.py:80
-msgid "Use system file chooser"
-msgstr "Använd systemets filväljare"
-
 #: ../admin-tool/lockdown/maindialog.py:81
+msgid "Printing should mark the document as modified"
+msgstr "Utskrift ska markera dokumentet som ändrat"
+
+#: ../admin-tool/lockdown/maindialog.py:82
+msgid "Use system's file dialog"
+msgstr "Använd systemets fildialog"
+
+#: ../admin-tool/lockdown/maindialog.py:83
 msgid "Create backup copy on save"
 msgstr "Skapa säkerhetskopia vid sparning"
 
-#: ../admin-tool/lockdown/maindialog.py:82
-msgid "Warn for external formats"
-msgstr "Varna för externa format"
-
 #: ../admin-tool/lockdown/maindialog.py:84
-msgid "Use Open GL"
-msgstr "Använd Open GL"
+msgid "Warn when saving non-OpenOffice.org formats"
+msgstr "Varna vid sparning av icke-OpenOffice.org-format"
 
-#: ../admin-tool/lockdown/maindialog.py:85
+#: ../admin-tool/lockdown/maindialog.py:86
+msgid "Use OpenGL"
+msgstr "Använd OpenGL"
+
+#: ../admin-tool/lockdown/maindialog.py:87
 msgid "Use system font"
 msgstr "Använd systemtypsnitt"
 
-#: ../admin-tool/lockdown/maindialog.py:86
+#: ../admin-tool/lockdown/maindialog.py:88
 msgid "Use anti-aliasing"
 msgstr "Använd kantutjämning"
 
-#: ../admin-tool/lockdown/maindialog.py:87
+#: ../admin-tool/lockdown/maindialog.py:89
 msgid "Disable UI customization"
 msgstr "Inaktivera gränssnittsanpassningar"
 
-#: ../admin-tool/lockdown/maindialog.py:88
+#: ../admin-tool/lockdown/maindialog.py:90
 msgid "Show insensitive menu items"
 msgstr "Visa okänsliga menyobjekt"
 
-#: ../admin-tool/lockdown/maindialog.py:89
+#: ../admin-tool/lockdown/maindialog.py:91
 msgid "Show font preview"
 msgstr "Visa typsnittsförhandsvisning"
 
-#: ../admin-tool/lockdown/maindialog.py:90
+#: ../admin-tool/lockdown/maindialog.py:92
 msgid "Show font history"
 msgstr "Visa typsnittshistorik"
 
-#: ../admin-tool/lockdown/maindialog.py:91
+#: ../admin-tool/lockdown/maindialog.py:93
 msgid "Show icons in menus"
 msgstr "Visa ikoner i menyer"
 
@@ -361,36 +363,36 @@ msgid ""
 "\n"
 "OpenDocument (.odp)\n"
 "PowerPoint 97+ (.ppt)\n"
-"OpenOffice 1.1 (.sxi)"
+"OpenOffice.org 1.1 (.sxi)"
 msgstr ""
 "\n"
 "OpenDocument (.odp)\n"
 "PowerPoint 97+ (.ppt)\n"
-"OpenOffice 1.1 (.sxi)"
+"OpenOffice.org 1.1 (.sxi)"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:14
 msgid ""
 "\n"
 "OpenDocument (.ods)\n"
 "Excel 97+ (.xls)\n"
-"OpenOffice 1.1 (.sxc)"
+"OpenOffice.org 1.1 (.sxc)"
 msgstr ""
 "\n"
 "OpenDocument (.ods)\n"
 "Excel 97+ (.xls)\n"
-"OpenOffice 1.1 (.sxc)"
+"OpenOffice.org 1.1 (.sxc)"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:18
 msgid ""
 "\n"
 "OpenDocument (.odt)\n"
 "Word 97+ (.doc)\n"
-"OpenOffice 1.1 (.sxw)"
+"OpenOffice.org 1.1 (.sxw)"
 msgstr ""
 "\n"
 "OpenDocument (.odt)\n"
 "Word 97+ (.doc)\n"
-"OpenOffice 1.1 (.sxw)"
+"OpenOffice.org 1.1 (.sxw)"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:22
 msgid ""
@@ -415,60 +417,60 @@ msgid "<b>Safe Protocols</b>"
 msgstr "<b>Säkra protokoll</b>"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:29
-msgid "Calc default format:"
-msgstr "Standardformat för Calc:"
+msgid "Default format for presentations:"
+msgstr "Standardformat för presentationer:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:30
+msgid "Default format for spreadsheet:"
+msgstr "Standardformat för kalkylark:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:31
+msgid "Default format for word processor:"
+msgstr "Standardformat för ordbehandlare:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:32
 msgid "Default icon size"
 msgstr "Standardikonstorlek"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:31
+#: ../admin-tool/lockdown/pessulus.glade.h:33
 msgid "Disable _unsafe protocols"
 msgstr "Inaktivera _osäkra protokoll"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:32
+#: ../admin-tool/lockdown/pessulus.glade.h:34
 msgid "Epiphany Web Browser"
 msgstr "Webbläsaren Epiphany"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:33
+#: ../admin-tool/lockdown/pessulus.glade.h:35
 msgid "General"
 msgstr "Allmänt"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:34
-msgid "Impress default format:"
-msgstr "Standardformat för Impress:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:35
+#: ../admin-tool/lockdown/pessulus.glade.h:36
 msgid "Load / Save"
 msgstr "Läs in / Spara"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:36
+#: ../admin-tool/lockdown/pessulus.glade.h:37
 msgid "Lockdown Editor"
 msgstr "Nedlåsningsredigerare"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:37
+#: ../admin-tool/lockdown/pessulus.glade.h:38
 msgid "Macro Security Level:"
 msgstr "Säkerhetsnivå för makro:"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:38
-msgid "OpenOffice"
-msgstr "OpenOffice"
+#: ../admin-tool/lockdown/pessulus.glade.h:39
+msgid "Number of undo steps:"
+msgstr "Antal ångringssteg:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:40
+msgid "OpenOffice.org"
+msgstr "OpenOffice.org"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:42
 msgid "Security"
 msgstr "Säkerhet"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:41
-msgid "Undo Steps:"
-msgstr "Ångra-steg:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:42
+#: ../admin-tool/lockdown/pessulus.glade.h:43
 msgid "User Interface"
 msgstr "Användargränssnitt"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:43
-msgid "Writer default format:"
-msgstr "Standardformat för Writer:"
 
 #.
 #. Translators: this string specifies how a profile
@@ -696,22 +698,9 @@ msgstr "Misslyckades med att starta Xnest: timeout vid väntan på USR1-signal"
 msgid "Failed to start Xnest: died during startup"
 msgstr "Misslyckades med att starta Xnest: dog under uppstart"
 
-#: ../lib/protosession.py:480
-#, python-format
-msgid ""
-"Could not create the 'sabayon-apply' process: %s\n"
-"The command line used is '%s'\n"
-"Child traceback:\n"
-"%s"
-msgstr ""
-"Kunde inte skapa \"sabayon-apply\"-processen: %s\n"
-"Kommandoraden som användes var '%s'\n"
-"Bakåtspårning för barnet:\n"
-"%s"
-
 #: ../lib/protosession.py:501
 #, python-format
-msgid "There was a recoverable error while applying the user profile from '%s'."
+msgid "There was a recoverable error while applying the user profile from file '%s'."
 msgstr "Det inträffade ett återhämtningsbart fel vid tillämpandet av användarprofilen från \"%s\"."
 
 #: ../lib/protosession.py:510
@@ -975,44 +964,45 @@ msgstr "%s togs bort från vänstra panelen"
 msgid "%s removed from right panel"
 msgstr "%s togs bort från högra panelen"
 
-#: ../lib/sources/paneldelegate.py:199
+#. Translators: This is a drawer in gnome-panel (where you can put applets)
+#: ../lib/sources/paneldelegate.py:200
 msgid "Drawer"
 msgstr "Låda"
 
-#: ../lib/sources/paneldelegate.py:201
+#: ../lib/sources/paneldelegate.py:202
 msgid "Main Menu"
 msgstr "Huvudmeny"
 
-#: ../lib/sources/paneldelegate.py:211
+#: ../lib/sources/paneldelegate.py:212
 #, python-format
 msgid "%s launcher"
 msgstr "%s-programstartare"
 
-#: ../lib/sources/paneldelegate.py:215
+#: ../lib/sources/paneldelegate.py:216
 msgid "Lock Screen button"
 msgstr "Lås skärm-knapp"
 
-#: ../lib/sources/paneldelegate.py:217
+#: ../lib/sources/paneldelegate.py:218
 msgid "Logout button"
 msgstr "Logga ut-knapp"
 
-#: ../lib/sources/paneldelegate.py:219
+#: ../lib/sources/paneldelegate.py:220
 msgid "Run Application button"
 msgstr "Kör program-knapp"
 
-#: ../lib/sources/paneldelegate.py:221
+#: ../lib/sources/paneldelegate.py:222
 msgid "Search button"
 msgstr "Sök-knapp"
 
-#: ../lib/sources/paneldelegate.py:223
+#: ../lib/sources/paneldelegate.py:224
 msgid "Screenshot button"
 msgstr "Skärmbild-knapp"
 
-#: ../lib/sources/paneldelegate.py:225
+#: ../lib/sources/paneldelegate.py:226
 msgid "Menu Bar"
 msgstr "Menyrad"
 
-#: ../lib/sources/paneldelegate.py:469
+#: ../lib/sources/paneldelegate.py:470
 msgid "Panel File"
 msgstr "Panelfil"
 
@@ -1060,63 +1050,66 @@ msgstr "Kör %s tester (%s)"
 msgid "Success!"
 msgstr "Lyckades!"
 
-#: ../lib/userdb.py:51
+#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
+#. do not change the way they are written.  The intended string is
+#. something like "invalid type for setting blah in /ldap/path/to/blah"
+#: ../lib/userdb.py:54
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "ogiltig typ för inställningen %(setting)s i %(np)s"
 
 # FIXME. base?
-#: ../lib/userdb.py:211
+#: ../lib/userdb.py:215
 #, python-format
 msgid "No search based specified for %s"
 msgstr "Ingen sökbas angiven för %s"
 
-#: ../lib/userdb.py:214
+#: ../lib/userdb.py:218
 #, python-format
 msgid "No query filter specified for %s"
 msgstr "Inget frågefilter angivet för %s"
 
-#: ../lib/userdb.py:217
+#: ../lib/userdb.py:221
 #, python-format
 msgid "No result attribute specified for %s"
 msgstr "Inget resultatattribut angivet för %s"
 
-#: ../lib/userdb.py:226
+#: ../lib/userdb.py:230
 msgid "Scope must be one of sub, base and one"
 msgstr "Område måste vara en av sub, base och one"
 
-#: ../lib/userdb.py:246
+#: ../lib/userdb.py:250
 msgid "multiple_result must be one of first and random"
 msgstr "multiple_result måste vara en av first och random"
 
-#: ../lib/userdb.py:338
+#: ../lib/userdb.py:342
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Kunde inte öppna %s för skrivning"
 
 # FIXME. UserDatabase is what? A function?
-#: ../lib/userdb.py:351
+#: ../lib/userdb.py:355
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Misslyckades med att spara UserDatabase till %s"
 
-#: ../lib/userdb.py:374
-#: ../lib/userdb.py:409
+#: ../lib/userdb.py:378
+#: ../lib/userdb.py:413
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Filen %s är inte en profilkonfiguration"
 
-#: ../lib/userdb.py:381
+#: ../lib/userdb.py:385
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Misslyckades med att lägga till standardprofilen %s till konfigurationen"
 
-#: ../lib/userdb.py:417
+#: ../lib/userdb.py:421
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Misslyckades med att lägga till användaren %s till profilkonfigurationen"
 
-#: ../lib/userdb.py:468
+#: ../lib/userdb.py:472
 msgid "Failed to get the user list"
 msgstr "Misslyckades med att få användarlistan"
 
@@ -1128,6 +1121,30 @@ msgstr "Kan inte hitta hemkatalog: inte inställd i /etc/passwd och inget värde
 msgid "Cannot find username: not set in /etc/passwd and no value for $USER in environment"
 msgstr "Kan inte hitta användarnamn: inte inställd i /etc/passwd och inget värde för $HOME i miljön"
 
+#~ msgid "Warn if macro prints"
+#~ msgstr "Varna om makro skriver ut"
+#~ msgid "Printing modifies document"
+#~ msgstr "Utskrift ändrar dokument"
+#~ msgid "Warn for external formats"
+#~ msgstr "Varna för externa format"
+#~ msgid "Calc default format:"
+#~ msgstr "Standardformat för Calc:"
+#~ msgid "Impress default format:"
+#~ msgstr "Standardformat för Impress:"
+#~ msgid "Undo Steps:"
+#~ msgstr "Ångra-steg:"
+#~ msgid "Writer default format:"
+#~ msgstr "Standardformat för Writer:"
+#~ msgid ""
+#~ "Could not create the 'sabayon-apply' process: %s\n"
+#~ "The command line used is '%s'\n"
+#~ "Child traceback:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Kunde inte skapa \"sabayon-apply\"-processen: %s\n"
+#~ "Kommandoraden som användes var '%s'\n"
+#~ "Bakåtspårning för barnet:\n"
+#~ "%s"
 #~ msgid "Failed to add monitor for %s"
 #~ msgstr "Misslyckades med att lägga till övervakare för %s"
 #~ msgid "Expected event: %s %s"
