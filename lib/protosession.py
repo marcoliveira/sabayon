@@ -477,9 +477,9 @@ class ProtoSession (gobject.GObject):
                                      stderr = subprocess.PIPE,
                                      env = os.environ)
         except Exception, e:
-            raise errors.FatalApplyErrorException (_("Could not create the 'sabayon-apply' process: %s\n"
-                                                     "The command line used is '%s'\n"
-                                                     "Child traceback:\n%s") %
+            raise errors.FatalApplyErrorException (("Could not create the 'sabayon-apply' process: %s\n" +
+                                                    "The command used is '%s'\n" +
+                                                    "Child traceback:\n%s") %
                                                    (e.message,
                                                     " ".join (argv),
                                                     e.child_traceback))
@@ -499,7 +499,7 @@ class ProtoSession (gobject.GObject):
                     "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
                     stderr_str)
             raise errors.RecoverableApplyErrorException (_("There was a recoverable error while applying "
-                                                           "the user profile from '%s'.") % self.profile_file)
+                                                           "the user profile from file '%s'.") % self.profile_file)
         else:
             # return_code == util.EXIT_CODE_FATAL or something else
             mprint ("Finished running sabayon-apply with FATAL exit status")

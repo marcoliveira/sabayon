@@ -67,21 +67,23 @@ lockdownbuttons = (
     ( "/apps/epiphany/lockdown/fullscreen", _("_Fullscreen"), "vbox9" ),
     ( "/apps/epiphany/lockdown/hide_menubar", _("Hide _menubar"), "vbox9" ),
 
-    ( "/apps/openoffice/lockdown/remove_personal_info_on_save", _("Remove personal info from doc. on save"), "ooosecurity" ),
-    ( "/apps/openoffice/lockdown/warn_info_create_pdf", _("Warn if macro creates PDF"), "ooosecurity" ),
-    ( "/apps/openoffice/lockdown/warn_info_printing",   _("Warn if macro prints"), "ooosecurity" ),
-    ( "/apps/openoffice/lockdown/warn_info_saving", _("Warn if macro saves doc"), "ooosecurity" ),
-    ( "/apps/openoffice/lockdown/warn_info_signing", _("Warn if macro signs doc"), "ooosecurity" ),
-    ( "/apps/openoffice/lockdown/recommend_password_on_save", _("Recommend password on save"), "ooosecurity" ),
+    # Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
+    # This can be used to disable this, for when you don't want people to know you created the document.
+    ( "/apps/openoffice/lockdown/remove_personal_info_on_save", _("Remove personal info from documents when saving them"), "ooosecurity" ),
+    ( "/apps/openoffice/lockdown/warn_info_create_pdf", _("Warn if macro tries to create a PDF"), "ooosecurity" ),
+    ( "/apps/openoffice/lockdown/warn_info_printing",   _("Warn if macro tries to print a document"), "ooosecurity" ),
+    ( "/apps/openoffice/lockdown/warn_info_saving", _("Warn if macro tries to save a document"), "ooosecurity" ),
+    ( "/apps/openoffice/lockdown/warn_info_signing", _("Warn if macro tries to sign a document"), "ooosecurity" ),
+    ( "/apps/openoffice/lockdown/recommend_password_on_save", _("Recommend password when saving a document"), "ooosecurity" ),
 
     ( "/apps/openoffice/auto_save", _("Enable auto-save"), "oooio" ),
 #    ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
-    ( "/apps/openoffice/printing_modifies_doc", _("Printing modifies document"), "oooio" ),
-    ( "/apps/openoffice/use_system_file_dialog", _("Use system file chooser"), "oooio" ),
+    ( "/apps/openoffice/printing_modifies_doc", _("Printing should mark the document as modified"), "oooio" ),
+    ( "/apps/openoffice/use_system_file_dialog", _("Use system's file dialog"), "oooio" ),
     ( "/apps/openoffice/create_backup", _("Create backup copy on save"), "oooio" ),
-    ( "/apps/openoffice/warn_alien_format", _("Warn for external formats"), "oooio" ),
+    ( "/apps/openoffice/warn_alien_format", _("Warn when saving non-OpenOffice.org formats"), "oooio" ),
 
-    ( "/apps/openoffice/use_opengl", _("Use Open GL"), "oooui" ),
+    ( "/apps/openoffice/use_opengl", _("Use OpenGL"), "oooui" ),
     ( "/apps/openoffice/use_system_font", _("Use system font"), "oooui" ),
     ( "/apps/openoffice/use_font_anti_aliasing", _("Use anti-aliasing"), "oooui" ),
     ( "/apps/openoffice/lockdown/disable_ui_customization", _("Disable UI customization"), "oooui" ),

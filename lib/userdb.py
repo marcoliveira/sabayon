@@ -48,7 +48,11 @@ def get_setting (node, setting, default = None, convert_to = str):
             return convert_to (a.content)
         except:
 	    np = node.nodePath()
-            raise UserDatabaseException(_("invalid type for setting %(setting)s in %(np)s") % (setting, np))
+            # Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
+            # do not change the way they are written.  The intended string is
+            # something like "invalid type for setting blah in /ldap/path/to/blah"
+            raise UserDatabaseException(_("invalid type for setting %(setting)s in %(np)s") % { "setting": setting,
+                                                                                                "np": np }))
     return default
 
 def expand_string (string, attrs):

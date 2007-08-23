@@ -1,3 +1,15 @@
+2007-08-23  Federico Mena Quintero  <federico@novell.com>
+
+	Fix http://bugzilla.gnome.org/show_bug.cgi?id=461110 - some
+	strings are hard to translate (especially in the OpenOffice.org
+	module).
+
+	* admin-tool/lockdown/maindialog.py:
+	* admin-tool/lockdown/pessulus.glade:
+	* lib/protosession.py:
+	* lib/sources/paneldelegate.py:
+	* lib/userdb.py: Use better strings for translation.
+
 ==================== 2.19.2 ====================
 
 2007-08-14  Federico Mena Quintero  <federico@novell.com>

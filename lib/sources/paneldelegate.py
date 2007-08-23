@@ -196,6 +196,7 @@ class PanelDelegate (userprofile.SourceDelegate):
 		self.object_type = self.client.get_string (PANEL_KEY_BASE + "/objects/" + id + "/object_type")
 	
 		if self.object_type == "drawer-object":
+			# Translators: This is a drawer in gnome-panel (where you can put applets)
 			self.name = _("Drawer")
 		elif self.object_type == "menu-object":
 			self.name = _("Main Menu")
