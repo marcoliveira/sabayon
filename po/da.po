@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-05-24 19:37+0200\n"
-"PO-Revision-Date: 2007-02-17 16:16+0100\n"
-"Last-Translator: Lasse Bang Mikkelsen <lbm@fatalerror.dk>\n"
+"POT-Creation-Date: 2007-08-24 03:24+0200\n"
+"PO-Revision-Date: 2007-08-24 03:22+0200\n"
+"Last-Translator: Kenneth Nielsen <k.nielsen81@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -106,12 +106,13 @@ msgstr "Om Sabayon"
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:78
+#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:79
 msgid "Files"
 msgstr "Filer"
 
-#: ../admin-tool/editorwindow.py:266 ../admin-tool/lockdown/pessulus.glade.h:7
-#: ../lib/sources/paneldelegate.py:228
+#: ../admin-tool/editorwindow.py:266
+#: ../admin-tool/lockdown/pessulus.glade.h:41
+#: ../lib/sources/paneldelegate.py:229
 msgid "Panel"
 msgstr "Panel"
 
@@ -183,93 +184,304 @@ msgstr "Klik for at gøre denne indstilling valgfri"
 msgid "Click to make this setting mandatory"
 msgstr "Klik for at gøre denne indstilling obligatorisk"
 
-#: ../admin-tool/lockdown/maindialog.py:49
+#: ../admin-tool/lockdown/maindialog.py:51
 msgid "Disable _command line"
 msgstr "Deaktivér _kommandolinje"
 
-#: ../admin-tool/lockdown/maindialog.py:50
+#: ../admin-tool/lockdown/maindialog.py:52
 msgid "Disable _printing"
 msgstr "Deaktivér _udskrivning"
 
-#: ../admin-tool/lockdown/maindialog.py:51
+#: ../admin-tool/lockdown/maindialog.py:53
 msgid "Disable print _setup"
 msgstr "Deaktivér udskrifts_opsætning"
 
-#: ../admin-tool/lockdown/maindialog.py:52
+#: ../admin-tool/lockdown/maindialog.py:54
 msgid "Disable save to _disk"
 msgstr "Deaktivér gem til _disk"
 
-#: ../admin-tool/lockdown/maindialog.py:54
+#: ../admin-tool/lockdown/maindialog.py:56
 msgid "_Lock down the panels"
 msgstr "_Lås panelerne"
 
-#: ../admin-tool/lockdown/maindialog.py:55
+#: ../admin-tool/lockdown/maindialog.py:57
 msgid "Disable force _quit"
 msgstr "Deaktivér tvungen _afslutning"
 
-#: ../admin-tool/lockdown/maindialog.py:56
+#: ../admin-tool/lockdown/maindialog.py:58
 msgid "Disable lock _screen"
 msgstr "Deaktivér lås _skærm"
 
-#: ../admin-tool/lockdown/maindialog.py:57
+#: ../admin-tool/lockdown/maindialog.py:59
 msgid "Disable log _out"
 msgstr "Deaktivér log_ud"
 
-#: ../admin-tool/lockdown/maindialog.py:59
+#: ../admin-tool/lockdown/maindialog.py:61
 msgid "Disable _quit"
 msgstr "Deaktivér _afslut"
 
-#: ../admin-tool/lockdown/maindialog.py:60
+#: ../admin-tool/lockdown/maindialog.py:62
 msgid "Disable _arbitrary URL"
 msgstr "Deaktivér _arbitrær adresse"
 
-#: ../admin-tool/lockdown/maindialog.py:61
+#: ../admin-tool/lockdown/maindialog.py:63
 msgid "Disable _bookmark editing"
 msgstr "Deaktivér redigering af _bogmærker"
 
-#: ../admin-tool/lockdown/maindialog.py:62
+#: ../admin-tool/lockdown/maindialog.py:64
 msgid "Disable _history"
 msgstr "Deaktivér _historik"
 
-#: ../admin-tool/lockdown/maindialog.py:63
+#: ../admin-tool/lockdown/maindialog.py:65
 msgid "Disable _javascript chrome"
 msgstr "Deaktivér _javaskript-chrome"
 
-#: ../admin-tool/lockdown/maindialog.py:64
+#: ../admin-tool/lockdown/maindialog.py:66
 msgid "Disable _toolbar editing"
 msgstr "Deaktivér redigering af _værktøjslinje"
 
-#: ../admin-tool/lockdown/maindialog.py:65
+#: ../admin-tool/lockdown/maindialog.py:67
 msgid "_Fullscreen"
 msgstr "_Fuldskærm"
 
-#: ../admin-tool/lockdown/maindialog.py:66
+#: ../admin-tool/lockdown/maindialog.py:68
 msgid "Hide _menubar"
 msgstr "Skjul _værktøjslinje"
 
+#. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
+#. This can be used to disable this, for when you don't want people to know you created the document.
+#: ../admin-tool/lockdown/maindialog.py:72
+#, fuzzy
+msgid "Remove personal info from documents when saving them"
+msgstr "Fjern personlig info fra doc. når der gemmes"
+
+#: ../admin-tool/lockdown/maindialog.py:73
+#, fuzzy
+msgid "Warn if macro tries to create a PDF"
+msgstr "Advar hvis makro danner PDF"
+
+#: ../admin-tool/lockdown/maindialog.py:74
+#, fuzzy
+msgid "Warn if macro tries to print a document"
+msgstr "Advar hvis makro signerer doc"
+
+#: ../admin-tool/lockdown/maindialog.py:75
+#, fuzzy
+msgid "Warn if macro tries to save a document"
+msgstr "Advar hvis makro gemmer doc"
+
+#: ../admin-tool/lockdown/maindialog.py:76
+#, fuzzy
+msgid "Warn if macro tries to sign a document"
+msgstr "Advar hvis makro signerer doc"
+
+#: ../admin-tool/lockdown/maindialog.py:77
+#, fuzzy
+msgid "Recommend password when saving a document"
+msgstr "Anbefal kodeord når der gemmes"
+
+#: ../admin-tool/lockdown/maindialog.py:79
+msgid "Enable auto-save"
+msgstr "Slå auto-gem til"
+
+#. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
+#: ../admin-tool/lockdown/maindialog.py:81
+msgid "Printing should mark the document as modified"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:82
+#, fuzzy
+msgid "Use system's file dialog"
+msgstr "Brug systemets filvælger"
+
+#: ../admin-tool/lockdown/maindialog.py:83
+msgid "Create backup copy on save"
+msgstr "Dan sikkerhedskopi når der gemmes"
+
+#: ../admin-tool/lockdown/maindialog.py:84
+msgid "Warn when saving non-OpenOffice.org formats"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:86
+#, fuzzy
+msgid "Use OpenGL"
+msgstr "Brug Open GL"
+
+#: ../admin-tool/lockdown/maindialog.py:87
+msgid "Use system font"
+msgstr "Brug systemskrifttype"
+
+#: ../admin-tool/lockdown/maindialog.py:88
+msgid "Use anti-aliasing"
+msgstr "Brug udjævning"
+
+#: ../admin-tool/lockdown/maindialog.py:89
+msgid "Disable UI customization"
+msgstr "Deaktivér tilpasning af brugergrænseflade"
+
+# Kildkoden indikerer at dette har noget med filen
+# /apps/openoffice/show_menu_inactive_items
+# at gøre hvorfor jeg synes denne oversættelse er væsentlig bedre end en der indeholder den direkte oversættelse "ufølsom/ikke følsom"
+#: ../admin-tool/lockdown/maindialog.py:90
+msgid "Show insensitive menu items"
+msgstr "Vis inaktive menuelementer"
+
+#: ../admin-tool/lockdown/maindialog.py:91
+msgid "Show font preview"
+msgstr "Skrifttype-forhåndsvisning"
+
+#: ../admin-tool/lockdown/maindialog.py:92
+msgid "Show font history"
+msgstr "Vis skrifttype-historik"
+
+#: ../admin-tool/lockdown/maindialog.py:93
+msgid "Show icons in menus"
+msgstr "Vis ikoner i menuer"
+
 #: ../admin-tool/lockdown/pessulus.glade.h:1
+msgid ""
+"\n"
+"5\n"
+"10\n"
+"25\n"
+"50"
+msgstr ""
+"\n"
+"5\n"
+"10\n"
+"25\n"
+"50"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:6
+msgid ""
+"\n"
+"Automatic\n"
+"Large\n"
+"Small"
+msgstr ""
+"\n"
+"Automatisk\n"
+"Stor\n"
+"Lille"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:10
+#, fuzzy
+msgid ""
+"\n"
+"OpenDocument (.odp)\n"
+"PowerPoint 97+ (.ppt)\n"
+"OpenOffice.org 1.1 (.sxi)"
+msgstr ""
+"\n"
+"OpenDocument (.odp)\n"
+"PowerPoint 97+ (.ppt)\n"
+"OpenOffice 1.1 (.sxi)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:14
+#, fuzzy
+msgid ""
+"\n"
+"OpenDocument (.ods)\n"
+"Excel 97+ (.xls)\n"
+"OpenOffice.org 1.1 (.sxc)"
+msgstr ""
+"\n"
+"OpenDocument (.ods)\n"
+"Excel 97+ (.xls)\n"
+"OpenOffice 1.1 (.sxc)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:18
+#, fuzzy
+msgid ""
+"\n"
+"OpenDocument (.odt)\n"
+"Word 97+ (.doc)\n"
+"OpenOffice.org 1.1 (.sxw)"
+msgstr ""
+"\n"
+"OpenDocument (.odt)\n"
+"Word 97+ (.doc)\n"
+"OpenOffice 1.1 (.sxw)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:22
+msgid ""
+"\n"
+"Very High\n"
+"High\n"
+"Medium\n"
+"Low"
+msgstr ""
+"\n"
+"Meget høj\n"
+"Høj\n"
+"Medium\n"
+"Lav"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:27
 msgid "<b>Disabled Applets</b>"
 msgstr "<b>Deaktivér panelprogrammer</b>"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:2
+#: ../admin-tool/lockdown/pessulus.glade.h:28
 msgid "<b>Safe Protocols</b>"
 msgstr "<b>Sikre protokoller</b>"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:3
+#: ../admin-tool/lockdown/pessulus.glade.h:29
+#, fuzzy
+msgid "Default format for presentations:"
+msgstr "Forvalgte GConf-indstillinger"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:30
+msgid "Default format for spreadsheet:"
+msgstr ""
+
+#: ../admin-tool/lockdown/pessulus.glade.h:31
+msgid "Default format for word processor:"
+msgstr ""
+
+#: ../admin-tool/lockdown/pessulus.glade.h:32
+msgid "Default icon size"
+msgstr "Forvalgt ikonstørrelse"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:33
 msgid "Disable _unsafe protocols"
 msgstr "Deaktivér _usikre protokoller"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:4
+#: ../admin-tool/lockdown/pessulus.glade.h:34
 msgid "Epiphany Web Browser"
 msgstr "Internetbrowseren Epiphany"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:5
+#: ../admin-tool/lockdown/pessulus.glade.h:35
 msgid "General"
 msgstr "Generelt"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:6
+#: ../admin-tool/lockdown/pessulus.glade.h:36
+msgid "Load / Save"
+msgstr "Indlæs / Gem"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:37
 msgid "Lockdown Editor"
 msgstr "Aflås redigering"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:38
+msgid "Macro Security Level:"
+msgstr "Makro sikkerhedsniveau:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:39
+msgid "Number of undo steps:"
+msgstr ""
+
+#: ../admin-tool/lockdown/pessulus.glade.h:40
+#, fuzzy
+msgid "OpenOffice.org"
+msgstr "OpenOffice"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:42
+msgid "Security"
+msgstr "Sikkerhed"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:43
+msgid "User Interface"
+msgstr "Brugergrænseflade"
 
 #.
 #. Translators: this string specifies how a profile
@@ -329,6 +541,8 @@ msgid ""
 "A fatal error has occurred.  You can help us fix the problem by sending the "
 "log in %s to %s"
 msgstr ""
+"Der er sket en fatal fejl. Du kan hjælpe os med at rette problemet ved at "
+"sende loggen i %s til %s"
 
 #: ../admin-tool/sabayon:143
 #, c-format
@@ -336,17 +550,20 @@ msgid ""
 "Sabayon will now exit.  There were some recoverable errors, and you can help "
 "us debug the problem by sending the log in %s to %s"
 msgstr ""
+"Sabayon afsluttes nu. Der opstod nogle fejl som kunne reddes, du kan hjælpe "
+"os med at finde fejlene ved at sende loggen i %s til %s"
 
-#: ../admin-tool/sabayon-apply:86
+#: ../admin-tool/sabayon-apply:98
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Ingen profil fundet for bruger \"%s\"\n"
 
-#: ../admin-tool/sabayon-apply:91
+# Denne her er noget af et gæt. Men eftersom det står at man skal bruge -h må vi næsten gå ud fra at det er kommandolinje tilvalg man kan få vist ved at køre programmet med tilvalget -h
+#: ../admin-tool/sabayon-apply:103
 msgid "Please use -h for usage options"
-msgstr ""
+msgstr "Brug -h for at få vist kommandolinje-tilvalg"
 
-#: ../admin-tool/sabayon-session:66
+#: ../admin-tool/sabayon-session:67
 #, c-format
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
 msgstr "Brug: %s <profilnavn> <profilsti> <profilnummer>\n"
@@ -517,14 +734,17 @@ msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
 "report this error now or try to continue editing the user profile."
 msgstr ""
+"Der opstod en fejl som kunne reddes under anvendelsen af brugerprofilen \"%s"
+"\". Du kan nu indrapportere denne fejl eller prøve at fortsætte med at "
+"redigere brugerprofilen."
 
 #: ../admin-tool/sessionwindow.py:337
 msgid "_Report this error"
-msgstr ""
+msgstr "_Indrapportér denne fejl"
 
 #: ../admin-tool/sessionwindow.py:338
 msgid "_Continue editing"
-msgstr ""
+msgstr "_Fortsæt med at redigere"
 
 #: ../admin-tool/usersdialog.py:67
 #, python-format
@@ -534,16 +754,6 @@ msgstr "Brugere til profil %s"
 #: ../admin-tool/usersdialog.py:95
 msgid "Use This Profile"
 msgstr "Brug denne profil"
-
-#: ../lib/dirmonitor.py:150
-#, python-format
-msgid "Failed to add monitor for %s"
-msgstr "Kunne ikke tilføje overvågning for %s"
-
-#: ../lib/dirmonitor.py:230
-#, python-format
-msgid "Expected event: %s %s"
-msgstr "Forventet begivenhed: %s %s"
 
 #: ../lib/protosession.py:147
 msgid "Unable to find a free X display"
@@ -559,58 +769,52 @@ msgstr ""
 msgid "Failed to start Xnest: died during startup"
 msgstr "Kunne ikke starte Xnest: stoppede under opstart"
 
-#: ../lib/protosession.py:480
-#, python-format
-msgid ""
-"Could not create the 'sabayon-apply' process: %s\n"
-"The command line used is '%s'\n"
-"Child traceback:\n"
-"%s"
-msgstr ""
-
 #: ../lib/protosession.py:501
-#, python-format
+#, fuzzy, python-format
 msgid ""
-"There was a recoverable error while applying the user profile from '%s'."
+"There was a recoverable error while applying the user profile from file '%s'."
 msgstr ""
+"Der opstod en fejl som kunne reddes under anvendelsen af brugerprofilen fra "
+"\"%s\"."
 
 #: ../lib/protosession.py:510
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr ""
+"Der opstod en fatal fejl under anvendelsen af brugerprofilen fra \"%s\"."
 
-#: ../lib/sources/filessource.py:68
+#: ../lib/sources/filessource.py:69
 #, python-format
 msgid "File '%s' created"
 msgstr "Fil \"%s\" oprettet"
 
-#: ../lib/sources/filessource.py:70
+#: ../lib/sources/filessource.py:71
 #, python-format
 msgid "File '%s' deleted"
 msgstr "Fil \"%s\" slettet"
 
-#: ../lib/sources/filessource.py:72
+#: ../lib/sources/filessource.py:73
 #, python-format
 msgid "File '%s' changed"
 msgstr "Fil \"%s\" ændret"
 
-#: ../lib/sources/filessource.py:96
+#: ../lib/sources/filessource.py:97
 msgid "Applications menu"
 msgstr "Program-menu"
 
-#: ../lib/sources/filessource.py:98
+#: ../lib/sources/filessource.py:99
 msgid "Preferences menu"
 msgstr "Indstillings-menu"
 
-#: ../lib/sources/filessource.py:100
+#: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
 msgstr "Serverindstillings-menu"
 
-#: ../lib/sources/filessource.py:102
+#: ../lib/sources/filessource.py:103
 msgid "System Settings menu"
 msgstr "Systemindstillings-menu"
 
-#: ../lib/sources/filessource.py:104
+#: ../lib/sources/filessource.py:105
 msgid "Start Here menu"
 msgstr "\"Start her\"-menu"
 
@@ -694,7 +898,7 @@ msgstr "Internetbrowser-bogmærker"
 msgid "Web browser profile list"
 msgstr "Internetbrowser-profil-liste"
 
-#: ../lib/sources/mozillasource.py:521
+#: ../lib/sources/mozillasource.py:522
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Fil ikke fundet (%s)"
@@ -702,46 +906,46 @@ msgstr "Fil ikke fundet (%s)"
 # Denne streng er oversat på en lignende måde i både den svenske og den norske udgave,
 # på den måde at name i parenteserne ikke er oversat. Jeg går ud fra at det er rigtigt
 # men måske en der kan Python kan be- eller af-kræfte dette
-#: ../lib/sources/mozillasource.py:872
+#: ../lib/sources/mozillasource.py:873
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "dobbelt navn(%(name)s) in sektion %(section)s"
 
-#: ../lib/sources/mozillasource.py:881
+#: ../lib/sources/mozillasource.py:882
 #, python-format
 msgid "redundant default in section %s"
 msgstr "overflødig forvalgt indstilling i sektion %s"
 
-#: ../lib/sources/mozillasource.py:898
+#: ../lib/sources/mozillasource.py:899
 msgid "no default profile"
 msgstr "ingen forvalgt profil"
 
-#: ../lib/sources/mozillasource.py:953
+#: ../lib/sources/mozillasource.py:954
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Mozilla-bogmærke oprettet \"%s\" -> \"%s\""
 
-#: ../lib/sources/mozillasource.py:955
+#: ../lib/sources/mozillasource.py:956
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Mozilla-bogmærkemappe oprettet \"%s\""
 
-#: ../lib/sources/mozillasource.py:958
+#: ../lib/sources/mozillasource.py:959
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Mozilla-bogmærke slettet \"%s\""
 
-#: ../lib/sources/mozillasource.py:960
+#: ../lib/sources/mozillasource.py:961
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Mozilla-bogmærkemappe slettet \"%s\""
 
-#: ../lib/sources/mozillasource.py:963
+#: ../lib/sources/mozillasource.py:964
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Mozilla-bogmærke ændret \"%s\" \"%s\""
 
-#: ../lib/sources/mozillasource.py:965
+#: ../lib/sources/mozillasource.py:966
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mozilla-bogmærkemappe ændret \"%s\""
@@ -836,44 +1040,45 @@ msgstr "%s fjernet fra venstre panel"
 msgid "%s removed from right panel"
 msgstr "%s fjernet fra højre panel"
 
-#: ../lib/sources/paneldelegate.py:199
+#. Translators: This is a drawer in gnome-panel (where you can put applets)
+#: ../lib/sources/paneldelegate.py:200
 msgid "Drawer"
 msgstr "Skuffe"
 
-#: ../lib/sources/paneldelegate.py:201
+#: ../lib/sources/paneldelegate.py:202
 msgid "Main Menu"
 msgstr "Hovedmenu"
 
-#: ../lib/sources/paneldelegate.py:211
+#: ../lib/sources/paneldelegate.py:212
 #, python-format
 msgid "%s launcher"
 msgstr "%s startgenvej"
 
-#: ../lib/sources/paneldelegate.py:215
+#: ../lib/sources/paneldelegate.py:216
 msgid "Lock Screen button"
 msgstr "Lås skærm-knap"
 
-#: ../lib/sources/paneldelegate.py:217
+#: ../lib/sources/paneldelegate.py:218
 msgid "Logout button"
 msgstr "Logud-knap"
 
-#: ../lib/sources/paneldelegate.py:219
-msgid "Run Appliction button"
+#: ../lib/sources/paneldelegate.py:220
+msgid "Run Application button"
 msgstr "Kør program-knap"
 
-#: ../lib/sources/paneldelegate.py:221
+#: ../lib/sources/paneldelegate.py:222
 msgid "Search button"
 msgstr "Søge-knap"
 
-#: ../lib/sources/paneldelegate.py:223
+#: ../lib/sources/paneldelegate.py:224
 msgid "Screenshot button"
 msgstr "Skærmbillede-knap"
 
-#: ../lib/sources/paneldelegate.py:225
+#: ../lib/sources/paneldelegate.py:226
 msgid "Menu Bar"
 msgstr "Menu-knap"
 
-#: ../lib/sources/paneldelegate.py:469
+#: ../lib/sources/paneldelegate.py:470
 msgid "Panel File"
 msgstr "Panelfil"
 
@@ -920,60 +1125,63 @@ msgstr "Kører %s tests (%s)"
 msgid "Success!"
 msgstr "Succes!"
 
-#: ../lib/userdb.py:51
-#, fuzzy, python-format
+#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
+#. do not change the way they are written.  The intended string is
+#. something like "invalid type for setting blah in /ldap/path/to/blah"
+#: ../lib/userdb.py:54
+#, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
-msgstr "ugyldig type for indstilling %s i %s"
+msgstr "ugyldig type af indstillingen %(setting)s i %(np)s"
 
-#: ../lib/userdb.py:211
+#: ../lib/userdb.py:215
 #, python-format
 msgid "No search based specified for %s"
 msgstr "Ingen søgebase angivet for %s"
 
-#: ../lib/userdb.py:214
+#: ../lib/userdb.py:218
 #, python-format
 msgid "No query filter specified for %s"
 msgstr "Intet forespørgselsfilter angivet for %s"
 
-#: ../lib/userdb.py:217
+#: ../lib/userdb.py:221
 #, python-format
 msgid "No result attribute specified for %s"
 msgstr "Ingen resultatattributter angivet for %s"
 
-#: ../lib/userdb.py:226
+#: ../lib/userdb.py:230
 msgid "Scope must be one of sub, base and one"
 msgstr "Området skal enten være under, basis og en"
 
-#: ../lib/userdb.py:246
+#: ../lib/userdb.py:250
 msgid "multiple_result must be one of first and random"
 msgstr "flere _resultater skal enten være første og tilfældig"
 
-#: ../lib/userdb.py:338
+#: ../lib/userdb.py:342
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Kunne ikke åbne %s for at skrive til den"
 
-#: ../lib/userdb.py:351
+#: ../lib/userdb.py:355
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Kunne ikke gemme brugerdatabasen til %s"
 
-#: ../lib/userdb.py:374 ../lib/userdb.py:409
+#: ../lib/userdb.py:378 ../lib/userdb.py:413
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Fil %s er ikke en profilkonfiguration"
 
-#: ../lib/userdb.py:381
+#: ../lib/userdb.py:385
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Kunne ikke tilføje den forvalgte profil %s til konfigurationen"
 
-#: ../lib/userdb.py:417
+#: ../lib/userdb.py:421
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Kunne ikke tilføje bruger %s til profilkonfiguration"
 
-#: ../lib/userdb.py:448
+#: ../lib/userdb.py:472
 msgid "Failed to get the user list"
 msgstr "Kunne ikke hente brugerlisten"
 
@@ -993,17 +1201,37 @@ msgstr ""
 "Kunne ikke finde brugernavn: ikke indstillet i /etc/passwd og ingen værdi "
 "for $USER i miljøet"
 
-#~ msgid "Usage: %s [<profile-name>]\n"
-#~ msgstr "Brug: %s [<profilnavn>]\n"
+#~ msgid "Warn if macro prints"
+#~ msgstr "Advar hvis makro printer"
 
-#~ msgid "Panel applet '%s' added"
-#~ msgstr "Panelprogram \"%s\" tilføjet"
+#~ msgid "Printing modifies document"
+#~ msgstr "Udskrivning modificerer dokumentet"
 
-#~ msgid "Panel applet '%s' removed"
-#~ msgstr "Panelprogram \"%s\" fjernet"
+# Kildkoden indikerer at dette har noget med filen
+# /apps/openoffice/warn_alien_format
+# at gøre hvorfor jeg synes denne oversættelse er væsentlig bedre end en der indeholder den direkte oversættelse "eksterne"
+#~ msgid "Warn for external formats"
+#~ msgstr "Advar ved fremmede formater"
 
-#~ msgid "Panel object '%s' added"
-#~ msgstr "Panelobjekt \"%s\" tilføjet"
+#~ msgid "Calc default format:"
+#~ msgstr "Calc standard-filformat:"
 
-#~ msgid "Panel object '%s' removed"
-#~ msgstr "Panelobjekt \"%s\" fjernet"
+#~ msgid "Impress default format:"
+#~ msgstr "Impress standard-filformat:"
+
+#~ msgid "Undo Steps:"
+#~ msgstr "Fortrydelsesskridt:"
+
+#~ msgid "Writer default format:"
+#~ msgstr "Writer standard-filformat:"
+
+#~ msgid ""
+#~ "Could not create the 'sabayon-apply' process: %s\n"
+#~ "The command line used is '%s'\n"
+#~ "Child traceback:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Kunne ikke danne \"sabayon-apply\"-proces: %s\n"
+#~ "Kommandolinjen som blev brugt er \"%s\"\n"
+#~ "Stakspor for underprocessen:\n"
+#~ "%s"
