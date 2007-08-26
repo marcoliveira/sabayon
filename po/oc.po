@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: sabayon 2.14.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-08-20 19:02+0100\n"
-"PO-Revision-Date: 2007-08-21 11:21+0200\n"
+"PO-Revision-Date: 2007-08-26 11:44+0200\n"
 "Last-Translator: Yannig MARCHEGAY (Kokoyaya) <yannig@marchegay.org>\n"
 "Language-Team: Occitan (post 1500) <ubuntu-l10n-oci@lists.ubuntu.com>\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr "La còla occitana de revirada d'Ubuntu, 2007 - ubuntu-l10n-oci@lists.ubu
 #: ../admin-tool/changeswindow.py:50
 #, python-format
 msgid "Changes in profile %s"
-msgstr ""
+msgstr "Perfil %s modificat"
 
 #: ../admin-tool/changeswindow.py:113
 msgid "Ignore"
@@ -57,7 +57,7 @@ msgstr "_Enregistrar"
 
 #: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
 msgid "Save profile"
-msgstr ""
+msgstr "Enregistrar lo perfil"
 
 #: ../admin-tool/editorwindow.py:197
 msgid "_Close"
@@ -108,7 +108,7 @@ msgstr "Panèl"
 #: ../admin-tool/fileviewer.py:27
 #, python-format
 msgid "Profile file: %s"
-msgstr ""
+msgstr "Fichièr de perfil : %s"
 
 #: ../admin-tool/gconfviewer.py:57 ../admin-tool/gconfviewer.py:76
 msgid "<no type>"
@@ -218,7 +218,7 @@ msgstr ""
 
 #: ../admin-tool/lockdown/maindialog.py:64
 msgid "Disable _history"
-msgstr ""
+msgstr "Desactivar l'_istoric"
 
 #: ../admin-tool/lockdown/maindialog.py:65
 msgid "Disable _javascript chrome"
@@ -342,6 +342,10 @@ msgid ""
 "PowerPoint 97+ (.ppt)\n"
 "OpenOffice 1.1 (.sxi)"
 msgstr ""
+"\n"
+"OpenDocument (.odp)\n"
+"PowerPoint 97+ (.ppt)\n"
+"OpenOffice 1.1 (.sxi)"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:14
 msgid ""
@@ -350,6 +354,10 @@ msgid ""
 "Excel 97+ (.xls)\n"
 "OpenOffice 1.1 (.sxc)"
 msgstr ""
+"\n"
+"OpenDocument (.ods)\n"
+"Excel 97+ (.xls)\n"
+"OpenOffice 1.1 (.sxc)"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:18
 msgid ""
@@ -358,6 +366,10 @@ msgid ""
 "Word 97+ (.doc)\n"
 "OpenOffice 1.1 (.sxw)"
 msgstr ""
+"\n"
+"OpenDocument (.odt)\n"
+"Word 97+ (.doc)\n"
+"OpenOffice 1.1 (.sxw)"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:22
 msgid ""
@@ -402,7 +414,7 @@ msgstr ""
 
 #: ../admin-tool/lockdown/pessulus.glade.h:35
 msgid "Load / Save"
-msgstr ""
+msgstr "Cargar / enregistrar"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:36
 msgid "Lockdown Editor"
@@ -519,7 +531,7 @@ msgstr "Apondre un perfil"
 
 #: ../admin-tool/sabayon.glade.h:2
 msgid "Profile _name:"
-msgstr ""
+msgstr "_Nom del perfil :"
 
 #: ../admin-tool/sabayon.glade.h:3
 msgid "Use this profile for _all users"
@@ -547,7 +559,7 @@ msgstr "_Utilizaires :"
 
 #: ../admin-tool/saveconfirm.py:34
 msgid "Close _Without Saving"
-msgstr ""
+msgstr "Tampar _sens enregistrar"
 
 #: ../admin-tool/saveconfirm.py:41
 #, python-format
@@ -629,7 +641,7 @@ msgstr ""
 #: ../admin-tool/sessionwindow.py:154
 #, python-format
 msgid "Editing profile %s"
-msgstr ""
+msgstr "Modificacion del perfil %s"
 
 #: ../admin-tool/sessionwindow.py:178
 msgid "_Quit"
@@ -641,7 +653,7 @@ msgstr "_Modificacions"
 
 #: ../admin-tool/sessionwindow.py:180
 msgid "Edit changes"
-msgstr ""
+msgstr "Editar las modificacions"
 
 #: ../admin-tool/sessionwindow.py:181
 msgid "_Lockdown"
@@ -737,11 +749,11 @@ msgstr "Fichièr '%s' modificat"
 
 #: ../lib/sources/filessource.py:97
 msgid "Applications menu"
-msgstr ""
+msgstr "Menut de las aplicacions"
 
 #: ../lib/sources/filessource.py:99
 msgid "Preferences menu"
-msgstr ""
+msgstr "Menut de las preferéncias"
 
 #: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
@@ -1001,7 +1013,7 @@ msgstr ""
 
 #: ../lib/sources/paneldelegate.py:221
 msgid "Search button"
-msgstr ""
+msgstr "Boton de recèrca"
 
 #: ../lib/sources/paneldelegate.py:223
 msgid "Screenshot button"
@@ -1018,7 +1030,7 @@ msgstr ""
 #: ../lib/storage.py:172
 #, python-format
 msgid "Failed to read file '%s': %s"
-msgstr ""
+msgstr "Impossible de legir lo fichièr '%s' : %s"
 
 #: ../lib/storage.py:182
 #, python-format
@@ -1130,3 +1142,4 @@ msgid ""
 msgstr ""
 "Impossible de trobar lo nom d'utilizaire : pas definit dins /etc/passwd e pas de valor per $User dins "
 "l'environament"
+
