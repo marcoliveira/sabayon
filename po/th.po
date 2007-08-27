@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon 2.19.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-14 14:05+0700\n"
-"PO-Revision-Date: 2007-08-14 14:06+0700\n"
+"POT-Creation-Date: 2007-08-27 11:11+0700\n"
+"PO-Revision-Date: 2007-08-27 11:20+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -97,13 +97,13 @@ msgstr "เกี่ยวกับ Sabayon"
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:78
+#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:79
 msgid "Files"
 msgstr "แฟ้ม"
 
 #: ../admin-tool/editorwindow.py:266
-#: ../admin-tool/lockdown/pessulus.glade.h:39
-#: ../lib/sources/paneldelegate.py:228
+#: ../admin-tool/lockdown/pessulus.glade.h:41
+#: ../lib/sources/paneldelegate.py:229
 msgid "Panel"
 msgstr "พาเนล"
 
@@ -238,80 +238,82 @@ msgstr "เ_ต็มจอ"
 msgid "Hide _menubar"
 msgstr "ซ่อนแถบเ_มนู"
 
-#: ../admin-tool/lockdown/maindialog.py:70
-msgid "Remove personal info from doc. on save"
+#. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
+#. This can be used to disable this, for when you don't want people to know you created the document.
+#: ../admin-tool/lockdown/maindialog.py:72
+msgid "Remove personal info from documents when saving them"
 msgstr "ลบข้อมูลส่วนตัวออกจากเอกสารขณะบันทึก"
 
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Warn if macro creates PDF"
-msgstr "เตือนถ้าแมโครสร้าง PDF"
-
-#: ../admin-tool/lockdown/maindialog.py:72
-msgid "Warn if macro prints"
-msgstr "เตือนถ้าแมโครพิมพ์"
-
 #: ../admin-tool/lockdown/maindialog.py:73
-msgid "Warn if macro saves doc"
-msgstr "เตือนถ้าแมโครบันทึกเอกสาร"
+msgid "Warn if macro tries to create a PDF"
+msgstr "เตือนถ้าแมโครพยายามสร้าง PDF"
 
 #: ../admin-tool/lockdown/maindialog.py:74
-msgid "Warn if macro signs doc"
-msgstr "เตือนถ้าแมโครเซ็นกำกับเอกสาร"
+msgid "Warn if macro tries to print a document"
+msgstr "เตือนถ้าแมโครพยายามพิมพ์เอกสาร"
 
 #: ../admin-tool/lockdown/maindialog.py:75
-msgid "Recommend password on save"
-msgstr "แนะนำรหัสผ่านขณะบันทึก"
+msgid "Warn if macro tries to save a document"
+msgstr "เตือนถ้าแมโครพยายามบันทึกเอกสาร"
+
+#: ../admin-tool/lockdown/maindialog.py:76
+msgid "Warn if macro tries to sign a document"
+msgstr "เตือนถ้าแมโครพยายามเซ็นกำกับเอกสาร"
 
 #: ../admin-tool/lockdown/maindialog.py:77
+msgid "Recommend password when saving a document"
+msgstr "แนะนำรหัสผ่านขณะบันทึกเอกสาร"
+
+#: ../admin-tool/lockdown/maindialog.py:79
 msgid "Enable auto-save"
 msgstr "เปิดใช้การบันทึกอัตโนมัติ"
 
 #. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
-#: ../admin-tool/lockdown/maindialog.py:79
-msgid "Printing modifies document"
-msgstr "การพิมพ์ถือเป็นการแก้ไขเอกสาร"
+#: ../admin-tool/lockdown/maindialog.py:81
+msgid "Printing should mark the document as modified"
+msgstr "การพิมพ์ควรถือว่าทำให้เอกสารถูกเปลี่ยนแปลง"
 
-#: ../admin-tool/lockdown/maindialog.py:80
-msgid "Use system file chooser"
+#: ../admin-tool/lockdown/maindialog.py:82
+msgid "Use system's file dialog"
 msgstr "ใช้กล่องเลือกแฟ้มของระบบ"
 
-#: ../admin-tool/lockdown/maindialog.py:81
+#: ../admin-tool/lockdown/maindialog.py:83
 msgid "Create backup copy on save"
 msgstr "สร้างสำเนาแฟ้มสำรองขณะบันทึก"
 
-#: ../admin-tool/lockdown/maindialog.py:82
-msgid "Warn for external formats"
-msgstr "เตือนเมื่อใช้ฟอร์แมตภายนอก"
-
 #: ../admin-tool/lockdown/maindialog.py:84
-msgid "Use Open GL"
-msgstr "ใช้ Open GL"
+msgid "Warn when saving non-OpenOffice.org formats"
+msgstr "เตือนเมื่อมีการบันทึกเอกสารในรูปแบบที่ไม่ใช่ OpenOffice.org"
 
-#: ../admin-tool/lockdown/maindialog.py:85
+#: ../admin-tool/lockdown/maindialog.py:86
+msgid "Use OpenGL"
+msgstr "ใช้ OpenGL"
+
+#: ../admin-tool/lockdown/maindialog.py:87
 msgid "Use system font"
 msgstr "ใช้แบบอักษรของระบบ"
 
-#: ../admin-tool/lockdown/maindialog.py:86
+#: ../admin-tool/lockdown/maindialog.py:88
 msgid "Use anti-aliasing"
 msgstr "ใช้ตัวอักษรแบบไร้รอยหยัก"
 
-#: ../admin-tool/lockdown/maindialog.py:87
+#: ../admin-tool/lockdown/maindialog.py:89
 msgid "Disable UI customization"
 msgstr "ห้ามปรับแต่ง UI"
 
-#: ../admin-tool/lockdown/maindialog.py:88
+#: ../admin-tool/lockdown/maindialog.py:90
 msgid "Show insensitive menu items"
 msgstr "แสดงรายการเมนูที่ไม่ตอบสนองด้วย"
 
-#: ../admin-tool/lockdown/maindialog.py:89
+#: ../admin-tool/lockdown/maindialog.py:91
 msgid "Show font preview"
 msgstr "แสดงตัวอย่างแบบอักษร"
 
-#: ../admin-tool/lockdown/maindialog.py:90
+#: ../admin-tool/lockdown/maindialog.py:92
 msgid "Show font history"
 msgstr "แสดงประวัติแบบอักษร"
 
-#: ../admin-tool/lockdown/maindialog.py:91
+#: ../admin-tool/lockdown/maindialog.py:93
 msgid "Show icons in menus"
 msgstr "แสดงไอคอนในเมนู"
 
@@ -346,36 +348,36 @@ msgid ""
 "\n"
 "OpenDocument (.odp)\n"
 "PowerPoint 97+ (.ppt)\n"
-"OpenOffice 1.1 (.sxi)"
+"OpenOffice.org 1.1 (.sxi)"
 msgstr ""
 "\n"
 "OpenDocument (.odp)\n"
 "PowerPoint 97+ (.ppt)\n"
-"OpenOffice 1.1 (.sxi)"
+"OpenOffice.org 1.1 (.sxi)"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:14
 msgid ""
 "\n"
 "OpenDocument (.ods)\n"
 "Excel 97+ (.xls)\n"
-"OpenOffice 1.1 (.sxc)"
+"OpenOffice.org 1.1 (.sxc)"
 msgstr ""
 "\n"
 "OpenDocument (.ods)\n"
 "Excel 97+ (.xls)\n"
-"OpenOffice 1.1 (.sxc)"
+"OpenOffice.org 1.1 (.sxc)"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:18
 msgid ""
 "\n"
 "OpenDocument (.odt)\n"
 "Word 97+ (.doc)\n"
-"OpenOffice 1.1 (.sxw)"
+"OpenOffice.org 1.1 (.sxw)"
 msgstr ""
 "\n"
 "OpenDocument (.odt)\n"
 "Word 97+ (doc)\n"
-"OpenOffice 1.1 (.sxw)"
+"OpenOffice.org 1.1 (.sxw)"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:22
 msgid ""
@@ -400,60 +402,60 @@ msgid "<b>Safe Protocols</b>"
 msgstr "<b>โพรโทคอลที่ปลอดภัย</b>"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:29
-msgid "Calc default format:"
-msgstr "ฟอร์แมตปริยายของ Calc:"
+msgid "Default format for presentations:"
+msgstr "ฟอร์แมตปริยายสำหรับการนำเสนอ:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:30
+msgid "Default format for spreadsheet:"
+msgstr "ฟอร์แมตปริยายสำหรับตารางคำนวณ:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:31
+msgid "Default format for word processor:"
+msgstr "ฟอร์แมตปริยายสำหรับโปรแกรมประมวลคำ:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:32
 msgid "Default icon size"
 msgstr "ขนาดไอคอนปริยาย"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:31
+#: ../admin-tool/lockdown/pessulus.glade.h:33
 msgid "Disable _unsafe protocols"
 msgstr "ห้ามใช้โพรโทคอลที่ไม่ป_ลอดภัย"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:32
+#: ../admin-tool/lockdown/pessulus.glade.h:34
 msgid "Epiphany Web Browser"
 msgstr "เว็บเบราว์เซอร์ Epiphany"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:33
+#: ../admin-tool/lockdown/pessulus.glade.h:35
 msgid "General"
 msgstr "ทั่วไป"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:34
-msgid "Impress default format:"
-msgstr "ฟอร์แมตปริยายของ Impress:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:35
+#: ../admin-tool/lockdown/pessulus.glade.h:36
 msgid "Load / Save"
 msgstr "เปิด / บันทึก"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:36
+#: ../admin-tool/lockdown/pessulus.glade.h:37
 msgid "Lockdown Editor"
 msgstr "แก้ไขการจำกัดการใช้งาน"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:37
+#: ../admin-tool/lockdown/pessulus.glade.h:38
 msgid "Macro Security Level:"
 msgstr "ระดับการรักษาความปลอดภัยของแมโคร:"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:38
-msgid "OpenOffice"
-msgstr "OpenOffice"
+#: ../admin-tool/lockdown/pessulus.glade.h:39
+msgid "Number of undo steps:"
+msgstr "จำนวนขั้นการเรียกคืนคำสั่ง:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:40
+msgid "OpenOffice.org"
+msgstr "OpenOffice.org"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:42
 msgid "Security"
 msgstr "การรักษาความปลอดภัย"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:41
-msgid "Undo Steps:"
-msgstr "ขั้นตอนการเรียกคืน:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:42
+#: ../admin-tool/lockdown/pessulus.glade.h:43
 msgid "User Interface"
 msgstr "ส่วนติดต่อผู้ใช้"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:43
-msgid "Writer default format:"
-msgstr "ฟอร์แมตปริยายของ Writer:"
 
 #.
 #. Translators: this string specifies how a profile
@@ -713,62 +715,49 @@ msgstr "เริ่มใช้ Xnest ไม่สำเร็จ: ไม่ม
 msgid "Failed to start Xnest: died during startup"
 msgstr "เริ่มใช้ Xnest ไม่สำเร็จ: โปรแกรมตายระหว่างเริ่มทำงาน"
 
-#: ../lib/protosession.py:480
-#, python-format
-msgid ""
-"Could not create the 'sabayon-apply' process: %s\n"
-"The command line used is '%s'\n"
-"Child traceback:\n"
-"%s"
-msgstr ""
-"ไม่สามารถสร้างโพรเซส 'sabayon-apply': %s\n"
-"บรรทัดคำสั่งที่ใช้คือ '%s'\n"
-"ร่องรอยของโพรเซสลูก:\n"
-"%s"
-
 #: ../lib/protosession.py:501
 #, python-format
 msgid ""
-"There was a recoverable error while applying the user profile from '%s'."
-msgstr "เกิดข้อผิดพลาดที่พอฟื้นตัวได้ขณะเริ่มใช้โพรไฟล์ผู้ใช้จาก '%s'"
+"There was a recoverable error while applying the user profile from file '%s'."
+msgstr "เกิดข้อผิดพลาดที่พอฟื้นตัวได้ขณะเริ่มใช้โพรไฟล์ผู้ใช้จากแฟ้ม '%s'"
 
 #: ../lib/protosession.py:510
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "เกิดข้อผิดพลาดร้ายแรงขณะเริ่มใช้โพรไฟล์ผู้ใช้จาก '%s'"
 
-#: ../lib/sources/filessource.py:68
+#: ../lib/sources/filessource.py:69
 #, python-format
 msgid "File '%s' created"
 msgstr "สร้างแฟ้ม '%s' แล้ว"
 
-#: ../lib/sources/filessource.py:70
+#: ../lib/sources/filessource.py:71
 #, python-format
 msgid "File '%s' deleted"
 msgstr "ลบแฟ้ม '%s' แล้ว"
 
-#: ../lib/sources/filessource.py:72
+#: ../lib/sources/filessource.py:73
 #, python-format
 msgid "File '%s' changed"
 msgstr "เปลี่ยนแปลงแฟ้ม '%s' แล้ว"
 
-#: ../lib/sources/filessource.py:96
+#: ../lib/sources/filessource.py:97
 msgid "Applications menu"
 msgstr "เมนูโปรแกรม"
 
-#: ../lib/sources/filessource.py:98
+#: ../lib/sources/filessource.py:99
 msgid "Preferences menu"
 msgstr "เมนูปรับแต่ง"
 
-#: ../lib/sources/filessource.py:100
+#: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
 msgstr "เมนูค่าตั้งเซิร์ฟเวอร์"
 
-#: ../lib/sources/filessource.py:102
+#: ../lib/sources/filessource.py:103
 msgid "System Settings menu"
 msgstr "เมนูค่าตั้งระบบ"
 
-#: ../lib/sources/filessource.py:104
+#: ../lib/sources/filessource.py:105
 msgid "Start Here menu"
 msgstr "เมนูเริ่มต้น"
 
@@ -991,44 +980,45 @@ msgstr "ลบ %s ออกจากพาเนลด้านซ้ายแ�
 msgid "%s removed from right panel"
 msgstr "ลบ %s ออกจากพาเนลด้านขวาแล้ว"
 
-#: ../lib/sources/paneldelegate.py:199
+#. Translators: This is a drawer in gnome-panel (where you can put applets)
+#: ../lib/sources/paneldelegate.py:200
 msgid "Drawer"
 msgstr "ลิ้นชัก"
 
-#: ../lib/sources/paneldelegate.py:201
+#: ../lib/sources/paneldelegate.py:202
 msgid "Main Menu"
 msgstr "เมนูหลัก"
 
-#: ../lib/sources/paneldelegate.py:211
+#: ../lib/sources/paneldelegate.py:212
 #, python-format
 msgid "%s launcher"
 msgstr "ปุ่มเรียก %s"
 
-#: ../lib/sources/paneldelegate.py:215
+#: ../lib/sources/paneldelegate.py:216
 msgid "Lock Screen button"
 msgstr "ปุ่มล็อคหน้าจอ"
 
-#: ../lib/sources/paneldelegate.py:217
+#: ../lib/sources/paneldelegate.py:218
 msgid "Logout button"
 msgstr "ปุ่มออกจากระบบ"
 
-#: ../lib/sources/paneldelegate.py:219
+#: ../lib/sources/paneldelegate.py:220
 msgid "Run Application button"
 msgstr "ปุ่มเรียกโปรแกรม"
 
-#: ../lib/sources/paneldelegate.py:221
+#: ../lib/sources/paneldelegate.py:222
 msgid "Search button"
 msgstr "ปุ่มค้นหา"
 
-#: ../lib/sources/paneldelegate.py:223
+#: ../lib/sources/paneldelegate.py:224
 msgid "Screenshot button"
 msgstr "ปุ่มจับภาพหน้าจอ"
 
-#: ../lib/sources/paneldelegate.py:225
+#: ../lib/sources/paneldelegate.py:226
 msgid "Menu Bar"
 msgstr "แถบเมนู"
 
-#: ../lib/sources/paneldelegate.py:469
+#: ../lib/sources/paneldelegate.py:470
 msgid "Panel File"
 msgstr "แฟ้มพาเนล"
 
@@ -1075,60 +1065,63 @@ msgstr "กำลังทดสอบ %s (%s)"
 msgid "Success!"
 msgstr "สำเร็จ!"
 
-#: ../lib/userdb.py:51
+#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
+#. do not change the way they are written.  The intended string is
+#. something like "invalid type for setting blah in /ldap/path/to/blah"
+#: ../lib/userdb.py:54
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "ชนิดสำหรับค่าตั้ง %(setting)s ไม่ถูกต้องใน %(np)s"
 
-#: ../lib/userdb.py:211
+#: ../lib/userdb.py:215
 #, python-format
 msgid "No search based specified for %s"
 msgstr "ไม่พบตำแหน่งเริ่มค้นหาสำหรับ %s"
 
-#: ../lib/userdb.py:214
+#: ../lib/userdb.py:218
 #, python-format
 msgid "No query filter specified for %s"
 msgstr "ไม่มีตัวกรองคำสืบค้นสำหรับ %s"
 
-#: ../lib/userdb.py:217
+#: ../lib/userdb.py:221
 #, python-format
 msgid "No result attribute specified for %s"
 msgstr "ไม่ได้ระบุแอตทริบิวต์ของผลลัพธ์สำหรับ %s"
 
-#: ../lib/userdb.py:226
+#: ../lib/userdb.py:230
 msgid "Scope must be one of sub, base and one"
 msgstr "ขอบเขตต้องมีค่าเป็น sub, base หรือ one"
 
-#: ../lib/userdb.py:246
+#: ../lib/userdb.py:250
 msgid "multiple_result must be one of first and random"
 msgstr "multiple_result ต้องมีค่าเป็น first หรือ random"
 
-#: ../lib/userdb.py:338
+#: ../lib/userdb.py:342
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "ไม่สามารถเปิด %s เพื่อเขียนได้"
 
-#: ../lib/userdb.py:351
+#: ../lib/userdb.py:355
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "ไม่สามารถบันทึก UserDatabase ไปยัง %s"
 
-#: ../lib/userdb.py:374 ../lib/userdb.py:409
+#: ../lib/userdb.py:378 ../lib/userdb.py:413
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "แฟ้ม %s ไม่ใช่ค่าตั้งโพรไฟล์"
 
-#: ../lib/userdb.py:381
+#: ../lib/userdb.py:385
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "ไม่สามารถเพิ่มโพรไฟล์ปริยาย %s เข้าในค่าตั้งได้"
 
-#: ../lib/userdb.py:417
+#: ../lib/userdb.py:421
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "ไม่สามารถเพิ่มผู้ใช้ %s เข้าในค่าตั้งโพรไฟล์ได้"
 
-#: ../lib/userdb.py:468
+#: ../lib/userdb.py:472
 msgid "Failed to get the user list"
 msgstr "ไม่สามารถอ่านรายการผู้ใช้ได้"
 
@@ -1146,6 +1139,38 @@ msgid ""
 "environment"
 msgstr ""
 "หาชื่อผู้ใช้ไม่พบ: ไม่ได้กำหนดใน /etc/passwd และไม่ได้กำหนดค่า $USER ในตัวแปรสภาพแวดล้อม"
+
+#~ msgid "Warn if macro prints"
+#~ msgstr "เตือนถ้าแมโครพิมพ์"
+
+#~ msgid "Printing modifies document"
+#~ msgstr "การพิมพ์ถือเป็นการแก้ไขเอกสาร"
+
+#~ msgid "Warn for external formats"
+#~ msgstr "เตือนเมื่อใช้ฟอร์แมตภายนอก"
+
+#~ msgid "Calc default format:"
+#~ msgstr "ฟอร์แมตปริยายของ Calc:"
+
+#~ msgid "Impress default format:"
+#~ msgstr "ฟอร์แมตปริยายของ Impress:"
+
+#~ msgid "Undo Steps:"
+#~ msgstr "ขั้นตอนการเรียกคืน:"
+
+#~ msgid "Writer default format:"
+#~ msgstr "ฟอร์แมตปริยายของ Writer:"
+
+#~ msgid ""
+#~ "Could not create the 'sabayon-apply' process: %s\n"
+#~ "The command line used is '%s'\n"
+#~ "Child traceback:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "ไม่สามารถสร้างโพรเซส 'sabayon-apply': %s\n"
+#~ "บรรทัดคำสั่งที่ใช้คือ '%s'\n"
+#~ "ร่องรอยของโพรเซสลูก:\n"
+#~ "%s"
 
 #~ msgid "Failed to add monitor for %s"
 #~ msgstr "ไม่สามารถเพิ่มการติดตามสำหรับ %s"
