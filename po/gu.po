@@ -8,14 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD.gu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-14 03:18+0100\n"
-"PO-Revision-Date: 2007-08-16 13:29+0530\n"
+"POT-Creation-Date: 2007-08-24 00:25+0100\n"
+"PO-Revision-Date: 2007-08-29 14:13+0530\n"
 "Last-Translator: Ankit Patel <ankit@redhat.com>\n"
 "Language-Team: Gujarati <fedora-trans-gu@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=2; plural=(n!=1);\n\n"
+"\n"
 "\n"
 "\n"
 "\n"
@@ -102,13 +103,13 @@ msgstr "Sabayon વિશે"
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:78
+#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:79
 msgid "Files"
 msgstr "ફાઈલો"
 
 #: ../admin-tool/editorwindow.py:266
-#: ../admin-tool/lockdown/pessulus.glade.h:39
-#: ../lib/sources/paneldelegate.py:228
+#: ../admin-tool/lockdown/pessulus.glade.h:41
+#: ../lib/sources/paneldelegate.py:229
 msgid "Panel"
 msgstr "પેનલ"
 
@@ -243,80 +244,82 @@ msgstr "પૂર્ણસ્ક્રીન (_F)"
 msgid "Hide _menubar"
 msgstr "મેનુપટ્ટી છુપાવો (_m)"
 
-#: ../admin-tool/lockdown/maindialog.py:70
-msgid "Remove personal info from doc. on save"
-msgstr "સંગ્રહ કરવા પર દસ્તાવેજમાંથી વ્યક્તિગત જાણકારી દૂર કરો"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Warn if macro creates PDF"
-msgstr "ચેતવો જો મેક્રો PDF બનાવે"
-
+#. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
+#. This can be used to disable this, for when you don't want people to know you created the document.
 #: ../admin-tool/lockdown/maindialog.py:72
-msgid "Warn if macro prints"
-msgstr "જો મેક્રો છપાય તો ચેતવો"
+msgid "Remove personal info from documents when saving them"
+msgstr "જ્યારે દસ્તાવેજો સંગ્રહી રહ્યા હોય ત્યારે તેમાંથી વ્યક્તિગત જાણકારી દૂર કરો"
 
 #: ../admin-tool/lockdown/maindialog.py:73
-msgid "Warn if macro saves doc"
-msgstr "ચેતવો જો મેક્રો દસ્તાવેજ સંગ્રહે"
+msgid "Warn if macro tries to create a PDF"
+msgstr "ચેતવો જો મેક્રો PDF બનાવવાનો પ્રયત્ન કરે"
 
 #: ../admin-tool/lockdown/maindialog.py:74
-msgid "Warn if macro signs doc"
-msgstr "ચેતવો જો મેક્રો દસ્તાવેજ સહી કરે"
+msgid "Warn if macro tries to print a document"
+msgstr "ચેતવો જો મેક્રો દસ્તાવેજ છાપવાનો પ્રયત્ન કરે"
 
 #: ../admin-tool/lockdown/maindialog.py:75
-msgid "Recommend password on save"
-msgstr "સંગ્રહવા પર પાસવર્ડનો આગ્રહ રાખો"
+msgid "Warn if macro tries to save a document"
+msgstr "ચેતવો જો મેક્રો દસ્તાવેજ સંગ્રહવાનો પ્રયત્ન કરે"
+
+#: ../admin-tool/lockdown/maindialog.py:76
+msgid "Warn if macro tries to sign a document"
+msgstr "ચેતવો જો મેક્રો દસ્તાવેજ સહી કરવાનો પ્રયત્ન કરે"
 
 #: ../admin-tool/lockdown/maindialog.py:77
+msgid "Recommend password when saving a document"
+msgstr "જ્યારે દસ્તાવેજ સંગ્રહી રહ્યા હોય ત્યારે પાસવર્ડનો આગ્રહ રાખો"
+
+#: ../admin-tool/lockdown/maindialog.py:79
 msgid "Enable auto-save"
 msgstr "આપોઆપ-સંગ્રહો સક્રિય કરો"
 
 #. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
-#: ../admin-tool/lockdown/maindialog.py:79
-msgid "Printing modifies document"
-msgstr "છાપન દસ્તાવેજને સુધારે છે"
-
-#: ../admin-tool/lockdown/maindialog.py:80
-msgid "Use system file chooser"
-msgstr "સિસ્ટમ ફાઈલ પસંદગીકારક વાપરો"
-
 #: ../admin-tool/lockdown/maindialog.py:81
+msgid "Printing should mark the document as modified"
+msgstr "છાપન દસ્તાવેજને સુધારેલ તરીકે ચિહ્નિત કરતું હોવું જોઈએ"
+
+#: ../admin-tool/lockdown/maindialog.py:82
+msgid "Use system's file dialog"
+msgstr "સિસ્ટમનો ફાઈલ સંવાદ વાપરો"
+
+#: ../admin-tool/lockdown/maindialog.py:83
 msgid "Create backup copy on save"
 msgstr "સંગ્રહવા પર બેકઅપ નકલ બનાવો"
 
-#: ../admin-tool/lockdown/maindialog.py:82
-msgid "Warn for external formats"
-msgstr "બાહ્ય બંધારણો માટે ચેતવો"
-
 #: ../admin-tool/lockdown/maindialog.py:84
-msgid "Use Open GL"
-msgstr "Open GL વાપરો"
+msgid "Warn when saving non-OpenOffice.org formats"
+msgstr "જ્યારે બિન-OpenOffice.org બંધારણો સંગ્રહી રહ્યા હોય ત્યારે ચેતવો"
 
-#: ../admin-tool/lockdown/maindialog.py:85
+#: ../admin-tool/lockdown/maindialog.py:86
+msgid "Use OpenGL"
+msgstr "OpenGL વાપરો"
+
+#: ../admin-tool/lockdown/maindialog.py:87
 msgid "Use system font"
 msgstr "સિસ્ટમ ફોન્ટ વાપરો"
 
-#: ../admin-tool/lockdown/maindialog.py:86
+#: ../admin-tool/lockdown/maindialog.py:88
 msgid "Use anti-aliasing"
 msgstr "એન્ટી-એલિઆઝીંગ વાપરો"
 
-#: ../admin-tool/lockdown/maindialog.py:87
+#: ../admin-tool/lockdown/maindialog.py:89
 msgid "Disable UI customization"
 msgstr "UI વૈવિધ્યપણું નિષ્ક્રિય કરો"
 
-#: ../admin-tool/lockdown/maindialog.py:88
+#: ../admin-tool/lockdown/maindialog.py:90
 msgid "Show insensitive menu items"
 msgstr "હેતુસરની મેનુ વસ્તુઓ બતાવો"
 
-#: ../admin-tool/lockdown/maindialog.py:89
+#: ../admin-tool/lockdown/maindialog.py:91
 msgid "Show font preview"
 msgstr "ફોન્ટ પૂર્વદર્શન બતાવો"
 
-#: ../admin-tool/lockdown/maindialog.py:90
+#: ../admin-tool/lockdown/maindialog.py:92
 msgid "Show font history"
 msgstr "ફોન્ટ ઈતિહાસ બતાવો"
 
-#: ../admin-tool/lockdown/maindialog.py:91
+#: ../admin-tool/lockdown/maindialog.py:93
 msgid "Show icons in menus"
 msgstr "મેનુઓમાં ચિહ્નો બતાવો"
 
@@ -351,36 +354,36 @@ msgid ""
 "\n"
 "OpenDocument (.odp)\n"
 "PowerPoint 97+ (.ppt)\n"
-"OpenOffice 1.1 (.sxi)"
+"OpenOffice.org 1.1 (.sxi)"
 msgstr ""
 "\n"
 "OpenDocument (.odp)\n"
 "PowerPoint 97+ (.ppt)\n"
-"OpenOffice 1.1 (.sxi)"
+"OpenOffice.org 1.1 (.sxi)"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:14
 msgid ""
 "\n"
 "OpenDocument (.ods)\n"
 "Excel 97+ (.xls)\n"
-"OpenOffice 1.1 (.sxc)"
+"OpenOffice.org 1.1 (.sxc)"
 msgstr ""
 "\n"
 "OpenDocument (.ods)\n"
 "Excel 97+ (.xls)\n"
-"OpenOffice 1.1 (.sxc)"
+"OpenOffice.org 1.1 (.sxc)"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:18
 msgid ""
 "\n"
 "OpenDocument (.odt)\n"
 "Word 97+ (.doc)\n"
-"OpenOffice 1.1 (.sxw)"
+"OpenOffice.org 1.1 (.sxw)"
 msgstr ""
 "\n"
 "OpenDocument (.odt)\n"
 "Word 97+ (.doc)\n"
-"OpenOffice 1.1 (.sxw)"
+"OpenOffice.org 1.1 (.sxw)"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:22
 msgid ""
@@ -405,60 +408,60 @@ msgid "<b>Safe Protocols</b>"
 msgstr "<b>સુરક્ષિત પ્રોટોકોલો</b>"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:29
-msgid "Calc default format:"
-msgstr "Calc મૂળભૂત બંધારણ:"
+msgid "Default format for presentations:"
+msgstr "રજૂઆતો માટે મૂળભૂત બંધારણ:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:30
+msgid "Default format for spreadsheet:"
+msgstr "સ્પ્રેડશીટ માટે મૂળભૂત બંધારણ:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:31
+msgid "Default format for word processor:"
+msgstr "વર્ડ પ્રોસેસર માટે મૂળભૂત બંધારણ:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:32
 msgid "Default icon size"
 msgstr "મૂળભૂત ચિહ્ન માપ"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:31
+#: ../admin-tool/lockdown/pessulus.glade.h:33
 msgid "Disable _unsafe protocols"
 msgstr "અસુરક્ષિત પ્રોટોકોલો નિષ્ક્રિય કરો (_u)"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:32
+#: ../admin-tool/lockdown/pessulus.glade.h:34
 msgid "Epiphany Web Browser"
 msgstr "એપીફની વેબ બ્રાઉઝર"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:33
+#: ../admin-tool/lockdown/pessulus.glade.h:35
 msgid "General"
 msgstr "સામાન્ય"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:34
-msgid "Impress default format:"
-msgstr "રજૂઆત મૂળભૂત બંધારણ:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:35
+#: ../admin-tool/lockdown/pessulus.glade.h:36
 msgid "Load / Save"
 msgstr "લાવો / સંગ્રહો"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:36
+#: ../admin-tool/lockdown/pessulus.glade.h:37
 msgid "Lockdown Editor"
 msgstr "સંપાદક તાળું મારો"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:37
+#: ../admin-tool/lockdown/pessulus.glade.h:38
 msgid "Macro Security Level:"
 msgstr "મેક્રો સુરક્ષા સ્તર:"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:38
-msgid "OpenOffice"
-msgstr "OpenOffice"
+#: ../admin-tool/lockdown/pessulus.glade.h:39
+msgid "Number of undo steps:"
+msgstr "રદ કરવાનાં પગલાંઓની સંખ્યા:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:40
+msgid "OpenOffice.org"
+msgstr "OpenOffice.org"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:42
 msgid "Security"
 msgstr "સુરક્ષા"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:41
-msgid "Undo Steps:"
-msgstr "પગલાંઓ રદ કરો:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:42
+#: ../admin-tool/lockdown/pessulus.glade.h:43
 msgid "User Interface"
 msgstr "વપરાશકર્તા ઈન્ટરફેસ"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:43
-msgid "Writer default format:"
-msgstr "લેખન મૂળભૂત બંધારણ:"
 
 #.
 #. Translators: this string specifies how a profile
@@ -718,61 +721,48 @@ msgstr "Xnest શરૂ કરવામાં નિષ્ફળ: USR1 સિગ
 msgid "Failed to start Xnest: died during startup"
 msgstr "Xnest શરૂ કરવામાં નિષ્ફળ: શરૂઆત દરમ્યાન મરી ગયું"
 
-#: ../lib/protosession.py:480
-#, python-format
-msgid ""
-"Could not create the 'sabayon-apply' process: %s\n"
-"The command line used is '%s'\n"
-"Child traceback:\n"
-"%s"
-msgstr ""
-"'sabayon-apply' પ્રક્રિયા બનાવી શક્યા નહિં: %s\n"
-"વપરાતો આદેશ વાક્ય '%s' છે\n"
-"બાળ ટ્રેસબેક:\n"
-"%s"
-
 #: ../lib/protosession.py:501
 #, python-format
-msgid "There was a recoverable error while applying the user profile from '%s'."
-msgstr "'%s' માંથી વપરાશકર્તા રૂપરેખા લાગુ પાડતી વખતે ત્યાં પુનઃપ્રાપ્ય ભૂલ હતી."
+msgid "There was a recoverable error while applying the user profile from file '%s'."
+msgstr "જ્યારે '%s' ફાઈલમાંથી વપરાશકર્તા રૂપરેખા લાગુ કરી રહ્યા હોય ત્યારે પુનઃપ્રાપ્ય ભૂલ ઉદ્ભવી હતી."
 
 #: ../lib/protosession.py:510
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "'%s' માંથી વપરાશકર્તા રૂપરેખા લાગુ પાડતી વખતે ત્યાં ઘાતક ભૂલ હતી."
 
-#: ../lib/sources/filessource.py:68
+#: ../lib/sources/filessource.py:69
 #, python-format
 msgid "File '%s' created"
 msgstr "ફાઈલ '%s' બની ગઈ"
 
-#: ../lib/sources/filessource.py:70
+#: ../lib/sources/filessource.py:71
 #, python-format
 msgid "File '%s' deleted"
 msgstr "ફાઈલ '%s' કાઢી નંખાઈ"
 
-#: ../lib/sources/filessource.py:72
+#: ../lib/sources/filessource.py:73
 #, python-format
 msgid "File '%s' changed"
 msgstr "ફાઈલ '%s' બદલાઈ ગઈ"
 
-#: ../lib/sources/filessource.py:96
+#: ../lib/sources/filessource.py:97
 msgid "Applications menu"
 msgstr "કાર્યક્રમો મેનુ"
 
-#: ../lib/sources/filessource.py:98
+#: ../lib/sources/filessource.py:99
 msgid "Preferences menu"
 msgstr "પસંદગીઓ મેનુ"
 
-#: ../lib/sources/filessource.py:100
+#: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
 msgstr "સર્વર સુયોજનો મેનુ"
 
-#: ../lib/sources/filessource.py:102
+#: ../lib/sources/filessource.py:103
 msgid "System Settings menu"
 msgstr "સિસ્ટમ સુયોજનો મેનુ"
 
-#: ../lib/sources/filessource.py:104
+#: ../lib/sources/filessource.py:105
 msgid "Start Here menu"
 msgstr "અંહિ શરૂ કરો મેનુ"
 
@@ -995,44 +985,45 @@ msgstr "%s ડાબી પેનલ પરથી દૂર કરવામા�
 msgid "%s removed from right panel"
 msgstr "%s જમણી પેનલ પરથી દૂર કરવામાં આવેલ છે"
 
-#: ../lib/sources/paneldelegate.py:199
+#. Translators: This is a drawer in gnome-panel (where you can put applets)
+#: ../lib/sources/paneldelegate.py:200
 msgid "Drawer"
 msgstr "ડ્રોઅર"
 
-#: ../lib/sources/paneldelegate.py:201
+#: ../lib/sources/paneldelegate.py:202
 msgid "Main Menu"
 msgstr "મુખ્ય મેનુ"
 
-#: ../lib/sources/paneldelegate.py:211
+#: ../lib/sources/paneldelegate.py:212
 #, python-format
 msgid "%s launcher"
 msgstr "%s લોન્ચર"
 
-#: ../lib/sources/paneldelegate.py:215
+#: ../lib/sources/paneldelegate.py:216
 msgid "Lock Screen button"
 msgstr "સ્ક્રીનને તાળું મારવાનું બટન"
 
-#: ../lib/sources/paneldelegate.py:217
+#: ../lib/sources/paneldelegate.py:218
 msgid "Logout button"
 msgstr "પ્રવેશ બહાર નીકળો બટન"
 
-#: ../lib/sources/paneldelegate.py:219
+#: ../lib/sources/paneldelegate.py:220
 msgid "Run Application button"
 msgstr "કાર્યક્રમ ચલાવો બટન"
 
-#: ../lib/sources/paneldelegate.py:221
+#: ../lib/sources/paneldelegate.py:222
 msgid "Search button"
 msgstr "શોધો બટન"
 
-#: ../lib/sources/paneldelegate.py:223
+#: ../lib/sources/paneldelegate.py:224
 msgid "Screenshot button"
 msgstr "સ્ક્રીનશોટ બટન"
 
-#: ../lib/sources/paneldelegate.py:225
+#: ../lib/sources/paneldelegate.py:226
 msgid "Menu Bar"
 msgstr "મુખ્ય બાર"
 
-#: ../lib/sources/paneldelegate.py:469
+#: ../lib/sources/paneldelegate.py:470
 msgid "Panel File"
 msgstr "પેનલ ફાઈલ"
 
@@ -1079,60 +1070,63 @@ msgstr "%s ચકાસણીઓ ચલાવી રહ્યા છીએ (%s)"
 msgid "Success!"
 msgstr "સફળ!"
 
-#: ../lib/userdb.py:51
+#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
+#. do not change the way they are written.  The intended string is
+#. something like "invalid type for setting blah in /ldap/path/to/blah"
+#: ../lib/userdb.py:54
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "%(setting)s ને %(np)s માં સુયોજિત કરતી વખતે અયોગ્ય પ્રકાર"
 
-#: ../lib/userdb.py:211
+#: ../lib/userdb.py:215
 #, python-format
 msgid "No search based specified for %s"
 msgstr "%s માટે કોઈ શોધ આધાર સ્પષ્ટ થયેલ નથી"
 
-#: ../lib/userdb.py:214
+#: ../lib/userdb.py:218
 #, python-format
 msgid "No query filter specified for %s"
 msgstr "કોઈ પ્રશ્ન ગાળક %s માટે સ્પષ્ટ થયેલ નથી"
 
-#: ../lib/userdb.py:217
+#: ../lib/userdb.py:221
 #, python-format
 msgid "No result attribute specified for %s"
 msgstr "કોઈ પરિણામ લક્ષણ %s માટે સ્પષ્ટ થયેલ નથી"
 
-#: ../lib/userdb.py:226
+#: ../lib/userdb.py:230
 msgid "Scope must be one of sub, base and one"
 msgstr "મર્યાદા ઉપ, આધાર અને એકમાંની જ હોવી જોઈએ"
 
-#: ../lib/userdb.py:246
+#: ../lib/userdb.py:250
 msgid "multiple_result must be one of first and random"
 msgstr "ઘણા પરિણામ પ્રથમ અને રેન્ડમમાંના એક જ હોવા જોઈએ (_r)"
 
-#: ../lib/userdb.py:338
+#: ../lib/userdb.py:342
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "%s ને લખવા માટે ખોલી શક્યા નહિં"
 
-#: ../lib/userdb.py:351
+#: ../lib/userdb.py:355
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "%s માં વપરાશકર્તા ડેટાબેઝ સંગ્રહવામાં નિષ્ફળ"
 
-#: ../lib/userdb.py:374 ../lib/userdb.py:409
+#: ../lib/userdb.py:378 ../lib/userdb.py:413
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "ફાઈલ %s એ રૂપરેખા રૂપરેખાંકન નથી"
 
-#: ../lib/userdb.py:381
+#: ../lib/userdb.py:385
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "મૂળભૂત રૂપરેખા %s ને રૂપરેખાંકનમાં ઉમેરવામાં નિષ્ફળ"
 
-#: ../lib/userdb.py:417
+#: ../lib/userdb.py:421
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "વપરાશકર્તા %s ને રૂપરેખા રૂપરેખાંકનમાં ઉમેરવામાં નિષ્ફળ"
 
-#: ../lib/userdb.py:468
+#: ../lib/userdb.py:472
 msgid "Failed to get the user list"
 msgstr "વપરાશકર્તા યાદી મેળવવામાં નિષ્ફળ"
 
