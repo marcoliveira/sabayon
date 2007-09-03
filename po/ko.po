@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-18 12:34+0900\n"
-"PO-Revision-Date: 2007-08-18 12:58+0900\n"
+"POT-Creation-Date: 2007-09-02 00:14+0900\n"
+"PO-Revision-Date: 2007-09-02 00:33+0900\n"
 "Last-Translator: Young-Ho Cha <ganadist@gmail.com>\n"
 "Language-Team: GNOME Korea <gnome-kr-hackers@lists.kldp.net>\n"
 "MIME-Version: 1.0\n"
@@ -99,8 +99,8 @@ msgid "Files"
 msgstr "파일"
 
 #: ../admin-tool/editorwindow.py:266
-#: ../admin-tool/lockdown/pessulus.glade.h:39
-#: ../lib/sources/paneldelegate.py:228
+#: ../admin-tool/lockdown/pessulus.glade.h:41
+#: ../lib/sources/paneldelegate.py:229
 msgid "Panel"
 msgstr "패널"
 
@@ -235,80 +235,82 @@ msgstr "전체 화면(_F)"
 msgid "Hide _menubar"
 msgstr "메뉴 모음 숨기기(_M)"
 
-#: ../admin-tool/lockdown/maindialog.py:70
-msgid "Remove personal info from doc. on save"
+#. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
+#. This can be used to disable this, for when you don't want people to know you created the document.
+#: ../admin-tool/lockdown/maindialog.py:72
+msgid "Remove personal info from documents when saving them"
 msgstr "저장할 때 문서에 개인정보 지우기"
 
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Warn if macro creates PDF"
+#: ../admin-tool/lockdown/maindialog.py:73
+msgid "Warn if macro tries to create a PDF"
 msgstr "매크로가 PDF를 만드려고 하면 경고"
 
-#: ../admin-tool/lockdown/maindialog.py:72
-msgid "Warn if macro prints"
-msgstr "매크로가 인쇄하려 하면 경고"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-msgid "Warn if macro saves doc"
-msgstr "매크로가 문서를 저장하려 하면 경고"
-
 #: ../admin-tool/lockdown/maindialog.py:74
-msgid "Warn if macro signs doc"
-msgstr "매크로가 문서에 서명하려 하면 경고"
+msgid "Warn if macro tries to print a document"
+msgstr "매크로가 문서를 인쇄하려 하면 경고"
 
 #: ../admin-tool/lockdown/maindialog.py:75
-msgid "Recommend password on save"
-msgstr "저장할 때 열쇠글 추천"
+msgid "Warn if macro tries to save a document"
+msgstr "매크로가 문서를 저장하려 하면 경고"
+
+#: ../admin-tool/lockdown/maindialog.py:76
+msgid "Warn if macro tries to sign a document"
+msgstr "매크로가 문서에 서명하려 하면 경고"
 
 #: ../admin-tool/lockdown/maindialog.py:77
+msgid "Recommend password when saving a document"
+msgstr "저장할 때 열쇠글 추천"
+
+#: ../admin-tool/lockdown/maindialog.py:79
 msgid "Enable auto-save"
 msgstr "자동 저장 사용"
 
 #. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
-#: ../admin-tool/lockdown/maindialog.py:79
-msgid "Printing modifies document"
-msgstr "문서가 변경되면 출력"
+#: ../admin-tool/lockdown/maindialog.py:81
+msgid "Printing should mark the document as modified"
+msgstr "인쇄할 때 문서가 수정되었다는 표시를 함"
 
-#: ../admin-tool/lockdown/maindialog.py:80
-msgid "Use system file chooser"
+#: ../admin-tool/lockdown/maindialog.py:82
+msgid "Use system's file dialog"
 msgstr "시스템 파일 선택기 사용"
 
-#: ../admin-tool/lockdown/maindialog.py:81
+#: ../admin-tool/lockdown/maindialog.py:83
 msgid "Create backup copy on save"
 msgstr "저장할 때 백업 사본 만들기"
 
-#: ../admin-tool/lockdown/maindialog.py:82
-msgid "Warn for external formats"
-msgstr "외부 형식에 대해 경고"
-
 #: ../admin-tool/lockdown/maindialog.py:84
-msgid "Use Open GL"
+msgid "Warn when saving non-OpenOffice.org formats"
+msgstr "오픈오피스.org의 형식이 아닌 것으로 저장할 때 경고"
+
+#: ../admin-tool/lockdown/maindialog.py:86
+msgid "Use OpenGL"
 msgstr "OpenGL 쓰기"
 
-#: ../admin-tool/lockdown/maindialog.py:85
+#: ../admin-tool/lockdown/maindialog.py:87
 msgid "Use system font"
 msgstr "시스템 글꼴 쓰기"
 
-#: ../admin-tool/lockdown/maindialog.py:86
+#: ../admin-tool/lockdown/maindialog.py:88
 msgid "Use anti-aliasing"
 msgstr "부드러운 글꼴 쓰기"
 
-#: ../admin-tool/lockdown/maindialog.py:87
+#: ../admin-tool/lockdown/maindialog.py:89
 msgid "Disable UI customization"
 msgstr "UI 고치기 금지"
 
-#: ../admin-tool/lockdown/maindialog.py:88
+#: ../admin-tool/lockdown/maindialog.py:90
 msgid "Show insensitive menu items"
 msgstr "비활성화된 메뉴 항목 보기"
 
-#: ../admin-tool/lockdown/maindialog.py:89
+#: ../admin-tool/lockdown/maindialog.py:91
 msgid "Show font preview"
 msgstr "글꼴 미리보기"
 
-#: ../admin-tool/lockdown/maindialog.py:90
+#: ../admin-tool/lockdown/maindialog.py:92
 msgid "Show font history"
 msgstr "글꼴 이력 보기"
 
-#: ../admin-tool/lockdown/maindialog.py:91
+#: ../admin-tool/lockdown/maindialog.py:93
 msgid "Show icons in menus"
 msgstr "메뉴에 아이콘 보이기"
 
@@ -343,36 +345,36 @@ msgid ""
 "\n"
 "OpenDocument (.odp)\n"
 "PowerPoint 97+ (.ppt)\n"
-"OpenOffice 1.1 (.sxi)"
+"OpenOffice.org 1.1 (.sxi)"
 msgstr ""
 "\n"
 "오픈도큐먼트 (.odp)\n"
 "파워포인트 97+ (.ppt)\n"
-"오픈오피스 1.1 (.sxi)"
+"오픈오피스.org 1.1 (.sxi)"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:14
 msgid ""
 "\n"
 "OpenDocument (.ods)\n"
 "Excel 97+ (.xls)\n"
-"OpenOffice 1.1 (.sxc)"
+"OpenOffice.org 1.1 (.sxc)"
 msgstr ""
 "\n"
 "오픈도큐먼트 (.ods)\n"
 "엑셀 97+ (.xls)\n"
-"오픈오피스 1.1 (.sxc)"
+"오픈오피스.org 1.1 (.sxc)"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:18
 msgid ""
 "\n"
 "OpenDocument (.odt)\n"
 "Word 97+ (.doc)\n"
-"OpenOffice 1.1 (.sxw)"
+"OpenOffice.org 1.1 (.sxw)"
 msgstr ""
 "\n"
 "오픈도큐먼트 (.odt)\n"
 "워드 97+ (.doc)\n"
-"오픈오피스 1.1 (.sxw)"
+"오픈오피스.org 1.1 (.sxw)"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:22
 msgid ""
@@ -397,60 +399,60 @@ msgid "<b>Safe Protocols</b>"
 msgstr "<b>안전한 프로토콜</b>"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:29
-msgid "Calc default format:"
-msgstr "Calc 기본 형식:"
+msgid "Default format for presentations:"
+msgstr "프리젠테이션의 기본 형식:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:30
+msgid "Default format for spreadsheet:"
+msgstr "스프레드시트의 기본 형식:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:31
+msgid "Default format for word processor:"
+msgstr "워드 프로세서의 기본 형식:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:32
 msgid "Default icon size"
 msgstr "기본 아이콘 크기"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:31
+#: ../admin-tool/lockdown/pessulus.glade.h:33
 msgid "Disable _unsafe protocols"
 msgstr "안전하지 않은 프로토콜 사용 금지(_U)"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:32
+#: ../admin-tool/lockdown/pessulus.glade.h:34
 msgid "Epiphany Web Browser"
 msgstr "Epiphany 웹 브라우저"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:33
+#: ../admin-tool/lockdown/pessulus.glade.h:35
 msgid "General"
 msgstr "일반"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:34
-msgid "Impress default format:"
-msgstr "Impress 기본 형식:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:35
+#: ../admin-tool/lockdown/pessulus.glade.h:36
 msgid "Load / Save"
 msgstr "읽기/저장"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:36
+#: ../admin-tool/lockdown/pessulus.glade.h:37
 msgid "Lockdown Editor"
 msgstr "잠금 편집기"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:37
+#: ../admin-tool/lockdown/pessulus.glade.h:38
 msgid "Macro Security Level:"
 msgstr "매크로 보안 수준:"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:38
-msgid "OpenOffice"
-msgstr "오픈오피스"
+#: ../admin-tool/lockdown/pessulus.glade.h:39
+msgid "Number of undo steps:"
+msgstr "실행 취소 횟수:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:40
+msgid "OpenOffice.org"
+msgstr "오픈오피스.org"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:42
 msgid "Security"
 msgstr "보안"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:41
-msgid "Undo Steps:"
-msgstr "되돌리기 단계:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:42
+#: ../admin-tool/lockdown/pessulus.glade.h:43
 msgid "User Interface"
 msgstr "사용자 인터페이스"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:43
-msgid "Writer default format:"
-msgstr "Writer 기본 형식:"
 
 #.
 #. Translators: this string specifies how a profile
@@ -508,8 +510,8 @@ msgid ""
 "A fatal error has occurred.  You can help us fix the problem by sending the "
 "log in %s to %s"
 msgstr ""
-"심각한 오류가 생겼습니다. %s에 있는 로그를 %s에 보내주시면 문제를 고치는데 "
-"도움이 될것입니다"
+"심각한 오류가 생겼습니다. %s에 있는 로그를 %s에 보내주시면 문제를 고치는데 도"
+"움이 될것입니다"
 
 #: ../admin-tool/sabayon:143
 #, c-format
@@ -517,8 +519,8 @@ msgid ""
 "Sabayon will now exit.  There were some recoverable errors, and you can help "
 "us debug the problem by sending the log in %s to %s"
 msgstr ""
-"Sabayon이 종료됩니다. 복구가능한 몇몇 오류가 있었습니다.  %s에 있는 로그를 "
-"%s에 보내주시면 문제를 해결하는데 도움이 될것입니다"
+"Sabayon이 종료됩니다. 복구가능한 몇몇 오류가 있었습니다.  %s에 있는 로그를 %s"
+"에 보내주시면 문제를 해결하는데 도움이 될것입니다"
 
 #: ../admin-tool/sabayon-apply:98
 #, c-format
@@ -682,8 +684,8 @@ msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
 "report this error now or try to continue editing the user profile."
 msgstr ""
-"사용자 프로파일 '%s'를 적용하는 동안 복구 가능한 오류가 생겼습니다. 발생한 "
-"오류를 지금 보고하겠습니까? 아니면 사용자 프로파일을 계속해서 고치겠습니까?"
+"사용자 프로파일 '%s'를 적용하는 동안 복구 가능한 오류가 생겼습니다. 발생한 오"
+"류를 지금 보고하겠습니까? 아니면 사용자 프로파일을 계속해서 고치겠습니까?"
 
 #: ../admin-tool/sessionwindow.py:337
 msgid "_Report this error"
@@ -714,31 +716,17 @@ msgstr "Xnest 시작 실패: USR1신호를 기다리는중 시간 제한"
 msgid "Failed to start Xnest: died during startup"
 msgstr "Xnest 시작 실패: 시작하는 중 죽음"
 
-#: ../lib/protosession.py:480
-#, python-format
-msgid ""
-"Could not create the 'sabayon-apply' process: %s\n"
-"The command line used is '%s'\n"
-"Child traceback:\n"
-"%s"
-msgstr ""
-"'sabayon-apply'를 실행할 수 없습니다: %s\n"
-"'%s'명령행이 사용되었습니다\n"
-"자식프로세스 추적:\n"
-"%s"
-
 #: ../lib/protosession.py:501
 #, python-format
 msgid ""
-"There was a recoverable error while applying the user profile from '%s'."
+"There was a recoverable error while applying the user profile from file '%s'."
 msgstr ""
 "'%s'에서 사용자 프로파일을 적용하는 동안 복구가능한 오류가 생겼습니다."
 
 #: ../lib/protosession.py:510
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
-msgstr ""
-"'%s'에서 사용자 프로파일을 적용하는 동안 치명적인 오류가 생겼습니다."
+msgstr "'%s'에서 사용자 프로파일을 적용하는 동안 치명적인 오류가 생겼습니다."
 
 #: ../lib/sources/filessource.py:69
 #, python-format
@@ -994,44 +982,45 @@ msgstr "%s (이)가 왼쪽 패널에서 지워졌습니다"
 msgid "%s removed from right panel"
 msgstr "%s (이)가 오른쪽 패널에서 지워졌습니다"
 
-#: ../lib/sources/paneldelegate.py:199
+#. Translators: This is a drawer in gnome-panel (where you can put applets)
+#: ../lib/sources/paneldelegate.py:200
 msgid "Drawer"
 msgstr "서랍"
 
-#: ../lib/sources/paneldelegate.py:201
+#: ../lib/sources/paneldelegate.py:202
 msgid "Main Menu"
 msgstr "주 메뉴"
 
-#: ../lib/sources/paneldelegate.py:211
+#: ../lib/sources/paneldelegate.py:212
 #, python-format
 msgid "%s launcher"
 msgstr "%s 실행기"
 
-#: ../lib/sources/paneldelegate.py:215
+#: ../lib/sources/paneldelegate.py:216
 msgid "Lock Screen button"
 msgstr "화면 잠그기 단추"
 
-#: ../lib/sources/paneldelegate.py:217
+#: ../lib/sources/paneldelegate.py:218
 msgid "Logout button"
 msgstr "로그아웃 단추"
 
-#: ../lib/sources/paneldelegate.py:219
+#: ../lib/sources/paneldelegate.py:220
 msgid "Run Application button"
 msgstr "프로그램 실행 단추"
 
-#: ../lib/sources/paneldelegate.py:221
+#: ../lib/sources/paneldelegate.py:222
 msgid "Search button"
 msgstr "찾기 단추"
 
-#: ../lib/sources/paneldelegate.py:223
+#: ../lib/sources/paneldelegate.py:224
 msgid "Screenshot button"
 msgstr "스크린샷 찍기 단추"
 
-#: ../lib/sources/paneldelegate.py:225
+#: ../lib/sources/paneldelegate.py:226
 msgid "Menu Bar"
 msgstr "메뉴 모음"
 
-#: ../lib/sources/paneldelegate.py:469
+#: ../lib/sources/paneldelegate.py:470
 msgid "Panel File"
 msgstr "패널 파일"
 
@@ -1078,60 +1067,63 @@ msgstr "%s 검사 실행 중 (%s)"
 msgid "Success!"
 msgstr "성공!"
 
-#: ../lib/userdb.py:51
+#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
+#. do not change the way they are written.  The intended string is
+#. something like "invalid type for setting blah in /ldap/path/to/blah"
+#: ../lib/userdb.py:54
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "%(np)s에서 설정 종류 %(setting)s(이)가 잘못되었습니다"
 
-#: ../lib/userdb.py:211
+#: ../lib/userdb.py:215
 #, python-format
 msgid "No search based specified for %s"
 msgstr "%s에 지정된 찾기 기준 없음"
 
-#: ../lib/userdb.py:214
+#: ../lib/userdb.py:218
 #, python-format
 msgid "No query filter specified for %s"
 msgstr "%s에 지정된 질의 거르개 없음"
 
-#: ../lib/userdb.py:217
+#: ../lib/userdb.py:221
 #, python-format
 msgid "No result attribute specified for %s"
 msgstr "%s에 지정된 속성 결과 없음"
 
-#: ../lib/userdb.py:226
+#: ../lib/userdb.py:230
 msgid "Scope must be one of sub, base and one"
 msgstr "범위는 sub, base, one중 하나이어야 합니다"
 
-#: ../lib/userdb.py:246
+#: ../lib/userdb.py:250
 msgid "multiple_result must be one of first and random"
 msgstr "multiple_result는 첫번째, 임의의 값 중 하나이어야 합니다"
 
-#: ../lib/userdb.py:338
+#: ../lib/userdb.py:342
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "%s(을)를 쓰기위해 열 수 없음"
 
-#: ../lib/userdb.py:351
+#: ../lib/userdb.py:355
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "사용자 데이터베이스를 %s에 저장 실패"
 
-#: ../lib/userdb.py:374 ../lib/userdb.py:409
+#: ../lib/userdb.py:378 ../lib/userdb.py:413
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "파일 %s(은)는 프로파일 설정이 아닙니다"
 
-#: ../lib/userdb.py:381
+#: ../lib/userdb.py:385
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "설정에 기본 프로파일 %s 더하기 실패"
 
-#: ../lib/userdb.py:417
+#: ../lib/userdb.py:421
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "프로파일 설정에서 사용자 %s(을)를 더하기 실패"
 
-#: ../lib/userdb.py:468
+#: ../lib/userdb.py:472
 msgid "Failed to get the user list"
 msgstr "사용자 목록에서 얻기 실패"
 
@@ -1150,6 +1142,38 @@ msgid ""
 msgstr ""
 "사용자 이름 찾을 수 없음: /etc/passwd에 설정되어 있지 않고 환경변수에 $USER값"
 "이 없습니다"
+
+#~ msgid "Warn if macro prints"
+#~ msgstr "매크로가 인쇄하려 하면 경고"
+
+#~ msgid "Printing modifies document"
+#~ msgstr "문서가 변경되면 출력"
+
+#~ msgid "Warn for external formats"
+#~ msgstr "외부 형식에 대해 경고"
+
+#~ msgid "Calc default format:"
+#~ msgstr "Calc 기본 형식:"
+
+#~ msgid "Impress default format:"
+#~ msgstr "Impress 기본 형식:"
+
+#~ msgid "Undo Steps:"
+#~ msgstr "되돌리기 단계:"
+
+#~ msgid "Writer default format:"
+#~ msgstr "Writer 기본 형식:"
+
+#~ msgid ""
+#~ "Could not create the 'sabayon-apply' process: %s\n"
+#~ "The command line used is '%s'\n"
+#~ "Child traceback:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "'sabayon-apply'를 실행할 수 없습니다: %s\n"
+#~ "'%s'명령행이 사용되었습니다\n"
+#~ "자식프로세스 추적:\n"
+#~ "%s"
 
 #~ msgid "Usage: %s [<profile-name>]\n"
 #~ msgstr "사용법: %s [<프로파일 이름>]\n"
