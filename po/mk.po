@@ -7,14 +7,15 @@
 # Јован Наумовски <jove.mk@gmail.com>, 2005.
 # Arangel Angov <ufo@linux.net.mk>, 2005, 2006, 2007.
 # Jovan Naumovski <jovan@lugola.net>, 2006, 2007.
+# Dimitar Talevski <dimi3.14@gmail.com>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD.mk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-13 03:16+0100\n"
-"PO-Revision-Date: 2007-08-12 03:02+0200\n"
-"Last-Translator: Jovan Naumovski <jovan@lugola.net>\n"
-"Language-Team: Macedonian <ossm-members@hedona.on.net.mk>\n"
+"POT-Creation-Date: 2007-08-24 00:25+0100\n"
+"PO-Revision-Date: 2007-09-03 01:44+0200\n"
+"Last-Translator: Dimitar Talevski <dimi3.14@gmail.com>\n"
+"Language-Team: Macedonian <mk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,12 +28,12 @@ msgstr "Програма за формирање и уредување на пр
 
 #: ../admin-tool/aboutdialog.py:66
 msgid "translator-credits"
-msgstr "Ѓоре Захарчев <aristotel@mt.net.mk>"
+msgstr "заслуга за преведувачите"
 
 #: ../admin-tool/changeswindow.py:50
 #, python-format
 msgid "Changes in profile %s"
-msgstr "Зачувај профил %s"
+msgstr "Промени во профилот %s"
 
 #: ../admin-tool/changeswindow.py:113
 msgid "Ignore"
@@ -49,7 +50,7 @@ msgstr "Опис"
 #: ../admin-tool/editorwindow.py:97
 #, python-format
 msgid "Profile %s"
-msgstr "Профили %s"
+msgstr "Профилот %s"
 
 #: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:176
 msgid "_Profile"
@@ -99,13 +100,13 @@ msgstr "Во врска со Sabayon"
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:78
+#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:79
 msgid "Files"
 msgstr "Датотеки"
 
 #: ../admin-tool/editorwindow.py:266
-#: ../admin-tool/lockdown/pessulus.glade.h:39
-#: ../lib/sources/paneldelegate.py:228
+#: ../admin-tool/lockdown/pessulus.glade.h:41
+#: ../lib/sources/paneldelegate.py:229
 msgid "Panel"
 msgstr "Табла"
 
@@ -132,11 +133,11 @@ msgstr "цел број"
 
 #: ../admin-tool/gconfviewer.py:66
 msgid "float"
-msgstr "лебди"
+msgstr "децимален број"
 
 #: ../admin-tool/gconfviewer.py:68
 msgid "boolean"
-msgstr "boolean"
+msgstr "булов"
 
 #: ../admin-tool/gconfviewer.py:70
 msgid "schema"
@@ -210,7 +211,7 @@ msgstr "Оневозможи _одјава"
 
 #: ../admin-tool/lockdown/maindialog.py:61
 msgid "Disable _quit"
-msgstr "Оневозможи _Излез"
+msgstr "Оневозможи _излез"
 
 #: ../admin-tool/lockdown/maindialog.py:62
 msgid "Disable _arbitrary URL"
@@ -240,80 +241,82 @@ msgstr "_Цел екран"
 msgid "Hide _menubar"
 msgstr "Скриј ја _мени лентата"
 
-#: ../admin-tool/lockdown/maindialog.py:70
-msgid "Remove personal info from doc. on save"
-msgstr "Отстрани ги личните информации од doc. при зачувување"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Warn if macro creates PDF"
-msgstr "Предупреди ако макрото креира PDF"
-
+#. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
+#. This can be used to disable this, for when you don't want people to know you created the document.
 #: ../admin-tool/lockdown/maindialog.py:72
-msgid "Warn if macro prints"
-msgstr "Предупреди ако макрото печати"
+msgid "Remove personal info from documents when saving them"
+msgstr "Отстрани ги личните информации од документите при нивно зачувување"
 
 #: ../admin-tool/lockdown/maindialog.py:73
-msgid "Warn if macro saves doc"
-msgstr "Предупреди ако макрото зачувува doc"
+msgid "Warn if macro tries to create a PDF"
+msgstr "Предупреди ако макрото пробува да креира PDF"
 
 #: ../admin-tool/lockdown/maindialog.py:74
-msgid "Warn if macro signs doc"
-msgstr "Предупреди ако макрото потпишува doc"
+msgid "Warn if macro tries to print a document"
+msgstr "Предупреди ако макрото пробува да испечати документ"
 
 #: ../admin-tool/lockdown/maindialog.py:75
-msgid "Recommend password on save"
-msgstr "Препорачај лозинка при зачувување"
+msgid "Warn if macro tries to save a document"
+msgstr "Предупреди ако макрото пробува да зачува документ"
+
+#: ../admin-tool/lockdown/maindialog.py:76
+msgid "Warn if macro tries to sign a document"
+msgstr "Предупреди ако макрото пробува да потпише документ"
 
 #: ../admin-tool/lockdown/maindialog.py:77
+msgid "Recommend password when saving a document"
+msgstr "Препорачај лозинка при зачувување на документ"
+
+#: ../admin-tool/lockdown/maindialog.py:79
 msgid "Enable auto-save"
 msgstr "Овозможи автоматско зачувување"
 
 #. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
-#: ../admin-tool/lockdown/maindialog.py:79
-msgid "Printing modifies document"
-msgstr "Печатењето го изменува документот"
-
-#: ../admin-tool/lockdown/maindialog.py:80
-msgid "Use system file chooser"
-msgstr "Користи го системскиот зачувувач на датотеки"
-
 #: ../admin-tool/lockdown/maindialog.py:81
+msgid "Printing should mark the document as modified"
+msgstr "Печатењето треба да го означи документот како изменет"
+
+#: ../admin-tool/lockdown/maindialog.py:82
+msgid "Use system's file dialog"
+msgstr "Користи го системскиот дијалог за датотеки"
+
+#: ../admin-tool/lockdown/maindialog.py:83
 msgid "Create backup copy on save"
 msgstr "Креирај сигурносна копија при зачувување"
 
-#: ../admin-tool/lockdown/maindialog.py:82
-msgid "Warn for external formats"
-msgstr "Предупреди а надворешните формати"
-
 #: ../admin-tool/lockdown/maindialog.py:84
-msgid "Use Open GL"
+msgid "Warn when saving non-OpenOffice.org formats"
+msgstr "Предупреди при зачувување на не OpenOffice.org формати"
+
+#: ../admin-tool/lockdown/maindialog.py:86
+msgid "Use OpenGL"
 msgstr "Користи Open GL"
 
-#: ../admin-tool/lockdown/maindialog.py:85
+#: ../admin-tool/lockdown/maindialog.py:87
 msgid "Use system font"
 msgstr "Користи системски фонт"
 
-#: ../admin-tool/lockdown/maindialog.py:86
+#: ../admin-tool/lockdown/maindialog.py:88
 msgid "Use anti-aliasing"
 msgstr "Користи anti-aliasing"
 
-#: ../admin-tool/lockdown/maindialog.py:87
+#: ../admin-tool/lockdown/maindialog.py:89
 msgid "Disable UI customization"
 msgstr "Оневозможи прилагодување на графичкиот интерфејс"
 
-#: ../admin-tool/lockdown/maindialog.py:88
+#: ../admin-tool/lockdown/maindialog.py:90
 msgid "Show insensitive menu items"
 msgstr "Прикажи ги нечувствителните предмети од менито"
 
-#: ../admin-tool/lockdown/maindialog.py:89
+#: ../admin-tool/lockdown/maindialog.py:91
 msgid "Show font preview"
 msgstr "Покажи преглед на фонт"
 
-#: ../admin-tool/lockdown/maindialog.py:90
+#: ../admin-tool/lockdown/maindialog.py:92
 msgid "Show font history"
 msgstr "Покажи историја на фонт"
 
-#: ../admin-tool/lockdown/maindialog.py:91
+#: ../admin-tool/lockdown/maindialog.py:93
 msgid "Show icons in menus"
 msgstr "Прикажи икони во менијата"
 
@@ -348,7 +351,7 @@ msgid ""
 "\n"
 "OpenDocument (.odp)\n"
 "PowerPoint 97+ (.ppt)\n"
-"OpenOffice 1.1 (.sxi)"
+"OpenOffice.org 1.1 (.sxi)"
 msgstr ""
 "\n"
 "OpenDocument (.odp)\n"
@@ -360,7 +363,7 @@ msgid ""
 "\n"
 "OpenDocument (.ods)\n"
 "Excel 97+ (.xls)\n"
-"OpenOffice 1.1 (.sxc)"
+"OpenOffice.org 1.1 (.sxc)"
 msgstr ""
 "\n"
 "OpenDocument (.ods)\n"
@@ -372,7 +375,7 @@ msgid ""
 "\n"
 "OpenDocument (.odt)\n"
 "Word 97+ (.doc)\n"
-"OpenOffice 1.1 (.sxw)"
+"OpenOffice.org 1.1 (.sxw)"
 msgstr ""
 "\n"
 "OpenDocument (.odt)\n"
@@ -402,60 +405,60 @@ msgid "<b>Safe Protocols</b>"
 msgstr "<b>Безбедни протоколи</b>"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:29
-msgid "Calc default format:"
-msgstr "Стандардниот формат на Calc:"
+msgid "Default format for presentations:"
+msgstr "Стандарден формат за презентации:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:30
+msgid "Default format for spreadsheet:"
+msgstr "Стандарден формат за табеларни пресметки:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:31
+msgid "Default format for word processor:"
+msgstr "Стандарден формат за обработувачот на текст:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:32
 msgid "Default icon size"
 msgstr "Стандардната големина на иконите"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:31
+#: ../admin-tool/lockdown/pessulus.glade.h:33
 msgid "Disable _unsafe protocols"
 msgstr "Оневозможи _несигурни протоколи"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:32
+#: ../admin-tool/lockdown/pessulus.glade.h:34
 msgid "Epiphany Web Browser"
-msgstr "Епифани Веб прелистувач"
+msgstr "Epiphany веб прелистувач"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:33
+#: ../admin-tool/lockdown/pessulus.glade.h:35
 msgid "General"
 msgstr "Главно"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:34
-msgid "Impress default format:"
-msgstr "Стандардниот формат на Impress:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:35
+#: ../admin-tool/lockdown/pessulus.glade.h:36
 msgid "Load / Save"
 msgstr "Вчитај / зачувај"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:36
+#: ../admin-tool/lockdown/pessulus.glade.h:37
 msgid "Lockdown Editor"
 msgstr "Уреди заклучувања"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:37
+#: ../admin-tool/lockdown/pessulus.glade.h:38
 msgid "Macro Security Level:"
 msgstr "Сигурносно ниво на макрото:"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:38
-msgid "OpenOffice"
-msgstr "OpenOffice"
+#: ../admin-tool/lockdown/pessulus.glade.h:39
+msgid "Number of undo steps:"
+msgstr "Број на чекори наназад:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:40
+msgid "OpenOffice.org"
+msgstr "OpenOffice.org"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:42
 msgid "Security"
 msgstr "Безбедност"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:41
-msgid "Undo Steps:"
-msgstr "Чекори за отповикување:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:42
+#: ../admin-tool/lockdown/pessulus.glade.h:43
 msgid "User Interface"
 msgstr "Кориснички интерфејс"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:43
-msgid "Writer default format:"
-msgstr "Стандардниот формат на Writer:"
 
 #.
 #. Translators: this string specifies how a profile
@@ -507,7 +510,7 @@ msgid ""
 "command)"
 msgstr ""
 "Sabayon има потреба од специјална корисничка сметка „%s“ на овој компјутер. "
-"Обидете се подоцна по креирањето на сметката (користејќи, на пр., 'adduser' "
+"Обидете се подоцна по креирањето на сметката (користејќи, на пр. „adduser“ "
 "команда)"
 
 #: ../admin-tool/sabayon:128
@@ -516,8 +519,8 @@ msgid ""
 "A fatal error has occurred.  You can help us fix the problem by sending the "
 "log in %s to %s"
 msgstr ""
-"Се случи фатална грешка.  Можете да ни помогнете да го поправиме проблемот со"
-"испраќање на логот во %s до %s"
+"Се случи фатална грешка.  Можете да ни помогнете да го поправиме проблемот "
+"соиспраќање на логот во %s до %s"
 
 #: ../admin-tool/sabayon:143
 #, c-format
@@ -525,19 +528,19 @@ msgid ""
 "Sabayon will now exit.  There were some recoverable errors, and you can help "
 "us debug the problem by sending the log in %s to %s"
 msgstr ""
-"Sabayon сега ќе се исклучи.  Се појавија некакви поправливи грешки и Вие можете"
-"да помогнете да го решиме проблемот со испраќање на логот на %s до %s"
+"Sabayon сега ќе се исклучи.  Се појавија некакви поправливи грешки и Вие "
+"можетеда помогнете да го решиме проблемот со испраќање на логот на %s до %s"
 
-#: ../admin-tool/sabayon-apply:96
+#: ../admin-tool/sabayon-apply:98
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Никаков профил за корисникот „%s“ пронајден\n"
 
-#: ../admin-tool/sabayon-apply:101
+#: ../admin-tool/sabayon-apply:103
 msgid "Please use -h for usage options"
 msgstr "Користете -h за опции за употребување"
 
-#: ../admin-tool/sabayon-session:66
+#: ../admin-tool/sabayon-session:67
 #, c-format
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
 msgstr "Употреба: %s <profile-name> <profile-path> <display-number>\n"
@@ -729,8 +732,9 @@ msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
 "report this error now or try to continue editing the user profile."
 msgstr ""
-"Се појави поправлива грешка при применувањето на корисничкиот профил „%s“.  Можете"
-"да ја пријавите оваа грешка или да се обидите со уредување на корисничкиот профил."
+"Се појави поправлива грешка при применувањето на корисничкиот профил „%s“.  "
+"Можетеда ја пријавите оваа грешка или да се обидите со уредување на "
+"корисничкиот профил."
 
 #: ../admin-tool/sessionwindow.py:337
 msgid "_Report this error"
@@ -761,61 +765,48 @@ msgstr "Откажано стартувањето наXnest: истече вре
 msgid "Failed to start Xnest: died during startup"
 msgstr "Откажано стартувањето на Xnest: изгинато за време на стартувањето"
 
-#: ../lib/protosession.py:480
-#, python-format
-msgid ""
-"Could not create the 'sabayon-apply' process: %s\n"
-"The command line used is '%s'\n"
-"Child traceback:\n"
-"%s"
-msgstr ""
-"Не можам да го креирам процесот „sabayon-apply“: %s\n"
-"Користена е командната лнија „%s“\n"
-"Следење на дете-процес:\n"
-"%s"
-
 #: ../lib/protosession.py:501
 #, python-format
-msgid "There was a recoverable error while applying the user profile from '%s'."
-msgstr "Се појави поправлива грешка при применувањето на корисничкиот профил од „%s“."
+msgid "There was a recoverable error while applying the user profile from file '%s'."
+msgstr "Се појави поправлива грешка при применувањето на корисничкиот профил од датотеката „%s“."
 
 #: ../lib/protosession.py:510
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "Се појави фатална грешка при применувањето на корисничкиот профил од „%s“."
 
-#: ../lib/sources/filessource.py:68
+#: ../lib/sources/filessource.py:69
 #, python-format
 msgid "File '%s' created"
 msgstr "Датотека „%s“ креирана"
 
-#: ../lib/sources/filessource.py:70
+#: ../lib/sources/filessource.py:71
 #, python-format
 msgid "File '%s' deleted"
 msgstr "Датотека „%s“ избришана"
 
-#: ../lib/sources/filessource.py:72
+#: ../lib/sources/filessource.py:73
 #, python-format
 msgid "File '%s' changed"
 msgstr "Датотека „%s“ променета"
 
-#: ../lib/sources/filessource.py:96
+#: ../lib/sources/filessource.py:97
 msgid "Applications menu"
 msgstr "Мени за апликацијата"
 
-#: ../lib/sources/filessource.py:98
+#: ../lib/sources/filessource.py:99
 msgid "Preferences menu"
 msgstr "Мени за параметри"
 
-#: ../lib/sources/filessource.py:100
+#: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
 msgstr "Мени за Серверски поставки"
 
-#: ../lib/sources/filessource.py:102
+#: ../lib/sources/filessource.py:103
 msgid "System Settings menu"
 msgstr "Мени за Системски поставки"
 
-#: ../lib/sources/filessource.py:104
+#: ../lib/sources/filessource.py:105
 msgid "Start Here menu"
 msgstr "Мени за Почеток од овде"
 
@@ -1038,44 +1029,45 @@ msgstr "%s е отстранет од левиот панел"
 msgid "%s removed from right panel"
 msgstr "%s е отстранет од десниот панел"
 
-#: ../lib/sources/paneldelegate.py:199
+#. Translators: This is a drawer in gnome-panel (where you can put applets)
+#: ../lib/sources/paneldelegate.py:200
 msgid "Drawer"
 msgstr "Фиока"
 
-#: ../lib/sources/paneldelegate.py:201
+#: ../lib/sources/paneldelegate.py:202
 msgid "Main Menu"
 msgstr "Главно мени"
 
-#: ../lib/sources/paneldelegate.py:211
+#: ../lib/sources/paneldelegate.py:212
 #, python-format
 msgid "%s launcher"
 msgstr "Лансерот %s"
 
-#: ../lib/sources/paneldelegate.py:215
+#: ../lib/sources/paneldelegate.py:216
 msgid "Lock Screen button"
 msgstr "Копче за заклучување"
 
-#: ../lib/sources/paneldelegate.py:217
+#: ../lib/sources/paneldelegate.py:218
 msgid "Logout button"
 msgstr "Копче за одјава"
 
-#: ../lib/sources/paneldelegate.py:219
-msgid "Run Appliction button"
-msgstr "Пушти копче за апликации"
+#: ../lib/sources/paneldelegate.py:220
+msgid "Run Application button"
+msgstr "Копче за извршување на апликации"
 
-#: ../lib/sources/paneldelegate.py:221
+#: ../lib/sources/paneldelegate.py:222
 msgid "Search button"
 msgstr "Копче за пребарување"
 
-#: ../lib/sources/paneldelegate.py:223
+#: ../lib/sources/paneldelegate.py:224
 msgid "Screenshot button"
 msgstr "Копче за слика од екранот"
 
-#: ../lib/sources/paneldelegate.py:225
+#: ../lib/sources/paneldelegate.py:226
 msgid "Menu Bar"
 msgstr "Лента со мени"
 
-#: ../lib/sources/paneldelegate.py:469
+#: ../lib/sources/paneldelegate.py:470
 msgid "Panel File"
 msgstr "Датотека со панел"
 
@@ -1111,71 +1103,74 @@ msgstr "Игнорирај ПРЕДУПРЕДУВАЊА"
 #: ../lib/unittests.py:61
 #, python-format
 msgid "Running %s tests"
-msgstr "Извршувај %s тестови"
+msgstr "Извршувам %s тестови"
 
 #: ../lib/unittests.py:63
 #, python-format
 msgid "Running %s tests (%s)"
-msgstr "Извршувај %s тестови (%s)"
+msgstr "Извршувам %s тестови (%s)"
 
 #: ../lib/unittests.py:70
 msgid "Success!"
 msgstr "Успешно!"
 
-#: ../lib/userdb.py:51
+#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
+#. do not change the way they are written.  The intended string is
+#. something like "invalid type for setting blah in /ldap/path/to/blah"
+#: ../lib/userdb.py:54
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "невалиден тип за поставување на %(setting)s во %(np)s"
 
-#: ../lib/userdb.py:211
+#: ../lib/userdb.py:215
 #, python-format
 msgid "No search based specified for %s"
 msgstr "Нема базирано пребарување одредено за %s"
 
-#: ../lib/userdb.py:214
+#: ../lib/userdb.py:218
 #, python-format
 msgid "No query filter specified for %s"
 msgstr "Нема одреден филтер за прашања за %s"
 
-#: ../lib/userdb.py:217
+#: ../lib/userdb.py:221
 #, python-format
 msgid "No result attribute specified for %s"
 msgstr "Нема одредено атрибут за резултати за %s"
 
-#: ../lib/userdb.py:226
+#: ../lib/userdb.py:230
 msgid "Scope must be one of sub, base and one"
 msgstr "Опсегот може да е sub, base и one"
 
-#: ../lib/userdb.py:246
+#: ../lib/userdb.py:250
 msgid "multiple_result must be one of first and random"
 msgstr "multiple_result мора да биде еден од првите и еден случаен"
 
-#: ../lib/userdb.py:338
+#: ../lib/userdb.py:342
 #, python-format
 msgid "Could not open %s for writing"
-msgstr "Не можам да се отвори %s за запишување"
+msgstr "Не можам да отворам %s за запишување"
 
-#: ../lib/userdb.py:351
+#: ../lib/userdb.py:355
 #, python-format
 msgid "Failed to save UserDatabase to %s"
-msgstr "Откажано зачувувањето на Корисничката база во %s"
+msgstr "Не успеа зачувувањето на корисничката база на податоци во %s"
 
-#: ../lib/userdb.py:374 ../lib/userdb.py:409
+#: ../lib/userdb.py:378 ../lib/userdb.py:413
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Датотеката %s не е за конфигурирање на профили"
 
-#: ../lib/userdb.py:381
+#: ../lib/userdb.py:385
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Откажано додавање на стандарден профил %s во конфигурацијата"
 
-#: ../lib/userdb.py:417
+#: ../lib/userdb.py:421
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Откажано додавање на корисник %s во конфигурацијата за профили"
 
-#: ../lib/userdb.py:468
+#: ../lib/userdb.py:472
 msgid "Failed to get the user list"
 msgstr "Откажано добивање на корисничка листа"
 
