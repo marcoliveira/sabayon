@@ -1,24 +1,25 @@
-# translation of sabayon.gnome-2-18.ar.po to Arabic
+# translation of sabayon.HEAD.po to Arabic
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Yousef Raffah <yousef@raffah.com>, 2006.
 # Khaled Hosny <khaledhosny@eglug.org>, 2007.
 # Djihed Afifi <djihed@gmail.com>, 2007.
+# Youssef Chahibi <chahibi@gmail.com>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-04-14 19:43+0100\n"
-"PO-Revision-Date: 2007-03-01 13:10+0200\n"
-"Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
+"POT-Creation-Date: 2007-08-24 00:25+0100\n"
+"PO-Revision-Date: 2007-08-27 09:53+0000\n"
+"Last-Translator: Youssef Chahibi <chahibi@gmail.com>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 0 : n==2 ? 1 : n>=3 && n<=10 ? 2 : "
 "3\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: KBabel 1.11.2\n"
 
 #: ../admin-tool/aboutdialog.py:63
 msgid "Program to establish and edit profiles for users"
@@ -102,12 +103,13 @@ msgstr "حوْل سابايون"
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:78
+#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:79
 msgid "Files"
 msgstr "ملفات"
 
-#: ../admin-tool/editorwindow.py:266 ../admin-tool/lockdown/pessulus.glade.h:7
-#: ../lib/sources/paneldelegate.py:228
+#: ../admin-tool/editorwindow.py:266
+#: ../admin-tool/lockdown/pessulus.glade.h:41
+#: ../lib/sources/paneldelegate.py:229
 msgid "Panel"
 msgstr "شريط"
 
@@ -178,93 +180,288 @@ msgstr "اضغط لجعل هذه الخاصية غير إلزامية"
 msgid "Click to make this setting mandatory"
 msgstr "اضغط لجعل هذه الخاصية إلزامية"
 
-#: ../admin-tool/lockdown/maindialog.py:49
+#: ../admin-tool/lockdown/maindialog.py:51
 msgid "Disable _command line"
 msgstr "عطِّل _سطر الأوامر"
 
-#: ../admin-tool/lockdown/maindialog.py:50
+#: ../admin-tool/lockdown/maindialog.py:52
 msgid "Disable _printing"
 msgstr "عطِّل ال_طباعة"
 
-#: ../admin-tool/lockdown/maindialog.py:51
+#: ../admin-tool/lockdown/maindialog.py:53
 msgid "Disable print _setup"
 msgstr "عطِّل إ_عدادات الطباعة"
 
-#: ../admin-tool/lockdown/maindialog.py:52
+#: ../admin-tool/lockdown/maindialog.py:54
 msgid "Disable save to _disk"
 msgstr "عطِّل الحف_ظ للقرص"
 
-#: ../admin-tool/lockdown/maindialog.py:54
+#: ../admin-tool/lockdown/maindialog.py:56
 msgid "_Lock down the panels"
 msgstr "أق_فل الأشرطة"
 
-#: ../admin-tool/lockdown/maindialog.py:55
+#: ../admin-tool/lockdown/maindialog.py:57
 msgid "Disable force _quit"
 msgstr "عطِّل إ_جبار الإنهاء"
 
-#: ../admin-tool/lockdown/maindialog.py:56
+#: ../admin-tool/lockdown/maindialog.py:58
 msgid "Disable lock _screen"
 msgstr "عطِّل قفل ال_شاشة"
 
-#: ../admin-tool/lockdown/maindialog.py:57
+#: ../admin-tool/lockdown/maindialog.py:59
 msgid "Disable log _out"
 msgstr "عطِّل ال_خروج"
 
-#: ../admin-tool/lockdown/maindialog.py:59
+#: ../admin-tool/lockdown/maindialog.py:61
 msgid "Disable _quit"
 msgstr "عطِّل الإن_هاء"
 
-#: ../admin-tool/lockdown/maindialog.py:60
+#: ../admin-tool/lockdown/maindialog.py:62
 msgid "Disable _arbitrary URL"
 msgstr "عطِّل _عناوين الإنترنت التّعسّفيّة"
 
-#: ../admin-tool/lockdown/maindialog.py:61
+#: ../admin-tool/lockdown/maindialog.py:63
 msgid "Disable _bookmark editing"
 msgstr "عطِّل تحرير علامات الم_واقع"
 
-#: ../admin-tool/lockdown/maindialog.py:62
+#: ../admin-tool/lockdown/maindialog.py:64
 msgid "Disable _history"
 msgstr "عطِّل التاريخ"
 
-#: ../admin-tool/lockdown/maindialog.py:63
+#: ../admin-tool/lockdown/maindialog.py:65
 msgid "Disable _javascript chrome"
 msgstr "عطِّل _كروم جافا سكريبت"
 
-#: ../admin-tool/lockdown/maindialog.py:64
+#: ../admin-tool/lockdown/maindialog.py:66
 msgid "Disable _toolbar editing"
 msgstr "عطِّل تحرير _شريط الأدوات"
 
-#: ../admin-tool/lockdown/maindialog.py:65
+#: ../admin-tool/lockdown/maindialog.py:67
 msgid "_Fullscreen"
 msgstr "_ملء الشاشة"
 
-#: ../admin-tool/lockdown/maindialog.py:66
+#: ../admin-tool/lockdown/maindialog.py:68
 msgid "Hide _menubar"
 msgstr "أخفِ _شريط القوائم"
 
+#. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
+#. This can be used to disable this, for when you don't want people to know you created the document.
+#: ../admin-tool/lockdown/maindialog.py:72
+msgid "Remove personal info from documents when saving them"
+msgstr "أزل المعلومات الشخصية من الوثائق بعد حفظها"
+
+#: ../admin-tool/lockdown/maindialog.py:73
+msgid "Warn if macro tries to create a PDF"
+msgstr "أنذرني إذا حاول الماكرو إنشاء وثيقة PDF"
+
+#: ../admin-tool/lockdown/maindialog.py:74
+msgid "Warn if macro tries to print a document"
+msgstr "أنذرني إذا حاول الماكرو طبع ملف"
+
+#: ../admin-tool/lockdown/maindialog.py:75
+msgid "Warn if macro tries to save a document"
+msgstr "أنذرني إذا حاول الماكرو حفظ وثيقة"
+
+#: ../admin-tool/lockdown/maindialog.py:76
+msgid "Warn if macro tries to sign a document"
+msgstr "أنذرني إذا حاول الماكرو توقيع ملف"
+
+#: ../admin-tool/lockdown/maindialog.py:77
+msgid "Recommend password when saving a document"
+msgstr "انصح لكلمة سر عند حفظ وثيقة"
+
+#: ../admin-tool/lockdown/maindialog.py:79
+msgid "Enable auto-save"
+msgstr "فعّل الحفظ الآلي"
+
+#. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
+#: ../admin-tool/lockdown/maindialog.py:81
+msgid "Printing should mark the document as modified"
+msgstr "إذا طبع الملف، يعلّم الوثيقة بأنها معدّلة"
+
+#: ../admin-tool/lockdown/maindialog.py:82
+msgid "Use system's file dialog"
+msgstr "استعمل حوار ملفات النظام"
+
+#: ../admin-tool/lockdown/maindialog.py:83
+msgid "Create backup copy on save"
+msgstr "أنشئ نسخة احتياطية عند الحفظ"
+
+#: ../admin-tool/lockdown/maindialog.py:84
+msgid "Warn when saving non-OpenOffice.org formats"
+msgstr "أنذرني أثناء حفظ ملفات غير أوبن أوفس"
+
+#: ../admin-tool/lockdown/maindialog.py:86
+msgid "Use OpenGL"
+msgstr "استعمل أوبن جل"
+
+#: ../admin-tool/lockdown/maindialog.py:87
+msgid "Use system font"
+msgstr "استعمل خط النظام"
+
+#: ../admin-tool/lockdown/maindialog.py:88
+msgid "Use anti-aliasing"
+msgstr "استعمل إزالة التسنن"
+
+#: ../admin-tool/lockdown/maindialog.py:89
+msgid "Disable UI customization"
+msgstr "عطِّل تخصيص الواجهة"
+
+#: ../admin-tool/lockdown/maindialog.py:90
+msgid "Show insensitive menu items"
+msgstr "أظهر عناصر قائمة غير حساسة"
+
+#: ../admin-tool/lockdown/maindialog.py:91
+msgid "Show font preview"
+msgstr "أظهر معاينة الخطوط"
+
+#: ../admin-tool/lockdown/maindialog.py:92
+msgid "Show font history"
+msgstr "أظهر تاريخ الخطوط"
+
+#: ../admin-tool/lockdown/maindialog.py:93
+msgid "Show icons in menus"
+msgstr "أظهر أيقونات في القوائم"
+
 #: ../admin-tool/lockdown/pessulus.glade.h:1
+msgid ""
+"\n"
+"5\n"
+"10\n"
+"25\n"
+"50"
+msgstr ""
+"\n"
+"5\n"
+"10\n"
+"25\n"
+"50"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:6
+msgid ""
+"\n"
+"Automatic\n"
+"Large\n"
+"Small"
+msgstr ""
+"\n"
+"آلي\n"
+"عريض\n"
+"صغير"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:10
+msgid ""
+"\n"
+"OpenDocument (.odp)\n"
+"PowerPoint 97+ (.ppt)\n"
+"OpenOffice.org 1.1 (.sxi)"
+msgstr ""
+"\n"
+"وثيقة مفتوحة (.odp)\n"
+"باوربوينت 97+ (.ppt)\n"
+"أوبن أوفس 1.1 (.sxi)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:14
+msgid ""
+"\n"
+"OpenDocument (.ods)\n"
+"Excel 97+ (.xls)\n"
+"OpenOffice.org 1.1 (.sxc)"
+msgstr ""
+"\n"
+"وثيقة مفتوحة (.ods)\n"
+"إكسل 97+ (.xls)\n"
+"أوبن أوفس 1.1 (.sxc)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:18
+msgid ""
+"\n"
+"OpenDocument (.odt)\n"
+"Word 97+ (.doc)\n"
+"OpenOffice.org 1.1 (.sxw)"
+msgstr ""
+"\n"
+"وثيقة مفتوحة (.odt)\n"
+"وورد 97+ (.doc)\n"
+"أوبن أوفس 1.1 (.sxw)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:22
+msgid ""
+"\n"
+"Very High\n"
+"High\n"
+"Medium\n"
+"Low"
+msgstr ""
+"\n"
+"عال جدا\n"
+"عال\n"
+"متوسط\n"
+"منخفض"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:27
 msgid "<b>Disabled Applets</b>"
 msgstr "<b>بريمجات معطّلة</b>"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:2
+#: ../admin-tool/lockdown/pessulus.glade.h:28
 msgid "<b>Safe Protocols</b>"
 msgstr "<b>بروتوكولات آمنة</b>"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:3
-msgid "Disable _unsafe protocols"
-msgstr "عطِّل البروتوكولات الغير آمنة"
+#: ../admin-tool/lockdown/pessulus.glade.h:29
+msgid "Default format for presentations:"
+msgstr "الصيغة الافتراضية للعروض:"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:4
+#: ../admin-tool/lockdown/pessulus.glade.h:30
+msgid "Default format for spreadsheet:"
+msgstr "الصيغة الافتراضية للجداول الممتدة:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:31
+msgid "Default format for word processor:"
+msgstr "الصيغة الافتراضية للنصوص:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:32
+msgid "Default icon size"
+msgstr "حجم الأيقونات الافتراضي"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:33
+msgid "Disable _unsafe protocols"
+msgstr "عطِّل البروتوكولات غير الآمنة"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:34
 msgid "Epiphany Web Browser"
 msgstr "متصفح الويب إبيفني"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:5
+#: ../admin-tool/lockdown/pessulus.glade.h:35
 msgid "General"
 msgstr "عام"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:6
+#: ../admin-tool/lockdown/pessulus.glade.h:36
+msgid "Load / Save"
+msgstr "حمّل / احفظ"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:37
 msgid "Lockdown Editor"
 msgstr "أقفل المحرر"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:38
+msgid "Macro Security Level:"
+msgstr "مستوى أمان الماكرو:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:39
+msgid "Number of undo steps:"
+msgstr "عدد خطوات التراجع:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:40
+msgid "OpenOffice.org"
+msgstr "أوبن أوفس"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:42
+msgid "Security"
+msgstr "الأمان"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:43
+msgid "User Interface"
+msgstr "واجهة المستخدم"
 
 #.
 #. Translators: this string specifies how a profile
@@ -278,8 +475,7 @@ msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:73
-msgid ""
-"Your account does not have permissions to run the Desktop User Profiles tool"
+msgid "Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr "ليس لحسابك صلاحيات تشغيل أداة سطح المكتب للملفات الشخصية المستخدمين"
 
 #: ../admin-tool/sabayon:74
@@ -323,25 +519,25 @@ msgstr ""
 msgid ""
 "A fatal error has occurred.  You can help us fix the problem by sending the "
 "log in %s to %s"
-msgstr ""
+msgstr "حدث خطأ فادح. يمكنك المساعدة على حل هذا المشكل بإرسال اسم الولوج %s إلى %s"
 
 #: ../admin-tool/sabayon:143
 #, c-format
 msgid ""
 "Sabayon will now exit.  There were some recoverable errors, and you can help "
 "us debug the problem by sending the log in %s to %s"
-msgstr ""
+msgstr "سيغادر سابايون الآن. كانت هناك أخطاء يمكن حلها، يمكنك المساعدة على حل هذا المشكل بإرسال اسم الولوج %s إلى %s"
 
-#: ../admin-tool/sabayon-apply:86
+#: ../admin-tool/sabayon-apply:98
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "لايوجد ملف شخصي للمستخدم '%s'\n"
 
-#: ../admin-tool/sabayon-apply:91
+#: ../admin-tool/sabayon-apply:103
 msgid "Please use -h for usage options"
-msgstr ""
+msgstr "المرجو استعمال -h للحصول على خيارات الاستعمال"
 
-#: ../admin-tool/sabayon-session:66
+#: ../admin-tool/sabayon-session:67
 #, c-format
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
 msgstr "الإستخدام: %s <اسم-الملف-الشخصي> <مسار-الملف-الشخصي> <رقم-العرض>\n"
@@ -397,23 +593,17 @@ msgstr "حفظ التعديلات للحساب الشخصي \"%s\" قبل الإ
 
 #: ../admin-tool/saveconfirm.py:45
 #, python-format
-msgid ""
-"If you don't save, changes from the last %ld second will be permanently lost."
+msgid "If you don't save, changes from the last %ld second will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld seconds will be permanently "
 "lost."
-msgstr[0] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثانية."
-msgstr[1] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثانية."
-msgstr[2] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثوان."
-msgstr[3] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثانية."
+msgstr[0] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثانية."
+msgstr[1] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثانية."
+msgstr[2] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثوان."
+msgstr[3] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثانية."
 
 #: ../admin-tool/saveconfirm.py:51
-msgid ""
-"If you don't save, changes from the last minute will be permanently lost."
+msgid "If you don't save, changes from the last minute will be permanently lost."
 msgstr "ستفقد التعديلات منذ آخر دقيقة بشكل دائم في حالة عدم الحفظ."
 
 #: ../admin-tool/saveconfirm.py:55
@@ -439,19 +629,14 @@ msgstr[3] ""
 
 #: ../admin-tool/saveconfirm.py:62
 #, python-format
-msgid ""
-"If you don't save, changes from the last %ld minute will be permanently lost."
+msgid "If you don't save, changes from the last %ld minute will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
-msgstr[0] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقيقة."
-msgstr[1] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقيقة."
-msgstr[2] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقائق."
-msgstr[3] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقيقة."
+msgstr[0] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقيقة."
+msgstr[1] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقيقة."
+msgstr[2] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقائق."
+msgstr[3] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقيقة."
 
 #
 #: ../admin-tool/saveconfirm.py:71
@@ -481,17 +666,12 @@ msgstr[3] ""
 
 #: ../admin-tool/saveconfirm.py:81
 #, python-format
-msgid ""
-"If you don't save, changes from the last %d hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
+msgid "If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
 msgstr[0] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر ساعة."
-msgstr[1] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر ساعتان."
-msgstr[2] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %d  ساعات."
-msgstr[3] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %d  ساعة."
+msgstr[1] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر ساعتان."
+msgstr[2] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %d  ساعات."
+msgstr[3] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %d  ساعة."
 
 #: ../admin-tool/sessionwindow.py:154
 #, python-format
@@ -536,15 +716,15 @@ msgstr "اقفل الإعدادات الخاصة بـ %s"
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
 "report this error now or try to continue editing the user profile."
-msgstr ""
+msgstr "حدث خطأ يمكن حلّه أثناء تطبيق الملف الشخصي '%s'. يمكن التقرير عن هذا الخطأ الآن أو المواصلة في تحرير الملف الشخصي للمستخدم."
 
 #: ../admin-tool/sessionwindow.py:337
 msgid "_Report this error"
-msgstr ""
+msgstr "_قرّر عن هذا الخطأ"
 
 #: ../admin-tool/sessionwindow.py:338
 msgid "_Continue editing"
-msgstr ""
+msgstr "وا_صل التحرير"
 
 #: ../admin-tool/usersdialog.py:67
 #, python-format
@@ -554,16 +734,6 @@ msgstr "مستخدمي الملف الشخصي %s"
 #: ../admin-tool/usersdialog.py:95
 msgid "Use This Profile"
 msgstr "استخدم هذا الملف الشخصي"
-
-#: ../lib/dirmonitor.py:150
-#, python-format
-msgid "Failed to add monitor for %s"
-msgstr "فشل إضافة الشاشة لـ %s"
-
-#: ../lib/dirmonitor.py:230
-#, python-format
-msgid "Expected event: %s %s"
-msgstr "حدث متوقع: %s %s"
 
 #: ../lib/protosession.py:147
 msgid "Unable to find a free X display"
@@ -577,58 +747,48 @@ msgstr "فشل في بدء تشغيل Xnest: انتهاء الوقت المسم�
 msgid "Failed to start Xnest: died during startup"
 msgstr "فشل في بدء تشغيل Xnest: ماتت العملية أثناء بدء التشغيل"
 
-#: ../lib/protosession.py:480
-#, python-format
-msgid ""
-"Could not create the 'sabayon-apply' process: %s\n"
-"The command line used is '%s'\n"
-"Child traceback:\n"
-"%s"
-msgstr ""
-
 #: ../lib/protosession.py:501
 #, python-format
-msgid ""
-"There was a recoverable error while applying the user profile from '%s'."
-msgstr ""
+msgid "There was a recoverable error while applying the user profile from file '%s'."
+msgstr "حدث خطأ يمكن حلّه أثناء تطبيق الملف الشخصي من الملف'%s'."
 
 #: ../lib/protosession.py:510
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
-msgstr ""
+msgstr "حدث خطأ فادح أثناء تطبيق الملف الشخصي للمستخدم من '%s'."
 
-#: ../lib/sources/filessource.py:68
+#: ../lib/sources/filessource.py:69
 #, python-format
 msgid "File '%s' created"
 msgstr "أُنشيء الملف '%s'"
 
-#: ../lib/sources/filessource.py:70
+#: ../lib/sources/filessource.py:71
 #, python-format
 msgid "File '%s' deleted"
 msgstr "حُذِف الملف '%s'"
 
-#: ../lib/sources/filessource.py:72
+#: ../lib/sources/filessource.py:73
 #, python-format
 msgid "File '%s' changed"
 msgstr "عُدِّل الملف '%s'"
 
-#: ../lib/sources/filessource.py:96
+#: ../lib/sources/filessource.py:97
 msgid "Applications menu"
 msgstr "قائمة التطبيقات"
 
-#: ../lib/sources/filessource.py:98
+#: ../lib/sources/filessource.py:99
 msgid "Preferences menu"
 msgstr "قائمة التفضيلات"
 
-#: ../lib/sources/filessource.py:100
+#: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
 msgstr "قائمة خيارات الخادم"
 
-#: ../lib/sources/filessource.py:102
+#: ../lib/sources/filessource.py:103
 msgid "System Settings menu"
 msgstr "قائمة خيارات النظام"
 
-#: ../lib/sources/filessource.py:104
+#: ../lib/sources/filessource.py:105
 msgid "Start Here menu"
 msgstr "قائمة البداية"
 
@@ -712,51 +872,51 @@ msgstr "علامات المواقع لمتصفح الويب"
 msgid "Web browser profile list"
 msgstr "قائمة الملفات الشخصية لمتصفح الويب"
 
-#: ../lib/sources/mozillasource.py:521
+#: ../lib/sources/mozillasource.py:522
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "الملف غير موجود (%s)"
 
-#: ../lib/sources/mozillasource.py:872
+#: ../lib/sources/mozillasource.py:873
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "الاسم (%(name)s) متكرر في القسم %(section)s"
 
-#: ../lib/sources/mozillasource.py:881
+#: ../lib/sources/mozillasource.py:882
 #, python-format
 msgid "redundant default in section %s"
 msgstr "إفتراض عاطل في القسم %s"
 
-#: ../lib/sources/mozillasource.py:898
+#: ../lib/sources/mozillasource.py:899
 msgid "no default profile"
 msgstr "لايوجد ملف شخصي افتراضي"
 
-#: ../lib/sources/mozillasource.py:953
+#: ../lib/sources/mozillasource.py:954
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "تم إنشاء علامة موقع موزيلا %s -> '%s'"
 
-#: ../lib/sources/mozillasource.py:955
+#: ../lib/sources/mozillasource.py:956
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "تم إنشاء مجلد علامة موقع موزيلا '%s'"
 
-#: ../lib/sources/mozillasource.py:958
+#: ../lib/sources/mozillasource.py:959
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "حُذِفت علامة موقع موزيلا '%s'"
 
-#: ../lib/sources/mozillasource.py:960
+#: ../lib/sources/mozillasource.py:961
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "حُذِفت مجلد علامة موقع موزيلا '%s'"
 
-#: ../lib/sources/mozillasource.py:963
+#: ../lib/sources/mozillasource.py:964
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "تم تغير علامة موقع موزيلا '%s' '%s'"
 
-#: ../lib/sources/mozillasource.py:965
+#: ../lib/sources/mozillasource.py:966
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "تم تغير علامة موقع موزيلا '%s'"
@@ -851,44 +1011,45 @@ msgstr "حُذِف %s من الشريط الأيسر"
 msgid "%s removed from right panel"
 msgstr "حُذِف %s من الشريط الأيمن"
 
-#: ../lib/sources/paneldelegate.py:199
+#. Translators: This is a drawer in gnome-panel (where you can put applets)
+#: ../lib/sources/paneldelegate.py:200
 msgid "Drawer"
 msgstr "درج"
 
-#: ../lib/sources/paneldelegate.py:201
+#: ../lib/sources/paneldelegate.py:202
 msgid "Main Menu"
 msgstr "القائمة الرئيسيّة"
 
-#: ../lib/sources/paneldelegate.py:211
+#: ../lib/sources/paneldelegate.py:212
 #, python-format
 msgid "%s launcher"
 msgstr "%s مُطلِق"
 
-#: ../lib/sources/paneldelegate.py:215
+#: ../lib/sources/paneldelegate.py:216
 msgid "Lock Screen button"
 msgstr "زر قفل الشاشة"
 
-#: ../lib/sources/paneldelegate.py:217
+#: ../lib/sources/paneldelegate.py:218
 msgid "Logout button"
 msgstr "زر الخروج"
 
-#: ../lib/sources/paneldelegate.py:219
-msgid "Run Appliction button"
-msgstr "زر شغِّل تطبيق"
+#: ../lib/sources/paneldelegate.py:220
+msgid "Run Application button"
+msgstr "زر تشغيل التطبيقات"
 
-#: ../lib/sources/paneldelegate.py:221
+#: ../lib/sources/paneldelegate.py:222
 msgid "Search button"
 msgstr "زر البحث"
 
-#: ../lib/sources/paneldelegate.py:223
+#: ../lib/sources/paneldelegate.py:224
 msgid "Screenshot button"
 msgstr "زر لقطة الشاشة"
 
-#: ../lib/sources/paneldelegate.py:225
+#: ../lib/sources/paneldelegate.py:226
 msgid "Menu Bar"
 msgstr "شريط القوائم"
 
-#: ../lib/sources/paneldelegate.py:469
+#: ../lib/sources/paneldelegate.py:470
 msgid "Panel File"
 msgstr "ملف لوحة المهام"
 
@@ -935,60 +1096,63 @@ msgstr "إجراء %s اختبارات %s"
 msgid "Success!"
 msgstr "نجاح!"
 
-#: ../lib/userdb.py:50
+#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
+#. do not change the way they are written.  The intended string is
+#. something like "invalid type for setting blah in /ldap/path/to/blah"
+#: ../lib/userdb.py:54
 #, python-format
-msgid "invalid type for setting %s in %s"
-msgstr "نوع غير صحيح للإعدادات %s في %s"
+msgid "invalid type for setting %(setting)s in %(np)s"
+msgstr "نوع غير صالح للتعيينات %(setting)s في %(np)s"
 
-#: ../lib/userdb.py:210
+#: ../lib/userdb.py:215
 #, python-format
 msgid "No search based specified for %s"
 msgstr "لم تحدد قاعدة البحث لـ %s"
 
-#: ../lib/userdb.py:213
+#: ../lib/userdb.py:218
 #, python-format
 msgid "No query filter specified for %s"
 msgstr "لم يحدد مرشح استعلام لـ %s"
 
-#: ../lib/userdb.py:216
+#: ../lib/userdb.py:221
 #, python-format
 msgid "No result attribute specified for %s"
 msgstr "صفات النتائج غير محددة لـ %s"
 
-#: ../lib/userdb.py:225
+#: ../lib/userdb.py:230
 msgid "Scope must be one of sub, base and one"
 msgstr "يجب أن يكون المدى أحد الفروع أو القاعدة و الواحد"
 
-#: ../lib/userdb.py:245
+#: ../lib/userdb.py:250
 msgid "multiple_result must be one of first and random"
 msgstr "الخيارات الم_تعددة يجب أن تكون أحد الأوائل و عشوائية"
 
-#: ../lib/userdb.py:337
+#: ../lib/userdb.py:342
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "تعذر فتح %s للكتابة"
 
-#: ../lib/userdb.py:350
+#: ../lib/userdb.py:355
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "فشل في حفظ قاعدة بيانات المستخدم إلى %s"
 
-#: ../lib/userdb.py:373 ../lib/userdb.py:408
+#: ../lib/userdb.py:378 ../lib/userdb.py:413
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "%s ليس بملف إعدادات الملف الشخصي"
 
-#: ../lib/userdb.py:380
+#: ../lib/userdb.py:385
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "فشل في إضافة الملف الشخصي الإفتراضي %s إلى الإعدادات"
 
-#: ../lib/userdb.py:416
+#: ../lib/userdb.py:421
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "فشل في إضافة المستخدم %s إلى إعدادات الملف الشخصي"
 
-#: ../lib/userdb.py:447
+#: ../lib/userdb.py:472
 msgid "Failed to get the user list"
 msgstr "فشل في الحصول على قائمة المستخدمين"
 
@@ -1008,5 +1172,3 @@ msgstr ""
 "تعذر إيجاد اسم المستخدم: اسم المستخدم غير محدد في /etc/passwd و ليس للمتغير "
 "$USER قيمة في بيئة الإستخدام"
 
-#~ msgid "Usage: %s [<profile-name>]\n"
-#~ msgstr "الإستخدام: %s [<اسم-الملف-الشخصي>]\n"
