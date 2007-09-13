@@ -1,3 +1,9 @@
+2007-09-13  Federico Mena Quintero  <federico@novell.com>
+
+	* lib/config.py.in (DIRECTORIES_TO_IGNORE): Argh!  Add a missing
+	comma in the list of strings; this is why .fontconfig and .beagle
+	were not getting ignored.
+
 2007-08-23  Federico Mena Quintero  <federico@novell.com>
 
 	Fix http://bugzilla.gnome.org/show_bug.cgi?id=461110 - some
