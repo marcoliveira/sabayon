@@ -54,6 +54,7 @@ class DebugLog:
     DEFAULT_MAX_LINES = 1000
 
     def __init__ (self):
+        self.force_dump = False
         self.domains = {}
         self.ring_buffer = None
         self.ring_max_lines = self.DEFAULT_MAX_LINES
@@ -156,6 +157,10 @@ class DebugLog:
 
         if config.has_option (self.SECTION_DEBUG_LOG, self.KEY_MAX_LINES):
             self.set_max_lines_from_string (config.get (self.SECTION_DEBUG_LOG, self.KEY_MAX_LINES))
+
+        # Since the debug log config file exists, we assume that the
+        # user wants to unconditionally dump the log.
+        self.force_dump = True
 
     def dump_configuration (self, file):
         file.write (self.make_configuration_string ())
@@ -312,6 +317,18 @@ def debug_log_is_domain_enabled (domain):
     _debug_log_lock ()
     try:
         return _debug_log_log.is_domain_enabled (domain)
+    finally:
+        _debug_log_unlock ()
+
+def debug_log_get_force_dump ():
+    """Returns True if the debug log configuration specifies that the log should be
+    dumped at the end of the program's execution; False otherwise (the default)."""
+    
+    global _debug_log_log
+
+    _debug_log_lock ()
+    try:
+        return _debug_log_log.force_dump
     finally:
         _debug_log_unlock ()
 

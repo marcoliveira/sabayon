@@ -1,5 +1,15 @@
 2007-09-13  Federico Mena Quintero  <federico@novell.com>
 
+	* lib/debuglog.py (DebugLog.load_configuration): Set a force_dump
+	flag.  If the configuration file for the debug log is present,
+	we'll assume that the user wants Sabayon to dump its debug log
+	even if no errors occurred.
+	(debug_log_get_force_dump): Public function.
+
+	* admin-tool/sabayon (main): Dump the debug log if force_dump is enabled.
+
+2007-09-13  Federico Mena Quintero  <federico@novell.com>
+
 	* lib/config.py.in (DIRECTORIES_TO_IGNORE): Argh!  Add a missing
 	comma in the list of strings; this is why .fontconfig and .beagle
 	were not getting ignored.

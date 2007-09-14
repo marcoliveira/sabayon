@@ -50,6 +50,10 @@ def readable_log_config_setup ():
 
     util.set_readable_log_config_filename (name)
 
+def dump_log ():
+    log_filename = debuglog.debug_log_dump_to_dated_file (util.get_admin_log_config_filename ())
+    sys.stderr.write ("Dumped debug log to %s\n" % log_filename)
+
 if __name__ == '__main__':
     def dprint (fmt, *args):
         debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL, fmt % args)
@@ -118,8 +122,7 @@ if __name__ == '__main__':
 
     if errors.errors_have_fatal_error ():
         mprint ("Exiting abnormally; dumping log due to a fatal error")
-        log_filename = debuglog.debug_log_dump_to_dated_file (util.get_admin_log_config_filename ())
-        sys.stderr.write ("Dumped debug log to %s\n" % log_filename)
+        dump_log ()
 
         dialog = gtk.MessageDialog (parent = None,
                                     flags = 0,
@@ -133,8 +136,7 @@ if __name__ == '__main__':
         sys.exit (util.EXIT_CODE_FATAL)
     elif errors.errors_have_recoverable_error ():
         mprint ("Exiting normally; dumping log due to a recoverable error")
-        log_filename = debuglog.debug_log_dump_to_dated_file (util.get_admin_log_config_filename ())
-        sys.stderr.write ("Dumped debug log to %s\n" % log_filename)
+        dump_log ()
 
         dialog = gtk.MessageDialog (parent = None,
                                     flags = 0,
@@ -149,5 +151,10 @@ if __name__ == '__main__':
 
         sys.exit (util.EXIT_CODE_RECOVERABLE)
     else:
-        mprint ("Exiting normally")
+        if debuglog.debug_log_get_force_dump ():
+            mprint ('Exiting normally - dumping debug log due to presence of %s', util.get_admin_log_config_filename ())
+            dump_log ()
+        else:
+            mprint ("Exiting normally")
+
         sys.exit (util.EXIT_CODE_NORMAL)
