@@ -1,3 +1,14 @@
+2007-09-19  Federico Mena Quintero  <federico@novell.com>
+
+	Fix http://bugzilla.gnome.org/show_bug.cgi?id=450085 - Strings
+	coming from sabayon.glade do not appear translated.
+
+	* admin-tool/profilesdialog.py (AddProfileDialog.__init__): Pass
+	the l10n domain to gtk.glade.XML.
+	(ProfilesDialog.__init__): Likewise.
+
+	* admin-tool/usersdialog.py (UsersDialog.__init__): Likewise.
+
 2007-09-13  Federico Mena Quintero  <federico@novell.com>
 
 	* lib/debuglog.py (DebugLog.load_configuration): Set a force_dump

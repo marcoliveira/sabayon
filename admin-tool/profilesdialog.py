@@ -267,7 +267,7 @@ class AddProfileDialog:
         self.profiles_model = profiles_model
 
         glade_file = os.path.join (GLADEDIR, "sabayon.glade")
-        self.xml = gtk.glade.XML (glade_file, "add_profile_dialog")
+        self.xml = gtk.glade.XML (glade_file, "add_profile_dialog", PACKAGE)
 
         self.dialog = self.xml.get_widget ("add_profile_dialog")
         self.dialog.connect ("destroy", gtk.main_quit)
@@ -321,7 +321,7 @@ class ProfilesDialog:
         assert os.geteuid () == 0
 
         glade_file = os.path.join (GLADEDIR, "sabayon.glade")
-        self.xml = gtk.glade.XML (glade_file, "profiles_dialog")
+        self.xml = gtk.glade.XML (glade_file, "profiles_dialog", PACKAGE)
 
         self.dialog = self.xml.get_widget ("profiles_dialog")
         self.dialog.connect ("destroy", gtk.main_quit)

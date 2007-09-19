@@ -58,7 +58,7 @@ class UsersDialog:
         apply_to_all = self.userdb.get_default_profile (False) == profile
         
         glade_file = os.path.join (GLADEDIR, "sabayon.glade")
-        self.xml = gtk.glade.XML (glade_file, "users_dialog")
+        self.xml = gtk.glade.XML (glade_file, "users_dialog", PACKAGE)
 
         self.dialog = self.xml.get_widget ("users_dialog")
         self.dialog.set_transient_for (parent)
