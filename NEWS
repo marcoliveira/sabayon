@@ -1,4 +1,65 @@
 ==============
+Version 2.20.0
+==============
+
+  Code name:
+
+	* "Better late than never"
+
+  Changes:
+
+	* Sabayon now dumps the debug log even if there were no errors
+          if you have ~/sabayon-debug-log.conf --- the assumption is
+          that if you created that file, you *want* debug logs
+          (Federico Mena Quintero).
+
+  Fixes:
+
+	* Fixed hard-to-translate strings in the OpenOffice.org module
+	  (Federico Mena Quintero):
+		http://bugzilla.gnome.org/show_bug.cgi?id=461110
+
+	* Some strings were not being translated (Federico Mena Quintero):
+		http://bugzilla.gnome.org/show_bug.cgi?id=450085
+		http://bugzilla.gnome.org/show_bug.cgi?id=475434
+
+	* Fixed the list of directories to ignore for user profiles.
+
+  Translators:
+
+	* Djihed Afifi, Youssef Chahibi (ar)
+	* Ihar Hrachyshka (be@latin)
+	* Alexander Shopov (bg)
+	* Runa Bhattacharjee (bn_IN)
+	* Josep Puigdemont i Casamajó (ca)
+	* Jakub Friedl, Martin Picek (cs)
+	* Kenneth Nielsen (da)
+	* Andre Klapper (de)
+	* Adam Weinberger (en_CA)
+	* David Lodge (en_GB)
+	* Jorge Gonzalez (es)
+	* Priit Laes, Ivar Smolin (et)
+	* Inaki Larranaga Murgoitio (eu)
+	* Ilkka Tuohela (fi)
+	* Stéphane Raimbault (fr)
+	* Ankit Patel (gu)
+	* Gabor Kelemen (hu)
+	* Takeshi AIHANA (ja)
+	* Changwoo Ryu, Young-Ho Cha (ko)
+	* Jovan Naumovski (mk)
+	* Ani Peter (ml)
+	* Kjartan Maraas (nb)
+	* Wouter Bolsterlee (nl)
+	* Wadim Dziedzic (pl)
+	* Duarte Loreto (pt)
+	* Raphael Higino, Andre Noel (pt_BR)
+	* Nickolay V. Shmyrev (ru)
+	* Daniel Nylander (sv)
+	* Theppitak Karoonboonyanan (th)
+	* Maxim Dziumanenko (uk)
+	* Clytie Siddall (vi)
+
+==============
 Version 2.19.2
 ==============
 
