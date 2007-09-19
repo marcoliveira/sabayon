@@ -110,11 +110,11 @@ def print_exception ():
 
 def init_gettext ():
     """Binds _() to gettext.gettext() in the global namespace. Run
-    util.init_gettext() at the entry point to any script and you'll
-    be able to use _() to mark strings for translation.
-    """
+    util.init_gettext() at the entry point to any script and you'll be
+    able to use _(), gettext(), and ngettext() to mark strings for
+    translation."""
     locale.setlocale (locale.LC_ALL, "")
-    gettext.install (PACKAGE, LOCALEDIR)
+    gettext.install (PACKAGE, LOCALEDIR, names=("gettext", "ngettext"))
 
 def random_string (len):
     """Returns a string with random binary data of the specified length"""

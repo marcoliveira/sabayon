@@ -1,5 +1,20 @@
 2007-09-19  Federico Mena Quintero  <federico@novell.com>
 
+	Fix http://bugzilla.gnome.org/show_bug.cgi?id=475434 - Plurals
+	were not getting translated as gettext.ngettext() assumes
+	textdomain() / bindtextdomain() have been called, but we use
+	gettext.install() instead.
+
+	* lib/util.py (init_gettext): Add ngettext as part of the "names"
+	argument to gettext.install, so that ngettext() will get bound as a
+	built-in.
+
+	* admin-tool/saveconfirm.py (SaveConfirmationAlert.__init__): Call
+	ngettext(), not gettext.ngettext(); the former is now bound as a
+	built-in.
+
+2007-09-19  Federico Mena Quintero  <federico@novell.com>
+
 	Fix http://bugzilla.gnome.org/show_bug.cgi?id=450085 - Strings
 	coming from sabayon.glade do not appear translated.
 
