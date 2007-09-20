@@ -52,7 +52,7 @@ def get_setting (node, setting, default = None, convert_to = str):
             # do not change the way they are written.  The intended string is
             # something like "invalid type for setting blah in /ldap/path/to/blah"
             raise UserDatabaseException(_("invalid type for setting %(setting)s in %(np)s") % { "setting": setting,
-                                                                                                "np": np }))
+                                                                                                "np": np })
     return default
 
 def expand_string (string, attrs):
