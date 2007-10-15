@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-04-16 16:45+0100\n"
-"PO-Revision-Date: 2007-05-10 09:07+0100\n"
+"PO-Revision-Date: 2007-10-15 12:26+0100\n"
 "Last-Translator: Matej Urbančič <matej.urban@gmail.com>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -321,12 +321,12 @@ msgstr "Sabayon zahteva poseben uporabniški račun '%s'. Potem ko ustvarite ra�
 #: ../admin-tool/sabayon:128
 #, c-format
 msgid "A fatal error has occurred.  You can help us fix the problem by sending the log in %s to %s"
-msgstr ""
+msgstr "Prišlo je do usodne napake. Napako nam lahko pomagate odpraviti, če pošljete podatke beleženja v  %s na %s"
 
 #: ../admin-tool/sabayon:143
 #, c-format
 msgid "Sabayon will now exit.  There were some recoverable errors, and you can help us debug the problem by sending the log in %s to %s"
-msgstr ""
+msgstr "Program Sabayon se bo zaprl. Prišlo je do nekaj obnovljivih napak, ki jih lahko iz beležnice pošljete %s na %s"
 
 #: ../admin-tool/sabayon-apply:86
 #, c-format
@@ -335,7 +335,7 @@ msgstr "Ni profila za uporabnika '%s'\n"
 
 #: ../admin-tool/sabayon-apply:91
 msgid "Please use -h for usage options"
-msgstr ""
+msgstr "Prosim, uporabite -h zastavico za podrobnosti uporabe"
 
 #: ../admin-tool/sabayon-session:66
 #, c-format
@@ -486,7 +486,7 @@ msgstr "Nastavitve zaklepanja za %s"
 #: ../admin-tool/sessionwindow.py:333
 #, python-format
 msgid "There was a recoverable error while applying the user profile '%s'.  You can report this error now or try to continue editing the user profile."
-msgstr ""
+msgstr "Prišlo je do popravljive napake med branjem nastavitev uporabnika '%s'.  Napako lahko sporočite razvijalcem programa ali pa nadaljujete z urejanjem nastavitev."
 
 #: ../admin-tool/sessionwindow.py:337
 msgid "_Report this error"
@@ -535,16 +535,20 @@ msgid ""
 "Child traceback:\n"
 "%s"
 msgstr ""
+"Ni mogoče ustvariti postopka 'sabayon-apply': %s\n"
+"Uporabljena ukazna vrstica je bila '%s'\n"
+"Sledenje podprocesom:\n"
+"%s"
 
 #: ../lib/protosession.py:501
 #, python-format
 msgid "There was a recoverable error while applying the user profile from '%s'."
-msgstr ""
+msgstr "Prišlo je do obnovljive napake med prejemanjem uporabniškega profila preko '%s'."
 
 #: ../lib/protosession.py:510
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
-msgstr ""
+msgstr "Prišlo je do usodne napake med pripravo uporabniških nastavitev preko '%s'."
 
 #: ../lib/sources/filessource.py:68
 #, python-format
@@ -745,22 +749,22 @@ msgstr "Aplet %s dodan na desni pladenj"
 #: ../lib/sources/paneldelegate.py:97
 #, python-format
 msgid "Applet %s removed from top panel"
-msgstr "Aplet %s odstranjen z zgornjega pladenja"
+msgstr "Aplet %s odstranjen z zgornjega pladnja"
 
 #: ../lib/sources/paneldelegate.py:99
 #, python-format
 msgid "Applet %s removed from bottom panel"
-msgstr "Aplet %s odstranjen s spodnjega pladenja"
+msgstr "Aplet %s odstranjen s spodnjega pladnja"
 
 #: ../lib/sources/paneldelegate.py:101
 #, python-format
 msgid "Applet %s removed from left panel"
-msgstr "Aplet %s odstranjen z levega pladenja"
+msgstr "Aplet %s odstranjen z levega pladnja"
 
 #: ../lib/sources/paneldelegate.py:103
 #, python-format
 msgid "Applet %s removed from right panel"
-msgstr "Aplet %s odstranjen z desnega pladenja"
+msgstr "Aplet %s odstranjen z desnega pladnja"
 
 #: ../lib/sources/paneldelegate.py:117
 #, python-format
@@ -888,9 +892,9 @@ msgid "Success!"
 msgstr "Uspeh!"
 
 #: ../lib/userdb.py:51
-#, fuzzy, python-format
+#, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
-msgstr "neveljavna vrsta nastavitve %s v %s"
+msgstr "neveljavna vrsta nastavitve %(setting)s v %(np)s"
 
 #: ../lib/userdb.py:211
 #, python-format
