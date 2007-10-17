@@ -1,27 +1,27 @@
-# Slovenian translation of sabayon.
 # Copyright (C) 2005-2007 Free Software Foundation, Inc.
-# This file is distributed under the same license as the sabayon package.
+# This file is distributed under the same license as the program package.
 #
-# Matej Urbančič <matej.urban@gmail.com>, 2005.
+# Slovenian maintainer: Matej Urbančič <matej.urban@gmail.com>.
+#
+# Translators:
 # Matjaž Horvat <m@owca.info>, 2006.
-# Matej Urbančič <matej.urban@gmail.com>, 2007.
+# Matej Urbančič <matej.urban@gmail.com>, 2005 - 2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-04-16 16:45+0100\n"
-"PO-Revision-Date: 2007-10-15 12:26+0100\n"
+"PO-Revision-Date: 2007-10-17 09:53+0100\n"
 "Last-Translator: Matej Urbančič <matej.urban@gmail.com>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"X-Poedit-Language: Slovenian\n"
 "X-Poedit-Country: SLOVENIA\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Krusader\n"
-"X-Poedit-Language: Slovenian\n"
 
 #: ../admin-tool/aboutdialog.py:63
 msgid "Program to establish and edit profiles for users"
@@ -114,13 +114,13 @@ msgid "GConf"
 msgstr "GConf"
 
 #: ../admin-tool/editorwindow.py:266
-#: ../lib/sources/filessource.py:78
+#: ../lib/sources/filessource.py:79
 msgid "Files"
 msgstr "Datoteke"
 
 #: ../admin-tool/editorwindow.py:266
-#: ../admin-tool/lockdown/pessulus.glade.h:7
-#: ../lib/sources/paneldelegate.py:228
+#: ../admin-tool/lockdown/pessulus.glade.h:41
+#: ../lib/sources/paneldelegate.py:229
 msgid "Panel"
 msgstr "Pult"
 
@@ -193,93 +193,288 @@ msgstr "Kliknite, če želite da je nastavitev obvezna"
 msgid "Click to make this setting mandatory"
 msgstr "Kliknite, če želite da nastavitev ni obvezna"
 
-#: ../admin-tool/lockdown/maindialog.py:49
+#: ../admin-tool/lockdown/maindialog.py:51
 msgid "Disable _command line"
 msgstr "Onemogoči _ukazno vrstico"
 
-#: ../admin-tool/lockdown/maindialog.py:50
+#: ../admin-tool/lockdown/maindialog.py:52
 msgid "Disable _printing"
 msgstr "Onemogoči _tiskanje"
 
-#: ../admin-tool/lockdown/maindialog.py:51
+#: ../admin-tool/lockdown/maindialog.py:53
 msgid "Disable print _setup"
 msgstr "Onemogoči _nastavitve tiskanja"
 
-#: ../admin-tool/lockdown/maindialog.py:52
+#: ../admin-tool/lockdown/maindialog.py:54
 msgid "Disable save to _disk"
 msgstr "Onemogoči shranjevanje na _disk"
 
-#: ../admin-tool/lockdown/maindialog.py:54
+#: ../admin-tool/lockdown/maindialog.py:56
 msgid "_Lock down the panels"
 msgstr "_Zakleni pulte"
 
-#: ../admin-tool/lockdown/maindialog.py:55
+#: ../admin-tool/lockdown/maindialog.py:57
 msgid "Disable force _quit"
 msgstr "Onemogoči prisilni _izhod"
 
-#: ../admin-tool/lockdown/maindialog.py:56
+#: ../admin-tool/lockdown/maindialog.py:58
 msgid "Disable lock _screen"
 msgstr "Onemogoči zaklepanje _zaslona"
 
-#: ../admin-tool/lockdown/maindialog.py:57
+#: ../admin-tool/lockdown/maindialog.py:59
 msgid "Disable log _out"
 msgstr "Onemogoči _odjavo"
 
-#: ../admin-tool/lockdown/maindialog.py:59
+#: ../admin-tool/lockdown/maindialog.py:61
 msgid "Disable _quit"
 msgstr "Onemogoči _izhod"
 
-#: ../admin-tool/lockdown/maindialog.py:60
+#: ../admin-tool/lockdown/maindialog.py:62
 msgid "Disable _arbitrary URL"
 msgstr "Onemogoči _neomejen URL"
 
-#: ../admin-tool/lockdown/maindialog.py:61
+#: ../admin-tool/lockdown/maindialog.py:63
 msgid "Disable _bookmark editing"
 msgstr "Onemogoči _urejanje zaznamkov"
 
-#: ../admin-tool/lockdown/maindialog.py:62
+#: ../admin-tool/lockdown/maindialog.py:64
 msgid "Disable _history"
 msgstr "Onemogoči z_godovino"
 
-#: ../admin-tool/lockdown/maindialog.py:63
+#: ../admin-tool/lockdown/maindialog.py:65
 msgid "Disable _javascript chrome"
 msgstr "Onemogoči kramo _javascripta"
 
-#: ../admin-tool/lockdown/maindialog.py:64
+#: ../admin-tool/lockdown/maindialog.py:66
 msgid "Disable _toolbar editing"
 msgstr "Onemogoči urejanje _orodnih vrsti"
 
-#: ../admin-tool/lockdown/maindialog.py:65
+#: ../admin-tool/lockdown/maindialog.py:67
 msgid "_Fullscreen"
 msgstr "_Celozaslonski način"
 
-#: ../admin-tool/lockdown/maindialog.py:66
+#: ../admin-tool/lockdown/maindialog.py:68
 msgid "Hide _menubar"
 msgstr "Skrij _menijsko vrstico"
 
+#. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
+#. This can be used to disable this, for when you don't want people to know you created the document.
+#: ../admin-tool/lockdown/maindialog.py:72
+msgid "Remove personal info from documents when saving them"
+msgstr "Odstrani osebne podatke iz dokumentov med shranjevanjem"
+
+#: ../admin-tool/lockdown/maindialog.py:73
+msgid "Warn if macro tries to create a PDF"
+msgstr "Opozori, če želi makro ustvariti PDF"
+
+#: ../admin-tool/lockdown/maindialog.py:74
+msgid "Warn if macro tries to print a document"
+msgstr "Opozori, če želi makro natisniti dokument"
+
+#: ../admin-tool/lockdown/maindialog.py:75
+msgid "Warn if macro tries to save a document"
+msgstr "Opozori, če želi makro shraniti dokument"
+
+#: ../admin-tool/lockdown/maindialog.py:76
+msgid "Warn if macro tries to sign a document"
+msgstr "Opozori, če želi makro podpisati dokument"
+
+#: ../admin-tool/lockdown/maindialog.py:77
+msgid "Recommend password when saving a document"
+msgstr "Priporoči geslo med shranjevanjem dokumenta"
+
+#: ../admin-tool/lockdown/maindialog.py:79
+msgid "Enable auto-save"
+msgstr "Omogoči samodejno shranjevanje"
+
+#. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
+#: ../admin-tool/lockdown/maindialog.py:81
+msgid "Printing should mark the document as modified"
+msgstr "Tiskanje označi dokument kot spremenjen"
+
+#: ../admin-tool/lockdown/maindialog.py:82
+msgid "Use system's file dialog"
+msgstr "Uporabi sistemsko pogovorno okno"
+
+#: ../admin-tool/lockdown/maindialog.py:83
+msgid "Create backup copy on save"
+msgstr "Ustvari varnostno kopijo ob shranjevanju"
+
+#: ../admin-tool/lockdown/maindialog.py:84
+msgid "Warn when saving non-OpenOffice.org formats"
+msgstr "Opozori ob shranjevanju v obliku drugačno od oblike OpenOffice.org"
+
+#: ../admin-tool/lockdown/maindialog.py:86
+msgid "Use OpenGL"
+msgstr "Uporabi OpenGL"
+
+#: ../admin-tool/lockdown/maindialog.py:87
+msgid "Use system font"
+msgstr "Uporabi sistemske pisave"
+
+#: ../admin-tool/lockdown/maindialog.py:88
+msgid "Use anti-aliasing"
+msgstr "Uporabi glajenje črk"
+
+#: ../admin-tool/lockdown/maindialog.py:89
+msgid "Disable UI customization"
+msgstr "Onemogoči prilagajanje vmesnika"
+
+#: ../admin-tool/lockdown/maindialog.py:90
+msgid "Show insensitive menu items"
+msgstr "Prikaži nezaznavne predmete menuja"
+
+#: ../admin-tool/lockdown/maindialog.py:91
+msgid "Show font preview"
+msgstr "Prikaži predogled pisav"
+
+#: ../admin-tool/lockdown/maindialog.py:92
+msgid "Show font history"
+msgstr "Pokaži zgodovino pisav"
+
+#: ../admin-tool/lockdown/maindialog.py:93
+msgid "Show icons in menus"
+msgstr "Pokaži ikone v menujih"
+
 #: ../admin-tool/lockdown/pessulus.glade.h:1
+msgid ""
+"\n"
+"5\n"
+"10\n"
+"25\n"
+"50"
+msgstr ""
+"\n"
+"5\n"
+"10\n"
+"25\n"
+"50"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:6
+msgid ""
+"\n"
+"Automatic\n"
+"Large\n"
+"Small"
+msgstr ""
+"\n"
+"samodejno\n"
+"Veliko\n"
+"Malo"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:10
+msgid ""
+"\n"
+"OpenDocument (.odp)\n"
+"PowerPoint 97+ (.ppt)\n"
+"OpenOffice.org 1.1 (.sxi)"
+msgstr ""
+"\n"
+"OpenDocument (.odp)\n"
+"PowerPoint 97+ (.ppt)\n"
+"OpenOffice.org 1.1 (.sxi)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:14
+msgid ""
+"\n"
+"OpenDocument (.ods)\n"
+"Excel 97+ (.xls)\n"
+"OpenOffice.org 1.1 (.sxc)"
+msgstr ""
+"\n"
+"OpenDocument (.ods)\n"
+"Excel 97+ (.xls)\n"
+"OpenOffice.org 1.1 (.sxc)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:18
+msgid ""
+"\n"
+"OpenDocument (.odt)\n"
+"Word 97+ (.doc)\n"
+"OpenOffice.org 1.1 (.sxw)"
+msgstr ""
+"\n"
+"OpenDocument (.odt)\n"
+"Word 97+ (.doc)\n"
+"OpenOffice.org 1.1 (.sxw)"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:22
+msgid ""
+"\n"
+"Very High\n"
+"High\n"
+"Medium\n"
+"Low"
+msgstr ""
+"\n"
+"Zalo visoko\n"
+"Visoko\n"
+"Srednje\n"
+"Nizko"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:27
 msgid "<b>Disabled Applets</b>"
 msgstr "<b>Onemogočeni vstavki</b>"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:2
+#: ../admin-tool/lockdown/pessulus.glade.h:28
 msgid "<b>Safe Protocols</b>"
 msgstr "<b>Varni protokoli</b>"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:3
+#: ../admin-tool/lockdown/pessulus.glade.h:29
+msgid "Default format for presentations:"
+msgstr "Privzeta oblika predstavitve:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:30
+msgid "Default format for spreadsheet:"
+msgstr "Privzeta oblika razpredelničnih datotek:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:31
+msgid "Default format for word processor:"
+msgstr "Privzeta oblika besedilnih datotek:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:32
+msgid "Default icon size"
+msgstr "Privzeta velikost ikon"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:33
 msgid "Disable _unsafe protocols"
 msgstr "Onemogoči _nevarne protokole"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:4
+#: ../admin-tool/lockdown/pessulus.glade.h:34
 msgid "Epiphany Web Browser"
 msgstr "Spletni brskalnik Epiphany"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:5
+#: ../admin-tool/lockdown/pessulus.glade.h:35
 msgid "General"
 msgstr "Splošno"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:6
+#: ../admin-tool/lockdown/pessulus.glade.h:36
+msgid "Load / Save"
+msgstr "Naloži / Shrani"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:37
 msgid "Lockdown Editor"
 msgstr "Urejevalnik zaklepanja"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:38
+msgid "Macro Security Level:"
+msgstr "Stopnja varnosti makrov:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:39
+msgid "Number of undo steps:"
+msgstr "Število korakov razveljavitve:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:40
+msgid "OpenOffice.org"
+msgstr "OpenOffice.org"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:42
+msgid "Security"
+msgstr "Varnost"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:43
+msgid "User Interface"
+msgstr "Uporabniški vmesnik"
 
 #.
 #. Translators: this string specifies how a profile
@@ -292,52 +487,52 @@ msgstr "Urejevalnik zaklepanja"
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../admin-tool/sabayon:73
+#: ../admin-tool/sabayon:77
 msgid "Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr "Vaš račun nima dovoljenj za zagon orodja za namizne uporabniške profile"
 
-#: ../admin-tool/sabayon:74
+#: ../admin-tool/sabayon:78
 msgid "Administrator level permissions are needed to run this program because it can modify system files."
 msgstr "Za zagon tega programa potrebujete pravice nadzornika, saj lahko spreminja sistemske datoteke"
 
-#: ../admin-tool/sabayon:79
+#: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
 msgstr "Orodje za namizne uporabniške profile že teče"
 
-#: ../admin-tool/sabayon:80
+#: ../admin-tool/sabayon:84
 msgid "You may not use Desktop User Profiles tool from within a profile editing session"
 msgstr "Orodja za namizne uporabniške profile ne smete uporabljati znotraj seje za urejanje profila"
 
-#: ../admin-tool/sabayon:87
+#: ../admin-tool/sabayon:91
 #, c-format
 msgid "User account '%s' was not found"
 msgstr "Uporabnik '%s' ni bil najden"
 
-#: ../admin-tool/sabayon:88
+#: ../admin-tool/sabayon:92
 #, c-format
 msgid "Sabayon requires a special user account '%s' to be present on this computer. Try again after creating the account (using, for example, the 'adduser' command)"
 msgstr "Sabayon zahteva poseben uporabniški račun '%s'. Potem ko ustvarite račun (na primer z ukazom 'adduser' command), poskusite znova."
 
-#: ../admin-tool/sabayon:128
+#: ../admin-tool/sabayon:131
 #, c-format
 msgid "A fatal error has occurred.  You can help us fix the problem by sending the log in %s to %s"
 msgstr "Prišlo je do usodne napake. Napako nam lahko pomagate odpraviti, če pošljete podatke beleženja v  %s na %s"
 
-#: ../admin-tool/sabayon:143
+#: ../admin-tool/sabayon:145
 #, c-format
 msgid "Sabayon will now exit.  There were some recoverable errors, and you can help us debug the problem by sending the log in %s to %s"
 msgstr "Program Sabayon se bo zaprl. Prišlo je do nekaj obnovljivih napak, ki jih lahko iz beležnice pošljete %s na %s"
 
-#: ../admin-tool/sabayon-apply:86
+#: ../admin-tool/sabayon-apply:98
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Ni profila za uporabnika '%s'\n"
 
-#: ../admin-tool/sabayon-apply:91
+#: ../admin-tool/sabayon-apply:103
 msgid "Please use -h for usage options"
 msgstr "Prosim, uporabite -h zastavico za podrobnosti uporabe"
 
-#: ../admin-tool/sabayon-session:66
+#: ../admin-tool/sabayon-session:67
 #, c-format
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
 msgstr "Uporaba: %s <ime-profila> <pot-profila> <številka-zaslona>\n"
@@ -505,16 +700,6 @@ msgstr "Uporabniki profila %s"
 msgid "Use This Profile"
 msgstr "Uporabi ta profil"
 
-#: ../lib/dirmonitor.py:150
-#, python-format
-msgid "Failed to add monitor for %s"
-msgstr "Ni bilo moč dodati nadzornika za %s"
-
-#: ../lib/dirmonitor.py:230
-#, python-format
-msgid "Expected event: %s %s"
-msgstr "Pričakovan dogodek: %s %s"
-
 #: ../lib/protosession.py:147
 msgid "Unable to find a free X display"
 msgstr "Ni mogoče najti prostega zaslona X"
@@ -527,61 +712,48 @@ msgstr "Zagon Xnesta ni uspel: čas čakanja na signal USR1 je potekel"
 msgid "Failed to start Xnest: died during startup"
 msgstr "Zagon Xnesta ni uspel: umrl med zagonom"
 
-#: ../lib/protosession.py:480
-#, python-format
-msgid ""
-"Could not create the 'sabayon-apply' process: %s\n"
-"The command line used is '%s'\n"
-"Child traceback:\n"
-"%s"
-msgstr ""
-"Ni mogoče ustvariti postopka 'sabayon-apply': %s\n"
-"Uporabljena ukazna vrstica je bila '%s'\n"
-"Sledenje podprocesom:\n"
-"%s"
-
 #: ../lib/protosession.py:501
 #, python-format
-msgid "There was a recoverable error while applying the user profile from '%s'."
-msgstr "Prišlo je do obnovljive napake med prejemanjem uporabniškega profila preko '%s'."
+msgid "There was a recoverable error while applying the user profile from file '%s'."
+msgstr "Prišlo je do popravljive napake med pripravo uporabniških nastavitev preko '%s'."
 
 #: ../lib/protosession.py:510
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "Prišlo je do usodne napake med pripravo uporabniških nastavitev preko '%s'."
 
-#: ../lib/sources/filessource.py:68
+#: ../lib/sources/filessource.py:69
 #, python-format
 msgid "File '%s' created"
 msgstr "Datoteka '%s' ustvarjena"
 
-#: ../lib/sources/filessource.py:70
+#: ../lib/sources/filessource.py:71
 #, python-format
 msgid "File '%s' deleted"
 msgstr "Datoteka '%s' zbrisana"
 
-#: ../lib/sources/filessource.py:72
+#: ../lib/sources/filessource.py:73
 #, python-format
 msgid "File '%s' changed"
 msgstr "Datoteka '%s' spremenjena"
 
-#: ../lib/sources/filessource.py:96
+#: ../lib/sources/filessource.py:97
 msgid "Applications menu"
 msgstr "Meni Programi"
 
-#: ../lib/sources/filessource.py:98
+#: ../lib/sources/filessource.py:99
 msgid "Preferences menu"
 msgstr "Meni Nastavitve"
 
-#: ../lib/sources/filessource.py:100
+#: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
 msgstr "Meni Nastavitve strežnika"
 
-#: ../lib/sources/filessource.py:102
+#: ../lib/sources/filessource.py:103
 msgid "System Settings menu"
 msgstr "Meni Nastavitve sistema"
 
-#: ../lib/sources/filessource.py:104
+#: ../lib/sources/filessource.py:105
 msgid "Start Here menu"
 msgstr "Meni Začni tukaj"
 
@@ -667,51 +839,51 @@ msgstr "Zaznamki spletnega brskalnika"
 msgid "Web browser profile list"
 msgstr "Sezam profilov spletnega brskalnika"
 
-#: ../lib/sources/mozillasource.py:521
+#: ../lib/sources/mozillasource.py:522
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Datoteka ni bila najdena (%s)"
 
-#: ../lib/sources/mozillasource.py:872
+#: ../lib/sources/mozillasource.py:873
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "podvojeno ime(%(name)s) iv razdelku %(section)s"
 
-#: ../lib/sources/mozillasource.py:881
+#: ../lib/sources/mozillasource.py:882
 #, python-format
 msgid "redundant default in section %s"
 msgstr "odvečna privzeta vrednost v razdelku %s"
 
-#: ../lib/sources/mozillasource.py:898
+#: ../lib/sources/mozillasource.py:899
 msgid "no default profile"
 msgstr "ni privzetega profila"
 
-#: ../lib/sources/mozillasource.py:953
+#: ../lib/sources/mozillasource.py:954
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Zaznamek Mozille ustvarjen '%s' -> '%s'"
 
-#: ../lib/sources/mozillasource.py:955
+#: ../lib/sources/mozillasource.py:956
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Mapa zaznamkov Mozille ustvarjena '%s'"
 
-#: ../lib/sources/mozillasource.py:958
+#: ../lib/sources/mozillasource.py:959
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Zaznamek Mozille zbrisan '%s'"
 
-#: ../lib/sources/mozillasource.py:960
+#: ../lib/sources/mozillasource.py:961
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Mapa zaznamkov Mozille zbrisana '%s'"
 
-#: ../lib/sources/mozillasource.py:963
+#: ../lib/sources/mozillasource.py:964
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Zaznamek Mozille spremenjen '%s' '%s'"
 
-#: ../lib/sources/mozillasource.py:965
+#: ../lib/sources/mozillasource.py:966
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mapa zaznamkov Mozille spremenjena '%s'"
@@ -749,22 +921,22 @@ msgstr "Aplet %s dodan na desni pladenj"
 #: ../lib/sources/paneldelegate.py:97
 #, python-format
 msgid "Applet %s removed from top panel"
-msgstr "Aplet %s odstranjen z zgornjega pladnja"
+msgstr "Aplet %s odstranjen z zgornjega pladenja"
 
 #: ../lib/sources/paneldelegate.py:99
 #, python-format
 msgid "Applet %s removed from bottom panel"
-msgstr "Aplet %s odstranjen s spodnjega pladnja"
+msgstr "Aplet %s odstranjen s spodnjega pladenja"
 
 #: ../lib/sources/paneldelegate.py:101
 #, python-format
 msgid "Applet %s removed from left panel"
-msgstr "Aplet %s odstranjen z levega pladnja"
+msgstr "Aplet %s odstranjen z levega pladenja"
 
 #: ../lib/sources/paneldelegate.py:103
 #, python-format
 msgid "Applet %s removed from right panel"
-msgstr "Aplet %s odstranjen z desnega pladnja"
+msgstr "Aplet %s odstranjen z desnega pladenja"
 
 #: ../lib/sources/paneldelegate.py:117
 #, python-format
@@ -806,44 +978,45 @@ msgstr "%s odstranjen z levega pladnja"
 msgid "%s removed from right panel"
 msgstr "%s odstranjen z desnega pladnja"
 
-#: ../lib/sources/paneldelegate.py:199
+#. Translators: This is a drawer in gnome-panel (where you can put applets)
+#: ../lib/sources/paneldelegate.py:200
 msgid "Drawer"
 msgstr "Predal"
 
-#: ../lib/sources/paneldelegate.py:201
+#: ../lib/sources/paneldelegate.py:202
 msgid "Main Menu"
 msgstr "Glavni menu"
 
-#: ../lib/sources/paneldelegate.py:211
+#: ../lib/sources/paneldelegate.py:212
 #, python-format
 msgid "%s launcher"
 msgstr "%s zaganjalnik"
 
-#: ../lib/sources/paneldelegate.py:215
+#: ../lib/sources/paneldelegate.py:216
 msgid "Lock Screen button"
 msgstr "Gumb za zaklep zaslona"
 
-#: ../lib/sources/paneldelegate.py:217
+#: ../lib/sources/paneldelegate.py:218
 msgid "Logout button"
 msgstr "Gumb za odjavo"
 
-#: ../lib/sources/paneldelegate.py:219
-msgid "Run Appliction button"
+#: ../lib/sources/paneldelegate.py:220
+msgid "Run Application button"
 msgstr "Gumb za zagon programov"
 
-#: ../lib/sources/paneldelegate.py:221
+#: ../lib/sources/paneldelegate.py:222
 msgid "Search button"
 msgstr "Gumb za iskanje"
 
-#: ../lib/sources/paneldelegate.py:223
+#: ../lib/sources/paneldelegate.py:224
 msgid "Screenshot button"
 msgstr "Gumb za zajem slike"
 
-#: ../lib/sources/paneldelegate.py:225
+#: ../lib/sources/paneldelegate.py:226
 msgid "Menu Bar"
 msgstr "Menujska vrstica"
 
-#: ../lib/sources/paneldelegate.py:469
+#: ../lib/sources/paneldelegate.py:470
 msgid "Panel File"
 msgstr "Datoteka pulta"
 
@@ -891,61 +1064,64 @@ msgstr "Preizkus %s teče (%s)"
 msgid "Success!"
 msgstr "Uspeh!"
 
-#: ../lib/userdb.py:51
+#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
+#. do not change the way they are written.  The intended string is
+#. something like "invalid type for setting blah in /ldap/path/to/blah"
+#: ../lib/userdb.py:54
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "neveljavna vrsta nastavitve %(setting)s v %(np)s"
 
-#: ../lib/userdb.py:211
+#: ../lib/userdb.py:215
 #, python-format
 msgid "No search based specified for %s"
 msgstr "Iskalna osnova ni navedena za %s"
 
-#: ../lib/userdb.py:214
+#: ../lib/userdb.py:218
 #, python-format
 msgid "No query filter specified for %s"
 msgstr "Filter poizvedbe ni naveden za %s"
 
-#: ../lib/userdb.py:217
+#: ../lib/userdb.py:221
 #, python-format
 msgid "No result attribute specified for %s"
 msgstr "Atribut rezultata ni naveden za %s"
 
-#: ../lib/userdb.py:226
+#: ../lib/userdb.py:230
 msgid "Scope must be one of sub, base and one"
 msgstr "Obseg mora biti pod, osnova ali eden"
 
-#: ../lib/userdb.py:246
+#: ../lib/userdb.py:250
 msgid "multiple_result must be one of first and random"
 msgstr "multiple_result mora biti prvi ali naključen"
 
-#: ../lib/userdb.py:338
+#: ../lib/userdb.py:342
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Ni bilo moč odpreti %s za pisanje"
 
-#: ../lib/userdb.py:351
+#: ../lib/userdb.py:355
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Ni bilo moč shraniti UserDatabase v %s"
 
-#: ../lib/userdb.py:374
-#: ../lib/userdb.py:409
+#: ../lib/userdb.py:378
+#: ../lib/userdb.py:413
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Datoteka %s ni nastavitvena datoteka profila"
 
-#: ../lib/userdb.py:381
+#: ../lib/userdb.py:385
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Nastavitvam ni bilo moč dodati privzetega profila %s"
 
-#: ../lib/userdb.py:417
+#: ../lib/userdb.py:421
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Nastavitvam profila ni bilo moč dodati uporabnika %s"
 
-#: ../lib/userdb.py:448
+#: ../lib/userdb.py:472
 msgid "Failed to get the user list"
 msgstr "Ni bilo moč dobiti seznama uporabnikov"
 
@@ -956,15 +1132,4 @@ msgstr "Ni moč najti domačega imenika: ni nastavljen v /etc/passwd in ni vredn
 #: ../lib/util.py:104
 msgid "Cannot find username: not set in /etc/passwd and no value for $USER in environment"
 msgstr "Ni moč najti uporabniškega imena: ni nastavljeno v /etc/passwd in ni vrednosti za spremenljivko $USER"
-
-#~ msgid "Usage: %s [<profile-name>]\n"
-#~ msgstr "Uporaba: %s [<ime-profila>]\n"
-#~ msgid "Panel applet '%s' added"
-#~ msgstr "Vstavek pulta '%s' dodan"
-#~ msgid "Panel applet '%s' removed"
-#~ msgstr "Vstavek pulta '%s' odstranjen"
-#~ msgid "Panel object '%s' added"
-#~ msgstr "Predmet pulta '%s' dodan"
-#~ msgid "Panel object '%s' removed"
-#~ msgstr "Predmet pulta '%s' odstranjen"
 
