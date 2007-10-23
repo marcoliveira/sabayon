@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-24 00:25+0100\n"
+"POT-Creation-Date: 2007-10-21 20:04+0100\n"
 "PO-Revision-Date: 2007-08-27 09:53+0000\n"
 "Last-Translator: Youssef Chahibi <chahibi@gmail.com>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -474,11 +474,12 @@ msgstr "واجهة المستخدم"
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../admin-tool/sabayon:73
-msgid "Your account does not have permissions to run the Desktop User Profiles tool"
+#: ../admin-tool/sabayon:77
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr "ليس لحسابك صلاحيات تشغيل أداة سطح المكتب للملفات الشخصية المستخدمين"
 
-#: ../admin-tool/sabayon:74
+#: ../admin-tool/sabayon:78
 msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
@@ -486,11 +487,11 @@ msgstr ""
 "صلاحيات مدير النظام مطلوبة لتشغيل هذا البرنامج حيث أنه قد يغير في ملفات "
 "النظام"
 
-#: ../admin-tool/sabayon:79
+#: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
 msgstr "أداة سطح المكتب للملفات الشخصية تعمل مسبقا"
 
-#: ../admin-tool/sabayon:80
+#: ../admin-tool/sabayon:84
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
@@ -498,12 +499,12 @@ msgstr ""
 "لايمكنك استخدام أداة سطح المكتب للملفات الشخصية من خلال جلسة تحرير الحساب "
 "الشخصي"
 
-#: ../admin-tool/sabayon:87
+#: ../admin-tool/sabayon:91
 #, c-format
 msgid "User account '%s' was not found"
 msgstr "حساب المستخدم '%s' غير موجود"
 
-#: ../admin-tool/sabayon:88
+#: ../admin-tool/sabayon:92
 #, c-format
 msgid ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
@@ -514,19 +515,22 @@ msgstr ""
 "الجهاز. حاول مرة أخرى بعد إنشاء حساب المستخدم المطلوب باستخدام الأمر "
 "('adduser') مثلا"
 
-#: ../admin-tool/sabayon:128
+#: ../admin-tool/sabayon:131
 #, c-format
 msgid ""
 "A fatal error has occurred.  You can help us fix the problem by sending the "
 "log in %s to %s"
-msgstr "حدث خطأ فادح. يمكنك المساعدة على حل هذا المشكل بإرسال اسم الولوج %s إلى %s"
+msgstr ""
+"حدث خطأ فادح. يمكنك المساعدة على حل هذا المشكل بإرسال اسم الولوج %s إلى %s"
 
-#: ../admin-tool/sabayon:143
+#: ../admin-tool/sabayon:145
 #, c-format
 msgid ""
 "Sabayon will now exit.  There were some recoverable errors, and you can help "
 "us debug the problem by sending the log in %s to %s"
-msgstr "سيغادر سابايون الآن. كانت هناك أخطاء يمكن حلها، يمكنك المساعدة على حل هذا المشكل بإرسال اسم الولوج %s إلى %s"
+msgstr ""
+"سيغادر سابايون الآن. كانت هناك أخطاء يمكن حلها، يمكنك المساعدة على حل هذا "
+"المشكل بإرسال اسم الولوج %s إلى %s"
 
 #: ../admin-tool/sabayon-apply:98
 #, c-format
@@ -593,17 +597,23 @@ msgstr "حفظ التعديلات للحساب الشخصي \"%s\" قبل الإ
 
 #: ../admin-tool/saveconfirm.py:45
 #, python-format
-msgid "If you don't save, changes from the last %ld second will be permanently lost."
+msgid ""
+"If you don't save, changes from the last %ld second will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld seconds will be permanently "
 "lost."
-msgstr[0] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثانية."
-msgstr[1] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثانية."
-msgstr[2] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثوان."
-msgstr[3] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثانية."
+msgstr[0] ""
+"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثانية."
+msgstr[1] ""
+"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثانية."
+msgstr[2] ""
+"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثوان."
+msgstr[3] ""
+"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثانية."
 
 #: ../admin-tool/saveconfirm.py:51
-msgid "If you don't save, changes from the last minute will be permanently lost."
+msgid ""
+"If you don't save, changes from the last minute will be permanently lost."
 msgstr "ستفقد التعديلات منذ آخر دقيقة بشكل دائم في حالة عدم الحفظ."
 
 #: ../admin-tool/saveconfirm.py:55
@@ -629,14 +639,19 @@ msgstr[3] ""
 
 #: ../admin-tool/saveconfirm.py:62
 #, python-format
-msgid "If you don't save, changes from the last %ld minute will be permanently lost."
+msgid ""
+"If you don't save, changes from the last %ld minute will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
-msgstr[0] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقيقة."
-msgstr[1] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقيقة."
-msgstr[2] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقائق."
-msgstr[3] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقيقة."
+msgstr[0] ""
+"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقيقة."
+msgstr[1] ""
+"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقيقة."
+msgstr[2] ""
+"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقائق."
+msgstr[3] ""
+"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقيقة."
 
 #
 #: ../admin-tool/saveconfirm.py:71
@@ -666,12 +681,17 @@ msgstr[3] ""
 
 #: ../admin-tool/saveconfirm.py:81
 #, python-format
-msgid "If you don't save, changes from the last %d hour will be permanently lost."
-msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
+msgid ""
+"If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
 msgstr[0] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر ساعة."
-msgstr[1] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر ساعتان."
-msgstr[2] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %d  ساعات."
-msgstr[3] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %d  ساعة."
+msgstr[1] ""
+"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر ساعتان."
+msgstr[2] ""
+"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %d  ساعات."
+msgstr[3] ""
+"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %d  ساعة."
 
 #: ../admin-tool/sessionwindow.py:154
 #, python-format
@@ -716,7 +736,9 @@ msgstr "اقفل الإعدادات الخاصة بـ %s"
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
 "report this error now or try to continue editing the user profile."
-msgstr "حدث خطأ يمكن حلّه أثناء تطبيق الملف الشخصي '%s'. يمكن التقرير عن هذا الخطأ الآن أو المواصلة في تحرير الملف الشخصي للمستخدم."
+msgstr ""
+"حدث خطأ يمكن حلّه أثناء تطبيق الملف الشخصي '%s'. يمكن التقرير عن هذا الخطأ "
+"الآن أو المواصلة في تحرير الملف الشخصي للمستخدم."
 
 #: ../admin-tool/sessionwindow.py:337
 msgid "_Report this error"
@@ -749,7 +771,8 @@ msgstr "فشل في بدء تشغيل Xnest: ماتت العملية أثناء 
 
 #: ../lib/protosession.py:501
 #, python-format
-msgid "There was a recoverable error while applying the user profile from file '%s'."
+msgid ""
+"There was a recoverable error while applying the user profile from file '%s'."
 msgstr "حدث خطأ يمكن حلّه أثناء تطبيق الملف الشخصي من الملف'%s'."
 
 #: ../lib/protosession.py:510
@@ -1171,4 +1194,3 @@ msgid ""
 msgstr ""
 "تعذر إيجاد اسم المستخدم: اسم المستخدم غير محدد في /etc/passwd و ليس للمتغير "
 "$USER قيمة في بيئة الإستخدام"
-
