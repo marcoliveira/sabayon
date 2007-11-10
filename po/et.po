@@ -6,14 +6,15 @@
 #
 # Ivar Smolin <okul@linux.ee>, 2006, 2007.
 # Priit Laes <amd@store20.com>, 2006, 2007.
+# Mattias Põldaru <mahfiaz@gmail.com>, 2007.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sabayon HEAD\n"
+"Project-Id-Version: sabayon 2.18\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-24 00:25+0100\n"
-"PO-Revision-Date: 2007-09-17 12:34+0300\n"
-"Last-Translator: Priit Laes <amd@store20.com>\n"
+"POT-Creation-Date: 2007-09-17 16:59+0100\n"
+"PO-Revision-Date: 2007-11-01 22:12+0300\n"
+"Last-Translator: Mattias Põldaru <mahfiaz@gmail.com>\n"
 "Language-Team: Estonian <gnome-et@linux.ee>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,7 +29,8 @@ msgstr "Programm kasutajaprofiilide loomiseks ja muutmiseks"
 msgid "translator-credits"
 msgstr ""
 "Ivar Smolin <okul@linux.ee>, 2006, 2007.\n"
-"Priit Laes <amd@store20.com>, 2006, 2007."
+"Priit Laes <amd@store20.com>, 2006, 2007.\n"
+"Mattias Põldaru <mahfiaz@gmail.com>, 2007."
 
 #: ../admin-tool/changeswindow.py:50
 #, python-format
@@ -319,7 +321,7 @@ msgstr "Kasutajaliidese kohandamine on keelatud"
 
 #: ../admin-tool/lockdown/maindialog.py:90
 msgid "Show insensitive menu items"
-msgstr ""
+msgstr "Mittetöötavaid menüüelemente näidatakse"
 
 #: ../admin-tool/lockdown/maindialog.py:91
 msgid "Show font preview"
@@ -484,38 +486,38 @@ msgstr "Kasutajaliides"
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../admin-tool/sabayon:73
+#: ../admin-tool/sabayon:77
 msgid "Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr "Sinu kontol pole Töölauakasutajate profiilide tööriista käivitamiseks piisavalt õiguseid"
 
-#: ../admin-tool/sabayon:74
+#: ../admin-tool/sabayon:78
 msgid "Administrator level permissions are needed to run this program because it can modify system files."
 msgstr "Selle programmi käivitamiseks peavad olema halduri taseme õigused kuna see programm võib muuta süsteemseid faile."
 
-#: ../admin-tool/sabayon:79
+#: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
 msgstr "Tööriist töölauakasutajate profiilide redigeerimiseks juba töötab."
 
-#: ../admin-tool/sabayon:80
+#: ../admin-tool/sabayon:84
 msgid "You may not use Desktop User Profiles tool from within a profile editing session"
 msgstr "Sa ei tohi töölauakasutajate profiilide tööriista kasutada profiilide redigeerimise seansis."
 
-#: ../admin-tool/sabayon:87
+#: ../admin-tool/sabayon:91
 #, c-format
 msgid "User account '%s' was not found"
 msgstr "Kasutajakontot '%s' ei leitud"
 
-#: ../admin-tool/sabayon:88
+#: ../admin-tool/sabayon:92
 #, c-format
 msgid "Sabayon requires a special user account '%s' to be present on this computer. Try again after creating the account (using, for example, the 'adduser' command)"
 msgstr "Sabayon'il on vaja, et selles arvutis oleks eriotstarbeline kasutajakonto '%s'. Proovi pärast konto loomist uuesti (konto saab luua näiteks 'adduser' käsuga)."
 
-#: ../admin-tool/sabayon:128
+#: ../admin-tool/sabayon:131
 #, c-format
 msgid "A fatal error has occurred.  You can help us fix the problem by sending the log in %s to %s"
-msgstr ""
+msgstr "Esines pöördumatu viga. Sa võid vea parandamisele kaasa aidata saates logifaili %s arendajatele aadressil %s"
 
-#: ../admin-tool/sabayon:143
+#: ../admin-tool/sabayon:145
 #, c-format
 msgid "Sabayon will now exit.  There were some recoverable errors, and you can help us debug the problem by sending the log in %s to %s"
 msgstr "Sabayon lõpetab töö. Programmis esines mõningaid probleeme ning soovitav oleks nende vigade parandamiseks saata logifailid asukohas %s arendajatele aadressil %s."
@@ -668,7 +670,7 @@ msgstr "Lukustussätted %s jaoks"
 #: ../admin-tool/sessionwindow.py:333
 #, python-format
 msgid "There was a recoverable error while applying the user profile '%s'.  You can report this error now or try to continue editing the user profile."
-msgstr ""
+msgstr "Esines kergemat sorti viga kasutajaprofiili '%s' rakendamisel. Sa võid raporteerida veast kohe või jätkata kasutajaprofiili muutmist."
 
 #: ../admin-tool/sessionwindow.py:337
 msgid "_Report this error"
@@ -1119,29 +1121,3 @@ msgstr "Kodukataloogi pole võimalik leida: seda pole määratud ei /etc/passwd 
 #: ../lib/util.py:104
 msgid "Cannot find username: not set in /etc/passwd and no value for $USER in environment"
 msgstr "Kasutajanime pole võimalik leida: seda pole määratud ei /etc/passwd failis ega ka keskkonnamuutujas $USER"
-
-#~ msgid "Warn if macro prints"
-#~ msgstr "Hoiatus, kui makro üritab printida"
-#~ msgid "Printing modifies document"
-#~ msgstr "Printimine muudab dokumenti"
-#~ msgid "Warn for external formats"
-#~ msgstr "Hoiatused väliste vormingute kohta"
-#~ msgid "Calc default format:"
-#~ msgstr "Calci vaikimisi vorming:"
-#~ msgid "Impress default format:"
-#~ msgstr "Impressi vaikimisi vorming:"
-#~ msgid "Undo Steps:"
-#~ msgstr "Tagasivõtmiste arv:"
-#~ msgid "Writer default format:"
-#~ msgstr "Writeri vaikimisi vorming:"
-#~ msgid ""
-#~ "Could not create the 'sabayon-apply' process: %s\n"
-#~ "The command line used is '%s'\n"
-#~ "Child traceback:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "'sabayon-apply' protsessi pole võimalik luua: %s\n"
-#~ "Kasutatav käsurida '%s'\n"
-#~ "Lapsprotsessi väljund:\n"
-#~ "%s"
-
