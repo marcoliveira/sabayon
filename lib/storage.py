@@ -37,7 +37,7 @@ def dprint (fmt, *args):
 def recursive_del (path):
     if not os.path.exists (path):
         return
-    
+
     if os.path.isdir (path):
 	for file in os.listdir (path):
             subpath = os.path.join (path, file)
@@ -49,10 +49,10 @@ def recursive_del (path):
 def copy_tree (dst_base, src_base, dst_name, src_name = None, overwrite = False):
     if src_name is None:
         src_name = dst_name
-    
+
     try:
         dprint ("Making dir %s", os.path.join (dst_base, dst_name))
-        os.mkdir (os.path.join (dst_base, dst_name))
+        os.makedirs (os.path.join (dst_base, dst_name))
     except OSError, err:
         if err.errno != errno.EEXIST:
             raise err
@@ -80,7 +80,7 @@ def unlink_children(node):
 
 class ProfileStorageException (Exception):
     pass
-        
+
 class ProfileStorage:
     """An encapsulation of all the files which make up the
     contents of a profile.
@@ -99,7 +99,7 @@ class ProfileStorage:
     and a set of arbitrary key value pairs which that source
     may interpret.
     """
-    
+
     def __init__ (self, name):
         """Create a ProfileStorage.
 
@@ -108,7 +108,7 @@ class ProfileStorage:
         """
         self.name = name
 	self.readonly = 0
-	
+
         if not os.path.isabs (self.name):
 	    try:
 	        protocol = urlparse.urlparse(self.name)[0]
@@ -121,12 +121,12 @@ class ProfileStorage:
 		    self.path = cachou.get_resource(self.name)
 		    if self.path == None:
 		        self.path = self.name
-		    
+
 	    except:
 		self.path = os.path.join (PROFILESDIR, self.name + ".zip")
         else:
             self.path = name
-            
+
         self.metadata         = None
         self.zip              = None
         self.temp_path        = None
@@ -138,11 +138,11 @@ class ProfileStorage:
         if self.temp_path:
             shutil.rmtree (self.temp_path)
         self.temp_path = None
-        
+
         if self.metadata:
             self.metadata.freeDoc ()
         self.metadata = None
-            
+
         if self.zip:
             self.zip.close ()
         self.zip = None
@@ -153,7 +153,7 @@ class ProfileStorage:
         root.newChild (None, "directories", None)
         root.newChild (None, "files", None)
         return metadata
-        
+
     def __read_metadata (self):
         if not self.metadata is None:
             return
@@ -165,7 +165,7 @@ class ProfileStorage:
             return
 
         dprint ("Reading metadata from '%s'", self.path)
-            
+
         try:
             self.zip = zipfile.ZipFile (self.path, "r")
         except:
@@ -181,20 +181,20 @@ class ProfileStorage:
         except:
             raise ProfileStorageException (_("Failed to read metadata from '%s': %s") %
                                            (self.path, sys.exc_info()[1]))
-        
+
         root = doc.getRootElement ()
         if not root or root.name != "metadata":
             doc.freeDoc ()
             raise ProfileStorageException (_("Invalid metadata section in '%s': %s") %
                                            (self.path, sys.exc_info()[1]))
-            
+
         self.metadata = doc
 
         if len (root.xpathEval ("directories")) == 0:
             root.newChild (None, "directories", None)
         if len (root.xpathEval ("files")) == 0:
             root.newChild (None, "files", None)
-            
+
     def __get_node_source (self, node):
         return node.xpathEval ("string (source)")
 
@@ -208,14 +208,14 @@ class ProfileStorage:
         # Set properties
 
         unlink_children (file_or_dir_node)
-        
+
         file_or_dir_node.setProp ("timestamp", str (int (time.time ())))
         file_or_dir_node.setProp ("user",      util.get_user_name ())
         file_or_dir_node.setProp ("host",      socket.gethostname ())
 
         # Set source and attributes
         file_or_dir_node.newChild (None, "source", source)
-        
+
         attributes_node = file_or_dir_node.newChild (None, "attributes", None)
         if attributes:
             for name in attributes:
@@ -229,7 +229,7 @@ class ProfileStorage:
         assert metadata
 
         files_node = metadata.xpathEval ("/metadata/files")[0]
-        
+
         # Ensure the file node exists
         nodes = files_node.xpathEval ("file[@path='%s']" % path)
         if len (nodes):
@@ -246,7 +246,7 @@ class ProfileStorage:
         assert metadata
 
         files_node = metadata.xpathEval ("/metadata/directories")[0]
-        
+
         # Ensure the directory node exists
         nodes = files_node.xpathEval ("directory[@path='%s']" % path)
         if len (nodes):
@@ -262,14 +262,14 @@ class ProfileStorage:
 
         if self.temp_path:
             return
-        
+
         self.temp_path = tempfile.mkdtemp (prefix = "sabayon-profile-storage-")
 
         dprint ("Unpacking '%s' in '%s'", self.path, self.temp_path)
 
         if not self.zip:
             return
-        
+
         def unzip_directory (zip, dir, name):
             if not os.path.exists (os.path.join (dir, name)):
                 os.makedirs (os.path.join (dir, name))
@@ -282,25 +282,25 @@ class ProfileStorage:
 
                 if not os.path.exists (dest_dir):
                     os.makedirs (dest_dir)
-                
+
                 # It sucks that we lose file permissions, mtime etc. with ZIP
                 file (dest_path, "w").write (zip.read (f))
-        
+
         def unzip_foreach (path, is_directory, data):
             (zip, temp_path) = data
 
             dprint ("Unzip: path = %s, is_directory = %s",
                     path, is_directory)
-            
+
             abs_path = os.path.join (temp_path, path)
-                
+
             if is_directory:
                 unzip_directory (zip, temp_path, path)
             else:
                 dest_dir = os.path.join (temp_path, os.path.dirname (path))
                 if not os.path.exists (dest_dir):
                     os.makedirs (dest_dir)
-                                                           
+
                 # It sucks that we lose file permissions, mtime etc. with ZIP
                 file (abs_path, "w").write (zip.read (path))
 
@@ -310,7 +310,7 @@ class ProfileStorage:
         for file_node in self.metadata.xpathEval ("/metadata/files/file"):
             path = file_node.prop ("path")
             callback (path, False, user_data)
-            
+
         for directory_node in self.metadata.xpathEval ("/metadata/directories/directory"):
             path = directory_node.prop ("path")
             callback (path, True, user_data)
@@ -330,7 +330,7 @@ class ProfileStorage:
             except:
                 dprint ("Failed to copy profile from '%s' to '%s': %s",
                         self.path, new_path, sys.exc_info()[1])
-        
+
         retval = ProfileStorage (name)
         retval.save ()
         return retval
@@ -350,7 +350,7 @@ class ProfileStorage:
         (specific to @source) which should be saved.
         """
         dprint ("Adding '%s' from %s:%s", path, source, src_dir)
-        
+
         self.__unpack ()
 
         if src_path == None:
@@ -367,7 +367,7 @@ class ProfileStorage:
             node.unlinkNode ()
             node.freeNode ()
         recursive_del (dst_path)
-        
+
         if os.path.isdir (src_path):
             self.__update_directory_node (path, source, attributes)
             copy_tree (self.temp_path, src_dir, path)
@@ -418,7 +418,7 @@ class ProfileStorage:
         dprint ("Removing '%s' profile from profile %s", path, self.name)
 
         self.__unpack ()
-        
+
         item_node = self.__get_node (path)
         if not item_node:
             return
@@ -429,7 +429,7 @@ class ProfileStorage:
         recursive_del (os.path.join (self.temp_path, path))
 
         self.needs_saving = True
-        
+
     def __get_item_type (self, path):
         self.__read_metadata ()
 
@@ -440,7 +440,7 @@ class ProfileStorage:
         if node:
             return "file"
         return None
-        
+
     def get_extract_src_path (self, path):
         """Return the src path of a file or directory for extraction from the profile.
 
@@ -450,7 +450,7 @@ class ProfileStorage:
         extract_src_path = os.path.join (self.temp_path, path)
 
         dprint ("Extract src path for '%s'  is '%s'", path, extract_src_path)
-        
+
         return os.path.normpath (extract_src_path)
 
     def extract (self, path, dst_dir, overwrite = False):
@@ -489,9 +489,9 @@ class ProfileStorage:
 
             if got_stat:
                 os.chmod (dest, buf.st_mode)
-            
+
         dprint ("Extracting '%s' to '%s'", path, dst_dir)
-        
+
         self.__unpack ()
 
         item_type = self.__get_item_type (path)
@@ -526,15 +526,15 @@ class ProfileStorage:
 
     def __foreach_node (self, node, callback, user_data, source):
         item_path = node.prop ("path")
-            
+
         item_source = self.__get_node_source (node)
         if not item_source:
             dprint ("No source associated with item '%s'", item_path)
             return
-        
+
         if source and source != item_source:
             return
-        
+
         if not user_data is None:
             callback (item_source, item_path, user_data)
         else:
@@ -543,7 +543,7 @@ class ProfileStorage:
     def foreach (self, callback, user_data = None, source = None):
         """Iterate over the contents of the profile:
 
-        @callback: an function or method of which takes 
+        @callback: an function or method of which takes
         at least two arguments - @source and @path. If @callback
         is a method, the object which the method is associated
         will be the first parameter. If @user_data is passed,
@@ -556,7 +556,7 @@ class ProfileStorage:
 
         for node in self.metadata.xpathEval ("/metadata/files/file"):
             self.__foreach_node (node, callback, user_data, source)
-            
+
         for node in self.metadata.xpathEval ("/metadata/directories/directory"):
             self.__foreach_node (node, callback, user_data, source)
 
@@ -583,9 +583,9 @@ class ProfileStorage:
             failsafe_rename (self.path, backup)
         else:
             backup = None
-        
+
         dprint ("Writing contents of profile to '%s'", self.path)
-        
+
         try:
             save_zip = zipfile.ZipFile (self.path, "w")
 
@@ -600,12 +600,12 @@ class ProfileStorage:
                                        os.path.join (name, f))
                     elif os.path.isfile (path):
                         save_zip.write (path, os.path.join (name, f))
-        
+
             def zip_foreach (path, is_directory, data):
                 (save_zip, temp_path) = data
 
                 abs_path = os.path.join (temp_path, path)
-                    
+
                 if is_directory:
                     zip_directory (save_zip, abs_path, path)
                 else:
@@ -625,9 +625,9 @@ class ProfileStorage:
         if self.temp_path:
             shutil.rmtree (self.temp_path)
             self.temp_path = None
-        
+
         self.needs_saving = False
-        
+
         self.zip = zipfile.ZipFile (self.path, "r")
 
     def get_attributes (self, path):
@@ -673,7 +673,7 @@ def run_unit_tests ():
 
     # Create profile
     profile = ProfileStorage (profile_path)
-    
+
     # Save the profile (no revision yet)
     profile.save ()
     assert os.path.exists (profile_path)
@@ -696,7 +696,7 @@ def run_unit_tests ():
 
     # Add the test directory to the profile
     profile.add ("foobar", temp_dir, "TestSource3", { "foo-attr3" : "foo" , "bar-attr3" : 3 })
-    
+
     # Save the profile (first revision)
     profile.save ()
     assert os.path.exists (profile_path)
@@ -716,7 +716,7 @@ def run_unit_tests ():
     assert attributes["foo-attr1"] == "foo"
     assert attributes.has_key ("bar-attr1")
     assert attributes["bar-attr1"] == "1"
-    
+
     (source, path) = l[1]
     assert source == "TestSource2"
     assert path == "config2.test"
@@ -727,7 +727,7 @@ def run_unit_tests ():
     assert attributes["foo-attr2"] == "foo"
     assert attributes.has_key ("bar-attr2")
     assert attributes["bar-attr2"] == "2"
-    
+
     (source, path) = l[2]
     assert source == "TestSource3"
     assert path == "foobar"
@@ -759,7 +759,7 @@ def run_unit_tests ():
     assert file (os.path.join (temp_dir2, "foobar/foo/bar.txt")).read () == "new test file 5"
     assert os.path.isfile (os.path.join (temp_dir2, "foobar/foo.txt"))
     assert file (os.path.join (temp_dir2, "foobar/foo.txt")).read () == "new test file 6"
-    
+
     # Remove temporary extraction dir
     shutil.rmtree (temp_dir2)
 
@@ -771,7 +771,7 @@ def run_unit_tests ():
 
     # Remove one of the test files
     profile.remove ("config2.test")
-    
+
     # Add the test directory again to get a new revision
     open (os.path.join (temp_dir, "foobar/foo/bar/foo/bar/%gconf.xml"), "w").write ("new test file 2005")
     open (os.path.join (temp_dir, "foobar/foo/bar/foo.txt"), "w").write ("new test file 2005")
@@ -783,7 +783,7 @@ def run_unit_tests ():
     os.makedirs (os.path.join (temp_dir, "blaas/are/nice"))
     open (os.path.join (temp_dir, "blaas/are/nice/foo.txt"), "w").write ("blaas are nice")
     profile.add ("blaas", temp_dir, "Waterford", { "nice" : True, "with-butter" : "but of course" })
-    
+
     # Remove temporary dir
     shutil.rmtree (temp_dir)
 
@@ -819,7 +819,7 @@ def run_unit_tests ():
     assert attributes["foo-attr2005"] == "foo"
     assert attributes.has_key ("bar-attr2005")
     assert attributes["bar-attr2005"] == "2005"
-    
+
     (source, path) = l[2]
     assert source == "Waterford"
     assert path == "blaas"
@@ -851,7 +851,7 @@ def run_unit_tests ():
     assert file (os.path.join (temp_dir2, "foobar/foo.txt")).read () == "new test file 2005"
     assert os.path.isfile (os.path.join (temp_dir2, "blaas/are/nice/foo.txt"))
     assert file (os.path.join (temp_dir2, "blaas/are/nice/foo.txt")).read () == "blaas are nice"
-    
+
     # Remove temporary extraction dir
     shutil.rmtree (temp_dir2)
 
@@ -859,7 +859,7 @@ def run_unit_tests ():
 
     # Create temporary dir again
     temp_dir = tempfile.mkdtemp (prefix = "storage-test-")
-    
+
     # Now, re-open
     profile = ProfileStorage (profile_path)
 
@@ -914,7 +914,7 @@ def run_unit_tests ():
     assert attributes["foo-attr2005"] == "foo"
     assert attributes.has_key ("bar-attr2005")
     assert attributes["bar-attr2005"] == "2005"
-    
+
     # Create temporary dir for extraction
     temp_dir = tempfile.mkdtemp (prefix = "storage-test-")
 
@@ -935,7 +935,7 @@ def run_unit_tests ():
     assert file (os.path.join (temp_dir, "foobar/foo/bar.txt")).read () == "new test file 2005"
     assert os.path.isfile (os.path.join (temp_dir, "foobar/foo.txt"))
     assert file (os.path.join (temp_dir, "foobar/foo.txt")).read () == "new test file 2005"
-    
+
     # Remove temporary extraction dir
     shutil.rmtree (temp_dir)
 
