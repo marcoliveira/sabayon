@@ -1,5 +1,17 @@
 2007-12-19  Federico Mena Quintero  <federico@novell.com>
 
+	Fix http://bugzilla.gnome.org/show_bug.cgi?id=474666 - In X
+	startup scripts, a way is needed to detect if there was no user
+	profile for the user.
+
+	* lib/util.py (EXIT_CODE_NO_USER_PROFILE): New exit code of 3 for
+	sabayon-apply when no user profile can be found for the user.
+
+	* admin-tool/sabayon-apply: Exit with
+	util.EXIT_CODE_NO_USER_PROFILE if no profile is found for the user.
+
+2007-12-19  Federico Mena Quintero  <federico@novell.com>
+
 	* lib/storage.py (copy_tree): Create all the directories in the
 	path (mkdir -p).  Fixes
 	http://bugzilla.gnome.org/show_bug.cgi?id=486216 - patch by Dan Walsh.

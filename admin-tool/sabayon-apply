@@ -95,8 +95,9 @@ if __name__ == '__main__':
         if num_args == 0:
             profile_name = userdb.get_database().get_profile (user_name)
             if not profile_name:
+                mprint ("No profile for user '%s' found", user_name)
                 sys.stderr.write (_("No profile for user '%s' found\n") % user_name)
-                sys.exit (util.EXIT_CODE_FATAL)
+                sys.exit (util.EXIT_CODE_NO_USER_PROFILE)
         elif num_args == 1:
             profile_name = args[0]
         else:

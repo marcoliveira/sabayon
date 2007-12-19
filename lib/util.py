@@ -30,6 +30,7 @@ from config import *
 EXIT_CODE_NORMAL = 0
 EXIT_CODE_FATAL = 1
 EXIT_CODE_RECOVERABLE = 2
+EXIT_CODE_NO_USER_PROFILE = 3 # only for sabayon-apply
 
 _util_admin_log_config_filename = None
 _util_readable_log_config_filename = None
