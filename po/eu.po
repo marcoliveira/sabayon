@@ -1,4 +1,5 @@
 # translation of eu.po to Basque
+# translation of sabayon.HEAD.po to
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 #
@@ -9,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-15 19:34+0200\n"
-"PO-Revision-Date: 2007-09-15 19:41+0200\n"
+"POT-Creation-Date: 2007-12-27 16:02+0100\n"
+"PO-Revision-Date: 2007-12-27 16:02+0100\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
 "Language-Team: Basque <itzulpena@euskalgnu.org>\n"
 "MIME-Version: 1.0\n"
@@ -216,7 +217,7 @@ msgstr "Desgaitu URL _arbitrarioa"
 
 #: ../admin-tool/lockdown/maindialog.py:63
 msgid "Disable _bookmark editing"
-msgstr "Desgaitu _lastermarkak editatzea"
+msgstr "Desgaitu _laster-markak editatzea"
 
 #: ../admin-tool/lockdown/maindialog.py:64
 msgid "Disable _history"
@@ -250,15 +251,15 @@ msgstr "Abisatu makroak PDFa sortzen saiatzen bada"
 
 #: ../admin-tool/lockdown/maindialog.py:74
 msgid "Warn if macro tries to print a document"
-msgstr "Abisatu makroak dokumentua inprimatzen saiatzen bada"
+msgstr "Abisatu makroak dokumentua inprimatzea saiatzen badu"
 
 #: ../admin-tool/lockdown/maindialog.py:75
 msgid "Warn if macro tries to save a document"
-msgstr "Abisatu makroak dokumentua gordetzen saiatzen bada"
+msgstr "Abisatu makroak dokumentua gordetzea saiatzen badu"
 
 #: ../admin-tool/lockdown/maindialog.py:76
 msgid "Warn if macro tries to sign a document"
-msgstr "Abisatu makroak dokumentua sinatzen saiatzen bada"
+msgstr "Abisatu makroak dokumentua sinatzea saiatzen badu"
 
 #: ../admin-tool/lockdown/maindialog.py:77
 msgid "Recommend password when saving a document"
@@ -271,7 +272,7 @@ msgstr "Gaitu automatikoki gordetzea"
 #. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
 #: ../admin-tool/lockdown/maindialog.py:81
 msgid "Printing should mark the document as modified"
-msgstr "Inprimatzean dokumentua aldatuta bezala markatu"
+msgstr "Inprimatzean markatu dokumentua aldatuta bezala"
 
 #: ../admin-tool/lockdown/maindialog.py:82
 msgid "Use system's file dialog"
@@ -516,8 +517,8 @@ msgid ""
 "A fatal error has occurred.  You can help us fix the problem by sending the "
 "log in %s to %s"
 msgstr ""
-"Errore larria gertatu da. Arazoa konpontzen lagun gaitzakezu %s(e)ngo "
-"egunkaria hona bidaliz: %s"
+"Errore larria gertatu da. Arazoa konpontzen lagun gaitzakezu %s(r)"
+"enegunkaria hona bidaliz: %s"
 
 #: ../admin-tool/sabayon:145
 #, c-format
@@ -526,14 +527,14 @@ msgid ""
 "us debug the problem by sending the log in %s to %s"
 msgstr ""
 "Sabayon irten egingo da. Zenbait errore berreskuragarri daude, eta arazoa "
-"arazten lagun gaitzakezu %s(e)ngo egunkaria hona bidaliz: %s"
+"arazten lagun gaitzakezu %s(r)en egunkaria hona bidaliz: %s"
 
-#: ../admin-tool/sabayon-apply:98
+#: ../admin-tool/sabayon-apply:99
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Ez da '%s' erabiltzailearen profilik aurkitu\n"
 
-#: ../admin-tool/sabayon-apply:103
+#: ../admin-tool/sabayon-apply:104
 msgid "Please use -h for usage options"
 msgstr "Erabili '-h' aukera erabilgarriak ikusteko"
 
@@ -625,7 +626,7 @@ msgid "If you don't save, changes from the last %ld minute will be permanently l
 msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
-msgstr[0] "Ez baduzu gordetzen, azken %ld minutuko aldaketak betirako galduko dira."
+msgstr[0] "Ez baduzu gordetzen, azken minutu %ld-eko aldaketak betirako galduko dira."
 msgstr[1] "Ez baduzu gordetzen, azken %ld minutuko aldaketak betirako galduko dira."
 
 #: ../admin-tool/saveconfirm.py:71
@@ -950,7 +951,7 @@ msgstr "%s applet-a azpiko paneletik kenduta"
 #: ../lib/sources/paneldelegate.py:101
 #, python-format
 msgid "Applet %s removed from left panel"
-msgstr "%s applet-a ezkerrko paneletik kenduta"
+msgstr "%s applet-a ezkerreko paneletik kenduta"
 
 #: ../lib/sources/paneldelegate.py:103
 #, python-format
@@ -1066,7 +1067,7 @@ msgstr "'%s' profilea irakurtzeko soilik da"
 
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
-msgstr "Ez ikusi egin ABISUei"
+msgstr "Ez ikusi egin ABISUEI"
 
 #: ../lib/unittests.py:61
 #, python-format
@@ -1136,21 +1137,21 @@ msgstr "Huts egin du %s profil lehenetsia konfigurazioari gehitzean"
 #: ../lib/userdb.py:421
 #, python-format
 msgid "Failed to add user %s to profile configuration"
-msgstr "Huts eign du %s erabiltzailea profilaren konfigurazioari gehitzean"
+msgstr "Huts egin du %s erabiltzailea profilaren konfigurazioari gehitzean"
 
 #: ../lib/userdb.py:472
 msgid "Failed to get the user list"
 msgstr "Huts egin du erabiltzaileen zerrenda lortzean"
 
-#: ../lib/util.py:91
+#: ../lib/util.py:92
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"Ezin izan da etxeko direktorioa aurkitu: ez dago /etc/passwd-en ezarrita, "
-"ezta ere inguruneko $HOME aldagaian"
+"Ezin izan da etxeko direktorioa aurkitu: ez dago /etc/passwd fitxategian "
+"ezarrita, ezta ere inguruneko $HOME aldagaian"
 
-#: ../lib/util.py:104
+#: ../lib/util.py:105
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
