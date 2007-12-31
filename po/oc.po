@@ -1,17 +1,15 @@
-# translation of oc.po to Occitan
+# Translation of oc.po to Occitan
 # Occitan translation of Sabayon.
 # Copyright (C) 2005-2007 The Free Software Foundation, Inc.
 # This file is distributed under the same license as the Sabayon package.
 #
-# Yannig MARCHEGAY (yannig@marchegay.org) - 2006-2007
-#
-# Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>, 2007.
+# Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>, 2006-2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: oc\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-20 19:02+0100\n"
-"PO-Revision-Date: 2007-11-21 19:50+0100\n"
+"POT-Creation-Date: 2007-12-27 00:04+0100\n"
+"PO-Revision-Date: 2007-12-28 23:51+0100\n"
 "Last-Translator: Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>\n"
 "Language-Team: Occitan <ubuntu-l10n-oci@lists.ubuntu.com>\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +23,7 @@ msgstr ""
 
 #: ../admin-tool/aboutdialog.py:66
 msgid "translator-credits"
-msgstr "Yannig Marchegay (Kokoyaya) <yannig@marchegay.org)"
+msgstr "Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>"
 
 #: ../admin-tool/changeswindow.py:50
 #, python-format
@@ -102,8 +100,8 @@ msgid "Files"
 msgstr "Fichièrs"
 
 #: ../admin-tool/editorwindow.py:266
-#: ../admin-tool/lockdown/pessulus.glade.h:39
-#: ../lib/sources/paneldelegate.py:228
+#: ../admin-tool/lockdown/pessulus.glade.h:41
+#: ../lib/sources/paneldelegate.py:229
 msgid "Panel"
 msgstr "Panèl"
 
@@ -184,11 +182,11 @@ msgstr "Desactivar l'_estampatge"
 
 #: ../admin-tool/lockdown/maindialog.py:53
 msgid "Disable print _setup"
-msgstr ""
+msgstr "Desactivar la _configuracion de l'estampaira"
 
 #: ../admin-tool/lockdown/maindialog.py:54
 msgid "Disable save to _disk"
-msgstr ""
+msgstr "Desactivar l'enregistrament sul _disc"
 
 #: ../admin-tool/lockdown/maindialog.py:56
 msgid "_Lock down the panels"
@@ -228,7 +226,7 @@ msgstr ""
 
 #: ../admin-tool/lockdown/maindialog.py:66
 msgid "Disable _toolbar editing"
-msgstr ""
+msgstr "Desactivar la modificacion de la barra d'_espleches"
 
 #: ../admin-tool/lockdown/maindialog.py:67
 msgid "_Fullscreen"
@@ -238,80 +236,82 @@ msgstr "Ecran _complet"
 msgid "Hide _menubar"
 msgstr "Amagar la barra de _menuts"
 
-#: ../admin-tool/lockdown/maindialog.py:70
-msgid "Remove personal info from doc. on save"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Warn if macro creates PDF"
-msgstr ""
-
+#. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
+#. This can be used to disable this, for when you don't want people to know you created the document.
 #: ../admin-tool/lockdown/maindialog.py:72
-msgid "Warn if macro prints"
+msgid "Remove personal info from documents when saving them"
 msgstr ""
 
 #: ../admin-tool/lockdown/maindialog.py:73
-msgid "Warn if macro saves doc"
-msgstr ""
+msgid "Warn if macro tries to create a PDF"
+msgstr "Avisar se una macrò ensaja de crear un PDF"
 
 #: ../admin-tool/lockdown/maindialog.py:74
-msgid "Warn if macro signs doc"
-msgstr ""
+msgid "Warn if macro tries to print a document"
+msgstr "Avisar se una macrò ensaja d'estampar un document"
 
 #: ../admin-tool/lockdown/maindialog.py:75
-msgid "Recommend password on save"
-msgstr ""
+msgid "Warn if macro tries to save a document"
+msgstr "Avisar se una macrò ensaja d'enregistrar un document"
+
+#: ../admin-tool/lockdown/maindialog.py:76
+msgid "Warn if macro tries to sign a document"
+msgstr "Avisar se una macrò ensaja de signar un document"
 
 #: ../admin-tool/lockdown/maindialog.py:77
-msgid "Enable auto-save"
+msgid "Recommend password when saving a document"
 msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:79
+msgid "Enable auto-save"
+msgstr "Activar l'enregistrament automatic"
 
 #. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
-#: ../admin-tool/lockdown/maindialog.py:79
-msgid "Printing modifies document"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:80
-msgid "Use system file chooser"
-msgstr ""
-
 #: ../admin-tool/lockdown/maindialog.py:81
-msgid "Create backup copy on save"
+msgid "Printing should mark the document as modified"
 msgstr ""
 
 #: ../admin-tool/lockdown/maindialog.py:82
-msgid "Warn for external formats"
+msgid "Use system's file dialog"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:83
+msgid "Create backup copy on save"
 msgstr ""
 
 #: ../admin-tool/lockdown/maindialog.py:84
+msgid "Warn when saving non-OpenOffice.org formats"
+msgstr "Avisar quand enregistrar dins un format que perten pas a OpenOffice.org"
+
+#: ../admin-tool/lockdown/maindialog.py:86
 msgid "Use OpenGL"
 msgstr "Utilizar Open GL"
 
-#: ../admin-tool/lockdown/maindialog.py:85
+#: ../admin-tool/lockdown/maindialog.py:87
 msgid "Use system font"
-msgstr ""
+msgstr "Utilizar la poliça del sistèma"
 
-#: ../admin-tool/lockdown/maindialog.py:86
+#: ../admin-tool/lockdown/maindialog.py:88
 msgid "Use anti-aliasing"
 msgstr ""
 
-#: ../admin-tool/lockdown/maindialog.py:87
+#: ../admin-tool/lockdown/maindialog.py:89
 msgid "Disable UI customization"
-msgstr ""
+msgstr "Desactivar la personalizacion de l'interfaç grafica"
 
-#: ../admin-tool/lockdown/maindialog.py:88
+#: ../admin-tool/lockdown/maindialog.py:90
 msgid "Show insensitive menu items"
 msgstr ""
 
-#: ../admin-tool/lockdown/maindialog.py:89
+#: ../admin-tool/lockdown/maindialog.py:91
 msgid "Show font preview"
 msgstr ""
 
-#: ../admin-tool/lockdown/maindialog.py:90
+#: ../admin-tool/lockdown/maindialog.py:92
 msgid "Show font history"
 msgstr ""
 
-#: ../admin-tool/lockdown/maindialog.py:91
+#: ../admin-tool/lockdown/maindialog.py:93
 msgid "Show icons in menus"
 msgstr ""
 
@@ -342,36 +342,36 @@ msgid ""
 "\n"
 "OpenDocument (.odp)\n"
 "PowerPoint 97+ (.ppt)\n"
-"OpenOffice 1.1 (.sxi)"
+"OpenOffice.org 1.1 (.sxi)"
 msgstr ""
 "\n"
 "OpenDocument (.odp)\n"
 "PowerPoint 97+ (.ppt)\n"
-"OpenOffice 1.1 (.sxi)"
+"OpenOffice.org 1.1 (.sxi)"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:14
 msgid ""
 "\n"
 "OpenDocument (.ods)\n"
 "Excel 97+ (.xls)\n"
-"OpenOffice 1.1 (.sxc)"
+"OpenOffice.org 1.1 (.sxc)"
 msgstr ""
 "\n"
 "OpenDocument (.ods)\n"
 "Excel 97+ (.xls)\n"
-"OpenOffice 1.1 (.sxc)"
+"OpenOffice.org 1.1 (.sxc)"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:18
 msgid ""
 "\n"
 "OpenDocument (.odt)\n"
 "Word 97+ (.doc)\n"
-"OpenOffice 1.1 (.sxw)"
+"OpenOffice.org 1.1 (.sxw)"
 msgstr ""
 "\n"
 "OpenDocument (.odt)\n"
 "Word 97+ (.doc)\n"
-"OpenOffice 1.1 (.sxw)"
+"OpenOffice.org 1.1 (.sxw)"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:22
 msgid ""
@@ -391,60 +391,60 @@ msgid "<b>Safe Protocols</b>"
 msgstr "<b>Protocòls segurs</b>"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:29
-msgid "Calc default format:"
-msgstr ""
+msgid "Default format for presentations:"
+msgstr "Format per defaut de las presentacions :"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:30
-msgid "Default icon size"
-msgstr ""
+msgid "Default format for spreadsheet:"
+msgstr "Format per defaut de las fuèlhas de calcul :"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:31
-msgid "Disable _unsafe protocols"
-msgstr ""
+msgid "Default format for word processor:"
+msgstr "Format per defaut del tractament de tèxt :"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:32
+msgid "Default icon size"
+msgstr "Talha d'icòna per defaut"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:33
+msgid "Disable _unsafe protocols"
+msgstr "Desactivar los protocòls _pas segurs"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:34
 msgid "Epiphany Web Browser"
 msgstr "Navegador Epiphany"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:33
+#: ../admin-tool/lockdown/pessulus.glade.h:35
 msgid "General"
 msgstr "General"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:34
-msgid "Impress default format:"
-msgstr ""
-
-#: ../admin-tool/lockdown/pessulus.glade.h:35
+#: ../admin-tool/lockdown/pessulus.glade.h:36
 msgid "Load / Save"
 msgstr "Cargar / enregistrar"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:36
+#: ../admin-tool/lockdown/pessulus.glade.h:37
 msgid "Lockdown Editor"
 msgstr ""
 
-#: ../admin-tool/lockdown/pessulus.glade.h:37
+#: ../admin-tool/lockdown/pessulus.glade.h:38
 msgid "Macro Security Level:"
 msgstr ""
 
-#: ../admin-tool/lockdown/pessulus.glade.h:38
-msgid "OpenOffice"
-msgstr "OpenOffice"
+#: ../admin-tool/lockdown/pessulus.glade.h:39
+msgid "Number of undo steps:"
+msgstr ""
 
 #: ../admin-tool/lockdown/pessulus.glade.h:40
+msgid "OpenOffice.org"
+msgstr "OpenOffice.org"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:42
 msgid "Security"
 msgstr "Seguritat"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:41
-msgid "Undo Steps:"
-msgstr ""
-
-#: ../admin-tool/lockdown/pessulus.glade.h:42
+#: ../admin-tool/lockdown/pessulus.glade.h:43
 msgid "User Interface"
 msgstr "Interfaç utilizaire"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:43
-msgid "Writer default format:"
-msgstr ""
 
 #.
 #. Translators: this string specifies how a profile
@@ -457,32 +457,33 @@ msgstr ""
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../admin-tool/sabayon:73
-msgid "Your account does not have permissions to run the Desktop User Profiles tool"
+#: ../admin-tool/sabayon:77
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr ""
 
-#: ../admin-tool/sabayon:74
+#: ../admin-tool/sabayon:78
 msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
 msgstr ""
 
-#: ../admin-tool/sabayon:79
+#: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
 msgstr ""
 
-#: ../admin-tool/sabayon:80
+#: ../admin-tool/sabayon:84
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
 msgstr ""
 
-#: ../admin-tool/sabayon:87
+#: ../admin-tool/sabayon:91
 #, c-format
 msgid "User account '%s' was not found"
-msgstr ""
+msgstr "Impossible de trobar lo compte de l'utilizaire %s"
 
-#: ../admin-tool/sabayon:88
+#: ../admin-tool/sabayon:92
 #, c-format
 msgid ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
@@ -490,26 +491,26 @@ msgid ""
 "command)"
 msgstr ""
 
-#: ../admin-tool/sabayon:128
+#: ../admin-tool/sabayon:131
 #, c-format
 msgid ""
 "A fatal error has occurred.  You can help us fix the problem by sending the "
 "log in %s to %s"
 msgstr ""
 
-#: ../admin-tool/sabayon:143
+#: ../admin-tool/sabayon:145
 #, c-format
 msgid ""
 "Sabayon will now exit.  There were some recoverable errors, and you can help "
 "us debug the problem by sending the log in %s to %s"
 msgstr ""
 
-#: ../admin-tool/sabayon-apply:98
+#: ../admin-tool/sabayon-apply:99
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr ""
 
-#: ../admin-tool/sabayon-apply:103
+#: ../admin-tool/sabayon-apply:104
 msgid "Please use -h for usage options"
 msgstr ""
 
@@ -524,7 +525,7 @@ msgstr ""
 
 #: ../admin-tool/sabayon.desktop.in.h:2 ../admin-tool/sabayon.glade.h:4
 msgid "User Profile Editor"
-msgstr ""
+msgstr "Editor de perfil d'utilizaire"
 
 #: ../admin-tool/sabayon.glade.h:1
 msgid "Add Profile"
@@ -580,7 +581,8 @@ msgstr ""
 "perdudas per totjorn."
 
 #: ../admin-tool/saveconfirm.py:51
-msgid "If you don't save, changes from the last minute will be permanently lost."
+msgid ""
+"If you don't save, changes from the last minute will be permanently lost."
 msgstr ""
 "S'enregistratz pas, las modificacions de la darrièra minuta seràn perdudas "
 "per totjorn."
@@ -622,9 +624,9 @@ msgid ""
 "If you don't save, changes from the last hour and %d minutes will be "
 "permanently lost."
 msgstr ""
-"S'enregistratz pas, las modificacions de la darrièra minuta seràn perdudas "
+"S'enregistratz pas, las modificacions de la darrièra ora e %d minuta seràn perdudas "
 "per totjorn."
-"S'enregistratz pas, las modificacions de la darrièra minuta seràn perdudas "
+"S'enregistratz pas, las modificacions de la darrièra ora e %d minutas seràn perdudas "
 "per totjorn."
 
 #: ../admin-tool/saveconfirm.py:81
@@ -633,10 +635,7 @@ msgid ""
 "If you don't save, changes from the last %d hour will be permanently lost."
 "If you don't save, changes from the last %d hours will be permanently lost."
 msgstr ""
-"S'enregistratz pas, las modificacions de la darrièra minuta seràn perdudas "
-"per totjorn."
-"S'enregistratz pas, las modificacions de la darrièra minuta seràn perdudas "
-"per totjorn."
+""
 
 #: ../admin-tool/sessionwindow.py:154
 #, python-format
@@ -712,18 +711,10 @@ msgstr ""
 msgid "Failed to start Xnest: died during startup"
 msgstr ""
 
-#: ../lib/protosession.py:480
-#, python-format
-msgid ""
-"Could not create the 'sabayon-apply' process: %s\n"
-"The command line used is '%s'\n"
-"Child traceback:\n"
-"%s"
-msgstr ""
-
 #: ../lib/protosession.py:501
 #, python-format
-msgid "There was a recoverable error while applying the user profile from '%s'."
+msgid ""
+"There was a recoverable error while applying the user profile from file '%s'."
 msgstr ""
 
 #: ../lib/protosession.py:510
@@ -756,7 +747,7 @@ msgstr "Menut de las preferéncias"
 
 #: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
-msgstr ""
+msgstr "Menut de paramètres de servidor"
 
 #: ../lib/sources/filessource.py:103
 msgid "System Settings menu"
@@ -813,7 +804,7 @@ msgstr ""
 
 #: ../lib/sources/gconfsource.py:137
 msgid "Default GConf settings"
-msgstr ""
+msgstr "Paramètres per defaut de GConf"
 
 #: ../lib/sources/gconfsource.py:139
 msgid "Mandatory GConf settings"
@@ -836,20 +827,20 @@ msgstr ""
 
 #: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
 msgid "Web browser preferences"
-msgstr ""
+msgstr "Preferéncias del navegaire web"
 
 #: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
 msgid "Web browser bookmarks"
-msgstr ""
+msgstr "Favorits del navegaire web"
 
 #: ../lib/sources/mozillasource.py:170
 msgid "Web browser profile list"
-msgstr ""
+msgstr "Tièra dels perfils del navegaire web"
 
 #: ../lib/sources/mozillasource.py:522
 #, python-format
 msgid "File Not Found (%s)"
-msgstr ""
+msgstr "Impossible de trobar lo fichièr (%s)"
 
 #: ../lib/sources/mozillasource.py:873
 #, python-format
@@ -868,32 +859,32 @@ msgstr ""
 #: ../lib/sources/mozillasource.py:954
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
-msgstr ""
+msgstr "Favorit Mozilla creat '%s' -> '%s'"
 
 #: ../lib/sources/mozillasource.py:956
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
-msgstr ""
+msgstr "Repertòri de favorits Mozilla creat '%s'"
 
 #: ../lib/sources/mozillasource.py:959
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
-msgstr ""
+msgstr "Favorit Mozilla suprimit '%s'"
 
 #: ../lib/sources/mozillasource.py:961
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
-msgstr ""
+msgstr "Repertòri de favorits Mozilla suprimit '%s'"
 
 #: ../lib/sources/mozillasource.py:964
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
-msgstr ""
+msgstr "Favorit Mozilla modificat '%s' '%s'"
 
 #: ../lib/sources/mozillasource.py:966
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
-msgstr ""
+msgstr "Repertòri de favorits Mozilla modificat '%s'"
 
 #: ../lib/sources/paneldelegate.py:55
 #, python-format
@@ -968,61 +959,62 @@ msgstr ""
 #: ../lib/sources/paneldelegate.py:144
 #, python-format
 msgid "%s removed from top panel"
-msgstr ""
+msgstr "%s suprimit del panèl superior"
 
 #: ../lib/sources/paneldelegate.py:146
 #, python-format
 msgid "%s removed from bottom panel"
-msgstr ""
+msgstr "%s suprimit del panèl inferior"
 
 #: ../lib/sources/paneldelegate.py:148
 #, python-format
 msgid "%s removed from left panel"
-msgstr ""
+msgstr "%s suprimit del panèl d'esquèrra"
 
 #: ../lib/sources/paneldelegate.py:150
 #, python-format
 msgid "%s removed from right panel"
-msgstr ""
+msgstr "%s suprimit del panèl de drecha"
 
-#: ../lib/sources/paneldelegate.py:199
+#. Translators: This is a drawer in gnome-panel (where you can put applets)
+#: ../lib/sources/paneldelegate.py:200
 msgid "Drawer"
 msgstr "Tirador"
 
-#: ../lib/sources/paneldelegate.py:201
+#: ../lib/sources/paneldelegate.py:202
 msgid "Main Menu"
 msgstr "Menut principal"
 
-#: ../lib/sources/paneldelegate.py:211
+#: ../lib/sources/paneldelegate.py:212
 #, python-format
 msgid "%s launcher"
 msgstr ""
 
-#: ../lib/sources/paneldelegate.py:215
+#: ../lib/sources/paneldelegate.py:216
 msgid "Lock Screen button"
 msgstr ""
 
-#: ../lib/sources/paneldelegate.py:217
+#: ../lib/sources/paneldelegate.py:218
 msgid "Logout button"
 msgstr ""
 
-#: ../lib/sources/paneldelegate.py:219
+#: ../lib/sources/paneldelegate.py:220
 msgid "Run Application button"
 msgstr ""
 
-#: ../lib/sources/paneldelegate.py:221
+#: ../lib/sources/paneldelegate.py:222
 msgid "Search button"
 msgstr "Boton de recèrca"
 
-#: ../lib/sources/paneldelegate.py:223
+#: ../lib/sources/paneldelegate.py:224
 msgid "Screenshot button"
 msgstr ""
 
-#: ../lib/sources/paneldelegate.py:225
+#: ../lib/sources/paneldelegate.py:226
 msgid "Menu Bar"
 msgstr "Barra de menuts"
 
-#: ../lib/sources/paneldelegate.py:469
+#: ../lib/sources/paneldelegate.py:470
 msgid "Panel File"
 msgstr ""
 
@@ -1069,76 +1061,79 @@ msgstr ""
 msgid "Success!"
 msgstr ""
 
-#: ../lib/userdb.py:51
+#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
+#. do not change the way they are written.  The intended string is
+#. something like "invalid type for setting blah in /ldap/path/to/blah"
+#: ../lib/userdb.py:54
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr ""
 
-#: ../lib/userdb.py:211
+#: ../lib/userdb.py:215
 #, python-format
 msgid "No search based specified for %s"
 msgstr ""
 
-#: ../lib/userdb.py:214
+#: ../lib/userdb.py:218
 #, python-format
 msgid "No query filter specified for %s"
 msgstr ""
 
-#: ../lib/userdb.py:217
+#: ../lib/userdb.py:221
 #, python-format
 msgid "No result attribute specified for %s"
 msgstr ""
 
-#: ../lib/userdb.py:226
+#: ../lib/userdb.py:230
 msgid "Scope must be one of sub, base and one"
 msgstr ""
 
-#: ../lib/userdb.py:246
+#: ../lib/userdb.py:250
 msgid "multiple_result must be one of first and random"
 msgstr ""
 
-#: ../lib/userdb.py:338
+#: ../lib/userdb.py:342
 #, python-format
 msgid "Could not open %s for writing"
-msgstr ""
+msgstr "Impossible de dobrir %s en escritura"
 
-#: ../lib/userdb.py:351
+#: ../lib/userdb.py:355
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr ""
 
-#: ../lib/userdb.py:374 ../lib/userdb.py:409
+#: ../lib/userdb.py:378 ../lib/userdb.py:413
 #, python-format
 msgid "File %s is not a profile configuration"
-msgstr ""
+msgstr "Lo fichièr %s es pas una configuracion de perfil"
 
-#: ../lib/userdb.py:381
+#: ../lib/userdb.py:385
 #, python-format
 msgid "Failed to add default profile %s to configuration"
-msgstr ""
+msgstr "Impossible d'apondre lo perfil per defaut %s a la configuracion"
 
-#: ../lib/userdb.py:417
+#: ../lib/userdb.py:421
 #, python-format
 msgid "Failed to add user %s to profile configuration"
-msgstr ""
+msgstr "Impossible d'apondre l'utilizaire %s a la configuracion del perfil"
 
-#: ../lib/userdb.py:468
+#: ../lib/userdb.py:472
 msgid "Failed to get the user list"
-msgstr ""
+msgstr "Impossible d'obténer la tièra d'utilizaires"
 
-#: ../lib/util.py:91
+#: ../lib/util.py:92
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
 "Impossible de localizar lo repertòri personal : pas definit dins /etc/passwd "
-"e la variabla d'environament $HOME es voida."
+"e la variabla d'environament $HOME es voida"
 
-#: ../lib/util.py:104
+#: ../lib/util.py:105
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr ""
-"Impossible de trobar lo nom d'utilizaire : pas definit dins /etc/passwd e pas de valor per $User dins "
-"l'environament"
+"Impossible de trobar lo nom d'utilizaire : pas definit dins /etc/passwd e "
+"pas de valor per $User dins l'environament"
 
