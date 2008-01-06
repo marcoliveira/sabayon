@@ -115,7 +115,11 @@ def init_gettext ():
     able to use _(), gettext(), and ngettext() to mark strings for
     translation."""
     locale.setlocale (locale.LC_ALL, "")
-    gettext.install (PACKAGE, LOCALEDIR, names=("gettext", "ngettext"))
+    gettext.install (PACKAGE, LOCALEDIR)
+    # Python 2.4 compatibility
+    import __builtin__
+    __builtin__.__dict__['gettext'] = __builtin__.__dict__['_']
+    __builtin__.__dict__['ngettext'] = gettext.ngettext
 
 def random_string (len):
     """Returns a string with random binary data of the specified length"""
