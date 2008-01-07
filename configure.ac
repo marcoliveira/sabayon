@@ -135,7 +135,7 @@ else
     slackware)
       XSESSION="/etc/gdm/Xsession"
       SESSION_NAME="gnome-session"
-      install_xinitrc_script="yes"
+      install_xinitrc_script="no"
       XINITRC_SYSCONFDIR=""
       ;;
     gentoo)
