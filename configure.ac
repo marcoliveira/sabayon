@@ -133,9 +133,9 @@ else
       XINITRC_SYSCONFDIR=""
       ;;
     slackware)
-      XSESSION="/etc/X11/gdm/Xsession"
-      SESSION_NAME="gnome"
-      install_xinitrc_script="no"
+      XSESSION="/etc/gdm/Xsession"
+      SESSION_NAME="gnome-session"
+      install_xinitrc_script="yes"
       XINITRC_SYSCONFDIR=""
       ;;
     gentoo)
