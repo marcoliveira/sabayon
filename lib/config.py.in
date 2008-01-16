@@ -93,16 +93,18 @@ FILES_TO_IGNORE = [
     ".gnome2/share/cursor-fonts/fonts.dir",
     ".gnome2/share/fonts/fonts.dir",
     ".gtkrc-1.2-gnome2*",
-    ".recently-used",
-    ".xsession-errors",
-    ".local",
-    ".config"
+    ".pulse-cookie",
+    ".recently-used*",
+    ".xsession-errors"
 ]
 
 #
 # Directories which we don't want to see change notifications for
 # 
 DIRECTORIES_TO_IGNORE = [
+    ".beagle",
+    ".cache",
+    ".fontconfig",
     ".gconf",
     ".gconf.xml.defaults",
     ".gconf.xml.mandatory",
@@ -115,8 +117,7 @@ DIRECTORIES_TO_IGNORE = [
     ".profile_cache",
     ".thumbnails",
     ".wapi",
-    ".fontconfig",
-    ".beagle"
+    ".Trash"
 ]
 
 #
