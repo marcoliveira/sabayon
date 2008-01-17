@@ -140,10 +140,10 @@ class FilesSource (userprofile.ProfileSource):
 
     def __apply_foreach (self, source, path):
         attributes = self.storage.get_attributes (path)
+        mandatory = False
         if attributes.has_key ("mandatory"):
-            mandatory = bool (attributes ["mandatory"])
-        else:
-            mandatory = False
+            if attributes["mandatory"].lower() == "true":
+                mandatory = True
 
         self.storage.extract (path, self.home_dir, mandatory)
     
