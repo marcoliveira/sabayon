@@ -1,14 +1,14 @@
-2008-01-17  John Robeson <johnny@localmomentum.net>
-
-    Make mandatory attribute in metadata xml files work
-    Patch from https://bugzilla.redhat.com/show_bug.cgi?id=253996  
-    by Josko Plazonic
-
 2008-01-17  Federico Mena Quintero  <federico@novell.com>
 
 	* sabayon.spec.in: Removed; this specfile is really obsolete anyway.
 
 	* Makefile.am: Remove references to the specfile.
+
+2008-01-17  John Robeson <johnny@localmomentum.net>
+
+    Make mandatory attribute in metadata xml files work
+    Patch from https://bugzilla.redhat.com/show_bug.cgi?id=253996
+    by Josko Plazonic
 
 2008-01-17  Federico Mena Quintero  <federico@novell.com>
 
@@ -27,15 +27,15 @@
 2008-01-06  John Robeson <johnny@localmomentum.net>
 
     Make sabayon work on slackware
-    
+
     Fixes: http://bugzilla.gnome.org/show_bug.cgi?id=497471
-    patch by Jared 
+    patch by Jared
 
 2008-01-06  John Robeson <johnny@localmomentum.net>
 
     Python 2.4 compatibility path for gettext/ngettext
-    
-    Fixes: http://bugzilla.gnome.org/show_bug.cgi?id=480508 
+
+    Fixes: http://bugzilla.gnome.org/show_bug.cgi?id=480508
     patch by Loïc Minier
 
 2008-01-05  Josh Triplett  <josh@freedesktop.org>
@@ -46,7 +46,7 @@
 
 2008-01-05  John William Robeson <johnny@localmomentum.net>
 
-	Remove shebang line from non-executable python scripts 
+	Remove shebang line from non-executable python scripts
 	Fixes: http://bugzilla.gnome.org/show_bug.cgi?id=424328
 
 2007-12-19  Federico Mena Quintero  <federico@novell.com>
@@ -232,19 +232,19 @@
 	Add support for OpenOffice.org lockdown.
 
 	* lib/sources/gconfsource.py: add int/string bits.
-	
+
 	* admin-tool/lockdownappliersabayon.py: add support
 	for string & int types & re-factor a little.
 
 	pessulus: yes I know I shouldn't commit here, but it's
 	          a branch & I want a simple diff.
-	
+
 	* admin-tool/lockdown/maindialog.py: add combo
 	settings, and OO.o key path / name / vbox tuples
 
 	* admin-tool/lockdown/lockdowncombo.py: impl. new
 	combo lock-down setup.
-	
+
 	* admin-tool/lockdown/pessulus.glade: add OO.o widgets
 
 2007-07-12  Federico Mena Quintero  <federico@novell.com>
@@ -773,7 +773,7 @@
 
 2007-01-18  Federico Mena Quintero  <federico@novell.com>
 
-	* lib/sources/gconfsource.py: 
+	* lib/sources/gconfsource.py:
 	* lib/sources/paneldelegate.py: Use subprocess.call() instead of
 	os.call() so that we don't use unrobust shell quoting.  Patch
 	taken from https://bugzilla.novell.com/show_bug.cgi?id=184919, by
@@ -812,7 +812,7 @@
 	descriptions, like "Applet %s added to top panel".
 	(PanelAppletRemovedChange.get_short_description): Likewise,
 	"Applet %s removed from left panel".
-	(PanelObjectAddedChange.get_short_description): Likewise, 
+	(PanelObjectAddedChange.get_short_description): Likewise,
 	"%s added to right panel".
 	(PanelObjectRemovedChange.get_short_description): Likewise,
 	"%s removed from bottom panel".
