@@ -1,4 +1,53 @@
 ==============
+Version 2.21.0
+==============
+
+  Code name:
+
+	* ""
+
+  Changes:
+
+	* sabayon-apply now returns exit code 3 when a user profile
+          cannot be found for the user:
+	  http://bugzilla.gnome.org/show_bug.cgi?id=474666
+
+	* New Assamese translation courtesy of Amitakhya Phukan.
+
+	* New Hebrew translation courtesy of Yair Hershkovitz.
+
+  Fixes:
+
+	* Fix syntax errors that were only caught at runtime :(
+
+	* Create directories recursively in the storage module (Dan Walsh):
+	  http://bugzilla.gnome.org/show_bug.cgi?id=486216
+
+	* Remove shebang python lines from files that are not meant to
+          be executable (John William Robeson, Josh Triplett):
+	  http://bugzilla.gnome.org/show_bug.cgi?id=424328
+
+	* Fix gettext/ngettext for Python 2.4 (John William Robeson, Loïc Minier):
+	  http://bugzilla.gnome.org/show_bug.cgi?id=480508 
+
+	* Make Sabayon work on Slackware (Jared, John William Robeson):
+	  http://bugzilla.gnome.org/show_bug.cgi?id=497471
+
+	* Fix the lists of files/directories to ignore (John William Robeson).
+
+  Translators:
+
+	* Djihed Afifi, Youssef Chahibi (ar)
+	* Amitakhya Phukan (as)
+	* Ihar Hrachyshka (be@latin)
+	* Priit Laes, Mattias Põldaru (et)
+	* Inaki Larranaga Murgoitio (eu)
+	* Ignacio Casal Quinteiro (gl)
+	* Yair Hershkovitz (he)
+	* Gabor Kelemen (hu)
+	* Yannig Marchegay (oc)
+
+==============
 Version 2.20.0
 ==============
 
