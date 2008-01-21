@@ -285,7 +285,7 @@ class BookmarkHTMLParser(HTMLParser):
 
         implicit_close_scope = tag_info.get('implicit_close_scope', None)
         implicit_close_tags  = tag_info.get('implicit_close_tags',  None)
-        if not (implicit_close_scope or implict_close_tags):
+        if not (implicit_close_scope or implicit_close_tags):
             return
         
         scope_index = len(self.stack) - 1
@@ -428,5 +428,5 @@ if __name__ == "__main__":
         util.dump_change_set(cs)
 
     if False:
-        bm_file.folder_root.write("tmp_bookmarks.html", exclude_attrs=exclude_attrs)
+        bm_file.folder_root.write("tmp_bookmarks.html", exclude_attrs=bm_file.bookmark_exclude_attrs)
 
