@@ -139,10 +139,10 @@ else
       XINITRC_SYSCONFDIR=""
       ;;
     gentoo)
-      XSESSION="/etc/X11/xdm/Xsession"
-      SESSION_NAME="gnome"
+      XSESSION="/etc/X11/gdm/Xsession"
+      SESSION_NAME="gnome-session"
       install_xinitrc_script="no"
-      XINITRC_SYSCONFDIR=""
+      XINITRC_SYSCONFDIR="X11/xinit/xinitrc.d"
       ;;
     suse)
       XSESSION="/etc/gdm/Xsession"
