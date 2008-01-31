@@ -11,14 +11,13 @@ msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-10-21 20:04+0100\n"
-"PO-Revision-Date: 2007-08-27 09:53+0000\n"
-"Last-Translator: Youssef Chahibi <chahibi@gmail.com>\n"
+"PO-Revision-Date: 2008-01-20 15:38+0100\n"
+"Last-Translator: Djihed Afifi <djihed@gmail.com>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n==2 ? 1 : n>=3 && n<=10 ? 2 : "
-"3\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n==2 ? 1 : n>=3 && n<=10 ? 2 : 3\n"
 "X-Generator: KBabel 1.11.2\n"
 
 #: ../admin-tool/aboutdialog.py:63
@@ -46,7 +45,8 @@ msgstr "تجاهل"
 msgid "Lock"
 msgstr "أقفل"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:230
+#: ../admin-tool/changeswindow.py:127
+#: ../admin-tool/editorwindow.py:230
 msgid "Description"
 msgstr "شرح"
 
@@ -55,15 +55,18 @@ msgstr "شرح"
 msgid "Profile %s"
 msgstr "الملف الشخصي %s"
 
-#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/editorwindow.py:195
+#: ../admin-tool/sessionwindow.py:176
 msgid "_Profile"
 msgstr "_ملف شخصي"
 
-#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:196
+#: ../admin-tool/sessionwindow.py:177
 msgid "_Save"
 msgstr "ا_حفظ"
 
-#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:196
+#: ../admin-tool/sessionwindow.py:177
 msgid "Save profile"
 msgstr "احفظ الملف الشخصي"
 
@@ -71,11 +74,13 @@ msgstr "احفظ الملف الشخصي"
 msgid "_Close"
 msgstr "أ_غلق"
 
-#: ../admin-tool/editorwindow.py:197 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:197
+#: ../admin-tool/sessionwindow.py:178
 msgid "Close the current window"
 msgstr "أغلق النافذة الحالية"
 
-#: ../admin-tool/editorwindow.py:198 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:198
+#: ../admin-tool/sessionwindow.py:179
 msgid "_Edit"
 msgstr "_حرِّر"
 
@@ -87,23 +92,28 @@ msgstr "اح_ذف"
 msgid "Delete item"
 msgstr "احذف عنصر"
 
-#: ../admin-tool/editorwindow.py:200 ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/editorwindow.py:200
+#: ../admin-tool/sessionwindow.py:182
 msgid "_Help"
 msgstr "_مساعدة"
 
-#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:201
+#: ../admin-tool/sessionwindow.py:183
 msgid "_About"
 msgstr "ح_وْل"
 
-#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:201
+#: ../admin-tool/sessionwindow.py:183
 msgid "About Sabayon"
 msgstr "حوْل سابايون"
 
-#: ../admin-tool/editorwindow.py:262 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:262
+#: ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:266
+#: ../lib/sources/filessource.py:79
 msgid "Files"
 msgstr "ملفات"
 
@@ -118,7 +128,8 @@ msgstr "شريط"
 msgid "Profile file: %s"
 msgstr "ملف الملف الشخصي %s"
 
-#: ../admin-tool/gconfviewer.py:57 ../admin-tool/gconfviewer.py:76
+#: ../admin-tool/gconfviewer.py:57
+#: ../admin-tool/gconfviewer.py:76
 msgid "<no type>"
 msgstr "<نوع غير محدد>"
 
@@ -159,7 +170,8 @@ msgstr "زوج"
 msgid "Profile settings: %s"
 msgstr "خصائص الملف الشخصي: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:384
+#: ../admin-tool/gconfviewer.py:110
+#: ../admin-tool/profilesdialog.py:384
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "اسم"
@@ -475,29 +487,20 @@ msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:77
-msgid ""
-"Your account does not have permissions to run the Desktop User Profiles tool"
+msgid "Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr "ليس لحسابك صلاحيات تشغيل أداة سطح المكتب للملفات الشخصية المستخدمين"
 
 #: ../admin-tool/sabayon:78
-msgid ""
-"Administrator level permissions are needed to run this program because it "
-"can modify system files."
-msgstr ""
-"صلاحيات مدير النظام مطلوبة لتشغيل هذا البرنامج حيث أنه قد يغير في ملفات "
-"النظام"
+msgid "Administrator level permissions are needed to run this program because it can modify system files."
+msgstr "صلاحيات مدير النظام مطلوبة لتشغيل هذا البرنامج حيث أنه قد يغير في ملفات النظام"
 
 #: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
 msgstr "أداة سطح المكتب للملفات الشخصية تعمل مسبقا"
 
 #: ../admin-tool/sabayon:84
-msgid ""
-"You may not use Desktop User Profiles tool from within a profile editing "
-"session"
-msgstr ""
-"لايمكنك استخدام أداة سطح المكتب للملفات الشخصية من خلال جلسة تحرير الحساب "
-"الشخصي"
+msgid "You may not use Desktop User Profiles tool from within a profile editing session"
+msgstr "لايمكنك استخدام أداة سطح المكتب للملفات الشخصية من خلال جلسة تحرير الحساب الشخصي"
 
 #: ../admin-tool/sabayon:91
 #, c-format
@@ -506,31 +509,18 @@ msgstr "حساب المستخدم '%s' غير موجود"
 
 #: ../admin-tool/sabayon:92
 #, c-format
-msgid ""
-"Sabayon requires a special user account '%s' to be present on this computer. "
-"Try again after creating the account (using, for example, the 'adduser' "
-"command)"
-msgstr ""
-"سابايون بحاجة إلى حساب مستخدم '%s' من نوع خاص لأن يكون متواجدا على هذا "
-"الجهاز. حاول مرة أخرى بعد إنشاء حساب المستخدم المطلوب باستخدام الأمر "
-"('adduser') مثلا"
+msgid "Sabayon requires a special user account '%s' to be present on this computer. Try again after creating the account (using, for example, the 'adduser' command)"
+msgstr "سابايون بحاجة إلى حساب مستخدم '%s' من نوع خاص لأن يكون متواجدا على هذا الجهاز. حاول مرة أخرى بعد إنشاء حساب المستخدم المطلوب باستخدام الأمر ('adduser') مثلا"
 
 #: ../admin-tool/sabayon:131
 #, c-format
-msgid ""
-"A fatal error has occurred.  You can help us fix the problem by sending the "
-"log in %s to %s"
-msgstr ""
-"حدث خطأ فادح. يمكنك المساعدة على حل هذا المشكل بإرسال اسم الولوج %s إلى %s"
+msgid "A fatal error has occurred.  You can help us fix the problem by sending the log in %s to %s"
+msgstr "حدث خطأ فادح. يمكنك المساعدة على حل هذا المشكل بإرسال اسم الولوج %s إلى %s"
 
 #: ../admin-tool/sabayon:145
 #, c-format
-msgid ""
-"Sabayon will now exit.  There were some recoverable errors, and you can help "
-"us debug the problem by sending the log in %s to %s"
-msgstr ""
-"سيغادر سابايون الآن. كانت هناك أخطاء يمكن حلها، يمكنك المساعدة على حل هذا "
-"المشكل بإرسال اسم الولوج %s إلى %s"
+msgid "Sabayon will now exit.  There were some recoverable errors, and you can help us debug the problem by sending the log in %s to %s"
+msgstr "سيغادر سابايون الآن. كانت هناك أخطاء يمكن حلها، يمكنك المساعدة على حل هذا المشكل بإرسال اسم الولوج %s إلى %s"
 
 #: ../admin-tool/sabayon-apply:98
 #, c-format
@@ -550,13 +540,15 @@ msgstr "الإستخدام: %s <اسم-الملف-الشخصي> <مسار-الم
 msgid "Establish and Edit Profiles for Users"
 msgstr "إنشاء و تحرير الملفات الشخصية للمستخدمين"
 
-#: ../admin-tool/sabayon.desktop.in.h:2 ../admin-tool/sabayon.glade.h:4
+# This is a menu entry. Keep it short.
+#: ../admin-tool/sabayon.desktop.in.h:2
+#: ../admin-tool/sabayon.glade.h:4
 msgid "User Profile Editor"
-msgstr "محرر الحسابات الشخصية للمستخدمين"
+msgstr "محرر الحسابات"
 
 #: ../admin-tool/sabayon.glade.h:1
 msgid "Add Profile"
-msgstr "أضِف حساب شخصي"
+msgstr "ضِف حسابا شخصيا"
 
 #: ../admin-tool/sabayon.glade.h:2
 msgid "Profile _name:"
@@ -580,15 +572,15 @@ msgstr "_حسابات المستخدمين:"
 
 #: ../admin-tool/sabayon.glade.h:8
 msgid "_Users"
-msgstr "ال_مستخدمين"
+msgstr "ال_مستخدمون"
 
 #: ../admin-tool/sabayon.glade.h:9
 msgid "_Users:"
-msgstr "ال_مستخدمين:"
+msgstr "ال_مستخدمون:"
 
 #: ../admin-tool/saveconfirm.py:34
 msgid "Close _Without Saving"
-msgstr "أ_غلق بدون حفظ"
+msgstr "أ_غلق من دون حفظ"
 
 #: ../admin-tool/saveconfirm.py:41
 #, python-format
@@ -597,101 +589,56 @@ msgstr "حفظ التعديلات للحساب الشخصي \"%s\" قبل الإ
 
 #: ../admin-tool/saveconfirm.py:45
 #, python-format
-msgid ""
-"If you don't save, changes from the last %ld second will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld seconds will be permanently "
-"lost."
-msgstr[0] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثانية."
-msgstr[1] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثانية."
-msgstr[2] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثوان."
-msgstr[3] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثانية."
+msgid "If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural "If you don't save, changes from the last %ld seconds will be permanently lost."
+msgstr[0] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثانية."
+msgstr[1] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثانية."
+msgstr[2] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثوان."
+msgstr[3] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثانية."
 
 #: ../admin-tool/saveconfirm.py:51
-msgid ""
-"If you don't save, changes from the last minute will be permanently lost."
+msgid "If you don't save, changes from the last minute will be permanently lost."
 msgstr "ستفقد التعديلات منذ آخر دقيقة بشكل دائم في حالة عدم الحفظ."
 
 #: ../admin-tool/saveconfirm.py:55
 #, python-format
-msgid ""
-"If you don't save, changes from the last minute and %ld second will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last minute and %ld seconds will be "
-"permanently lost."
-msgstr[0] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر دقيقة و %ld "
-"ثانية."
-msgstr[1] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر دقيقة و %ld "
-"ثانية."
-msgstr[2] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر دقيقة و %ld "
-"ثوان."
-msgstr[3] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر دقيقة و %ld "
-"ثانية."
+msgid "If you don't save, changes from the last minute and %ld second will be permanently lost."
+msgid_plural "If you don't save, changes from the last minute and %ld seconds will be permanently lost."
+msgstr[0] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر دقيقة و %ld ثانية."
+msgstr[1] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر دقيقة و %ld ثانية."
+msgstr[2] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر دقيقة و %ld ثوان."
+msgstr[3] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر دقيقة و %ld ثانية."
 
 #: ../admin-tool/saveconfirm.py:62
 #, python-format
-msgid ""
-"If you don't save, changes from the last %ld minute will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld minutes will be permanently "
-"lost."
-msgstr[0] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقيقة."
-msgstr[1] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقيقة."
-msgstr[2] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقائق."
-msgstr[3] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقيقة."
+msgid "If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural "If you don't save, changes from the last %ld minutes will be permanently lost."
+msgstr[0] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقيقة."
+msgstr[1] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقيقة."
+msgstr[2] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقائق."
+msgstr[3] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقيقة."
 
-#
 #: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
 msgstr "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر ساعة."
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
-msgid ""
-"If you don't save, changes from the last hour and %d minute will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last hour and %d minutes will be "
-"permanently lost."
-msgstr[0] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر ساعة و %d "
-"دقائق."
-msgstr[1] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر ساعة و %d "
-"دقيقة."
-msgstr[2] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر ساعة و %d "
-"دقائق."
-msgstr[3] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر ساعة و %d "
-"دقيقة."
+msgid "If you don't save, changes from the last hour and %d minute will be permanently lost."
+msgid_plural "If you don't save, changes from the last hour and %d minutes will be permanently lost."
+msgstr[0] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر ساعة و %d دقائق."
+msgstr[1] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر ساعة و %d دقيقة."
+msgstr[2] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر ساعة و %d دقائق."
+msgstr[3] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر ساعة و %d دقيقة."
 
 #: ../admin-tool/saveconfirm.py:81
 #, python-format
-msgid ""
-"If you don't save, changes from the last %d hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
+msgid "If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
 msgstr[0] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر ساعة."
-msgstr[1] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر ساعتان."
-msgstr[2] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %d  ساعات."
-msgstr[3] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %d  ساعة."
+msgstr[1] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر ساعتان."
+msgstr[2] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %d  ساعات."
+msgstr[3] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %d  ساعة."
 
 #: ../admin-tool/sessionwindow.py:154
 #, python-format
@@ -733,12 +680,8 @@ msgstr "اقفل الإعدادات الخاصة بـ %s"
 
 #: ../admin-tool/sessionwindow.py:333
 #, python-format
-msgid ""
-"There was a recoverable error while applying the user profile '%s'.  You can "
-"report this error now or try to continue editing the user profile."
-msgstr ""
-"حدث خطأ يمكن حلّه أثناء تطبيق الملف الشخصي '%s'. يمكن التقرير عن هذا الخطأ "
-"الآن أو المواصلة في تحرير الملف الشخصي للمستخدم."
+msgid "There was a recoverable error while applying the user profile '%s'.  You can report this error now or try to continue editing the user profile."
+msgstr "حدث خطأ يمكن حلّه أثناء تطبيق الملف الشخصي '%s'. يمكن التقرير عن هذا الخطأ الآن أو المواصلة في تحرير الملف الشخصي للمستخدم."
 
 #: ../admin-tool/sessionwindow.py:337
 msgid "_Report this error"
@@ -771,8 +714,7 @@ msgstr "فشل في بدء تشغيل Xnest: ماتت العملية أثناء 
 
 #: ../lib/protosession.py:501
 #, python-format
-msgid ""
-"There was a recoverable error while applying the user profile from file '%s'."
+msgid "There was a recoverable error while applying the user profile from file '%s'."
 msgstr "حدث خطأ يمكن حلّه أثناء تطبيق الملف الشخصي من الملف'%s'."
 
 #: ../lib/protosession.py:510
@@ -883,11 +825,13 @@ msgstr "مفتاح موزيلا '%s' غير محدد"
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "مفتاح موزيلا '%s' تغير إلى '%s'"
 
-#: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
+#: ../lib/sources/mozillasource.py:166
+#: ../lib/sources/mozillasource.py:176
 msgid "Web browser preferences"
 msgstr "خصائص متصفح الويب"
 
-#: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
+#: ../lib/sources/mozillasource.py:168
+#: ../lib/sources/mozillasource.py:178
 msgid "Web browser bookmarks"
 msgstr "علامات المواقع لمتصفح الويب"
 
@@ -1101,7 +1045,8 @@ msgstr "لايمكن إضافة ملف غير موجود '%s'"
 msgid "Profile is read-only %s"
 msgstr "الملف الشخصي للقراءة فقط %s"
 
-#: ../lib/unittests.py:38 ../lib/unittests.py:39
+#: ../lib/unittests.py:38
+#: ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
 msgstr "تجاهل الأخطاء"
 
@@ -1160,7 +1105,8 @@ msgstr "تعذر فتح %s للكتابة"
 msgid "Failed to save UserDatabase to %s"
 msgstr "فشل في حفظ قاعدة بيانات المستخدم إلى %s"
 
-#: ../lib/userdb.py:378 ../lib/userdb.py:413
+#: ../lib/userdb.py:378
+#: ../lib/userdb.py:413
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "%s ليس بملف إعدادات الملف الشخصي"
@@ -1180,17 +1126,10 @@ msgid "Failed to get the user list"
 msgstr "فشل في الحصول على قائمة المستخدمين"
 
 #: ../lib/util.py:91
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"تعذر إيجاد مجلد الموطن: المجلد غير محدد في /etc/passwd و ليس للمتغير $HOME "
-"قيمة في بيئة الاستخدام"
+msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+msgstr "تعذر إيجاد مجلد الموطن: المجلد غير محدد في /etc/passwd و ليس للمتغير $HOME قيمة في بيئة الاستخدام"
 
 #: ../lib/util.py:104
-msgid ""
-"Cannot find username: not set in /etc/passwd and no value for $USER in "
-"environment"
-msgstr ""
-"تعذر إيجاد اسم المستخدم: اسم المستخدم غير محدد في /etc/passwd و ليس للمتغير "
-"$USER قيمة في بيئة الإستخدام"
+msgid "Cannot find username: not set in /etc/passwd and no value for $USER in environment"
+msgstr "تعذر إيجاد اسم المستخدم: اسم المستخدم غير محدد في /etc/passwd و ليس للمتغير $USER قيمة في بيئة الإستخدام"
+
