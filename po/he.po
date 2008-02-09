@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-08 18:00+0000\n"
+"POT-Creation-Date: 2008-01-29 13:01+0000\n"
 "PO-Revision-Date: 2008-01-08 03:18+0000\n"
 "Last-Translator: Yair Hershkovitz  <yairhr@gmail.com>\n"
 "Language-Team: he\n"
@@ -186,7 +186,7 @@ msgstr "נטרל ה_דפסה"
 
 #: ../admin-tool/lockdown/maindialog.py:51
 msgid "Disable print _setup"
-msgstr ""
+msgstr "נטרל ה_גדרות הדפסה"
 
 #: ../admin-tool/lockdown/maindialog.py:52
 msgid "Disable save to _disk"
@@ -210,7 +210,7 @@ msgstr "נטרל _התנתקות"
 
 #: ../admin-tool/lockdown/maindialog.py:59
 msgid "Disable _quit"
-msgstr ""
+msgstr "נטרל י_ציאה"
 
 #: ../admin-tool/lockdown/maindialog.py:60
 msgid "Disable _arbitrary URL"
@@ -264,7 +264,7 @@ msgstr "הזהר במידה והמאקרו מנסה לחתום על מסמך"
 
 #: ../admin-tool/lockdown/maindialog.py:75
 msgid "Recommend password when saving a document"
-msgstr ""
+msgstr "המלץ על סיסמה כאשר שומרים מסמך"
 
 #: ../admin-tool/lockdown/maindialog.py:77
 msgid "Enable auto-save"
@@ -273,7 +273,7 @@ msgstr "אפשר שמירה אוטומטית"
 #. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
 #: ../admin-tool/lockdown/maindialog.py:79
 msgid "Printing should mark the document as modified"
-msgstr ""
+msgstr "הדפסה צריכה לסמן את המסמך כאילו נקרא"
 
 #: ../admin-tool/lockdown/maindialog.py:80
 msgid "Use system's file dialog"
@@ -281,11 +281,11 @@ msgstr ""
 
 #: ../admin-tool/lockdown/maindialog.py:81
 msgid "Create backup copy on save"
-msgstr ""
+msgstr "צור העתק גיבוי בשמירה"
 
 #: ../admin-tool/lockdown/maindialog.py:82
 msgid "Warn when saving non-OpenOffice.org formats"
-msgstr ""
+msgstr "הזהר כאשר שומרים בתצורה שאינה OpenOffice.org"
 
 #: ../admin-tool/lockdown/maindialog.py:84
 msgid "Use OpenGL"
@@ -405,7 +405,7 @@ msgstr "<b>פרוטוקולים בטוחים</b>"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:29
 msgid "Default format for presentations:"
-msgstr ""
+msgstr "תצורת ברירת המחדל עבור מצגות:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:30
 msgid "Default format for spreadsheet:"
@@ -417,11 +417,11 @@ msgstr ""
 
 #: ../admin-tool/lockdown/pessulus.glade.h:32
 msgid "Default icon size"
-msgstr ""
+msgstr "ברירת המחדל עבור גודל סמל"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:33
 msgid "Disable _unsafe protocols"
-msgstr ""
+msgstr "נטרל _פרוטוקולים לא בטוחים"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:34
 msgid "Epiphany Web Browser"
@@ -495,7 +495,7 @@ msgstr ""
 #: ../admin-tool/sabayon:91
 #, c-format
 msgid "User account '%s' was not found"
-msgstr ""
+msgstr "חשבון המשתמש '%s' לא נימצא"
 
 #: ../admin-tool/sabayon:92
 #, c-format
@@ -730,7 +730,7 @@ msgstr ""
 #: ../lib/sources/filessource.py:69
 #, python-format
 msgid "File '%s' created"
-msgstr ""
+msgstr "הקובץ '%s' נוצר"
 
 #: ../lib/sources/filessource.py:71
 #, python-format
@@ -809,11 +809,11 @@ msgstr ""
 
 #: ../lib/sources/gconfsource.py:137
 msgid "Default GConf settings"
-msgstr ""
+msgstr "הגדרות ברירת המחדל של GConf"
 
 #: ../lib/sources/gconfsource.py:139
 msgid "Mandatory GConf settings"
-msgstr ""
+msgstr "הגדרות GConf הכרחיות"
 
 #: ../lib/sources/mozillasource.py:133
 #, python-format
@@ -845,7 +845,7 @@ msgstr ""
 #: ../lib/sources/mozillasource.py:522
 #, python-format
 msgid "File Not Found (%s)"
-msgstr ""
+msgstr "קובץ לא נמצא (%s)"
 
 #: ../lib/sources/mozillasource.py:873
 #, python-format
@@ -864,131 +864,139 @@ msgstr "אין פרופיל ברירת מחדל"
 #: ../lib/sources/mozillasource.py:954
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
-msgstr ""
+msgstr "סימניית Mozilla נוצרה '%s' -> '%s'"
 
 #: ../lib/sources/mozillasource.py:956
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
-msgstr ""
+msgstr "ספריית סימניות Mozilla נוצרה '%s'"
 
 #: ../lib/sources/mozillasource.py:959
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
-msgstr ""
+msgstr "סימניית Mozilla נמחקה '%s'"
 
 #: ../lib/sources/mozillasource.py:961
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
-msgstr ""
+msgstr "ספריית סימניות Mozilla נמחקה '%s'"
 
 #: ../lib/sources/mozillasource.py:964
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
-msgstr ""
+msgstr "סימניית Mozilla השתנתה '%s' -> '%s'"
 
 #: ../lib/sources/mozillasource.py:966
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
-msgstr ""
+msgstr "ספריית סימניות Mozilla השתנתה '%s'"
 
 #: ../lib/sources/paneldelegate.py:55
 #, python-format
 msgid "Panel '%s' added"
-msgstr ""
+msgstr "לוח '%s' הוסף"
 
 #: ../lib/sources/paneldelegate.py:61
 #, python-format
 msgid "Panel '%s' removed"
-msgstr ""
+msgstr "לוח '%s' הוסר"
 
 #: ../lib/sources/paneldelegate.py:76
 #, python-format
 msgid "Applet %s added to top panel"
-msgstr ""
+msgstr "יישומון %s הוסף ללוח העליון"
 
 #: ../lib/sources/paneldelegate.py:78
 #, python-format
 msgid "Applet %s added to bottom panel"
-msgstr ""
+msgstr "יישומון %s הוסף ללוח התחתון"
 
 #: ../lib/sources/paneldelegate.py:80
 #, python-format
 msgid "Applet %s added to left panel"
-msgstr ""
+msgstr "יישומון %s הוסף ללוח השמאלי"
 
 #: ../lib/sources/paneldelegate.py:82
 #, python-format
 msgid "Applet %s added to right panel"
-msgstr ""
+msgstr "יישומון %s הוסף ללוח הימני"
 
 #: ../lib/sources/paneldelegate.py:97
 #, python-format
 msgid "Applet %s removed from top panel"
-msgstr ""
+msgstr "יישומון %s הוסר מהלוח העליון"
 
 #: ../lib/sources/paneldelegate.py:99
 #, python-format
 msgid "Applet %s removed from bottom panel"
-msgstr ""
+msgstr "יישומון %s הוסר מהלוח התחתון"
 
 #: ../lib/sources/paneldelegate.py:101
 #, python-format
 msgid "Applet %s removed from left panel"
-msgstr ""
+msgstr "יישומון %s הוסר מהלוח השמאלי"
 
 #: ../lib/sources/paneldelegate.py:103
 #, python-format
 msgid "Applet %s removed from right panel"
-msgstr ""
+msgstr "יישומון %s הוסר מהלוח הימני"
 
 #: ../lib/sources/paneldelegate.py:117
 #, python-format
 msgid "%s added to top panel"
 msgstr ""
+"‏%s הוסף ללוח העליון"
 
 #: ../lib/sources/paneldelegate.py:119
 #, python-format
 msgid "%s added to bottom panel"
 msgstr ""
+"‏%s הוסף ללוח התחתון"
 
 #: ../lib/sources/paneldelegate.py:121
 #, python-format
 msgid "%s added to left panel"
 msgstr ""
+"‏%s הוסף ללוח השמאלי"
 
 #: ../lib/sources/paneldelegate.py:123
 #, python-format
 msgid "%s added to right panel"
 msgstr ""
+"‏%s הוסף ללוח הימני"
 
 #: ../lib/sources/paneldelegate.py:144
 #, python-format
 msgid "%s removed from top panel"
 msgstr ""
+"‏%s הוסר מהלוח העליון"
 
 #: ../lib/sources/paneldelegate.py:146
 #, python-format
 msgid "%s removed from bottom panel"
 msgstr ""
+"‏%s הוסר מהלוח התחתון"
 
 #: ../lib/sources/paneldelegate.py:148
 #, python-format
 msgid "%s removed from left panel"
 msgstr ""
+"‏%s הוסר מהלוח השמאלי"
 
 #: ../lib/sources/paneldelegate.py:150
 #, python-format
 msgid "%s removed from right panel"
 msgstr ""
+"‏%s הוסר מהלוח הימני"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
 #: ../lib/sources/paneldelegate.py:200
 msgid "Drawer"
-msgstr ""
+msgstr "מגירה"
 
 #: ../lib/sources/paneldelegate.py:202
 msgid "Main Menu"
-msgstr ""
+msgstr "תפריט ראשי"
 
 #: ../lib/sources/paneldelegate.py:212
 #, python-format
@@ -997,11 +1005,11 @@ msgstr ""
 
 #: ../lib/sources/paneldelegate.py:216
 msgid "Lock Screen button"
-msgstr ""
+msgstr "כפתור נעילת מסך"
 
 #: ../lib/sources/paneldelegate.py:218
 msgid "Logout button"
-msgstr ""
+msgstr "כפתור התנתקות"
 
 #: ../lib/sources/paneldelegate.py:220
 msgid "Run Application button"
@@ -1009,11 +1017,11 @@ msgstr "כפתור הפעל יישום"
 
 #: ../lib/sources/paneldelegate.py:222
 msgid "Search button"
-msgstr ""
+msgstr "כפתור חיפוש"
 
 #: ../lib/sources/paneldelegate.py:224
 msgid "Screenshot button"
-msgstr ""
+msgstr "כפתור צילום מסך"
 
 #: ../lib/sources/paneldelegate.py:226
 msgid "Menu Bar"
@@ -1021,12 +1029,12 @@ msgstr ""
 
 #: ../lib/sources/paneldelegate.py:470
 msgid "Panel File"
-msgstr ""
+msgstr "קובץ לוח"
 
 #: ../lib/storage.py:172
 #, python-format
 msgid "Failed to read file '%s': %s"
-msgstr ""
+msgstr "נכשל בקריאת הקובץ '%s': %s"
 
 #: ../lib/storage.py:182
 #, python-format
@@ -1050,21 +1058,21 @@ msgstr ""
 
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
-msgstr ""
+msgstr "התעלם מאזהרות"
 
 #: ../lib/unittests.py:61
 #, python-format
 msgid "Running %s tests"
-msgstr ""
+msgstr "מריץ %s בדיקות"
 
 #: ../lib/unittests.py:63
 #, python-format
 msgid "Running %s tests (%s)"
-msgstr ""
+msgstr "מריץ %s בדיקות (%s)"
 
 #: ../lib/unittests.py:70
 msgid "Success!"
-msgstr ""
+msgstr "הצלחה!"
 
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
