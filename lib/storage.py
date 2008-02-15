@@ -39,7 +39,7 @@ def recursive_del (path):
         return
 
     if os.path.isdir (path):
-	for file in os.listdir (path):
+        for file in os.listdir (path):
             subpath = os.path.join (path, file)
             recursive_del (subpath)
         os.rmdir (path)
@@ -73,10 +73,10 @@ def copy_tree (dst_base, src_base, dst_name, src_name = None, overwrite = False)
 def unlink_children(node):
     children = node.children
     while children:
-	  tmp = children
-	  children = children.next
-	  tmp.unlinkNode()
-	  tmp.freeNode()
+        tmp = children
+        children = children.next
+        tmp.unlinkNode()
+        tmp.freeNode()
 
 class ProfileStorageException (Exception):
     pass
@@ -107,23 +107,23 @@ class ProfileStorage:
         /etc/desktop-profiles/$(name).zip.
         """
         self.name = name
-	self.readonly = 0
+        self.readonly = 0
 
         if not os.path.isabs (self.name):
-	    try:
-	        protocol = urlparse.urlparse(self.name)[0]
-	        if protocol == "":
-		    self.path = os.path.join (PROFILESDIR, self.name + ".zip")
-		else:
-		    # if someone uses file:/// they deserve to have troubles
-		    self.readonly == 1
-		    cachou = cache.get_default_cache()
-		    self.path = cachou.get_resource(self.name)
-		    if self.path == None:
-		        self.path = self.name
+            try:
+                protocol = urlparse.urlparse(self.name)[0]
+                if protocol == "":
+                    self.path = os.path.join (PROFILESDIR, self.name + ".zip")
+                else:
+                    # if someone uses file:/// they deserve to have troubles
+                    self.readonly == 1
+                    cachou = cache.get_default_cache()
+                    self.path = cachou.get_resource(self.name)
+                    if self.path == None:
+                        self.path = self.name
 
-	    except:
-		self.path = os.path.join (PROFILESDIR, self.name + ".zip")
+            except:
+                self.path = os.path.join (PROFILESDIR, self.name + ".zip")
         else:
             self.path = name
 
@@ -564,7 +564,7 @@ class ProfileStorage:
         """Save the contents of the profile to
         /etc/desktop-profiles/$(name).zip.
         """
-	if self.readonly:
+        if self.readonly:
             raise ProfileStorageException (_("Profile is read-only %s") %
                                            (self.name))
         self.__read_metadata ()
