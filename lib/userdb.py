@@ -47,7 +47,7 @@ def get_setting (node, setting, default = None, convert_to = str):
         try:
             return convert_to (a.content)
         except:
-	    np = node.nodePath()
+            np = node.nodePath()
             # Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
             # do not change the way they are written.  The intended string is
             # something like "invalid type for setting blah in /ldap/path/to/blah"
@@ -97,31 +97,31 @@ class UserDatabase:
         """
         if db_file is None:
             file = os.path.join (config.PROFILESDIR, "users.xml")
-	elif db_file[0] != '/':
+        elif db_file[0] != '/':
             file = os.path.join (config.PROFILESDIR, db_file)
-	else:
-	    file = db_file
-	self.file = file;
-	self.modified = 0
-	dprint("New UserDatabase(%s) object\n" % self.file)
+        else:
+            file = db_file
+        self.file = file;
+        self.modified = 0
+        dprint("New UserDatabase(%s) object\n" % self.file)
 
-	try:
-	    self.doc = libxml2.readFile(file, None, libxml2.XML_PARSE_NOBLANKS)
-	    # Process XInclude statements
-	    self.doc.xincludeProcess()
-	except:
-	    # TODO add fallback to last good database
-	    dprint("failed to parse %s falling back to default conf\n" %
-	           self.file)
-	    self.doc = None
-	if self.doc == None:
-	    self.doc = libxml2.readMemory(defaultConf, len(defaultConf),
-	                                  None, None,
-	                                  libxml2.XML_PARSE_NOBLANKS);
+        try:
+            self.doc = libxml2.readFile(file, None, libxml2.XML_PARSE_NOBLANKS)
+            # Process XInclude statements
+            self.doc.xincludeProcess()
+        except:
+            # TODO add fallback to last good database
+            dprint("failed to parse %s falling back to default conf\n" %
+                   self.file)
+            self.doc = None
+        if self.doc == None:
+            self.doc = libxml2.readMemory(defaultConf, len(defaultConf),
+                                          None, None,
+                                          libxml2.XML_PARSE_NOBLANKS);
 
     def __del__ (self):
         if self.doc != None:
-	    self.doc.freeDoc()
+            self.doc.freeDoc()
 
     def __profile_name_to_location (self, profile, node):
         if not profile:
@@ -131,45 +131,45 @@ class UserDatabase:
         if uri:
             return uri
 
-	# do the necessary URI escaping of the profile name if needed
+        # do the necessary URI escaping of the profile name if needed
         orig_profile = profile
-	try:
-	    tmp = parseURI(profile)
-	except:
-	    profile = libxml2.URIEscapeStr(profile, "/:")
+        try:
+            tmp = parseURI(profile)
+        except:
+            profile = libxml2.URIEscapeStr(profile, "/:")
 
-	# if there is a base on the node, then use 
-	if node != None:
-	    try:
-		base = node.getBase(None)
-		if base != None and base != "" and \
-		   base != os.path.join (config.PROFILESDIR, "users.xml"):
-		    # URI composition from the base
+        # if there is a base on the node, then use 
+        if node != None:
+            try:
+                base = node.getBase(None)
+                if base != None and base != "" and \
+                   base != os.path.join (config.PROFILESDIR, "users.xml"):
+                    # URI composition from the base
                     ret = libxml2.buildURI(profile, base)
-		    if ret[0] == '/':
-		        ret = libxml2.URIUnescapeString(ret, len(ret), None)
-		    dprint("Converted profile name '%s' to location '%s'\n",
+                    if ret[0] == '/':
+                        ret = libxml2.URIUnescapeString(ret, len(ret), None)
+                    dprint("Converted profile name '%s' to location '%s'\n",
                            orig_profile, ret)
                     return ret
-	    except:
-		pass
-	try:
-	    uri = libxml2.parseURI(profile);
-	    if uri.scheme() is None:
-	        # it is a file path
-		if profile[0] != '/':
-		    profile = os.path.join (config.PROFILESDIR, profile)
-		if profile[-4:] != ".zip":
-		    profile = profile + ".zip"
-	    else:
-	        # TODO need to make a local copy or use the local copy
-		profile = profile
-	except:
-	    # we really expect an URI there
-	    profile = None
+            except:
+                pass
+        try:
+            uri = libxml2.parseURI(profile);
+            if uri.scheme() is None:
+                # it is a file path
+                if profile[0] != '/':
+                    profile = os.path.join (config.PROFILESDIR, profile)
+                if profile[-4:] != ".zip":
+                    profile = profile + ".zip"
+            else:
+                # TODO need to make a local copy or use the local copy
+                profile = profile
+        except:
+            # we really expect an URI there
+            profile = None
 
-	if profile[0] == '/':
-	    profile = libxml2.URIUnescapeString(profile, len(profile), None)
+        if profile[0] == '/':
+            profile = libxml2.URIUnescapeString(profile, len(profile), None)
         dprint("Converted profile name '%s' to location '%s'\n",
                orig_profile, profile)
         return profile
@@ -265,12 +265,12 @@ class UserDatabase:
         object, or the default profile name if @profile_location is
         False.
         """
-	default = None
-	try:
-	    default = self.doc.xpathEval("/profiles/default")[0]
-	    profile = default.prop("profile")
-	except:
-	    profile = None
+        default = None
+        try:
+            default = self.doc.xpathEval("/profiles/default")[0]
+            profile = default.prop("profile")
+            except:
+                profile = None
 
         if not profile_location:
             return profile
@@ -301,13 +301,13 @@ class UserDatabase:
                 profile = user.prop("profile")
             except:
                 profile = None
-	if not profile and not ignore_default:
-	    try:
-	        query = "/profiles/default[1][@profile]"
-		user = self.doc.xpathEval(query)[0]
-		profile = user.prop("profile")
-	    except:
-	        profile = None
+        if not profile and not ignore_default:
+            try:
+                query = "/profiles/default[1][@profile]"
+                user = self.doc.xpathEval(query)[0]
+                profile = user.prop("profile")
+            except:
+                profile = None
         
         if not profile_location:
             return profile
@@ -317,44 +317,44 @@ class UserDatabase:
 
     def __save_as(self, filename = None):
         """Save the current version to the given filename"""
-	if filename == None:
-	    filename = self.file
+        if filename == None:
+            filename = self.file
 
-	dprint("Saving UserDatabase to %s\n", filename)
-	try:
-	    os.rename(filename, filename + ".bak")
-	    backup = 1
-	except:
-	    backup = 0
-	    pass
+        dprint("Saving UserDatabase to %s\n", filename)
+        try:
+            os.rename(filename, filename + ".bak")
+            backup = 1
+        except:
+            backup = 0
+            pass
 
-	try:
-	    f = open(filename, 'w')
-	except:
-	    if backup == 1:
-	        try:
-		    os.rename(filename + ".bak", filename)
-		    dprint("Restore from %s.bak\n", filename)
-		except:
-		    dprint("Failed to restore from %s.bak\n", filename)
+        try:
+            f = open(filename, 'w')
+        except:
+            if backup == 1:
+                try:
+                    os.rename(filename + ".bak", filename)
+                    dprint("Restore from %s.bak\n", filename)
+                except:
+                    dprint("Failed to restore from %s.bak\n", filename)
 
-	    raise UserDatabaseException(
-	              _("Could not open %s for writing") % filename)
-	try:
-	    f.write(self.doc.serialize("UTF-8", format=1))
-	    f.close()
-	except:
-	    if backup == 1:
-	        try:
-		    os.rename(filename + ".bak", filename)
-		    dprint("Restore from %s.bak\n", filename)
-		except:
-		    dprint("Failed to restore from %s.bak\n", filename)
+                raise UserDatabaseException(
+                    _("Could not open %s for writing") % filename)
+        try:
+            f.write(self.doc.serialize("UTF-8", format=1))
+            f.close()
+        except:
+            if backup == 1:
+                try:
+                    os.rename(filename + ".bak", filename)
+                    dprint("Restore from %s.bak\n", filename)
+                except:
+                    dprint("Failed to restore from %s.bak\n", filename)
 
-	    raise UserDatabaseException(
-	              _("Failed to save UserDatabase to %s") % filename)
-	
-	self.modified = 0
+            raise UserDatabaseException(
+                _("Failed to save UserDatabase to %s") % filename)
+
+        self.modified = 0
 
     def set_default_profile (self, profile):
         """Set the default profile to be used for all users.
@@ -363,30 +363,30 @@ class UserDatabase:
         """
         if profile is None:
             profile = ""
-	self.modified = 0
-	try:
-	    default = self.doc.xpathEval("/profiles/default")[0]
-	    oldprofile = default.prop("profile")
-	    if oldprofile != profile:
-	        default.setProp("profile", profile)
-		self.modified = 1
+        self.modified = 0
+        try:
+            default = self.doc.xpathEval("/profiles/default")[0]
+            oldprofile = default.prop("profile")
+            if oldprofile != profile:
+                default.setProp("profile", profile)
+                self.modified = 1
         except:
-	    try:
-		profiles = self.doc.xpathEval("/profiles")[0]
-	    except:
-		raise UserDatabaseException(
-			  _("File %s is not a profile configuration") %
+            try:
+                profiles = self.doc.xpathEval("/profiles")[0]
+            except:
+                raise UserDatabaseException(
+                    _("File %s is not a profile configuration") %
                                            (self.file))
-	    try:
-		default = profiles.newChild(None, "default", None)
-		default.setProp("profile", profile)
-	    except:
-		raise UserDatabaseException(
-			  _("Failed to add default profile %s to configuration") %
+            try:
+                default = profiles.newChild(None, "default", None)
+                default.setProp("profile", profile)
+            except:
+                raise UserDatabaseException(
+                    _("Failed to add default profile %s to configuration") %
                                            (profile))
-	    self.modified = 1
-	if self.modified == 1:
-	    self.__save_as()
+            self.modified = 1
+        if self.modified == 1:
+            self.__save_as()
 
     def set_profile (self, username, profile):
         """Set the profile for a given username.
@@ -397,48 +397,48 @@ class UserDatabase:
         """
         if profile is None:
             profile = ""
-	self.modified = 0
-	try:
-	    query = "/profiles/user[@name='%s']" % username
-	    user = self.doc.xpathEval(query)[0]
-	    oldprofile = user.prop("profile")
-	    if oldprofile != profile:
-	        user.setProp("profile", profile)
-		self.modified = 1
-	except:
-	    try:
-		profiles = self.doc.xpathEval("/profiles")[0]
-	    except:
-		raise UserDatabaseException(
-			  _("File %s is not a profile configuration") %
+        self.modified = 0
+        try:
+            query = "/profiles/user[@name='%s']" % username
+            user = self.doc.xpathEval(query)[0]
+            oldprofile = user.prop("profile")
+            if oldprofile != profile:
+                user.setProp("profile", profile)
+                self.modified = 1
+        except:
+            try:
+                profiles = self.doc.xpathEval("/profiles")[0]
+            except:
+                raise UserDatabaseException(
+                    _("File %s is not a profile configuration") %
                                            (self.file))
-	    try:
-		user = profiles.newChild(None, "user", None)
-		user.setProp("name", username)
-		user.setProp("profile", profile)
-	    except:
-		raise UserDatabaseException(
-			  _("Failed to add user %s to profile configuration") %
+            try:
+                user = profiles.newChild(None, "user", None)
+                user.setProp("name", username)
+                user.setProp("profile", profile)
+            except:
+                raise UserDatabaseException(
+                    _("Failed to add user %s to profile configuration") %
                                            (username))
-	    self.modified = 1
-	if self.modified == 1:
-	    self.__save_as()
-	
+            self.modified = 1
+        if self.modified == 1:
+            self.__save_as()
+
     def get_profiles (self):
         """Return the list of currently available profiles.
         This is basically just list of zip files in
         /etc/desktop-profiles, each without the .zip extension.
         """
-	list = []
-	try:
-	    for file in os.listdir(config.PROFILESDIR):
-	        if file[-4:] != ".zip":
-		    continue
-		list.append(file[0:-4])
-	except:
-	    dprint("Failed to read directory(%s)\n" % (config.PROFILESDIR))
-	# TODO: also list remote profiles as found in self.doc
-	return list
+        list = []
+        try:
+            for file in os.listdir(config.PROFILESDIR):
+                if file[-4:] != ".zip":
+                    continue
+                list.append(file[0:-4])
+        except:
+            dprint("Failed to read directory(%s)\n" % (config.PROFILESDIR))
+        # TODO: also list remote profiles as found in self.doc
+        return list
 
     def is_sabayon_controlled (self, username):
         """Return True if user's configuration was ever under Sabayon's
@@ -465,27 +465,27 @@ class UserDatabase:
         be real users - i.e. should not include system users
         like nobody, gdm, nfsnobody etc.
         """
-	list = []
-	try:
-	    users = pwd.getpwall()
-	except:
-	    raise UserDatabaseException(_("Failed to get the user list"))
+        list = []
+        try:
+            users = pwd.getpwall()
+        except:
+            raise UserDatabaseException(_("Failed to get the user list"))
 
-	for user in pwd.getpwall():
-	    try:
-	        # remove non-users
-		if user[2] < 500:
-		    continue
-		if user[0] in list:
-		    continue
-		if user[6] == "" or string.find(user[6], "nologin") != -1:
-		    continue
+        for user in pwd.getpwall():
+            try:
+                # remove non-users
+                if user[2] < 500:
+                    continue
+                if user[0] in list:
+                    continue
+                if user[6] == "" or string.find(user[6], "nologin") != -1:
+                    continue
                 if user[0][len (user[0]) - 1] == "$":  # Active Directory hosts end in "$"; we don't want to show those as users
                     continue
-		list.append(user[0])
-	    except:
-		pass
-	return list
+                list.append(user[0])
+            except:
+                pass
+        return list
 
 
 

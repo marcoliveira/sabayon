@@ -38,11 +38,11 @@ class cacheRepository:
        try to transfer only files remotely modified from the cache."""
     def __init__(self, directory = None):
         info = None
-	self.directory = None
-	self.catalog = None
-	self.root = None
-	# delay the directory check/creation until needed
-	self.orig_directory = directory
+        self.directory = None
+        self.catalog = None
+        self.root = None
+        # delay the directory check/creation until needed
+        self.orig_directory = directory
 
     def __ensure_directory(self, directory, remove_old):
         try:
@@ -78,193 +78,193 @@ class cacheRepository:
             if info == None:
                 directory = None
                 
-	if directory == None:
+        if directory == None:
             parent_info = self.__ensure_directory (get_home_dir() + "/.sabayon", True)
             if parent_info:
                 directory = get_home_dir() + "/.sabayon/profile_cache"
                 info = self.__ensure_directory (directory, True)
                     
-	if info == None:
-	    dprint("Running with cache deactivated")
-	    self.directory = None
-	    return
-	else:
-	    self.directory = directory
-	if stat.S_IMODE(info[0]) != stat.S_IRUSR + stat.S_IWUSR + stat.S_IXUSR:
-	    dprint("Wrong mode for %s", directory)
-	    try:
-		os.chmod(directory, stat.S_IRUSR + stat.S_IWUSR + stat.S_IXUSR)
-	    except:
-	        dprint("Failed to chmod %s, ignored", directory)
-		self.directory = None
-		return
-	if self.directory == None:
-	    dprint("Running with cache deactivated")
-	    return
+        if info == None:
+            dprint("Running with cache deactivated")
+            self.directory = None
+            return
+        else:
+            self.directory = directory
+        if stat.S_IMODE(info[0]) != stat.S_IRUSR + stat.S_IWUSR + stat.S_IXUSR:
+            dprint("Wrong mode for %s", directory)
+            try:
+                os.chmod(directory, stat.S_IRUSR + stat.S_IWUSR + stat.S_IXUSR)
+            except:
+                dprint("Failed to chmod %s, ignored", directory)
+                self.directory = None
+                return
+        if self.directory == None:
+            dprint("Running with cache deactivated")
+            return
 
-	catalogfile = self.directory + "/catalog.xml"
-	try:
-	    self.catalog = libxml2.readFile(catalogfile, None,
-	                                    libxml2.XML_PARSE_NOBLANKS)
-	except:
-	    dprint("Failed to load catalog from %s" %(catalogfile))
-	    self.catalog = None
+        catalogfile = self.directory + "/catalog.xml"
+        try:
+            self.catalog = libxml2.readFile(catalogfile, None,
+                                            libxml2.XML_PARSE_NOBLANKS)
+        except:
+            dprint("Failed to load catalog from %s" %(catalogfile))
+            self.catalog = None
 
-	if self.catalog != None:
-	    root = self.catalog.getRootElement()
-	    if not root or root.name != "catalog":
-	        dprint("Discarding corrupted catalog")
-		self.catalog.freeDoc ()
-		self.catalog = None
-	    else:
-	        self.root = root
+        if self.catalog != None:
+            root = self.catalog.getRootElement()
+            if not root or root.name != "catalog":
+                dprint("Discarding corrupted catalog")
+                self.catalog.freeDoc ()
+                self.catalog = None
+            else:
+                self.root = root
 
-	# remove empty catalogs
-	if self.catalog == None or self.root == None or \
-	   self.root.children == None:
-	    try:
-		os.unlink(self.directory + "/catalog.xml")
-	    except:
-	        pass
+        # remove empty catalogs
+        if self.catalog == None or self.root == None or \
+           self.root.children == None:
+            try:
+                os.unlink(self.directory + "/catalog.xml")
+            except:
+                pass
 
     def __URL_mapping(self, URL):
         """Function to convert an URL to a local name in the cache"""
-	URL = string.replace(URL, '//', "_")
-	URL = string.replace(URL, '/', "_")
-	return URL
+        URL = string.replace(URL, '//', "_")
+        URL = string.replace(URL, '/', "_")
+        return URL
 
     def __save_catalog(self):
         """Save the on disk catalog in XML format"""
-	# don't save an empty catalog, and remove it if empty
-	if self.catalog == None or self.root == None or \
-	   self.root.children == None:
-	    try:
-		os.unlink(self.directory + "/catalog.xml")
-	    except:
-	        pass
-	    return
+        # don't save an empty catalog, and remove it if empty
+        if self.catalog == None or self.root == None or \
+           self.root.children == None:
+            try:
+                os.unlink(self.directory + "/catalog.xml")
+            except:
+                pass
+            return
         if self.catalog != None and self.directory != None:
-	    f = open(self.directory + "/catalog.xml", "w")
-	    f.write(self.catalog.serialize(format = 1))
-	    f.close()
+            f = open(self.directory + "/catalog.xml", "w")
+            f.write(self.catalog.serialize(format = 1))
+            f.close()
 
     def __update_catalog(self, URL, timestamp = None):
         """Update the catalog of resources in the cache with an updated entry"""
-	if URL == None:
-	    return
-	modified = 0
+        if URL == None:
+            return
+        modified = 0
 
         # create the catalog if needed
-	if self.catalog == None:
-	    self.catalog = libxml2.newDoc("1.0")
-	    self.root = self.catalog.newChild (None, "catalog", None)
-	    modified = 1
-	if self.root == None:
-	    return
+        if self.catalog == None:
+            self.catalog = libxml2.newDoc("1.0")
+            self.root = self.catalog.newChild (None, "catalog", None)
+            modified = 1
+        if self.root == None:
+            return
 
-	try:
-	    child = self.root.xpathEval("/catalog/entry[@URL = '%s']" % URL)[0]
-	except:
-	    child = None
-	if child == None:
-	    child = self.root.newChild(None, "entry", None)
-	    child.setProp("URL", URL)
-	    if timestamp == None:
-	        timestamp = ""
-	    child.setProp("timestamp", timestamp)
-	    modified = 1
-	else:
-	    if child.prop("URL") == URL:
-		if timestamp != None:
-		    if timestamp != child.prop("timestamp"):
-			child.setProp("timestamp", timestamp)
-			modified = 1
-		else:
-		    child.setProp("timestamp", "")
-		    modified = 1
-	if modified == 1:
-	    self.__save_catalog()
+        try:
+            child = self.root.xpathEval("/catalog/entry[@URL = '%s']" % URL)[0]
+        except:
+            child = None
+        if child == None:
+            child = self.root.newChild(None, "entry", None)
+            child.setProp("URL", URL)
+            if timestamp == None:
+                timestamp = ""
+            child.setProp("timestamp", timestamp)
+            modified = 1
+        else:
+            if child.prop("URL") == URL:
+                if timestamp != None:
+                    if timestamp != child.prop("timestamp"):
+                        child.setProp("timestamp", timestamp)
+                        modified = 1
+                else:
+                    child.setProp("timestamp", "")
+                    modified = 1
+        if modified == 1:
+            self.__save_catalog()
 
     def __catalog_lookup(self, URL):
         """lookup an entry in the catalog, it will return a tuple of the
-	   file path and the timestamp if found, None otherwise. If the
-	   file is referenced in the cache but has not timestamp then it
-	   will return an empty string."""
-	if self.root == None:
-	    return None
-	try:
-	    child = self.root.xpathEval("/catalog/entry[@URL = '%s']" % URL)[0]
-	except:
-	    return None
-	filename = self.directory + "/" + self.__URL_mapping(URL)
-	try:
-	    info = os.stat(filename)
-	except:
-	    dprint("Local cache file for %s disapeared", URL)
-	    child.unlinkNode()
-	    child.freeNode()
-	    return None
-	return child.prop("timestamp")
+        file path and the timestamp if found, None otherwise. If the
+        file is referenced in the cache but has not timestamp then it
+        will return an empty string."""
+        if self.root == None:
+            return None
+        try:
+            child = self.root.xpathEval("/catalog/entry[@URL = '%s']" % URL)[0]
+        except:
+            return None
+        filename = self.directory + "/" + self.__URL_mapping(URL)
+        try:
+            info = os.stat(filename)
+        except:
+            dprint("Local cache file for %s disapeared", URL)
+            child.unlinkNode()
+            child.freeNode()
+            return None
+        return child.prop("timestamp")
 
     def get_resource(self, URL):
         """Get a resource from the cache. It may fetch it from the network
-	   or use a local copy. It returns a Python file liek open() would.
-	   If passed a filename it will accept it if absolute.
-	   The return value is an absolute path to a local file."""
-	file = None
-	try:
-	    decomp = urlparse.urlparse(URL)
-	    if decomp[2] == URL:
-	        file = URL
-	except:
-	    file = URL
-	if file != None:
-	    if file[0] != '/':
-	        return None
-	    try:
-	        return file
-	    except:
-	        dprint("Failed to read %s", file)
-	        return None
-	else:
-	    self.__check_directory()
-	    filename = self.directory + "/" + self.__URL_mapping(URL)
-	    timestamp = self.__catalog_lookup(URL)
-	    last_modified = None
-	    try:
-	        request = urllib2.Request(URL)
-		if timestamp != None and timestamp != "":
-		    request.add_header('If-Modified-Since', timestamp)
-            except:
-	        dprint("Failed to create request for %s", URL)
-	        return None
-	    try:
-	        opener = urllib2.build_opener()
-		# TODO handle time outs there ....
-		datastream = opener.open(request)
-		try:
-		    last_modified = datastream.headers.dict['last-modified']
-		except:
-		    last_modified = None
-	        data = datastream.read()
-		datastream.close()
-	    except:
-	        dprint("Resource not available or older using cache")
-		try:
-		    info = os.stat(filename)
-		    return filename
-		except:
-		    dprint("Failed to find cache file %s", filename)
-		    return None
+        or use a local copy. It returns a Python file liek open() would.
+        If passed a filename it will accept it if absolute.
+        The return value is an absolute path to a local file."""
+        file = None
+        try:
+            decomp = urlparse.urlparse(URL)
+            if decomp[2] == URL:
+                file = URL
+        except:
+            file = URL
+        if file != None:
+            if file[0] != '/':
+                return None
             try:
-	        fd = open(filename, "w")
-		fd.write(data)
-		fd.close()
-		self.__update_catalog(URL, last_modified)
-	    except:
-	        dprint("Failed to write cache file %s", filename)
-		return None
-	    return filename
+                return file
+            except:
+                dprint("Failed to read %s", file)
+                return None
+        else:
+            self.__check_directory()
+            filename = self.directory + "/" + self.__URL_mapping(URL)
+            timestamp = self.__catalog_lookup(URL)
+            last_modified = None
+            try:
+                request = urllib2.Request(URL)
+                if timestamp != None and timestamp != "":
+                    request.add_header('If-Modified-Since', timestamp)
+            except:
+                dprint("Failed to create request for %s", URL)
+                return None
+            try:
+                opener = urllib2.build_opener()
+                # TODO handle time outs there ....
+                datastream = opener.open(request)
+                try:
+                    last_modified = datastream.headers.dict['last-modified']
+                except:
+                    last_modified = None
+                data = datastream.read()
+                datastream.close()
+            except:
+                dprint("Resource not available or older using cache")
+                try:
+                    info = os.stat(filename)
+                    return filename
+                except:
+                    dprint("Failed to find cache file %s", filename)
+                    return None
+            try:
+                fd = open(filename, "w")
+                fd.write(data)
+                fd.close()
+                self.__update_catalog(URL, last_modified)
+            except:
+                dprint("Failed to write cache file %s", filename)
+                return None
+            return filename
 
 default_cache = None
 
@@ -273,8 +273,8 @@ def get_default_cache():
 
     if default_cache == None:
         default_cache = cacheRepository()
-	# now we can activate the entity loader
-	libxml2.setEntityLoader(libxml2_entity_loader)
+        # now we can activate the entity loader
+        libxml2.setEntityLoader(libxml2_entity_loader)
 
     return default_cache
 
@@ -285,7 +285,7 @@ def libxml2_entity_loader(URL, ID, ctxt):
     file = the_cache.get_resource(URL)
     try:
         fd = open(file)
-	dprint("Cache entity loader resolved to %s", file)
+        dprint("Cache entity loader resolved to %s", file)
     except:
         fd = None
     return fd
@@ -311,18 +311,18 @@ def run_unit_tests ():
 
     class test_http_handler(SimpleHTTPServer.SimpleHTTPRequestHandler):
         def do_GET(self):
-	    SimpleHTTPServer.SimpleHTTPRequestHandler.do_GET(self)
+            SimpleHTTPServer.SimpleHTTPRequestHandler.do_GET(self)
 
-	def log_message(self, format, *args):
-	    pass
+        def log_message(self, format, *args):
+            pass
 
     def run_http_server(www):
-	os.chdir(www)
-	server_address = ('', 8000)
-	httpd = BaseHTTPServer.HTTPServer(server_address,test_http_handler)
-	dprint("starting HTTP on %s" % (www))
-	httpd.handle_request()
-	dprint("stopping HTTP server")
+        os.chdir(www)
+        server_address = ('', 8000)
+        httpd = BaseHTTPServer.HTTPServer(server_address,test_http_handler)
+        dprint("starting HTTP on %s" % (www))
+        httpd.handle_request()
+        dprint("stopping HTTP server")
 
     www = "/tmp/sabayon_http_test"
     shutil.rmtree(www, True)
@@ -359,8 +359,7 @@ def run_unit_tests ():
     assert(data == "content")
     dprint("second cached HTTP access okay")
 
-    # shutdown the cache, restart a new instance and try to get the
-    # resource
+    # shutdown the cache, restart a new instance and try to get the resource
     del cache
     cache = cacheRepository(dir)
 
