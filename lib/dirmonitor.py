@@ -49,7 +49,7 @@ class DirectoryMonitor:
         self.directory = directory
         self.callback = callback
         self.data = data
-	self.watches = {} # maps filename => gnome_vfs_monitor handle
+        self.watches = {} # maps filename => gnome_vfs_monitor handle
         self.too_many_watches = False
         self.dirs_to_ignore = []
         self.files_to_ignore = []
@@ -142,7 +142,7 @@ class DirectoryMonitor:
             dprint ("Added directory watch for '%s'", dir)
         except:
             print ("Failed to add monitor for %s") % (dir)
-	    util.print_exception ()
+            util.print_exception ()
 
     def __monitor_dir_recurse (self, dir, new_dir = False):
         if self.too_many_watches:

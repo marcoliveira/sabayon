@@ -233,7 +233,7 @@ class Session (gobject.GObject):
         (pid, oink, oink, stderr_fd) = gobject.spawn_async (argv, envp, cwd,
                                                             gobject.SPAWN_DO_NOT_REAP_CHILD,
                                                             child_setup_fn, self,
-                                                            None, None, True)	# stdin, stdout, stderr
+                                                            None, None, True)# stdin, stdout, stderr
 
         self.session_pid = pid;
         self.session_stderr = os.fdopen (stderr_fd)

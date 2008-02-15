@@ -305,7 +305,7 @@ class UserProfile (gobject.GObject):
     def __init__ (self, profile_name):
         """Construct a UserProfile
 
-	profile_name: name of the profile to be loaded
+        profile_name: name of the profile to be loaded
         module_path: optional path from which configuration modules
         should be loaded
         """
@@ -316,9 +316,9 @@ class UserProfile (gobject.GObject):
         self.profile_name = profile_name
 
         #
-	# Open the user settings packages and try to install them
-	#
-	self.storage = storage.ProfileStorage (profile_name)
+        # Open the user settings packages and try to install them
+        #
+        self.storage = storage.ProfileStorage (profile_name)
         
         module_loader = get_module_loader ()
         
