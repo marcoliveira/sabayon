@@ -1,28 +1,29 @@
-# translation of sabayon.po to
-# Czech translation of gnome-2.14.
-# Copyright (C) 2005 sabayon'S COPYRIGHT HOLDER
-# Copyright (C) 2005, 2006 Miloslav Trmac <mitr@volny.cz>
-# Copyright (C) 2006 Lukas Novotny <lukasnov@cvs.gnome.org>
-# Copyright (C) 2007 Martin Picek <picek.martin@gmail.com>
+# Czech translation of Sabayon.
+# Copyright (C) 2005, 2008 Free Software Foundation, Inc.
+# Copyright (C) 2005, 2006 Miloslav Trmac <mitr@volny.cz>.
+# Copyright (C) 2006 Lukas Novotny <lukasnov@cvs.gnome.org>.
+# Copyright (C) 2007 Martin Picek <picek.martin@gmail.com>.
 # This file is distributed under the same license as the sabayon package.
-#
-# Miloslav Trmac <mitr@volny.cz>, 2005 - 2006.
+# Miloslav Trmac <mitr@volny.cz>, 2005, 2006.
 # Lukas Novotny <lukasnov@cvs.gnome.org>, 2006.
 # Petr Tomeš <ptomes@gmail.com>, 2006.
 # Jakub Friedl <jfriedl@suse.cz>, 2007.
 # Martin Picek <picek.martin@gmail.com>, 2007.
+# Lucas Lommer <llommer@svn.gnome.org>, 2008.
+# Petr Kovar <pknbe@volny.cz>, 2008.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-15 19:22+0200\n"
-"PO-Revision-Date: 2007-08-14 16:38+0200\n"
-"Last-Translator: Martin Picek <picek.martin@gmail.com>\n"
-"Language-Team:  <cs@li.org>\n"
+"POT-Creation-Date: 2008-02-16 16:44+0100\n"
+"PO-Revision-Date: 2008-02-16 11:49+0100\n"
+"Last-Translator: Petr Kovar <pknbe@volny.cz>\n"
+"Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ../admin-tool/aboutdialog.py:63
 msgid "Program to establish and edit profiles for users"
@@ -31,8 +32,13 @@ msgstr "Program pro vytvoření a úpravu profilů uživatelů"
 #: ../admin-tool/aboutdialog.py:66
 msgid "translator-credits"
 msgstr ""
+"Miloslav Trmač <mitr@volny.cz>\n"
 "Lukáš Novotný <lukasnov@cvs.gnome.org>\n"
-"Martin Picek <picek.martin@gmail.com>"
+"Petr Tomeš <ptomes@gmail.com>\n"
+"Jakub Friedl <jfriedl@suse.cz>\n"
+"Martin Picek <picek.martin@gmail.com>\n"
+"Lucas Lommer <llommer@svn.gnome.org>\n"
+"Petr Kovář <pknbe@volny.cz>"
 
 #: ../admin-tool/changeswindow.py:50
 #, python-format
@@ -109,8 +115,8 @@ msgid "Files"
 msgstr "Soubory"
 
 #: ../admin-tool/editorwindow.py:266
-#: ../admin-tool/lockdown/pessulus.glade.h:39
-#: ../lib/sources/paneldelegate.py:228
+#: ../admin-tool/lockdown/pessulus.glade.h:41
+#: ../lib/sources/paneldelegate.py:229
 msgid "Panel"
 msgstr "Panel"
 
@@ -173,101 +179,103 @@ msgstr "Typ"
 msgid "Value"
 msgstr "Hodnota"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:101
+#: ../admin-tool/lockdown/lockdownbutton.py:99
 msgid "Click to make this setting not mandatory"
 msgstr "Klikněte pro vytvoření nepovinného nastavení"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:103
+#: ../admin-tool/lockdown/lockdownbutton.py:101
 msgid "Click to make this setting mandatory"
 msgstr "Klikněte pro vytvoření povinného nastavení"
 
-#: ../admin-tool/lockdown/maindialog.py:51
+#: ../admin-tool/lockdown/maindialog.py:49
 msgid "Disable _command line"
 msgstr "Zakázat _příkazový řádek"
 
-#: ../admin-tool/lockdown/maindialog.py:52
+#: ../admin-tool/lockdown/maindialog.py:50
 msgid "Disable _printing"
 msgstr "Zakázat _tisknutí"
 
-#: ../admin-tool/lockdown/maindialog.py:53
+#: ../admin-tool/lockdown/maindialog.py:51
 msgid "Disable print _setup"
 msgstr "Zakázat _nastavování tisku"
 
-#: ../admin-tool/lockdown/maindialog.py:54
+#: ../admin-tool/lockdown/maindialog.py:52
 msgid "Disable save to _disk"
-msgstr "Zakázat ukládání na disk"
+msgstr "Zakázat u_kládání na disk"
 
-#: ../admin-tool/lockdown/maindialog.py:56
+#: ../admin-tool/lockdown/maindialog.py:54
 msgid "_Lock down the panels"
 msgstr "_Uzamknout panely"
 
-#: ../admin-tool/lockdown/maindialog.py:57
+#: ../admin-tool/lockdown/maindialog.py:55
 msgid "Disable force _quit"
 msgstr "Zakázat _vynucené ukončení"
 
-#: ../admin-tool/lockdown/maindialog.py:58
+#: ../admin-tool/lockdown/maindialog.py:56
 msgid "Disable lock _screen"
 msgstr "Zakázat uzamčení _obrazovky"
 
-#: ../admin-tool/lockdown/maindialog.py:59
+#: ../admin-tool/lockdown/maindialog.py:57
 msgid "Disable log _out"
 msgstr "Zakázat o_dhlašování"
 
-#: ../admin-tool/lockdown/maindialog.py:61
+#: ../admin-tool/lockdown/maindialog.py:59
 msgid "Disable _quit"
 msgstr "Zakázat _ukončení"
 
-#: ../admin-tool/lockdown/maindialog.py:62
+#: ../admin-tool/lockdown/maindialog.py:60
 msgid "Disable _arbitrary URL"
 msgstr "Zakázat z_adávání URL"
 
-#: ../admin-tool/lockdown/maindialog.py:63
+#: ../admin-tool/lockdown/maindialog.py:61
 msgid "Disable _bookmark editing"
 msgstr "Zakázat úpravy _záložek"
 
-#: ../admin-tool/lockdown/maindialog.py:64
+#: ../admin-tool/lockdown/maindialog.py:62
 msgid "Disable _history"
 msgstr "Zakázat _historii"
 
-#: ../admin-tool/lockdown/maindialog.py:65
+#: ../admin-tool/lockdown/maindialog.py:63
 msgid "Disable _javascript chrome"
 msgstr "Zakázat _JavaScript chrome"
 
-#: ../admin-tool/lockdown/maindialog.py:66
+#: ../admin-tool/lockdown/maindialog.py:64
 msgid "Disable _toolbar editing"
-msgstr "Zakázat úpravy lišty nástrojů"
+msgstr "Zakázat úpravy _lišty nástrojů"
 
-#: ../admin-tool/lockdown/maindialog.py:67
+#: ../admin-tool/lockdown/maindialog.py:65
 msgid "_Fullscreen"
 msgstr "_Celá obrazovka"
 
-#: ../admin-tool/lockdown/maindialog.py:68
+#: ../admin-tool/lockdown/maindialog.py:66
 msgid "Hide _menubar"
-msgstr "Skrýt panel nabídky"
+msgstr "Skrýt panel nabídk_y"
 
+#. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
+#. This can be used to disable this, for when you don't want people to know you created the document.
 #: ../admin-tool/lockdown/maindialog.py:70
-msgid "Remove personal info from doc. on save"
-msgstr "Odstranit osobní informace z dokumentu při uložení"
+msgid "Remove personal info from documents when saving them"
+msgstr "Odstranit při uložení z dokumentu informace o autorovi"
 
 #: ../admin-tool/lockdown/maindialog.py:71
-msgid "Warn if macro creates PDF"
-msgstr "Varovat, když makro vytváří PDF"
+msgid "Warn if macro tries to create a PDF"
+msgstr "Varovat, když se makro pokusí vytvořit PDF"
 
 #: ../admin-tool/lockdown/maindialog.py:72
-msgid "Warn if macro prints"
-msgstr "Varovat, když makro tiskne"
+msgid "Warn if macro tries to print a document"
+msgstr "Varovat, když se makro pokusí vytisknout dokument"
 
 #: ../admin-tool/lockdown/maindialog.py:73
-msgid "Warn if macro saves doc"
-msgstr "Varovat, když makro ukládá dokument"
+msgid "Warn if macro tries to save a document"
+msgstr "Varovat, když se makro pokusí uložit dokument"
 
 #: ../admin-tool/lockdown/maindialog.py:74
-msgid "Warn if macro signs doc"
-msgstr "Varovat, když makro podepisuje dokument"
+msgid "Warn if macro tries to sign a document"
+msgstr "Varovat, když se makro pokusí podepsat dokument"
 
 #: ../admin-tool/lockdown/maindialog.py:75
-msgid "Recommend password on save"
-msgstr "Doporučit zaheslování při ukládání"
+msgid "Recommend password when saving a document"
+msgstr "Doporučit opatření heslem při ukládání dokumentu"
 
 #: ../admin-tool/lockdown/maindialog.py:77
 msgid "Enable auto-save"
@@ -275,28 +283,28 @@ msgstr "Povolit automatické ukládání"
 
 #. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
 #: ../admin-tool/lockdown/maindialog.py:79
-msgid "Printing modifies document"
-msgstr "Tisk upravuje dokument"
+msgid "Printing should mark the document as modified"
+msgstr "Tisk může dokument označit jako upravený"
 
 #: ../admin-tool/lockdown/maindialog.py:80
-msgid "Use system file chooser"
-msgstr "Použít systémový dialog pro výběr souboru"
+msgid "Use system's file dialog"
+msgstr "Použít systémový souborový dialog"
 
 #: ../admin-tool/lockdown/maindialog.py:81
 msgid "Create backup copy on save"
 msgstr "Vytvořit záložní kopii při uložení"
 
 #: ../admin-tool/lockdown/maindialog.py:82
-msgid "Warn for external formats"
-msgstr "Varovat při externích formátech"
+msgid "Warn when saving non-OpenOffice.org formats"
+msgstr "Varovat při ukládání jiných formátů než OpenOffice.org"
 
 #: ../admin-tool/lockdown/maindialog.py:84
-msgid "Use Open GL"
+msgid "Use OpenGL"
 msgstr "Použít OpenGL"
 
 #: ../admin-tool/lockdown/maindialog.py:85
 msgid "Use system font"
-msgstr "Použít systémový font"
+msgstr "Použít systémové písmo"
 
 #: ../admin-tool/lockdown/maindialog.py:86
 msgid "Use anti-aliasing"
@@ -312,11 +320,11 @@ msgstr "Zobrazovat nečinné položky nabídky"
 
 #: ../admin-tool/lockdown/maindialog.py:89
 msgid "Show font preview"
-msgstr "Zobrazovat náhled fontů"
+msgstr "Zobrazovat náhledy písem"
 
 #: ../admin-tool/lockdown/maindialog.py:90
 msgid "Show font history"
-msgstr "Zobrazovat historii fontů"
+msgstr "Zobrazovat historii písem"
 
 #: ../admin-tool/lockdown/maindialog.py:91
 msgid "Show icons in menus"
@@ -353,7 +361,7 @@ msgid ""
 "\n"
 "OpenDocument (.odp)\n"
 "PowerPoint 97+ (.ppt)\n"
-"OpenOffice 1.1 (.sxi)"
+"OpenOffice.org 1.1 (.sxi)"
 msgstr ""
 "\n"
 "OpenDocument (.odp)\n"
@@ -365,7 +373,7 @@ msgid ""
 "\n"
 "OpenDocument (.ods)\n"
 "Excel 97+ (.xls)\n"
-"OpenOffice 1.1 (.sxc)"
+"OpenOffice.org 1.1 (.sxc)"
 msgstr ""
 "\n"
 "OpenDocument (.ods)\n"
@@ -377,7 +385,7 @@ msgid ""
 "\n"
 "OpenDocument (.odt)\n"
 "Word 97+ (.doc)\n"
-"OpenOffice 1.1 (.sxw)"
+"OpenOffice.org 1.1 (.sxw)"
 msgstr ""
 "\n"
 "OpenDocument (.odt)\n"
@@ -400,67 +408,67 @@ msgstr ""
 
 #: ../admin-tool/lockdown/pessulus.glade.h:27
 msgid "<b>Disabled Applets</b>"
-msgstr "<b>Zakázané aplety</b>"
+msgstr "<b>Zakázané applety</b>"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:28
 msgid "<b>Safe Protocols</b>"
-msgstr "<b>Bezpečné protocoly</b>"
+msgstr "<b>Bezpečné protokoly</b>"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:29
-msgid "Calc default format:"
-msgstr "Výchozí formát pro Calc:"
+msgid "Default format for presentations:"
+msgstr "Výchozí formát pro prezentace:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:30
+msgid "Default format for spreadsheet:"
+msgstr "Výchozí formát pro tabulkový kalkulátor:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:31
+msgid "Default format for word processor:"
+msgstr "Výchozí formát pro textový procesor:"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:32
 msgid "Default icon size"
 msgstr "Výchozí velikost ikon"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:31
+#: ../admin-tool/lockdown/pessulus.glade.h:33
 msgid "Disable _unsafe protocols"
 msgstr "Zakázat _nebezpečné protokoly"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:32
+#: ../admin-tool/lockdown/pessulus.glade.h:34
 msgid "Epiphany Web Browser"
 msgstr "Webový prohlížeč Epiphany"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:33
+#: ../admin-tool/lockdown/pessulus.glade.h:35
 msgid "General"
 msgstr "Obecné"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:34
-msgid "Impress default format:"
-msgstr "Výchozí formát pro Impress:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:35
+#: ../admin-tool/lockdown/pessulus.glade.h:36
 msgid "Load / Save"
 msgstr "Načíst nebo uložit"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:36
+#: ../admin-tool/lockdown/pessulus.glade.h:37
 msgid "Lockdown Editor"
 msgstr "Editor omezení práv"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:37
+#: ../admin-tool/lockdown/pessulus.glade.h:38
 msgid "Macro Security Level:"
 msgstr "Úroveň zabezpečení maker"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:38
-msgid "OpenOffice"
-msgstr "OpenOffice.org"
+#: ../admin-tool/lockdown/pessulus.glade.h:39
+msgid "Number of undo steps:"
+msgstr "Počet kroků pro návrat zpět:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:40
+msgid "OpenOffice.org"
+msgstr "OpenOffice.org"
+
+#: ../admin-tool/lockdown/pessulus.glade.h:42
 msgid "Security"
 msgstr "Bezpečnost"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:41
-msgid "Undo Steps:"
-msgstr "Kroky zpět:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:42
+#: ../admin-tool/lockdown/pessulus.glade.h:43
 msgid "User Interface"
 msgstr "Uživatelské rozhraní"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:43
-msgid "Writer default format:"
-msgstr "Výchozí formát pro Writer:"
 
 #.
 #. Translators: this string specifies how a profile
@@ -473,12 +481,12 @@ msgstr "Výchozí formát pro Writer:"
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../admin-tool/sabayon:73
+#: ../admin-tool/sabayon:77
 msgid ""
 "Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr "Váš účet nemá oprávnění spustit nástroj Profily uživatelů"
 
-#: ../admin-tool/sabayon:74
+#: ../admin-tool/sabayon:78
 msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
@@ -486,23 +494,23 @@ msgstr ""
 "Pro spuštění tohoto programu jsou vyžadována oprávnění správce, protože může "
 "měnit systémové soubory."
 
-#: ../admin-tool/sabayon:79
+#: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
 msgstr "Nástroj Profily uživatelů již běží"
 
-#: ../admin-tool/sabayon:80
+#: ../admin-tool/sabayon:84
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
 msgstr ""
 "Nemůžete používat nástroj Profily uživatelů v sezení upravujícím profil"
 
-#: ../admin-tool/sabayon:87
+#: ../admin-tool/sabayon:91
 #, c-format
 msgid "User account '%s' was not found"
 msgstr "Účet uživatele „%s“ nebyl nalezen"
 
-#: ../admin-tool/sabayon:88
+#: ../admin-tool/sabayon:92
 #, c-format
 msgid ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
@@ -513,7 +521,7 @@ msgstr ""
 "uživatele „%s“. Zkuste to znovu po vytvoření tohoto účtu (například příkazem "
 "„adduser“)"
 
-#: ../admin-tool/sabayon:128
+#: ../admin-tool/sabayon:131
 #, c-format
 msgid ""
 "A fatal error has occurred.  You can help us fix the problem by sending the "
@@ -522,7 +530,7 @@ msgstr ""
 "Došlo k fatální chybě. Odesláním protokolu v %s na %s nám můžete nám pomoci "
 "chybu vyřešit"
 
-#: ../admin-tool/sabayon:143
+#: ../admin-tool/sabayon:145
 #, c-format
 msgid ""
 "Sabayon will now exit.  There were some recoverable errors, and you can help "
@@ -531,19 +539,19 @@ msgstr ""
 "Sabayon bude nyní ukončen. Vyskytly se nějaké obnovitelné chyby, ale vy nám "
 "můžete pomoci je vyladit odesláním protokolu v %s na %s"
 
-#: ../admin-tool/sabayon-apply:98
+#: ../admin-tool/sabayon-apply:99
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Nebyl nalezen profil uživatele „%s“\n"
 
-#: ../admin-tool/sabayon-apply:103
+#: ../admin-tool/sabayon-apply:104
 msgid "Please use -h for usage options"
-msgstr "Prosím, použijte -h pro možnosti použití"
+msgstr "Možnosti použití viz -h"
 
 #: ../admin-tool/sabayon-session:67
 #, c-format
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
-msgstr "Použití: %s <název-profilu> <cesta-k-profilu> <číslo-monitoru>\n"
+msgstr "Použití: %s <název-profilu> <cesta-k-profilu> <číslo-displeje>\n"
 
 #: ../admin-tool/sabayon.desktop.in.h:1
 msgid "Establish and Edit Profiles for Users"
@@ -761,30 +769,17 @@ msgstr "Nepodařilo se spustit Xnest: čas vypršel při čekání na signál US
 msgid "Failed to start Xnest: died during startup"
 msgstr "Nepodařilo se spustit Xnest: zaniklo při spouštění"
 
-#: ../lib/protosession.py:480
-#, fuzzy, python-format
-msgid ""
-"Could not create the 'sabayon-apply' process: %s\n"
-"The command line used is '%s'\n"
-"Child traceback:\n"
-"%s"
-msgstr ""
-"Nepodařilo se vytvořit proces „sabayon-apply“: %s\n"
-"Použitý příkazový řádek: „%s“\n"
-"Child traceback:\n"
-"%s"
-
 #: ../lib/protosession.py:501
 #, python-format
 msgid ""
-"There was a recoverable error while applying the user profile from '%s'."
+"There was a recoverable error while applying the user profile from file '%s'."
 msgstr ""
-"Vyslytla se obnovitelná chyba při používání uživatelského profilu z „%s“."
+"Vyskytla se obnovitelná chyba při používání uživatelského profilu z „%s“."
 
 #: ../lib/protosession.py:510
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
-msgstr "Vyslytla se fatální chyba při používání uživatelského profilu z „%s“."
+msgstr "Vyskytla se kritická chyba při používání uživatelského profilu z „%s“."
 
 #: ../lib/sources/filessource.py:69
 #, python-format
@@ -963,42 +958,42 @@ msgstr "Panel „%s“ byl odstraněn"
 #: ../lib/sources/paneldelegate.py:76
 #, python-format
 msgid "Applet %s added to top panel"
-msgstr "Aplet %s byl přidán do horního panelu"
+msgstr "Applet %s byl přidán do horního panelu"
 
 #: ../lib/sources/paneldelegate.py:78
 #, python-format
 msgid "Applet %s added to bottom panel"
-msgstr "Aplet %s byl přidán do dolního panelu"
+msgstr "Applet %s byl přidán do dolního panelu"
 
 #: ../lib/sources/paneldelegate.py:80
 #, python-format
 msgid "Applet %s added to left panel"
-msgstr "Aplet %s byl přidán do levého panelu"
+msgstr "Applet %s byl přidán do levého panelu"
 
 #: ../lib/sources/paneldelegate.py:82
 #, python-format
 msgid "Applet %s added to right panel"
-msgstr "Aplet %s byl přidán do pravého panelu"
+msgstr "Applet %s byl přidán do pravého panelu"
 
 #: ../lib/sources/paneldelegate.py:97
 #, python-format
 msgid "Applet %s removed from top panel"
-msgstr "Aplet %s byl odstraněn z horního panelu"
+msgstr "Applet %s byl odstraněn z horního panelu"
 
 #: ../lib/sources/paneldelegate.py:99
 #, python-format
 msgid "Applet %s removed from bottom panel"
-msgstr "Aplet %s byl odstraněn z dolního panelu"
+msgstr "Applet %s byl odstraněn z dolního panelu"
 
 #: ../lib/sources/paneldelegate.py:101
 #, python-format
 msgid "Applet %s removed from left panel"
-msgstr "Aplet %s byl odstraněn z levého panelu"
+msgstr "Applet %s byl odstraněn z levého panelu"
 
 #: ../lib/sources/paneldelegate.py:103
 #, python-format
 msgid "Applet %s removed from right panel"
-msgstr "Aplet %s byl odstraněn z pravého panelu"
+msgstr "Applet %s byl odstraněn z pravého panelu"
 
 #: ../lib/sources/paneldelegate.py:117
 #, python-format
@@ -1040,44 +1035,45 @@ msgstr "%s byl odstraněn z levého panelu"
 msgid "%s removed from right panel"
 msgstr "%s byl odstraněn z pravého panelu"
 
-#: ../lib/sources/paneldelegate.py:199
+#. Translators: This is a drawer in gnome-panel (where you can put applets)
+#: ../lib/sources/paneldelegate.py:200
 msgid "Drawer"
 msgstr "Zásuvka"
 
-#: ../lib/sources/paneldelegate.py:201
+#: ../lib/sources/paneldelegate.py:202
 msgid "Main Menu"
 msgstr "Hlavní nabídka"
 
-#: ../lib/sources/paneldelegate.py:211
+#: ../lib/sources/paneldelegate.py:212
 #, python-format
 msgid "%s launcher"
 msgstr "%s spouštěč"
 
-#: ../lib/sources/paneldelegate.py:215
+#: ../lib/sources/paneldelegate.py:216
 msgid "Lock Screen button"
 msgstr "Tlačítko uzamčení obrazovky"
 
-#: ../lib/sources/paneldelegate.py:217
+#: ../lib/sources/paneldelegate.py:218
 msgid "Logout button"
 msgstr "Tlačítko odhlášení"
 
-#: ../lib/sources/paneldelegate.py:219
+#: ../lib/sources/paneldelegate.py:220
 msgid "Run Application button"
 msgstr "Tlačítko spouštění aplikace"
 
-#: ../lib/sources/paneldelegate.py:221
+#: ../lib/sources/paneldelegate.py:222
 msgid "Search button"
 msgstr "Tlačítko hledání"
 
-#: ../lib/sources/paneldelegate.py:223
+#: ../lib/sources/paneldelegate.py:224
 msgid "Screenshot button"
 msgstr "Tlačítko snímku obrazovky"
 
-#: ../lib/sources/paneldelegate.py:225
+#: ../lib/sources/paneldelegate.py:226
 msgid "Menu Bar"
 msgstr "Lišta nabídky"
 
-#: ../lib/sources/paneldelegate.py:469
+#: ../lib/sources/paneldelegate.py:470
 msgid "Panel File"
 msgstr "Soubor panelu"
 
@@ -1124,64 +1120,67 @@ msgstr "Spouští se testy %s (%s)"
 msgid "Success!"
 msgstr "Úspěch!"
 
-#: ../lib/userdb.py:51
+#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
+#. do not change the way they are written.  The intended string is
+#. something like "invalid type for setting blah in /ldap/path/to/blah"
+#: ../lib/userdb.py:54
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "neplatný typ pro nastavení %(setting)s v %(np)s"
 
-#: ../lib/userdb.py:211
+#: ../lib/userdb.py:215
 #, python-format
 msgid "No search based specified for %s"
-msgstr ""
+msgstr "Není specifikován Základ vyhledávání (search base) pro %s"
 
-#: ../lib/userdb.py:214
+#: ../lib/userdb.py:218
 #, python-format
 msgid "No query filter specified for %s"
 msgstr "Neurčený dotaz filtru pro %s"
 
-#: ../lib/userdb.py:217
+#: ../lib/userdb.py:221
 #, python-format
 msgid "No result attribute specified for %s"
 msgstr "Nespecifikovaný výsledek pro vlastnost %s"
 
-#: ../lib/userdb.py:226
+#: ../lib/userdb.py:230
 msgid "Scope must be one of sub, base and one"
 msgstr "Rozsah musí být jedním ze sub, base a one"
 
-#: ../lib/userdb.py:246
+#: ../lib/userdb.py:250
 msgid "multiple_result must be one of first and random"
 msgstr "multiple_result musí být jedno z first a random"
 
-#: ../lib/userdb.py:338
+#: ../lib/userdb.py:342
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Nepodařilo se otevřít %s pro zápis"
 
-#: ../lib/userdb.py:351
+#: ../lib/userdb.py:355
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Nepodařilo se uložit UserDatabase do %s"
 
-#: ../lib/userdb.py:374 ../lib/userdb.py:409
+#: ../lib/userdb.py:378 ../lib/userdb.py:413
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Soubor %s není nastavením profilu"
 
-#: ../lib/userdb.py:381
+#: ../lib/userdb.py:385
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Nepodařilo se přidat výchozí profil %s do nastavení"
 
-#: ../lib/userdb.py:417
+#: ../lib/userdb.py:421
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Nepodařilo se přidat uživatele %s do nastavení profilu"
 
-#: ../lib/userdb.py:468
+#: ../lib/userdb.py:472
 msgid "Failed to get the user list"
 msgstr "Nepodařilo se získat seznam uživatelů"
 
-#: ../lib/util.py:91
+#: ../lib/util.py:92
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -1189,7 +1188,7 @@ msgstr ""
 "Nepodařilo se najít domovský adresář: není nastaven v /etc/passwd a není "
 "žádná hodnota proměnné $HOME v prostředí"
 
-#: ../lib/util.py:104
+#: ../lib/util.py:105
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
