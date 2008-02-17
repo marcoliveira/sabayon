@@ -269,8 +269,8 @@ class UserDatabase:
         try:
             default = self.doc.xpathEval("/profiles/default")[0]
             profile = default.prop("profile")
-            except:
-                profile = None
+        except:
+            profile = None
 
         if not profile_location:
             return profile
