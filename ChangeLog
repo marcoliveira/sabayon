@@ -1,3 +1,9 @@
+2008-02-18  Sayamindu Dasgupta  <sayamindu@gmail.com>
+
+	* lib/util.py: Make it work; import fnmatch.
+
+	* lib/util.py (should_ignore_dir): Fix the recursive call.
+
 2008-02-18  Federico Mena Quintero  <federico@novell.com>
 
 	* lib/util.py (should_ignore_dir): Moved over from dirmonitor.py;

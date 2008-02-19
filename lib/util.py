@@ -19,6 +19,7 @@
 import os
 import os.path
 import sys
+import fnmatch
 import pwd
 import gettext
 import locale
@@ -350,7 +351,7 @@ def should_ignore_dir (base_dir, ignore_dir_list, dir):
 
     parent = os.path.dirname (dir)
     if parent != dir:
-        return should_ignore_dir (parent)
+        return should_ignore_dir (base_dir, ignore_dir_list, parent)
     else:
         return False
 
