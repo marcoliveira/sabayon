@@ -85,7 +85,7 @@ def get_home_dir ():
             return pw.pw_dir
     except KeyError:
         pass
-    
+
     if os.environ.has_key ("HOME"):
         return os.environ["HOME"]
     else:
@@ -98,7 +98,7 @@ def get_user_name ():
             return pw.pw_name
     except KeyError:
         pass
-    
+
     if os.environ.has_key ("USER"):
         return os.environ["USER"]
     else:
@@ -166,7 +166,7 @@ def split_path(path, head=None, tail=None):
         if path[dir_split] != '/':
             raise ValueError
         return (path[:dir_split], path[dir_split+1:])
-        
+
     raise ValueError
 
 #
@@ -184,7 +184,7 @@ def uninterruptible_spawnve (mode, file, args, env):
     except os.error, (err, errstr):
         if err != errno.EINTR:
             raise
-        
+
 def uninterruptible_spawnv (mode, file, args):
     uninterruptible_spawnve (mode, file, args, None)
 
@@ -216,7 +216,7 @@ class DictCompare:
 
         self.keys_a = self.a.keys()
         self.keys_b = self.b.keys()
-        
+
         self.intersection = []
         self.only_a = []
         self.only_b = []
@@ -235,13 +235,13 @@ class DictCompare:
         for k in self.keys_b:
             if not self.a.has_key(k):
                 self.only_b.append(k)
-                
+
         for k in self.intersection:
             if self.a[k] == self.b[k]:
                 self.equal.append(k)
             else:
                 self.not_equal.append(k)
-                
+
     def intersection(self):
         'return list of keys shared between a and b'
         return self.intersection
@@ -267,7 +267,7 @@ class DictCompare:
         (e.g. lhs = rhs), the two dictionary parameters are specified as
         either the string 'a' or the string 'b' corresponding to the parameters
         this class was created with.
-        
+
         Return value is a dictionary with 3 keys (add, del, mod) whose values
         are dictionaries containing containing (key,value) pairs to add,
         delete, or modify respectively in dict_lhs.'''
@@ -339,3 +339,28 @@ def dump_change_set(cs):
             print "    %s=%s" % (k, _mod[k])
 
 
+def should_ignore_dir (base_dir, ignore_dir_list, dir):
+    dir = os.path.normpath (dir)
+
+    for ignore_dir in ignore_dir_list:
+        ignore_path = os.path.normpath (os.path.join (base_dir, ignore_dir))
+
+        if fnmatch.fnmatch (dir, ignore_path):
+            return True
+
+    parent = os.path.dirname (dir)
+    if parent != dir:
+        return should_ignore_dir (parent)
+    else:
+        return False
+
+def should_ignore_file (base_dir, ignore_dir_list, ignore_file_list, file):
+    file = os.path.normpath (file)
+
+    for ignore_file in ignore_file_list:
+        ignore_path = os.path.normpath (os.path.join (base_dir, ignore_file))
+
+        if fnmatch.fnmatch (file, ignore_path):
+            return True
+
+    return should_ignore_dir (base_dir, ignore_dir_list, os.path.dirname (file))

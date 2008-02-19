@@ -1,3 +1,15 @@
+2008-02-18  Federico Mena Quintero  <federico@novell.com>
+
+	* lib/util.py (should_ignore_dir): Moved over from dirmonitor.py;
+	now this is a general-purpose function instead of being specific
+	to the directory monitor.
+	(should_ignore_file): Likewise.
+
+	* lib/dirmonitor.py (DirectoryMonitor.__should_ignore_dir):
+	Implement in terms of util.should_ignore_dir().
+	(DirectoryMonitor.__should_ignore_file): Implement in terms of
+	util.should_ignore_file().
+
 2008-02-16  John Robeson  <johnny@localmomentum.net>
 
      fix an indent in lib/userdb.py

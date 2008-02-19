@@ -105,28 +105,10 @@ class DirectoryMonitor:
                 dprint ("Not calling callback for '%s' nor recursing in it since it is an ignored dir/file", path)
 
     def __should_ignore_dir (self, dir):
-        dir = os.path.normpath (dir)
-        
-        for ignore_dir in self.dirs_to_ignore:
-            ignore_path = os.path.normpath (os.path.join (self.directory, ignore_dir))
-
-            if fnmatch.fnmatch (dir, ignore_path):
-                return True
-
-        parent = os.path.dirname (dir)
-        if parent != dir:
-            return self.__should_ignore_dir (parent)
-        else:
-            return False
+        return util.should_ignore_dir (self.directory, self.dirs_to_ignore, dir)
     
     def __should_ignore_file (self, file):
-        file = os.path.normpath (file)
-        
-        for ignore_file in self.files_to_ignore:
-            ignore_path = os.path.normpath (os.path.join (self.directory, ignore_file))
-            if fnmatch.fnmatch (file, ignore_path):
-                return True
-        return self.__should_ignore_dir (os.path.dirname (file))
+        return util.should_ignore_file (self.directory, self.dirs_to_ignore, self.files_to_ignore, file)
 
     def __monitor_dir (self, dir):
         dir = os.path.normpath (dir)
