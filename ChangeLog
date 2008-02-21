@@ -1,3 +1,10 @@
+2008-02-21	Sayamindu Dasgupta	<sayamindu@gmail.com>
+
+	* lib/storage.py (zip_directory): Fix recursive behaviour;
+	Now only single instances of files are added, and ignored 
+	files and directories are filtered out.
+	Fixes bgo #476761
+
 2008-02-18  Sayamindu Dasgupta  <sayamindu@gmail.com>
 
 	* lib/util.py: Make it work; import fnmatch.

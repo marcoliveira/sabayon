@@ -592,14 +592,32 @@ class ProfileStorage:
             save_zip.writestr ("metadata", self.metadata.serialize (format = 1))
 
             def zip_directory (save_zip, dir, name):
+                zip_filelist = save_zip.namelist()
+                homedir = util.get_home_dir()
+
                 for f in os.listdir (dir):
                     path = os.path.join (dir, f)
                     if os.path.isdir (path):
-                        zip_directory (save_zip,
-                                       path,
-                                       os.path.join (name, f))
+                        # We need to stop if we are recursing inside a ignored 
+                        # directory.
+                        if util.should_ignore_dir (homedir, 
+                                DIRECTORIES_TO_IGNORE, os.path.join(homedir, name, f)):
+                            dprint ("Not going inside %s as it is an ignored directory.", path)
+                        else:
+                            zip_directory (save_zip,
+                                        path,
+                                        os.path.join (name, f))
                     elif os.path.isfile (path):
-                        save_zip.write (path, os.path.join (name, f))
+                        # Avoid putting in a duplicate file entry
+                        # See bug #476761
+                        if os.path.join (name, f) in zip_filelist:
+                            dprint ("Not adding %s to zipfile since it is already in the file", os.path.join (name, f))
+                        elif util.should_ignore_file (homedir, 
+                                DIRECTORIES_TO_IGNORE, FILES_TO_IGNORE, os.path.join(homedir, name, f)):
+                            dprint ("Not adding %s to zipfile since it is a ignored file", os.path.join (name, f))
+                        else:
+                            zip_filelist.append(os.path.join(name, f))
+                            save_zip.write (path, os.path.join (name, f))
 
             def zip_foreach (path, is_directory, data):
                 (save_zip, temp_path) = data
