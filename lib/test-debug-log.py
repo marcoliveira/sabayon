@@ -17,4 +17,4 @@ for i in range (1000):
     debuglog.debug_log (is_milestone, domain, "%s" % i)
     print "logged %s" % i
 
-debuglog.debug_log_dump_to_stderr ("test-debug-log.conf")
+debuglog.debug_log_dump_to_file ("test-debug-log.conf",sys.stderr)
