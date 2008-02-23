@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-29 13:01+0000\n"
+"POT-Creation-Date: 2008-02-09 21:23+0000\n"
 "PO-Revision-Date: 2008-01-08 03:18+0000\n"
 "Last-Translator: Yair Hershkovitz  <yairhr@gmail.com>\n"
 "Language-Team: he\n"
@@ -277,7 +277,7 @@ msgstr "הדפסה צריכה לסמן את המסמך כאילו נקרא"
 
 #: ../admin-tool/lockdown/maindialog.py:80
 msgid "Use system's file dialog"
-msgstr ""
+msgstr "השתמש בתיבת דו-שיח הקבצים של המערכת"
 
 #: ../admin-tool/lockdown/maindialog.py:81
 msgid "Create backup copy on save"
@@ -409,11 +409,11 @@ msgstr "תצורת ברירת המחדל עבור מצגות:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:30
 msgid "Default format for spreadsheet:"
-msgstr ""
+msgstr "תצורת ברירת המחדל עבור גליונות אלקטרוניים:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:31
 msgid "Default format for word processor:"
-msgstr ""
+msgstr "תצורת ברירת המחדל עבור מעבדי תמלילים:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:32
 msgid "Default icon size"
@@ -445,7 +445,7 @@ msgstr "רמת אבטחת מאקרו:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:39
 msgid "Number of undo steps:"
-msgstr ""
+msgstr "מספר צעדי הביטול:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:40
 msgid "OpenOffice.org"
@@ -484,13 +484,13 @@ msgstr ""
 
 #: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
-msgstr ""
+msgstr "כלי פרופילי המשתמש כבר פועל"
 
 #: ../admin-tool/sabayon:84
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
-msgstr ""
+msgstr "לא ניתן להריץ את כלי פרופילי המשתמש מתוך הפעלת עריכת פרופיל"
 
 #: ../admin-tool/sabayon:91
 #, c-format
@@ -504,6 +504,8 @@ msgid ""
 "Try again after creating the account (using, for example, the 'adduser' "
 "command)"
 msgstr ""
+"‏Sabayon דורשת קיום של חשבון משתמש מיוחד '%s'. "
+"נסה שוב לאחר יצירת חשבון משתמש זה"
 
 #: ../admin-tool/sabayon:131
 #, c-format
@@ -511,6 +513,7 @@ msgid ""
 "A fatal error has occurred.  You can help us fix the problem by sending the "
 "log in %s to %s"
 msgstr ""
+"שגיאה חמורה התרחשה. באפשרותך לעזור לנו לתקן את הבעיה על ידי שליחת המידע ב-%s ל-%s"
 
 #: ../admin-tool/sabayon:145
 #, c-format
@@ -518,6 +521,7 @@ msgid ""
 "Sabayon will now exit.  There were some recoverable errors, and you can help "
 "us debug the problem by sending the log in %s to %s"
 msgstr ""
+"‏Sabayon תסתיים עכשיו. ארעו שגיאות שלא ניתן להתאושש מהם. באפשרותך לעזור לנו לתקן את הבעיה על ידי שליחת המידע ב-%s ל-%s"
 
 #: ../admin-tool/sabayon-apply:99
 #, c-format
@@ -535,7 +539,7 @@ msgstr "Usage: %s <profile-name> <profile-path> <display-number>\n"
 
 #: ../admin-tool/sabayon.desktop.in.h:1
 msgid "Establish and Edit Profiles for Users"
-msgstr ""
+msgstr "צור וערוך פרופילי משתמשים"
 
 #: ../admin-tool/sabayon.desktop.in.h:2 ../admin-tool/sabayon.glade.h:4
 msgid "User Profile Editor"
@@ -590,12 +594,15 @@ msgid_plural ""
 "If you don't save, changes from the last %ld seconds will be permanently "
 "lost."
 msgstr[0] ""
+"אם לא תשמור, שינויים מהשנייה אחרונה יאבדו."
 msgstr[1] ""
+"אם לא תשמור, שינויים מ-%ld השניות האחרונות יאבדו."
 
 #: ../admin-tool/saveconfirm.py:51
 msgid ""
 "If you don't save, changes from the last minute will be permanently lost."
 msgstr ""
+"אם לא תשמור, שינויים מהדקה האחרונה יאבדו."
 
 #: ../admin-tool/saveconfirm.py:55
 #, python-format
@@ -606,7 +613,9 @@ msgid_plural ""
 "If you don't save, changes from the last minute and %ld seconds will be "
 "permanently lost."
 msgstr[0] ""
+"אם לא תשמור, שינויים מהדקה והשניה האחרונות יאבדו."
 msgstr[1] ""
+"אם לא תשמור, שינויים מהדקה ו-%ld השניות האחרונות יאבדו."
 
 #: ../admin-tool/saveconfirm.py:62
 #, python-format
@@ -616,11 +625,13 @@ msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
 msgstr[0] ""
+"אם לא תשמור, שינויים מהדקה האחרונה יאבדו."
 msgstr[1] ""
+"אם לא תשמור, שינויים מ-%ld הדקות האחרונות יאבדו."
 
 #: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgstr ""
+msgstr "אם לא תשמור, שינויים מהשעה האחרונה יאבדו."
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
@@ -631,7 +642,9 @@ msgid_plural ""
 "If you don't save, changes from the last hour and %d minutes will be "
 "permanently lost."
 msgstr[0] ""
+"אם לא תשמור, שינויים מהשעה והדקה האחרונות יאבדו."
 msgstr[1] ""
+"אם לא תשמור, שינויים מהשעה ו-%d הדקות האחרונות יאבדו."
 
 #: ../admin-tool/saveconfirm.py:81
 #, python-format
@@ -640,7 +653,9 @@ msgid ""
 msgid_plural ""
 "If you don't save, changes from the last %d hours will be permanently lost."
 msgstr[0] ""
+"אם לא תשמור, שינויים מהשעה האחרונה יאבדו."
 msgstr[1] ""
+"אם לא תשמור, שינויים מ-%d השעות האחרונות יאבדו."
 
 #: ../admin-tool/sessionwindow.py:154
 #, python-format
@@ -686,6 +701,7 @@ msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
 "report this error now or try to continue editing the user profile."
 msgstr ""
+"ארעה שגיאה ברת-התאוששות בהחלת פרופיל המשתמש '%s'. באפשרותך לדווח על השגיאה עכשיו או להמשיך בעריכת פרופיל המשתמש."
 
 #: ../admin-tool/sessionwindow.py:337
 msgid "_Report this error"
@@ -707,25 +723,30 @@ msgstr "השתמש בפרופיל זה"
 #: ../lib/protosession.py:147
 msgid "Unable to find a free X display"
 msgstr ""
+"לא ניתן למצוא תצוגת X פנוייה"
 
 #: ../lib/protosession.py:414
 msgid "Failed to start Xnest: timed out waiting for USR1 signal"
 msgstr ""
+"נכשל בהפעלת Xnest: פג זמן ההמתנה לאות USR1"
 
 #: ../lib/protosession.py:416
 msgid "Failed to start Xnest: died during startup"
 msgstr ""
+"נכשל בהפעלת Xnest: הסתיים במהלך ההפעלה"
 
 #: ../lib/protosession.py:501
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
 msgstr ""
+"ארעה שגיאה ברת-התאוששות בהחלת פרופיל המשתמש מהקובץ '%s'."
 
 #: ../lib/protosession.py:510
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr ""
+"ארעה שגיאה חמורה בהחלת פרופיל המשתמש מ-'%s'."
 
 #: ../lib/sources/filessource.py:69
 #, python-format
@@ -766,46 +787,55 @@ msgstr "תפריט התחל מכאן"
 #, python-format
 msgid "GConf key '%s' unset"
 msgstr ""
+"מפתח GConf‏ '%s' בוטל"
 
 #: ../lib/sources/gconfsource.py:92
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
 msgstr ""
+"מפתח GConf ‏'%s' נקבע למחרוזת '%s'"
 
 #: ../lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
 msgstr ""
+"מפתח GConf ‏'%s' נקבע לשלם '%s'"
 
 #: ../lib/sources/gconfsource.py:96
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
 msgstr ""
+"מפתח GConf ‏'%s' נקבע לממשי '%s'"
 
 #: ../lib/sources/gconfsource.py:98
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
 msgstr ""
+"מפתח GConf ‏'%s' נקבע לבוליאני '%s'"
 
 #: ../lib/sources/gconfsource.py:100
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
 msgstr ""
+"מפתח GConf ‏'%s' נקבע לסכימה '%s'"
 
 #: ../lib/sources/gconfsource.py:102
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
 msgstr ""
+"מפתח GConf ‏'%s' נקבע לרשימה '%s'"
 
 #: ../lib/sources/gconfsource.py:104
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
 msgstr ""
+"מפתח GConf ‏'%s' נקבע לזוג '%s'"
 
 #: ../lib/sources/gconfsource.py:106
 #, python-format
 msgid "GConf key '%s' set to '%s'"
 msgstr ""
+"מפתח GConf ‏'%s' נקבע ל-'%s'"
 
 #: ../lib/sources/gconfsource.py:137
 msgid "Default GConf settings"
@@ -819,16 +849,19 @@ msgstr "הגדרות GConf הכרחיות"
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
 msgstr ""
+"מפתח Mozilla ‏'%s' נקבע ל-'%s'"
 
 #: ../lib/sources/mozillasource.py:135
 #, python-format
 msgid "Mozilla key '%s' unset"
 msgstr ""
+"מפתח Mozilla ‏'%s' בוטל"
 
 #: ../lib/sources/mozillasource.py:137
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr ""
+"מפתח Mozilla ‏'%s' שונה ל-'%s'"
 
 #: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
 msgid "Web browser preferences"
@@ -840,7 +873,7 @@ msgstr "סימניות דפדפן אינטרנט"
 
 #: ../lib/sources/mozillasource.py:170
 msgid "Web browser profile list"
-msgstr ""
+msgstr "רשימת פרופילים של דפדפן האינטרנט"
 
 #: ../lib/sources/mozillasource.py:522
 #, python-format
@@ -851,11 +884,12 @@ msgstr "קובץ לא נמצא (%s)"
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr ""
+"שם קיים (%(name)s) ביחידה %(section)s"
 
 #: ../lib/sources/mozillasource.py:882
 #, python-format
 msgid "redundant default in section %s"
-msgstr ""
+msgstr "ברירת מחדל עודפת ביחידה %s"
 
 #: ../lib/sources/mozillasource.py:899
 msgid "no default profile"
@@ -944,50 +978,42 @@ msgstr "יישומון %s הוסר מהלוח הימני"
 #: ../lib/sources/paneldelegate.py:117
 #, python-format
 msgid "%s added to top panel"
-msgstr ""
-"‏%s הוסף ללוח העליון"
+msgstr "‏%s הוסף ללוח העליון"
 
 #: ../lib/sources/paneldelegate.py:119
 #, python-format
 msgid "%s added to bottom panel"
-msgstr ""
-"‏%s הוסף ללוח התחתון"
+msgstr "‏%s הוסף ללוח התחתון"
 
 #: ../lib/sources/paneldelegate.py:121
 #, python-format
 msgid "%s added to left panel"
-msgstr ""
-"‏%s הוסף ללוח השמאלי"
+msgstr "‏%s הוסף ללוח השמאלי"
 
 #: ../lib/sources/paneldelegate.py:123
 #, python-format
 msgid "%s added to right panel"
-msgstr ""
-"‏%s הוסף ללוח הימני"
+msgstr "‏%s הוסף ללוח הימני"
 
 #: ../lib/sources/paneldelegate.py:144
 #, python-format
 msgid "%s removed from top panel"
-msgstr ""
-"‏%s הוסר מהלוח העליון"
+msgstr "‏%s הוסר מהלוח העליון"
 
 #: ../lib/sources/paneldelegate.py:146
 #, python-format
 msgid "%s removed from bottom panel"
-msgstr ""
-"‏%s הוסר מהלוח התחתון"
+msgstr "‏%s הוסר מהלוח התחתון"
 
 #: ../lib/sources/paneldelegate.py:148
 #, python-format
 msgid "%s removed from left panel"
-msgstr ""
-"‏%s הוסר מהלוח השמאלי"
+msgstr "‏%s הוסר מהלוח השמאלי"
 
 #: ../lib/sources/paneldelegate.py:150
 #, python-format
 msgid "%s removed from right panel"
-msgstr ""
-"‏%s הוסר מהלוח הימני"
+msgstr "‏%s הוסר מהלוח הימני"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
 #: ../lib/sources/paneldelegate.py:200
@@ -1001,7 +1027,7 @@ msgstr "תפריט ראשי"
 #: ../lib/sources/paneldelegate.py:212
 #, python-format
 msgid "%s launcher"
-msgstr ""
+msgstr "מפעיל %s"
 
 #: ../lib/sources/paneldelegate.py:216
 msgid "Lock Screen button"
@@ -1040,21 +1066,25 @@ msgstr "נכשל בקריאת הקובץ '%s': %s"
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr ""
+"נכשל בקריאת מטה-מידע מ-'%s': ‏%s"
 
 #: ../lib/storage.py:188
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr ""
+"מטה-מידע לא תקין ב-'%s': ‏%s"
 
 #: ../lib/storage.py:362
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr ""
+"לא ניתן להוסיף את הקובץ שלא קיים '%s'"
 
 #: ../lib/storage.py:568
 #, python-format
 msgid "Profile is read-only %s"
 msgstr ""
+"הפרופיל לקריאה בלבד %s"
 
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
@@ -1081,6 +1111,7 @@ msgstr "הצלחה!"
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr ""
+"סוג לא תקין לקביעת %(setting)s ב-%(np)s"
 
 #: ../lib/userdb.py:215
 #, python-format
@@ -1109,39 +1140,46 @@ msgstr ""
 #, python-format
 msgid "Could not open %s for writing"
 msgstr ""
+"לא ניתן לפתוח את %s לכתיבה"
 
 #: ../lib/userdb.py:355
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr ""
+"נכשל בשמירת בסיס נתוני המשתמשים ל-%s"
 
 #: ../lib/userdb.py:378 ../lib/userdb.py:413
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr ""
+"הקובץ %s אינו הגדרות פרופיל"
 
 #: ../lib/userdb.py:385
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr ""
+"נכשל בהוספת פרופיל ברירת המחדל %s להגדרות"
 
 #: ../lib/userdb.py:421
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr ""
+"נכשל בהוספת המשתמש %s להגדרות הפרופיל"
 
 #: ../lib/userdb.py:472
 msgid "Failed to get the user list"
-msgstr ""
+msgstr "נכשל בקבלת רשימת המשתמשים"
 
 #: ../lib/util.py:92
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
+"לא ניתן למצוא את ספריית הבית: לא נקבעה ב-‎/etc/passwd‏ ואין ערך במשתנה הסביבה ‎$HOME"
 
 #: ../lib/util.py:105
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr ""
+"לא ניתן למצוא את שם המשתמש: לא נקבע ב-‎/etc/passwd‏ ואין ערך במשתנה הסביבה ‎$USER"
