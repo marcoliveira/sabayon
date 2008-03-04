@@ -1,17 +1,17 @@
 # translation of sabayon.HEAD.hu.po to Hungarian
 # Hungarian translation of sabayon
 # This file is distributed under the same license as the sabayon package.
-# Copyright (C) 2005, 2007, Free Software Foundation, Inc.
+# Copyright (C) 2005, 2007, 2008, Free Software Foundation, Inc.
 #
-# Gabor Kelemen <kelemeng@gnome.hu>, 2005, 2007.
+# Gabor Kelemen <kelemeng@gnome.hu>, 2005, 2007, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-24 00:25+0100\n"
-"PO-Revision-Date: 2007-10-29 10:09+0100\n"
+"POT-Creation-Date: 2007-10-29 09:10+0000\n"
+"PO-Revision-Date: 2008-03-04 12:16+0100\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
-"Language-Team: Hungarian <gnome@gnome.hu>\n"
+"Language-Team: Hungarian <gnome@fsf.hu>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -467,13 +467,13 @@ msgstr "Felhasználói felület"
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../admin-tool/sabayon:73
+#: ../admin-tool/sabayon:77
 msgid "Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr ""
 "A felhasználói fiókjának nincs jogosultsága futtatni a Munkaasztal-"
 "felhasználói profilok eszközt"
 
-#: ../admin-tool/sabayon:74
+#: ../admin-tool/sabayon:78
 msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
@@ -481,11 +481,11 @@ msgstr ""
 "Rendszergazda szintű jogosultság szükséges ezen program futtatásához, mivel "
 "rendszerfájlokat tud módosítani."
 
-#: ../admin-tool/sabayon:79
+#: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
 msgstr "A Munkaasztal-felhasználói profilok eszköz már fut"
 
-#: ../admin-tool/sabayon:80
+#: ../admin-tool/sabayon:84
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
@@ -493,23 +493,23 @@ msgstr ""
 "Nem használhatja a Munkaasztal-felhasználói profilok eszközt egy "
 "profilszerkesztő munkafolyamaton belül"
 
-#: ../admin-tool/sabayon:87
+#: ../admin-tool/sabayon:91
 #, c-format
 msgid "User account '%s' was not found"
-msgstr "\"%s\" felhasználói fiók nem található"
+msgstr "„%s” felhasználói fiók nem található"
 
-#: ../admin-tool/sabayon:88
+#: ../admin-tool/sabayon:92
 #, c-format
 msgid ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
 "Try again after creating the account (using, for example, the 'adduser' "
 "command)"
 msgstr ""
-"A Sabayonnak szüksége van \"%s\" felhasználói fiók jelenlétére ezen a "
-"számítógépen. Próbálja újra a fiók létrehozása után (például az \"adduser\" "
+"A Sabayonnak szüksége van „%s” felhasználói fiók jelenlétére ezen a "
+"számítógépen. Próbálja újra a fiók létrehozása után (például az „adduser” "
 "parancs használatával)"
 
-#: ../admin-tool/sabayon:128
+#: ../admin-tool/sabayon:131
 #, c-format
 msgid ""
 "A fatal error has occurred.  You can help us fix the problem by sending the "
@@ -518,7 +518,7 @@ msgstr ""
 "Végzetes hiba történt. Segíthet kijavítani a problémát a(z) %s helyen "
 "található napló elküldésével a következő címre: %s."
 
-#: ../admin-tool/sabayon:143
+#: ../admin-tool/sabayon:145
 #, c-format
 msgid ""
 "Sabayon will now exit.  There were some recoverable errors, and you can help "
@@ -530,7 +530,7 @@ msgstr ""
 #: ../admin-tool/sabayon-apply:98
 #, c-format
 msgid "No profile for user '%s' found\n"
-msgstr "\"%s\" felhasználónak nincs profilja\n"
+msgstr "„%s” felhasználónak nincs profilja\n"
 
 #: ../admin-tool/sabayon-apply:103
 msgid "Please use -h for usage options"
@@ -588,7 +588,7 @@ msgstr "Bezárás mentés _nélkül"
 #: ../admin-tool/saveconfirm.py:41
 #, python-format
 msgid "Save changes to profile \"%s\" before closing?"
-msgstr "Elmenti \"%s\" profil változásait mielőtt kilép?"
+msgstr "Elmenti „%s” profil változásait mielőtt kilép?"
 
 #: ../admin-tool/saveconfirm.py:45
 #, python-format
@@ -711,7 +711,7 @@ msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
 "report this error now or try to continue editing the user profile."
 msgstr ""
-"Helyreállítható hiba történt a(z) \"%s\" felhasználói profil alkalmazásakor. "
+"Helyreállítható hiba történt a(z) „%s” felhasználói profil alkalmazásakor. "
 "Jelentheti ezt a hibát, vagy megpróbálhatja folytatni a felhasználói profil "
 "szerkesztését."
 
@@ -749,27 +749,29 @@ msgstr "Nem sikerült elindítani az Xnestet: indítás közben összeomlott"
 #: ../lib/protosession.py:501
 #, python-format
 msgid "There was a recoverable error while applying the user profile from file '%s'."
-msgstr "Helyreállítható hiba történt a(z) \"%s\" fájlból származó felhasználói profil alkalmazásakor."
+msgstr ""
+"Helyreállítható hiba történt a(z) „%s” fájlból származó felhasználói "
+"profil alkalmazásakor."
 
 #: ../lib/protosession.py:510
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
-msgstr "Végzetes hiba történt a(z) \"%s\" felhasználói profil alkalmazásakor."
+msgstr "Végzetes hiba történt a(z) „%s” felhasználói profil alkalmazásakor."
 
 #: ../lib/sources/filessource.py:69
 #, python-format
 msgid "File '%s' created"
-msgstr "\"%s\" fájl létrehozva"
+msgstr "„%s” fájl létrehozva"
 
 #: ../lib/sources/filessource.py:71
 #, python-format
 msgid "File '%s' deleted"
-msgstr "\"%s\" fájl törölve"
+msgstr "„%s” fájl törölve"
 
 #: ../lib/sources/filessource.py:73
 #, python-format
 msgid "File '%s' changed"
-msgstr "\"%s\" fájl megváltoztatva"
+msgstr "„%s” fájl megváltoztatva"
 
 #: ../lib/sources/filessource.py:97
 msgid "Applications menu"
@@ -794,47 +796,47 @@ msgstr "Kezdje itt menü"
 #: ../lib/sources/gconfsource.py:90
 #, python-format
 msgid "GConf key '%s' unset"
-msgstr "\"%s\" GConf kulcs visszaállítva"
+msgstr "„%s” GConf kulcs visszaállítva"
 
 #: ../lib/sources/gconfsource.py:92
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
-msgstr "\"%s\" GConf kulcs beállítva \"%s\" karakterláncra"
+msgstr "„%s” GConf kulcs beállítva „%s” karakterláncra"
 
 #: ../lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
-msgstr "\"%s\" GConf kulcs beállítva \"%s\" egész értékre"
+msgstr "„%s” GConf kulcs beállítva „%s” egész értékre"
 
 #: ../lib/sources/gconfsource.py:96
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
-msgstr "\"%s\" GConf kulcs beállítva \"%s\" lebegőpontos értékre"
+msgstr "„%s” GConf kulcs beállítva „%s” lebegőpontos értékre"
 
 #: ../lib/sources/gconfsource.py:98
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
-msgstr "\"%s\" GConf kulcs beállítva \"%s\" logikai értékre"
+msgstr "„%s” GConf kulcs beállítva „%s” logikai értékre"
 
 #: ../lib/sources/gconfsource.py:100
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
-msgstr "\"%s\" GConf kulcs beállítva \"%s\" sémára"
+msgstr "„%s” GConf kulcs beállítva „%s” sémára"
 
 #: ../lib/sources/gconfsource.py:102
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
-msgstr "\"%s\" GConf kulcs beállítva \"%s\" listára"
+msgstr "„%s” GConf kulcs beállítva „%s” listára"
 
 #: ../lib/sources/gconfsource.py:104
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
-msgstr "\"%s\" GConf kulcs beállítva \"%s\" párra"
+msgstr "„%s” GConf kulcs beállítva „%s” párra"
 
 #: ../lib/sources/gconfsource.py:106
 #, python-format
 msgid "GConf key '%s' set to '%s'"
-msgstr "\"%s\" GConf kulcs beállítva a következőre: \"%s\""
+msgstr "„%s” GConf kulcs beállítva a következőre: „%s”"
 
 #: ../lib/sources/gconfsource.py:137
 msgid "Default GConf settings"
@@ -847,17 +849,17 @@ msgstr "Kötelező GConf beállítások"
 #: ../lib/sources/mozillasource.py:133
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
-msgstr "\"%s\" Mozilla kulcs beállítva a következőre: \"%s\""
+msgstr "„%s” Mozilla kulcs beállítva a következőre: „%s”"
 
 #: ../lib/sources/mozillasource.py:135
 #, python-format
 msgid "Mozilla key '%s' unset"
-msgstr "\"%s\" Mozilla kulcs visszaállítva"
+msgstr "„%s” Mozilla kulcs visszaállítva"
 
 #: ../lib/sources/mozillasource.py:137
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
-msgstr "\"%s\" Mozilla kulcs megváltoztatva a következőre: \"%s\""
+msgstr "„%s” Mozilla kulcs megváltoztatva a következőre: „%s”"
 
 #: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
 msgid "Web browser preferences"
@@ -893,42 +895,42 @@ msgstr "nincs alapértelmezett profil"
 #: ../lib/sources/mozillasource.py:954
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
-msgstr "Mozilla könyvjelző létrehozva: \"%s\" -> \"%s\""
+msgstr "Mozilla könyvjelző létrehozva: „%s” -> „%s”"
 
 #: ../lib/sources/mozillasource.py:956
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
-msgstr "Mozilla könyvjelzőmappa létrehozva: \"%s\""
+msgstr "Mozilla könyvjelzőmappa létrehozva: „%s”"
 
 #: ../lib/sources/mozillasource.py:959
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
-msgstr "Mozilla könyvjelző törölve: \"%s\""
+msgstr "Mozilla könyvjelző törölve: „%s”"
 
 #: ../lib/sources/mozillasource.py:961
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
-msgstr "Mozilla könyvjelzőmappa törölve: \"%s\""
+msgstr "Mozilla könyvjelzőmappa törölve: „%s”"
 
 #: ../lib/sources/mozillasource.py:964
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
-msgstr "Mozilla könyvjelző megváltoztatva: \"%s\" \"%s\""
+msgstr "Mozilla könyvjelző megváltoztatva: „%s” „%s”"
 
 #: ../lib/sources/mozillasource.py:966
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
-msgstr "Mozilla könyvjelzőmappa megváltoztatva: \"%s\""
+msgstr "Mozilla könyvjelzőmappa megváltoztatva: „%s”"
 
 #: ../lib/sources/paneldelegate.py:55
 #, python-format
 msgid "Panel '%s' added"
-msgstr "\"%s\" panel hozzáadva"
+msgstr "„%s” panel hozzáadva"
 
 #: ../lib/sources/paneldelegate.py:61
 #, python-format
 msgid "Panel '%s' removed"
-msgstr "\"%s\" panel eltávolítva"
+msgstr "„%s” panel eltávolítva"
 
 #: ../lib/sources/paneldelegate.py:76
 #, python-format
@@ -1055,22 +1057,22 @@ msgstr "Panelfájl"
 #: ../lib/storage.py:172
 #, python-format
 msgid "Failed to read file '%s': %s"
-msgstr "Nem sikerült a(z) \"%s\" fájlt olvasni: %s"
+msgstr "Nem sikerült a(z) „%s” fájlt olvasni: %s"
 
 #: ../lib/storage.py:182
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
-msgstr "Nem sikerült metaadatokat olvasni a következőből: \"%s\": %s"
+msgstr "Nem sikerült metaadatokat olvasni a következőből: „%s”: %s"
 
 #: ../lib/storage.py:188
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
-msgstr "Érvénytelen metaadat-szakasz a következőben: \"%s\": %s"
+msgstr "Érvénytelen metaadat-szakasz a következőben: „%s”: %s"
 
 #: ../lib/storage.py:362
 #, python-format
 msgid "Cannot add non-existent file '%s'"
-msgstr "Nem lehet hozzáadni \"%s\" nem létező fájlt"
+msgstr "Nem lehet hozzáadni „%s” nem létező fájlt"
 
 #: ../lib/storage.py:568
 #, python-format
