@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-11 03:29+0000\n"
-"PO-Revision-Date: 2008-03-15 12:38+0100\n"
+"POT-Creation-Date: 2008-03-17 10:54+0100\n"
+"PO-Revision-Date: 2008-03-17 11:27+0100\n"
 "Last-Translator: Laurent Dhima <laurenti@alblinux.net>\n"
 "Language-Team: albanian <gnome-albanian-perkthyesit@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -20,6 +20,7 @@ msgstr ""
 msgid "Program to establish and edit profiles for users"
 msgstr "Program për të përcaktuar dhe ndryshuar profilet e përdoruesve"
 
+# (pofilter) credits: checks for messages containing translation credits instead of normal translations.
 #: ../admin-tool/aboutdialog.py:66
 msgid "translator-credits"
 msgstr "Laurent Dhima <laurenti@alblinux.net>"
@@ -90,13 +91,15 @@ msgstr "_Informacione"
 msgid "About Sabayon"
 msgstr "Informacione mbi Sabayon"
 
+# (pofilter) unchanged: please translate
 #: ../admin-tool/editorwindow.py:262 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
+# (pofilter) unchanged: please translate
 #: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:79
 msgid "Files"
-msgstr "Files"
+msgstr "File"
 
 #: ../admin-tool/editorwindow.py:266
 #: ../admin-tool/lockdown/pessulus.glade.h:41
@@ -117,25 +120,30 @@ msgstr "<asnjë lloj>"
 msgid "<no value>"
 msgstr "<asnjë vlerë>"
 
+# (pofilter) unchanged: please translate
 #: ../admin-tool/gconfviewer.py:62
 msgid "string"
-msgstr "string"
+msgstr "vlerë"
 
+# (pofilter) unchanged: please translate
 #: ../admin-tool/gconfviewer.py:64
 msgid "integer"
-msgstr "integer"
+msgstr "i plotë"
 
+# (pofilter) unchanged: please translate
 #: ../admin-tool/gconfviewer.py:66
 msgid "float"
-msgstr "float"
+msgstr "presje e lëvizëshme"
 
+# (pofilter) unchanged: please translate
 #: ../admin-tool/gconfviewer.py:68
 msgid "boolean"
-msgstr "boolean"
+msgstr "boolean-e"
 
+# (pofilter) unchanged: please translate
 #: ../admin-tool/gconfviewer.py:70
 msgid "schema"
-msgstr "schema"
+msgstr "skemë"
 
 #: ../admin-tool/gconfviewer.py:72
 msgid "list"
@@ -295,6 +303,8 @@ msgid "Use anti-aliasing"
 msgstr "Përdor anti-aliasing"
 
 # (pofilter) accelerators: accelerator _ does not occur in original and should not be in translation
+# (pofilter) isreview: Check if the unit has been marked review.
+# (pofilter) acronyms: acronyms should not be translated: UI
 #: ../admin-tool/lockdown/maindialog.py:87
 msgid "Disable UI customization"
 msgstr "Çaktivo personalizimin e interfaqes"
@@ -341,6 +351,7 @@ msgstr ""
 "E madhe\n"
 "E vogël"
 
+# (pofilter) unchanged: please translate
 #: ../admin-tool/lockdown/pessulus.glade.h:10
 msgid ""
 "\n"
@@ -353,6 +364,7 @@ msgstr ""
 "PowerPoint 97+ (.ppt)\n"
 "OpenOffice.org 1.1 (.sxi)"
 
+# (pofilter) unchanged: please translate
 #: ../admin-tool/lockdown/pessulus.glade.h:14
 msgid ""
 "\n"
@@ -365,6 +377,7 @@ msgstr ""
 "Excel 97+ (.xls)\n"
 "OpenOffice.org 1.1 (.sxc)"
 
+# (pofilter) unchanged: please translate
 #: ../admin-tool/lockdown/pessulus.glade.h:18
 msgid ""
 "\n"
@@ -443,6 +456,7 @@ msgstr "Niveli i sigurisë të macro:"
 msgid "Number of undo steps:"
 msgstr "Numri i hapave të anullimit:"
 
+# (pofilter) unchanged: please translate
 #: ../admin-tool/lockdown/pessulus.glade.h:40
 msgid "OpenOffice.org"
 msgstr "OpenOffice.org"
@@ -480,23 +494,26 @@ msgstr ""
 "Të drejta të nivelit të administrimit nevoiten për të përdorur këtë program "
 "pasi ai mund të ndryshojë file të sistemit."
 
+# (pofilter) doublequoting: checks whether doublequoting is consistent between the two strings
 #: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
-msgstr "Instrumenti \"Profili i Përdoruesit\" është në përdorim"
+msgstr "Instrumenti \"Manazhimi profileve të përdoruesit\" është në përdorim"
 
+# (pofilter) doublequoting: checks whether doublequoting is consistent between the two strings
 #: ../admin-tool/sabayon:84
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
 msgstr ""
-"Nuk mund të përdorësh instrumentin \"Profili i përdoruesit\" pa një seancë "
-"për ndryshim profili"
+"Nuk mund të përdorësh instrumentin \"Manazhimi i profileve të përdoruesit\" pa "
+"një seancë për ndryshim profili"
 
 #: ../admin-tool/sabayon:91
 #, c-format
 msgid "User account '%s' was not found"
 msgstr "Profili i përdoruesit '%s' nuk ekziston"
 
+# (pofilter) puncspacing: checks for bad spacing after punctuation
 #: ../admin-tool/sabayon:92
 #, c-format
 msgid ""
@@ -506,7 +523,7 @@ msgid ""
 msgstr ""
 "Sabayon ka nevojë që një profil special përdoruesi '%s' të ekzistojë në këtë "
 "kompjuter. Provo përsëri pasi të kesh krijuar profilin (duke përdorur, për "
-"shembul komandën 'adduser')"
+"shembull komandën 'adduser')"
 
 #: ../admin-tool/sabayon:131
 #, c-format
@@ -527,6 +544,7 @@ msgstr ""
 "të na ndihmoni të zbulojmë problemin duke dërguar regjistrin e ruajtur në %s "
 "tek %s"
 
+# (pofilter) puncspacing: checks for bad spacing after punctuation
 #: ../admin-tool/sabayon-apply:99
 #, c-format
 msgid "No profile for user '%s' found\n"
@@ -537,6 +555,7 @@ msgid "Please use -h for usage options"
 msgstr "Përdor -h për ospionet e përdorimit"
 
 # (pofilter) xmltags: checks that XML/HTML tags have not been translated
+# (pofilter) isreview: Check if the unit has been marked review.
 #: ../admin-tool/sabayon-session:67
 #, c-format
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
@@ -656,6 +675,7 @@ msgstr[1] ""
 "përfundimisht."
 
 # (pofilter) variables: do not translate: %d
+# (pofilter) isreview: Check if the unit has been marked review.
 #: ../admin-tool/saveconfirm.py:81
 #, python-format
 msgid "If you don't save, changes from the last %d hour will be permanently lost."
@@ -783,6 +803,7 @@ msgstr "Menuja e rregullimeve të serverit"
 msgid "System Settings menu"
 msgstr "Menuja e rregullimeve të sistemit"
 
+# (pofilter) doublequoting: checks whether doublequoting is consistent between the two strings
 #: ../lib/sources/filessource.py:105
 msgid "Start Here menu"
 msgstr "Menuja \"Fillo këtu\""
@@ -840,16 +861,19 @@ msgstr "Rregullimet e przgjedhura të GConf"
 msgid "Mandatory GConf settings"
 msgstr "Rregullimet e detyrueshme GConf"
 
+# (pofilter) simplecaps: checks the capitalisation of two strings isn't wildly different
 #: ../lib/sources/mozillasource.py:133
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
-msgstr "Kyçi i Mozilla '%s' është vendosur tek '%s'"
+msgstr "Kyçi i Mozilla '%s' është caktuar tek '%s'"
 
+# (pofilter) simplecaps: checks the capitalisation of two strings isn't wildly different
 #: ../lib/sources/mozillasource.py:135
 #, python-format
 msgid "Mozilla key '%s' unset"
 msgstr "Kyçi i Mozilla '%s' papërcaktuar"
 
+# (pofilter) simplecaps: checks the capitalisation of two strings isn't wildly different
 #: ../lib/sources/mozillasource.py:137
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
@@ -886,31 +910,38 @@ msgstr "prezgjedhje ridondante në seksionin %s"
 msgid "no default profile"
 msgstr "asnjë profil i prezgjedhur"
 
+# (pofilter) simplecaps: checks the capitalisation of two strings isn't wildly different
 #: ../lib/sources/mozillasource.py:954
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "U krijua libërshënuesi i Mozilla '%s' -> '%s'"
 
+# (pofilter) simplecaps: checks the capitalisation of two strings isn't wildly different
 #: ../lib/sources/mozillasource.py:956
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "U krijua kartela e libërshënuesëve Mozilla '%s'"
 
+# (pofilter) simplecaps: checks the capitalisation of two strings isn't wildly different
 #: ../lib/sources/mozillasource.py:959
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "U eleminua libërshënuesi i Mozilla '%s'"
 
+# (pofilter) simplecaps: checks the capitalisation of two strings isn't wildly different
 #: ../lib/sources/mozillasource.py:961
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "U eleminua kartela e libërshënuesëve Mozilla '%s'"
 
+# (pofilter) simplecaps: checks the capitalisation of two strings isn't wildly different
+# (pofilter) doublewords: The word '''' is repeated
 #: ../lib/sources/mozillasource.py:964
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "U ndryshua libërshënuesi Mozilla '%s' '%s'"
 
+# (pofilter) simplecaps: checks the capitalisation of two strings isn't wildly different
 #: ../lib/sources/mozillasource.py:966
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
@@ -1015,10 +1046,11 @@ msgstr "Sirtari"
 msgid "Main Menu"
 msgstr "Menuja kryesore"
 
+# (pofilter) startcaps: checks that the message starts with the correct capitalisation
 #: ../lib/sources/paneldelegate.py:212
 #, python-format
 msgid "%s launcher"
-msgstr "Lëshues i %s"
+msgstr "Lëshues «%s»"
 
 #: ../lib/sources/paneldelegate.py:216
 msgid "Lock Screen button"
@@ -1048,11 +1080,13 @@ msgstr "Shtylla e menuve"
 msgid "Panel File"
 msgstr "File i panelit"
 
+# (pofilter) puncspacing: checks for bad spacing after punctuation
 #: ../lib/storage.py:172
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "Ngarkimi i file '%s' dështoi: %s"
 
+# (pofilter) puncspacing: checks for bad spacing after punctuation
 #: ../lib/storage.py:182
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
@@ -1092,13 +1126,14 @@ msgid "Success!"
 msgstr "Me sukses!"
 
 # (pofilter) variables: translation contains variables not in original: %s, %s
+# (pofilter) isreview: Check if the unit has been marked review.
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
 #: ../lib/userdb.py:54
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
-msgstr "lloj i pavlefshëm për caktimin e %(setting)s në %(np)s"
+msgstr "lloj i pavlefshëm për parametrin %(setting)s në %(np)s"
 
 #: ../lib/userdb.py:215
 #, python-format
@@ -1152,19 +1187,22 @@ msgstr "Dështoi shtimi i përdoruesit %s tek konfigurimi i profilit"
 msgid "Failed to get the user list"
 msgstr "Dështoi marrja e listës së përdoruesve"
 
+# (pofilter) doublequoting: checks whether doublequoting is consistent between the two strings
+# (pofilter) filepaths: checks that file paths have not been translated
 #: ../lib/util.py:93
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"E pamundur gjetja e directory \"shtëpi\": e papërcaktuar tek /etc/password "
-"dhe asnjë vlerë për $HOME në ambient"
+"E pamundur gjetja e directory \"home\": papërcaktuar tek /etc/passwd dhe asnjë "
+"vlerë për të ndryshueshmen e mjedisit $HOME"
 
+# (pofilter) filepaths: checks that file paths have not been translated
 #: ../lib/util.py:106
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr ""
-"E pamundur gjetja e përdoruesit: i papërcaktuar tek /etc/password dhe asnjë "
-"vlerë për $USER në ambient"
+"E pamundur gjetja e emrit të përdoruesit: papërcaktuar tek /etc/passwd dhe "
+"asnjë vlerë për të ndryshueshmen e mjedisit $USER"
 
