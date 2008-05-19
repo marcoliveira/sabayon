@@ -1,3 +1,15 @@
+2008-05-19  Michael Meeks  <michael.meeks@novell.com>
+
+	https://bugzilla.novell.com/show_bug.cgi?id=384840
+
+	* admin-tool/sabayon-xinitrc.sh.in: Before launching
+	sabayon-apply, check if users.xml exists.  If it doesn't (i.e.
+	this machine doesn't use Sabayon), we can avoid loading the entire
+	Python stack at login time.
+
+	* admin-tool/Makefile.am (%.sh): Substitute @SCONFDIR@ as well in
+	the sed rule for the xinitrc script.
+
 ==================== 2.20.0 ====================
 
 2008-03-11  Federico Mena Quintero  <federico@novell.com>
