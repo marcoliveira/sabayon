@@ -47,6 +47,7 @@ sabayon_PYTHON = $(PYTHON_FILES)
 %.sh: %.sh.in
 	sed                                             \
 		-e s!\@SBINDIR\@!$(sbindir)!            \
+		-e s!\@SCONFDIR\@!$(sysconfdir)!        \
 		< $< > $@
 	chmod a+x $@
 

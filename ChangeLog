@@ -1,3 +1,11 @@
+2008-06-25  Michael Meeks  <michael.meeks@novell.com>
+
+	* admin-tool/Makefile.am, admin-tool/sabayon-xinitrc.sh.in:
+	don't spawn a whole python process / bootstrap to check for
+	a single file - when we can do that in the shell script
+	wrapper for free: hugely improves login performance with
+	sabayon running.
+
 ==================== 2.20.0 ====================
 
 2008-03-11  Federico Mena Quintero  <federico@novell.com>
@@ -15,11 +23,11 @@
 	* configure.ac (AC_CONFIG_FILES): admin-tool/sabayon.desktop.in is a
 	generated file now.
 
-2008-02-21  John Robeson <johnny@localmomentum.net>
+2008-02-21  John Robeson  <johnny@localmomentum.net>
 
     * lib/test-debug-conf.py: updated the test
 
-2008-02-21	Sayamindu Dasgupta	<sayamindu@gmail.com>
+2008-02-21  Sayamindu Dasgupta	<sayamindu@gmail.com>
 
 	* lib/storage.py (zip_directory): Fix recursive behaviour;
 	Now only single instances of files are added, and ignored 

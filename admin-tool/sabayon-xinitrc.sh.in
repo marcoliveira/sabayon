@@ -5,7 +5,10 @@
 #
 
 if [ "x$DISABLE_SABAYON_XINITRC" = "x" ] ; then
-  if [ -x @SBINDIR@/sabayon-apply ] ; then
-    @SBINDIR@/sabayon-apply
+  # ensure we do no work if there are no profiles to apply
+  if [ -f @SCONFDIR@/desktop-profiles/users.xml ]; then
+    if [ -x @SBINDIR@/sabayon-apply ] ; then
+      @SBINDIR@/sabayon-apply
+    fi
   fi
 fi
