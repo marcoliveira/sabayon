@@ -67,7 +67,7 @@ lockdownbuttons = (
 
     # Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
     # This can be used to disable this, for when you don't want people to know you created the document.
-    ( "/apps/openoffice/lockdown/remove_personal_info_on_save", _("Remove personal info from documents when saving them"), "ooosecurity" ),
+    ( "/apps/openoffice/lockdown/remove_personal_info_on_save", _("Remove personal information from documents when saving them"), "ooosecurity" ),
     ( "/apps/openoffice/lockdown/warn_info_create_pdf", _("Warn if macro tries to create a PDF"), "ooosecurity" ),
     ( "/apps/openoffice/lockdown/warn_info_printing",   _("Warn if macro tries to print a document"), "ooosecurity" ),
     ( "/apps/openoffice/lockdown/warn_info_saving", _("Warn if macro tries to save a document"), "ooosecurity" ),

@@ -212,7 +212,7 @@ class UserDatabase:
         multiple_result = get_setting (map_node, "multiple_result", "first")
 
         if search_base == None:
-            raise UserDatabaseException(_("No search based specified for %s"%map))
+            raise UserDatabaseException(_("No search base specified for %s"%map))
             
         if query_filter == None:
             raise UserDatabaseException(_("No query filter specified for %s"%map))
