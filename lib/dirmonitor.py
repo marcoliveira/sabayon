@@ -19,7 +19,7 @@
 import os
 import os.path
 import gobject
-import gnomevfs
+import gio
 import util
 import fnmatch
 import debuglog
@@ -27,9 +27,9 @@ import urllib
 
 N_WATCHES_LIMIT = 200
 
-CHANGED = gnomevfs.MONITOR_EVENT_CHANGED
-DELETED = gnomevfs.MONITOR_EVENT_DELETED
-CREATED = gnomevfs.MONITOR_EVENT_CREATED
+CHANGED = gio.FILE_MONITOR_EVENT_CHANGED
+DELETED = gio.FILE_MONITOR_EVENT_DELETED
+CREATED = gio.FILE_MONITOR_EVENT_CREATED
 
 def dprint (fmt, *args):
     debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_DIR_MONITOR, fmt % args)
@@ -49,7 +49,7 @@ class DirectoryMonitor:
         self.directory = directory
         self.callback = callback
         self.data = data
-        self.watches = {} # maps filename => gnome_vfs_monitor handle
+        self.watches = {} # maps filename => FileMonitor handle
         self.too_many_watches = False
         self.dirs_to_ignore = []
         self.files_to_ignore = []
@@ -75,18 +75,16 @@ class DirectoryMonitor:
             self.callback (path, event)
 
     #
-    # Processing of a gnomevfs callback
+    # Processing of a file_monitor callback
     #
-    def __handle_gnomevfs_event (self, dir_uri, file_uri, event):
+    def __handle_file_monitor_event (self, dir_uri, file_uri, event, data):
         if event == CHANGED or event == DELETED or event == CREATED:
-            # Strip 'file://' and replace %xx with equivalent characters.
-            path = file_uri [7:]
-            path = urllib.unquote (path)
-
+            path = file_uri.get_path ()
+            
             # Strip trailing '/'.
             path = os.path.normpath (path)
             
-            dprint ("Got gnomevfs event '%s' on '%s'", event_to_string (event), path)
+            dprint ("Got file_monitor event '%s' on '%s'", event_to_string (event), path)
 
             if not self.__should_ignore_dir (path) and \
                not self.__should_ignore_file (path):
@@ -97,7 +95,7 @@ class DirectoryMonitor:
                 elif event == DELETED:
                     if path != self.directory and self.watches.has_key (path):
                         dprint ("Deleting watch for '%s' since it got deleted", path)
-                        gnomevfs.monitor_cancel (self.watches [path])
+                        self.watches [path].cancel ()
                         del self.watches[path]
                         if len (self.watches) < N_WATCHES_LIMIT:
                             self.too_many_watches = False
@@ -120,7 +118,9 @@ class DirectoryMonitor:
             return
 
         try:
-            self.watches [dir] = gnomevfs.monitor_add (dir, gnomevfs.MONITOR_DIRECTORY, self.__handle_gnomevfs_event)
+            gfile = gio.File (dir)
+            self.watches [dir] = gfile.monitor_directory ()
+            self.watches [dir].connect ("changed", self.__handle_file_monitor_event) 
             dprint ("Added directory watch for '%s'", dir)
         except:
             print ("Failed to add monitor for %s") % (dir)
@@ -160,7 +160,7 @@ class DirectoryMonitor:
         dprint ("Stopping recursive monitoring of '%s'", self.directory)
 
         for path in self.watches:
-            gnomevfs.monitor_cancel (self.watches [path])
+            self.watches [path].cancel ()
 
 def run_unit_tests ():
     import tempfile
