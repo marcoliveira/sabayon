@@ -1,20 +1,20 @@
 # Vietnamese translation for Sabayon.
-# Copyright © 2007 Gnome i18n Project for Vietnamese.
-# Clytie Siddall <clytie@riverland.net.au>, 2005-2007.
-# 
+# Copyright © 2009 GNOME i18n Project for Vietnamese.
+# Clytie Siddall <clytie@riverland.net.au>, 2005-2009.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Sabayon TRUNK\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-24 00:25+0100\n"
-"PO-Revision-Date: 2007-09-03 22:43+0930\n"
+"Project-Id-Version: Sabayon 2.22.1\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon&component=general\n"
+"POT-Creation-Date: 2009-01-24 23:07+0000\n"
+"PO-Revision-Date: 2009-02-07 19:00+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
-"Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
+"Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: LocFactoryEditor 1.7b1\n"
+"X-Generator: LocFactoryEditor 1.8\n"
 
 #: ../admin-tool/aboutdialog.py:63
 msgid "Program to establish and edit profiles for users"
@@ -176,154 +176,155 @@ msgstr "Kiểu"
 msgid "Value"
 msgstr "Giá trị"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:101
+#: ../admin-tool/lockdown/lockdownbutton.py:99
 msgid "Click to make this setting not mandatory"
 msgstr "Nhấn chuột để làm cho thiết lập này không bắt buộc"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:103
+#: ../admin-tool/lockdown/lockdownbutton.py:101
 msgid "Click to make this setting mandatory"
 msgstr "Nhấn chuột để làm cho thiết lập này bắt buộc"
 
-#: ../admin-tool/lockdown/maindialog.py:51
+#: ../admin-tool/lockdown/maindialog.py:49
 msgid "Disable _command line"
 msgstr "Tắt dòng _lệnh"
 
-#: ../admin-tool/lockdown/maindialog.py:52
+#: ../admin-tool/lockdown/maindialog.py:50
 msgid "Disable _printing"
 msgstr "Tắt khả năng _in"
 
-#: ../admin-tool/lockdown/maindialog.py:53
+#: ../admin-tool/lockdown/maindialog.py:51
 msgid "Disable print _setup"
 msgstr "Tắt thiết lậ_p in"
 
-#: ../admin-tool/lockdown/maindialog.py:54
+#: ../admin-tool/lockdown/maindialog.py:52
 msgid "Disable save to _disk"
 msgstr "Tắt khả năng lưu _vào đĩa"
 
-#: ../admin-tool/lockdown/maindialog.py:56
+#: ../admin-tool/lockdown/maindialog.py:54
 msgid "_Lock down the panels"
 msgstr "_Khoá xuống Bảng"
 
-#: ../admin-tool/lockdown/maindialog.py:57
+#: ../admin-tool/lockdown/maindialog.py:55
 msgid "Disable force _quit"
 msgstr "Tắt khả năng buộc t_hoát"
 
-#: ../admin-tool/lockdown/maindialog.py:58
+#: ../admin-tool/lockdown/maindialog.py:56
 msgid "Disable lock _screen"
 msgstr "Tắt khả năng khóa _màn hình"
 
-#: ../admin-tool/lockdown/maindialog.py:59
+#: ../admin-tool/lockdown/maindialog.py:57
 msgid "Disable log _out"
 msgstr "Tắt khả năng đăng _xuất"
 
-#: ../admin-tool/lockdown/maindialog.py:61
+#: ../admin-tool/lockdown/maindialog.py:59
 msgid "Disable _quit"
 msgstr "Tắt khả năng t_hoát"
 
-#: ../admin-tool/lockdown/maindialog.py:62
+#: ../admin-tool/lockdown/maindialog.py:60
 msgid "Disable _arbitrary URL"
 msgstr "Tắt địa chỉ Mạng tù_y ý"
 
-#: ../admin-tool/lockdown/maindialog.py:63
+#: ../admin-tool/lockdown/maindialog.py:61
 msgid "Disable _bookmark editing"
 msgstr "Tắt khả năng _sửa dấu nhớ"
 
-#: ../admin-tool/lockdown/maindialog.py:64
+#: ../admin-tool/lockdown/maindialog.py:62
 msgid "Disable _history"
 msgstr "Tắt _lược sử"
 
-#: ../admin-tool/lockdown/maindialog.py:65
+#: ../admin-tool/lockdown/maindialog.py:63
 msgid "Disable _javascript chrome"
 msgstr "Tắt crom _JavaScript"
 
-#: ../admin-tool/lockdown/maindialog.py:66
+#: ../admin-tool/lockdown/maindialog.py:64
 msgid "Disable _toolbar editing"
 msgstr "Tắt khả năng sửa _thanh công cụ"
 
-#: ../admin-tool/lockdown/maindialog.py:67
+#: ../admin-tool/lockdown/maindialog.py:65
 msgid "_Fullscreen"
 msgstr "Toàn _màn hình"
 
-#: ../admin-tool/lockdown/maindialog.py:68
+#: ../admin-tool/lockdown/maindialog.py:66
 msgid "Hide _menubar"
 msgstr "Ẩn thanh trình đơ_n"
 
-#: ../admin-tool/lockdown/maindialog.py:72
 #. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
 #. This can be used to disable this, for when you don't want people to know you created the document.
-msgid "Remove personal info from documents when saving them"
-msgstr "Gỡ bỏ thông tin cá nhân khỏi tài liệu khi lưu"
+#: ../admin-tool/lockdown/maindialog.py:70
+#| msgid "Remove personal info from documents when saving them"
+msgid "Remove personal information from documents when saving them"
+msgstr "Gỡ bỏ thông tin cá nhân khỏi tài liệu khi lưu nó"
 
-#: ../admin-tool/lockdown/maindialog.py:73
+#: ../admin-tool/lockdown/maindialog.py:71
 msgid "Warn if macro tries to create a PDF"
 msgstr "Cảnh báo nếu vĩ lệnh thử tạo PDF"
 
-#: ../admin-tool/lockdown/maindialog.py:74
+#: ../admin-tool/lockdown/maindialog.py:72
 msgid "Warn if macro tries to print a document"
 msgstr "Cảnh báo nếu vĩ lệnh thử in tài liệu"
 
-#: ../admin-tool/lockdown/maindialog.py:75
+#: ../admin-tool/lockdown/maindialog.py:73
 msgid "Warn if macro tries to save a document"
 msgstr "Cảnh báo nếu vĩ lệnh thử lưu tài liệu"
 
-#: ../admin-tool/lockdown/maindialog.py:76
+#: ../admin-tool/lockdown/maindialog.py:74
 msgid "Warn if macro tries to sign a document"
 msgstr "Cảnh báo nếu vĩ lệnh thử ký tài liệu"
 
-#: ../admin-tool/lockdown/maindialog.py:77
+#: ../admin-tool/lockdown/maindialog.py:75
 msgid "Recommend password when saving a document"
 msgstr "Khuyên đặt mật khẩu khi lưu tài liệu"
 
-#: ../admin-tool/lockdown/maindialog.py:79
+#: ../admin-tool/lockdown/maindialog.py:77
 msgid "Enable auto-save"
 msgstr "Bật tự động lưu"
 
-#: ../admin-tool/lockdown/maindialog.py:81
 #. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
+#: ../admin-tool/lockdown/maindialog.py:79
 msgid "Printing should mark the document as modified"
 msgstr "In thì đánh dấu tài liệu « đã sửa đổi »"
 
-#: ../admin-tool/lockdown/maindialog.py:82
+#: ../admin-tool/lockdown/maindialog.py:80
 msgid "Use system's file dialog"
 msgstr "Dùng hộp thoại tập tin của hệ thống"
 
-#: ../admin-tool/lockdown/maindialog.py:83
+#: ../admin-tool/lockdown/maindialog.py:81
 msgid "Create backup copy on save"
 msgstr "Tạo bản sao lưu khi lưu"
 
-#: ../admin-tool/lockdown/maindialog.py:84
+#: ../admin-tool/lockdown/maindialog.py:82
 msgid "Warn when saving non-OpenOffice.org formats"
 msgstr "Cảnh báo khi lưu theo định dạng không phải OpenOffice.org"
 
-#: ../admin-tool/lockdown/maindialog.py:86
+#: ../admin-tool/lockdown/maindialog.py:84
 msgid "Use OpenGL"
 msgstr "Dùng OpenGL"
 
-#: ../admin-tool/lockdown/maindialog.py:87
+#: ../admin-tool/lockdown/maindialog.py:85
 msgid "Use system font"
 msgstr "Dùng phông của hệ thống"
 
-#: ../admin-tool/lockdown/maindialog.py:88
+#: ../admin-tool/lockdown/maindialog.py:86
 msgid "Use anti-aliasing"
 msgstr "Làm trơn phông"
 
-#: ../admin-tool/lockdown/maindialog.py:89
+#: ../admin-tool/lockdown/maindialog.py:87
 msgid "Disable UI customization"
 msgstr "Tắt tùy chỉnh giao diện người dùng"
 
-#: ../admin-tool/lockdown/maindialog.py:90
+#: ../admin-tool/lockdown/maindialog.py:88
 msgid "Show insensitive menu items"
 msgstr "Hiện tên trình đơn không đáp ứng"
 
-#: ../admin-tool/lockdown/maindialog.py:91
+#: ../admin-tool/lockdown/maindialog.py:89
 msgid "Show font preview"
 msgstr "Hiện ô xem thử phông"
 
-#: ../admin-tool/lockdown/maindialog.py:92
+#: ../admin-tool/lockdown/maindialog.py:90
 msgid "Show font history"
 msgstr "Hiện lược sử phông"
 
-#: ../admin-tool/lockdown/maindialog.py:93
+#: ../admin-tool/lockdown/maindialog.py:91
 msgid "Show icons in menus"
 msgstr "Hiện biểu tượng trong trình đơn"
 
@@ -334,7 +335,8 @@ msgid ""
 "10\n"
 "25\n"
 "50"
-msgstr "\n"
+msgstr ""
+"\n"
 "5\n"
 "10\n"
 "25\n"
@@ -346,7 +348,8 @@ msgid ""
 "Automatic\n"
 "Large\n"
 "Small"
-msgstr "\n"
+msgstr ""
+"\n"
 "Tự động\n"
 "Lớn\n"
 "Nhỏ"
@@ -357,7 +360,8 @@ msgid ""
 "OpenDocument (.odp)\n"
 "PowerPoint 97+ (.ppt)\n"
 "OpenOffice.org 1.1 (.sxi)"
-msgstr "\n"
+msgstr ""
+"\n"
 "OpenDocument (.odp)\n"
 "PowerPoint 97+ (.ppt)\n"
 "OpenOffice.org 1.1 (.sxi)"
@@ -368,7 +372,8 @@ msgid ""
 "OpenDocument (.ods)\n"
 "Excel 97+ (.xls)\n"
 "OpenOffice.org 1.1 (.sxc)"
-msgstr "\n"
+msgstr ""
+"\n"
 "OpenDocument (.ods)\n"
 "Excel 97+ (.xls)\n"
 "OpenOffice.org 1.1 (.sxc)"
@@ -379,7 +384,8 @@ msgid ""
 "OpenDocument (.odt)\n"
 "Word 97+ (.doc)\n"
 "OpenOffice.org 1.1 (.sxw)"
-msgstr "\n"
+msgstr ""
+"\n"
 "OpenDocument (.odt)\n"
 "Word 97+ (.doc)\n"
 "OpenOffice.org 1.1 (.sxw)"
@@ -391,7 +397,8 @@ msgid ""
 "High\n"
 "Medium\n"
 "Low"
-msgstr "\n"
+msgstr ""
+"\n"
 "Rất cao\n"
 "Cao\n"
 "Vừa\n"
@@ -463,97 +470,72 @@ msgid "User Interface"
 msgstr "Giao diện người dùng"
 
 # Variable: do not translate/ biến: đừng dịch
-#: ../admin-tool/profilesdialog.py:494
-#, python-format
 #.
 #. Translators: this string specifies how a profile
 #. name is concatenated with an integer
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
+#: ../admin-tool/profilesdialog.py:494
+#, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../admin-tool/sabayon:73
-msgid ""
-"Your account does not have permissions to run the Desktop User Profiles tool"
-msgstr ""
-"Tài khoản của bạn không có quyền chạy công cụ Hồ sơ Người dùng Môi trường"
+#: ../admin-tool/sabayon:77
+msgid "Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr "Tài khoản của bạn không có quyền chạy công cụ Hồ sơ Người dùng Môi trường"
 
-#: ../admin-tool/sabayon:74
-msgid ""
-"Administrator level permissions are needed to run this program because it "
-"can modify system files."
-msgstr ""
-"Cần thiết quyền quản trị để chạy chương trình này vì nó có thể sửa đổi tập "
-"tin hệ thống."
+#: ../admin-tool/sabayon:78
+msgid "Administrator level permissions are needed to run this program because it can modify system files."
+msgstr "Cần thiết quyền quản trị để chạy chương trình này vì nó có thể sửa đổi tập tin hệ thống."
 
-#: ../admin-tool/sabayon:79
+#: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
 msgstr "Công cụ Hồ sơ Người dùng Môi trường đang chạy"
 
-#: ../admin-tool/sabayon:80
-msgid ""
-"You may not use Desktop User Profiles tool from within a profile editing "
-"session"
-msgstr ""
-"Không cho phép bạn sử dụng công cụ Hồ sơ Người dùng Môi trường bên trong "
-"phiên chạy sửa hồ sơ"
+#: ../admin-tool/sabayon:84
+msgid "You may not use Desktop User Profiles tool from within a profile editing session"
+msgstr "Không cho phép bạn sử dụng công cụ Hồ sơ Người dùng Môi trường bên trong phiên chạy sửa hồ sơ"
 
-#: ../admin-tool/sabayon:87
+#: ../admin-tool/sabayon:91
 #, c-format
 msgid "User account '%s' was not found"
 msgstr "Không tìm thấy tài khoản người dùng « %s »"
 
-#: ../admin-tool/sabayon:88
+#: ../admin-tool/sabayon:92
 #, c-format
-msgid ""
-"Sabayon requires a special user account '%s' to be present on this computer. "
-"Try again after creating the account (using, for example, the 'adduser' "
-"command)"
-msgstr ""
-"Sabayon cần thiết một tài khoản người dùng đặc biệt « %s » nằm trong máy "
-"tính này. Hãy thử lại sau khi tạo tài khoản này (chẳng hạn, bằng lệnh « "
-"adduser » [thêm người dùng])"
+msgid "Sabayon requires a special user account '%s' to be present on this computer. Try again after creating the account (using, for example, the 'adduser' command)"
+msgstr "Sabayon cần thiết một tài khoản người dùng đặc biệt « %s » nằm trong máy tính này. Hãy thử lại sau khi tạo tài khoản này (chẳng hạn, bằng lệnh « adduser » [thêm người dùng])"
 
-#: ../admin-tool/sabayon:128
+#: ../admin-tool/sabayon:131
 #, c-format
-msgid ""
-"A fatal error has occurred.  You can help us fix the problem by sending the "
-"log in %s to %s"
-msgstr ""
-"Gặp lỗi nghiệm trọng. Xin giúp đỡ sửa lỗi này bằng cách gửi cho %s bản ghi "
-"nằm trong %s"
+msgid "A fatal error has occurred.  You can help us fix the problem by sending the log in %s to %s"
+msgstr "Gặp lỗi nghiệm trọng. Xin giúp đỡ sửa lỗi này bằng cách gửi cho %s bản ghi nằm trong %s"
 
-#: ../admin-tool/sabayon:143
+#: ../admin-tool/sabayon:145
 #, c-format
-msgid ""
-"Sabayon will now exit.  There were some recoverable errors, and you can help "
-"us debug the problem by sending the log in %s to %s"
-msgstr ""
-"Trình Sabayon sắp thoát. Nó đã gặp một số lỗi không thể phục hồi: bạn có thể "
-"giúp đỡ gỡ lỗi bằng cách gửi cho %s bản ghi nằm trong %s"
+msgid "Sabayon will now exit.  There were some recoverable errors, and you can help us debug the problem by sending the log in %s to %s"
+msgstr "Trình Sabayon sắp thoát. Nó đã gặp một số lỗi không thể phục hồi: bạn có thể giúp đỡ gỡ lỗi bằng cách gửi cho %s bản ghi nằm trong %s"
 
-#: ../admin-tool/sabayon-apply:98
+#: ../admin-tool/sabayon-apply:99
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Không tìm thấy hồ sơ cho người dùng « %s »\n"
 
-#: ../admin-tool/sabayon-apply:103
+#: ../admin-tool/sabayon-apply:104
 msgid "Please use -h for usage options"
 msgstr "Hãy dùng tùy chọn « -h » để xem thông tin về cách sử dụng"
 
 #: ../admin-tool/sabayon-session:67
 #, c-format
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
-msgstr ""
-"Cách sử dụng: %s <tên_hồ_sơ> <đường_dẫn_hồ_sơ> <số_hiệu_bộ_trình_bày>\n"
+msgstr "Cách sử dụng: %s <tên_hồ_sơ> <đường_dẫn_hồ_sơ> <số_hiệu_bộ_trình_bày>\n"
 
-#: ../admin-tool/sabayon.desktop.in.h:1
+#: ../admin-tool/sabayon.desktop.in.in.h:1
 msgid "Establish and Edit Profiles for Users"
 msgstr "Tạo và Sửa Hồ sơ cho Người dùng"
 
-#: ../admin-tool/sabayon.desktop.in.h:2
+#: ../admin-tool/sabayon.desktop.in.in.h:2
 #: ../admin-tool/sabayon.glade.h:4
 msgid "User Profile Editor"
 msgstr "Bộ Sửa Hồ sơ Người dùng"
@@ -601,54 +583,39 @@ msgstr "Lưu các thay đổi trong hồ sơ « %s » trước khi đóng không
 
 #: ../admin-tool/saveconfirm.py:45
 #, python-format
-msgid ""
-"If you don't save, changes from the last %ld second will be permanently lost."
-msgid_plural "If you don't save, changes from the last %ld seconds will be permanently "
-"lost."
+msgid "If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural "If you don't save, changes from the last %ld seconds will be permanently lost."
 msgstr[0] "Không lưu thì các thay đổi trong vòng %ld giây chót sẽ bị mất hoàn toàn."
 
 #: ../admin-tool/saveconfirm.py:51
-msgid ""
-"If you don't save, changes from the last minute will be permanently lost."
+msgid "If you don't save, changes from the last minute will be permanently lost."
 msgstr "Không lưu thì các thay đổi trong vòng phút chót sẽ bị mất hoàn toàn."
 
 #: ../admin-tool/saveconfirm.py:55
 #, python-format
-msgid ""
-"If you don't save, changes from the last minute and %ld second will be "
-"permanently lost."
-msgid_plural "If you don't save, changes from the last minute and %ld seconds will be "
-"permanently lost."
-msgstr[0] "Không lưu thì các thay đổi trong vòng phút chót và %ld giây sẽ bị mất hoàn "
-"toàn."
+msgid "If you don't save, changes from the last minute and %ld second will be permanently lost."
+msgid_plural "If you don't save, changes from the last minute and %ld seconds will be permanently lost."
+msgstr[0] "Không lưu thì các thay đổi trong vòng phút chót và %ld giây sẽ bị mất hoàn toàn."
 
 #: ../admin-tool/saveconfirm.py:62
 #, python-format
-msgid ""
-"If you don't save, changes from the last %ld minute will be permanently lost."
-msgid_plural "If you don't save, changes from the last %ld minutes will be permanently "
-"lost."
+msgid "If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural "If you don't save, changes from the last %ld minutes will be permanently lost."
 msgstr[0] "Không lưu thì các thay đổi trong vòng %ld phút chót sẽ bị mất hoàn toàn."
 
 #: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgstr ""
-"Không lưu thì các thay đổi trong vòng %d giờ sau chót sẽ bị mất hoàn toàn."
+msgstr "Không lưu thì các thay đổi trong vòng %d giờ sau chót sẽ bị mất hoàn toàn."
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
-msgid ""
-"If you don't save, changes from the last hour and %d minute will be "
-"permanently lost."
-msgid_plural "If you don't save, changes from the last hour and %d minutes will be "
-"permanently lost."
-msgstr[0] "Không lưu thì các thay đổi trong vòng giờ sau chót và %d phút chót sẽ bị mất "
-"hoàn toàn."
+msgid "If you don't save, changes from the last hour and %d minute will be permanently lost."
+msgid_plural "If you don't save, changes from the last hour and %d minutes will be permanently lost."
+msgstr[0] "Không lưu thì các thay đổi trong vòng giờ sau chót và %d phút chót sẽ bị mất hoàn toàn."
 
 #: ../admin-tool/saveconfirm.py:81
 #, python-format
-msgid ""
-"If you don't save, changes from the last %d hour will be permanently lost."
+msgid "If you don't save, changes from the last %d hour will be permanently lost."
 msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
 msgstr[0] "Không lưu thì các thay đổi trong vòng %d giờ sau chót sẽ bị mất hoàn toàn."
 
@@ -692,13 +659,8 @@ msgstr "Thiết lập khoá xuống cho %s"
 
 #: ../admin-tool/sessionwindow.py:333
 #, python-format
-msgid ""
-"There was a recoverable error while applying the user profile '%s'.  You can "
-"report this error now or try to continue editing the user profile."
-msgstr ""
-"Gặp lỗi có thể phục hồi trong khi áp dụng hồ sơ người dùng « %s ». Bây giờ "
-"bạn có dịp thông báo lỗi này, hoặc bạn có thể thử tiếp tục sửa hồ sơ người "
-"dùng đó."
+msgid "There was a recoverable error while applying the user profile '%s'.  You can report this error now or try to continue editing the user profile."
+msgstr "Gặp lỗi có thể phục hồi trong khi áp dụng hồ sơ người dùng « %s ». Bây giờ bạn có dịp thông báo lỗi này, hoặc bạn có thể thử tiếp tục sửa hồ sơ người dùng đó."
 
 #: ../admin-tool/sessionwindow.py:337
 msgid "_Report this error"
@@ -731,8 +693,7 @@ msgstr "Lỗi khởi chạy Xnest: chết trong khi khởi chạy"
 
 #: ../lib/protosession.py:501
 #, python-format
-msgid ""
-"There was a recoverable error while applying the user profile from file '%s'."
+msgid "There was a recoverable error while applying the user profile from file '%s'."
 msgstr "Gặp lỗi có thể phục hồi trong khi áp dụng hồ sơ người dùng từ tập tin « %s »."
 
 #: ../lib/protosession.py:510
@@ -998,8 +959,8 @@ msgstr "%s bị bỏ khỏi bảng bên trái"
 msgid "%s removed from right panel"
 msgstr "%s bị bỏ khỏi bảng bên phải"
 
-#: ../lib/sources/paneldelegate.py:200
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
+#: ../lib/sources/paneldelegate.py:200
 msgid "Drawer"
 msgstr "Ngăn kéo"
 
@@ -1084,18 +1045,19 @@ msgstr "Đang chạy %s việc thử (%s)"
 msgid "Success!"
 msgstr "Thành công !"
 
-#: ../lib/userdb.py:54
-#, python-format
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
+#: ../lib/userdb.py:54
+#, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "kiểu không hợp lệ cho thiết lập %(setting)s trong %(np)s"
 
 #: ../lib/userdb.py:215
 #, python-format
-msgid "No search based specified for %s"
-msgstr "Chưa ghi rõ cơ bản tìm cho %s"
+#| msgid "No search based specified for %s"
+msgid "No search base specified for %s"
+msgstr "Chưa ghi rõ cơ bản tìm kiếm cho %s"
 
 #: ../lib/userdb.py:218
 #, python-format
@@ -1158,50 +1120,11 @@ msgstr "Lỗi thêm người dùng %s vào cấu hình hồ sơ"
 msgid "Failed to get the user list"
 msgstr "Lỗi lấy danh sách người dùng"
 
-#: ../lib/util.py:91
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"Không tìm thấy thư mục chính: chưa lập nó trong « /etc/passwd » và không có "
-"giá trị cho biến « $HOME » trong môi trường."
+#: ../lib/util.py:93
+msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+msgstr "Không tìm thấy thư mục chính: chưa lập nó trong « /etc/passwd » và không có giá trị cho biến « $HOME » trong môi trường."
 
-#: ../lib/util.py:104
-msgid ""
-"Cannot find username: not set in /etc/passwd and no value for $USER in "
-"environment"
-msgstr ""
-"Không tìm thấy tên người dùng: chưa lập nó trong « /etc/passwd » và không có "
-"giá trị cho biến « $USER » trong môi trường."
+#: ../lib/util.py:106
+msgid "Cannot find username: not set in /etc/passwd and no value for $USER in environment"
+msgstr "Không tìm thấy tên người dùng: chưa lập nó trong « /etc/passwd » và không có giá trị cho biến « $USER » trong môi trường."
 
-#~ msgid "Failed to add monitor for %s"
-#~ msgstr "Lỗi thêm bộ trình bày cho %s"
-
-#~ msgid "Expected event: %s %s"
-#~ msgstr "Sự kiện mong đợi: %s %s"
-
-#~ msgid ""
-#~ "Could not create the 'sabayon-apply' process: %s\n"
-#~ "The command line used is '%s'\n"
-#~ "Child traceback:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Không thể tạo tiến trình « sabayon-apply »: %s\n"
-#~ "Dòng lệnh dùng là « %s »\n"
-#~ "Vết lùi con:\n"
-#~ "%s"
-
-#~ msgid "Usage: %s [<profile-name>]\n"
-#~ msgstr "Cách sử dụng: %s [<tên_hồ_sơ>]\n"
-
-#~ msgid "Panel applet '%s' added"
-#~ msgstr "Tiểu dụng bảng « %s » được thêm"
-
-#~ msgid "Panel applet '%s' removed"
-#~ msgstr "Tiểu dụng bảng « %s » bị gỡ bỏ"
-
-#~ msgid "Panel object '%s' added"
-#~ msgstr "Đối tượng bảng « %s » được thêm"
-
-#~ msgid "Panel object '%s' removed"
-#~ msgstr "Đối tượng bảng « %s » bị gỡ bỏ"
