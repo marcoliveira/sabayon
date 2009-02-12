@@ -184,6 +184,7 @@ class Session (gobject.GObject):
 
         if self.temp_xauth_path:
             new_environ.append ("XAUTHORITY=%s" % self.temp_xauth_path)
+            new_environ.append ("XAUTHLOCALHOSTNAME=%s" % os.environ["XAUTHLOCALHOSTNAME"])
 
         return new_environ
 

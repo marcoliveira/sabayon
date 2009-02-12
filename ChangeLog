@@ -1,3 +1,11 @@
+2009-02-11  Federico Mena Quintero  <federico@novell.com>
+
+	https://bugzilla.novell.com/show_bug.cgi?id=471897
+
+	* admin-tool/profilesdialog.py (Session.build_envp_for_child):
+	Also put XAUTHLOCALHOSTNAME in the environment, so that the child
+	session can start.  Patch by Michael Meeks <michael.meeks@novell.com>
+
 2009-02-05  Andre Klapper  <a9016009@gmx.de>
 
 	* configure.ac:
