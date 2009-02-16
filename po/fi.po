@@ -1,15 +1,15 @@
 # Finnish messages for sabayon
-# Copyright (C) 2005 Ilkka Tuohela 
+# Copyright (C) 2005-2009 Ilkka Tuohela 
 # This file is distributed under the same license as the sabayon package.
 #
-# Ilkka Tuohela <hile@iki.fi>, 2005.
+# Ilkka Tuohela <hile@iki.fi>, 2005-2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-29 18:09+0300\n"
-"PO-Revision-Date: 2007-02-14 15:21+0300\n"
+"POT-Creation-Date: 2009-02-16 21:05+0300\n"
+"PO-Revision-Date: 2009-02-16 21:10+0300\n"
 "Last-Translator: Ilkka Tuohela <hile@iki.fi>\n"
 "Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +24,8 @@ msgstr "Ohjelma käyttäjäprofiilien määrittelyyn ja muokkaamiseen"
 #: ../admin-tool/aboutdialog.py:66
 msgid "translator-credits"
 msgstr ""
-"Ilkka Tuohela, 2005-2007\n"
+"Ilkka Tuohela, 2005-2009\n"
+"\n"
 "http://gnome.fi/"
 
 #: ../admin-tool/changeswindow.py:50
@@ -153,7 +154,7 @@ msgstr "pari"
 msgid "Profile settings: %s"
 msgstr "Profiilin asetukset: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:384
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:385
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Nimi"
@@ -166,154 +167,154 @@ msgstr "Tyyppi"
 msgid "Value"
 msgstr "Arvo"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:101
+#: ../admin-tool/lockdown/lockdownbutton.py:99
 msgid "Click to make this setting not mandatory"
 msgstr "Tee asetuksesta vapaaehtoinen napsauttamalla tästä"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:103
+#: ../admin-tool/lockdown/lockdownbutton.py:101
 msgid "Click to make this setting mandatory"
 msgstr "Tee asetuksesta vaadittu napsauttamalla tästä"
 
-#: ../admin-tool/lockdown/maindialog.py:51
+#: ../admin-tool/lockdown/maindialog.py:49
 msgid "Disable _command line"
 msgstr "Estä _komentorivi"
 
-#: ../admin-tool/lockdown/maindialog.py:52
+#: ../admin-tool/lockdown/maindialog.py:50
 msgid "Disable _printing"
 msgstr "Estä _tulostus"
 
-#: ../admin-tool/lockdown/maindialog.py:53
+#: ../admin-tool/lockdown/maindialog.py:51
 msgid "Disable print _setup"
 msgstr "Estä tulostus_asetukset"
 
-#: ../admin-tool/lockdown/maindialog.py:54
+#: ../admin-tool/lockdown/maindialog.py:52
 msgid "Disable save to _disk"
 msgstr "Estä levylle t_allennus"
 
-#: ../admin-tool/lockdown/maindialog.py:56
+#: ../admin-tool/lockdown/maindialog.py:54
 msgid "_Lock down the panels"
 msgstr "_Lukitse paneelit"
 
-#: ../admin-tool/lockdown/maindialog.py:57
+#: ../admin-tool/lockdown/maindialog.py:55
 msgid "Disable force _quit"
 msgstr "Estä pakotettu _sulkeminen"
 
-#: ../admin-tool/lockdown/maindialog.py:58
+#: ../admin-tool/lockdown/maindialog.py:56
 msgid "Disable lock _screen"
 msgstr "Estä _näytön lukitus"
 
-#: ../admin-tool/lockdown/maindialog.py:59
+#: ../admin-tool/lockdown/maindialog.py:57
 msgid "Disable log _out"
 msgstr "Estä ulos_kirjautuminen"
 
-#: ../admin-tool/lockdown/maindialog.py:61
+#: ../admin-tool/lockdown/maindialog.py:59
 msgid "Disable _quit"
 msgstr "Estä _sulkeminen"
 
-#: ../admin-tool/lockdown/maindialog.py:62
+#: ../admin-tool/lockdown/maindialog.py:60
 msgid "Disable _arbitrary URL"
 msgstr "Estä _mielivaltaiset URL:it"
 
-#: ../admin-tool/lockdown/maindialog.py:63
+#: ../admin-tool/lockdown/maindialog.py:61
 msgid "Disable _bookmark editing"
 msgstr "Estä _kirjanmerkkien muokkaus"
 
-#: ../admin-tool/lockdown/maindialog.py:64
+#: ../admin-tool/lockdown/maindialog.py:62
 msgid "Disable _history"
 msgstr "Estä _historia"
 
-#: ../admin-tool/lockdown/maindialog.py:65
+#: ../admin-tool/lockdown/maindialog.py:63
 msgid "Disable _javascript chrome"
 msgstr "Estä _javascriptin chromet"
 
-#: ../admin-tool/lockdown/maindialog.py:66
+#: ../admin-tool/lockdown/maindialog.py:64
 msgid "Disable _toolbar editing"
 msgstr "Estä _työkalupalkkien muokkaus"
 
-#: ../admin-tool/lockdown/maindialog.py:67
+#: ../admin-tool/lockdown/maindialog.py:65
 msgid "_Fullscreen"
 msgstr "_Kokoruutu"
 
-#: ../admin-tool/lockdown/maindialog.py:68
+#: ../admin-tool/lockdown/maindialog.py:66
 msgid "Hide _menubar"
 msgstr "Piilota _valikkopalkki"
 
 #. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
 #. This can be used to disable this, for when you don't want people to know you created the document.
-#: ../admin-tool/lockdown/maindialog.py:72
-msgid "Remove personal info from documents when saving them"
-msgstr "Poista yksityiset tiedostot asiakirjasta tallennettaessa"
+#: ../admin-tool/lockdown/maindialog.py:70
+msgid "Remove personal information from documents when saving them"
+msgstr "Poista yksityiset tiedot asiakirjoista tallennettaessa"
 
-#: ../admin-tool/lockdown/maindialog.py:73
+#: ../admin-tool/lockdown/maindialog.py:71
 msgid "Warn if macro tries to create a PDF"
 msgstr "Varoita, jos makro yrittää luoda PDF-tiedoston"
 
-#: ../admin-tool/lockdown/maindialog.py:74
+#: ../admin-tool/lockdown/maindialog.py:72
 msgid "Warn if macro tries to print a document"
 msgstr "Varoita, jos makro yrittää tulostaa asiakirjan"
 
-#: ../admin-tool/lockdown/maindialog.py:75
+#: ../admin-tool/lockdown/maindialog.py:73
 msgid "Warn if macro tries to save a document"
 msgstr "Varoita, jos makro yrittää tallentaa asiakirjan"
 
-#: ../admin-tool/lockdown/maindialog.py:76
+#: ../admin-tool/lockdown/maindialog.py:74
 msgid "Warn if macro tries to sign a document"
 msgstr "Varoita, jos makro yrittää allekirjoittaa asiakirjan"
 
-#: ../admin-tool/lockdown/maindialog.py:77
+#: ../admin-tool/lockdown/maindialog.py:75
 msgid "Recommend password when saving a document"
 msgstr "Suosittele salasanaa tallennettaessa asiakirjaa"
 
-#: ../admin-tool/lockdown/maindialog.py:79
+#: ../admin-tool/lockdown/maindialog.py:77
 msgid "Enable auto-save"
 msgstr "Käytä automaattista tallennusta"
 
 #. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
-#: ../admin-tool/lockdown/maindialog.py:81
+#: ../admin-tool/lockdown/maindialog.py:79
 msgid "Printing should mark the document as modified"
 msgstr "Merkitseekö tulostus tiedoston muokatuksi"
 
-#: ../admin-tool/lockdown/maindialog.py:82
+#: ../admin-tool/lockdown/maindialog.py:80
 msgid "Use system's file dialog"
 msgstr "Käytä järjestelmän tiedostovalitsinta"
 
-#: ../admin-tool/lockdown/maindialog.py:83
+#: ../admin-tool/lockdown/maindialog.py:81
 msgid "Create backup copy on save"
 msgstr "Luo varmuuskopio tallennettaessa"
 
-#: ../admin-tool/lockdown/maindialog.py:84
+#: ../admin-tool/lockdown/maindialog.py:82
 msgid "Warn when saving non-OpenOffice.org formats"
 msgstr "Varoita tallennettaessa muihin kuin OpenOffice.org-muotoihin"
 
-#: ../admin-tool/lockdown/maindialog.py:86
+#: ../admin-tool/lockdown/maindialog.py:84
 msgid "Use OpenGL"
 msgstr "Käytä OpenGL:ää"
 
-#: ../admin-tool/lockdown/maindialog.py:87
+#: ../admin-tool/lockdown/maindialog.py:85
 msgid "Use system font"
 msgstr "Käytä järjestelmäkirjasinta"
 
-#: ../admin-tool/lockdown/maindialog.py:88
+#: ../admin-tool/lockdown/maindialog.py:86
 msgid "Use anti-aliasing"
 msgstr "Käytä pehmennystä"
 
-#: ../admin-tool/lockdown/maindialog.py:89
+#: ../admin-tool/lockdown/maindialog.py:87
 msgid "Disable UI customization"
 msgstr "Estä käyttöliittymän muokkaus"
 
-#: ../admin-tool/lockdown/maindialog.py:90
+#: ../admin-tool/lockdown/maindialog.py:88
 msgid "Show insensitive menu items"
 msgstr "Näytä vähän käytetyt valikon kohdat"
 
-#: ../admin-tool/lockdown/maindialog.py:91
+#: ../admin-tool/lockdown/maindialog.py:89
 msgid "Show font preview"
 msgstr "Näytä kirjasimen esikatselu"
 
-#: ../admin-tool/lockdown/maindialog.py:92
+#: ../admin-tool/lockdown/maindialog.py:90
 msgid "Show font history"
 msgstr "Näytä kirjasinhistoria"
 
-#: ../admin-tool/lockdown/maindialog.py:93
+#: ../admin-tool/lockdown/maindialog.py:91
 msgid "Show icons in menus"
 msgstr "Näytä kuvakkeet valikoissa"
 
@@ -463,18 +464,18 @@ msgstr "Käyttöliittymä"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:494
+#: ../admin-tool/profilesdialog.py:495
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../admin-tool/sabayon:73
+#: ../admin-tool/sabayon:77
 msgid ""
 "Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr ""
 "Käyttäjätilisi oikeudet eivät riitä käyttäjäprofiilityökalun suorittamiseen"
 
-#: ../admin-tool/sabayon:74
+#: ../admin-tool/sabayon:78
 msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
@@ -482,11 +483,11 @@ msgstr ""
 "Tämän ohjelman suorittamiseen vaaditaan järjestelmän ylläpitäjän oikeudet, "
 "koska se voi muokata järjestelmän asetuksia."
 
-#: ../admin-tool/sabayon:79
+#: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
 msgstr "Työpöytäkäyttäjien profiilien työkalu on jo käynnissä"
 
-#: ../admin-tool/sabayon:80
+#: ../admin-tool/sabayon:84
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
@@ -494,12 +495,12 @@ msgstr ""
 "Et voi käyttää käyttäjäoikeuksien hallintaohjelmaa profiilin "
 "muokkausistunnosta"
 
-#: ../admin-tool/sabayon:87
+#: ../admin-tool/sabayon:91
 #, c-format
 msgid "User account '%s' was not found"
 msgstr "Käyttäjätunnusta \"%s\" ei löydy"
 
-#: ../admin-tool/sabayon:88
+#: ../admin-tool/sabayon:92
 #, c-format
 msgid ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
@@ -509,7 +510,7 @@ msgstr ""
 "Sabayon vaatii erityistä käyttäjätiliä \"%s\" tietokoneella. Yritä uudestaan "
 "luotuasi tämä käyttäjätilin esimerkiksi \"adduser\"-ohjelmalla."
 
-#: ../admin-tool/sabayon:128
+#: ../admin-tool/sabayon:131
 #, c-format
 msgid ""
 "A fatal error has occurred.  You can help us fix the problem by sending the "
@@ -518,7 +519,7 @@ msgstr ""
 "Tapahtui vakava virhe. Voit auttaa ongelman korjaamisessa lähettämällä lokin "
 "%s osoitteeseen %s"
 
-#: ../admin-tool/sabayon:143
+#: ../admin-tool/sabayon:145
 #, c-format
 msgid ""
 "Sabayon will now exit.  There were some recoverable errors, and you can help "
@@ -527,12 +528,12 @@ msgstr ""
 "Sabayon suljetaan nyt. Tapahtui korjattavissa olevia virheitä, ja voit "
 "auttaa vian etsinnässä lähettämällä lokin %s osoitteeseen %s"
 
-#: ../admin-tool/sabayon-apply:98
+#: ../admin-tool/sabayon-apply:99
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Profiilia käyttäjälle \"%s\" ei löydy\n"
 
-#: ../admin-tool/sabayon-apply:103
+#: ../admin-tool/sabayon-apply:104
 msgid "Please use -h for usage options"
 msgstr "Katso käynnistysvaihtoehdot valitsimella -h"
 
@@ -541,11 +542,11 @@ msgstr "Katso käynnistysvaihtoehdot valitsimella -h"
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
 msgstr "Käyttö: %s <profiilin-nimi> <profiilin-polku> <näytön-numero>\n"
 
-#: ../admin-tool/sabayon.desktop.in.h:1
+#: ../admin-tool/sabayon.desktop.in.in.h:1
 msgid "Establish and Edit Profiles for Users"
 msgstr "Määrittele ja muokkaa käyttäjäprofiileja"
 
-#: ../admin-tool/sabayon.desktop.in.h:2 ../admin-tool/sabayon.glade.h:4
+#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.glade.h:4
 msgid "User Profile Editor"
 msgstr "Käyttäjäprofiilien muokkain"
 
@@ -1113,8 +1114,8 @@ msgstr "virheellinen tyyppi asetukselle %(setting)s kohdassa %(np)s"
 
 #: ../lib/userdb.py:215
 #, python-format
-msgid "No search based specified for %s"
-msgstr "Hakualuetta ei ole määritelty arvolle %s"
+msgid "No search base specified for %s"
+msgstr "Hakupohjaa ei määritelty arvolle %s"
 
 #: ../lib/userdb.py:218
 #, python-format
@@ -1163,7 +1164,7 @@ msgstr "Käyttäjää %s ei voitu lisätä profiilin asetuksiin"
 msgid "Failed to get the user list"
 msgstr "Käyttäjälistaa ei voitu lukea"
 
-#: ../lib/util.py:91
+#: ../lib/util.py:93
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -1171,7 +1172,7 @@ msgstr ""
 "Kotihakemistoa ei löydy: se ei ole asetettu /etc/passwd-tiedostossa eikä "
 "muuttujassa $HOME."
 
-#: ../lib/util.py:104
+#: ../lib/util.py:106
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
