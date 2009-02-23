@@ -1,37 +1,36 @@
 # translation of sabayon.HEAD.ml.po to Malayalam
-# This file is distributed under the same license as the PACKAGE package.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# This file is distributed under the same license as the sabayon package.
+# Copyright (C) 2006-2009 sabayon'S COPYRIGHT HOLDER.
 #
 # Ani Peter <apeter@redhat.com>, 2006, 2007.
+# Praveen Arimbrathodiyil <pravi.a@gmail.com>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD.ml\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-24 00:25+0100\n"
-"PO-Revision-Date: 2007-09-05 16:03+0530\n"
-"Last-Translator: Ani Peter <apeter@redhat.com>\n"
-"Language-Team: Malayalam\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon&component=general\n"
+"POT-Creation-Date: 2009-02-21 14:01+0000\n"
+"PO-Revision-Date: 2009-02-22 17:19-0800\n"
+"Last-Translator: Praveen Arimbrathodiyil <pravi.a@gmail.com>\n"
+"Language-Team: Malayalam <smc-discuss@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"\n"
 "X-Generator: KBabel 1.11.4\n"
 
 #: ../admin-tool/aboutdialog.py:63
 msgid "Program to establish and edit profiles for users"
-msgstr ""
-"ഉപയോക്താക്കള്‍ക്കുളള പ്രൊഫൈലുകള്‍ സ്ഥാപിച്ച് ആവശ്യമുളള മാറ്റങ്ങള്‍ "
-"‌വരുത്തുന്നതിനായുളള പ്രോഗ്രാം"
+msgstr "ഉപയോക്താക്കള്‍ക്കുളള പ്രൊഫൈലുകള്‍ സ്ഥാപിച്ച് ആവശ്യമുളള മാറ്റങ്ങള്‍ ‌വരുത്തുന്നതിനായുളള പ്രോഗ്രാം"
 
 #: ../admin-tool/aboutdialog.py:66
 msgid "translator-credits"
-msgstr "അനി പീറ്റര്‍ <peter.ani@gmail.com>"
+msgstr "അനി പീറ്റര്‍ <peter.ani@gmail.com>‌\n"
+"പ്രവീണ്‍ അരിമ്പ്രത്തൊടിയില്‍ <pravi.a@gmail.com>"
 
 #: ../admin-tool/changeswindow.py:50
 #, python-format
 msgid "Changes in profile %s"
-msgstr "പ്രൊഫൈല്‍ %s ഉളള മാറ്റങ്ങള്‍"
+msgstr "പ്രൊഫൈല്‍ %s ല്‍ ഉളള മാറ്റങ്ങള്‍"
 
 #: ../admin-tool/changeswindow.py:113
 msgid "Ignore"
@@ -41,7 +40,8 @@ msgstr "അവഗണിക്കുക"
 msgid "Lock"
 msgstr "പൂട്ടുക"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:230
+#: ../admin-tool/changeswindow.py:127
+#: ../admin-tool/editorwindow.py:230
 msgid "Description"
 msgstr "വിവരണം"
 
@@ -50,55 +50,65 @@ msgstr "വിവരണം"
 msgid "Profile %s"
 msgstr "പ്രൊഫൈല്‍ %s"
 
-#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/editorwindow.py:195
+#: ../admin-tool/sessionwindow.py:176
 msgid "_Profile"
-msgstr "പ്രൊഫൈല്‍ (_P)"
+msgstr "_പ്രൊഫൈല്‍"
 
-#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:196
+#: ../admin-tool/sessionwindow.py:177
 msgid "_Save"
-msgstr "സംരക്ഷിക്കുക (_S)"
+msgstr "_സൂക്ഷിക്കുക"
 
-#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:196
+#: ../admin-tool/sessionwindow.py:177
 msgid "Save profile"
-msgstr "പ്രൊഫൈല്‍ സംരക്ഷിക്കുക"
+msgstr "പ്രൊഫൈല്‍ സൂക്ഷിക്കുക"
 
 #: ../admin-tool/editorwindow.py:197
 msgid "_Close"
-msgstr "അടയ്ക്കുക (_C)"
+msgstr "_അടയ്ക്കുക"
 
-#: ../admin-tool/editorwindow.py:197 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:197
+#: ../admin-tool/sessionwindow.py:178
 msgid "Close the current window"
 msgstr "നിലവിലുളള ജാലകം അടയ്ക്കുക"
 
-#: ../admin-tool/editorwindow.py:198 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:198
+#: ../admin-tool/sessionwindow.py:179
 msgid "_Edit"
-msgstr "മാറ്റം വരുത്തുക (_E)"
+msgstr "_ചിട്ട"
 
 #: ../admin-tool/editorwindow.py:199
 msgid "_Delete"
-msgstr "വെട്ടി നീക്കുക (_D)"
+msgstr "_വെട്ടി നീക്കുക"
 
 #: ../admin-tool/editorwindow.py:199
 msgid "Delete item"
 msgstr "ഐറ്റം വെട്ടി നീക്കുക"
 
-#: ../admin-tool/editorwindow.py:200 ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/editorwindow.py:200
+#: ../admin-tool/sessionwindow.py:182
 msgid "_Help"
-msgstr "സഹായം (_H)"
+msgstr "_സഹായം"
 
-#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:201
+#: ../admin-tool/sessionwindow.py:183
 msgid "_About"
-msgstr "സംബന്ധിച്ച് (_A)"
+msgstr "_സംബന്ധിച്ചു്"
 
-#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:201
+#: ../admin-tool/sessionwindow.py:183
 msgid "About Sabayon"
-msgstr "Sabayon സംബന്ധിച്ചുളള വിവരങ്ങള്‍"
+msgstr "സബായന്‍ സംബന്ധിച്ചുളള വിവരങ്ങള്‍"
 
-#: ../admin-tool/editorwindow.py:262 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:262
+#: ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:266
+#: ../lib/sources/filessource.py:79
 msgid "Files"
 msgstr "ഫയലുകള്‍"
 
@@ -106,14 +116,15 @@ msgstr "ഫയലുകള്‍"
 #: ../admin-tool/lockdown/pessulus.glade.h:41
 #: ../lib/sources/paneldelegate.py:229
 msgid "Panel"
-msgstr "പാനല്‍"
+msgstr "പാളി"
 
 #: ../admin-tool/fileviewer.py:27
 #, python-format
 msgid "Profile file: %s"
 msgstr "പ്രൊഫൈല്‍ ഫയല്‍: %s"
 
-#: ../admin-tool/gconfviewer.py:57 ../admin-tool/gconfviewer.py:76
+#: ../admin-tool/gconfviewer.py:57
+#: ../admin-tool/gconfviewer.py:76
 msgid "<no type>"
 msgstr "<no type>"
 
@@ -127,11 +138,11 @@ msgstr "സ്ട്രിങ്"
 
 #: ../admin-tool/gconfviewer.py:64
 msgid "integer"
-msgstr "ഇന്‍റിജര്‍"
+msgstr "ഇന്റിജര്‍"
 
 #: ../admin-tool/gconfviewer.py:66
 msgid "float"
-msgstr "ഫ്ളോട്ട്"
+msgstr "ഫ്ലോട്ട്"
 
 #: ../admin-tool/gconfviewer.py:68
 msgid "boolean"
@@ -154,7 +165,8 @@ msgstr "ജോഡി"
 msgid "Profile settings: %s"
 msgstr "പ്രൊഫൈല്‍ സെറ്റിങുകള്‍: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:384
+#: ../admin-tool/gconfviewer.py:110
+#: ../admin-tool/profilesdialog.py:385
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "പേര്"
@@ -167,156 +179,156 @@ msgstr "തരം"
 msgid "Value"
 msgstr "മൂല്ല്യം"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:101
+#: ../admin-tool/lockdown/lockdownbutton.py:99
 msgid "Click to make this setting not mandatory"
 msgstr "നിര്‍ബന്ധമില്ലാത്ത സെറ്റിങ് ആക്കുന്നതിനായി ക്ളിക്ക് ചെയ്യുക"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:103
+#: ../admin-tool/lockdown/lockdownbutton.py:101
 msgid "Click to make this setting mandatory"
 msgstr "നിര്‍ബന്ധമുളള സെറ്റിങ് ആക്കുന്നതിനായി ക്ളിക്ക് ചെയ്യുക"
 
-#: ../admin-tool/lockdown/maindialog.py:51
+#: ../admin-tool/lockdown/maindialog.py:49
 msgid "Disable _command line"
-msgstr "കമാന്‍ഡ് ലൈന്‍ പ്രവര്‍ത്തന രഹിതമാക്കുക (_c)"
+msgstr "_കമാന്‍ഡ് ലൈന്‍ പ്രവര്‍ത്തന രഹിതമാക്കുക"
 
-#: ../admin-tool/lockdown/maindialog.py:52
+#: ../admin-tool/lockdown/maindialog.py:50
 msgid "Disable _printing"
-msgstr "പ്രിന്‍റ് ചെയ്യുന്നത് പ്രവര്‍ത്തന രഹിതമാക്കുക (_p)"
+msgstr "_അച്ചടിയ്ക്കുന്നതു് പ്രവര്‍ത്തന രഹിതമാക്കുക"
 
-#: ../admin-tool/lockdown/maindialog.py:53
+#: ../admin-tool/lockdown/maindialog.py:51
 msgid "Disable print _setup"
 msgstr "പ്രിന്‍റ് സെറ്റപ്പ് പ്രവര്‍ത്തന രഹിതമാക്കുക (_s)"
 
-#: ../admin-tool/lockdown/maindialog.py:54
+#: ../admin-tool/lockdown/maindialog.py:52
 msgid "Disable save to _disk"
-msgstr "ഡിസ്ക്കിലേക്ക് സംരക്ഷിക്കുന്നത് പ്രവര്‍ത്തന രഹിതമാക്കുക (_d)"
+msgstr "_ഡിസ്ക്കിലേക്ക് സൂക്ഷിക്കുന്നതു് പ്രവര്‍ത്തന രഹിതമാക്കുക"
+
+#: ../admin-tool/lockdown/maindialog.py:54
+msgid "_Lock down the panels"
+msgstr "പാളികള്‍ _പൂട്ടിവയ്ക്കുക"
+
+#: ../admin-tool/lockdown/maindialog.py:55
+msgid "Disable force _quit"
+msgstr "നിര്‍ബന്ധപൂര്‍വ്വം _പുറത്തു് കടക്കുന്നതു് പ്രവര്‍ത്തന രഹിതമാക്കുക"
 
 #: ../admin-tool/lockdown/maindialog.py:56
-msgid "_Lock down the panels"
-msgstr "പാനലുകള്‍ ലോക്ക് ഡൌണ്‍ ചെയ്യുക (_L)"
+msgid "Disable lock _screen"
+msgstr "_സ്ക്രീന്‍ പൂട്ടുന്നതു് പ്രവര്‍ത്തന രഹിതമാക്കുക"
 
 #: ../admin-tool/lockdown/maindialog.py:57
-msgid "Disable force _quit"
-msgstr "നിര്‍ബന്ധപൂര്‍വ്വം പുറത്ത് കടത്തുന്നത് പ്രവര്‍ത്തന രഹിതമാക്കുക (_q)"
-
-#: ../admin-tool/lockdown/maindialog.py:58
-msgid "Disable lock _screen"
-msgstr "സ്ക്രീന്‍ പൂട്ടുന്നത് പ്രവര്‍ത്തന രഹിതമാക്കുക (_s)"
+msgid "Disable log _out"
+msgstr "_പുറത്തിറങ്ങുന്നതു് പ്രവര്‍ത്തന രഹിതമാക്കുക"
 
 #: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable log _out"
-msgstr "ലോഗൌട്ട് ചെയ്യുന്നത് പ്രവര്‍ത്തന രഹിതമാക്കുക (_o)"
+msgid "Disable _quit"
+msgstr "_പുറത്തു് കടക്കുന്നതു് പ്രവര്‍ത്തന രഹിതമാക്കുക"
+
+#: ../admin-tool/lockdown/maindialog.py:60
+msgid "Disable _arbitrary URL"
+msgstr "_സ്വന്തം ഇഷ്ടത്തിലുളള യുആര്‍എല്‍ പ്രവര്‍ത്തന രഹിതമാക്കുക"
 
 #: ../admin-tool/lockdown/maindialog.py:61
-msgid "Disable _quit"
-msgstr "പുറത്ത് കടക്കുന്നത് പ്രവര്‍ത്തന രഹിതമാക്കുക (_q)"
+msgid "Disable _bookmark editing"
+msgstr "_ഓര്‍മ്മക്കുറിപ്പില്‍ മാറ്റം വരുത്തുന്നത് പ്രവര്‍ത്തന രഹിതമാക്കുക"
 
 #: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _arbitrary URL"
-msgstr "സ്വന്തം ഇഷ്ടത്തിലുളള URL പ്രവര്‍ത്തന രഹിതമാക്കുക (_a)"
+msgid "Disable _history"
+msgstr "_നാള്‍വഴി പ്രവര്‍ത്തന രഹിതമാക്കുക"
 
 #: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _bookmark editing"
-msgstr "ബുക്ക് മാര്‍ക്കില്‍ മാറ്റം വരുത്തുന്നത് പ്രവര്‍ത്തന രഹിതമാക്കുക (_b)"
+msgid "Disable _javascript chrome"
+msgstr "_ജാവാസ്ക്രിപ്റ്റ് ക്രോം പ്രവര്‍ത്തന രഹിതമാക്കുക"
 
 #: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _history"
-msgstr "ഹിസ്റ്ററി പ്രവര്‍ത്തന രഹിതമാക്കുക (_h)"
+msgid "Disable _toolbar editing"
+msgstr "_ടൂള്‍ ബാറില്‍ മാറ്റം വരുത്തുന്നതു് പ്രവര്‍ത്തന രഹിതമാക്കുക"
 
 #: ../admin-tool/lockdown/maindialog.py:65
-msgid "Disable _javascript chrome"
-msgstr "ജാവാസ്ക്രിപ്റ്റ് ക്രോം പ്രവര്‍ത്തന രഹിതമാക്കുക (_j)"
+msgid "_Fullscreen"
+msgstr "_പരമാവധി വലിപ്പമുളള സ്ക്രീന്‍"
 
 #: ../admin-tool/lockdown/maindialog.py:66
-msgid "Disable _toolbar editing"
-msgstr "ടൂള്‍ ബാറില്‍ മാറ്റം വരുത്തുന്നത് പ്രവര്‍ത്തന രഹിതമാക്കുക (_t)"
-
-#: ../admin-tool/lockdown/maindialog.py:67
-msgid "_Fullscreen"
-msgstr "പരമാവധി വലിപ്പമുളള സ്ക്രീന്‍ (_F)"
-
-#: ../admin-tool/lockdown/maindialog.py:68
 msgid "Hide _menubar"
-msgstr "മെനു ബാര്‍ ഒളിച്ചു വയ്ക്കുക (_m)"
+msgstr "_മെനുബാര്‍ ഒളിച്ചു വയ്ക്കുക"
 
 #. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
 #. This can be used to disable this, for when you don't want people to know you created the document.
-#: ../admin-tool/lockdown/maindialog.py:72
-msgid "Remove personal info from documents when saving them"
+#: ../admin-tool/lockdown/maindialog.py:70
+msgid "Remove personal information from documents when saving them"
 msgstr "രേഖകള്‍ സൂക്ഷിക്കുമ്പോള്‍ സ്വകാര്യ വിവരങ്ങള്‍ നീക്കം ചെയ്യുക"
 
-#: ../admin-tool/lockdown/maindialog.py:73
+#: ../admin-tool/lockdown/maindialog.py:71
 msgid "Warn if macro tries to create a PDF"
-msgstr "PDF ഉണ്ടാക്കുന്നതിന് മാക്റോ ശ്റമിച്ചാല്‍ മുന്നറിയിപ്പ് നല്‍കുക"
+msgstr "പിഡിഎഫ് ഉണ്ടാക്കുന്നതിനു് മാക്രോ ശ്രമിച്ചാല്‍ മുന്നറിയിപ്പ് നല്‍കുക"
+
+#: ../admin-tool/lockdown/maindialog.py:72
+msgid "Warn if macro tries to print a document"
+msgstr "ഒരു രേഖ അച്ചടിയ്ക്കുന്നതിനു് മാക്രോ ശ്രമിച്ചാല്‍ മുന്നറിയിപ്പു് നല്‍കുക"
+
+#: ../admin-tool/lockdown/maindialog.py:73
+msgid "Warn if macro tries to save a document"
+msgstr "ഒരു രേഖ സൂക്ഷിക്കുന്നതിനായി മാക്രോ ശ്രമിച്ചാല്‍ മുന്നറിയിപ്പു് നല്‍കുക"
 
 #: ../admin-tool/lockdown/maindialog.py:74
-msgid "Warn if macro tries to print a document"
-msgstr "ഒരു രേഖ പ്റിന്റ് ചെയ്യുന്നതിന് മാക്റോ ശ്റമിച്ചാല്‍ മുന്നറിയിപ്പ് നല്‍കുക"
+msgid "Warn if macro tries to sign a document"
+msgstr "ഒരു രേഖയില്‍ ഒപ്പ് വെയ്ക്കുന്നതിന് മാക്രോ ശ്രമിച്ചാല്‍ മുന്നറിയിപ്പു് നല്‍കുക"
 
 #: ../admin-tool/lockdown/maindialog.py:75
-msgid "Warn if macro tries to save a document"
-msgstr "ഒരു രേഖ സൂക്ഷിക്കുന്നതിനായി മാക്റോ ശ്റമിച്ചാല്‍ മുന്നറിയിപ്പ് നല്‍കുക"
-
-#: ../admin-tool/lockdown/maindialog.py:76
-msgid "Warn if macro tries to sign a document"
-msgstr "ഒരു രേഖയില്‍ ഒപ്പ് വെയ്ക്കുന്നതിന് മാക്റോ ശ്റമിച്ചാല്‍ മുന്നറിയിപ്പ് നല്‍കുക"
+msgid "Recommend password when saving a document"
+msgstr "ഒരു രേഖ സൂക്ഷിക്കുമ്പോള്‍ അടയാളവാക്കു് നല്‍കുക"
 
 #: ../admin-tool/lockdown/maindialog.py:77
-msgid "Recommend password when saving a document"
-msgstr "ഒരു രേഖ സൂക്ഷിക്കുമ്പോള്‍ പാസ്‌വേറ്‍ഡ് നല്‍കുക"
-
-#: ../admin-tool/lockdown/maindialog.py:79
 msgid "Enable auto-save"
 msgstr "സ്വയം സൂക്ഷിക്കുന്ന സംവിധാനം സജ്ജമാക്കുക"
 
 #. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
-#: ../admin-tool/lockdown/maindialog.py:81
+#: ../admin-tool/lockdown/maindialog.py:79
 msgid "Printing should mark the document as modified"
 msgstr "പ്റിന്റ് ചെയ്യുന്നു എങ്കില്‍ ഫയലില്‍ മാറ്റം വരുത്തി എന്നതായി അടയാളപ്പെടുത്തണം"
 
-#: ../admin-tool/lockdown/maindialog.py:82
+#: ../admin-tool/lockdown/maindialog.py:80
 msgid "Use system's file dialog"
-msgstr "സിസ്റ്റം ഫയലിന്റെ ഡയലോഗ് ഉപയോഗിക്കുക"
+msgstr "സിസ്റ്റത്തിലെ ഫയല്‍ ഡയലോഗ് ഉപയോഗിക്കുക"
 
-#: ../admin-tool/lockdown/maindialog.py:83
+#: ../admin-tool/lockdown/maindialog.py:81
 msgid "Create backup copy on save"
-msgstr "സൂക്ഷിക്കുമ്പോള്‍ ഒരു ബാക്കപ്പ് പകറ്‍പ്പും ഉണ്ടാക്കുക"
+msgstr "സൂക്ഷിക്കുമ്പോള്‍ ഒരു കരുതല്‍ പകര്‍പ്പും ഉണ്ടാക്കുക"
 
-#: ../admin-tool/lockdown/maindialog.py:84
+#: ../admin-tool/lockdown/maindialog.py:82
 msgid "Warn when saving non-OpenOffice.org formats"
 msgstr "OpenOffice.org രീതിയിലല്ലാത്ത ഫയലുകള്‍ തുറക്കുമ്പോള്‍ മുന്നറിയിപ്പ് നല്‍കുക"
 
-#: ../admin-tool/lockdown/maindialog.py:86
+#: ../admin-tool/lockdown/maindialog.py:84
 msgid "Use OpenGL"
 msgstr "OpenGL ഉപയോഗിക്കുക"
 
-#: ../admin-tool/lockdown/maindialog.py:87
+#: ../admin-tool/lockdown/maindialog.py:85
 msgid "Use system font"
-msgstr "സിസ്റ്റമിന്റെ ലിപി ഉപയോഗിക്കുക"
+msgstr "സിസ്റ്റത്തിലെ അക്ഷരസഞ്ചയം ഉപയോഗിയ്ക്കുക"
 
-#: ../admin-tool/lockdown/maindialog.py:88
+#: ../admin-tool/lockdown/maindialog.py:86
 msgid "Use anti-aliasing"
 msgstr "ആന്റി-ആലിയാസിങ് ഉപയോഗിക്കുക"
 
-#: ../admin-tool/lockdown/maindialog.py:89
+#: ../admin-tool/lockdown/maindialog.py:87
 msgid "Disable UI customization"
-msgstr "UI കസ്റ്റമൈസ് ചെയ്യുന്നത് പ്റവറ്‍ത്തന രഹിതമാക്കുക"
+msgstr "യുഐ കസ്റ്റമൈസ് ചെയ്യുന്നത് പ്രവര്‍ത്തന രഹിതമാക്കുക"
 
-#: ../admin-tool/lockdown/maindialog.py:90
+#: ../admin-tool/lockdown/maindialog.py:88
 msgid "Show insensitive menu items"
 msgstr "ഇന്‍സെന്‍സിറ്റീവ് ആയ മെനു വസ്തുക്കള്‍ കാണിക്കുക"
 
-#: ../admin-tool/lockdown/maindialog.py:91
+#: ../admin-tool/lockdown/maindialog.py:89
 msgid "Show font preview"
-msgstr "ഉപയോഗിക്കുന്ന ലിപി സ്ക്രീനില്‍ കാണിക്കുക"
+msgstr "ഉപയോഗിക്കുന്ന അക്ഷരസഞ്ചയം സ്ക്രീനില്‍ കാണിക്കുക"
 
-#: ../admin-tool/lockdown/maindialog.py:92
+#: ../admin-tool/lockdown/maindialog.py:90
 msgid "Show font history"
-msgstr "ലിപിയുടെ ചരിത്റം കാണിക്കുക"
+msgstr "അക്ഷരസഞ്ചയത്തിന്റെ നാള്‍വഴി കാണിയ്ക്കുക"
 
-#: ../admin-tool/lockdown/maindialog.py:93
+#: ../admin-tool/lockdown/maindialog.py:91
 msgid "Show icons in menus"
-msgstr "മെനുവില്‍ ഐക്കണുകള്‍ കാണിക്കുക"
+msgstr "മെനുവില്‍ ചിഹ്നങ്ങള്‍ കാണിയ്ക്കുക"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:1
 msgid ""
@@ -396,31 +408,31 @@ msgstr ""
 
 #: ../admin-tool/lockdown/pessulus.glade.h:27
 msgid "<b>Disabled Applets</b>"
-msgstr "<b>പ്രവര്‍ത്തന രഹിതമായ ആപ്പ-ലെറ്റുകള്‍</b>"
+msgstr "<b>പ്രവര്‍ത്തന രഹിതമായ ലഘുപ്രയോഗങ്ങള്‍</b>"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:28
 msgid "<b>Safe Protocols</b>"
-msgstr "<b>സുരക്ഷിത സന്പ്രദായങ്ങള്‍</b>"
+msgstr "<b>സുരക്ഷിത നിയമാവലികള്‍</b>"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:29
 msgid "Default format for presentations:"
-msgstr "പ്റസന്റേഷനുകളുടെ സ്വതവേയുള്ള രീതി:"
+msgstr "അവതരണങ്ങളുടെ സഹജമായ ഫോര്‍മാറ്റ്:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:30
 msgid "Default format for spreadsheet:"
-msgstr "സ്പ്രെഡ് ഷീറ്റിന്റെ സ്വതവേയുള്ള രീതി:"
+msgstr "സ്പ്രെഡ് ഷീറ്റിന്റെ സഹജമായ ഫോര്‍മാറ്റ്:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:31
 msgid "Default format for word processor:"
-msgstr "വേറ്‍ഡ് പ്റൊസസ്സറ്റിന്റെ സ്വതവേയുള്ള രീതി:"
+msgstr "വേര്‍ഡ് പ്രൊസസ്സറിന്റെ സഹജമായ ഫോര്‍മാറ്റ്:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:32
 msgid "Default icon size"
-msgstr "ഐക്കണുകളുടെ സ്വതവേയുള്ള വ്യാപ്തി"
+msgstr "ചിഹ്നങ്ങളുടെ സഹജമായ വലിപ്പം"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:33
 msgid "Disable _unsafe protocols"
-msgstr "സുരക്ഷിതമല്ലാത്ത സന്പ്രദായങ്ങള്‍ പ്രവര്‍ത്തന രഹിതമാക്കുക (_u)"
+msgstr "_സുരക്ഷിതമല്ലാത്ത നിയമാവലികള്‍ പ്രവര്‍ത്തന രഹിതമാക്കുക "
 
 #: ../admin-tool/lockdown/pessulus.glade.h:34
 msgid "Epiphany Web Browser"
@@ -428,7 +440,7 @@ msgstr "എപ്പിഫണി വെബ് ബ്രൌസര്‍"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:35
 msgid "General"
-msgstr "സാധാരണമായ"
+msgstr "പൊതുവായ"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:36
 msgid "Load / Save"
@@ -436,15 +448,15 @@ msgstr "ലഭ്യമാക്കുക / സൂക്ഷിക്കുക"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:37
 msgid "Lockdown Editor"
-msgstr "ലോക്ക് ഡൌണ്‍ എഡിറ്റര്‍"
+msgstr "പൂട്ടി വയ്ക്കാനുള്ള എഡിറ്റര്‍"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:38
 msgid "Macro Security Level:"
-msgstr "മാക്റോയുടെ സുരക്ഷാ നിലവാരം:"
+msgstr "മാക്രോയുടെ സുരക്ഷാ തലം:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:39
 msgid "Number of undo steps:"
-msgstr "വേണ്ടെന്ന് വച്ച പ്റവൃറ്‍ത്തികള്‍ എത്റ:"
+msgstr "എത്ര തവണ പ്രവൃത്തികള്‍ വേണ്ടെന്നു് വയ്ക്കാം:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:40
 msgid "OpenOffice.org"
@@ -456,7 +468,7 @@ msgstr "സുരക്ഷ"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:43
 msgid "User Interface"
-msgstr "ഉപയോക്താവിനുള്ള സംയോജക ഘടകം"
+msgstr "ഉപയോക്താവുമായുള്ള വിനിമയതലം"
 
 #.
 #. Translators: this string specifies how a profile
@@ -464,74 +476,53 @@ msgstr "ഉപയോക്താവിനുള്ള സംയോജക ഘട�
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:494
+#: ../admin-tool/profilesdialog.py:495
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../admin-tool/sabayon:73
+#: ../admin-tool/sabayon:77
 msgid "Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr "ഡസ്ക്ക്-ടോപ്പ് യൂസര്‍ പ്രൊഫൈല്‍സ് ടൂള്‍ പ്രവര്‍ത്തിക്കുന്നതിനായുളള അനുവാദങ്ങള്‍ നിങ്ങളുടെ അക്കൌണ്ടിനില്ല"
 
-#: ../admin-tool/sabayon:74
-msgid ""
-"Administrator level permissions are needed to run this program because it "
-"can modify system files."
-msgstr ""
-"സിസ്റ്റം ഫയലുകളില്‍ മാറ്റങ്ങള്‍ വരുത്തുവാന്‍ കഴിവുളളതിനാല്‍ ഈ പ്രോഗ്രാം പ്രവര്‍ത്തിക്കുന്നതിന് "
-"അഡ്മിനിസ്ടര്‍ നിലവാരത്തിലുളള അനുവാദങ്ങള്‍ ആവശ്യമാണ്."
+#: ../admin-tool/sabayon:78
+msgid "Administrator level permissions are needed to run this program because it can modify system files."
+msgstr "സിസ്റ്റം ഫയലുകളില്‍ മാറ്റങ്ങള്‍ വരുത്തുവാന്‍ കഴിവുളളതിനാല്‍ ഈ പ്രോഗ്രാം പ്രവര്‍ത്തിക്കുന്നതിനു് ഭരണാധികാരി തലത്തിലുളള അനുവാദങ്ങള്‍ ആവശ്യമാണു്."
 
-#: ../admin-tool/sabayon:79
+#: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
 msgstr "ഡസ്ക്ക്-ടോപ്പ് യൂസര്‍ പ്രൊഫൈല്‍സ് ടൂള്‍ നിലവില്‍ പ്രവര്‍ത്തിച്ചുകൊണ്ടിരിക്കുന്നു"
 
-#: ../admin-tool/sabayon:80
-msgid ""
-"You may not use Desktop User Profiles tool from within a profile editing "
-"session"
-msgstr ""
-"പ്രൊഫൈലുകളില്‍ മാറ്റം വരുത്തുന്ന സെഷനില്‍ നിന്നും ഡസ്ക്ക്-ടോപ്പ് യൂസര്‍ പ്രൊഫൈല്‍സ് ടൂള്‍ ഉപയോഗിക്കുവാന്‍ "
-"പാടില്ല"
+#: ../admin-tool/sabayon:84
+msgid "You may not use Desktop User Profiles tool from within a profile editing session"
+msgstr "പ്രൊഫൈലുകളില്‍ മാറ്റം വരുത്തുന്ന സെഷനില്‍ നിന്നും ഡസ്ക്ക്-ടോപ്പ് യൂസര്‍ പ്രൊഫൈല്‍സ് ടൂള്‍ ഉപയോഗിക്കുവാന്‍ പാടില്ല"
 
-#: ../admin-tool/sabayon:87
+#: ../admin-tool/sabayon:91
 #, c-format
 msgid "User account '%s' was not found"
 msgstr "നിങ്ങളുടെ അക്കൌണ്ട് '%s' കണ്ടുകിട്ടിയില്ല"
 
-#: ../admin-tool/sabayon:88
+#: ../admin-tool/sabayon:92
 #, c-format
-msgid ""
-"Sabayon requires a special user account '%s' to be present on this computer. "
-"Try again after creating the account (using, for example, the 'adduser' "
-"command)"
-msgstr ""
-"Sabayon-ന് ഒരു പ്രത്യേക യൂസര്‍ അക്കൌണ്ട് %s ആവശ്യമാണ്. അക്കൌണ്ട് ഉണ്ടാക്കിയ ശേഷം വീണ്ടും "
-"ശ്രമിക്കുക (ഉദാഹരണത്തിന്, 'adduser' നിര്‍ദ്ദേശം ഉപയോഗിച്ച്)"
+msgid "Sabayon requires a special user account '%s' to be present on this computer. Try again after creating the account (using, for example, the 'adduser' command)"
+msgstr "Sabayon-ന് ഒരു പ്രത്യേക യൂസര്‍ അക്കൌണ്ട് %s ആവശ്യമാണ്. അക്കൌണ്ട് ഉണ്ടാക്കിയ ശേഷം വീണ്ടും ശ്രമിക്കുക (ഉദാഹരണത്തിന്, 'adduser' നിര്‍ദ്ദേശം ഉപയോഗിച്ച്)"
 
-#: ../admin-tool/sabayon:128
+#: ../admin-tool/sabayon:131
 #, c-format
-msgid ""
-"A fatal error has occurred.  You can help us fix the problem by sending the "
-"log in %s to %s"
-msgstr ""
-"ഒരു പിശക് സംഭവിച്ചിരിക്കുന്നു. ഇത് പരിഹരിക്കുന്നതിനായി ഞങ്ങള്‍ക്ക് ലോഗിന്‍ %s %s-ലേക്ക് "
-"അയച്ചു നല്‍കുക"
+msgid "A fatal error has occurred.  You can help us fix the problem by sending the log in %s to %s"
+msgstr "ഒരു പിശക് സംഭവിച്ചിരിക്കുന്നു. ഇത് പരിഹരിക്കുന്നതിനായി ഞങ്ങള്‍ക്ക് ലോഗിന്‍ %s %s-ലേക്ക് അയച്ചു നല്‍കുക"
 
-#: ../admin-tool/sabayon:143
+#: ../admin-tool/sabayon:145
 #, c-format
-msgid ""
-"Sabayon will now exit.  There were some recoverable errors, and you can help "
-"us debug the problem by sending the log in %s to %s"
-msgstr ""
-"Sabayon-യില്‍ നിന്നും ഇപ്പോള്‍ പുറത്ത് കടക്കുന്നതാണ്.  ഇത് പരിഹരിക്കുന്നതിനായി "
-"ഞങ്ങള്‍ക്ക് ലോഗിന്‍ %s %s-ലേക്ക് അയച്ചു നല്‍കുക"
+msgid "Sabayon will now exit.  There were some recoverable errors, and you can help us debug the problem by sending the log in %s to %s"
+msgstr "Sabayon-യില്‍ നിന്നും ഇപ്പോള്‍ പുറത്ത് കടക്കുന്നതാണ്.  ഇത് പരിഹരിക്കുന്നതിനായി ഞങ്ങള്‍ക്ക് ലോഗിന്‍ %s %s-ലേക്ക് അയച്ചു നല്‍കുക"
 
-#: ../admin-tool/sabayon-apply:98
+#: ../admin-tool/sabayon-apply:99
 #, c-format
 msgid "No profile for user '%s' found\n"
-msgstr "ഉപയോക്താവ് '%s'-ന്‍റെ പ്രൊഫൈല്‍ ലഭ്യമല്ല\n"
+msgstr "ഉപയോക്താവ് '%s'-ന്റെ പ്രൊഫൈല്‍ ലഭ്യമല്ല\n"
 
-#: ../admin-tool/sabayon-apply:103
+#: ../admin-tool/sabayon-apply:104
 msgid "Please use -h for usage options"
 msgstr "ഉപയോഗിക്കുന്നതിനുള്ള ഉപാധികള്‍ക്കായി -h ഉപയോഗിക്കുക"
 
@@ -540,13 +531,14 @@ msgstr "ഉപയോഗിക്കുന്നതിനുള്ള ഉപാ�
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
 msgstr "ഉപയോഗിക്കേണ്ട വിധം: %s <profile-name> <profile-path> <display-number>\n"
 
-#: ../admin-tool/sabayon.desktop.in.h:1
+#: ../admin-tool/sabayon.desktop.in.in.h:1
 msgid "Establish and Edit Profiles for Users"
 msgstr "ഉപയോക്താക്കള്‍ക്കുളള പ്രൊഫൈലുകള്‍ സ്ഥാപിച്ച് ആവശ്യമുളള മാറ്റങ്ങള്‍ വരുത്തുക"
 
-#: ../admin-tool/sabayon.desktop.in.h:2 ../admin-tool/sabayon.glade.h:4
+#: ../admin-tool/sabayon.desktop.in.in.h:2
+#: ../admin-tool/sabayon.glade.h:4
 msgid "User Profile Editor"
-msgstr "ഉപയോക്താവിന്‍റെ പ്രൊഫൈലില്‍ മാറ്റം വരുത്തുന്നതിനുളള ഉപകരണം (എഡിറ്റര്‍)"
+msgstr "ഉപയോക്താവിന്റെ പ്രൊഫൈലില്‍ മാറ്റം വരുത്തുന്നതിനുളള ഉപകരണം (എഡിറ്റര്‍)"
 
 #: ../admin-tool/sabayon.glade.h:1
 msgid "Add Profile"
@@ -554,109 +546,83 @@ msgstr "പ്രൊഫൈല്‍ ചേര്‍ക്കുക"
 
 #: ../admin-tool/sabayon.glade.h:2
 msgid "Profile _name:"
-msgstr "പ്രൊഫൈലിന്‍റെ പേര്: (_n)"
+msgstr "പ്രൊഫൈലിന്റെ _പേരു്:"
 
 #: ../admin-tool/sabayon.glade.h:3
 msgid "Use this profile for _all users"
-msgstr "എല്ലാ ഉപയോക്താക്കള്‍ക്കും ഈ പ്രൊഫൈല്‍ ഉപയോഗിക്കുക (_a)"
+msgstr "_എല്ലാ ഉപയോക്താക്കള്‍ക്കും ഈ പ്രൊഫൈല്‍ ഉപയോഗിയ്ക്കുക"
 
 #: ../admin-tool/sabayon.glade.h:5
 msgid "_Base on:"
-msgstr "അടിസ്ഥാനം: (_B)"
+msgstr "_അടിസ്ഥാനം:"
 
 #: ../admin-tool/sabayon.glade.h:6
 msgid "_Details"
-msgstr "വിശദാംശങ്ങള്‍ (_D)"
+msgstr "_വിശദാംശങ്ങള്‍"
 
 #: ../admin-tool/sabayon.glade.h:7
 msgid "_Profiles:"
-msgstr "പ്രൊഫൈലുകള്‍ (_P):"
+msgstr "_പ്രൊഫൈലുകള്‍:"
 
 #: ../admin-tool/sabayon.glade.h:8
 msgid "_Users"
-msgstr "ഉപയോക്താക്കള്‍ (_U)"
+msgstr "_ഉപയോക്താക്കള്‍"
 
 #: ../admin-tool/sabayon.glade.h:9
 msgid "_Users:"
-msgstr "ഉപയോക്താക്കള്‍ (_U):"
+msgstr "ഉ_പയോക്താക്കള്‍:"
 
 #: ../admin-tool/saveconfirm.py:34
 msgid "Close _Without Saving"
-msgstr "സംരക്ഷിക്കാതെ അടയ്ക്കുക (_W)"
+msgstr "_സൂക്ഷിക്കാതെ അടയ്ക്കുക"
 
 #: ../admin-tool/saveconfirm.py:41
 #, python-format
 msgid "Save changes to profile \"%s\" before closing?"
-msgstr "അടയ്ക്കുന്നതിന് മുന്പായി പ്രൊഫൈല്‍ \"%s\"-ല്‍ വരുത്തിയ മാറ്റങ്ങള്‍ സംരക്ഷിക്കണമോ?"
+msgstr "അടയ്ക്കുന്നതിനു് മുമ്പായി പ്രൊഫൈല്‍ \"%s\"-ല്‍ വരുത്തിയ മാറ്റങ്ങള്‍ സൂക്ഷിക്കണമോ?"
 
 #: ../admin-tool/saveconfirm.py:45
 #, python-format
 msgid "If you don't save, changes from the last %ld second will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld seconds will be permanently "
-"lost."
-msgstr[0] "സംരക്ഷിച്ചില്ലായെങ്കില്‍,കഴിഞ്ഞ %ld സെക്കന്‍ഡ് മുതലുളള മാറ്റങ്ങള്‍ എന്നേക്കുമായി നിങ്ങള്‍ക്ക് നഷ്ടമാകും"
-msgstr[1] ""
-"സംരക്ഷിച്ചില്ലായെങ്കില്‍,കഴിഞ്ഞ %ld സെക്കന്‍ഡുകള്‍ മുതലുളള മാറ്റങ്ങള്‍ എന്നേക്കുമായി നിങ്ങള്‍ക്ക് "
-"നഷ്ടമാകും"
+msgid_plural "If you don't save, changes from the last %ld seconds will be permanently lost."
+msgstr[0] "സൂക്ഷിച്ചില്ലായെങ്കില്‍, കഴിഞ്ഞ %ld സെക്കന്‍ഡ് മുതലുളള മാറ്റങ്ങള്‍ എന്നേക്കുമായി നിങ്ങള്‍ക്ക് നഷ്ടമാകും"
+msgstr[1] "സൂക്ഷിച്ചില്ലായെങ്കില്‍, കഴിഞ്ഞ %ld സെക്കന്‍ഡുകള്‍ മുതലുളള മാറ്റങ്ങള്‍ എന്നേക്കുമായി നിങ്ങള്‍ക്ക് നഷ്ടമാകും"
 
 #: ../admin-tool/saveconfirm.py:51
 msgid "If you don't save, changes from the last minute will be permanently lost."
-msgstr "സംരക്ഷിച്ചില്ലായെങ്കില്‍,കഴിഞ്ഞ നിമിഷം മുതലുളള മാറ്റങ്ങള്‍ എന്നേക്കുമായി നിങ്ങള്‍ക്ക് നഷ്ടമാകും"
+msgstr "സൂക്ഷിച്ചില്ലായെങ്കില്‍, കഴിഞ്ഞ നിമിഷം മുതലുളള മാറ്റങ്ങള്‍ എന്നേക്കുമായി നിങ്ങള്‍ക്ക് നഷ്ടമാകും"
 
 #: ../admin-tool/saveconfirm.py:55
 #, python-format
-msgid ""
-"If you don't save, changes from the last minute and %ld second will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last minute and %ld seconds will be "
-"permanently lost."
-msgstr[0] ""
-"സംരക്ഷിച്ചില്ലായെങ്കില്‍,അവസാന മിനിട്ടും കഴിഞ്ഞ %ld നിമിഷവും മുതലുളള മാറ്റങ്ങള്‍ എന്നേക്കുമായി "
-"നിങ്ങള്‍ക്ക് നഷ്ടമാകും"
-msgstr[1] ""
-"സംരക്ഷിച്ചില്ലായെങ്കില്‍,അവസാന മിനിട്ടും കഴിഞ്ഞ %ld നിമിഷങ്ങളും മുതലുളള മാറ്റങ്ങള്‍ "
-"എന്നേക്കുമായി നിങ്ങള്‍ക്ക് നഷ്ടമാകും"
+msgid "If you don't save, changes from the last minute and %ld second will be permanently lost."
+msgid_plural "If you don't save, changes from the last minute and %ld seconds will be permanently lost."
+msgstr[0] "സൂക്ഷിച്ചില്ലായെങ്കില്‍, അവസാന മിനിട്ടും കഴിഞ്ഞ %ld നിമിഷവും മുതലുളള മാറ്റങ്ങള്‍ എന്നേക്കുമായി നിങ്ങള്‍ക്ക് നഷ്ടമാകും"
+msgstr[1] "സൂക്ഷിച്ചില്ലായെങ്കില്‍, അവസാന മിനിട്ടും കഴിഞ്ഞ %ld നിമിഷങ്ങളും മുതലുളള മാറ്റങ്ങള്‍ എന്നേക്കുമായി നിങ്ങള്‍ക്ക് നഷ്ടമാകും"
 
 #: ../admin-tool/saveconfirm.py:62
 #, python-format
 msgid "If you don't save, changes from the last %ld minute will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld minutes will be permanently "
-"lost."
-msgstr[0] "സംരക്ഷിച്ചില്ലായെങ്കില്‍,കഴിഞ്ഞ %ld നിമിഷം മുതലുളള മാറ്റങ്ങള്‍ എന്നേക്കുമായി നിങ്ങള്‍ക്ക് നഷ്ടമാകും"
-msgstr[1] "സംരക്ഷിച്ചില്ലായെങ്കില്‍,കഴിഞ്ഞ %ld നിമിഷം മുതലുളള മാറ്റങ്ങള്‍ എന്നേക്കുമായി നിങ്ങള്‍ക്ക് നഷ്ടമാകും."
+msgid_plural "If you don't save, changes from the last %ld minutes will be permanently lost."
+msgstr[0] "സൂക്ഷിച്ചില്ലായെങ്കില്‍,കഴിഞ്ഞ %ld നിമിഷം മുതലുളള മാറ്റങ്ങള്‍ എന്നേക്കുമായി നിങ്ങള്‍ക്ക് നഷ്ടമാകും"
+msgstr[1] "സൂക്ഷിച്ചില്ലായെങ്കില്‍, കഴിഞ്ഞ %ld നിമിഷം മുതലുളള മാറ്റങ്ങള്‍ എന്നേക്കുമായി നിങ്ങള്‍ക്ക് നഷ്ടമാകും."
 
 #: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgstr ""
-"സംരക്ഷിച്ചില്ലായെങ്കില്‍, കഴിഞ്ഞ ഒരു മണിക്കൂര്‍ മുതലുളള മാറ്റങ്ങള്‍ എന്നേക്കുമായി "
-"നിങ്ങള്‍ക്ക് നഷ്ടമാകും."
+msgstr "സൂക്ഷിച്ചില്ലായെങ്കില്‍, കഴിഞ്ഞ ഒരു മണിക്കൂര്‍ മുതലുളള മാറ്റങ്ങള്‍ എന്നേക്കുമായി നിങ്ങള്‍ക്ക് നഷ്ടമാകും."
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
-msgid ""
-"If you don't save, changes from the last hour and %d minute will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last hour and %d minutes will be "
-"permanently lost."
-msgstr[0] ""
-"സംരക്ഷിച്ചില്ലായെങ്കില്‍,കഴിഞ്ഞ മണിക്കൂറും %d നിമിഷം മുതലുളള മാറ്റങ്ങള്‍ എന്നേക്കുമായി നിങ്ങള്‍ക്ക് "
-"നഷ്ടമാകും"
-msgstr[1] ""
-"സംരക്ഷിച്ചില്ലായെങ്കില്‍,കഴിഞ്ഞ മണിക്കൂറും %d നിമിഷങ്ങള്‍ മുതലുളള മാറ്റങ്ങള്‍ എന്നേക്കുമായി "
-"നിങ്ങള്‍ക്ക് നഷ്ടമാകും"
+msgid "If you don't save, changes from the last hour and %d minute will be permanently lost."
+msgid_plural "If you don't save, changes from the last hour and %d minutes will be permanently lost."
+msgstr[0] "സൂക്ഷിച്ചില്ലായെങ്കില്‍, കഴിഞ്ഞ മണിക്കൂറും %d നിമിഷം മുതലുളള മാറ്റങ്ങള്‍ എന്നേക്കുമായി നിങ്ങള്‍ക്ക് നഷ്ടമാകും"
+msgstr[1] "സൂക്ഷിച്ചില്ലായെങ്കില്‍, കഴിഞ്ഞ മണിക്കൂറും %d നിമിഷങ്ങള്‍ മുതലുളള മാറ്റങ്ങള്‍ എന്നേക്കുമായി നിങ്ങള്‍ക്ക് നഷ്ടമാകും"
 
 #: ../admin-tool/saveconfirm.py:81
 #, python-format
 msgid "If you don't save, changes from the last %d hour will be permanently lost."
 msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] ""
-"സംരക്ഷിച്ചില്ലായെങ്കില്‍,കഴിഞ്ഞ %d മണിക്കൂര്‍ മുതലുളള മാറ്റങ്ങള്‍ എന്നേക്കുമായി "
-"നിങ്ങള്‍ക്ക് നഷ്ടമാകും."
-msgstr[1] "സംരക്ഷിച്ചില്ലായെങ്കില്‍,കഴിഞ്ഞ %d മണിക്കൂറുകള്‍ മുതലുളള മാറ്റങ്ങള്‍ എന്നേക്കുമായി നിങ്ങള്‍ക്ക് നഷ്ടമാകും."
+msgstr[0] "സൂക്ഷിച്ചില്ലായെങ്കില്‍, കഴിഞ്ഞ %d മണിക്കൂര്‍ മുതലുളള മാറ്റങ്ങള്‍ എന്നേക്കുമായി നിങ്ങള്‍ക്ക് നഷ്ടമാകും."
+msgstr[1] "സൂക്ഷിച്ചില്ലായെങ്കില്‍, കഴിഞ്ഞ %d മണിക്കൂറുകള്‍ മുതലുളള മാറ്റങ്ങള്‍ എന്നേക്കുമായി നിങ്ങള്‍ക്ക് നഷ്ടമാകും."
 
 #: ../admin-tool/sessionwindow.py:154
 #, python-format
@@ -665,11 +631,11 @@ msgstr "പ്രൊഫൈല്‍ %s-ല്‍ മാറ്റം വരുത
 
 #: ../admin-tool/sessionwindow.py:178
 msgid "_Quit"
-msgstr "പുറത്ത് പോവുക (_Q)"
+msgstr "_പുറത്തു് കടക്കുക"
 
 #: ../admin-tool/sessionwindow.py:180
 msgid "_Changes"
-msgstr "മാറ്റങ്ങള്‍ (_C)"
+msgstr "_മാറ്റങ്ങള്‍"
 
 #: ../admin-tool/sessionwindow.py:180
 msgid "Edit changes"
@@ -677,11 +643,11 @@ msgstr "മാറ്റങ്ങളില്‍ വ്യത്യാസം വ�
 
 #: ../admin-tool/sessionwindow.py:181
 msgid "_Lockdown"
-msgstr "ലോക്ക് ഡൌണ്‍ (_L)"
+msgstr "_പൂട്ടി വയ്ക്കുക"
 
 #: ../admin-tool/sessionwindow.py:181
 msgid "Edit Lockdown settings"
-msgstr "ലോക്ക് ഡൌണ്‍ സെറ്റിങുകളില്‍ മാറ്റം വരുത്തുക"
+msgstr "പൂട്ട് വയ്ക്കാനുള്ള സജ്ജീകരണങ്ങളില്‍ മാറ്റം വരുത്തുക"
 
 #: ../admin-tool/sessionwindow.py:186
 msgid "Enforce Mandatory"
@@ -689,29 +655,25 @@ msgstr "നിര്‍ബന്ധമാക്കുക"
 
 #: ../admin-tool/sessionwindow.py:186
 msgid "Enforce mandatory settings in the editing session"
-msgstr "മാറ്റങ്ങള്‍ വരുത്തുന്ന സെഷനില്‍ സെറ്റിങുകള്‍ നിര്‍ബന്ധമാക്കുക"
+msgstr "നിര്‍ബന്ധമുള്ള സജ്ജീകരണങ്ങള്‍ ഈ മാറ്റം വരുത്തുന്ന വേളയില്‍ തന്നെ ഉറപ്പാക്കുക"
 
 #: ../admin-tool/sessionwindow.py:297
 #, python-format
 msgid "Lockdown settings for %s"
-msgstr "%s-നുളള ലോക്ക് ഡൌണ്‍ സെറ്റിങുകള്‍"
+msgstr "%s-നുളള പൂട്ടി വച്ചിരിയ്ക്കുന്ന സജ്ജീകരണങ്ങള്‍"
 
 #: ../admin-tool/sessionwindow.py:333
 #, python-format
-msgid ""
-"There was a recoverable error while applying the user profile '%s'.  You can "
-"report this error now or try to continue editing the user profile."
-msgstr ""
-"'%s' ഫയലിലുള്ള യൂസറ്‍ പ്റൊഫൈല്‍ ഉപയോഗിക്കുമ്പോള്‍ ഒരു പിശക് സംഭവിച്ചിരിക്കുന്നു. "
-"നിങ്ങള്‍ക്ക് ഇത് രേഖപ്പെടുത്തുകയോ അല്ലെങ്കില്‍ പ്റൊഫൈലില്‍ മാറ്റം വരുത്തുകയോ ചെയ്യാം."
+msgid "There was a recoverable error while applying the user profile '%s'.  You can report this error now or try to continue editing the user profile."
+msgstr "'%s' ഫയലിലുള്ള യൂസര്‍ പ്രൊഫൈല്‍ ഉപയോഗിക്കുമ്പോള്‍ ഒരു പിശക് സംഭവിച്ചിരിക്കുന്നു. നിങ്ങള്‍ക്ക് ഇത് രേഖപ്പെടുത്തുകയോ അല്ലെങ്കില്‍ പ്രൊഫൈലില്‍ മാറ്റം വരുത്തുകയോ ചെയ്യാം."
 
 #: ../admin-tool/sessionwindow.py:337
 msgid "_Report this error"
-msgstr "ഈ പിശക് രേഖപ്പെടുത്തുക (_R)"
+msgstr "ഈ പിശക് _രേഖപ്പെടുത്തുക"
 
 #: ../admin-tool/sessionwindow.py:338
 msgid "_Continue editing"
-msgstr "മാറ്റം വരുത്തുന്നതുമായി തുടരുക (_C)"
+msgstr "മാറ്റം വരുത്തുന്നതുമായി _തുടരുക"
 
 #: ../admin-tool/usersdialog.py:67
 #, python-format
@@ -724,7 +686,7 @@ msgstr "ഈ പ്രൊഫൈല്‍ ഉപയോഗിക്കുക"
 
 #: ../lib/protosession.py:147
 msgid "Unable to find a free X display"
-msgstr "ഉപയോഗത്തിലല്ലാത്ത ഒരു X ഡിസ്പ്ളെ ലഭ്യമാകാന്‍ കഴിഞ്ഞില്ല"
+msgstr "ഉപയോഗത്തിലല്ലാത്ത ഒരു X ഡിസ്പ്ലെ ലഭ്യമാകാന്‍ കഴിഞ്ഞില്ല"
 
 #: ../lib/protosession.py:414
 msgid "Failed to start Xnest: timed out waiting for USR1 signal"
@@ -737,12 +699,12 @@ msgstr "Xnest ആരംഭിക്കുന്നതില്‍ പരാജ�
 #: ../lib/protosession.py:501
 #, python-format
 msgid "There was a recoverable error while applying the user profile from file '%s'."
-msgstr "'%s' ഫയലിലുള്ള യൂസറ്‍ പ്റൊഫൈല്‍ ഉപയോഗിക്കുമ്പോള്‍ ഒരു പിശക് സംഭവിച്ചിരിക്കുന്നു."
+msgstr "'%s' ഫയലിലുള്ള യൂസര്‍ പ്രൊഫൈല്‍ ഉപയോഗിക്കുമ്പോള്‍ ഒരു പിശക് സംഭവിച്ചിരിക്കുന്നു."
 
 #: ../lib/protosession.py:510
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
-msgstr "'%s'-ല്‍ നിന്നുള്ള യൂസറ്‍ പ്റൊഫൈല്‍ ഉപയോഗിക്കുന്നതില്‍ ഒരു പിശക്."
+msgstr "'%s'-ല്‍ നിന്നുള്ള യൂസര്‍ പ്രൊഫൈല്‍ ഉപയോഗിക്കുന്നതില്‍ ഒരു പിശക്."
 
 #: ../lib/sources/filessource.py:69
 #, python-format
@@ -769,11 +731,11 @@ msgstr "മുന്‍ഗണനകളുടെ പട്ടിക"
 
 #: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
-msgstr "സര്‍വര്‍ സെറ്റിങുകളുടെ പട്ടിക"
+msgstr "സര്‍വര്‍ സജ്ജീകരണങ്ങളുടെ പട്ടിക"
 
 #: ../lib/sources/filessource.py:103
 msgid "System Settings menu"
-msgstr "സിസ്റ്റം സെറ്റിങുകളുടെ പട്ടിക"
+msgstr "സിസ്റ്റം സജ്ജീകരണങ്ങളുടെ പട്ടിക"
 
 #: ../lib/sources/filessource.py:105
 msgid "Start Here menu"
@@ -782,7 +744,7 @@ msgstr "തുടങ്ങുന്നതിനുളള പട്ടിക"
 #: ../lib/sources/gconfsource.py:90
 #, python-format
 msgid "GConf key '%s' unset"
-msgstr "GConf കീ '%s'-ന്‍റെ ക്രമീകരണം മാറ്റുക"
+msgstr "GConf കീ '%s'-ന്റെ ക്രമീകരണം മാറ്റുക"
 
 #: ../lib/sources/gconfsource.py:92
 #, python-format
@@ -792,12 +754,12 @@ msgstr "GConf കീ '%s' സ്ട്രിങ് '%s' ആയി സെറ്�
 #: ../lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
-msgstr "GConf കീ '%s' ഇന്‍റിജര്‍ '%s' ആയി സെറ്റ് ചെയ്യുക"
+msgstr "GConf കീ '%s' ഇന്റിജര്‍ '%s' ആയി സെറ്റ് ചെയ്യുക"
 
 #: ../lib/sources/gconfsource.py:96
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
-msgstr "GConf കീ '%s' ഫ്ളോട്ട് '%s' ആയി സെറ്റ് ചെയ്യുക"
+msgstr "GConf കീ '%s' ഫ്ലോട്ട് '%s' ആയി സെറ്റ് ചെയ്യുക"
 
 #: ../lib/sources/gconfsource.py:98
 #, python-format
@@ -826,7 +788,7 @@ msgstr "GConf കീ '%s' '%s' ആയി സെറ്റ് ചെയ്യു�
 
 #: ../lib/sources/gconfsource.py:137
 msgid "Default GConf settings"
-msgstr "ഡീഫോള്‍ട്ടായ GConf ക്രമീകരണങ്ങള്‍"
+msgstr "സഹജമായ GConf ക്രമീകരണങ്ങള്‍"
 
 #: ../lib/sources/gconfsource.py:139
 msgid "Mandatory GConf settings"
@@ -840,24 +802,26 @@ msgstr "Mozilla കീ '%s' '%s' ആയി സെറ്റ് ചെയ്യു
 #: ../lib/sources/mozillasource.py:135
 #, python-format
 msgid "Mozilla key '%s' unset"
-msgstr "Mozilla കീ '%s'-ന്‍റെ ക്രമീകരണം മാറ്റുക"
+msgstr "Mozilla കീ '%s'-ന്റെ ക്രമീകരണം മാറ്റുക"
 
 #: ../lib/sources/mozillasource.py:137
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Mozilla കീ '%s' '%s' മാറ്റിയിരിക്കുന്നു"
 
-#: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
+#: ../lib/sources/mozillasource.py:166
+#: ../lib/sources/mozillasource.py:176
 msgid "Web browser preferences"
 msgstr "വെബ് ബ്രൈസര്‍ മുന്‍ഗണനകള്‍"
 
-#: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
+#: ../lib/sources/mozillasource.py:168
+#: ../lib/sources/mozillasource.py:178
 msgid "Web browser bookmarks"
 msgstr "വെബ് ബ്രൈസര്‍ ബുക്ക് മാര്‍ക്കുകള്‍"
 
 #: ../lib/sources/mozillasource.py:170
 msgid "Web browser profile list"
-msgstr "വെബ് ബ്രൈസറിന്‍റെ പ്രൊഫൈല്‍ പട്ടിക"
+msgstr "വെബ് ബ്രൈസറിന്റെ പ്രൊഫൈല്‍ പട്ടിക"
 
 #: ../lib/sources/mozillasource.py:522
 #, python-format
@@ -881,122 +845,122 @@ msgstr "ഡീഫോള്‍ട്ട് പ്രൊഫൈല്‍ ഇല്�
 #: ../lib/sources/mozillasource.py:954
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
-msgstr "Mozilla ബുക്ക് മാര്‍ക്ക് നിര്‍മ്മിച്ചിരിക്കുന്നു '%s' -> '%s'"
+msgstr "Mozilla ഓര്‍മ്മക്കുറിപ്പു് നിര്‍മ്മിച്ചിരിക്കുന്നു '%s' -> '%s'"
 
 #: ../lib/sources/mozillasource.py:956
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
-msgstr "Mozilla ബുക്ക് മാര്‍ക്ക് ഫോള്‍ഡര്‍ '%s' നിര്‍മ്മിച്ചിരിക്കുന്നു"
+msgstr "Mozilla ഓര്‍മ്മക്കുറിപ്പു് അറ '%s' നിര്‍മ്മിച്ചിരിക്കുന്നു"
 
 #: ../lib/sources/mozillasource.py:959
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
-msgstr "Mozilla ബുക്ക് മാര്‍ക്ക് ഫോള്‍ഡര്‍ '%s' നീക്കം ചെയ്തിരിക്കുന്നു"
+msgstr "Mozilla ഓര്‍മ്മക്കുറിപ്പു് അറ '%s' നീക്കം ചെയ്തിരിക്കുന്നു"
 
 #: ../lib/sources/mozillasource.py:961
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
-msgstr "Mozilla ബുക്ക് മാര്‍ക്ക് ഫോള്‍ഡര്‍ '%s' വെട്ടി മാറ്റിയിരിക്കുന്നു"
+msgstr "Mozilla ഓര്‍മ്മക്കുറിപ്പു് അറ '%s' വെട്ടി മാറ്റിയിരിക്കുന്നു"
 
 #: ../lib/sources/mozillasource.py:964
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
-msgstr "Mozilla ബുക്ക് മാര്‍ക്ക് '%s' '%s' മാറിയിരിക്കുന്നു"
+msgstr "Mozilla ഓര്‍മ്മക്കുറിപ്പു് '%s' '%s' മാറിയിരിക്കുന്നു"
 
 #: ../lib/sources/mozillasource.py:966
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
-msgstr "Mozilla ബുക്ക് മാര്‍ക്ക് ഫോള്‍ഡര്‍ '%s' മാറിയിരിക്കുന്നു"
+msgstr "Mozilla ഓര്‍മ്മക്കുറിപ്പു് അറ '%s' മാറിയിരിക്കുന്നു"
 
 #: ../lib/sources/paneldelegate.py:55
 #, python-format
 msgid "Panel '%s' added"
-msgstr "പാനല്‍ '%s' ചേര്‍ത്തിരിക്കുന്നു"
+msgstr "പാളി '%s' ചേര്‍ത്തിരിക്കുന്നു"
 
 #: ../lib/sources/paneldelegate.py:61
 #, python-format
 msgid "Panel '%s' removed"
-msgstr "പാനല്‍ '%s' നീക്കം ചെയ്തിരിക്കുന്നു"
+msgstr "പാളി '%s' നീക്കം ചെയ്തിരിക്കുന്നു"
 
 #: ../lib/sources/paneldelegate.py:76
 #, python-format
 msgid "Applet %s added to top panel"
-msgstr "മുകളിലുള്ള പാനലിലേക്ക് %s എന്ന പ്റയോഗം ചേറ്‍ത്തിരിക്കുന്നു"
+msgstr "മുകളിലുള്ള പാളിയിലേയ്ക്കു് %s എന്ന പ്രയോഗം ചേര്‍ത്തിരിക്കുന്നു"
 
 #: ../lib/sources/paneldelegate.py:78
 #, python-format
 msgid "Applet %s added to bottom panel"
-msgstr "താഴെയുള്ള പാനലിലേക്ക് %s എന്ന പ്റയോഗം ചേറ്‍ത്തിരിക്കുന്നു"
+msgstr "താഴെയുള്ള പാളിയിലേയ്ക്കു് %s എന്ന പ്രയോഗം ചേര്‍ത്തിരിക്കുന്നു"
 
 #: ../lib/sources/paneldelegate.py:80
 #, python-format
 msgid "Applet %s added to left panel"
-msgstr "ഇടത് പാനലിലേക്ക് %s എന്ന പ്റയോഗം ചേറ്‍ത്തിരിക്കുന്നു"
+msgstr "ഇടത് പാളിയിലേയ്ക്കു് %s എന്ന പ്രയോഗം ചേര്‍ത്തിരിക്കുന്നു"
 
 #: ../lib/sources/paneldelegate.py:82
 #, python-format
 msgid "Applet %s added to right panel"
-msgstr "വലത് പാനലിലേക്ക് %s എന്ന പ്റയോഗം ചേറ്‍ത്തിരിക്കുന്നു"
+msgstr "വലത് പാളിയിലേയ്ക്കു് %s എന്ന പ്രയോഗം ചേര്‍ത്തിരിക്കുന്നു"
 
 #: ../lib/sources/paneldelegate.py:97
 #, python-format
 msgid "Applet %s removed from top panel"
-msgstr "മുകളിലുള്ള പാനലില്‍ നിന്നും %s എന്ന പ്റയോഗം നീക്കം ചെയ്തിരിക്കുന്നു"
+msgstr "മുകളിലുള്ള പാളിയില്‍ നിന്നും %s എന്ന പ്രയോഗം നീക്കം ചെയ്തിരിക്കുന്നു"
 
 #: ../lib/sources/paneldelegate.py:99
 #, python-format
 msgid "Applet %s removed from bottom panel"
-msgstr "താഴെയുള്ള പാനലില്‍ നിന്നും %s എന്ന പ്റയോഗം നീക്കം ചെയ്തിരിക്കുന്നു"
+msgstr "താഴെയുള്ള പാളിയില്‍ നിന്നും %s എന്ന പ്രയോഗം നീക്കം ചെയ്തിരിക്കുന്നു"
 
 #: ../lib/sources/paneldelegate.py:101
 #, python-format
 msgid "Applet %s removed from left panel"
-msgstr "ഇടത് പാനലില്‍ നിന്നും %s എന്ന പ്റയോഗം നീക്കം ചെയ്തിരിക്കുന്നു"
+msgstr "ഇടത് പാളിയില്‍ നിന്നും %s എന്ന പ്രയോഗം നീക്കം ചെയ്തിരിക്കുന്നു"
 
 #: ../lib/sources/paneldelegate.py:103
 #, python-format
 msgid "Applet %s removed from right panel"
-msgstr "വലത് പാനലില്‍ നിന്നും %s എന്ന പ്റയോഗം നീക്കം ചെയ്തിരിക്കുന്നു"
+msgstr "വലത് പാളിയില്‍ നിന്നും %s എന്ന പ്രയോഗം നീക്കം ചെയ്തിരിക്കുന്നു"
 
 #: ../lib/sources/paneldelegate.py:117
 #, python-format
 msgid "%s added to top panel"
-msgstr "മുകളിലുള്ള പാനലിലേക്ക് %s-നെ ചേറ്‍ത്തിരിക്കുന്നു"
+msgstr "മുകളിലുള്ള പാളിയിലേയ്ക്കു് %s-നെ ചേര്‍ത്തിരിക്കുന്നു"
 
 #: ../lib/sources/paneldelegate.py:119
 #, python-format
 msgid "%s added to bottom panel"
-msgstr "താഴെയുള്ള പാനലിലേക്ക് %s-നെ ചേറ്‍ത്തിരിക്കുന്നു"
+msgstr "താഴെയുള്ള പാളിയിലേയ്ക്കു് %s-നെ ചേര്‍ത്തിരിക്കുന്നു"
 
 #: ../lib/sources/paneldelegate.py:121
 #, python-format
 msgid "%s added to left panel"
-msgstr "ഇടത് പാനലിലേക്ക് %s-നെ ചേറ്‍ത്തിരിക്കുന്നു"
+msgstr "ഇടത് പാളിയിലേയ്ക്കു് %s-നെ ചേര്‍ത്തിരിക്കുന്നു"
 
 #: ../lib/sources/paneldelegate.py:123
 #, python-format
 msgid "%s added to right panel"
-msgstr "വലത് പാനലിലേക്ക് %s-നെ ചേറ്‍ത്തിരിക്കുന്നു"
+msgstr "വലത് പാളിയിലേയ്ക്കു് %s-നെ ചേര്‍ത്തിരിക്കുന്നു"
 
 #: ../lib/sources/paneldelegate.py:144
 #, python-format
 msgid "%s removed from top panel"
-msgstr "മുകളിലുള്ള പാനലില്‍ നിന്നും %s നീക്കം ചെയ്തിരിക്കുന്നു"
+msgstr "മുകളിലുള്ള പാളിയില്‍ നിന്നും %s നീക്കം ചെയ്തിരിക്കുന്നു"
 
 #: ../lib/sources/paneldelegate.py:146
 #, python-format
 msgid "%s removed from bottom panel"
-msgstr "താഴെയുള്ള പാനലില്‍ നിന്നും %s നീക്കം ചെയ്തിരിക്കുന്നു"
+msgstr "താഴെയുള്ള പാളിയില്‍ നിന്നും %s നീക്കം ചെയ്തിരിക്കുന്നു"
 
 #: ../lib/sources/paneldelegate.py:148
 #, python-format
 msgid "%s removed from left panel"
-msgstr "ഇടത് പാനലില്‍ നിന്നും %s നീക്കം ചെയ്തിരിക്കുന്നു"
+msgstr "ഇടത് പാളിയില്‍ നിന്നും %s നീക്കം ചെയ്തിരിക്കുന്നു"
 
 #: ../lib/sources/paneldelegate.py:150
 #, python-format
 msgid "%s removed from right panel"
-msgstr "വലത് പാനലില്‍ നിന്നും %s നീക്കം ചെയ്തിരിക്കുന്നു"
+msgstr "വലത് പാളിയില്‍ നിന്നും %s നീക്കം ചെയ്തിരിക്കുന്നു"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
 #: ../lib/sources/paneldelegate.py:200
@@ -1005,7 +969,7 @@ msgstr "ഡ്റോവറ്‍"
 
 #: ../lib/sources/paneldelegate.py:202
 msgid "Main Menu"
-msgstr "പ്റധാന മെനു"
+msgstr "പ്രധാന മെനു"
 
 #: ../lib/sources/paneldelegate.py:212
 #, python-format
@@ -1018,15 +982,15 @@ msgstr "സ്ക്രീന്‍ പൂട്ടുന്നതിനുള�
 
 #: ../lib/sources/paneldelegate.py:218
 msgid "Logout button"
-msgstr "ലോഗൌട്ട് ചെയ്യുന്നതിനുള്ള ബട്ടണ്‍"
+msgstr "പുറത്തിറങ്ങുന്നതിനുള്ള ബട്ടണ്‍"
 
 #: ../lib/sources/paneldelegate.py:220
 msgid "Run Application button"
-msgstr "പ്രയോഗങ്ങളുടെ ബട്ടണ്‍ പ്റവറ്‍ത്തിപ്പിക്കുക"
+msgstr "പ്രയോഗങ്ങളുടെ ബട്ടണ്‍ പ്രവര്‍ത്തിപ്പിക്കുക"
 
 #: ../lib/sources/paneldelegate.py:222
 msgid "Search button"
-msgstr "തിരയുന്നതിനുള്ള ബട്ടണ്‍"
+msgstr "തെരയുന്നതിനുള്ള ബട്ടണ്‍"
 
 #: ../lib/sources/paneldelegate.py:224
 msgid "Screenshot button"
@@ -1034,11 +998,11 @@ msgstr "സ്ക്രീന്‍ഷോട്ട് ബട്ടണ്‍"
 
 #: ../lib/sources/paneldelegate.py:226
 msgid "Menu Bar"
-msgstr "മെനുവിന്റെ ബാറ്‍"
+msgstr "മെനുവിന്റെ പട്ട"
 
 #: ../lib/sources/paneldelegate.py:470
 msgid "Panel File"
-msgstr "പാനല്‍ ഫയല്‍"
+msgstr "പാളി ഫയല്‍"
 
 #: ../lib/storage.py:172
 #, python-format
@@ -1065,7 +1029,8 @@ msgstr "നിലവിലില്ലാത്ത ഫയല്‍ '%s' ചേ�
 msgid "Profile is read-only %s"
 msgstr "പ്രൊഫൈല്‍ റീഡ്-ഒണ്‍ലി %s ആണ്"
 
-#: ../lib/unittests.py:38 ../lib/unittests.py:39
+#: ../lib/unittests.py:38
+#: ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
 msgstr "മുന്നറിയിപ്പുകള്‍ അവഗണിക്കുക"
 
@@ -1093,8 +1058,8 @@ msgstr "%(setting)s-ല്‍ അസാധുവായ സെറ്റിങ് 
 
 #: ../lib/userdb.py:215
 #, python-format
-msgid "No search based specified for %s"
-msgstr "%s-ന് ആയി തിരച്ചില്‍ പറഞ്ഞിട്ടില്ല"
+msgid "No search base specified for %s"
+msgstr "%s നു് തെരച്ചിലിന്റെ തുടക്കം പറഞ്ഞിട്ടില്ല"
 
 #: ../lib/userdb.py:218
 #, python-format
@@ -1104,15 +1069,15 @@ msgstr "%s-ന് ആയി ക്വറി ഫില്‍റ്റര്‍ �
 #: ../lib/userdb.py:221
 #, python-format
 msgid "No result attribute specified for %s"
-msgstr "%s-ന് ആയി റിസള്‍ട്ട് ആട്ട്രിബ്യൂട്ട് പറഞ്ഞിട്ടില്ല"
+msgstr "%s-ന് ആയി റിസള്‍ട്ട് ആട്രിബ്യൂട്ട് പറഞ്ഞിട്ടില്ല"
 
 #: ../lib/userdb.py:230
 msgid "Scope must be one of sub, base and one"
-msgstr "സബ്, ബെയിസ്, ഒണ്‍ ഇവയില്‍ ഒന്നാരിക്കണം സ്ക്കോപ്പ്"
+msgstr "സബ്, ബെയിസ്, വണ്‍ ഇവയില്‍ ഒന്നാരിക്കണം സ്ക്കോപ്പ്"
 
 #: ../lib/userdb.py:250
 msgid "multiple_result must be one of first and random"
-msgstr "multiple_result ആദ്യത്തേതും ഏതിലേലും ഒന്നുമാരിക്കണം"
+msgstr "multiple_result ആദ്യത്തേതും ഏതിലേലും ഒന്നുമായിരിയ്ക്കണം"
 
 #: ../lib/userdb.py:342
 #, python-format
@@ -1122,12 +1087,13 @@ msgstr "എഴുതുന്നതിനായി %s തുറക്കുവ�
 #: ../lib/userdb.py:355
 #, python-format
 msgid "Failed to save UserDatabase to %s"
-msgstr "%s-ലേക്ക് UserDatabase സംരക്ഷിക്കുവാന്‍ സാധ്യമല്ല"
+msgstr "%s-ലേക്ക് UserDatabase സൂക്ഷിക്കുവാന്‍ സാധ്യമല്ല"
 
-#: ../lib/userdb.py:378 ../lib/userdb.py:413
+#: ../lib/userdb.py:378
+#: ../lib/userdb.py:413
 #, python-format
 msgid "File %s is not a profile configuration"
-msgstr "ഫയല്‍ %s ഒരു പ്രൊഫൈല്‍ കോണ്‍ഫിഗറേഷന്‍ അല്ല"
+msgstr "ഫയല്‍ %s ഒരു പ്രൊഫൈല്‍ ക്രമീകരണം അല്ല"
 
 #: ../lib/userdb.py:385
 #, python-format
@@ -1143,19 +1109,11 @@ msgstr "പ്രൊഫൈല്‍ കോണ്‍ഫിഗറേഷനില�
 msgid "Failed to get the user list"
 msgstr "ഉപയോക്താക്കളുടെ പട്ടിക ലഭ്യമായില്ല"
 
-#: ../lib/util.py:91
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"ഹോം ഡയറക്ടറി ലഭ്യമല്ല: /etc/passwd-ല്‍ സെറ്റ് ചെയ്തിട്ടില്ല, എന്‍വയോണ്‍മെന്‍റില്‍ $HOME-ന് "
-"മൂല്യവുമില്ല"
+#: ../lib/util.py:93
+msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+msgstr "ആസ്ഥാന തട്ടു് ലഭ്യമല്ല: /etc/passwd-ല്‍ സെറ്റ് ചെയ്തിട്ടില്ല, എന്‍വയോണ്‍മെന്റില്‍ $HOME-ന് മൂല്യവുമില്ല"
 
-#: ../lib/util.py:104
-msgid ""
-"Cannot find username: not set in /etc/passwd and no value for $USER in "
-"environment"
-msgstr ""
-"ഉപയോക്തൃനാമം ലഭ്യമല്ല: /etc/passwd-ല്‍ സെറ്റ് ചെയ്തിട്ടില്ല, എന്‍വയോണ്‍മെന്‍റില്‍ $USER-ന് "
-"മൂല്യവുമില്ല"
+#: ../lib/util.py:106
+msgid "Cannot find username: not set in /etc/passwd and no value for $USER in environment"
+msgstr "ഉപയോക്തൃനാമം ലഭ്യമല്ല: /etc/passwd-ല്‍ സെറ്റ് ചെയ്തിട്ടില്ല, എന്‍വയോണ്‍മെന്റില്‍ $USER-ന് മൂല്യവുമില്ല"
 
