@@ -1,5 +1,5 @@
 # French translation of Sabayon.
-# Copyright (C) 2005-2007 The Free Software Foundation, Inc.
+# Copyright (C) 2005-2009 The Free Software Foundation, Inc.
 # This file is distributed under the same license as the Sabayon package.
 #
 # Hervé Romano <azuri@free.fr>, 2005.
@@ -10,11 +10,11 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sabayon 2.22\n"
+"Project-Id-Version: sabayon HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-09 00:02+0200\n"
-"PO-Revision-Date: 2008-07-27 12:45+0200\n"
-"Last-Translator: Stéphane Raimbault <stephane.raimbault@gmail.com>\n"
+"POT-Creation-Date: 2009-02-26 10:51+0100\n"
+"PO-Revision-Date: 2009-02-26 10:53+0100\n"
+"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -160,7 +160,7 @@ msgstr "paire"
 msgid "Profile settings: %s"
 msgstr "Paramètres du profil : %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:384
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:385
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Nom"
@@ -248,8 +248,8 @@ msgstr "Masquer la _barre de menu"
 #. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
 #. This can be used to disable this, for when you don't want people to know you created the document.
 #: ../admin-tool/lockdown/maindialog.py:70
-msgid "Remove personal info from documents when saving them"
-msgstr "Supprimer les infos personnelles des documents à l'enregistrement"
+msgid "Remove personal information from documents when saving them"
+msgstr "Supprimer les informations personnelles des documents à l'enregistrement"
 
 #: ../admin-tool/lockdown/maindialog.py:71
 msgid "Warn if macro tries to create a PDF"
@@ -470,7 +470,7 @@ msgstr "Interface utilisateur"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:494
+#: ../admin-tool/profilesdialog.py:495
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -1128,7 +1128,7 @@ msgstr "type non valide pour le paramètre %(setting)s dans %(np)s"
 
 #: ../lib/userdb.py:215
 #, python-format
-msgid "No search based specified for %s"
+msgid "No search base specified for %s"
 msgstr "Aucune base de recherche n'a été spécifiée pour %s"
 
 #: ../lib/userdb.py:218
