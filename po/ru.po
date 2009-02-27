@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-24 00:25+0100\n"
-"PO-Revision-Date: 2006-02-21 14:12+0200\n"
+"POT-Creation-Date: 2009-02-27 11:42+0300\n"
+"PO-Revision-Date: 2009-02-27 14:12+0200\n"
 "Last-Translator: Nickolay V. Shmyrev <nshmyrev@yandex.ru>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -151,7 +151,7 @@ msgstr "пара"
 msgid "Profile settings: %s"
 msgstr "Настройка профиля: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:384
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:385
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Имя"
@@ -164,154 +164,155 @@ msgstr "Тип"
 msgid "Value"
 msgstr "Значение"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:101
+#: ../admin-tool/lockdown/lockdownbutton.py:99
 msgid "Click to make this setting not mandatory"
 msgstr "Нажмите, чтобы сделать этот параметр не принудительным"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:103
+#: ../admin-tool/lockdown/lockdownbutton.py:101
 msgid "Click to make this setting mandatory"
 msgstr "Нажмите, чтобы сделать этот параметр принудительным"
 
-#: ../admin-tool/lockdown/maindialog.py:51
+#: ../admin-tool/lockdown/maindialog.py:49
 msgid "Disable _command line"
 msgstr "Запретить _командную строку"
 
-#: ../admin-tool/lockdown/maindialog.py:52
+#: ../admin-tool/lockdown/maindialog.py:50
 msgid "Disable _printing"
 msgstr "Запретить _печать"
 
-#: ../admin-tool/lockdown/maindialog.py:53
+#: ../admin-tool/lockdown/maindialog.py:51
 msgid "Disable print _setup"
 msgstr "Запретить _настройку печати"
 
-#: ../admin-tool/lockdown/maindialog.py:54
+#: ../admin-tool/lockdown/maindialog.py:52
 msgid "Disable save to _disk"
 msgstr "Запретить сохранение на _диск"
 
-#: ../admin-tool/lockdown/maindialog.py:56
+#: ../admin-tool/lockdown/maindialog.py:54
 msgid "_Lock down the panels"
 msgstr "За_блокировать панели"
 
-#: ../admin-tool/lockdown/maindialog.py:57
+#: ../admin-tool/lockdown/maindialog.py:55
 msgid "Disable force _quit"
 msgstr "Запретить принудительный в_ыход"
 
-#: ../admin-tool/lockdown/maindialog.py:58
+#: ../admin-tool/lockdown/maindialog.py:56
 msgid "Disable lock _screen"
 msgstr "Запретить блокирование _экрана"
 
-#: ../admin-tool/lockdown/maindialog.py:59
+#: ../admin-tool/lockdown/maindialog.py:57
 msgid "Disable log _out"
 msgstr "Запретить завершение _сеанса"
 
-#: ../admin-tool/lockdown/maindialog.py:61
+#: ../admin-tool/lockdown/maindialog.py:59
 msgid "Disable _quit"
 msgstr "Запретить в_ыход"
 
-#: ../admin-tool/lockdown/maindialog.py:62
+#: ../admin-tool/lockdown/maindialog.py:60
 msgid "Disable _arbitrary URL"
 msgstr "Запретить произвольные _URL"
 
-#: ../admin-tool/lockdown/maindialog.py:63
+#: ../admin-tool/lockdown/maindialog.py:61
 msgid "Disable _bookmark editing"
 msgstr "Запретить редактирование _закладок"
 
-#: ../admin-tool/lockdown/maindialog.py:64
+#: ../admin-tool/lockdown/maindialog.py:62
 msgid "Disable _history"
 msgstr "Запретить _историю"
 
-#: ../admin-tool/lockdown/maindialog.py:65
+#: ../admin-tool/lockdown/maindialog.py:63
 msgid "Disable _javascript chrome"
 msgstr "Запретить поддержку _javascript"
 
-#: ../admin-tool/lockdown/maindialog.py:66
+#: ../admin-tool/lockdown/maindialog.py:64
 msgid "Disable _toolbar editing"
 msgstr "Запретить изменение _панели инструментов"
 
-#: ../admin-tool/lockdown/maindialog.py:67
+#: ../admin-tool/lockdown/maindialog.py:65
 msgid "_Fullscreen"
 msgstr "_Полноэкранный режим"
 
-#: ../admin-tool/lockdown/maindialog.py:68
+#: ../admin-tool/lockdown/maindialog.py:66
 msgid "Hide _menubar"
 msgstr "Скрыть _меню"
 
 #. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
 #. This can be used to disable this, for when you don't want people to know you created the document.
-#: ../admin-tool/lockdown/maindialog.py:72
-msgid "Remove personal info from documents when saving them"
+#: ../admin-tool/lockdown/maindialog.py:70
+msgid "Remove personal information from documents when saving them"
 msgstr "Удалять личные данные из документов при сохранении"
 
-#: ../admin-tool/lockdown/maindialog.py:73
+#: ../admin-tool/lockdown/maindialog.py:71
 msgid "Warn if macro tries to create a PDF"
 msgstr "Предупреждать о том, что макрос пытается создать документ PDF"
 
-#: ../admin-tool/lockdown/maindialog.py:74
+#: ../admin-tool/lockdown/maindialog.py:72
 msgid "Warn if macro tries to print a document"
 msgstr "Предупреждать о том, что макрос пытается напечатать документ"
 
-#: ../admin-tool/lockdown/maindialog.py:75
+#: ../admin-tool/lockdown/maindialog.py:73
 msgid "Warn if macro tries to save a document"
 msgstr "Предупреждать о том, что макрос пытается сохранить документ"
 
-#: ../admin-tool/lockdown/maindialog.py:76
+#: ../admin-tool/lockdown/maindialog.py:74
 msgid "Warn if macro tries to sign a document"
 msgstr "Предупреждать о том, что макрос пытается подписать документ"
 
-#: ../admin-tool/lockdown/maindialog.py:77
+#: ../admin-tool/lockdown/maindialog.py:75
 msgid "Recommend password when saving a document"
 msgstr "Предлагать пароль при сохранении документа"
 
-#: ../admin-tool/lockdown/maindialog.py:79
+#: ../admin-tool/lockdown/maindialog.py:77
 msgid "Enable auto-save"
 msgstr "Включить автоматическое сохранение"
 
 #. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
-#: ../admin-tool/lockdown/maindialog.py:81
+#: ../admin-tool/lockdown/maindialog.py:79
 msgid "Printing should mark the document as modified"
 msgstr "Печать изменяет документ"
 
-#: ../admin-tool/lockdown/maindialog.py:82
+#: ../admin-tool/lockdown/maindialog.py:80
 msgid "Use system's file dialog"
 msgstr "Использовать системный диалог файлов"
 
-#: ../admin-tool/lockdown/maindialog.py:83
+#: ../admin-tool/lockdown/maindialog.py:81
 msgid "Create backup copy on save"
 msgstr "Создавать запасную копию при сохранении"
 
-#: ../admin-tool/lockdown/maindialog.py:84
+#: ../admin-tool/lockdown/maindialog.py:82
 msgid "Warn when saving non-OpenOffice.org formats"
-msgstr "Предупреждать о сохранении в форматах, отличных от документов OpenOffice.org"
+msgstr ""
+"Предупреждать о сохранении в форматах, отличных от документов OpenOffice.org"
 
-#: ../admin-tool/lockdown/maindialog.py:86
+#: ../admin-tool/lockdown/maindialog.py:84
 msgid "Use OpenGL"
 msgstr "Использовать OpenGL"
 
-#: ../admin-tool/lockdown/maindialog.py:87
+#: ../admin-tool/lockdown/maindialog.py:85
 msgid "Use system font"
 msgstr "Использовать системный шрифт"
 
-#: ../admin-tool/lockdown/maindialog.py:88
+#: ../admin-tool/lockdown/maindialog.py:86
 msgid "Use anti-aliasing"
 msgstr "Использовать сглаживание шрифтов"
 
-#: ../admin-tool/lockdown/maindialog.py:89
+#: ../admin-tool/lockdown/maindialog.py:87
 msgid "Disable UI customization"
 msgstr "Запретить настройку пользовательского интерфейса"
 
-#: ../admin-tool/lockdown/maindialog.py:90
+#: ../admin-tool/lockdown/maindialog.py:88
 msgid "Show insensitive menu items"
 msgstr "Показывать выключенные элементы меню"
 
-#: ../admin-tool/lockdown/maindialog.py:91
+#: ../admin-tool/lockdown/maindialog.py:89
 msgid "Show font preview"
 msgstr "Показывать шрифты"
 
-#: ../admin-tool/lockdown/maindialog.py:92
+#: ../admin-tool/lockdown/maindialog.py:90
 msgid "Show font history"
 msgstr "Показывать историю шрифтов"
 
-#: ../admin-tool/lockdown/maindialog.py:93
+#: ../admin-tool/lockdown/maindialog.py:91
 msgid "Show icons in menus"
 msgstr "Показывать значки в меню"
 
@@ -393,11 +394,11 @@ msgstr ""
 
 #: ../admin-tool/lockdown/pessulus.glade.h:27
 msgid "<b>Disabled Applets</b>"
-msgstr "<b>Запрещенные апплеты</b>"
+msgstr "<b>Запрещённые апплеты</b>"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:28
 msgid "<b>Safe Protocols</b>"
-msgstr "<b>Защищенные протоколы</b>"
+msgstr "<b>Защищённые протоколы</b>"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:29
 msgid "Default format for presentations:"
@@ -461,19 +462,19 @@ msgstr "Пользовательский интерфейс"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:494
+#: ../admin-tool/profilesdialog.py:495
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../admin-tool/sabayon:73
+#: ../admin-tool/sabayon:77
 msgid ""
 "Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr ""
-"Ваша учетная запись не имеет права запуска утилиты изменения профилей "
+"Ваша учётная запись не имеет права запуска утилиты изменения профилей "
 "пользователей"
 
-#: ../admin-tool/sabayon:74
+#: ../admin-tool/sabayon:78
 msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
@@ -481,11 +482,11 @@ msgstr ""
 "Для выполнения этой программы необходимы права администратора, потому что "
 "она может изменить системные файлы."
 
-#: ../admin-tool/sabayon:79
+#: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
 msgstr "Утилита управления профилями пользователей уже запущена."
 
-#: ../admin-tool/sabayon:80
+#: ../admin-tool/sabayon:84
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
@@ -493,43 +494,45 @@ msgstr ""
 "Вы не можете использовать утилиту изменения профилей из сеанса изменения "
 "профилей"
 
-#: ../admin-tool/sabayon:87
+#: ../admin-tool/sabayon:91
 #, c-format
 msgid "User account '%s' was not found"
-msgstr "Учетная запись пользователя \"%s\" не найдена"
+msgstr "Учётная запись пользователя «%s» не найдена"
 
-#: ../admin-tool/sabayon:88
+#: ../admin-tool/sabayon:92
 #, c-format
 msgid ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
 "Try again after creating the account (using, for example, the 'adduser' "
 "command)"
 msgstr ""
-"Для работы программы Sabayon требуется специальная учетная запись \"%s\". "
+"Для работы программы Sabayon требуется специальная учётная запись «%s». "
 "Попробуйте еще раз после создания этой учетной записи."
 
-#: ../admin-tool/sabayon:128
+#: ../admin-tool/sabayon:131
 #, c-format
 msgid ""
 "A fatal error has occurred.  You can help us fix the problem by sending the "
 "log in %s to %s"
 msgstr ""
-"Возникла критическая ошибка. Помогите нам исследовать эту проблему, послав файл журнала из %s на адрес %s"
+"Возникла критическая ошибка. Помогите нам исследовать эту проблему, послав "
+"файл журнала из %s на адрес %s"
 
-#: ../admin-tool/sabayon:143
+#: ../admin-tool/sabayon:145
 #, c-format
 msgid ""
 "Sabayon will now exit.  There were some recoverable errors, and you can help "
 "us debug the problem by sending the log in %s to %s"
 msgstr ""
-"Sabayon завершит работу, так как возникла критическая ошибка. Помогите нам исследовать эту проблему, послав файл журнала из %s на адрес %s"
+"Sabayon завершит работу, так как возникла критическая ошибка. Помогите нам "
+"исследовать эту проблему, послав файл журнала из %s на адрес %s"
 
-#: ../admin-tool/sabayon-apply:98
+#: ../admin-tool/sabayon-apply:99
 #, c-format
 msgid "No profile for user '%s' found\n"
-msgstr "Профиль для пользователя \"%s\" не найден.\n"
+msgstr "Профиль для пользователя «%s» не найден.\n"
 
-#: ../admin-tool/sabayon-apply:103
+#: ../admin-tool/sabayon-apply:104
 msgid "Please use -h for usage options"
 msgstr "Используйте параметр -h для получения справки по применению"
 
@@ -538,11 +541,11 @@ msgstr "Используйте параметр -h для получения с�
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
 msgstr "Применение: %s <имя профиля> <путь профиля> <номер дисплея>\n"
 
-#: ../admin-tool/sabayon.desktop.in.h:1
+#: ../admin-tool/sabayon.desktop.in.in.h:1
 msgid "Establish and Edit Profiles for Users"
 msgstr "Установка и изменение профилей пользователей"
 
-#: ../admin-tool/sabayon.desktop.in.h:2 ../admin-tool/sabayon.glade.h:4
+#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.glade.h:4
 msgid "User Profile Editor"
 msgstr "Редактор профилей пользователей"
 
@@ -585,7 +588,7 @@ msgstr "Закрыть _без сохранения"
 #: ../admin-tool/saveconfirm.py:41
 #, python-format
 msgid "Save changes to profile \"%s\" before closing?"
-msgstr "Сохранить изменения профиля \"%s\" перед выходом?"
+msgstr "Сохранить изменения профиля «%s» перед выходом?"
 
 #: ../admin-tool/saveconfirm.py:45
 #, python-format
@@ -648,7 +651,8 @@ msgstr[2] ""
 
 #: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgstr "Если вы не сохраните, изменения за последний час будут безвозвратно утеряны."
+msgstr ""
+"Если вы не сохраните, изменения за последний час будут безвозвратно утеряны."
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
@@ -728,8 +732,9 @@ msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
 "report this error now or try to continue editing the user profile."
 msgstr ""
-"Возникла критическая ошибка во время применения профиля пользователя '%s'. Возможно "
-"сообщить об этой ошибке разработчикам или продолжить редактирование профиля пользователя."
+"Возникла критическая ошибка во время применения профиля пользователя '%s'. "
+"Возможно сообщить об этой ошибке разработчикам или продолжить редактирование "
+"профиля пользователя."
 
 #: ../admin-tool/sessionwindow.py:337
 msgid "_Report this error"
@@ -750,42 +755,45 @@ msgstr "Использовать этот профиль"
 
 #: ../lib/protosession.py:147
 msgid "Unable to find a free X display"
-msgstr "Не удаётся найти свободный X-дисплей"
+msgstr "Не удалось найти свободный X-дисплей"
 
 #: ../lib/protosession.py:414
 msgid "Failed to start Xnest: timed out waiting for USR1 signal"
-msgstr "Не удаётся запустить Xnest: время ожидания сигнала USR1 истекло"
+msgstr "Не удалось запустить Xnest: время ожидания сигнала USR1 истекло"
 
 #: ../lib/protosession.py:416
 msgid "Failed to start Xnest: died during startup"
-msgstr "Не удаётся запустить Xnest: умер при запуске"
+msgstr "Не удалось запустить Xnest: умер при запуске"
 
 #: ../lib/protosession.py:501
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
 msgstr ""
-"При применении профиля пользователя из файла '%s' возникла критическая ошибка."
+"При применении профиля пользователя из файла '%s' возникла критическая "
+"ошибка."
 
 #: ../lib/protosession.py:510
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
-msgstr "При применении профиля пользователя из файла '%s' возникла критическая ошибка."
+msgstr ""
+"При применении профиля пользователя из файла '%s' возникла критическая "
+"ошибка."
 
 #: ../lib/sources/filessource.py:69
 #, python-format
 msgid "File '%s' created"
-msgstr "Файл \"%s\" создан"
+msgstr "Файл «%s» создан"
 
 #: ../lib/sources/filessource.py:71
 #, python-format
 msgid "File '%s' deleted"
-msgstr "Файл \"%s\" удалён"
+msgstr "Файл «%s» удалён"
 
 #: ../lib/sources/filessource.py:73
 #, python-format
 msgid "File '%s' changed"
-msgstr "Файл \"%s\" изменён"
+msgstr "Файл «%s» изменён"
 
 #: ../lib/sources/filessource.py:97
 msgid "Applications menu"
@@ -810,47 +818,47 @@ msgstr "Меню \"Начать здесь\""
 #: ../lib/sources/gconfsource.py:90
 #, python-format
 msgid "GConf key '%s' unset"
-msgstr "Ключ GConf \"%s\" сброшен"
+msgstr "Ключ GConf «%s» сброшен"
 
 #: ../lib/sources/gconfsource.py:92
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
-msgstr "Ключ GConf \"%s\" установлен как строка \"%s\""
+msgstr "Ключ GConf «%s» установлен как строка «%s»"
 
 #: ../lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
-msgstr "Ключ GConf \"%s\" установлен как целое \"%s\""
+msgstr "Ключ GConf «%s» установлен как целое «%s»"
 
 #: ../lib/sources/gconfsource.py:96
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
-msgstr "Ключ GConf \"%s\" установлен как плавающее \"%s\""
+msgstr "Ключ GConf «%s» установлен как плавающее «%s»"
 
 #: ../lib/sources/gconfsource.py:98
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
-msgstr "Ключ GConf \"%s\" установлен как булево \"%s\""
+msgstr "Ключ GConf «%s» установлен как булево «%s»"
 
 #: ../lib/sources/gconfsource.py:100
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
-msgstr "Ключ GConf \"%s\" установлен как схема \"%s\""
+msgstr "Ключ GConf «%s» установлен как схема «%s»"
 
 #: ../lib/sources/gconfsource.py:102
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
-msgstr "Ключ GConf \"%s\" установлен как список \"%s\""
+msgstr "Ключ GConf «%s» установлен как список «%s»"
 
 #: ../lib/sources/gconfsource.py:104
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
-msgstr "Ключ GConf \"%s\" установлен как пара \"%s\""
+msgstr "Ключ GConf «%s» установлен как пара «%s»"
 
 #: ../lib/sources/gconfsource.py:106
 #, python-format
 msgid "GConf key '%s' set to '%s'"
-msgstr "Ключ GConf \"%s\" установлен в \"%s\""
+msgstr "Ключ GConf «%s» установлен в «%s»"
 
 #: ../lib/sources/gconfsource.py:137
 msgid "Default GConf settings"
@@ -863,17 +871,17 @@ msgstr "Принудительные параметры GConf"
 #: ../lib/sources/mozillasource.py:133
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
-msgstr "Ключ Mozilla \"%s\" установлен в \"%s\""
+msgstr "Ключ Mozilla «%s» установлен в «%s»"
 
 #: ../lib/sources/mozillasource.py:135
 #, python-format
 msgid "Mozilla key '%s' unset"
-msgstr "Сброшен ключ Mozilla \"%s\""
+msgstr "Сброшен ключ Mozilla «%s»"
 
 #: ../lib/sources/mozillasource.py:137
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
-msgstr "Ключ Mozilla \"%s\" изменён на \"%s\""
+msgstr "Ключ Mozilla «%s» изменён на «%s»"
 
 #: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
 msgid "Web browser preferences"
@@ -909,42 +917,42 @@ msgstr "нет профиля по умолчанию"
 #: ../lib/sources/mozillasource.py:954
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
-msgstr "Создана закладка Mozilla \"%s\" -> \"%s\""
+msgstr "Создана закладка Mozilla «%s» -> «%s»"
 
 #: ../lib/sources/mozillasource.py:956
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
-msgstr "Создана закладка Mozilla \"%s\""
+msgstr "Создана закладка Mozilla «%s»"
 
 #: ../lib/sources/mozillasource.py:959
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
-msgstr "Удалена закладка Mozilla \"%s\""
+msgstr "Удалена закладка Mozilla «%s»"
 
 #: ../lib/sources/mozillasource.py:961
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
-msgstr "Удалена папка закладок \"%s\""
+msgstr "Удалена папка закладок «%s»"
 
 #: ../lib/sources/mozillasource.py:964
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
-msgstr "Закладка Mozilla изменена \"%s\" \"%s\""
+msgstr "Закладка Mozilla изменена «%s» «%s»"
 
 #: ../lib/sources/mozillasource.py:966
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
-msgstr "Папка закладок Mozilla изменена \"%s\""
+msgstr "Папка закладок Mozilla изменена «%s»"
 
 #: ../lib/sources/paneldelegate.py:55
 #, python-format
 msgid "Panel '%s' added"
-msgstr "Панель \"%s\" добавлена"
+msgstr "Панель «%s» добавлена"
 
 #: ../lib/sources/paneldelegate.py:61
 #, python-format
 msgid "Panel '%s' removed"
-msgstr "Панель \"%s\" удалена"
+msgstr "Панель «%s» удалена"
 
 #: ../lib/sources/paneldelegate.py:76
 #, python-format
@@ -1071,22 +1079,22 @@ msgstr "Файл панели"
 #: ../lib/storage.py:172
 #, python-format
 msgid "Failed to read file '%s': %s"
-msgstr "Ошибка чтения файла \"%s\": %s"
+msgstr "Ошибка чтения файла «%s»: %s"
 
 #: ../lib/storage.py:182
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
-msgstr "Ошибка чтения метаданных из \"%s\": %s"
+msgstr "Ошибка чтения метаданных из «%s»: %s"
 
 #: ../lib/storage.py:188
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
-msgstr "Неверная секция метаданных в \"%s\": %s"
+msgstr "Неверная секция метаданных в «%s»: %s"
 
 #: ../lib/storage.py:362
 #, python-format
 msgid "Cannot add non-existent file '%s'"
-msgstr "Не удаётся добавить несуществующий файл \"%s\""
+msgstr "Не удалось добавить несуществующий файл «%s»"
 
 #: ../lib/storage.py:568
 #, python-format
@@ -1121,8 +1129,8 @@ msgstr "неверный тип для установки %(setting)s в %(np)s"
 
 #: ../lib/userdb.py:215
 #, python-format
-msgid "No search based specified for %s"
-msgstr "Поиск не указан для %s"
+msgid "No search base specified for %s"
+msgstr "Не указан корень для запроса %s"
 
 #: ../lib/userdb.py:218
 #, python-format
@@ -1136,21 +1144,21 @@ msgstr "Атрибут результата не указан для %s"
 
 #: ../lib/userdb.py:230
 msgid "Scope must be one of sub, base and one"
-msgstr "Scope должен быть одним из sub, base и one"
+msgstr "Возможные значения scope - sub, base и one"
 
 #: ../lib/userdb.py:250
 msgid "multiple_result must be one of first and random"
-msgstr "multiple_result должен быть одним из first или random"
+msgstr "Возможные значения multiple_result - first или random"
 
 #: ../lib/userdb.py:342
 #, python-format
 msgid "Could not open %s for writing"
-msgstr "Не удаётся открыть %s для записи"
+msgstr "Не удалось открыть %s для записи"
 
 #: ../lib/userdb.py:355
 #, python-format
 msgid "Failed to save UserDatabase to %s"
-msgstr "Не удаётся сохранить UserDatabase в %s"
+msgstr "Не удалось сохранить UserDatabase в %s"
 
 #: ../lib/userdb.py:378 ../lib/userdb.py:413
 #, python-format
@@ -1160,30 +1168,29 @@ msgstr "Файл %s не является конфигурацией профи�
 #: ../lib/userdb.py:385
 #, python-format
 msgid "Failed to add default profile %s to configuration"
-msgstr "Не удаётся добавить профиль %s в конфигурацию"
+msgstr "Не удалось добавить профиль %s в конфигурацию"
 
 #: ../lib/userdb.py:421
 #, python-format
 msgid "Failed to add user %s to profile configuration"
-msgstr "Не удаётся добавить пользователя %s в конфигурацию профиля"
+msgstr "Не удалось добавить пользователя %s в конфигурацию профиля"
 
 #: ../lib/userdb.py:472
 msgid "Failed to get the user list"
-msgstr "Не удаётся получить список пользователей"
+msgstr "Не удалось получить список пользователей"
 
-#: ../lib/util.py:91
+#: ../lib/util.py:93
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"Не удаётся найти домашний каталог: не установлен ни в /etc/passwd, ни в "
+"Не удалось найти домашний каталог: не установлен ни в /etc/passwd, ни в "
 "переменной окружения $HOME."
 
-#: ../lib/util.py:104
+#: ../lib/util.py:106
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr ""
-"Не удаётся найти имя пользователя: не установлено ни в /etc/passwd, ни в "
+"Не удалось найти имя пользователя: не установлено ни в /etc/passwd, ни в "
 "переменной окружения $USER."
-
