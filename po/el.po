@@ -1,21 +1,22 @@
-# translation of el.po to Greek
+# translation of sabayon.HEAD.po to Greek
 # Stylianos Papanastasiou <stelios@dcs.gla.ac.uk>, 2005.
 # Kostas Papadimas <pkst@gnome.org>, 2005, 2006, 2008.
 # Athanasios Lefteris <alefteris@gmail.com>, 2007.
 # Dimitris Glezos <dimitris@glezos.com>, 2007.
 # George Retsinas <ElemonGW@gmail.com>, 2007.
+# Jennie Petoumenou <epetoumenou@gmail.com>, 2009.
 # translation of sabayon.HEAD.el.po to
 # Greek translation of sabayon.
-# Copyright (C) 2005, 2006, 2007, 2008  Free Software Foundation, Inc.
+# Copyright (C) 2005, 2006, 2007, 2008, 2009  Free Software Foundation, Inc.
 # This file is distributed under the same license as the sabayon package.
 # Initial translation by Stelios
 msgid ""
 msgstr ""
-"Project-Id-Version: el\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-19 18:12+0200\n"
-"PO-Revision-Date: 2008-03-19 18:11+0200\n"
-"Last-Translator: Kostas Papadimas <pkst@gnome.org>\n"
+"Project-Id-Version: sabayon.HEAD\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon&component=general\n"
+"POT-Creation-Date: 2009-01-24 23:07+0000\n"
+"PO-Revision-Date: 2009-02-28 14:30+0100\n"
+"Last-Translator: Jennie Petoumenou <epetoumenou@gmail.com>\n"
 "Language-Team: Greek <team@gnome.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -250,8 +251,9 @@ msgstr "Απόκρυψη γραμμής _μενού"
 #. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
 #. This can be used to disable this, for when you don't want people to know you created the document.
 #: ../admin-tool/lockdown/maindialog.py:70
-msgid "Remove personal info from documents when saving them"
-msgstr "Αφαίρεση προσωπικών δεδομένων από τα έγγραφα ποθ αποθηκεύονται"
+#| msgid "Remove personal info from documents when saving them"
+msgid "Remove personal information from documents when saving them"
+msgstr "Αφαίρεση προσωπικών δεδομένων από τα έγγραφα κατά την αποθήκευσή τους"
 
 #: ../admin-tool/lockdown/maindialog.py:71
 msgid "Warn if macro tries to create a PDF"
@@ -292,8 +294,7 @@ msgstr "Δημιουργία αντιγράφου κατά την αποθήκε
 
 #: ../admin-tool/lockdown/maindialog.py:82
 msgid "Warn when saving non-OpenOffice.org formats"
-msgstr ""
-"Προειδοποίηση στην αποθήκευση τύπων αρχείων που δεν είναι OpenOffice.org"
+msgstr "Προειδοποίηση στην αποθήκευση τύπων αρχείων που δεν είναι OpenOffice.org"
 
 #: ../admin-tool/lockdown/maindialog.py:84
 msgid "Use OpenGL"
@@ -479,8 +480,7 @@ msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:77
-msgid ""
-"Your account does not have permissions to run the Desktop User Profiles tool"
+msgid "Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr ""
 "Ο λογαριασμός σας δεν έχει επαρκή δικαιώματα για να εκτελέσει το εργαλείο "
 "Προφίλ χρηστών"
@@ -605,8 +605,7 @@ msgstr "Αποθήκευση των αλλαγών στο προφίλ \"%s\" π
 
 #: ../admin-tool/saveconfirm.py:45
 #, python-format
-msgid ""
-"If you don't save, changes from the last %ld second will be permanently lost."
+msgid "If you don't save, changes from the last %ld second will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld seconds will be permanently "
 "lost."
@@ -618,8 +617,7 @@ msgstr[1] ""
 "οριστικά."
 
 #: ../admin-tool/saveconfirm.py:51
-msgid ""
-"If you don't save, changes from the last minute will be permanently lost."
+msgid "If you don't save, changes from the last minute will be permanently lost."
 msgstr ""
 "Αν δεν αποθηκεύσετε, οι αλλαγές που έγιναν το τελευταίο λεπτό θα χαθούν "
 "οριστικά."
@@ -641,8 +639,7 @@ msgstr[1] ""
 
 #: ../admin-tool/saveconfirm.py:62
 #, python-format
-msgid ""
-"If you don't save, changes from the last %ld minute will be permanently lost."
+msgid "If you don't save, changes from the last %ld minute will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
@@ -676,10 +673,8 @@ msgstr[1] ""
 
 #: ../admin-tool/saveconfirm.py:81
 #, python-format
-msgid ""
-"If you don't save, changes from the last %d hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
+msgid "If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
 msgstr[0] ""
 "Αν δεν αποθηκεύσετε, οι αλλαγές που έγιναν την προηγούμενη %d  ώρα θα χαθούν "
 "οριστικά."
@@ -769,15 +764,13 @@ msgstr "Αποτυχία εκκίνησης Xnest: τερματίστηκε κα
 
 #: ../lib/protosession.py:501
 #, python-format
-msgid ""
-"There was a recoverable error while applying the user profile from file '%s'."
+msgid "There was a recoverable error while applying the user profile from file '%s'."
 msgstr "Υπήρξε ένα  σφάλμα κατά την εφαρμογή του προφίλ χρήστη από το '%s'."
 
 #: ../lib/protosession.py:510
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
-msgstr ""
-"Υπήρξε ένα μοιραίο σφάλμα κατά την εφαρμογή του προφίλ χρήστη από το '%s'."
+msgstr "Υπήρξε ένα μοιραίο σφάλμα κατά την εφαρμογή του προφίλ χρήστη από το '%s'."
 
 #: ../lib/sources/filessource.py:69
 #, python-format
@@ -1128,7 +1121,8 @@ msgstr "μη έγκυρος τύπος για τη ρύθμιση του %(setti
 
 #: ../lib/userdb.py:215
 #, python-format
-msgid "No search based specified for %s"
+#| msgid "No search based specified for %s"
+msgid "No search base specified for %s"
 msgstr "Δεν καθορίστηκε βάση αναζήτησης για %s"
 
 #: ../lib/userdb.py:218
@@ -1193,3 +1187,4 @@ msgid ""
 msgstr ""
 "Αδυναμία εύρεσης ονόματος χρήστη: δεν έχει τεθεί στο /etc/passwd και δεν "
 "υπάρχει τιμή για το $USER στο περιβάλλον"
+
