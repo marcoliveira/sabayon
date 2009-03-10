@@ -1,14 +1,16 @@
 # This is the Italian locale definition for Sabayon.
-# Copyright (C) Free Software Foundation, Inc.
+# Copyright (C) 2006-2009 Free Software Foundation, Inc.
 # Alessio Dessì <alessiodessi@tiscali.it>, 2006.
+# Flavia Weisghizzi <flavia@weisghizzi.it>, 2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-07 15:24+0100\n"
-"PO-Revision-Date: 2008-03-07 15:19+0100\n"
-"Last-Translator: Alessio Dessì <alessio.dessi@gmail.com>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=sabayon&component=general\n"
+"POT-Creation-Date: 2009-03-09 18:29+0000\n"
+"PO-Revision-Date: 2009-03-10 23:36+0100\n"
+"Last-Translator: Flavia Weisghizzi <flavia@weisghizzi.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -149,7 +151,7 @@ msgstr "coppia"
 msgid "Profile settings: %s"
 msgstr "Impostazioni del profilo: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:384
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:385
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Nome"
@@ -268,8 +270,8 @@ msgstr "Nascondere la barra dei _menu"
 #. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
 #. This can be used to disable this, for when you don't want people to know you created the document.
 #: ../admin-tool/lockdown/maindialog.py:70
-msgid "Remove personal info from documents when saving them"
-msgstr "Rimuovere informazioni personali dai documenti al salvataggio"
+msgid "Remove personal information from documents when saving them"
+msgstr "Rimuovere informazioni personali dai documenti durante il salvataggio"
 
 # GNOME-2-22
 #: ../admin-tool/lockdown/maindialog.py:71
@@ -310,7 +312,7 @@ msgstr "La stampa dovrebbe contrassegnare il documento come modificato"
 # GNOME-2-22
 #: ../admin-tool/lockdown/maindialog.py:80
 msgid "Use system's file dialog"
-msgstr "Usare dialoghi per file di sistema"
+msgstr "Usare il dialogo di sistema per i file"
 
 # GNOME-2-22
 #: ../admin-tool/lockdown/maindialog.py:81
@@ -523,7 +525,7 @@ msgstr "Interfaccia utente"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:494
+#: ../admin-tool/profilesdialog.py:495
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -579,9 +581,9 @@ msgid ""
 "A fatal error has occurred.  You can help us fix the problem by sending the "
 "log in %s to %s"
 msgstr ""
-"Si è verificato un errore irrimediabilie. È possibile aiutare gli "
-"sviluppatori a correggere il problema inviando il registro salvato su «%s» a "
-"%s"
+"Si è verificato un errore irrimediabile. È possibile aiutare gli "
+"sviluppatori a correggere il problema inviando il registro salvato su «%s» a %"
+"s"
 
 # GNOME-2-22
 #: ../admin-tool/sabayon:145
@@ -590,8 +592,8 @@ msgid ""
 "Sabayon will now exit.  There were some recoverable errors, and you can help "
 "us debug the problem by sending the log in %s to %s"
 msgstr ""
-"Sabayon verrà termianto. Si sono verificati alcuni errori non recuperabili; "
-"è possibile aiutare gli sviluppatori a correggere il problema inviando il "
+"Sabayon verrà terminato. Si sono verificati alcuni errori recuperabili; è "
+"possibile aiutare gli sviluppatori a correggere il problema inviando il "
 "registro salvato su «%s» a %s"
 
 #: ../admin-tool/sabayon-apply:99
@@ -817,8 +819,8 @@ msgid ""
 "report this error now or try to continue editing the user profile."
 msgstr ""
 "Si è verificato un errore recuperabile durante l'applicazione del profilo "
-"utente «%s». È possibile segnare immeatamente questo errore oppure tentare "
-"di continuare la modifica del profilo utente."
+"utente «%s». È possibile segnalare immediatamente questo errore oppure "
+"tentare di continuare la modifica del profilo utente."
 
 # GNOME-2-22
 #: ../admin-tool/sessionwindow.py:337
@@ -864,7 +866,7 @@ msgstr ""
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr ""
-"Si è verificato un errore irrimediagile durante l'applicazione del profilo "
+"Si è verificato un errore irrimediabile durante l'applicazione del profilo "
 "utente dal «%s»."
 
 #: ../lib/sources/filessource.py:69
@@ -1246,7 +1248,7 @@ msgstr "tipo non valido per il parametro %(setting)s in %(np)s"
 
 #: ../lib/userdb.py:215
 #, python-format
-msgid "No search based specified for %s"
+msgid "No search base specified for %s"
 msgstr "Nessuna base di ricerca specificata per %s"
 
 #: ../lib/userdb.py:218
