@@ -1,14 +1,14 @@
 # sabayon ja.po.
-# Copyright (C) 2005-2007 The Gnome Foundation.
-# This file is distributed under the same license as the 'sabayon' package.
-# Takeshi AIHANA <takeshi.aihana@gmail.com>, 2005-2007.
+# Copyright (C) 2005-2009 The Gnome Foundation.
+# This file is distributed under the same license as the sabayon package.
+# Takeshi AIHANA <takeshi.aihana@gmail.com>, 2005-2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-16 20:47+0900\n"
-"PO-Revision-Date: 2007-09-16 20:46+0900\n"
+"POT-Creation-Date: 2009-03-12 00:08+0900\n"
+"PO-Revision-Date: 2009-03-12 00:07+0900\n"
 "Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -152,7 +152,7 @@ msgstr "ペア"
 msgid "Profile settings: %s"
 msgstr "プロファイルの設定: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:384
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:385
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "名前"
@@ -165,154 +165,154 @@ msgstr "型"
 msgid "Value"
 msgstr "値"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:101
+#: ../admin-tool/lockdown/lockdownbutton.py:99
 msgid "Click to make this setting not mandatory"
 msgstr "クリックすると、この設定を任意にします"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:103
+#: ../admin-tool/lockdown/lockdownbutton.py:101
 msgid "Click to make this setting mandatory"
 msgstr "クリックすると、この設定を必須にします"
 
-#: ../admin-tool/lockdown/maindialog.py:51
+#: ../admin-tool/lockdown/maindialog.py:49
 msgid "Disable _command line"
 msgstr "コマンドラインを入力できないようにする(_C)"
 
-#: ../admin-tool/lockdown/maindialog.py:52
+#: ../admin-tool/lockdown/maindialog.py:50
 msgid "Disable _printing"
 msgstr "印刷機能を使用不可にする(_P)"
 
-#: ../admin-tool/lockdown/maindialog.py:53
+#: ../admin-tool/lockdown/maindialog.py:51
 msgid "Disable print _setup"
 msgstr "印刷設定を使用不可にする(_S)"
 
-#: ../admin-tool/lockdown/maindialog.py:54
+#: ../admin-tool/lockdown/maindialog.py:52
 msgid "Disable save to _disk"
 msgstr "ディスクへ保存できないようにする(_D)"
 
-#: ../admin-tool/lockdown/maindialog.py:56
+#: ../admin-tool/lockdown/maindialog.py:54
 msgid "_Lock down the panels"
 msgstr "パネル操作を利用不可にする(_L)"
 
-#: ../admin-tool/lockdown/maindialog.py:57
+#: ../admin-tool/lockdown/maindialog.py:55
 msgid "Disable force _quit"
 msgstr "強制終了できないようにする(_Q)"
 
-#: ../admin-tool/lockdown/maindialog.py:58
+#: ../admin-tool/lockdown/maindialog.py:56
 msgid "Disable lock _screen"
 msgstr "画面をロックできないようにする(_S)"
 
-#: ../admin-tool/lockdown/maindialog.py:59
+#: ../admin-tool/lockdown/maindialog.py:57
 msgid "Disable log _out"
 msgstr "ログアウトできないようにする(_O)"
 
-#: ../admin-tool/lockdown/maindialog.py:61
+#: ../admin-tool/lockdown/maindialog.py:59
 msgid "Disable _quit"
 msgstr "終了できないようにする(_Q)"
 
-#: ../admin-tool/lockdown/maindialog.py:62
+#: ../admin-tool/lockdown/maindialog.py:60
 msgid "Disable _arbitrary URL"
 msgstr "URL を入力できないようにする(_A)"
 
-#: ../admin-tool/lockdown/maindialog.py:63
+#: ../admin-tool/lockdown/maindialog.py:61
 msgid "Disable _bookmark editing"
 msgstr "ブックマークを編集できないようにする(_B)"
 
-#: ../admin-tool/lockdown/maindialog.py:64
+#: ../admin-tool/lockdown/maindialog.py:62
 msgid "Disable _history"
 msgstr "履歴操作を使用不可にする(_H)"
 
-#: ../admin-tool/lockdown/maindialog.py:65
+#: ../admin-tool/lockdown/maindialog.py:63
 msgid "Disable _javascript chrome"
 msgstr "JavaScript の処理を無効にする(_J)"
 
-#: ../admin-tool/lockdown/maindialog.py:66
+#: ../admin-tool/lockdown/maindialog.py:64
 msgid "Disable _toolbar editing"
 msgstr "ツールバーを編集できないようにする(_T)"
 
-#: ../admin-tool/lockdown/maindialog.py:67
+#: ../admin-tool/lockdown/maindialog.py:65
 msgid "_Fullscreen"
 msgstr "フルスクリーン表示できないようにする(_F)"
 
-#: ../admin-tool/lockdown/maindialog.py:68
+#: ../admin-tool/lockdown/maindialog.py:66
 msgid "Hide _menubar"
 msgstr "メニューバーを隠す(_M)"
 
 #. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
 #. This can be used to disable this, for when you don't want people to know you created the document.
-#: ../admin-tool/lockdown/maindialog.py:72
-msgid "Remove personal info from documents when saving them"
+#: ../admin-tool/lockdown/maindialog.py:70
+msgid "Remove personal information from documents when saving them"
 msgstr "保存時にドキュメントから個人情報を削除する"
 
-#: ../admin-tool/lockdown/maindialog.py:73
+#: ../admin-tool/lockdown/maindialog.py:71
 msgid "Warn if macro tries to create a PDF"
 msgstr "マクロから PDF を生成する場合は警告する"
 
-#: ../admin-tool/lockdown/maindialog.py:74
+#: ../admin-tool/lockdown/maindialog.py:72
 msgid "Warn if macro tries to print a document"
 msgstr "マクロからドキュメントを印刷する場合は警告する"
 
-#: ../admin-tool/lockdown/maindialog.py:75
+#: ../admin-tool/lockdown/maindialog.py:73
 msgid "Warn if macro tries to save a document"
 msgstr "マクロからドキュメントを保存する場合は警告する"
 
-#: ../admin-tool/lockdown/maindialog.py:76
+#: ../admin-tool/lockdown/maindialog.py:74
 msgid "Warn if macro tries to sign a document"
 msgstr "マクロからドキュメントに署名する場合は警告する"
 
-#: ../admin-tool/lockdown/maindialog.py:77
+#: ../admin-tool/lockdown/maindialog.py:75
 msgid "Recommend password when saving a document"
 msgstr "ドキュメントを保存する時にパスワードを要求する"
 
-#: ../admin-tool/lockdown/maindialog.py:79
+#: ../admin-tool/lockdown/maindialog.py:77
 msgid "Enable auto-save"
 msgstr "自動保存の機能を有効にする"
 
 #. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
-#: ../admin-tool/lockdown/maindialog.py:81
+#: ../admin-tool/lockdown/maindialog.py:79
 msgid "Printing should mark the document as modified"
 msgstr "印刷したらドキュメントを変更済みとしてマークする"
 
-#: ../admin-tool/lockdown/maindialog.py:82
+#: ../admin-tool/lockdown/maindialog.py:80
 msgid "Use system's file dialog"
 msgstr "システムのファイル選択ダイアログを使う"
 
-#: ../admin-tool/lockdown/maindialog.py:83
+#: ../admin-tool/lockdown/maindialog.py:81
 msgid "Create backup copy on save"
 msgstr "保存時にバックアップを生成する"
 
-#: ../admin-tool/lockdown/maindialog.py:84
+#: ../admin-tool/lockdown/maindialog.py:82
 msgid "Warn when saving non-OpenOffice.org formats"
 msgstr "OpenOffice.org ではない形式で保存する時は警告する"
 
-#: ../admin-tool/lockdown/maindialog.py:86
+#: ../admin-tool/lockdown/maindialog.py:84
 msgid "Use OpenGL"
 msgstr "OpenGL を使用する"
 
-#: ../admin-tool/lockdown/maindialog.py:87
+#: ../admin-tool/lockdown/maindialog.py:85
 msgid "Use system font"
 msgstr "システム規模のフォントを使用する"
 
-#: ../admin-tool/lockdown/maindialog.py:88
+#: ../admin-tool/lockdown/maindialog.py:86
 msgid "Use anti-aliasing"
 msgstr "アンチ・エイリアス効果を使用する"
 
-#: ../admin-tool/lockdown/maindialog.py:89
+#: ../admin-tool/lockdown/maindialog.py:87
 msgid "Disable UI customization"
 msgstr "UI をカスタマイズできないようにする"
 
-#: ../admin-tool/lockdown/maindialog.py:90
+#: ../admin-tool/lockdown/maindialog.py:88
 msgid "Show insensitive menu items"
 msgstr "利用不可のメニュー項目を表示する"
 
-#: ../admin-tool/lockdown/maindialog.py:91
+#: ../admin-tool/lockdown/maindialog.py:89
 msgid "Show font preview"
 msgstr "フォントのプレビューを表示する"
 
-#: ../admin-tool/lockdown/maindialog.py:92
+#: ../admin-tool/lockdown/maindialog.py:90
 msgid "Show font history"
 msgstr "フォントの使用履歴を表示する"
 
-#: ../admin-tool/lockdown/maindialog.py:93
+#: ../admin-tool/lockdown/maindialog.py:91
 msgid "Show icons in menus"
 msgstr "メニューの中にアイコンを表示する"
 
@@ -462,7 +462,7 @@ msgstr "ユーザ・インタフェース"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:494
+#: ../admin-tool/profilesdialog.py:495
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -528,12 +528,12 @@ msgstr ""
 "今から Sabayon を終了します。復旧可能なエラーがいくつか発生しましたが、%s に"
 "あるログを %s に送付して、この問題のデバッグに協力して下さい。"
 
-#: ../admin-tool/sabayon-apply:98
+#: ../admin-tool/sabayon-apply:99
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "ユーザ '%s' のプロファイルが見つかりませんでした\n"
 
-#: ../admin-tool/sabayon-apply:103
+#: ../admin-tool/sabayon-apply:104
 msgid "Please use -h for usage options"
 msgstr "オプションの使い方は -h を指定して下さい"
 
@@ -542,11 +542,11 @@ msgstr "オプションの使い方は -h を指定して下さい"
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
 msgstr "用法: %s <プロファイル名> <プロファイルのパス名> <ディスプレイ番号>\n"
 
-#: ../admin-tool/sabayon.desktop.in.h:1
+#: ../admin-tool/sabayon.desktop.in.in.h:1
 msgid "Establish and Edit Profiles for Users"
 msgstr "ユーザ向けのプロファイルを設定したり編集します"
 
-#: ../admin-tool/sabayon.desktop.in.h:2 ../admin-tool/sabayon.glade.h:4
+#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.glade.h:4
 msgid "User Profile Editor"
 msgstr "プロファイル・エディタ"
 
@@ -1090,7 +1090,7 @@ msgstr "%(np)s にある %(setting)s の設定の型が間違っています"
 
 #: ../lib/userdb.py:215
 #, python-format
-msgid "No search based specified for %s"
+msgid "No search base specified for %s"
 msgstr "%s で指定した検索ベースはありません"
 
 #: ../lib/userdb.py:218
@@ -1140,7 +1140,7 @@ msgstr "ユーザ %s をプロファイルの設定に追加できませんで�
 msgid "Failed to get the user list"
 msgstr "ユーザの一覧を取得できませんでした"
 
-#: ../lib/util.py:91
+#: ../lib/util.py:93
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -1148,7 +1148,7 @@ msgstr ""
 "ホーム・フォルダが見つかりません: /etc/passwd で設定されていないか環境変数 "
 "$HOME がセットされていません"
 
-#: ../lib/util.py:104
+#: ../lib/util.py:106
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
