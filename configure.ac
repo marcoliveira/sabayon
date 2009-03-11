@@ -28,6 +28,17 @@ GNOME_COMPILE_WARNINGS(yes)
 # Detect if we can build Python bindings (need python and python headers)
 AM_CHECK_PYTHON_HEADERS(,[AC_MSG_ERROR([Can't locate python headers])])
 
+# Strictly speaking, xdg.DesktopEntry should be a run-time check.  But 
+# distros may not be aware that Sabayon *requires* xdg.DesktopEntry to run,
+# so we'll check for it at "compilation" time.
+AC_MSG_CHECKING(whether the xdg.DesktopEntry module for Python is available)
+if [ ! python -c "import xdg.DesktopEntry" ] 
+then
+	AC_MSG_FAILURE([Please install the python-xdg or pyxdg package.])
+else
+	AC_MSG_RESULT(yes)
+fi
+
 # Check for GDK/X11 and PyGObject
 PKG_CHECK_MODULES(XLIB_MODULE, gdk-x11-2.0 pygobject-2.0)
 
