@@ -1,4 +1,79 @@
 ==============
+Version 2.25.0
+==============
+
+  Code name:
+
+	* "Bitter tea"
+
+  What's new in this release:
+
+	* Nothing, really; the only major thing is the port to GIO.
+
+	* The configure script now checks for the xdg.DesktopEntry
+	  module for Python.  My autoconf skills suck, so expert
+	  review of this snippet would be appreciated.
+
+  What's broken in this release:
+
+	* Glad you asked.  Everything!  For some reason, Sabayon is
+          not picking up changes in at least ~/Desktop.  This makes it
+          save mostly empty user profiles.  Help with debugging is
+          much appreciated.  This is bgo#542604.
+
+  Fixes:
+
+	* Port from gnome-vfs to GIO (Evan Briones, Andre Klapper) - bgo#527541
+
+	* Put XAUTHLOCALHOSTNAME in the child session's environment so
+          it will run (Michael Meeks) - bnc#471897
+
+	* Ignore .pulse to avoid replicating PulseAudio data (Federico Mena)
+
+	* String fixes (Philip Withnall) - bgo#528253
+
+  Translators:
+
+	* Djihed Afifi (ar)
+	* Amitakhya Phukan (as)
+	* Alexander Shopov (bg)
+	* Gil Forcada (ca)
+	* Kenneth Nielsen (da)
+	* Christian Kirbach (de)
+	* Philip Withnall (en_GB)
+	* Jennie Petoumenou (el)
+	* Jorge Gonzalez (es)
+	* Mattias Põldaru (et)
+	* Inaki Larranaga Murgoitio (eu)
+	* Claude Paroz (fr)
+	* Ankitkumar Patel (gu)
+	* Yair Hershkovitz, Yaron Sharabani (he)
+	* Gabor Kelemen (hu)
+	* Flavia Weisghizzi (it)
+	* Takeshi AIHANA (ja)
+	* Changwoo Ryu (ko)
+	* Gintautas Miliauskas (lt)
+	* Praveen Arimbrathodiyil (ml)
+	* Sandeep Shedmake (mr)
+	* Kjartan Maraas (nb)
+	* Wouter Bolsterlee (nl)
+	* Yannig Marchegay (oc)
+	* Manoj Kumar Giri (or)
+	* Tomasz Dominikowski (pl)
+	* Duarte Loreto (pt)
+	* Vladimir Melo (pt_BR)
+	* Adi Roiban (ro)
+	* Nickolay V. Shmyrev (ru)
+	* Supun Budhajeewa (si) NEW!!!
+	* Laurent Dhima (sq)
+	* Daniel Nylander (sv)
+	* Krishnababu K (te)
+	* Theppitak Karoonboonyanan (th)
+	* Baris Cicek (tr)
+	* Clytie Siddall (vi)
+	* Chao-Hsiung Liao (zh_HK, zh_TW)
+
+==============
 Version 2.22.1
 ==============
 
