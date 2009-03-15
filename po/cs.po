@@ -9,16 +9,17 @@
 # Petr Tomeš <ptomes@gmail.com>, 2006.
 # Jakub Friedl <jfriedl@suse.cz>, 2007.
 # Martin Picek <picek.martin@gmail.com>, 2007.
-# Lucas Lommer <llommer@svn.gnome.org>, 2008.
+# Lucas Lommer <llommer@svn.gnome.org>, 2008, 2009.
 # Petr Kovar <pknbe@volny.cz>, 2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-16 16:44+0100\n"
-"PO-Revision-Date: 2008-02-16 11:49+0100\n"
-"Last-Translator: Petr Kovar <pknbe@volny.cz>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=sabayon&component=general\n"
+"POT-Creation-Date: 2009-03-14 10:36+0000\n"
+"PO-Revision-Date: 2009-03-15 15:30+0200\n"
+"Last-Translator: Lucas Lommer <llommer@svn.gnome.org>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -166,7 +167,7 @@ msgstr "dvojice"
 msgid "Profile settings: %s"
 msgstr "Nastavení profilu: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:384
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:385
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Název"
@@ -254,8 +255,8 @@ msgstr "Skrýt panel nabídk_y"
 #. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
 #. This can be used to disable this, for when you don't want people to know you created the document.
 #: ../admin-tool/lockdown/maindialog.py:70
-msgid "Remove personal info from documents when saving them"
-msgstr "Odstranit při uložení z dokumentu informace o autorovi"
+msgid "Remove personal information from documents when saving them"
+msgstr "Odstranit z dokumentu při uložení osobní informace"
 
 #: ../admin-tool/lockdown/maindialog.py:71
 msgid "Warn if macro tries to create a PDF"
@@ -476,7 +477,7 @@ msgstr "Uživatelské rozhraní"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:494
+#: ../admin-tool/profilesdialog.py:495
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -553,11 +554,11 @@ msgstr "Možnosti použití viz -h"
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
 msgstr "Použití: %s <název-profilu> <cesta-k-profilu> <číslo-displeje>\n"
 
-#: ../admin-tool/sabayon.desktop.in.h:1
+#: ../admin-tool/sabayon.desktop.in.in.h:1
 msgid "Establish and Edit Profiles for Users"
 msgstr "Vytvářet a upravovat profily uživatelů"
 
-#: ../admin-tool/sabayon.desktop.in.h:2 ../admin-tool/sabayon.glade.h:4
+#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.glade.h:4
 msgid "User Profile Editor"
 msgstr "Editor profilů uživatele"
 
@@ -1130,7 +1131,7 @@ msgstr "neplatný typ pro nastavení %(setting)s v %(np)s"
 
 #: ../lib/userdb.py:215
 #, python-format
-msgid "No search based specified for %s"
+msgid "No search base specified for %s"
 msgstr "Není specifikován Základ vyhledávání (search base) pro %s"
 
 #: ../lib/userdb.py:218
@@ -1180,7 +1181,7 @@ msgstr "Nepodařilo se přidat uživatele %s do nastavení profilu"
 msgid "Failed to get the user list"
 msgstr "Nepodařilo se získat seznam uživatelů"
 
-#: ../lib/util.py:92
+#: ../lib/util.py:93
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -1188,7 +1189,7 @@ msgstr ""
 "Nepodařilo se najít domovský adresář: není nastaven v /etc/passwd a není "
 "žádná hodnota proměnné $HOME v prostředí"
 
-#: ../lib/util.py:105
+#: ../lib/util.py:106
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
