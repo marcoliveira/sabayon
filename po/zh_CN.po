@@ -1,16 +1,19 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# zh_CN translation of sabayon.
+# Copyright (C) 2009 THE sabayon'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the sabayon package.
 # Funda Wang <fundawang@linux.net.cn>, 2005.
+# Yang Zhang <zyangmath@gmail.com>, 2009.
+#
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-24 00:25+0100\n"
-"PO-Revision-Date: 2007-08-26 22:52+0700\n"
-"Last-Translator: Yang Zhang <zyangmath@gmail.com>\n"
-"Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=sabayon&component=general\n"
+"POT-Creation-Date: 2009-03-25 06:56+0000\n"
+"PO-Revision-Date: 2009-03-27 14:42+0800\n"
+"Last-Translator: Ray Wang <wanglei1123@gmail.com>\n"
+"Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -37,8 +40,7 @@ msgstr "忽略"
 msgid "Lock"
 msgstr "锁定"
 
-#: ../admin-tool/changeswindow.py:127
-#: ../admin-tool/editorwindow.py:230
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:230
 msgid "Description"
 msgstr "描述"
 
@@ -47,18 +49,15 @@ msgstr "描述"
 msgid "Profile %s"
 msgstr "配置文件 %s"
 
-#: ../admin-tool/editorwindow.py:195
-#: ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:176
 msgid "_Profile"
 msgstr "配置文件(_P)"
 
-#: ../admin-tool/editorwindow.py:196
-#: ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
 msgid "_Save"
 msgstr "保存(_S)"
 
-#: ../admin-tool/editorwindow.py:196
-#: ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
 msgid "Save profile"
 msgstr "保存配置文件"
 
@@ -66,13 +65,11 @@ msgstr "保存配置文件"
 msgid "_Close"
 msgstr "关闭(_C)"
 
-#: ../admin-tool/editorwindow.py:197
-#: ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:197 ../admin-tool/sessionwindow.py:178
 msgid "Close the current window"
 msgstr "关闭当前窗口"
 
-#: ../admin-tool/editorwindow.py:198
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:198 ../admin-tool/sessionwindow.py:179
 msgid "_Edit"
 msgstr "编辑(_E)"
 
@@ -84,28 +81,23 @@ msgstr "删除(_D)"
 msgid "Delete item"
 msgstr "删除项目"
 
-#: ../admin-tool/editorwindow.py:200
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/editorwindow.py:200 ../admin-tool/sessionwindow.py:182
 msgid "_Help"
 msgstr "帮助(_H)"
 
-#: ../admin-tool/editorwindow.py:201
-#: ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
 msgid "_About"
 msgstr "关于(_A)"
 
-#: ../admin-tool/editorwindow.py:201
-#: ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
 msgid "About Sabayon"
 msgstr "关于 Sabayon"
 
-#: ../admin-tool/editorwindow.py:262
-#: ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:262 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:266
-#: ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:79
 msgid "Files"
 msgstr "文件"
 
@@ -120,8 +112,7 @@ msgstr "面板"
 msgid "Profile file: %s"
 msgstr "配置文件：%s"
 
-#: ../admin-tool/gconfviewer.py:57
-#: ../admin-tool/gconfviewer.py:76
+#: ../admin-tool/gconfviewer.py:57 ../admin-tool/gconfviewer.py:76
 msgid "<no type>"
 msgstr "<无类型>"
 
@@ -162,8 +153,7 @@ msgstr "对"
 msgid "Profile settings: %s"
 msgstr "配置文件设置：%s"
 
-#: ../admin-tool/gconfviewer.py:110
-#: ../admin-tool/profilesdialog.py:384
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:385
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "名称"
@@ -176,154 +166,154 @@ msgstr "类型"
 msgid "Value"
 msgstr "值"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:101
+#: ../admin-tool/lockdown/lockdownbutton.py:99
 msgid "Click to make this setting not mandatory"
 msgstr "单击可将此设置设定为非强制值"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:103
+#: ../admin-tool/lockdown/lockdownbutton.py:101
 msgid "Click to make this setting mandatory"
 msgstr "单击可将此设置设定为强制值"
 
-#: ../admin-tool/lockdown/maindialog.py:51
+#: ../admin-tool/lockdown/maindialog.py:49
 msgid "Disable _command line"
 msgstr "禁用命令行(_C)"
 
-#: ../admin-tool/lockdown/maindialog.py:52
+#: ../admin-tool/lockdown/maindialog.py:50
 msgid "Disable _printing"
 msgstr "禁止打印(_P)"
 
-#: ../admin-tool/lockdown/maindialog.py:53
+#: ../admin-tool/lockdown/maindialog.py:51
 msgid "Disable print _setup"
 msgstr "禁止设置打印(_S)"
 
-#: ../admin-tool/lockdown/maindialog.py:54
+#: ../admin-tool/lockdown/maindialog.py:52
 msgid "Disable save to _disk"
 msgstr "禁止保存到磁盘(_D)"
 
-#: ../admin-tool/lockdown/maindialog.py:56
+#: ../admin-tool/lockdown/maindialog.py:54
 msgid "_Lock down the panels"
 msgstr "锁定面板(_L)"
 
-#: ../admin-tool/lockdown/maindialog.py:57
+#: ../admin-tool/lockdown/maindialog.py:55
 msgid "Disable force _quit"
 msgstr "禁止强制退出(_Q)"
 
-#: ../admin-tool/lockdown/maindialog.py:58
+#: ../admin-tool/lockdown/maindialog.py:56
 msgid "Disable lock _screen"
 msgstr "禁止锁定屏幕(_S)"
 
-#: ../admin-tool/lockdown/maindialog.py:59
+#: ../admin-tool/lockdown/maindialog.py:57
 msgid "Disable log _out"
 msgstr "禁止注销(_O)"
 
-#: ../admin-tool/lockdown/maindialog.py:61
+#: ../admin-tool/lockdown/maindialog.py:59
 msgid "Disable _quit"
 msgstr "禁止退出(_Q)"
 
-#: ../admin-tool/lockdown/maindialog.py:62
+#: ../admin-tool/lockdown/maindialog.py:60
 msgid "Disable _arbitrary URL"
 msgstr "禁止滥用 URL(_A)"
 
-#: ../admin-tool/lockdown/maindialog.py:63
+#: ../admin-tool/lockdown/maindialog.py:61
 msgid "Disable _bookmark editing"
 msgstr "禁止编辑书签(_B)"
 
-#: ../admin-tool/lockdown/maindialog.py:64
+#: ../admin-tool/lockdown/maindialog.py:62
 msgid "Disable _history"
 msgstr "禁用历史(_H)"
 
-#: ../admin-tool/lockdown/maindialog.py:65
+#: ../admin-tool/lockdown/maindialog.py:63
 msgid "Disable _javascript chrome"
 msgstr "禁用 _javascript chrome"
 
-#: ../admin-tool/lockdown/maindialog.py:66
+#: ../admin-tool/lockdown/maindialog.py:64
 msgid "Disable _toolbar editing"
 msgstr "禁止编辑工具栏(_T)"
 
-#: ../admin-tool/lockdown/maindialog.py:67
+#: ../admin-tool/lockdown/maindialog.py:65
 msgid "_Fullscreen"
 msgstr "全屏(_F)"
 
-#: ../admin-tool/lockdown/maindialog.py:68
+#: ../admin-tool/lockdown/maindialog.py:66
 msgid "Hide _menubar"
 msgstr "隐藏菜单栏(_M)"
 
 #. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
 #. This can be used to disable this, for when you don't want people to know you created the document.
-#: ../admin-tool/lockdown/maindialog.py:72
-msgid "Remove personal info from documents when saving them"
+#: ../admin-tool/lockdown/maindialog.py:70
+msgid "Remove personal information from documents when saving them"
 msgstr "保存文档时从文档中移除个人信息"
 
-#: ../admin-tool/lockdown/maindialog.py:73
+#: ../admin-tool/lockdown/maindialog.py:71
 msgid "Warn if macro tries to create a PDF"
 msgstr "宏试图创建 PDF 时警告"
 
-#: ../admin-tool/lockdown/maindialog.py:74
+#: ../admin-tool/lockdown/maindialog.py:72
 msgid "Warn if macro tries to print a document"
 msgstr "宏试图打印文档时警告"
 
-#: ../admin-tool/lockdown/maindialog.py:75
+#: ../admin-tool/lockdown/maindialog.py:73
 msgid "Warn if macro tries to save a document"
 msgstr "宏试图保存文档时警告"
 
-#: ../admin-tool/lockdown/maindialog.py:76
+#: ../admin-tool/lockdown/maindialog.py:74
 msgid "Warn if macro tries to sign a document"
 msgstr "宏试图签名文档时警告"
 
-#: ../admin-tool/lockdown/maindialog.py:77
+#: ../admin-tool/lockdown/maindialog.py:75
 msgid "Recommend password when saving a document"
 msgstr "保存文档时推荐密码"
 
-#: ../admin-tool/lockdown/maindialog.py:79
+#: ../admin-tool/lockdown/maindialog.py:77
 msgid "Enable auto-save"
 msgstr "启用自动保存"
 
 #. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
-#: ../admin-tool/lockdown/maindialog.py:81
+#: ../admin-tool/lockdown/maindialog.py:79
 msgid "Printing should mark the document as modified"
 msgstr "打印时标记文档为已修改"
 
-#: ../admin-tool/lockdown/maindialog.py:82
+#: ../admin-tool/lockdown/maindialog.py:80
 msgid "Use system's file dialog"
 msgstr "使用系统的文件对话框"
 
-#: ../admin-tool/lockdown/maindialog.py:83
+#: ../admin-tool/lockdown/maindialog.py:81
 msgid "Create backup copy on save"
 msgstr "保存时创建备份"
 
-#: ../admin-tool/lockdown/maindialog.py:84
+#: ../admin-tool/lockdown/maindialog.py:82
 msgid "Warn when saving non-OpenOffice.org formats"
 msgstr "保存非 OpenOffice.org 格式时警告"
 
-#: ../admin-tool/lockdown/maindialog.py:86
+#: ../admin-tool/lockdown/maindialog.py:84
 msgid "Use OpenGL"
 msgstr "使用 OpenGL"
 
-#: ../admin-tool/lockdown/maindialog.py:87
+#: ../admin-tool/lockdown/maindialog.py:85
 msgid "Use system font"
 msgstr "使用系统字体"
 
-#: ../admin-tool/lockdown/maindialog.py:88
+#: ../admin-tool/lockdown/maindialog.py:86
 msgid "Use anti-aliasing"
 msgstr "使用反锯齿(anti-aliasing)"
 
-#: ../admin-tool/lockdown/maindialog.py:89
+#: ../admin-tool/lockdown/maindialog.py:87
 msgid "Disable UI customization"
 msgstr "禁用自定义用户界面"
 
-#: ../admin-tool/lockdown/maindialog.py:90
+#: ../admin-tool/lockdown/maindialog.py:88
 msgid "Show insensitive menu items"
 msgstr "显示非敏感菜单项"
 
-#: ../admin-tool/lockdown/maindialog.py:91
+#: ../admin-tool/lockdown/maindialog.py:89
 msgid "Show font preview"
 msgstr "显示字体预览"
 
-#: ../admin-tool/lockdown/maindialog.py:92
+#: ../admin-tool/lockdown/maindialog.py:90
 msgid "Show font history"
 msgstr "显示字体历史"
 
-#: ../admin-tool/lockdown/maindialog.py:93
+#: ../admin-tool/lockdown/maindialog.py:91
 msgid "Show icons in menus"
 msgstr "在菜单中显示图标"
 
@@ -473,53 +463,69 @@ msgstr "用户界面"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:494
+#: ../admin-tool/profilesdialog.py:495
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../admin-tool/sabayon:73
-msgid "Your account does not have permissions to run the Desktop User Profiles tool"
+#: ../admin-tool/sabayon:77
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr "您的帐户没有权限运行桌面用户配置文件工具"
 
-#: ../admin-tool/sabayon:74
-msgid "Administrator level permissions are needed to run this program because it can modify system files."
+#: ../admin-tool/sabayon:78
+msgid ""
+"Administrator level permissions are needed to run this program because it "
+"can modify system files."
 msgstr "要运行此程序，需要有管理员级别的权限，因为此程序将会修改系统文件。"
 
-#: ../admin-tool/sabayon:79
+#: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
 msgstr "桌面用户配置文件工具已在运行中"
 
-#: ../admin-tool/sabayon:80
-msgid "You may not use Desktop User Profiles tool from within a profile editing session"
+#: ../admin-tool/sabayon:84
+msgid ""
+"You may not use Desktop User Profiles tool from within a profile editing "
+"session"
 msgstr "在编辑配置文件的会话中，您无法使用桌面用户配置文件工具。"
 
-#: ../admin-tool/sabayon:87
+#: ../admin-tool/sabayon:91
 #, c-format
 msgid "User account '%s' was not found"
 msgstr "用户帐户“%s”未找到"
 
-#: ../admin-tool/sabayon:88
+#: ../admin-tool/sabayon:92
 #, c-format
-msgid "Sabayon requires a special user account '%s' to be present on this computer. Try again after creating the account (using, for example, the 'adduser' command)"
-msgstr "Sabayon 需要此计算机上有特殊的用户帐户“%s”。请在创建该帐户后再试(例如使用“adduser”命令)"
+msgid ""
+"Sabayon requires a special user account '%s' to be present on this computer. "
+"Try again after creating the account (using, for example, the 'adduser' "
+"command)"
+msgstr ""
+"Sabayon 需要此计算机上有特殊的用户帐户“%s”。请在创建该帐户后再试(例如使"
+"用“adduser”命令)"
 
-#: ../admin-tool/sabayon:128
+#: ../admin-tool/sabayon:131
 #, c-format
-msgid "A fatal error has occurred.  You can help us fix the problem by sending the log in %s to %s"
+msgid ""
+"A fatal error has occurred.  You can help us fix the problem by sending the "
+"log in %s to %s"
 msgstr "发生了致命错误。您可以通过发送 %s 中的记录到 %s 来帮助我们修复此问题"
 
-#: ../admin-tool/sabayon:143
+#: ../admin-tool/sabayon:145
 #, c-format
-msgid "Sabayon will now exit.  There were some recoverable errors, and you can help us debug the problem by sending the log in %s to %s"
-msgstr "Sabayon 将马上退出。出现了一些可恢复的错误，您可以通过发送 %s 中的记录到 %s 来帮助我们调试此问题。"
+msgid ""
+"Sabayon will now exit.  There were some recoverable errors, and you can help "
+"us debug the problem by sending the log in %s to %s"
+msgstr ""
+"Sabayon 将马上退出。出现了一些可恢复的错误，您可以通过发送 %s 中的记录到 %s "
+"来帮助我们调试此问题。"
 
-#: ../admin-tool/sabayon-apply:98
+#: ../admin-tool/sabayon-apply:99
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "用户“%s”未找到配置文件\n"
 
-#: ../admin-tool/sabayon-apply:103
+#: ../admin-tool/sabayon-apply:104
 msgid "Please use -h for usage options"
 msgstr "请使用 -h 以获得用法选项"
 
@@ -528,12 +534,11 @@ msgstr "请使用 -h 以获得用法选项"
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
 msgstr "用法：%s <配置文件名> <配置文件路径> <显示号>\n"
 
-#: ../admin-tool/sabayon.desktop.in.h:1
+#: ../admin-tool/sabayon.desktop.in.in.h:1
 msgid "Establish and Edit Profiles for Users"
 msgstr "为用户建立并编辑配置文件"
 
-#: ../admin-tool/sabayon.desktop.in.h:2
-#: ../admin-tool/sabayon.glade.h:4
+#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.glade.h:4
 msgid "User Profile Editor"
 msgstr "用户配置文件编辑器"
 
@@ -579,42 +584,69 @@ msgid "Save changes to profile \"%s\" before closing?"
 msgstr "关闭前将更改保存到配置文件“%s”中吗？"
 
 #: ../admin-tool/saveconfirm.py:45
-#, python-format
-msgid "If you don't save, changes from the last %ld second will be permanently lost."
-msgid_plural "If you don't save, changes from the last %ld seconds will be permanently lost."
-msgstr[0] "如果您不保存的话，上%ld秒内所做的更改都将永久丢失。"
+#, fuzzy, python-format
+#| msgid ""
+#| "If you don't save, changes from the last hour will be permanently lost."
+msgid ""
+"If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld seconds will be permanently "
+"lost."
+msgstr[0] "如果您不保存的话，上%d小时内所做的更改都将永久丢失。"
 
 #: ../admin-tool/saveconfirm.py:51
-msgid "If you don't save, changes from the last minute will be permanently lost."
+msgid ""
+"If you don't save, changes from the last minute will be permanently lost."
 msgstr "如果您不保存的话，上1分钟内所做的更改都将永久丢失。"
 
 #: ../admin-tool/saveconfirm.py:55
-#, python-format
-msgid "If you don't save, changes from the last minute and %ld second will be permanently lost."
-msgid_plural "If you don't save, changes from the last minute and %ld seconds will be permanently lost."
-msgstr[0] "如果您不保存的话，上一分钟%ld秒内所做的更改都将永久丢失。"
+#, fuzzy, python-format
+#| msgid ""
+#| "If you don't save, changes from the last minute will be permanently lost."
+msgid ""
+"If you don't save, changes from the last minute and %ld second will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last minute and %ld seconds will be "
+"permanently lost."
+msgstr[0] "如果您不保存的话，上1分钟内所做的更改都将永久丢失。"
 
 #: ../admin-tool/saveconfirm.py:62
-#, python-format
-msgid "If you don't save, changes from the last %ld minute will be permanently lost."
-msgid_plural "If you don't save, changes from the last %ld minutes will be permanently lost."
-msgstr[0] "如果您不保存的话，上%ld分钟内所做的更改都将永久丢失。"
+#, fuzzy, python-format
+#| msgid ""
+#| "If you don't save, changes from the last minute will be permanently lost."
+msgid ""
+"If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld minutes will be permanently "
+"lost."
+msgstr[0] "如果您不保存的话，上1分钟内所做的更改都将永久丢失。"
 
 #: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
 msgstr "如果您不保存的话，上%d小时内所做的更改都将永久丢失。"
 
 #: ../admin-tool/saveconfirm.py:74
-#, python-format
-msgid "If you don't save, changes from the last hour and %d minute will be permanently lost."
-msgid_plural "If you don't save, changes from the last hour and %d minutes will be permanently lost."
-msgstr[0] "如果您不保存的话，上一小时%d分钟内所做的更改都将永久丢失。"
+#, fuzzy, python-format
+#| msgid ""
+#| "If you don't save, changes from the last minute will be permanently lost."
+msgid ""
+"If you don't save, changes from the last hour and %d minute will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last hour and %d minutes will be "
+"permanently lost."
+msgstr[0] "如果您不保存的话，上1分钟内所做的更改都将永久丢失。"
 
 #: ../admin-tool/saveconfirm.py:81
-#, python-format
-msgid "If you don't save, changes from the last %d hour will be permanently lost."
-msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "如果您不保存的话，过去%d小时内所做的更改将永久丢失。"
+#, fuzzy, python-format
+#| msgid ""
+#| "If you don't save, changes from the last hour will be permanently lost."
+msgid ""
+"If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] "如果您不保存的话，上%d小时内所做的更改都将永久丢失。"
 
 #: ../admin-tool/sessionwindow.py:154
 #, python-format
@@ -656,8 +688,12 @@ msgstr "%s 的锁闭设置"
 
 #: ../admin-tool/sessionwindow.py:333
 #, python-format
-msgid "There was a recoverable error while applying the user profile '%s'.  You can report this error now or try to continue editing the user profile."
-msgstr "应用用户配置文件“%s”时发生可恢复的错误。您可以于现在报告此错误或尝试继续编辑用户配置文件。"
+msgid ""
+"There was a recoverable error while applying the user profile '%s'.  You can "
+"report this error now or try to continue editing the user profile."
+msgstr ""
+"应用用户配置文件“%s”时发生可恢复的错误。您可以于现在报告此错误或尝试继续编辑"
+"用户配置文件。"
 
 #: ../admin-tool/sessionwindow.py:337
 msgid "_Report this error"
@@ -690,7 +726,8 @@ msgstr "启动 Xnest 失败：启动时死掉"
 
 #: ../lib/protosession.py:501
 #, python-format
-msgid "There was a recoverable error while applying the user profile from file '%s'."
+msgid ""
+"There was a recoverable error while applying the user profile from file '%s'."
 msgstr "于文件“%s”中应用用户配置文件时发生可恢复的错误。"
 
 #: ../lib/protosession.py:510
@@ -801,13 +838,11 @@ msgstr "取消了 Mozilla 键“%s”"
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Mozilla 键“%s”更改为“%s”"
 
-#: ../lib/sources/mozillasource.py:166
-#: ../lib/sources/mozillasource.py:176
+#: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
 msgid "Web browser preferences"
 msgstr "Web 浏览器首选项"
 
-#: ../lib/sources/mozillasource.py:168
-#: ../lib/sources/mozillasource.py:178
+#: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
 msgid "Web browser bookmarks"
 msgstr "Web 浏览器书签"
 
@@ -1021,8 +1056,7 @@ msgstr "无法添加不存在的文件“%s”"
 msgid "Profile is read-only %s"
 msgstr "配置文件只读 %s"
 
-#: ../lib/unittests.py:38
-#: ../lib/unittests.py:39
+#: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
 msgstr "忽略警告"
 
@@ -1050,7 +1084,7 @@ msgstr "设置 %(setting)s 于 %(np)s 时出现非法类型"
 
 #: ../lib/userdb.py:215
 #, python-format
-msgid "No search based specified for %s"
+msgid "No search base specified for %s"
 msgstr "未为 %s 指定搜索基础"
 
 #: ../lib/userdb.py:218
@@ -1081,8 +1115,7 @@ msgstr "无法打开 %s 写入"
 msgid "Failed to save UserDatabase to %s"
 msgstr "将用户数据库保存到 %s 失败"
 
-#: ../lib/userdb.py:378
-#: ../lib/userdb.py:413
+#: ../lib/userdb.py:378 ../lib/userdb.py:413
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "文件 %s 不是配置文件配置"
@@ -1101,13 +1134,57 @@ msgstr "将用户 %s 添加到配置文件配置失败"
 msgid "Failed to get the user list"
 msgstr "获得用户列表失败"
 
-#: ../lib/util.py:91
-msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+#: ../lib/util.py:93
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
 msgstr "找不到主目录：未在 /etc/passwd 中设定，也未在 $HOME 环境变量中设定"
 
-#: ../lib/util.py:104
-msgid "Cannot find username: not set in /etc/passwd and no value for $USER in environment"
+#: ../lib/util.py:106
+msgid ""
+"Cannot find username: not set in /etc/passwd and no value for $USER in "
+"environment"
 msgstr "找不到用户名：未在 /etc/passwd 中设定，也未在 $USER 环境变量中设定"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld second will be permanently "
+#~ "lost.If you don't save, changes from the last %ld seconds will be "
+#~ "permanently lost."
+#~ msgstr ""
+#~ "如果您不保存的话，上%ld秒内所做的更改都将永久丢失。如果您不保存的话，上%ld"
+#~ "秒内所做的更改都将永久丢失。"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last minute and %ld second will be "
+#~ "permanently lost.If you don't save, changes from the last minute and %ld "
+#~ "seconds will be permanently lost."
+#~ msgstr ""
+#~ "如果您不保存的话，上一分钟%ld秒内所做的更改都将永久丢失。如果您不保存的"
+#~ "话，上一分钟%ld秒内所做的更改都将永久丢失。"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld minute will be permanently "
+#~ "lost.If you don't save, changes from the last %ld minutes will be "
+#~ "permanently lost."
+#~ msgstr ""
+#~ "如果您不保存的话，上%ld分钟内所做的更改都将永久丢失。如果您不保存的话，上%"
+#~ "ld分钟内所做的更改都将永久丢失。"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last hour and %d minute will be "
+#~ "permanently lost.If you don't save, changes from the last hour and %d "
+#~ "minutes will be permanently lost."
+#~ msgstr ""
+#~ "如果您不保存的话，上一小时%d分钟内所做的更改都将永久丢失。如果您不保存的"
+#~ "话，上一小时%d分钟内所做的更改都将永久丢失。"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %d hour will be permanently lost."
+#~ "If you don't save, changes from the last %d hours will be permanently "
+#~ "lost."
+#~ msgstr ""
+#~ "如果您不保存的话，过去%d小时内所做的更改将永久丢失。如果您不保存的话，过"
+#~ "去%d小时内所做的更改将永久丢失。"
 
 #~ msgid "Warn if macro prints"
 #~ msgstr "宏打印时警告"
@@ -1115,16 +1192,22 @@ msgstr "找不到用户名：未在 /etc/passwd 中设定，也未在 $USER 环�
 #, fuzzy
 #~ msgid "Printing modifies document"
 #~ msgstr "打印修改的文档"
+
 #~ msgid "Warn for external formats"
 #~ msgstr "使用外部格式时警告"
+
 #~ msgid "Calc default format:"
 #~ msgstr "Calc 默认格式"
+
 #~ msgid "Impress default format:"
 #~ msgstr "Impress 默认格式："
+
 #~ msgid "Undo Steps:"
 #~ msgstr "撤销步数："
+
 #~ msgid "Writer default format:"
 #~ msgstr "Writer 默认格式："
+
 #~ msgid ""
 #~ "Could not create the 'sabayon-apply' process: %s\n"
 #~ "The command line used is '%s'\n"
@@ -1135,10 +1218,12 @@ msgstr "找不到用户名：未在 /etc/passwd 中设定，也未在 $USER 环�
 #~ "使用的命令行是“%s”\n"
 #~ "子进程追踪：\n"
 #~ "%s"
+
 #~ msgid "Usage: %s [<profile-name>]\n"
 #~ msgstr "用法：%s [<配置文件名>]\n"
+
 #~ msgid "Failed to add monitor for %s"
 #~ msgstr "为 %s 添加监视器失败"
+
 #~ msgid "Expected event: %s %s"
 #~ msgstr "意外事件：%s %s"
-
