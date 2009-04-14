@@ -77,22 +77,22 @@ class DirectoryMonitor:
     #
     # Processing of a file_monitor callback
     #
-    def __handle_file_monitor_event (self, dir_uri, file_uri, event, data):
-        if event == CHANGED or event == DELETED or event == CREATED:
-            path = file_uri.get_path ()
+    def __handle_file_monitor_event (self, monitor, file, other_file, event_type):
+        if event_type == CHANGED or event_type == DELETED or event_type == CREATED:
+            path = file.get_path ()
             
             # Strip trailing '/'.
             path = os.path.normpath (path)
             
-            dprint ("Got file_monitor event '%s' on '%s'", event_to_string (event), path)
+            dprint ("Got file_monitor event '%s' on '%s'", event_to_string (event_type), path)
 
             if not self.__should_ignore_dir (path) and \
                not self.__should_ignore_file (path):
-                self.__invoke_callback (path, event)
+                self.__invoke_callback (path, event_type)
 
-                if event == CREATED and os.path.isdir (path):
+                if event_type == CREATED and os.path.isdir (path):
                     self.__monitor_dir_recurse (path, True)
-                elif event == DELETED:
+                elif event_type == DELETED:
                     if path != self.directory and self.watches.has_key (path):
                         dprint ("Deleting watch for '%s' since it got deleted", path)
                         self.watches [path].cancel ()

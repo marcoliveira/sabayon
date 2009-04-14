@@ -1,3 +1,10 @@
+2009-04-14  Sayamindu Dasgupta  <sayamindu@gmail.com>
+
+	* lib/dirmonitor.py
+	(DirectoryMonitor.__handle_file_monitor_event): Fix incorrect
+	callback prototype.  This was keeping file monitoring from
+	working!  Fixes http://bugzilla.gnome.org/show_bug.cgi?id=542604
+
 ==================== 2.25.0 ====================
 
 2009-03-11  Federico Mena Quintero  <federico@novell.com>
