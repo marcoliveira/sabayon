@@ -1,3 +1,10 @@
+2009-04-15  Federico Mena Quintero  <federico@novell.com>
+
+	* lib/config.py.in (PASSTHROUGH_ENVIRONMENT): Pass a
+	DEBUG_WHILE_IN_SABAYON environment variable to the child session.
+	This way, programs that run immediately during login can be made
+	to pause themselves (or something equivalent) for debugging.
+
 2009-04-14  Sayamindu Dasgupta  <sayamindu@gmail.com>
 
 	* lib/dirmonitor.py
