@@ -256,11 +256,11 @@ else
   SABAYON_DIR_TMP="$bindir"
 fi
 
-AC_PATH_PROG(XNEST_PATH,Xephyr,no)
-if test "x$XNEST_PATH" = "xno" ; then
-  AC_MSG_ERROR(Xnest binary not found)
+AC_PATH_PROG(XEPHYR_PATH,Xephyr,no)
+if test "x$XEPHYR_PATH" = "xno" ; then
+  AC_MSG_ERROR(Xephyr binary not found)
 fi
-AC_SUBST(XNEST_PATH)
+AC_SUBST(XEPHYR_PATH)
 
 
 EXPANDED_SABAYON_DIR=`eval echo $SABAYON_DIR_TMP`

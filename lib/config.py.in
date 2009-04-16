@@ -36,8 +36,8 @@ APPLY_TOOL_ARGV   = [ os.path.join (SBINDIR,    "sabayon-apply") ]
 # FIXME: this is too big a hammer
 CLOBBER_USER_PROCESSES_ARGV = [ "/usr/bin/pkill", "-u" ]
 
-# No. of seconds to wait for USR1 from Xnest before giving up
-XNEST_USR1_TIMEOUT = 10
+# No. of seconds to wait for USR1 from Xephyr before giving up
+XEPHYR_USR1_TIMEOUT = 10
 
 #
 # This is the user which we run the prototype sessions
@@ -52,7 +52,7 @@ DEFAULT_SHELL = "/bin/bash"
 NOLOGIN_SHELL = "/sbin/nologin"
 SKEL_HOMEDIR  = "/etc/skel"
 
-XNEST_ARGV   = [ "@XNEST_PATH@", "-terminate", "-audit", "0", "-nolisten", "tcp" ]
+XEPHYR_ARGV  = [ "@XEPHYR_PATH@", "-terminate", "-audit", "0", "-nolisten", "tcp" ]
 SESSION_ARGV = [ "@XSESSION@", "@SESSION_NAME@" ]
 USERMOD_ARGV = [ "/usr/sbin/usermod" ]
 
