@@ -175,9 +175,9 @@ class ProtoSession (gobject.GObject):
         self.usr1_pipe_r = 0
         self.usr1_pipe_w = 0
         
-        self.xnest_pid = 0
-        self.xnest_child_watch = 0
-        self.xnest_xauth_file = None
+        self.xephyr_pid = 0
+        self.xephyr_child_watch = 0
+        self.xephyr_xauth_file = None
         
         self.session_pid = 0
         self.session_child_watch = 0
@@ -189,14 +189,14 @@ class ProtoSession (gobject.GObject):
 
         self.pw = pwd.getpwuid (os.getuid ())
         
-    def __kill_xnest (self):
-        if self.xnest_child_watch:
-            gobject.source_remove (self.xnest_child_watch)
-            self.xnest_child_watch = 0
+    def __kill_xephyr (self):
+        if self.xephyr_child_watch:
+            gobject.source_remove (self.xephyr_child_watch)
+            self.xephyr_child_watch = 0
         
-        if self.xnest_pid:
-            safe_kill (self.xnest_pid, signal.SIGTERM)
-            self.xnest_pid = 0
+        if self.xephyr_pid:
+            safe_kill (self.xephyr_pid, signal.SIGTERM)
+            self.xephyr_pid = 0
 
     def __kill_session (self):
         if self.session_child_watch:
@@ -221,8 +221,8 @@ class ProtoSession (gobject.GObject):
             self.admin_tool_pid = 0
 
     def __del__ (self):
-        if self.xnest_xauth_file:
-            os.remove (self.xnest_xauth_file)
+        if self.xephyr_xauth_file:
+            os.remove (self.xephyr_xauth_file)
         if self.session_xauth_file:
             os.remove (self.session_xauth_file)
         if self.usr1_pipe_r:
@@ -240,11 +240,11 @@ class ProtoSession (gobject.GObject):
         self.got_usr1_signal = True
         os.write (self.usr1_pipe_w, "Y")
 
-    def __xnest_child_watch_handler (self, pid, status):
-        dprint ("Xnest died")
+    def __xephyr_child_watch_handler (self, pid, status):
+        dprint ("Xephyr died")
         
-        self.xnest_pid = 0
-        self.xnest_child_watch = 0
+        self.xephyr_pid = 0
+        self.xephyr_child_watch = 0
 
         self.emit ("finished");
         
@@ -268,7 +268,7 @@ class ProtoSession (gobject.GObject):
 
     # Write out a temporary Xauthority file which contains the same magic
     # cookie as the parent display so that we can pass that using -auth
-    # to Xnest.
+    # to Xephyr.
     #
     # Xauthority is a binary file format:
     #
@@ -350,21 +350,21 @@ class ProtoSession (gobject.GObject):
     # runing the mainloop we re-enter, then we'll install another
     # SIGUSR1 handler and everything will break
     #
-    def __start_xnest (self, parent_window):
-        dprint ("Starting Xnest %s" % self.display_name)
+    def __start_xephyr (self, parent_window):
+        dprint ("Starting Xephyr %s" % self.display_name)
 
-        self.xnest_xauth_file = self.__write_temp_xauth_file (True)
+        self.xephyr_xauth_file = self.__write_temp_xauth_file (True)
 
         (self.usr1_pipe_r, self.usr1_pipe_w) = os.pipe ()
         self.got_usr1_signal = False
         signal.signal (signal.SIGUSR1, self.__sigusr1_handler)
 
-        self.xnest_pid = os.fork ()
-        if self.xnest_pid == 0: # Child process
+        self.xephyr_pid = os.fork ()
+        if self.xephyr_pid == 0: # Child process
             signal.signal (signal.SIGUSR1, signal.SIG_IGN)
 
-            argv = XNEST_ARGV + \
-                   [ "-auth", self.xnest_xauth_file ] + \
+            argv = XEPHYR_ARGV + \
+                   [ "-auth", self.xephyr_xauth_file ] + \
                    [ "-name", "sabayon" ]
             if parent_window:
                 argv += [ "-parent", parent_window ]
@@ -375,20 +375,20 @@ class ProtoSession (gobject.GObject):
             os.execv (argv[0], argv)
 
             # Shouldn't ever reach here
-            sys.stderr.write ("Failed to launch Xnest")
+            sys.stderr.write ("Failed to launch Xephyr")
             os._exit (1)
 
         self.main_loop = gobject.MainLoop ()
 
-        self.xnest_child_watch = gobject.child_watch_add (self.xnest_pid,
-                                                          self.__xnest_child_watch_handler)
+        self.xephyr_child_watch = gobject.child_watch_add (self.xephyr_pid,
+                                                           self.__xephyr_child_watch_handler)
         io_watch = gobject.io_add_watch (self.usr1_pipe_r,
                                          gobject.IO_IN | gobject.IO_PRI,
                                          self.__usr1_pipe_watch_handler)
-        timeout = gobject.timeout_add (XNEST_USR1_TIMEOUT * 1000,
+        timeout = gobject.timeout_add (XEPHYR_USR1_TIMEOUT * 1000,
                                        self.__usr1_timeout_handler)
 
-        dprint ("Waiting on child process (%d)" % self.xnest_pid)
+        dprint ("Waiting on child process (%d)" % self.xephyr_pid)
 
         self.main_loop.run ()
         self.main_loop = None
@@ -404,16 +404,16 @@ class ProtoSession (gobject.GObject):
         self.usr1_pipe_w = 0
 
         if not self.got_usr1_signal:
-            if self.xnest_child_watch:
-                gobject.source_remove (self.xnest_child_watch)
-                self.xnest_child_watch = 0
+            if self.xephyr_child_watch:
+                gobject.source_remove (self.xephyr_child_watch)
+                self.xephyr_child_watch = 0
             
-            if self.xnest_pid:
-                safe_kill (self.xnest_pid, signal.SIGTERM)
-                self.xnest_pid = 0
-                raise SessionStartError, _("Failed to start Xnest: timed out waiting for USR1 signal")
+            if self.xephyr_pid:
+                safe_kill (self.xephyr_pid, signal.SIGTERM)
+                self.xephyr_pid = 0
+                raise SessionStartError, _("Failed to start Xephyr: timed out waiting for USR1 signal")
             else:
-                raise SessionStartError, _("Failed to start Xnest: died during startup")
+                raise SessionStartError, _("Failed to start Xephyr: died during startup")
 
     def __session_child_watch_handler (self, pid, status):
         dprint ("Session died")
@@ -512,13 +512,13 @@ class ProtoSession (gobject.GObject):
 
     def start (self, parent_window):
         # Get an X server going
-        self.__start_xnest (parent_window)
+        self.__start_xephyr (parent_window)
 
         # Start the session
         self.__start_session ()
         
     def force_quit (self):
         self.__kill_session ()
-        self.__kill_xnest ()
+        self.__kill_xephyr ()
 
 gobject.type_register (ProtoSession)
