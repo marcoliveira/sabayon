@@ -256,7 +256,7 @@ else
   SABAYON_DIR_TMP="$bindir"
 fi
 
-AC_PATH_PROG(XNEST_PATH,Xnest,no)
+AC_PATH_PROG(XNEST_PATH,Xephyr,no)
 if test "x$XNEST_PATH" = "xno" ; then
   AC_MSG_ERROR(Xnest binary not found)
 fi
