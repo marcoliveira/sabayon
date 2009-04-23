@@ -177,7 +177,7 @@ def run_unit_tests ():
     def should_not_be_reached ():
         assert False
         return True
-    timeout = gobject.timeout_add (60 * 1000, should_not_be_reached)
+    timeout = gobject.timeout_add_seconds (60, should_not_be_reached)
 
     profile_path = os.path.join (os.getcwd (), "file-test.zip")
     if os.path.exists (profile_path):

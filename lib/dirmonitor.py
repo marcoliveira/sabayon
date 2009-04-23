@@ -192,7 +192,7 @@ def run_unit_tests ():
             print ("Expected event: %s %s") % (path, event_to_string (event))
         assert False
         return True
-    timeout = gobject.timeout_add (5 * 1000, should_not_be_reached, expected)
+    timeout = gobject.timeout_add_seconds (5, should_not_be_reached, expected)
 
     monitor = DirectoryMonitor (temp_path, handle_change, (expected, main_loop))
     monitor.set_directories_to_ignore (["bar"])
