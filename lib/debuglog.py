@@ -27,6 +27,7 @@ DEBUG_LOG_DOMAIN_ADMIN_TOOL      = "admin-tool"
 DEBUG_LOG_DOMAIN_USER_DB         = "user-db"
 DEBUG_LOG_DOMAIN_CACHE           = "cache"
 DEBUG_LOG_DOMAIN_PESSULUS        = "pessulus"
+DEBUG_LOG_DOMAIN_SESSION_WIDGET  = "session-widget"
 
 _debug_log_log = None
 _debug_log_the_lock = threading.Lock ()

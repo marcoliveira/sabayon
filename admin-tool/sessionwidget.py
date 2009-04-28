@@ -24,7 +24,7 @@ import util
 import debuglog
 
 def dprint (fmt, *args):
-    debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL, fmt % args)
+    debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_SESSION_WIDGET, fmt % args)
     
 class SessionWidget (gtk.Widget):
     # FIXME:
