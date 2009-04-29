@@ -108,6 +108,7 @@ class SessionWidget (gtk.Widget):
                                             colormap = self.get_colormap (),
                                             event_mask = event_mask)
         self.input_window.set_user_data (self)
+        dprint ("Created input_only window for child session")
 
     def do_unrealize (self):
         # FIXME:
@@ -115,6 +116,7 @@ class SessionWidget (gtk.Widget):
         #   See bug #308384
         self.input_window.set_user_data (None)
         self.input_window.destroy ()
+        dprint ("Destroyed input_only window for child session")
         
         self.session_window.set_user_data (None)
         self.session_window.destroy ()
@@ -125,11 +127,13 @@ class SessionWidget (gtk.Widget):
         gtk.Widget.do_map (self)
         self.session_window.show ()
         self.input_window.show ()
+        dprint ("Showed input_only window for child session")
 
     def do_unmap (self):
         self.input_window.hide ()
         self.session_window.hide ()
         gtk.Widget.do_unmap (self)
+        dprint ("Hid input_only window for child session")
 
     def do_expose_event (self, event):
         if self.flags() & gtk.HAS_FOCUS:
@@ -155,8 +159,10 @@ class SessionWidget (gtk.Widget):
         
         if self.flags() & gtk.HAS_FOCUS:
             self.input_window.hide ()
+            dprint ("Focus in: hiding input_only window for child session")
         else:
             self.input_window.show ()
+            dprint ("Focus out: showing input_only window for child session")
             
     def do_focus_in_event (self, event):
         self.__update_input_only_window ()
