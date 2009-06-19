@@ -41,9 +41,12 @@ def show_about_dialog (parent_window = None):
         return
 
     authors = [
+        "Alexander Larsson <alexl@redhat.com>",
         "Daniel Veillard <veillard@redhat.com>",
+        "Federico Mena-Quintero <federico@novell.com>",
         "John Dennis <jdennis@redhat.com>",
-        "Mark McLoughlin <markmc@redhat.com>"
+        "Mark McLoughlin <markmc@redhat.com>",
+        "Sayamindu Dasgupta <sayamindu@gmail.com>"
     ]
 
     # documenters = [
