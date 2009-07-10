@@ -1,32 +1,31 @@
 # translation of sabayon.HEAD.po to Arabic
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Yousef Raffah <yousef@raffah.com>, 2006.
-# Khaled Hosny <khaledhosny@eglug.org>, 2007.
+# Khaled Hosny <khaledhosny@eglug.org>, 2007, 2009.
 # Djihed Afifi <djihed@gmail.com>, 2007.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-03-17 01:25+0000\n"
-"PO-Revision-Date: 2008-01-20 15:38+0100\n"
-"Last-Translator: Djihed Afifi <djihed@gmail.com>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-07-11 01:03+0300\n"
+"PO-Revision-Date: 2009-07-11 02:03+0300\n"
+"Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n==2 ? 1 : n>=3 && n<=10 ? 2 : "
-"3\n"
-"X-Generator: KBabel 1.11.2\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Virtaal 0.4.0-beta1\n"
 
-#: ../admin-tool/aboutdialog.py:63
+#: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
 msgstr "برنامج لإنشاء و تعديل الملفات الشخصية للمستخدمين"
 
-#: ../admin-tool/aboutdialog.py:66
+#: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
 msgstr ""
 "فريق عربآيز للترجمة http://www.arabeyes.org :\n"
@@ -94,11 +93,11 @@ msgstr "_مساعدة"
 
 #: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
 msgid "_About"
-msgstr "ح_وْل"
+msgstr "_عن"
 
 #: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
 msgid "About Sabayon"
-msgstr "حوْل سابايون"
+msgstr "عن سابايون"
 
 #: ../admin-tool/editorwindow.py:262 ../lib/sources/gconfsource.py:124
 msgid "GConf"
@@ -160,7 +159,7 @@ msgstr "زوج"
 msgid "Profile settings: %s"
 msgstr "خصائص الملف الشخصي: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:385
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:387
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "اسم"
@@ -248,9 +247,8 @@ msgstr "أخفِ _شريط القوائم"
 #. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
 #. This can be used to disable this, for when you don't want people to know you created the document.
 #: ../admin-tool/lockdown/maindialog.py:70
-#, fuzzy
 msgid "Remove personal information from documents when saving them"
-msgstr "أزل المعلومات الشخصية من الوثائق بعد حفظها"
+msgstr "أزل المعلومات الشخصية من المستندات أثناء حفظها"
 
 #: ../admin-tool/lockdown/maindialog.py:71
 msgid "Warn if macro tries to create a PDF"
@@ -431,7 +429,7 @@ msgstr "عطِّل البروتوكولات غير الآمنة"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:34
 msgid "Epiphany Web Browser"
-msgstr "متصفح الويب إبيفني"
+msgstr "متصفح الوب إبِفني"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:35
 msgid "General"
@@ -471,7 +469,7 @@ msgstr "واجهة المستخدم"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:495
+#: ../admin-tool/profilesdialog.py:497
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -546,7 +544,7 @@ msgstr "المرجو استعمال -h للحصول على خيارات الاس
 #: ../admin-tool/sabayon-session:67
 #, c-format
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
-msgstr "الإستخدام: %s <اسم-الملف-الشخصي> <مسار-الملف-الشخصي> <رقم-العرض>\n"
+msgstr "الاستخدام: %s <اسم-الملف-الشخصي> <مسار-الملف-الشخصي> <رقم-العرض>\n"
 
 #: ../admin-tool/sabayon.desktop.in.in.h:1
 msgid "Establish and Edit Profiles for Users"
@@ -601,23 +599,22 @@ msgstr "حفظ التعديلات للحساب الشخصي \"%s\" قبل الإ
 #: ../admin-tool/saveconfirm.py:45
 #, python-format
 msgid ""
-"If you don't save, changes from the last %ld second will be permanently lost."
+"If you don't save, changes from the last %ld second will be permanently "
+"lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld seconds will be permanently "
 "lost."
-msgstr[0] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثانية."
-msgstr[1] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثانية."
-msgstr[2] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثوان."
-msgstr[3] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld ثانية."
+msgstr[0] "إذا لم تحفظ، ستُفقد آخر التغييرات بشكل دائم."
+msgstr[1] "إذا لم تحفظ، ستُفقد تغييرات آخر ثانية بشكل دائم."
+msgstr[2] "إذا لم تحفظ، ستُفقد تغييرات آخر ثانيتين بشكل دائم."
+msgstr[3] "إذا لم تحفظ، ستُفقد تغييرات آخر %ld ثوان بشكل دائم."
+msgstr[4] "إذا لم تحفظ، ستُفقد تغييرات آخر %ld ثانية بشكل دائم."
+msgstr[5] "إذا لم تحفظ، ستُفقد تغييرات آخر %ld ثانية بشكل دائم."
 
 #: ../admin-tool/saveconfirm.py:51
 msgid ""
 "If you don't save, changes from the last minute will be permanently lost."
-msgstr "ستفقد التعديلات منذ آخر دقيقة بشكل دائم في حالة عدم الحفظ."
+msgstr "إذا لم تحفظ، ستُفقد تغييرات آخر دقيقة بشكل دائم."
 
 #: ../admin-tool/saveconfirm.py:55
 #, python-format
@@ -627,38 +624,31 @@ msgid ""
 msgid_plural ""
 "If you don't save, changes from the last minute and %ld seconds will be "
 "permanently lost."
-msgstr[0] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر دقيقة و %ld "
-"ثانية."
-msgstr[1] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر دقيقة و %ld "
-"ثانية."
-msgstr[2] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر دقيقة و %ld "
-"ثوان."
-msgstr[3] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر دقيقة و %ld "
-"ثانية."
+msgstr[0] "إذا لم تحفظ، ستُفقد تغييرات آخر دقيقة و %ld ثانية بشكل دائم."
+msgstr[1] "إذا لم تحفظ، ستُفقد تغييرات آخر دقيقة و ثانية بشكل دائم."
+msgstr[2] "إذا لم تحفظ، ستُفقد تغييرات آخر دقيقة و ثانيتين بشكل دائم."
+msgstr[3] "إذا لم تحفظ، ستُفقد تغييرات آخر دقيقة و %ld ثوان بشكل دائم."
+msgstr[4] "إذا لم تحفظ، ستُفقد تغييرات آخر دقيقة و %ld ثانية بشكل دائم."
+msgstr[5] "إذا لم تحفظ، ستُفقد تغييرات آخر دقيقة و %ld ثانية بشكل دائم."
 
 #: ../admin-tool/saveconfirm.py:62
 #, python-format
 msgid ""
-"If you don't save, changes from the last %ld minute will be permanently lost."
+"If you don't save, changes from the last %ld minute will be permanently "
+"lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
-msgstr[0] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقيقة."
-msgstr[1] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقيقة."
-msgstr[2] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقائق."
-msgstr[3] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %ld دقيقة."
+msgstr[0] "إذا لم تحفظ، ستُفقد تغييرات آخر %ld دقيقة بشكل دائم."
+msgstr[1] "إذا لم تحفظ، ستُفقد تغييرات آخر دقيقة بشكل دائم."
+msgstr[2] "إذا لم تحفظ، ستُفقد تغييرات آخر دقيقتين بشكل دائم."
+msgstr[3] "إذا لم تحفظ، ستُفقد تغييرات آخر %ld دقائق بشكل دائم."
+msgstr[4] "إذا لم تحفظ، ستُفقد تغييرات آخر %ld دقيقة بشكل دائم."
+msgstr[5] "إذا لم تحفظ، ستُفقد تغييرات آخر %ld دقيقة بشكل دائم."
 
 #: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgstr "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر ساعة."
+msgstr "إذا لم تحفظ، ستُفقد تغييرات آخر ساعة بشكل دائم."
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
@@ -668,18 +658,12 @@ msgid ""
 msgid_plural ""
 "If you don't save, changes from the last hour and %d minutes will be "
 "permanently lost."
-msgstr[0] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر ساعة و %d "
-"دقائق."
-msgstr[1] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر ساعة و %d "
-"دقيقة."
-msgstr[2] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر ساعة و %d "
-"دقائق."
-msgstr[3] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر ساعة و %d "
-"دقيقة."
+msgstr[0] "إذا لم تحفظ، ستُفقد تغييرات آخر ساعة و %d دقائق بشكل دائم."
+msgstr[1] "إذا لم تحفظ، ستُفقد تغييرات آخر ساعة و دقيقة بشكل دائم."
+msgstr[2] "إذا لم تحفظ، ستُفقد تغييرات آخر ساعة و دقيقتين بشكل دائم."
+msgstr[3] "إذا لم تحفظ، ستُفقد تغييرات آخر ساعة و %d دقائق بشكل دائم."
+msgstr[4] "إذا لم تحفظ، ستُفقد تغييرات آخر ساعة و %d دقيقة بشكل دائم."
+msgstr[5] "إذا لم تحفظ، ستُفقد تغييرات آخر ساعة و %d دقيقة بشكل دائم."
 
 #: ../admin-tool/saveconfirm.py:81
 #, python-format
@@ -687,13 +671,12 @@ msgid ""
 "If you don't save, changes from the last %d hour will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر ساعة."
-msgstr[1] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر ساعتان."
-msgstr[2] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %d  ساعات."
-msgstr[3] ""
-"إذا لم تقم بالحفظ، سيتم فقدان التغييرات بشكل كامل بدءا من آخر %d  ساعة."
+msgstr[0] "إذا لم تحفظ، ستُفقد تغييرات آخر %d ساعة بشكل دائم."
+msgstr[1] "إذا لم تحفظ، ستُفقد تغييرات آخر ساعة بشكل دائم."
+msgstr[2] "إذا لم تحفظ، ستُفقد تغييرات آخر ساعتين بشكل دائم."
+msgstr[3] "إذا لم تحفظ، ستُفقد تغييرات آخر %d ساعات بشكل دائم."
+msgstr[4] "إذا لم تحفظ، ستُفقد تغييرات آخر %d ساعة بشكل دائم."
+msgstr[5] "إذا لم تحفظ، ستُفقد تغييرات آخر %d ساعة بشكل دائم."
 
 #: ../admin-tool/sessionwindow.py:154
 #, python-format
@@ -864,7 +847,7 @@ msgstr "مفتاح GConf '%s' محدد بـ '%s'"
 
 #: ../lib/sources/gconfsource.py:137
 msgid "Default GConf settings"
-msgstr "إعدادات GConf الإفتراضية"
+msgstr "إعدادات GConf الافتراضية"
 
 #: ../lib/sources/gconfsource.py:139
 msgid "Mandatory GConf settings"
@@ -887,15 +870,15 @@ msgstr "مفتاح موزيلا '%s' تغير إلى '%s'"
 
 #: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
 msgid "Web browser preferences"
-msgstr "خصائص متصفح الويب"
+msgstr "خصائص متصفح الوب"
 
 #: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
 msgid "Web browser bookmarks"
-msgstr "علامات المواقع لمتصفح الويب"
+msgstr "علامات المواقع لمتصفح الوب"
 
 #: ../lib/sources/mozillasource.py:170
 msgid "Web browser profile list"
-msgstr "قائمة الملفات الشخصية لمتصفح الويب"
+msgstr "قائمة الملفات الشخصية لمتصفح الوب"
 
 #: ../lib/sources/mozillasource.py:522
 #, python-format
@@ -1130,9 +1113,9 @@ msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "نوع غير صالح للإعدادات %(setting)s في %(np)s"
 
 #: ../lib/userdb.py:215
-#, fuzzy, python-format
+#, python-format
 msgid "No search base specified for %s"
-msgstr "لم تحدد قاعدة البحث لـ %s"
+msgstr "لم تحدد قاعدة البحث ل‍ %s"
 
 #: ../lib/userdb.py:218
 #, python-format
@@ -1170,7 +1153,7 @@ msgstr "%s ليس بملف إعدادات الملف الشخصي"
 #: ../lib/userdb.py:385
 #, python-format
 msgid "Failed to add default profile %s to configuration"
-msgstr "فشل في إضافة الملف الشخصي الإفتراضي %s إلى الإعدادات"
+msgstr "فشل في إضافة الملف الشخصي الافتراضي %s إلى الإعدادات"
 
 #: ../lib/userdb.py:421
 #, python-format
