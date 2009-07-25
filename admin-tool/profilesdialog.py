@@ -157,11 +157,11 @@ class Session (gobject.GObject):
         self.session_pid         = 0
         self.session_child_watch = 0
 
-        gobject.source_remove (self.session_stderr_watch_id)
-        self.session_stderr_watch_id = 0
+        #gobject.source_remove (self.session_stderr_watch_id)
+        #self.session_stderr_watch_id = 0
 
-        self.session_stderr.close ()
-        self.session_stderr = None
+        #self.session_stderr.close ()
+        #self.session_stderr = None
 
         self.emit ("finished")
 
@@ -190,21 +190,21 @@ class Session (gobject.GObject):
 
         return new_environ
 
-    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL)
-    def session_stderr_io_cb (self, source_fd, condition, session):
-        if condition & gobject.IO_IN:
-            s = session.session_stderr.read ()
-            session.session_log_str = session.session_log_str + s
-#            print "%s: got from sabayon-session stderr: \n<BEGIN SABAYON-SESSION STDERR>\n%s\n<END SABAYON-SESSION STDERR>" % (os.getpid (), s)
-
-        if condition & gobject.IO_HUP:
-            mprint ("========== BEGIN SABAYON-SESSION LOG ==========\n"
-                    "%s\n"
-                    "========== END SABAYON-SESSION LOG ==========",
-                    session.session_log_str)
-            return False
-
-        return True
+    #@errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL)
+    #def session_stderr_io_cb (self, source_fd, condition, session):
+    #    if condition & gobject.IO_IN:
+    #        s = session.session_stderr.read ()
+    #        session.session_log_str = session.session_log_str + s
+    #        print "%s: got from sabayon-session stderr: \n<BEGIN SABAYON-SESSION STDERR>\n%s\n<END SABAYON-SESSION STDERR>" % (os.getpid (), s)
+    #
+    #    if condition & gobject.IO_HUP:
+    #        mprint ("========== BEGIN SABAYON-SESSION LOG ==========\n"
+    #                "%s\n"
+    #                "========== END SABAYON-SESSION LOG ==========",
+    #                session.session_log_str)
+    #        return False
+    #
+    #    return True
 
     def start (self):
         self.user_profile_path = self.__copy_to_user (self.profile_path)
@@ -233,16 +233,16 @@ class Session (gobject.GObject):
 
         # FIXME: do we need any special processing if this throws an exception?
         # We'll catch it in the toplevel and exit with a fatal error code, anyway.
-        (pid, oink, oink, stderr_fd) = gobject.spawn_async (argv, envp, cwd,
-                                                            gobject.SPAWN_DO_NOT_REAP_CHILD,
-                                                            child_setup_fn, self,
-                                                            None, None, True)# stdin, stdout, stderr
+        (pid, oink, oink, oink) = gobject.spawn_async (argv, envp, cwd,
+                                                       gobject.SPAWN_DO_NOT_REAP_CHILD,
+                                                       child_setup_fn, self,
+                                                       None, None, None)# stdin, stdout, stderr
 
         self.session_pid = pid;
-        self.session_stderr = os.fdopen (stderr_fd)
-        self.session_stderr_watch_id = gobject.io_add_watch (stderr_fd,
-                                                             gobject.IO_IN | gobject.IO_HUP,
-                                                             self.session_stderr_io_cb, self)
+        #self.session_stderr = os.fdopen (stderr_fd)
+        #self.session_stderr_watch_id = gobject.io_add_watch (stderr_fd,
+        #                                                     gobject.IO_IN | gobject.IO_HUP,
+        #                                                     self.session_stderr_io_cb, self)
         self.session_child_watch = gobject.child_watch_add (self.session_pid,
                                                             self.__session_child_watch_handler)
 
