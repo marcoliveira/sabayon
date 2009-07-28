@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2005 Red Hat, Inc.
+ * Copyright (C) 2009 Novell, Inc.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -15,9 +16,10 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
  * 02111-1307, USA.
-
+ *
  * Authors:
  *      Mark McLoughlin <markmc@redhat.com>
+ *      Federico Mena-Quintero <federico@novell.com>
  */
 
 #include <config.h>
@@ -27,6 +29,9 @@
 #include <X11/Xlib.h>
 #include <gdk/gdk.h>
 #include <gdk/gdkx.h>
+
+
+/* Bindings to do Xlib hackery */
 
 static PyObject *
 xlib_send_key_event (PyObject *self,
@@ -246,13 +251,106 @@ xlib_send_crossing_event (PyObject *self,
   return Py_None;
 }
 
+
+/* Bindings to do Gdk hackery, usually where features are not bound (or not
+ * properly bound) by Pygtk itself.
+ */
+
+struct create_window_closure {
+    GdkWindow *gdk_parent_window;
+    PyObject *pyfunc;
+    PyObject *pydata;
+};
+
+static int
+window_filter_func_marshal_cb(GdkXEvent *xevent,
+			      GdkEvent *event,
+			      gpointer data)
+{
+  struct create_window_closure *closure;
+  PyObject *ret;
+  XEvent *xev;
+
+  closure = data;
+    
+  xev = (XEvent *) xevent;
+
+  if (xev->type != CreateNotify)
+    return GDK_FILTER_CONTINUE;
+
+  if (closure->pydata)
+    ret = PyEval_CallFunction (closure->pyfunc, "(iO)", (int) xev->xcreatewindow.window, closure->pydata);
+  else
+    ret = PyEval_CallFunction (closure->pyfunc, "(i)", (int) xev->xcreatewindow.window);
+
+  if (ret == NULL)
+    PyErr_Print ();
+  else
+    Py_DECREF (ret);
+
+  return GDK_FILTER_REMOVE; /* GDK doesn't process CreateNotify events */
+}
+
+/* Called as
+ *   xlib.window_capture_create_notify (gdkwindow, callback, user_data)
+ *
+ * The callback is
+ *   def callback (xid, user_data):
+ */
+static PyObject*
+xlib_window_capture_create_notify (PyGObject *self, PyObject *args)
+{
+  PyGObject *pygdkwindow;
+  PyObject *pyfunc, *pydata;
+  GdkWindow *gdkwindow;
+  struct create_window_closure *closure;
+
+  if (!PyArg_ParseTuple (args, "OOO:xlib.window_capture_create_notify", &pygdkwindow, &pyfunc, &pydata))
+    return NULL;
+
+  if (!PyCallable_Check (pyfunc))
+    {
+      PyErr_SetString (PyExc_TypeError, "func must be a callable object");
+      return NULL;
+    }
+
+  if (!GDK_IS_WINDOW (pygdkwindow->obj))
+    {
+      PyErr_SetString (PyExc_TypeError, "window should be a GdkWindow");
+      return NULL;
+    }
+
+  gdkwindow = GDK_WINDOW (pygdkwindow->obj);
+
+  closure = g_new (struct create_window_closure, 1);
+  closure->gdk_parent_window = gdkwindow;
+
+  closure->pyfunc = pyfunc;
+  closure->pydata = pydata;
+  Py_INCREF (closure->pyfunc);
+  Py_INCREF (closure->pydata);
+
+  /* FIXME: weakref the gdk_parent_window; destroy our closure when the window is destroyed */
+    
+  gdk_window_add_filter (gdkwindow,
+			 (GdkFilterFunc) window_filter_func_marshal_cb,
+			 closure);
+
+  Py_INCREF(Py_None);
+  return Py_None;
+}
+
+
+/* Registration */
+
 static struct PyMethodDef xlib_methods[] =
 {
-  { "send_key_event",      xlib_send_key_event,      METH_VARARGS },
-  { "send_button_event",   xlib_send_button_event,   METH_VARARGS },
-  { "send_motion_event",   xlib_send_motion_event,   METH_VARARGS },
-  { "send_crossing_event", xlib_send_crossing_event, METH_VARARGS },
-  { NULL,                  NULL,                     0            }
+  { "send_key_event",			xlib_send_key_event,			METH_VARARGS },
+  { "send_button_event",		xlib_send_button_event,			METH_VARARGS },
+  { "send_motion_event",		xlib_send_motion_event,			METH_VARARGS },
+  { "send_crossing_event",		xlib_send_crossing_event,		METH_VARARGS },
+  { "window_capture_create_notify",	xlib_window_capture_create_notify,	METH_VARARGS },
+  { NULL,				NULL,					0            }
 };
 
 void initxlib (void);
