@@ -26,6 +26,14 @@ import debuglog
 def dprint (fmt, *args):
     debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_SESSION_WIDGET, fmt % args)
     
+def session_window_subwindow_created_cb (xid, user_data):
+    self = user_data
+
+    dprint ("subwindow got created with xid %x", xid)
+
+    self.xephyr_window = gtk.gdk.window_foreign_new_for_display (gtk.gdk.display_get_default (), xid)
+    dprint ("gdk foreign window created, %s", self.xephyr_window)
+
 class SessionWidget (gtk.Widget):
     # FIXME:
     #   Should be able override do_size_allocate() without this
@@ -40,6 +48,8 @@ class SessionWidget (gtk.Widget):
 
         self.session_width  = session_width
         self.session_height = session_height
+
+        self.xephyr_window = None
 
     def do_size_request (self, requisition):
         focus_width = self.style_get_property ("focus-line-width")
@@ -86,8 +96,27 @@ class SessionWidget (gtk.Widget):
                                               wclass = gtk.gdk.INPUT_OUTPUT,
                                               visual = self.get_visual (),
                                               colormap = self.get_colormap (),
-                                              event_mask = gtk.gdk.BUTTON_RELEASE_MASK)
+                                              event_mask = gtk.gdk.BUTTON_RELEASE_MASK | gtk.gdk.SUBSTRUCTURE_MASK)
         self.session_window.set_user_data (self)
+        dprint ("session window has xid %x", self.session_window.xid)
+
+        # We use Xephyr's "-parent" option to tell it where to create
+        # its window.  However, Xephyr does not use our window
+        # directly for drawing.  Instead, it creates a subwindow in
+        # our parent window, and uses *that*.  So, the events that we
+        # proxy to Xephyr must be sent to the window that it creates.
+        #
+        # To get notified when Xephyr creates its window inside ours,
+        # we select for gtk.gdk.SUBSTRUCTURE_MASK above.  However,
+        # there's no GDK_* event for CreateNotify events.  In an ideal
+        # world, we could just install a window event filter to
+        # extract that event ourselves.
+        #
+        # However, PyGTK is buggy and doesn't implement
+        # gdk_window_add_filter() correctly (see
+        # http://bugzilla.gnome.org/show_bug.cgi?id=156948).  So, we
+        # use our own wrapper for that function...
+        xlib.window_capture_create_notify (self.session_window, session_window_subwindow_created_cb, self)
 
         event_mask = gtk.gdk.BUTTON_PRESS_MASK   | \
                      gtk.gdk.BUTTON_RELEASE_MASK | \
@@ -95,7 +124,7 @@ class SessionWidget (gtk.Widget):
                      gtk.gdk.ENTER_NOTIFY_MASK   | \
                      gtk.gdk.LEAVE_NOTIFY_MASK   | \
                      gtk.gdk.KEY_PRESS_MASK      | \
-                     gtk.gdk.KEY_RELEASE_MASK;
+                     gtk.gdk.KEY_RELEASE_MASK
 
         self.input_window = gtk.gdk.Window (parent = self.get_parent_window (),
                                             window_type = gtk.gdk.WINDOW_CHILD,
@@ -177,50 +206,57 @@ class SessionWidget (gtk.Widget):
             self.grab_focus ()
             
         if not event.send_event:
-            dprint ("Resending button press; button = %d, state = 0x%x", event.button, event.state);
-            xlib.send_button_event (self.session_window, True, event.time, event.button, event.state);
+            if self.xephyr_window:
+                dprint ("Resending button press; button = %d, state = 0x%x", event.button, event.state)
+                xlib.send_button_event (self.xephyr_window, True, event.time, event.button, event.state)
         
         return True
     
     def do_button_release_event (self, event):
         if not event.send_event:
-            dprint ("Resending button release; button = %d, state = 0x%x", event.button, event.state);
-            xlib.send_button_event (self.session_window, False, event.time, event.button, event.state);
+            if self.xephyr_window:
+                dprint ("Resending button release; button = %d, state = 0x%x", event.button, event.state)
+                xlib.send_button_event (self.xephyr_window, False, event.time, event.button, event.state)
         
         return True
 
     def do_motion_notify_event (self, event):
         if not event.send_event:
-            dprint ("Resending motion notify; x = %d, y = %d", event.x, event.y);
-            xlib.send_motion_event (self.session_window, event.time, event.x, event.y);
+            if self.xephyr_window:
+                dprint ("Resending motion notify; x = %d, y = %d", event.x, event.y)
+                xlib.send_motion_event (self.xephyr_window, event.time, event.x, event.y);
         
         return True
     
     def do_enter_notify_event (self, event):
         if not event.send_event:
-            dprint ("Resending enter notify; x = %d, y = %d, detail = %d", event.x, event.y, event.detail);
-            xlib.send_crossing_event (self.session_window, True, event.time, event.x, event.y, event.detail);
+            if self.xephyr_window:
+                dprint ("Resending enter notify; x = %d, y = %d, detail = %d", event.x, event.y, event.detail)
+                xlib.send_crossing_event (self.xephyr_window, False, event.time, event.x, event.y, event.detail);
         
         return True
     
     def do_leave_notify_event (self, event):
         if not event.send_event:
-            dprint ("Resending leave notify; x = %d, y = %d, detail = %d", event.x, event.y, event.detail);
-            xlib.send_crossing_event (self.session_window, False, event.time, event.x, event.y, event.detail);
+            if self.xephyr_window:
+                dprint ("Resending leave notify; x = %d, y = %d, detail = %d", event.x, event.y, event.detail)
+                xlib.send_crossing_event (self.xephyr_window, False, event.time, event.x, event.y, event.detail);
         
         return True
     
     def do_key_press_event (self, event):
         if not event.send_event:
-            dprint ("Resending key press; keycode = 0x%x, state = 0x%x", event.hardware_keycode, event.state)
-            xlib.send_key_event (self.session_window, True, event.time, event.hardware_keycode, event.state)
+            if self.xephyr_window:
+                dprint ("Resending key press; keycode = 0x%x, state = 0x%x", event.hardware_keycode, event.state)
+                xlib.send_key_event (self.xephyr_window, True, event.time, event.hardware_keycode, event.state)
         
         return True
 
     def do_key_release_event (self, event):
         if not event.send_event:
-            dprint ("Resending key release; keycode = 0x%x, state = 0x%x", event.hardware_keycode, event.state)
-            xlib.send_key_event (self.session_window, False, event.time, event.hardware_keycode, event.state)
+            if self.xephyr_window:
+                dprint ("Resending key release; keycode = 0x%x, state = 0x%x", event.hardware_keycode, event.state)
+                xlib.send_key_event (self.xephyr_window, False, event.time, event.hardware_keycode, event.state)
         
         return True
 
