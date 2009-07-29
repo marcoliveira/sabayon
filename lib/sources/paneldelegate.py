@@ -177,8 +177,16 @@ class PanelDelegate (userprofile.SourceDelegate):
         def __init__ (self, id, added = False, removed = False):
             PanelDelegate.PanelThing.__init__ (self, id, added, removed)
 
-            self.toplevel_id = self.client.get_string (PANEL_KEY_BASE + "/applets/" + id + "/toplevel_id")
-            self.bonobo_iid  = self.client.get_string (PANEL_KEY_BASE + "/applets/" + id + "/bonobo_iid")
+            toplevel_key_name = PANEL_KEY_BASE + "/applets/" + id + "/toplevel_id"
+            bonobo_iid_key_name = PANEL_KEY_BASE + "/applets/" + id + "/bonobo_iid"
+
+            self.toplevel_id = self.client.get_string (toplevel_key_name)
+            self.bonobo_iid  = self.client.get_string (bonobo_iid_key_name)
+
+            dprint ("Creating PanelApplet for '%s' (toplevel_key %s, toplevel_id %s, bonobo_key %s, bonobo_iid %s)",
+                    id,
+                    toplevel_key_name, self.toplevel_id,
+                    bonobo_iid_key_name, self.bonobo_iid)
 
             applet = bonobo.activation.query("iid == '" + self.bonobo_iid + "'" )
             for i in applet:
