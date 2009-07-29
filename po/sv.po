@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-26 00:18+0100\n"
-"PO-Revision-Date: 2009-01-26 00:19+0100\n"
+"POT-Creation-Date: 2009-07-29 10:34+0200\n"
+"PO-Revision-Date: 2009-07-29 10:34+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../admin-tool/aboutdialog.py:63
+#: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
 msgstr "Program för att etablera och redigera profiler för användare"
 
-#: ../admin-tool/aboutdialog.py:66
+#: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
 msgstr ""
 "Daniel Nylander\n"
@@ -168,7 +168,7 @@ msgid "Profile settings: %s"
 msgstr "Profilinställningar: %s"
 
 #: ../admin-tool/gconfviewer.py:110
-#: ../admin-tool/profilesdialog.py:384
+#: ../admin-tool/profilesdialog.py:387
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Namn"
@@ -478,7 +478,7 @@ msgstr "Användargränssnitt"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:494
+#: ../admin-tool/profilesdialog.py:497
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -691,12 +691,12 @@ msgid "Unable to find a free X display"
 msgstr "Kan inte hitta en ledig X-display"
 
 #: ../lib/protosession.py:414
-msgid "Failed to start Xnest: timed out waiting for USR1 signal"
-msgstr "Misslyckades med att starta Xnest: timeout vid väntan på USR1-signal"
+msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
+msgstr "Misslyckades med att starta Xephyr: timeout vid väntan på USR1-signal"
 
 #: ../lib/protosession.py:416
-msgid "Failed to start Xnest: died during startup"
-msgstr "Misslyckades med att starta Xnest: dog under uppstart"
+msgid "Failed to start Xephyr: died during startup"
+msgstr "Misslyckades med att starta Xephyr: dog under uppstart"
 
 #: ../lib/protosession.py:501
 #, python-format
