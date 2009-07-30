@@ -264,6 +264,8 @@ def debug_log (is_milestone, domain, msg):
                 domain,
                 msg))
 
+        sys.stderr.write (msg + "\n")
+
         _debug_log_log.add_to_ring (msg)
 
         if is_milestone:
