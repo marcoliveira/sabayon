@@ -198,7 +198,7 @@ class GConfSource (userprofile.ProfileSource):
             return
         
         def handle_notify (client, cnx_id, entry, self):
-            dprint ("Got GConf notification on '%s'", entry.key)
+            dprint ("Got GConf notification on '%s', value='%s', default=%s", entry.key, entry.value, entry.get_is_default ())
             
             for ignore_pattern in GCONF_KEYS_TO_IGNORE:
                 if fnmatch.fnmatchcase (entry.key, ignore_pattern):
