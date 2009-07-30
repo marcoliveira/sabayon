@@ -125,7 +125,7 @@ class GConfSource (userprofile.ProfileSource):
 
         self.storage              = storage
         self.home_dir             = util.get_home_dir ()
-        self.client               = None
+        self.gconf_client         = None
         self.notify_id            = 0
         self.defaults_client      = None
         self.mandatory_client     = None
@@ -213,19 +213,19 @@ class GConfSource (userprofile.ProfileSource):
             self.emit_change (GConfChange (self, entry.key, value))
 
         # Only monitor for changes in the user settings database
-        (self.client, address) = get_client_and_address_for_path (os.path.join (self.home_dir, ".gconf"))
-        self.client.add_dir ("/", gconf.CLIENT_PRELOAD_RECURSIVE)
-        self.notify_id = self.client.notify_add ("/", handle_notify, self)
+        (self.gconf_client, address) = get_client_and_address_for_path (os.path.join (self.home_dir, ".gconf"))
+        self.gconf_client.add_dir ("/", gconf.CLIENT_PRELOAD_RECURSIVE)
+        self.notify_id = self.gconf_client.notify_add ("/", handle_notify, self)
 
     def stop_monitoring (self):
         """Stop monitoring for GConf changes."""
         if self.notify_id == 0:
             return
 
-        self.client.notify_remove (self.notify_id)
+        self.gconf_client.notify_remove (self.notify_id)
         self.notify_id = 0
-        self.client.remove_dir ("/")
-        self.client = None
+        self.gconf_client.remove_dir ("/")
+        self.gconf_client = None
 
     def sync_changes (self):
         """Ensure that all committed changes are saved to disk."""
@@ -324,10 +324,10 @@ class GConfSource (userprofile.ProfileSource):
         subprocess.call (["gconftool-2", "--shutdown"])
 
     def add_gconf_notify (self, key, handler, data):
-        return self.client.notify_add (key, handler, data)
+        return self.gconf_client.notify_add (key, handler, data)
 
     def remove_gconf_notify (self, id):
-        return self.client.notify_remove (id)
+        return self.gconf_client.notify_remove (id)
 
     def get_gconf_key_is_mandatory (self, key):
         (client, address) = self.get_committing_client_and_address (True)
@@ -339,7 +339,7 @@ class GConfSource (userprofile.ProfileSource):
     def set_value (self, key, gconf_value, mandatory):
         change = GConfChange (self, key, gconf_value)
         change.set_mandatory (mandatory)
-        self.client.set (key, gconf_value)
+        self.gconf_client.set (key, gconf_value)
         self.emit_change (change)
 
     def set_gconf_boolean (self, key, value, mandatory):
@@ -401,7 +401,7 @@ def run_unit_tests ():
 
     # Make sure there's no stale keys from a previous run
     # FIXME: gconf_client_recursive_unset() has no wrapping
-    # source.client.recursive_unset ("/tmp/test-gconfprofile")
+    # source.gconf_client.recursive_unset ("/tmp/test-gconfprofile")
     subprocess.call (["gconftool-2", "--recursive-unset", "/tmp/test-gconfprofile"])
     time.sleep (1)
 
@@ -423,17 +423,17 @@ def run_unit_tests ():
         while main_loop.get_context ().pending ():
             main_loop.get_context ().iteration (False)
         
-    source.client.set_bool ("/tmp/test-gconfprofile/t1", True)
+    source.gconf_client.set_bool ("/tmp/test-gconfprofile/t1", True)
     poll (main_loop)
-    source.client.set_bool ("/tmp/test-gconfprofile/t1", False)
+    source.gconf_client.set_bool ("/tmp/test-gconfprofile/t1", False)
     poll (main_loop)
-    source.client.set_bool ("/tmp/test-gconfprofile/t2", True)
+    source.gconf_client.set_bool ("/tmp/test-gconfprofile/t2", True)
     poll (main_loop)
-    source.client.set_int ("/tmp/test-gconfprofile/t3", 3)
+    source.gconf_client.set_int ("/tmp/test-gconfprofile/t3", 3)
     poll (main_loop)
     
     source.stop_monitoring ()
-    source.client = gconf.client_get_default ()
+    source.gconf_client = gconf.client_get_default ()
     
     assert len (changes) == 4
     assert changes[3].key == "/tmp/test-gconfprofile/t3"
@@ -445,7 +445,7 @@ def run_unit_tests ():
     assert changes[1].key == "/tmp/test-gconfprofile/t1"
     assert changes[0].key == "/tmp/test-gconfprofile/t1"
 
-    # source.client.recursive_unset ("/tmp/test-gconfprofile")
+    # source.gconf_client.recursive_unset ("/tmp/test-gconfprofile")
     subprocess.call (["gconftool-2", "--recursive-unset", "/tmp/test-gconfprofile"])
     
     source.sync_changes ()
@@ -457,16 +457,16 @@ def run_unit_tests ():
     # We need to clear the cache because GConfClient doesn't know
     # some new sources have been added to the sources stack so it
     # won't see the value we put in the mandatory source
-    source.client.clear_cache ()
+    source.gconf_client.clear_cache ()
     
-    entry = source.client.get_entry ("/tmp/test-gconfprofile/t3", "", False)
+    entry = source.gconf_client.get_entry ("/tmp/test-gconfprofile/t3", "", False)
     assert entry.value
     assert entry.value.type == gconf.VALUE_INT
     assert entry.value.get_int () == 3
     assert not entry.get_is_default ()
     assert entry.get_is_writable ()
     
-    entry = source.client.get_entry ("/tmp/test-gconfprofile/t2", "", False)
+    entry = source.gconf_client.get_entry ("/tmp/test-gconfprofile/t2", "", False)
     assert entry.value
     assert entry.value.type == gconf.VALUE_BOOL
     assert entry.value.get_bool () == True

@@ -65,11 +65,11 @@ class PanelAppletAddedChange (PanelChange):
         PanelChange.__init__ (self, source, delegate, id)
     def get_short_description (self):
         # FIXME: This only works if panel object type is bonobo-applet. Are all applets bonobo-applets ?
-        panel_applet = self.delegate.PanelApplet(self.id)
+        panel_applet = self.delegate.PanelApplet(self.delegate, self.id)
         toplevel_id = panel_applet.toplevel_id
         name = panel_applet.name
 
-        panel_toplevel = self.delegate.PanelToplevel(toplevel_id)
+        panel_toplevel = self.delegate.PanelToplevel(self.delegate, toplevel_id)
         panel_orientation = panel_toplevel.orientation
 
         if panel_orientation == "top":
@@ -86,11 +86,11 @@ class PanelAppletRemovedChange (PanelChange):
         PanelChange.__init__ (self, source, delegate, id)
     def get_short_description (self):
         # FIXME: This only works if panel object type is bonobo-applet. Are all applets bonobo-applets ?
-        panel_applet = self.delegate.PanelApplet(self.id)
+        panel_applet = self.delegate.PanelApplet(self.delegate, self.id)
         toplevel_id = panel_applet.toplevel_id
         name = panel_applet.name
 
-        panel_toplevel = self.delegate.PanelToplevel(toplevel_id)
+        panel_toplevel = self.delegate.PanelToplevel(self.delegate, toplevel_id)
         panel_orientation = panel_toplevel.orientation
 
         if panel_orientation == "top":
@@ -106,11 +106,11 @@ class PanelObjectAddedChange (PanelChange):
     def __init__ (self, source, delegate, id):
         PanelChange.__init__ (self, source, delegate, id)
     def get_short_description (self):
-        panel_object = self.delegate.PanelObject(self.id)
+        panel_object = self.delegate.PanelObject(self.delegate, self.id)
         toplevel_id = panel_object.toplevel_id
         name = panel_object.name
 
-        panel_toplevel = self.delegate.PanelToplevel(toplevel_id)
+        panel_toplevel = self.delegate.PanelToplevel(self.delegate, toplevel_id)
         panel_orientation = panel_toplevel.orientation
 
         if panel_orientation == "top":
@@ -124,7 +124,7 @@ class PanelObjectAddedChange (PanelChange):
 
     def commit_change (self, mandatory):
         # Might have to commit a launcher file
-        launcher = self.delegate.client.get_string (PANEL_KEY_BASE + "/objects/" + self.id + "/launcher_location")
+        launcher = self.delegate.get_gconf_client ().get_string (PANEL_KEY_BASE + "/objects/" + self.id + "/launcher_location")
         if launcher and launcher[0] != '/':
             file = PANEL_LAUNCHER_DIR + "/" + launcher
             self.source.storage.add (file, self.delegate.home_dir, self.delegate.name)
@@ -133,11 +133,11 @@ class PanelObjectRemovedChange (PanelChange):
     def __init__ (self, source, delegate, id):
         PanelChange.__init__ (self, source, delegate, id)
     def get_short_description (self):
-        panel_object = self.delegate.PanelObject(self.id)
+        panel_object = self.delegate.PanelObject(self.delegate, self.id)
         toplevel_id = panel_object.toplevel_id
         name = panel_object.name
 
-        panel_toplevel = self.delegate.PanelToplevel(toplevel_id)
+        panel_toplevel = self.delegate.PanelToplevel(self.delegate, toplevel_id)
         panel_orientation = panel_toplevel.orientation
 
         if panel_orientation == "top":
@@ -150,38 +150,39 @@ class PanelObjectRemovedChange (PanelChange):
             return _("%s removed from right panel") % name
 
     def commit_change (self, mandatory):
-        launcher = self.delegate.client.get_string (PANEL_KEY_BASE + "/objects/" + self.id + "/launcher_location")
+        launcher = self.delegate.get_gconf_client ().get_string (PANEL_KEY_BASE + "/objects/" + self.id + "/launcher_location")
         if launcher and launcher[0] != '/':
             file = PANEL_LAUNCHER_DIR + "/" + launcher
             self.source.storage.remove (file)
 
 class PanelDelegate (userprofile.SourceDelegate):
     class PanelThing:
-        def __init__ (self, id, added, removed):
-            self.id      = id
-            self.added   = added
-            self.removed = removed
-            self.client = gconf.client_get_default ()
+        def __init__ (self, delegate, id, added, removed):
+            self.delegate     = delegate
+            self.id           = id
+            self.added        = added
+            self.removed      = removed
+            self.gconf_client = self.delegate.get_gconf_client ()
     
     class PanelToplevel (PanelThing):
-        def __init__ (self, id, added = False, removed = False):
-            PanelDelegate.PanelThing.__init__ (self, id, added, removed)
+        def __init__ (self, delegate, id, added = False, removed = False):
+            PanelDelegate.PanelThing.__init__ (self, delegate, id, added, removed)
             
-            self.orientation = self.client.get_string (PANEL_KEY_BASE + "/toplevels/" + id + "/orientation")
+            self.orientation = self.gconf_client.get_string (PANEL_KEY_BASE + "/toplevels/" + id + "/orientation")
             
             # FIXME: which of the following attributes do we really need?
-            # self.name        = self.client.get_string (PANEL_KEY_BASE + "/toplevels/" + toplevel_id + "/name")
-            # self.expand      = self.client.get_bool   (PANEL_KEY_BASE + "/toplevels/" + toplevel_id + "/expand")
+            # self.name        = self.gconf_client.get_string (PANEL_KEY_BASE + "/toplevels/" + toplevel_id + "/name")
+            # self.expand      = self.gconf_client.get_bool   (PANEL_KEY_BASE + "/toplevels/" + toplevel_id + "/expand")
 
     class PanelApplet (PanelThing):
-        def __init__ (self, id, added = False, removed = False):
-            PanelDelegate.PanelThing.__init__ (self, id, added, removed)
+        def __init__ (self, delegate, id, added = False, removed = False):
+            PanelDelegate.PanelThing.__init__ (self, delegate, id, added, removed)
 
             toplevel_key_name = PANEL_KEY_BASE + "/applets/" + id + "/toplevel_id"
             bonobo_iid_key_name = PANEL_KEY_BASE + "/applets/" + id + "/bonobo_iid"
 
-            self.toplevel_id = self.client.get_string (toplevel_key_name)
-            self.bonobo_iid  = self.client.get_string (bonobo_iid_key_name)
+            self.toplevel_id = self.gconf_client.get_string (toplevel_key_name)
+            self.bonobo_iid  = self.gconf_client.get_string (bonobo_iid_key_name)
 
             dprint ("Creating PanelApplet for '%s' (toplevel_key %s, toplevel_id %s, bonobo_key %s, bonobo_iid %s)",
                     id,
@@ -197,11 +198,11 @@ class PanelDelegate (userprofile.SourceDelegate):
 
 
     class PanelObject (PanelThing):
-        def __init__ (self, id, added = False, removed = False):
-            PanelDelegate.PanelThing.__init__ (self, id, added, removed)
+        def __init__ (self, delegate, id, added = False, removed = False):
+            PanelDelegate.PanelThing.__init__ (self, delegate, id, added, removed)
   
-            self.toplevel_id = self.client.get_string (PANEL_KEY_BASE + "/objects/" + id + "/toplevel_id")
-            self.object_type = self.client.get_string (PANEL_KEY_BASE + "/objects/" + id + "/object_type")
+            self.toplevel_id = self.gconf_client.get_string (PANEL_KEY_BASE + "/objects/" + id + "/toplevel_id")
+            self.object_type = self.gconf_client.get_string (PANEL_KEY_BASE + "/objects/" + id + "/object_type")
 
             if self.object_type == "drawer-object":
                 # Translators: This is a drawer in gnome-panel (where you can put applets)
@@ -209,7 +210,7 @@ class PanelDelegate (userprofile.SourceDelegate):
             elif self.object_type == "menu-object":
                 self.name = _("Main Menu")
             elif self.object_type == "launcher-object":
-                launcher_location = self.client.get_string (PANEL_KEY_BASE + "/objects/" + id + "/launcher_location")
+                launcher_location = self.gconf_client.get_string (PANEL_KEY_BASE + "/objects/" + id + "/launcher_location")
                 if launcher_location[0] == '/':
                     desktop_file = launcher_location
                 elif launcher_location[0:7] == "file://": # See what happens when you drag and drop from the menu
@@ -219,7 +220,7 @@ class PanelDelegate (userprofile.SourceDelegate):
                 launcher = xdg.DesktopEntry.DesktopEntry(desktop_file)
                 self.name = _("%s launcher") % launcher.getName()
             elif self.object_type == "action-applet":
-                action_type = self.client.get_string (PANEL_KEY_BASE + "/objects/" + id + "/action_type")
+                action_type = self.gconf_client.get_string (PANEL_KEY_BASE + "/objects/" + id + "/action_type")
                 if action_type == "lock":
                     self.name = _("Lock Screen button")
                 elif action_type == "logout":
@@ -235,33 +236,35 @@ class PanelDelegate (userprofile.SourceDelegate):
 
     def __init__ (self, source):
         userprofile.SourceDelegate.__init__ (self, _("Panel"), source, PANEL_KEY_BASE)
-        self.client = gconf.client_get_default ()
 
         self.home_dir = util.get_home_dir()
         self.toplevels = {}
         self.applets = {}
         self.objects = {}
 
+    def get_gconf_client (self):
+        return self.source.gconf_client
+
     def __read_panel_config (self):
         dprint ("Reading initial panel config");
         
         dprint ("Toplevels:");
-        for id in self.client.get_list (PANEL_KEY_BASE + "/general/toplevel_id_list", gconf.VALUE_STRING):
+        for id in self.get_gconf_client ().get_list (PANEL_KEY_BASE + "/general/toplevel_id_list", gconf.VALUE_STRING):
             if not self.toplevels.has_key (id):
                 dprint ("  %s", id);
-                self.toplevels[id] = PanelDelegate.PanelToplevel (id)
+                self.toplevels[id] = PanelDelegate.PanelToplevel (self, id)
                 
         dprint ("Applets:");
-        for id in self.client.get_list (PANEL_KEY_BASE + "/general/applet_id_list", gconf.VALUE_STRING):
+        for id in self.get_gconf_client ().get_list (PANEL_KEY_BASE + "/general/applet_id_list", gconf.VALUE_STRING):
             if not self.applets.has_key (id):
                 dprint ("  %s", id);
-                self.applets[id] = PanelDelegate.PanelApplet (id)
+                self.applets[id] = PanelDelegate.PanelApplet (self, id)
                 
         dprint ("Objects:");
-        for id in self.client.get_list (PANEL_KEY_BASE + "/general/object_id_list", gconf.VALUE_STRING):
+        for id in self.get_gconf_client ().get_list (PANEL_KEY_BASE + "/general/object_id_list", gconf.VALUE_STRING):
             if not self.objects.has_key (id):
                 dprint ("  %s", id);
-                self.objects[id] = PanelDelegate.PanelObject (id)
+                self.objects[id] = PanelDelegate.PanelObject (self, id)
 
     def __handle_id_list_change (self, change, dict, thing_class, added_class, removed_class):
         if not change.value or \
@@ -278,7 +281,7 @@ class PanelDelegate (userprofile.SourceDelegate):
             if dict.has_key (id) and not dict[id].removed:
                 continue
             if not dict.has_key (id):
-                dict[id] = thing_class (id, True)
+                dict[id] = thing_class (self, id, True)
             else:
                 dict[id].added   = True
                 dict[id].removed = False
@@ -376,7 +379,7 @@ class PanelDelegate (userprofile.SourceDelegate):
 
         (client, address) = self.source.get_committing_client_and_address (mandatory)
 
-        self.__copy_dir (self.client, client, address, PANEL_KEY_BASE + "/" + dir_name + "/" + thing.id)
+        self.__copy_dir (self.get_gconf_client (), client, address, PANEL_KEY_BASE + "/" + dir_name + "/" + thing.id)
         
         id_list = self.__get_current_list (dict)
         id_list.append (thing.id)
