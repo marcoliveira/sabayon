@@ -11,20 +11,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-25 23:37+0100\n"
-"PO-Revision-Date: 2009-01-25 17:20+0100\n"
+"POT-Creation-Date: 2009-08-01 11:13+0200\n"
+"PO-Revision-Date: 2009-08-01 11:18+0200\n"
 "Last-Translator: Christian Kirbach <Christian.Kirbach@googlemail.com>\n"
-"Language-Team: Deutsch <gnome-de@gnome.org>\n"
+"Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../admin-tool/aboutdialog.py:63
+#: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
 msgstr "Programm zum Einrichten und Bearbeiten von Benutzerprofilen"
 
-#: ../admin-tool/aboutdialog.py:66
+#: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
 msgstr ""
 "Frank Arnold <frank@scirocco-5v-turbo.de>\n"
@@ -108,7 +108,7 @@ msgstr "Dateien"
 
 #: ../admin-tool/editorwindow.py:266
 #: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:229
+#: ../lib/sources/paneldelegate.py:238
 msgid "Panel"
 msgstr "Panel"
 
@@ -158,7 +158,7 @@ msgstr "Paar"
 msgid "Profile settings: %s"
 msgstr "Profileinstellungen: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:384
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:387
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Name"
@@ -468,7 +468,7 @@ msgstr "Benutzeroberfläche"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:494
+#: ../admin-tool/profilesdialog.py:497
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -750,24 +750,24 @@ msgstr "Dieses Profil verwenden"
 
 #: ../lib/protosession.py:147
 msgid "Unable to find a free X display"
-msgstr "Es konnte kein freies Anzeigegerät für X gefunden werden"
+msgstr "Es konnte keine freie X-Anzeige gefunden werden"
 
 #: ../lib/protosession.py:414
-msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr ""
-"Xnest konnte nicht gestartet werden: Zeitüberschreitung beim Warten auf USR1-"
-"Signal"
+"Xephyr konnte nicht gestartet werden: Zeitüberschreitung beim Warten auf "
+"USR1-Signal"
 
 #: ../lib/protosession.py:416
-msgid "Failed to start Xnest: died during startup"
-msgstr "Xnest konnte nicht gestartet werden: Beim Starten abgestürzt"
+msgid "Failed to start Xephyr: died during startup"
+msgstr "Xephyr konnte nicht gestartet werden: Beim Starten abgestürzt"
 
 #: ../lib/protosession.py:501
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
 msgstr ""
-"Ein behebbarer Fehler ist beim Anwenden des Benutzerprofils aus Datei %s "
+"Ein behebbarer Fehler ist beim Anwenden des Benutzerprofils aus Datei »%s« "
 "aufgetreten."
 
 #: ../lib/protosession.py:510
@@ -780,17 +780,17 @@ msgstr ""
 #: ../lib/sources/filessource.py:69
 #, python-format
 msgid "File '%s' created"
-msgstr "Datei »%s« erstellt"
+msgstr "Datei »%s« wurde erstellt"
 
 #: ../lib/sources/filessource.py:71
 #, python-format
 msgid "File '%s' deleted"
-msgstr "Datei »%s« gelöscht"
+msgstr "Datei »%s« wurde gelöscht"
 
 #: ../lib/sources/filessource.py:73
 #, python-format
 msgid "File '%s' changed"
-msgstr "Datei »%s« geändert"
+msgstr "Datei »%s« wurde geändert"
 
 #: ../lib/sources/filessource.py:97
 msgid "Applications menu"
@@ -944,12 +944,12 @@ msgstr "Mozilla-Lesezeichenordner geändert »%s«"
 #: ../lib/sources/paneldelegate.py:55
 #, python-format
 msgid "Panel '%s' added"
-msgstr "Panel »%s« hinzugefügt"
+msgstr "Panel »%s« wurde hinzugefügt"
 
 #: ../lib/sources/paneldelegate.py:61
 #, python-format
 msgid "Panel '%s' removed"
-msgstr "Panel »%s« entfernt"
+msgstr "Panel »%s« wurde entfernt"
 
 #: ../lib/sources/paneldelegate.py:76
 #, python-format
@@ -1032,44 +1032,44 @@ msgid "%s removed from right panel"
 msgstr "»%s« wurde vom rechten Panel entfernt"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:200
+#: ../lib/sources/paneldelegate.py:209
 msgid "Drawer"
 msgstr "Schublade"
 
-#: ../lib/sources/paneldelegate.py:202
+#: ../lib/sources/paneldelegate.py:211
 msgid "Main Menu"
 msgstr "Hauptmenü"
 
-#: ../lib/sources/paneldelegate.py:212
+#: ../lib/sources/paneldelegate.py:221
 #, python-format
 msgid "%s launcher"
 msgstr "Anwendungsstarter »%s«"
 
-#: ../lib/sources/paneldelegate.py:216
+#: ../lib/sources/paneldelegate.py:225
 msgid "Lock Screen button"
 msgstr "»Bildschirm sperren«-Knopf"
 
-#: ../lib/sources/paneldelegate.py:218
+#: ../lib/sources/paneldelegate.py:227
 msgid "Logout button"
-msgstr "»Beenden«-Knopf"
+msgstr "»Abmelden«-Knopf"
 
-#: ../lib/sources/paneldelegate.py:220
+#: ../lib/sources/paneldelegate.py:229
 msgid "Run Application button"
 msgstr "»Anwendung ausführen«-Knopf"
 
-#: ../lib/sources/paneldelegate.py:222
+#: ../lib/sources/paneldelegate.py:231
 msgid "Search button"
 msgstr "»Suchen«-Knopf"
 
-#: ../lib/sources/paneldelegate.py:224
+#: ../lib/sources/paneldelegate.py:233
 msgid "Screenshot button"
 msgstr "»Bildschirmfoto«-Knopf"
 
-#: ../lib/sources/paneldelegate.py:226
+#: ../lib/sources/paneldelegate.py:235
 msgid "Menu Bar"
 msgstr "Menüleiste"
 
-#: ../lib/sources/paneldelegate.py:470
+#: ../lib/sources/paneldelegate.py:481
 msgid "Panel File"
 msgstr "Panel-Datei"
 
