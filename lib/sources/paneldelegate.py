@@ -251,8 +251,17 @@ class PanelDelegate (userprofile.SourceDelegate):
                     self.name = _("Run Application button")
                 elif action_type == "search":
                     self.name = _("Search button")
-                else:
+                elif action_type == "force-quit":
+                    self.name = _("Force Quit button")
+                elif action_type == "connect-server":
+                    self.name = _("Connect to Server button")
+                elif action_type == "shutdown":
+                    self.name = _("Shutdown button")
+                elif action_type == "screenshot":
                     self.name = _("Screenshot button")
+                    
+                else:
+                    self.name = _("Unknown")
             else:
                 self.name = _("Menu Bar")
 
