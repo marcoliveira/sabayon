@@ -39,6 +39,16 @@ def dprint (fmt, *args):
 
 PANEL_LAUNCHER_DIR = ".gnome2/panel2.d/default/launchers"
 
+def copy_dir (src_client, dst_client, dst_address, dir):
+    for entry in src_client.all_entries (dir):
+        schema_name = entry.get_schema_name ()
+        if schema_name:
+            gconfsource.associate_schema (dst_address, entry.key, schema_name)
+        if entry.value and not entry.get_is_default ():
+            dst_client.set (entry.key, entry.value)
+    for subdir in src_client.all_dirs (dir):
+        copy_dir (src_client, dst_client, dst_address, subdir)
+
 class PanelChange (userprofile.ProfileChange):
     def __init__ (self, source, delegate, id):
         userprofile.ProfileChange.__init__ (self, source, delegate)
@@ -164,10 +174,18 @@ class PanelDelegate (userprofile.SourceDelegate):
             self.removed      = removed
             self.gconf_client = self.delegate.get_gconf_client ()
     
+        def _copy_tree (self, dir):
+            if not self.gconf_client.dir_exists(dir):
+                (src_client, src_address) = gconfsource.get_client_and_address_for_path (os.path.join (util.get_home_dir (), '.gconf'))
+                (dst_client, dst_address) = gconfsource.get_client_and_address_for_path (os.path.join (util.get_home_dir (), '.gconf.xml.defaults'))
+                copy_dir (src_client, dst_client, dst_address, dir)
+
     class PanelToplevel (PanelThing):
         def __init__ (self, delegate, id, added = False, removed = False):
             PanelDelegate.PanelThing.__init__ (self, delegate, id, added, removed)
-            
+
+            self._copy_tree (PANEL_KEY_BASE + "/toplevels/" + id)
+
             self.orientation = self.gconf_client.get_string (PANEL_KEY_BASE + "/toplevels/" + id + "/orientation")
             
             # FIXME: which of the following attributes do we really need?
@@ -178,6 +196,8 @@ class PanelDelegate (userprofile.SourceDelegate):
         def __init__ (self, delegate, id, added = False, removed = False):
             PanelDelegate.PanelThing.__init__ (self, delegate, id, added, removed)
 
+            self._copy_tree (PANEL_KEY_BASE + "/applets/" + id)
+ 
             toplevel_key_name = PANEL_KEY_BASE + "/applets/" + id + "/toplevel_id"
             bonobo_iid_key_name = PANEL_KEY_BASE + "/applets/" + id + "/bonobo_iid"
 
@@ -201,6 +221,8 @@ class PanelDelegate (userprofile.SourceDelegate):
         def __init__ (self, delegate, id, added = False, removed = False):
             PanelDelegate.PanelThing.__init__ (self, delegate, id, added, removed)
   
+            self._copy_tree (PANEL_KEY_BASE + "/objects/" + id)
+
             self.toplevel_id = self.gconf_client.get_string (PANEL_KEY_BASE + "/objects/" + id + "/toplevel_id")
             self.object_type = self.gconf_client.get_string (PANEL_KEY_BASE + "/objects/" + id + "/object_type")
 
@@ -350,15 +372,6 @@ class PanelDelegate (userprofile.SourceDelegate):
 
         return False
 
-    def __copy_dir (self, src_client, dst_client, dst_address, dir):
-        for entry in src_client.all_entries (dir):
-            if entry.get_schema_name ():
-                gconfsource.associate_schema (dst_address, entry.key, entry.get_schema_name ())
-            if entry.value and not entry.get_is_default ():
-                dst_client.set (entry.key, entry.value)
-        for subdir in src_client.all_dirs (dir):
-            self.__copy_dir (src_client, dst_client, dst_address, subdir)
-
     def __get_current_list (self, dict):
         id_list = []
         for id in dict:
@@ -379,8 +392,8 @@ class PanelDelegate (userprofile.SourceDelegate):
 
         (client, address) = self.source.get_committing_client_and_address (mandatory)
 
-        self.__copy_dir (self.get_gconf_client (), client, address, PANEL_KEY_BASE + "/" + dir_name + "/" + thing.id)
-        
+        copy_dir (self.get_gconf_client (), client, address, PANEL_KEY_BASE + "/" + dir_name + "/" + thing.id)
+
         id_list = self.__get_current_list (dict)
         id_list.append (thing.id)
         client.set_list (PANEL_KEY_BASE + "/general/" + id_list_name, gconf.VALUE_STRING, id_list)
