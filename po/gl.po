@@ -1,4 +1,4 @@
-# translation of gl.po to Galego
+# translation of sabayon.master.po to Galician
 # translation of sabayon.gl.po to
 # translation of sabayon.gl.po to
 # This file is distributed under the same license as the PACKAGE package.
@@ -8,28 +8,30 @@
 # Ignacio Casal Quinteiro <icq@svn.gnome.org>, 2008.
 # Fran Diéguez <fran.dieguez@mabishu.com>, 2009.
 # Mancomún - Centro de Referencia e Servizos de Software Libre <g11n@mancomun.org>, 2009.
+# Antón Méixome <meixome@mancomun.org>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: gl\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-03-08 17:20+0000\n"
-"PO-Revision-Date: 2009-03-10 20:17+0000\n"
-"Last-Translator: Suso Baleato <suso.baleato@xunta.es>\n"
-"Language-Team: Galego <proxecto@trasno.net>\n"
-"Language: gl\n"
+"Project-Id-Version: sabayon.master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-08-06 18:55+0200\n"
+"PO-Revision-Date: 2009-08-05 09:57+0200\n"
+"Last-Translator: Antón Méixome <meixome@mancomun.org>\n"
+"Language-Team: Galician <gnome@mancomun.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: gl\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.4\n"
 
-#: ../admin-tool/aboutdialog.py:63
+#: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
 msgstr "Programa para estabelecer e editar perfís para usuarios"
 
-#: ../admin-tool/aboutdialog.py:66
+#: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
-msgstr "Suso Baleato <suso.baleato@xunta.es>"
+msgstr ""
+"Suso Baleato <suso.baleato@xunta.es>; Antón Méixome <meixome@mancomun.org>"
 
 #: ../admin-tool/changeswindow.py:50
 #, python-format
@@ -107,7 +109,7 @@ msgstr "Ficheiros"
 
 #: ../admin-tool/editorwindow.py:266
 #: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:229
+#: ../lib/sources/paneldelegate.py:269
 msgid "Panel"
 msgstr "Panel"
 
@@ -157,7 +159,7 @@ msgstr "par"
 msgid "Profile settings: %s"
 msgstr "Configuración do perfil: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:385
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:387
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Nome"
@@ -180,7 +182,7 @@ msgstr "Prema para facer esta configuración obrigatoria"
 
 #: ../admin-tool/lockdown/maindialog.py:49
 msgid "Disable _command line"
-msgstr "Desactivar a liña de _comandos"
+msgstr "Desactivar a liña de _ordes"
 
 #: ../admin-tool/lockdown/maindialog.py:50
 msgid "Disable _printing"
@@ -192,7 +194,7 @@ msgstr "Desactivar a c_onfiguración de impresora"
 
 #: ../admin-tool/lockdown/maindialog.py:52
 msgid "Disable save to _disk"
-msgstr "Desactivar gardar no _disco"
+msgstr "Desactivar o gardado no _disco"
 
 #: ../admin-tool/lockdown/maindialog.py:54
 msgid "_Lock down the panels"
@@ -200,7 +202,7 @@ msgstr "_Bloquear os paneis"
 
 #: ../admin-tool/lockdown/maindialog.py:55
 msgid "Disable force _quit"
-msgstr "Desactivar forzar a _saída"
+msgstr "Desactivar o forzar a _saída"
 
 #: ../admin-tool/lockdown/maindialog.py:56
 msgid "Disable lock _screen"
@@ -399,7 +401,7 @@ msgstr ""
 
 #: ../admin-tool/lockdown/pessulus.glade.h:27
 msgid "<b>Disabled Applets</b>"
-msgstr "<b>Miniaplicacións desactivadas</b>"
+msgstr "<b>Miniaplicativos desactivados</b>"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:28
 msgid "<b>Safe Protocols</b>"
@@ -467,7 +469,7 @@ msgstr "Interface de usuario"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:495
+#: ../admin-tool/profilesdialog.py:497
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -484,7 +486,7 @@ msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
 msgstr ""
-"Necesítanse permisos no nivel do administrador para executar este programa, "
+"Necesítanse permisos con nivel do administrador para executar este programa, "
 "xa que pode modificar ficheiros do sistema."
 
 #: ../admin-tool/sabayon:83
@@ -512,7 +514,7 @@ msgid ""
 "command)"
 msgstr ""
 "O Sabayon require unha conta de usuario especial '%s' para este computador. "
-"Ténteo de novo despois de crear a conta (usando, por exemplo, o comando "
+"Ténteo de novo despois de crear a conta (usando, por exemplo, a orde "
 "'adduser')"
 
 #: ../admin-tool/sabayon:131
@@ -748,12 +750,12 @@ msgid "Unable to find a free X display"
 msgstr "Non é posíbel localizar unha pantalla X libre"
 
 #: ../lib/protosession.py:414
-msgid "Failed to start Xnest: timed out waiting for USR1 signal"
-msgstr "Fallo ao iniciar Xnest: tempo de espera excedido para o sinal USR1"
+msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
+msgstr "Fallou o iniciio de Xephyr: tempo de espera excedido para o sinal USR1"
 
 #: ../lib/protosession.py:416
-msgid "Failed to start Xnest: died during startup"
-msgstr "Fallo ao iniciar Xnest: morreu durante o inicio"
+msgid "Failed to start Xephyr: died during startup"
+msgstr "Fallou o inicio de Xnest: morreu durante o inicio"
 
 #: ../lib/protosession.py:501
 #, python-format
@@ -785,7 +787,7 @@ msgstr "Modificouse o ficheiro '%s'"
 
 #: ../lib/sources/filessource.py:97
 msgid "Applications menu"
-msgstr "Menú de aplicacións"
+msgstr "Menú de aplicativos"
 
 #: ../lib/sources/filessource.py:99
 msgid "Preferences menu"
@@ -932,135 +934,151 @@ msgstr "Modificouse un marcador de Mozilla '%s' '%s'"
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Modificouse un cartafol de marcadores de Mozilla '%s'"
 
-#: ../lib/sources/paneldelegate.py:55
+#: ../lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel '%s' added"
 msgstr "Engadiuse o panel '%s'"
 
-#: ../lib/sources/paneldelegate.py:61
+#: ../lib/sources/paneldelegate.py:71
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "Eliminouse o panel '%s'"
 
-#: ../lib/sources/paneldelegate.py:76
+#: ../lib/sources/paneldelegate.py:86
 #, python-format
 msgid "Applet %s added to top panel"
-msgstr "Engadiuse a miniaplicación %s ao panel superior"
+msgstr "Engadiuse o miniaplicativo %s ao panel superior"
 
-#: ../lib/sources/paneldelegate.py:78
+#: ../lib/sources/paneldelegate.py:88
 #, python-format
 msgid "Applet %s added to bottom panel"
-msgstr "Engadiuse a miniaplicación %s ao panel inferior"
+msgstr "Engadiuse o miniaplicativo %s ao panel inferior"
 
-#: ../lib/sources/paneldelegate.py:80
+#: ../lib/sources/paneldelegate.py:90
 #, python-format
 msgid "Applet %s added to left panel"
-msgstr "Engadiuse a miniaplicación %s ao panel esquerdo"
+msgstr "Engadiuse o miniaplicativo %s ao panel esquerdo"
 
-#: ../lib/sources/paneldelegate.py:82
+#: ../lib/sources/paneldelegate.py:92
 #, python-format
 msgid "Applet %s added to right panel"
-msgstr "Engadiuse a miniaplicación %s ao panel dereito"
+msgstr "Engadiuse o miniaplicativo %s ao panel dereito"
 
-#: ../lib/sources/paneldelegate.py:97
+#: ../lib/sources/paneldelegate.py:107
 #, python-format
 msgid "Applet %s removed from top panel"
-msgstr "Eliminouse a miniaplicación %s do panel superior"
+msgstr "Eliminouse o miniaplicativo %s do panel superior"
 
-#: ../lib/sources/paneldelegate.py:99
+#: ../lib/sources/paneldelegate.py:109
 #, python-format
 msgid "Applet %s removed from bottom panel"
-msgstr "Eliminouse a miniaplicación %s do panel inferior"
+msgstr "Eliminouse o miniaplicativo %s do panel inferior"
 
-#: ../lib/sources/paneldelegate.py:101
+#: ../lib/sources/paneldelegate.py:111
 #, python-format
 msgid "Applet %s removed from left panel"
-msgstr "Eliminouse a miniaplicación %s do panel esquerdo"
+msgstr "Eliminouse o miniaplicativo %s do panel esquerdo"
 
-#: ../lib/sources/paneldelegate.py:103
+#: ../lib/sources/paneldelegate.py:113
 #, python-format
 msgid "Applet %s removed from right panel"
-msgstr "Eliminouse a miniaplicación %s do panel dereito"
+msgstr "Eliminouse o miniaplicativo %s do panel dereito"
 
-#: ../lib/sources/paneldelegate.py:117
+#: ../lib/sources/paneldelegate.py:127
 #, python-format
 msgid "%s added to top panel"
 msgstr "Engadiuse %s ao panel superior"
 
-#: ../lib/sources/paneldelegate.py:119
+#: ../lib/sources/paneldelegate.py:129
 #, python-format
 msgid "%s added to bottom panel"
 msgstr "Engadiuse %s ao panel inferior"
 
-#: ../lib/sources/paneldelegate.py:121
+#: ../lib/sources/paneldelegate.py:131
 #, python-format
 msgid "%s added to left panel"
 msgstr "Engadiuse %s ao panel esquerdo"
 
-#: ../lib/sources/paneldelegate.py:123
+#: ../lib/sources/paneldelegate.py:133
 #, python-format
 msgid "%s added to right panel"
 msgstr "Engadiuse %s ao panel dereito"
 
-#: ../lib/sources/paneldelegate.py:144
+#: ../lib/sources/paneldelegate.py:154
 #, python-format
 msgid "%s removed from top panel"
 msgstr "Eliminouse %s do panel superior"
 
-#: ../lib/sources/paneldelegate.py:146
+#: ../lib/sources/paneldelegate.py:156
 #, python-format
 msgid "%s removed from bottom panel"
 msgstr "Eliminouse %s do panel inferior"
 
-#: ../lib/sources/paneldelegate.py:148
+#: ../lib/sources/paneldelegate.py:158
 #, python-format
 msgid "%s removed from left panel"
 msgstr "Eliminouse %s do panel esquerdo"
 
-#: ../lib/sources/paneldelegate.py:150
+#: ../lib/sources/paneldelegate.py:160
 #, python-format
 msgid "%s removed from right panel"
 msgstr "Eliminouse %s do panel dereito"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:200
+#: ../lib/sources/paneldelegate.py:231
 msgid "Drawer"
 msgstr "Caixón"
 
-#: ../lib/sources/paneldelegate.py:202
+#: ../lib/sources/paneldelegate.py:233
 msgid "Main Menu"
 msgstr "Menú principal"
 
-#: ../lib/sources/paneldelegate.py:212
+#: ../lib/sources/paneldelegate.py:243
 #, python-format
 msgid "%s launcher"
 msgstr "Iniciador de %s"
 
-#: ../lib/sources/paneldelegate.py:216
+#: ../lib/sources/paneldelegate.py:247
 msgid "Lock Screen button"
-msgstr "Botón Bloquear a pantalla"
+msgstr "Botón de bloquear a pantalla"
 
-#: ../lib/sources/paneldelegate.py:218
+#: ../lib/sources/paneldelegate.py:249
 msgid "Logout button"
-msgstr "Botón Saír"
+msgstr "Botón de saír"
 
-#: ../lib/sources/paneldelegate.py:220
+#: ../lib/sources/paneldelegate.py:251
 msgid "Run Application button"
-msgstr "Botón de executar unha aplicación"
+msgstr "Botón de executar un aplicativo"
 
-#: ../lib/sources/paneldelegate.py:222
+#: ../lib/sources/paneldelegate.py:253
 msgid "Search button"
-msgstr "Botón Buscar"
+msgstr "Botón de buscar"
 
-#: ../lib/sources/paneldelegate.py:224
+#: ../lib/sources/paneldelegate.py:255
+msgid "Force Quit button"
+msgstr "Botón de forzar a saída"
+
+#: ../lib/sources/paneldelegate.py:257
+msgid "Connect to Server button"
+msgstr "Botón de conectar co servidor"
+
+#: ../lib/sources/paneldelegate.py:259
+msgid "Shutdown button"
+msgstr "Botón de apagar"
+
+#: ../lib/sources/paneldelegate.py:261
 msgid "Screenshot button"
-msgstr "Botón Captura de pantalla"
+msgstr "Botón de captura de pantalla"
 
-#: ../lib/sources/paneldelegate.py:226
+#: ../lib/sources/paneldelegate.py:264
+msgid "Unknown"
+msgstr "Descoñecido"
+
+#: ../lib/sources/paneldelegate.py:266
 msgid "Menu Bar"
 msgstr "Barra de menú"
 
-#: ../lib/sources/paneldelegate.py:470
+#: ../lib/sources/paneldelegate.py:503
 msgid "Panel File"
 msgstr "Ficheiro de panel"
 
@@ -1077,7 +1095,7 @@ msgstr "Fallo ao ler os metadatos desde '%s': %s"
 #: ../lib/storage.py:188
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
-msgstr "Sección de metadatos non válida en '%s': %s"
+msgstr "A sección de metadatos non é válida en '%s': %s"
 
 #: ../lib/storage.py:362
 #, python-format
@@ -1113,7 +1131,7 @@ msgstr "Éxito!"
 #: ../lib/userdb.py:54
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
-msgstr "tipo non válido para a configuración %(setting)s en %(np)s"
+msgstr "o tipo non é válido para a configuración %(setting)s en %(np)s"
 
 #: ../lib/userdb.py:215
 #, python-format
@@ -1182,9 +1200,3 @@ msgid ""
 msgstr ""
 "Non se puido localizar o nome de usuario: non está definido en /etc/passwd e "
 "non hai ningún valor para $USER no contorno"
-
-#~ msgid "Remove personal info from documents when saving them"
-#~ msgstr "Eliminar a información persoal dos documentos ao gardalos"
-
-#~ msgid "No search based specified for %s"
-#~ msgstr "Non hai ningunha base de busca especificada para %s"
