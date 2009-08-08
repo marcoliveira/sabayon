@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sabayon 2.22.2\n"
+"Project-Id-Version: sabayon 2.25.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-29 22:28+0800\n"
-"PO-Revision-Date: 2009-01-29 22:38+0800\n"
+"POT-Creation-Date: 2009-08-08 21:57+0800\n"
+"PO-Revision-Date: 2009-08-08 15:25+0800\n"
 "Last-Translator: Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>\n"
 "Language-Team: Chinese (Taiwan) <zh-l10n@lists.linux.org.tw>\n"
 "MIME-Version: 1.0\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../admin-tool/aboutdialog.py:63
+#: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
 msgstr "用來建立及編輯使用者設定組合的程式"
 
-#: ../admin-tool/aboutdialog.py:66
+#: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
 msgstr "Woodman Tuen <wmtuen@gmail.com>,2007"
 
@@ -37,8 +37,7 @@ msgstr "忽略"
 msgid "Lock"
 msgstr "鎖定"
 
-#: ../admin-tool/changeswindow.py:127
-#: ../admin-tool/editorwindow.py:230
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:230
 msgid "Description"
 msgstr "描述"
 
@@ -47,18 +46,15 @@ msgstr "描述"
 msgid "Profile %s"
 msgstr "設定組合 %s"
 
-#: ../admin-tool/editorwindow.py:195
-#: ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:176
 msgid "_Profile"
 msgstr "設定組合(_P)"
 
-#: ../admin-tool/editorwindow.py:196
-#: ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
 msgid "_Save"
 msgstr "儲存(_S)"
 
-#: ../admin-tool/editorwindow.py:196
-#: ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
 msgid "Save profile"
 msgstr "儲存設定組合"
 
@@ -66,13 +62,11 @@ msgstr "儲存設定組合"
 msgid "_Close"
 msgstr "關閉(_C)"
 
-#: ../admin-tool/editorwindow.py:197
-#: ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:197 ../admin-tool/sessionwindow.py:178
 msgid "Close the current window"
 msgstr "關閉目前的視窗"
 
-#: ../admin-tool/editorwindow.py:198
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:198 ../admin-tool/sessionwindow.py:179
 msgid "_Edit"
 msgstr "編輯 (_E)"
 
@@ -84,34 +78,29 @@ msgstr "刪除(_D)"
 msgid "Delete item"
 msgstr "刪除項目"
 
-#: ../admin-tool/editorwindow.py:200
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/editorwindow.py:200 ../admin-tool/sessionwindow.py:182
 msgid "_Help"
 msgstr "求助(_H)"
 
-#: ../admin-tool/editorwindow.py:201
-#: ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
 msgid "_About"
 msgstr "關於(_A)"
 
-#: ../admin-tool/editorwindow.py:201
-#: ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
 msgid "About Sabayon"
 msgstr "關於 Sabayon"
 
-#: ../admin-tool/editorwindow.py:262
-#: ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:262 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:266
-#: ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:79
 msgid "Files"
 msgstr "檔案"
 
 #: ../admin-tool/editorwindow.py:266
 #: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:229
+#: ../lib/sources/paneldelegate.py:269
 msgid "Panel"
 msgstr "面板"
 
@@ -120,8 +109,7 @@ msgstr "面板"
 msgid "Profile file: %s"
 msgstr "設定組合檔案：%s"
 
-#: ../admin-tool/gconfviewer.py:57
-#: ../admin-tool/gconfviewer.py:76
+#: ../admin-tool/gconfviewer.py:57 ../admin-tool/gconfviewer.py:76
 msgid "<no type>"
 msgstr "<沒有類型>"
 
@@ -162,8 +150,7 @@ msgstr "對"
 msgid "Profile settings: %s"
 msgstr "設定組合設定值：%s"
 
-#: ../admin-tool/gconfviewer.py:110
-#: ../admin-tool/profilesdialog.py:384
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:387
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "名稱"
@@ -473,17 +460,20 @@ msgstr "使用者介面"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:494
+#: ../admin-tool/profilesdialog.py:497
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:77
-msgid "Your account does not have permissions to run the Desktop User Profiles tool"
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr "您的帳號沒有執行桌面使用者設定組合工具的權限"
 
 #: ../admin-tool/sabayon:78
-msgid "Administrator level permissions are needed to run this program because it can modify system files."
+msgid ""
+"Administrator level permissions are needed to run this program because it "
+"can modify system files."
 msgstr "由於此程式可以修改系統檔案，因此要執行它需要系統管理者層級的權限。"
 
 #: ../admin-tool/sabayon:83
@@ -491,7 +481,9 @@ msgid "Desktop User Profiles tool is already running"
 msgstr "桌面使用者設定組合工具已在執行中"
 
 #: ../admin-tool/sabayon:84
-msgid "You may not use Desktop User Profiles tool from within a profile editing session"
+msgid ""
+"You may not use Desktop User Profiles tool from within a profile editing "
+"session"
 msgstr "您可能無法從設定組合編輯作業階段中使用桌面使用者設定組合工具"
 
 #: ../admin-tool/sabayon:91
@@ -501,18 +493,29 @@ msgstr "找不到使用者帳號‘%s’"
 
 #: ../admin-tool/sabayon:92
 #, c-format
-msgid "Sabayon requires a special user account '%s' to be present on this computer. Try again after creating the account (using, for example, the 'adduser' command)"
-msgstr "Sabayon 需要這台電腦上有特殊的使用者帳號‘%s’。請在建立該帳號之後再試一次（例如，使用‘adduser’指令）"
+msgid ""
+"Sabayon requires a special user account '%s' to be present on this computer. "
+"Try again after creating the account (using, for example, the 'adduser' "
+"command)"
+msgstr ""
+"Sabayon 需要這台電腦上有特殊的使用者帳號‘%s’。請在建立該帳號之後再試一次（例"
+"如，使用‘adduser’指令）"
 
 #: ../admin-tool/sabayon:131
 #, c-format
-msgid "A fatal error has occurred.  You can help us fix the problem by sending the log in %s to %s"
+msgid ""
+"A fatal error has occurred.  You can help us fix the problem by sending the "
+"log in %s to %s"
 msgstr "發生嚴重的錯誤。您可以將紀錄檔中的 %s 傳送至 %s 協助我們修正此問題。"
 
 #: ../admin-tool/sabayon:145
 #, c-format
-msgid "Sabayon will now exit.  There were some recoverable errors, and you can help us debug the problem by sending the log in %s to %s"
-msgstr "Sabayon 即將關閉。系統上發生部分錯誤，您可以將紀錄檔中的 %s 傳送至 %s 協助我們修正此問題。"
+msgid ""
+"Sabayon will now exit.  There were some recoverable errors, and you can help "
+"us debug the problem by sending the log in %s to %s"
+msgstr ""
+"Sabayon 即將關閉。系統上發生部分錯誤，您可以將紀錄檔中的 %s 傳送至 %s 協助我"
+"們修正此問題。"
 
 #: ../admin-tool/sabayon-apply:99
 #, c-format
@@ -532,8 +535,7 @@ msgstr "用法： %s <profile-name> <profile-path> <display-number>\n"
 msgid "Establish and Edit Profiles for Users"
 msgstr "建立與編輯使用者設定組合"
 
-#: ../admin-tool/sabayon.desktop.in.in.h:2
-#: ../admin-tool/sabayon.glade.h:4
+#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.glade.h:4
 msgid "User Profile Editor"
 msgstr "使用者設定組合編輯器"
 
@@ -580,24 +582,35 @@ msgstr "關閉前是否將變更儲存至設定組合‘%s’？"
 
 #: ../admin-tool/saveconfirm.py:45
 #, python-format
-msgid "If you don't save, changes from the last %ld second will be permanently lost."
-msgid_plural "If you don't save, changes from the last %ld seconds will be permanently lost."
+msgid ""
+"If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld seconds will be permanently "
+"lost."
 msgstr[0] "如果不儲存，將會永久地失去 %ld 秒前所作的修改。"
 
 #: ../admin-tool/saveconfirm.py:51
-msgid "If you don't save, changes from the last minute will be permanently lost."
+msgid ""
+"If you don't save, changes from the last minute will be permanently lost."
 msgstr "如果不儲存，將會永久地失去 1 分鐘前所作的修改。"
 
 #: ../admin-tool/saveconfirm.py:55
 #, python-format
-msgid "If you don't save, changes from the last minute and %ld second will be permanently lost."
-msgid_plural "If you don't save, changes from the last minute and %ld seconds will be permanently lost."
+msgid ""
+"If you don't save, changes from the last minute and %ld second will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last minute and %ld seconds will be "
+"permanently lost."
 msgstr[0] "如果不儲存，將會永久地失去 1 分 %ld 秒前所作的修改。"
 
 #: ../admin-tool/saveconfirm.py:62
 #, python-format
-msgid "If you don't save, changes from the last %ld minute will be permanently lost."
-msgid_plural "If you don't save, changes from the last %ld minutes will be permanently lost."
+msgid ""
+"If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld minutes will be permanently "
+"lost."
 msgstr[0] "如果不儲存，將會永久地失去 %ld 分鐘前所作的修改。"
 
 #: ../admin-tool/saveconfirm.py:71
@@ -606,14 +619,20 @@ msgstr "如果不儲存，將會永久地失去 1 小時前所作的修改。"
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
-msgid "If you don't save, changes from the last hour and %d minute will be permanently lost."
-msgid_plural "If you don't save, changes from the last hour and %d minutes will be permanently lost."
+msgid ""
+"If you don't save, changes from the last hour and %d minute will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last hour and %d minutes will be "
+"permanently lost."
 msgstr[0] "如果不儲存，將會永久地失去 1 小時 %d 分前所作的修改。"
 
 #: ../admin-tool/saveconfirm.py:81
 #, python-format
-msgid "If you don't save, changes from the last %d hour will be permanently lost."
-msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
+msgid ""
+"If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
 msgstr[0] "如果不儲存，將會永久地失去 %d 小時前所作的修改。"
 
 #: ../admin-tool/sessionwindow.py:154
@@ -656,8 +675,12 @@ msgstr "鎖定 %s 的設定值"
 
 #: ../admin-tool/sessionwindow.py:333
 #, python-format
-msgid "There was a recoverable error while applying the user profile '%s'.  You can report this error now or try to continue editing the user profile."
-msgstr "在套用使用者設定組合「%s」時發生部分錯誤。您可以現在就回報這個錯誤或是繼續編輯該使用者設定組合。"
+msgid ""
+"There was a recoverable error while applying the user profile '%s'.  You can "
+"report this error now or try to continue editing the user profile."
+msgstr ""
+"在套用使用者設定組合「%s」時發生部分錯誤。您可以現在就回報這個錯誤或是繼續編"
+"輯該使用者設定組合。"
 
 #: ../admin-tool/sessionwindow.py:337
 msgid "_Report this error"
@@ -681,16 +704,17 @@ msgid "Unable to find a free X display"
 msgstr "找不到可用的 X 畫面"
 
 #: ../lib/protosession.py:414
-msgid "Failed to start Xnest: timed out waiting for USR1 signal"
-msgstr "啟動 Xnest 失敗：等待 USR1 信號逾時"
+msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
+msgstr "啟動 Xephyr 失敗：等待 USR1 信號逾時"
 
 #: ../lib/protosession.py:416
-msgid "Failed to start Xnest: died during startup"
-msgstr "啟動 Xnest 失敗：啟動過程中止"
+msgid "Failed to start Xephyr: died during startup"
+msgstr "啟動 Xephyr 失敗：啟動過程中止"
 
 #: ../lib/protosession.py:501
 #, python-format
-msgid "There was a recoverable error while applying the user profile from file '%s'."
+msgid ""
+"There was a recoverable error while applying the user profile from file '%s'."
 msgstr "從檔案「%s」套用使用者設定組合時發生部分錯誤。"
 
 #: ../lib/protosession.py:510
@@ -801,13 +825,11 @@ msgstr "Mozilla 鍵值‘%s’未設定"
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Mozilla 鍵值‘%s’改變為‘%s’"
 
-#: ../lib/sources/mozillasource.py:166
-#: ../lib/sources/mozillasource.py:176
+#: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
 msgid "Web browser preferences"
 msgstr "網頁瀏覽器偏好設定"
 
-#: ../lib/sources/mozillasource.py:168
-#: ../lib/sources/mozillasource.py:178
+#: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
 msgid "Web browser bookmarks"
 msgstr "網頁瀏覽器書籤"
 
@@ -864,135 +886,151 @@ msgstr "Mozilla 書籤已改變‘%s’‘%s’"
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mozilla 書籤資料夾改變了‘%s’"
 
-#: ../lib/sources/paneldelegate.py:55
+#: ../lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel '%s' added"
 msgstr "已加入面板‘%s’"
 
-#: ../lib/sources/paneldelegate.py:61
+#: ../lib/sources/paneldelegate.py:71
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "面板‘%s’已經移除"
 
-#: ../lib/sources/paneldelegate.py:76
+#: ../lib/sources/paneldelegate.py:86
 #, python-format
 msgid "Applet %s added to top panel"
 msgstr "面板程式 %s 已加入至上方的面板中"
 
-#: ../lib/sources/paneldelegate.py:78
+#: ../lib/sources/paneldelegate.py:88
 #, python-format
 msgid "Applet %s added to bottom panel"
 msgstr "面板程式 %s 已加入至下方的面板中"
 
-#: ../lib/sources/paneldelegate.py:80
+#: ../lib/sources/paneldelegate.py:90
 #, python-format
 msgid "Applet %s added to left panel"
 msgstr "面板程式 %s 已加入至左方的面板中"
 
-#: ../lib/sources/paneldelegate.py:82
+#: ../lib/sources/paneldelegate.py:92
 #, python-format
 msgid "Applet %s added to right panel"
 msgstr "面板程式 %s 已加入至右方的面板中"
 
-#: ../lib/sources/paneldelegate.py:97
+#: ../lib/sources/paneldelegate.py:107
 #, python-format
 msgid "Applet %s removed from top panel"
 msgstr "面板程式 %s 已從上方的面板中移除"
 
-#: ../lib/sources/paneldelegate.py:99
+#: ../lib/sources/paneldelegate.py:109
 #, python-format
 msgid "Applet %s removed from bottom panel"
 msgstr "面板程式 %s 已從下方的面板中移除"
 
-#: ../lib/sources/paneldelegate.py:101
+#: ../lib/sources/paneldelegate.py:111
 #, python-format
 msgid "Applet %s removed from left panel"
 msgstr "面板程式 %s 已從左方的面板中移除"
 
-#: ../lib/sources/paneldelegate.py:103
+#: ../lib/sources/paneldelegate.py:113
 #, python-format
 msgid "Applet %s removed from right panel"
 msgstr "面板程式 %s 已從右方的面板中移除"
 
-#: ../lib/sources/paneldelegate.py:117
+#: ../lib/sources/paneldelegate.py:127
 #, python-format
 msgid "%s added to top panel"
 msgstr "%s 已加入至上方的面板中"
 
-#: ../lib/sources/paneldelegate.py:119
+#: ../lib/sources/paneldelegate.py:129
 #, python-format
 msgid "%s added to bottom panel"
 msgstr "%s 已加入至下方的面板中"
 
-#: ../lib/sources/paneldelegate.py:121
+#: ../lib/sources/paneldelegate.py:131
 #, python-format
 msgid "%s added to left panel"
 msgstr "%s 已加入至左方的面板中"
 
-#: ../lib/sources/paneldelegate.py:123
+#: ../lib/sources/paneldelegate.py:133
 #, python-format
 msgid "%s added to right panel"
 msgstr "%s 已加入至右方的面板中"
 
-#: ../lib/sources/paneldelegate.py:144
+#: ../lib/sources/paneldelegate.py:154
 #, python-format
 msgid "%s removed from top panel"
 msgstr "%s 已從上方的面板中移除"
 
-#: ../lib/sources/paneldelegate.py:146
+#: ../lib/sources/paneldelegate.py:156
 #, python-format
 msgid "%s removed from bottom panel"
 msgstr "%s 已從下方面的板中移除"
 
-#: ../lib/sources/paneldelegate.py:148
+#: ../lib/sources/paneldelegate.py:158
 #, python-format
 msgid "%s removed from left panel"
 msgstr "%s 已從左方的面板中移除"
 
-#: ../lib/sources/paneldelegate.py:150
+#: ../lib/sources/paneldelegate.py:160
 #, python-format
 msgid "%s removed from right panel"
 msgstr "%s 已從右方的面板中移除"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:200
+#: ../lib/sources/paneldelegate.py:231
 msgid "Drawer"
 msgstr "抽屜"
 
-#: ../lib/sources/paneldelegate.py:202
+#: ../lib/sources/paneldelegate.py:233
 msgid "Main Menu"
 msgstr "主選單"
 
-#: ../lib/sources/paneldelegate.py:212
+#: ../lib/sources/paneldelegate.py:243
 #, python-format
 msgid "%s launcher"
 msgstr "%s 程式啟動器"
 
-#: ../lib/sources/paneldelegate.py:216
+#: ../lib/sources/paneldelegate.py:247
 msgid "Lock Screen button"
 msgstr "螢幕鎖定按鈕"
 
-#: ../lib/sources/paneldelegate.py:218
+#: ../lib/sources/paneldelegate.py:249
 msgid "Logout button"
 msgstr "登出按鈕"
 
-#: ../lib/sources/paneldelegate.py:220
+#: ../lib/sources/paneldelegate.py:251
 msgid "Run Application button"
 msgstr "執行應用程式按鈕"
 
-#: ../lib/sources/paneldelegate.py:222
+#: ../lib/sources/paneldelegate.py:253
 msgid "Search button"
 msgstr "搜尋按鈕"
 
-#: ../lib/sources/paneldelegate.py:224
+#: ../lib/sources/paneldelegate.py:255
+msgid "Force Quit button"
+msgstr "強制結束按鈕"
+
+#: ../lib/sources/paneldelegate.py:257
+msgid "Connect to Server button"
+msgstr "連接到伺服器按鈕"
+
+#: ../lib/sources/paneldelegate.py:259
+msgid "Shutdown button"
+msgstr "關機按鈕"
+
+#: ../lib/sources/paneldelegate.py:261
 msgid "Screenshot button"
 msgstr "螢幕快照按鈕"
 
-#: ../lib/sources/paneldelegate.py:226
+#: ../lib/sources/paneldelegate.py:264
+msgid "Unknown"
+msgstr "不明"
+
+#: ../lib/sources/paneldelegate.py:266
 msgid "Menu Bar"
 msgstr "選單列"
 
-#: ../lib/sources/paneldelegate.py:470
+#: ../lib/sources/paneldelegate.py:503
 msgid "Panel File"
 msgstr "面板檔案"
 
@@ -1021,8 +1059,7 @@ msgstr "無法加入不存在的檔案‘%s’"
 msgid "Profile is read-only %s"
 msgstr "設定組合是唯讀的 %s"
 
-#: ../lib/unittests.py:38
-#: ../lib/unittests.py:39
+#: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
 msgstr "忽略警告"
 
@@ -1081,8 +1118,7 @@ msgstr "無法開啟要寫入的 %s"
 msgid "Failed to save UserDatabase to %s"
 msgstr "儲存 UserDatabase 至 %s 失敗"
 
-#: ../lib/userdb.py:378
-#: ../lib/userdb.py:413
+#: ../lib/userdb.py:378 ../lib/userdb.py:413
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "檔案 %s 不是設定組合組態"
@@ -1102,17 +1138,23 @@ msgid "Failed to get the user list"
 msgstr "取得使用者清單失敗"
 
 #: ../lib/util.py:93
-msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
 msgstr "找不到家目錄：沒有設定在 /etc/passwd 及環境變數 $HOME 中。"
 
 #: ../lib/util.py:106
-msgid "Cannot find username: not set in /etc/passwd and no value for $USER in environment"
-msgstr "找不到使用者名稱：沒有在 /etc/passwd 中設定，環境變數 $USER 中也沒有數值"
+msgid ""
+"Cannot find username: not set in /etc/passwd and no value for $USER in "
+"environment"
+msgstr ""
+"找不到使用者名稱：沒有在 /etc/passwd 中設定，環境變數 $USER 中也沒有數值"
 
 #~ msgid "Usage: %s [<profile-name>]\n"
 #~ msgstr "用法： %s [<profile-name>]\n"
+
 #~ msgid "Failed to add monitor for %s"
 #~ msgstr "加入 %s 的監視器失敗"
+
 #~ msgid "Expected event: %s %s"
 #~ msgstr "預期的事件：%s %s"
-
