@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-01 11:13+0200\n"
-"PO-Revision-Date: 2009-08-01 11:18+0200\n"
+"POT-Creation-Date: 2009-08-09 14:12+0200\n"
+"PO-Revision-Date: 2009-08-08 18:34+0200\n"
 "Last-Translator: Christian Kirbach <Christian.Kirbach@googlemail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -108,7 +108,7 @@ msgstr "Dateien"
 
 #: ../admin-tool/editorwindow.py:266
 #: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:238
+#: ../lib/sources/paneldelegate.py:269
 msgid "Panel"
 msgstr "Panel"
 
@@ -941,135 +941,151 @@ msgstr "Mozilla-Lesezeichen geändert »%s« »%s«"
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mozilla-Lesezeichenordner geändert »%s«"
 
-#: ../lib/sources/paneldelegate.py:55
+#: ../lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel '%s' added"
 msgstr "Panel »%s« wurde hinzugefügt"
 
-#: ../lib/sources/paneldelegate.py:61
+#: ../lib/sources/paneldelegate.py:71
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "Panel »%s« wurde entfernt"
 
-#: ../lib/sources/paneldelegate.py:76
+#: ../lib/sources/paneldelegate.py:86
 #, python-format
 msgid "Applet %s added to top panel"
 msgstr "Applet »%s« wurde dem oberen Panel hinzugefügt"
 
-#: ../lib/sources/paneldelegate.py:78
+#: ../lib/sources/paneldelegate.py:88
 #, python-format
 msgid "Applet %s added to bottom panel"
 msgstr "Applet »%s« wurde dem unteren Panel hinzugefügt"
 
-#: ../lib/sources/paneldelegate.py:80
+#: ../lib/sources/paneldelegate.py:90
 #, python-format
 msgid "Applet %s added to left panel"
 msgstr "Applet »%s« wurde dem linken Panel hinzugefügt"
 
-#: ../lib/sources/paneldelegate.py:82
+#: ../lib/sources/paneldelegate.py:92
 #, python-format
 msgid "Applet %s added to right panel"
 msgstr "Applet »%s« wurde dem rechten Panel hinzugefügt"
 
-#: ../lib/sources/paneldelegate.py:97
+#: ../lib/sources/paneldelegate.py:107
 #, python-format
 msgid "Applet %s removed from top panel"
 msgstr "Applet »%s« wurde vom oberen Panel entfernt"
 
-#: ../lib/sources/paneldelegate.py:99
+#: ../lib/sources/paneldelegate.py:109
 #, python-format
 msgid "Applet %s removed from bottom panel"
 msgstr "Applet »%s« wurde vom unteren Panel entfernt"
 
-#: ../lib/sources/paneldelegate.py:101
+#: ../lib/sources/paneldelegate.py:111
 #, python-format
 msgid "Applet %s removed from left panel"
 msgstr "Applet »%s« wurde vom linken Panel entfernt"
 
-#: ../lib/sources/paneldelegate.py:103
+#: ../lib/sources/paneldelegate.py:113
 #, python-format
 msgid "Applet %s removed from right panel"
 msgstr "Applet »%s« wurde vom rechten Panel entfernt"
 
-#: ../lib/sources/paneldelegate.py:117
+#: ../lib/sources/paneldelegate.py:127
 #, python-format
 msgid "%s added to top panel"
 msgstr "»%s« wurde dem oberen Panel hinzugefügt"
 
-#: ../lib/sources/paneldelegate.py:119
+#: ../lib/sources/paneldelegate.py:129
 #, python-format
 msgid "%s added to bottom panel"
 msgstr "»%s« wurde dem unteren Panel hinzugefügt"
 
-#: ../lib/sources/paneldelegate.py:121
+#: ../lib/sources/paneldelegate.py:131
 #, python-format
 msgid "%s added to left panel"
 msgstr "»%s« wurde dem linken Panel hinzugefügt"
 
-#: ../lib/sources/paneldelegate.py:123
+#: ../lib/sources/paneldelegate.py:133
 #, python-format
 msgid "%s added to right panel"
 msgstr "»%s« wurde dem rechten Panel hinzugefügt"
 
-#: ../lib/sources/paneldelegate.py:144
+#: ../lib/sources/paneldelegate.py:154
 #, python-format
 msgid "%s removed from top panel"
 msgstr "»%s« wurde vom oberen Panel entfernt"
 
-#: ../lib/sources/paneldelegate.py:146
+#: ../lib/sources/paneldelegate.py:156
 #, python-format
 msgid "%s removed from bottom panel"
 msgstr "»%s« wurde vom unteren Panel entfernt"
 
-#: ../lib/sources/paneldelegate.py:148
+#: ../lib/sources/paneldelegate.py:158
 #, python-format
 msgid "%s removed from left panel"
 msgstr "»%s« wurde vom linken Panel entfernt"
 
-#: ../lib/sources/paneldelegate.py:150
+#: ../lib/sources/paneldelegate.py:160
 #, python-format
 msgid "%s removed from right panel"
 msgstr "»%s« wurde vom rechten Panel entfernt"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:209
+#: ../lib/sources/paneldelegate.py:231
 msgid "Drawer"
 msgstr "Schublade"
 
-#: ../lib/sources/paneldelegate.py:211
+#: ../lib/sources/paneldelegate.py:233
 msgid "Main Menu"
 msgstr "Hauptmenü"
 
-#: ../lib/sources/paneldelegate.py:221
+#: ../lib/sources/paneldelegate.py:243
 #, python-format
 msgid "%s launcher"
 msgstr "Anwendungsstarter »%s«"
 
-#: ../lib/sources/paneldelegate.py:225
+#: ../lib/sources/paneldelegate.py:247
 msgid "Lock Screen button"
 msgstr "»Bildschirm sperren«-Knopf"
 
-#: ../lib/sources/paneldelegate.py:227
+#: ../lib/sources/paneldelegate.py:249
 msgid "Logout button"
-msgstr "»Abmelden«-Knopf"
+msgstr "Knopf »Abmelden«"
 
-#: ../lib/sources/paneldelegate.py:229
+#: ../lib/sources/paneldelegate.py:251
 msgid "Run Application button"
-msgstr "»Anwendung ausführen«-Knopf"
+msgstr "Knopf »Anwendung ausführen«"
 
-#: ../lib/sources/paneldelegate.py:231
+#: ../lib/sources/paneldelegate.py:253
 msgid "Search button"
-msgstr "»Suchen«-Knopf"
+msgstr "Knopf »Suchen«"
 
-#: ../lib/sources/paneldelegate.py:233
+#: ../lib/sources/paneldelegate.py:255
+msgid "Force Quit button"
+msgstr "Knopf »Beenden erzwingen«"
+
+#: ../lib/sources/paneldelegate.py:257
+msgid "Connect to Server button"
+msgstr "Knopf »Mit Server verbinden«"
+
+#: ../lib/sources/paneldelegate.py:259
+msgid "Shutdown button"
+msgstr "Knopf »Herunterfahren«"
+
+#: ../lib/sources/paneldelegate.py:261
 msgid "Screenshot button"
-msgstr "»Bildschirmfoto«-Knopf"
+msgstr "Knopf »Bildschirmfoto«"
 
-#: ../lib/sources/paneldelegate.py:235
+#: ../lib/sources/paneldelegate.py:264
+msgid "Unknown"
+msgstr "Unbekannt"
+
+#: ../lib/sources/paneldelegate.py:266
 msgid "Menu Bar"
 msgstr "Menüleiste"
 
-#: ../lib/sources/paneldelegate.py:481
+#: ../lib/sources/paneldelegate.py:503
 msgid "Panel File"
 msgstr "Panel-Datei"
 
