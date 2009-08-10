@@ -1,4 +1,70 @@
 ==============
+Version 2.27.0
+==============
+
+  Code name:
+
+	* "Perforated bedsheet"
+
+  What's new in this release:
+
+	* Sabayon now uses Xephyr instead of Xnest for its child
+          session.  This means that a) you must have Xephyr installed;
+          b) the child session should work much better than before, as
+          Xephyr supports most of the recent X extensions, unlike
+          Xnest.
+
+	* Sabayon now passes the DEBUG_WHILE_IN_SABAYON environment
+          variable untouched to all its child processes.  You can use
+          this as a hook from applications to debug them in special
+          ways while they are being run inside Sabayon.
+
+	* For debugging purposes, Sabayon no longer eats the stderr
+          output from its child processes.  This will change in the
+          future as we improve the logging infrastructure.
+
+  Fixes:
+
+	* bgo#542604 - Fix file monitoring (Sayamindu Dasgupta)
+
+	* bgo#576440 - Don't crash if XAUTHLOCALHOSTNAME is not set
+          (Tomas Bzatek)
+
+	* bgo#564405 - use gobject.timeout_add_seconds() where
+          possible (Debarshi Ray)
+
+	* Fix monitoring and saving of panel applets (Sayamindu Dasgupta, 
+	  Federico Mena Quintero).  This gets rid of the annoying
+	  error, "cannot concatenate str and NoneType objects".
+
+	* Ignore .gvfs in user profiles (Federico Mena Quintero)
+
+  Translators:
+
+	* Djihed Afifi, Khaled Hosny (ar)
+	* Iryna Nikanchuk (be)
+	* Runa Bhattacharjee (bn_IN)
+	* Miquel Esplà (ca@valencia)
+	* Lucas Lommer (cs)
+	* Christian Kirbach (de)
+	* Socratis Vavilis (el)
+	* Jorge González (es)
+	* Mattias Põldaru, Ivar Smolin (et)
+	* Iñaki Larrañaga Murgoitio (eu)
+	* Ignacio Casal Quinteiro, Antón Méixome (gl)
+	* Rajesh Ranjan (hi)
+	* Gabor Kelemen (hu)
+	* Shankar Prasad, Vikarm Vincent (kn)
+	* Kjartan Maraas (nb)
+	* A S Alam (pa)
+	* Zabeeh Khan (ps)
+	* Leonardo Ferreira Fontenelle, Krix Apolinário (pt_BR)
+	* Daniel Nylander (sv)
+	* Krishnababu K (te)
+	* Yang Zhang, fujianwzh (zh_CN)
+	* Chao-Hsiung Liao (zh_HK, zh_TW)
+
+==============
 Version 2.25.0
 ==============
 
