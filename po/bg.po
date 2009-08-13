@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-30 08:30+0200\n"
-"PO-Revision-Date: 2009-01-30 08:30+0200\n"
+"POT-Creation-Date: 2009-08-13 08:06+0300\n"
+"PO-Revision-Date: 2009-08-13 08:06+0300\n"
 "Last-Translator: Alexander Shopov <ash@contact.bg>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "MIME-Version: 1.0\n"
@@ -19,11 +19,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: ../admin-tool/aboutdialog.py:63
+#: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
 msgstr "Настройване и редактиране на потребителски профили"
 
-#: ../admin-tool/aboutdialog.py:66
+#: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
 msgstr ""
 "Ростислав Райков <zbrox@i-space.org>\n"
@@ -109,7 +109,7 @@ msgstr "Файлове"
 
 #: ../admin-tool/editorwindow.py:266
 #: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:229
+#: ../lib/sources/paneldelegate.py:269
 msgid "Panel"
 msgstr "Панел"
 
@@ -159,7 +159,7 @@ msgstr "двойка"
 msgid "Profile settings: %s"
 msgstr "Настройки на профила: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:384
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:387
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Име"
@@ -470,7 +470,7 @@ msgstr "Потребителски интерфейс"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:494
+#: ../admin-tool/profilesdialog.py:497
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -742,12 +742,12 @@ msgid "Unable to find a free X display"
 msgstr "Не е открит свободен дисплей на X"
 
 #: ../lib/protosession.py:414
-msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr ""
 "Неуспех при стартирането на Xnest: свърши времето за изчакване на сигнал USR1"
 
 #: ../lib/protosession.py:416
-msgid "Failed to start Xnest: died during startup"
+msgid "Failed to start Xephyr: died during startup"
 msgstr ""
 "Неуспех при стартирането на Xnest: процесът завърши работа още при "
 "стартирането си"
@@ -933,135 +933,151 @@ msgstr "Отметката „%s“ в Mozilla е променена на „%s�
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Папката за отметки в Mozilla е променена: „%s“"
 
-#: ../lib/sources/paneldelegate.py:55
+#: ../lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel '%s' added"
 msgstr "Панелът „%s“ е добавен"
 
-#: ../lib/sources/paneldelegate.py:61
+#: ../lib/sources/paneldelegate.py:71
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "Панелът „%s“ е премахнат"
 
-#: ../lib/sources/paneldelegate.py:76
+#: ../lib/sources/paneldelegate.py:86
 #, python-format
 msgid "Applet %s added to top panel"
 msgstr "Аплетът „%s“ е добавен към горния панел"
 
-#: ../lib/sources/paneldelegate.py:78
+#: ../lib/sources/paneldelegate.py:88
 #, python-format
 msgid "Applet %s added to bottom panel"
 msgstr "Аплетът „%s“ е добавен към долния панел"
 
-#: ../lib/sources/paneldelegate.py:80
+#: ../lib/sources/paneldelegate.py:90
 #, python-format
 msgid "Applet %s added to left panel"
 msgstr "Аплетът „%s“ е добавен към левия панел"
 
-#: ../lib/sources/paneldelegate.py:82
+#: ../lib/sources/paneldelegate.py:92
 #, python-format
 msgid "Applet %s added to right panel"
 msgstr "Аплетът „%s“ е добавен към десния панел"
 
-#: ../lib/sources/paneldelegate.py:97
+#: ../lib/sources/paneldelegate.py:107
 #, python-format
 msgid "Applet %s removed from top panel"
 msgstr "Аплетът „%s“ е премахнат от горния панел"
 
-#: ../lib/sources/paneldelegate.py:99
+#: ../lib/sources/paneldelegate.py:109
 #, python-format
 msgid "Applet %s removed from bottom panel"
 msgstr "Аплетът „%s“ е премахнат от долния панел"
 
-#: ../lib/sources/paneldelegate.py:101
+#: ../lib/sources/paneldelegate.py:111
 #, python-format
 msgid "Applet %s removed from left panel"
 msgstr "Аплетът „%s“ е премахнат от левия панел"
 
-#: ../lib/sources/paneldelegate.py:103
+#: ../lib/sources/paneldelegate.py:113
 #, python-format
 msgid "Applet %s removed from right panel"
 msgstr "Аплетът „%s“ е премахнат от десния панел"
 
-#: ../lib/sources/paneldelegate.py:117
+#: ../lib/sources/paneldelegate.py:127
 #, python-format
 msgid "%s added to top panel"
 msgstr "%s е добавен към горния панел"
 
-#: ../lib/sources/paneldelegate.py:119
+#: ../lib/sources/paneldelegate.py:129
 #, python-format
 msgid "%s added to bottom panel"
 msgstr "%s е добавен към долния панел"
 
-#: ../lib/sources/paneldelegate.py:121
+#: ../lib/sources/paneldelegate.py:131
 #, python-format
 msgid "%s added to left panel"
 msgstr "%s е добавен към левия панел"
 
-#: ../lib/sources/paneldelegate.py:123
+#: ../lib/sources/paneldelegate.py:133
 #, python-format
 msgid "%s added to right panel"
 msgstr "%s е добавен към десния панел"
 
-#: ../lib/sources/paneldelegate.py:144
+#: ../lib/sources/paneldelegate.py:154
 #, python-format
 msgid "%s removed from top panel"
 msgstr "%s е премахнат от горния панел"
 
-#: ../lib/sources/paneldelegate.py:146
+#: ../lib/sources/paneldelegate.py:156
 #, python-format
 msgid "%s removed from bottom panel"
 msgstr "%s е премахнат от долния панел"
 
-#: ../lib/sources/paneldelegate.py:148
+#: ../lib/sources/paneldelegate.py:158
 #, python-format
 msgid "%s removed from left panel"
 msgstr "%s е премахнат от левия панел"
 
-#: ../lib/sources/paneldelegate.py:150
+#: ../lib/sources/paneldelegate.py:160
 #, python-format
 msgid "%s removed from right panel"
 msgstr "%s е премахнат от десния панел"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:200
+#: ../lib/sources/paneldelegate.py:231
 msgid "Drawer"
 msgstr "Шкаф"
 
-#: ../lib/sources/paneldelegate.py:202
+#: ../lib/sources/paneldelegate.py:233
 msgid "Main Menu"
 msgstr "Главно меню"
 
-#: ../lib/sources/paneldelegate.py:212
+#: ../lib/sources/paneldelegate.py:243
 #, python-format
 msgid "%s launcher"
 msgstr "стартер на %s"
 
-#: ../lib/sources/paneldelegate.py:216
+#: ../lib/sources/paneldelegate.py:247
 msgid "Lock Screen button"
 msgstr "Бутон за заключване на екрана"
 
-#: ../lib/sources/paneldelegate.py:218
+#: ../lib/sources/paneldelegate.py:249
 msgid "Logout button"
 msgstr "Бутон за изход"
 
-#: ../lib/sources/paneldelegate.py:220
+#: ../lib/sources/paneldelegate.py:251
 msgid "Run Application button"
 msgstr "Бутон за стартиране на програма"
 
-#: ../lib/sources/paneldelegate.py:222
+#: ../lib/sources/paneldelegate.py:253
 msgid "Search button"
 msgstr "Бутон за търсене"
 
-#: ../lib/sources/paneldelegate.py:224
+#: ../lib/sources/paneldelegate.py:255
+msgid "Force Quit button"
+msgstr "Бутон за принудително спиране"
+
+#: ../lib/sources/paneldelegate.py:257
+msgid "Connect to Server button"
+msgstr "Бутон за свързване към сървър"
+
+#: ../lib/sources/paneldelegate.py:259
+msgid "Shutdown button"
+msgstr "Бутон за спиране на системата"
+
+#: ../lib/sources/paneldelegate.py:261
 msgid "Screenshot button"
 msgstr "Бутон за снимка на екрана"
 
-#: ../lib/sources/paneldelegate.py:226
+#: ../lib/sources/paneldelegate.py:264
+msgid "Unknown"
+msgstr "Непознат"
+
+#: ../lib/sources/paneldelegate.py:266
 msgid "Menu Bar"
 msgstr "Лента с меню"
 
-#: ../lib/sources/paneldelegate.py:470
+#: ../lib/sources/paneldelegate.py:503
 msgid "Panel File"
 msgstr "Файл за панел"
 
