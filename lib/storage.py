@@ -601,7 +601,8 @@ class ProfileStorage:
                         # We need to stop if we are recursing inside a ignored 
                         # directory.
                         if util.should_ignore_dir (homedir, 
-                                DIRECTORIES_TO_IGNORE, os.path.join(homedir, name, f)):
+                                                   DIRECTORIES_TO_IGNORE_PROFILE,
+                                                   os.path.join (homedir, name, f)):
                             dprint ("Not going inside %s as it is an ignored directory.", path)
                         else:
                             zip_directory (save_zip,
@@ -613,7 +614,9 @@ class ProfileStorage:
                         if os.path.join (name, f) in zip_filelist:
                             dprint ("Not adding %s to zipfile since it is already in the file", os.path.join (name, f))
                         elif util.should_ignore_file (homedir, 
-                                DIRECTORIES_TO_IGNORE, FILES_TO_IGNORE, os.path.join(homedir, name, f)):
+                                                      DIRECTORIES_TO_IGNORE_PROFILE,
+                                                      FILES_TO_IGNORE,
+                                                      os.path.join (homedir, name, f)):
                             dprint ("Not adding %s to zipfile since it is a ignored file", os.path.join (name, f))
                         else:
                             zip_filelist.append(os.path.join(name, f))
