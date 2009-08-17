@@ -480,7 +480,7 @@ class ProtoSession (gobject.GObject):
 
         try:
             pipe = subprocess.Popen (argv,
-                                     stderr = subprocess.PIPE,
+#                                     stderr = subprocess.PIPE,
                                      env = os.environ)
         except Exception, e:
             raise errors.FatalApplyErrorException (("Could not create the 'sabayon-apply' process: %s\n" +
@@ -491,7 +491,7 @@ class ProtoSession (gobject.GObject):
                                                     e.child_traceback))
 
         return_code = pipe.wait ()
-        stderr_str = pipe.stderr.read ()
+#        stderr_str = pipe.stderr.read ()
 
 #        print "<BEGIN SABAYON-APPLY STDERR>\n%s\n<END SABAYON-APPLY STDERR>" % stderr_str
 
@@ -500,19 +500,19 @@ class ProtoSession (gobject.GObject):
             pass
         elif return_code == util.EXIT_CODE_RECOVERABLE:
             mprint ("Finished running sabayon-apply with RECOVERABLE exit status")
-            mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
-                    "%s\n"
-                    "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
-                    stderr_str)
+#            mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
+#                    "%s\n"
+#                    "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
+#                    stderr_str)
             raise errors.RecoverableApplyErrorException (_("There was a recoverable error while applying "
                                                            "the user profile from file '%s'.") % self.profile_file)
         else:
             # return_code == util.EXIT_CODE_FATAL or something else
             mprint ("Finished running sabayon-apply with FATAL exit status")
-            mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
-                    "%s\n"
-                    "========== END SABAYON-APPLY LOG (FATAL) ==========",
-                    stderr_str)
+#            mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
+#                    "%s\n"
+#                    "========== END SABAYON-APPLY LOG (FATAL) ==========",
+#                    stderr_str)
             raise errors.FatalApplyErrorException (_("There was a fatal error while applying the "
                                                      "user profile from '%s'.") % self.profile_file)
 
