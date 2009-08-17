@@ -452,6 +452,12 @@ class ProtoSession (gobject.GObject):
             # Disable Xscreensaver locking
             new_environ["RUNNING_UNDER_GDM"] = "yes"
 
+            # Don't let the child session's gvfs use FUSE, so old
+            # gvfs-fuse-daemons that crash won't make FUSE turn
+            # /tmp/blahblah/.gvfs unreadable --- this screws up
+            # resetting and erasing the temporary home directory.
+            new_environ["GVFS_DISABLE_FUSE"] = "yes"
+
             dprint ("Child process env: %s" % new_environ)
             
             # Start the session
