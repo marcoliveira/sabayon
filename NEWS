@@ -1,4 +1,17 @@
 ==============
+Version 2.27.1
+==============
+
+  Fixes:
+
+	* bgo#551535 - Don't ignore the GConf settings when saving the
+          user profile (Tomas Bzatek).
+
+	* Disable gvfs's usage of FUSE in the child session, so
+          crashed daemons will not keep Sabayon from working (Federico
+          Mena Quintero).
+
+==============
 Version 2.27.0
 ==============
 
