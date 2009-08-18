@@ -115,7 +115,10 @@ def init_gettext ():
     util.init_gettext() at the entry point to any script and you'll be
     able to use _(), gettext(), and ngettext() to mark strings for
     translation."""
-    locale.setlocale (locale.LC_ALL, "")
+    try:
+         locale.setlocale (locale.LC_ALL, "")
+    except locale.Error:
+         pass
     gettext.install (PACKAGE, LOCALEDIR)
     # Python 2.4 compatibility
     import __builtin__
