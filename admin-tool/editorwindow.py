@@ -261,11 +261,11 @@ class ProfileEditorWindow:
 
         if source_name == _("GConf"):
             viewer = gconfviewer.GConfViewer (extracted_path, description, self.window)
-            viewer.connect ("destroy", lambda v, dir: shutil.rmtree (dir), extract_dir)
+            viewer.connect ("destroy", lambda v, dir: shutil.rmtree (dir, True), extract_dir)
             viewer.show ()
         elif source_name == _("Files") or source_name == _("Panel"):
             viewer = fileviewer.FileViewer (extracted_path, description, self.window)
-            viewer.connect ("destroy", lambda v, dir: shutil.rmtree (dir), extract_dir)
+            viewer.connect ("destroy", lambda v, dir: shutil.rmtree (dir, True), extract_dir)
             viewer.show ()
         else:
-            shutil.rmtree (extract_dir)
+            shutil.rmtree (extract_dir, True)

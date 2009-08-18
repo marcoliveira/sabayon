@@ -79,7 +79,7 @@ def reset_shell_and_homedir (username, temp_homedir):
     usermod.set_homedir (username, "")
 
     dprint ("Deleting temporary homedir '%s'", temp_homedir)
-    shutil.rmtree (temp_homedir)
+    shutil.rmtree (temp_homedir, True)
         
     dprint ("Resetting shell for '%s' to '%s'", username, NOLOGIN_SHELL)
     usermod.set_shell (username, NOLOGIN_SHELL)

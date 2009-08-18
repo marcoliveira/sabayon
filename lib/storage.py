@@ -136,7 +136,7 @@ class ProfileStorage:
 
     def __del__ (self):
         if self.temp_path:
-            shutil.rmtree (self.temp_path)
+            shutil.rmtree (self.temp_path, True)
         self.temp_path = None
 
         if self.metadata:
@@ -644,7 +644,7 @@ class ProfileStorage:
             os.remove (backup)
 
         if self.temp_path:
-            shutil.rmtree (self.temp_path)
+            shutil.rmtree (self.temp_path, True)
             self.temp_path = None
 
         self.needs_saving = False
@@ -782,7 +782,7 @@ def run_unit_tests ():
     assert file (os.path.join (temp_dir2, "foobar/foo.txt")).read () == "new test file 6"
 
     # Remove temporary extraction dir
-    shutil.rmtree (temp_dir2)
+    shutil.rmtree (temp_dir2, True)
 
     ########## Create second revision
 
@@ -806,7 +806,7 @@ def run_unit_tests ():
     profile.add ("blaas", temp_dir, "Waterford", { "nice" : True, "with-butter" : "but of course" })
 
     # Remove temporary dir
-    shutil.rmtree (temp_dir)
+    shutil.rmtree (temp_dir, True)
 
     # Save the profile (second revision)
     os.remove (profile_path)
@@ -874,7 +874,7 @@ def run_unit_tests ():
     assert file (os.path.join (temp_dir2, "blaas/are/nice/foo.txt")).read () == "blaas are nice"
 
     # Remove temporary extraction dir
-    shutil.rmtree (temp_dir2)
+    shutil.rmtree (temp_dir2, True)
 
     ########## Create third revision
 
@@ -897,7 +897,7 @@ def run_unit_tests ():
     assert os.path.exists (profile_path)
 
     # Remove temp dir again
-    shutil.rmtree (temp_dir)
+    shutil.rmtree (temp_dir, True)
 
     ########## Verify the third revision
 
@@ -958,6 +958,6 @@ def run_unit_tests ():
     assert file (os.path.join (temp_dir, "foobar/foo.txt")).read () == "new test file 2005"
 
     # Remove temporary extraction dir
-    shutil.rmtree (temp_dir)
+    shutil.rmtree (temp_dir, True)
 
     os.remove (profile_path)
