@@ -1,6 +1,18 @@
-==============
-Version 2.27.1
-==============
+===============
+Version 2.27.91
+===============
+
+  Code name:
+
+	* "The fisherman's pointing finger"
+
+  What's new in this release:
+
+	* It works!
+
+	* No, really, it does.
+
+	* That alone warrants the massive increase in minor version number.
 
   Fixes:
 
@@ -10,6 +22,20 @@ Version 2.27.1
 	* Disable gvfs's usage of FUSE in the child session, so
           crashed daemons will not keep Sabayon from working (Federico
           Mena Quintero).
+
+	* Work even with invalid locales (Scott Balneaves).
+
+	* Be more lenient when removing directories (Scott Balneaves).
+
+	* Don't block sabayon-session on sabayon-apply's stderr output
+          (Federico Mena Quintero).
+
+  Translators:
+
+	* Alexander Shopov (bg)
+	* Tommi Vainikainen (fi)
+	* Laurent Dhima (sq)
+	* Daniel Nylander (sv)
 
 ==============
 Version 2.27.0
