@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon 2.27.x\n"
-"Report-Msgid-Bugs-To:\n"
-"POT-Creation-Date: 2009-08-03 00:11+0200\n"
-"PO-Revision-Date: 2009-08-03 00:12+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-08-21 13:36+0200\n"
+"PO-Revision-Date: 2009-08-21 13:37+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian Bokmaal <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -102,7 +102,7 @@ msgstr "Filer"
 
 #: ../admin-tool/editorwindow.py:266
 #: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:238
+#: ../lib/sources/paneldelegate.py:269
 msgid "Panel"
 msgstr "Panel"
 
@@ -738,14 +738,22 @@ msgstr "Kunne ikke starte Xephyr: tidsavbrudd ved venting på signal USR1"
 msgid "Failed to start Xephyr: died during startup"
 msgstr "Kunne ikke starte Xephyr: terminerte ved oppstart"
 
-#: ../lib/protosession.py:501
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:507
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
 msgstr ""
 "Det oppsto en gjenopprettbar feil under bruk av brukerprofil fra fil «%s»."
 
-#: ../lib/protosession.py:510
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (FATAL) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:516
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "Det oppsto en fatal feil ved bruk av brukerprofil fra «%s»."
@@ -914,135 +922,151 @@ msgstr "Mozilla-bokmerke endret «%s» «%s»"
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Bokmerkemappe for Mozilla endret «%s»"
 
-#: ../lib/sources/paneldelegate.py:55
+#: ../lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel '%s' added"
 msgstr "Panel «%s» lagt til"
 
-#: ../lib/sources/paneldelegate.py:61
+#: ../lib/sources/paneldelegate.py:71
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "Panel «%s» fjernet"
 
-#: ../lib/sources/paneldelegate.py:76
+#: ../lib/sources/paneldelegate.py:86
 #, python-format
 msgid "Applet %s added to top panel"
 msgstr "Panelprogram %s lagt til på det øverste panelet"
 
-#: ../lib/sources/paneldelegate.py:78
+#: ../lib/sources/paneldelegate.py:88
 #, python-format
 msgid "Applet %s added to bottom panel"
 msgstr "Panelprogram %s lagt til på det nederste panelet"
 
-#: ../lib/sources/paneldelegate.py:80
+#: ../lib/sources/paneldelegate.py:90
 #, python-format
 msgid "Applet %s added to left panel"
 msgstr "Panelprogram %s lagt til på venstre panel"
 
-#: ../lib/sources/paneldelegate.py:82
+#: ../lib/sources/paneldelegate.py:92
 #, python-format
 msgid "Applet %s added to right panel"
 msgstr "Panelprogram %s lagt til på høyre panel"
 
-#: ../lib/sources/paneldelegate.py:97
+#: ../lib/sources/paneldelegate.py:107
 #, python-format
 msgid "Applet %s removed from top panel"
 msgstr "Panelprogram %s fjernet fra det øverste panelet"
 
-#: ../lib/sources/paneldelegate.py:99
+#: ../lib/sources/paneldelegate.py:109
 #, python-format
 msgid "Applet %s removed from bottom panel"
 msgstr "Panelprogram %s fjernet fra det nederste panelet"
 
-#: ../lib/sources/paneldelegate.py:101
+#: ../lib/sources/paneldelegate.py:111
 #, python-format
 msgid "Applet %s removed from left panel"
 msgstr "Panelprogram %s fjernet fra venstre panel"
 
-#: ../lib/sources/paneldelegate.py:103
+#: ../lib/sources/paneldelegate.py:113
 #, python-format
 msgid "Applet %s removed from right panel"
 msgstr "Panelprogram %s fjernet fra høyre panel"
 
-#: ../lib/sources/paneldelegate.py:117
+#: ../lib/sources/paneldelegate.py:127
 #, python-format
 msgid "%s added to top panel"
 msgstr "%s lagt til på det øverste panelet"
 
-#: ../lib/sources/paneldelegate.py:119
+#: ../lib/sources/paneldelegate.py:129
 #, python-format
 msgid "%s added to bottom panel"
 msgstr "%s lagt til på det nederste panelet"
 
-#: ../lib/sources/paneldelegate.py:121
+#: ../lib/sources/paneldelegate.py:131
 #, python-format
 msgid "%s added to left panel"
 msgstr "%s lagt til på venstre panel"
 
-#: ../lib/sources/paneldelegate.py:123
+#: ../lib/sources/paneldelegate.py:133
 #, python-format
 msgid "%s added to right panel"
 msgstr "%s lagt til på høyre panel"
 
-#: ../lib/sources/paneldelegate.py:144
+#: ../lib/sources/paneldelegate.py:154
 #, python-format
 msgid "%s removed from top panel"
 msgstr "%s fjernet fra det øverste panelet"
 
-#: ../lib/sources/paneldelegate.py:146
+#: ../lib/sources/paneldelegate.py:156
 #, python-format
 msgid "%s removed from bottom panel"
 msgstr "%s fjernet fra det nederste panelet"
 
-#: ../lib/sources/paneldelegate.py:148
+#: ../lib/sources/paneldelegate.py:158
 #, python-format
 msgid "%s removed from left panel"
 msgstr "%s fjernet fra venstre panel"
 
-#: ../lib/sources/paneldelegate.py:150
+#: ../lib/sources/paneldelegate.py:160
 #, python-format
 msgid "%s removed from right panel"
 msgstr "%s fjernet fra høyre panel"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:209
+#: ../lib/sources/paneldelegate.py:231
 msgid "Drawer"
 msgstr "Skuff"
 
-#: ../lib/sources/paneldelegate.py:211
+#: ../lib/sources/paneldelegate.py:233
 msgid "Main Menu"
 msgstr "Hovedmeny"
 
-#: ../lib/sources/paneldelegate.py:221
+#: ../lib/sources/paneldelegate.py:243
 #, python-format
 msgid "%s launcher"
 msgstr "oppstarter for %s"
 
-#: ../lib/sources/paneldelegate.py:225
+#: ../lib/sources/paneldelegate.py:247
 msgid "Lock Screen button"
 msgstr "Knapp som låser skjermen"
 
-#: ../lib/sources/paneldelegate.py:227
+#: ../lib/sources/paneldelegate.py:249
 msgid "Logout button"
 msgstr "Knapp som logger brukeren ut"
 
-#: ../lib/sources/paneldelegate.py:229
+#: ../lib/sources/paneldelegate.py:251
 msgid "Run Application button"
 msgstr "Knapp som kjører program"
 
-#: ../lib/sources/paneldelegate.py:231
+#: ../lib/sources/paneldelegate.py:253
 msgid "Search button"
 msgstr "Søkeknapp"
 
-#: ../lib/sources/paneldelegate.py:233
+#: ../lib/sources/paneldelegate.py:255
+msgid "Force Quit button"
+msgstr "Knapp som logger brukeren ut"
+
+#: ../lib/sources/paneldelegate.py:257
+msgid "Connect to Server button"
+msgstr "Knapp for å koble til tjener"
+
+#: ../lib/sources/paneldelegate.py:259
+msgid "Shutdown button"
+msgstr "Knapp for å slå av"
+
+#: ../lib/sources/paneldelegate.py:261
 msgid "Screenshot button"
 msgstr "Knapp for skjermdump"
 
-#: ../lib/sources/paneldelegate.py:235
+#: ../lib/sources/paneldelegate.py:264
+msgid "Unknown"
+msgstr "Ukjent"
+
+#: ../lib/sources/paneldelegate.py:266
 msgid "Menu Bar"
 msgstr "Menylinje"
 
-#: ../lib/sources/paneldelegate.py:481
+#: ../lib/sources/paneldelegate.py:503
 msgid "Panel File"
 msgstr "Panelfil"
 
