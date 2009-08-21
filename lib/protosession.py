@@ -96,57 +96,20 @@ def clobber_user_processes (username):
 
 def find_free_display ():
     def is_display_free (display_number):
-        # First make sure we get CONNREFUSED connecting
-        # to port 6000 + display_number
-        refused = False
-        sock = socket.socket (socket.AF_INET, socket.SOCK_STREAM)
         try:
-            sock.connect (("127.0.0.1", 6000 + display_number))
-        except socket.error, (err, errstr):
-            if err == errno.ECONNREFUSED:
-                refused = True
-        
-        sock.close ()
-        if not refused:
+            d = gtk.gdk.Display (":%d.0" % display_number)
+            d.close ()
             return False
-
-        # Now make sure either that the lock file doesn't exist or
-        # that the server specified in the lock file isn't running
-        lock_file = "/tmp/.X%d-lock" % display_number
-        if os.path.exists (lock_file):
-            f = file (lock_file, "r")
-            try:
-                pid = int (f.read ())
-            except ValueError:
-                return False
-
-            process_exists = True
-            try:
-                os.kill (pid, 0)
-            except os.error, (err, errstr):
-                if err == errno.ESRCH:
-                    process_exists = False
-            if process_exists:
-                return False
-
-            os.remove (lock_file)
-            
-        socket_file = "/tmp/.X11-unix/X%d" % display_number
-        if os.path.exists (socket_file):
-            os.remove (socket_file)
-
-        return True
+        except RuntimeError, e:
+            return True
 
     display_number = 1
     while display_number < 100:
         if is_display_free (display_number):
-            break
+            return display_number
         display_number += 1
         
-    if display_number == 100:
-        raise ProtoSessionError, _("Unable to find a free X display")
-
-    return display_number
+    raise ProtoSessionError, _("Unable to find a free X display")
         
 #
 # Everything beyond here gets run from sabayon-session
