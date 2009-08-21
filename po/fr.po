@@ -11,9 +11,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon HEAD\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-26 10:51+0100\n"
-"PO-Revision-Date: 2009-02-26 10:53+0100\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=sabayon&component=general\n"
+"POT-Creation-Date: 2009-08-13 05:08+0000\n"
+"PO-Revision-Date: 2009-08-22 01:11+0200\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -21,11 +22,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 
-#: ../admin-tool/aboutdialog.py:63
+#: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
 msgstr "Application pour établir et éditer les profils utilisateurs"
 
-#: ../admin-tool/aboutdialog.py:66
+#: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
 msgstr ""
 "Gianni Moschini <gianni@cmsoft.net>\n"
@@ -110,7 +111,7 @@ msgstr "Fichiers"
 
 #: ../admin-tool/editorwindow.py:266
 #: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:229
+#: ../lib/sources/paneldelegate.py:269
 msgid "Panel"
 msgstr "Tableau de bord"
 
@@ -160,7 +161,7 @@ msgstr "paire"
 msgid "Profile settings: %s"
 msgstr "Paramètres du profil : %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:385
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:387
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Nom"
@@ -249,7 +250,8 @@ msgstr "Masquer la _barre de menu"
 #. This can be used to disable this, for when you don't want people to know you created the document.
 #: ../admin-tool/lockdown/maindialog.py:70
 msgid "Remove personal information from documents when saving them"
-msgstr "Supprimer les informations personnelles des documents à l'enregistrement"
+msgstr ""
+"Supprimer les informations personnelles des documents à l'enregistrement"
 
 #: ../admin-tool/lockdown/maindialog.py:71
 msgid "Warn if macro tries to create a PDF"
@@ -470,7 +472,7 @@ msgstr "Interface utilisateur"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:495
+#: ../admin-tool/profilesdialog.py:497
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -757,12 +759,12 @@ msgid "Unable to find a free X display"
 msgstr "Impossible d'obtenir un écran X"
 
 #: ../lib/protosession.py:414
-msgid "Failed to start Xnest: timed out waiting for USR1 signal"
-msgstr "Impossible d'exécuter Xnest : délai d'attente du signal USR1 dépassé"
+msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
+msgstr "Impossible d'exécuter Xephyr : délai d'attente du signal USR1 dépassé"
 
 #: ../lib/protosession.py:416
-msgid "Failed to start Xnest: died during startup"
-msgstr "Impossible de démarrer Xnest : échec durant le lancement"
+msgid "Failed to start Xephyr: died during startup"
+msgstr "Impossible de démarrer Xephyr : échec durant le lancement"
 
 #: ../lib/protosession.py:501
 #, python-format
@@ -943,135 +945,151 @@ msgstr "Signet de Mozilla modifié « %s » « %s »"
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Dossier de signet de Mozilla modifié « %s »"
 
-#: ../lib/sources/paneldelegate.py:55
+#: ../lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel '%s' added"
 msgstr "Le tableau de bord « %s » a été ajouté"
 
-#: ../lib/sources/paneldelegate.py:61
+#: ../lib/sources/paneldelegate.py:71
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "Le tableau de bord « %s » a été retiré"
 
-#: ../lib/sources/paneldelegate.py:76
+#: ../lib/sources/paneldelegate.py:86
 #, python-format
 msgid "Applet %s added to top panel"
 msgstr "Applet %s ajouté au tableau de bord supérieur"
 
-#: ../lib/sources/paneldelegate.py:78
+#: ../lib/sources/paneldelegate.py:88
 #, python-format
 msgid "Applet %s added to bottom panel"
 msgstr "Applet %s ajouté au tableau de bord inférieur"
 
-#: ../lib/sources/paneldelegate.py:80
+#: ../lib/sources/paneldelegate.py:90
 #, python-format
 msgid "Applet %s added to left panel"
 msgstr "Applet %s ajouté au tableau de bord gauche"
 
-#: ../lib/sources/paneldelegate.py:82
+#: ../lib/sources/paneldelegate.py:92
 #, python-format
 msgid "Applet %s added to right panel"
 msgstr "Applet %s ajouté au tableau de bord droit"
 
-#: ../lib/sources/paneldelegate.py:97
+#: ../lib/sources/paneldelegate.py:107
 #, python-format
 msgid "Applet %s removed from top panel"
 msgstr "Applet %s supprimé du tableau de bord supérieur"
 
-#: ../lib/sources/paneldelegate.py:99
+#: ../lib/sources/paneldelegate.py:109
 #, python-format
 msgid "Applet %s removed from bottom panel"
 msgstr "Applet %s supprimé du tableau de bord inférieur"
 
-#: ../lib/sources/paneldelegate.py:101
+#: ../lib/sources/paneldelegate.py:111
 #, python-format
 msgid "Applet %s removed from left panel"
 msgstr "Applet %s supprimé du tableau de bord gauche"
 
-#: ../lib/sources/paneldelegate.py:103
+#: ../lib/sources/paneldelegate.py:113
 #, python-format
 msgid "Applet %s removed from right panel"
 msgstr "Applet %s supprimé du tableau de bord droit"
 
-#: ../lib/sources/paneldelegate.py:117
+#: ../lib/sources/paneldelegate.py:127
 #, python-format
 msgid "%s added to top panel"
 msgstr "%s ajouté au tableau de bord supérieur"
 
-#: ../lib/sources/paneldelegate.py:119
+#: ../lib/sources/paneldelegate.py:129
 #, python-format
 msgid "%s added to bottom panel"
 msgstr "%s ajouté au tableau de bord inférieur"
 
-#: ../lib/sources/paneldelegate.py:121
+#: ../lib/sources/paneldelegate.py:131
 #, python-format
 msgid "%s added to left panel"
 msgstr "%s ajouté au tableau de bord gauche"
 
-#: ../lib/sources/paneldelegate.py:123
+#: ../lib/sources/paneldelegate.py:133
 #, python-format
 msgid "%s added to right panel"
 msgstr "%s ajouté au tableau de bord droit"
 
-#: ../lib/sources/paneldelegate.py:144
+#: ../lib/sources/paneldelegate.py:154
 #, python-format
 msgid "%s removed from top panel"
 msgstr "%s supprimé du tableau de bord supérieur"
 
-#: ../lib/sources/paneldelegate.py:146
+#: ../lib/sources/paneldelegate.py:156
 #, python-format
 msgid "%s removed from bottom panel"
 msgstr "%s supprimé du tableau de bord inférieur"
 
-#: ../lib/sources/paneldelegate.py:148
+#: ../lib/sources/paneldelegate.py:158
 #, python-format
 msgid "%s removed from left panel"
 msgstr "%s supprimé du tableau de bord gauche"
 
-#: ../lib/sources/paneldelegate.py:150
+#: ../lib/sources/paneldelegate.py:160
 #, python-format
 msgid "%s removed from right panel"
 msgstr "%s supprimé du tableau de bord droit"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:200
+#: ../lib/sources/paneldelegate.py:231
 msgid "Drawer"
 msgstr "Tiroir"
 
-#: ../lib/sources/paneldelegate.py:202
+#: ../lib/sources/paneldelegate.py:233
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: ../lib/sources/paneldelegate.py:212
+#: ../lib/sources/paneldelegate.py:243
 #, python-format
 msgid "%s launcher"
 msgstr "lanceur %s"
 
-#: ../lib/sources/paneldelegate.py:216
+#: ../lib/sources/paneldelegate.py:247
 msgid "Lock Screen button"
 msgstr "Bouton Verrouiller l'écran"
 
-#: ../lib/sources/paneldelegate.py:218
+#: ../lib/sources/paneldelegate.py:249
 msgid "Logout button"
 msgstr "Bouton Déconnexion"
 
-#: ../lib/sources/paneldelegate.py:220
+#: ../lib/sources/paneldelegate.py:251
 msgid "Run Application button"
 msgstr "Bouton Lancer une application"
 
-#: ../lib/sources/paneldelegate.py:222
+#: ../lib/sources/paneldelegate.py:253
 msgid "Search button"
 msgstr "Bouton Recherche"
 
-#: ../lib/sources/paneldelegate.py:224
+#: ../lib/sources/paneldelegate.py:255
+msgid "Force Quit button"
+msgstr "Bouton « Forcer à quitter »"
+
+#: ../lib/sources/paneldelegate.py:257
+msgid "Connect to Server button"
+msgstr "Bouton « Se connecter à un serveur »"
+
+#: ../lib/sources/paneldelegate.py:259
+msgid "Shutdown button"
+msgstr "Bouton Éteindre"
+
+#: ../lib/sources/paneldelegate.py:261
 msgid "Screenshot button"
 msgstr "Bouton Capture d'écran"
 
-#: ../lib/sources/paneldelegate.py:226
-msgid "Menu Bar"
-msgstr "Barre de menu"
+#: ../lib/sources/paneldelegate.py:264
+msgid "Unknown"
+msgstr "Inconnu"
 
-#: ../lib/sources/paneldelegate.py:470
+#: ../lib/sources/paneldelegate.py:266
+msgid "Menu Bar"
+msgstr "Barre de menus"
+
+#: ../lib/sources/paneldelegate.py:503
 msgid "Panel File"
 msgstr "Fichier de tableau de bord"
 
