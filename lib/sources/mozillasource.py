@@ -212,8 +212,7 @@ class MozillaDelegate(userprofile.SourceDelegate):
         # INI File
         #
         if self.is_ini_file(rel_path):
-            dprint(LOG_CHANGE, "%s ini file: %s",
-                   dirmonitor.event_to_string(change.event), rel_path)
+            dprint(LOG_CHANGE, "%s ini file: %s", dirmonitor.event_to_string(change.event), rel_path)
             self.load_profiles_ini()
 
         #
@@ -221,8 +220,7 @@ class MozillaDelegate(userprofile.SourceDelegate):
         #
         profile = self.is_profile_file(rel_path)
         if profile:
-            dprint(LOG_CHANGE, "%s profile file: %s",
-                   dirmonitor.event_to_string(change.event), rel_path)
+            dprint(LOG_CHANGE, "%s profile file: %s", dirmonitor.event_to_string(change.event), rel_path)
 
             profile_file = profile.add_file(rel_path)
             profile_file_type = profile_file.get_type()
@@ -406,7 +404,7 @@ class MozillaDelegate(userprofile.SourceDelegate):
 
         # --------------------
         if sabayon_pref_rel_path in pref_files:
-            dprint(LOG_APPLY, "extracting %s" % sabayon_pref_rel_path)
+            dprint(LOG_APPLY, "extracting %s", sabayon_pref_rel_path)
             self.source.storage.extract(sabayon_pref_rel_path, self.home_dir, True)
             apply_pref = JavascriptPrefsFile(self.home_dir, sabayon_pref_rel_path)
             apply_pref.read()
@@ -414,7 +412,7 @@ class MozillaDelegate(userprofile.SourceDelegate):
             apply_pref = None
 
         if sabayon_mandatory_pref_rel_path in pref_files:
-            dprint(LOG_APPLY, "extracting %s" % sabayon_mandatory_pref_rel_path)
+            dprint(LOG_APPLY, "extracting %s", sabayon_mandatory_pref_rel_path)
             self.source.storage.extract(sabayon_mandatory_pref_rel_path, self.home_dir, True)
             mandatory_apply_pref = JavascriptPrefsFile(self.home_dir, sabayon_mandatory_pref_rel_path)
             mandatory_apply_pref.read()
@@ -424,7 +422,7 @@ class MozillaDelegate(userprofile.SourceDelegate):
         # --------------------
 
         if sabayon_bookmark_rel_path in bookmark_files:
-            dprint(LOG_APPLY, "extracting %s" % sabayon_bookmark_rel_path)
+            dprint(LOG_APPLY, "extracting %s", sabayon_bookmark_rel_path)
             self.source.storage.extract(sabayon_bookmark_rel_path, self.home_dir, True)
             apply_bookmark = BookmarksFile(self.home_dir, sabayon_bookmark_rel_path)
             apply_bookmark.read()
@@ -432,7 +430,7 @@ class MozillaDelegate(userprofile.SourceDelegate):
             apply_bookmark = None
 
         if sabayon_mandatory_bookmark_rel_path in bookmark_files:
-            dprint(LOG_APPLY, "extracting %s" % sabayon_mandatory_bookmark_rel_path)
+            dprint(LOG_APPLY, "extracting %s", sabayon_mandatory_bookmark_rel_path)
             self.source.storage.extract(sabayon_mandatory_bookmark_rel_path, self.home_dir, True)
             mandatory_apply_bookmark = BookmarksFile(self.home_dir, sabayon_mandatory_bookmark_rel_path)
             mandatory_apply_bookmark.read()
@@ -714,8 +712,7 @@ class JavascriptPrefsFile(FirefoxProfileFile):
                 type  = match.group(1)
                 key   = match.group(2)
                 value = match.group(3)
-                dprint(LOG_PARSE, "(%d:%d) key='%s' value='%s'" %
-                       (match.start(), match.end(), key, value))
+                dprint(LOG_PARSE, "(%d:%d) key='%s' value='%s'", match.start(), match.end(), key, value)
                 self.prefs[key] = JavascriptPreference(type, key, value)
                 start = match.end()
             else:
@@ -731,7 +728,7 @@ class JavascriptPrefsFile(FirefoxProfileFile):
         keys = self.prefs.keys()
         keys.sort()
         for key in keys:
-            dprint(LOG_, "%s=%s" % (key, self.prefs[key]))
+            dprint(LOG_VERBOSE, "%s=%s", key, self.prefs[key])
 
 
 # ------ Class FirefoxProfile ------
@@ -833,8 +830,7 @@ class FirefoxProfilesIni:
 
 
     def read(self):
-        dprint(LOG_OPERATION, "FirefoxProfilesIni.read() path = %s",
-               self.get_full_path(self.rel_path))
+        dprint(LOG_OPERATION, "FirefoxProfilesIni.read() path = %s", self.get_full_path(self.rel_path))
         self.profiles = {}
 
         try:
@@ -1121,11 +1117,11 @@ def get_type_from_path(rel_path):
 
 def cat_file(path):
     if os.path.isfile(path):
-        dprint(LOG_FILE_CONTENTS, "==== %s ====" % path)
+        dprint(LOG_FILE_CONTENTS, "==== %s ====", path)
         for line in open(path):
             dprint(LOG_FILE_CONTENTS, line.rstrip())
     else:
-        dprint(LOG_FILE_CONTENTS, "WARNING, does not exist ==== %s ====" % path)
+        dprint(LOG_FILE_CONTENTS, "WARNING, does not exist ==== %s ====", path)
 
 
 
