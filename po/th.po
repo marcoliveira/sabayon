@@ -7,9 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon 2.19.1\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-05 22:38+0700\n"
-"PO-Revision-Date: 2009-02-05 22:40+0700\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=sabayon&component=general\n"
+"POT-Creation-Date: 2009-08-23 16:14+0700\n"
+"PO-Revision-Date: 2009-08-23 16:17+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -17,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../admin-tool/aboutdialog.py:63
+#: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
 msgstr "โปรแกรมสร้างและแก้ไขโพรไฟล์ของผู้ใช้"
 
-#: ../admin-tool/aboutdialog.py:66
+#: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
 msgstr ""
 "เทพพิทักษ์ การุญบุญญานันท์ <thep@linux.thai.net>\n"
@@ -103,7 +104,7 @@ msgstr "แฟ้ม"
 
 #: ../admin-tool/editorwindow.py:266
 #: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:229
+#: ../lib/sources/paneldelegate.py:269
 msgid "Panel"
 msgstr "พาเนล"
 
@@ -153,7 +154,7 @@ msgstr "คู่"
 msgid "Profile settings: %s"
 msgstr "ค่าตั้งของโพรไฟล์: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:384
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:387
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "ชื่อ"
@@ -463,7 +464,7 @@ msgstr "ส่วนติดต่อผู้ใช้"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:494
+#: ../admin-tool/profilesdialog.py:497
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -702,25 +703,33 @@ msgstr "ผู้ใช้สำหรับโพรไฟล์ %s"
 msgid "Use This Profile"
 msgstr "ใช้โพรไฟล์นี้"
 
-#: ../lib/protosession.py:147
+#: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
 msgstr "หาดิสเพลย์ของ X ที่ว่างไม่พบ"
 
-#: ../lib/protosession.py:414
-msgid "Failed to start Xnest: timed out waiting for USR1 signal"
-msgstr "เริ่มใช้ Xnest ไม่สำเร็จ: ไม่มีสัญญาณ USR1 เข้ามาในเวลาที่กำหนด"
+#: ../lib/protosession.py:377
+msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
+msgstr "เริ่มใช้ Xephyr ไม่สำเร็จ: ไม่มีสัญญาณ USR1 เข้ามาในเวลาที่กำหนด"
 
-#: ../lib/protosession.py:416
-msgid "Failed to start Xnest: died during startup"
-msgstr "เริ่มใช้ Xnest ไม่สำเร็จ: โปรแกรมตายระหว่างเริ่มทำงาน"
+#: ../lib/protosession.py:379
+msgid "Failed to start Xephyr: died during startup"
+msgstr "เริ่มใช้ Xephyr ไม่สำเร็จ: โปรแกรมตายระหว่างเริ่มทำงาน"
 
-#: ../lib/protosession.py:501
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:470
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
 msgstr "เกิดข้อผิดพลาดที่พอฟื้นตัวได้ขณะเริ่มใช้โพรไฟล์ผู้ใช้จากแฟ้ม '%s'"
 
-#: ../lib/protosession.py:510
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (FATAL) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:479
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "เกิดข้อผิดพลาดร้ายแรงขณะเริ่มใช้โพรไฟล์ผู้ใช้จาก '%s'"
@@ -840,184 +849,200 @@ msgstr "ที่คั่นหน้าของเว็บเบราว์
 msgid "Web browser profile list"
 msgstr "รายการโพรไฟล์ของเว็บเบราว์เซอร์"
 
-#: ../lib/sources/mozillasource.py:522
+#: ../lib/sources/mozillasource.py:520
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "หาแฟ้มไม่พบ (%s)"
 
-#: ../lib/sources/mozillasource.py:873
+#: ../lib/sources/mozillasource.py:869
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "ชื่อ (%(name)s) ซ้ำกันในหัวข้อ %(section)s"
 
-#: ../lib/sources/mozillasource.py:882
+#: ../lib/sources/mozillasource.py:878
 #, python-format
 msgid "redundant default in section %s"
 msgstr "ค่าปริยายส่วนเกินในหัวข้อ %s"
 
-#: ../lib/sources/mozillasource.py:899
+#: ../lib/sources/mozillasource.py:895
 msgid "no default profile"
 msgstr "ไม่มีโพรไฟล์ปริยาย"
 
-#: ../lib/sources/mozillasource.py:954
+#: ../lib/sources/mozillasource.py:950
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "สร้างที่คั่นหน้าของ Mozilla '%s' -> '%s' แล้ว"
 
-#: ../lib/sources/mozillasource.py:956
+#: ../lib/sources/mozillasource.py:952
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "สร้างโฟลเดอร์ที่คั่นหน้า '%s' แล้ว"
 
-#: ../lib/sources/mozillasource.py:959
+#: ../lib/sources/mozillasource.py:955
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "ลบที่คั่นหน้า Mozilla '%s' แล้ว"
 
-#: ../lib/sources/mozillasource.py:961
+#: ../lib/sources/mozillasource.py:957
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "ลบโฟลเดอร์ที่คั่นหน้า Mozilla '%s' แล้ว"
 
-#: ../lib/sources/mozillasource.py:964
+#: ../lib/sources/mozillasource.py:960
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "เปลี่ยนแปลงที่คั่นหน้า Mozilla '%s' '%s' แล้ว"
 
-#: ../lib/sources/mozillasource.py:966
+#: ../lib/sources/mozillasource.py:962
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "เปลี่ยนแปลงโฟลเดอร์ที่คั่นหน้า Mozilla '%s' แล้ว"
 
-#: ../lib/sources/paneldelegate.py:55
+#: ../lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel '%s' added"
 msgstr "เพิ่มพาเนล '%s' แล้ว"
 
-#: ../lib/sources/paneldelegate.py:61
+#: ../lib/sources/paneldelegate.py:71
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "ลบพาเนล '%s' แล้ว"
 
-#: ../lib/sources/paneldelegate.py:76
+#: ../lib/sources/paneldelegate.py:86
 #, python-format
 msgid "Applet %s added to top panel"
 msgstr "เพิ่มแอพเพล็ต %s ในพาเนลด้านบนแล้ว"
 
-#: ../lib/sources/paneldelegate.py:78
+#: ../lib/sources/paneldelegate.py:88
 #, python-format
 msgid "Applet %s added to bottom panel"
 msgstr "เพิ่มแอพเพล็ต %s ในพาเนลด้านล่างแล้ว"
 
-#: ../lib/sources/paneldelegate.py:80
+#: ../lib/sources/paneldelegate.py:90
 #, python-format
 msgid "Applet %s added to left panel"
 msgstr "เพิ่มแอพเพล็ต %s ในพาเนลด้านซ้ายแล้ว"
 
-#: ../lib/sources/paneldelegate.py:82
+#: ../lib/sources/paneldelegate.py:92
 #, python-format
 msgid "Applet %s added to right panel"
 msgstr "เพิ่มแอพเพล็ต %s ในพาเนลด้านขวาแล้ว"
 
-#: ../lib/sources/paneldelegate.py:97
+#: ../lib/sources/paneldelegate.py:107
 #, python-format
 msgid "Applet %s removed from top panel"
 msgstr "ลบแอพเพล็ต %s ออกจากพาเนลด้านบนแล้ว"
 
-#: ../lib/sources/paneldelegate.py:99
+#: ../lib/sources/paneldelegate.py:109
 #, python-format
 msgid "Applet %s removed from bottom panel"
 msgstr "ลบแอพเพล็ต %s ออกจากพาเนลด้านล่างแล้ว"
 
-#: ../lib/sources/paneldelegate.py:101
+#: ../lib/sources/paneldelegate.py:111
 #, python-format
 msgid "Applet %s removed from left panel"
 msgstr "ลบแอพเพล็ต %s ออกจากพาเนลด้านซ้ายแล้ว"
 
-#: ../lib/sources/paneldelegate.py:103
+#: ../lib/sources/paneldelegate.py:113
 #, python-format
 msgid "Applet %s removed from right panel"
 msgstr "ลบแอพเพล็ต %s ออกจากพาเนลด้านขวาแล้ว"
 
-#: ../lib/sources/paneldelegate.py:117
+#: ../lib/sources/paneldelegate.py:127
 #, python-format
 msgid "%s added to top panel"
 msgstr "เพิ่ม %s ในพาเนลด้านบนแล้ว"
 
-#: ../lib/sources/paneldelegate.py:119
+#: ../lib/sources/paneldelegate.py:129
 #, python-format
 msgid "%s added to bottom panel"
 msgstr "เพิ่ม %s ในพาเนลด้านล่างแล้ว"
 
-#: ../lib/sources/paneldelegate.py:121
+#: ../lib/sources/paneldelegate.py:131
 #, python-format
 msgid "%s added to left panel"
 msgstr "เพิ่ม %s ในพาเนลด้านซ้ายแล้ว"
 
-#: ../lib/sources/paneldelegate.py:123
+#: ../lib/sources/paneldelegate.py:133
 #, python-format
 msgid "%s added to right panel"
 msgstr "เพิ่ม %s ในพาเนลด้านขวาแล้ว"
 
-#: ../lib/sources/paneldelegate.py:144
+#: ../lib/sources/paneldelegate.py:154
 #, python-format
 msgid "%s removed from top panel"
 msgstr "ลบ %s ออกจากพาเนลด้านบนแล้ว"
 
-#: ../lib/sources/paneldelegate.py:146
+#: ../lib/sources/paneldelegate.py:156
 #, python-format
 msgid "%s removed from bottom panel"
 msgstr "ลบ %s ออกจากพาเนลด้านล่างแล้ว"
 
-#: ../lib/sources/paneldelegate.py:148
+#: ../lib/sources/paneldelegate.py:158
 #, python-format
 msgid "%s removed from left panel"
 msgstr "ลบ %s ออกจากพาเนลด้านซ้ายแล้ว"
 
-#: ../lib/sources/paneldelegate.py:150
+#: ../lib/sources/paneldelegate.py:160
 #, python-format
 msgid "%s removed from right panel"
 msgstr "ลบ %s ออกจากพาเนลด้านขวาแล้ว"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:200
+#: ../lib/sources/paneldelegate.py:231
 msgid "Drawer"
 msgstr "ลิ้นชัก"
 
-#: ../lib/sources/paneldelegate.py:202
+#: ../lib/sources/paneldelegate.py:233
 msgid "Main Menu"
 msgstr "เมนูหลัก"
 
-#: ../lib/sources/paneldelegate.py:212
+#: ../lib/sources/paneldelegate.py:243
 #, python-format
 msgid "%s launcher"
 msgstr "ปุ่มเรียก %s"
 
-#: ../lib/sources/paneldelegate.py:216
+#: ../lib/sources/paneldelegate.py:247
 msgid "Lock Screen button"
 msgstr "ปุ่มล็อคหน้าจอ"
 
-#: ../lib/sources/paneldelegate.py:218
+#: ../lib/sources/paneldelegate.py:249
 msgid "Logout button"
 msgstr "ปุ่มออกจากระบบ"
 
-#: ../lib/sources/paneldelegate.py:220
+#: ../lib/sources/paneldelegate.py:251
 msgid "Run Application button"
 msgstr "ปุ่มเรียกโปรแกรม"
 
-#: ../lib/sources/paneldelegate.py:222
+#: ../lib/sources/paneldelegate.py:253
 msgid "Search button"
 msgstr "ปุ่มค้นหา"
 
-#: ../lib/sources/paneldelegate.py:224
+#: ../lib/sources/paneldelegate.py:255
+msgid "Force Quit button"
+msgstr "ปุ่มบังคับออก"
+
+#: ../lib/sources/paneldelegate.py:257
+msgid "Connect to Server button"
+msgstr "ปุ่มเชื่อมต่อไปยังเซิร์ฟเวอร์"
+
+#: ../lib/sources/paneldelegate.py:259
+msgid "Shutdown button"
+msgstr "ปุ่มปิดเครื่อง"
+
+#: ../lib/sources/paneldelegate.py:261
 msgid "Screenshot button"
 msgstr "ปุ่มจับภาพหน้าจอ"
 
-#: ../lib/sources/paneldelegate.py:226
+#: ../lib/sources/paneldelegate.py:264
+msgid "Unknown"
+msgstr "ไม่ทราบ"
+
+#: ../lib/sources/paneldelegate.py:266
 msgid "Menu Bar"
 msgstr "แถบเมนู"
 
-#: ../lib/sources/paneldelegate.py:470
+#: ../lib/sources/paneldelegate.py:503
 msgid "Panel File"
 msgstr "แฟ้มพาเนล"
 
