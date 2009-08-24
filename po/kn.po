@@ -1,30 +1,31 @@
-# translation of sabayon.HEAD.kn.po to Kannada
+# translation of sabayon.master.kn.po to Kannada
+# Shankar Prasad <svenkate@redhat.com>, 2008, 2009.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Vikarm Vincent <vincentvikram@swatantra.org>
-# Shankar Prasad <svenkate@redhat.com>, 2008, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: sabayon.HEAD.kn\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-03-25 06:56+0000\n"
-"PO-Revision-Date: 2009-03-16 15:19+0530\n"
+"Project-Id-Version: sabayon.master.kn\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon&component=general\n"
+"POT-Creation-Date: 2009-08-13 05:08+0000\n"
+"PO-Revision-Date: 2009-08-24 12:50+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
-"Language-Team: Swatantra Kannada <debian-l10n-kannada@lists.debian.org>\n"
+"Language-Team: Kannada <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../admin-tool/aboutdialog.py:63
+#: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
 msgstr "ಬಳಕೆದಾರರಿಗಾಗಿ ಪ್ರೊಫೈಲುಗಳನ್ನು ಸ್ಥಾಪಿಸುವ ಹಾಗು ಸಂಪಾದಿಸುವ ಪ್ರೊಗ್ರಾಮ್‌"
 
-#: ../admin-tool/aboutdialog.py:66
+#: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
-msgstr "ವಿಕ್ರಂ ವಿನ್ಸೆಂಟ್ <vincentvikram@swatantra.org>\n ಶಂಕರ್ ಪ್ರಸಾದ್ <svenkate@redhat.com>"
+msgstr ""
+"ವಿಕ್ರಂ ವಿನ್ಸೆಂಟ್ <vincentvikram@swatantra.org>\n"
+" ಶಂಕರ್ ಪ್ರಸಾದ್ <svenkate@redhat.com>"
 
 #: ../admin-tool/changeswindow.py:50
 #, python-format
@@ -102,7 +103,7 @@ msgstr "ಕಡತಗಳು"
 
 #: ../admin-tool/editorwindow.py:266
 #: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:229
+#: ../lib/sources/paneldelegate.py:269
 msgid "Panel"
 msgstr "ಮುಖ್ಯ ಪಟ್ಟಿ"
 
@@ -152,7 +153,7 @@ msgstr "ಜೋಡಿ"
 msgid "Profile settings: %s"
 msgstr "ಪ್ರೊಫೈಲ್‌ ಸಂಯೋಜನೆಗಳು: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:385
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:387
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "ಹೆಸರು"
@@ -462,14 +463,13 @@ msgstr "ಬಳಕೆದಾರ ಸಂಪರ್ಕಸಾಧನ"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:495
+#: ../admin-tool/profilesdialog.py:497
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:77
-msgid ""
-"Your account does not have permissions to run the Desktop User Profiles tool"
+msgid "Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr "Desktop User Profiles ಉಪಕರಣವನ್ನು ಚಲಾಯಿಸಲು ನಿಮ್ಮ ಖಾತೆಗೆ ಅನುಮತಿ ಇಲ್ಲ"
 
 #: ../admin-tool/sabayon:78
@@ -590,19 +590,15 @@ msgstr "ಮುಚ್ಚುವ ಮೊದಲು ಬದಲಾವಣೆಗಳನ್�
 
 #: ../admin-tool/saveconfirm.py:45
 #, python-format
-msgid ""
-"If you don't save, changes from the last %ld second will be permanently lost."
+msgid "If you don't save, changes from the last %ld second will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld seconds will be permanently "
 "lost."
-msgstr[0] ""
-"ನೀವು ಉಳಿಸದೆ ಹೋದರೆ, ಕೊನೆಯ %ld ಸೆಕೆಂಡಿನ ಬದಲಾವಣೆಗಳು ಶಾಶ್ವತವಾಗಿ ಕಾಣೆಯಾಗುತ್ತವೆ."
-msgstr[1] ""
-"ನೀವು ಉಳಿಸದೆ ಹೋದರೆ, ಕೊನೆಯ %ld ಸೆಕೆಂಡುಗಳ ಬದಲಾವಣೆಗಳು ಶಾಶ್ವತವಾಗಿ ಕಾಣೆಯಾಗುತ್ತವೆ."
+msgstr[0] "ನೀವು ಉಳಿಸದೆ ಹೋದರೆ, ಕೊನೆಯ %ld ಸೆಕೆಂಡಿನ ಬದಲಾವಣೆಗಳು ಶಾಶ್ವತವಾಗಿ ಕಾಣೆಯಾಗುತ್ತವೆ."
+msgstr[1] "ನೀವು ಉಳಿಸದೆ ಹೋದರೆ, ಕೊನೆಯ %ld ಸೆಕೆಂಡುಗಳ ಬದಲಾವಣೆಗಳು ಶಾಶ್ವತವಾಗಿ ಕಾಣೆಯಾಗುತ್ತವೆ."
 
 #: ../admin-tool/saveconfirm.py:51
-msgid ""
-"If you don't save, changes from the last minute will be permanently lost."
+msgid "If you don't save, changes from the last minute will be permanently lost."
 msgstr "ನೀವು ಉಳಿಸದೆ ಹೋದರೆ, ಕೊನೆಯ ನಿಮಿಷದ ಬದಲಾವಣೆಗಳು ಶಾಶ್ವತವಾಗಿ ಕಾಣೆಯಾಗುತ್ತವೆ."
 
 #: ../admin-tool/saveconfirm.py:55
@@ -622,15 +618,12 @@ msgstr[1] ""
 
 #: ../admin-tool/saveconfirm.py:62
 #, python-format
-msgid ""
-"If you don't save, changes from the last %ld minute will be permanently lost."
+msgid "If you don't save, changes from the last %ld minute will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
-msgstr[0] ""
-"ನೀವು ಉಳಿಸದೆ ಹೋದರೆ, ಕೊನೆಯ %ld ನಿಮಿಷದ ಬದಲಾವಣೆಗಳು ಶಾಶ್ವತವಾಗಿ ಕಾಣೆಯಾಗುತ್ತವೆ."
-msgstr[1] ""
-"ನೀವು ಉಳಿಸದೆ ಹೋದರೆ, ಕೊನೆಯ %ld ನಿಮಿಷಗಳ ಬದಲಾವಣೆಗಳು ಶಾಶ್ವತವಾಗಿ ಕಾಣೆಯಾಗುತ್ತವೆ."
+msgstr[0] "ನೀವು ಉಳಿಸದೆ ಹೋದರೆ, ಕೊನೆಯ %ld ನಿಮಿಷದ ಬದಲಾವಣೆಗಳು ಶಾಶ್ವತವಾಗಿ ಕಾಣೆಯಾಗುತ್ತವೆ."
+msgstr[1] "ನೀವು ಉಳಿಸದೆ ಹೋದರೆ, ಕೊನೆಯ %ld ನಿಮಿಷಗಳ ಬದಲಾವಣೆಗಳು ಶಾಶ್ವತವಾಗಿ ಕಾಣೆಯಾಗುತ್ತವೆ."
 
 #: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
@@ -653,14 +646,10 @@ msgstr[1] ""
 
 #: ../admin-tool/saveconfirm.py:81
 #, python-format
-msgid ""
-"If you don't save, changes from the last %d hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] ""
-"ನೀವು ಉಳಿಸದೆ ಹೋದರೆ, ಕೊನೆಯ %d ಗಂಟೆಯ ಬದಲಾವಣೆಗಳು ಶಾಶ್ವತವಾಗಿ ಕಾಣೆಯಾಗುತ್ತವೆ."
-msgstr[1] ""
-"ನೀವು ಉಳಿಸದೆ ಹೋದರೆ, ಕೊನೆಯ %d ಗಂಟೆಗಳ ಬದಲಾವಣೆಗಳು ಶಾಶ್ವತವಾಗಿ ಕಾಣೆಯಾಗುತ್ತವೆ."
+msgid "If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] "ನೀವು ಉಳಿಸದೆ ಹೋದರೆ, ಕೊನೆಯ %d ಗಂಟೆಯ ಬದಲಾವಣೆಗಳು ಶಾಶ್ವತವಾಗಿ ಕಾಣೆಯಾಗುತ್ತವೆ."
+msgstr[1] "ನೀವು ಉಳಿಸದೆ ಹೋದರೆ, ಕೊನೆಯ %d ಗಂಟೆಗಳ ಬದಲಾವಣೆಗಳು ಶಾಶ್ವತವಾಗಿ ಕಾಣೆಯಾಗುತ್ತವೆ."
 
 #: ../admin-tool/sessionwindow.py:154
 #, python-format
@@ -732,18 +721,18 @@ msgid "Unable to find a free X display"
 msgstr "ಮುಕ್ತ X ಪ್ರದರ್ಶಕವು ಕಂಡು ಬಂದಿಲ್ಲ"
 
 #: ../lib/protosession.py:414
-msgid "Failed to start Xnest: timed out waiting for USR1 signal"
-msgstr ""
-"Xnest ಅನ್ನು ಆರಂಭಿಸುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ: USR1 ನ ಸೂಚನೆಗಾಗಿ ಕಾಯವಲ್ಲಿ ಸಮಯ ತೀರಿದೆ"
+#| msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
+msgstr "Xephyr ಅನ್ನು ಆರಂಭಿಸುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ: USR1 ನ ಸೂಚನೆಗಾಗಿ ಕಾಯವಲ್ಲಿ ಸಮಯ ತೀರಿದೆ"
 
 #: ../lib/protosession.py:416
-msgid "Failed to start Xnest: died during startup"
-msgstr "Xnest ಅನ್ನು ಆರಂಭಿಸುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ: ಪ್ರಾರಂಭಿಸುವ ಸಮಯದಲ್ಲೆ ಸತ್ತಿದೆ"
+#| msgid "Failed to start Xnest: died during startup"
+msgid "Failed to start Xephyr: died during startup"
+msgstr "Xephyr ಅನ್ನು ಆರಂಭಿಸುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ: ಪ್ರಾರಂಭಿಸುವ ಸಮಯದಲ್ಲೆ ಸತ್ತಿದೆ"
 
 #: ../lib/protosession.py:501
 #, python-format
-msgid ""
-"There was a recoverable error while applying the user profile from file '%s'."
+msgid "There was a recoverable error while applying the user profile from file '%s'."
 msgstr ""
 "'%s' ಇಂದ ಬಳಕೆದಾರ ಪ್ರೊಫೈಲನ್ನು ಅನ್ವಯಿಸುವಾಗ ಒಂದು ಚೇತರಿಸಿಕೊಳ್ಳಬಹುದಾದಂತಹ ದೋಷವು "
 "ಎದುರಾಗಿದೆ."
@@ -917,135 +906,154 @@ msgstr "ಮೋಝಿಲ್ಲಾ ಬುಕ್‌ಮಾರ್ಕ್ '%s' '%s' ಅ
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "ಮೋಝಿಲ್ಲಾ ಬುಕ್‌ಮಾರ್ಕ್ ಕಡತ ಕೋಶವನ್ನು '%s' ಅನ್ನು ಬದಲಾಯಿಸಿದೆ"
 
-#: ../lib/sources/paneldelegate.py:55
+#: ../lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel '%s' added"
 msgstr "ಮುಖ್ಯ ಪಟ್ಟಿ '%s' ಅನ್ನು ಸೇರಿಸಿದೆ"
 
-#: ../lib/sources/paneldelegate.py:61
+#: ../lib/sources/paneldelegate.py:71
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "ಮುಖ್ಯ ಪಟ್ಟಿ '%s' ಅನ್ನು ತೆಗೆದು ಹಾಕಲಾಗಿದೆ"
 
-#: ../lib/sources/paneldelegate.py:76
+#: ../lib/sources/paneldelegate.py:86
 #, python-format
 msgid "Applet %s added to top panel"
 msgstr "ಆಪ್ಲೆಟ್ %s ಅನ್ನು ಮೇಲಿನ ಫಲಕಕ್ಕೆ ಸೇರಿಸಲಾಗಿದೆ"
 
-#: ../lib/sources/paneldelegate.py:78
+#: ../lib/sources/paneldelegate.py:88
 #, python-format
 msgid "Applet %s added to bottom panel"
 msgstr "ಆಪ್ಲೆಟ್ %s ಅನ್ನು ಅಡಿ ಫಲಕಕ್ಕೆ ಸೇರಿಸಲಾಗಿದೆ"
 
-#: ../lib/sources/paneldelegate.py:80
+#: ../lib/sources/paneldelegate.py:90
 #, python-format
 msgid "Applet %s added to left panel"
 msgstr "ಆಪ್ಲೆಟ್ %s ಅನ್ನು ಎಡ ಫಲಕಕ್ಕೆ ಸೇರಿಸಲಾಗಿದೆ"
 
-#: ../lib/sources/paneldelegate.py:82
+#: ../lib/sources/paneldelegate.py:92
 #, python-format
 msgid "Applet %s added to right panel"
 msgstr "ಆಪ್ಲೆಟ್ %s ಅನ್ನು ಬಲ ಫಲಕಕ್ಕೆ ಸೇರಿಸಲಾಗಿದೆ"
 
-#: ../lib/sources/paneldelegate.py:97
+#: ../lib/sources/paneldelegate.py:107
 #, python-format
 msgid "Applet %s removed from top panel"
 msgstr "ಆಪ್ಲೆಟ್ %s ಅನ್ನು ಮೇಲಿನ ಫಲಕದಿಂದ ತೆಗೆದುಹಾಕಲಾಗಿದೆ"
 
-#: ../lib/sources/paneldelegate.py:99
+#: ../lib/sources/paneldelegate.py:109
 #, python-format
 msgid "Applet %s removed from bottom panel"
 msgstr "ಆಪ್ಲೆಟ್ %s ಅನ್ನು ಕೆಳಗಿನ ಫಲಕದಿಂದ ತೆಗೆದುಹಾಕಲಾಗಿದೆ"
 
-#: ../lib/sources/paneldelegate.py:101
+#: ../lib/sources/paneldelegate.py:111
 #, python-format
 msgid "Applet %s removed from left panel"
 msgstr "ಆಪ್ಲೆಟ್ %s ಅನ್ನು ಎಡ ಫಲಕದಿಂದ ತೆಗೆದುಹಾಕಲಾಗಿದೆ"
 
-#: ../lib/sources/paneldelegate.py:103
+#: ../lib/sources/paneldelegate.py:113
 #, python-format
 msgid "Applet %s removed from right panel"
 msgstr "ಆಪ್ಲೆಟ್ %s ಅನ್ನು ಬಲ ಫಲಕದಿಂದ ತೆಗೆದುಹಾಕಲಾಗಿದೆ"
 
-#: ../lib/sources/paneldelegate.py:117
+#: ../lib/sources/paneldelegate.py:127
 #, python-format
 msgid "%s added to top panel"
 msgstr "%s ಅನ್ನು ಮೇಲಿನ ಫಲಕಕ್ಕೆ ಸೇರಿಸಲಾಗಿದೆ"
 
-#: ../lib/sources/paneldelegate.py:119
+#: ../lib/sources/paneldelegate.py:129
 #, python-format
 msgid "%s added to bottom panel"
 msgstr "%s ಅನ್ನು ಅಡಿ ಫಲಕಕ್ಕೆ ಸೇರಿಸಲಾಗಿದೆ"
 
-#: ../lib/sources/paneldelegate.py:121
+#: ../lib/sources/paneldelegate.py:131
 #, python-format
 msgid "%s added to left panel"
 msgstr "%s ಅನ್ನು ಎಡ ಫಲಕಕ್ಕೆ ಸೇರಿಸಲಾಗಿದೆ"
 
-#: ../lib/sources/paneldelegate.py:123
+#: ../lib/sources/paneldelegate.py:133
 #, python-format
 msgid "%s added to right panel"
 msgstr "%s ಅನ್ನು ಬಲ ಫಲಕಕ್ಕೆ ಸೇರಿಸಲಾಗಿದೆ"
 
-#: ../lib/sources/paneldelegate.py:144
+#: ../lib/sources/paneldelegate.py:154
 #, python-format
 msgid "%s removed from top panel"
 msgstr "%s ಅನ್ನು ಮೇಲಿನ ಫಲಕದಿಂದ ತೆಗೆದು ಹಾಕಲಾಗಿದೆ"
 
-#: ../lib/sources/paneldelegate.py:146
+#: ../lib/sources/paneldelegate.py:156
 #, python-format
 msgid "%s removed from bottom panel"
 msgstr "%s ಅನ್ನು ಅಡಿ ಫಲಕದಿಂದ ತೆಗೆದು ಹಾಕಲಾಗಿದೆ"
 
-#: ../lib/sources/paneldelegate.py:148
+#: ../lib/sources/paneldelegate.py:158
 #, python-format
 msgid "%s removed from left panel"
 msgstr "%s ಅನ್ನು ಎಡ ಫಲಕದಿಂದ ತೆಗೆದು ಹಾಕಲಾಗಿದೆ"
 
-#: ../lib/sources/paneldelegate.py:150
+#: ../lib/sources/paneldelegate.py:160
 #, python-format
 msgid "%s removed from right panel"
 msgstr "%s ಅನ್ನು ಬಲ ಫಲಕದಿಂದ ತೆಗೆದು ಹಾಕಲಾಗಿದೆ"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:200
+#: ../lib/sources/paneldelegate.py:231
 msgid "Drawer"
 msgstr "ಡ್ರಾಯರ್"
 
-#: ../lib/sources/paneldelegate.py:202
+#: ../lib/sources/paneldelegate.py:233
 msgid "Main Menu"
 msgstr "ಮುಖ್ಯ ಮೆನು"
 
-#: ../lib/sources/paneldelegate.py:212
+#: ../lib/sources/paneldelegate.py:243
 #, python-format
 msgid "%s launcher"
 msgstr "%s ಆರಂಭಕ"
 
-#: ../lib/sources/paneldelegate.py:216
+#: ../lib/sources/paneldelegate.py:247
 msgid "Lock Screen button"
 msgstr "ತೆರೆ ಲಾಕ್ ಗುಂಡಿ"
 
-#: ../lib/sources/paneldelegate.py:218
+#: ../lib/sources/paneldelegate.py:249
 msgid "Logout button"
 msgstr "ನಿರ್ಗಮನ ಗುಂಡಿ"
 
-#: ../lib/sources/paneldelegate.py:220
+#: ../lib/sources/paneldelegate.py:251
 msgid "Run Application button"
 msgstr "ಅನ್ವಯವನ್ನು ಚಲಾಯಿಸುವ ಗುಂಡಿ"
 
-#: ../lib/sources/paneldelegate.py:222
+#: ../lib/sources/paneldelegate.py:253
 msgid "Search button"
 msgstr "ಹುಡುಕು ಗುಂಡಿ"
 
-#: ../lib/sources/paneldelegate.py:224
+#: ../lib/sources/paneldelegate.py:255
+#| msgid "Logout button"
+msgid "Force Quit button"
+msgstr "ಒತ್ತಾಯಪೂರ್ವಕ ನಿರ್ಗಮನದ ಗುಂಡಿ"
+
+#: ../lib/sources/paneldelegate.py:257
+#| msgid "Lock Screen button"
+msgid "Connect to Server button"
+msgstr "ಪರಿಚಾರಕ ಗುಂಡಿಗೆ ಸಂಪರ್ಕ ಸಾಧಿಸು"
+
+#: ../lib/sources/paneldelegate.py:259
+#| msgid "Logout button"
+msgid "Shutdown button"
+msgstr "ಸ್ಥಗಿತಗೊಳಿಸುವ ಗುಂಡಿ"
+
+#: ../lib/sources/paneldelegate.py:261
 msgid "Screenshot button"
 msgstr "ತೆರೆಚಿತ್ರ ತೆಗೆದುಕೊಳ್ಳುವ ಗುಂಡಿ"
 
-#: ../lib/sources/paneldelegate.py:226
+#: ../lib/sources/paneldelegate.py:264
+msgid "Unknown"
+msgstr "ಅಜ್ಞಾತ"
+
+#: ../lib/sources/paneldelegate.py:266
 msgid "Menu Bar"
 msgstr "ಮೆನು ಪಟ್ಟಿ"
 
-#: ../lib/sources/paneldelegate.py:470
+#: ../lib/sources/paneldelegate.py:503
 msgid "Panel File"
 msgstr "ಫಲಕ ಕಡತ"
 
@@ -1167,3 +1175,4 @@ msgid ""
 msgstr ""
 "ಬಳಕೆದಾರ ಹೆಸರು ಕಂಡುಬಂದಿಲ್ಲ: /etc/passwd ನಲ್ಲಿ ಹೊಂದಿಸಲಾಗಿಲ್ಲ ಹಾಗು ಪರಿಸರದಲ್ಲಿ $USER "
 "ಅನ್ನು ಹೊಂದಿಸಲಾಗಿಲ್ಲ"
+
