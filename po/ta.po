@@ -1,4 +1,4 @@
-# translation of sabayon.HEAD.ta.po to Tamil
+# translation of sabayon.master.ta.po to Tamil
 # translation of sabayon.HEAD.ta.po to
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
@@ -9,10 +9,10 @@
 # I. Felix <ifelix@redhat.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: sabayon.HEAD.ta\n"
+"Project-Id-Version: sabayon.master.ta\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-01-24 23:07+0000\n"
-"PO-Revision-Date: 2009-03-02 15:54+0530\n"
+"POT-Creation-Date: 2009-08-13 05:08+0000\n"
+"PO-Revision-Date: 2009-08-24 13:52+0530\n"
 "Last-Translator: I. Felix <ifelix@redhat.com>\n"
 "Language-Team: Tamil <fedora-trans-ta@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -20,13 +20,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\\n\n"
 "\n"
+"\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../admin-tool/aboutdialog.py:63
+#: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
 msgstr "பயனர்களுக்கு விவரக்குறிப்புகளை உருவாக்கும் தொகுக்கும் நிரல்"
 
-#: ../admin-tool/aboutdialog.py:66
+#: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
 msgstr "மொழிபெயர்ப்பாளர் சன்மானம்"
 
@@ -106,7 +107,7 @@ msgstr "கோப்புகள்"
 
 #: ../admin-tool/editorwindow.py:266
 #: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:229
+#: ../lib/sources/paneldelegate.py:269
 msgid "Panel"
 msgstr "பலகை"
 
@@ -156,7 +157,7 @@ msgstr "ஜோடி"
 msgid "Profile settings: %s"
 msgstr "விவரக்குறிப்பு அமைவுகள்: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:384
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:387
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "பெயர்"
@@ -301,7 +302,6 @@ msgid "Use anti-aliasing"
 msgstr "ஆன்டி அலையசிங்"
 
 #: ../admin-tool/lockdown/maindialog.py:87
-#| msgid "Disable _command line"
 msgid "Disable UI customization"
 msgstr "யூஐ ஐ தனிப்பயன் அமைத்தலை செயல்நீக்கு "
 
@@ -406,7 +406,6 @@ msgid "<b>Safe Protocols</b>"
 msgstr "<b>பாதுகாப்பான நெறிமுறைகள்</b>"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:29
-#| msgid "Default GConf settings"
 msgid "Default format for presentations:"
 msgstr "முன்வைப்புகளுக்கு முன்னிருப்பு அமைவுகள்:"
 
@@ -419,7 +418,6 @@ msgid "Default format for word processor:"
 msgstr "சொல் செயலிகளுக்கு முன்னிருப்பு அமைவுகள்:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:32
-#| msgid "Default GConf settings"
 msgid "Default icon size"
 msgstr "முன்னிருப்பு சின்ன அளவு"
 
@@ -469,7 +467,7 @@ msgstr "பயனர் இடைமுகம்"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:494
+#: ../admin-tool/profilesdialog.py:497
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -525,7 +523,9 @@ msgstr "ஒரு பெரும்பிழை நேர்ந்தது. �
 msgid ""
 "Sabayon will now exit.  There were some recoverable errors, and you can help "
 "us debug the problem by sending the log in %s to %s"
-msgstr "சபாயன் இப்போது வெளியேறும். சில மீட்கக்கூடிய  பிழை நேர்ந்தது. இதை சரி செய்ய நீங்கள் %s இல் உள்ள பதிவை %s க்கு அனுப்பி உதவலாம்"
+msgstr ""
+"சபாயன் இப்போது வெளியேறும். சில மீட்கக்கூடிய  பிழை நேர்ந்தது. இதை சரி செய்ய நீங்கள் %s இல் "
+"உள்ள பதிவை %s க்கு அனுப்பி உதவலாம்"
 
 #: ../admin-tool/sabayon-apply:99
 #, c-format
@@ -628,11 +628,6 @@ msgstr[0] "நீங்கள் சேமிக்காவிட்டால�
 msgstr[1] "நீங்கள் சேமிக்காவிட்டால் கடைசி %ld நிமிடங்களில் செய்த மாற்றங்களை நிரந்தரமாக இழக்க நேரும். "
 
 #: ../admin-tool/saveconfirm.py:71
-#| msgid ""
-#| "If you don't save, changes from the last hour will be permanently lost."
-#| msgid_plural ""
-#| "If you don't save, changes from the last %d hours will be permanently "
-#| "lost."
 msgid "If you don't save, changes from the last hour will be permanently lost."
 msgstr "நீங்கள் சேமிக்காவிட்டால் கடைசி மணியில் செய்த மாற்றங்களை நிரந்தரமாக இழக்க நேரும். "
 
@@ -653,11 +648,6 @@ msgstr[1] ""
 
 #: ../admin-tool/saveconfirm.py:81
 #, python-format
-#| msgid ""
-#| "If you don't save, changes from the last hour will be permanently lost."
-#| msgid_plural ""
-#| "If you don't save, changes from the last %d hours will be permanently "
-#| "lost."
 msgid "If you don't save, changes from the last %d hour will be permanently lost."
 msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
 msgstr[0] "நீங்கள் சேமிக்காவிட்டால் கடைசி %d  மணியில் செய்த மாற்றங்களை நிரந்தரமாக இழக்க நேரும். "
@@ -706,7 +696,9 @@ msgstr "%s இன் அமைவுகளை பூட்டு "
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
 "report this error now or try to continue editing the user profile."
-msgstr "பயனர் வரிவுரு '%s' ஐ பயன்படுத்துகையில் ஒரு மீட்கக்கூடிய பிழை நேர்ந்தது. நீங்கள் இதை அறிவிக்கலாம் அல்லது பயனர் வரிவுருவை தொடர்ந்து திருத்தலாம். "
+msgstr ""
+"பயனர் வரிவுரு '%s' ஐ பயன்படுத்துகையில் ஒரு மீட்கக்கூடிய பிழை நேர்ந்தது. நீங்கள் இதை "
+"அறிவிக்கலாம் அல்லது பயனர் வரிவுருவை தொடர்ந்து திருத்தலாம். "
 
 #: ../admin-tool/sessionwindow.py:337
 msgid "_Report this error"
@@ -730,17 +722,21 @@ msgid "Unable to find a free X display"
 msgstr "X displayஐ காண இயலவில்லை"
 
 #: ../lib/protosession.py:414
-msgid "Failed to start Xnest: timed out waiting for USR1 signal"
-msgstr "Xnestஐ துவக்க முடியவில்லை: நேரம் முடிந்தது USR1 சமிக்ஞைக்காக காத்திருக்கிறது"
+#| msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
+msgstr "Xephyrஐ துவக்க முடியவில்லை: நேரம் முடிந்தது USR1 சமிக்ஞைக்காக காத்திருக்கிறது"
 
 #: ../lib/protosession.py:416
-msgid "Failed to start Xnest: died during startup"
-msgstr "Xnestஐ துவக்க முடியவில்லை: தொடங்கும் போது செயலில் இல்லை"
+#| msgid "Failed to start Xnest: died during startup"
+msgid "Failed to start Xephyr: died during startup"
+msgstr "Xephyrஐ துவக்க முடியவில்லை:துவங்கும் போது செயலிழப்பு"
 
 #: ../lib/protosession.py:501
 #, python-format
 msgid "There was a recoverable error while applying the user profile from file '%s'."
-msgstr "பயனர் வரிவுருவை கோப்பு '%s' இலிருந்து பயன்படுத்துகையில் ஒரு மீட்கக்கூடிய பிழை நேர்ந்தது. "
+msgstr ""
+"பயனர் வரிவுருவை கோப்பு '%s' இலிருந்து பயன்படுத்துகையில் ஒரு மீட்கக்கூடிய பிழை "
+"நேர்ந்தது. "
 
 #: ../lib/protosession.py:510
 #, python-format
@@ -911,136 +907,154 @@ msgstr "மோசில்லா புத்தகக்குறி மாற�
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "மோசில்லா புத்தகக்குறி அடைவு மாற்றப்பட்டது '%s'"
 
-#: ../lib/sources/paneldelegate.py:55
+#: ../lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel '%s' added"
 msgstr "பலகை '%s' சேர்க்கப்பட்டது"
 
-#: ../lib/sources/paneldelegate.py:61
+#: ../lib/sources/paneldelegate.py:71
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "பலகை '%s' நீக்கப்பட்டது"
 
-#: ../lib/sources/paneldelegate.py:76
+#: ../lib/sources/paneldelegate.py:86
 #, python-format
 msgid "Applet %s added to top panel"
 msgstr "மேல் பலகத்துக்கு குறு நிரல் %s  சேர்க்கப்பட்டது"
 
-#: ../lib/sources/paneldelegate.py:78
+#: ../lib/sources/paneldelegate.py:88
 #, python-format
 msgid "Applet %s added to bottom panel"
 msgstr "கீழ் பலகத்துக்கு குறு நிரல் %s  சேர்க்கப்பட்டது"
 
-#: ../lib/sources/paneldelegate.py:80
+#: ../lib/sources/paneldelegate.py:90
 #, python-format
 msgid "Applet %s added to left panel"
 msgstr "இடது  பலகத்துக்கு குறு நிரல் %s  சேர்க்கப்பட்டது"
 
-#: ../lib/sources/paneldelegate.py:82
+#: ../lib/sources/paneldelegate.py:92
 #, python-format
 msgid "Applet %s added to right panel"
 msgstr "வலது பலகத்துக்கு குறு நிரல் %s  சேர்க்கப்பட்டது"
 
-#: ../lib/sources/paneldelegate.py:97
+#: ../lib/sources/paneldelegate.py:107
 #, python-format
 msgid "Applet %s removed from top panel"
 msgstr "மேல் பலகத்தில் இருந்து குறு நிரல் %s  நீக்கப்பட்டது"
 
-#: ../lib/sources/paneldelegate.py:99
+#: ../lib/sources/paneldelegate.py:109
 #, python-format
 msgid "Applet %s removed from bottom panel"
 msgstr "கீழ்  பலகத்தில் இருந்து குறு நிரல் %s  நீக்கப்பட்டது"
 
-#: ../lib/sources/paneldelegate.py:101
+#: ../lib/sources/paneldelegate.py:111
 #, python-format
 msgid "Applet %s removed from left panel"
 msgstr "இடது பலகத்தில் இருந்து குறு நிரல் %s  நீக்கப்பட்டது"
 
-#: ../lib/sources/paneldelegate.py:103
+#: ../lib/sources/paneldelegate.py:113
 #, python-format
 msgid "Applet %s removed from right panel"
 msgstr "வலது  பலகத்தில் இருந்து குறு நிரல் %s  நீக்கப்பட்டது"
 
-#: ../lib/sources/paneldelegate.py:117
+#: ../lib/sources/paneldelegate.py:127
 #, python-format
 msgid "%s added to top panel"
 msgstr "மேல் பலகத்துக்கு %s  சேர்க்கப்பட்டது"
 
-#: ../lib/sources/paneldelegate.py:119
+#: ../lib/sources/paneldelegate.py:129
 #, python-format
 msgid "%s added to bottom panel"
 msgstr "கீழ் பலகத்துக்கு %s  சேர்க்கப்பட்டது"
 
-#: ../lib/sources/paneldelegate.py:121
+#: ../lib/sources/paneldelegate.py:131
 #, python-format
 msgid "%s added to left panel"
 msgstr "இடது பலகத்துக்கு %s  சேர்க்கப்பட்டது"
 
-#: ../lib/sources/paneldelegate.py:123
+#: ../lib/sources/paneldelegate.py:133
 #, python-format
 msgid "%s added to right panel"
 msgstr "வலது பலகத்துக்கு %s  சேர்க்கப்பட்டது"
 
-#: ../lib/sources/paneldelegate.py:144
+#: ../lib/sources/paneldelegate.py:154
 #, python-format
 msgid "%s removed from top panel"
 msgstr "மேல்  பலகத்துக்கு %s  நீக்கப்பட்டது"
 
-#: ../lib/sources/paneldelegate.py:146
+#: ../lib/sources/paneldelegate.py:156
 #, python-format
 msgid "%s removed from bottom panel"
 msgstr "கீழ் பலகத்தில் இருந்து %s  நீக்கப்பட்டது"
 
-#: ../lib/sources/paneldelegate.py:148
+#: ../lib/sources/paneldelegate.py:158
 #, python-format
 msgid "%s removed from left panel"
 msgstr "இடது பலகத்தில் இருந்து %s  நீக்கப்பட்டது"
 
-#: ../lib/sources/paneldelegate.py:150
+#: ../lib/sources/paneldelegate.py:160
 #, python-format
 msgid "%s removed from right panel"
 msgstr "வலது பலகத்தில் இருந்து %s  நீக்கப்பட்டது"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:200
+#: ../lib/sources/paneldelegate.py:231
 msgid "Drawer"
 msgstr "இழுப்பறை"
 
-#: ../lib/sources/paneldelegate.py:202
+#: ../lib/sources/paneldelegate.py:233
 msgid "Main Menu"
 msgstr "முதன்மை பட்டி"
 
-#: ../lib/sources/paneldelegate.py:212
+#: ../lib/sources/paneldelegate.py:243
 #, python-format
 msgid "%s launcher"
 msgstr "%s துவக்கி"
 
-#: ../lib/sources/paneldelegate.py:216
+#: ../lib/sources/paneldelegate.py:247
 msgid "Lock Screen button"
 msgstr "பூட்டு திரை பொத்தான்"
 
-#: ../lib/sources/paneldelegate.py:218
+#: ../lib/sources/paneldelegate.py:249
 msgid "Logout button"
 msgstr "வெளியேறுதல் பொத்தான்"
 
-#: ../lib/sources/paneldelegate.py:220
-#| msgid "Applications menu"
+#: ../lib/sources/paneldelegate.py:251
 msgid "Run Application button"
 msgstr "பயன்பாடு இயக்கு பொத்தான்"
 
-#: ../lib/sources/paneldelegate.py:222
+#: ../lib/sources/paneldelegate.py:253
 msgid "Search button"
 msgstr "தேடு பொத்தான்"
 
-#: ../lib/sources/paneldelegate.py:224
+#: ../lib/sources/paneldelegate.py:255
+#| msgid "Logout button"
+msgid "Force Quit button"
+msgstr "கட்டாய வெளியேற்றுதல் பொத்தான்"
+
+#: ../lib/sources/paneldelegate.py:257
+#| msgid "Lock Screen button"
+msgid "Connect to Server button"
+msgstr "சேவையக பொத்தானுடன் இணை"
+
+#: ../lib/sources/paneldelegate.py:259
+#| msgid "Logout button"
+msgid "Shutdown button"
+msgstr "பணிநிறுத்தப் பொத்தான்"
+
+#: ../lib/sources/paneldelegate.py:261
 msgid "Screenshot button"
 msgstr "திரைவெட்டு பொத்தான்"
 
-#: ../lib/sources/paneldelegate.py:226
+#: ../lib/sources/paneldelegate.py:264
+msgid "Unknown"
+msgstr "தெரியாத"
+
+#: ../lib/sources/paneldelegate.py:266
 msgid "Menu Bar"
 msgstr "மெனு பட்டி"
 
-#: ../lib/sources/paneldelegate.py:470
+#: ../lib/sources/paneldelegate.py:503
 msgid "Panel File"
 msgstr "பலகை கோப்பு"
 
@@ -1092,13 +1106,11 @@ msgstr "வெற்றி!"
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
 #: ../lib/userdb.py:54
 #, python-format
-#| msgid "invalid type for setting %s in %s"
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "%(np)s ல் %(setting)s ஐ அமைப்பதில் செல்லுபடியாகாத வகை"
 
 #: ../lib/userdb.py:215
 #, python-format
-#| msgid "No search based specified for %s"
 msgid "No search base specified for %s"
 msgstr "%sக்கு தேடும் அடிப்படை குறிப்படவில்லை"
 
