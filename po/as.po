@@ -9,21 +9,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: as\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-01-24 23:07+0000\n"
-"PO-Revision-Date: 2009-03-09 16:28+0530\n"
+"POT-Creation-Date: 2009-08-13 05:08+0000\n"
+"PO-Revision-Date: 2009-08-26 14:27+0530\n"
 "Last-Translator: Amitakhya Phukan <aphukan@fedoraproject.org>\n"
-"Language-Team: Assamese <fedora-trans-as@redhat.com>\n"
+"Language-Team: Assamese <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1)\n"
-"X-Generator: Lokalize 0.3\n"
+"X-Generator: Lokalize 0.2\n"
 
-#: ../admin-tool/aboutdialog.py:63
+#: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
 msgstr "ব্যৱহাৰকৰোঁতাৰ পৰিলেখ নিৰ্মাণ আৰু সম্পাদনাৰ বাবে ব্যৱহৃত অনুপ্ৰয়োগ"
 
-#: ../admin-tool/aboutdialog.py:66
+#: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
 msgstr "অমিতাক্ষ ফুকন (aphukan@fedoraproject.org)"
 
@@ -103,7 +103,7 @@ msgstr "নথিপত্ৰ"
 
 #: ../admin-tool/editorwindow.py:266
 #: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:229
+#: ../lib/sources/paneldelegate.py:269
 msgid "Panel"
 msgstr "পেনেল"
 
@@ -153,7 +153,7 @@ msgstr "যোৰা"
 msgid "Profile settings: %s"
 msgstr "পৰিলেখৰ বৈশিষ্ট্য: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:384
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:387
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "নাম"
@@ -241,7 +241,6 @@ msgstr "তালিকা-বাৰ লুকুৱা হ'ব (_m)"
 #. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
 #. This can be used to disable this, for when you don't want people to know you created the document.
 #: ../admin-tool/lockdown/maindialog.py:70
-#| msgid "Remove personal info from documents when saving them"
 msgid "Remove personal information from documents when saving them"
 msgstr "সংৰক্ষণ কৰাৰ সময় আলেখ্যনৰ পৰা ব্যক্তিগত তথ্য আঁতৰুৱা হ'ব"
 
@@ -464,22 +463,24 @@ msgstr "ব্যৱহাৰকৰ্তা সংযোগমাধ্যম"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:494
+#: ../admin-tool/profilesdialog.py:497
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:77
 msgid "Your account does not have permissions to run the Desktop User Profiles tool"
-msgstr "ডেস্কটপ ব্যৱহাৰকৰ্তা পৰিলেখ ব্যৱস্থা সঞ্চালনৰ বাবে প্ৰযোজ্য অনুমতি আপোনাৰ হিচাপত উপস্থিত নাই"
+msgstr ""
+"ডেস্কটপ ব্যৱহাৰকৰ্তা পৰিলেখ ব্যৱস্থা সঞ্চালনৰ বাবে প্ৰযোজ্য অনুমতি আপোনাৰ হিচাপত "
+"উপস্থিত নাই"
 
 #: ../admin-tool/sabayon:78
 msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
 msgstr ""
-"এই অনুপ্ৰয়োগৰ দ্বাৰা প্ৰণালী নথিপত্ৰ পৰিবৰ্তনৰ সম্ভাবনাৰ ফলত এইটো সঞ্চালনৰ বাবে প্ৰশাসনিক অনুমতি "
-"আবশ্যক ।"
+"এই অনুপ্ৰয়োগৰ দ্বাৰা প্ৰণালী নথিপত্ৰ পৰিবৰ্তনৰ সম্ভাবনাৰ ফলত এইটো সঞ্চালনৰ বাবে "
+"প্ৰশাসনিক অনুমতি আবশ্যক ।"
 
 #: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
@@ -489,7 +490,9 @@ msgstr "ডেস্কটপ ব্যৱহাৰকৰ্তা পৰিল�
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
-msgstr "পৰিলেখ সম্পাদনাৰ অধিবেশন চলাসময়ত ডেস্কটপ ব্যৱহাৰকৰ্তা পৰিলেখ ব্যৱস্থা চলোৱা সম্ভব নহয়"
+msgstr ""
+"পৰিলেখ সম্পাদনাৰ অধিবেশন চলাসময়ত ডেস্কটপ ব্যৱহাৰকৰ্তা পৰিলেখ ব্যৱস্থা চলোৱা সম্ভব "
+"নহয়"
 
 #: ../admin-tool/sabayon:91
 #, c-format
@@ -503,15 +506,18 @@ msgid ""
 "Try again after creating the account (using, for example, the 'adduser' "
 "command)"
 msgstr ""
-"Sabayon-ৰ ক্ষেত্ৰত '%s' নামক এটা বিশেষ ব্যৱহাৰকৰ্তাৰ হিচাপ বৰ্তমান প্ৰণালীত উপস্তিত থকা আবশ্যক । "
-"হিচাপ নিৰ্মাণ কৰি (যেনে 'adduser' আদেশ প্ৰয়োগ কৰি) পুনৰায় প্ৰচেষ্টা কৰক"
+"Sabayon-ৰ ক্ষেত্ৰত '%s' নামক এটা বিশেষ ব্যৱহাৰকৰ্তাৰ হিচাপ বৰ্তমান প্ৰণালীত উপস্তিত "
+"থকা আবশ্যক । হিচাপ নিৰ্মাণ কৰি (যেনে 'adduser' আদেশ প্ৰয়োগ কৰি) পুনৰায় প্ৰচেষ্টা "
+"কৰক"
 
 #: ../admin-tool/sabayon:131
 #, c-format
 msgid ""
 "A fatal error has occurred.  You can help us fix the problem by sending the "
 "log in %s to %s"
-msgstr "গুৰুতৰ সমস্যা উৎপন্ন হৈছে । %s-ত উপস্থিত লগ, %s লৈ পঠিয়াই এই সমস্যা সমাধানেত সহায়তা কৰক ।"
+msgstr ""
+"গুৰুতৰ সমস্যা উৎপন্ন হৈছে । %s-ত উপস্থিত লগ, %s লৈ পঠিয়াই এই সমস্যা সমাধানেত "
+"সহায়তা কৰক ।"
 
 #: ../admin-tool/sabayon:145
 #, c-format
@@ -519,8 +525,8 @@ msgid ""
 "Sabayon will now exit.  There were some recoverable errors, and you can help "
 "us debug the problem by sending the log in %s to %s"
 msgstr ""
-"Sabayon বন্ধ কৰা হ'ব । কিছুমান সমাধান যোগ্য সমস্যা উৎপন্ন হৈছে আৰু  %s-ত উপস্থিত লগ, %s লৈ পঠিয়াই "
-"এই সমস্যা ডিবাগ কৰিবলৈ সহায়তা কৰক ।"
+"Sabayon বন্ধ কৰা হ'ব । কিছুমান সমাধান যোগ্য সমস্যা উৎপন্ন হৈছে আৰু  %s-ত উপস্থিত "
+"লগ, %s লৈ পঠিয়াই এই সমস্যা ডিবাগ কৰিবলৈ সহায়তা কৰক ।"
 
 #: ../admin-tool/sabayon-apply:99
 #, c-format
@@ -607,11 +613,11 @@ msgid_plural ""
 "If you don't save, changes from the last minute and %ld seconds will be "
 "permanently lost."
 msgstr[0] ""
-"সংৰক্ষণ কৰা ন'হ'লে যোৱা এক মিনিট আৰু %ld ছেকেণ্ডত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে আঁতৰুৱা "
-"যাব ।"
+"সংৰক্ষণ কৰা ন'হ'লে যোৱা এক মিনিট আৰু %ld ছেকেণ্ডত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে "
+"আঁতৰুৱা যাব ।"
 msgstr[1] ""
-"সংৰক্ষণ কৰা ন'হ'লে যোৱা এক মিনিট আৰু %ld ছেকেণ্ডত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে আঁতৰুৱা "
-"যাব ।"
+"সংৰক্ষণ কৰা ন'হ'লে যোৱা এক মিনিট আৰু %ld ছেকেণ্ডত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে "
+"আঁতৰুৱা যাব ।"
 
 #: ../admin-tool/saveconfirm.py:62
 #, python-format
@@ -635,9 +641,11 @@ msgid_plural ""
 "If you don't save, changes from the last hour and %d minutes will be "
 "permanently lost."
 msgstr[0] ""
-"সংৰক্ষণ কৰা ন'হ'লে যোৱা এক ঘন্টা আৰু %d মিনিটত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে আঁতৰুৱা যাব ।"
+"সংৰক্ষণ কৰা ন'হ'লে যোৱা এক ঘন্টা আৰু %d মিনিটত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে আঁতৰুৱা "
+"যাব ।"
 msgstr[1] ""
-"সংৰক্ষণ কৰা ন'হ'লে যোৱা এক ঘন্টা আৰু %d মিনিটত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে আঁতৰুৱা যাব ।"
+"সংৰক্ষণ কৰা ন'হ'লে যোৱা এক ঘন্টা আৰু %d মিনিটত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে আঁতৰুৱা "
+"যাব ।"
 
 #: ../admin-tool/saveconfirm.py:81
 #, python-format
@@ -690,9 +698,8 @@ msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
 "report this error now or try to continue editing the user profile."
 msgstr ""
-"'%s' ব্যৱহাৰকৰ্তাৰ পৰিলেখ প্ৰয়োগসময়ত এটা সমাধানযোগ্য সমস্থা উৎপন্ন হৈছে । এই সমস্যা সম্বন্ধে এই "
-"মুহূৰ্তে সূচিত কৰা যাব অথবা ব্যৱহাৰকৰ্তাৰ পৰিলেখ পৰিবৰ্তনৰ "
-"প্ৰচেষ্টা কৰক ।"
+"'%s' ব্যৱহাৰকৰ্তাৰ পৰিলেখ প্ৰয়োগসময়ত এটা সমাধানযোগ্য সমস্থা উৎপন্ন হৈছে । এই সমস্যা "
+"সম্বন্ধে এই মুহূৰ্তে সূচিত কৰা যাব অথবা ব্যৱহাৰকৰ্তাৰ পৰিলেখ পৰিবৰ্তনৰ প্ৰচেষ্টা কৰক ।"
 
 #: ../admin-tool/sessionwindow.py:337
 msgid "_Report this error"
@@ -716,12 +723,14 @@ msgid "Unable to find a free X display"
 msgstr "অব্যৱহৃত X প্ৰদৰ্শন পোৱা নাযায়"
 
 #: ../lib/protosession.py:414
-msgid "Failed to start Xnest: timed out waiting for USR1 signal"
-msgstr "Xnest আৰম্ভ কৰিবলৈ ব্যৰ্থ: USR1 signal ৰ অপেক্ষাত সময়সীমা অতিক্ৰান্ত হৈছে"
+#| msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
+msgstr "Xephyr আৰম্ভ কৰিবলৈ ব্যৰ্থ: USR1 signal ৰ অপেক্ষাত সময়সীমা অতিক্ৰান্ত হৈছে"
 
 #: ../lib/protosession.py:416
-msgid "Failed to start Xnest: died during startup"
-msgstr "Xnest আৰম্ভ কৰিবলৈ ব্যৰ্থ: আৰম্ভৰ সময়ত বন্ধ হৈ গৈছে"
+#| msgid "Failed to start Xnest: died during startup"
+msgid "Failed to start Xephyr: died during startup"
+msgstr "Xephyr আৰম্ভ কৰিবলৈ ব্যৰ্থ: আৰম্ভৰ সময়ত বন্ধ হৈ গৈছে"
 
 #: ../lib/protosession.py:501
 #, python-format
@@ -897,135 +906,154 @@ msgstr "Mozilla পত্ৰচিহ্ন পৰিবৰ্তিত হৈ�
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mozilla পত্ৰচিহ্ন ফোল্ডাৰ পৰিবৰ্তিত হৈছে'%s'"
 
-#: ../lib/sources/paneldelegate.py:55
+#: ../lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel '%s' added"
 msgstr "পেনেল '%s' যোগ কৰা হৈছে"
 
-#: ../lib/sources/paneldelegate.py:61
+#: ../lib/sources/paneldelegate.py:71
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "পেনেল '%s' আঁতৰুৱা হৈছে"
 
-#: ../lib/sources/paneldelegate.py:76
+#: ../lib/sources/paneldelegate.py:86
 #, python-format
 msgid "Applet %s added to top panel"
 msgstr "ওপৰৰ পেনেলত %s এপ্লেট যোগ কৰা হৈছে"
 
-#: ../lib/sources/paneldelegate.py:78
+#: ../lib/sources/paneldelegate.py:88
 #, python-format
 msgid "Applet %s added to bottom panel"
 msgstr "তলৰ পেনেলত %s এপ্লেট যোগ কৰা হৈছে"
 
-#: ../lib/sources/paneldelegate.py:80
+#: ../lib/sources/paneldelegate.py:90
 #, python-format
 msgid "Applet %s added to left panel"
 msgstr "বাওঁফালৰ পেনেলত %s এপ্লেট যোগ কৰা হৈছে"
 
-#: ../lib/sources/paneldelegate.py:82
+#: ../lib/sources/paneldelegate.py:92
 #, python-format
 msgid "Applet %s added to right panel"
 msgstr "সোঁফালৰ পেনেলত %s এপ্লেট যোগ কৰা হৈছে"
 
-#: ../lib/sources/paneldelegate.py:97
+#: ../lib/sources/paneldelegate.py:107
 #, python-format
 msgid "Applet %s removed from top panel"
 msgstr "ওপৰৰ পেনেলৰ পৰা %s এপ্লেট আঁতৰুৱা হৈছে"
 
-#: ../lib/sources/paneldelegate.py:99
+#: ../lib/sources/paneldelegate.py:109
 #, python-format
 msgid "Applet %s removed from bottom panel"
 msgstr "তলৰ পেনেলৰ পৰা %s এপ্লেট আঁতৰুৱা হৈছে"
 
-#: ../lib/sources/paneldelegate.py:101
+#: ../lib/sources/paneldelegate.py:111
 #, python-format
 msgid "Applet %s removed from left panel"
 msgstr "বাওঁফালৰ পেনেলৰ পৰা %s এপ্লেট আঁতৰুৱা হৈছে"
 
-#: ../lib/sources/paneldelegate.py:103
+#: ../lib/sources/paneldelegate.py:113
 #, python-format
 msgid "Applet %s removed from right panel"
 msgstr "সোঁফালৰ পেনেলৰ পৰা %s এপ্লেট আঁতৰুৱা হৈছে"
 
-#: ../lib/sources/paneldelegate.py:117
+#: ../lib/sources/paneldelegate.py:127
 #, python-format
 msgid "%s added to top panel"
 msgstr "ওপৰৰ পেনেলত %s যোগ কৰা হৈছে"
 
-#: ../lib/sources/paneldelegate.py:119
+#: ../lib/sources/paneldelegate.py:129
 #, python-format
 msgid "%s added to bottom panel"
 msgstr "তলৰ পেনেলত %s যোগ কৰা হৈছে"
 
-#: ../lib/sources/paneldelegate.py:121
+#: ../lib/sources/paneldelegate.py:131
 #, python-format
 msgid "%s added to left panel"
 msgstr "বাওঁফালৰ পেনেলত %s যোগ কৰা হৈছে"
 
-#: ../lib/sources/paneldelegate.py:123
+#: ../lib/sources/paneldelegate.py:133
 #, python-format
 msgid "%s added to right panel"
 msgstr "সোঁফালৰ পেনেলত %s যোগ কৰা হৈছে"
 
-#: ../lib/sources/paneldelegate.py:144
+#: ../lib/sources/paneldelegate.py:154
 #, python-format
 msgid "%s removed from top panel"
 msgstr "ওপৰৰ পেনেলৰ পৰা %s আঁতৰুৱা হৈছে"
 
-#: ../lib/sources/paneldelegate.py:146
+#: ../lib/sources/paneldelegate.py:156
 #, python-format
 msgid "%s removed from bottom panel"
 msgstr "তলৰ পেনেলৰ পৰা %s আঁতৰুৱা হৈছে"
 
-#: ../lib/sources/paneldelegate.py:148
+#: ../lib/sources/paneldelegate.py:158
 #, python-format
 msgid "%s removed from left panel"
 msgstr "বাওঁফালৰ পেনেলৰ পৰা %s আঁতৰুৱা হৈছে"
 
-#: ../lib/sources/paneldelegate.py:150
+#: ../lib/sources/paneldelegate.py:160
 #, python-format
 msgid "%s removed from right panel"
 msgstr "সোঁফালৰ পেনেলৰ পৰা %s আঁতৰুৱা হৈছে"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:200
+#: ../lib/sources/paneldelegate.py:231
 msgid "Drawer"
 msgstr "ড্ৰয়াৰ"
 
-#: ../lib/sources/paneldelegate.py:202
+#: ../lib/sources/paneldelegate.py:233
 msgid "Main Menu"
 msgstr "প্ৰধান তালিকা"
 
-#: ../lib/sources/paneldelegate.py:212
+#: ../lib/sources/paneldelegate.py:243
 #, python-format
 msgid "%s launcher"
 msgstr "%s লঞ্চাৰ"
 
-#: ../lib/sources/paneldelegate.py:216
+#: ../lib/sources/paneldelegate.py:247
 msgid "Lock Screen button"
 msgstr "পৰ্দা লক কৰাৰ বুটাম"
 
-#: ../lib/sources/paneldelegate.py:218
+#: ../lib/sources/paneldelegate.py:249
 msgid "Logout button"
 msgstr "লগ-আউট বুটাম"
 
-#: ../lib/sources/paneldelegate.py:220
+#: ../lib/sources/paneldelegate.py:251
 msgid "Run Application button"
 msgstr "অনুপ্ৰয়োগ সঞ্চালন বুটাম"
 
-#: ../lib/sources/paneldelegate.py:222
+#: ../lib/sources/paneldelegate.py:253
 msgid "Search button"
 msgstr "অনুসন্ধান বুটাম"
 
-#: ../lib/sources/paneldelegate.py:224
+#: ../lib/sources/paneldelegate.py:255
+#| msgid "Logout button"
+msgid "Force Quit button"
+msgstr "বলবৎভাবে বাতিল কৰা বুটাম"
+
+#: ../lib/sources/paneldelegate.py:257
+#| msgid "Lock Screen button"
+msgid "Connect to Server button"
+msgstr "সেৱকলৈ সংযোগ কৰাৰ বুটাম"
+
+#: ../lib/sources/paneldelegate.py:259
+#| msgid "Logout button"
+msgid "Shutdown button"
+msgstr "বন্ধ কৰাৰ বুটাম"
+
+#: ../lib/sources/paneldelegate.py:261
 msgid "Screenshot button"
 msgstr "পৰ্দাৰ ছবিৰ বুটাম"
 
-#: ../lib/sources/paneldelegate.py:226
+#: ../lib/sources/paneldelegate.py:264
+msgid "Unknown"
+msgstr "অজ্ঞাত"
+
+#: ../lib/sources/paneldelegate.py:266
 msgid "Menu Bar"
 msgstr "তালিকা-বাৰ"
 
-#: ../lib/sources/paneldelegate.py:470
+#: ../lib/sources/paneldelegate.py:503
 msgid "Panel File"
 msgstr "পেনেল নথিপত্ৰ"
 
@@ -1080,8 +1108,8 @@ msgstr "সফল!"
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "%(setting)s, %(np)s-ত নিৰ্ধাৰণৰ বাবে বৈধ ধৰন নহয়"
 
-#: ../lib/userdb.py:215, python-format
-#| msgid "No search based specified for %s"
+#: ../lib/userdb.py:215
+#, python-format
 msgid "No search base specified for %s"
 msgstr "%s ৰ বাবে অনুসন্ধানৰ স্থান উল্লিখিত হোৱা নাই"
 
@@ -1137,14 +1165,14 @@ msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"ব্যক্তিগত পঞ্জিকা পোৱা নাযায়: /etc/passwd নথিপত্ৰত উল্লিখিত হোৱা নাই আৰু পৰিবেশৰ $HOME চলকৰ মান "
-"অনুপস্থিত"
+"ব্যক্তিগত পঞ্জিকা পোৱা নাযায়: /etc/passwd নথিপত্ৰত উল্লিখিত হোৱা নাই আৰু পৰিবেশৰ "
+"$HOME চলকৰ মান অনুপস্থিত"
 
 #: ../lib/util.py:106
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr ""
-"ব্যৱহাৰকৰ্তাৰ নাম পোৱা নাযায়: /etc/passwd নথিপত্ৰত উল্লিখিত হোৱা নাই আৰু পৰিবেশৰ $USER চলকৰ মান "
-"অনুপস্থিত"
+"ব্যৱহাৰকৰ্তাৰ নাম পোৱা নাযায়: /etc/passwd নথিপত্ৰত উল্লিখিত হোৱা নাই আৰু পৰিবেশৰ "
+"$USER চলকৰ মান অনুপস্থিত"
 
