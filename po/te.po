@@ -1,4 +1,4 @@
-# translation of sabayon.HEAD.te.po to Telugu
+# translation of sabayon.master.te.po to Telugu
 # Telugu translation of sabayon.
 # Copyright (C) 2007 Swecha Telugu Localisation Team <localisation@swecha.org>.
 # This file is distributed under the same license as the sabayon package.
@@ -7,10 +7,10 @@
 # Krishna Babu K <kkrothap@redhat.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: sabayon.HEAD.te\n"
+"Project-Id-Version: sabayon.master.te\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-03-11 14:33+0000\n"
-"PO-Revision-Date: 2009-04-09 20:06+0530\n"
+"POT-Creation-Date: 2009-08-27 20:51+0000\n"
+"PO-Revision-Date: 2009-08-31 19:55+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,13 +18,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
 "\n"
+"\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../admin-tool/aboutdialog.py:63
+#: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
 msgstr "వినియోగదారుల కొరకు ప్రొఫైల్సు సరికూర్చుటకు మరియు ఏర్పరుచుటకు ప్రోగ్రామ్"
 
-#: ../admin-tool/aboutdialog.py:66
+#: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
 msgstr "Pramod <pramodfsf@gmail.com>"
 
@@ -104,7 +105,7 @@ msgstr "దస్త్రాలు"
 
 #: ../admin-tool/editorwindow.py:266
 #: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:229
+#: ../lib/sources/paneldelegate.py:269
 msgid "Panel"
 msgstr "ప్యానల్"
 
@@ -154,7 +155,7 @@ msgstr "జత"
 msgid "Profile settings: %s"
 msgstr "ప్రొఫైల్ అమరికలు: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:385
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:387
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "పేరు"
@@ -242,32 +243,26 @@ msgstr "జాబితాల పట్టీని దాయుము (_m)"
 #. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
 #. This can be used to disable this, for when you don't want people to know you created the document.
 #: ../admin-tool/lockdown/maindialog.py:70
-#| msgid "Remove personal info from doc. on save"
 msgid "Remove personal information from documents when saving them"
 msgstr "పత్రములను దాయుచున్నప్పుడు వాటినుండి వ్యక్తిగత సమాచారమును తీసివేయుము"
 
 #: ../admin-tool/lockdown/maindialog.py:71
-#| msgid "Warn if macro prints"
 msgid "Warn if macro tries to create a PDF"
 msgstr "మాక్రో అనునది PDF సృష్టించుటకు ప్రయత్నిస్తుంటే హెచ్చరించుము"
 
 #: ../admin-tool/lockdown/maindialog.py:72
-#| msgid "Warn if macro prints"
 msgid "Warn if macro tries to print a document"
 msgstr "మాక్రో పత్రమును ముద్రించుటకు ప్రయత్నిస్తుంటే హెచ్చరించుము"
 
 #: ../admin-tool/lockdown/maindialog.py:73
-#| msgid "Warn if macro prints"
 msgid "Warn if macro tries to save a document"
 msgstr "మాక్రో వొక పత్రమును దాయుటకు ప్రయత్నిస్తుంటే హెచ్చరించుము"
 
 #: ../admin-tool/lockdown/maindialog.py:74
-#| msgid "Warn if macro prints"
 msgid "Warn if macro tries to sign a document"
 msgstr "మాక్రో వొక పత్రమును సంతకము చేయుటకు ప్రయత్నిస్తుంటే హెచ్చరించుము"
 
 #: ../admin-tool/lockdown/maindialog.py:75
-#| msgid "Recommend password on save"
 msgid "Recommend password when saving a document"
 msgstr "పత్రమును దాయుచున్నప్పుడు సంకేతపదమును సిఫార్సు చేయుము"
 
@@ -281,7 +276,6 @@ msgid "Printing should mark the document as modified"
 msgstr "పత్రమును సవరించినట్లు ముద్రణ గుర్తుంచవలెను"
 
 #: ../admin-tool/lockdown/maindialog.py:80
-#| msgid "Use system file chooser"
 msgid "Use system's file dialog"
 msgstr "సిస్టముయొక్క దస్త్ర డైలాగును వుపయోగించుము"
 
@@ -454,7 +448,6 @@ msgid "Number of undo steps:"
 msgstr "చిసినవి తిరిగివుంచు అంచెల సంఖ్య:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:40
-#| msgid "OpenOffice"
 msgid "OpenOffice.org"
 msgstr "OpenOffice.org"
 
@@ -472,7 +465,7 @@ msgstr "వినియోగదారు సంవిధానం"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:495
+#: ../admin-tool/profilesdialog.py:497
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -486,8 +479,8 @@ msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
 msgstr ""
-"ఈ ప్రోగ్రామును నడుపుటకు నిర్వహణాధికారి స్థాయి అనుమతులు కావాలి యెంచేతంటే యిది "
-"సిస్టమ్ దస్త్రములను మార్చగలదు."
+"ఈ ప్రోగ్రామును నడుపుటకు నిర్వహణాధికారి స్థాయి అనుమతులు కావాలి యెంచేతంటే యిది సిస్టమ్ దస్త్రములను "
+"మార్చగలదు."
 
 #: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
@@ -497,9 +490,7 @@ msgstr "డెస్కుటాపు వినియోగదారి ప్�
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
-msgstr ""
-"మీరు ప్రొఫైల్ సరికూర్చు విభాగము(సెషన్) లోపలినుండే డెస్కుటాపు వినియోగదారి ప్రొఫైల్స్ సాధనమును "
-"నడుపలేక పోవచ్చు"
+msgstr "మీరు ప్రొఫైల్ సరికూర్చు విభాగము(సెషన్) లోపలినుండే డెస్కుటాపు వినియోగదారి ప్రొఫైల్స్ సాధనమును నడుపలేక పోవచ్చు"
 
 #: ../admin-tool/sabayon:91
 #, c-format
@@ -513,8 +504,8 @@ msgid ""
 "Try again after creating the account (using, for example, the 'adduser' "
 "command)"
 msgstr ""
-"Sabyonకు ప్రత్యేక వినియోగదారి ఖాతా '%s' ఈ కంప్యూటర్ నందు కావాలి.ఖాతా సృష్టించిన తర్వాత "
-"(వుదాహరణకు, 'adduser' ఆదేశమును వుపయోగించి) తిరిగి ప్రయత్నించండి"
+"Sabyonకు ప్రత్యేక వినియోగదారి ఖాతా '%s' ఈ కంప్యూటర్ నందు కావాలి.ఖాతా సృష్టించిన తర్వాత (వుదాహరణకు, "
+"'adduser' ఆదేశమును వుపయోగించి) తిరిగి ప్రయత్నించండి"
 
 #: ../admin-tool/sabayon:131
 #, c-format
@@ -522,8 +513,8 @@ msgid ""
 "A fatal error has occurred.  You can help us fix the problem by sending the "
 "log in %s to %s"
 msgstr ""
-"ఒక ప్రమాదకర దోషము సంభవించింది.  లాగ్ యిన్ %s ను %sకు పంపుటద్వారా మీరు ఈ "
-"సమస్య పరిష్కరించుటలో మాకు సహాయపడగలరు."
+"ఒక ప్రమాదకర దోషము సంభవించింది.  లాగ్ యిన్ %s ను %sకు పంపుటద్వారా మీరు ఈ సమస్య పరిష్కరించుటలో "
+"మాకు సహాయపడగలరు."
 
 #: ../admin-tool/sabayon:145
 #, c-format
@@ -531,9 +522,8 @@ msgid ""
 "Sabayon will now exit.  There were some recoverable errors, and you can help "
 "us debug the problem by sending the log in %s to %s"
 msgstr ""
-"Sabayon యిప్పుడు నిష్క్రమించును.  అక్కడ కొన్ని కోలుకొనగల దోషములు వున్నాయి, మరియు "
-"లాగ్ యిన్ %s ను %sకు పంపుటద్వారా మీరు ఈ సమస్యను డీబగ్ చేయుటలో మాకు "
-"సహాయపడగలరు."
+"Sabayon యిప్పుడు నిష్క్రమించును.  అక్కడ కొన్ని కోలుకొనగల దోషములు వున్నాయి, మరియు లాగ్ యిన్ %s ను %"
+"sకు పంపుటద్వారా మీరు ఈ సమస్యను డీబగ్ చేయుటలో మాకు సహాయపడగలరు."
 
 #: ../admin-tool/sabayon-apply:99
 #, c-format
@@ -697,9 +687,8 @@ msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
 "report this error now or try to continue editing the user profile."
 msgstr ""
-"వినియోగదారి ప్రొఫైల్ '%s' ఆపాదించుచున్నప్పుడు అక్కడ కొలుకొనగల దోషము వుంది.  మీరు "
-"ఈ దోషమును యిప్పుడు నివేదించగలరు లేదా వినియోగదారి ప్రొఫైల్‌ను సరికూర్చుట ద్వారా "
-"తిరిగికొనసాగించుటకు ప్రయత్నించుము."
+"వినియోగదారి ప్రొఫైల్ '%s' ఆపాదించుచున్నప్పుడు అక్కడ కొలుకొనగల దోషము వుంది.  మీరు ఈ దోషమును "
+"యిప్పుడు నివేదించగలరు లేదా వినియోగదారి ప్రొఫైల్‌ను సరికూర్చుట ద్వారా తిరిగికొనసాగించుటకు ప్రయత్నించుము."
 
 #: ../admin-tool/sessionwindow.py:337
 msgid "_Report this error"
@@ -718,24 +707,34 @@ msgstr "ప్రొఫైల్ %s కొరకు వినియోగదా�
 msgid "Use This Profile"
 msgstr "ఈ స్థూల వివరాన్ని వాడుము"
 
-#: ../lib/protosession.py:147
+#: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
 msgstr "ఉచిత X ప్రదర్శనను కనుగొనలేక పోయింది"
 
-#: ../lib/protosession.py:414
-msgid "Failed to start Xnest: timed out waiting for USR1 signal"
-msgstr "Xnest ప్రారంభించుటకు విఫలమైంది: సమయం ముగిసినది USR1 సంకేతము కొరకు వేచివుంది"
+#: ../lib/protosession.py:377
+#| msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
+msgstr "Xephyr ప్రారంభించుటకు విఫలమైంది: USR1 సంజ్ఞ కొరకు వేచివుండుటలో సమయం దాటినది"
 
-#: ../lib/protosession.py:416
-msgid "Failed to start Xnest: died during startup"
-msgstr "Xnest ప్రారంభించుట కొరకు విఫలమైంది: ప్రారంభమునందు అంతమైంది"
+#: ../lib/protosession.py:379
+#| msgid "Failed to start Xnest: died during startup"
+msgid "Failed to start Xephyr: died during startup"
+msgstr "Xephyr ప్రారంభించుటకు విఫలమైంది: ప్రారంభమునప్పుడు అంతమైంది"
 
-#: ../lib/protosession.py:501
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:470
 #, python-format
 msgid "There was a recoverable error while applying the user profile from file '%s'."
 msgstr "దస్త్రము '%s'నుం‍డి వినియోగదారి ప్రొఫైల్ ఆపాదిస్తున్నప్పుడు అక్కడ కొలుకొనగల దోషము వుంది."
 
-#: ../lib/protosession.py:510
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (FATAL) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:479
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "'%s' నుండి వినియోగదారి ప్రొఫైల్ ఆపాదించుచున్నప్పుడు అక్కడ వొక ప్రమాదకర దోషము వుంది."
@@ -855,185 +854,203 @@ msgstr "మహాతల అన్వేషి గుర్తులు"
 msgid "Web browser profile list"
 msgstr "మహాతల అన్వేషి స్థూల వివరాల జాబితా"
 
-#: ../lib/sources/mozillasource.py:522
+#: ../lib/sources/mozillasource.py:520
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "దస్త్రము కనుగొనబడలేదు (%s)"
 
-#: ../lib/sources/mozillasource.py:873
+#: ../lib/sources/mozillasource.py:869
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "భాగము %(section)s నందు నకిలీ నామము(%(name)s)"
 
-#: ../lib/sources/mozillasource.py:882
+#: ../lib/sources/mozillasource.py:878
 #, python-format
 msgid "redundant default in section %s"
 msgstr "భాగము %sనందు అప్రమేయంగా ఆవృతం"
 
-#: ../lib/sources/mozillasource.py:899
+#: ../lib/sources/mozillasource.py:895
 msgid "no default profile"
 msgstr "ఎటువంటి స్థూల వివరం లేదు"
 
-#: ../lib/sources/mozillasource.py:954
+#: ../lib/sources/mozillasource.py:950
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "మొజిల్లా ఇష్టాంశము సృష్టించబడింది '%s' -> '%s'"
 
-#: ../lib/sources/mozillasource.py:956
+#: ../lib/sources/mozillasource.py:952
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "మొజిల్లా ఇష్టాంశము ఫోల్డర్ సృష్టించబడింది '%s'"
 
-#: ../lib/sources/mozillasource.py:959
+#: ../lib/sources/mozillasource.py:955
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "మొజిల్లా ఇష్టాంశము తొలగించబడింది '%s'"
 
-#: ../lib/sources/mozillasource.py:961
+#: ../lib/sources/mozillasource.py:957
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "మొజిల్లా ఇష్టాంశము ఫోల్డర్ తొలగించబడింది '%s'"
 
-#: ../lib/sources/mozillasource.py:964
+#: ../lib/sources/mozillasource.py:960
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "మొజిల్లా ఇష్టాంశము మార్చబడింది '%s' '%s'"
 
-#: ../lib/sources/mozillasource.py:966
+#: ../lib/sources/mozillasource.py:962
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "మొజిల్లా ఇష్టాంశము ఫోల్డర్ మార్చబడింది '%s'"
 
-#: ../lib/sources/paneldelegate.py:55
+#: ../lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel '%s' added"
 msgstr "ప్యానల్ '%s' జతచేయుబడింది"
 
-#: ../lib/sources/paneldelegate.py:61
+#: ../lib/sources/paneldelegate.py:71
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "ప్యానల్ '%s' తీసివేయబడింది"
 
-#: ../lib/sources/paneldelegate.py:76
+#: ../lib/sources/paneldelegate.py:86
 #, python-format
 msgid "Applet %s added to top panel"
 msgstr "ఆప్లెట్ %s అనునది పై ప్యానల్‌కు జతచేయబడింది"
 
-#: ../lib/sources/paneldelegate.py:78
+#: ../lib/sources/paneldelegate.py:88
 #, python-format
 msgid "Applet %s added to bottom panel"
 msgstr "ఆప్లెట్ %s క్రింది ప్యానల్‌కు జతచేయబడింది"
 
-#: ../lib/sources/paneldelegate.py:80
+#: ../lib/sources/paneldelegate.py:90
 #, python-format
 msgid "Applet %s added to left panel"
 msgstr "ఆప్లెట్ %s ఎడమ ప్యానల్‌కు జతచేయబడింది"
 
-#: ../lib/sources/paneldelegate.py:82
+#: ../lib/sources/paneldelegate.py:92
 #, python-format
 msgid "Applet %s added to right panel"
 msgstr "ఆప్లెట్ %s కుడి ప్యానల్‌కు జతచేయబడింది"
 
-#: ../lib/sources/paneldelegate.py:97
+#: ../lib/sources/paneldelegate.py:107
 #, python-format
 msgid "Applet %s removed from top panel"
 msgstr "ఆప్లెట్ %s పై ప్యానల్‌నుండి తీసివేయబడింది"
 
-#: ../lib/sources/paneldelegate.py:99
+#: ../lib/sources/paneldelegate.py:109
 #, python-format
 msgid "Applet %s removed from bottom panel"
 msgstr "ఆప్లెట్ %s క్రింది ప్యానల్ నుండి తీసివేయబడింది"
 
-#: ../lib/sources/paneldelegate.py:101
+#: ../lib/sources/paneldelegate.py:111
 #, python-format
 msgid "Applet %s removed from left panel"
 msgstr "ఆప్లెట్ %s ఎడమ ప్యానల్ నుండి తీసివేయబడింది"
 
-#: ../lib/sources/paneldelegate.py:103
+#: ../lib/sources/paneldelegate.py:113
 #, python-format
 msgid "Applet %s removed from right panel"
 msgstr "ఆప్లెట్ %s కుడి ప్యానల్ నుండి తీసివేయబడింది"
 
-#: ../lib/sources/paneldelegate.py:117
+#: ../lib/sources/paneldelegate.py:127
 #, python-format
 msgid "%s added to top panel"
 msgstr "%s పై ప్యానల్‌కు జతచేయబడింది"
 
-#: ../lib/sources/paneldelegate.py:119
+#: ../lib/sources/paneldelegate.py:129
 #, python-format
 msgid "%s added to bottom panel"
 msgstr "%s క్రింది ప్యానల్‌కు జతచేయబడింది"
 
-#: ../lib/sources/paneldelegate.py:121
+#: ../lib/sources/paneldelegate.py:131
 #, python-format
 msgid "%s added to left panel"
 msgstr "%s ఎడమ ప్యానల్‌కు జతచేయబడింది"
 
-#: ../lib/sources/paneldelegate.py:123
+#: ../lib/sources/paneldelegate.py:133
 #, python-format
 msgid "%s added to right panel"
 msgstr "%s కుడి ప్యానల్‌కు జతచేయబడింది"
 
-#: ../lib/sources/paneldelegate.py:144
+#: ../lib/sources/paneldelegate.py:154
 #, python-format
 msgid "%s removed from top panel"
 msgstr "%s పై ప్యానల్ నుండి తీసివేయబడింది"
 
-#: ../lib/sources/paneldelegate.py:146
+#: ../lib/sources/paneldelegate.py:156
 #, python-format
 msgid "%s removed from bottom panel"
 msgstr "%s క్రింది ప్యానల్ నుండి తీసివేయబడింది"
 
-#: ../lib/sources/paneldelegate.py:148
+#: ../lib/sources/paneldelegate.py:158
 #, python-format
 msgid "%s removed from left panel"
 msgstr "%s ఎడమ ప్యానల్ నుండి తీసివేయబడింది"
 
-#: ../lib/sources/paneldelegate.py:150
+#: ../lib/sources/paneldelegate.py:160
 #, python-format
 msgid "%s removed from right panel"
 msgstr "%s కుడి ప్యానల్ నుండి తీసివేయబడింది"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:200
+#: ../lib/sources/paneldelegate.py:231
 msgid "Drawer"
 msgstr "సోకుసె"
 
-#: ../lib/sources/paneldelegate.py:202
+#: ../lib/sources/paneldelegate.py:233
 msgid "Main Menu"
 msgstr "ప్రధాన జాబితా"
 
-#: ../lib/sources/paneldelegate.py:212
+#: ../lib/sources/paneldelegate.py:243
 #, python-format
 msgid "%s launcher"
 msgstr "%s ఆరంభకి"
 
-#: ../lib/sources/paneldelegate.py:216
+#: ../lib/sources/paneldelegate.py:247
 msgid "Lock Screen button"
 msgstr "తెర బొత్తానికి తాళంవేయు"
 
-#: ../lib/sources/paneldelegate.py:218
+#: ../lib/sources/paneldelegate.py:249
 msgid "Logout button"
 msgstr "నిష్ర్కమణ బొత్తం"
 
-#: ../lib/sources/paneldelegate.py:220
-#| msgid "Run Appliction button"
+#: ../lib/sources/paneldelegate.py:251
 msgid "Run Application button"
 msgstr "అనువర్తనపు బటన్‌ను నడుపుము"
 
-#: ../lib/sources/paneldelegate.py:222
+#: ../lib/sources/paneldelegate.py:253
 msgid "Search button"
 msgstr "వెతుకు బొత్తం"
 
-#: ../lib/sources/paneldelegate.py:224
+#: ../lib/sources/paneldelegate.py:255
+#| msgid "Logout button"
+msgid "Force Quit button"
+msgstr "బలవంతపు నిష్క్రమణ బటన్"
+
+#: ../lib/sources/paneldelegate.py:257
+#| msgid "Lock Screen button"
+msgid "Connect to Server button"
+msgstr "సేవిక బటన్‌కు అనుసంధానమవ్వు"
+
+#: ../lib/sources/paneldelegate.py:259
+#| msgid "Logout button"
+msgid "Shutdown button"
+msgstr "మూసివేత బటన్"
+
+#: ../lib/sources/paneldelegate.py:261
 msgid "Screenshot button"
 msgstr "తెర ఛాయాచిత్ర బొత్తం"
 
-#: ../lib/sources/paneldelegate.py:226
+#: ../lib/sources/paneldelegate.py:264
+msgid "Unknown"
+msgstr "తెలియని"
+
+#: ../lib/sources/paneldelegate.py:266
 msgid "Menu Bar"
 msgstr "జాబితా పట్టీ"
 
-#: ../lib/sources/paneldelegate.py:470
+#: ../lib/sources/paneldelegate.py:503
 msgid "Panel File"
 msgstr "ప్యానల్ దస్త్రం "
 
@@ -1151,6 +1168,6 @@ msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr ""
-"వినియోగదారినామము కనబడలేదు: /etc/passwd నందు అమర్చలేదు మరియు $USER కొరకు "
-"ఎన్విరాన్మెంటునందు ఏ విలువ లేదు"
+"వినియోగదారినామము కనబడలేదు: /etc/passwd నందు అమర్చలేదు మరియు $USER కొరకు ఎన్విరాన్మెంటునందు ఏ "
+"విలువ లేదు"
 
