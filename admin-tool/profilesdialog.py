@@ -354,6 +354,10 @@ class ProfilesDialog:
         self.__fix_button_align (self.users_button)
         self.users_button.connect ("clicked", self.__users_button_clicked)
 
+        self.groups_button = self.xml.get_widget ("groups_button")
+        self.__fix_button_align (self.groups_button)
+        self.groups_button.connect ("clicked", self.__groups_button_clicked)
+
         self.help_button = self.xml.get_widget ("help_button")
         self.help_button.hide ()
 
@@ -432,6 +436,12 @@ class ProfilesDialog:
         profile_name = self.__get_selected_profile ()
         if profile_name:
             usersdialog.UsersDialog (profile_name, self.dialog)
+
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
+    def __groups_button_clicked (self, button):
+        profile_name = self.__get_selected_profile ()
+        if profile_name:
+            groupsdialog.GroupsDialog (profile_name, self.dialog)
 
     def __delete_currently_selected (self):
         (model, selected) = self.profiles_list.get_selection ().get_selected ()

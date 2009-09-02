@@ -439,7 +439,7 @@ class GroupDatabase:
         except:
             raise GroupDatabaseException(_("Failed to get the group list"))
 
-        for group in groups():
+        for group in groups:
             try:
                 # remove non-groups
                 if group[2] < 500:
