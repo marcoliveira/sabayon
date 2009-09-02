@@ -284,7 +284,7 @@ class ProfileStorage:
                     os.makedirs (dest_dir)
 
                 # It sucks that we lose file permissions, mtime etc. with ZIP
-                file (dest_path, "w").write (zip.read (f))
+                zip.extract(f, dir)
 
         def unzip_foreach (path, is_directory, data):
             (zip, temp_path) = data
@@ -302,7 +302,7 @@ class ProfileStorage:
                     os.makedirs (dest_dir)
 
                 # It sucks that we lose file permissions, mtime etc. with ZIP
-                file (abs_path, "w").write (zip.read (path))
+                zip.extract(path, temp_path)
 
         self.__foreach_all (unzip_foreach, (self.zip, self.temp_path))
 
