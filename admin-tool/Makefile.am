@@ -8,6 +8,7 @@ PYTHON_FILES =				\
 	gconfviewer.py			\
 	fileviewer.py			\
 	usersdialog.py			\
+	groupssdialog.py		\
 	sessionwindow.py		\
 	sessionwidget.py		\
 	lockdownappliersabayon.py	\

@@ -28,8 +28,10 @@ import gtk.glade
 import storage
 import editorwindow
 import usersdialog
+import groupsdialog
 import util
 import userdb
+import groupdb
 import protosession
 import debuglog
 import errors
