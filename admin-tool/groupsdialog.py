@@ -20,7 +20,7 @@ import os.path
 import pwd
 import gtk
 import gtk.glade
-import groupdb
+import systemdb
 import errors
 import debuglog
 
@@ -44,7 +44,7 @@ class GroupsModel (gtk.ListStore):
 class GroupsDialog:
     def __init__ (self, profile, parent):
         self.profile = profile
-        self.groupdb = groupdb.get_database ()
+        self.groupdb = systemdb.get_group_database ()
 
         apply_to_all = self.groupdb.get_default_profile (False) == profile
         

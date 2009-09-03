@@ -19,6 +19,7 @@
 import sys
 import string
 import pwd
+import grp
 import os
 import libxml2
 import config
@@ -29,6 +30,9 @@ import ldap
 import socket
 import debuglog
 
+#
+# Default empty config.
+#
 defaultConf="""<profiles>
   <default profile=""/>
 </profiles>"""
@@ -72,10 +76,10 @@ def expand_string (string, attrs):
     return res
 
 
-class UserDatabaseException (Exception):
+class SystemDatabaseException (Exception):
     pass
 
-class UserDatabase:
+class SystemDatabase(object):
     """An encapsulation of the database which maintains an
     association between users and profiles.
 
@@ -89,19 +93,20 @@ class UserDatabase:
     an absolute path or a http/file URL.
     """
     def __init__ (self, db_file = None):
-        """Create a UserDatabase object.
+        """Create a SystemDatabase object.
 
-        @db_file: an (optional) path which specifes the location
-        of the database file. If not specified, the default
-        location of /etc/desktop-profiles/users.xml is used.
+        @db_file: a mandatory path which specifes the location
+        of the database file. If only a file is specified, the
+        directory /etc/desktop-profiles is used.
         """
         if db_file is None:
-            file = os.path.join (config.PROFILESDIR, "users.xml")
+            raise SystemDatabaseException(_("No database file provided"))
         elif db_file[0] != '/':
             file = os.path.join (config.PROFILESDIR, db_file)
         else:
             file = db_file
-        self.file = file;
+        self.file = file
+        self.xmlquery = None
         self.modified = 0
         dprint("New UserDatabase(%s) object\n" % self.file)
 
@@ -117,7 +122,7 @@ class UserDatabase:
         if self.doc == None:
             self.doc = libxml2.readMemory(defaultConf, len(defaultConf),
                                           None, None,
-                                          libxml2.XML_PARSE_NOBLANKS);
+                                          libxml2.XML_PARSE_NOBLANKS)
 
     def __del__ (self):
         if self.doc != None:
@@ -143,7 +148,7 @@ class UserDatabase:
             try:
                 base = node.getBase(None)
                 if base != None and base != "" and \
-                   base != os.path.join (config.PROFILESDIR, "users.xml"):
+                   base != self.file:
                     # URI composition from the base
                     ret = libxml2.buildURI(profile, base)
                     if ret[0] == '/':
@@ -277,8 +282,8 @@ class UserDatabase:
         
         return self.__profile_name_to_location (profile, default)
 
-    def get_profile (self, username, profile_location = True, ignore_default = False):
-        """Look up the profile for a given username.
+    def gen_get_profile (self, searchterm, replace, profile_location = True, ignore_default = False):
+        """Look up the profile for a given searchterm.
 
         @username: the user whose profile location should be
         returned.
@@ -293,10 +298,10 @@ class UserDatabase:
         @profile_location is False.
         """
         user = None
-        profile = self.__ldap_query ("profilemap", {"u":username, "h":socket.getfqdn()})
+        profile = self.__ldap_query ("profilemap", replace)
         if not profile:
             try:
-                query = "/profiles/user[@name='%s']" % username
+                query = self.xmlquery % searchterm
                 user = self.doc.xpathEval(query)[0]
                 profile = user.prop("profile")
             except:
@@ -311,7 +316,7 @@ class UserDatabase:
         
         if not profile_location:
             return profile
-        
+
         # TODO Check the resulting file path exists
         return self.__profile_name_to_location (profile, user)
 
@@ -357,7 +362,7 @@ class UserDatabase:
         self.modified = 0
 
     def set_default_profile (self, profile):
-        """Set the default profile to be used for all users.
+        """Set the default profile to be used in this database.
 
         @profile: the location of the profile.
         """
@@ -374,32 +379,31 @@ class UserDatabase:
             try:
                 profiles = self.doc.xpathEval("/profiles")[0]
             except:
-                raise UserDatabaseException(
+                raise SystemDatabaseException(
                     _("File %s is not a profile configuration") %
                                            (self.file))
             try:
                 default = profiles.newChild(None, "default", None)
                 default.setProp("profile", profile)
             except:
-                raise UserDatabaseException(
+                raise SystemDatabaseException(
                     _("Failed to add default profile %s to configuration") %
                                            (profile))
             self.modified = 1
         if self.modified == 1:
             self.__save_as()
 
-    def set_profile (self, username, profile):
-        """Set the profile for a given username.
+    def gen_set_profile (self, searchterm, child, profile):
+        """Set the profile for a given searchterm.
 
-        @username: the user whose profile location should be
-        set.
+        @searchterm: the term whose profile location should be set.
         @profile: the location of the profile.
         """
         if profile is None:
             profile = ""
         self.modified = 0
         try:
-            query = "/profiles/user[@name='%s']" % username
+            query = self.xmlquery % searchterm
             user = self.doc.xpathEval(query)[0]
             oldprofile = user.prop("profile")
             if oldprofile != profile:
@@ -409,20 +413,39 @@ class UserDatabase:
             try:
                 profiles = self.doc.xpathEval("/profiles")[0]
             except:
-                raise UserDatabaseException(
-                    _("File %s is not a profile configuration") %
-                                           (self.file))
+                raise SystemDatabaseException(
+                    _("File %s is not a profile configuration") % (self.file))
             try:
-                user = profiles.newChild(None, "user", None)
-                user.setProp("name", username)
+                user = profiles.newChild(None, child, None)
+                user.setProp("name", searchterm)
                 user.setProp("profile", profile)
             except:
-                raise UserDatabaseException(
+                raise SystemDatabaseException(
                     _("Failed to add user %s to profile configuration") %
                                            (username))
             self.modified = 1
         if self.modified == 1:
             self.__save_as()
+
+    def gen_is_sabayon_controlled (self, searchterm, replace):
+        """Return True if user's configuration was ever under Sabayon's
+        control.
+        """
+        profile = self.__ldap_query ("profilemap", replace)
+
+        if profile:
+            return True
+        
+        try:
+            query = self.xmlquery % searchterm
+            user = self.doc.xpathEval(query)[0]
+        except:
+            return False
+
+        if user:
+            return True
+
+        return False
 
     def get_profiles (self):
         """Return the list of currently available profiles.
@@ -440,25 +463,26 @@ class UserDatabase:
         # TODO: also list remote profiles as found in self.doc
         return list
 
+class UserDatabase(SystemDatabase):
+    """Encapsulate a user mapping
+    """
+    def __init__ (self, db_file = None):
+        if db_file is None:
+            SystemDatabase.__init__(self, "users.xml")
+        else:
+            SystemDatabase.__init__(self, db_file)
+
+        self.xmlquery = "/profiles/user[@name='%s']"
+
+    def get_profile (self, username, profile_location = True, ignore_default = False):
+        return self.gen_get_profile(username, {"u":username,
+            "h":socket.getfqdn()}, profile_location, ignore_default)
+
     def is_sabayon_controlled (self, username):
-        """Return True if user's configuration was ever under Sabayon's
-        control.
-        """
-        profile = self.__ldap_query ("profilemap", {"u":username, "h":socket.getfqdn()})
+        return self.gen_is_sabayon_controlled(username, {"u":username, "h":socket.getfqdn()})
 
-        if profile:
-            return True
-        
-        try:
-            query = "/profiles/user[@name='%s']" % username
-            user = self.doc.xpathEval(query)[0]
-        except:
-            return False
-
-        if user:
-            return True
-
-        return False
+    def set_profile (self, username, profile):
+        return self.gen_set_profile (username, "user", profile)
 
     def get_users (self):
         """Return the list of users on the system. These should
@@ -469,12 +493,14 @@ class UserDatabase:
         try:
             users = pwd.getpwall()
         except:
-            raise UserDatabaseException(_("Failed to get the user list"))
+            raise SystemDatabaseException(_("Failed to get the user list"))
 
         for user in pwd.getpwall():
             try:
                 # remove non-users
                 if user[2] < 500:
+                    continue
+                if user[0] == "nobody":
                     continue
                 if user[0] in list:
                     continue
@@ -487,26 +513,85 @@ class UserDatabase:
                 pass
         return list
 
+class GroupDatabase(SystemDatabase):
+    """Encapsulate a user mapping
+    """
+    def __init__ (self, db_file = None):
+        if db_file is None:
+            SystemDatabase.__init__(self, "groups.xml")
+        else:
+            SystemDatabase.__init__(self, db_file)
 
+        self.xmlquery = "/profiles/group[@name='%s']"
+
+    def get_profile (self, groupname, profile_location = True, ignore_default = False):
+        return self.gen_get_profile(groupname, {"g":groupname,
+            "h":socket.getfqdn()}, profile_location, ignore_default)
+
+    def is_sabayon_controlled (self, groupname):
+        return self.gen_is_sabayon_controlled(groupname, {"g":groupname, "h":socket.getfqdn()})
+
+    def set_profile (self, groupname, profile):
+        return self.gen_set_profile (groupname, "group", profile)
+
+    def get_groups (self):
+        """Return the list of groups on the system. These should
+        be real groups - i.e. should not include system groups
+        like lp, udev, etc.
+        """
+        list = []
+        try:
+            groups = grp.getgrall()
+        except:
+            raise GroupDatabaseException(_("Failed to get the group list"))
+
+        for group in groups:
+            # remove non-groups
+            if group[2] < 500:
+                continue
+            if group[0] == "nogroup":
+                continue
+            if group[0] in list:
+                continue
+            # We don't want to include "user" primary groups
+            try:
+                user = pwd.getpwnam(group[0])
+            except:
+                user = None
+            if user is not None and user[2] == group[2]:
+                continue
+            list.append(group[0])
+        return list
 
 user_database = None
-def get_database ():
+group_database = None
+
+def get_user_database ():
     """Return a UserDatabase singleton"""
     global user_database
     if user_database is None:
         user_database = UserDatabase ()
     return user_database
 
+def get_group_database ():
+    """Return a UserDatabase singleton"""
+    global group_database
+    if group_database is None:
+        group_database = GroupDatabase ()
+    return group_database
 #
 # Unit tests
 #
+
 def run_unit_tests ():
-    testfile = "/tmp/test_users.xml"
+    testuserfile = "/tmp/test_users.xml"
+    testgroupfile = "/tmp/test_groups.xml"
     try:
-        os.unlink(testfile)
+        os.unlink(testuserfile)
+        os.unlink(testgroupfile)
     except:
         pass
-    db = UserDatabase(testfile)
+    db = UserDatabase(testuserfile)
     db.set_default_profile("default")
     res = db.get_profile("localuser", False)
     assert not res is None
@@ -519,6 +604,23 @@ def run_unit_tests ():
     res = db.get_profile("localuser")
     assert not res is None
     assert res[-28:] == "/desktop-profiles/groupB.zip"
+    res = db.get_users()
+    print res
+    db = GroupDatabase(testgroupfile)
+    db.set_default_profile("default")
+    res = db.get_profile("localuser", False)
+    assert not res is None
+    assert res == "default"
+    db.set_profile("localgroup", "groupA")
+    res = db.get_profile("localgroup")
+    assert not res is None
+    assert res[-28:] == "/desktop-profiles/groupA.zip"
+    db.set_profile("localgroup", "groupB")
+    res = db.get_profile("localgroup")
+    assert not res is None
+    assert res[-28:] == "/desktop-profiles/groupB.zip"
+    res = db.get_groups()
+    print res
 
 if __name__ == "__main__":
     util.init_gettext ()

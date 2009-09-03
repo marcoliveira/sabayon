@@ -30,8 +30,7 @@ import editorwindow
 import usersdialog
 import groupsdialog
 import util
-import userdb
-import groupdb
+import systemdb
 import protosession
 import debuglog
 import errors
@@ -261,7 +260,7 @@ class ProfilesModel (gtk.ListStore):
 
     def reload (self):
         self.clear ()
-        profiles = userdb.get_database ().get_profiles ()
+        profiles = systemdb.get_user_database ().get_profiles ()
         profiles.sort ()
         for profile in profiles:
             self.set (self.append (),
@@ -464,7 +463,7 @@ class ProfilesDialog:
             dprint ("Deleting '%s'", profile_name)
             os.remove (_get_profile_path_for_name (profile_name))
 
-            db = userdb.get_database ()
+            db = systemdb.get_user_database ()
             if db.get_default_profile (False) == profile_name:
                 db.set_default_profile (None)
             for user in db.get_users ():
@@ -495,7 +494,7 @@ class ProfilesDialog:
             self.__delete_currently_selected ()
 
     def __make_unique_profile_name (self, profile_name):
-        profiles = userdb.get_database ().get_profiles ()
+        profiles = systemdb.get_user_database ().get_profiles ()
 
         name = profile_name
         idx = 1

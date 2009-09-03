@@ -20,7 +20,7 @@ import os.path
 import pwd
 import gtk
 import gtk.glade
-import userdb
+import systemdb
 import errors
 import debuglog
 
@@ -53,7 +53,7 @@ class UsersModel (gtk.ListStore):
 class UsersDialog:
     def __init__ (self, profile, parent):
         self.profile = profile
-        self.userdb = userdb.get_database ()
+        self.userdb = systemdb.get_user_database ()
 
         apply_to_all = self.userdb.get_default_profile (False) == profile
         
