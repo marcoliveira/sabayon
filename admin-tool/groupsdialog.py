@@ -46,8 +46,6 @@ class GroupsDialog:
         self.profile = profile
         self.groupdb = systemdb.get_group_database ()
 
-        apply_to_all = self.groupdb.get_default_profile (False) == profile
-        
         glade_file = os.path.join (GLADEDIR, "sabayon.glade")
         self.xml = gtk.glade.XML (glade_file, "groups_dialog", PACKAGE)
 
@@ -67,7 +65,6 @@ class GroupsDialog:
         self.groups_list_scroll = self.xml.get_widget ("groups_list_scroll")
         self.groups_list = self.xml.get_widget ("groups_list")
         self.groups_list.set_model (self.groups_model)
-        self.groups_list.set_sensitive (not apply_to_all)
 
         c = gtk.TreeViewColumn (_("Group"),
                                 gtk.CellRendererText (),
@@ -102,16 +99,6 @@ class GroupsDialog:
             self.groupdb.set_profile (groupname, self.profile)
         else:
             self.groupdb.set_profile (groupname, None)
-
-    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
-    def __all_check_toggled (self, toggle):
-        apply_to_all = self.all_check.get_active ()
-        self.groups_list.set_sensitive (not apply_to_all)
-
-        if apply_to_all:
-            self.groupdb.set_default_profile (self.profile)
-        else:
-            self.groupdb.set_default_profile (None)
 
 if __name__ == "__main__":
     import util

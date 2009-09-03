@@ -534,4 +534,5 @@ class ProfilesDialog:
         self.edit_button.set_sensitive (profile_name != None)
         self.details_button.set_sensitive (profile_name != None)
         self.users_button.set_sensitive (profile_name != None)
+        self.groups_button.set_sensitive (profile_name != None)
         self.remove_button.set_sensitive (profile_name != None)
