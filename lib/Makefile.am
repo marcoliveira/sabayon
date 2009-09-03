@@ -23,11 +23,10 @@ PYTHON_FILES =				\
 	errors.py			\
 	debuglog.py			\
 	dirmonitor.py			\
-	groupdb.py			\
 	mozilla_bookmarks.py		\
 	protosession.py			\
 	storage.py			\
-	userdb.py			\
+	systemdb.py			\
 	usermod.py			\
 	userprofile.py			\
 	util.py

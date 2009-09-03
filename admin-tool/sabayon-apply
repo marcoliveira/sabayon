@@ -42,7 +42,7 @@ if __name__ == '__main__':
     from sabayon import debuglog
     from sabayon import errors
     from sabayon import util
-    from sabayon import userdb
+    from sabayon import systemdb
 
     def dprint (fmt, *args):
         debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_SABAYON_APPLY, fmt % args)
@@ -82,7 +82,7 @@ if __name__ == '__main__':
 
         user_name = util.get_user_name ()
 
-        if userdb.get_database().is_sabayon_controlled (user_name):
+        if systemdb.get_user_database().is_sabayon_controlled (user_name):
             try:
                 shutil.rmtree (os.path.join (util.get_home_dir (), ".gconf.xml.defaults"), True)
                 shutil.rmtree (os.path.join (util.get_home_dir (), ".gconf.xml.mandatory"), True)
@@ -93,7 +93,7 @@ if __name__ == '__main__':
 
         num_args = len (args)
         if num_args == 0:
-            profile_name = userdb.get_database().get_profile (user_name)
+            profile_name = systemdb.get_user_database().get_profile (user_name)
             if not profile_name:
                 mprint ("No profile for user '%s' found", user_name)
                 sys.stderr.write (_("No profile for user '%s' found\n") % user_name)
