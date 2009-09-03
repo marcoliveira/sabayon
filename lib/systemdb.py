@@ -55,7 +55,7 @@ def get_setting (node, setting, default = None, convert_to = str):
             # Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
             # do not change the way they are written.  The intended string is
             # something like "invalid type for setting blah in /ldap/path/to/blah"
-            raise UserDatabaseException(_("invalid type for setting %(setting)s in %(np)s") % { "setting": setting,
+            raise SystemDatabaseException(_("invalid type for setting %(setting)s in %(np)s") % { "setting": setting,
                                                                                                 "np": np })
     return default
 
@@ -217,13 +217,13 @@ class SystemDatabase(object):
         multiple_result = get_setting (map_node, "multiple_result", "first")
 
         if search_base == None:
-            raise UserDatabaseException(_("No search base specified for %s"%map))
+            raise SystemDatabaseException(_("No search base specified for %s"%map))
             
         if query_filter == None:
-            raise UserDatabaseException(_("No query filter specified for %s"%map))
+            raise SystemDatabaseException(_("No query filter specified for %s"%map))
             
         if result_attribute == None:
-            raise UserDatabaseException(_("No result attribute specified for %s"%map))
+            raise SystemDatabaseException(_("No result attribute specified for %s"%map))
 
         if scope == "sub":
             scope = ldap.SCOPE_SUBTREE
@@ -232,7 +232,7 @@ class SystemDatabase(object):
         elif scope == "one":
             scope = ldap.SCOPE_ONELEVEL
         else:
-            raise UserDatabaseException(_("Scope must be one of sub, base and one"))
+            raise SystemDatabaseException(_("Scope must be one of sub, base and one"))
         
         query_filter = expand_string (query_filter, replace)
         search_base = expand_string (search_base, replace)
@@ -252,7 +252,7 @@ class SystemDatabase(object):
         elif multiple_result == "random":
             val = vals[random.randint(0, len(vals)-1)]
         else:
-            raise UserDatabaseException(_("multiple_result must be one of first and random"))
+            raise SystemDatabaseException(_("multiple_result must be one of first and random"))
 
         l.unbind ()
         
@@ -343,7 +343,7 @@ class SystemDatabase(object):
                 except:
                     dprint("Failed to restore from %s.bak\n", filename)
 
-                raise UserDatabaseException(
+                raise SystemDatabaseException(
                     _("Could not open %s for writing") % filename)
         try:
             f.write(self.doc.serialize("UTF-8", format=1))
@@ -356,7 +356,7 @@ class SystemDatabase(object):
                 except:
                     dprint("Failed to restore from %s.bak\n", filename)
 
-            raise UserDatabaseException(
+            raise SystemDatabaseException(
                 _("Failed to save UserDatabase to %s") % filename)
 
         self.modified = 0

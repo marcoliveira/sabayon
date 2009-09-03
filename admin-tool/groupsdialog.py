@@ -33,13 +33,14 @@ class GroupsModel (gtk.ListStore):
     ) = range (2)
 
     def __init__ (self, db, profile):
-        gtk.ListStore.__init__ (self, str, str, bool)
+        gtk.ListStore.__init__ (self, str, bool)
         for group in db.get_groups ():
 
             row = self.append ()
             self.set (row,
                       self.COLUMN_GROUP, group,
-                      self.COLUMN_APPLY, profile == db.get_profile (group, False, True))
+                      self.COLUMN_APPLY, profile == db.get_profile (group,
+                          False, True))
 
 class GroupsDialog:
     def __init__ (self, profile, parent):
@@ -53,7 +54,7 @@ class GroupsDialog:
         self.dialog.set_transient_for (parent)
         self.dialog.set_default_response (gtk.RESPONSE_CLOSE)
         self.dialog.set_icon_name ("sabayon")
-        self.dialog.set_title (_("groups for profile %s")%profile)
+        self.dialog.set_title (_("Groups for profile %s")%profile)
 
         self.close_button = self.xml.get_widget ("groups_close_button")
 
