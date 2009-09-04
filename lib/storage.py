@@ -481,8 +481,10 @@ class ProfileStorage:
                     raise err
 
             if got_stat:
-                os.unlink (dest) # FIXME: this could fail, but that would be because the parent
-                                 # directory is not writable.  Then we have bigger problems, anyway.
+                try:
+                    os.unlink (dest)
+                except OSError, err:
+                    raise ProfileStorageException (_("Couldn't unlink file '%s'") % dest)
 
             # FIXME: we lose the "original" permissions, mtime, etc. with ZIP files.
             shutil.copy2 (src, dest)
@@ -638,7 +640,6 @@ class ProfileStorage:
         except:
             if backup:
                 failsafe_rename (backup, self.path)
-            raise
 
         if backup:
             os.remove (backup)
