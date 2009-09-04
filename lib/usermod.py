@@ -20,7 +20,7 @@ import os
 import os.path
 import tempfile
 import shutil
-import util
+import subprocess
 from config import *
 import debuglog
 
@@ -30,7 +30,7 @@ def dprint (fmt, *args):
 def set_shell (username, shell):
     argv = USERMOD_ARGV + [ "-s", shell, username ]
     dprint ("Executing %s" % argv)
-    util.uninterruptible_spawnv (os.P_WAIT, argv[0], argv)
+    subprocess.call (argv)
 
 #
 # FIXME:
@@ -41,7 +41,7 @@ def set_shell (username, shell):
 def set_homedir (username, homedir):
     argv = USERMOD_ARGV + [ "-d", homedir, username ]
     dprint ("Executing %s" % argv)
-    util.uninterruptible_spawnv (os.P_WAIT, argv[0], argv)
+    subprocess.call (argv)
 
 def create_temporary_homedir (uid, gid):
     temp_homedir = tempfile.mkdtemp (prefix = "sabayon-temp-home-")
