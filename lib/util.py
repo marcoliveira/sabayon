@@ -21,6 +21,7 @@ import os.path
 import sys
 import fnmatch
 import pwd
+import grp
 import gettext
 import locale
 import errno
@@ -91,6 +92,36 @@ def get_home_dir ():
         return os.environ["HOME"]
     else:
         raise GeneralError (_("Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"))
+
+def get_group_membership ():
+    """Returns a list of non-primary, non-system groups that the user belongs
+    to.  Raises a GeneralError if this fails.  May return an empty list.
+    """
+
+    groups = grp.getgrall()
+
+    try:
+        pw = pwd.getpwuid (os.getuid ())
+        user = pw[0]
+    except KeyError:
+        if os.environ.has_key("USER"):
+            user = os.environ["USER"]
+        else:
+            raise GeneralError (_("Cannot find username: not set in /etc/passwd and no value for $USER in environment"))
+
+    members = []
+
+    for group in groups:
+        if group[0] in members:
+            continue
+        if group[2] < 500:
+            continue
+        if group[0] == user:
+            continue
+        if user in group[3]:
+            members.append(group[0])
+
+    return members
 
 def get_user_name ():
     try:
