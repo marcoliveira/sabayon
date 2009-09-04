@@ -92,7 +92,7 @@ def clobber_user_processes (username):
     # FIXME: my, what a big hammer you have!
     argv = CLOBBER_USER_PROCESSES_ARGV + [ pw.pw_name ]
     dprint ("Clobbering existing processes running as user '%s': %s", pw.pw_name, argv)
-    util.uninterruptible_spawnv (os.P_WAIT, argv[0], argv)
+    subprocess.call (argv)
 
 def find_free_display ():
     def is_display_free (display_number):

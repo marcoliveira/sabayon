@@ -204,25 +204,6 @@ def split_path(path, head=None, tail=None):
 
     raise ValueError
 
-#
-# os.spawn() doesn't handle EINTR from waitpid() on Linux:
-#  http://sourceforge.net/tracker/?group_id=5470&atid=105470&func=detail&aid=686667
-# Best we can do is ignore the exception and carry on
-# See bug #303034
-#
-def uninterruptible_spawnve (mode, file, args, env):
-    try:
-        if env is None:
-            os.spawnv (mode, file, args)
-        else:
-            os.spawnve (mode, file, args, env)
-    except os.error, (err, errstr):
-        if err != errno.EINTR:
-            raise
-
-def uninterruptible_spawnv (mode, file, args):
-    uninterruptible_spawnve (mode, file, args, None)
-
 def run_unit_tests ():
     home_dir = get_home_dir ()
     assert home_dir != ""
