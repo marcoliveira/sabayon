@@ -20,7 +20,7 @@
 # Exit codes from this program:
 #
 # 0 - Success
-# 
+#
 # 1 - A fatal error occurred, and the user profile may not have been applied completely.
 #
 # 2 - One or more recoverable errors ocurred while applying the profile.
@@ -36,7 +36,7 @@ if __name__ == '__main__':
     import sys
     import optparse
     import shutil
-    
+
     from sabayon import userprofile
     from sabayon import config
     from sabayon import debuglog
@@ -81,28 +81,60 @@ if __name__ == '__main__':
         util.set_readable_log_config_filename (readable_log_config_filename)
 
         user_name = util.get_user_name ()
+        group_membership = util.get_group_membership ()
 
-        if systemdb.get_user_database().is_sabayon_controlled (user_name):
-            try:
-                shutil.rmtree (os.path.join (util.get_home_dir (), ".gconf.xml.defaults"), True)
-                shutil.rmtree (os.path.join (util.get_home_dir (), ".gconf.xml.mandatory"), True)
-                os.mkdir (os.path.join (util.get_home_dir (), ".gconf.xml.defaults"))
-                os.mkdir (os.path.join (util.get_home_dir (), ".gconf.xml.mandatory"))
-            except:
-                pass
+        #
+        # Begin the process of determining WHICH profile to apply.
+        # We have 4 possibilities, rated in order of priority (highest first)
+        # 1) We've been passed a profile on the command line.  We'll apply
+        #    this above all others, as it allows sysadmins to build their own
+        #    apply scripts that override the "autodetect" mechanism.
+        # 2) We've detected that a profile applies to this user, via the
+        #    users.xml database.  User profiles should override group profiles.
+        # 3) The user is a member of a group for which there's a profile.
+        #    Apply the profile for the group.
+        # 4) The user belongs to multiple groups to which there are profiles.
+        #    We'll pick the first one we come across. FIXME: is this good
+        #    behavior?
+        #
+
+        profile_name = None
 
         num_args = len (args)
-        if num_args == 0:
-            profile_name = systemdb.get_user_database().get_profile (user_name)
-            if not profile_name:
-                mprint ("No profile for user '%s' found", user_name)
-                sys.stderr.write (_("No profile for user '%s' found\n") % user_name)
-                sys.exit (util.EXIT_CODE_NO_USER_PROFILE)
-        elif num_args == 1:
+        if num_args == 1:
+            # We've been passed a profile name
             profile_name = args[0]
+        elif num_args == 0:
+            # lookup profile name for user
+            profile_name = systemdb.get_user_database().get_profile (user_name)
         else:
             sys.stderr.write (_("Please use -h for usage options"))
             sys.exit (util.EXIT_CODE_FATAL)
+
+        # Test for group lookup
+        if not profile_name:
+            for group_name in group_membership:
+                if systemdb.get_group_database().is_sabayon_controlled (group_name):
+                    profile_name = systemdb.get_group_database().get_profile (group_name)
+                    break
+
+        if not profile_name:
+            mprint ("No profile for user '%s' found", user_name)
+            sys.stderr.write (_("No profile for user '%s' found\n") % user_name)
+            sys.exit (util.EXIT_CODE_NO_USER_PROFILE)
+
+        #
+        # We've determined a profile applies to us.  Clean up existing
+        # defaults.
+        #
+
+        try:
+            shutil.rmtree (os.path.join (util.get_home_dir (), ".gconf.xml.defaults"), True)
+            shutil.rmtree (os.path.join (util.get_home_dir (), ".gconf.xml.mandatory"), True)
+            os.mkdir (os.path.join (util.get_home_dir (), ".gconf.xml.defaults"))
+            os.mkdir (os.path.join (util.get_home_dir (), ".gconf.xml.mandatory"))
+        except:
+            pass
 
         mprint ("Applying profile '%s' for user '%s'",
                 profile_name, util.get_user_name ())
