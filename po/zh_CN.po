@@ -10,9 +10,9 @@ msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-07-30 22:39+0000\n"
-"PO-Revision-Date: 2009-07-30 18:16+0800\n"
-"Last-Translator: fujianwzh <fujianwzh@gmail.com>\n"
+"POT-Creation-Date: 2009-09-07 04:06+0000\n"
+"PO-Revision-Date: 2009-09-08 20:31+0800\n"
+"Last-Translator: Hinker <hinkerliu@gmail.com>\n"
 "Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -103,7 +103,7 @@ msgstr "文件"
 
 #: ../admin-tool/editorwindow.py:266
 #: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:238
+#: ../lib/sources/paneldelegate.py:269
 msgid "Panel"
 msgstr "面板"
 
@@ -196,7 +196,7 @@ msgstr "锁定面板(_L)"
 
 #: ../admin-tool/lockdown/maindialog.py:55
 msgid "Disable force _quit"
-msgstr "禁止强制退出(_Q)"
+msgstr "强制退出按钮(_Q)"
 
 #: ../admin-tool/lockdown/maindialog.py:56
 msgid "Disable lock _screen"
@@ -702,25 +702,33 @@ msgstr "配置文件 %s 的用户"
 msgid "Use This Profile"
 msgstr "使用此配置文件"
 
-#: ../lib/protosession.py:147
+#: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
 msgstr "无法找到空闲的 X 显示"
 
-#: ../lib/protosession.py:414
+#: ../lib/protosession.py:377
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr "启动 Xnest 失败：等候 USR1 信号超时"
 
-#: ../lib/protosession.py:416
+#: ../lib/protosession.py:379
 msgid "Failed to start Xephyr: died during startup"
 msgstr "启动 Xnest 失败：启动时崩溃"
 
-#: ../lib/protosession.py:501
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:470
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
 msgstr "于文件“%s”中应用用户配置文件时发生可恢复的错误。"
 
-#: ../lib/protosession.py:510
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (FATAL) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:479
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "应用来自“%s”的用户配置文件时发生致命错误。"
@@ -840,184 +848,200 @@ msgstr "Web 浏览器书签"
 msgid "Web browser profile list"
 msgstr "Web 浏览器配置文件列表"
 
-#: ../lib/sources/mozillasource.py:522
+#: ../lib/sources/mozillasource.py:520
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "文件未找到(%s)"
 
-#: ../lib/sources/mozillasource.py:873
+#: ../lib/sources/mozillasource.py:869
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "在 %(section)s 节中有重复的名称(%(name)s)"
 
-#: ../lib/sources/mozillasource.py:882
+#: ../lib/sources/mozillasource.py:878
 #, python-format
 msgid "redundant default in section %s"
 msgstr "在 %s 节中有多余的默认值"
 
-#: ../lib/sources/mozillasource.py:899
+#: ../lib/sources/mozillasource.py:895
 msgid "no default profile"
 msgstr "无默认的配置文件"
 
-#: ../lib/sources/mozillasource.py:954
+#: ../lib/sources/mozillasource.py:950
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "创建了 Mozilla 书签“%s”->“%s”"
 
-#: ../lib/sources/mozillasource.py:956
+#: ../lib/sources/mozillasource.py:952
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "创建了 Mozilla 书签文件夹“%s”"
 
-#: ../lib/sources/mozillasource.py:959
+#: ../lib/sources/mozillasource.py:955
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "删除了 Mozilla 书签“%s”"
 
-#: ../lib/sources/mozillasource.py:961
+#: ../lib/sources/mozillasource.py:957
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "删除了 Mozilla 书签文件夹“%s”"
 
-#: ../lib/sources/mozillasource.py:964
+#: ../lib/sources/mozillasource.py:960
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "更改了 Mozilla 书签“%s”“%s”"
 
-#: ../lib/sources/mozillasource.py:966
+#: ../lib/sources/mozillasource.py:962
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "更改了 Mozilla 书签文件夹“%s”"
 
-#: ../lib/sources/paneldelegate.py:55
+#: ../lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel '%s' added"
 msgstr "添加了面板“%s”"
 
-#: ../lib/sources/paneldelegate.py:61
+#: ../lib/sources/paneldelegate.py:71
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "删除了面板“%s”"
 
-#: ../lib/sources/paneldelegate.py:76
+#: ../lib/sources/paneldelegate.py:86
 #, python-format
 msgid "Applet %s added to top panel"
 msgstr "小程序 %s 已被添加到顶部面板"
 
-#: ../lib/sources/paneldelegate.py:78
+#: ../lib/sources/paneldelegate.py:88
 #, python-format
 msgid "Applet %s added to bottom panel"
 msgstr "小程序 %s 已被添加到底部面板"
 
-#: ../lib/sources/paneldelegate.py:80
+#: ../lib/sources/paneldelegate.py:90
 #, python-format
 msgid "Applet %s added to left panel"
 msgstr "小程序 %s 已被添加到左边面板"
 
-#: ../lib/sources/paneldelegate.py:82
+#: ../lib/sources/paneldelegate.py:92
 #, python-format
 msgid "Applet %s added to right panel"
 msgstr "小程序 %s 已被添加到右边面板"
 
-#: ../lib/sources/paneldelegate.py:97
+#: ../lib/sources/paneldelegate.py:107
 #, python-format
 msgid "Applet %s removed from top panel"
 msgstr "小程序 %s 已被从顶部面板移除"
 
-#: ../lib/sources/paneldelegate.py:99
+#: ../lib/sources/paneldelegate.py:109
 #, python-format
 msgid "Applet %s removed from bottom panel"
 msgstr "小程序 %s 已被从底部面板移除"
 
-#: ../lib/sources/paneldelegate.py:101
+#: ../lib/sources/paneldelegate.py:111
 #, python-format
 msgid "Applet %s removed from left panel"
 msgstr "小程序 %s 已被从左边面板移除"
 
-#: ../lib/sources/paneldelegate.py:103
+#: ../lib/sources/paneldelegate.py:113
 #, python-format
 msgid "Applet %s removed from right panel"
 msgstr "小程序 %s 已被从右边面板移除"
 
-#: ../lib/sources/paneldelegate.py:117
+#: ../lib/sources/paneldelegate.py:127
 #, python-format
 msgid "%s added to top panel"
 msgstr "%s 已被添加到顶部面板"
 
-#: ../lib/sources/paneldelegate.py:119
+#: ../lib/sources/paneldelegate.py:129
 #, python-format
 msgid "%s added to bottom panel"
 msgstr "%s 已被添加到底部面板"
 
-#: ../lib/sources/paneldelegate.py:121
+#: ../lib/sources/paneldelegate.py:131
 #, python-format
 msgid "%s added to left panel"
 msgstr "%s 已被添加到左边面板"
 
-#: ../lib/sources/paneldelegate.py:123
+#: ../lib/sources/paneldelegate.py:133
 #, python-format
 msgid "%s added to right panel"
 msgstr "%s 已被添加到右边面板"
 
-#: ../lib/sources/paneldelegate.py:144
+#: ../lib/sources/paneldelegate.py:154
 #, python-format
 msgid "%s removed from top panel"
 msgstr "%s 已被从顶部面板移除"
 
-#: ../lib/sources/paneldelegate.py:146
+#: ../lib/sources/paneldelegate.py:156
 #, python-format
 msgid "%s removed from bottom panel"
 msgstr "%s 已被从底部面板移除"
 
-#: ../lib/sources/paneldelegate.py:148
+#: ../lib/sources/paneldelegate.py:158
 #, python-format
 msgid "%s removed from left panel"
 msgstr "%s 已被从左边面板移除"
 
-#: ../lib/sources/paneldelegate.py:150
+#: ../lib/sources/paneldelegate.py:160
 #, python-format
 msgid "%s removed from right panel"
 msgstr "%s 已被从右边面板移除"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:209
+#: ../lib/sources/paneldelegate.py:231
 msgid "Drawer"
 msgstr "抽屉"
 
-#: ../lib/sources/paneldelegate.py:211
+#: ../lib/sources/paneldelegate.py:233
 msgid "Main Menu"
 msgstr "主菜单"
 
-#: ../lib/sources/paneldelegate.py:221
+#: ../lib/sources/paneldelegate.py:243
 #, python-format
 msgid "%s launcher"
 msgstr "%s 启动器"
 
-#: ../lib/sources/paneldelegate.py:225
+#: ../lib/sources/paneldelegate.py:247
 msgid "Lock Screen button"
 msgstr "锁定屏幕按钮"
 
-#: ../lib/sources/paneldelegate.py:227
+#: ../lib/sources/paneldelegate.py:249
 msgid "Logout button"
 msgstr "注销按钮"
 
-#: ../lib/sources/paneldelegate.py:229
+#: ../lib/sources/paneldelegate.py:251
 msgid "Run Application button"
 msgstr "“运行应用程序”按钮"
 
-#: ../lib/sources/paneldelegate.py:231
+#: ../lib/sources/paneldelegate.py:253
 msgid "Search button"
 msgstr "搜索按钮"
 
-#: ../lib/sources/paneldelegate.py:233
+#: ../lib/sources/paneldelegate.py:255
+msgid "Force Quit button"
+msgstr "禁止强制退出"
+
+#: ../lib/sources/paneldelegate.py:257
+msgid "Connect to Server button"
+msgstr "连接到服务器按钮"
+
+#: ../lib/sources/paneldelegate.py:259
+msgid "Shutdown button"
+msgstr "关机按钮"
+
+#: ../lib/sources/paneldelegate.py:261
 msgid "Screenshot button"
 msgstr "屏幕截图按钮"
 
-#: ../lib/sources/paneldelegate.py:235
+#: ../lib/sources/paneldelegate.py:264
+msgid "Unknown"
+msgstr "未知"
+
+#: ../lib/sources/paneldelegate.py:266
 msgid "Menu Bar"
 msgstr "菜单栏"
 
-#: ../lib/sources/paneldelegate.py:481
+#: ../lib/sources/paneldelegate.py:503
 msgid "Panel File"
 msgstr "面板文件"
 
