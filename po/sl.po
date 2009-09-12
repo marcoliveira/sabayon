@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-02-01 02:49+0000\n"
-"PO-Revision-Date: 2009-02-02 11:23+0100\n"
+"POT-Creation-Date: 2009-09-11 04:14+0000\n"
+"PO-Revision-Date: 2009-09-12 10:00+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -19,15 +19,15 @@ msgstr ""
 "X-Poedit-Country: SLOVENIA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: ../admin-tool/aboutdialog.py:63
+#: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
 msgstr "Program za ustvarjanje in urejanje uporabniških profilov"
 
-#: ../admin-tool/aboutdialog.py:66
+#: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
 msgstr ""
-"Matej Urbančič <mateju@svn.gnome.org>\n"
-"Matjaž Horvat <m@owca.info>"
+"Matjaž Horvat <m@owca.info>\n"
+"Matej Urbančič <mateju@svn.gnome.org>"
 
 #: ../admin-tool/changeswindow.py:50
 #, python-format
@@ -116,7 +116,7 @@ msgstr "Datoteke"
 
 #: ../admin-tool/editorwindow.py:266
 #: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:229
+#: ../lib/sources/paneldelegate.py:269
 msgid "Panel"
 msgstr "Pult"
 
@@ -168,7 +168,7 @@ msgid "Profile settings: %s"
 msgstr "Nastavitve profila: %s"
 
 #: ../admin-tool/gconfviewer.py:110
-#: ../admin-tool/profilesdialog.py:384
+#: ../admin-tool/profilesdialog.py:387
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Ime"
@@ -261,19 +261,19 @@ msgstr "Med shranjevanjem odstrani osebne podatke iz dokumentov"
 
 #: ../admin-tool/lockdown/maindialog.py:71
 msgid "Warn if macro tries to create a PDF"
-msgstr "Opozori, če želi makro ustvariti PDF"
+msgstr "Opozori v primeru, da želi makro ustvariti PDF"
 
 #: ../admin-tool/lockdown/maindialog.py:72
 msgid "Warn if macro tries to print a document"
-msgstr "Opozori, če želi makro natisniti dokument"
+msgstr "Opozori v primeru, da želi makro natisniti dokument"
 
 #: ../admin-tool/lockdown/maindialog.py:73
 msgid "Warn if macro tries to save a document"
-msgstr "Opozori, če želi makro shraniti dokument"
+msgstr "Opozori v primeru, da želi makro shraniti dokument"
 
 #: ../admin-tool/lockdown/maindialog.py:74
 msgid "Warn if macro tries to sign a document"
-msgstr "Opozori, če želi makro podpisati dokument"
+msgstr "Opozori v primeru, da želi makro podpisati dokument"
 
 #: ../admin-tool/lockdown/maindialog.py:75
 msgid "Recommend password when saving a document"
@@ -454,7 +454,7 @@ msgstr "Urejevalnik zaklepanja"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:38
 msgid "Macro Security Level:"
-msgstr "Stopnja varnosti makrov:"
+msgstr "Raven varnosti makrov:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:39
 msgid "Number of undo steps:"
@@ -478,18 +478,18 @@ msgstr "Uporabniški vmesnik"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:494
+#: ../admin-tool/profilesdialog.py:497
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:77
 msgid "Your account does not have permissions to run the Desktop User Profiles tool"
-msgstr "Vaš račun nima dovoljenj za zagon orodja za namizne uporabniške profile"
+msgstr "Ni ustreznih dovoljenj za zagon orodja za namizne uporabniške profile"
 
 #: ../admin-tool/sabayon:78
 msgid "Administrator level permissions are needed to run this program because it can modify system files."
-msgstr "Za zagon tega programa potrebujete pravice nadzornika, saj lahko spreminja sistemske datoteke"
+msgstr "Zagon tega programa zahteva nadzorniške pravice, saj je mogoče spreminjati sistemske datoteke"
 
 #: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
@@ -587,54 +587,54 @@ msgstr "Ali želite shraniti spremembe profila \"%s\" pred zapiranjem?"
 #, python-format
 msgid "If you don't save, changes from the last %ld second will be permanently lost."
 msgid_plural "If you don't save, changes from the last %ld seconds will be permanently lost."
-msgstr[0] "Če ne shranite, bodo za vedno izgubljene spremembe zadnjih %d sekund."
-msgstr[1] "Če ne shranite, bodo za vedno izgubljene spremembe zadnje %d sekunde."
-msgstr[2] "Če ne shranite, bodo za vedno izgubljene spremembe zadnjih %d sekund."
+msgstr[0] "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %d sekund trajno izgubljene."
+msgstr[1] "V primeru, da datoteke ne shranite, bodo spremembe zadnje %d sekunde trajno izgubljene."
+msgstr[2] "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %d sekund trajno izgubljene."
 msgstr[3] "Če ne shranite, bodo za vedno izgubljene spremembe zadnjih %d sekund."
 
 #: ../admin-tool/saveconfirm.py:51
 msgid "If you don't save, changes from the last minute will be permanently lost."
-msgstr "Če ne shranite, bodo za vedno izgubljene spremembe v zadnji minuti."
+msgstr "V primeru, da datoteke ne shranite, bodo  spremembe v zadnji minut trajno izgubljene."
 
 #: ../admin-tool/saveconfirm.py:55
 #, python-format
 msgid "If you don't save, changes from the last minute and %ld second will be permanently lost."
 msgid_plural "If you don't save, changes from the last minute and %ld seconds will be permanently lost."
-msgstr[0] "Če ne shranite, bodo za vedno izgubljene spremembe v zadnji minuti in %d sekundah."
-msgstr[1] "Če ne shranite, bodo za vedno izgubljene spremembe v zadnji minuti in %d sekundi."
-msgstr[2] "Če ne shranite, bodo za vedno izgubljene spremembe v zadnji minuti in %d sekundah."
-msgstr[3] "Če ne shranite, bodo za vedno izgubljene spremembe v zadnji minuti in %d sekundah."
+msgstr[0] "V primeru, da datoteke ne shranite, bodo spremembe zadnje minute in  %d sekund trajno izgubljene."
+msgstr[1] "V primeru, da datoteke ne shranite, bodo spremembe zadnje minute in  %d sekunde trajno izgubljene."
+msgstr[2] "V primeru, da datoteke ne shranite, bodo spremembe zadnje minute in  %d sekund trajno izgubljene."
+msgstr[3] "V primeru, da datoteke ne shranite, bodo spremembe zadnje minute in  %d sekund trajno izgubljene."
 
 #: ../admin-tool/saveconfirm.py:62
 #, python-format
 msgid "If you don't save, changes from the last %ld minute will be permanently lost."
 msgid_plural "If you don't save, changes from the last %ld minutes will be permanently lost."
-msgstr[0] "Če ne shranite, bodo za vedno izgubljene spremembe v zadnjih %d minutah."
-msgstr[1] "Če ne shranite, bodo za vedno izgubljene spremembe v zadnji %d minuti."
-msgstr[2] "Če ne shranite, bodo za vedno izgubljene spremembe v zadnjih %d minutah."
-msgstr[3] "Če ne shranite, bodo za vedno izgubljene spremembe v zadnjih %d minutah."
+msgstr[0] "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %d minut trajno izgubljene."
+msgstr[1] "V primeru, da datoteke ne shranite, bodo spremembe zadnji %d minuti trajno izgubljene"
+msgstr[2] "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %d minutah trajno izgubljene."
+msgstr[3] "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %d minutah trajno izgubljene."
 
 #: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgstr "Če ne shranite, bodo  spremembe trajno izgubljene."
+msgstr "V primeru, da datoteke ne shranite, bodo spremembe zadnje ure trajno izgubljene."
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
 msgid "If you don't save, changes from the last hour and %d minute will be permanently lost."
 msgid_plural "If you don't save, changes from the last hour and %d minutes will be permanently lost."
-msgstr[0] "Če ne shranite, bodo za vedno izgubljene spremembe v zadnji uri in %d minutah."
-msgstr[1] "Če ne shranite, bodo za vedno izgubljene spremembe v zadnji uri in %d minuti."
-msgstr[2] "Če ne shranite, bodo za vedno izgubljene spremembe v zadnji uri in %d minutah."
-msgstr[3] "Če ne shranite, bodo za vedno izgubljene spremembe v zadnji uri in %d minutah."
+msgstr[0] "V primeru, da datoteke ne shranite, bodo spremembe zadnje ure in %d minut trajno izgubljene."
+msgstr[1] "V primeru, da datoteke ne shranite, bodo spremembe zadnje ure in %d minute trajno izgubljene."
+msgstr[2] "V primeru, da datoteke ne shranite, bodo spremembe zadnje ure in %d minut trajno izgubljene."
+msgstr[3] "V primeru, da datoteke ne shranite, bodo spremembe zadnje ure in %d minut trajno izgubljene."
 
 #: ../admin-tool/saveconfirm.py:81
 #, python-format
 msgid "If you don't save, changes from the last %d hour will be permanently lost."
 msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "Če ne shranite, bodo za vedno izgubljene spremembe v zadnjih %d urah."
-msgstr[1] "Če ne shranite, bodo za vedno izgubljene spremembe v zadnji %d uri."
-msgstr[2] "Če ne shranite, bodo za vedno izgubljene spremembe v zadnjih %d urah."
-msgstr[3] "Če ne shranite, bodo za vedno izgubljene spremembe v zadnjih %d urah."
+msgstr[0] "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %d ur trajno izgubljene."
+msgstr[1] "V primeru, da datoteke ne shranite, bodo spremembe zadnje %d ure trajno izgubljene."
+msgstr[2] "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %d ur trajno izgubljene."
+msgstr[3] "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %d ur trajno izgubljene."
 
 #: ../admin-tool/sessionwindow.py:154
 #, python-format
@@ -696,24 +696,32 @@ msgstr "Uporabniki profila %s"
 msgid "Use This Profile"
 msgstr "Uporabi ta profil"
 
-#: ../lib/protosession.py:147
+#: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
 msgstr "Ni mogoče najti prostega zaslona X"
 
-#: ../lib/protosession.py:414
-msgid "Failed to start Xnest: timed out waiting for USR1 signal"
-msgstr "Zagon Xnesta ni uspel: čas čakanja na signal USR1 je potekel"
+#: ../lib/protosession.py:377
+msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
+msgstr "Neuspešen Zagon Xephyr: čas čakanja na signal USR1 je potekel"
 
-#: ../lib/protosession.py:416
-msgid "Failed to start Xnest: died during startup"
-msgstr "Zagon Xnesta ni uspel: umrl med zagonom"
+#: ../lib/protosession.py:379
+msgid "Failed to start Xephyr: died during startup"
+msgstr "Zagon Xnesta ni uspel: proces ustavljen med zagonom"
 
-#: ../lib/protosession.py:501
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:470
 #, python-format
 msgid "There was a recoverable error while applying the user profile from file '%s'."
 msgstr "Prišlo je do popravljive napake med pripravo uporabniških nastavitev preko '%s'."
 
-#: ../lib/protosession.py:510
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (FATAL) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:479
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "Prišlo je do usodne napake med pripravo uporabniških nastavitev preko '%s'."
@@ -835,184 +843,200 @@ msgstr "Zaznamki spletnega brskalnika"
 msgid "Web browser profile list"
 msgstr "Sezam profilov spletnega brskalnika"
 
-#: ../lib/sources/mozillasource.py:522
+#: ../lib/sources/mozillasource.py:520
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Datoteke ni mogoče najti (%s)"
 
-#: ../lib/sources/mozillasource.py:873
+#: ../lib/sources/mozillasource.py:869
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "podvojeno ime(%(name)s) v razdelku %(section)s"
 
-#: ../lib/sources/mozillasource.py:882
+#: ../lib/sources/mozillasource.py:878
 #, python-format
 msgid "redundant default in section %s"
 msgstr "odvečna privzeta vrednost v razdelku %s"
 
-#: ../lib/sources/mozillasource.py:899
+#: ../lib/sources/mozillasource.py:895
 msgid "no default profile"
 msgstr "ni privzetega profila"
 
-#: ../lib/sources/mozillasource.py:954
+#: ../lib/sources/mozillasource.py:950
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Ustvarjen je zaznamek Mozille '%s' -> '%s'"
 
-#: ../lib/sources/mozillasource.py:956
+#: ../lib/sources/mozillasource.py:952
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Mapa zaznamkov Mozille ustvarjena '%s'"
 
-#: ../lib/sources/mozillasource.py:959
+#: ../lib/sources/mozillasource.py:955
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Izbrisan je zaznamek Mozille '%s'"
 
-#: ../lib/sources/mozillasource.py:961
+#: ../lib/sources/mozillasource.py:957
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Mapa zaznamkov Mozille zbrisana '%s'"
 
-#: ../lib/sources/mozillasource.py:964
+#: ../lib/sources/mozillasource.py:960
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Spremenjen je zaznamek Mozille '%s' '%s'"
 
-#: ../lib/sources/mozillasource.py:966
+#: ../lib/sources/mozillasource.py:962
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mapa zaznamkov Mozille spremenjena '%s'"
 
-#: ../lib/sources/paneldelegate.py:55
+#: ../lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel '%s' added"
 msgstr "Pult '%s' dodan"
 
-#: ../lib/sources/paneldelegate.py:61
+#: ../lib/sources/paneldelegate.py:71
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "Pult '%s' odstranjen"
 
-#: ../lib/sources/paneldelegate.py:76
+#: ../lib/sources/paneldelegate.py:86
 #, python-format
 msgid "Applet %s added to top panel"
 msgstr "Aplet %s dodan na zgornji pladenj"
 
-#: ../lib/sources/paneldelegate.py:78
+#: ../lib/sources/paneldelegate.py:88
 #, python-format
 msgid "Applet %s added to bottom panel"
 msgstr "Aplet %s dodan na spodnji pladenj"
 
-#: ../lib/sources/paneldelegate.py:80
+#: ../lib/sources/paneldelegate.py:90
 #, python-format
 msgid "Applet %s added to left panel"
 msgstr "Aplet %s dodan na levi pladenj"
 
-#: ../lib/sources/paneldelegate.py:82
+#: ../lib/sources/paneldelegate.py:92
 #, python-format
 msgid "Applet %s added to right panel"
 msgstr "Aplet %s dodan na desni pladenj"
 
-#: ../lib/sources/paneldelegate.py:97
+#: ../lib/sources/paneldelegate.py:107
 #, python-format
 msgid "Applet %s removed from top panel"
 msgstr "Aplet %s odstranjen z zgornjega pladenja"
 
-#: ../lib/sources/paneldelegate.py:99
+#: ../lib/sources/paneldelegate.py:109
 #, python-format
 msgid "Applet %s removed from bottom panel"
 msgstr "Aplet %s odstranjen s spodnjega pladenja"
 
-#: ../lib/sources/paneldelegate.py:101
+#: ../lib/sources/paneldelegate.py:111
 #, python-format
 msgid "Applet %s removed from left panel"
 msgstr "Aplet %s odstranjen z levega pladenja"
 
-#: ../lib/sources/paneldelegate.py:103
+#: ../lib/sources/paneldelegate.py:113
 #, python-format
 msgid "Applet %s removed from right panel"
 msgstr "Aplet %s odstranjen z desnega pladenja"
 
-#: ../lib/sources/paneldelegate.py:117
+#: ../lib/sources/paneldelegate.py:127
 #, python-format
 msgid "%s added to top panel"
 msgstr "%s dodan na zgornji pladenj"
 
-#: ../lib/sources/paneldelegate.py:119
+#: ../lib/sources/paneldelegate.py:129
 #, python-format
 msgid "%s added to bottom panel"
 msgstr "%s dodan na spodnji pladenj"
 
-#: ../lib/sources/paneldelegate.py:121
+#: ../lib/sources/paneldelegate.py:131
 #, python-format
 msgid "%s added to left panel"
 msgstr "%s dodan na levi pladenj"
 
-#: ../lib/sources/paneldelegate.py:123
+#: ../lib/sources/paneldelegate.py:133
 #, python-format
 msgid "%s added to right panel"
 msgstr "%s dodan na desni pladenj"
 
-#: ../lib/sources/paneldelegate.py:144
+#: ../lib/sources/paneldelegate.py:154
 #, python-format
 msgid "%s removed from top panel"
 msgstr "%s odstranjen z zgornjega pladnja"
 
-#: ../lib/sources/paneldelegate.py:146
+#: ../lib/sources/paneldelegate.py:156
 #, python-format
 msgid "%s removed from bottom panel"
 msgstr "%s odstranjen s spodnjega pladnja"
 
-#: ../lib/sources/paneldelegate.py:148
+#: ../lib/sources/paneldelegate.py:158
 #, python-format
 msgid "%s removed from left panel"
 msgstr "%s odstranjen z levega pladnja"
 
-#: ../lib/sources/paneldelegate.py:150
+#: ../lib/sources/paneldelegate.py:160
 #, python-format
 msgid "%s removed from right panel"
 msgstr "%s odstranjen z desnega pladnja"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:200
+#: ../lib/sources/paneldelegate.py:231
 msgid "Drawer"
 msgstr "Predal"
 
-#: ../lib/sources/paneldelegate.py:202
+#: ../lib/sources/paneldelegate.py:233
 msgid "Main Menu"
 msgstr "Glavni menu"
 
-#: ../lib/sources/paneldelegate.py:212
+#: ../lib/sources/paneldelegate.py:243
 #, python-format
 msgid "%s launcher"
 msgstr "%s zaganjalnik"
 
-#: ../lib/sources/paneldelegate.py:216
+#: ../lib/sources/paneldelegate.py:247
 msgid "Lock Screen button"
 msgstr "Gumb za zaklep zaslona"
 
-#: ../lib/sources/paneldelegate.py:218
+#: ../lib/sources/paneldelegate.py:249
 msgid "Logout button"
 msgstr "Gumb za odjavo"
 
-#: ../lib/sources/paneldelegate.py:220
+#: ../lib/sources/paneldelegate.py:251
 msgid "Run Application button"
 msgstr "Gumb za zagon programov"
 
-#: ../lib/sources/paneldelegate.py:222
+#: ../lib/sources/paneldelegate.py:253
 msgid "Search button"
 msgstr "Gumb za iskanje"
 
-#: ../lib/sources/paneldelegate.py:224
+#: ../lib/sources/paneldelegate.py:255
+msgid "Force Quit button"
+msgstr "Gumb za vsiljeno prekinitev"
+
+#: ../lib/sources/paneldelegate.py:257
+msgid "Connect to Server button"
+msgstr "Gumb za povezavo s strežnikom"
+
+#: ../lib/sources/paneldelegate.py:259
+msgid "Shutdown button"
+msgstr "Gumb za ugašanje"
+
+#: ../lib/sources/paneldelegate.py:261
 msgid "Screenshot button"
 msgstr "Gumb za zajem slike"
 
-#: ../lib/sources/paneldelegate.py:226
+#: ../lib/sources/paneldelegate.py:264
+msgid "Unknown"
+msgstr "Neznano"
+
+#: ../lib/sources/paneldelegate.py:266
 msgid "Menu Bar"
 msgstr "Menujska vrstica"
 
-#: ../lib/sources/paneldelegate.py:470
+#: ../lib/sources/paneldelegate.py:503
 msgid "Panel File"
 msgstr "Datoteka pulta"
 
