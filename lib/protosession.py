@@ -327,8 +327,7 @@ class ProtoSession (gobject.GObject):
             signal.signal (signal.SIGUSR1, signal.SIG_IGN)
 
             argv = XEPHYR_ARGV + \
-                   [ "-auth", self.xephyr_xauth_file ] + \
-                   [ "-name", "sabayon" ]
+                   [ "-auth", self.xephyr_xauth_file ]
             if parent_window:
                 argv += [ "-parent", parent_window ]
             argv += [ self.display_name ]

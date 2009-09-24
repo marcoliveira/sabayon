@@ -52,7 +52,7 @@ DEFAULT_SHELL = "/bin/bash"
 NOLOGIN_SHELL = "/sbin/nologin"
 SKEL_HOMEDIR  = "/etc/skel"
 
-XEPHYR_ARGV  = [ "@XEPHYR_PATH@", "-terminate", "-audit", "0", "-nolisten", "tcp" ]
+XEPHYR_ARGV  = [ "@XEPHYR_PATH@", "-terminate", "-audit", "0", "-nolisten", "tcp", "-name", "sabayon" ]
 SESSION_ARGV = [ "@XSESSION@", "@SESSION_NAME@" ]
 USERMOD_ARGV = [ "/usr/sbin/usermod" ]
 
