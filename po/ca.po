@@ -3,14 +3,15 @@
 # Copyright © 2005, 2006, 2007 The Free Software Foundation, Inc.
 # This file is distributed under the same license as the sabayon package.
 # Josep Puigdemont <josep.puigdemont@gmail.com>, 2005, 2006, 2007.
+# Gil Forcada <gilforcada@guifi.net>, 2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-14 13:18+0200\n"
-"PO-Revision-Date: 2009-09-14 13:18+0200\n"
-"Last-Translator: Josep Puigdemont <josep.puigdemont@gmail.com>\n"
+"POT-Creation-Date: 2009-10-01 20:35+0200\n"
+"PO-Revision-Date: 2009-09-29 19:56+0200\n"
+"Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -734,15 +735,14 @@ msgid "Unable to find a free X display"
 msgstr "No s'ha pogut trobar cap pantalla X lliure"
 
 #: ../lib/protosession.py:377
-#, fuzzy
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr ""
-"No s'ha pogut executar l'Xnest: ha expirat el temps d'espera del senyal USR1"
+"No s'ha pogut iniciar el Xephyr: ha expirat el temps d'espera del senyal "
+"USR1"
 
 #: ../lib/protosession.py:379
-#, fuzzy
 msgid "Failed to start Xephyr: died during startup"
-msgstr "No s'ha pogut executar l'Xnest: ha mort durant la inicialització"
+msgstr "No s'ha pogut iniciar el Xephyr: ha mort durant la inicialització"
 
 #. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
 #. "%s\n"
@@ -1050,19 +1050,16 @@ msgid "Search button"
 msgstr "Botó de cerca"
 
 #: ../lib/sources/paneldelegate.py:255
-#, fuzzy
 msgid "Force Quit button"
-msgstr "Botó de sortida"
+msgstr "Botó de forçar la sortida"
 
 #: ../lib/sources/paneldelegate.py:257
-#, fuzzy
 msgid "Connect to Server button"
-msgstr "Botó de blocar la pantalla"
+msgstr "Botó de connectar al servidor"
 
 #: ../lib/sources/paneldelegate.py:259
-#, fuzzy
 msgid "Shutdown button"
-msgstr "Botó de sortida"
+msgstr "Botó d'aturar l'ordinador"
 
 #: ../lib/sources/paneldelegate.py:261
 msgid "Screenshot button"
@@ -1070,7 +1067,7 @@ msgstr "Botó de captura de pantalla"
 
 #: ../lib/sources/paneldelegate.py:264
 msgid "Unknown"
-msgstr ""
+msgstr "Desconegut"
 
 #: ../lib/sources/paneldelegate.py:266
 msgid "Menu Bar"
