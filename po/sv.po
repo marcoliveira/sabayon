@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-13 09:33+0200\n"
-"PO-Revision-Date: 2009-08-13 09:33+0100\n"
+"POT-Creation-Date: 2009-10-24 10:09+0200\n"
+"PO-Revision-Date: 2009-10-24 10:09+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -686,24 +686,32 @@ msgstr "Användare för profil %s"
 msgid "Use This Profile"
 msgstr "Använd denna profil"
 
-#: ../lib/protosession.py:147
+#: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
 msgstr "Kan inte hitta en ledig X-display"
 
-#: ../lib/protosession.py:414
+#: ../lib/protosession.py:376
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr "Misslyckades med att starta Xephyr: timeout vid väntan på USR1-signal"
 
-#: ../lib/protosession.py:416
+#: ../lib/protosession.py:378
 msgid "Failed to start Xephyr: died during startup"
 msgstr "Misslyckades med att starta Xephyr: dog under uppstart"
 
-#: ../lib/protosession.py:501
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:469
 #, python-format
 msgid "There was a recoverable error while applying the user profile from file '%s'."
 msgstr "Det inträffade ett återhämtningsbart fel vid tillämpandet av användarprofilen från \"%s\"."
 
-#: ../lib/protosession.py:510
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (FATAL) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:478
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "Det inträffade ett ödesdigert fel vid tillämpandet av användarprofilen från \"%s\"."
@@ -825,51 +833,51 @@ msgstr "Webbläsarbokmärken"
 msgid "Web browser profile list"
 msgstr "Webbläsarprofillista"
 
-#: ../lib/sources/mozillasource.py:522
+#: ../lib/sources/mozillasource.py:520
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Filen hittades inte (%s)"
 
-#: ../lib/sources/mozillasource.py:873
+#: ../lib/sources/mozillasource.py:869
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "dubblettnamn(%(name)s) i sektion %(section)s"
 
-#: ../lib/sources/mozillasource.py:882
+#: ../lib/sources/mozillasource.py:878
 #, python-format
 msgid "redundant default in section %s"
 msgstr "redundant standardvärde i sektion %s"
 
-#: ../lib/sources/mozillasource.py:899
+#: ../lib/sources/mozillasource.py:895
 msgid "no default profile"
 msgstr "ingen standardprofil"
 
-#: ../lib/sources/mozillasource.py:954
+#: ../lib/sources/mozillasource.py:950
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Mozilla-bokmärke skapades \"%s\" -> \"%s\""
 
-#: ../lib/sources/mozillasource.py:956
+#: ../lib/sources/mozillasource.py:952
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Mozilla-bokmärkesmapp skapades \"%s\""
 
-#: ../lib/sources/mozillasource.py:959
+#: ../lib/sources/mozillasource.py:955
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Mozilla-bokmärke \"%s\" borttaget"
 
-#: ../lib/sources/mozillasource.py:961
+#: ../lib/sources/mozillasource.py:957
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Mozilla-bokmärkesmapp togs bort \"%s\""
 
-#: ../lib/sources/mozillasource.py:964
+#: ../lib/sources/mozillasource.py:960
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Mozilla-bokmärke ändrades \"%s\" \"%s\""
 
-#: ../lib/sources/mozillasource.py:966
+#: ../lib/sources/mozillasource.py:962
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mozilla-bokmärkesmapp ändrades \"%s\""
@@ -1042,7 +1050,12 @@ msgstr "Ogiltig metadatasektion i \"%s\": %s"
 msgid "Cannot add non-existent file '%s'"
 msgstr "Kan inte lägga till en icke-existerande fil \"%s\""
 
-#: ../lib/storage.py:568
+#: ../lib/storage.py:487
+#, python-format
+msgid "Couldn't unlink file '%s'"
+msgstr "Kunde inte avlänka filen \"%s\""
+
+#: ../lib/storage.py:570
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Profilen är skrivskyddad %s"
@@ -1245,8 +1258,6 @@ msgstr "Kan inte hitta användarnamn: inte inställd i /etc/passwd och inget vä
 #~ msgstr ""
 #~ "Kunde inte skapa GConf-motor. Felet var:\n"
 #~ "%s"
-#~ msgid "Couldn't display help: %s"
-#~ msgstr "Kunde inte visa hjälp: %s"
 #~ msgid "translator_credits"
 #~ msgstr ""
 #~ "Christian Rose\n"
