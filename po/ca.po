@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-01 20:35+0200\n"
-"PO-Revision-Date: 2009-09-29 19:56+0200\n"
+"POT-Creation-Date: 2009-10-25 20:19+0100\n"
+"PO-Revision-Date: 2009-10-25 20:20+0100\n"
 "Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
@@ -734,13 +734,12 @@ msgstr "Utilitza aquest perfil"
 msgid "Unable to find a free X display"
 msgstr "No s'ha pogut trobar cap pantalla X lliure"
 
-#: ../lib/protosession.py:377
+#: ../lib/protosession.py:376
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr ""
-"No s'ha pogut iniciar el Xephyr: ha expirat el temps d'espera del senyal "
-"USR1"
+"No s'ha pogut iniciar el Xephyr: ha expirat el temps d'espera del senyal USR1"
 
-#: ../lib/protosession.py:379
+#: ../lib/protosession.py:378
 msgid "Failed to start Xephyr: died during startup"
 msgstr "No s'ha pogut iniciar el Xephyr: ha mort durant la inicialització"
 
@@ -748,7 +747,7 @@ msgstr "No s'ha pogut iniciar el Xephyr: ha mort durant la inicialització"
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:470
+#: ../lib/protosession.py:469
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
@@ -760,7 +759,7 @@ msgstr ""
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (FATAL) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:479
+#: ../lib/protosession.py:478
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "S'ha produït un error fatal en aplicar el perfil d'usuari de «%s»."
@@ -1097,7 +1096,12 @@ msgstr "La secció de metadades de «%s» no és vàlida: %s"
 msgid "Cannot add non-existent file '%s'"
 msgstr "No es pot afegir el fitxer «%s» perquè no existeix"
 
-#: ../lib/storage.py:568
+#: ../lib/storage.py:487
+#, python-format
+msgid "Couldn't unlink file '%s'"
+msgstr "No s'ha pogut desenllaçar el fitxer «%s»"
+
+#: ../lib/storage.py:570
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "El perfil és de només lectura %s"
