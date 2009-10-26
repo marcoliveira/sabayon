@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-09-11 04:14+0000\n"
-"PO-Revision-Date: 2009-09-12 10:00+0100\n"
+"POT-Creation-Date: 2009-10-25 21:46+0000\n"
+"PO-Revision-Date: 2009-10-26 07:33+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -183,11 +183,11 @@ msgstr "Vrednost"
 
 #: ../admin-tool/lockdown/lockdownbutton.py:99
 msgid "Click to make this setting not mandatory"
-msgstr "Kliknite, če želite da je nastavitev obvezna"
+msgstr "Kliknite, če želite določiti nastavitev kot neobvezno"
 
 #: ../admin-tool/lockdown/lockdownbutton.py:101
 msgid "Click to make this setting mandatory"
-msgstr "Kliknite, če želite da nastavitev ni obvezna"
+msgstr "Kliknite, če želite določiti nastavitev kot obvezno"
 
 #: ../admin-tool/lockdown/maindialog.py:49
 msgid "Disable _command line"
@@ -211,7 +211,7 @@ msgstr "_Zakleni pulte"
 
 #: ../admin-tool/lockdown/maindialog.py:55
 msgid "Disable force _quit"
-msgstr "Onemogoči prisilni _izhod"
+msgstr "Onemogoči prisilni _konec"
 
 #: ../admin-tool/lockdown/maindialog.py:56
 msgid "Disable lock _screen"
@@ -223,7 +223,7 @@ msgstr "Onemogoči _odjavo"
 
 #: ../admin-tool/lockdown/maindialog.py:59
 msgid "Disable _quit"
-msgstr "Onemogoči _izhod"
+msgstr "Onemogoči _konec"
 
 #: ../admin-tool/lockdown/maindialog.py:60
 msgid "Disable _arbitrary URL"
@@ -261,19 +261,19 @@ msgstr "Med shranjevanjem odstrani osebne podatke iz dokumentov"
 
 #: ../admin-tool/lockdown/maindialog.py:71
 msgid "Warn if macro tries to create a PDF"
-msgstr "Opozori v primeru, da želi makro ustvariti PDF"
+msgstr "Opozori v primeru, da želi makro program ustvariti PDF"
 
 #: ../admin-tool/lockdown/maindialog.py:72
 msgid "Warn if macro tries to print a document"
-msgstr "Opozori v primeru, da želi makro natisniti dokument"
+msgstr "Opozori v primeru, da želi makro program natisniti dokument"
 
 #: ../admin-tool/lockdown/maindialog.py:73
 msgid "Warn if macro tries to save a document"
-msgstr "Opozori v primeru, da želi makro shraniti dokument"
+msgstr "Opozori v primeru, da želi makro program shraniti dokument"
 
 #: ../admin-tool/lockdown/maindialog.py:74
 msgid "Warn if macro tries to sign a document"
-msgstr "Opozori v primeru, da želi makro podpisati dokument"
+msgstr "Opozori v primeru, da želi makro program podpisati dokument"
 
 #: ../admin-tool/lockdown/maindialog.py:75
 msgid "Recommend password when saving a document"
@@ -489,7 +489,7 @@ msgstr "Ni ustreznih dovoljenj za zagon orodja za namizne uporabniške profile"
 
 #: ../admin-tool/sabayon:78
 msgid "Administrator level permissions are needed to run this program because it can modify system files."
-msgstr "Zagon tega programa zahteva nadzorniške pravice, saj je mogoče spreminjati sistemske datoteke"
+msgstr "Zagon tega programa zahteva skrbniške pravice, saj je mogoče spreminjati sistemske datoteke"
 
 #: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
@@ -643,7 +643,7 @@ msgstr "Urejanje profila %s"
 
 #: ../admin-tool/sessionwindow.py:178
 msgid "_Quit"
-msgstr "_Izhod"
+msgstr "_Končaj"
 
 #: ../admin-tool/sessionwindow.py:180
 msgid "_Changes"
@@ -700,19 +700,19 @@ msgstr "Uporabi ta profil"
 msgid "Unable to find a free X display"
 msgstr "Ni mogoče najti prostega zaslona X"
 
-#: ../lib/protosession.py:377
+#: ../lib/protosession.py:376
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr "Neuspešen Zagon Xephyr: čas čakanja na signal USR1 je potekel"
 
-#: ../lib/protosession.py:379
+#: ../lib/protosession.py:378
 msgid "Failed to start Xephyr: died during startup"
-msgstr "Zagon Xnesta ni uspel: proces ustavljen med zagonom"
+msgstr "Zagon Xnesta ni uspel: opravilo ustavljeno med zagonom"
 
 #. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:470
+#: ../lib/protosession.py:469
 #, python-format
 msgid "There was a recoverable error while applying the user profile from file '%s'."
 msgstr "Prišlo je do popravljive napake med pripravo uporabniških nastavitev preko '%s'."
@@ -721,7 +721,7 @@ msgstr "Prišlo je do popravljive napake med pripravo uporabniških nastavitev p
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (FATAL) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:479
+#: ../lib/protosession.py:478
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "Prišlo je do usodne napake med pripravo uporabniških nastavitev preko '%s'."
@@ -905,62 +905,62 @@ msgstr "Pult '%s' odstranjen"
 #: ../lib/sources/paneldelegate.py:86
 #, python-format
 msgid "Applet %s added to top panel"
-msgstr "Aplet %s dodan na zgornji pladenj"
+msgstr "Aplet %s dodan na zgornji pult"
 
 #: ../lib/sources/paneldelegate.py:88
 #, python-format
 msgid "Applet %s added to bottom panel"
-msgstr "Aplet %s dodan na spodnji pladenj"
+msgstr "Aplet %s dodan na spodnji pult"
 
 #: ../lib/sources/paneldelegate.py:90
 #, python-format
 msgid "Applet %s added to left panel"
-msgstr "Aplet %s dodan na levi pladenj"
+msgstr "Aplet %s dodan na levi pult"
 
 #: ../lib/sources/paneldelegate.py:92
 #, python-format
 msgid "Applet %s added to right panel"
-msgstr "Aplet %s dodan na desni pladenj"
+msgstr "Aplet %s dodan na desni pult"
 
 #: ../lib/sources/paneldelegate.py:107
 #, python-format
 msgid "Applet %s removed from top panel"
-msgstr "Aplet %s odstranjen z zgornjega pladenja"
+msgstr "Aplet %s odstranjen z zgornjega pulta"
 
 #: ../lib/sources/paneldelegate.py:109
 #, python-format
 msgid "Applet %s removed from bottom panel"
-msgstr "Aplet %s odstranjen s spodnjega pladenja"
+msgstr "Aplet %s odstranjen s spodnjega pulta"
 
 #: ../lib/sources/paneldelegate.py:111
 #, python-format
 msgid "Applet %s removed from left panel"
-msgstr "Aplet %s odstranjen z levega pladenja"
+msgstr "Aplet %s odstranjen z levega pulta"
 
 #: ../lib/sources/paneldelegate.py:113
 #, python-format
 msgid "Applet %s removed from right panel"
-msgstr "Aplet %s odstranjen z desnega pladenja"
+msgstr "Aplet %s odstranjen z desnega pulta"
 
 #: ../lib/sources/paneldelegate.py:127
 #, python-format
 msgid "%s added to top panel"
-msgstr "%s dodan na zgornji pladenj"
+msgstr "%s dodan na zgornji pult"
 
 #: ../lib/sources/paneldelegate.py:129
 #, python-format
 msgid "%s added to bottom panel"
-msgstr "%s dodan na spodnji pladenj"
+msgstr "%s dodan na spodnji pult"
 
 #: ../lib/sources/paneldelegate.py:131
 #, python-format
 msgid "%s added to left panel"
-msgstr "%s dodan na levi pladenj"
+msgstr "%s dodan na levi pult"
 
 #: ../lib/sources/paneldelegate.py:133
 #, python-format
 msgid "%s added to right panel"
-msgstr "%s dodan na desni pladenj"
+msgstr "%s dodan na desni pult"
 
 #: ../lib/sources/paneldelegate.py:154
 #, python-format
@@ -1014,7 +1014,7 @@ msgstr "Gumb za iskanje"
 
 #: ../lib/sources/paneldelegate.py:255
 msgid "Force Quit button"
-msgstr "Gumb za vsiljeno prekinitev"
+msgstr "Gumb za vsiljeni konec"
 
 #: ../lib/sources/paneldelegate.py:257
 msgid "Connect to Server button"
@@ -1060,10 +1060,15 @@ msgstr "Neveljaven razdelek metapodatkov v '%s': %s"
 msgid "Cannot add non-existent file '%s'"
 msgstr "Ni mogoče dodati neobstoječe datoteke '%s'"
 
-#: ../lib/storage.py:568
+#: ../lib/storage.py:487
+#, python-format
+msgid "Couldn't unlink file '%s'"
+msgstr "Ni mogoče odstraniti povezave datoteke '%s'"
+
+#: ../lib/storage.py:570
 #, python-format
 msgid "Profile is read-only %s"
-msgstr "Profil je samo za branje %s"
+msgstr "Profil je le za branje %s"
 
 #: ../lib/unittests.py:38
 #: ../lib/unittests.py:39
