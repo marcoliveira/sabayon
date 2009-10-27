@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-10-23 22:08+0000\n"
-"PO-Revision-Date: 2009-10-27 07:52+0100\n"
+"POT-Creation-Date: 2009-10-27 06:57+0000\n"
+"PO-Revision-Date: 2009-10-27 08:05+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -161,7 +161,7 @@ msgstr "par"
 msgid "Profile settings: %s"
 msgstr "Ajustes del perfil: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:387
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:392
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Nombre"
@@ -173,6 +173,20 @@ msgstr "Tipo"
 #: ../admin-tool/gconfviewer.py:120
 msgid "Value"
 msgstr "Valor"
+
+#: ../admin-tool/groupsdialog.py:57
+#, python-format
+#| msgid "Users for profile %s"
+msgid "Groups for profile %s"
+msgstr "Grupos para el perfil %s"
+
+#: ../admin-tool/groupsdialog.py:70
+msgid "Group"
+msgstr "Grupo"
+
+#: ../admin-tool/groupsdialog.py:80 ../admin-tool/usersdialog.py:95
+msgid "Use This Profile"
+msgstr "Usar este perfil"
 
 #: ../admin-tool/lockdown/lockdownbutton.py:99
 msgid "Click to make this setting not mandatory"
@@ -471,7 +485,7 @@ msgstr "Interfaz de usuario"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:497
+#: ../admin-tool/profilesdialog.py:508
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -539,14 +553,14 @@ msgstr ""
 "Sabayon saldrá ahora. Hubo algunos errores recuperables y puede ayudarnos a "
 "depurar el problema enviando el archivo de registros en %s a %s"
 
-#: ../admin-tool/sabayon-apply:99
+#: ../admin-tool/sabayon-apply:111
+msgid "Please use -h for usage options"
+msgstr "Use -h para las opciones de uso"
+
+#: ../admin-tool/sabayon-apply:123
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "No se ha encontrado ningún perfil para el usuario «%s»\n"
-
-#: ../admin-tool/sabayon-apply:104
-msgid "Please use -h for usage options"
-msgstr "Use -h para las opciones de uso"
 
 #: ../admin-tool/sabayon-session:67
 #, c-format
@@ -582,14 +596,22 @@ msgid "_Details"
 msgstr "_Detalles"
 
 #: ../admin-tool/sabayon.glade.h:7
+msgid "_Groups"
+msgstr "_Grupos"
+
+#: ../admin-tool/sabayon.glade.h:8
+msgid "_Groups:"
+msgstr "_Grupos:"
+
+#: ../admin-tool/sabayon.glade.h:9
 msgid "_Profiles:"
 msgstr "_Perfiles:"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.glade.h:10
 msgid "_Users"
 msgstr "_Usuarios"
 
-#: ../admin-tool/sabayon.glade.h:9
+#: ../admin-tool/sabayon.glade.h:11
 msgid "_Users:"
 msgstr "_Usuarios:"
 
@@ -741,10 +763,6 @@ msgstr "_Continuar editando"
 #, python-format
 msgid "Users for profile %s"
 msgstr "Usuarios para el perfil %s"
-
-#: ../admin-tool/usersdialog.py:95
-msgid "Use This Profile"
-msgstr "Usar este perfil"
 
 #: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
@@ -1122,6 +1140,75 @@ msgstr "No se pudo desenlazar el archivo «%s»"
 msgid "Profile is read-only %s"
 msgstr "El perfil es de sólo lectura %s"
 
+#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
+#. do not change the way they are written.  The intended string is
+#. something like "invalid type for setting blah in /ldap/path/to/blah"
+#: ../lib/systemdb.py:58
+#, python-format
+msgid "invalid type for setting %(setting)s in %(np)s"
+msgstr "tipo no válido para el ajuste %(setting)s en %(np)s"
+
+#: ../lib/systemdb.py:103
+msgid "No database file provided"
+msgstr "No se proporcionó ningún archivo de base de datos"
+
+#: ../lib/systemdb.py:220
+#, python-format
+msgid "No search base specified for %s"
+msgstr "Sin base de búsqueda especificada para %s"
+
+#: ../lib/systemdb.py:223
+#, python-format
+msgid "No query filter specified for %s"
+msgstr "Sin filtro de consulta especificado para %s"
+
+#: ../lib/systemdb.py:226
+#, python-format
+msgid "No result attribute specified for %s"
+msgstr "No se ha especificado un atributo resultante para %s"
+
+#: ../lib/systemdb.py:235
+msgid "Scope must be one of sub, base and one"
+msgstr "El ámbito debe ser uno de sub, base o uno"
+
+#: ../lib/systemdb.py:255
+msgid "multiple_result must be one of first and random"
+msgstr "multiple_result debe ser uno de los primeros y aleatorio"
+
+#: ../lib/systemdb.py:347
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "No se pudo abrir %s en para escritura"
+
+#: ../lib/systemdb.py:360
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "No se pudo guardar UserDatabase en %s"
+
+#: ../lib/systemdb.py:383 ../lib/systemdb.py:417
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "El archivo %s no es una configuración de perfil"
+
+#: ../lib/systemdb.py:390
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "No se pudo añadir el perfil predeterminado %s a la configuración"
+
+#: ../lib/systemdb.py:424
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "No se pudo añadir el usuario %s a la configuración de perfil"
+
+#: ../lib/systemdb.py:496
+msgid "Failed to get the user list"
+msgstr "No se pudo recuperar la lista de usuarios"
+
+#: ../lib/systemdb.py:546
+#| msgid "Failed to get the user list"
+msgid "Failed to get the group list"
+msgstr "Falló al obtener la lista de grupos"
+
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
 msgstr "Ignorar ADVERTENCIAS"
@@ -1140,67 +1227,7 @@ msgstr "Ejecutando pruebas de %s (%s)"
 msgid "Success!"
 msgstr "Éxito"
 
-#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
-#. do not change the way they are written.  The intended string is
-#. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/userdb.py:54
-#, python-format
-msgid "invalid type for setting %(setting)s in %(np)s"
-msgstr "tipo no válido para el ajuste %(setting)s en %(np)s"
-
-#: ../lib/userdb.py:215
-#, python-format
-msgid "No search base specified for %s"
-msgstr "Sin base de búsqueda especificada para %s"
-
-#: ../lib/userdb.py:218
-#, python-format
-msgid "No query filter specified for %s"
-msgstr "Sin filtro de consulta especificado para %s"
-
-#: ../lib/userdb.py:221
-#, python-format
-msgid "No result attribute specified for %s"
-msgstr "No se ha especificado un atributo resultante para %s"
-
-#: ../lib/userdb.py:230
-msgid "Scope must be one of sub, base and one"
-msgstr "El ámbito debe ser uno de sub, base o uno"
-
-#: ../lib/userdb.py:250
-msgid "multiple_result must be one of first and random"
-msgstr "multiple_result debe ser uno de los primeros y aleatorio"
-
-#: ../lib/userdb.py:342
-#, python-format
-msgid "Could not open %s for writing"
-msgstr "No se pudo abrir %s en para escritura"
-
-#: ../lib/userdb.py:355
-#, python-format
-msgid "Failed to save UserDatabase to %s"
-msgstr "No se pudo guardar UserDatabase en %s"
-
-#: ../lib/userdb.py:378 ../lib/userdb.py:413
-#, python-format
-msgid "File %s is not a profile configuration"
-msgstr "El archivo %s no es una configuración de perfil"
-
-#: ../lib/userdb.py:385
-#, python-format
-msgid "Failed to add default profile %s to configuration"
-msgstr "No se pudo añadir el perfil predeterminado %s a la configuración"
-
-#: ../lib/userdb.py:421
-#, python-format
-msgid "Failed to add user %s to profile configuration"
-msgstr "No se pudo añadir el usuario %s a la configuración de perfil"
-
-#: ../lib/userdb.py:472
-msgid "Failed to get the user list"
-msgstr "No se pudo recuperar la lista de usuarios"
-
-#: ../lib/util.py:93
+#: ../lib/util.py:94
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -1208,7 +1235,7 @@ msgstr ""
 "No se puede encontrar la carpeta personal: no se encuentra establecido en /"
 "etc/passwd y no existe ningún valor para $HOME en el entorno"
 
-#: ../lib/util.py:106
+#: ../lib/util.py:110 ../lib/util.py:137
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
