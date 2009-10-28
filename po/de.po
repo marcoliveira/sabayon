@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-09 14:12+0200\n"
-"PO-Revision-Date: 2009-08-08 18:34+0200\n"
+"POT-Creation-Date: 2009-10-28 09:49+0100\n"
+"PO-Revision-Date: 2009-10-28 10:12+0100\n"
 "Last-Translator: Christian Kirbach <Christian.Kirbach@googlemail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -478,7 +478,7 @@ msgid ""
 "Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr ""
 "Ihr Benutzerkonto ist nicht berechtigt das Programm zum Bearbeiten der "
-"Desktop-Benutzerprofile auszuführen"
+"Benutzerprofile auszuführen"
 
 #: ../admin-tool/sabayon:78
 msgid ""
@@ -490,16 +490,15 @@ msgstr ""
 
 #: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
-msgstr ""
-"Das Programm für die Bearbeitung der Desktop-Benutzerprofile läuft bereits"
+msgstr "Das Programm für die Bearbeitung der Benutzerprofile läuft bereits"
 
 #: ../admin-tool/sabayon:84
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
 msgstr ""
-"Sie dürfen das Desktop-Benutzerprofil-Einstellungsprogramm nicht aus einer "
-"Sitzung heraus verwenden, die Sie gerade anpassen"
+"Sie dürfen das Benutzerprofil-Einstellungsprogramm nicht aus einer Sitzung "
+"heraus verwenden, die Sie gerade anpassen"
 
 #: ../admin-tool/sabayon:91
 #, c-format
@@ -748,21 +747,25 @@ msgstr "Benutzer von Profil %s"
 msgid "Use This Profile"
 msgstr "Dieses Profil verwenden"
 
-#: ../lib/protosession.py:147
+#: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
 msgstr "Es konnte keine freie X-Anzeige gefunden werden"
 
-#: ../lib/protosession.py:414
+#: ../lib/protosession.py:376
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr ""
 "Xephyr konnte nicht gestartet werden: Zeitüberschreitung beim Warten auf "
 "USR1-Signal"
 
-#: ../lib/protosession.py:416
+#: ../lib/protosession.py:378
 msgid "Failed to start Xephyr: died during startup"
 msgstr "Xephyr konnte nicht gestartet werden: Beim Starten abgestürzt"
 
-#: ../lib/protosession.py:501
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:469
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
@@ -770,7 +773,11 @@ msgstr ""
 "Ein behebbarer Fehler ist beim Anwenden des Benutzerprofils aus Datei »%s« "
 "aufgetreten."
 
-#: ../lib/protosession.py:510
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (FATAL) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:478
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr ""
@@ -892,51 +899,51 @@ msgstr "Internet-Browser-Lesezeichen"
 msgid "Web browser profile list"
 msgstr "Internet-Browser-Profilliste"
 
-#: ../lib/sources/mozillasource.py:522
+#: ../lib/sources/mozillasource.py:520
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Datei konnte nicht gefunden werden (%s)"
 
-#: ../lib/sources/mozillasource.py:873
+#: ../lib/sources/mozillasource.py:869
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "doppelter Name (%(name)s) in Abschnitt %(section)s"
 
-#: ../lib/sources/mozillasource.py:882
+#: ../lib/sources/mozillasource.py:878
 #, python-format
 msgid "redundant default in section %s"
 msgstr "doppelter Vorgabewert in Abschnitt %s"
 
-#: ../lib/sources/mozillasource.py:899
+#: ../lib/sources/mozillasource.py:895
 msgid "no default profile"
 msgstr "kein Standardprofil"
 
-#: ../lib/sources/mozillasource.py:954
+#: ../lib/sources/mozillasource.py:950
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Mozilla-Lesezeichen erstellt »%s« -> »%s«"
 
-#: ../lib/sources/mozillasource.py:956
+#: ../lib/sources/mozillasource.py:952
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Mozilla-Lesezeichenordner erstellt »%s«"
 
-#: ../lib/sources/mozillasource.py:959
+#: ../lib/sources/mozillasource.py:955
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Mozilla-Lesezeichen gelöscht »%s«"
 
-#: ../lib/sources/mozillasource.py:961
+#: ../lib/sources/mozillasource.py:957
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Mozilla-Lesezeichenordner gelöscht »%s«"
 
-#: ../lib/sources/mozillasource.py:964
+#: ../lib/sources/mozillasource.py:960
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Mozilla-Lesezeichen geändert »%s« »%s«"
 
-#: ../lib/sources/mozillasource.py:966
+#: ../lib/sources/mozillasource.py:962
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mozilla-Lesezeichenordner geändert »%s«"
@@ -1107,9 +1114,14 @@ msgstr "Ungültiger Metadatenabschnitt in »%s«: %s"
 #: ../lib/storage.py:362
 #, python-format
 msgid "Cannot add non-existent file '%s'"
-msgstr "Nicht-existierende Datei »%s« konnte nicht hinzugefügt werden"
+msgstr "Nicht vorhandene Datei »%s« konnte nicht hinzugefügt werden"
 
-#: ../lib/storage.py:568
+#: ../lib/storage.py:487
+#, python-format
+msgid "Couldn't unlink file '%s'"
+msgstr "Datei »%s« konnte nicht getrennt werden"
+
+#: ../lib/storage.py:570
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Dieses Profil ist nur lesbar %s"
@@ -1207,3 +1219,11 @@ msgid ""
 msgstr ""
 "Benutzername konnte nicht gefunden werden: nicht in /etc/passwd gesetzt und "
 "kein Wert in Umgebungsvariable $USER"
+
+#, fuzzy
+#~ msgid "Groups for profile %s"
+#~ msgstr "Benutzer von Profil %s"
+
+#, fuzzy
+#~ msgid "Failed to get the group list"
+#~ msgstr "Benutzerliste konnte nicht gelesen werden"
