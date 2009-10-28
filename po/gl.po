@@ -1,4 +1,4 @@
-# translation of sabayon.master.po to Galician
+# translation of sabayon-master-po-gl-1950.po to Galician
 # translation of sabayon.gl.po to
 # translation of sabayon.gl.po to
 # This file is distributed under the same license as the PACKAGE package.
@@ -11,12 +11,12 @@
 # Antón Méixome <meixome@mancomun.org>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: sabayon.master\n"
+"Project-Id-Version: sabayon-master-po-gl-1950\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-06 18:55+0200\n"
-"PO-Revision-Date: 2009-08-05 09:57+0200\n"
+"POT-Creation-Date: 2009-10-28 21:35+0100\n"
+"PO-Revision-Date: 2009-10-28 14:26+0100\n"
 "Last-Translator: Antón Méixome <meixome@mancomun.org>\n"
-"Language-Team: Galician <gnome@mancomun.org>\n"
+"Language-Team: Galician <gnome@g11n.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -31,7 +31,7 @@ msgstr "Programa para estabelecer e editar perfís para usuarios"
 #: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
 msgstr ""
-"Suso Baleato <suso.baleato@xunta.es>; Antón Méixome <meixome@mancomun.org>"
+"Fran Diéguez <fran.dieguez@glug.es>; Antón Méixome <meixome@mancomun.org>"
 
 #: ../admin-tool/changeswindow.py:50
 #, python-format
@@ -159,7 +159,7 @@ msgstr "par"
 msgid "Profile settings: %s"
 msgstr "Configuración do perfil: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:387
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:392
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Nome"
@@ -171,6 +171,19 @@ msgstr "Tipo"
 #: ../admin-tool/gconfviewer.py:120
 msgid "Value"
 msgstr "Valor"
+
+#: ../admin-tool/groupsdialog.py:57
+#, python-format
+msgid "Groups for profile %s"
+msgstr "Grupos para o perfil %s"
+
+#: ../admin-tool/groupsdialog.py:70
+msgid "Group"
+msgstr "Grupo"
+
+#: ../admin-tool/groupsdialog.py:80 ../admin-tool/usersdialog.py:95
+msgid "Use This Profile"
+msgstr "Usar este perfil"
 
 #: ../admin-tool/lockdown/lockdownbutton.py:99
 msgid "Click to make this setting not mandatory"
@@ -469,7 +482,7 @@ msgstr "Interface de usuario"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:497
+#: ../admin-tool/profilesdialog.py:508
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -535,14 +548,14 @@ msgstr ""
 "O Sabayon vai saír agora. Houbo algúns erros recuperábeis e pode axudarnos a "
 "depurar o problema enviando o rexistro %s a %s"
 
-#: ../admin-tool/sabayon-apply:99
+#: ../admin-tool/sabayon-apply:111
+msgid "Please use -h for usage options"
+msgstr "Use -h para as opcións de uso"
+
+#: ../admin-tool/sabayon-apply:123
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Non se localizou ningún perfil para o usuario '%s'\n"
-
-#: ../admin-tool/sabayon-apply:104
-msgid "Please use -h for usage options"
-msgstr "Use -h para as opcións de uso"
 
 #: ../admin-tool/sabayon-session:67
 #, c-format
@@ -579,14 +592,22 @@ msgid "_Details"
 msgstr "_Detalles"
 
 #: ../admin-tool/sabayon.glade.h:7
+msgid "_Groups"
+msgstr "_Grupos"
+
+#: ../admin-tool/sabayon.glade.h:8
+msgid "_Groups:"
+msgstr "_Grupos:"
+
+#: ../admin-tool/sabayon.glade.h:9
 msgid "_Profiles:"
 msgstr "_Perfís:"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.glade.h:10
 msgid "_Users"
 msgstr "_Usuarios"
 
-#: ../admin-tool/sabayon.glade.h:9
+#: ../admin-tool/sabayon.glade.h:11
 msgid "_Users:"
 msgstr "_Usuarios:"
 
@@ -741,23 +762,23 @@ msgstr "_Continuar editando"
 msgid "Users for profile %s"
 msgstr "Usuarios para o perfil %s"
 
-#: ../admin-tool/usersdialog.py:95
-msgid "Use This Profile"
-msgstr "Usar este perfil"
-
-#: ../lib/protosession.py:147
+#: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
 msgstr "Non é posíbel localizar unha pantalla X libre"
 
-#: ../lib/protosession.py:414
+#: ../lib/protosession.py:376
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr "Fallou o iniciio de Xephyr: tempo de espera excedido para o sinal USR1"
 
-#: ../lib/protosession.py:416
+#: ../lib/protosession.py:378
 msgid "Failed to start Xephyr: died during startup"
 msgstr "Fallou o inicio de Xnest: morreu durante o inicio"
 
-#: ../lib/protosession.py:501
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:469
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
@@ -765,7 +786,11 @@ msgstr ""
 "Houbo un erro recuperábel ao aplicar o perfil de usuario desde o ficheiro '%"
 "s'."
 
-#: ../lib/protosession.py:510
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (FATAL) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:478
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "Houbo un erro moi grave ao aplicar o perfil do usuario desde '%s'."
@@ -885,51 +910,51 @@ msgstr "Marcadores do navegador web"
 msgid "Web browser profile list"
 msgstr "Lista dos perfís do navegador web"
 
-#: ../lib/sources/mozillasource.py:522
+#: ../lib/sources/mozillasource.py:520
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Non se encontrou o ficheiro (%s)"
 
-#: ../lib/sources/mozillasource.py:873
+#: ../lib/sources/mozillasource.py:869
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "nome duplicado(%(name)s) na sección %(section)s"
 
-#: ../lib/sources/mozillasource.py:882
+#: ../lib/sources/mozillasource.py:878
 #, python-format
 msgid "redundant default in section %s"
 msgstr "valor predeterminado redundante na sección %s"
 
-#: ../lib/sources/mozillasource.py:899
+#: ../lib/sources/mozillasource.py:895
 msgid "no default profile"
 msgstr "sen perfil predeterminado"
 
-#: ../lib/sources/mozillasource.py:954
+#: ../lib/sources/mozillasource.py:950
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Creouse un marcador de Mozilla '%s' -> '%s'"
 
-#: ../lib/sources/mozillasource.py:956
+#: ../lib/sources/mozillasource.py:952
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Creouse un cartafol de marcadores de Mozilla '%s'"
 
-#: ../lib/sources/mozillasource.py:959
+#: ../lib/sources/mozillasource.py:955
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Eliminouse un marcador de Mozilla '%s'"
 
-#: ../lib/sources/mozillasource.py:961
+#: ../lib/sources/mozillasource.py:957
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Eliminouse un cartafol de marcadores de Mozilla '%s'"
 
-#: ../lib/sources/mozillasource.py:964
+#: ../lib/sources/mozillasource.py:960
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Modificouse un marcador de Mozilla '%s' '%s'"
 
-#: ../lib/sources/mozillasource.py:966
+#: ../lib/sources/mozillasource.py:962
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Modificouse un cartafol de marcadores de Mozilla '%s'"
@@ -1102,10 +1127,83 @@ msgstr "A sección de metadatos non é válida en '%s': %s"
 msgid "Cannot add non-existent file '%s'"
 msgstr "Non se pode engadir o ficheiro inexistente '%s'"
 
-#: ../lib/storage.py:568
+#: ../lib/storage.py:487
+#, python-format
+msgid "Couldn't unlink file '%s'"
+msgstr "Non foi posíbel eliminar a ligazón do ficheiro '%s'"
+
+#: ../lib/storage.py:570
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "O perfil é só de lectura %s"
+
+#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
+#. do not change the way they are written.  The intended string is
+#. something like "invalid type for setting blah in /ldap/path/to/blah"
+#: ../lib/systemdb.py:58
+#, python-format
+msgid "invalid type for setting %(setting)s in %(np)s"
+msgstr "o tipo non é válido para a configuración %(setting)s en %(np)s"
+
+#: ../lib/systemdb.py:103
+msgid "No database file provided"
+msgstr "Non se forneceu un ficheiro de base de datos"
+
+#: ../lib/systemdb.py:220
+#, python-format
+msgid "No search base specified for %s"
+msgstr "Non se especificou unha base de busca para %s"
+
+#: ../lib/systemdb.py:223
+#, python-format
+msgid "No query filter specified for %s"
+msgstr "Non hai ningún filtro de consulta especificado para %s"
+
+#: ../lib/systemdb.py:226
+#, python-format
+msgid "No result attribute specified for %s"
+msgstr "Non se especificou ningún atributo resultante para %s"
+
+#: ../lib/systemdb.py:235
+msgid "Scope must be one of sub, base and one"
+msgstr "O ámbito debe ser \"one\", \"base\" e \"sub\""
+
+#: ../lib/systemdb.py:255
+msgid "multiple_result must be one of first and random"
+msgstr "multiple_result debe ser \"first\" e \"random\""
+
+#: ../lib/systemdb.py:347
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "Non se puido abrir %s para escritura"
+
+#: ../lib/systemdb.py:360
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "Fallo ao gardar a base de datos de usuario en %s"
+
+#: ../lib/systemdb.py:383 ../lib/systemdb.py:417
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "O ficheiro %s non é unha configuración de perfil"
+
+#: ../lib/systemdb.py:390
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "Fallo ao engadir o perfil predeterminado %s á configuración"
+
+#: ../lib/systemdb.py:424
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "Fallo ao engadir o usuario %s á configuración de perfil"
+
+#: ../lib/systemdb.py:496
+msgid "Failed to get the user list"
+msgstr "Fallo ao obter a lista de usuario"
+
+#: ../lib/systemdb.py:546
+msgid "Failed to get the group list"
+msgstr "Produciuse un fallo ao obter a lista de grupo"
 
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
@@ -1125,67 +1223,7 @@ msgstr "Executando %s probas (%s)"
 msgid "Success!"
 msgstr "Éxito!"
 
-#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
-#. do not change the way they are written.  The intended string is
-#. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/userdb.py:54
-#, python-format
-msgid "invalid type for setting %(setting)s in %(np)s"
-msgstr "o tipo non é válido para a configuración %(setting)s en %(np)s"
-
-#: ../lib/userdb.py:215
-#, python-format
-msgid "No search base specified for %s"
-msgstr "Non se especificou unha base de busca para %s"
-
-#: ../lib/userdb.py:218
-#, python-format
-msgid "No query filter specified for %s"
-msgstr "Non hai ningún filtro de consulta especificado para %s"
-
-#: ../lib/userdb.py:221
-#, python-format
-msgid "No result attribute specified for %s"
-msgstr "Non se especificou ningún atributo resultante para %s"
-
-#: ../lib/userdb.py:230
-msgid "Scope must be one of sub, base and one"
-msgstr "O ámbito debe ser \"one\", \"base\" e \"sub\""
-
-#: ../lib/userdb.py:250
-msgid "multiple_result must be one of first and random"
-msgstr "multiple_result debe ser \"first\" e \"random\""
-
-#: ../lib/userdb.py:342
-#, python-format
-msgid "Could not open %s for writing"
-msgstr "Non se puido abrir %s para escritura"
-
-#: ../lib/userdb.py:355
-#, python-format
-msgid "Failed to save UserDatabase to %s"
-msgstr "Fallo ao gardar a base de datos de usuario en %s"
-
-#: ../lib/userdb.py:378 ../lib/userdb.py:413
-#, python-format
-msgid "File %s is not a profile configuration"
-msgstr "O ficheiro %s non é unha configuración de perfil"
-
-#: ../lib/userdb.py:385
-#, python-format
-msgid "Failed to add default profile %s to configuration"
-msgstr "Fallo ao engadir o perfil predeterminado %s á configuración"
-
-#: ../lib/userdb.py:421
-#, python-format
-msgid "Failed to add user %s to profile configuration"
-msgstr "Fallo ao engadir o usuario %s á configuración de perfil"
-
-#: ../lib/userdb.py:472
-msgid "Failed to get the user list"
-msgstr "Fallo ao obter a lista de usuario"
-
-#: ../lib/util.py:93
+#: ../lib/util.py:94
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -1193,7 +1231,7 @@ msgstr ""
 "Non se pode localizar o directorio persoal: non está definido en /etc/passwd "
 "e non hai ningún valor para $HOME no contorno"
 
-#: ../lib/util.py:106
+#: ../lib/util.py:110 ../lib/util.py:137
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
