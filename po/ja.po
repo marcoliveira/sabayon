@@ -2,19 +2,21 @@
 # Copyright (C) 2005-2009 The Gnome Foundation.
 # This file is distributed under the same license as the sabayon package.
 # Takeshi AIHANA <takeshi.aihana@gmail.com>, 2005-2009.
+# Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>, 2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-15 13:01+0900\n"
-"PO-Revision-Date: 2009-10-15 12:54+0900\n"
-"Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=sabayon&component=general\n"
+"POT-Creation-Date: 2009-11-03 14:35+0900\n"
+"PO-Revision-Date: 2009-11-03 13:10+0900\n"
+"Last-Translator: Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
@@ -24,7 +26,8 @@ msgstr "ユーザのプロファイルを確定したり編集するプログラ
 msgid "translator-credits"
 msgstr ""
 "相花 毅 <takeshi.aihana@gmail.com>\n"
-"日本GNOMEユーザー会 http://www.gnome.gr.jp"
+"草野 貴之 <AE5T-KSN@asahi-net.or.jp>\n"
+"日本GNOMEユーザー会 http://www.gnome.gr.jp/"
 
 #: ../admin-tool/changeswindow.py:50
 #, python-format
@@ -599,7 +602,6 @@ msgid_plural ""
 "If you don't save, changes from the last %ld seconds will be permanently "
 "lost."
 msgstr[0] "保存しないと%ld秒前からの変更を完全に失うことになります。"
-msgstr[1] "保存しないと%ld秒前からの変更を完全に失うことになります。"
 
 #: ../admin-tool/saveconfirm.py:51
 msgid ""
@@ -615,7 +617,6 @@ msgid_plural ""
 "If you don't save, changes from the last minute and %ld seconds will be "
 "permanently lost."
 msgstr[0] "保存しないと1分%ld秒前からの変更を完全に失うことになります。"
-msgstr[1] "保存しないと1分%ld秒前からの変更を完全に失うことになります。"
 
 #: ../admin-tool/saveconfirm.py:62
 #, python-format
@@ -625,7 +626,6 @@ msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
 msgstr[0] "保存しないと%ld分前からの変更を完全に失うことになります。"
-msgstr[1] "保存しないと%ld分前からの変更を完全に失うことになります。"
 
 #: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
@@ -640,7 +640,6 @@ msgid_plural ""
 "If you don't save, changes from the last hour and %d minutes will be "
 "permanently lost."
 msgstr[0] "保存しないと1時間%d分前からの変更を完全に失うことになります。"
-msgstr[1] "保存しないと1時間%d分前からの変更を完全に失うことになります。"
 
 #: ../admin-tool/saveconfirm.py:81
 #, python-format
@@ -649,7 +648,6 @@ msgid ""
 msgid_plural ""
 "If you don't save, changes from the last %d hours will be permanently lost."
 msgstr[0] "保存しないと%d時間前からの変更を完全に失うことになります。"
-msgstr[1] "保存しないと%d時間前からの変更を完全に失うことになります。"
 
 #: ../admin-tool/sessionwindow.py:154
 #, python-format
@@ -719,11 +717,11 @@ msgstr "このプロファイルを使用する"
 msgid "Unable to find a free X display"
 msgstr "利用できるＸディスプレイが見つかりませんでした"
 
-#: ../lib/protosession.py:377
+#: ../lib/protosession.py:376
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr "Xephyr の起動エラー: USR1 シグナル待ちでタイムアウトしました"
 
-#: ../lib/protosession.py:379
+#: ../lib/protosession.py:378
 msgid "Failed to start Xephyr: died during startup"
 msgstr "Xephyr の起動エラー: 起動した後すぐに強制終了しました"
 
@@ -731,7 +729,7 @@ msgstr "Xephyr の起動エラー: 起動した後すぐに強制終了しまし
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:470
+#: ../lib/protosession.py:469
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
@@ -743,7 +741,7 @@ msgstr ""
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (FATAL) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:479
+#: ../lib/protosession.py:478
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr ""
@@ -1082,7 +1080,12 @@ msgstr "'%s' のメタデータ・セクションが間違っています: %s"
 msgid "Cannot add non-existent file '%s'"
 msgstr "'%s' という存在していないファイルは追加できません"
 
-#: ../lib/storage.py:568
+#: ../lib/storage.py:487
+#, python-format
+msgid "Couldn't unlink file '%s'"
+msgstr "ファイル '%s' をアンリンクできませんでした"
+
+#: ../lib/storage.py:570
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "プロファイルの %s は読み込み専用です"
@@ -1180,3 +1183,21 @@ msgid ""
 msgstr ""
 "ユーザ名が見つかりません: /etc/passwd で設定されていないか環境変数 $USER が"
 "セットされていません"
+
+#~ msgid "Groups for profile %s"
+#~ msgstr "プロファイル %s のグループ"
+
+#~ msgid "Group"
+#~ msgstr "グループ"
+
+#~ msgid "_Groups"
+#~ msgstr "グループ(_G)"
+
+#~ msgid "_Groups:"
+#~ msgstr "グループ(_G):"
+
+#~ msgid "No database file provided"
+#~ msgstr "データベース・ファイルが指定されていません"
+
+#~ msgid "Failed to get the group list"
+#~ msgstr "グループの一覧を取得できませんでした"
