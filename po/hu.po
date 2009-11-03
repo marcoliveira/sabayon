@@ -8,9 +8,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-08-27 20:51+0000\n"
-"PO-Revision-Date: 2009-08-29 12:46+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-11-03 20:17+0100\n"
+"PO-Revision-Date: 2009-11-03 20:18+0100\n"
 "Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
 "Language-Team: Hungarian <gnome at fsf dot hu>\n"
 "MIME-Version: 1.0\n"
@@ -737,15 +737,13 @@ msgstr "Ezen profil használata"
 msgid "Unable to find a free X display"
 msgstr "Nem sikerült szabad X megjelenítőt találni"
 
-#: ../lib/protosession.py:377
-#| msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+#: ../lib/protosession.py:376
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr ""
 "Nem sikerült elindítani az Xephyrt: időtúllépés az USR1 szignálra való "
 "várakozás közben"
 
-#: ../lib/protosession.py:379
-#| msgid "Failed to start Xnest: died during startup"
+#: ../lib/protosession.py:378
 msgid "Failed to start Xephyr: died during startup"
 msgstr "Nem sikerült elindítani az Xephyrt: indítás közben összeomlott"
 
@@ -753,7 +751,7 @@ msgstr "Nem sikerült elindítani az Xephyrt: indítás közben összeomlott"
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:470
+#: ../lib/protosession.py:469
 #, python-format
 msgid "There was a recoverable error while applying the user profile from file '%s'."
 msgstr ""
@@ -764,7 +762,7 @@ msgstr ""
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (FATAL) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:479
+#: ../lib/protosession.py:478
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "Végzetes hiba történt a(z) „%s” felhasználói profil alkalmazásakor."
@@ -1054,17 +1052,14 @@ msgid "Search button"
 msgstr "Keresés gomb"
 
 #: ../lib/sources/paneldelegate.py:255
-#| msgid "Logout button"
 msgid "Force Quit button"
 msgstr "Erőltetett kilépés gomb"
 
 #: ../lib/sources/paneldelegate.py:257
-#| msgid "Lock Screen button"
 msgid "Connect to Server button"
 msgstr "Kapcsolódás kiszolgálóhoz gomb"
 
 #: ../lib/sources/paneldelegate.py:259
-#| msgid "Logout button"
 msgid "Shutdown button"
 msgstr "Leállítás gomb"
 
@@ -1104,7 +1099,12 @@ msgstr "Érvénytelen metaadat-szakasz a következőben: „%s”: %s"
 msgid "Cannot add non-existent file '%s'"
 msgstr "Nem lehet hozzáadni „%s” nem létező fájlt"
 
-#: ../lib/storage.py:568
+#: ../lib/storage.py:487
+#, python-format
+msgid "Couldn't unlink file '%s'"
+msgstr "A fájl („%s”) nem törölhető"
+
+#: ../lib/storage.py:570
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "A profil csak olvasható %s"
