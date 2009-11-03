@@ -8,9 +8,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-08-27 20:51+0000\n"
-"PO-Revision-Date: 2009-08-29 12:46+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-11-03 20:15+0100\n"
+"PO-Revision-Date: 2009-11-03 20:17+0100\n"
 "Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
 "Language-Team: Hungarian <gnome at fsf dot hu>\n"
 "MIME-Version: 1.0\n"
@@ -153,7 +153,7 @@ msgstr "pár"
 msgid "Profile settings: %s"
 msgstr "Profilbeállítások: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:387
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:392
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Név"
@@ -165,6 +165,19 @@ msgstr "Típus"
 #: ../admin-tool/gconfviewer.py:120
 msgid "Value"
 msgstr "Érték"
+
+#: ../admin-tool/groupsdialog.py:57
+#, python-format
+msgid "Groups for profile %s"
+msgstr "%s profil csoportjai"
+
+#: ../admin-tool/groupsdialog.py:70
+msgid "Group"
+msgstr "Csoport"
+
+#: ../admin-tool/groupsdialog.py:80 ../admin-tool/usersdialog.py:95
+msgid "Use This Profile"
+msgstr "Ezen profil használata"
 
 #: ../admin-tool/lockdown/lockdownbutton.py:99
 msgid "Click to make this setting not mandatory"
@@ -463,7 +476,7 @@ msgstr "Felhasználói felület"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:497
+#: ../admin-tool/profilesdialog.py:508
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -528,14 +541,14 @@ msgstr ""
 "A Sabayon most kilép. Helyreállítható hibák történtek. Segíthet kijavítani a "
 "problémát a(z) %s helyen található napló elküldésével a következő címre: %s."
 
-#: ../admin-tool/sabayon-apply:99
+#: ../admin-tool/sabayon-apply:111
+msgid "Please use -h for usage options"
+msgstr "A használati utasításhoz használja -h kapcsolót"
+
+#: ../admin-tool/sabayon-apply:123
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "„%s” felhasználónak nincs profilja\n"
-
-#: ../admin-tool/sabayon-apply:104
-msgid "Please use -h for usage options"
-msgstr "A használati utasításhoz használja -h kapcsolót"
 
 #: ../admin-tool/sabayon-session:67
 #, c-format
@@ -571,14 +584,22 @@ msgid "_Details"
 msgstr "_Részletek"
 
 #: ../admin-tool/sabayon.glade.h:7
+msgid "_Groups"
+msgstr "_Csoportok"
+
+#: ../admin-tool/sabayon.glade.h:8
+msgid "_Groups:"
+msgstr "_Csoportok:"
+
+#: ../admin-tool/sabayon.glade.h:9
 msgid "_Profiles:"
 msgstr "_Profilok:"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.glade.h:10
 msgid "_Users"
 msgstr "_Felhasználók"
 
-#: ../admin-tool/sabayon.glade.h:9
+#: ../admin-tool/sabayon.glade.h:11
 msgid "_Users:"
 msgstr "_Felhasználók:"
 
@@ -729,23 +750,17 @@ msgstr "S_zerkesztés folytatása"
 msgid "Users for profile %s"
 msgstr "%s profil felhasználói"
 
-#: ../admin-tool/usersdialog.py:95
-msgid "Use This Profile"
-msgstr "Ezen profil használata"
-
 #: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
 msgstr "Nem sikerült szabad X megjelenítőt találni"
 
-#: ../lib/protosession.py:377
-#| msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+#: ../lib/protosession.py:376
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr ""
 "Nem sikerült elindítani az Xephyrt: időtúllépés az USR1 szignálra való "
 "várakozás közben"
 
-#: ../lib/protosession.py:379
-#| msgid "Failed to start Xnest: died during startup"
+#: ../lib/protosession.py:378
 msgid "Failed to start Xephyr: died during startup"
 msgstr "Nem sikerült elindítani az Xephyrt: indítás közben összeomlott"
 
@@ -753,7 +768,7 @@ msgstr "Nem sikerült elindítani az Xephyrt: indítás közben összeomlott"
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:470
+#: ../lib/protosession.py:469
 #, python-format
 msgid "There was a recoverable error while applying the user profile from file '%s'."
 msgstr ""
@@ -764,7 +779,7 @@ msgstr ""
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (FATAL) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:479
+#: ../lib/protosession.py:478
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "Végzetes hiba történt a(z) „%s” felhasználói profil alkalmazásakor."
@@ -1054,17 +1069,14 @@ msgid "Search button"
 msgstr "Keresés gomb"
 
 #: ../lib/sources/paneldelegate.py:255
-#| msgid "Logout button"
 msgid "Force Quit button"
 msgstr "Erőltetett kilépés gomb"
 
 #: ../lib/sources/paneldelegate.py:257
-#| msgid "Lock Screen button"
 msgid "Connect to Server button"
 msgstr "Kapcsolódás kiszolgálóhoz gomb"
 
 #: ../lib/sources/paneldelegate.py:259
-#| msgid "Logout button"
 msgid "Shutdown button"
 msgstr "Leállítás gomb"
 
@@ -1104,10 +1116,85 @@ msgstr "Érvénytelen metaadat-szakasz a következőben: „%s”: %s"
 msgid "Cannot add non-existent file '%s'"
 msgstr "Nem lehet hozzáadni „%s” nem létező fájlt"
 
-#: ../lib/storage.py:568
+#: ../lib/storage.py:487
+#, python-format
+msgid "Couldn't unlink file '%s'"
+msgstr "A fájl („%s”) nem törölhető"
+
+#: ../lib/storage.py:570
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "A profil csak olvasható %s"
+
+#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
+#. do not change the way they are written.  The intended string is
+#. something like "invalid type for setting blah in /ldap/path/to/blah"
+#: ../lib/systemdb.py:58
+#, python-format
+msgid "invalid type for setting %(setting)s in %(np)s"
+msgstr ""
+"A(z) %(setting)s beállításhoz megadott típus érvénytelen a következőben: %"
+"(np)s"
+
+#: ../lib/systemdb.py:103
+msgid "No database file provided"
+msgstr "Nincs megadva adatbázisfájl"
+
+#: ../lib/systemdb.py:220
+#, python-format
+msgid "No search base specified for %s"
+msgstr "Nincs keresési alap megadva a következőhöz: %s"
+
+#: ../lib/systemdb.py:223
+#, python-format
+msgid "No query filter specified for %s"
+msgstr "Nincs lekérdezési szűrő megadva a következőhöz: %s"
+
+#: ../lib/systemdb.py:226
+#, python-format
+msgid "No result attribute specified for %s"
+msgstr "Nincs eredményattribútum megadva a következőhöz: %s"
+
+#: ../lib/systemdb.py:235
+msgid "Scope must be one of sub, base and one"
+msgstr "A hatókörnek az al, alap, és egy egyikének kell lennie"
+
+#: ../lib/systemdb.py:255
+msgid "multiple_result must be one of first and random"
+msgstr "a multiple_result az első és a véletlen egyike kell legyen"
+
+#: ../lib/systemdb.py:347
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "Nem sikerült megnyitni olvasásra a következőt: %s"
+
+#: ../lib/systemdb.py:360
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "Nem sikerült menteni a felhasználó-adatbázist ide: %s"
+
+#: ../lib/systemdb.py:383 ../lib/systemdb.py:417
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "%s fájl nem egy profilbeállítás"
+
+#: ../lib/systemdb.py:390
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "%s alapértelmezett profil hozzáadása a beállításhoz sikertelen"
+
+#: ../lib/systemdb.py:424
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "%s felhasználó hozzáadása a profilbeállításhoz sikertelen"
+
+#: ../lib/systemdb.py:496
+msgid "Failed to get the user list"
+msgstr "A felhasználók listájának lekérése sikertelen"
+
+#: ../lib/systemdb.py:546
+msgid "Failed to get the group list"
+msgstr "A csoportlista lekérése sikertelen"
 
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
@@ -1127,69 +1214,7 @@ msgstr "%s teszt végrehajtása (%s)"
 msgid "Success!"
 msgstr "Sikerült!"
 
-#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
-#. do not change the way they are written.  The intended string is
-#. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/userdb.py:54
-#, python-format
-msgid "invalid type for setting %(setting)s in %(np)s"
-msgstr ""
-"A(z) %(setting)s beállításhoz megadott típus érvénytelen a következőben: %"
-"(np)s"
-
-#: ../lib/userdb.py:215
-#, python-format
-msgid "No search base specified for %s"
-msgstr "Nincs keresési alap megadva a következőhöz: %s"
-
-#: ../lib/userdb.py:218
-#, python-format
-msgid "No query filter specified for %s"
-msgstr "Nincs lekérdezési szűrő megadva a következőhöz: %s"
-
-#: ../lib/userdb.py:221
-#, python-format
-msgid "No result attribute specified for %s"
-msgstr "Nincs eredményattribútum megadva a következőhöz: %s"
-
-#: ../lib/userdb.py:230
-msgid "Scope must be one of sub, base and one"
-msgstr "A hatókörnek az al, alap, és egy egyikének kell lennie"
-
-#: ../lib/userdb.py:250
-msgid "multiple_result must be one of first and random"
-msgstr "a multiple_result az első és a véletlen egyike kell legyen"
-
-#: ../lib/userdb.py:342
-#, python-format
-msgid "Could not open %s for writing"
-msgstr "Nem sikerült megnyitni olvasásra a következőt: %s"
-
-#: ../lib/userdb.py:355
-#, python-format
-msgid "Failed to save UserDatabase to %s"
-msgstr "Nem sikerült menteni a felhasználó-adatbázist ide: %s"
-
-#: ../lib/userdb.py:378 ../lib/userdb.py:413
-#, python-format
-msgid "File %s is not a profile configuration"
-msgstr "%s fájl nem egy profilbeállítás"
-
-#: ../lib/userdb.py:385
-#, python-format
-msgid "Failed to add default profile %s to configuration"
-msgstr "%s alapértelmezett profil hozzáadása a beállításhoz sikertelen"
-
-#: ../lib/userdb.py:421
-#, python-format
-msgid "Failed to add user %s to profile configuration"
-msgstr "%s felhasználó hozzáadása a profilbeállításhoz sikertelen"
-
-#: ../lib/userdb.py:472
-msgid "Failed to get the user list"
-msgstr "A felhasználók listájának lekérése sikertelen"
-
-#: ../lib/util.py:93
+#: ../lib/util.py:94
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -1197,7 +1222,7 @@ msgstr ""
 "Nem található a saját könyvtár: nincs beállítva az /etc/passwd-ben és a "
 "$HOME környezeti változónak nincs értéke"
 
-#: ../lib/util.py:106
+#: ../lib/util.py:110 ../lib/util.py:137
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
