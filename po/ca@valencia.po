@@ -1,27 +1,29 @@
-# Valencian (southern Catalan) translations for sabayon package
-# Traduccions al valencià (català meridional) del paquet «sabayon».
+# Catalan translations for sabayon package
+# Traduccions al català del paquet «sabayon».
 # Copyright © 2005, 2006, 2007 The Free Software Foundation, Inc.
 # This file is distributed under the same license as the sabayon package.
 # Josep Puigdemont <josep.puigdemont@gmail.com>, 2005, 2006, 2007.
+# Gil Forcada <gilforcada@guifi.net>, 2009.
 #
+# Carles Ferrando Garcia <carles.ferrando@gmail.com>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-21 14:23+0200\n"
-"PO-Revision-Date: 2009-01-26 19:50+0100\n"
-"Last-Translator: Josep Puigdemont <josep.puigdemont@gmail.com>\n"
-"Language-Team: Catalan <tradgnome@softcatala.org>\n"
+"POT-Creation-Date: 2009-10-24 12:37+0200\n"
+"PO-Revision-Date: 2009-10-04 09:23+0200\n"
+"Last-Translator: Carles Ferrando Garcia <carles.ferrando@gmail.com>\n"
+"Language-Team: Catalan (Valencià) <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: ../admin-tool/aboutdialog.py:63
+#: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
 msgstr "Un programa per a establir i editar perfils per a usuaris"
 
-#: ../admin-tool/aboutdialog.py:66
+#: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
 msgstr "Josep Puigdemont <josep.puigdemont@gmail.com>"
 
@@ -101,7 +103,7 @@ msgstr "Fitxers"
 
 #: ../admin-tool/editorwindow.py:266
 #: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:229
+#: ../lib/sources/paneldelegate.py:269
 msgid "Panel"
 msgstr "Quadre"
 
@@ -166,7 +168,7 @@ msgstr "Valor"
 
 #: ../admin-tool/lockdown/lockdownbutton.py:99
 msgid "Click to make this setting not mandatory"
-msgstr "Feu clic perquè quest paràmetre no siga obligatori"
+msgstr "Feu clic perquè este paràmetre no siga obligatori"
 
 #: ../admin-tool/lockdown/lockdownbutton.py:101
 msgid "Click to make this setting mandatory"
@@ -195,7 +197,7 @@ msgstr "_Fixa els quadres"
 
 #: ../admin-tool/lockdown/maindialog.py:55
 msgid "Disable force _quit"
-msgstr "Inhabilita f_orçar l'eixida"
+msgstr "Inhabilita f_orçar la eixida"
 
 #: ../admin-tool/lockdown/maindialog.py:56
 msgid "Disable lock _screen"
@@ -203,11 +205,11 @@ msgstr "Inhabilita _blocar la pantalla"
 
 #: ../admin-tool/lockdown/maindialog.py:57
 msgid "Disable log _out"
-msgstr "Inhabilita poder s_ortir"
+msgstr "Inhabilita poder ei_xir"
 
 #: ../admin-tool/lockdown/maindialog.py:59
 msgid "Disable _quit"
-msgstr "Inhabilita poder _sortir dels programes"
+msgstr "Inhabilita poder ei_xir dels programes"
 
 #: ../admin-tool/lockdown/maindialog.py:60
 msgid "Disable _arbitrary URL"
@@ -282,7 +284,7 @@ msgstr "Crea una còpia de seguretat en alçar"
 
 #: ../admin-tool/lockdown/maindialog.py:82
 msgid "Warn when saving non-OpenOffice.org formats"
-msgstr "Avisa quan no es desin fitxers en formats de l'OpenOffice.org"
+msgstr "Avisa quan no s'alcen fitxers en formats de l'OpenOffice.org"
 
 #: ../admin-tool/lockdown/maindialog.py:84
 msgid "Use OpenGL"
@@ -415,7 +417,7 @@ msgstr "Format per defecte del processador de textos:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:32
 msgid "Default icon size"
-msgstr "Grandària per defecte de les icones"
+msgstr "Mida per defecte de les icones"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:33
 msgid "Disable _unsafe protocols"
@@ -508,7 +510,7 @@ msgid ""
 "command)"
 msgstr ""
 "El Sabayon requereix que hi haja un compte especial «%s» en este ordinador. "
-"Torneu-ho a intentar quan hagueu creat el compte (utilitzant, per exemple, "
+"Torneu-ho a intentar quan hàgeu creat el compte (utilitzant, per exemple, "
 "l'orde «adduser»)"
 
 #: ../admin-tool/sabayon:131
@@ -562,7 +564,7 @@ msgstr "_Nom del perfil:"
 
 #: ../admin-tool/sabayon.glade.h:3
 msgid "Use this profile for _all users"
-msgstr "Utilitza _aquest perfil per a tots els usuaris"
+msgstr "Utilitza este perfil per a tots els usu_aris"
 
 #: ../admin-tool/sabayon.glade.h:5
 msgid "_Base on:"
@@ -603,14 +605,14 @@ msgid_plural ""
 "If you don't save, changes from the last %ld seconds will be permanently "
 "lost."
 msgstr[0] ""
-"Si no alceu, els canvis que hagueu fet el darrer %ld segon es perdran."
+"Si no alceu, els canvis que hàgeu fet el darrer %ld segon es perdran."
 msgstr[1] ""
-"Si no alceu, els canvis que hagueu fet els darrers %ld segons es perdran."
+"Si no alceu, els canvis que hàgeu fet els darrers %ld segons es perdran."
 
 #: ../admin-tool/saveconfirm.py:51
 msgid ""
 "If you don't save, changes from the last minute will be permanently lost."
-msgstr "So no alceu, els canvis que hagueu fet el darrer minut es perdran."
+msgstr "So no alceu, els canvis que hàgeu fet el darrer minut es perdran."
 
 #: ../admin-tool/saveconfirm.py:55
 #, python-format
@@ -621,10 +623,9 @@ msgid_plural ""
 "If you don't save, changes from the last minute and %ld seconds will be "
 "permanently lost."
 msgstr[0] ""
-"Si no alceu, els canvis que hagueu fet el darrer minut i %ld segon es "
-"perdran."
+"Si no alceu, els canvis que hàgeu fet el darrer minut i %ld segon es perdran."
 msgstr[1] ""
-"Si no alceu, els canvis que hagueu fet el darrer minut i %ld segons es "
+"Si no alceu, els canvis que hàgeu fet el darrer minut i %ld segons es "
 "perdran."
 
 #: ../admin-tool/saveconfirm.py:62
@@ -635,9 +636,9 @@ msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
 msgstr[0] ""
-"Si no alceu, els canvis que hagueu fet el darrer %ld minut es perdran."
+"Si no alceu, els canvis que hàgeu fet el darrer %ld minut es perdran."
 msgstr[1] ""
-"Si no alceu, els canvis que hagueu fet els darrers %ld minuts es perdran."
+"Si no alceu, els canvis que hàgeu fet els darrers %ld minuts es perdran."
 
 #: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
@@ -652,9 +653,9 @@ msgid_plural ""
 "If you don't save, changes from the last hour and %d minutes will be "
 "permanently lost."
 msgstr[0] ""
-"Si no alceu, els canvis que hagueu fet la darrera hora i %d minut es perdran."
+"Si no alceu, els canvis que hàgeu fet la darrera hora i %d minut es perdran."
 msgstr[1] ""
-"Si no alceu, els canvis que hagueu fet la darrera hora %d minuts es perdran."
+"Si no alceu, els canvis que hàgeu fet la darrera hora %d minuts es perdran."
 
 #: ../admin-tool/saveconfirm.py:81
 #, python-format
@@ -673,7 +674,7 @@ msgstr "S'està editat el perfil %s"
 
 #: ../admin-tool/sessionwindow.py:178
 msgid "_Quit"
-msgstr "_Ix"
+msgstr "I_x"
 
 #: ../admin-tool/sessionwindow.py:180
 msgid "_Changes"
@@ -730,20 +731,24 @@ msgstr "Usuaris del perfil %s"
 msgid "Use This Profile"
 msgstr "Utilitza este perfil"
 
-#: ../lib/protosession.py:147
+#: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
 msgstr "No s'ha pogut trobar cap pantalla X lliure"
 
-#: ../lib/protosession.py:414
-msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+#: ../lib/protosession.py:376
+msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr ""
-"No s'ha pogut executar l'Xnest: ha expirat el temps d'espera del senyal USR1"
+"No s'ha pogut iniciar el Xephyr: ha expirat el temps d'espera del senyal USR1"
 
-#: ../lib/protosession.py:416
-msgid "Failed to start Xnest: died during startup"
-msgstr "No s'ha pogut executar l'Xnest: ha mort durant la inicialització"
+#: ../lib/protosession.py:378
+msgid "Failed to start Xephyr: died during startup"
+msgstr "No s'ha pogut iniciar el Xephyr: ha mort durant la inicialització"
 
-#: ../lib/protosession.py:501
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:469
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
@@ -751,7 +756,11 @@ msgstr ""
 "S'ha produït un error recuperable en aplicar el perfil d'usuari del fitxer «%"
 "s»."
 
-#: ../lib/protosession.py:510
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (FATAL) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:478
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "S'ha produït un error fatal en aplicar el perfil d'usuari de «%s»."
@@ -847,7 +856,7 @@ msgstr "Paràmetres obligatoris del GConf"
 #: ../lib/sources/mozillasource.py:133
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
-msgstr "S'ha establert la clau «%s» del Mozilla a «%s»"
+msgstr "S'ha establit la clau «%s» del Mozilla a «%s»"
 
 #: ../lib/sources/mozillasource.py:135
 #, python-format
@@ -871,184 +880,200 @@ msgstr "Adreces d'interés del navegador"
 msgid "Web browser profile list"
 msgstr "Llista de perfils del navegador web"
 
-#: ../lib/sources/mozillasource.py:522
+#: ../lib/sources/mozillasource.py:520
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "No s'ha trobat el fitxer (%s)"
 
-#: ../lib/sources/mozillasource.py:873
+#: ../lib/sources/mozillasource.py:869
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "el nom (%(name)s) està duplicat a la secció %(section)s"
 
-#: ../lib/sources/mozillasource.py:882
+#: ../lib/sources/mozillasource.py:878
 #, python-format
 msgid "redundant default in section %s"
 msgstr "el valor per defecte és redundant a la secció %s"
 
-#: ../lib/sources/mozillasource.py:899
+#: ../lib/sources/mozillasource.py:895
 msgid "no default profile"
 msgstr "no hi ha cap perfil per defecte"
 
-#: ../lib/sources/mozillasource.py:954
+#: ../lib/sources/mozillasource.py:950
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "S'ha creat una adreça d'interés del Mozilla «%s» -> «%s»"
 
-#: ../lib/sources/mozillasource.py:956
+#: ../lib/sources/mozillasource.py:952
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "S'ha creat una carpeta d'adreces d'interés del Mozilla «%s»"
 
-#: ../lib/sources/mozillasource.py:959
+#: ../lib/sources/mozillasource.py:955
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "S'ha suprimit una adreça d'interés del Mozilla «%s»"
 
-#: ../lib/sources/mozillasource.py:961
+#: ../lib/sources/mozillasource.py:957
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "S'ha suprimit una carpeta d'adreces d'interés del Mozilla «%s»"
 
-#: ../lib/sources/mozillasource.py:964
+#: ../lib/sources/mozillasource.py:960
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "S'ha canviat una adreça d'interés del Mozilla «%s» «%s»"
 
-#: ../lib/sources/mozillasource.py:966
+#: ../lib/sources/mozillasource.py:962
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "S'ha canviat una carpeta d'adreces d'interés del Mozilla «%s»"
 
-#: ../lib/sources/paneldelegate.py:55
+#: ../lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel '%s' added"
 msgstr "S'ha afegit el quadre «%s»"
 
-#: ../lib/sources/paneldelegate.py:61
+#: ../lib/sources/paneldelegate.py:71
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "S'ha suprimit el quadre «%s»"
 
-#: ../lib/sources/paneldelegate.py:76
+#: ../lib/sources/paneldelegate.py:86
 #, python-format
 msgid "Applet %s added to top panel"
 msgstr "S'ha afegit la miniaplicació %s al quadre superior"
 
-#: ../lib/sources/paneldelegate.py:78
+#: ../lib/sources/paneldelegate.py:88
 #, python-format
 msgid "Applet %s added to bottom panel"
 msgstr "S'ha afegit la miniaplicació %s al quadre inferior"
 
-#: ../lib/sources/paneldelegate.py:80
+#: ../lib/sources/paneldelegate.py:90
 #, python-format
 msgid "Applet %s added to left panel"
 msgstr "S'ha afegit la miniaplicació %s al quadre de l'esquerra"
 
-#: ../lib/sources/paneldelegate.py:82
+#: ../lib/sources/paneldelegate.py:92
 #, python-format
 msgid "Applet %s added to right panel"
 msgstr "S'ha afegit la miniaplicació %s al quadre de la dreta"
 
-#: ../lib/sources/paneldelegate.py:97
+#: ../lib/sources/paneldelegate.py:107
 #, python-format
 msgid "Applet %s removed from top panel"
 msgstr "S'ha suprimit la miniaplicació %s del quadre superior"
 
-#: ../lib/sources/paneldelegate.py:99
+#: ../lib/sources/paneldelegate.py:109
 #, python-format
 msgid "Applet %s removed from bottom panel"
 msgstr "S'ha suprimit la miniaplicació %s del quadre inferior"
 
-#: ../lib/sources/paneldelegate.py:101
+#: ../lib/sources/paneldelegate.py:111
 #, python-format
 msgid "Applet %s removed from left panel"
 msgstr "S'ha suprimit la miniaplicació %s del quadre de l'esquerra"
 
-#: ../lib/sources/paneldelegate.py:103
+#: ../lib/sources/paneldelegate.py:113
 #, python-format
 msgid "Applet %s removed from right panel"
 msgstr "S'ha suprimit la miniaplicació %s del quadre de la dreta"
 
-#: ../lib/sources/paneldelegate.py:117
+#: ../lib/sources/paneldelegate.py:127
 #, python-format
 msgid "%s added to top panel"
 msgstr "S'ha afegit %s al quadre superior"
 
-#: ../lib/sources/paneldelegate.py:119
+#: ../lib/sources/paneldelegate.py:129
 #, python-format
 msgid "%s added to bottom panel"
 msgstr "S'ha afegit %s al quadre inferior"
 
-#: ../lib/sources/paneldelegate.py:121
+#: ../lib/sources/paneldelegate.py:131
 #, python-format
 msgid "%s added to left panel"
 msgstr "S'ha afegit %s al quadre de l'esquerra"
 
-#: ../lib/sources/paneldelegate.py:123
+#: ../lib/sources/paneldelegate.py:133
 #, python-format
 msgid "%s added to right panel"
 msgstr "S'ha afegit %s al quadre de la dreta"
 
-#: ../lib/sources/paneldelegate.py:144
+#: ../lib/sources/paneldelegate.py:154
 #, python-format
 msgid "%s removed from top panel"
 msgstr "S'ha suprimit %s del quadre superior"
 
-#: ../lib/sources/paneldelegate.py:146
+#: ../lib/sources/paneldelegate.py:156
 #, python-format
 msgid "%s removed from bottom panel"
 msgstr "S'ha suprimit %s del quadre inferior"
 
-#: ../lib/sources/paneldelegate.py:148
+#: ../lib/sources/paneldelegate.py:158
 #, python-format
 msgid "%s removed from left panel"
 msgstr "S'ha suprimit %s del quadre de l'esquerra"
 
-#: ../lib/sources/paneldelegate.py:150
+#: ../lib/sources/paneldelegate.py:160
 #, python-format
 msgid "%s removed from right panel"
 msgstr "S'ha suprimit %s del quadre de la dreta"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:200
+#: ../lib/sources/paneldelegate.py:231
 msgid "Drawer"
 msgstr "Calaix"
 
-#: ../lib/sources/paneldelegate.py:202
+#: ../lib/sources/paneldelegate.py:233
 msgid "Main Menu"
 msgstr "Menú principal"
 
-#: ../lib/sources/paneldelegate.py:212
+#: ../lib/sources/paneldelegate.py:243
 #, python-format
 msgid "%s launcher"
 msgstr "Llançadora de %s"
 
-#: ../lib/sources/paneldelegate.py:216
+#: ../lib/sources/paneldelegate.py:247
 msgid "Lock Screen button"
 msgstr "Botó de blocar la pantalla"
 
-#: ../lib/sources/paneldelegate.py:218
+#: ../lib/sources/paneldelegate.py:249
 msgid "Logout button"
 msgstr "Botó d'eixida"
 
-#: ../lib/sources/paneldelegate.py:220
+#: ../lib/sources/paneldelegate.py:251
 msgid "Run Application button"
 msgstr "Botó d'executar una aplicació"
 
-#: ../lib/sources/paneldelegate.py:222
+#: ../lib/sources/paneldelegate.py:253
 msgid "Search button"
 msgstr "Botó de cerca"
 
-#: ../lib/sources/paneldelegate.py:224
+#: ../lib/sources/paneldelegate.py:255
+msgid "Force Quit button"
+msgstr "Botó de forçar la eixida"
+
+#: ../lib/sources/paneldelegate.py:257
+msgid "Connect to Server button"
+msgstr "Botó de connectar al servidor"
+
+#: ../lib/sources/paneldelegate.py:259
+msgid "Shutdown button"
+msgstr "Botó d'aturar l'ordinador"
+
+#: ../lib/sources/paneldelegate.py:261
 msgid "Screenshot button"
 msgstr "Botó de captura de pantalla"
 
-#: ../lib/sources/paneldelegate.py:226
+#: ../lib/sources/paneldelegate.py:264
+msgid "Unknown"
+msgstr "Desconegut"
+
+#: ../lib/sources/paneldelegate.py:266
 msgid "Menu Bar"
 msgstr "Barra de menú"
 
-#: ../lib/sources/paneldelegate.py:470
+#: ../lib/sources/paneldelegate.py:503
 msgid "Panel File"
 msgstr "Fitxer del quadre"
 
@@ -1072,7 +1097,12 @@ msgstr "La secció de metadades de «%s» no és vàlida: %s"
 msgid "Cannot add non-existent file '%s'"
 msgstr "No es pot afegir el fitxer «%s» perquè no existeix"
 
-#: ../lib/storage.py:568
+#: ../lib/storage.py:487
+#, python-format
+msgid "Couldn't unlink file '%s'"
+msgstr ""
+
+#: ../lib/storage.py:570
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "El perfil és de només lectura %s"

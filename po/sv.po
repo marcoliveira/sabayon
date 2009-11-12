@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-13 09:33+0200\n"
-"PO-Revision-Date: 2009-08-13 09:33+0100\n"
+"POT-Creation-Date: 2009-11-08 21:29+0100\n"
+"PO-Revision-Date: 2009-11-08 23:39+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -27,12 +27,12 @@ msgstr ""
 "Christian Rose\n"
 "\n"
 "Skicka synpunkter på översättningen till\n"
-"tp-sv@listor.tp-sv.se"
+"<tp-sv@listor.tp-sv.se>."
 
 #: ../admin-tool/changeswindow.py:50
 #, python-format
 msgid "Changes in profile %s"
-msgstr "Ändringar i profil %s"
+msgstr "Ändringar i profilen %s"
 
 #: ../admin-tool/changeswindow.py:113
 msgid "Ignore"
@@ -168,7 +168,7 @@ msgid "Profile settings: %s"
 msgstr "Profilinställningar: %s"
 
 #: ../admin-tool/gconfviewer.py:110
-#: ../admin-tool/profilesdialog.py:387
+#: ../admin-tool/profilesdialog.py:392
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Namn"
@@ -180,6 +180,20 @@ msgstr "Typ"
 #: ../admin-tool/gconfviewer.py:120
 msgid "Value"
 msgstr "Värde"
+
+#: ../admin-tool/groupsdialog.py:57
+#, python-format
+msgid "Groups for profile %s"
+msgstr "Grupper för profilen %s"
+
+#: ../admin-tool/groupsdialog.py:70
+msgid "Group"
+msgstr "Grupp"
+
+#: ../admin-tool/groupsdialog.py:80
+#: ../admin-tool/usersdialog.py:95
+msgid "Use This Profile"
+msgstr "Använd denna profil"
 
 #: ../admin-tool/lockdown/lockdownbutton.py:99
 msgid "Click to make this setting not mandatory"
@@ -478,7 +492,7 @@ msgstr "Användargränssnitt"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:497
+#: ../admin-tool/profilesdialog.py:508
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -519,14 +533,14 @@ msgstr "Ett ödesdigert fel har inträffat.  Du kan hjälpa oss att rätta till 
 msgid "Sabayon will now exit.  There were some recoverable errors, and you can help us debug the problem by sending the log in %s to %s"
 msgstr "Sabayon kommer nu att avslutas.  Det inträffade några återhämtningsbara fel och du kan hjälpa oss att felsöka problemet genom att skicka in loggfilen i %s till %s"
 
-#: ../admin-tool/sabayon-apply:99
+#: ../admin-tool/sabayon-apply:111
+msgid "Please use -h for usage options"
+msgstr "Använd -h för användningsflaggor"
+
+#: ../admin-tool/sabayon-apply:123
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Ingen profil för användaren \"%s\" hittades\n"
-
-#: ../admin-tool/sabayon-apply:104
-msgid "Please use -h for usage options"
-msgstr "Använd -h för användningsflaggor"
 
 #: ../admin-tool/sabayon-session:67
 #, c-format
@@ -563,14 +577,22 @@ msgid "_Details"
 msgstr "_Detaljer"
 
 #: ../admin-tool/sabayon.glade.h:7
+msgid "_Groups"
+msgstr "_Grupper"
+
+#: ../admin-tool/sabayon.glade.h:8
+msgid "_Groups:"
+msgstr "_Grupper:"
+
+#: ../admin-tool/sabayon.glade.h:9
 msgid "_Profiles:"
 msgstr "_Profiler:"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.glade.h:10
 msgid "_Users"
 msgstr "_Användare"
 
-#: ../admin-tool/sabayon.glade.h:9
+#: ../admin-tool/sabayon.glade.h:11
 msgid "_Users:"
 msgstr "_Användare:"
 
@@ -682,28 +704,32 @@ msgstr "_Fortsätt redigera"
 msgid "Users for profile %s"
 msgstr "Användare för profil %s"
 
-#: ../admin-tool/usersdialog.py:95
-msgid "Use This Profile"
-msgstr "Använd denna profil"
-
-#: ../lib/protosession.py:147
+#: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
 msgstr "Kan inte hitta en ledig X-display"
 
-#: ../lib/protosession.py:414
+#: ../lib/protosession.py:376
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr "Misslyckades med att starta Xephyr: timeout vid väntan på USR1-signal"
 
-#: ../lib/protosession.py:416
+#: ../lib/protosession.py:378
 msgid "Failed to start Xephyr: died during startup"
 msgstr "Misslyckades med att starta Xephyr: dog under uppstart"
 
-#: ../lib/protosession.py:501
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:469
 #, python-format
 msgid "There was a recoverable error while applying the user profile from file '%s'."
 msgstr "Det inträffade ett återhämtningsbart fel vid tillämpandet av användarprofilen från \"%s\"."
 
-#: ../lib/protosession.py:510
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (FATAL) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:478
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "Det inträffade ett ödesdigert fel vid tillämpandet av användarprofilen från \"%s\"."
@@ -825,51 +851,51 @@ msgstr "Webbläsarbokmärken"
 msgid "Web browser profile list"
 msgstr "Webbläsarprofillista"
 
-#: ../lib/sources/mozillasource.py:522
+#: ../lib/sources/mozillasource.py:520
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Filen hittades inte (%s)"
 
-#: ../lib/sources/mozillasource.py:873
+#: ../lib/sources/mozillasource.py:869
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "dubblettnamn(%(name)s) i sektion %(section)s"
 
-#: ../lib/sources/mozillasource.py:882
+#: ../lib/sources/mozillasource.py:878
 #, python-format
 msgid "redundant default in section %s"
 msgstr "redundant standardvärde i sektion %s"
 
-#: ../lib/sources/mozillasource.py:899
+#: ../lib/sources/mozillasource.py:895
 msgid "no default profile"
 msgstr "ingen standardprofil"
 
-#: ../lib/sources/mozillasource.py:954
+#: ../lib/sources/mozillasource.py:950
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Mozilla-bokmärke skapades \"%s\" -> \"%s\""
 
-#: ../lib/sources/mozillasource.py:956
+#: ../lib/sources/mozillasource.py:952
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Mozilla-bokmärkesmapp skapades \"%s\""
 
-#: ../lib/sources/mozillasource.py:959
+#: ../lib/sources/mozillasource.py:955
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Mozilla-bokmärke \"%s\" borttaget"
 
-#: ../lib/sources/mozillasource.py:961
+#: ../lib/sources/mozillasource.py:957
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Mozilla-bokmärkesmapp togs bort \"%s\""
 
-#: ../lib/sources/mozillasource.py:964
+#: ../lib/sources/mozillasource.py:960
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Mozilla-bokmärke ändrades \"%s\" \"%s\""
 
-#: ../lib/sources/mozillasource.py:966
+#: ../lib/sources/mozillasource.py:962
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mozilla-bokmärkesmapp ändrades \"%s\""
@@ -1042,10 +1068,86 @@ msgstr "Ogiltig metadatasektion i \"%s\": %s"
 msgid "Cannot add non-existent file '%s'"
 msgstr "Kan inte lägga till en icke-existerande fil \"%s\""
 
-#: ../lib/storage.py:568
+#: ../lib/storage.py:487
+#, python-format
+msgid "Couldn't unlink file '%s'"
+msgstr "Kunde inte avlänka filen \"%s\""
+
+#: ../lib/storage.py:570
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Profilen är skrivskyddad %s"
+
+#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
+#. do not change the way they are written.  The intended string is
+#. something like "invalid type for setting blah in /ldap/path/to/blah"
+#: ../lib/systemdb.py:58
+#, python-format
+msgid "invalid type for setting %(setting)s in %(np)s"
+msgstr "ogiltig typ för inställningen %(setting)s i %(np)s"
+
+#: ../lib/systemdb.py:103
+msgid "No database file provided"
+msgstr "Ingen databasfil tillhandahölls"
+
+# FIXME. base?
+#: ../lib/systemdb.py:220
+#, python-format
+msgid "No search base specified for %s"
+msgstr "Ingen sökbas angiven för %s"
+
+#: ../lib/systemdb.py:223
+#, python-format
+msgid "No query filter specified for %s"
+msgstr "Inget frågefilter angivet för %s"
+
+#: ../lib/systemdb.py:226
+#, python-format
+msgid "No result attribute specified for %s"
+msgstr "Inget resultatattribut angivet för %s"
+
+#: ../lib/systemdb.py:235
+msgid "Scope must be one of sub, base and one"
+msgstr "Område måste vara en av sub, base och one"
+
+#: ../lib/systemdb.py:255
+msgid "multiple_result must be one of first and random"
+msgstr "multiple_result måste vara en av first och random"
+
+#: ../lib/systemdb.py:347
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "Kunde inte öppna %s för skrivning"
+
+# FIXME. UserDatabase is what? A function?
+#: ../lib/systemdb.py:360
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "Misslyckades med att spara UserDatabase till %s"
+
+#: ../lib/systemdb.py:383
+#: ../lib/systemdb.py:417
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "Filen %s är inte en profilkonfiguration"
+
+#: ../lib/systemdb.py:390
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "Misslyckades med att lägga till standardprofilen %s till konfigurationen"
+
+#: ../lib/systemdb.py:424
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "Misslyckades med att lägga till användaren %s till profilkonfigurationen"
+
+#: ../lib/systemdb.py:496
+msgid "Failed to get the user list"
+msgstr "Misslyckades med att få användarlistan"
+
+#: ../lib/systemdb.py:546
+msgid "Failed to get the group list"
+msgstr "Misslyckades med att få grupplistan"
 
 #: ../lib/unittests.py:38
 #: ../lib/unittests.py:39
@@ -1066,74 +1168,12 @@ msgstr "Kör %s tester (%s)"
 msgid "Success!"
 msgstr "Lyckades!"
 
-#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
-#. do not change the way they are written.  The intended string is
-#. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/userdb.py:54
-#, python-format
-msgid "invalid type for setting %(setting)s in %(np)s"
-msgstr "ogiltig typ för inställningen %(setting)s i %(np)s"
-
-# FIXME. base?
-#: ../lib/userdb.py:215
-#, python-format
-msgid "No search base specified for %s"
-msgstr "Ingen sökbas angiven för %s"
-
-#: ../lib/userdb.py:218
-#, python-format
-msgid "No query filter specified for %s"
-msgstr "Inget frågefilter angivet för %s"
-
-#: ../lib/userdb.py:221
-#, python-format
-msgid "No result attribute specified for %s"
-msgstr "Inget resultatattribut angivet för %s"
-
-#: ../lib/userdb.py:230
-msgid "Scope must be one of sub, base and one"
-msgstr "Område måste vara en av sub, base och one"
-
-#: ../lib/userdb.py:250
-msgid "multiple_result must be one of first and random"
-msgstr "multiple_result måste vara en av first och random"
-
-#: ../lib/userdb.py:342
-#, python-format
-msgid "Could not open %s for writing"
-msgstr "Kunde inte öppna %s för skrivning"
-
-# FIXME. UserDatabase is what? A function?
-#: ../lib/userdb.py:355
-#, python-format
-msgid "Failed to save UserDatabase to %s"
-msgstr "Misslyckades med att spara UserDatabase till %s"
-
-#: ../lib/userdb.py:378
-#: ../lib/userdb.py:413
-#, python-format
-msgid "File %s is not a profile configuration"
-msgstr "Filen %s är inte en profilkonfiguration"
-
-#: ../lib/userdb.py:385
-#, python-format
-msgid "Failed to add default profile %s to configuration"
-msgstr "Misslyckades med att lägga till standardprofilen %s till konfigurationen"
-
-#: ../lib/userdb.py:421
-#, python-format
-msgid "Failed to add user %s to profile configuration"
-msgstr "Misslyckades med att lägga till användaren %s till profilkonfigurationen"
-
-#: ../lib/userdb.py:472
-msgid "Failed to get the user list"
-msgstr "Misslyckades med att få användarlistan"
-
-#: ../lib/util.py:93
+#: ../lib/util.py:94
 msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
 msgstr "Kan inte hitta hemkatalog: inte inställd i /etc/passwd och inget värde för $HOME i miljön"
 
-#: ../lib/util.py:106
+#: ../lib/util.py:110
+#: ../lib/util.py:137
 msgid "Cannot find username: not set in /etc/passwd and no value for $USER in environment"
 msgstr "Kan inte hitta användarnamn: inte inställd i /etc/passwd och inget värde för $HOME i miljön"
 
@@ -1245,8 +1285,6 @@ msgstr "Kan inte hitta användarnamn: inte inställd i /etc/passwd och inget vä
 #~ msgstr ""
 #~ "Kunde inte skapa GConf-motor. Felet var:\n"
 #~ "%s"
-#~ msgid "Couldn't display help: %s"
-#~ msgstr "Kunde inte visa hjälp: %s"
 #~ msgid "translator_credits"
 #~ msgstr ""
 #~ "Christian Rose\n"

@@ -9,22 +9,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-01 04:49+0200\n"
-"PO-Revision-Date: 2009-02-01 04:49+0200\n"
-"Last-Translator: Gintautas Miliauskas <gintas@akl.lt>\n"
+"POT-Creation-Date: 2009-09-22 00:39+0300\n"
+"PO-Revision-Date: 2009-09-21 21:35+0200\n"
+"Last-Translator: Rimas Kudelis <rq@akl.lt>\n"
 "Language-Team: Lithuanian <gnome-lt@lists.akl.lt>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%"
 "100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../admin-tool/aboutdialog.py:63
+#: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
 msgstr "Naudotojų profilių kūrimo ir redagavimo programa"
 
-#: ../admin-tool/aboutdialog.py:66
+#: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
 msgstr "Žygimantas Beručka <zygis@gnome.org>"
 
@@ -104,7 +104,7 @@ msgstr "Failai"
 
 #: ../admin-tool/editorwindow.py:266
 #: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:229
+#: ../lib/sources/paneldelegate.py:269
 msgid "Panel"
 msgstr "Skydelis"
 
@@ -154,7 +154,7 @@ msgstr "pora"
 msgid "Profile settings: %s"
 msgstr "Profilio nustatymai: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:384
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:387
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Vardas"
@@ -197,7 +197,7 @@ msgstr "_Užrakinti skydelius"
 
 #: ../admin-tool/lockdown/maindialog.py:55
 msgid "Disable force _quit"
-msgstr "Išjungti priverstinį _išėjimą"
+msgstr "Išjungti priverstinį _užvėrimą"
 
 #: ../admin-tool/lockdown/maindialog.py:56
 msgid "Disable lock _screen"
@@ -464,7 +464,7 @@ msgstr "Naudotojo sąsaja"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:494
+#: ../admin-tool/profilesdialog.py:497
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -757,25 +757,33 @@ msgstr "Profilio %s naudotojai"
 msgid "Use This Profile"
 msgstr "Naudoti šį profilį"
 
-#: ../lib/protosession.py:147
+#: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
 msgstr "Nepavyko rasti laisvo X ekrano"
 
-#: ../lib/protosession.py:414
-msgid "Failed to start Xnest: timed out waiting for USR1 signal"
-msgstr "Nepavyko paleisti Xnest: nutrauktas laukimas USR1 signalo"
+#: ../lib/protosession.py:377
+msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
+msgstr "Nepavyko paleisti „Xephyr“: nesulaukta USR1 signalo"
 
-#: ../lib/protosession.py:416
-msgid "Failed to start Xnest: died during startup"
-msgstr "Nepavyko paleisti Xnest: nulūžo paleidimo metu"
+#: ../lib/protosession.py:379
+msgid "Failed to start Xephyr: died during startup"
+msgstr "Nepavyko paleisti „Xephyr“: nulūžo paleidimo metu"
 
-#: ../lib/protosession.py:501
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:470
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
 msgstr "Įvyko nekritinė klaida atnaujinant naudotojo profilį iš failo „%s“."
 
-#: ../lib/protosession.py:510
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (FATAL) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:479
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "Įvyko kritinė klaida atnaujinant naudotojo profilį iš failo „%s“."
@@ -895,184 +903,200 @@ msgstr "Web naršyklės žymelės"
 msgid "Web browser profile list"
 msgstr "Web naršyklės profilių sąrašas"
 
-#: ../lib/sources/mozillasource.py:522
+#: ../lib/sources/mozillasource.py:520
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Failas nerastas (%s)"
 
-#: ../lib/sources/mozillasource.py:873
+#: ../lib/sources/mozillasource.py:869
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "dvigubas vardas (%(name)s) skyriuje %(section)s"
 
-#: ../lib/sources/mozillasource.py:882
+#: ../lib/sources/mozillasource.py:878
 #, python-format
 msgid "redundant default in section %s"
 msgstr "nereikalingas numatytasis nustatymas skyriuje %s"
 
-#: ../lib/sources/mozillasource.py:899
+#: ../lib/sources/mozillasource.py:895
 msgid "no default profile"
 msgstr "nėra numatytojo profilio"
 
-#: ../lib/sources/mozillasource.py:954
+#: ../lib/sources/mozillasource.py:950
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Sukurta Mozilla žymelė „%s“ -> „%s“"
 
-#: ../lib/sources/mozillasource.py:956
+#: ../lib/sources/mozillasource.py:952
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Sukurtas Mozilla žymelių aplankas „%s“"
 
-#: ../lib/sources/mozillasource.py:959
+#: ../lib/sources/mozillasource.py:955
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Ištrinta Mozilla žymelė „%s“"
 
-#: ../lib/sources/mozillasource.py:961
+#: ../lib/sources/mozillasource.py:957
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Ištrintas Mozilla žymelių aplankas „%s“"
 
-#: ../lib/sources/mozillasource.py:964
+#: ../lib/sources/mozillasource.py:960
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Pakeita Mozilla žymelė „%s“ „%s“"
 
-#: ../lib/sources/mozillasource.py:966
+#: ../lib/sources/mozillasource.py:962
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Pakeistas Mozilla žymelių aplankas „%s“"
 
-#: ../lib/sources/paneldelegate.py:55
+#: ../lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel '%s' added"
 msgstr "Pridėtas skydelis „%s“"
 
-#: ../lib/sources/paneldelegate.py:61
+#: ../lib/sources/paneldelegate.py:71
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "Pašalintas skydelis „%s“"
 
-#: ../lib/sources/paneldelegate.py:76
+#: ../lib/sources/paneldelegate.py:86
 #, python-format
 msgid "Applet %s added to top panel"
 msgstr "Įtaisas %s pridėtas viršutiniame skydelyje"
 
-#: ../lib/sources/paneldelegate.py:78
+#: ../lib/sources/paneldelegate.py:88
 #, python-format
 msgid "Applet %s added to bottom panel"
 msgstr "Įtaisas %s pridėtas apatiniame skydelyje"
 
-#: ../lib/sources/paneldelegate.py:80
+#: ../lib/sources/paneldelegate.py:90
 #, python-format
 msgid "Applet %s added to left panel"
 msgstr "Įtaisas %s pridėtas kairiajame skydelyje"
 
-#: ../lib/sources/paneldelegate.py:82
+#: ../lib/sources/paneldelegate.py:92
 #, python-format
 msgid "Applet %s added to right panel"
 msgstr "Įtaisas %s pridėtas dešiniajame skydelyje"
 
-#: ../lib/sources/paneldelegate.py:97
+#: ../lib/sources/paneldelegate.py:107
 #, python-format
 msgid "Applet %s removed from top panel"
 msgstr "Įtaisas %s pašalintas iš viršutinio skydelio"
 
-#: ../lib/sources/paneldelegate.py:99
+#: ../lib/sources/paneldelegate.py:109
 #, python-format
 msgid "Applet %s removed from bottom panel"
 msgstr "Įtaisas %s pašalintas iš apatinio skydelio"
 
-#: ../lib/sources/paneldelegate.py:101
+#: ../lib/sources/paneldelegate.py:111
 #, python-format
 msgid "Applet %s removed from left panel"
 msgstr "Įtaisas %s pašalintas iš kairiojo skydelio"
 
-#: ../lib/sources/paneldelegate.py:103
+#: ../lib/sources/paneldelegate.py:113
 #, python-format
 msgid "Applet %s removed from right panel"
 msgstr "Įtaisas %s pašalintas iš dešiniojo skydelio"
 
-#: ../lib/sources/paneldelegate.py:117
+#: ../lib/sources/paneldelegate.py:127
 #, python-format
 msgid "%s added to top panel"
 msgstr "%s pridėtas viršutiniame skydelyje"
 
-#: ../lib/sources/paneldelegate.py:119
+#: ../lib/sources/paneldelegate.py:129
 #, python-format
 msgid "%s added to bottom panel"
 msgstr "%s pridėtas apatiniame skydelyje"
 
-#: ../lib/sources/paneldelegate.py:121
+#: ../lib/sources/paneldelegate.py:131
 #, python-format
 msgid "%s added to left panel"
 msgstr "%s pridėtas kairiajame skydelyje"
 
-#: ../lib/sources/paneldelegate.py:123
+#: ../lib/sources/paneldelegate.py:133
 #, python-format
 msgid "%s added to right panel"
 msgstr "%s pridėtas dešiniajame skydelyje"
 
-#: ../lib/sources/paneldelegate.py:144
+#: ../lib/sources/paneldelegate.py:154
 #, python-format
 msgid "%s removed from top panel"
 msgstr "%s pašalintas iš viršutinio skydelio"
 
-#: ../lib/sources/paneldelegate.py:146
+#: ../lib/sources/paneldelegate.py:156
 #, python-format
 msgid "%s removed from bottom panel"
 msgstr "%s pašalintas iš apatinio skydelio"
 
-#: ../lib/sources/paneldelegate.py:148
+#: ../lib/sources/paneldelegate.py:158
 #, python-format
 msgid "%s removed from left panel"
 msgstr "%s pašalintas iš kairiojo skydelio"
 
-#: ../lib/sources/paneldelegate.py:150
+#: ../lib/sources/paneldelegate.py:160
 #, python-format
 msgid "%s removed from right panel"
 msgstr "%s pašalintas iš dešiniojo skydelio"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:200
+#: ../lib/sources/paneldelegate.py:231
 msgid "Drawer"
 msgstr "Stalčius"
 
-#: ../lib/sources/paneldelegate.py:202
+#: ../lib/sources/paneldelegate.py:233
 msgid "Main Menu"
 msgstr "Pagrindinis meniu"
 
-#: ../lib/sources/paneldelegate.py:212
+#: ../lib/sources/paneldelegate.py:243
 #, python-format
 msgid "%s launcher"
 msgstr "%s paleidiklis"
 
-#: ../lib/sources/paneldelegate.py:216
+#: ../lib/sources/paneldelegate.py:247
 msgid "Lock Screen button"
 msgstr "Mygtukas „Užrakinti ekraną“"
 
-#: ../lib/sources/paneldelegate.py:218
+#: ../lib/sources/paneldelegate.py:249
 msgid "Logout button"
 msgstr "Mygtukas „Atsijungti“"
 
-#: ../lib/sources/paneldelegate.py:220
+#: ../lib/sources/paneldelegate.py:251
 msgid "Run Application button"
 msgstr "Mygtukas „Paleisti programą“"
 
-#: ../lib/sources/paneldelegate.py:222
+#: ../lib/sources/paneldelegate.py:253
 msgid "Search button"
 msgstr "Mygtukas „Ieškoti“"
 
-#: ../lib/sources/paneldelegate.py:224
+#: ../lib/sources/paneldelegate.py:255
+msgid "Force Quit button"
+msgstr "Mygtukas „Priverstinai užverti“"
+
+#: ../lib/sources/paneldelegate.py:257
+msgid "Connect to Server button"
+msgstr "Mygtukas „Jungtis prie serverio“"
+
+#: ../lib/sources/paneldelegate.py:259
+msgid "Shutdown button"
+msgstr "Mygtukas „Išjungti“"
+
+#: ../lib/sources/paneldelegate.py:261
 msgid "Screenshot button"
 msgstr "Mygtukas „Ekrano nuotrauka“"
 
-#: ../lib/sources/paneldelegate.py:226
+#: ../lib/sources/paneldelegate.py:264
+msgid "Unknown"
+msgstr "Nežinoma"
+
+#: ../lib/sources/paneldelegate.py:266
 msgid "Menu Bar"
 msgstr "Meniu juosta"
 
-#: ../lib/sources/paneldelegate.py:470
+#: ../lib/sources/paneldelegate.py:503
 msgid "Panel File"
 msgstr "Skydelio failas"
 

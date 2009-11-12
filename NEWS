@@ -1,3 +1,97 @@
+==============
+Version 2.29.0
+==============
+
+  Code name:
+
+	* "The troops gather"
+
+  New features:
+
+	* Sabayon now lets you apply profiles to groups of users,
+	  instead of just individual users.  This is still in
+	  development, but for now you can use any Unix group whose
+	  gid >= 500.  This big feature is courtesy of Scott Balneaves.
+
+==============
+Version 2.28.1
+==============
+
+  Code name:
+
+	* "Footwear on fire"
+
+  Fixes:
+
+	* Remove obsolete calls to os.spawn*() and replace them with
+          subprocess.call() (Scott Balneaves)
+
+	* Fix potential exception when extracting profiles (Scott Balneaves)
+
+	* Move the "-name" argument for Xephyr where XEPHYR_ARGV is
+          defined, so that it is easier to find for distros that need
+          to patch it out (Scott Balneaves)
+
+  Translators:
+
+	* Denis Arnaud (br)
+	* Gil Forcada (ca)
+	* Carles Ferrando Garcia (ca@valencia)
+	* Ivar Smolin (et)
+	* Andika Triwidada (id)
+	* Takeshi Aihana (ja)
+	* Rimas Kudelis (lt)
+	* Leonid Kanter (ru)
+	* Matej Urbančič (sl)
+	* Daniel Nylander (sv)
+
+==============
+Version 2.28.0
+==============
+
+  Fixes:
+
+	* Find a free X display without using TCP sockets (Scott Balneaves)
+	* Fix incorrect format strings; make others consistent (Scott
+	  Balneaves)
+
+  Translators
+
+	* Amitakhya Phukan (as)
+	* Alexander Nyakhaychyk (be)
+	* Saad M Niamatullah (bn)
+	* Runa Bhattacharjee (bn_IN)
+	* denis (br)
+	* Josep Puigdemont (ca)
+	* Lucas Lommer (cs)
+	* Kenneth Nielsen (da)
+	* nikosCharonitakis (el)
+	* Philip Withnall (en_GB)
+	* Mattias Põldaru (et)
+	* Claude Paroz (fr)
+	* Sweta Kothari (gu)
+	* Mark Krapivner (he)
+	* Rajesh Ranjan (hi)
+	* Gabor Kelemen (hu)
+	* Gianvito Cavasoli (it)
+	* Shankar Prasad (kn)
+	* Sangeeta Kumari (mai)
+	* Peter Ani (ml)
+	* Sandeep Shedmake (mr)
+	* Kjartan Maraas (nb)
+	* Manoj Kumar Giri (or)
+	* A S Alam (pa)
+	* Piotr Drąg (pl)
+	* Duarte Loreto (pt)
+	* Adi Roiban (ro)
+	* Matej Urbančič (sl)
+	* I. Felix (ta)
+	* Krishna Babu K (te)
+	* Theppitak Karoonboonyanan (th)
+	* Baris Cicek (tr)
+	* wanderlust (uk)
+	* Hinker (zh_CN)
+
 ===============
 Version 2.27.91
 ===============

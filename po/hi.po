@@ -1,15 +1,16 @@
-# translation of sabayon.HEAD.po to Hindi
+# translation of sabayon.master.po to Hindi
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 #
 # Rajesh Ranjan <rranjan@redhat.com>, 2006, 2008, 2009.
+# Rajesh Ranjan <rajesh672@gmail.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: sabayon.HEAD\n"
+"Project-Id-Version: sabayon.master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-01-24 23:07+0000\n"
-"PO-Revision-Date: 2009-03-14 12:53+0530\n"
-"Last-Translator: Rajesh Ranjan <rranjan@redhat.com>\n"
+"POT-Creation-Date: 2009-08-27 20:51+0000\n"
+"PO-Revision-Date: 2009-08-31 16:42+0530\n"
+"Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Hindi <hindi.sf.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,13 +23,14 @@ msgstr ""
 "\n"
 "\n"
 "\n"
+"\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../admin-tool/aboutdialog.py:63
+#: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
 msgstr "उपयोक्ता के लिये प्रोफाइल संपादन व स्थापन के लिये प्रोग्राम"
 
-#: ../admin-tool/aboutdialog.py:66
+#: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
 msgstr ""
 "रविशंकर श्रीवास्तव (raviratlami@yahoo.com)\n"
@@ -110,7 +112,7 @@ msgstr "फ़ाइल"
 
 #: ../admin-tool/editorwindow.py:266
 #: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:229
+#: ../lib/sources/paneldelegate.py:269
 msgid "Panel"
 msgstr "पटल"
 
@@ -160,7 +162,7 @@ msgstr "जोड़ा"
 msgid "Profile settings: %s"
 msgstr "प्रोफाइल जमावट: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:384
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:387
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "नाम"
@@ -470,7 +472,7 @@ msgstr "प्रयोक्ता अंतरफलक"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:494
+#: ../admin-tool/profilesdialog.py:497
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -517,14 +519,18 @@ msgstr ""
 msgid ""
 "A fatal error has occurred.  You can help us fix the problem by sending the "
 "log in %s to %s"
-msgstr "कोई गंभीर त्रुटि आई.  आप समस्या ठीक करने में हमारी मदद कर सकते हैं %s में लॉगिन को %s भेजते हुए"
+msgstr ""
+"कोई गंभीर त्रुटि आई.  आप समस्या ठीक करने में हमारी मदद कर सकते हैं %s में लॉगिन को %s "
+"भेजते हुए"
 
 #: ../admin-tool/sabayon:145
 #, c-format
 msgid ""
 "Sabayon will now exit.  There were some recoverable errors, and you can help "
 "us debug the problem by sending the log in %s to %s"
-msgstr "Sabayon अब निकल जाएगा.  वहाँ कुछ फिर पाने योग्य त्रुटियाँ थी, और आप समस्या को डिबग करने में हमारी मदद कर सकते हैं लॉग को %s में %s से भेजते हुए"
+msgstr ""
+"Sabayon अब निकल जाएगा.  वहाँ कुछ फिर पाने योग्य त्रुटियाँ थी, और आप समस्या को डिबग "
+"करने में हमारी मदद कर सकते हैं लॉग को %s में %s से भेजते हुए"
 
 #: ../admin-tool/sabayon-apply:99
 #, c-format
@@ -628,7 +634,9 @@ msgstr[1] "यदि आप सहेजते नहीं हैं तो आ
 
 #: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgstr "यदि आप सहेजते नहीं हैं तो अंतिम घंटे में आपके द्वारा किए गए परिवर्तन स्थायी रूप से मिट ही जाएंगे."
+msgstr ""
+"यदि आप सहेजते नहीं हैं तो अंतिम घंटे में आपके द्वारा किए गए परिवर्तन स्थायी रूप से मिट ही "
+"जाएंगे."
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
@@ -716,24 +724,34 @@ msgstr "%s प्रोफाइल के लिये उपयोक्ता
 msgid "Use This Profile"
 msgstr "इस प्रोफाइल का प्रयोग करें"
 
-#: ../lib/protosession.py:147
+#: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
 msgstr "मुक्त X डिस्प्ले पाने में विफल"
 
-#: ../lib/protosession.py:414
-msgid "Failed to start Xnest: timed out waiting for USR1 signal"
-msgstr "Xnest आरंभ करने में विफल:USR1 सिग्नल के लिये प्रतीक्षारत समय समाप्त"
+#: ../lib/protosession.py:377
+#| msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
+msgstr "Xephyr आरंभ करने में विफल: USR1 सिग्नल के लिए प्रतीक्षारत समय समाप्त"
 
-#: ../lib/protosession.py:416
-msgid "Failed to start Xnest: died during startup"
-msgstr "Xnest आरंभ करने में विफल: आरंभन के दौरान मृत"
+#: ../lib/protosession.py:379
+#| msgid "Failed to start Xnest: died during startup"
+msgid "Failed to start Xephyr: died during startup"
+msgstr "Xephyr आरंभ करने में विफल: आरंभन के दौरान मृत"
 
-#: ../lib/protosession.py:501
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:470
 #, python-format
 msgid "There was a recoverable error while applying the user profile from file '%s'."
 msgstr "वहाँ फिर पाने योग्य त्रुटि थी फाइल '%s' से उपयोक्ता प्रोफाइल लागू करते हुए."
 
-#: ../lib/protosession.py:510
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (FATAL) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:479
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "एक गंभीर त्रुटि थी जब उपयोक्ता प्रोफाइल '%s' से लागू किया जा रहा है."
@@ -853,184 +871,203 @@ msgstr "वेबब्रॉउजर पुस्तकचिह्न"
 msgid "Web browser profile list"
 msgstr "वेब ब्रॉउजर प्रोफाइल सूची"
 
-#: ../lib/sources/mozillasource.py:522
+#: ../lib/sources/mozillasource.py:520
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "फाइल नहीं मिला (%s)"
 
-#: ../lib/sources/mozillasource.py:873
+#: ../lib/sources/mozillasource.py:869
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "duplicate name(%(name)s) in section %(section)s"
 
-#: ../lib/sources/mozillasource.py:882
+#: ../lib/sources/mozillasource.py:878
 #, python-format
 msgid "redundant default in section %s"
 msgstr "%s खंड में वैकल्पिक मूलभूत"
 
-#: ../lib/sources/mozillasource.py:899
+#: ../lib/sources/mozillasource.py:895
 msgid "no default profile"
 msgstr "कोई मूलभूत प्रोफाइल नहीं"
 
-#: ../lib/sources/mozillasource.py:954
+#: ../lib/sources/mozillasource.py:950
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "मोजिला बुकमार्क बनाया गया '%s'-> '%s'"
 
-#: ../lib/sources/mozillasource.py:956
+#: ../lib/sources/mozillasource.py:952
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "मोजिला बुकमार्क फोल्डर बनाया गया '%s'"
 
-#: ../lib/sources/mozillasource.py:959
+#: ../lib/sources/mozillasource.py:955
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "मोजिला बुकमार्क मिटाया गया '%s'"
 
-#: ../lib/sources/mozillasource.py:961
+#: ../lib/sources/mozillasource.py:957
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "मोजिला बुकमार्क फोल्डर मिटाया गया '%s'"
 
-#: ../lib/sources/mozillasource.py:964
+#: ../lib/sources/mozillasource.py:960
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "मोडिला बुकमार्क बदला गया '%s' '%s'"
 
-#: ../lib/sources/mozillasource.py:966
+#: ../lib/sources/mozillasource.py:962
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "मोजिला पुस्तकचिह्न फोल्डर बदला गया '%s'"
 
-#: ../lib/sources/paneldelegate.py:55
+#: ../lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel '%s' added"
 msgstr "पैनल '%s' जोड़ा गया"
 
-#: ../lib/sources/paneldelegate.py:61
+#: ../lib/sources/paneldelegate.py:71
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "पैनल '%s' हटाया गया"
 
-#: ../lib/sources/paneldelegate.py:76
+#: ../lib/sources/paneldelegate.py:86
 #, python-format
 msgid "Applet %s added to top panel"
 msgstr "एप्पलेट %s जोड़ा गया शीर्ष पैनल में"
 
-#: ../lib/sources/paneldelegate.py:78
+#: ../lib/sources/paneldelegate.py:88
 #, python-format
 msgid "Applet %s added to bottom panel"
 msgstr "एप्पलेट %s जोड़ा गया निचले पैनल में"
 
-#: ../lib/sources/paneldelegate.py:80
+#: ../lib/sources/paneldelegate.py:90
 #, python-format
 msgid "Applet %s added to left panel"
 msgstr "एप्पलेट %s जोड़ा गया बाएँ पैनल में"
 
-#: ../lib/sources/paneldelegate.py:82
+#: ../lib/sources/paneldelegate.py:92
 #, python-format
 msgid "Applet %s added to right panel"
 msgstr "एप्पलेट %s जोड़ा गया दाहिने पैनल में"
 
-#: ../lib/sources/paneldelegate.py:97
+#: ../lib/sources/paneldelegate.py:107
 #, python-format
 msgid "Applet %s removed from top panel"
 msgstr "एप्पलेट %s हटाया गया शीर्ष पैनल से"
 
-#: ../lib/sources/paneldelegate.py:99
+#: ../lib/sources/paneldelegate.py:109
 #, python-format
 msgid "Applet %s removed from bottom panel"
 msgstr "एप्पलेट %s हटाया गया निचले पैनल से"
 
-#: ../lib/sources/paneldelegate.py:101
+#: ../lib/sources/paneldelegate.py:111
 #, python-format
 msgid "Applet %s removed from left panel"
 msgstr "एप्पलेट %s हटाया गया बाएँ पैनल से"
 
-#: ../lib/sources/paneldelegate.py:103
+#: ../lib/sources/paneldelegate.py:113
 #, python-format
 msgid "Applet %s removed from right panel"
 msgstr "एप्पलेट %s हटाया गया दाहिने पैनल से"
 
-#: ../lib/sources/paneldelegate.py:117
+#: ../lib/sources/paneldelegate.py:127
 #, python-format
 msgid "%s added to top panel"
 msgstr "%s जोड़ा गया शीर्ष पैनल में"
 
-#: ../lib/sources/paneldelegate.py:119
+#: ../lib/sources/paneldelegate.py:129
 #, python-format
 msgid "%s added to bottom panel"
 msgstr "%s जोड़ा गया निचले पैनल में"
 
-#: ../lib/sources/paneldelegate.py:121
+#: ../lib/sources/paneldelegate.py:131
 #, python-format
 msgid "%s added to left panel"
 msgstr "%s जोड़ा गया बाएँ पैनल में"
 
-#: ../lib/sources/paneldelegate.py:123
+#: ../lib/sources/paneldelegate.py:133
 #, python-format
 msgid "%s added to right panel"
 msgstr "%s जोड़ा गया दाहिने पैनल में"
 
-#: ../lib/sources/paneldelegate.py:144
+#: ../lib/sources/paneldelegate.py:154
 #, python-format
 msgid "%s removed from top panel"
 msgstr "%s हटाया गया शीर्ष पैनल से"
 
-#: ../lib/sources/paneldelegate.py:146
+#: ../lib/sources/paneldelegate.py:156
 #, python-format
 msgid "%s removed from bottom panel"
 msgstr "%s हटाया गया निचले पैनल से"
 
-#: ../lib/sources/paneldelegate.py:148
+#: ../lib/sources/paneldelegate.py:158
 #, python-format
 msgid "%s removed from left panel"
 msgstr "%s हटाया गया बाएँ पैनल से"
 
-#: ../lib/sources/paneldelegate.py:150
+#: ../lib/sources/paneldelegate.py:160
 #, python-format
 msgid "%s removed from right panel"
 msgstr "%s हटाया गया दाहिने पैनल से"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:200
+#: ../lib/sources/paneldelegate.py:231
 msgid "Drawer"
 msgstr "दराज़"
 
-#: ../lib/sources/paneldelegate.py:202
+#: ../lib/sources/paneldelegate.py:233
 msgid "Main Menu"
 msgstr "मुख्य मेनू"
 
-#: ../lib/sources/paneldelegate.py:212
+#: ../lib/sources/paneldelegate.py:243
 #, python-format
 msgid "%s launcher"
 msgstr "%s लांचर"
 
-#: ../lib/sources/paneldelegate.py:216
+#: ../lib/sources/paneldelegate.py:247
 msgid "Lock Screen button"
 msgstr "लाक स्क्रीन बटन"
 
-#: ../lib/sources/paneldelegate.py:218
+#: ../lib/sources/paneldelegate.py:249
 msgid "Logout button"
 msgstr "लॉगआउट बटन"
 
-#: ../lib/sources/paneldelegate.py:220
+#: ../lib/sources/paneldelegate.py:251
 msgid "Run Application button"
 msgstr "अनुप्रयोग बटन चलाएँ"
 
-#: ../lib/sources/paneldelegate.py:222
+#: ../lib/sources/paneldelegate.py:253
 msgid "Search button"
 msgstr "बटन खोजें"
 
-#: ../lib/sources/paneldelegate.py:224
+#: ../lib/sources/paneldelegate.py:255
+#| msgid "Logout button"
+msgid "Force Quit button"
+msgstr "जबरदस्ती छोड़े बटन"
+
+#: ../lib/sources/paneldelegate.py:257
+#| msgid "Lock Screen button"
+msgid "Connect to Server button"
+msgstr "सर्वर बटन से कनेक्ट करें"
+
+#: ../lib/sources/paneldelegate.py:259
+#| msgid "Logout button"
+msgid "Shutdown button"
+msgstr "शटडाउन बटन"
+
+#: ../lib/sources/paneldelegate.py:261
 msgid "Screenshot button"
 msgstr "स्क्रीनशॉट बटन"
 
-#: ../lib/sources/paneldelegate.py:226
+#: ../lib/sources/paneldelegate.py:264
+msgid "Unknown"
+msgstr "अज्ञात"
+
+#: ../lib/sources/paneldelegate.py:266
 msgid "Menu Bar"
 msgstr "मेन्यू पट्टी"
 
-#: ../lib/sources/paneldelegate.py:470
+#: ../lib/sources/paneldelegate.py:503
 msgid "Panel File"
 msgstr "पटल फ़ाइल"
 
@@ -1087,7 +1124,6 @@ msgstr "%(setting)s सेटिंग के लिए %(np)s में को�
 
 #: ../lib/userdb.py:215
 #, python-format
-#| msgid "No search based specified for %s"
 msgid "No search base specified for %s"
 msgstr "%s के लिये कोई खोज आधार निर्दिष्ट नहीं था"
 

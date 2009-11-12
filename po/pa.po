@@ -7,22 +7,23 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-01-24 23:07+0000\n"
-"PO-Revision-Date: 2009-03-16 07:37+0000\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
+"cgi?product=sabayon&component=general\n"
+"POT-Creation-Date: 2009-08-27 20:51+0000\n"
+"PO-Revision-Date: 2009-09-13 08:49+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
-"Language-Team: Punjabi/Panjabi <punjab-l10n@list.sf.net>\n"
+"Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Lokalize 0.3\n"
+"X-Generator: Lokalize 1.0\n"
 
-#: ../admin-tool/aboutdialog.py:63
+#: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
 msgstr "ਯੂਜ਼ਰਾਂ ਲਈ ਪਰੋਫਾਇਲ ਬਣਾਉਣ ਅਤੇ ਸੋਧਣ ਲਈ ਪਰੋਗਰਾਮ"
 
-#: ../admin-tool/aboutdialog.py:66
+#: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
 msgstr "ਅਨੁਵਾਦ ਮਾਣ"
 
@@ -102,7 +103,7 @@ msgstr "ਫਾਇਲਾਂ"
 
 #: ../admin-tool/editorwindow.py:266
 #: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:229
+#: ../lib/sources/paneldelegate.py:269
 msgid "Panel"
 msgstr "ਪੈਨਲ"
 
@@ -152,7 +153,7 @@ msgstr "ਜੋੜਾ"
 msgid "Profile settings: %s"
 msgstr "ਪਰੋਫਾਇਲ ਸੈਟਿੰਗ: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:384
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:387
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "ਨਾਂ"
@@ -240,7 +241,6 @@ msgstr "ਮੇਨੂ-ਪੱਟੀ ਓਹਲੇ(_m)"
 #. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
 #. This can be used to disable this, for when you don't want people to know you created the document.
 #: ../admin-tool/lockdown/maindialog.py:70
-#| msgid "Remove personal info from documents when saving them"
 msgid "Remove personal information from documents when saving them"
 msgstr "ਜਦੋਂ ਡੌਕੂਮੈਂਟ ਸੰਭਾਲਣੇ ਹੋਣ ਤਾਂ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਹਟਾਓ। "
 
@@ -463,7 +463,7 @@ msgstr "ਯੂਜ਼ਰ ਇੰਟਰਫੇਸ"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:494
+#: ../admin-tool/profilesdialog.py:497
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -511,8 +511,8 @@ msgid ""
 "A fatal error has occurred.  You can help us fix the problem by sending the "
 "log in %s to %s"
 msgstr ""
-"ਇੱਕ ਘਾਤਕ ਗਲਤੀ ਆਈ ਹੈ। ਤੁਸੀਂ ਸਾਨੂੰ %s ਵਿੱਚ %s ਵਾਂਗ "
-"ਲਾਗ ਭੇਜ ਕੇ ਸਮੱਸਿਆ ਨੂੰ ਡੀਬੱਗ ਕਰਨ ਲਈ ਮੱਦਦ ਦੇ ਸਕਦੇ ਹੋ।"
+"ਇੱਕ ਘਾਤਕ ਗਲਤੀ ਆਈ ਹੈ। ਤੁਸੀਂ ਸਾਨੂੰ %s ਵਿੱਚ %s ਵਾਂਗ ਲਾਗ ਭੇਜ ਕੇ ਸਮੱਸਿਆ ਨੂੰ ਡੀਬੱਗ ਕਰਨ ਲਈ ਮੱਦਦ ਦੇ "
+"ਸਕਦੇ ਹੋ।"
 
 #: ../admin-tool/sabayon:145
 #, c-format
@@ -520,8 +520,8 @@ msgid ""
 "Sabayon will now exit.  There were some recoverable errors, and you can help "
 "us debug the problem by sending the log in %s to %s"
 msgstr ""
-"ਸਾਬਾਯੋਗ ਹੁਣ ਬੰਦ ਹੋ ਰਿਹਾ ਹੈ। ਕੁਝ ਮੁੜ-ਪ੍ਰਾਪਤੀਯੋਗ ਗਲਤੀਆਂ ਸਨ ਅਤੇ ਤੁਸੀਂ ਸਾਨੂੰ %s ਵਿੱਚ %s ਵਾਂਗ "
-"ਲਾਗ ਭੇਜ ਕੇ ਸਮੱਸਿਆ ਨੂੰ ਡੀਬੱਗ ਕਰਨ ਲਈ ਮੱਦਦ ਦੇ ਸਕਦੇ ਹੋ।"
+"ਸਾਬਾਯੋਗ ਹੁਣ ਬੰਦ ਹੋ ਰਿਹਾ ਹੈ। ਕੁਝ ਮੁੜ-ਪ੍ਰਾਪਤੀਯੋਗ ਗਲਤੀਆਂ ਸਨ ਅਤੇ ਤੁਸੀਂ ਸਾਨੂੰ %s ਵਿੱਚ %s ਵਾਂਗ ਲਾਗ "
+"ਭੇਜ ਕੇ ਸਮੱਸਿਆ ਨੂੰ ਡੀਬੱਗ ਕਰਨ ਲਈ ਮੱਦਦ ਦੇ ਸਕਦੇ ਹੋ।"
 
 #: ../admin-tool/sabayon-apply:99
 #, c-format
@@ -592,8 +592,10 @@ msgid "If you don't save, changes from the last %ld second will be permanently l
 msgid_plural ""
 "If you don't save, changes from the last %ld seconds will be permanently "
 "lost."
-msgstr[0] "ਜੇਕਰ ਤੁਸੀਂ ਨਾ ਸੰਭਾਲਿਆ ਤਾਂ ਆਖਰੀ %ld ਸਕਿੰਟ ਵਿੱਚ ਕੀਤੀਆਂ ਤਬਦੀਲੀਆਂ ਹਮੇਸ਼ਾ ਲਈ ਖਤਮ ਹੋ ਜਾਣਗੀਆਂ।"
-msgstr[1] "ਜੇਕਰ ਤੁਸੀਂ ਨਾ ਸੰਭਾਲਿਆ ਤਾਂ ਆਖਰੀ %ld ਸਕਿੰਟ ਵਿੱਚ ਕੀਤੀਆਂ ਤਬਦੀਲੀਆਂ ਹਮੇਸ਼ਾ ਲਈ ਖਤਮ ਹੋ ਜਾਣਗੀਆਂ।"
+msgstr[0] ""
+"ਜੇਕਰ ਤੁਸੀਂ ਨਾ ਸੰਭਾਲਿਆ ਤਾਂ ਆਖਰੀ %ld ਸਕਿੰਟ ਵਿੱਚ ਕੀਤੀਆਂ ਤਬਦੀਲੀਆਂ ਹਮੇਸ਼ਾ ਲਈ ਖਤਮ ਹੋ ਜਾਣਗੀਆਂ।"
+msgstr[1] ""
+"ਜੇਕਰ ਤੁਸੀਂ ਨਾ ਸੰਭਾਲਿਆ ਤਾਂ ਆਖਰੀ %ld ਸਕਿੰਟ ਵਿੱਚ ਕੀਤੀਆਂ ਤਬਦੀਲੀਆਂ ਹਮੇਸ਼ਾ ਲਈ ਖਤਮ ਹੋ ਜਾਣਗੀਆਂ।"
 
 #: ../admin-tool/saveconfirm.py:51
 msgid "If you don't save, changes from the last minute will be permanently lost."
@@ -620,8 +622,10 @@ msgid "If you don't save, changes from the last %ld minute will be permanently l
 msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
-msgstr[0] "ਜੇਕਰ ਤੁਸੀਂ ਨਾ ਸੰਭਾਲਿਆ ਤਾਂ ਆਖਰੀ %ld ਮਿੰਟ ਵਿੱਚ ਕੀਤੀਆਂ ਤਬਦੀਲੀਆਂ ਹਮੇਸ਼ਾ ਲਈ ਖਤਮ ਹੋ ਜਾਣਗੀਆਂ।"
-msgstr[1] "ਜੇਕਰ ਤੁਸੀਂ ਨਾ ਸੰਭਾਲਿਆ ਤਾਂ ਆਖਰੀ %ld ਮਿੰਟਾਂ ਵਿੱਚ ਕੀਤੀਆਂ ਤਬਦੀਲੀਆਂ ਹਮੇਸ਼ਾ ਲਈ ਖਤਮ ਹੋ ਜਾਣਗੀਆਂ।"
+msgstr[0] ""
+"ਜੇਕਰ ਤੁਸੀਂ ਨਾ ਸੰਭਾਲਿਆ ਤਾਂ ਆਖਰੀ %ld ਮਿੰਟ ਵਿੱਚ ਕੀਤੀਆਂ ਤਬਦੀਲੀਆਂ ਹਮੇਸ਼ਾ ਲਈ ਖਤਮ ਹੋ ਜਾਣਗੀਆਂ।"
+msgstr[1] ""
+"ਜੇਕਰ ਤੁਸੀਂ ਨਾ ਸੰਭਾਲਿਆ ਤਾਂ ਆਖਰੀ %ld ਮਿੰਟਾਂ ਵਿੱਚ ਕੀਤੀਆਂ ਤਬਦੀਲੀਆਂ ਹਮੇਸ਼ਾ ਲਈ ਖਤਮ ਹੋ ਜਾਣਗੀਆਂ।"
 
 #: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
@@ -642,11 +646,14 @@ msgstr[1] ""
 "ਜੇਕਰ ਤੁਸੀਂ ਨਾ ਸੰਭਾਲਿਆ ਤਾਂ ਆਖਰੀ ਘੰਟੇ ਅਤੇ %d ਮਿੰਟਾਂ ਵਿੱਚ ਕੀਤੀਆਂ ਤਬਦੀਲੀਆਂ ਹਮੇਸ਼ਾ ਲਈ ਖਤਮ ਹੋ "
 "ਜਾਣਗੀਆਂ।"
 
-#: ../admin-tool/saveconfirm.py:81, python-format
+#: ../admin-tool/saveconfirm.py:81
+#, python-format
 msgid "If you don't save, changes from the last %d hour will be permanently lost."
 msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "ਜੇਕਰ ਤੁਸੀਂ ਨਾ ਸੰਭਾਲਿਆ ਤਾਂ ਆਖਰੀ %d ਘੰਟੇ ਵਿੱਚ ਕੀਤੀਆਂ ਤਬਦੀਲੀਆਂ ਹਮੇਸ਼ਾ ਲਈ ਖਤਮ ਹੋ ਜਾਣਗੀਆਂ।"
-msgstr[1] "ਜੇਕਰ ਤੁਸੀਂ ਨਾ ਸੰਭਾਲਿਆ ਤਾਂ ਆਖਰੀ %d ਘੰਟਿਆਂ ਵਿੱਚ ਕੀਤੀਆਂ ਤਬਦੀਲੀਆਂ ਹਮੇਸ਼ਾ ਲਈ ਖਤਮ ਹੋ ਜਾਣਗੀਆਂ।"
+msgstr[0] ""
+"ਜੇਕਰ ਤੁਸੀਂ ਨਾ ਸੰਭਾਲਿਆ ਤਾਂ ਆਖਰੀ %d ਘੰਟੇ ਵਿੱਚ ਕੀਤੀਆਂ ਤਬਦੀਲੀਆਂ ਹਮੇਸ਼ਾ ਲਈ ਖਤਮ ਹੋ ਜਾਣਗੀਆਂ।"
+msgstr[1] ""
+"ਜੇਕਰ ਤੁਸੀਂ ਨਾ ਸੰਭਾਲਿਆ ਤਾਂ ਆਖਰੀ %d ਘੰਟਿਆਂ ਵਿੱਚ ਕੀਤੀਆਂ ਤਬਦੀਲੀਆਂ ਹਮੇਸ਼ਾ ਲਈ ਖਤਮ ਹੋ ਜਾਣਗੀਆਂ।"
 
 #: ../admin-tool/sessionwindow.py:154
 #, python-format
@@ -692,8 +699,8 @@ msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
 "report this error now or try to continue editing the user profile."
 msgstr ""
-"ਯੂਜ਼ਰ ਪਰੋਫਾਇਲ '%s' ਨੂੰ ਲਾਗੂ ਕਰਨ ਦੌਰਾਨ ਮੁੜ-ਪ੍ਰਾਪਤੀ ਯੋਗ ਗਲਤੀ ਆਈ ਹੈ। ਤੁਸੀਂ ਇਸ ਗਲਤੀ "
-"ਬਾਰੇ ਹੁਣੇ ਰਿਪੋਰਟ ਦੇ ਸਕਦੇ ਹੋ ਜਾਂ ਯੂਜ਼ਰ ਪਰੋਫਾਇਲ ਨੂੰ ਸੋਧਣਾ ਜਾਰੀ ਰੱਖ ਸਕਦੇ ਹੋ।"
+"ਯੂਜ਼ਰ ਪਰੋਫਾਇਲ '%s' ਨੂੰ ਲਾਗੂ ਕਰਨ ਦੌਰਾਨ ਮੁੜ-ਪ੍ਰਾਪਤੀ ਯੋਗ ਗਲਤੀ ਆਈ ਹੈ। ਤੁਸੀਂ ਇਸ ਗਲਤੀ ਬਾਰੇ ਹੁਣੇ "
+"ਰਿਪੋਰਟ ਦੇ ਸਕਦੇ ਹੋ ਜਾਂ ਯੂਜ਼ਰ ਪਰੋਫਾਇਲ ਨੂੰ ਸੋਧਣਾ ਜਾਰੀ ਰੱਖ ਸਕਦੇ ਹੋ।"
 
 #: ../admin-tool/sessionwindow.py:337
 msgid "_Report this error"
@@ -712,24 +719,34 @@ msgstr "ਪਰੋਫਾਇਲ %s ਲਈ ਯੂਜ਼ਰ"
 msgid "Use This Profile"
 msgstr "ਇਹ ਪਰੋਫਾਇਲ ਵਰਤੋਂ"
 
-#: ../lib/protosession.py:147
+#: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
 msgstr "ਇੱਕ X ਦਰਿਸ਼ ਲੱਭਣ ਲਈ ਅਸਫ਼ਲ"
 
-#: ../lib/protosession.py:414
-msgid "Failed to start Xnest: timed out waiting for USR1 signal"
-msgstr "Xnest ਚਲਾਉਣ ਲਈ ਅਸਫ਼ਲ: USR1 ਸੰਕੇਤ ਲਈ ਉਡੀਕ ਖਤਮ ਹੋਈ"
+#: ../lib/protosession.py:377
+#| msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
+msgstr "Xephyr ਚਲਾਉਣ ਲਈ ਅਸਫ਼ਲ: USR1 ਸੰਕੇਤ ਲਈ ਉਡੀਕ ਖਤਮ ਹੋਈ"
 
-#: ../lib/protosession.py:416
-msgid "Failed to start Xnest: died during startup"
-msgstr "Xnest ਚਲਾਉਣ ਲਈ ਅਸਫ਼ਲ: ਸ਼ੁਰੂ ਦੌਰਾਨ ਹੀ ਖਤਮ"
+#: ../lib/protosession.py:379
+#| msgid "Failed to start Xnest: died during startup"
+msgid "Failed to start Xephyr: died during startup"
+msgstr "Xephyr ਚਲਾਉਣ ਲਈ ਅਸਫ਼ਲ: ਸ਼ੁਰੂ ਦੌਰਾਨ ਹੀ ਖਤਮ"
 
-#: ../lib/protosession.py:501
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:470
 #, python-format
 msgid "There was a recoverable error while applying the user profile from file '%s'."
 msgstr "ਇਹ ਮੁੜ-ਪ੍ਰਾਪਤੀਯੋਗ ਗਲਤੀ ਸੀ, ਜਦੋਂ ਕਿ ਫਾਇਲ '%s' ਲਈ ਯੂਜ਼ਰ ਪਰੋਫਾਇਲ ਲਾਗੂ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ।"
 
-#: ../lib/protosession.py:510
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (FATAL) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:479
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "'%s' ਤੋਂ ਯੂਜ਼ਰ ਪਰੋਫਾਇਲ ਲਾਗੂ ਕਰਨ ਦੌਰਾਨ ਇੱਕ ਘਾਤਕ ਗਲਤੀ ਸੀ।"
@@ -849,184 +866,203 @@ msgstr "ਵੈੱਬ ਝਲਕਾਰਾ ਬੁੱਕਮਾਰਕ"
 msgid "Web browser profile list"
 msgstr "ਵੈੱਬ ਝਲਕਾਰਾ ਪਰੋਫਾਇਲ ਸੂਚੀ"
 
-#: ../lib/sources/mozillasource.py:522
+#: ../lib/sources/mozillasource.py:520
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "ਫਾਇਲ ਨਹੀਂ ਲੱਭੀ (%s)"
 
-#: ../lib/sources/mozillasource.py:873
+#: ../lib/sources/mozillasource.py:869
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "ਦੂਹਰਾ ਨਾਂ (%(name)s) ਭਾਗ %(section)s ਵਿੱਚ ਹੈ"
 
-#: ../lib/sources/mozillasource.py:882
+#: ../lib/sources/mozillasource.py:878
 #, python-format
 msgid "redundant default in section %s"
 msgstr "ਭਾਗ %s ਵਿੱਚ ਮੂਲ ਇਕਸਾਰਤਾ ਹੈ"
 
-#: ../lib/sources/mozillasource.py:899
+#: ../lib/sources/mozillasource.py:895
 msgid "no default profile"
 msgstr "ਕੋਈ ਮੂਲ ਪਰੋਫਾਇਲ ਨਹੀਂ"
 
-#: ../lib/sources/mozillasource.py:954
+#: ../lib/sources/mozillasource.py:950
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "ਮੌਜੀਲਾ ਬੁੱਕਮਾਰਕ ਬਣਾਏ '%s' -> '%s'"
 
-#: ../lib/sources/mozillasource.py:956
+#: ../lib/sources/mozillasource.py:952
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "ਮੌਜੀਲਾ ਬੁੱਕਮਾਰਕ ਫੋਲਡਰ '%s' ਬਣਾਇਆ"
 
-#: ../lib/sources/mozillasource.py:959
+#: ../lib/sources/mozillasource.py:955
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "ਮੌਜੀਲਾ ਬੁੱਕਮਾਰਕ '%s' ਹਟਾਏ"
 
-#: ../lib/sources/mozillasource.py:961
+#: ../lib/sources/mozillasource.py:957
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "ਮੌਜੀਲਾ ਬੁੱਕਮਾਰਕ ਫੋਲਡਰ '%s' ਹਟਾਇਆ"
 
-#: ../lib/sources/mozillasource.py:964
+#: ../lib/sources/mozillasource.py:960
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "ਮੌਜੀਲਾ ਬੁੱਕਮਾਰਕ '%s' '%s' ਬਦਲੇ"
 
-#: ../lib/sources/mozillasource.py:966
+#: ../lib/sources/mozillasource.py:962
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "ਮੌਜੀਲਾ ਬੁੱਕਮਾਰਕ ਫੋਲਡਰ '%s' ਬਦਲਿਆ"
 
-#: ../lib/sources/paneldelegate.py:55
+#: ../lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel '%s' added"
 msgstr "ਪੈਨਲ '%s' ਜੋੜਿਆ ਗਿਆ"
 
-#: ../lib/sources/paneldelegate.py:61
+#: ../lib/sources/paneldelegate.py:71
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "ਪੈਨਲ '%s' ਹਟਾਇਆ ਗਿਆ"
 
-#: ../lib/sources/paneldelegate.py:76
+#: ../lib/sources/paneldelegate.py:86
 #, python-format
 msgid "Applet %s added to top panel"
 msgstr "ਐਪਲਿਟ %s ਉੱਤਲੇ ਪੈਨਲ ਵਿੱਚ ਸ਼ਾਮਲ ਕੀਤਾ"
 
-#: ../lib/sources/paneldelegate.py:78
+#: ../lib/sources/paneldelegate.py:88
 #, python-format
 msgid "Applet %s added to bottom panel"
 msgstr "ਐਪਲਿਟ %s ਹੇਠਲੇ ਪੈਨਲ ਵਿੱਚ ਸ਼ਾਮਲ ਕੀਤਾ"
 
-#: ../lib/sources/paneldelegate.py:80
+#: ../lib/sources/paneldelegate.py:90
 #, python-format
 msgid "Applet %s added to left panel"
 msgstr "ਐਪਲਿਟ %s ਪੈਨਲ ਪੈਨਲ ਵਿੱਚ ਸ਼ਾਮਲ ਕੀਤਾ"
 
-#: ../lib/sources/paneldelegate.py:82
+#: ../lib/sources/paneldelegate.py:92
 #, python-format
 msgid "Applet %s added to right panel"
 msgstr "ਐਪਲਿਟ %s ਸੱਜੇ ਪੈਨਲ ਵਿੱਚ ਸ਼ਾਮਲ ਕੀਤਾ"
 
-#: ../lib/sources/paneldelegate.py:97
+#: ../lib/sources/paneldelegate.py:107
 #, python-format
 msgid "Applet %s removed from top panel"
 msgstr "ਐਪਲਿਟ %s ਉੱਤਲੇ ਪੈਨਲ ਤੋਂ ਹਟਾਇਆ"
 
-#: ../lib/sources/paneldelegate.py:99
+#: ../lib/sources/paneldelegate.py:109
 #, python-format
 msgid "Applet %s removed from bottom panel"
 msgstr "ਐਪਲਿਟ %s ਹੇਠਲੇ ਪੈਨਲ ਤੋਂ ਹਟਾਇਆ"
 
-#: ../lib/sources/paneldelegate.py:101
+#: ../lib/sources/paneldelegate.py:111
 #, python-format
 msgid "Applet %s removed from left panel"
 msgstr "ਐਪਲਿਟ %s ਖੱਬੇ ਪੈਨਲ ਤੋਂ ਹਟਾਇਆ"
 
-#: ../lib/sources/paneldelegate.py:103
+#: ../lib/sources/paneldelegate.py:113
 #, python-format
 msgid "Applet %s removed from right panel"
 msgstr "ਐਪਲਿਟ %s ਸੱਜੇ ਪੈਨਲ ਤੋਂ ਹਟਾਇਆ"
 
-#: ../lib/sources/paneldelegate.py:117
+#: ../lib/sources/paneldelegate.py:127
 #, python-format
 msgid "%s added to top panel"
 msgstr "%s ਨੂੰ ਉਤਲੇ ਪੈਨਲ ਵਿੱਚ ਸ਼ਾਮਲ ਕੀਤਾ"
 
-#: ../lib/sources/paneldelegate.py:119
+#: ../lib/sources/paneldelegate.py:129
 #, python-format
 msgid "%s added to bottom panel"
 msgstr "%s ਨੂੰ ਹੇਠਲੇ ਪੈਨਲ ਵਿੱਚ ਸ਼ਾਮਲ ਕੀਤਾ"
 
-#: ../lib/sources/paneldelegate.py:121
+#: ../lib/sources/paneldelegate.py:131
 #, python-format
 msgid "%s added to left panel"
 msgstr "%s ਨੂੰ ਖੱਬੇ ਪੈਨਲ ਵਿੱਚ ਸ਼ਾਮਲ ਕੀਤਾ"
 
-#: ../lib/sources/paneldelegate.py:123
+#: ../lib/sources/paneldelegate.py:133
 #, python-format
 msgid "%s added to right panel"
 msgstr "%s ਨੂੰ ਸੱਜੇ ਪੈਨਲ ਵਿੱਚ ਸ਼ਾਮਲ ਕੀਤਾ"
 
-#: ../lib/sources/paneldelegate.py:144
+#: ../lib/sources/paneldelegate.py:154
 #, python-format
 msgid "%s removed from top panel"
 msgstr "%s ਨੂੰ ਉਤਲੇ ਪੈਨਲ ਤੋਂ ਹਟਾਇਆ"
 
-#: ../lib/sources/paneldelegate.py:146
+#: ../lib/sources/paneldelegate.py:156
 #, python-format
 msgid "%s removed from bottom panel"
 msgstr "%s ਨੂੰ ਹੇਠਲੇ ਪੈਨਲ ਤੋਂ ਹਟਾਇਆ"
 
-#: ../lib/sources/paneldelegate.py:148
+#: ../lib/sources/paneldelegate.py:158
 #, python-format
 msgid "%s removed from left panel"
 msgstr "%s ਨੂੰ ਖੱਬੇ ਪੈਨਲ ਤੋਂ ਹਟਾਇਆ"
 
-#: ../lib/sources/paneldelegate.py:150
+#: ../lib/sources/paneldelegate.py:160
 #, python-format
 msgid "%s removed from right panel"
 msgstr "%s ਨੂੰ ਸੱਜੇ ਪੈਨਲ ਤੋਂ ਹਟਾਇਆ"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:200
+#: ../lib/sources/paneldelegate.py:231
 msgid "Drawer"
 msgstr "ਦਰਾਜ਼"
 
-#: ../lib/sources/paneldelegate.py:202
+#: ../lib/sources/paneldelegate.py:233
 msgid "Main Menu"
 msgstr "ਮੁੱਖ ਮੇਨੂ"
 
-#: ../lib/sources/paneldelegate.py:212
+#: ../lib/sources/paneldelegate.py:243
 #, python-format
 msgid "%s launcher"
 msgstr "%s ਲਾਂਚਰ"
 
-#: ../lib/sources/paneldelegate.py:216
+#: ../lib/sources/paneldelegate.py:247
 msgid "Lock Screen button"
 msgstr "ਸਕਰੀਨ ਲਾਕ ਬਟਨ"
 
-#: ../lib/sources/paneldelegate.py:218
+#: ../lib/sources/paneldelegate.py:249
 msgid "Logout button"
 msgstr "ਲਾਗਆਉਟ ਬਟਨ"
 
-#: ../lib/sources/paneldelegate.py:220
+#: ../lib/sources/paneldelegate.py:251
 msgid "Run Application button"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ ਚਲਾਓ ਬਟਨ"
 
-#: ../lib/sources/paneldelegate.py:222
+#: ../lib/sources/paneldelegate.py:253
 msgid "Search button"
 msgstr "ਖੋਜ ਬਟਨ"
 
-#: ../lib/sources/paneldelegate.py:224
+#: ../lib/sources/paneldelegate.py:255
+#| msgid "Logout button"
+msgid "Force Quit button"
+msgstr "ਧੱਕੇ ਨਾਲ ਬੰਦ ਕਰੋ ਬਟਨ"
+
+#: ../lib/sources/paneldelegate.py:257
+#| msgid "Lock Screen button"
+msgid "Connect to Server button"
+msgstr "ਸਰਵਰ ਨਾਲ ਕੁਨੈਕਟ ਬਟਨ"
+
+#: ../lib/sources/paneldelegate.py:259
+#| msgid "Logout button"
+msgid "Shutdown button"
+msgstr "ਬੰਦ ਕਰੋ ਬਟਨ"
+
+#: ../lib/sources/paneldelegate.py:261
 msgid "Screenshot button"
 msgstr "ਸਕਰੀਨਸ਼ਾਟ ਬਟਨ"
 
-#: ../lib/sources/paneldelegate.py:226
+#: ../lib/sources/paneldelegate.py:264
+msgid "Unknown"
+msgstr "ਅਣਜਾਣ"
+
+#: ../lib/sources/paneldelegate.py:266
 msgid "Menu Bar"
 msgstr "ਮੇਨੂ ਪੱਟੀ"
 
-#: ../lib/sources/paneldelegate.py:470
+#: ../lib/sources/paneldelegate.py:503
 msgid "Panel File"
 msgstr "ਪੈਨਲ ਫਾਇਲ"
 
@@ -1053,7 +1089,7 @@ msgstr "ਨਾ-ਮੌਜੂਦ ਫਾਇਲ '%s' ਜੋੜੀ ਨਹੀਂ ਜ�
 #: ../lib/storage.py:568
 #, python-format
 msgid "Profile is read-only %s"
-msgstr "ਪਰੋਫਾਇਲ ਸਿਰਫ਼ ਪੜਨ ਲਈ ਹੈ %s"
+msgstr "ਪਰੋਫਾਇਲ ਸਿਰਫ਼ ਪੜ੍ਹਨ ਲਈ ਹੈ %s"
 
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
@@ -1076,12 +1112,13 @@ msgstr "ਸਫ਼ਲ!"
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/userdb.py:54, python-format
+#: ../lib/userdb.py:54
+#, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "%(setting)s ਸੈਟਿੰਗ %(np)s ਵਿੱਚੋਂ ਲਈ ਅਢੁੱਕਵੀਂ ਟਾਈਪ"
 
-#: ../lib/userdb.py:215, python-format
-#| msgid "No search based specified for %s"
+#: ../lib/userdb.py:215
+#, python-format
 msgid "No search base specified for %s"
 msgstr "%s ਲਈ ਕੋਈ ਖੋਜ ਅਧਾਰ ਨਾ ਦਿੱਤਾ ਗਿਆ"
 
@@ -1137,8 +1174,8 @@ msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"ਘਰ ਡਾਇਰੈਕਟਰੀ ਨਹੀਂ ਖੋਜੀ ਜਾ ਸਕਦੀ: /etc/passwd ਵਿੱਚ ਨਹੀਂ ਦਿੱਤੀ ਹੈ ਅਤੇ ਨਾ ਹੀ ਇੰਵਾਇਰਨਮੈਂਟ ਵਿੱਚ "
-"$HOME ਲਈ ਮੁੱਲ ਹੈ"
+"ਘਰ ਡਾਇਰੈਕਟਰੀ ਨਹੀਂ ਖੋਜੀ ਜਾ ਸਕਦੀ: /etc/passwd ਵਿੱਚ ਨਹੀਂ ਦਿੱਤੀ ਹੈ ਅਤੇ ਨਾ ਹੀ ਇੰਵਾਇਰਨਮੈਂਟ "
+"ਵਿੱਚ $HOME ਲਈ ਮੁੱਲ ਹੈ"
 
 #: ../lib/util.py:106
 msgid ""

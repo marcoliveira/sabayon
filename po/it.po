@@ -2,35 +2,38 @@
 # Copyright (C) 2006-2009 Free Software Foundation, Inc.
 # Alessio Dessì <alessiodessi@tiscali.it>, 2006.
 # Flavia Weisghizzi <flavia@weisghizzi.it>, 2009.
+# Gianvito Cavasoli <janvitus@ubuntu-it.org>, 2009.
+#
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-03-09 18:29+0000\n"
-"PO-Revision-Date: 2009-03-11 13:16+0100\n"
-"Last-Translator: Flavia Weisghizzi <flavia@weisghizzi.it>\n"
+"POT-Creation-Date: 2009-09-18 08:33+0000\n"
+"PO-Revision-Date: 2009-09-07 11:58+0200\n"
+"Last-Translator: Gianvito Cavasoli <janvitus@ubuntu-it.org>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../admin-tool/aboutdialog.py:63
+#: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
 msgstr "Programma per definire e modificare i profili degli utenti"
 
-#: ../admin-tool/aboutdialog.py:66
+#: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
 msgstr ""
 "Flavia Weisghizzi <flavia@weisghizzi.it>\n"
-"Alessio Dessì <alessio.dessi@gmail.com>"
+"Alessio Dessì <alessio.dessi@gmail.com>\n"
+"Gianvito Cavasoli <janvitus@ubuntu-it.org>"
 
 #: ../admin-tool/changeswindow.py:50
 #, python-format
 msgid "Changes in profile %s"
-msgstr "Cambiamenti nel profilo %s"
+msgstr "Modifiche nel profilo %s"
 
 #: ../admin-tool/changeswindow.py:113
 msgid "Ignore"
@@ -103,7 +106,7 @@ msgstr "File"
 
 #: ../admin-tool/editorwindow.py:266
 #: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:229
+#: ../lib/sources/paneldelegate.py:269
 msgid "Panel"
 msgstr "Pannello"
 
@@ -142,7 +145,7 @@ msgstr "schema"
 
 #: ../admin-tool/gconfviewer.py:72
 msgid "list"
-msgstr "lista"
+msgstr "elenco"
 
 #: ../admin-tool/gconfviewer.py:74
 msgid "pair"
@@ -153,7 +156,7 @@ msgstr "coppia"
 msgid "Profile settings: %s"
 msgstr "Impostazioni del profilo: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:385
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:387
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Nome"
@@ -180,7 +183,7 @@ msgstr "Fare clic per rendere questa impostazione vincolante"
 # sync pessulus
 #: ../admin-tool/lockdown/maindialog.py:49
 msgid "Disable _command line"
-msgstr "Disabilitare la _riga di comando"
+msgstr "Disabilitare la riga di comand_o"
 
 # GNOME-2-22
 # sync pessulus
@@ -222,7 +225,7 @@ msgstr "Disabilitare il _blocco dello schermo"
 # sync pessulus
 #: ../admin-tool/lockdown/maindialog.py:57
 msgid "Disable log _out"
-msgstr "Disabilitare la _terminazione della sessione"
+msgstr "Disabilitare la chius_ura della sessione"
 
 # GNOME-2-22
 # sync pessulus
@@ -240,13 +243,13 @@ msgstr "Disabilitare gli URL _arbitrari"
 # sync pessulus
 #: ../admin-tool/lockdown/maindialog.py:61
 msgid "Disable _bookmark editing"
-msgstr "Disabilitare la _modifica dei segnalibri"
+msgstr "Disabilitare la modifica dei se_gnalibri"
 
 # GNOME-2-22
 # sync pessulus
 #: ../admin-tool/lockdown/maindialog.py:62
 msgid "Disable _history"
-msgstr "Disabilitare la _cronologia"
+msgstr "Disabilitare la crono_logia"
 
 # GNOME-2-22
 # sync pessulus
@@ -258,7 +261,7 @@ msgstr "Disabilitare il chrome _javascript"
 # sync pessulus
 #: ../admin-tool/lockdown/maindialog.py:64
 msgid "Disable _toolbar editing"
-msgstr "Disabilitare modifica della _barra degli strumenti"
+msgstr "Disabilitare la modifica della _barra degli strumenti"
 
 #: ../admin-tool/lockdown/maindialog.py:65
 msgid "_Fullscreen"
@@ -457,17 +460,17 @@ msgstr "<b>Protocolli sicuri</b>"
 # GNOME-2-22
 #: ../admin-tool/lockdown/pessulus.glade.h:29
 msgid "Default format for presentations:"
-msgstr "Formato predefinito per presentazioni:"
+msgstr "Formato predefinito per le presentazioni:"
 
 # GNOME-2-22
 #: ../admin-tool/lockdown/pessulus.glade.h:30
 msgid "Default format for spreadsheet:"
-msgstr "Formato predefinito per fogli di calcolo:"
+msgstr "Formato predefinito per i fogli di calcolo:"
 
 # GNOME-2-22
 #: ../admin-tool/lockdown/pessulus.glade.h:31
 msgid "Default format for word processor:"
-msgstr "Formato predefinito per word processor:"
+msgstr "Formato predefinito per l'elaboratore di testo:"
 
 # GNOME-2-22
 #: ../admin-tool/lockdown/pessulus.glade.h:32
@@ -476,11 +479,11 @@ msgstr "Dimensione predefinita icone:"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:33
 msgid "Disable _unsafe protocols"
-msgstr "Disabilita i protocolli _non sicuri"
+msgstr "Disabilitare i protocolli _non sicuri"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:34
 msgid "Epiphany Web Browser"
-msgstr "Browser Web Epiphany"
+msgstr "Browser web Epiphany"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:35
 msgid "General"
@@ -527,7 +530,7 @@ msgstr "Interfaccia utente"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:495
+#: ../admin-tool/profilesdialog.py:497
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -572,7 +575,7 @@ msgid ""
 "Try again after creating the account (using, for example, the 'adduser' "
 "command)"
 msgstr ""
-"Per poter usare Sabayon è necessario che sul computer in uso esista "
+"Per utilizzare l'applicazione è necessario che sul computer in uso esista "
 "l'account utente speciale «%s». Riprovare dopo aver creato l'utente "
 "(utilizzare, ad esempio, il comando \"adduser\")"
 
@@ -594,19 +597,19 @@ msgid ""
 "Sabayon will now exit.  There were some recoverable errors, and you can help "
 "us debug the problem by sending the log in %s to %s"
 msgstr ""
-"Sabayon verrà terminato. Si sono verificati alcuni errori recuperabili; è "
-"possibile aiutare gli sviluppatori a correggere il problema inviando il "
-"registro salvato su «%s» a %s"
+"L'applicazione verrà terminata. Si sono verificati alcuni errori "
+"recuperabili; è possibile aiutare gli sviluppatori a correggere il problema "
+"inviando il registro salvato su «%s» a %s"
 
 #: ../admin-tool/sabayon-apply:99
 #, c-format
 msgid "No profile for user '%s' found\n"
-msgstr "Il profilo per l'utente «%s» non è stato trovato\n"
+msgstr "Non è stato trovato alcun profilo per l'utente «%s»\n"
 
 # GNOME-2-22
 #: ../admin-tool/sabayon-apply:104
 msgid "Please use -h for usage options"
-msgstr "Provare \"-h\" per informazioni sull'uso"
+msgstr "Utilizzare \"-h\" per informazioni sull'uso"
 
 #: ../admin-tool/sabayon-session:67
 #, c-format
@@ -669,7 +672,7 @@ msgid "Save changes to profile \"%s\" before closing?"
 msgstr "Salvare le modifiche al profilo «%s» prima di chiudere?"
 
 # GNOME-2-22
-# sycn con gedit
+# sync con gedit
 #
 # la forma singolare non viene usata, c'è l'altra senza %d
 #: ../admin-tool/saveconfirm.py:45
@@ -832,7 +835,7 @@ msgstr "_Segnala questo errore"
 # GNOME-2-22
 #: ../admin-tool/sessionwindow.py:338
 msgid "_Continue editing"
-msgstr "_Continua modifica"
+msgstr "_Continua la modifica"
 
 #: ../admin-tool/usersdialog.py:67
 #, python-format
@@ -843,20 +846,24 @@ msgstr "Utenti per il profilo %s"
 msgid "Use This Profile"
 msgstr "Usa questo profilo"
 
-#: ../lib/protosession.py:147
+#: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
 msgstr "Impossibile trovare un display X libero"
 
-#: ../lib/protosession.py:414
-msgid "Failed to start Xnest: timed out waiting for USR1 signal"
-msgstr "Avvio di Xnest fallito: tempo scaduto nell'attesa del segnale USR1"
+#: ../lib/protosession.py:377
+msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
+msgstr "Avvio di Xephyr fallito: tempo scaduto nell'attesa del segnale USR1"
 
-#: ../lib/protosession.py:416
-msgid "Failed to start Xnest: died during startup"
-msgstr "Avvio di Xnest fallito: terminato durante l'avvio"
+#: ../lib/protosession.py:379
+msgid "Failed to start Xephyr: died during startup"
+msgstr "Avvio di Xephyr fallito: terminato durante l'avvio"
 
 # GNOME-2-2
-#: ../lib/protosession.py:501
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:470
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
@@ -864,7 +871,11 @@ msgstr ""
 "Si è verificato un errore recuperabile durante l'applicazione del profilo "
 "utente dal file «%s»."
 
-#: ../lib/protosession.py:510
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (FATAL) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:479
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr ""
@@ -940,7 +951,7 @@ msgstr "Chiave GConf «%s» impostata allo schema «%s»"
 #: ../lib/sources/gconfsource.py:102
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
-msgstr "Chiave GConf «%s» impostata alla lista «%s»"
+msgstr "Chiave GConf «%s» impostata all'elenco «%s»"
 
 #: ../lib/sources/gconfsource.py:104
 #, python-format
@@ -979,231 +990,250 @@ msgstr "Chiave Mozilla «%s» cambiata in «%s»"
 
 #: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
 msgid "Web browser preferences"
-msgstr "Preferenze Browser Web"
+msgstr "Preferenze browser web"
 
 #: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
 msgid "Web browser bookmarks"
-msgstr "Segnalibri Browser Web"
+msgstr "Segnalibri browser web"
 
 #: ../lib/sources/mozillasource.py:170
 msgid "Web browser profile list"
-msgstr "Elenco profili del Browser Web"
+msgstr "Elenco profili del browser web"
 
-#: ../lib/sources/mozillasource.py:522
+#: ../lib/sources/mozillasource.py:520
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "File non trovato (%s)"
 
-#: ../lib/sources/mozillasource.py:873
+#: ../lib/sources/mozillasource.py:869
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "nome(%(name)s) duplicato nella sezione %(section)s"
 
-#: ../lib/sources/mozillasource.py:882
+#: ../lib/sources/mozillasource.py:878
 #, python-format
 msgid "redundant default in section %s"
 msgstr "valore predefinito ridondante nella sezione %s"
 
-#: ../lib/sources/mozillasource.py:899
+#: ../lib/sources/mozillasource.py:895
 msgid "no default profile"
 msgstr "nessun profilo predefinito"
 
-#: ../lib/sources/mozillasource.py:954
+#: ../lib/sources/mozillasource.py:950
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Creato segnalibro Mozilla «%s» -> «%s»"
 
-#: ../lib/sources/mozillasource.py:956
+#: ../lib/sources/mozillasource.py:952
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Creata cartella segnalibro Mozilla «%s»"
 
-#: ../lib/sources/mozillasource.py:959
+#: ../lib/sources/mozillasource.py:955
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Eliminato segnalibro Mozilla «%s»"
 
-#: ../lib/sources/mozillasource.py:961
+#: ../lib/sources/mozillasource.py:957
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Eliminata la cartella segnalibro Mozilla «%s»"
 
-#: ../lib/sources/mozillasource.py:964
+#: ../lib/sources/mozillasource.py:960
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Modificato segnalibro Mozilla «%s» «%s»"
 
-#: ../lib/sources/mozillasource.py:966
+#: ../lib/sources/mozillasource.py:962
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Modificata cartella segnalibro Mozilla «%s»"
 
-#: ../lib/sources/paneldelegate.py:55
+#: ../lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel '%s' added"
 msgstr "Aggiunto pannello «%s»"
 
-#: ../lib/sources/paneldelegate.py:61
+#: ../lib/sources/paneldelegate.py:71
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "Rimosso pannello «%s»"
 
 # GNOME-2-22
-#: ../lib/sources/paneldelegate.py:76
+#: ../lib/sources/paneldelegate.py:86
 #, python-format
 msgid "Applet %s added to top panel"
 msgstr "Applet «%s» aggiunta al pannello superiore"
 
 # GNOME-2-22
-#: ../lib/sources/paneldelegate.py:78
+#: ../lib/sources/paneldelegate.py:88
 #, python-format
 msgid "Applet %s added to bottom panel"
 msgstr "Applet «%s» aggiunta al pannello inferiore"
 
 # GNOME-2-22
-#: ../lib/sources/paneldelegate.py:80
+#: ../lib/sources/paneldelegate.py:90
 #, python-format
 msgid "Applet %s added to left panel"
 msgstr "Applet «%s» aggiunta al pannello sinistro"
 
 # GNOME-2-22
-#: ../lib/sources/paneldelegate.py:82
+#: ../lib/sources/paneldelegate.py:92
 #, python-format
 msgid "Applet %s added to right panel"
 msgstr "Applet «%s» aggiunta al pannello destro"
 
 # GNOME-2-22
-#: ../lib/sources/paneldelegate.py:97
+#: ../lib/sources/paneldelegate.py:107
 #, python-format
 msgid "Applet %s removed from top panel"
 msgstr "Applet «%s» rimossa dal pannello superiore"
 
 # GNOME-2-22
-#: ../lib/sources/paneldelegate.py:99
+#: ../lib/sources/paneldelegate.py:109
 #, python-format
 msgid "Applet %s removed from bottom panel"
 msgstr "Applet «%s» rimossa dal pannello inferiore"
 
 # GNOME-2-22
-#: ../lib/sources/paneldelegate.py:101
+#: ../lib/sources/paneldelegate.py:111
 #, python-format
 msgid "Applet %s removed from left panel"
 msgstr "Applet «%s» rimossa dal pannello sinistro"
 
 # GNOME-2-22
-#: ../lib/sources/paneldelegate.py:103
+#: ../lib/sources/paneldelegate.py:113
 #, python-format
 msgid "Applet %s removed from right panel"
 msgstr "Applet «%s» rimossa dal pannello destro"
 
 # GNOME-2-22
-#: ../lib/sources/paneldelegate.py:117
+#: ../lib/sources/paneldelegate.py:127
 #, python-format
 msgid "%s added to top panel"
-msgstr "«%s» aggiunto dal pannello superiore"
+msgstr "«%s» aggiunto al pannello superiore"
 
 # GNOME-2-22
-#: ../lib/sources/paneldelegate.py:119
+#: ../lib/sources/paneldelegate.py:129
 #, python-format
 msgid "%s added to bottom panel"
-msgstr "«%s» aggiunto dal pannello inferiore"
+msgstr "«%s» aggiunto al pannello inferiore"
 
 # GNOME-2-22
-#: ../lib/sources/paneldelegate.py:121
+#: ../lib/sources/paneldelegate.py:131
 #, python-format
 msgid "%s added to left panel"
-msgstr "«%s» aggiunto dal pannello sinistro"
+msgstr "«%s» aggiunto al pannello sinistro"
 
 # GNOME-2-22
-#: ../lib/sources/paneldelegate.py:123
+#: ../lib/sources/paneldelegate.py:133
 #, python-format
 msgid "%s added to right panel"
-msgstr "«%s» aggiunto dal pannello destro"
+msgstr "«%s» aggiunto al pannello destro"
 
 # GNOME-2-22
-#: ../lib/sources/paneldelegate.py:144
+#: ../lib/sources/paneldelegate.py:154
 #, python-format
 msgid "%s removed from top panel"
 msgstr "«%s» rimosso dal pannello superiore"
 
 # GNOME-2-22
-#: ../lib/sources/paneldelegate.py:146
+#: ../lib/sources/paneldelegate.py:156
 #, python-format
 msgid "%s removed from bottom panel"
 msgstr "«%s» rimosso dal pannello inferiore"
 
 # GNOME-2-22
-#: ../lib/sources/paneldelegate.py:148
+#: ../lib/sources/paneldelegate.py:158
 #, python-format
 msgid "%s removed from left panel"
 msgstr "«%s» rimosso dal pannello sinistro"
 
 # GNOME-2-22
-#: ../lib/sources/paneldelegate.py:150
+#: ../lib/sources/paneldelegate.py:160
 #, python-format
 msgid "%s removed from right panel"
 msgstr "«%s» rimosso dal pannello destro"
 
 # GNOME-2-22
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:200
+#: ../lib/sources/paneldelegate.py:231
 msgid "Drawer"
 msgstr "Cassetto"
 
 # GNOME-2-22
-#: ../lib/sources/paneldelegate.py:202
+#: ../lib/sources/paneldelegate.py:233
 msgid "Main Menu"
 msgstr "Menù principale"
 
 # GNOME-2-22
-#: ../lib/sources/paneldelegate.py:212
+#: ../lib/sources/paneldelegate.py:243
 #, python-format
 msgid "%s launcher"
 msgstr "Lanciatore «%s»"
 
 # GNOME-2-22
-#: ../lib/sources/paneldelegate.py:216
+#: ../lib/sources/paneldelegate.py:247
 msgid "Lock Screen button"
 msgstr "Pulsante «Blocca schermo»"
 
 # GNOME-2-22
-#: ../lib/sources/paneldelegate.py:218
+#: ../lib/sources/paneldelegate.py:249
 msgid "Logout button"
 msgstr "Pulsante «Termina sessione»"
 
 # GNOME-2-22
-#: ../lib/sources/paneldelegate.py:220
+#: ../lib/sources/paneldelegate.py:251
 msgid "Run Application button"
 msgstr "Pulsante «Esegui applicazione»"
 
 # GNOME-2-22
-#: ../lib/sources/paneldelegate.py:222
+#: ../lib/sources/paneldelegate.py:253
 msgid "Search button"
 msgstr "Pulsate «Cerca»"
 
 # GNOME-2-22
-#: ../lib/sources/paneldelegate.py:224
+#: ../lib/sources/paneldelegate.py:255
+msgid "Force Quit button"
+msgstr "Pulsante «Forza uscita»"
+
+# GNOME-2-22
+#: ../lib/sources/paneldelegate.py:257
+msgid "Connect to Server button"
+msgstr "Pulsante «Connetti al server»"
+
+# GNOME-2-22
+#: ../lib/sources/paneldelegate.py:259
+msgid "Shutdown button"
+msgstr "Pulsante «Arresta»"
+
+# GNOME-2-22
+#: ../lib/sources/paneldelegate.py:261
 msgid "Screenshot button"
 msgstr "Pulsante «Schermata»"
 
+#: ../lib/sources/paneldelegate.py:264
+msgid "Unknown"
+msgstr "Sconosciuto"
+
 # GNOME-2-22
-#: ../lib/sources/paneldelegate.py:226
+#: ../lib/sources/paneldelegate.py:266
 msgid "Menu Bar"
 msgstr "Barra dei menù"
 
-#: ../lib/sources/paneldelegate.py:470
+#: ../lib/sources/paneldelegate.py:503
 msgid "Panel File"
 msgstr "File del pannello"
 
 #: ../lib/storage.py:172
 #, python-format
 msgid "Failed to read file '%s': %s"
-msgstr "Lettura del file «%s» fallita: %s"
+msgstr "Lettura del file «%s» non riuscita: %s"
 
 #: ../lib/storage.py:182
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
-msgstr "Lettura dei metadati da «%s» fallita: %s"
+msgstr "Lettura dei metadati da «%s» non riuscita: %s"
 
 #: ../lib/storage.py:188
 #, python-format
@@ -1269,7 +1299,7 @@ msgstr "L'ambito deve essere uno tra sub, base e one"
 
 #: ../lib/userdb.py:250
 msgid "multiple_result must be one of first and random"
-msgstr "multiple_result deve essere un numero primo casuale"
+msgstr "multiple_result deve essere uno dei primi e casuale"
 
 #: ../lib/userdb.py:342
 #, python-format
@@ -1279,7 +1309,7 @@ msgstr "Non è possibile aprire %s in scrittura"
 #: ../lib/userdb.py:355
 #, python-format
 msgid "Failed to save UserDatabase to %s"
-msgstr "Salvataggio di UserDataBase in %s fallito"
+msgstr "Salvataggio di UserDataBase in %s non riuscito"
 
 #: ../lib/userdb.py:378 ../lib/userdb.py:413
 #, python-format
@@ -1289,23 +1319,23 @@ msgstr "Il file %s non è una configurazione di profilo"
 #: ../lib/userdb.py:385
 #, python-format
 msgid "Failed to add default profile %s to configuration"
-msgstr "Aggiunta del profilo predefinito %s alla configurazione fallita"
+msgstr "Aggiunta del profilo predefinito %s alla configurazione non riuscita"
 
 #: ../lib/userdb.py:421
 #, python-format
 msgid "Failed to add user %s to profile configuration"
-msgstr "Aggiunta dell'utente %s alla configurazione del profilo fallita"
+msgstr "Aggiunta dell'utente %s alla configurazione del profilo non riuscita"
 
 #: ../lib/userdb.py:472
 msgid "Failed to get the user list"
-msgstr "Recupero dell'elenco degli utenti fallito"
+msgstr "Recupero dell'elenco degli utenti non riuscito"
 
 #: ../lib/util.py:93
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"Non è possibilte trovare la directory «home»: non impostata in /etc/passwd e "
+"Impossibile trovare la directory «home»: non impostata in /etc/passwd e "
 "nessun valore per la variabile di ambiente $HOME"
 
 #: ../lib/util.py:106
@@ -1313,5 +1343,5 @@ msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr ""
-"Non è possibile trovare il nome utente: non impostato in /etc/passwd e "
-"nessun valore per la variabile di ambiente $USER"
+"Impossibile trovare il nome utente: non impostato in /etc/passwd e nessun "
+"valore per la variabile di ambiente $USER"

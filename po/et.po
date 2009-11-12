@@ -4,18 +4,18 @@
 # Copyright (C) 2006-2009 The GNOME Project.
 # This file is distributed under the same license as the sabayon package.
 #
-# Ivar Smolin <okul@linux.ee>, 2006-2009.
-# Priit Laes <amd@store20.com>, 2006, 2007.
-# Mattias Põldaru <mahfiaz@gmail.com>, 2007, 2009.
+# Ivar Smolin <okul linux ee>, 2006-2009.
+# Priit Laes <amd store20 com>, 2006, 2007.
+# Mattias Põldaru <mahfiaz gmail com>, 2007, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sabayon HEAD\n"
+"Project-Id-Version: sabayon MASTER\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-08-05 01:20+0000\n"
-"PO-Revision-Date: 2009-08-24 07:50+0300\n"
-"Last-Translator: Mattias Põldaru <mahfiaz gmail com>\n"
+"POT-Creation-Date: 2009-11-03 05:39+0000\n"
+"PO-Revision-Date: 2009-11-06 17:19+0200\n"
+"Last-Translator: Ivar Smolin <okul@linux.ee>\n"
 "Language-Team: Estonian <gnome-et@linux.ee>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,9 +27,9 @@ msgstr "Programm kasutajaprofiilide loomiseks ja muutmiseks"
 
 msgid "translator-credits"
 msgstr ""
-"Ivar Smolin <okul@linux.ee>, 2006-2009.\n"
-"Priit Laes <amd@store20.com>, 2006, 2007.\n"
-"Mattias Põldaru <mahfiaz@gmail.com>, 2007, 2009."
+"Ivar Smolin <okul linux ee>, 2006-2009.\n"
+"Priit Laes <amd store20 com>, 2006, 2007.\n"
+"Mattias Põldaru <mahfiaz gmail com>, 2007, 2009."
 
 #, python-format
 msgid "Changes in profile %s"
@@ -133,6 +133,16 @@ msgstr "Tüüp"
 
 msgid "Value"
 msgstr "Väärtus"
+
+#, python-format
+msgid "Groups for profile %s"
+msgstr "Profiili %s grupid"
+
+msgid "Group"
+msgstr "Grupp"
+
+msgid "Use This Profile"
+msgstr "Kasutab seda profiili"
 
 msgid "Click to make this setting not mandatory"
 msgstr "Klõpsa, et muuta see säte mittekohustuslikuks"
@@ -430,12 +440,12 @@ msgstr ""
 "oleks nende vigade parandamiseks saata logifailid asukohas %s arendajatele "
 "aadressil %s."
 
+msgid "Please use -h for usage options"
+msgstr "Kasutusspikri vaatamiseks kasuta palun võtit -h"
+
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Kasutajale '%s' ei leitud profiili\n"
-
-msgid "Please use -h for usage options"
-msgstr "Kasutusspikri vaatamiseks kasuta palun võtit -h"
 
 #, c-format
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
@@ -461,6 +471,12 @@ msgstr "Millel _põhineb:"
 
 msgid "_Details"
 msgstr "Ü_ksikasjad"
+
+msgid "_Groups"
+msgstr "_Grupid"
+
+msgid "_Groups:"
+msgstr "_Grupid:"
 
 msgid "_Profiles:"
 msgstr "_Profiilid:"
@@ -602,9 +618,6 @@ msgstr "_Jätka redigeerimist"
 msgid "Users for profile %s"
 msgstr "Profiili %s kasutajad"
 
-msgid "Use This Profile"
-msgstr "Kasutab seda profiili"
-
 msgid "Unable to find a free X display"
 msgstr "X'i vaba kuva pole võimalik leida"
 
@@ -615,11 +628,19 @@ msgstr ""
 msgid "Failed to start Xephyr: died during startup"
 msgstr "Xephyr-i käivitamine ebaõnnestus: suri käivitamisel"
 
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
+#. stderr_str)
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
 msgstr "Kasutaja profiilifaili '%s' rakendamisel tekkis kõrvaldatav viga."
 
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (FATAL) ==========",
+#. stderr_str)
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "Kasutaja profiilifaili '%s' rakendamisel tekkis fataalne viga."
@@ -886,22 +907,12 @@ msgid "Cannot add non-existent file '%s'"
 msgstr "Olematut faili '%s' pole võimalik lisada"
 
 #, python-format
+msgid "Couldn't unlink file '%s'"
+msgstr "Faili '%s' pole võimalik kustutada"
+
+#, python-format
 msgid "Profile is read-only %s"
 msgstr "Profiil %s on ainult lugemisõigustega"
-
-msgid "Ignore WARNINGs"
-msgstr "Eira HOIATUSi"
-
-#, python-format
-msgid "Running %s tests"
-msgstr "%s testide läbiviimine"
-
-#, python-format
-msgid "Running %s tests (%s)"
-msgstr "%s testide läbiviimine (%s)"
-
-msgid "Success!"
-msgstr "Edukas!"
 
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
@@ -909,6 +920,9 @@ msgstr "Edukas!"
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "vigane tüüp sättele %(setting)s asukohas %(np)s"
+
+msgid "No database file provided"
+msgstr "Puudub andmebaasifail"
 
 #, python-format
 msgid "No search base specified for %s"
@@ -949,7 +963,24 @@ msgid "Failed to add user %s to profile configuration"
 msgstr "Kasutaja %s lisamine profiili häälestusse ebaõnnestus"
 
 msgid "Failed to get the user list"
-msgstr "Tõrge kasutajaloendi hankimisel"
+msgstr "Tõrge kasutajate nimekirja hankimisel"
+
+msgid "Failed to get the group list"
+msgstr "Tõrge gruppide nimekirja hankimisel"
+
+msgid "Ignore WARNINGs"
+msgstr "Eira HOIATUSi"
+
+#, python-format
+msgid "Running %s tests"
+msgstr "%s testide läbiviimine"
+
+#, python-format
+msgid "Running %s tests (%s)"
+msgstr "%s testide läbiviimine (%s)"
+
+msgid "Success!"
+msgstr "Edukas!"
 
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
@@ -964,29 +995,3 @@ msgid ""
 msgstr ""
 "Kasutajanime pole võimalik leida: seda pole määratud ei /etc/passwd failis "
 "ega ka keskkonnamuutujas $USER"
-
-#~ msgid "Warn if macro prints"
-#~ msgstr "Hoiatus, kui makro üritab printida"
-
-#~ msgid "Printing modifies document"
-#~ msgstr "Printimine muudab dokumenti"
-
-#~ msgid "Warn for external formats"
-#~ msgstr "Hoiatused väliste vormingute kohta"
-
-#~ msgid "Undo Steps:"
-#~ msgstr "Tagasivõtmiste arv:"
-
-#~ msgid "Writer default format:"
-#~ msgstr "Writeri vaikimisi vorming:"
-
-#~ msgid ""
-#~ "Could not create the 'sabayon-apply' process: %s\n"
-#~ "The command line used is '%s'\n"
-#~ "Child traceback:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "'sabayon-apply' protsessi pole võimalik luua: %s\n"
-#~ "Kasutatav käsurida '%s'\n"
-#~ "Lapsprotsessi väljund:\n"
-#~ "%s"
