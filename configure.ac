@@ -21,6 +21,7 @@ AC_HEADER_STDC
 AM_PROG_LIBTOOL
 AM_PATH_PYTHON
 IT_PROG_INTLTOOL([0.40.0])
+GNOME_DOC_INIT([0.17.3])
 AC_PROG_LN_S
 
 GNOME_COMPILE_WARNINGS(yes)
@@ -278,7 +279,7 @@ data/icons/22x22/Makefile
 data/icons/32x32/Makefile
 data/icons/48x48/Makefile
 data/icons/scalable/Makefile
-doc/Makefile
+help/Makefile
 admin-tool/Makefile
 admin-tool/sabayon.console
 admin-tool/sabayon.desktop.in
