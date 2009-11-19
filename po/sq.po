@@ -5,12 +5,12 @@
 # Laurent Dhima <laurenti@alblinux.net>, 2006 - 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: sabayon\n"
+"Project-Id-Version: sabayon.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-14 12:42+0200\n"
-"PO-Revision-Date: 2009-08-14 12:41+0200\n"
+"POT-Creation-Date: 2009-11-19 12:17+0100\n"
+"PO-Revision-Date: 2009-11-19 12:20+0100\n"
 "Last-Translator: Laurent Dhima <laurenti@alblinux.net>\n"
-"Language-Team: Albanian <gnome-albanian-perkthyesit@lists.sourceforge.net>\n"
+"Language-Team: albanian <gnome-albanian-perkthyesit@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -151,7 +151,7 @@ msgstr "çift"
 msgid "Profile settings: %s"
 msgstr "Rregullimet e profilit: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:387
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:392
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "Emri"
@@ -163,6 +163,19 @@ msgstr "Lloji"
 #: ../admin-tool/gconfviewer.py:120
 msgid "Value"
 msgstr "Vlera"
+
+#: ../admin-tool/groupsdialog.py:57
+#, python-format
+msgid "Groups for profile %s"
+msgstr "Grupet për profilin %s"
+
+#: ../admin-tool/groupsdialog.py:70
+msgid "Group"
+msgstr "Grupi"
+
+#: ../admin-tool/groupsdialog.py:80 ../admin-tool/usersdialog.py:95
+msgid "Use This Profile"
+msgstr "Përdor këtë profil"
 
 #: ../admin-tool/lockdown/lockdownbutton.py:99
 msgid "Click to make this setting not mandatory"
@@ -465,14 +478,13 @@ msgstr "Interfaqja e përdorimit"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:497
+#: ../admin-tool/profilesdialog.py:508
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:77
-msgid ""
-"Your account does not have permissions to run the Desktop User Profiles tool"
+msgid "Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr ""
 "Profili juaj nuk ka të drejtë të përdorë instrumentin e Profilit të "
 "Përdoruesit"
@@ -535,15 +547,15 @@ msgstr ""
 "të na ndihmoni të zbulojmë problemin duke dërguar regjistrin e ruajtur në %s "
 "tek %s"
 
+#: ../admin-tool/sabayon-apply:111
+msgid "Please use -h for usage options"
+msgstr "Përdor -h për ospionet e përdorimit"
+
 # (pofilter) puncspacing: checks for bad spacing after punctuation
-#: ../admin-tool/sabayon-apply:99
+#: ../admin-tool/sabayon-apply:123
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Nuk u gjet asnjë profil për përdoruesin '%s'\n"
-
-#: ../admin-tool/sabayon-apply:104
-msgid "Please use -h for usage options"
-msgstr "Përdor -h për ospionet e përdorimit"
 
 # (pofilter) xmltags: checks that XML/HTML tags have not been translated
 # (pofilter) isreview: Check if the unit has been marked review.
@@ -581,14 +593,22 @@ msgid "_Details"
 msgstr "_Detaje"
 
 #: ../admin-tool/sabayon.glade.h:7
+msgid "_Groups"
+msgstr "_Grupe"
+
+#: ../admin-tool/sabayon.glade.h:8
+msgid "_Groups:"
+msgstr "_Grupet:"
+
+#: ../admin-tool/sabayon.glade.h:9
 msgid "_Profiles:"
 msgstr "_Profilet:"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.glade.h:10
 msgid "_Users"
 msgstr "Përdor_ues"
 
-#: ../admin-tool/sabayon.glade.h:9
+#: ../admin-tool/sabayon.glade.h:11
 msgid "_Users:"
 msgstr "Përdor_uesit:"
 
@@ -603,8 +623,7 @@ msgstr "Ruan ndryshimet tek profili \"%s\" para se ta mbyllësh?"
 
 #: ../admin-tool/saveconfirm.py:45
 #, python-format
-msgid ""
-"If you don't save, changes from the last %ld second will be permanently lost."
+msgid "If you don't save, changes from the last %ld second will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld seconds will be permanently "
 "lost."
@@ -616,10 +635,8 @@ msgstr[1] ""
 "përfundimisht."
 
 #: ../admin-tool/saveconfirm.py:51
-msgid ""
-"If you don't save, changes from the last minute will be permanently lost."
-msgstr ""
-"Nëse nuk ruani, ndryshimet nga minuta e fundit do të humben përfundimisht."
+msgid "If you don't save, changes from the last minute will be permanently lost."
+msgstr "Nëse nuk ruani, ndryshimet nga minuta e fundit do të humben përfundimisht."
 
 #: ../admin-tool/saveconfirm.py:55
 #, python-format
@@ -638,8 +655,7 @@ msgstr[1] ""
 
 #: ../admin-tool/saveconfirm.py:62
 #, python-format
-msgid ""
-"If you don't save, changes from the last %ld minute will be permanently lost."
+msgid "If you don't save, changes from the last %ld minute will be permanently lost."
 msgid_plural ""
 "If you don't save, changes from the last %ld minutes will be permanently "
 "lost."
@@ -652,8 +668,7 @@ msgstr[1] ""
 
 #: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgstr ""
-"Nëse nuk ruani, ndryshimet nga ora e fundit do të humben përfundimisht."
+msgstr "Nëse nuk ruani, ndryshimet nga ora e fundit do të humben përfundimisht."
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
@@ -674,14 +689,10 @@ msgstr[1] ""
 # (pofilter) isreview: Check if the unit has been marked review.
 #: ../admin-tool/saveconfirm.py:81
 #, python-format
-msgid ""
-"If you don't save, changes from the last %d hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] ""
-"Nëse nuk ruani, ndryshimet nga %d ora e fundit do të humben përfundimisht."
-msgstr[1] ""
-"Nëse nuk ruani, ndryshimet nga %d orët e fundit do të humben përfundimisht."
+msgid "If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] "Nëse nuk ruani, ndryshimet nga %d ora e fundit do të humben përfundimisht."
+msgstr[1] "Nëse nuk ruani, ndryshimet nga %d orët e fundit do të humben përfundimisht."
 
 #: ../admin-tool/sessionwindow.py:154
 #, python-format
@@ -744,35 +755,37 @@ msgstr "_Vazhdo ndryshimin"
 msgid "Users for profile %s"
 msgstr "Përdorues për profilin %s"
 
-#: ../admin-tool/usersdialog.py:95
-msgid "Use This Profile"
-msgstr "Përdor këtë profil"
-
-#: ../lib/protosession.py:147
+#: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
 msgstr "E pamundur gjetja e një display X të lirë"
 
-#: ../lib/protosession.py:414
+#: ../lib/protosession.py:376
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr "Nisja e Xephyr dështoi: skadoi koha e pritjes së sinjalit USR1"
 
-#: ../lib/protosession.py:416
+#: ../lib/protosession.py:378
 msgid "Failed to start Xephyr: died during startup"
 msgstr "Nisja e Xephyr dështoi: u ndërpre gjatë nisjes"
 
-#: ../lib/protosession.py:501
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:469
 #, python-format
-msgid ""
-"There was a recoverable error while applying the user profile from file '%s'."
+msgid "There was a recoverable error while applying the user profile from file '%s'."
 msgstr ""
 "U ndesh një gabim i korrigjueshëm gjatë aplikimit të profilit të përdoruesit "
 "nga file'%s'."
 
-#: ../lib/protosession.py:510
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (FATAL) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:478
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
-msgstr ""
-"U ndesh një gabim fatal gjatë aplikimit të profilit të përdoruesit nga '%s'."
+msgstr "U ndesh një gabim fatal gjatë aplikimit të profilit të përdoruesit nga '%s'."
 
 #: ../lib/sources/filessource.py:69
 #, python-format
@@ -890,58 +903,58 @@ msgstr "Libërshënuesit e shfletuesit web"
 msgid "Web browser profile list"
 msgstr "Lista e profileve të shfletuesit web"
 
-#: ../lib/sources/mozillasource.py:522
+#: ../lib/sources/mozillasource.py:520
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "File nuk u gjet (%s)"
 
-#: ../lib/sources/mozillasource.py:873
+#: ../lib/sources/mozillasource.py:869
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "emër i duplikuar(%(name)s) në seksionin %(section)s"
 
-#: ../lib/sources/mozillasource.py:882
+#: ../lib/sources/mozillasource.py:878
 #, python-format
 msgid "redundant default in section %s"
 msgstr "prezgjedhje e përsëritur në seksionin %s"
 
-#: ../lib/sources/mozillasource.py:899
+#: ../lib/sources/mozillasource.py:895
 msgid "no default profile"
 msgstr "asnjë profil i paracaktuar"
 
 # (pofilter) simplecaps: checks the capitalisation of two strings isn't wildly different
-#: ../lib/sources/mozillasource.py:954
+#: ../lib/sources/mozillasource.py:950
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "U krijua libërshënuesi i Mozilla '%s' -> '%s'"
 
 # (pofilter) simplecaps: checks the capitalisation of two strings isn't wildly different
-#: ../lib/sources/mozillasource.py:956
+#: ../lib/sources/mozillasource.py:952
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "U krijua kartela e libërshënuesëve Mozilla '%s'"
 
 # (pofilter) simplecaps: checks the capitalisation of two strings isn't wildly different
-#: ../lib/sources/mozillasource.py:959
+#: ../lib/sources/mozillasource.py:955
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "U eleminua libërshënuesi i Mozilla '%s'"
 
 # (pofilter) simplecaps: checks the capitalisation of two strings isn't wildly different
-#: ../lib/sources/mozillasource.py:961
+#: ../lib/sources/mozillasource.py:957
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "U eleminua kartela e libërshënuesëve Mozilla '%s'"
 
 # (pofilter) simplecaps: checks the capitalisation of two strings isn't wildly different
 # (pofilter) doublewords: The word '''' is repeated
-#: ../lib/sources/mozillasource.py:964
+#: ../lib/sources/mozillasource.py:960
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "U ndryshua libërshënuesi Mozilla '%s' '%s'"
 
 # (pofilter) simplecaps: checks the capitalisation of two strings isn't wildly different
-#: ../lib/sources/mozillasource.py:966
+#: ../lib/sources/mozillasource.py:962
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "U ndryshua kartela e libërshënuesëve Mozilla '%s'"
@@ -1116,10 +1129,83 @@ msgstr "Seksion i pavlefshëm metadata tek '%s': %s"
 msgid "Cannot add non-existent file '%s'"
 msgstr "I pamundur shtimi i file joekzistues '%s'"
 
-#: ../lib/storage.py:568
+#: ../lib/storage.py:487
+#, python-format
+msgid "Couldn't unlink file '%s'"
+msgstr "E pamundur heqja e lidhjes me file '%s'"
+
+#: ../lib/storage.py:570
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Profili është në vetëm-lexim %s"
+
+#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
+#. do not change the way they are written.  The intended string is
+#. something like "invalid type for setting blah in /ldap/path/to/blah"
+#: ../lib/systemdb.py:58
+#, python-format
+msgid "invalid type for setting %(setting)s in %(np)s"
+msgstr "lloj i pavlefshëm për parametrin %(setting)s në %(np)s"
+
+#: ../lib/systemdb.py:103
+msgid "No database file provided"
+msgstr "Nuk është dhënë asnjë databazë file"
+
+#: ../lib/systemdb.py:220
+#, python-format
+msgid "No search base specified for %s"
+msgstr "Asnjë bazë kërkimi specifikuar për %s"
+
+#: ../lib/systemdb.py:223
+#, python-format
+msgid "No query filter specified for %s"
+msgstr "Asnjë filtër kërkimi përcaktuar për %s"
+
+#: ../lib/systemdb.py:226
+#, python-format
+msgid "No result attribute specified for %s"
+msgstr "Asnjë atribut rezultues përcaktuar për %s"
+
+#: ../lib/systemdb.py:235
+msgid "Scope must be one of sub, base and one"
+msgstr "Qëllimi duhet të jetë një prej sub, base dhe one"
+
+#: ../lib/systemdb.py:255
+msgid "multiple_result must be one of first and random"
+msgstr "multiple_result duhet të jetë njëri prej first dhe random"
+
+#: ../lib/systemdb.py:347
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "E pamundur hapja e %s për shkrim"
+
+#: ../lib/systemdb.py:360
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "Dështoi ruajtja e UserDatabase në %s"
+
+#: ../lib/systemdb.py:383 ../lib/systemdb.py:417
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "File %s nuk është një konfigurim profili"
+
+#: ../lib/systemdb.py:390
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "Dështoi shtimi i profilit të paracaktuar %s në konfigurim"
+
+#: ../lib/systemdb.py:424
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "Dështoi shtimi i përdoruesit %s tek konfigurimi i profilit"
+
+#: ../lib/systemdb.py:496
+msgid "Failed to get the user list"
+msgstr "Dështoi marrja e listës së përdoruesve"
+
+#: ../lib/systemdb.py:546
+msgid "Failed to get the group list"
+msgstr "Dështoi marrja e listës së grupeve"
 
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
@@ -1139,67 +1225,7 @@ msgstr "Duke kryer kontrollet e %s (%s)"
 msgid "Success!"
 msgstr "Me sukses!"
 
-#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
-#. do not change the way they are written.  The intended string is
-#. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/userdb.py:54
-#, python-format
-msgid "invalid type for setting %(setting)s in %(np)s"
-msgstr "lloj i pavlefshëm për parametrin %(setting)s në %(np)s"
-
-#: ../lib/userdb.py:215
-#, python-format
-msgid "No search base specified for %s"
-msgstr "Asnjë bazë kërkimi specifikuar për %s"
-
-#: ../lib/userdb.py:218
-#, python-format
-msgid "No query filter specified for %s"
-msgstr "Asnjë filtër kërkimi përcaktuar për %s"
-
-#: ../lib/userdb.py:221
-#, python-format
-msgid "No result attribute specified for %s"
-msgstr "Asnjë atribut rezultues përcaktuar për %s"
-
-#: ../lib/userdb.py:230
-msgid "Scope must be one of sub, base and one"
-msgstr "Qëllimi duhet të jetë një prej sub, base dhe one"
-
-#: ../lib/userdb.py:250
-msgid "multiple_result must be one of first and random"
-msgstr "multiple_result duhet të jetë njëri prej first dhe random"
-
-#: ../lib/userdb.py:342
-#, python-format
-msgid "Could not open %s for writing"
-msgstr "E pamundur hapja e %s për shkrim"
-
-#: ../lib/userdb.py:355
-#, python-format
-msgid "Failed to save UserDatabase to %s"
-msgstr "Dështoi ruajtja e UserDatabase në %s"
-
-#: ../lib/userdb.py:378 ../lib/userdb.py:413
-#, python-format
-msgid "File %s is not a profile configuration"
-msgstr "File %s nuk është një konfigurim profili"
-
-#: ../lib/userdb.py:385
-#, python-format
-msgid "Failed to add default profile %s to configuration"
-msgstr "Dështoi shtimi i profilit të paracaktuar %s në konfigurim"
-
-#: ../lib/userdb.py:421
-#, python-format
-msgid "Failed to add user %s to profile configuration"
-msgstr "Dështoi shtimi i përdoruesit %s tek konfigurimi i profilit"
-
-#: ../lib/userdb.py:472
-msgid "Failed to get the user list"
-msgstr "Dështoi marrja e listës së përdoruesve"
-
-#: ../lib/util.py:93
+#: ../lib/util.py:94
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -1207,10 +1233,11 @@ msgstr ""
 "E pamundur gjetja e directory \"home\": papërcaktuar tek /etc/passwd dhe "
 "asnjë vlerë për të ndryshueshmen e mjedisit $HOME"
 
-#: ../lib/util.py:106
+#: ../lib/util.py:110 ../lib/util.py:137
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr ""
 "E pamundur gjetja e emrit të përdoruesit: papërcaktuar tek /etc/passwd dhe "
 "asnjë vlerë për të ndryshueshmen e mjedisit $USER"
+
