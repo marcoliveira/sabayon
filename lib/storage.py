@@ -484,7 +484,7 @@ class ProfileStorage:
                 try:
                     os.unlink (dest)
                 except OSError, err:
-                    raise ProfileStorageException (_("Couldn't unlink file '%s'") % dest)
+                    raise ProfileStorageException ("Couldn't unlink file '%s'" % dest)
 
             # FIXME: we lose the "original" permissions, mtime, etc. with ZIP files.
             shutil.copy2 (src, dest)
