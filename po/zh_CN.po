@@ -10,9 +10,9 @@ msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-09-07 04:06+0000\n"
-"PO-Revision-Date: 2009-09-08 20:31+0800\n"
-"Last-Translator: Hinker <hinkerliu@gmail.com>\n"
+"POT-Creation-Date: 2009-11-20 17:47+0000\n"
+"PO-Revision-Date: 2009-11-24 19:47+0100\n"
+"Last-Translator: Tao Wei <weitao1979@gmail.com>\n"
 "Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -153,7 +153,7 @@ msgstr "对"
 msgid "Profile settings: %s"
 msgstr "配置文件设置：%s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:387
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:392
 #: ../admin-tool/usersdialog.py:85
 msgid "Name"
 msgstr "名称"
@@ -165,6 +165,19 @@ msgstr "类型"
 #: ../admin-tool/gconfviewer.py:120
 msgid "Value"
 msgstr "值"
+
+#: ../admin-tool/groupsdialog.py:57
+#, python-format
+msgid "Groups for profile %s"
+msgstr "配置文件 %s 的组"
+
+#: ../admin-tool/groupsdialog.py:70
+msgid "Group"
+msgstr "组"
+
+#: ../admin-tool/groupsdialog.py:80 ../admin-tool/usersdialog.py:95
+msgid "Use This Profile"
+msgstr "使用此配置文件"
 
 #: ../admin-tool/lockdown/lockdownbutton.py:99
 msgid "Click to make this setting not mandatory"
@@ -423,7 +436,7 @@ msgstr "禁用不安全的协议(_U)"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:34
 msgid "Epiphany Web Browser"
-msgstr "Epiphany Web 浏览器"
+msgstr "Epiphany 网络浏览器"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:35
 msgid "General"
@@ -463,7 +476,7 @@ msgstr "用户界面"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:497
+#: ../admin-tool/profilesdialog.py:508
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -520,14 +533,14 @@ msgstr ""
 "Sabayon 将马上退出。出现了一些可恢复的错误，您可以通过发送 %s 中的记录到 %s "
 "来帮助我们调试此问题。"
 
-#: ../admin-tool/sabayon-apply:99
-#, c-format
-msgid "No profile for user '%s' found\n"
-msgstr "未找到用户 “%s” 的配置文件\n"
-
-#: ../admin-tool/sabayon-apply:104
+#: ../admin-tool/sabayon-apply:111
 msgid "Please use -h for usage options"
 msgstr "请使用 -h 以获得用法选项"
+
+#: ../admin-tool/sabayon-apply:123
+#, c-format
+msgid "No profile for user '%s' found\n"
+msgstr "未找到用户“%s”的配置文件\n"
 
 #: ../admin-tool/sabayon-session:67
 #, c-format
@@ -563,14 +576,22 @@ msgid "_Details"
 msgstr "细节(_D)"
 
 #: ../admin-tool/sabayon.glade.h:7
+msgid "_Groups"
+msgstr "组(_G)"
+
+#: ../admin-tool/sabayon.glade.h:8
+msgid "_Groups:"
+msgstr "组(_G)："
+
+#: ../admin-tool/sabayon.glade.h:9
 msgid "_Profiles:"
 msgstr "配置文件(_P)："
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.glade.h:10
 msgid "_Users"
 msgstr "用户(_U)"
 
-#: ../admin-tool/sabayon.glade.h:9
+#: ../admin-tool/sabayon.glade.h:11
 msgid "_Users:"
 msgstr "用户(_U)："
 
@@ -595,7 +616,7 @@ msgstr[0] "如果您不保存的话，前 %d 小时内所做的更改都将永�
 #: ../admin-tool/saveconfirm.py:51
 msgid ""
 "If you don't save, changes from the last minute will be permanently lost."
-msgstr "如果您不保存的话，上1分钟内所做的更改都将永久丢失。"
+msgstr "如果您不保存的话，前 1 分钟内所做的更改都将永久丢失。"
 
 #: ../admin-tool/saveconfirm.py:55
 #, python-format
@@ -618,7 +639,7 @@ msgstr[0] "如果您不保存的话，前 %ld 分钟内所做的更改都将永�
 
 #: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
-msgstr "如果您不保存的话，上%d小时内所做的更改都将永久丢失。"
+msgstr "如果您不保存的话，前 %d 小时内所做的更改都将永久丢失。"
 
 #: ../admin-tool/saveconfirm.py:74
 #, python-format
@@ -698,19 +719,15 @@ msgstr "继续编辑(_C)"
 msgid "Users for profile %s"
 msgstr "配置文件 %s 的用户"
 
-#: ../admin-tool/usersdialog.py:95
-msgid "Use This Profile"
-msgstr "使用此配置文件"
-
 #: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
 msgstr "无法找到空闲的 X 显示"
 
-#: ../lib/protosession.py:377
+#: ../lib/protosession.py:376
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr "启动 Xnest 失败：等候 USR1 信号超时"
 
-#: ../lib/protosession.py:379
+#: ../lib/protosession.py:378
 msgid "Failed to start Xephyr: died during startup"
 msgstr "启动 Xnest 失败：启动时崩溃"
 
@@ -718,20 +735,20 @@ msgstr "启动 Xnest 失败：启动时崩溃"
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:470
+#: ../lib/protosession.py:469
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
-msgstr "于文件“%s”中应用用户配置文件时发生可恢复的错误。"
+msgstr "从文件“%s”中应用用户配置文件时发生了一个可恢复的错误。"
 
 #. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (FATAL) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:479
+#: ../lib/protosession.py:478
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
-msgstr "应用来自“%s”的用户配置文件时发生致命错误。"
+msgstr "应用来自“%s”的用户配置文件时发生一个致命错误。"
 
 #: ../lib/sources/filessource.py:69
 #, python-format
@@ -838,15 +855,15 @@ msgstr "Mozilla 键“%s”更改为“%s”"
 
 #: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
 msgid "Web browser preferences"
-msgstr "Web 浏览器首选项"
+msgstr "网络浏览器首选项"
 
 #: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
 msgid "Web browser bookmarks"
-msgstr "Web 浏览器书签"
+msgstr "网络浏览器书签"
 
 #: ../lib/sources/mozillasource.py:170
 msgid "Web browser profile list"
-msgstr "Web 浏览器配置文件列表"
+msgstr "网络浏览器配置文件列表"
 
 #: ../lib/sources/mozillasource.py:520
 #, python-format
@@ -1065,10 +1082,83 @@ msgstr "“%s”中有无效的元数据：%s"
 msgid "Cannot add non-existent file '%s'"
 msgstr "无法添加不存在的文件“%s”"
 
-#: ../lib/storage.py:568
+#: ../lib/storage.py:487
+#, python-format
+msgid "Couldn't unlink file '%s'"
+msgstr "不能撤销链接文件“%s”"
+
+#: ../lib/storage.py:570
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "配置文件只读 %s"
+
+#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
+#. do not change the way they are written.  The intended string is
+#. something like "invalid type for setting blah in /ldap/path/to/blah"
+#: ../lib/systemdb.py:58
+#, python-format
+msgid "invalid type for setting %(setting)s in %(np)s"
+msgstr "设置 %(setting)s 于 %(np)s 时出现非法类型"
+
+#: ../lib/systemdb.py:103
+msgid "No database file provided"
+msgstr "没有提供数据库文件"
+
+#: ../lib/systemdb.py:220
+#, python-format
+msgid "No search base specified for %s"
+msgstr "未给 %s 指定搜索基准"
+
+#: ../lib/systemdb.py:223
+#, python-format
+msgid "No query filter specified for %s"
+msgstr "%s 未指定查询过滤器"
+
+#: ../lib/systemdb.py:226
+#, python-format
+msgid "No result attribute specified for %s"
+msgstr "未给 %s 指定结果属性"
+
+#: ../lib/systemdb.py:235
+msgid "Scope must be one of sub, base and one"
+msgstr "范围必须是 sub、base 和 one 之一"
+
+#: ../lib/systemdb.py:255
+msgid "multiple_result must be one of first and random"
+msgstr "multiple_result 必须是 first 和 random 之一"
+
+#: ../lib/systemdb.py:347
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "无法打开 %s 写入"
+
+#: ../lib/systemdb.py:360
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "将用户数据库保存到 %s 失败"
+
+#: ../lib/systemdb.py:383 ../lib/systemdb.py:417
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "文件 %s 不是配置文件配置"
+
+#: ../lib/systemdb.py:390
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "将默认配置文件 %s 添加到配置失败"
+
+#: ../lib/systemdb.py:424
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "将用户 %s 添加到配置文件配置失败"
+
+#: ../lib/systemdb.py:496
+msgid "Failed to get the user list"
+msgstr "获得用户列表失败"
+
+#: ../lib/systemdb.py:546
+msgid "Failed to get the group list"
+msgstr "获取组列表失败"
 
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
@@ -1088,73 +1178,13 @@ msgstr "正运行 %s 测试(%s)"
 msgid "Success!"
 msgstr "成功！"
 
-#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
-#. do not change the way they are written.  The intended string is
-#. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/userdb.py:54
-#, python-format
-msgid "invalid type for setting %(setting)s in %(np)s"
-msgstr "设置 %(setting)s 于 %(np)s 时出现非法类型"
-
-#: ../lib/userdb.py:215
-#, python-format
-msgid "No search base specified for %s"
-msgstr "未给 %s 指定搜索基准"
-
-#: ../lib/userdb.py:218
-#, python-format
-msgid "No query filter specified for %s"
-msgstr "%s 未指定查询过滤器"
-
-#: ../lib/userdb.py:221
-#, python-format
-msgid "No result attribute specified for %s"
-msgstr "未给 %s 指定结果属性"
-
-#: ../lib/userdb.py:230
-msgid "Scope must be one of sub, base and one"
-msgstr "范围必须是 sub、base 和 one 之一"
-
-#: ../lib/userdb.py:250
-msgid "multiple_result must be one of first and random"
-msgstr "multiple_result 必须是 first 和 random 之一"
-
-#: ../lib/userdb.py:342
-#, python-format
-msgid "Could not open %s for writing"
-msgstr "无法打开 %s 写入"
-
-#: ../lib/userdb.py:355
-#, python-format
-msgid "Failed to save UserDatabase to %s"
-msgstr "将用户数据库保存到 %s 失败"
-
-#: ../lib/userdb.py:378 ../lib/userdb.py:413
-#, python-format
-msgid "File %s is not a profile configuration"
-msgstr "文件 %s 不是配置文件配置"
-
-#: ../lib/userdb.py:385
-#, python-format
-msgid "Failed to add default profile %s to configuration"
-msgstr "将默认配置文件 %s 添加到配置失败"
-
-#: ../lib/userdb.py:421
-#, python-format
-msgid "Failed to add user %s to profile configuration"
-msgstr "将用户 %s 添加到配置文件配置失败"
-
-#: ../lib/userdb.py:472
-msgid "Failed to get the user list"
-msgstr "获得用户列表失败"
-
-#: ../lib/util.py:93
+#: ../lib/util.py:94
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr "找不到主目录：未在 /etc/passwd 中设定，也未在 $HOME 环境变量中设定"
 
-#: ../lib/util.py:106
+#: ../lib/util.py:110 ../lib/util.py:137
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
