@@ -360,7 +360,7 @@ class ProfilesDialog:
         self.groups_button.connect ("clicked", self.__groups_button_clicked)
 
         self.help_button = self.xml.get_widget ("help_button")
-        self.help_button.connect ("clicked", self.__help_button_clicked)
+        self.help_button.hide()
 
         self.dialog.connect ("response", self.__dialog_response)
 
@@ -397,16 +397,6 @@ class ProfilesDialog:
     @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __dialog_response (self, dialog, response_id):
         dialog.destroy ()
-
-    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
-    def __help_button_clicked (self, button):
-        uri = "ghelp:sabayon"
-
-        try:
-            gtk.show_uri (None, uri, gtk.get_current_event_time())
-        except gobject.GError, e:
-            pass
-        return
 
     @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __add_button_clicked (self, button):

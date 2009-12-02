@@ -48,6 +48,7 @@ _ui_string = '''
       <menuitem action="EnforceMandatory"/>
     </menu>
     <menu action="HelpMenu">
+      <menuitem action="Contents"/>
       <menuitem action="About"/>
     </menu>
   </menubar>
@@ -180,6 +181,7 @@ class SessionWindow:
             ("Changes",     gtk.STOCK_EDIT,  _("_Changes"), "<control>H", _("Edit changes"),             self.__handle_edit),
             ("Lockdown",    None,            _("_Lockdown"),"<control>L", _("Edit Lockdown settings"),   self.__handle_lockdown),
             ("HelpMenu",    None,            _("_Help")),
+            ("Contents",    gtk.STOCK_ABOUT, _("_Contents"),None,         _("Help Contents"),            self.__handle_help),
             ("About",       gtk.STOCK_ABOUT, _("_About"),   None,         _("About Sabayon"),            self.__handle_about),
         ]
         toggle_actions = [
@@ -273,6 +275,13 @@ class SessionWindow:
     @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __handle_delete_event (self, window, event):
         return not self.__do_saveconfirm ()
+
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
+    def __handle_help (self, action):
+        try:
+            gtk.show_uri (None, "ghelp:sabayon", gtk.get_current_event_time())
+        except gobject.GError, e:
+            pass
 
     @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __handle_about (self, action):

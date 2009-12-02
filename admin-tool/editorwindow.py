@@ -45,6 +45,7 @@ _ui_string = '''
       <menuitem action="Delete"/>
     </menu>
     <menu action="HelpMenu">
+      <menuitem action="Contents"/>
       <menuitem action="About"/>
     </menu>
   </menubar>
@@ -184,6 +185,13 @@ class ProfileEditorWindow:
         self.__delete_currently_selected ()
         
     @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
+    def __handle_help (self, action):
+        try:
+            gtk.show_uri (None, "ghelp:sabayon", gtk.get_current_event_time())
+        except gobject.GError, e:
+            pass
+
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __handle_about (self, action):
         aboutdialog.show_about_dialog (self.window)
 
@@ -198,6 +206,7 @@ class ProfileEditorWindow:
             ("EditMenu", None, _("_Edit")),
             ("Delete", gtk.STOCK_DELETE, _("_Delete"), "<control>D", _("Delete item"), self.__handle_delete),
             ("HelpMenu", None, _("_Help")),
+            ("Contents", gtk.STOCK_HELP, _("_Contents"), None, _("Help Contents"), self.__handle_help),
             ("About", gtk.STOCK_ABOUT, _("_About"), None, _("About Sabayon"), self.__handle_about),
         ]
         action_group = gtk.ActionGroup ("WindowActions")
