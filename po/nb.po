@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon 2.29.x\n"
-"Report-Msgid-Bugs-To:\n"
-"POT-Creation-Date: 2009-11-11 20:03+0100\n"
-"PO-Revision-Date: 2009-11-11 20:04+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-12-05 20:34+0100\n"
+"PO-Revision-Date: 2009-12-05 20:35+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian Bokmaal <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -39,68 +39,76 @@ msgstr "Ignorer"
 msgid "Lock"
 msgstr "Lås"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:230
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:239
 msgid "Description"
 msgstr "Beskrivelse"
 
-#: ../admin-tool/editorwindow.py:97
+#: ../admin-tool/editorwindow.py:98
 #, python-format
 msgid "Profile %s"
 msgstr "Profil %s"
 
-#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:177
 msgid "_Profile"
 msgstr "_Profil"
 
-#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:178
 msgid "_Save"
 msgstr "_Lagre"
 
-#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:178
 msgid "Save profile"
 msgstr "Lagre profil"
 
-#: ../admin-tool/editorwindow.py:197
+#: ../admin-tool/editorwindow.py:205
 msgid "_Close"
 msgstr "L_ukk"
 
-#: ../admin-tool/editorwindow.py:197 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:179
 msgid "Close the current window"
 msgstr "Lukk dette vinduet"
 
-#: ../admin-tool/editorwindow.py:198 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
 msgid "_Edit"
 msgstr "R_ediger"
 
-#: ../admin-tool/editorwindow.py:199
+#: ../admin-tool/editorwindow.py:207
 msgid "_Delete"
 msgstr "_Slett"
 
-#: ../admin-tool/editorwindow.py:199
+#: ../admin-tool/editorwindow.py:207
 msgid "Delete item"
 msgstr "Slett oppføring"
 
-#: ../admin-tool/editorwindow.py:200 ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:183
 msgid "_Help"
 msgstr "_Hjelp"
 
-#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:184
+msgid "_Contents"
+msgstr "_Innhold"
+
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:184
+msgid "Help Contents"
+msgstr "Innhold i hjelp"
+
+#: ../admin-tool/editorwindow.py:210 ../admin-tool/sessionwindow.py:185
 msgid "_About"
 msgstr "_Om"
 
-#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:210 ../admin-tool/sessionwindow.py:185
 msgid "About Sabayon"
 msgstr "Om Sabayon"
 
-#: ../admin-tool/editorwindow.py:262 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:271 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:275 ../lib/sources/filessource.py:79
 msgid "Files"
 msgstr "Filer"
 
-#: ../admin-tool/editorwindow.py:266
+#: ../admin-tool/editorwindow.py:275
 #: ../admin-tool/lockdown/pessulus.glade.h:41
 #: ../lib/sources/paneldelegate.py:269
 msgid "Panel"
@@ -683,45 +691,45 @@ msgid_plural ""
 msgstr[0] "Hvis du ikke lagrer vil endringer fra den siste %d timen gå tapt."
 msgstr[1] "Hvis du ikke lagrer vil endringer fra de siste %d timene gå tapt."
 
-#: ../admin-tool/sessionwindow.py:154
+#: ../admin-tool/sessionwindow.py:155
 #, python-format
 msgid "Editing profile %s"
 msgstr "Redigerer profil %s"
 
-#: ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/sessionwindow.py:179
 msgid "_Quit"
 msgstr "A_vslutt"
 
-#: ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Changes"
 msgstr "_Endringer"
 
-#: ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/sessionwindow.py:181
 msgid "Edit changes"
 msgstr "Rediger endringer"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:182
 msgid "_Lockdown"
 msgstr "Ned_låsing"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:182
 msgid "Edit Lockdown settings"
 msgstr "Rediger innstillinger for nedlåsing"
 
-#: ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/sessionwindow.py:188
 msgid "Enforce Mandatory"
 msgstr "Bruk tvungne"
 
-#: ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/sessionwindow.py:188
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Bruk tvungne innstillinger i redigeringssesjonen"
 
-#: ../admin-tool/sessionwindow.py:297
+#: ../admin-tool/sessionwindow.py:306
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Innstillinger for nedlåsing for %s"
 
-#: ../admin-tool/sessionwindow.py:333
+#: ../admin-tool/sessionwindow.py:342
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
@@ -730,11 +738,11 @@ msgstr ""
 "Det oppsto en feil under bruk av brukerprofil «%s». Du kan rapportere denne "
 "feilen nå eller fortsette å redigere brukerprofilen."
 
-#: ../admin-tool/sessionwindow.py:337
+#: ../admin-tool/sessionwindow.py:346
 msgid "_Report this error"
 msgstr "_Rapporter denne feilen"
 
-#: ../admin-tool/sessionwindow.py:338
+#: ../admin-tool/sessionwindow.py:347
 msgid "_Continue editing"
 msgstr "_Fortsett redigering"
 
