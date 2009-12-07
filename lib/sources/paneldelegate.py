@@ -74,63 +74,69 @@ class PanelAppletAddedChange (PanelChange):
     def __init__ (self, source, delegate, id):
         PanelChange.__init__ (self, source, delegate, id)
     def get_short_description (self):
+        return _("Applet '%s' added" % self.id)
         # FIXME: This only works if panel object type is bonobo-applet. Are all applets bonobo-applets ?
-        panel_applet = self.delegate.PanelApplet(self.delegate, self.id)
-        toplevel_id = panel_applet.toplevel_id
-        name = panel_applet.name
+        # FIXME: Race condition with the code below.
+        # panel_applet = self.delegate.PanelApplet(self.delegate, self.id)
+        # toplevel_id = panel_applet.toplevel_id
+        # name = panel_applet.name
 
-        panel_toplevel = self.delegate.PanelToplevel(self.delegate, toplevel_id)
-        panel_orientation = panel_toplevel.orientation
+        # panel_toplevel = self.delegate.PanelToplevel(self.delegate, toplevel_id)
+        # panel_orientation = panel_toplevel.orientation
 
-        if panel_orientation == "top":
-            return _("Applet %s added to top panel") % name
-        elif panel_orientation == "bottom":
-            return _("Applet %s added to bottom panel") % name
-        elif panel_orientation == "left":
-            return _("Applet %s added to left panel") % name
-        else:
-            return _("Applet %s added to right panel") % name
+        # if panel_orientation == "top":
+        #     return _("Applet %s added to top panel") % name
+        # elif panel_orientation == "bottom":
+        #     return _("Applet %s added to bottom panel") % name
+        # elif panel_orientation == "left":
+        #     return _("Applet %s added to left panel") % name
+        # else:
+        #     return _("Applet %s added to right panel") % name
 
 class PanelAppletRemovedChange (PanelChange):
     def __init__ (self, source, delegate, id):
         PanelChange.__init__ (self, source, delegate, id)
     def get_short_description (self):
+        return _("Applet '%s' removed" % self.id)
         # FIXME: This only works if panel object type is bonobo-applet. Are all applets bonobo-applets ?
-        panel_applet = self.delegate.PanelApplet(self.delegate, self.id)
-        toplevel_id = panel_applet.toplevel_id
-        name = panel_applet.name
+        # FIXME: Race condition with the code below.
+        # panel_applet = self.delegate.PanelApplet(self.delegate, self.id)
+        # toplevel_id = panel_applet.toplevel_id
+        # name = panel_applet.name
 
-        panel_toplevel = self.delegate.PanelToplevel(self.delegate, toplevel_id)
-        panel_orientation = panel_toplevel.orientation
+        # panel_toplevel = self.delegate.PanelToplevel(self.delegate, toplevel_id)
+        # panel_orientation = panel_toplevel.orientation
 
-        if panel_orientation == "top":
-            return _("Applet %s removed from top panel") % name
-        elif panel_orientation == "bottom":
-            return _("Applet %s removed from bottom panel") % name
-        elif panel_orientation == "left":
-            return _("Applet %s removed from left panel") % name
-        else:
-            return _("Applet %s removed from right panel") % name
+        # if panel_orientation == "top":
+        #     return _("Applet %s removed from top panel") % name
+        # elif panel_orientation == "bottom":
+        #     return _("Applet %s removed from bottom panel") % name
+        # elif panel_orientation == "left":
+        #     return _("Applet %s removed from left panel") % name
+        # else:
+        #     return _("Applet %s removed from right panel") % name
 
 class PanelObjectAddedChange (PanelChange):
     def __init__ (self, source, delegate, id):
         PanelChange.__init__ (self, source, delegate, id)
     def get_short_description (self):
-        panel_object = self.delegate.PanelObject(self.delegate, self.id)
-        toplevel_id = panel_object.toplevel_id
-        name = panel_object.name
+        return _("Object '%s' added" % self.id)
+        # FIXME: Race condition with code below.
+        # panel_object = self.delegate.PanelObject(self.delegate, self.id)
+        # toplevel_id = panel_object.toplevel_id
+        # name = panel_object.name
 
-        panel_toplevel = self.delegate.PanelToplevel(self.delegate, toplevel_id)
-        panel_orientation = panel_toplevel.orientation
+        # panel_toplevel = self.delegate.PanelToplevel(self.delegate, toplevel_id)
+        # panel_orientation = panel_toplevel.orientation
 
-        if panel_orientation == "top":
-            return _("%s added to top panel") % name
-        elif panel_orientation == "bottom":
-            return _("%s added to bottom panel") % name
-        elif panel_orientation == "left":
-            return _("%s added to left panel") % name
-        else:
-            return _("%s added to right panel") % name
+        # if panel_orientation == "top":
+        #     return _("%s added to top panel") % name
+        # elif panel_orientation == "bottom":
+        #     return _("%s added to bottom panel") % name
+        # elif panel_orientation == "left":
+        #     return _("%s added to left panel") % name
+        # else:
+        #     return _("%s added to right panel") % name
 
     def commit_change (self, mandatory):
         # Might have to commit a launcher file
@@ -143,21 +149,23 @@ class PanelObjectRemovedChange (PanelChange):
     def __init__ (self, source, delegate, id):
         PanelChange.__init__ (self, source, delegate, id)
     def get_short_description (self):
-        panel_object = self.delegate.PanelObject(self.delegate, self.id)
-        toplevel_id = panel_object.toplevel_id
-        name = panel_object.name
+        return _("Object '%s' removed" % self.id)
+        # FIXME: Race condition with code below.
+        # panel_object = self.delegate.PanelObject(self.delegate, self.id)
+        # toplevel_id = panel_object.toplevel_id
+        # name = panel_object.name
 
-        panel_toplevel = self.delegate.PanelToplevel(self.delegate, toplevel_id)
-        panel_orientation = panel_toplevel.orientation
+        # panel_toplevel = self.delegate.PanelToplevel(self.delegate, toplevel_id)
+        # panel_orientation = panel_toplevel.orientation
 
-        if panel_orientation == "top":
-            return _("%s removed from top panel") % name
-        elif panel_orientation == "bottom":
-            return _("%s removed from bottom panel") % name
-        elif panel_orientation == "left":
-            return _("%s removed from left panel") % name
-        else:
-            return _("%s removed from right panel") % name
+        # if panel_orientation == "top":
+        #     return _("%s removed from top panel") % name
+        # elif panel_orientation == "bottom":
+        #     return _("%s removed from bottom panel") % name
+        # elif panel_orientation == "left":
+        #     return _("%s removed from left panel") % name
+        # else:
+        #     return _("%s removed from right panel") % name
 
     def commit_change (self, mandatory):
         launcher = self.delegate.get_gconf_client ().get_string (PANEL_KEY_BASE + "/objects/" + self.id + "/launcher_location")
@@ -208,12 +216,13 @@ class PanelDelegate (userprofile.SourceDelegate):
                     id,
                     toplevel_key_name, self.toplevel_id,
                     bonobo_iid_key_name, self.bonobo_iid)
-
-            applet = bonobo.activation.query("iid == '" + self.bonobo_iid + "'" )
-            for i in applet:
-                for prop in i.props:
-                    if prop.name == "name":
-                        self.name = prop.v.value_string #FIXME: This probably won't return localised names
+            
+            if self.bonobo_iid:
+                applet = bonobo.activation.query("iid == '" + self.bonobo_iid + "'" )
+                for i in applet:
+                    for prop in i.props:
+                        if prop.name == "name":
+                            self.name = prop.v.value_string #FIXME: This probably won't return localised names
 
 
 
