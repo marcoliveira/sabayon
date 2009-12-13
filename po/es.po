@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-10-27 06:57+0000\n"
-"PO-Revision-Date: 2009-10-27 08:05+0100\n"
+"POT-Creation-Date: 2009-12-07 19:18+0000\n"
+"PO-Revision-Date: 2009-12-12 12:10+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -48,70 +48,78 @@ msgstr "Ignorar"
 msgid "Lock"
 msgstr "Bloquear"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:230
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:239
 msgid "Description"
 msgstr "Descripción"
 
-#: ../admin-tool/editorwindow.py:97
+#: ../admin-tool/editorwindow.py:98
 #, python-format
 msgid "Profile %s"
 msgstr "Perfil %s"
 
-#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:177
 msgid "_Profile"
 msgstr "_Perfil"
 
-#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:178
 msgid "_Save"
 msgstr "_Guardar"
 
-#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:178
 msgid "Save profile"
 msgstr "Guardar perfil"
 
-#: ../admin-tool/editorwindow.py:197
+#: ../admin-tool/editorwindow.py:205
 msgid "_Close"
 msgstr "_Cerrar"
 
-#: ../admin-tool/editorwindow.py:197 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:179
 msgid "Close the current window"
 msgstr "Cierra la ventana actual"
 
-#: ../admin-tool/editorwindow.py:198 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
 msgid "_Edit"
 msgstr "_Editar"
 
-#: ../admin-tool/editorwindow.py:199
+#: ../admin-tool/editorwindow.py:207
 msgid "_Delete"
 msgstr "_Borrar"
 
-#: ../admin-tool/editorwindow.py:199
+#: ../admin-tool/editorwindow.py:207
 msgid "Delete item"
 msgstr "Borrar elemento"
 
-#: ../admin-tool/editorwindow.py:200 ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:183
 msgid "_Help"
 msgstr "Ay_uda"
 
-#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:184
+msgid "_Contents"
+msgstr "Índ_ice"
+
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:184
+msgid "Help Contents"
+msgstr "Contenido de la ayuda"
+
+#: ../admin-tool/editorwindow.py:210 ../admin-tool/sessionwindow.py:185
 msgid "_About"
 msgstr "Acerca _de"
 
-#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:210 ../admin-tool/sessionwindow.py:185
 msgid "About Sabayon"
 msgstr "Acerca de Sabayon"
 
-#: ../admin-tool/editorwindow.py:262 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:271 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:275 ../lib/sources/filessource.py:79
 msgid "Files"
 msgstr "Archivos"
 
-#: ../admin-tool/editorwindow.py:266
+#: ../admin-tool/editorwindow.py:275
 #: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:269
+#: ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "Panel"
 
@@ -176,7 +184,6 @@ msgstr "Valor"
 
 #: ../admin-tool/groupsdialog.py:57
 #, python-format
-#| msgid "Users for profile %s"
 msgid "Groups for profile %s"
 msgstr "Grupos para el perfil %s"
 
@@ -703,45 +710,45 @@ msgstr[1] ""
 "Si no guarda, se perderán permanentemente los cambios de las últimas %d "
 "horas."
 
-#: ../admin-tool/sessionwindow.py:154
+#: ../admin-tool/sessionwindow.py:155
 #, python-format
 msgid "Editing profile %s"
 msgstr "Editando el perfil %s"
 
-#: ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/sessionwindow.py:179
 msgid "_Quit"
 msgstr "_Salir"
 
-#: ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Changes"
 msgstr "_Cambios"
 
-#: ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/sessionwindow.py:181
 msgid "Edit changes"
 msgstr "Editar cambios"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:182
 msgid "_Lockdown"
 msgstr "_Bloquear"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:182
 msgid "Edit Lockdown settings"
 msgstr "Editar ajustes de bloqueo"
 
-#: ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/sessionwindow.py:188
 msgid "Enforce Mandatory"
 msgstr "Forzar obligatorios"
 
-#: ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/sessionwindow.py:188
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Forzar ajustes obligatorios en la sesión de edición"
 
-#: ../admin-tool/sessionwindow.py:297
+#: ../admin-tool/sessionwindow.py:306
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Configuraciones restringidas para %s"
 
-#: ../admin-tool/sessionwindow.py:333
+#: ../admin-tool/sessionwindow.py:342
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
@@ -751,11 +758,11 @@ msgstr ""
 "informar de este error ahora o intentar continuar editando el perfil del "
 "usuario."
 
-#: ../admin-tool/sessionwindow.py:337
+#: ../admin-tool/sessionwindow.py:346
 msgid "_Report this error"
 msgstr "Informar de este e_rror"
 
-#: ../admin-tool/sessionwindow.py:338
+#: ../admin-tool/sessionwindow.py:347
 msgid "_Continue editing"
 msgstr "_Continuar editando"
 
@@ -965,148 +972,92 @@ msgstr "Se ha cambiado una carpeta de marcadores de Mozilla «%s»"
 #: ../lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel '%s' added"
-msgstr "Se ha añadido el panel «%s»"
+msgstr "Panel «%s» añadido"
 
 #: ../lib/sources/paneldelegate.py:71
 #, python-format
 msgid "Panel '%s' removed"
-msgstr "Se ha quitado el panel «%s»"
+msgstr "Panel «%s» quitado"
 
-#: ../lib/sources/paneldelegate.py:86
+#: ../lib/sources/paneldelegate.py:77
 #, python-format
-msgid "Applet %s added to top panel"
-msgstr "Se ha añadido la miniaplicación %s al panel superior"
+#| msgid "Panel '%s' added"
+msgid "Applet '%s' added"
+msgstr "Miniaplicación «%s» añadida"
 
-#: ../lib/sources/paneldelegate.py:88
+#: ../lib/sources/paneldelegate.py:100
 #, python-format
-msgid "Applet %s added to bottom panel"
-msgstr "Se ha añadido la miniaplicación %s al panel inferior"
+#| msgid "Panel '%s' removed"
+msgid "Applet '%s' removed"
+msgstr "Miniaplicación «%s» quitada"
 
-#: ../lib/sources/paneldelegate.py:90
+#: ../lib/sources/paneldelegate.py:123
 #, python-format
-msgid "Applet %s added to left panel"
-msgstr "Se ha añadido la miniaplicación %s al panel izquierdo"
+#| msgid "Panel '%s' added"
+msgid "Object '%s' added"
+msgstr "Objeto «%s» añadido"
 
-#: ../lib/sources/paneldelegate.py:92
+#: ../lib/sources/paneldelegate.py:152
 #, python-format
-msgid "Applet %s added to right panel"
-msgstr "Se ha añadido la miniaplicación %s al panel derecho"
-
-#: ../lib/sources/paneldelegate.py:107
-#, python-format
-msgid "Applet %s removed from top panel"
-msgstr "Se ha eliminado la miniaplicación %s del panel superior"
-
-#: ../lib/sources/paneldelegate.py:109
-#, python-format
-msgid "Applet %s removed from bottom panel"
-msgstr "Se ha eliminado la miniaplicación %s del panel inferior"
-
-#: ../lib/sources/paneldelegate.py:111
-#, python-format
-msgid "Applet %s removed from left panel"
-msgstr "Se ha eliminado la miniaplicación %s del panel izquierdo"
-
-#: ../lib/sources/paneldelegate.py:113
-#, python-format
-msgid "Applet %s removed from right panel"
-msgstr "Se ha eliminado la miniaplicación %s del panel derecho"
-
-#: ../lib/sources/paneldelegate.py:127
-#, python-format
-msgid "%s added to top panel"
-msgstr "Se ha añadido %s al panel superior"
-
-#: ../lib/sources/paneldelegate.py:129
-#, python-format
-msgid "%s added to bottom panel"
-msgstr "Se ha añadido %s al panel inferior"
-
-#: ../lib/sources/paneldelegate.py:131
-#, python-format
-msgid "%s added to left panel"
-msgstr "Se ha añadido %s al panel izquierdo"
-
-#: ../lib/sources/paneldelegate.py:133
-#, python-format
-msgid "%s added to right panel"
-msgstr "Se ha añadido %s al panel derecho"
-
-#: ../lib/sources/paneldelegate.py:154
-#, python-format
-msgid "%s removed from top panel"
-msgstr "Se ha eliminado %s del panel superior"
-
-#: ../lib/sources/paneldelegate.py:156
-#, python-format
-msgid "%s removed from bottom panel"
-msgstr "Se ha eliminado %s del panel inferior"
-
-#: ../lib/sources/paneldelegate.py:158
-#, python-format
-msgid "%s removed from left panel"
-msgstr "Se ha eliminado %s del panel izquierdo"
-
-#: ../lib/sources/paneldelegate.py:160
-#, python-format
-msgid "%s removed from right panel"
-msgstr "Se ha eliminado %s del panel derecho"
+#| msgid "Panel '%s' removed"
+msgid "Object '%s' removed"
+msgstr "Objeto «%s» quitado"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:231
+#: ../lib/sources/paneldelegate.py:240
 msgid "Drawer"
 msgstr "Cajón"
 
-#: ../lib/sources/paneldelegate.py:233
+#: ../lib/sources/paneldelegate.py:242
 msgid "Main Menu"
 msgstr "Menú principal"
 
-#: ../lib/sources/paneldelegate.py:243
+#: ../lib/sources/paneldelegate.py:252
 #, python-format
 msgid "%s launcher"
 msgstr "Lanzador de %s"
 
-#: ../lib/sources/paneldelegate.py:247
+#: ../lib/sources/paneldelegate.py:256
 msgid "Lock Screen button"
 msgstr "Botón Bloquear la pantalla"
 
-#: ../lib/sources/paneldelegate.py:249
+#: ../lib/sources/paneldelegate.py:258
 msgid "Logout button"
 msgstr "Botón Salir"
 
-#: ../lib/sources/paneldelegate.py:251
+#: ../lib/sources/paneldelegate.py:260
 msgid "Run Application button"
 msgstr "Botón Ejecutar una aplicación"
 
-#: ../lib/sources/paneldelegate.py:253
+#: ../lib/sources/paneldelegate.py:262
 msgid "Search button"
 msgstr "Botón Buscar"
 
-#: ../lib/sources/paneldelegate.py:255
+#: ../lib/sources/paneldelegate.py:264
 msgid "Force Quit button"
 msgstr "Botón Forzar la salida"
 
-#: ../lib/sources/paneldelegate.py:257
+#: ../lib/sources/paneldelegate.py:266
 msgid "Connect to Server button"
 msgstr "Botón Conectar con el servidor"
 
-#: ../lib/sources/paneldelegate.py:259
+#: ../lib/sources/paneldelegate.py:268
 msgid "Shutdown button"
 msgstr "Botón Apagar"
 
-#: ../lib/sources/paneldelegate.py:261
+#: ../lib/sources/paneldelegate.py:270
 msgid "Screenshot button"
 msgstr "Botón Captura de pantalla"
 
-#: ../lib/sources/paneldelegate.py:264
+#: ../lib/sources/paneldelegate.py:273
 msgid "Unknown"
 msgstr "Desconocido"
 
-#: ../lib/sources/paneldelegate.py:266
+#: ../lib/sources/paneldelegate.py:275
 msgid "Menu Bar"
 msgstr "Barra de menús"
 
-#: ../lib/sources/paneldelegate.py:503
+#: ../lib/sources/paneldelegate.py:512
 msgid "Panel File"
 msgstr "Archivo del panel"
 
@@ -1205,7 +1156,6 @@ msgid "Failed to get the user list"
 msgstr "No se pudo recuperar la lista de usuarios"
 
 #: ../lib/systemdb.py:546
-#| msgid "Failed to get the user list"
 msgid "Failed to get the group list"
 msgstr "Falló al obtener la lista de grupos"
 
@@ -1242,3 +1192,51 @@ msgid ""
 msgstr ""
 "No se pudo encontrar el nombre de usuario: no se encuentra establecido en /"
 "etc/passwd y no existe ningún valor para $USER en el entorno"
+
+#~ msgid "Applet %s added to top panel"
+#~ msgstr "Se ha añadido la miniaplicación %s al panel superior"
+
+#~ msgid "Applet %s added to bottom panel"
+#~ msgstr "Se ha añadido la miniaplicación %s al panel inferior"
+
+#~ msgid "Applet %s added to left panel"
+#~ msgstr "Se ha añadido la miniaplicación %s al panel izquierdo"
+
+#~ msgid "Applet %s added to right panel"
+#~ msgstr "Se ha añadido la miniaplicación %s al panel derecho"
+
+#~ msgid "Applet %s removed from top panel"
+#~ msgstr "Se ha eliminado la miniaplicación %s del panel superior"
+
+#~ msgid "Applet %s removed from bottom panel"
+#~ msgstr "Se ha eliminado la miniaplicación %s del panel inferior"
+
+#~ msgid "Applet %s removed from left panel"
+#~ msgstr "Se ha eliminado la miniaplicación %s del panel izquierdo"
+
+#~ msgid "Applet %s removed from right panel"
+#~ msgstr "Se ha eliminado la miniaplicación %s del panel derecho"
+
+#~ msgid "%s added to top panel"
+#~ msgstr "Se ha añadido %s al panel superior"
+
+#~ msgid "%s added to bottom panel"
+#~ msgstr "Se ha añadido %s al panel inferior"
+
+#~ msgid "%s added to left panel"
+#~ msgstr "Se ha añadido %s al panel izquierdo"
+
+#~ msgid "%s added to right panel"
+#~ msgstr "Se ha añadido %s al panel derecho"
+
+#~ msgid "%s removed from top panel"
+#~ msgstr "Se ha eliminado %s del panel superior"
+
+#~ msgid "%s removed from bottom panel"
+#~ msgstr "Se ha eliminado %s del panel inferior"
+
+#~ msgid "%s removed from left panel"
+#~ msgstr "Se ha eliminado %s del panel izquierdo"
+
+#~ msgid "%s removed from right panel"
+#~ msgstr "Se ha eliminado %s del panel derecho"
