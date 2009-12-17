@@ -22,6 +22,9 @@ class PessulusLockdownApplier:
     def __init__ (self):
         raise NotImplementedError
 
+    def supports_normal_settings (self):
+        raise NotImplementedError
+
     def supports_mandatory_settings (self):
         raise NotImplementedError
 

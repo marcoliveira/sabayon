@@ -28,8 +28,6 @@ try:
 except:
     from sets import Set as set
 
-from sabayon import errors
-from sabayon import debuglog
 import globalvar
 import icons
 
@@ -116,32 +114,25 @@ class PessulusDisabledApplets:
         COLUMN_IID,
         COLUMN_NAME,
         COLUMN_ICON_NAME,
-        COLUMN_ICON,
         COLUMN_DISABLED
-    ) = range (5)
+    ) = range (4)
 
     def __init__ (self, treeview, lockdownbutton):
         self.notify_id = None
         self.key = "/apps/panel/global/disabled_applets"
         self.disabled_applets = None
 
-        self.liststore = gtk.ListStore (str, str, str, gtk.gdk.Pixbuf, bool)
+        self.liststore = gtk.ListStore (str, str, str, bool)
         self.liststore.set_sort_column_id (self.COLUMN_NAME, gtk.SORT_ASCENDING)
 
         self.treeview = treeview
         self.treeview.get_selection ().set_mode (gtk.SELECTION_SINGLE)
         self.treeview.set_model (self.liststore)
-        self.treeview.connect ("screen-changed", self.__on_screen_changed)
         self.treeview.connect ("destroy", self.__on_destroyed)
 
         self.lockdownbutton = lockdownbutton
         self.lockdownbutton.connect ("toggled",
                                      self.__on_lockdownbutton_toggled)
-
-        screen = self.treeview.get_screen ()
-        self.icon_theme = gtk.icon_theme_get_for_screen (screen)
-
-        self.icon_theme.connect ("changed", self.__on_icontheme_changed)
 
         self.__fill_liststore ()
         self.__create_columns ()
@@ -153,20 +144,6 @@ class PessulusDisabledApplets:
         self.lockdownbutton.set (mandatory)
         self.notify_id = globalvar.applier.notify_add (self.key,
                                                        self.__on_notified)
-
-    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_PESSULUS)
-    def __on_screen_changed (self, widget, screen):
-        self.icon_theme = gtk.icon_theme_get_for_screen (screen)
-        self.__on_icontheme_changed (self.icon_theme)
-
-    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_PESSULUS)
-    def __on_icontheme_changed (self, icontheme):
-        @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_PESSULUS)
-        def update_icon (model, path, iter, data):
-            if model[iter][self.COLUMN_ICON_NAME] != "":
-                model[iter][self.COLUMN_ICON] = icons.load_icon (self.icon_theme, model[iter][self.COLUMN_ICON_NAME])
-
-        self.liststore.foreach (update_icon, self)
 
     def __fill_liststore (self):
         applets = bonobo.activation.query ("has_all (repo_ids, ['IDL:Bonobo/Control:1.0', 'IDL:GNOME/Vertigo/PanelAppletShell:1.0'])")
@@ -182,22 +159,23 @@ class PessulusDisabledApplets:
                 if prop.name[:5] == "name-" and prop.name[5:] in languages:
                     if bestname > languages.index (prop.name[5:]) or bestname == -1:
                         name = prop.v.value_string
+                        bestname = languages.index (prop.name[5:])
                 elif prop.name == "name" and bestname == -1:
                     name = prop.v.value_string
                 elif prop.name == "panel:icon":
-                    icon = prop.v.value_string
-            iter = self.liststore.append ()
+                    icon = icons.fix_icon_name(prop.v.value_string)
 
             if name == None:
                 name = applet.iid
             else:
+                #FIXME needs to be translated
                 name = name + " (" + applet.iid + ")"
 
+            iter = self.liststore.append ()
             self.liststore.set (iter,
                                 self.COLUMN_IID, applet.iid,
                                 self.COLUMN_NAME, name,
-                                self.COLUMN_ICON_NAME, icon,
-                                self.COLUMN_ICON, icons.load_icon (self.icon_theme, icon))
+                                self.COLUMN_ICON_NAME, icon)
 
     def __create_columns (self):
         column = gtk.TreeViewColumn ()
@@ -214,19 +192,17 @@ class PessulusDisabledApplets:
 
         cell = gtk.CellRendererPixbuf ()
         column.pack_start (cell, False)
-        column.set_attributes (cell, pixbuf = self.COLUMN_ICON)
+        column.set_attributes (cell, icon_name = self.COLUMN_ICON_NAME)
 
         cell = gtk.CellRendererText ()
         column.pack_start (cell, True)
         column.set_attributes (cell, text = self.COLUMN_NAME)
 
-    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __on_lockdownbutton_toggled (self, lockdownbutton, mandatory):
         globalvar.applier.set_list (self.key, gconf.VALUE_STRING,
                                     list (self.disabled_applets),
                                     mandatory)
 
-    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __on_toggled (self, toggle, path):
         def toggle_value (model, iter, column):
             model[iter][column] = not model[iter][column]
@@ -238,19 +214,16 @@ class PessulusDisabledApplets:
         iid = self.liststore[iter][self.COLUMN_IID]
         if active:
             if iid not in self.disabled_applets:
-                debuglog.uprint ('adding "%s" to list of disabled applets', iid)
                 self.disabled_applets.add (iid)
                 globalvar.applier.set_list (self.key, gconf.VALUE_STRING,
                                             list (self.disabled_applets),
                                             self.lockdownbutton.get ())
         elif iid in self.disabled_applets:
-            debuglog.uprint ('removing "%s" from list of disabled applets', iid)
             self.disabled_applets.remove (iid)
             globalvar.applier.set_list (self.key, gconf.VALUE_STRING,
                                         list (self.disabled_applets),
                                         self.lockdownbutton.get ())
 
-    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_PESSULUS)
     def __on_notified (self, data):
         (list, mandatory) = globalvar.applier.get_list (self.key,
                                                         gconf.VALUE_STRING)
@@ -270,7 +243,6 @@ class PessulusDisabledApplets:
         self.liststore.foreach (update_toggle, self)
         self.treeview.set_sensitive (globalvar.applier.key_is_writable (self.key))
 
-    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_PESSULUS)
     def __on_destroyed (self, treeview):
         if self.notify_id:
             if globalvar.applier:

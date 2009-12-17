@@ -23,24 +23,28 @@ import gconf
 import gettext
 import gobject
 import gtk
-import gtk.glade
+
+from xml.sax.saxutils import escape as escape_pango
 
 from config import *
 
-from sabayon import errors
-from sabayon import debuglog
 import disabledapplets
 import lockdownbutton
 import lockdowncheckbutton
-import lockdowncombo
 import globalvar
 import safeprotocols
 
 gettext.install (PACKAGE, LOCALEDIR)
 
+pages = (
+    ( _('General'), "gnome-logo-icon-transparent", "vbox7" ),
+    ( _('Panel'), "gnome-panel", "vbox12" ),
+    ( _('Epiphany Web Browser'), "web-browser", "vboxEpiphany" ),
+    ( _('GNOME Screensaver'), "preferences-desktop-screensaver", "vbox15" )
+)
+
 gconfdirs = [
 "/desktop/gnome/lockdown",
-"/apps/openoffice/lockdown",
 "/apps/epiphany/lockdown",
 "/apps/panel/global"
 ]
@@ -53,7 +57,6 @@ lockdownbuttons = (
 
     ( "/apps/panel/global/locked_down", _("_Lock down the panels"), "vbox8" ),
     ( "/apps/panel/global/disable_force_quit", _("Disable force _quit"), "vbox8" ),
-    ( "/apps/panel/global/disable_lock_screen", _("Disable lock _screen"), "vbox8" ),
     ( "/apps/panel/global/disable_log_out", _("Disable log _out"), "vbox8" ),
 
     ( "/apps/epiphany/lockdown/disable_quit", _("Disable _quit"), "vbox9" ),
@@ -62,74 +65,35 @@ lockdownbuttons = (
     ( "/apps/epiphany/lockdown/disable_history", _("Disable _history"), "vbox9" ),
     ( "/apps/epiphany/lockdown/disable_javascript_chrome", _("Disable _javascript chrome"), "vbox9" ),
     ( "/apps/epiphany/lockdown/disable_toolbar_editing", _("Disable _toolbar editing"), "vbox9" ),
-    ( "/apps/epiphany/lockdown/fullscreen", _("_Fullscreen"), "vbox9" ),
+    ( "/apps/epiphany/lockdown/fullscreen", _("Force _fullscreen mode"), "vbox9" ),
     ( "/apps/epiphany/lockdown/hide_menubar", _("Hide _menubar"), "vbox9" ),
 
-    # Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
-    # This can be used to disable this, for when you don't want people to know you created the document.
-    ( "/apps/openoffice/lockdown/remove_personal_info_on_save", _("Remove personal information from documents when saving them"), "ooosecurity" ),
-    ( "/apps/openoffice/lockdown/warn_info_create_pdf", _("Warn if macro tries to create a PDF"), "ooosecurity" ),
-    ( "/apps/openoffice/lockdown/warn_info_printing",   _("Warn if macro tries to print a document"), "ooosecurity" ),
-    ( "/apps/openoffice/lockdown/warn_info_saving", _("Warn if macro tries to save a document"), "ooosecurity" ),
-    ( "/apps/openoffice/lockdown/warn_info_signing", _("Warn if macro tries to sign a document"), "ooosecurity" ),
-    ( "/apps/openoffice/lockdown/recommend_password_on_save", _("Recommend password when saving a document"), "ooosecurity" ),
-
-    ( "/apps/openoffice/auto_save", _("Enable auto-save"), "oooio" ),
-#    ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
-    ( "/apps/openoffice/printing_modifies_doc", _("Printing should mark the document as modified"), "oooio" ),
-    ( "/apps/openoffice/use_system_file_dialog", _("Use system's file dialog"), "oooio" ),
-    ( "/apps/openoffice/create_backup", _("Create backup copy on save"), "oooio" ),
-    ( "/apps/openoffice/warn_alien_format", _("Warn when saving non-OpenOffice.org formats"), "oooio" ),
-
-    ( "/apps/openoffice/use_opengl", _("Use OpenGL"), "oooui" ),
-    ( "/apps/openoffice/use_system_font", _("Use system font"), "oooui" ),
-    ( "/apps/openoffice/use_font_anti_aliasing", _("Use anti-aliasing"), "oooui" ),
-    ( "/apps/openoffice/lockdown/disable_ui_customization", _("Disable UI customization"), "oooui" ),
-    ( "/apps/openoffice/show_menu_inactive_items", _("Show insensitive menu items"), "oooui" ),
-    ( "/apps/openoffice/show_font_preview", _("Show font preview"), "oooui" ),
-    ( "/apps/openoffice/show_font_history", _("Show font history") , "oooui" ),
-    ( "/apps/openoffice/show_menu_icons", _("Show icons in menus"), "oooui" ),
-# Unclear / minority:
-#   ( "/apps/openoffice/optimize_opengl", , "oooui" ),
-#   ( "/apps/openoffice/font_anti_aliasing_min_pixel", , "oooui" ),
-)
-
-lockdowncombos = (
-    ( "/apps/openoffice/lockdown/macro_security_level", "macroSecurityLevel", "int",
-      [ "3", "2", "1", "0" ] ),
-    ( "/apps/openoffice/writer_default_document_format", "writerDefaultFormat", "string",
-      [ "writer8", "MS Word 97", "StarOffice XML (Writer)" ] ),
-    ( "/apps/openoffice/calc_default_document_format", "calcDefaultFormat", "string",
-      [ "calc8", "MS Excel 97", "StarOffice XML (Calc)" ] ),
-    ( "/apps/openoffice/impress_default_document_format", "impressDefaultFormat", "string",
-      [ "impress8", "MS PowerPoint 97", "StarOffice XML (Impress)" ] ),
-    ( "/apps/openoffice/icon_size", "defaultIconSize", "int",
-      [ "2", "1", "0" ] ),
-    ( "/apps/openoffice/undo_steps", "undoSteps", "int",
-      [ "5", "10", "25", "50" ] )
+    ( "/desktop/gnome/lockdown/disable_lock_screen", _("Disable lock _screen"), "vbox15" ),
+    ( "/apps/gnome-screensaver/lock_enabled", _("_Lock on activation"), "vbox15" ),
+    ( "/apps/gnome-screensaver/logout_enabled", _("Allow log _out"), "vbox15" ),
+    ( "/apps/gnome-screensaver/user_switch_enabled", _("Allow user _switching"), "vbox15" )
 )
 
 class PessulusMainDialog:
+    (
+        COLUMN_NAME,
+        COLUMN_ICON,
+        COLUMN_PAGENUMBER
+    ) = range (3)
+
     def __init__ (self, applier, quit_on_close = True):
         globalvar.applier = applier
-        globalvar.tooltips = gtk.Tooltips ()
 
         self.quit_on_close = quit_on_close
 
         for gconfdir in gconfdirs:
             globalvar.applier.add_dir (gconfdir, gconf.CLIENT_PRELOAD_NONE)
 
-        self.glade_file = os.path.join (GLADEDIR, "pessulus.glade")
-        self.xml = gtk.glade.XML (self.glade_file, "dialogEditor", PACKAGE)
+        self.builder = gtk.Builder()
+        self.builder.set_translation_domain(PACKAGE)
+        self.builder.add_from_file(os.path.join (BUILDERDIR, "pessulus.ui"))
 
-        self.__init_combos ()
-        self.__init_checkbuttons ()
-        self.__init_disabledapplets ()
-        self.__init_safeprotocols ()
-
-        self.xml.get_widget ("helpbutton").set_sensitive (False)
-
-        self.window = self.xml.get_widget ("dialogEditor")
+        self.window = self.builder.get_object ("dialogEditor")
         self.window.connect ("response", self.__on_dialog_response)
 
         if self.quit_on_close:
@@ -137,42 +101,41 @@ class PessulusMainDialog:
         else:
             self.window.connect ("delete-event", gtk.Widget.hide_on_delete)
 
+        self.__init_checkbuttons ()
+        self.__init_disabledapplets ()
+        self.__init_safeprotocols ()
+        self.__init_pageselector ()
+
         self.window.show ()
 
     def __init_checkbuttons (self):
         for (key, string, box_str) in lockdownbuttons:
             button = lockdowncheckbutton.PessulusLockdownCheckbutton.new (key,
                                                                           string)
-            box = self.xml.get_widget (box_str)
+            box = self.builder.get_object (box_str)
             box.pack_start (button.get_widget (), False)
 
-    def __init_combos (self):
-        for (key, combo_str, type, value_list) in lockdowncombos:
-            combo = self.xml.get_widget (combo_str)
-            button = self.xml.get_widget (combo_str + "Button")
-            lockdowncombo.PessulusLockdownCombo.attach (combo, button, key, type, value_list)
-
     def __init_disabledapplets (self):
-        treeview = self.xml.get_widget ("treeviewDisabledApplets")
-        button = self.xml.get_widget ("buttonDisabledApplets")
+        treeview = self.builder.get_object ("treeviewDisabledApplets")
+        button = self.builder.get_object ("buttonDisabledApplets")
         ldbutton = lockdownbutton.PessulusLockdownButton.new_with_widget (button)
         self.disabledapplets = disabledapplets.PessulusDisabledApplets (treeview,
                                                                         ldbutton)
 
     def __init_safeprotocols (self):
-        button = self.xml.get_widget ("buttonDisableUnsafeProtocols")
-        checkbutton = self.xml.get_widget ("checkbuttonDisableUnsafeProtocols")
+        button = self.builder.get_object ("buttonDisableUnsafeProtocols")
+        checkbutton = self.builder.get_object ("checkbuttonDisableUnsafeProtocols")
 
         lockdown = lockdowncheckbutton.PessulusLockdownCheckbutton.new_with_widgets (
                     "/apps/epiphany/lockdown/disable_unsafe_protocols",
                     button, checkbutton)
 
-        hbox = self.xml.get_widget ("hboxSafeProtocols")
+        hbox = self.builder.get_object ("hboxSafeProtocols")
 
-        treeview = self.xml.get_widget ("treeviewSafeProtocols")
-        addbutton = self.xml.get_widget ("buttonSafeProtocolAdd")
-        editbutton = self.xml.get_widget ("buttonSafeProtocolEdit")
-        removebutton = self.xml.get_widget ("buttonSafeProtocolRemove")
+        treeview = self.builder.get_object ("treeviewSafeProtocols")
+        addbutton = self.builder.get_object ("buttonSafeProtocolAdd")
+        editbutton = self.builder.get_object ("buttonSafeProtocolEdit")
+        removebutton = self.builder.get_object ("buttonSafeProtocolRemove")
 
         self.safeprotocols = safeprotocols.PessulusSafeProtocols (lockdown.get_lockdownbutton (),
                                                                   treeview,
@@ -183,23 +146,98 @@ class PessulusMainDialog:
         checkbutton.connect ("toggled", self.__on_unsafeprotocols_toggled, hbox)
         self.__on_unsafeprotocols_toggled (checkbutton, hbox)
 
-    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
+    def __init_pageselector (self):
+        use_tree = False
+        if use_tree:
+            store = gtk.TreeStore (str, str, int)
+        else:
+            store = gtk.ListStore (str, str, int)
+
+        notebook = self.builder.get_object ("notebook2")
+        children = notebook.get_children ()
+
+        for (name, icon, widgetname) in pages:
+            i = 0
+            found = False
+            for child in children:
+                if child == self.builder.get_object (widgetname):
+                    found = True
+                    break
+                i += 1
+
+            if not found:
+                continue
+
+            if use_tree:
+                iter = store.append (None)
+            else:
+                iter = store.append ()
+
+            store.set (iter,
+                       self.COLUMN_ICON, icon,
+                       self.COLUMN_NAME, name,
+                       self.COLUMN_PAGENUMBER, i)
+
+        pageselector = self.builder.get_object ("pageselector")
+        pageselector.set_model (store)
+
+        col = gtk.TreeViewColumn ()
+        pageselector.append_column (col)
+
+        cell = gtk.CellRendererPixbuf ()
+        col.pack_start (cell, True)
+        col.add_attribute (cell, 'icon_name', self.COLUMN_ICON)
+
+        cell = gtk.CellRendererText ()
+        col.pack_start (cell, True)
+        col.add_attribute (cell, 'text', self.COLUMN_NAME)
+ 
+        pageselector.connect ("cursor-changed", self.__on_page_select,
+                              notebook)
+        pageselector.set_cursor ((0,))
+
     def __on_unsafeprotocols_toggled (self, checkbutton, hbox):
         sensitive = checkbutton.get_active ()
-        debuglog.uprint ("PessulusMainDialog: setting unsafe protocols toggle to %s", sensitive)
         hbox.set_sensitive (sensitive)
         self.safeprotocols.set_sensitive (sensitive)
 
-    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
+    def __on_page_select (self, selector, notebook):
+        model = selector.get_model()
+        iter = model.get_iter (selector.get_cursor ()[0])
+        notebook.set_current_page (model[iter][self.COLUMN_PAGENUMBER])
+
+    def __error_dialog (self, primary, secondary = None):
+        def __on_response (dialog, response_id):
+            dialog.destroy ()
+
+        dialog = gtk.MessageDialog (parent = self.window,
+                                    flags = gtk.DIALOG_MODAL|gtk.DIALOG_DESTROY_WITH_PARENT,
+                                    type = gtk.MESSAGE_ERROR,
+                                    buttons = gtk.BUTTONS_CLOSE,
+                                    message_format = primary)
+        if secondary:
+            dialog.format_secondary_text (secondary)
+
+        dialog.connect ("response", __on_response)
+        dialog.show ()
+
     def __on_dialog_response (self, dialog, response_id):
         if dialog == self.window and response_id == gtk.RESPONSE_HELP:
+            doc_id = "system-admin-guide"
+            uri = "ghelp:%s#lockdown" % doc_id
+
+            try:
+                gtk.show_uri (self.window.get_screen(), uri,
+                              gtk.get_current_event_time())
+            except gobject.GError, e:
+                primary = _("Could not display help document '%s'") % escape_pango (doc_id)
+                self.__error_dialog (primary, str (e))
             return
         
         dialog.hide ()
         if self.quit_on_close:
             dialog.destroy ()
 
-    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_PESSULUS)
     def __on_dialog_destroy (self, dialog):
         for gconfdir in gconfdirs:
             globalvar.applier.remove_dir (gconfdir)

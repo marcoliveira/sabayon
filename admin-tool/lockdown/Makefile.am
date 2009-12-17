@@ -1,5 +1,5 @@
 PESSULUSDIR=../../../pessulus
-PESSULUSDATA=pessulus.glade
+PESSULUSDATA=pessulus.ui
 PESSULUSPYTHON= \
         disabledapplets.py      \
         icons.py                \
@@ -7,7 +7,7 @@ PESSULUSPYTHON= \
         lockdownapplier.py      \
         lockdownbutton.py       \
         lockdowncheckbutton.py  \
-        lockdowncombo.py  	\
+        lockdownappliergconf.py \
         maindialog.py           \
         safeprotocols.py        \
         simpleeditabletreeview.py
@@ -22,15 +22,15 @@ update:
 
 
 PYTHON_FILES = $(PESSULUSPYTHON) __init__.py config.py
-GLADE_FILES = pessulus.glade
+UI_FILES = pessulus.ui
 
-gladedir   = $(pkgdatadir)/glade
-glade_DATA = $(GLADE_FILES)
+uidir   = $(pkgdatadir)/ui
+ui_DATA = $(UI_FILES)
 
 
 EXTRA_DIST =				\
 	$(PYTHON_FILES)			\
-	$(GLADE_FILES)			
+	$(UI_FILES)
 
 sabayonlockdowndir     = $(pyexecdir)/sabayon/lockdown
 sabayonlockdown_PYTHON = $(PYTHON_FILES)

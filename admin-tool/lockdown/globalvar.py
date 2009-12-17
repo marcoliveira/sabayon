@@ -19,4 +19,3 @@
 #
 
 applier = None
-tooltips = None

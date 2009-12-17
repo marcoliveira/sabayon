@@ -21,8 +21,6 @@
 import gobject
 import gtk
 
-from sabayon import errors
-from sabayon import debuglog
 import globalvar
 
 def load_image (name):
@@ -60,7 +58,10 @@ class PessulusLockdownButton (gobject.GObject):
         lockdownbutton = PessulusLockdownButton ()
 
         lockdownbutton.button = button
-        button.remove (button.get_child ())
+        child = button.get_child ()
+
+        if child is not None:
+            button.remove (child)
 
         lockdownbutton.__connect_and_update ()
         return lockdownbutton
@@ -100,7 +101,7 @@ class PessulusLockdownButton (gobject.GObject):
         else:
             tooltip = _("Click to make this setting mandatory")
 
-        globalvar.tooltips.set_tip (self.button, tooltip)
+        self.button.set_tooltip_text (tooltip)
 
     def __set_button_icon (self):
         if self.locked:
@@ -114,7 +115,6 @@ class PessulusLockdownButton (gobject.GObject):
                 self.button.remove (child)
             self.button.add (newimage)
 
-    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __on_button_clicked (self, button):
         self.locked = not self.locked
         self.__update ()
