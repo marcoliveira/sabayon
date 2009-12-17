@@ -45,10 +45,14 @@ class GroupsDialog:
     def __init__ (self, profile, parent):
         self.profile = profile
         self.groupdb = systemdb.get_group_database ()
+        self.ui_objects_list = [ "groups_dialog",
+                                 "groups_close_button",
+                                 "groups_list_scroll",
+                                 "groups_list" ]
 
         self.builder = gtk.Builder()
         self.builder.set_translation_domain(PACKAGE)
-        self.builder.add_from_file(os.path.join (BUILDERDIR, "sabayon.ui"))
+        self.builder.add_objects_from_file(os.path.join (BUILDERDIR, "sabayon.ui"), self.ui_objects_list)
 
         self.dialog = self.builder.get_object ("groups_dialog")
         self.dialog.set_transient_for (parent)
@@ -57,9 +61,6 @@ class GroupsDialog:
         self.dialog.set_title (_("Groups for profile %s")%profile)
 
         self.close_button = self.builder.get_object ("groups_close_button")
-
-        self.help_button = self.builder.get_object ("groups_help_button")
-        self.help_button.hide ()
 
         self.groups_model = GroupsModel (self.groupdb, self.profile)
         

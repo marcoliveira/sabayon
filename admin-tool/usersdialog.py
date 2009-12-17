@@ -53,12 +53,17 @@ class UsersDialog:
     def __init__ (self, profile, parent):
         self.profile = profile
         self.userdb = systemdb.get_user_database ()
+        self.ui_objects_list = [ "users_dialog",
+                                 "users_close_button",
+                                 "users_all_check",
+                                 "users_list_scroll",
+                                 "users_list" ]
 
         apply_to_all = self.userdb.get_default_profile (False) == profile
         
         self.builder = gtk.Builder()
         self.builder.set_translation_domain(PACKAGE)
-        self.builder.add_from_file(os.path.join (BUILDERDIR, "sabayon.ui"))
+        self.builder.add_objects_from_file(os.path.join (BUILDERDIR, "sabayon.ui"), self.ui_objects_list)
  
         self.dialog = self.builder.get_object ("users_dialog")
         self.dialog.set_transient_for (parent)
@@ -67,9 +72,6 @@ class UsersDialog:
         self.dialog.set_title (_("Users for profile %s")%profile)
 
         self.close_button = self.builder.get_object ("users_close_button")
-
-        self.help_button = self.builder.get_object ("users_help_button")
-        self.help_button.hide ()
 
         self.all_check = self.builder.get_object ("users_all_check")
         self.all_check.set_active (apply_to_all)
@@ -85,10 +87,9 @@ class UsersDialog:
         c = gtk.TreeViewColumn (_("Name"),
                                 gtk.CellRendererText (),
                                 text = UsersModel.COLUMN_NAME)
-        c.set_sort_column_id(UsersModel.COLUMN_NAME)        
+        c.set_sort_column_id(UsersModel.COLUMN_NAME)
         self.users_list.append_column (c)
         self.users_model.set_sort_column_id(UsersModel.COLUMN_NAME, gtk.SORT_ASCENDING)
-
 
         toggle = gtk.CellRendererToggle ()
         toggle.connect ("toggled", self.__on_use_toggled)

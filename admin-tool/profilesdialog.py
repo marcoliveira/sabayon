@@ -268,10 +268,14 @@ class ProfilesModel (gtk.ListStore):
 class AddProfileDialog:
     def __init__ (self, profiles_model):
         self.profiles_model = profiles_model
+        self.ui_objects_list = [ "add_profile_dialog",
+                                 "add_profile_add_button",
+                                 "add_profile_name_entry",
+                                 "add_profile_base_combo" ]
 
         self.builder = gtk.Builder ();
         self.builder.set_translation_domain (PACKAGE)
-        self.builder.add_from_file (os.path.join (BUILDERDIR, "sabayon.ui"))
+        self.builder.add_objects_from_file (os.path.join (BUILDERDIR, "sabayon.ui"), self.ui_objects_list)
          
         self.dialog = self.builder.get_object ("add_profile_dialog")
         self.dialog.connect ("destroy", gtk.main_quit)
@@ -323,10 +327,20 @@ class AddProfileDialog:
 class ProfilesDialog:
     def __init__ (self):
         assert os.geteuid () == 0
+        self.ui_objects_list = [ "profiles_dialog",
+                                 "profiles_list",
+                                 "add_button",
+                                 "remove_button",
+                                 "edit_button",
+                                 "details_button",
+                                 "users_button",
+                                 "groups_button" ]
+
+
 
         self.builder = gtk.Builder ();
         self.builder.set_translation_domain (PACKAGE)
-        self.builder.add_from_file (os.path.join (BUILDERDIR, "sabayon.ui"))
+        self.builder.add_objects_from_file (os.path.join (BUILDERDIR, "sabayon.ui"), self.ui_objects_list)
 
         self.dialog = self.builder.get_object ("profiles_dialog")
         self.dialog.connect ("destroy", gtk.main_quit)
@@ -359,9 +373,6 @@ class ProfilesDialog:
         self.groups_button = self.builder.get_object ("groups_button")
         self.__fix_button_align (self.groups_button)
         self.groups_button.connect ("clicked", self.__groups_button_clicked)
-
-        self.help_button = self.builder.get_object ("help_button")
-        self.help_button.hide()
 
         self.dialog.connect ("response", self.__dialog_response)
 
