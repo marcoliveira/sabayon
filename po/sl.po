@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-10-27 07:06+0000\n"
-"PO-Revision-Date: 2009-10-28 09:52+0100\n"
+"POT-Creation-Date: 2009-12-08 07:03+0000\n"
+"PO-Revision-Date: 2009-12-11 21:33+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -43,80 +43,90 @@ msgid "Lock"
 msgstr "Zakleni"
 
 #: ../admin-tool/changeswindow.py:127
-#: ../admin-tool/editorwindow.py:230
+#: ../admin-tool/editorwindow.py:239
 msgid "Description"
 msgstr "Opis"
 
-#: ../admin-tool/editorwindow.py:97
+#: ../admin-tool/editorwindow.py:98
 #, python-format
 msgid "Profile %s"
 msgstr "Profil %s"
 
-#: ../admin-tool/editorwindow.py:195
-#: ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/editorwindow.py:203
+#: ../admin-tool/sessionwindow.py:177
 msgid "_Profile"
 msgstr "_Profil"
 
-#: ../admin-tool/editorwindow.py:196
-#: ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:204
+#: ../admin-tool/sessionwindow.py:178
 msgid "_Save"
 msgstr "_Shrani"
 
-#: ../admin-tool/editorwindow.py:196
-#: ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:204
+#: ../admin-tool/sessionwindow.py:178
 msgid "Save profile"
 msgstr "Shrani profil"
 
-#: ../admin-tool/editorwindow.py:197
+#: ../admin-tool/editorwindow.py:205
 msgid "_Close"
 msgstr "_Zapri"
 
-#: ../admin-tool/editorwindow.py:197
-#: ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:205
+#: ../admin-tool/sessionwindow.py:179
 msgid "Close the current window"
 msgstr "Zapri trenutno okno"
 
-#: ../admin-tool/editorwindow.py:198
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/sessionwindow.py:180
 msgid "_Edit"
 msgstr "_Uredi"
 
-#: ../admin-tool/editorwindow.py:199
+#: ../admin-tool/editorwindow.py:207
 msgid "_Delete"
 msgstr "_Izbriši"
 
-#: ../admin-tool/editorwindow.py:199
+#: ../admin-tool/editorwindow.py:207
 msgid "Delete item"
 msgstr "Izbriši predmet"
 
-#: ../admin-tool/editorwindow.py:200
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/editorwindow.py:208
+#: ../admin-tool/sessionwindow.py:183
 msgid "_Help"
 msgstr "_Pomoč"
 
-#: ../admin-tool/editorwindow.py:201
-#: ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:209
+#: ../admin-tool/sessionwindow.py:184
+msgid "_Contents"
+msgstr "_Vsebina"
+
+#: ../admin-tool/editorwindow.py:209
+#: ../admin-tool/sessionwindow.py:184
+msgid "Help Contents"
+msgstr "Vsebina pomoči"
+
+#: ../admin-tool/editorwindow.py:210
+#: ../admin-tool/sessionwindow.py:185
 msgid "_About"
 msgstr "_O programu"
 
-#: ../admin-tool/editorwindow.py:201
-#: ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:210
+#: ../admin-tool/sessionwindow.py:185
 msgid "About Sabayon"
 msgstr "O programu Sabayon"
 
-#: ../admin-tool/editorwindow.py:262
+#: ../admin-tool/editorwindow.py:271
 #: ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:266
+#: ../admin-tool/editorwindow.py:275
 #: ../lib/sources/filessource.py:79
 msgid "Files"
 msgstr "Datoteke"
 
-#: ../admin-tool/editorwindow.py:266
+#: ../admin-tool/editorwindow.py:275
 #: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:269
+#: ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "Pult"
 
@@ -144,7 +154,7 @@ msgstr "celo število"
 
 #: ../admin-tool/gconfviewer.py:66
 msgid "float"
-msgstr "vrednost plavajoče vejice"
+msgstr "plavajoče"
 
 #: ../admin-tool/gconfviewer.py:68
 msgid "boolean"
@@ -197,11 +207,11 @@ msgstr "Uporabi ta profil"
 
 #: ../admin-tool/lockdown/lockdownbutton.py:99
 msgid "Click to make this setting not mandatory"
-msgstr "Kliknite, če želite določiti nastavitev kot neobvezno"
+msgstr "S klikom se nastavitev določi kot neobvezna"
 
 #: ../admin-tool/lockdown/lockdownbutton.py:101
 msgid "Click to make this setting mandatory"
-msgstr "Kliknite, če želite določiti nastavitev kot obvezno"
+msgstr "S klikom se nastavitev določi kot obvezna"
 
 #: ../admin-tool/lockdown/maindialog.py:49
 msgid "Disable _command line"
@@ -213,7 +223,7 @@ msgstr "Onemogoči _tiskanje"
 
 #: ../admin-tool/lockdown/maindialog.py:51
 msgid "Disable print _setup"
-msgstr "Onemogoči _nastavitve tiskanja"
+msgstr "Onemogoči _nastavitev tiskanja"
 
 #: ../admin-tool/lockdown/maindialog.py:52
 msgid "Disable save to _disk"
@@ -225,7 +235,7 @@ msgstr "_Zakleni pulte"
 
 #: ../admin-tool/lockdown/maindialog.py:55
 msgid "Disable force _quit"
-msgstr "Onemogoči prisilni _konec"
+msgstr "Onemogoči vsiljeno _končanje"
 
 #: ../admin-tool/lockdown/maindialog.py:56
 msgid "Disable lock _screen"
@@ -237,11 +247,11 @@ msgstr "Onemogoči _odjavo"
 
 #: ../admin-tool/lockdown/maindialog.py:59
 msgid "Disable _quit"
-msgstr "Onemogoči _konec"
+msgstr "Onemogoči _končanje"
 
 #: ../admin-tool/lockdown/maindialog.py:60
 msgid "Disable _arbitrary URL"
-msgstr "Onemogoči _neomejen URL"
+msgstr "Onemogoči _poljuben URL"
 
 #: ../admin-tool/lockdown/maindialog.py:61
 msgid "Disable _bookmark editing"
@@ -253,11 +263,11 @@ msgstr "Onemogoči z_godovino"
 
 #: ../admin-tool/lockdown/maindialog.py:63
 msgid "Disable _javascript chrome"
-msgstr "Onemogoči kramo _javascripta"
+msgstr "Onemogoči _javaScript barve"
 
 #: ../admin-tool/lockdown/maindialog.py:64
 msgid "Disable _toolbar editing"
-msgstr "Onemogoči urejanje _orodnih vrsti"
+msgstr "Onemogoči urejanje _orodne vrstice"
 
 #: ../admin-tool/lockdown/maindialog.py:65
 msgid "_Fullscreen"
@@ -312,7 +322,7 @@ msgstr "Ustvari varnostno kopijo ob shranjevanju"
 
 #: ../admin-tool/lockdown/maindialog.py:82
 msgid "Warn when saving non-OpenOffice.org formats"
-msgstr "Opozori ob shranjevanju v obliku drugačno od oblike OpenOffice.org"
+msgstr "Opozori ob shranjevanju v zapisu drugačnem od zapisa OpenOffice.org"
 
 #: ../admin-tool/lockdown/maindialog.py:84
 msgid "Use OpenGL"
@@ -332,11 +342,11 @@ msgstr "Onemogoči prilagajanje vmesnika"
 
 #: ../admin-tool/lockdown/maindialog.py:88
 msgid "Show insensitive menu items"
-msgstr "Prikaži nezaznavne predmete menuja"
+msgstr "Pokaži nezaznavne predmete menija"
 
 #: ../admin-tool/lockdown/maindialog.py:89
 msgid "Show font preview"
-msgstr "Prikaži predogled pisav"
+msgstr "Pokaži predogled pisav"
 
 #: ../admin-tool/lockdown/maindialog.py:90
 msgid "Show font history"
@@ -344,7 +354,7 @@ msgstr "Pokaži zgodovino pisav"
 
 #: ../admin-tool/lockdown/maindialog.py:91
 msgid "Show icons in menus"
-msgstr "Pokaži ikone v menujih"
+msgstr "Pokaži ikone v menijih"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:1
 msgid ""
@@ -417,7 +427,7 @@ msgid ""
 "Low"
 msgstr ""
 "\n"
-"Zalo visoko\n"
+"Zelo visoko\n"
 "Visoko\n"
 "Srednje\n"
 "Nizko"
@@ -521,7 +531,7 @@ msgstr "Uporabnik '%s' ni bil najden"
 #: ../admin-tool/sabayon:92
 #, c-format
 msgid "Sabayon requires a special user account '%s' to be present on this computer. Try again after creating the account (using, for example, the 'adduser' command)"
-msgstr "Sabayon zahteva poseben uporabniški račun '%s'. Potem ko ustvarite račun (na primer z ukazom 'adduser' command), poskusite znova."
+msgstr "Sabayon zahteva poseben uporabniški račun '%s'. Potem ko ustvarite račun (na primer z ukazom 'adduser'), poskusite znova."
 
 #: ../admin-tool/sabayon:131
 #, c-format
@@ -535,7 +545,7 @@ msgstr "Program Sabayon se bo zaprl. Prišlo je do nekaj obnovljivih napak, ki j
 
 #: ../admin-tool/sabayon-apply:111
 msgid "Please use -h for usage options"
-msgstr "Prosim, uporabite -h zastavico za podrobnosti uporabe"
+msgstr "Uporabite -h zastavico za podrobnosti uporabe"
 
 #: ../admin-tool/sabayon-apply:123
 #, c-format
@@ -609,10 +619,10 @@ msgstr "Ali želite shraniti spremembe profila \"%s\" pred zapiranjem?"
 #, python-format
 msgid "If you don't save, changes from the last %ld second will be permanently lost."
 msgid_plural "If you don't save, changes from the last %ld seconds will be permanently lost."
-msgstr[0] "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %d sekund trajno izgubljene."
-msgstr[1] "V primeru, da datoteke ne shranite, bodo spremembe zadnje %d sekunde trajno izgubljene."
-msgstr[2] "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %d sekund trajno izgubljene."
-msgstr[3] "Če ne shranite, bodo za vedno izgubljene spremembe zadnjih %d sekund."
+msgstr[0] "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %ld sekund trajno izgubljene."
+msgstr[1] "V primeru, da datoteke ne shranite, bodo spremembe zadnje %ld sekunde trajno izgubljene."
+msgstr[2] "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %ld sekund trajno izgubljene."
+msgstr[3] "Če ne shranite, bodo za vedno izgubljene spremembe zadnjih %ld sekund."
 
 #: ../admin-tool/saveconfirm.py:51
 msgid "If you don't save, changes from the last minute will be permanently lost."
@@ -622,19 +632,19 @@ msgstr "V primeru, da datoteke ne shranite, bodo  spremembe v zadnji minut trajn
 #, python-format
 msgid "If you don't save, changes from the last minute and %ld second will be permanently lost."
 msgid_plural "If you don't save, changes from the last minute and %ld seconds will be permanently lost."
-msgstr[0] "V primeru, da datoteke ne shranite, bodo spremembe zadnje minute in  %d sekund trajno izgubljene."
-msgstr[1] "V primeru, da datoteke ne shranite, bodo spremembe zadnje minute in  %d sekunde trajno izgubljene."
-msgstr[2] "V primeru, da datoteke ne shranite, bodo spremembe zadnje minute in  %d sekund trajno izgubljene."
-msgstr[3] "V primeru, da datoteke ne shranite, bodo spremembe zadnje minute in  %d sekund trajno izgubljene."
+msgstr[0] "V primeru, da datoteke ne shranite, bodo spremembe zadnje minute in %ld sekund trajno izgubljene."
+msgstr[1] "V primeru, da datoteke ne shranite, bodo spremembe zadnje minute in %ld sekunde trajno izgubljene."
+msgstr[2] "V primeru, da datoteke ne shranite, bodo spremembe zadnje minute in %ld sekund trajno izgubljene."
+msgstr[3] "V primeru, da datoteke ne shranite, bodo spremembe zadnje minute in %ld sekund trajno izgubljene."
 
 #: ../admin-tool/saveconfirm.py:62
 #, python-format
 msgid "If you don't save, changes from the last %ld minute will be permanently lost."
 msgid_plural "If you don't save, changes from the last %ld minutes will be permanently lost."
-msgstr[0] "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %d minut trajno izgubljene."
-msgstr[1] "V primeru, da datoteke ne shranite, bodo spremembe zadnji %d minuti trajno izgubljene"
-msgstr[2] "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %d minutah trajno izgubljene."
-msgstr[3] "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %d minutah trajno izgubljene."
+msgstr[0] "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %ld minut trajno izgubljene."
+msgstr[1] "V primeru, da datoteke ne shranite, bodo spremembe zadnji %ld minuti trajno izgubljene"
+msgstr[2] "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %ld minutah trajno izgubljene."
+msgstr[3] "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %ld minutah trajno izgubljene."
 
 #: ../admin-tool/saveconfirm.py:71
 msgid "If you don't save, changes from the last hour will be permanently lost."
@@ -658,54 +668,54 @@ msgstr[1] "V primeru, da datoteke ne shranite, bodo spremembe zadnje %d ure traj
 msgstr[2] "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %d ur trajno izgubljene."
 msgstr[3] "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %d ur trajno izgubljene."
 
-#: ../admin-tool/sessionwindow.py:154
+#: ../admin-tool/sessionwindow.py:155
 #, python-format
 msgid "Editing profile %s"
 msgstr "Urejanje profila %s"
 
-#: ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/sessionwindow.py:179
 msgid "_Quit"
 msgstr "_Končaj"
 
-#: ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Changes"
 msgstr "_Spremembe"
 
-#: ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/sessionwindow.py:181
 msgid "Edit changes"
 msgstr "Uredi spremembe"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:182
 msgid "_Lockdown"
 msgstr "_Zaklepanje"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:182
 msgid "Edit Lockdown settings"
 msgstr "Uredi nastavitve zaklepanja"
 
-#: ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/sessionwindow.py:188
 msgid "Enforce Mandatory"
 msgstr "Vsili obveznost"
 
-#: ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/sessionwindow.py:188
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Vsili obvezne nastavitve v sejah urejanja"
 
-#: ../admin-tool/sessionwindow.py:297
+#: ../admin-tool/sessionwindow.py:306
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Nastavitve zaklepanja za %s"
 
-#: ../admin-tool/sessionwindow.py:333
+#: ../admin-tool/sessionwindow.py:342
 #, python-format
 msgid "There was a recoverable error while applying the user profile '%s'.  You can report this error now or try to continue editing the user profile."
-msgstr "Prišlo je do popravljive napake med branjem nastavitev uporabnika '%s'.  Napako lahko sporočite razvijalcem programa ali pa nadaljujete z urejanjem nastavitev."
+msgstr "Prišlo je do obnovljive napake med branjem nastavitev uporabnika '%s'.  Napako lahko sporočite razvijalcem programa ali pa nadaljujete z urejanjem nastavitev."
 
-#: ../admin-tool/sessionwindow.py:337
+#: ../admin-tool/sessionwindow.py:346
 msgid "_Report this error"
 msgstr "_Poročilo o napaki"
 
-#: ../admin-tool/sessionwindow.py:338
+#: ../admin-tool/sessionwindow.py:347
 msgid "_Continue editing"
 msgstr "_Nadaljevanje urejanja"
 
@@ -733,7 +743,7 @@ msgstr "Zagon Xnesta ni uspel: opravilo ustavljeno med zagonom"
 #: ../lib/protosession.py:469
 #, python-format
 msgid "There was a recoverable error while applying the user profile from file '%s'."
-msgstr "Prišlo je do popravljive napake med pripravo uporabniških nastavitev preko '%s'."
+msgstr "Prišlo je do obnovljive napake med pripravo uporabniških nastavitev preko '%s'."
 
 #. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
 #. "%s\n"
@@ -765,19 +775,19 @@ msgstr "Meni Programi"
 
 #: ../lib/sources/filessource.py:99
 msgid "Preferences menu"
-msgstr "Meni Nastavitve"
+msgstr "Meni možnosti"
 
 #: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
-msgstr "Meni Nastavitve strežnika"
+msgstr "Meni možnosti strežnika"
 
 #: ../lib/sources/filessource.py:103
 msgid "System Settings menu"
-msgstr "Meni Nastavitve sistema"
+msgstr "Meni možnosti sistema"
 
 #: ../lib/sources/filessource.py:105
 msgid "Start Here menu"
-msgstr "Meni Začni tukaj"
+msgstr "Začetni meni"
 
 #: ../lib/sources/gconfsource.py:90
 #, python-format
@@ -850,7 +860,7 @@ msgstr "Ključ Mozille '%s' spremenjen na '%s'"
 #: ../lib/sources/mozillasource.py:166
 #: ../lib/sources/mozillasource.py:176
 msgid "Web browser preferences"
-msgstr "Nastavitve spletnega brskalnika"
+msgstr "Možnosti spletnega brskalnika"
 
 #: ../lib/sources/mozillasource.py:168
 #: ../lib/sources/mozillasource.py:178
@@ -920,141 +930,81 @@ msgstr "Pult '%s' dodan"
 msgid "Panel '%s' removed"
 msgstr "Pult '%s' odstranjen"
 
-#: ../lib/sources/paneldelegate.py:86
+#: ../lib/sources/paneldelegate.py:77
 #, python-format
-msgid "Applet %s added to top panel"
-msgstr "Aplet %s dodan na zgornji pult"
+msgid "Applet '%s' added"
+msgstr "Aplet '%s' je dodan"
 
-#: ../lib/sources/paneldelegate.py:88
+#: ../lib/sources/paneldelegate.py:100
 #, python-format
-msgid "Applet %s added to bottom panel"
-msgstr "Aplet %s dodan na spodnji pult"
+msgid "Applet '%s' removed"
+msgstr "Aplet '%s' je odstranjen"
 
-#: ../lib/sources/paneldelegate.py:90
+#: ../lib/sources/paneldelegate.py:123
 #, python-format
-msgid "Applet %s added to left panel"
-msgstr "Aplet %s dodan na levi pult"
+msgid "Object '%s' added"
+msgstr "Predmet '%s' je dodan"
 
-#: ../lib/sources/paneldelegate.py:92
+#: ../lib/sources/paneldelegate.py:152
 #, python-format
-msgid "Applet %s added to right panel"
-msgstr "Aplet %s dodan na desni pult"
-
-#: ../lib/sources/paneldelegate.py:107
-#, python-format
-msgid "Applet %s removed from top panel"
-msgstr "Aplet %s odstranjen z zgornjega pulta"
-
-#: ../lib/sources/paneldelegate.py:109
-#, python-format
-msgid "Applet %s removed from bottom panel"
-msgstr "Aplet %s odstranjen s spodnjega pulta"
-
-#: ../lib/sources/paneldelegate.py:111
-#, python-format
-msgid "Applet %s removed from left panel"
-msgstr "Aplet %s odstranjen z levega pulta"
-
-#: ../lib/sources/paneldelegate.py:113
-#, python-format
-msgid "Applet %s removed from right panel"
-msgstr "Aplet %s odstranjen z desnega pulta"
-
-#: ../lib/sources/paneldelegate.py:127
-#, python-format
-msgid "%s added to top panel"
-msgstr "%s dodan na zgornji pult"
-
-#: ../lib/sources/paneldelegate.py:129
-#, python-format
-msgid "%s added to bottom panel"
-msgstr "%s dodan na spodnji pult"
-
-#: ../lib/sources/paneldelegate.py:131
-#, python-format
-msgid "%s added to left panel"
-msgstr "%s dodan na levi pult"
-
-#: ../lib/sources/paneldelegate.py:133
-#, python-format
-msgid "%s added to right panel"
-msgstr "%s dodan na desni pult"
-
-#: ../lib/sources/paneldelegate.py:154
-#, python-format
-msgid "%s removed from top panel"
-msgstr "%s odstranjen z zgornjega pladnja"
-
-#: ../lib/sources/paneldelegate.py:156
-#, python-format
-msgid "%s removed from bottom panel"
-msgstr "%s odstranjen s spodnjega pladnja"
-
-#: ../lib/sources/paneldelegate.py:158
-#, python-format
-msgid "%s removed from left panel"
-msgstr "%s odstranjen z levega pladnja"
-
-#: ../lib/sources/paneldelegate.py:160
-#, python-format
-msgid "%s removed from right panel"
-msgstr "%s odstranjen z desnega pladnja"
+msgid "Object '%s' removed"
+msgstr "Predmet '%s' je odstranjen"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:231
+#: ../lib/sources/paneldelegate.py:240
 msgid "Drawer"
-msgstr "Predal"
+msgstr "Predalnik"
 
-#: ../lib/sources/paneldelegate.py:233
+#: ../lib/sources/paneldelegate.py:242
 msgid "Main Menu"
 msgstr "Glavni menu"
 
-#: ../lib/sources/paneldelegate.py:243
+#: ../lib/sources/paneldelegate.py:252
 #, python-format
 msgid "%s launcher"
 msgstr "%s zaganjalnik"
 
-#: ../lib/sources/paneldelegate.py:247
+#: ../lib/sources/paneldelegate.py:256
 msgid "Lock Screen button"
 msgstr "Gumb za zaklep zaslona"
 
-#: ../lib/sources/paneldelegate.py:249
+#: ../lib/sources/paneldelegate.py:258
 msgid "Logout button"
 msgstr "Gumb za odjavo"
 
-#: ../lib/sources/paneldelegate.py:251
+#: ../lib/sources/paneldelegate.py:260
 msgid "Run Application button"
 msgstr "Gumb za zagon programov"
 
-#: ../lib/sources/paneldelegate.py:253
+#: ../lib/sources/paneldelegate.py:262
 msgid "Search button"
 msgstr "Gumb za iskanje"
 
-#: ../lib/sources/paneldelegate.py:255
+#: ../lib/sources/paneldelegate.py:264
 msgid "Force Quit button"
 msgstr "Gumb za vsiljeni konec"
 
-#: ../lib/sources/paneldelegate.py:257
+#: ../lib/sources/paneldelegate.py:266
 msgid "Connect to Server button"
 msgstr "Gumb za povezavo s strežnikom"
 
-#: ../lib/sources/paneldelegate.py:259
+#: ../lib/sources/paneldelegate.py:268
 msgid "Shutdown button"
 msgstr "Gumb za ugašanje"
 
-#: ../lib/sources/paneldelegate.py:261
+#: ../lib/sources/paneldelegate.py:270
 msgid "Screenshot button"
 msgstr "Gumb za zajem slike"
 
-#: ../lib/sources/paneldelegate.py:264
+#: ../lib/sources/paneldelegate.py:273
 msgid "Unknown"
 msgstr "Neznano"
 
-#: ../lib/sources/paneldelegate.py:266
+#: ../lib/sources/paneldelegate.py:275
 msgid "Menu Bar"
-msgstr "Menujska vrstica"
+msgstr "Menijska vrstica"
 
-#: ../lib/sources/paneldelegate.py:503
+#: ../lib/sources/paneldelegate.py:512
 msgid "Panel File"
 msgstr "Datoteka pulta"
 
@@ -1174,14 +1124,47 @@ msgstr "Preizkus %s teče (%s)"
 
 #: ../lib/unittests.py:70
 msgid "Success!"
-msgstr "Uspeh!"
+msgstr "Uspešno!"
 
 #: ../lib/util.py:94
 msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
-msgstr "Ni mogoče najti domačega imenika: ni nastavljen v /etc/passwd in ni vrednosti spremenljivke $HOME"
+msgstr "Ni mogoče najti domače mape: ni določila v /etc/passwd in ni vrednosti spremenljivke $HOME"
 
 #: ../lib/util.py:110
 #: ../lib/util.py:137
 msgid "Cannot find username: not set in /etc/passwd and no value for $USER in environment"
 msgstr "Ni mogoče najti uporabniškega imena: ni nastavljeno v /etc/passwd in ni vrednosti za spremenljivko $USER"
+
+#~ msgid "Applet %s added to top panel"
+#~ msgstr "Aplet %s dodan na zgornji pult"
+#~ msgid "Applet %s added to bottom panel"
+#~ msgstr "Aplet %s dodan na spodnji pult"
+#~ msgid "Applet %s added to left panel"
+#~ msgstr "Aplet %s dodan na levi pult"
+#~ msgid "Applet %s added to right panel"
+#~ msgstr "Aplet %s dodan na desni pult"
+#~ msgid "Applet %s removed from top panel"
+#~ msgstr "Aplet %s odstranjen z zgornjega pulta"
+#~ msgid "Applet %s removed from bottom panel"
+#~ msgstr "Aplet %s odstranjen s spodnjega pulta"
+#~ msgid "Applet %s removed from left panel"
+#~ msgstr "Aplet %s odstranjen z levega pulta"
+#~ msgid "Applet %s removed from right panel"
+#~ msgstr "Aplet %s odstranjen z desnega pulta"
+#~ msgid "%s added to top panel"
+#~ msgstr "%s dodan na zgornji pult"
+#~ msgid "%s added to bottom panel"
+#~ msgstr "%s dodan na spodnji pult"
+#~ msgid "%s added to left panel"
+#~ msgstr "%s dodan na levi pult"
+#~ msgid "%s added to right panel"
+#~ msgstr "%s dodan na desni pult"
+#~ msgid "%s removed from top panel"
+#~ msgstr "%s odstranjen z zgornjega pladnja"
+#~ msgid "%s removed from bottom panel"
+#~ msgstr "%s odstranjen s spodnjega pladnja"
+#~ msgid "%s removed from left panel"
+#~ msgstr "%s odstranjen z levega pladnja"
+#~ msgid "%s removed from right panel"
+#~ msgstr "%s odstranjen z desnega pladnja"
 
