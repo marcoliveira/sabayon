@@ -26,17 +26,6 @@
             <property name="visible">True</property>
             <property name="layout_style">GTK_BUTTONBOX_END</property>
             <child>
-              <object class="GtkButton" id="help_button">
-                <property name="visible">True</property>
-                <property name="can_default">True</property>
-                <property name="can_focus">True</property>
-                <property name="label">gtk-help</property>
-                <property name="use_stock">True</property>
-                <property name="relief">GTK_RELIEF_NORMAL</property>
-                <property name="focus_on_click">True</property>
-              </object>
-            </child>
-            <child>
               <object class="GtkButton" id="close_button">
                 <property name="visible">True</property>
                 <property name="can_default">True</property>
@@ -436,7 +425,6 @@
       </object>
     </child>
     <action-widgets>
-      <action-widget response="-11">help_button</action-widget>
       <action-widget response="-3">close_button</action-widget>
     </action-widgets>
   </object>
@@ -639,17 +627,6 @@
             <property name="visible">True</property>
             <property name="layout_style">GTK_BUTTONBOX_END</property>
             <child>
-              <object class="GtkButton" id="users_help_button">
-                <property name="visible">True</property>
-                <property name="can_default">True</property>
-                <property name="can_focus">True</property>
-                <property name="label">gtk-help</property>
-                <property name="use_stock">True</property>
-                <property name="relief">GTK_RELIEF_NORMAL</property>
-                <property name="focus_on_click">True</property>
-              </object>
-            </child>
-            <child>
               <object class="GtkButton" id="users_close_button">
                 <property name="visible">True</property>
                 <property name="can_default">True</property>
@@ -754,7 +731,6 @@
       </object>
     </child>
     <action-widgets>
-      <action-widget response="-11">users_help_button</action-widget>
       <action-widget response="-7">users_close_button</action-widget>
     </action-widgets>
   </object>
@@ -786,17 +762,6 @@
           <object class="GtkHButtonBox" id="hbuttonbox1">
             <property name="visible">True</property>
             <property name="layout_style">GTK_BUTTONBOX_END</property>
-            <child>
-              <object class="GtkButton" id="groups_help_button">
-                <property name="visible">True</property>
-                <property name="can_default">True</property>
-                <property name="can_focus">True</property>
-                <property name="label">gtk-help</property>
-                <property name="use_stock">True</property>
-                <property name="relief">GTK_RELIEF_NORMAL</property>
-                <property name="focus_on_click">True</property>
-              </object>
-            </child>
             <child>
               <object class="GtkButton" id="groups_close_button">
                 <property name="visible">True</property>
@@ -883,7 +848,6 @@
       </object>
     </child>
     <action-widgets>
-      <action-widget response="-11">groups_help_button</action-widget>
       <action-widget response="-7">groups_close_button</action-widget>
     </action-widgets>
   </object>
