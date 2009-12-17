@@ -22,7 +22,6 @@ import tempfile
 import time
 import locale
 import gtk
-import gtk.glade
 import userprofile
 import util
 import aboutdialog

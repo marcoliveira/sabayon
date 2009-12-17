@@ -16,8 +16,8 @@ PYTHON_FILES =				\
 
 @INTLTOOL_DESKTOP_RULE@
 
-GLADE_FILES =				\
-	sabayon.glade
+UI_FILES =				\
+	sabayon.ui
 
 desktopdir        = $(datadir)/applications
 desktop_in_files = sabayon.desktop.in
@@ -25,7 +25,7 @@ desktop_DATA     = $(desktop_in_files:.desktop.in=.desktop)
 
 EXTRA_DIST =				\
 	$(PYTHON_FILES)			\
-	$(GLADE_FILES)			\
+	$(UI_FILES)			\
 	$(desktop_in_files)		\
 	$(desktop_DATA)			\
 	sabayon				\
@@ -35,8 +35,8 @@ EXTRA_DIST =				\
 	sabayon.pam			\
 	sabayon-xinitrc.sh.in
 
-gladedir   = $(pkgdatadir)/glade
-glade_DATA = $(GLADE_FILES)
+uidir   = $(pkgdatadir)/ui
+ui_DATA = $(UI_FILES)
 
 bin_SCRIPTS = sabayon
 sbin_SCRIPTS = sabayon-apply

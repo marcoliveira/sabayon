@@ -20,13 +20,13 @@ import os.path
 
 PACKAGE    = "@PACKAGE_NAME@"
 VERSION    = "@PACKAGE_VERSION@"
-LOCALEDIR = "@LOCALEDIR@"
+LOCALEDIR  = "@LOCALEDIR@"
 DATADIR    = "@DATADIR@"
 SYSCONFDIR = "@SYSCONFDIR@"
 LIBEXECDIR = "@LIBEXECDIR@"
 SBINDIR    = "@SBINDIR@"
 
-GLADEDIR    = os.path.join (DATADIR, "sabayon", "glade")
+BUILDERDIR  = os.path.join (DATADIR, "sabayon", "ui")
 PROFILESDIR = os.path.join (SYSCONFDIR, "desktop-profiles")
 
 MONITOR_TOOL_ARGV = [ os.path.join (LIBEXECDIR, "sabayon-monitor") ]

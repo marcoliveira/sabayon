@@ -24,7 +24,6 @@ import tempfile
 import pwd
 import gobject
 import gtk
-import gtk.glade
 import storage
 import editorwindow
 import usersdialog
@@ -270,22 +269,23 @@ class AddProfileDialog:
     def __init__ (self, profiles_model):
         self.profiles_model = profiles_model
 
-        glade_file = os.path.join (GLADEDIR, "sabayon.glade")
-        self.xml = gtk.glade.XML (glade_file, "add_profile_dialog", PACKAGE)
-
-        self.dialog = self.xml.get_widget ("add_profile_dialog")
+        self.builder = gtk.Builder ();
+        self.builder.set_translation_domain (PACKAGE)
+        self.builder.add_from_file (os.path.join (BUILDERDIR, "sabayon.ui"))
+         
+        self.dialog = self.builder.get_object ("add_profile_dialog")
         self.dialog.connect ("destroy", gtk.main_quit)
         self.dialog.set_default_response (gtk.RESPONSE_ACCEPT)
         self.dialog.set_icon_name ("sabayon")
 
-        self.add_button = self.xml.get_widget ("add_profile_add_button")
+        self.add_button = self.builder.get_object ("add_profile_add_button")
         self.add_button.set_sensitive (False)
 
-        self.name_entry = self.xml.get_widget ("add_profile_name_entry")
+        self.name_entry = self.builder.get_object ("add_profile_name_entry")
         self.name_entry.connect ("changed", self.__name_entry_changed)
         self.name_entry.set_activates_default (True)
 
-        self.base_combo = self.xml.get_widget ("add_profile_base_combo")
+        self.base_combo = self.builder.get_object ("add_profile_base_combo")
         self.base_combo.set_model (self.profiles_model)
         if self.profiles_model.get_iter_first () is None:
             self.base_combo.set_sensitive (False)
@@ -324,42 +324,43 @@ class ProfilesDialog:
     def __init__ (self):
         assert os.geteuid () == 0
 
-        glade_file = os.path.join (GLADEDIR, "sabayon.glade")
-        self.xml = gtk.glade.XML (glade_file, "profiles_dialog", PACKAGE)
+        self.builder = gtk.Builder ();
+        self.builder.set_translation_domain (PACKAGE)
+        self.builder.add_from_file (os.path.join (BUILDERDIR, "sabayon.ui"))
 
-        self.dialog = self.xml.get_widget ("profiles_dialog")
+        self.dialog = self.builder.get_object ("profiles_dialog")
         self.dialog.connect ("destroy", gtk.main_quit)
         self.dialog.set_default_response (gtk.RESPONSE_ACCEPT)
         self.dialog.set_icon_name ("sabayon")
 
-        self.profiles_list = self.xml.get_widget ("profiles_list")
+        self.profiles_list = self.builder.get_object ("profiles_list")
         self.__setup_profiles_list ()
 
         self.profiles_list.connect ("key-press-event", self.__handle_key_press)
 
-        self.add_button = self.xml.get_widget ("add_button")
+        self.add_button = self.builder.get_object ("add_button")
         self.add_button.connect ("clicked", self.__add_button_clicked)
 
-        self.remove_button = self.xml.get_widget ("remove_button")
+        self.remove_button = self.builder.get_object ("remove_button")
         self.remove_button.connect ("clicked", self.__remove_button_clicked)
 
-        self.edit_button = self.xml.get_widget ("edit_button")
+        self.edit_button = self.builder.get_object ("edit_button")
         self.__fix_button_align (self.edit_button)
         self.edit_button.connect ("clicked", self.__edit_button_clicked)
 
-        self.details_button = self.xml.get_widget ("details_button")
+        self.details_button = self.builder.get_object ("details_button")
         self.__fix_button_align (self.details_button)
         self.details_button.connect ("clicked", self.__details_button_clicked)
 
-        self.users_button = self.xml.get_widget ("users_button")
+        self.users_button = self.builder.get_object ("users_button")
         self.__fix_button_align (self.users_button)
         self.users_button.connect ("clicked", self.__users_button_clicked)
 
-        self.groups_button = self.xml.get_widget ("groups_button")
+        self.groups_button = self.builder.get_object ("groups_button")
         self.__fix_button_align (self.groups_button)
         self.groups_button.connect ("clicked", self.__groups_button_clicked)
 
-        self.help_button = self.xml.get_widget ("help_button")
+        self.help_button = self.builder.get_object ("help_button")
         self.help_button.hide()
 
         self.dialog.connect ("response", self.__dialog_response)

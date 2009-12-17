@@ -19,7 +19,6 @@
 import os.path
 import pwd
 import gtk
-import gtk.glade
 import systemdb
 import errors
 import debuglog
@@ -57,28 +56,29 @@ class UsersDialog:
 
         apply_to_all = self.userdb.get_default_profile (False) == profile
         
-        glade_file = os.path.join (GLADEDIR, "sabayon.glade")
-        self.xml = gtk.glade.XML (glade_file, "users_dialog", PACKAGE)
-
-        self.dialog = self.xml.get_widget ("users_dialog")
+        self.builder = gtk.Builder()
+        self.builder.set_translation_domain(PACKAGE)
+        self.builder.add_from_file(os.path.join (BUILDERDIR, "sabayon.ui"))
+ 
+        self.dialog = self.builder.get_object ("users_dialog")
         self.dialog.set_transient_for (parent)
         self.dialog.set_default_response (gtk.RESPONSE_CLOSE)
         self.dialog.set_icon_name ("sabayon")
         self.dialog.set_title (_("Users for profile %s")%profile)
 
-        self.close_button = self.xml.get_widget ("users_close_button")
+        self.close_button = self.builder.get_object ("users_close_button")
 
-        self.help_button = self.xml.get_widget ("users_help_button")
+        self.help_button = self.builder.get_object ("users_help_button")
         self.help_button.hide ()
 
-        self.all_check = self.xml.get_widget ("users_all_check")
+        self.all_check = self.builder.get_object ("users_all_check")
         self.all_check.set_active (apply_to_all)
         self.all_check.connect ("toggled", self.__all_check_toggled)
 
         self.users_model = UsersModel (self.userdb, self.profile)
         
-        self.users_list_scroll = self.xml.get_widget ("users_list_scroll")
-        self.users_list = self.xml.get_widget ("users_list")
+        self.users_list_scroll = self.builder.get_object ("users_list_scroll")
+        self.users_list = self.builder.get_object ("users_list")
         self.users_list.set_model (self.users_model)
         self.users_list.set_sensitive (not apply_to_all)
 

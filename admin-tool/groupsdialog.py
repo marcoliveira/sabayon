@@ -19,7 +19,6 @@
 import os.path
 import pwd
 import gtk
-import gtk.glade
 import systemdb
 import errors
 import debuglog
@@ -47,24 +46,25 @@ class GroupsDialog:
         self.profile = profile
         self.groupdb = systemdb.get_group_database ()
 
-        glade_file = os.path.join (GLADEDIR, "sabayon.glade")
-        self.xml = gtk.glade.XML (glade_file, "groups_dialog", PACKAGE)
+        self.builder = gtk.Builder()
+        self.builder.set_translation_domain(PACKAGE)
+        self.builder.add_from_file(os.path.join (BUILDERDIR, "sabayon.ui"))
 
-        self.dialog = self.xml.get_widget ("groups_dialog")
+        self.dialog = self.builder.get_object ("groups_dialog")
         self.dialog.set_transient_for (parent)
         self.dialog.set_default_response (gtk.RESPONSE_CLOSE)
         self.dialog.set_icon_name ("sabayon")
         self.dialog.set_title (_("Groups for profile %s")%profile)
 
-        self.close_button = self.xml.get_widget ("groups_close_button")
+        self.close_button = self.builder.get_object ("groups_close_button")
 
-        self.help_button = self.xml.get_widget ("groups_help_button")
+        self.help_button = self.builder.get_object ("groups_help_button")
         self.help_button.hide ()
 
         self.groups_model = GroupsModel (self.groupdb, self.profile)
         
-        self.groups_list_scroll = self.xml.get_widget ("groups_list_scroll")
-        self.groups_list = self.xml.get_widget ("groups_list")
+        self.groups_list_scroll = self.builder.get_object ("groups_list_scroll")
+        self.groups_list = self.builder.get_object ("groups_list")
         self.groups_list.set_model (self.groups_model)
 
         c = gtk.TreeViewColumn (_("Group"),
