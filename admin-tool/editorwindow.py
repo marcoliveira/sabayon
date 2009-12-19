@@ -272,8 +272,9 @@ class ProfileEditorWindow:
             viewer.connect ("destroy", lambda v, dir: shutil.rmtree (dir, True), extract_dir)
             viewer.show ()
         elif source_name == _("Files") or source_name == _("Panel"):
-            viewer = fileviewer.FileViewer (extracted_path, description, self.window)
-            viewer.connect ("destroy", lambda v, dir: shutil.rmtree (dir, True), extract_dir)
-            viewer.show ()
+            if os.path.isfile(extracted_path):
+                viewer = fileviewer.FileViewer (extracted_path, description, self.window)
+                viewer.connect ("destroy", lambda v, dir: shutil.rmtree (dir, True), extract_dir)
+                viewer.show ()
         else:
             shutil.rmtree (extract_dir, True)
