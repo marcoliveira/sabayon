@@ -95,8 +95,8 @@ class FilesSource (userprofile.ProfileSource):
     def get_path_description (self, path):
         if path == ".config/menus/applications.menu":
             return _("Applications menu")
-        elif path == ".config/menus/preferences.menu":
-            return _("Preferences menu")
+        elif path == ".config/menus/settings.menu":
+            return _("Settings menu")
         elif path == ".config/menus/server-settings.menu":
             return _("Server Settings menu")
         elif path == ".config/menus/system-settings.menu":
