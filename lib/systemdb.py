@@ -229,13 +229,13 @@ class SystemDatabase(object):
         multiple_result = get_setting (map_node, "multiple_result", "first")
 
         if search_base == None:
-            raise SystemDatabaseException(_("No search base specified for %s"%map))
+            raise SystemDatabaseException(_("No LDAP search base specified for %s" % map))
             
         if query_filter == None:
-            raise SystemDatabaseException(_("No query filter specified for %s"%map))
+            raise SystemDatabaseException(_("No LDAP query filter specified for %s" % map))
             
         if result_attribute == None:
-            raise SystemDatabaseException(_("No result attribute specified for %s"%map))
+            raise SystemDatabaseException(_("No LDAP result attribute specified for %s" % map))
 
         if scope == "sub":
             scope = ldap.SCOPE_SUBTREE
@@ -244,7 +244,8 @@ class SystemDatabase(object):
         elif scope == "one":
             scope = ldap.SCOPE_ONELEVEL
         else:
-            raise SystemDatabaseException(_("Scope must be one of sub, base and one"))
+            raise SystemDatabaseException(_("LDAP Scope must be one of: ") +
+                    "sub, base, one"))
         
         query_filter = expand_string (query_filter, replace)
         search_base = expand_string (search_base, replace)
@@ -264,7 +265,8 @@ class SystemDatabase(object):
         elif multiple_result == "random":
             val = vals[random.randint(0, len(vals)-1)]
         else:
-            raise SystemDatabaseException(_("multiple_result must be one of first and random"))
+            raise SystemDatabaseException(_("multiple_result must be one of: ")
+                + "first, random")
 
         l.unbind ()
         
