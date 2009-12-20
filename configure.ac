@@ -33,11 +33,25 @@ AM_CHECK_PYTHON_HEADERS(,[AC_MSG_ERROR([Can't locate python headers])])
 # distros may not be aware that Sabayon *requires* xdg.DesktopEntry to run,
 # so we'll check for it at "compilation" time.
 AC_MSG_CHECKING(whether the xdg.DesktopEntry module for Python is available)
-if [ ! python -c "import xdg.DesktopEntry" ]
+if [ ! python -c "import xdg.DesktopEntry" 2> /dev/null ]
 then
 	AC_MSG_FAILURE([Please install the python-xdg or pyxdg package.])
 else
 	AC_MSG_RESULT(yes)
+fi
+
+#
+# Do a soft check for Python bindings for LDAP.  They're not strictly
+# necessary, but if you don't have them, you won't be able to do LDAP
+# queries.
+#
+
+AC_MSG_CHECKING(whether the ldap module for Python is available)
+if [ ! python -c "import ldap" 2> /dev/null ]
+then
+    AC_MSG_RESULT(no)
+else
+    AC_MSG_RESULT(yes)
 fi
 
 # Check for GDK/X11, PyGObject, and pygtk

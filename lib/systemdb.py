@@ -26,9 +26,18 @@ import config
 import util
 import cache
 import random
-import ldap
 import socket
 import debuglog
+
+#
+# LDAP should be a soft dependency.
+#
+
+try:
+    import ldap
+    has_ldap = True;
+except ImportError:
+    has_ldap = False;
 
 #
 # Default empty config.
@@ -107,6 +116,7 @@ class SystemDatabase(object):
             file = db_file
         self.file = file
         self.xmlquery = None
+        self.nodes = None        # nodes from the XML file for LDAP usage.
         self.modified = 0
         dprint("New UserDatabase(%s) object\n" % self.file)
 
@@ -180,10 +190,7 @@ class SystemDatabase(object):
         return profile
 
     def __open_ldap (self):
-        nodes = self.doc.xpathEval ("/profiles/ldap")
-        if len (nodes) == 0:
-            return None
-        ldap_node = nodes[0]
+        ldap_node = self.nodes[0]
 
         server = get_setting (ldap_node, "server", "localhost")
         port = get_setting (ldap_node, "port", ldap.PORT, int)
@@ -201,10 +208,15 @@ class SystemDatabase(object):
         return l
 
     def __ldap_query (self, map, replace):
-        nodes = self.doc.xpathEval ("/profiles/ldap/" + map)
-        if len (nodes) == 0:
+        global has_ldap
+        if not has_ldap:
             return None
-        map_node = nodes[0]
+        if not self.nodes:
+            self.nodes = self.doc.xpathEval ("/profiles/ldap/" + map)
+            if len (self.nodes) == 0:
+                has_ldap = False        # No LDAP nodes in the xml file.
+                return None
+        map_node = self.nodes[0]
         
         l = self.__open_ldap ()
         if not l:
