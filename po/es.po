@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-12-19 07:23+0000\n"
-"PO-Revision-Date: 2009-12-19 13:30+0100\n"
+"POT-Creation-Date: 2009-12-20 05:50+0000\n"
+"PO-Revision-Date: 2009-12-20 13:36+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -267,7 +267,6 @@ msgid "Disable _toolbar editing"
 msgstr "Desactivar edición de la barra de _herramientas"
 
 #: ../admin-tool/lockdown/maindialog.py:68
-#| msgid "_Fullscreen"
 msgid "Force _fullscreen mode"
 msgstr "Forzar modo a _pantalla completa"
 
@@ -280,12 +279,10 @@ msgid "Disable lock _screen"
 msgstr "Desactivar bloquear _pantalla"
 
 #: ../admin-tool/lockdown/maindialog.py:72
-#| msgid "_Lock down the panels"
 msgid "_Lock on activation"
 msgstr "_Bloquear en la activación"
 
 #: ../admin-tool/lockdown/maindialog.py:73
-#| msgid "Disable log _out"
 msgid "Allow log _out"
 msgstr "Permitir la _salida de la sesión"
 
@@ -303,7 +300,6 @@ msgid "Disable _unsafe protocols"
 msgstr "Desactivar protocolos _no seguros"
 
 #: ../admin-tool/lockdown/pessulus.ui.h:2
-#| msgid "<b>Disabled Applets</b>"
 msgid "Disabled Applets"
 msgstr "Miniaplicaciones desactivadas"
 
@@ -312,7 +308,6 @@ msgid "Lockdown Editor"
 msgstr "Editor de restricciones"
 
 #: ../admin-tool/lockdown/pessulus.ui.h:4
-#| msgid "<b>Safe Protocols</b>"
 msgid "Safe Protocols"
 msgstr "Protocolos seguros"
 
@@ -461,84 +456,11 @@ msgstr "Cerrar _sin guardar"
 msgid "Save changes to profile \"%s\" before closing?"
 msgstr "¿Desea guardar los cambios al perfil «%s» antes de cerrar?"
 
-#: ../admin-tool/saveconfirm.py:45
-#, python-format
-msgid ""
-"If you don't save, changes from the last %ld second will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld seconds will be permanently "
-"lost."
-msgstr[0] ""
-"Si no guarda, se perderán permanentemente los cambios del último %ld segundo."
-msgstr[1] ""
-"Si no guarda, se perderán permanentemente los cambios de los últimos %ld "
-"segundos."
-
-#: ../admin-tool/saveconfirm.py:51
-msgid ""
-"If you don't save, changes from the last minute will be permanently lost."
-msgstr ""
-"Si no guarda, se perderán permanentemente los cambios del último minuto."
-
-#: ../admin-tool/saveconfirm.py:55
-#, python-format
-msgid ""
-"If you don't save, changes from the last minute and %ld second will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last minute and %ld seconds will be "
-"permanently lost."
-msgstr[0] ""
-"Si no guarda, se perderán permanentemente los cambios del último minuto y %"
-"ld segundo."
-msgstr[1] ""
-"Si no guarda, se perderán permanentemente los cambios del último minuto y %"
-"ld segundos."
-
-#: ../admin-tool/saveconfirm.py:62
-#, python-format
-msgid ""
-"If you don't save, changes from the last %ld minute will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld minutes will be permanently "
-"lost."
-msgstr[0] ""
-"Si no guarda, se perderán permanentemente los cambios del último minuto."
-msgstr[1] ""
-"Si no guarda, se perderán permanentemente los cambios de los últimos %ld "
-"minutos."
-
-#: ../admin-tool/saveconfirm.py:71
-msgid "If you don't save, changes from the last hour will be permanently lost."
-msgstr ""
-"Si no guarda, se perderán permanentemente los cambios de la última hora."
-
-#: ../admin-tool/saveconfirm.py:74
-#, python-format
-msgid ""
-"If you don't save, changes from the last hour and %d minute will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last hour and %d minutes will be "
-"permanently lost."
-msgstr[0] ""
-"Si no guarda, se perderán permanentemente los cambios de la última hora y %d "
-"minuto."
-msgstr[1] ""
-"Si no guarda, se perderán permanentemente los cambios de la última hora y %d "
-"minutos."
-
-#: ../admin-tool/saveconfirm.py:81
-#, python-format
-msgid ""
-"If you don't save, changes from the last %d hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] ""
-"Si no guarda, se perderán permanentemente los cambios de la última hora."
-msgstr[1] ""
-"Si no guarda, se perderán permanentemente los cambios de las últimas %d "
-"horas."
+#: ../admin-tool/saveconfirm.py:44
+#| msgid ""
+#| "If you don't save, changes from the last hour will be permanently lost."
+msgid "If you don't save, all changes will be permanently lost."
+msgstr "Si no guarda, se perderán permanentemente los cambios."
 
 #: ../admin-tool/sessionwindow.py:155
 #, python-format
@@ -655,7 +577,6 @@ msgid "Applications menu"
 msgstr "Menú de aplicaciones"
 
 #: ../lib/sources/filessource.py:99
-#| msgid "Server Settings menu"
 msgid "Settings menu"
 msgstr "Menú de ajustes"
 
@@ -921,68 +842,73 @@ msgstr "El perfil es de sólo lectura %s"
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/systemdb.py:58
+#: ../lib/systemdb.py:67
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "tipo no válido para el ajuste %(setting)s en %(np)s"
 
-#: ../lib/systemdb.py:103
+#: ../lib/systemdb.py:112
 msgid "No database file provided"
 msgstr "No se proporcionó ningún archivo de base de datos"
 
-#: ../lib/systemdb.py:220
+#: ../lib/systemdb.py:232
 #, python-format
-msgid "No search base specified for %s"
-msgstr "Sin base de búsqueda especificada para %s"
-
-#: ../lib/systemdb.py:223
-#, python-format
-msgid "No query filter specified for %s"
-msgstr "Sin filtro de consulta especificado para %s"
-
-#: ../lib/systemdb.py:226
-#, python-format
-msgid "No result attribute specified for %s"
-msgstr "No se ha especificado un atributo resultante para %s"
+#| msgid "No search base specified for %s"
+msgid "No LDAP search base specified for %s"
+msgstr "Sin base de búsqueda LDAP especificada para %s"
 
 #: ../lib/systemdb.py:235
-msgid "Scope must be one of sub, base and one"
-msgstr "El ámbito debe ser uno de sub, base o uno"
+#, python-format
+#| msgid "No query filter specified for %s"
+msgid "No LDAP query filter specified for %s"
+msgstr "Sin filtro de consulta LDAP especificado para %s"
 
-#: ../lib/systemdb.py:255
-msgid "multiple_result must be one of first and random"
-msgstr "multiple_result debe ser uno de los primeros y aleatorio"
+#: ../lib/systemdb.py:238
+#, python-format
+#| msgid "No result attribute specified for %s"
+msgid "No LDAP result attribute specified for %s"
+msgstr "No se ha especificado un atributo resultante LDAP para %s"
 
-#: ../lib/systemdb.py:347
+#: ../lib/systemdb.py:247
+#| msgid "Scope must be one of sub, base and one"
+msgid "LDAP Scope must be one of: "
+msgstr "El ámbito LDAP debe ser uno de los siguientes: "
+
+#: ../lib/systemdb.py:268
+#| msgid "multiple_result must be one of first and random"
+msgid "multiple_result must be one of: "
+msgstr "multiple_result debe ser uno de los siguientes: "
+
+#: ../lib/systemdb.py:361
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "No se pudo abrir %s en para escritura"
 
-#: ../lib/systemdb.py:360
+#: ../lib/systemdb.py:374
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "No se pudo guardar UserDatabase en %s"
 
-#: ../lib/systemdb.py:383 ../lib/systemdb.py:417
+#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "El archivo %s no es una configuración de perfil"
 
-#: ../lib/systemdb.py:390
+#: ../lib/systemdb.py:404
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "No se pudo añadir el perfil predeterminado %s a la configuración"
 
-#: ../lib/systemdb.py:424
+#: ../lib/systemdb.py:438
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "No se pudo añadir el usuario %s a la configuración de perfil"
 
-#: ../lib/systemdb.py:496
+#: ../lib/systemdb.py:510
 msgid "Failed to get the user list"
 msgstr "No se pudo recuperar la lista de usuarios"
 
-#: ../lib/systemdb.py:546
+#: ../lib/systemdb.py:560
 msgid "Failed to get the group list"
 msgstr "Falló al obtener la lista de grupos"
 
@@ -1019,6 +945,73 @@ msgid ""
 msgstr ""
 "No se pudo encontrar el nombre de usuario: no se encuentra establecido en /"
 "etc/passwd y no existe ningún valor para $USER en el entorno"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld second will be permanently "
+#~ "lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %ld seconds will be permanently "
+#~ "lost."
+#~ msgstr[0] ""
+#~ "Si no guarda, se perderán permanentemente los cambios del último %ld "
+#~ "segundo."
+#~ msgstr[1] ""
+#~ "Si no guarda, se perderán permanentemente los cambios de los últimos %ld "
+#~ "segundos."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last minute will be permanently lost."
+#~ msgstr ""
+#~ "Si no guarda, se perderán permanentemente los cambios del último minuto."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last minute and %ld second will be "
+#~ "permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last minute and %ld seconds will be "
+#~ "permanently lost."
+#~ msgstr[0] ""
+#~ "Si no guarda, se perderán permanentemente los cambios del último minuto y "
+#~ "%ld segundo."
+#~ msgstr[1] ""
+#~ "Si no guarda, se perderán permanentemente los cambios del último minuto y "
+#~ "%ld segundos."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld minute will be permanently "
+#~ "lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %ld minutes will be permanently "
+#~ "lost."
+#~ msgstr[0] ""
+#~ "Si no guarda, se perderán permanentemente los cambios del último minuto."
+#~ msgstr[1] ""
+#~ "Si no guarda, se perderán permanentemente los cambios de los últimos %ld "
+#~ "minutos."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last hour and %d minute will be "
+#~ "permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last hour and %d minutes will be "
+#~ "permanently lost."
+#~ msgstr[0] ""
+#~ "Si no guarda, se perderán permanentemente los cambios de la última hora y "
+#~ "%d minuto."
+#~ msgstr[1] ""
+#~ "Si no guarda, se perderán permanentemente los cambios de la última hora y "
+#~ "%d minutos."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %d hour will be permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %d hours will be permanently "
+#~ "lost."
+#~ msgstr[0] ""
+#~ "Si no guarda, se perderán permanentemente los cambios de la última hora."
+#~ msgstr[1] ""
+#~ "Si no guarda, se perderán permanentemente los cambios de las últimas %d "
+#~ "horas."
 
 #~ msgid "Remove personal information from documents when saving them"
 #~ msgstr "Quitar información personal de los documentos al guardarlos"
