@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon 2.29.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-17 20:25+0100\n"
+"POT-Creation-Date: 2009-12-20 09:43-0600\n"
 "PO-Revision-Date: 2009-12-17 20:27+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian Bokmaal <i18n-nb@lister.ping.uio.no>\n"
@@ -443,78 +443,10 @@ msgstr "Lukk _uten å lagre"
 msgid "Save changes to profile \"%s\" before closing?"
 msgstr "Lagre endringer i profil «%s» før programmet lukkes?"
 
-#: ../admin-tool/saveconfirm.py:45
-#, python-format
-msgid ""
-"If you don't save, changes from the last %ld second will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld seconds will be permanently "
-"lost."
-msgstr[0] ""
-"Hvis du ikke lagrer vil endringer fra siste %ld sekund gå tapt permanent."
-msgstr[1] ""
-"Hvis du ikke lagrer vil endringer fra de siste %ld sekunder gå tapt "
-"permanent."
-
-#: ../admin-tool/saveconfirm.py:51
-msgid ""
-"If you don't save, changes from the last minute will be permanently lost."
-msgstr "Hvis du ikke lagrer vil endringer fra det siste minuttet gå tapt."
-
-#: ../admin-tool/saveconfirm.py:55
-#, python-format
-msgid ""
-"If you don't save, changes from the last minute and %ld second will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last minute and %ld seconds will be "
-"permanently lost."
-msgstr[0] ""
-"Hvis du ikke lagrer vil endringer fra det siste minuttet og %ld sekundet gå "
-"tapt."
-msgstr[1] ""
-"Hvis du ikke lagrer vil endringer fra det siste minuttet og de siste %ld "
-"sekundene gå tapt."
-
-#: ../admin-tool/saveconfirm.py:62
-#, python-format
-msgid ""
-"If you don't save, changes from the last %ld minute will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld minutes will be permanently "
-"lost."
-msgstr[0] ""
-"Hvis du ikke lagrer vil endringer fra det siste %ld miunttet gå tapt."
-msgstr[1] ""
-"Hvis du ikke lagrer vil endringer fra de siste %ld minuttene gå tapt."
-
-#: ../admin-tool/saveconfirm.py:71
-msgid "If you don't save, changes from the last hour will be permanently lost."
+#: ../admin-tool/saveconfirm.py:44
+#, fuzzy
+msgid "If you don't save, all changes will be permanently lost."
 msgstr "Hvis du ikke lagrer vil endringer fra den siste timen gå tapt."
-
-#: ../admin-tool/saveconfirm.py:74
-#, python-format
-msgid ""
-"If you don't save, changes from the last hour and %d minute will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last hour and %d minutes will be "
-"permanently lost."
-msgstr[0] ""
-"Hvis du ikke lagrer vil endringer fra den siste timen og det siste %d "
-"minuttet gå tapt."
-msgstr[1] ""
-"Hvis du ikke lagrer vil endringer fra den siste timen og de siste %d "
-"minuttene gå tapt."
-
-#: ../admin-tool/saveconfirm.py:81
-#, python-format
-msgid ""
-"If you don't save, changes from the last %d hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "Hvis du ikke lagrer vil endringer fra den siste %d timen gå tapt."
-msgstr[1] "Hvis du ikke lagrer vil endringer fra de siste %d timene gå tapt."
 
 #: ../admin-tool/sessionwindow.py:155
 #, python-format
@@ -628,8 +560,9 @@ msgid "Applications menu"
 msgstr "Programmeny"
 
 #: ../lib/sources/filessource.py:99
-msgid "Preferences menu"
-msgstr "Meny for brukervalg"
+#, fuzzy
+msgid "Settings menu"
+msgstr "Meny for tjenerinnstillinger"
 
 #: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
@@ -893,68 +826,70 @@ msgstr "Profilen er skrivebeskyttet %s"
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/systemdb.py:58
+#: ../lib/systemdb.py:67
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "ugyldig type for innstilling %(setting)s i %(np)s"
 
-#: ../lib/systemdb.py:103
+#: ../lib/systemdb.py:112
 msgid "No database file provided"
 msgstr "Ingen databasefil oppgitt"
 
-#: ../lib/systemdb.py:220
-#, python-format
-msgid "No search base specified for %s"
+#: ../lib/systemdb.py:232
+#, fuzzy, python-format
+msgid "No LDAP search base specified for %s"
 msgstr "Ingen søkebase oppgitt for %s"
 
-#: ../lib/systemdb.py:223
-#, python-format
-msgid "No query filter specified for %s"
+#: ../lib/systemdb.py:235
+#, fuzzy, python-format
+msgid "No LDAP query filter specified for %s"
 msgstr "Ingen filter oppgitt for spørring %s"
 
-#: ../lib/systemdb.py:226
-#, python-format
-msgid "No result attribute specified for %s"
+#: ../lib/systemdb.py:238
+#, fuzzy, python-format
+msgid "No LDAP result attribute specified for %s"
 msgstr "Ingen resultatattributt oppgitt for %s"
 
-#: ../lib/systemdb.py:235
-msgid "Scope must be one of sub, base and one"
+#: ../lib/systemdb.py:247
+#, fuzzy
+msgid "LDAP Scope must be one of: "
 msgstr "Området må være en av sub, base og en"
 
-#: ../lib/systemdb.py:255
-msgid "multiple_result must be one of first and random"
+#: ../lib/systemdb.py:268
+#, fuzzy
+msgid "multiple_result must be one of: "
 msgstr "multiple_result må være en av first og random"
 
-#: ../lib/systemdb.py:347
+#: ../lib/systemdb.py:361
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Kunne ikke åpne %s for skriving"
 
-#: ../lib/systemdb.py:360
+#: ../lib/systemdb.py:374
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Kunne ikke lagre UserDatabase til %s"
 
-#: ../lib/systemdb.py:383 ../lib/systemdb.py:417
+#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Fil %s er ikke en profilkonfigurasjon"
 
-#: ../lib/systemdb.py:390
+#: ../lib/systemdb.py:404
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Kunne ikke legge til forvalgt profil %s i konfigurasjonen"
 
-#: ../lib/systemdb.py:424
+#: ../lib/systemdb.py:438
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Kunne ikke legge til bruker %s i profilkonfigurasjonen"
 
-#: ../lib/systemdb.py:496
+#: ../lib/systemdb.py:510
 msgid "Failed to get the user list"
 msgstr "Kunne ikke hente brukerlisten"
 
-#: ../lib/systemdb.py:546
+#: ../lib/systemdb.py:560
 msgid "Failed to get the group list"
 msgstr "Kunne ikke hente gruppelisten"
 
@@ -991,3 +926,69 @@ msgid ""
 msgstr ""
 "Kan ikke finne brukernavn: ikke satt i /etc/passwd og det finnes ingen verdi "
 "for $USER i miljøet"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld second will be permanently "
+#~ "lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %ld seconds will be permanently "
+#~ "lost."
+#~ msgstr[0] ""
+#~ "Hvis du ikke lagrer vil endringer fra siste %ld sekund gå tapt permanent."
+#~ msgstr[1] ""
+#~ "Hvis du ikke lagrer vil endringer fra de siste %ld sekunder gå tapt "
+#~ "permanent."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last minute will be permanently lost."
+#~ msgstr "Hvis du ikke lagrer vil endringer fra det siste minuttet gå tapt."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last minute and %ld second will be "
+#~ "permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last minute and %ld seconds will be "
+#~ "permanently lost."
+#~ msgstr[0] ""
+#~ "Hvis du ikke lagrer vil endringer fra det siste minuttet og %ld sekundet "
+#~ "gå tapt."
+#~ msgstr[1] ""
+#~ "Hvis du ikke lagrer vil endringer fra det siste minuttet og de siste %ld "
+#~ "sekundene gå tapt."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld minute will be permanently "
+#~ "lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %ld minutes will be permanently "
+#~ "lost."
+#~ msgstr[0] ""
+#~ "Hvis du ikke lagrer vil endringer fra det siste %ld miunttet gå tapt."
+#~ msgstr[1] ""
+#~ "Hvis du ikke lagrer vil endringer fra de siste %ld minuttene gå tapt."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last hour and %d minute will be "
+#~ "permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last hour and %d minutes will be "
+#~ "permanently lost."
+#~ msgstr[0] ""
+#~ "Hvis du ikke lagrer vil endringer fra den siste timen og det siste %d "
+#~ "minuttet gå tapt."
+#~ msgstr[1] ""
+#~ "Hvis du ikke lagrer vil endringer fra den siste timen og de siste %d "
+#~ "minuttene gå tapt."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %d hour will be permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %d hours will be permanently "
+#~ "lost."
+#~ msgstr[0] ""
+#~ "Hvis du ikke lagrer vil endringer fra den siste %d timen gå tapt."
+#~ msgstr[1] ""
+#~ "Hvis du ikke lagrer vil endringer fra de siste %d timene gå tapt."
+
+#~ msgid "Preferences menu"
+#~ msgstr "Meny for brukervalg"

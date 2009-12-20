@@ -11,9 +11,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon HEAD\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-12-08 07:03+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-12-20 09:43-0600\n"
 "PO-Revision-Date: 2009-12-11 23:53+0100\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
@@ -49,77 +48,76 @@ msgstr "Ignorer"
 msgid "Lock"
 msgstr "Verrouiller"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:239
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
 msgid "Description"
 msgstr "Description"
 
-#: ../admin-tool/editorwindow.py:98
+#: ../admin-tool/editorwindow.py:97
 #, python-format
 msgid "Profile %s"
 msgstr "Profil %s"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
 msgid "_Profile"
 msgstr "_Profil"
 
-#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
 msgid "_Save"
 msgstr "_Enregistrer"
 
-#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
 msgid "Save profile"
 msgstr "Enregistrer le profil"
 
-#: ../admin-tool/editorwindow.py:205
+#: ../admin-tool/editorwindow.py:204
 msgid "_Close"
 msgstr "_Fermer"
 
-#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
 msgid "Close the current window"
 msgstr "Ferme la fenêtre active"
 
-#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
 msgid "_Edit"
 msgstr "É_dition"
 
-#: ../admin-tool/editorwindow.py:207
+#: ../admin-tool/editorwindow.py:206
 msgid "_Delete"
 msgstr "_Effacer"
 
-#: ../admin-tool/editorwindow.py:207
+#: ../admin-tool/editorwindow.py:206
 msgid "Delete item"
 msgstr "Effacer l'objet"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
 msgid "_Help"
 msgstr "Aid_e"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
 msgid "_Contents"
 msgstr "_Sommaire"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
 msgid "Help Contents"
 msgstr "Sommaire de l'aide"
 
-#: ../admin-tool/editorwindow.py:210 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
 msgid "_About"
 msgstr "À _propos"
 
-#: ../admin-tool/editorwindow.py:210 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
 msgid "About Sabayon"
 msgstr "À propos de Sabayon"
 
-#: ../admin-tool/editorwindow.py:271 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:275 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
 msgid "Files"
 msgstr "Fichiers"
 
-#: ../admin-tool/editorwindow.py:275
-#: ../admin-tool/lockdown/pessulus.glade.h:41
+#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
 #: ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "Tableau de bord"
@@ -170,8 +168,8 @@ msgstr "paire"
 msgid "Profile settings: %s"
 msgstr "Paramètres du profil : %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:392
-#: ../admin-tool/usersdialog.py:85
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "Nom"
 
@@ -183,310 +181,140 @@ msgstr "Type"
 msgid "Value"
 msgstr "Valeur"
 
-#: ../admin-tool/groupsdialog.py:57
+#: ../admin-tool/groupsdialog.py:61
 #, python-format
 msgid "Groups for profile %s"
 msgstr "Groupes pour le profil %s"
 
-#: ../admin-tool/groupsdialog.py:70
+#: ../admin-tool/groupsdialog.py:71
 msgid "Group"
 msgstr "Groupe"
 
-#: ../admin-tool/groupsdialog.py:80 ../admin-tool/usersdialog.py:95
+#: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
 msgstr "Utiliser ce profil"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:99
+#: ../admin-tool/lockdown/lockdownbutton.py:100
 msgid "Click to make this setting not mandatory"
 msgstr "Cliquez pour rendre ce paramètre non-obligatoire"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:101
+#: ../admin-tool/lockdown/lockdownbutton.py:102
 msgid "Click to make this setting mandatory"
 msgstr "Cliquez pour rendre ce paramètre obligatoire"
 
-#: ../admin-tool/lockdown/maindialog.py:49
-msgid "Disable _command line"
-msgstr "Désactiver la ligne de _commande"
-
-#: ../admin-tool/lockdown/maindialog.py:50
-msgid "Disable _printing"
-msgstr "Désactiver l'im_pression"
-
-#: ../admin-tool/lockdown/maindialog.py:51
-msgid "Disable print _setup"
-msgstr "Dé_sactiver la configuration de l'impression"
-
-#: ../admin-tool/lockdown/maindialog.py:52
-msgid "Disable save to _disk"
-msgstr "Désactiver l'enregistrement sur le _disque"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "_Lock down the panels"
-msgstr "_Verrouiller les tableaux de bord"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable force _quit"
-msgstr "Désactiver forcer à _quitter"
-
-#: ../admin-tool/lockdown/maindialog.py:56
-msgid "Disable lock _screen"
-msgstr "Dé_sactiver le verrouillage de l'écran"
-
-#: ../admin-tool/lockdown/maindialog.py:57
-msgid "Disable log _out"
-msgstr "Désactiver la fermeture de sessi_on"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable _quit"
-msgstr "Désactiver _quitter"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable _arbitrary URL"
-msgstr "Désactiver les URLs _arbitraires"
-
-#: ../admin-tool/lockdown/maindialog.py:61
-msgid "Disable _bookmark editing"
-msgstr "Désactiver l'édition des _signets"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _history"
-msgstr "Désactiver l'_historique"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _javascript chrome"
-msgstr "Désactiver le chrome _JavaScript"
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _toolbar editing"
-msgstr "Désactiver la modification de la barre d'ou_tils"
-
-#: ../admin-tool/lockdown/maindialog.py:65
-msgid "_Fullscreen"
-msgstr "_Plein écran"
-
-#: ../admin-tool/lockdown/maindialog.py:66
-msgid "Hide _menubar"
-msgstr "Masquer la _barre de menu"
-
-#. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
-#. This can be used to disable this, for when you don't want people to know you created the document.
-#: ../admin-tool/lockdown/maindialog.py:70
-msgid "Remove personal information from documents when saving them"
-msgstr ""
-"Supprimer les informations personnelles des documents à l'enregistrement"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Warn if macro tries to create a PDF"
-msgstr "Avertir si la macro essaie de créer un PDF"
-
-#: ../admin-tool/lockdown/maindialog.py:72
-msgid "Warn if macro tries to print a document"
-msgstr "Avertir si la macro essaie d'imprimer un document"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-msgid "Warn if macro tries to save a document"
-msgstr "Avertir si la macro essaie d'enregistrer un document"
-
-#: ../admin-tool/lockdown/maindialog.py:74
-msgid "Warn if macro tries to sign a document"
-msgstr "Avertir si la macro essaie de signer un document"
-
-#: ../admin-tool/lockdown/maindialog.py:75
-msgid "Recommend password when saving a document"
-msgstr "Recommander un mot de passe à l'enregistrement du document"
-
-#: ../admin-tool/lockdown/maindialog.py:77
-msgid "Enable auto-save"
-msgstr "Activer la sauvegarde automatique"
-
-#. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
-#: ../admin-tool/lockdown/maindialog.py:79
-msgid "Printing should mark the document as modified"
-msgstr "L'impression doit marquer le document comme modifié"
-
-#: ../admin-tool/lockdown/maindialog.py:80
-msgid "Use system's file dialog"
-msgstr "Utiliser la boîte de dialogue des fichiers du système"
-
-#: ../admin-tool/lockdown/maindialog.py:81
-msgid "Create backup copy on save"
-msgstr "Créer des copies de sauvegarde à l'enregistrement"
-
-#: ../admin-tool/lockdown/maindialog.py:82
-msgid "Warn when saving non-OpenOffice.org formats"
-msgstr "Avertir à l'enregistrement de formats non OpenOffice.org"
-
-#: ../admin-tool/lockdown/maindialog.py:84
-msgid "Use OpenGL"
-msgstr "Utiliser OpenGL"
-
-#: ../admin-tool/lockdown/maindialog.py:85
-msgid "Use system font"
-msgstr "Utiliser les polices du système"
-
-#: ../admin-tool/lockdown/maindialog.py:86
-msgid "Use anti-aliasing"
-msgstr "Utiliser le lissage"
-
-#: ../admin-tool/lockdown/maindialog.py:87
-msgid "Disable UI customization"
-msgstr "Désactiver la personnalisation de l'interface"
-
-#: ../admin-tool/lockdown/maindialog.py:88
-msgid "Show insensitive menu items"
-msgstr "Afficher les éléments de menu insensibles"
-
-#: ../admin-tool/lockdown/maindialog.py:89
-msgid "Show font preview"
-msgstr "Afficher l'aperçu des polices"
-
-#: ../admin-tool/lockdown/maindialog.py:90
-msgid "Show font history"
-msgstr "Afficher l'historique des polices"
-
-#: ../admin-tool/lockdown/maindialog.py:91
-msgid "Show icons in menus"
-msgstr "Afficher les icônes dans les menus"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:1
-msgid ""
-"\n"
-"5\n"
-"10\n"
-"25\n"
-"50"
-msgstr ""
-"\n"
-"5\n"
-"10\n"
-"25\n"
-"50"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:6
-msgid ""
-"\n"
-"Automatic\n"
-"Large\n"
-"Small"
-msgstr ""
-"\n"
-"Automatique\n"
-"Grand\n"
-"Petit"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:10
-msgid ""
-"\n"
-"OpenDocument (.odp)\n"
-"PowerPoint 97+ (.ppt)\n"
-"OpenOffice.org 1.1 (.sxi)"
-msgstr ""
-"\n"
-"OpenDocument (.odp)\n"
-"PowerPoint 97+ (.ppt)\n"
-"OpenOffice.org 1.1 (.sxi)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:14
-msgid ""
-"\n"
-"OpenDocument (.ods)\n"
-"Excel 97+ (.xls)\n"
-"OpenOffice.org 1.1 (.sxc)"
-msgstr ""
-"\n"
-"OpenDocument (.ods)\n"
-"Excel 97+ (.xls)\n"
-"OpenOffice.org 1.1 (.sxc)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:18
-msgid ""
-"\n"
-"OpenDocument (.odt)\n"
-"Word 97+ (.doc)\n"
-"OpenOffice.org 1.1 (.sxw)"
-msgstr ""
-"\n"
-"OpenDocument (.odt)\n"
-"Word 97+ (.doc)\n"
-"OpenOffice.org 1.1 (.sxw)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:22
-msgid ""
-"\n"
-"Very High\n"
-"High\n"
-"Medium\n"
-"Low"
-msgstr ""
-"\n"
-"Trés élevé\n"
-"Élevé\n"
-"Moyen\n"
-"Faible"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:27
-msgid "<b>Disabled Applets</b>"
-msgstr "<b>Applets désactivées</b>"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:28
-msgid "<b>Safe Protocols</b>"
-msgstr "<b>Protocoles sécurisés</b>"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:29
-msgid "Default format for presentations:"
-msgstr "Format par défaut pour les présentations :"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:30
-msgid "Default format for spreadsheet:"
-msgstr "Format par défaut pour le tableur :"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:31
-msgid "Default format for word processor:"
-msgstr "Format par défaut pour le traitement de texte :"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:32
-msgid "Default icon size"
-msgstr "Taille par défaut des icônes"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:33
-msgid "Disable _unsafe protocols"
-msgstr "Désactiver les protocoles non-sécurisés"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:34
-msgid "Epiphany Web Browser"
-msgstr "Navigateur Web Epiphany"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:35
+#: ../admin-tool/lockdown/maindialog.py:40
 msgid "General"
 msgstr "Général"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:36
-msgid "Load / Save"
-msgstr "Charger / Enregistrer"
+#: ../admin-tool/lockdown/maindialog.py:42
+msgid "Epiphany Web Browser"
+msgstr "Navigateur Web Epiphany"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:37
+#: ../admin-tool/lockdown/maindialog.py:43
+msgid "GNOME Screensaver"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:53
+msgid "Disable _command line"
+msgstr "Désactiver la ligne de _commande"
+
+#: ../admin-tool/lockdown/maindialog.py:54
+msgid "Disable _printing"
+msgstr "Désactiver l'im_pression"
+
+#: ../admin-tool/lockdown/maindialog.py:55
+msgid "Disable print _setup"
+msgstr "Dé_sactiver la configuration de l'impression"
+
+#: ../admin-tool/lockdown/maindialog.py:56
+msgid "Disable save to _disk"
+msgstr "Désactiver l'enregistrement sur le _disque"
+
+#: ../admin-tool/lockdown/maindialog.py:58
+msgid "_Lock down the panels"
+msgstr "_Verrouiller les tableaux de bord"
+
+#: ../admin-tool/lockdown/maindialog.py:59
+msgid "Disable force _quit"
+msgstr "Désactiver forcer à _quitter"
+
+#: ../admin-tool/lockdown/maindialog.py:60
+msgid "Disable log _out"
+msgstr "Désactiver la fermeture de sessi_on"
+
+#: ../admin-tool/lockdown/maindialog.py:62
+msgid "Disable _quit"
+msgstr "Désactiver _quitter"
+
+#: ../admin-tool/lockdown/maindialog.py:63
+msgid "Disable _arbitrary URL"
+msgstr "Désactiver les URLs _arbitraires"
+
+#: ../admin-tool/lockdown/maindialog.py:64
+msgid "Disable _bookmark editing"
+msgstr "Désactiver l'édition des _signets"
+
+#: ../admin-tool/lockdown/maindialog.py:65
+msgid "Disable _history"
+msgstr "Désactiver l'_historique"
+
+#: ../admin-tool/lockdown/maindialog.py:66
+msgid "Disable _javascript chrome"
+msgstr "Désactiver le chrome _JavaScript"
+
+#: ../admin-tool/lockdown/maindialog.py:67
+msgid "Disable _toolbar editing"
+msgstr "Désactiver la modification de la barre d'ou_tils"
+
+#: ../admin-tool/lockdown/maindialog.py:68
+#, fuzzy
+msgid "Force _fullscreen mode"
+msgstr "_Plein écran"
+
+#: ../admin-tool/lockdown/maindialog.py:69
+msgid "Hide _menubar"
+msgstr "Masquer la _barre de menu"
+
+#: ../admin-tool/lockdown/maindialog.py:71
+msgid "Disable lock _screen"
+msgstr "Dé_sactiver le verrouillage de l'écran"
+
+#: ../admin-tool/lockdown/maindialog.py:72
+#, fuzzy
+msgid "_Lock on activation"
+msgstr "_Verrouiller les tableaux de bord"
+
+#: ../admin-tool/lockdown/maindialog.py:73
+#, fuzzy
+msgid "Allow log _out"
+msgstr "Désactiver la fermeture de sessi_on"
+
+#: ../admin-tool/lockdown/maindialog.py:74
+msgid "Allow user _switching"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:233
+#, python-format
+msgid "Could not display help document '%s'"
+msgstr ""
+
+#: ../admin-tool/lockdown/pessulus.ui.h:1
+msgid "Disable _unsafe protocols"
+msgstr "Désactiver les protocoles non-sécurisés"
+
+#: ../admin-tool/lockdown/pessulus.ui.h:2
+#, fuzzy
+msgid "Disabled Applets"
+msgstr "<b>Applets désactivées</b>"
+
+#: ../admin-tool/lockdown/pessulus.ui.h:3
 msgid "Lockdown Editor"
 msgstr "Éditeur de verrouillage"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:38
-msgid "Macro Security Level:"
-msgstr "Niveau de sécurité de la macro :"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:39
-msgid "Number of undo steps:"
-msgstr "Nombre d'étapes d'annulations :"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:40
-msgid "OpenOffice.org"
-msgstr "OpenOffice.org"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:42
-msgid "Security"
-msgstr "Sécurité"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:43
-msgid "User Interface"
-msgstr "Interface utilisateur"
+#: ../admin-tool/lockdown/pessulus.ui.h:4
+#, fuzzy
+msgid "Safe Protocols"
+msgstr "<b>Protocoles sécurisés</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -494,7 +322,7 @@ msgstr "Interface utilisateur"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:508
+#: ../admin-tool/profilesdialog.py:520
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -580,47 +408,47 @@ msgstr ""
 msgid "Establish and Edit Profiles for Users"
 msgstr "Établir et éditer des profils pour les utilisateurs"
 
-#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.glade.h:4
+#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.ui.h:4
 msgid "User Profile Editor"
 msgstr "Éditeur de profil utilisateur"
 
-#: ../admin-tool/sabayon.glade.h:1
+#: ../admin-tool/sabayon.ui.h:1
 msgid "Add Profile"
 msgstr "Ajouter un profil"
 
-#: ../admin-tool/sabayon.glade.h:2
+#: ../admin-tool/sabayon.ui.h:2
 msgid "Profile _name:"
 msgstr "_Nom du profil :"
 
-#: ../admin-tool/sabayon.glade.h:3
+#: ../admin-tool/sabayon.ui.h:3
 msgid "Use this profile for _all users"
 msgstr "Utiliser ce profil pour tous les utilis_ateurs"
 
-#: ../admin-tool/sabayon.glade.h:5
+#: ../admin-tool/sabayon.ui.h:5
 msgid "_Base on:"
 msgstr "_Basé sur :"
 
-#: ../admin-tool/sabayon.glade.h:6
+#: ../admin-tool/sabayon.ui.h:6
 msgid "_Details"
 msgstr "_Détails"
 
-#: ../admin-tool/sabayon.glade.h:7
+#: ../admin-tool/sabayon.ui.h:7
 msgid "_Groups"
 msgstr "_Groupes"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.ui.h:8
 msgid "_Groups:"
 msgstr "_Groupes :"
 
-#: ../admin-tool/sabayon.glade.h:9
+#: ../admin-tool/sabayon.ui.h:9
 msgid "_Profiles:"
 msgstr "_Profils :"
 
-#: ../admin-tool/sabayon.glade.h:10
+#: ../admin-tool/sabayon.ui.h:10
 msgid "_Users"
 msgstr "_Utilisateurs"
 
-#: ../admin-tool/sabayon.glade.h:11
+#: ../admin-tool/sabayon.ui.h:11
 msgid "_Users:"
 msgstr "_Utilisateurs :"
 
@@ -635,88 +463,11 @@ msgstr ""
 "Voulez-vous enregistrer les modifications apportées au profil « %s » avant de "
 "fermer ?"
 
-#: ../admin-tool/saveconfirm.py:45
-#, python-format
-msgid ""
-"If you don't save, changes from the last %ld second will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld seconds will be permanently "
-"lost."
-msgstr[0] ""
-"Si vous n'enregistrez pas, les modifications effectuées depuis une seconde "
-"seront définitivement perdues."
-msgstr[1] ""
-"Si vous n'enregistrez pas, les modifications effectuées depuis %ld secondes "
-"seront définitivement perdues."
-
-#: ../admin-tool/saveconfirm.py:51
-msgid ""
-"If you don't save, changes from the last minute will be permanently lost."
-msgstr ""
-"Si vous n'enregistrez pas, les modifications effectuées depuis une minute "
-"seront définitivement perdues."
-
-#: ../admin-tool/saveconfirm.py:55
-#, python-format
-msgid ""
-"If you don't save, changes from the last minute and %ld second will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last minute and %ld seconds will be "
-"permanently lost."
-msgstr[0] ""
-"Si vous n'enregistrez pas, les modifications effectuées depuis une minute et "
-"une seconde seront définitivement perdues."
-msgstr[1] ""
-"Si vous n'enregistrez pas, les modifications effectuées depuis une minute et "
-"%ld secondes seront définitivement perdues."
-
-#: ../admin-tool/saveconfirm.py:62
-#, python-format
-msgid ""
-"If you don't save, changes from the last %ld minute will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld minutes will be permanently "
-"lost."
-msgstr[0] ""
-"Si vous n'enregistrez pas, les modifications effectuées depuis une minute "
-"seront définitivement perdues."
-msgstr[1] ""
-"Si vous n'enregistrez pas, les modifications effectuées depuis %ld minutes "
-"seront définitivement perdues."
-
-#: ../admin-tool/saveconfirm.py:71
-msgid "If you don't save, changes from the last hour will be permanently lost."
+#: ../admin-tool/saveconfirm.py:44
+#, fuzzy
+msgid "If you don't save, all changes will be permanently lost."
 msgstr ""
 "Si vous n'enregistrez pas, les modifications effectuées depuis une heure "
-"seront définitivement perdues."
-
-#: ../admin-tool/saveconfirm.py:74
-#, python-format
-msgid ""
-"If you don't save, changes from the last hour and %d minute will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last hour and %d minutes will be "
-"permanently lost."
-msgstr[0] ""
-"Si vous n'enregistrez pas, les modifications effectuées depuis une heure et "
-"une minute seront définitivement perdues."
-msgstr[1] ""
-"Si vous n'enregistrez pas, les modifications effectuées depuis une heure et %"
-"d minutes seront définitivement perdues."
-
-#: ../admin-tool/saveconfirm.py:81
-#, python-format
-msgid ""
-"If you don't save, changes from the last %d hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] ""
-"Si vous n'enregistrez pas, les modifications effectuées depuis une heure "
-"seront définitivement perdues."
-msgstr[1] ""
-"Si vous n'enregistrez pas, les modifications effectuées depuis %d heures "
 "seront définitivement perdues."
 
 #: ../admin-tool/sessionwindow.py:155
@@ -775,7 +526,7 @@ msgstr "_Signaler cette erreur"
 msgid "_Continue editing"
 msgstr "_Poursuivre l'édition"
 
-#: ../admin-tool/usersdialog.py:67
+#: ../admin-tool/usersdialog.py:72
 #, python-format
 msgid "Users for profile %s"
 msgstr "Utilisateurs pour le profil %s"
@@ -835,8 +586,9 @@ msgid "Applications menu"
 msgstr "Menu Applications"
 
 #: ../lib/sources/filessource.py:99
-msgid "Preferences menu"
-msgstr "Menu Préférences"
+#, fuzzy
+msgid "Settings menu"
+msgstr "Menu Administration réseau"
 
 #: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
@@ -1100,68 +852,70 @@ msgstr "Le profil %s est en lecture seule"
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/systemdb.py:58
+#: ../lib/systemdb.py:67
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "type non valide pour le paramètre %(setting)s dans %(np)s"
 
-#: ../lib/systemdb.py:103
+#: ../lib/systemdb.py:112
 msgid "No database file provided"
 msgstr "Aucun fichier de base de données n'a été fourni"
 
-#: ../lib/systemdb.py:220
-#, python-format
-msgid "No search base specified for %s"
+#: ../lib/systemdb.py:232
+#, fuzzy, python-format
+msgid "No LDAP search base specified for %s"
 msgstr "Aucune base de recherche n'a été spécifiée pour %s"
 
-#: ../lib/systemdb.py:223
-#, python-format
-msgid "No query filter specified for %s"
+#: ../lib/systemdb.py:235
+#, fuzzy, python-format
+msgid "No LDAP query filter specified for %s"
 msgstr "Aucun filtre de requête n'a été spécifié pour %s"
 
-#: ../lib/systemdb.py:226
-#, python-format
-msgid "No result attribute specified for %s"
+#: ../lib/systemdb.py:238
+#, fuzzy, python-format
+msgid "No LDAP result attribute specified for %s"
 msgstr "Aucun attribut de résultat n'a été spécifié pour %s"
 
-#: ../lib/systemdb.py:235
-msgid "Scope must be one of sub, base and one"
+#: ../lib/systemdb.py:247
+#, fuzzy
+msgid "LDAP Scope must be one of: "
 msgstr "L'étendue doit être « one », « base » ou « sub »"
 
-#: ../lib/systemdb.py:255
-msgid "multiple_result must be one of first and random"
+#: ../lib/systemdb.py:268
+#, fuzzy
+msgid "multiple_result must be one of: "
 msgstr "multiple_result doit être « first » ou « random »"
 
-#: ../lib/systemdb.py:347
+#: ../lib/systemdb.py:361
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Impossible d'ouvrir %s en écriture"
 
-#: ../lib/systemdb.py:360
+#: ../lib/systemdb.py:374
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Impossible d'enregistrer la base de données utilisateur vers %s"
 
-#: ../lib/systemdb.py:383 ../lib/systemdb.py:417
+#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Le fichier %s n'est pas une configuration de profil"
 
-#: ../lib/systemdb.py:390
+#: ../lib/systemdb.py:404
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Impossible d'ajouter le profil par défaut %s à la configuration"
 
-#: ../lib/systemdb.py:424
+#: ../lib/systemdb.py:438
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Impossible d'ajouter l'utilisateur %s à la configuration du profil"
 
-#: ../lib/systemdb.py:496
+#: ../lib/systemdb.py:510
 msgid "Failed to get the user list"
 msgstr "Impossible d'obtenir la liste des utilisateurs"
 
-#: ../lib/systemdb.py:546
+#: ../lib/systemdb.py:560
 msgid "Failed to get the group list"
 msgstr "Impossible d'obtenir la liste des groupes"
 
@@ -1198,3 +952,234 @@ msgid ""
 msgstr ""
 "Impossible de localiser le nom de l'utilisateur : non défini dans /etc/"
 "passwd et la variable d'environnement $USER n'est pas définie"
+
+#~ msgid "Remove personal information from documents when saving them"
+#~ msgstr ""
+#~ "Supprimer les informations personnelles des documents à l'enregistrement"
+
+#~ msgid "Warn if macro tries to create a PDF"
+#~ msgstr "Avertir si la macro essaie de créer un PDF"
+
+#~ msgid "Warn if macro tries to print a document"
+#~ msgstr "Avertir si la macro essaie d'imprimer un document"
+
+#~ msgid "Warn if macro tries to save a document"
+#~ msgstr "Avertir si la macro essaie d'enregistrer un document"
+
+#~ msgid "Warn if macro tries to sign a document"
+#~ msgstr "Avertir si la macro essaie de signer un document"
+
+#~ msgid "Recommend password when saving a document"
+#~ msgstr "Recommander un mot de passe à l'enregistrement du document"
+
+#~ msgid "Enable auto-save"
+#~ msgstr "Activer la sauvegarde automatique"
+
+#~ msgid "Printing should mark the document as modified"
+#~ msgstr "L'impression doit marquer le document comme modifié"
+
+#~ msgid "Use system's file dialog"
+#~ msgstr "Utiliser la boîte de dialogue des fichiers du système"
+
+#~ msgid "Create backup copy on save"
+#~ msgstr "Créer des copies de sauvegarde à l'enregistrement"
+
+#~ msgid "Warn when saving non-OpenOffice.org formats"
+#~ msgstr "Avertir à l'enregistrement de formats non OpenOffice.org"
+
+#~ msgid "Use OpenGL"
+#~ msgstr "Utiliser OpenGL"
+
+#~ msgid "Use system font"
+#~ msgstr "Utiliser les polices du système"
+
+#~ msgid "Use anti-aliasing"
+#~ msgstr "Utiliser le lissage"
+
+#~ msgid "Disable UI customization"
+#~ msgstr "Désactiver la personnalisation de l'interface"
+
+#~ msgid "Show insensitive menu items"
+#~ msgstr "Afficher les éléments de menu insensibles"
+
+#~ msgid "Show font preview"
+#~ msgstr "Afficher l'aperçu des polices"
+
+#~ msgid "Show font history"
+#~ msgstr "Afficher l'historique des polices"
+
+#~ msgid "Show icons in menus"
+#~ msgstr "Afficher les icônes dans les menus"
+
+#~ msgid ""
+#~ "\n"
+#~ "5\n"
+#~ "10\n"
+#~ "25\n"
+#~ "50"
+#~ msgstr ""
+#~ "\n"
+#~ "5\n"
+#~ "10\n"
+#~ "25\n"
+#~ "50"
+
+#~ msgid ""
+#~ "\n"
+#~ "Automatic\n"
+#~ "Large\n"
+#~ "Small"
+#~ msgstr ""
+#~ "\n"
+#~ "Automatique\n"
+#~ "Grand\n"
+#~ "Petit"
+
+#~ msgid ""
+#~ "\n"
+#~ "OpenDocument (.odp)\n"
+#~ "PowerPoint 97+ (.ppt)\n"
+#~ "OpenOffice.org 1.1 (.sxi)"
+#~ msgstr ""
+#~ "\n"
+#~ "OpenDocument (.odp)\n"
+#~ "PowerPoint 97+ (.ppt)\n"
+#~ "OpenOffice.org 1.1 (.sxi)"
+
+#~ msgid ""
+#~ "\n"
+#~ "OpenDocument (.ods)\n"
+#~ "Excel 97+ (.xls)\n"
+#~ "OpenOffice.org 1.1 (.sxc)"
+#~ msgstr ""
+#~ "\n"
+#~ "OpenDocument (.ods)\n"
+#~ "Excel 97+ (.xls)\n"
+#~ "OpenOffice.org 1.1 (.sxc)"
+
+#~ msgid ""
+#~ "\n"
+#~ "OpenDocument (.odt)\n"
+#~ "Word 97+ (.doc)\n"
+#~ "OpenOffice.org 1.1 (.sxw)"
+#~ msgstr ""
+#~ "\n"
+#~ "OpenDocument (.odt)\n"
+#~ "Word 97+ (.doc)\n"
+#~ "OpenOffice.org 1.1 (.sxw)"
+
+#~ msgid ""
+#~ "\n"
+#~ "Very High\n"
+#~ "High\n"
+#~ "Medium\n"
+#~ "Low"
+#~ msgstr ""
+#~ "\n"
+#~ "Trés élevé\n"
+#~ "Élevé\n"
+#~ "Moyen\n"
+#~ "Faible"
+
+#~ msgid "Default format for presentations:"
+#~ msgstr "Format par défaut pour les présentations :"
+
+#~ msgid "Default format for spreadsheet:"
+#~ msgstr "Format par défaut pour le tableur :"
+
+#~ msgid "Default format for word processor:"
+#~ msgstr "Format par défaut pour le traitement de texte :"
+
+#~ msgid "Default icon size"
+#~ msgstr "Taille par défaut des icônes"
+
+#~ msgid "Load / Save"
+#~ msgstr "Charger / Enregistrer"
+
+#~ msgid "Macro Security Level:"
+#~ msgstr "Niveau de sécurité de la macro :"
+
+#~ msgid "Number of undo steps:"
+#~ msgstr "Nombre d'étapes d'annulations :"
+
+#~ msgid "OpenOffice.org"
+#~ msgstr "OpenOffice.org"
+
+#~ msgid "Security"
+#~ msgstr "Sécurité"
+
+#~ msgid "User Interface"
+#~ msgstr "Interface utilisateur"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld second will be permanently "
+#~ "lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %ld seconds will be permanently "
+#~ "lost."
+#~ msgstr[0] ""
+#~ "Si vous n'enregistrez pas, les modifications effectuées depuis une "
+#~ "seconde seront définitivement perdues."
+#~ msgstr[1] ""
+#~ "Si vous n'enregistrez pas, les modifications effectuées depuis %"
+#~ "ld secondes seront définitivement perdues."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last minute will be permanently lost."
+#~ msgstr ""
+#~ "Si vous n'enregistrez pas, les modifications effectuées depuis une minute "
+#~ "seront définitivement perdues."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last minute and %ld second will be "
+#~ "permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last minute and %ld seconds will be "
+#~ "permanently lost."
+#~ msgstr[0] ""
+#~ "Si vous n'enregistrez pas, les modifications effectuées depuis une minute "
+#~ "et une seconde seront définitivement perdues."
+#~ msgstr[1] ""
+#~ "Si vous n'enregistrez pas, les modifications effectuées depuis une minute "
+#~ "et %ld secondes seront définitivement perdues."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld minute will be permanently "
+#~ "lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %ld minutes will be permanently "
+#~ "lost."
+#~ msgstr[0] ""
+#~ "Si vous n'enregistrez pas, les modifications effectuées depuis une minute "
+#~ "seront définitivement perdues."
+#~ msgstr[1] ""
+#~ "Si vous n'enregistrez pas, les modifications effectuées depuis %"
+#~ "ld minutes seront définitivement perdues."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last hour and %d minute will be "
+#~ "permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last hour and %d minutes will be "
+#~ "permanently lost."
+#~ msgstr[0] ""
+#~ "Si vous n'enregistrez pas, les modifications effectuées depuis une heure "
+#~ "et une minute seront définitivement perdues."
+#~ msgstr[1] ""
+#~ "Si vous n'enregistrez pas, les modifications effectuées depuis une heure "
+#~ "et %d minutes seront définitivement perdues."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %d hour will be permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %d hours will be permanently "
+#~ "lost."
+#~ msgstr[0] ""
+#~ "Si vous n'enregistrez pas, les modifications effectuées depuis une heure "
+#~ "seront définitivement perdues."
+#~ msgstr[1] ""
+#~ "Si vous n'enregistrez pas, les modifications effectuées depuis %d heures "
+#~ "seront définitivement perdues."
+
+#~ msgid "Preferences menu"
+#~ msgstr "Menu Préférences"

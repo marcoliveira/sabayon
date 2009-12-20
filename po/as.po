@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: as\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-08-13 05:08+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-12-20 09:43-0600\n"
 "PO-Revision-Date: 2009-08-26 14:27+0530\n"
 "Last-Translator: Amitakhya Phukan <aphukan@fedoraproject.org>\n"
 "Language-Team: Assamese <>\n"
@@ -40,7 +40,7 @@ msgstr "অগ্ৰাহ্য কৰা হ'ব"
 msgid "Lock"
 msgstr "লক কৰা হ'ব"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:230
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
 msgid "Description"
 msgstr "বিৱৰণ"
 
@@ -49,61 +49,68 @@ msgstr "বিৱৰণ"
 msgid "Profile %s"
 msgstr "পৰিলেখ %s"
 
-#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
 msgid "_Profile"
 msgstr "পৰিলেখ (_P)"
 
-#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
 msgid "_Save"
 msgstr "সংৰক্ষণ কৰক (_S)"
 
-#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
 msgid "Save profile"
 msgstr "পৰিলেখ সংৰক্ষণ কৰক"
 
-#: ../admin-tool/editorwindow.py:197
+#: ../admin-tool/editorwindow.py:204
 msgid "_Close"
 msgstr "বন্ধ কৰক (_C)"
 
-#: ../admin-tool/editorwindow.py:197 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
 msgid "Close the current window"
 msgstr "বৰ্তমান সংযোগক্ষেত্ৰ বন্ধ কৰক"
 
-#: ../admin-tool/editorwindow.py:198 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
 msgid "_Edit"
 msgstr "সম্পাদনা (_E)"
 
-#: ../admin-tool/editorwindow.py:199
+#: ../admin-tool/editorwindow.py:206
 msgid "_Delete"
 msgstr "আঁতৰাওক (_D)"
 
-#: ../admin-tool/editorwindow.py:199
+#: ../admin-tool/editorwindow.py:206
 msgid "Delete item"
 msgstr "বস্তু আঁতৰাওক"
 
-#: ../admin-tool/editorwindow.py:200 ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
 msgid "_Help"
 msgstr "সহায় (_H)"
 
-#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+msgid "_Contents"
+msgstr ""
+
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+msgid "Help Contents"
+msgstr ""
+
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
 msgid "_About"
 msgstr "বিষয়ে (_A)"
 
-#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
 msgid "About Sabayon"
 msgstr "Sabayon ৰ বিষয়ে"
 
-#: ../admin-tool/editorwindow.py:262 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
 msgid "Files"
 msgstr "নথিপত্ৰ"
 
-#: ../admin-tool/editorwindow.py:266
-#: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:269
+#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
+#: ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "পেনেল"
 
@@ -153,8 +160,8 @@ msgstr "যোৰা"
 msgid "Profile settings: %s"
 msgstr "পৰিলেখৰ বৈশিষ্ট্য: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:387
-#: ../admin-tool/usersdialog.py:85
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "নাম"
 
@@ -166,296 +173,140 @@ msgstr "ধৰণ"
 msgid "Value"
 msgstr "মান"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:99
+#: ../admin-tool/groupsdialog.py:61
+#, fuzzy, python-format
+msgid "Groups for profile %s"
+msgstr "পৰিলেখ %s-ৰ ব্যৱহাৰকৰ্তা"
+
+#: ../admin-tool/groupsdialog.py:71
+msgid "Group"
+msgstr ""
+
+#: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
+msgid "Use This Profile"
+msgstr "চিহ্নিত পৰিলেখ ব্যৱহাৰ কৰা হ'ব"
+
+#: ../admin-tool/lockdown/lockdownbutton.py:100
 msgid "Click to make this setting not mandatory"
 msgstr "এই পছন্দ আৱশ্যক ন'হ'বলৈ টিপক"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:101
+#: ../admin-tool/lockdown/lockdownbutton.py:102
 msgid "Click to make this setting mandatory"
 msgstr "এই পছন্দ আৱশ্যক কৰিব'লৈ টিপক"
 
-#: ../admin-tool/lockdown/maindialog.py:49
-msgid "Disable _command line"
-msgstr "আদেশ শাৰী নিষ্ক্ৰিয় কৰক (_c)"
-
-#: ../admin-tool/lockdown/maindialog.py:50
-msgid "Disable _printing"
-msgstr "মূদ্ৰণ নিষ্ক্ৰিয় কৰক (_p)"
-
-#: ../admin-tool/lockdown/maindialog.py:51
-msgid "Disable print _setup"
-msgstr "মূদ্ৰণৰ প্ৰতিষ্ঠা নিষ্ক্ৰিয় কৰক (_s)"
-
-#: ../admin-tool/lockdown/maindialog.py:52
-msgid "Disable save to _disk"
-msgstr "ডিস্কলৈ সংৰক্ষণ কৰা নিষ্ক্ৰিয় কৰক (_d)"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "_Lock down the panels"
-msgstr "পেনেল ল'ক-ডাউন কৰক (_L)"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable force _quit"
-msgstr "বাধ্যতামূলক প্ৰস্থান নিষ্ক্ৰিয় কৰক (_q)"
-
-#: ../admin-tool/lockdown/maindialog.py:56
-msgid "Disable lock _screen"
-msgstr "পৰ্দ্দা লক কৰা নিষ্ক্ৰিয় কৰক (_s)"
-
-#: ../admin-tool/lockdown/maindialog.py:57
-msgid "Disable log _out"
-msgstr "বাহিৰ হোৱা নিষ্ক্ৰিয় কৰক (_o)"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable _quit"
-msgstr "প্ৰস্থান কৰা নিষ্ক্ৰিয় কৰক (_q)"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable _arbitrary URL"
-msgstr "যিকোনো URL নিষ্ক্ৰিয় কৰক (_a)"
-
-#: ../admin-tool/lockdown/maindialog.py:61
-msgid "Disable _bookmark editing"
-msgstr "পত্ৰচিহ্নৰ সম্পাদনা নিষ্ক্ৰিয় কৰক (_b)"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _history"
-msgstr "পূৰ্ববৰ্তী তথ্য সংৰক্ষণ নিষ্ক্ৰিয় কৰক (_h)"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _javascript chrome"
-msgstr "javscript chrome নিষ্ক্ৰিয় কৰক (_j)"
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _toolbar editing"
-msgstr "টুল-বাৰ সম্পাদনা নিষ্ক্ৰিয় কৰক (_t)"
-
-#: ../admin-tool/lockdown/maindialog.py:65
-msgid "_Fullscreen"
-msgstr "সম্পূৰ্ণ পৰ্দাত প্ৰদৰ্শন (_F)"
-
-#: ../admin-tool/lockdown/maindialog.py:66
-msgid "Hide _menubar"
-msgstr "তালিকা-বাৰ লুকুৱা হ'ব (_m)"
-
-#. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
-#. This can be used to disable this, for when you don't want people to know you created the document.
-#: ../admin-tool/lockdown/maindialog.py:70
-msgid "Remove personal information from documents when saving them"
-msgstr "সংৰক্ষণ কৰাৰ সময় আলেখ্যনৰ পৰা ব্যক্তিগত তথ্য আঁতৰুৱা হ'ব"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Warn if macro tries to create a PDF"
-msgstr "macro দ্বাৰা PDF নিৰ্মাণ কৰা হ'লে সতৰ্কবাৰ্তা প্ৰদৰ্শন কৰা হ'ব"
-
-#: ../admin-tool/lockdown/maindialog.py:72
-msgid "Warn if macro tries to print a document"
-msgstr "macro দ্বাৰা আলেখ্যন স্বাক্ষৰিত হ'লে সতৰ্কবাৰ্তা প্ৰদৰ্শন কৰা হ'ব"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-msgid "Warn if macro tries to save a document"
-msgstr "macro দ্বাৰা আলেখ্যন সংৰক্ষণ কৰা হ'লে সতৰ্কবাৰ্তা প্ৰদৰ্শন কৰা হ'ব"
-
-#: ../admin-tool/lockdown/maindialog.py:74
-msgid "Warn if macro tries to sign a document"
-msgstr "macro দ্বাৰা আলেখ্যন স্বাক্ষৰৰ প্ৰচেষ্টা হ'লে সতৰ্কবাৰ্তা প্ৰদৰ্শন কৰা হ'ব"
-
-#: ../admin-tool/lockdown/maindialog.py:75
-msgid "Recommend password when saving a document"
-msgstr "আলেখ্যন সংৰক্ষণৰ সময় গুপ্তশব্দ ব্যৱহাৰৰ উপদেশ দিয়া হ'ব"
-
-#: ../admin-tool/lockdown/maindialog.py:77
-msgid "Enable auto-save"
-msgstr "স্বয়ংক্ৰিয় সংৰক্ষণ প্ৰক্ৰিয়া সক্ৰিয় কৰা হ'ব"
-
-#. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
-#: ../admin-tool/lockdown/maindialog.py:79
-msgid "Printing should mark the document as modified"
-msgstr "প্ৰিন্ট কৰাট সময় আলেখ্যনত পৰিবৰ্তন চিহ্নিত হ'ব"
-
-#: ../admin-tool/lockdown/maindialog.py:80
-msgid "Use system's file dialog"
-msgstr "প্ৰণালীৰ নথিপত্ৰ সম্বাদ প্ৰয়োগ কৰা হ'ব"
-
-#: ../admin-tool/lockdown/maindialog.py:81
-msgid "Create backup copy on save"
-msgstr "সংৰক্ষণৰ সময় বেক-আপ নকল নিৰ্মাণ কৰা হ'ব"
-
-#: ../admin-tool/lockdown/maindialog.py:82
-msgid "Warn when saving non-OpenOffice.org formats"
-msgstr "OpenOffice.org ভিন্ন অন্যান্য বিন্যাসত সংৰক্ষণৰ সময় সতৰ্কবাৰ্তা প্ৰদৰ্শন কৰা হ'ব"
-
-#: ../admin-tool/lockdown/maindialog.py:84
-msgid "Use OpenGL"
-msgstr "Open GL ব্যৱহাৰ কৰা হ'ব"
-
-#: ../admin-tool/lockdown/maindialog.py:85
-msgid "Use system font"
-msgstr "প্ৰণালীৰ ফন্ট ব্যৱহাৰ কৰা হ'ব"
-
-#: ../admin-tool/lockdown/maindialog.py:86
-msgid "Use anti-aliasing"
-msgstr "anti-aliasing ব্যৱহাৰ কৰক"
-
-#: ../admin-tool/lockdown/maindialog.py:87
-msgid "Disable UI customization"
-msgstr "পছন্দ অনুসাৰে UI পৰিবৰ্তন নিষ্ক্ৰিয় কৰা হ'ব"
-
-#: ../admin-tool/lockdown/maindialog.py:88
-msgid "Show insensitive menu items"
-msgstr "তালিকাৰ অসংবেদনশীল বস্তু প্ৰদৰ্শন কৰা হ'ব"
-
-#: ../admin-tool/lockdown/maindialog.py:89
-msgid "Show font preview"
-msgstr "ফন্টৰ পূৰ্বৰূপ প্ৰদৰ্শন কৰা হ'ব"
-
-#: ../admin-tool/lockdown/maindialog.py:90
-msgid "Show font history"
-msgstr "ফন্টৰ পূৰ্ববৰ্তী তথ্য প্ৰদৰ্শন কৰা হ'ব"
-
-#: ../admin-tool/lockdown/maindialog.py:91
-msgid "Show icons in menus"
-msgstr "তালিকাত আইকন প্ৰদৰ্শন কৰা হ'ব"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:1
-msgid ""
-"\n"
-"5\n"
-"10\n"
-"25\n"
-"50"
-msgstr ""
-"\n"
-"৫\n"
-"১০\n"
-"২৫\n"
-"৫০"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:6
-msgid ""
-"\n"
-"Automatic\n"
-"Large\n"
-"Small"
-msgstr ""
-"\n"
-"স্বয়ংক্ৰিয়\n"
-"বৃহৎ\n"
-"ক্ষুদ্ৰ"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:10
-msgid ""
-"\n"
-"OpenDocument (.odp)\n"
-"PowerPoint 97+ (.ppt)\n"
-"OpenOffice.org 1.1 (.sxi)"
-msgstr ""
-"\n"
-"OpenDocument (.odp)\n"
-"PowerPoint 97+ (.ppt)\n"
-"OpenOffice.org 1.1 (.sxi)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:14
-msgid ""
-"\n"
-"OpenDocument (.ods)\n"
-"Excel 97+ (.xls)\n"
-"OpenOffice.org 1.1 (.sxc)"
-msgstr ""
-"\n"
-"OpenDocument (.ods)\n"
-"Excel 97+ (.xls)\n"
-"OpenOffice.org 1.1 (.sxc)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:18
-msgid ""
-"\n"
-"OpenDocument (.odt)\n"
-"Word 97+ (.doc)\n"
-"OpenOffice.org 1.1 (.sxw)"
-msgstr ""
-"\n"
-"OpenDocument (.odt)\n"
-"Word 97+ (.doc)\n"
-"OpenOffice.org 1.1 (.sxw)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:22
-msgid ""
-"\n"
-"Very High\n"
-"High\n"
-"Medium\n"
-"Low"
-msgstr ""
-"\n"
-"অতি উচ্চ\n"
-"উচ্চ\n"
-"মধ্যম\n"
-"নিম্ন"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:27
-msgid "<b>Disabled Applets</b>"
-msgstr "<b>নিষ্ক্ৰিয় এপলেট</b>"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:28
-msgid "<b>Safe Protocols</b>"
-msgstr "<b>নিৰাপদ আচাৰ বিধি</b>"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:29
-msgid "Default format for presentations:"
-msgstr "পৰিৱেশনৰ অবিকল্পিত বিন্যাস:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:30
-msgid "Default format for spreadsheet:"
-msgstr "স্প্ৰেডশ্বিটৰ অবিকল্পিত বিন্যাস:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:31
-msgid "Default format for word processor:"
-msgstr "ৱৰ্ড প্ৰছেছৰৰ অবিকল্পিত বিন্যাস:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:32
-msgid "Default icon size"
-msgstr "আইকনৰ অবিকল্পিত মাপ"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:33
-msgid "Disable _unsafe protocols"
-msgstr "অসুৰক্ষিত আচাৰ বিধি নিষ্ক্ৰিয় কৰক (_u)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:34
-msgid "Epiphany Web Browser"
-msgstr "Epiphany ৱেব চৰক"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:35
+#: ../admin-tool/lockdown/maindialog.py:40
 msgid "General"
 msgstr "সাধাৰণ"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:36
-msgid "Load / Save"
-msgstr "লোড / সংৰক্ষণ কৰক"
+#: ../admin-tool/lockdown/maindialog.py:42
+msgid "Epiphany Web Browser"
+msgstr "Epiphany ৱেব চৰক"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:37
+#: ../admin-tool/lockdown/maindialog.py:43
+msgid "GNOME Screensaver"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:53
+msgid "Disable _command line"
+msgstr "আদেশ শাৰী নিষ্ক্ৰিয় কৰক (_c)"
+
+#: ../admin-tool/lockdown/maindialog.py:54
+msgid "Disable _printing"
+msgstr "মূদ্ৰণ নিষ্ক্ৰিয় কৰক (_p)"
+
+#: ../admin-tool/lockdown/maindialog.py:55
+msgid "Disable print _setup"
+msgstr "মূদ্ৰণৰ প্ৰতিষ্ঠা নিষ্ক্ৰিয় কৰক (_s)"
+
+#: ../admin-tool/lockdown/maindialog.py:56
+msgid "Disable save to _disk"
+msgstr "ডিস্কলৈ সংৰক্ষণ কৰা নিষ্ক্ৰিয় কৰক (_d)"
+
+#: ../admin-tool/lockdown/maindialog.py:58
+msgid "_Lock down the panels"
+msgstr "পেনেল ল'ক-ডাউন কৰক (_L)"
+
+#: ../admin-tool/lockdown/maindialog.py:59
+msgid "Disable force _quit"
+msgstr "বাধ্যতামূলক প্ৰস্থান নিষ্ক্ৰিয় কৰক (_q)"
+
+#: ../admin-tool/lockdown/maindialog.py:60
+msgid "Disable log _out"
+msgstr "বাহিৰ হোৱা নিষ্ক্ৰিয় কৰক (_o)"
+
+#: ../admin-tool/lockdown/maindialog.py:62
+msgid "Disable _quit"
+msgstr "প্ৰস্থান কৰা নিষ্ক্ৰিয় কৰক (_q)"
+
+#: ../admin-tool/lockdown/maindialog.py:63
+msgid "Disable _arbitrary URL"
+msgstr "যিকোনো URL নিষ্ক্ৰিয় কৰক (_a)"
+
+#: ../admin-tool/lockdown/maindialog.py:64
+msgid "Disable _bookmark editing"
+msgstr "পত্ৰচিহ্নৰ সম্পাদনা নিষ্ক্ৰিয় কৰক (_b)"
+
+#: ../admin-tool/lockdown/maindialog.py:65
+msgid "Disable _history"
+msgstr "পূৰ্ববৰ্তী তথ্য সংৰক্ষণ নিষ্ক্ৰিয় কৰক (_h)"
+
+#: ../admin-tool/lockdown/maindialog.py:66
+msgid "Disable _javascript chrome"
+msgstr "javscript chrome নিষ্ক্ৰিয় কৰক (_j)"
+
+#: ../admin-tool/lockdown/maindialog.py:67
+msgid "Disable _toolbar editing"
+msgstr "টুল-বাৰ সম্পাদনা নিষ্ক্ৰিয় কৰক (_t)"
+
+#: ../admin-tool/lockdown/maindialog.py:68
+#, fuzzy
+msgid "Force _fullscreen mode"
+msgstr "সম্পূৰ্ণ পৰ্দাত প্ৰদৰ্শন (_F)"
+
+#: ../admin-tool/lockdown/maindialog.py:69
+msgid "Hide _menubar"
+msgstr "তালিকা-বাৰ লুকুৱা হ'ব (_m)"
+
+#: ../admin-tool/lockdown/maindialog.py:71
+msgid "Disable lock _screen"
+msgstr "পৰ্দ্দা লক কৰা নিষ্ক্ৰিয় কৰক (_s)"
+
+#: ../admin-tool/lockdown/maindialog.py:72
+#, fuzzy
+msgid "_Lock on activation"
+msgstr "পেনেল ল'ক-ডাউন কৰক (_L)"
+
+#: ../admin-tool/lockdown/maindialog.py:73
+#, fuzzy
+msgid "Allow log _out"
+msgstr "বাহিৰ হোৱা নিষ্ক্ৰিয় কৰক (_o)"
+
+#: ../admin-tool/lockdown/maindialog.py:74
+msgid "Allow user _switching"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:233
+#, python-format
+msgid "Could not display help document '%s'"
+msgstr ""
+
+#: ../admin-tool/lockdown/pessulus.ui.h:1
+msgid "Disable _unsafe protocols"
+msgstr "অসুৰক্ষিত আচাৰ বিধি নিষ্ক্ৰিয় কৰক (_u)"
+
+#: ../admin-tool/lockdown/pessulus.ui.h:2
+#, fuzzy
+msgid "Disabled Applets"
+msgstr "<b>নিষ্ক্ৰিয় এপলেট</b>"
+
+#: ../admin-tool/lockdown/pessulus.ui.h:3
 msgid "Lockdown Editor"
 msgstr "লক-ডাউন সম্পাদন ব্যৱস্থা"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:38
-msgid "Macro Security Level:"
-msgstr "মেক্ৰোৰ নিৰাপত্তাৰ মাত্ৰা:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:39
-msgid "Number of undo steps:"
-msgstr "পূৰ্ববৰ্তী ধাপ প্ৰত্যাবৰ্তনৰ সংখ্যা:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:40
-msgid "OpenOffice.org"
-msgstr "OpenOffice.org"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:42
-msgid "Security"
-msgstr "নিৰাপত্তা"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:43
-msgid "User Interface"
-msgstr "ব্যৱহাৰকৰ্তা সংযোগমাধ্যম"
+#: ../admin-tool/lockdown/pessulus.ui.h:4
+#, fuzzy
+msgid "Safe Protocols"
+msgstr "<b>নিৰাপদ আচাৰ বিধি</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -463,13 +314,14 @@ msgstr "ব্যৱহাৰকৰ্তা সংযোগমাধ্যম"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:497
+#: ../admin-tool/profilesdialog.py:520
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:77
-msgid "Your account does not have permissions to run the Desktop User Profiles tool"
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr ""
 "ডেস্কটপ ব্যৱহাৰকৰ্তা পৰিলেখ ব্যৱস্থা সঞ্চালনৰ বাবে প্ৰযোজ্য অনুমতি আপোনাৰ হিচাপত "
 "উপস্থিত নাই"
@@ -528,14 +380,14 @@ msgstr ""
 "Sabayon বন্ধ কৰা হ'ব । কিছুমান সমাধান যোগ্য সমস্যা উৎপন্ন হৈছে আৰু  %s-ত উপস্থিত "
 "লগ, %s লৈ পঠিয়াই এই সমস্যা ডিবাগ কৰিবলৈ সহায়তা কৰক ।"
 
-#: ../admin-tool/sabayon-apply:99
+#: ../admin-tool/sabayon-apply:111
+msgid "Please use -h for usage options"
+msgstr "ব্যৱহাৰযোগ্য বিভিন্ন বিকল্প চাবলৈ -h প্ৰয়োগ কৰক"
+
+#: ../admin-tool/sabayon-apply:123
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "'%s' ব্যৱহাৰকৰ্তাৰ পৰিলেখ পোৱা নাযায়\n"
-
-#: ../admin-tool/sabayon-apply:104
-msgid "Please use -h for usage options"
-msgstr "ব্যৱহাৰযোগ্য বিভিন্ন বিকল্প চাবলৈ -h প্ৰয়োগ কৰক"
 
 #: ../admin-tool/sabayon-session:67
 #, c-format
@@ -546,39 +398,47 @@ msgstr "ব্যৱহাৰপদ্ধতি: %s <profile-name> <profile-path
 msgid "Establish and Edit Profiles for Users"
 msgstr "ব্যৱহাৰকৰোঁতাৰ পৰিলেখ নিৰ্ধাৰণ আৰু সম্পাদন কৰক"
 
-#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.glade.h:4
+#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.ui.h:4
 msgid "User Profile Editor"
 msgstr "ব্যৱহাৰকৰ্তাৰ পৰিলেখ সম্পাদন ব্যৱস্থা"
 
-#: ../admin-tool/sabayon.glade.h:1
+#: ../admin-tool/sabayon.ui.h:1
 msgid "Add Profile"
 msgstr "পৰিলেখ যোগ কৰক"
 
-#: ../admin-tool/sabayon.glade.h:2
+#: ../admin-tool/sabayon.ui.h:2
 msgid "Profile _name:"
 msgstr "পৰিলেখৰ নাম:(_n)"
 
-#: ../admin-tool/sabayon.glade.h:3
+#: ../admin-tool/sabayon.ui.h:3
 msgid "Use this profile for _all users"
 msgstr "সকলো ব্যৱহাৰকৰোঁতাৰ বাবে এই পৰিলেখ ব্যৱহৃত হ'ব (_a)"
 
-#: ../admin-tool/sabayon.glade.h:5
+#: ../admin-tool/sabayon.ui.h:5
 msgid "_Base on:"
 msgstr "ভিত্তি কৰা হ'ব:(_B)"
 
-#: ../admin-tool/sabayon.glade.h:6
+#: ../admin-tool/sabayon.ui.h:6
 msgid "_Details"
 msgstr "বিৱৰণ (_D)"
 
-#: ../admin-tool/sabayon.glade.h:7
+#: ../admin-tool/sabayon.ui.h:7
+msgid "_Groups"
+msgstr ""
+
+#: ../admin-tool/sabayon.ui.h:8
+msgid "_Groups:"
+msgstr ""
+
+#: ../admin-tool/sabayon.ui.h:9
 msgid "_Profiles:"
 msgstr "পৰিলেখ:(_P)"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.ui.h:10
 msgid "_Users"
 msgstr "ব্যৱহাৰকৰ্তা (_U)"
 
-#: ../admin-tool/sabayon.glade.h:9
+#: ../admin-tool/sabayon.ui.h:11
 msgid "_Users:"
 msgstr "ব্যৱহাৰকৰ্তা: (_U)"
 
@@ -591,108 +451,50 @@ msgstr "সংৰক্ষণ নকৰি বন্ধ কৰা হ'ব (_W)"
 msgid "Save changes to profile \"%s\" before closing?"
 msgstr "বন্ধ কৰাৰ পূৰ্বে \"%s\" পৰিলেখত পৰিবৰ্তন সংৰক্ষণ কৰা হ'ব?"
 
-#: ../admin-tool/saveconfirm.py:45
-#, python-format
-msgid "If you don't save, changes from the last %ld second will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld seconds will be permanently "
-"lost."
-msgstr[0] "সংৰক্ষণ কৰা ন'হ'লে সৰ্বশেষ %ld ছেকেণ্ডত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে আঁতৰুৱা যাব ।"
-msgstr[1] "সংৰক্ষণ কৰা ন'হ'লে সৰ্বশেষ %ld ছেকেণ্ডত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে আঁতৰুৱা যাব ।"
-
-#: ../admin-tool/saveconfirm.py:51
-msgid "If you don't save, changes from the last minute will be permanently lost."
-msgstr "সংৰক্ষণ কৰা ন'হ'লে যোৱা এক মিনিটত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে আঁতৰুৱা যাব ।"
-
-#: ../admin-tool/saveconfirm.py:55
-#, python-format
-msgid ""
-"If you don't save, changes from the last minute and %ld second will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last minute and %ld seconds will be "
-"permanently lost."
-msgstr[0] ""
-"সংৰক্ষণ কৰা ন'হ'লে যোৱা এক মিনিট আৰু %ld ছেকেণ্ডত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে "
-"আঁতৰুৱা যাব ।"
-msgstr[1] ""
-"সংৰক্ষণ কৰা ন'হ'লে যোৱা এক মিনিট আৰু %ld ছেকেণ্ডত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে "
-"আঁতৰুৱা যাব ।"
-
-#: ../admin-tool/saveconfirm.py:62
-#, python-format
-msgid "If you don't save, changes from the last %ld minute will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld minutes will be permanently "
-"lost."
-msgstr[0] "সংৰক্ষণ কৰা ন'হ'লে যোৱা %ld মিনিটত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে আঁতৰুৱা যাব ।"
-msgstr[1] "সংৰক্ষণ কৰা ন'হ'লে যোৱা %ld মিনিটত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে আঁতৰুৱা যাব ।"
-
-#: ../admin-tool/saveconfirm.py:71
-msgid "If you don't save, changes from the last hour will be permanently lost."
+#: ../admin-tool/saveconfirm.py:44
+#, fuzzy
+msgid "If you don't save, all changes will be permanently lost."
 msgstr "সংৰক্ষণ কৰা ন'হ'লে যোৱা এক ঘন্টাত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে আঁতৰুৱা যাব ।"
 
-#: ../admin-tool/saveconfirm.py:74
-#, python-format
-msgid ""
-"If you don't save, changes from the last hour and %d minute will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last hour and %d minutes will be "
-"permanently lost."
-msgstr[0] ""
-"সংৰক্ষণ কৰা ন'হ'লে যোৱা এক ঘন্টা আৰু %d মিনিটত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে আঁতৰুৱা "
-"যাব ।"
-msgstr[1] ""
-"সংৰক্ষণ কৰা ন'হ'লে যোৱা এক ঘন্টা আৰু %d মিনিটত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে আঁতৰুৱা "
-"যাব ।"
-
-#: ../admin-tool/saveconfirm.py:81
-#, python-format
-msgid "If you don't save, changes from the last %d hour will be permanently lost."
-msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "সংৰক্ষণ কৰা ন'হ'লে যোৱা %d ঘন্টাত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে আঁতৰুৱা যাব ।"
-msgstr[1] "সংৰক্ষণ কৰা ন'হ'লে যোৱা %d ঘন্টাত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে আঁতৰুৱা যাব ।"
-
-#: ../admin-tool/sessionwindow.py:154
+#: ../admin-tool/sessionwindow.py:155
 #, python-format
 msgid "Editing profile %s"
 msgstr "পৰিলেখ %s সম্পাদন কৰা হৈছে"
 
-#: ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/sessionwindow.py:179
 msgid "_Quit"
 msgstr "প্ৰস্থান (_Q)"
 
-#: ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Changes"
 msgstr "পৰিবৰ্তন (_C)"
 
-#: ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/sessionwindow.py:181
 msgid "Edit changes"
 msgstr "পৰিবৰ্তন সম্পাদন কৰক"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:182
 msgid "_Lockdown"
 msgstr "লক-ডাউন (_L)"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:182
 msgid "Edit Lockdown settings"
 msgstr "লক-ডাউন সংক্ৰান্ত বৈশিষ্ট্য সম্পাদনা"
 
-#: ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/sessionwindow.py:188
 msgid "Enforce Mandatory"
 msgstr "বাধ্যতামূলক বৈশিষ্ট্য প্ৰয়োগ কৰক"
 
-#: ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/sessionwindow.py:188
 msgid "Enforce mandatory settings in the editing session"
 msgstr "সম্পাদনা অধিবেশনৰ বাবে বাধ্যতামূলক বৈশিষ্ট্য প্ৰয়োগ কৰক"
 
-#: ../admin-tool/sessionwindow.py:297
+#: ../admin-tool/sessionwindow.py:306
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "%s-ৰ বাবে লক-ডাউন সংক্ৰান্ত বৈশিষ্ট্য"
 
-#: ../admin-tool/sessionwindow.py:333
+#: ../admin-tool/sessionwindow.py:342
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
@@ -701,46 +503,51 @@ msgstr ""
 "'%s' ব্যৱহাৰকৰ্তাৰ পৰিলেখ প্ৰয়োগসময়ত এটা সমাধানযোগ্য সমস্থা উৎপন্ন হৈছে । এই সমস্যা "
 "সম্বন্ধে এই মুহূৰ্তে সূচিত কৰা যাব অথবা ব্যৱহাৰকৰ্তাৰ পৰিলেখ পৰিবৰ্তনৰ প্ৰচেষ্টা কৰক ।"
 
-#: ../admin-tool/sessionwindow.py:337
+#: ../admin-tool/sessionwindow.py:346
 msgid "_Report this error"
 msgstr "সমস্যা সম্পৰ্কে সূচিত কৰক (_R)"
 
-#: ../admin-tool/sessionwindow.py:338
+#: ../admin-tool/sessionwindow.py:347
 msgid "_Continue editing"
 msgstr "সম্পাদনা কৰক (_C)"
 
-#: ../admin-tool/usersdialog.py:67
+#: ../admin-tool/usersdialog.py:72
 #, python-format
 msgid "Users for profile %s"
 msgstr "পৰিলেখ %s-ৰ ব্যৱহাৰকৰ্তা"
 
-#: ../admin-tool/usersdialog.py:95
-msgid "Use This Profile"
-msgstr "চিহ্নিত পৰিলেখ ব্যৱহাৰ কৰা হ'ব"
-
-#: ../lib/protosession.py:147
+#: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
 msgstr "অব্যৱহৃত X প্ৰদৰ্শন পোৱা নাযায়"
 
-#: ../lib/protosession.py:414
-#| msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+#: ../lib/protosession.py:376
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr "Xephyr আৰম্ভ কৰিবলৈ ব্যৰ্থ: USR1 signal ৰ অপেক্ষাত সময়সীমা অতিক্ৰান্ত হৈছে"
 
-#: ../lib/protosession.py:416
-#| msgid "Failed to start Xnest: died during startup"
+#: ../lib/protosession.py:378
 msgid "Failed to start Xephyr: died during startup"
 msgstr "Xephyr আৰম্ভ কৰিবলৈ ব্যৰ্থ: আৰম্ভৰ সময়ত বন্ধ হৈ গৈছে"
 
-#: ../lib/protosession.py:501
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:469
 #, python-format
-msgid "There was a recoverable error while applying the user profile from file '%s'."
-msgstr "'%s'ৰ পৰা প্ৰাপ্ত ব্যৱহাৰকৰ্তাৰ পৰিলেখ প্ৰয়োগসময়ত, সমাধানযোগ্য সমস্যা উৎপন্ন হৈছে ।"
+msgid ""
+"There was a recoverable error while applying the user profile from file '%s'."
+msgstr ""
+"'%s'ৰ পৰা প্ৰাপ্ত ব্যৱহাৰকৰ্তাৰ পৰিলেখ প্ৰয়োগসময়ত, সমাধানযোগ্য সমস্যা উৎপন্ন হৈছে ।"
 
-#: ../lib/protosession.py:510
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (FATAL) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:478
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
-msgstr "'%s'ৰ পৰা প্ৰাপ্ত ব্যৱহাৰকৰ্তাৰ পৰিলেখ প্ৰয়োগ কৰাৰ সময় গুৰুতৰ সমস্যা উৎপন্ন হৈছে ।"
+msgstr ""
+"'%s'ৰ পৰা প্ৰাপ্ত ব্যৱহাৰকৰ্তাৰ পৰিলেখ প্ৰয়োগ কৰাৰ সময় গুৰুতৰ সমস্যা উৎপন্ন হৈছে ।"
 
 #: ../lib/sources/filessource.py:69
 #, python-format
@@ -762,8 +569,9 @@ msgid "Applications menu"
 msgstr "অনুপ্ৰয়োগ তালিকা"
 
 #: ../lib/sources/filessource.py:99
-msgid "Preferences menu"
-msgstr "পছন্দ বৈশিষ্ট্যৰ তালিকা"
+#, fuzzy
+msgid "Settings menu"
+msgstr "সেৱকৰ বৈশিষ্ট্যৰ তালিকা"
 
 #: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
@@ -857,51 +665,51 @@ msgstr "ৱেব চৰকৰ পত্ৰচিহ্ন"
 msgid "Web browser profile list"
 msgstr "ৱেব চৰকৰ পৰিলেখৰ তালিকা"
 
-#: ../lib/sources/mozillasource.py:522
+#: ../lib/sources/mozillasource.py:520
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "নথিপত্ৰ পোৱা নাযায় (%s)"
 
-#: ../lib/sources/mozillasource.py:873
+#: ../lib/sources/mozillasource.py:869
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "একে নাম (%(name)s) %(section)s বিভাগত একাধিকবাৰ আছে"
 
-#: ../lib/sources/mozillasource.py:882
+#: ../lib/sources/mozillasource.py:878
 #, python-format
 msgid "redundant default in section %s"
 msgstr "%s বিভাগত অপ্ৰয়োজনীয় অবিকল্পিত মান উপস্থিত"
 
-#: ../lib/sources/mozillasource.py:899
+#: ../lib/sources/mozillasource.py:895
 msgid "no default profile"
 msgstr "অবিকল্পিত পৰিলেখ অনুপস্থিত"
 
-#: ../lib/sources/mozillasource.py:954
+#: ../lib/sources/mozillasource.py:950
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Mozilla পত্ৰচিহ্ন নিৰ্মিত হৈছে'%s' -> '%s'"
 
-#: ../lib/sources/mozillasource.py:956
+#: ../lib/sources/mozillasource.py:952
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Mozilla পত্ৰচিহ্ন ফোল্ডাৰ নিৰ্মিত হৈছে'%s'"
 
-#: ../lib/sources/mozillasource.py:959
+#: ../lib/sources/mozillasource.py:955
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Mozilla পত্ৰচিহ্ন আঁতৰুৱা হৈছে'%s'"
 
-#: ../lib/sources/mozillasource.py:961
+#: ../lib/sources/mozillasource.py:957
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Mozilla পত্ৰচিহ্ন ফোল্ডাৰ আঁতৰুৱা হৈছে'%s'"
 
-#: ../lib/sources/mozillasource.py:964
+#: ../lib/sources/mozillasource.py:960
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Mozilla পত্ৰচিহ্ন পৰিবৰ্তিত হৈছে'%s' '%s'"
 
-#: ../lib/sources/mozillasource.py:966
+#: ../lib/sources/mozillasource.py:962
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mozilla পত্ৰচিহ্ন ফোল্ডাৰ পৰিবৰ্তিত হৈছে'%s'"
@@ -916,144 +724,81 @@ msgstr "পেনেল '%s' যোগ কৰা হৈছে"
 msgid "Panel '%s' removed"
 msgstr "পেনেল '%s' আঁতৰুৱা হৈছে"
 
-#: ../lib/sources/paneldelegate.py:86
-#, python-format
-msgid "Applet %s added to top panel"
-msgstr "ওপৰৰ পেনেলত %s এপ্লেট যোগ কৰা হৈছে"
+#: ../lib/sources/paneldelegate.py:77
+#, fuzzy, python-format
+msgid "Applet '%s' added"
+msgstr "পেনেল '%s' যোগ কৰা হৈছে"
 
-#: ../lib/sources/paneldelegate.py:88
-#, python-format
-msgid "Applet %s added to bottom panel"
-msgstr "তলৰ পেনেলত %s এপ্লেট যোগ কৰা হৈছে"
+#: ../lib/sources/paneldelegate.py:100
+#, fuzzy, python-format
+msgid "Applet '%s' removed"
+msgstr "পেনেল '%s' আঁতৰুৱা হৈছে"
 
-#: ../lib/sources/paneldelegate.py:90
-#, python-format
-msgid "Applet %s added to left panel"
-msgstr "বাওঁফালৰ পেনেলত %s এপ্লেট যোগ কৰা হৈছে"
+#: ../lib/sources/paneldelegate.py:123
+#, fuzzy, python-format
+msgid "Object '%s' added"
+msgstr "পেনেল '%s' যোগ কৰা হৈছে"
 
-#: ../lib/sources/paneldelegate.py:92
-#, python-format
-msgid "Applet %s added to right panel"
-msgstr "সোঁফালৰ পেনেলত %s এপ্লেট যোগ কৰা হৈছে"
-
-#: ../lib/sources/paneldelegate.py:107
-#, python-format
-msgid "Applet %s removed from top panel"
-msgstr "ওপৰৰ পেনেলৰ পৰা %s এপ্লেট আঁতৰুৱা হৈছে"
-
-#: ../lib/sources/paneldelegate.py:109
-#, python-format
-msgid "Applet %s removed from bottom panel"
-msgstr "তলৰ পেনেলৰ পৰা %s এপ্লেট আঁতৰুৱা হৈছে"
-
-#: ../lib/sources/paneldelegate.py:111
-#, python-format
-msgid "Applet %s removed from left panel"
-msgstr "বাওঁফালৰ পেনেলৰ পৰা %s এপ্লেট আঁতৰুৱা হৈছে"
-
-#: ../lib/sources/paneldelegate.py:113
-#, python-format
-msgid "Applet %s removed from right panel"
-msgstr "সোঁফালৰ পেনেলৰ পৰা %s এপ্লেট আঁতৰুৱা হৈছে"
-
-#: ../lib/sources/paneldelegate.py:127
-#, python-format
-msgid "%s added to top panel"
-msgstr "ওপৰৰ পেনেলত %s যোগ কৰা হৈছে"
-
-#: ../lib/sources/paneldelegate.py:129
-#, python-format
-msgid "%s added to bottom panel"
-msgstr "তলৰ পেনেলত %s যোগ কৰা হৈছে"
-
-#: ../lib/sources/paneldelegate.py:131
-#, python-format
-msgid "%s added to left panel"
-msgstr "বাওঁফালৰ পেনেলত %s যোগ কৰা হৈছে"
-
-#: ../lib/sources/paneldelegate.py:133
-#, python-format
-msgid "%s added to right panel"
-msgstr "সোঁফালৰ পেনেলত %s যোগ কৰা হৈছে"
-
-#: ../lib/sources/paneldelegate.py:154
-#, python-format
-msgid "%s removed from top panel"
-msgstr "ওপৰৰ পেনেলৰ পৰা %s আঁতৰুৱা হৈছে"
-
-#: ../lib/sources/paneldelegate.py:156
-#, python-format
-msgid "%s removed from bottom panel"
-msgstr "তলৰ পেনেলৰ পৰা %s আঁতৰুৱা হৈছে"
-
-#: ../lib/sources/paneldelegate.py:158
-#, python-format
-msgid "%s removed from left panel"
-msgstr "বাওঁফালৰ পেনেলৰ পৰা %s আঁতৰুৱা হৈছে"
-
-#: ../lib/sources/paneldelegate.py:160
-#, python-format
-msgid "%s removed from right panel"
-msgstr "সোঁফালৰ পেনেলৰ পৰা %s আঁতৰুৱা হৈছে"
+#: ../lib/sources/paneldelegate.py:152
+#, fuzzy, python-format
+msgid "Object '%s' removed"
+msgstr "পেনেল '%s' আঁতৰুৱা হৈছে"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:231
+#: ../lib/sources/paneldelegate.py:240
 msgid "Drawer"
 msgstr "ড্ৰয়াৰ"
 
-#: ../lib/sources/paneldelegate.py:233
+#: ../lib/sources/paneldelegate.py:242
 msgid "Main Menu"
 msgstr "প্ৰধান তালিকা"
 
-#: ../lib/sources/paneldelegate.py:243
+#: ../lib/sources/paneldelegate.py:252
 #, python-format
 msgid "%s launcher"
 msgstr "%s লঞ্চাৰ"
 
-#: ../lib/sources/paneldelegate.py:247
+#: ../lib/sources/paneldelegate.py:256
 msgid "Lock Screen button"
 msgstr "পৰ্দা লক কৰাৰ বুটাম"
 
-#: ../lib/sources/paneldelegate.py:249
+#: ../lib/sources/paneldelegate.py:258
 msgid "Logout button"
 msgstr "লগ-আউট বুটাম"
 
-#: ../lib/sources/paneldelegate.py:251
+#: ../lib/sources/paneldelegate.py:260
 msgid "Run Application button"
 msgstr "অনুপ্ৰয়োগ সঞ্চালন বুটাম"
 
-#: ../lib/sources/paneldelegate.py:253
+#: ../lib/sources/paneldelegate.py:262
 msgid "Search button"
 msgstr "অনুসন্ধান বুটাম"
 
-#: ../lib/sources/paneldelegate.py:255
-#| msgid "Logout button"
+#: ../lib/sources/paneldelegate.py:264
 msgid "Force Quit button"
 msgstr "বলবৎভাবে বাতিল কৰা বুটাম"
 
-#: ../lib/sources/paneldelegate.py:257
-#| msgid "Lock Screen button"
+#: ../lib/sources/paneldelegate.py:266
 msgid "Connect to Server button"
 msgstr "সেৱকলৈ সংযোগ কৰাৰ বুটাম"
 
-#: ../lib/sources/paneldelegate.py:259
-#| msgid "Logout button"
+#: ../lib/sources/paneldelegate.py:268
 msgid "Shutdown button"
 msgstr "বন্ধ কৰাৰ বুটাম"
 
-#: ../lib/sources/paneldelegate.py:261
+#: ../lib/sources/paneldelegate.py:270
 msgid "Screenshot button"
 msgstr "পৰ্দাৰ ছবিৰ বুটাম"
 
-#: ../lib/sources/paneldelegate.py:264
+#: ../lib/sources/paneldelegate.py:273
 msgid "Unknown"
 msgstr "অজ্ঞাত"
 
-#: ../lib/sources/paneldelegate.py:266
+#: ../lib/sources/paneldelegate.py:275
 msgid "Menu Bar"
 msgstr "তালিকা-বাৰ"
 
-#: ../lib/sources/paneldelegate.py:503
+#: ../lib/sources/paneldelegate.py:512
 msgid "Panel File"
 msgstr "পেনেল নথিপত্ৰ"
 
@@ -1077,10 +822,86 @@ msgstr "'%s'-ত অবৈধ মিটা-ডাটা বিভাগ: %s"
 msgid "Cannot add non-existent file '%s'"
 msgstr "অনুপস্থিত নথিপত্ৰ '%s' যোগ কৰিবলৈ ব্যৰ্থ"
 
-#: ../lib/storage.py:568
+#: ../lib/storage.py:487
+#, python-format
+msgid "Couldn't unlink file '%s'"
+msgstr ""
+
+#: ../lib/storage.py:570
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "পৰিলেখ অকল পঢ়িবলৈ %s"
+
+#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
+#. do not change the way they are written.  The intended string is
+#. something like "invalid type for setting blah in /ldap/path/to/blah"
+#: ../lib/systemdb.py:67
+#, python-format
+msgid "invalid type for setting %(setting)s in %(np)s"
+msgstr "%(setting)s, %(np)s-ত নিৰ্ধাৰণৰ বাবে বৈধ ধৰন নহয়"
+
+#: ../lib/systemdb.py:112
+msgid "No database file provided"
+msgstr ""
+
+#: ../lib/systemdb.py:232
+#, fuzzy, python-format
+msgid "No LDAP search base specified for %s"
+msgstr "%s ৰ বাবে অনুসন্ধানৰ স্থান উল্লিখিত হোৱা নাই"
+
+#: ../lib/systemdb.py:235
+#, fuzzy, python-format
+msgid "No LDAP query filter specified for %s"
+msgstr "%s-ৰ বাবে প্ৰশ্ন ফিল্টাৰ উল্লিখিত হোৱা নাই"
+
+#: ../lib/systemdb.py:238
+#, fuzzy, python-format
+msgid "No LDAP result attribute specified for %s"
+msgstr "%s-ৰ বাবে ফলাফলৰ বৈশিষ্ট্য উল্লিখিত হোৱা নাই"
+
+#: ../lib/systemdb.py:247
+#, fuzzy
+msgid "LDAP Scope must be one of: "
+msgstr "পৰিধি sub, base আৰু one ৰ এটা হোৱা আবশ্যক"
+
+#: ../lib/systemdb.py:268
+#, fuzzy
+msgid "multiple_result must be one of: "
+msgstr "multiple_result-ৰ মান first অথবা random ৰ এটা হোৱা আবশ্যক"
+
+#: ../lib/systemdb.py:361
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "লেখাৰ উদ্দেশ্যে %s খুলিবলৈ ব্যৰ্থ"
+
+#: ../lib/systemdb.py:374
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "UserDatabase, %s লৈ সংৰক্ষণ কৰিবলৈ ব্যৰ্থ"
+
+#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "%s নথিপত্ৰৰ পৰিলেখ বিন্যাস নহয়"
+
+#: ../lib/systemdb.py:404
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "বিন্যাসত অবিকল্পিত পৰিলেখ %s যোগ কৰিবলৈ ব্যৰ্থ"
+
+#: ../lib/systemdb.py:438
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "পৰিলেখ বিন্যাসত %s ব্যৱহাৰকৰ্তাৰ তথ্য যোগ কৰিবলৈ ব্যৰ্থ"
+
+#: ../lib/systemdb.py:510
+msgid "Failed to get the user list"
+msgstr "ব্যৱহাৰকৰ্তাৰ তালিকা প্ৰাপ্ত কৰিবলৈ ব্যৰ্থ"
+
+#: ../lib/systemdb.py:560
+#, fuzzy
+msgid "Failed to get the group list"
+msgstr "ব্যৱহাৰকৰ্তাৰ তালিকা প্ৰাপ্ত কৰিবলৈ ব্যৰ্থ"
 
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
@@ -1100,67 +921,7 @@ msgstr "%s পৰীক্ষা সঞ্চালন কৰা হৈছে (%
 msgid "Success!"
 msgstr "সফল!"
 
-#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
-#. do not change the way they are written.  The intended string is
-#. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/userdb.py:54
-#, python-format
-msgid "invalid type for setting %(setting)s in %(np)s"
-msgstr "%(setting)s, %(np)s-ত নিৰ্ধাৰণৰ বাবে বৈধ ধৰন নহয়"
-
-#: ../lib/userdb.py:215
-#, python-format
-msgid "No search base specified for %s"
-msgstr "%s ৰ বাবে অনুসন্ধানৰ স্থান উল্লিখিত হোৱা নাই"
-
-#: ../lib/userdb.py:218
-#, python-format
-msgid "No query filter specified for %s"
-msgstr "%s-ৰ বাবে প্ৰশ্ন ফিল্টাৰ উল্লিখিত হোৱা নাই"
-
-#: ../lib/userdb.py:221
-#, python-format
-msgid "No result attribute specified for %s"
-msgstr "%s-ৰ বাবে ফলাফলৰ বৈশিষ্ট্য উল্লিখিত হোৱা নাই"
-
-#: ../lib/userdb.py:230
-msgid "Scope must be one of sub, base and one"
-msgstr "পৰিধি sub, base আৰু one ৰ এটা হোৱা আবশ্যক"
-
-#: ../lib/userdb.py:250
-msgid "multiple_result must be one of first and random"
-msgstr "multiple_result-ৰ মান first অথবা random ৰ এটা হোৱা আবশ্যক"
-
-#: ../lib/userdb.py:342
-#, python-format
-msgid "Could not open %s for writing"
-msgstr "লেখাৰ উদ্দেশ্যে %s খুলিবলৈ ব্যৰ্থ"
-
-#: ../lib/userdb.py:355
-#, python-format
-msgid "Failed to save UserDatabase to %s"
-msgstr "UserDatabase, %s লৈ সংৰক্ষণ কৰিবলৈ ব্যৰ্থ"
-
-#: ../lib/userdb.py:378 ../lib/userdb.py:413
-#, python-format
-msgid "File %s is not a profile configuration"
-msgstr "%s নথিপত্ৰৰ পৰিলেখ বিন্যাস নহয়"
-
-#: ../lib/userdb.py:385
-#, python-format
-msgid "Failed to add default profile %s to configuration"
-msgstr "বিন্যাসত অবিকল্পিত পৰিলেখ %s যোগ কৰিবলৈ ব্যৰ্থ"
-
-#: ../lib/userdb.py:421
-#, python-format
-msgid "Failed to add user %s to profile configuration"
-msgstr "পৰিলেখ বিন্যাসত %s ব্যৱহাৰকৰ্তাৰ তথ্য যোগ কৰিবলৈ ব্যৰ্থ"
-
-#: ../lib/userdb.py:472
-msgid "Failed to get the user list"
-msgstr "ব্যৱহাৰকৰ্তাৰ তালিকা প্ৰাপ্ত কৰিবলৈ ব্যৰ্থ"
-
-#: ../lib/util.py:93
+#: ../lib/util.py:94
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -1168,7 +929,7 @@ msgstr ""
 "ব্যক্তিগত পঞ্জিকা পোৱা নাযায়: /etc/passwd নথিপত্ৰত উল্লিখিত হোৱা নাই আৰু পৰিবেশৰ "
 "$HOME চলকৰ মান অনুপস্থিত"
 
-#: ../lib/util.py:106
+#: ../lib/util.py:110 ../lib/util.py:137
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
@@ -1176,3 +937,274 @@ msgstr ""
 "ব্যৱহাৰকৰ্তাৰ নাম পোৱা নাযায়: /etc/passwd নথিপত্ৰত উল্লিখিত হোৱা নাই আৰু পৰিবেশৰ "
 "$USER চলকৰ মান অনুপস্থিত"
 
+#~ msgid "Remove personal information from documents when saving them"
+#~ msgstr "সংৰক্ষণ কৰাৰ সময় আলেখ্যনৰ পৰা ব্যক্তিগত তথ্য আঁতৰুৱা হ'ব"
+
+#~ msgid "Warn if macro tries to create a PDF"
+#~ msgstr "macro দ্বাৰা PDF নিৰ্মাণ কৰা হ'লে সতৰ্কবাৰ্তা প্ৰদৰ্শন কৰা হ'ব"
+
+#~ msgid "Warn if macro tries to print a document"
+#~ msgstr "macro দ্বাৰা আলেখ্যন স্বাক্ষৰিত হ'লে সতৰ্কবাৰ্তা প্ৰদৰ্শন কৰা হ'ব"
+
+#~ msgid "Warn if macro tries to save a document"
+#~ msgstr "macro দ্বাৰা আলেখ্যন সংৰক্ষণ কৰা হ'লে সতৰ্কবাৰ্তা প্ৰদৰ্শন কৰা হ'ব"
+
+#~ msgid "Warn if macro tries to sign a document"
+#~ msgstr "macro দ্বাৰা আলেখ্যন স্বাক্ষৰৰ প্ৰচেষ্টা হ'লে সতৰ্কবাৰ্তা প্ৰদৰ্শন কৰা হ'ব"
+
+#~ msgid "Recommend password when saving a document"
+#~ msgstr "আলেখ্যন সংৰক্ষণৰ সময় গুপ্তশব্দ ব্যৱহাৰৰ উপদেশ দিয়া হ'ব"
+
+#~ msgid "Enable auto-save"
+#~ msgstr "স্বয়ংক্ৰিয় সংৰক্ষণ প্ৰক্ৰিয়া সক্ৰিয় কৰা হ'ব"
+
+#~ msgid "Printing should mark the document as modified"
+#~ msgstr "প্ৰিন্ট কৰাট সময় আলেখ্যনত পৰিবৰ্তন চিহ্নিত হ'ব"
+
+#~ msgid "Use system's file dialog"
+#~ msgstr "প্ৰণালীৰ নথিপত্ৰ সম্বাদ প্ৰয়োগ কৰা হ'ব"
+
+#~ msgid "Create backup copy on save"
+#~ msgstr "সংৰক্ষণৰ সময় বেক-আপ নকল নিৰ্মাণ কৰা হ'ব"
+
+#~ msgid "Warn when saving non-OpenOffice.org formats"
+#~ msgstr ""
+#~ "OpenOffice.org ভিন্ন অন্যান্য বিন্যাসত সংৰক্ষণৰ সময় সতৰ্কবাৰ্তা প্ৰদৰ্শন কৰা হ'ব"
+
+#~ msgid "Use OpenGL"
+#~ msgstr "Open GL ব্যৱহাৰ কৰা হ'ব"
+
+#~ msgid "Use system font"
+#~ msgstr "প্ৰণালীৰ ফন্ট ব্যৱহাৰ কৰা হ'ব"
+
+#~ msgid "Use anti-aliasing"
+#~ msgstr "anti-aliasing ব্যৱহাৰ কৰক"
+
+#~ msgid "Disable UI customization"
+#~ msgstr "পছন্দ অনুসাৰে UI পৰিবৰ্তন নিষ্ক্ৰিয় কৰা হ'ব"
+
+#~ msgid "Show insensitive menu items"
+#~ msgstr "তালিকাৰ অসংবেদনশীল বস্তু প্ৰদৰ্শন কৰা হ'ব"
+
+#~ msgid "Show font preview"
+#~ msgstr "ফন্টৰ পূৰ্বৰূপ প্ৰদৰ্শন কৰা হ'ব"
+
+#~ msgid "Show font history"
+#~ msgstr "ফন্টৰ পূৰ্ববৰ্তী তথ্য প্ৰদৰ্শন কৰা হ'ব"
+
+#~ msgid "Show icons in menus"
+#~ msgstr "তালিকাত আইকন প্ৰদৰ্শন কৰা হ'ব"
+
+#~ msgid ""
+#~ "\n"
+#~ "5\n"
+#~ "10\n"
+#~ "25\n"
+#~ "50"
+#~ msgstr ""
+#~ "\n"
+#~ "৫\n"
+#~ "১০\n"
+#~ "২৫\n"
+#~ "৫০"
+
+#~ msgid ""
+#~ "\n"
+#~ "Automatic\n"
+#~ "Large\n"
+#~ "Small"
+#~ msgstr ""
+#~ "\n"
+#~ "স্বয়ংক্ৰিয়\n"
+#~ "বৃহৎ\n"
+#~ "ক্ষুদ্ৰ"
+
+#~ msgid ""
+#~ "\n"
+#~ "OpenDocument (.odp)\n"
+#~ "PowerPoint 97+ (.ppt)\n"
+#~ "OpenOffice.org 1.1 (.sxi)"
+#~ msgstr ""
+#~ "\n"
+#~ "OpenDocument (.odp)\n"
+#~ "PowerPoint 97+ (.ppt)\n"
+#~ "OpenOffice.org 1.1 (.sxi)"
+
+#~ msgid ""
+#~ "\n"
+#~ "OpenDocument (.ods)\n"
+#~ "Excel 97+ (.xls)\n"
+#~ "OpenOffice.org 1.1 (.sxc)"
+#~ msgstr ""
+#~ "\n"
+#~ "OpenDocument (.ods)\n"
+#~ "Excel 97+ (.xls)\n"
+#~ "OpenOffice.org 1.1 (.sxc)"
+
+#~ msgid ""
+#~ "\n"
+#~ "OpenDocument (.odt)\n"
+#~ "Word 97+ (.doc)\n"
+#~ "OpenOffice.org 1.1 (.sxw)"
+#~ msgstr ""
+#~ "\n"
+#~ "OpenDocument (.odt)\n"
+#~ "Word 97+ (.doc)\n"
+#~ "OpenOffice.org 1.1 (.sxw)"
+
+#~ msgid ""
+#~ "\n"
+#~ "Very High\n"
+#~ "High\n"
+#~ "Medium\n"
+#~ "Low"
+#~ msgstr ""
+#~ "\n"
+#~ "অতি উচ্চ\n"
+#~ "উচ্চ\n"
+#~ "মধ্যম\n"
+#~ "নিম্ন"
+
+#~ msgid "Default format for presentations:"
+#~ msgstr "পৰিৱেশনৰ অবিকল্পিত বিন্যাস:"
+
+#~ msgid "Default format for spreadsheet:"
+#~ msgstr "স্প্ৰেডশ্বিটৰ অবিকল্পিত বিন্যাস:"
+
+#~ msgid "Default format for word processor:"
+#~ msgstr "ৱৰ্ড প্ৰছেছৰৰ অবিকল্পিত বিন্যাস:"
+
+#~ msgid "Default icon size"
+#~ msgstr "আইকনৰ অবিকল্পিত মাপ"
+
+#~ msgid "Load / Save"
+#~ msgstr "লোড / সংৰক্ষণ কৰক"
+
+#~ msgid "Macro Security Level:"
+#~ msgstr "মেক্ৰোৰ নিৰাপত্তাৰ মাত্ৰা:"
+
+#~ msgid "Number of undo steps:"
+#~ msgstr "পূৰ্ববৰ্তী ধাপ প্ৰত্যাবৰ্তনৰ সংখ্যা:"
+
+#~ msgid "OpenOffice.org"
+#~ msgstr "OpenOffice.org"
+
+#~ msgid "Security"
+#~ msgstr "নিৰাপত্তা"
+
+#~ msgid "User Interface"
+#~ msgstr "ব্যৱহাৰকৰ্তা সংযোগমাধ্যম"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld second will be permanently "
+#~ "lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %ld seconds will be permanently "
+#~ "lost."
+#~ msgstr[0] ""
+#~ "সংৰক্ষণ কৰা ন'হ'লে সৰ্বশেষ %ld ছেকেণ্ডত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে আঁতৰুৱা যাব ।"
+#~ msgstr[1] ""
+#~ "সংৰক্ষণ কৰা ন'হ'লে সৰ্বশেষ %ld ছেকেণ্ডত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে আঁতৰুৱা যাব ।"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last minute will be permanently lost."
+#~ msgstr ""
+#~ "সংৰক্ষণ কৰা ন'হ'লে যোৱা এক মিনিটত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে আঁতৰুৱা যাব ।"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last minute and %ld second will be "
+#~ "permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last minute and %ld seconds will be "
+#~ "permanently lost."
+#~ msgstr[0] ""
+#~ "সংৰক্ষণ কৰা ন'হ'লে যোৱা এক মিনিট আৰু %ld ছেকেণ্ডত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে "
+#~ "আঁতৰুৱা যাব ।"
+#~ msgstr[1] ""
+#~ "সংৰক্ষণ কৰা ন'হ'লে যোৱা এক মিনিট আৰু %ld ছেকেণ্ডত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে "
+#~ "আঁতৰুৱা যাব ।"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld minute will be permanently "
+#~ "lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %ld minutes will be permanently "
+#~ "lost."
+#~ msgstr[0] ""
+#~ "সংৰক্ষণ কৰা ন'হ'লে যোৱা %ld মিনিটত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে আঁতৰুৱা যাব ।"
+#~ msgstr[1] ""
+#~ "সংৰক্ষণ কৰা ন'হ'লে যোৱা %ld মিনিটত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে আঁতৰুৱা যাব ।"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last hour and %d minute will be "
+#~ "permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last hour and %d minutes will be "
+#~ "permanently lost."
+#~ msgstr[0] ""
+#~ "সংৰক্ষণ কৰা ন'হ'লে যোৱা এক ঘন্টা আৰু %d মিনিটত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে "
+#~ "আঁতৰুৱা যাব ।"
+#~ msgstr[1] ""
+#~ "সংৰক্ষণ কৰা ন'হ'লে যোৱা এক ঘন্টা আৰু %d মিনিটত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে "
+#~ "আঁতৰুৱা যাব ।"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %d hour will be permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %d hours will be permanently "
+#~ "lost."
+#~ msgstr[0] ""
+#~ "সংৰক্ষণ কৰা ন'হ'লে যোৱা %d ঘন্টাত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে আঁতৰুৱা যাব ।"
+#~ msgstr[1] ""
+#~ "সংৰক্ষণ কৰা ন'হ'লে যোৱা %d ঘন্টাত কৰা সমস্ত পৰিবৰ্তন স্থায়ীৰূপে আঁতৰুৱা যাব ।"
+
+#~ msgid "Preferences menu"
+#~ msgstr "পছন্দ বৈশিষ্ট্যৰ তালিকা"
+
+#~ msgid "Applet %s added to top panel"
+#~ msgstr "ওপৰৰ পেনেলত %s এপ্লেট যোগ কৰা হৈছে"
+
+#~ msgid "Applet %s added to bottom panel"
+#~ msgstr "তলৰ পেনেলত %s এপ্লেট যোগ কৰা হৈছে"
+
+#~ msgid "Applet %s added to left panel"
+#~ msgstr "বাওঁফালৰ পেনেলত %s এপ্লেট যোগ কৰা হৈছে"
+
+#~ msgid "Applet %s added to right panel"
+#~ msgstr "সোঁফালৰ পেনেলত %s এপ্লেট যোগ কৰা হৈছে"
+
+#~ msgid "Applet %s removed from top panel"
+#~ msgstr "ওপৰৰ পেনেলৰ পৰা %s এপ্লেট আঁতৰুৱা হৈছে"
+
+#~ msgid "Applet %s removed from bottom panel"
+#~ msgstr "তলৰ পেনেলৰ পৰা %s এপ্লেট আঁতৰুৱা হৈছে"
+
+#~ msgid "Applet %s removed from left panel"
+#~ msgstr "বাওঁফালৰ পেনেলৰ পৰা %s এপ্লেট আঁতৰুৱা হৈছে"
+
+#~ msgid "Applet %s removed from right panel"
+#~ msgstr "সোঁফালৰ পেনেলৰ পৰা %s এপ্লেট আঁতৰুৱা হৈছে"
+
+#~ msgid "%s added to top panel"
+#~ msgstr "ওপৰৰ পেনেলত %s যোগ কৰা হৈছে"
+
+#~ msgid "%s added to bottom panel"
+#~ msgstr "তলৰ পেনেলত %s যোগ কৰা হৈছে"
+
+#~ msgid "%s added to left panel"
+#~ msgstr "বাওঁফালৰ পেনেলত %s যোগ কৰা হৈছে"
+
+#~ msgid "%s added to right panel"
+#~ msgstr "সোঁফালৰ পেনেলত %s যোগ কৰা হৈছে"
+
+#~ msgid "%s removed from top panel"
+#~ msgstr "ওপৰৰ পেনেলৰ পৰা %s আঁতৰুৱা হৈছে"
+
+#~ msgid "%s removed from bottom panel"
+#~ msgstr "তলৰ পেনেলৰ পৰা %s আঁতৰুৱা হৈছে"
+
+#~ msgid "%s removed from left panel"
+#~ msgstr "বাওঁফালৰ পেনেলৰ পৰা %s আঁতৰুৱা হৈছে"
+
+#~ msgid "%s removed from right panel"
+#~ msgstr "সোঁফালৰ পেনেলৰ পৰা %s আঁতৰুৱা হৈছে"

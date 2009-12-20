@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SABAYON VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-10-20 07:52+0200\n"
+"POT-Creation-Date: 2009-12-20 09:43-0600\n"
 "PO-Revision-Date: 2006-12-09 11:13+0300\n"
 "Last-Translator: Thierry Randrianiriana <randrianiriana@gmail.com>\n"
 "Language-Team: MALAGASY <i18n-malagasy-gnome@gna.org>\n"
@@ -18,104 +18,100 @@ msgstr ""
 "X-Poedit-Language: Malagasy\n"
 "X-Poedit-Country: MADAGASCAR\n"
 
-#: ../admin-tool/aboutdialog.py:61
+#: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
 msgstr "Rindranasa famoronana sy fanovana profil ho an'ny mpampiasa"
 
-#: ../admin-tool/aboutdialog.py:64
+#: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
 msgstr ""
 "Mpandrindra: Thierry Randrianiriana <thierry@isvtec.com>\n"
 "Mpandika teny: Fanomezana Rajaonarisoa <fano@isvtec.com>"
 
-#: ../admin-tool/changeswindow.py:48
+#: ../admin-tool/changeswindow.py:50
 #, python-format
 msgid "Changes in profile %s"
 msgstr "Fanovana ny profil %s"
 
-#: ../admin-tool/changeswindow.py:104
+#: ../admin-tool/changeswindow.py:113
 msgid "Ignore"
 msgstr "Aza raharahaina"
 
-#: ../admin-tool/changeswindow.py:111
+#: ../admin-tool/changeswindow.py:120
 msgid "Lock"
 msgstr "Gejao"
 
-#: ../admin-tool/changeswindow.py:118
-#: ../admin-tool/editorwindow.py:222
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
 msgid "Description"
 msgstr "Fanoritsoritana"
 
-#: ../admin-tool/editorwindow.py:95
+#: ../admin-tool/editorwindow.py:97
 #, python-format
 msgid "Profile %s"
 msgstr "Profil %s"
 
-#: ../admin-tool/editorwindow.py:187
-#: ../admin-tool/sessionwindow.py:172
+#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
 msgid "_Profile"
 msgstr "_Profil"
 
-#: ../admin-tool/editorwindow.py:188
-#: ../admin-tool/sessionwindow.py:173
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
 msgid "_Save"
 msgstr "_Raiketo"
 
-#: ../admin-tool/editorwindow.py:188
-#: ../admin-tool/sessionwindow.py:173
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
 msgid "Save profile"
 msgstr "Mandraikitra ilay profil"
 
-#: ../admin-tool/editorwindow.py:189
+#: ../admin-tool/editorwindow.py:204
 msgid "_Close"
 msgstr "_Hidio"
 
-#: ../admin-tool/editorwindow.py:189
-#: ../admin-tool/sessionwindow.py:174
+#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
 msgid "Close the current window"
 msgstr "Manidy ity fikandrana ity"
 
-#: ../admin-tool/editorwindow.py:190
-#: ../admin-tool/sessionwindow.py:175
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
 msgid "_Edit"
 msgstr "_Fanovana"
 
-#: ../admin-tool/editorwindow.py:191
+#: ../admin-tool/editorwindow.py:206
 msgid "_Delete"
 msgstr "_Fafao"
 
-#: ../admin-tool/editorwindow.py:191
+#: ../admin-tool/editorwindow.py:206
 msgid "Delete item"
 msgstr "Mamafa ilay singan-javatra"
 
-#: ../admin-tool/editorwindow.py:192
-#: ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
 msgid "_Help"
 msgstr "_Toro-làlana"
 
-#: ../admin-tool/editorwindow.py:193
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+msgid "_Contents"
+msgstr ""
+
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+msgid "Help Contents"
+msgstr ""
+
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
 msgid "_About"
 msgstr "_Mombamomba"
 
-#: ../admin-tool/editorwindow.py:193
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
 msgid "About Sabayon"
 msgstr "Mombamomba ny Sabayon"
 
-#: ../admin-tool/editorwindow.py:252
-#: ../lib/sources/gconfsource.py:121
+#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:256
-#: ../lib/sources/filessource.py:76
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
 msgid "Files"
 msgstr "Rakitra"
 
-#: ../admin-tool/editorwindow.py:256
-#: ../admin-tool/lockdown/pessulus.glade.h:7
-#: ../lib/sources/paneldelegate.py:132
+#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
+#: ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "tontonana"
 
@@ -124,8 +120,7 @@ msgstr "tontonana"
 msgid "Profile file: %s"
 msgstr "Rakitra profil: %s"
 
-#: ../admin-tool/gconfviewer.py:57
-#: ../admin-tool/gconfviewer.py:76
+#: ../admin-tool/gconfviewer.py:57 ../admin-tool/gconfviewer.py:76
 msgid "<no type>"
 msgstr "<tsy misy karazana>"
 
@@ -166,9 +161,8 @@ msgstr "roroa"
 msgid "Profile settings: %s"
 msgstr "Rindran'ny profil: %s"
 
-#: ../admin-tool/gconfviewer.py:110
-#: ../admin-tool/profilesdialog.py:313
-#: ../admin-tool/usersdialog.py:83
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "Anarana"
 
@@ -180,101 +174,140 @@ msgstr "Karazana"
 msgid "Value"
 msgstr "Sanda"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:99
+#: ../admin-tool/groupsdialog.py:61
+#, fuzzy, python-format
+msgid "Groups for profile %s"
+msgstr "Profiln'ny mpampiasa ho an'ny %s"
+
+#: ../admin-tool/groupsdialog.py:71
+msgid "Group"
+msgstr ""
+
+#: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
+msgid "Use This Profile"
+msgstr "Ampiasao io profil io"
+
+#: ../admin-tool/lockdown/lockdownbutton.py:100
 msgid "Click to make this setting not mandatory"
 msgstr "Mariho raha azo ihodivirana io fandrindrana io"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:101
+#: ../admin-tool/lockdown/lockdownbutton.py:102
 msgid "Click to make this setting mandatory"
 msgstr "Mariho raha tsy azo ihodivirana io fandrindrana io"
 
-#: ../admin-tool/lockdown/maindialog.py:47
-msgid "Disable _command line"
-msgstr "Foano ny lazam-_baiko"
-
-#: ../admin-tool/lockdown/maindialog.py:48
-msgid "Disable _printing"
-msgstr "Foano ny _fanontana"
-
-#: ../admin-tool/lockdown/maindialog.py:49
-msgid "Disable print _setup"
-msgstr "Foano ny _fandrindrana fanontana"
-
-#: ../admin-tool/lockdown/maindialog.py:50
-msgid "Disable save to _disk"
-msgstr "Foano ny fandraiketana amin'ny _kapila"
-
-#: ../admin-tool/lockdown/maindialog.py:52
-msgid "_Lock down the panels"
-msgstr "_Gejao ny tontonana"
-
-#: ../admin-tool/lockdown/maindialog.py:53
-msgid "Disable force _quit"
-msgstr "Foano ny fanerena _mijanona"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "Disable lock _screen"
-msgstr "Foano ny fangejana ny _efijery"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable log _out"
-msgstr "Foano ny _fivoahana"
-
-#: ../admin-tool/lockdown/maindialog.py:57
-msgid "Disable _quit"
-msgstr "Foano ny _fijanonana"
-
-#: ../admin-tool/lockdown/maindialog.py:58
-msgid "Disable _arbitrary URL"
-msgstr "Foano ny URL _manara-tsitrapo"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable _bookmark editing"
-msgstr "Foano ny fanovana _tobin-drohy"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable _history"
-msgstr "Foano ny _diary"
-
-#: ../admin-tool/lockdown/maindialog.py:61
-msgid "Disable _javascript chrome"
-msgstr "Foano ny chrome _javascript"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _toolbar editing"
-msgstr "Foano ny fanovana _anjam-pitaovana"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "_Fullscreen"
-msgstr "_Mameno efijery"
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Hide _menubar"
-msgstr "Afeno ny _anjan-tolotra"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:1
-msgid "<b>Disabled Applets</b>"
-msgstr "<b>Applets nofoanana</b>"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:2
-msgid "<b>Safe Protocols</b>"
-msgstr "<b>Firesaka azo antoka</b>"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:3
-msgid "Disable _unsafe protocols"
-msgstr "Foano ireo firesaka _tsy azo antoka"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:4
-msgid "Epiphany Web Browser"
-msgstr "Epiphany Mpitety Tranonkala"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:5
+#: ../admin-tool/lockdown/maindialog.py:40
 msgid "General"
 msgstr "Ankapobe"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:6
+#: ../admin-tool/lockdown/maindialog.py:42
+msgid "Epiphany Web Browser"
+msgstr "Epiphany Mpitety Tranonkala"
+
+#: ../admin-tool/lockdown/maindialog.py:43
+msgid "GNOME Screensaver"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:53
+msgid "Disable _command line"
+msgstr "Foano ny lazam-_baiko"
+
+#: ../admin-tool/lockdown/maindialog.py:54
+msgid "Disable _printing"
+msgstr "Foano ny _fanontana"
+
+#: ../admin-tool/lockdown/maindialog.py:55
+msgid "Disable print _setup"
+msgstr "Foano ny _fandrindrana fanontana"
+
+#: ../admin-tool/lockdown/maindialog.py:56
+msgid "Disable save to _disk"
+msgstr "Foano ny fandraiketana amin'ny _kapila"
+
+#: ../admin-tool/lockdown/maindialog.py:58
+msgid "_Lock down the panels"
+msgstr "_Gejao ny tontonana"
+
+#: ../admin-tool/lockdown/maindialog.py:59
+msgid "Disable force _quit"
+msgstr "Foano ny fanerena _mijanona"
+
+#: ../admin-tool/lockdown/maindialog.py:60
+msgid "Disable log _out"
+msgstr "Foano ny _fivoahana"
+
+#: ../admin-tool/lockdown/maindialog.py:62
+msgid "Disable _quit"
+msgstr "Foano ny _fijanonana"
+
+#: ../admin-tool/lockdown/maindialog.py:63
+msgid "Disable _arbitrary URL"
+msgstr "Foano ny URL _manara-tsitrapo"
+
+#: ../admin-tool/lockdown/maindialog.py:64
+msgid "Disable _bookmark editing"
+msgstr "Foano ny fanovana _tobin-drohy"
+
+#: ../admin-tool/lockdown/maindialog.py:65
+msgid "Disable _history"
+msgstr "Foano ny _diary"
+
+#: ../admin-tool/lockdown/maindialog.py:66
+msgid "Disable _javascript chrome"
+msgstr "Foano ny chrome _javascript"
+
+#: ../admin-tool/lockdown/maindialog.py:67
+msgid "Disable _toolbar editing"
+msgstr "Foano ny fanovana _anjam-pitaovana"
+
+#: ../admin-tool/lockdown/maindialog.py:68
+#, fuzzy
+msgid "Force _fullscreen mode"
+msgstr "_Mameno efijery"
+
+#: ../admin-tool/lockdown/maindialog.py:69
+msgid "Hide _menubar"
+msgstr "Afeno ny _anjan-tolotra"
+
+#: ../admin-tool/lockdown/maindialog.py:71
+msgid "Disable lock _screen"
+msgstr "Foano ny fangejana ny _efijery"
+
+#: ../admin-tool/lockdown/maindialog.py:72
+#, fuzzy
+msgid "_Lock on activation"
+msgstr "_Gejao ny tontonana"
+
+#: ../admin-tool/lockdown/maindialog.py:73
+#, fuzzy
+msgid "Allow log _out"
+msgstr "Foano ny _fivoahana"
+
+#: ../admin-tool/lockdown/maindialog.py:74
+msgid "Allow user _switching"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:233
+#, python-format
+msgid "Could not display help document '%s'"
+msgstr ""
+
+#: ../admin-tool/lockdown/pessulus.ui.h:1
+msgid "Disable _unsafe protocols"
+msgstr "Foano ireo firesaka _tsy azo antoka"
+
+#: ../admin-tool/lockdown/pessulus.ui.h:2
+#, fuzzy
+msgid "Disabled Applets"
+msgstr "<b>Applets nofoanana</b>"
+
+#: ../admin-tool/lockdown/pessulus.ui.h:3
 msgid "Lockdown Editor"
 msgstr "Mpanova fangejana"
+
+#: ../admin-tool/lockdown/pessulus.ui.h:4
+#, fuzzy
+msgid "Safe Protocols"
+msgstr "<b>Firesaka azo antoka</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -282,86 +315,128 @@ msgstr "Mpanova fangejana"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:413
+#: ../admin-tool/profilesdialog.py:520
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../admin-tool/sabayon:44
-msgid "Your account does not have permissions to run the Desktop User Profiles tool"
-msgstr "Tsy anananao fahazoan-dàlana ny mandefa ny rindranasan'ny Desktop User Profiles ny kaontinao"
+#: ../admin-tool/sabayon:77
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr ""
+"Tsy anananao fahazoan-dàlana ny mandefa ny rindranasan'ny Desktop User "
+"Profiles ny kaontinao"
 
-#: ../admin-tool/sabayon:45
-msgid "Administrator level permissions are needed to run this program because it can modify system files."
-msgstr "Mila fahazoan'ny mpitantana ianao vao afaka mandefa io rindranasa io satria mahaova raki-drafitra izy io."
+#: ../admin-tool/sabayon:78
+msgid ""
+"Administrator level permissions are needed to run this program because it "
+"can modify system files."
+msgstr ""
+"Mila fahazoan'ny mpitantana ianao vao afaka mandefa io rindranasa io satria "
+"mahaova raki-drafitra izy io."
 
-#: ../admin-tool/sabayon:50
+#: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
 msgstr "efa mandeha ny rindranasan'ny Desktop User Profiles"
 
-#: ../admin-tool/sabayon:51
-msgid "You may not use Desktop User Profiles tool from within a profile editing session"
-msgstr "Tsy azonao atao ny mampiasa ny Desktop User Profiles mandritra session fanovana profil iray"
+#: ../admin-tool/sabayon:84
+msgid ""
+"You may not use Desktop User Profiles tool from within a profile editing "
+"session"
+msgstr ""
+"Tsy azonao atao ny mampiasa ny Desktop User Profiles mandritra session "
+"fanovana profil iray"
 
-#: ../admin-tool/sabayon:58
+#: ../admin-tool/sabayon:91
 #, c-format
 msgid "User account '%s' was not found"
 msgstr "Tsy hita ny kaonti-mpampiasa '%s'"
 
-#: ../admin-tool/sabayon:59
+#: ../admin-tool/sabayon:92
 #, c-format
-msgid "Sabayon requires a special user account '%s' to be present on this computer. Try again after creating the account (using, for example, the 'adduser' command)"
-msgstr "Mila mahita kaontim-pampiasa manokana '%s' ao amin'ity solosaina ity ny Sabayon. Andramo indray rehefa nahaforona ilay kaonty ianao (amin'ny alalan'ny baiko 'adduser' ohatra)"
+msgid ""
+"Sabayon requires a special user account '%s' to be present on this computer. "
+"Try again after creating the account (using, for example, the 'adduser' "
+"command)"
+msgstr ""
+"Mila mahita kaontim-pampiasa manokana '%s' ao amin'ity solosaina ity ny "
+"Sabayon. Andramo indray rehefa nahaforona ilay kaonty ianao (amin'ny "
+"alalan'ny baiko 'adduser' ohatra)"
 
-#: ../admin-tool/sabayon-apply:39
+#: ../admin-tool/sabayon:131
+#, c-format
+msgid ""
+"A fatal error has occurred.  You can help us fix the problem by sending the "
+"log in %s to %s"
+msgstr ""
+
+#: ../admin-tool/sabayon:145
+#, c-format
+msgid ""
+"Sabayon will now exit.  There were some recoverable errors, and you can help "
+"us debug the problem by sending the log in %s to %s"
+msgstr ""
+
+#: ../admin-tool/sabayon-apply:111
+msgid "Please use -h for usage options"
+msgstr ""
+
+#: ../admin-tool/sabayon-apply:123
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Tsy nahitana profil ny mpampiasa '%s'\n"
 
-#: ../admin-tool/sabayon-apply:44
-#, c-format
-msgid "Usage: %s [<profile-name>]\n"
-msgstr "Fampiasa: %s [<anarana-profil>]\n"
-
-#: ../admin-tool/sabayon-session:32
+#: ../admin-tool/sabayon-session:67
 #, c-format
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
-msgstr "Fampiasa: %s <anarana-profil> <sori-dàlan'ilay-profil> <laharana-miseho>\n"
+msgstr ""
+"Fampiasa: %s <anarana-profil> <sori-dàlan'ilay-profil> <laharana-miseho>\n"
 
-#: ../admin-tool/sabayon.desktop.in.h:1
+#: ../admin-tool/sabayon.desktop.in.in.h:1
 msgid "Establish and Edit Profiles for Users"
 msgstr "Mamorona sy manova profil ho an'ny mpampiasa"
 
-#: ../admin-tool/sabayon.desktop.in.h:2
-#: ../admin-tool/sabayon.glade.h:4
+#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.ui.h:4
 msgid "User Profile Editor"
 msgstr "Mpanova profiln'ny mpampiasa"
 
-#: ../admin-tool/sabayon.glade.h:1
+#: ../admin-tool/sabayon.ui.h:1
 msgid "Add Profile"
 msgstr "Hampiditra profil"
 
-#: ../admin-tool/sabayon.glade.h:2
+#: ../admin-tool/sabayon.ui.h:2
 msgid "Profile _name:"
 msgstr "Anaran'ilay _profil:"
 
-#: ../admin-tool/sabayon.glade.h:3
+#: ../admin-tool/sabayon.ui.h:3
 msgid "Use this profile for _all users"
 msgstr "Ampiasao amin'ny mpampiasa _rehetra"
 
-#: ../admin-tool/sabayon.glade.h:5
+#: ../admin-tool/sabayon.ui.h:5
 msgid "_Base on:"
 msgstr "_Mifototra amin'ny:"
 
-#: ../admin-tool/sabayon.glade.h:6
+#: ../admin-tool/sabayon.ui.h:6
+msgid "_Details"
+msgstr ""
+
+#: ../admin-tool/sabayon.ui.h:7
+msgid "_Groups"
+msgstr ""
+
+#: ../admin-tool/sabayon.ui.h:8
+msgid "_Groups:"
+msgstr ""
+
+#: ../admin-tool/sabayon.ui.h:9
 msgid "_Profiles:"
 msgstr "_Profil:"
 
-#: ../admin-tool/sabayon.glade.h:7
+#: ../admin-tool/sabayon.ui.h:10
 msgid "_Users"
 msgstr "_Mpampiasa"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.ui.h:11
 msgid "_Users:"
 msgstr "_Mpampiasa:"
 
@@ -374,233 +449,222 @@ msgstr "Hidio _tsy raiketina"
 msgid "Save changes to profile \"%s\" before closing?"
 msgstr "Raiketina amin'ny profil \"%s\" ve aloha ireo fanovana?"
 
-#: ../admin-tool/saveconfirm.py:45
-#, python-format
-msgid "If you don't save, changes from the last %ld second will be permanently lost."
-msgid_plural "If you don't save, changes from the last %ld seconds will be permanently lost."
-msgstr[0] "Ho very avokoa ireo fanovana natao tanatin'ny %ld segaondra raha tsy raiketinao."
-msgstr[1] "Ho very avokoa ireo fanovana natao tanatin'ny %ld segaondra raha tsy raiketinao."
+#: ../admin-tool/saveconfirm.py:44
+#, fuzzy
+msgid "If you don't save, all changes will be permanently lost."
+msgstr ""
+"Ho very avokoa ireo fanovana natao tanatin'ny ora farany raha tsy raiketinao."
 
-#: ../admin-tool/saveconfirm.py:51
-msgid "If you don't save, changes from the last minute will be permanently lost."
-msgstr "Ho very avokoa ireo fanovana natao tanatin'ny minitra farany raha tsy raiketinao."
-
-#: ../admin-tool/saveconfirm.py:55
-#, python-format
-msgid "If you don't save, changes from the last minute and %ld second will be permanently lost."
-msgid_plural "If you don't save, changes from the last minute and %ld seconds will be permanently lost."
-msgstr[0] "Ho very avokoa ireo fanovana natao tanatin'ny iray minitra sy %ld segaondra raha tsy raiketinao."
-msgstr[1] "Ho very avokoa ireo fanovana natao tanatin'ny iray minitra sy %ld segaondra raha tsy raiketinao."
-
-#: ../admin-tool/saveconfirm.py:62
-#, python-format
-msgid "If you don't save, changes from the last %ld minute will be permanently lost."
-msgid_plural "If you don't save, changes from the last %ld minutes will be permanently lost."
-msgstr[0] "Ho very avokoa ireo fanovana natao tanatin'ny %ld minitra raha tsy raiketinao."
-msgstr[1] "Ho very avokoa ireo fanovana natao tanatin'ny %ld minitra raha tsy raiketinao."
-
-#: ../admin-tool/saveconfirm.py:71
-#: ../admin-tool/saveconfirm.py:81
-#, python-format
-msgid "If you don't save, changes from the last hour will be permanently lost."
-msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "Ho very avokoa ireo fanovana natao tanatin'ny ora farany raha tsy raiketinao."
-msgstr[1] "Ho very avokoa ireo fanovana natao tanatin'ny %ld ora raha tsy raiketinao."
-
-#: ../admin-tool/saveconfirm.py:74
-#, python-format
-msgid "If you don't save, changes from the last hour and %d minute will be permanently lost."
-msgid_plural "If you don't save, changes from the last hour and %d minutes will be permanently lost."
-msgstr[0] "Ho very avokoa ireo fanovana natao tanatin'ny adin'iray sy %ld minitra raha tsy raiketinao."
-msgstr[1] "Ho very avokoa ireo fanovana natao tanatin'ny adin'iray sy %ld minitra raha tsy raiketinao."
-
-#: ../admin-tool/sessionwindow.py:151
+#: ../admin-tool/sessionwindow.py:155
 #, python-format
 msgid "Editing profile %s"
 msgstr "Manova ny profil %s"
 
-#: ../admin-tool/sessionwindow.py:174
+#: ../admin-tool/sessionwindow.py:179
 msgid "_Quit"
 msgstr "_Hijanona"
 
-#: ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Changes"
 msgstr "_Fanovana"
 
-#: ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/sessionwindow.py:181
 msgid "Edit changes"
 msgstr "Manamboatra ireo fanovana natao"
 
-#: ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/sessionwindow.py:182
 msgid "_Lockdown"
 msgstr "_Fangejana"
 
-#: ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/sessionwindow.py:182
 msgid "Edit Lockdown settings"
 msgstr "Manova ireo rindran'ny fangejana"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:188
 msgid "Enforce Mandatory"
 msgstr "Ampiharo ny fandrindrana an-tery"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:188
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Mampihatra ny fandrindrana tsy azo ihodivirana mandritra ny fanovana"
 
-#: ../admin-tool/sessionwindow.py:271
+#: ../admin-tool/sessionwindow.py:306
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Rindran'ny fangejana ho an'ny %s"
 
-#: ../admin-tool/usersdialog.py:65
+#: ../admin-tool/sessionwindow.py:342
+#, python-format
+msgid ""
+"There was a recoverable error while applying the user profile '%s'.  You can "
+"report this error now or try to continue editing the user profile."
+msgstr ""
+
+#: ../admin-tool/sessionwindow.py:346
+msgid "_Report this error"
+msgstr ""
+
+#: ../admin-tool/sessionwindow.py:347
+msgid "_Continue editing"
+msgstr ""
+
+#: ../admin-tool/usersdialog.py:72
 #, python-format
 msgid "Users for profile %s"
 msgstr "Profiln'ny mpampiasa ho an'ny %s"
 
-#: ../admin-tool/usersdialog.py:93
-msgid "Use This Profile"
-msgstr "Ampiasao io profil io"
-
-#: ../lib/dirmonitor.py:149
-#, python-format
-msgid "Failed to add monitor for %s"
-msgstr "Tsy nahavita nanampy mpanara-maso ho an'ny %s"
-
-#: ../lib/dirmonitor.py:229
-#, python-format
-msgid "Expected event: %s %s"
-msgstr "Tranga nantenaina: %s %s"
-
-#: ../lib/protosession.py:140
+#: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
 msgstr "Tsy mahita seho X malalaka"
 
-#: ../lib/protosession.py:407
-msgid "Failed to start Xnest: timed out waiting for USR1 signal"
-msgstr "Tsy nahavita nandefa ny Xnest: tapitra ny fe-potoana niandrasana ny signaln'ny USR1"
+#: ../lib/protosession.py:376
+#, fuzzy
+msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
+msgstr ""
+"Tsy nahavita nandefa ny Xnest: tapitra ny fe-potoana niandrasana ny "
+"signaln'ny USR1"
 
-#: ../lib/protosession.py:409
-msgid "Failed to start Xnest: died during startup"
+#: ../lib/protosession.py:378
+#, fuzzy
+msgid "Failed to start Xephyr: died during startup"
 msgstr "Tsy nahavita nandefa ny Xnest: maty teo am-piantombohana ilay izy"
 
-#: ../lib/sources/filessource.py:66
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:469
+#, python-format
+msgid ""
+"There was a recoverable error while applying the user profile from file '%s'."
+msgstr ""
+
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (FATAL) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:478
+#, python-format
+msgid "There was a fatal error while applying the user profile from '%s'."
+msgstr ""
+
+#: ../lib/sources/filessource.py:69
 #, python-format
 msgid "File '%s' created"
 msgstr "Voaforona ny '%s'"
 
-#: ../lib/sources/filessource.py:68
+#: ../lib/sources/filessource.py:71
 #, python-format
 msgid "File '%s' deleted"
 msgstr "Voafafa ny '%s'"
 
-#: ../lib/sources/filessource.py:70
+#: ../lib/sources/filessource.py:73
 #, python-format
 msgid "File '%s' changed"
 msgstr "Voaova ny '%s'"
 
-#: ../lib/sources/filessource.py:94
+#: ../lib/sources/filessource.py:97
 msgid "Applications menu"
 msgstr "Tolotry ny rindranasa"
 
-#: ../lib/sources/filessource.py:96
-msgid "Preferences menu"
-msgstr "Tolotry ny safidy manokana"
+#: ../lib/sources/filessource.py:99
+#, fuzzy
+msgid "Settings menu"
+msgstr "Tolotry ny rindran'ny mpizara"
 
-#: ../lib/sources/filessource.py:98
+#: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
 msgstr "Tolotry ny rindran'ny mpizara"
 
-#: ../lib/sources/filessource.py:100
+#: ../lib/sources/filessource.py:103
 msgid "System Settings menu"
 msgstr "Tolotry ny rindran'ny rafitra"
 
-#: ../lib/sources/filessource.py:102
+#: ../lib/sources/filessource.py:105
 msgid "Start Here menu"
 msgstr "Tolotra fiatombohana"
 
-#: ../lib/sources/gconfsource.py:87
+#: ../lib/sources/gconfsource.py:90
 #, python-format
 msgid "GConf key '%s' unset"
 msgstr "Tsy voafaritra ny famaha GConf '%s'"
 
-#: ../lib/sources/gconfsource.py:89
+#: ../lib/sources/gconfsource.py:92
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
 msgstr "Ny famaha '%s' dia voafaritra ho laha-daza '%s'"
 
-#: ../lib/sources/gconfsource.py:91
+#: ../lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
 msgstr "Ny famaha GConf '%s' dia voafaritra ho isa feno '%s'"
 
-#: ../lib/sources/gconfsource.py:93
+#: ../lib/sources/gconfsource.py:96
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
 msgstr "Ny famaha GConf '%s' dia voafaritra ho float '%s'"
 
-#: ../lib/sources/gconfsource.py:95
+#: ../lib/sources/gconfsource.py:98
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
 msgstr "Ny famaha GConf '%s' dia voafaritra ho boleanina '%s'"
 
-#: ../lib/sources/gconfsource.py:97
+#: ../lib/sources/gconfsource.py:100
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
 msgstr "Ny famaha GConf '%s' dia voafaritra ho drafitra '%s'"
 
-#: ../lib/sources/gconfsource.py:99
+#: ../lib/sources/gconfsource.py:102
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
 msgstr "Ny famaha GConf '%s' dia voafaritra ho lisitra '%s'"
 
-#: ../lib/sources/gconfsource.py:101
+#: ../lib/sources/gconfsource.py:104
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
 msgstr "Ny famaha GConf '%s' dia voafaritra ho roroa '%s'"
 
-#: ../lib/sources/gconfsource.py:103
+#: ../lib/sources/gconfsource.py:106
 #, python-format
 msgid "GConf key '%s' set to '%s'"
 msgstr "Ny famaha GConf '%s' dia voafaritra ho '%s'"
 
-#: ../lib/sources/gconfsource.py:134
+#: ../lib/sources/gconfsource.py:137
 msgid "Default GConf settings"
 msgstr "Rindran'ny GConf lasitra"
 
-#: ../lib/sources/gconfsource.py:136
+#: ../lib/sources/gconfsource.py:139
 msgid "Mandatory GConf settings"
 msgstr "Rindran'ny GConf tsy ihodivirana"
 
-#: ../lib/sources/mozillasource.py:130
+#: ../lib/sources/mozillasource.py:133
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
 msgstr "Ny famahan'ny Mozilla '%s' dia voafaritra ho '%s'"
 
-#: ../lib/sources/mozillasource.py:132
+#: ../lib/sources/mozillasource.py:135
 #, python-format
 msgid "Mozilla key '%s' unset"
 msgstr "Tsy voafaritra ny famahan'ny Mozilla '%s'"
 
-#: ../lib/sources/mozillasource.py:134
+#: ../lib/sources/mozillasource.py:137
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Ny famahan'ny Mozilla '%s' dia voaova ho '%s'"
 
-#: ../lib/sources/mozillasource.py:163
-#: ../lib/sources/mozillasource.py:173
+#: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
 msgid "Web browser preferences"
 msgstr "Safidy manokan'ny mpitety tranonkala"
 
-#: ../lib/sources/mozillasource.py:165
-#: ../lib/sources/mozillasource.py:175
+#: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
 msgid "Web browser bookmarks"
 msgstr "Tobin-drohin'ny mpitety tranonkala"
 
-#: ../lib/sources/mozillasource.py:167
+#: ../lib/sources/mozillasource.py:170
 msgid "Web browser profile list"
 msgstr "Lisitry ny profiln'ny mpitety tranonkala"
 
-#: ../lib/sources/mozillasource.py:518
+#: ../lib/sources/mozillasource.py:520
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Tsy hita ilay rakitra (%s)"
@@ -649,67 +713,197 @@ msgstr "Novain'ny tobin-drohin'ny Mozilla ny '%s' '%s'"
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Novain'ny lahatahirin'ny tobin-drohin'ny Mozilla ny '%s'"
 
-#: ../lib/sources/paneldelegate.py:56
+#: ../lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel '%s' added"
 msgstr "Nampidirina ny tontonana '%s'"
 
-#: ../lib/sources/paneldelegate.py:62
+#: ../lib/sources/paneldelegate.py:71
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "Nesorina ny tontonana '%s'"
 
-#: ../lib/sources/paneldelegate.py:68
-#, python-format
-msgid "Panel applet '%s' added"
+#: ../lib/sources/paneldelegate.py:77
+#, fuzzy, python-format
+msgid "Applet '%s' added"
 msgstr "Nampidirina ny appletn'ny tontonana '%s'"
 
-#: ../lib/sources/paneldelegate.py:74
-#, python-format
-msgid "Panel applet '%s' removed"
+#: ../lib/sources/paneldelegate.py:100
+#, fuzzy, python-format
+msgid "Applet '%s' removed"
 msgstr "Nesorina ny appletn'ny tontonana '%s'"
 
-#: ../lib/sources/paneldelegate.py:80
-#, python-format
-msgid "Panel object '%s' added"
+#: ../lib/sources/paneldelegate.py:123
+#, fuzzy, python-format
+msgid "Object '%s' added"
 msgstr "Nampidirina ny zavatry ny tontonana '%s'"
 
-#: ../lib/sources/paneldelegate.py:92
-#, python-format
-msgid "Panel object '%s' removed"
+#: ../lib/sources/paneldelegate.py:152
+#, fuzzy, python-format
+msgid "Object '%s' removed"
 msgstr "Nesorina ny zavatry ny tontonana '%s'"
 
-#: ../lib/sources/paneldelegate.py:373
+#. Translators: This is a drawer in gnome-panel (where you can put applets)
+#: ../lib/sources/paneldelegate.py:240
+msgid "Drawer"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:242
+msgid "Main Menu"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:252
+#, python-format
+msgid "%s launcher"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:256
+msgid "Lock Screen button"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:258
+msgid "Logout button"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:260
+#, fuzzy
+msgid "Run Application button"
+msgstr "Tolotry ny rindranasa"
+
+#: ../lib/sources/paneldelegate.py:262
+msgid "Search button"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:264
+msgid "Force Quit button"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:266
+msgid "Connect to Server button"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:268
+msgid "Shutdown button"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:270
+msgid "Screenshot button"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:273
+msgid "Unknown"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:275
+msgid "Menu Bar"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:512
 msgid "Panel File"
 msgstr "Rakitry ny tontonana"
 
-#: ../lib/storage.py:171
+#: ../lib/storage.py:172
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "Tsy nahavaky ny rakitra '%s': %s"
 
-#: ../lib/storage.py:181
+#: ../lib/storage.py:182
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "Tsy nahavaky ny metadata tanatin'ny '%s': %s"
 
-#: ../lib/storage.py:187
+#: ../lib/storage.py:188
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "Ampahana metadata tsy mitombina ao amin'ny '%s': %s"
 
-#: ../lib/storage.py:361
+#: ../lib/storage.py:362
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Tsy afaka mampiditra ny rakitra '%s' tsy misy"
 
-#: ../lib/storage.py:538
+#: ../lib/storage.py:487
+#, python-format
+msgid "Couldn't unlink file '%s'"
+msgstr ""
+
+#: ../lib/storage.py:570
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "%s vakiana fotsiny io profil io"
 
-#: ../lib/unittests.py:38
-#: ../lib/unittests.py:39
+#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
+#. do not change the way they are written.  The intended string is
+#. something like "invalid type for setting blah in /ldap/path/to/blah"
+#: ../lib/systemdb.py:67
+#, fuzzy, python-format
+msgid "invalid type for setting %(setting)s in %(np)s"
+msgstr "Karazana tsy mitombina ho an'ny rindra %s ao amin'ny %s"
+
+#: ../lib/systemdb.py:112
+msgid "No database file provided"
+msgstr ""
+
+#: ../lib/systemdb.py:232
+#, fuzzy, python-format
+msgid "No LDAP search base specified for %s"
+msgstr "Tsy misy tenin-karoka fototra voafaritra ho an'ny %s"
+
+#: ../lib/systemdb.py:235
+#, fuzzy, python-format
+msgid "No LDAP query filter specified for %s"
+msgstr "Tsy misy mpanivana fanontaniana voafaritra ho an'ny %s"
+
+#: ../lib/systemdb.py:238
+#, fuzzy, python-format
+msgid "No LDAP result attribute specified for %s"
+msgstr "Tsy misy marika manokan'ny valin-karoka voafaritra ho an'ny %s"
+
+#: ../lib/systemdb.py:247
+#, fuzzy
+msgid "LDAP Scope must be one of: "
+msgstr "Tsy maintsy iray amin'ny sub, base ary one ny fivelarana"
+
+#: ../lib/systemdb.py:268
+#, fuzzy
+msgid "multiple_result must be one of: "
+msgstr "Tsy maintsy iray amin'ny first sy random ny multiple_result"
+
+#: ../lib/systemdb.py:361
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "Tsy mety sokafana hanoratana ny %s"
+
+#: ../lib/systemdb.py:374
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "Tsy naharaikitra ny UserDatabase tamin'ny %s"
+
+#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "Tsy fikirakirana profil ny rakitra %s"
+
+#: ../lib/systemdb.py:404
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "Tsy nahavita nampiditra ny profil lasitra %s tanatin'ny kirakira"
+
+#: ../lib/systemdb.py:438
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "Tsy nahavita nampiditra ny mpampiasa %s tamin'ny kirakira"
+
+#: ../lib/systemdb.py:510
+msgid "Failed to get the user list"
+msgstr "Tsy nahazo ny lisitr'ilay mpampiasa"
+
+#: ../lib/systemdb.py:560
+#, fuzzy
+msgid "Failed to get the group list"
+msgstr "Tsy nahazo ny lisitr'ilay mpampiasa"
+
+#: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
 msgstr "Aza raharahaina ireo fampilazana"
 
@@ -727,68 +921,88 @@ msgstr "Mandefa ny fitsapana %s (%s)"
 msgid "Success!"
 msgstr "Nahomby!"
 
-#: ../lib/userdb.py:50
-#, python-format
-msgid "invalid type for setting %s in %s"
-msgstr "Karazana tsy mitombina ho an'ny rindra %s ao amin'ny %s"
+#: ../lib/util.py:94
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"Tsy hita ny lahatahirin'ny fandraisana: tsy voafaritra ao anatin'ny /etc/"
+"passwd sady tsy misy sanda ho an'ny $HOME ao amin'ny tontolo"
 
-#: ../lib/userdb.py:210
-#, python-format
-msgid "No search based specified for %s"
-msgstr "Tsy misy tenin-karoka fototra voafaritra ho an'ny %s"
+#: ../lib/util.py:110 ../lib/util.py:137
+msgid ""
+"Cannot find username: not set in /etc/passwd and no value for $USER in "
+"environment"
+msgstr ""
+"Tsy hita ny anaran'ny mpampiasa: tsy voafaritra ao anatin'ny /etc/passwd "
+"sady tsy misy sanda ho an'ny $USER ao amin'ny tontolo"
 
-#: ../lib/userdb.py:213
-#, python-format
-msgid "No query filter specified for %s"
-msgstr "Tsy misy mpanivana fanontaniana voafaritra ho an'ny %s"
+#~ msgid "Usage: %s [<profile-name>]\n"
+#~ msgstr "Fampiasa: %s [<anarana-profil>]\n"
 
-#: ../lib/userdb.py:216
-#, python-format
-msgid "No result attribute specified for %s"
-msgstr "Tsy misy marika manokan'ny valin-karoka voafaritra ho an'ny %s"
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld second will be permanently "
+#~ "lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %ld seconds will be permanently "
+#~ "lost."
+#~ msgstr[0] ""
+#~ "Ho very avokoa ireo fanovana natao tanatin'ny %ld segaondra raha tsy "
+#~ "raiketinao."
+#~ msgstr[1] ""
+#~ "Ho very avokoa ireo fanovana natao tanatin'ny %ld segaondra raha tsy "
+#~ "raiketinao."
 
-#: ../lib/userdb.py:225
-msgid "Scope must be one of sub, base and one"
-msgstr "Tsy maintsy iray amin'ny sub, base ary one ny fivelarana"
+#~ msgid ""
+#~ "If you don't save, changes from the last minute will be permanently lost."
+#~ msgstr ""
+#~ "Ho very avokoa ireo fanovana natao tanatin'ny minitra farany raha tsy "
+#~ "raiketinao."
 
-#: ../lib/userdb.py:245
-msgid "multiple_result must be one of first and random"
-msgstr "Tsy maintsy iray amin'ny first sy random ny multiple_result"
+#~ msgid ""
+#~ "If you don't save, changes from the last minute and %ld second will be "
+#~ "permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last minute and %ld seconds will be "
+#~ "permanently lost."
+#~ msgstr[0] ""
+#~ "Ho very avokoa ireo fanovana natao tanatin'ny iray minitra sy %ld "
+#~ "segaondra raha tsy raiketinao."
+#~ msgstr[1] ""
+#~ "Ho very avokoa ireo fanovana natao tanatin'ny iray minitra sy %ld "
+#~ "segaondra raha tsy raiketinao."
 
-#: ../lib/userdb.py:337
-#, python-format
-msgid "Could not open %s for writing"
-msgstr "Tsy mety sokafana hanoratana ny %s"
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld minute will be permanently "
+#~ "lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %ld minutes will be permanently "
+#~ "lost."
+#~ msgstr[0] ""
+#~ "Ho very avokoa ireo fanovana natao tanatin'ny %ld minitra raha tsy "
+#~ "raiketinao."
+#~ msgstr[1] ""
+#~ "Ho very avokoa ireo fanovana natao tanatin'ny %ld minitra raha tsy "
+#~ "raiketinao."
 
-#: ../lib/userdb.py:350
-#, python-format
-msgid "Failed to save UserDatabase to %s"
-msgstr "Tsy naharaikitra ny UserDatabase tamin'ny %s"
+#~ msgid ""
+#~ "If you don't save, changes from the last hour and %d minute will be "
+#~ "permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last hour and %d minutes will be "
+#~ "permanently lost."
+#~ msgstr[0] ""
+#~ "Ho very avokoa ireo fanovana natao tanatin'ny adin'iray sy %ld minitra "
+#~ "raha tsy raiketinao."
+#~ msgstr[1] ""
+#~ "Ho very avokoa ireo fanovana natao tanatin'ny adin'iray sy %ld minitra "
+#~ "raha tsy raiketinao."
 
-#: ../lib/userdb.py:373
-#: ../lib/userdb.py:408
-#, python-format
-msgid "File %s is not a profile configuration"
-msgstr "Tsy fikirakirana profil ny rakitra %s"
+#~ msgid "Failed to add monitor for %s"
+#~ msgstr "Tsy nahavita nanampy mpanara-maso ho an'ny %s"
 
-#: ../lib/userdb.py:380
-#, python-format
-msgid "Failed to add default profile %s to configuration"
-msgstr "Tsy nahavita nampiditra ny profil lasitra %s tanatin'ny kirakira"
+#~ msgid "Expected event: %s %s"
+#~ msgstr "Tranga nantenaina: %s %s"
 
-#: ../lib/userdb.py:416
-#, python-format
-msgid "Failed to add user %s to profile configuration"
-msgstr "Tsy nahavita nampiditra ny mpampiasa %s tamin'ny kirakira"
-
-#: ../lib/userdb.py:447
-msgid "Failed to get the user list"
-msgstr "Tsy nahazo ny lisitr'ilay mpampiasa"
-
-#: ../lib/util.py:125
-msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
-msgstr "Tsy hita ny lahatahirin'ny fandraisana: tsy voafaritra ao anatin'ny /etc/passwd sady tsy misy sanda ho an'ny $HOME ao amin'ny tontolo"
-
-#: ../lib/util.py:138
-msgid "Cannot find username: not set in /etc/passwd and no value for $USER in environment"
-msgstr "Tsy hita ny anaran'ny mpampiasa: tsy voafaritra ao anatin'ny /etc/passwd sady tsy misy sanda ho an'ny $USER ao amin'ny tontolo"
+#~ msgid "Preferences menu"
+#~ msgstr "Tolotry ny safidy manokana"

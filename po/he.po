@@ -6,9 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-10-26 23:28+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-12-20 09:43-0600\n"
 "PO-Revision-Date: 2009-10-24 11:29+0200\n"
 "Last-Translator: Mark Krapivner <mark125@gmail.com>\n"
 "Language-Team: he\n"
@@ -44,7 +43,7 @@ msgstr "התעלם"
 msgid "Lock"
 msgstr "נעל"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:230
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
 msgid "Description"
 msgstr "תיאור"
 
@@ -53,61 +52,68 @@ msgstr "תיאור"
 msgid "Profile %s"
 msgstr "פרופיל %s"
 
-#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
 msgid "_Profile"
 msgstr "_פרופיל"
 
-#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
 msgid "_Save"
 msgstr "_שמור"
 
-#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
 msgid "Save profile"
 msgstr "שמור פרופיל"
 
-#: ../admin-tool/editorwindow.py:197
+#: ../admin-tool/editorwindow.py:204
 msgid "_Close"
 msgstr "_סגור"
 
-#: ../admin-tool/editorwindow.py:197 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
 msgid "Close the current window"
 msgstr "סגור את החלון הנוכחי"
 
-#: ../admin-tool/editorwindow.py:198 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
 msgid "_Edit"
 msgstr "_ערוך"
 
-#: ../admin-tool/editorwindow.py:199
+#: ../admin-tool/editorwindow.py:206
 msgid "_Delete"
 msgstr "_מחק"
 
-#: ../admin-tool/editorwindow.py:199
+#: ../admin-tool/editorwindow.py:206
 msgid "Delete item"
 msgstr "מחק פריט"
 
-#: ../admin-tool/editorwindow.py:200 ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
 msgid "_Help"
 msgstr "_עזרה"
 
-#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+msgid "_Contents"
+msgstr ""
+
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+msgid "Help Contents"
+msgstr ""
+
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
 msgid "_About"
 msgstr "_אודות"
 
-#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
 msgid "About Sabayon"
 msgstr "אודות Sabayon"
 
-#: ../admin-tool/editorwindow.py:262 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
 msgid "Files"
 msgstr "קבצים"
 
-#: ../admin-tool/editorwindow.py:266
-#: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:269
+#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
+#: ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "לוח"
 
@@ -157,8 +163,8 @@ msgstr "זוג"
 msgid "Profile settings: %s"
 msgstr "הגדרות פרופיל: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:392
-#: ../admin-tool/usersdialog.py:85
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "שם"
 
@@ -170,310 +176,140 @@ msgstr "סוג"
 msgid "Value"
 msgstr "ערך"
 
-#: ../admin-tool/groupsdialog.py:57
+#: ../admin-tool/groupsdialog.py:61
 #, python-format
-#| msgid "Users for profile %s"
 msgid "Groups for profile %s"
 msgstr "קבוצות עבור פרופיל %s"
 
-#: ../admin-tool/groupsdialog.py:70
+#: ../admin-tool/groupsdialog.py:71
 msgid "Group"
 msgstr "קבוצה"
 
-#: ../admin-tool/groupsdialog.py:80 ../admin-tool/usersdialog.py:95
+#: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
 msgstr "השתמש בפרופיל זה"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:99
+#: ../admin-tool/lockdown/lockdownbutton.py:100
 msgid "Click to make this setting not mandatory"
 msgstr "לחץ כדי להפוך את הגדרות אלו ללא הכרחיות"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:101
+#: ../admin-tool/lockdown/lockdownbutton.py:102
 msgid "Click to make this setting mandatory"
 msgstr "לחץ כדי להפוך את הגדרות אלו להכרחיות"
 
-#: ../admin-tool/lockdown/maindialog.py:49
-msgid "Disable _command line"
-msgstr "נטרל _שורת פקודה"
-
-#: ../admin-tool/lockdown/maindialog.py:50
-msgid "Disable _printing"
-msgstr "נטרל ה_דפסה"
-
-#: ../admin-tool/lockdown/maindialog.py:51
-msgid "Disable print _setup"
-msgstr "נטרל ה_גדרות הדפסה"
-
-#: ../admin-tool/lockdown/maindialog.py:52
-msgid "Disable save to _disk"
-msgstr "נטרל שמירה ל_דיסק"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "_Lock down the panels"
-msgstr "נעל את ה_לוחות"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable force _quit"
-msgstr "נטרל את ה_כרח יציאה"
-
-#: ../admin-tool/lockdown/maindialog.py:56
-msgid "Disable lock _screen"
-msgstr "נטרל _נעילת מסך"
-
-#: ../admin-tool/lockdown/maindialog.py:57
-msgid "Disable log _out"
-msgstr "נטרל _התנתקות"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable _quit"
-msgstr "נטרל י_ציאה"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable _arbitrary URL"
-msgstr "נטרל כ_תובת שרירותית"
-
-#: ../admin-tool/lockdown/maindialog.py:61
-msgid "Disable _bookmark editing"
-msgstr "נטרל_ עריכת סימניות"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _history"
-msgstr "נטרל הי_סטוריה"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _javascript chrome"
-msgstr "נטרל את השליטה של JavaScript על _צבע החלון"
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _toolbar editing"
-msgstr "נטרל עריכת _סרגל הכלים"
-
-#: ../admin-tool/lockdown/maindialog.py:65
-msgid "_Fullscreen"
-msgstr "_מסך מלא"
-
-#: ../admin-tool/lockdown/maindialog.py:66
-msgid "Hide _menubar"
-msgstr "הסתר _תפריט"
-
-#. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
-#. This can be used to disable this, for when you don't want people to know you created the document.
-#: ../admin-tool/lockdown/maindialog.py:70
-msgid "Remove personal information from documents when saving them"
-msgstr "הסר נתונים אישיים ממסמכים בעת שמירתם"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Warn if macro tries to create a PDF"
-msgstr "הזהר במידה והמאקרו מנסה ליצור PDF"
-
-#: ../admin-tool/lockdown/maindialog.py:72
-msgid "Warn if macro tries to print a document"
-msgstr "הזהר במידה והמאקרו מנסה להדפיס מסמך"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-msgid "Warn if macro tries to save a document"
-msgstr "הזהר במידה והמאקרו מנסה לשמור מסמך"
-
-#: ../admin-tool/lockdown/maindialog.py:74
-msgid "Warn if macro tries to sign a document"
-msgstr "הזהר במידה והמאקרו מנסה לחתום על מסמך"
-
-#: ../admin-tool/lockdown/maindialog.py:75
-msgid "Recommend password when saving a document"
-msgstr "המלץ על סיסמה כאשר שומרים מסמך"
-
-#: ../admin-tool/lockdown/maindialog.py:77
-msgid "Enable auto-save"
-msgstr "אפשר שמירה אוטומטית"
-
-#. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
-#: ../admin-tool/lockdown/maindialog.py:79
-msgid "Printing should mark the document as modified"
-msgstr "הדפסה צריכה לסמן את המסמך כאילו נקרא"
-
-#: ../admin-tool/lockdown/maindialog.py:80
-msgid "Use system's file dialog"
-msgstr "השתמש בתיבת דו-שיח הקבצים של המערכת"
-
-#: ../admin-tool/lockdown/maindialog.py:81
-msgid "Create backup copy on save"
-msgstr "צור העתק גיבוי בשמירה"
-
-#: ../admin-tool/lockdown/maindialog.py:82
-msgid "Warn when saving non-OpenOffice.org formats"
-msgstr "הזהר כאשר שומרים בתצורה שאינה OpenOffice.org"
-
-#: ../admin-tool/lockdown/maindialog.py:84
-msgid "Use OpenGL"
-msgstr "השתמש ב-OpenGL"
-
-#: ../admin-tool/lockdown/maindialog.py:85
-msgid "Use system font"
-msgstr "השתמש בגופן המערכת"
-
-#: ../admin-tool/lockdown/maindialog.py:86
-msgid "Use anti-aliasing"
-msgstr "השתמש בהחלקה"
-
-#: ../admin-tool/lockdown/maindialog.py:87
-msgid "Disable UI customization"
-msgstr "בטל התאמת מנשק משתמש"
-
-#: ../admin-tool/lockdown/maindialog.py:88
-msgid "Show insensitive menu items"
-msgstr "הצג פרטי תפריט לא רגישים"
-
-#: ../admin-tool/lockdown/maindialog.py:89
-msgid "Show font preview"
-msgstr "הצג תצוגה מקדימה של הגופן"
-
-#: ../admin-tool/lockdown/maindialog.py:90
-msgid "Show font history"
-msgstr "הצג את הסטוריית הגופנים"
-
-#: ../admin-tool/lockdown/maindialog.py:91
-msgid "Show icons in menus"
-msgstr "הצג סמלים בתפריטים"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:1
-msgid ""
-"\n"
-"5\n"
-"10\n"
-"25\n"
-"50"
-msgstr ""
-"\n"
-"5\n"
-"10\n"
-"25\n"
-"50"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:6
-msgid ""
-"\n"
-"Automatic\n"
-"Large\n"
-"Small"
-msgstr ""
-"\n"
-"אוטומטי\n"
-"גדול\n"
-"קטן"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:10
-msgid ""
-"\n"
-"OpenDocument (.odp)\n"
-"PowerPoint 97+ (.ppt)\n"
-"OpenOffice.org 1.1 (.sxi)"
-msgstr ""
-"\n"
-"OpenDocument (.odp)\n"
-"PowerPoint 97+ (.ppt)\n"
-"OpenOffice.org 1.1 (.sxi)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:14
-msgid ""
-"\n"
-"OpenDocument (.ods)\n"
-"Excel 97+ (.xls)\n"
-"OpenOffice.org 1.1 (.sxc)"
-msgstr ""
-"\n"
-"OpenDocument (.ods)\n"
-"Excel 97+ (.xls)\n"
-"OpenOffice.org 1.1 (.sxc)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:18
-msgid ""
-"\n"
-"OpenDocument (.odt)\n"
-"Word 97+ (.doc)\n"
-"OpenOffice.org 1.1 (.sxw)"
-msgstr ""
-"\n"
-"OpenDocument (.odt)\n"
-"Word 97+ (.doc)\n"
-"OpenOffice.org 1.1 (.sxw)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:22
-msgid ""
-"\n"
-"Very High\n"
-"High\n"
-"Medium\n"
-"Low"
-msgstr ""
-"\n"
-"גבוה מאוד\n"
-"גבוה\n"
-"בינוני\n"
-"נמוך"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:27
-msgid "<b>Disabled Applets</b>"
-msgstr "<b>יישומונים מנוטרלים</b>"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:28
-msgid "<b>Safe Protocols</b>"
-msgstr "<b>פרוטוקולים בטוחים</b>"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:29
-msgid "Default format for presentations:"
-msgstr "תצורת ברירת המחדל עבור מצגות:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:30
-msgid "Default format for spreadsheet:"
-msgstr "תצורת ברירת המחדל עבור גליונות אלקטרוניים:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:31
-msgid "Default format for word processor:"
-msgstr "תצורת ברירת המחדל עבור מעבדי תמלילים:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:32
-msgid "Default icon size"
-msgstr "ברירת המחדל עבור גודל סמל"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:33
-msgid "Disable _unsafe protocols"
-msgstr "נטרל _פרוטוקולים לא בטוחים"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:34
-msgid "Epiphany Web Browser"
-msgstr "דפדפן אינטרנט Epiphany"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:35
+#: ../admin-tool/lockdown/maindialog.py:40
 msgid "General"
 msgstr "כללי"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:36
-msgid "Load / Save"
-msgstr "טען / שמור"
+#: ../admin-tool/lockdown/maindialog.py:42
+msgid "Epiphany Web Browser"
+msgstr "דפדפן אינטרנט Epiphany"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:37
+#: ../admin-tool/lockdown/maindialog.py:43
+msgid "GNOME Screensaver"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:53
+msgid "Disable _command line"
+msgstr "נטרל _שורת פקודה"
+
+#: ../admin-tool/lockdown/maindialog.py:54
+msgid "Disable _printing"
+msgstr "נטרל ה_דפסה"
+
+#: ../admin-tool/lockdown/maindialog.py:55
+msgid "Disable print _setup"
+msgstr "נטרל ה_גדרות הדפסה"
+
+#: ../admin-tool/lockdown/maindialog.py:56
+msgid "Disable save to _disk"
+msgstr "נטרל שמירה ל_דיסק"
+
+#: ../admin-tool/lockdown/maindialog.py:58
+msgid "_Lock down the panels"
+msgstr "נעל את ה_לוחות"
+
+#: ../admin-tool/lockdown/maindialog.py:59
+msgid "Disable force _quit"
+msgstr "נטרל את ה_כרח יציאה"
+
+#: ../admin-tool/lockdown/maindialog.py:60
+msgid "Disable log _out"
+msgstr "נטרל _התנתקות"
+
+#: ../admin-tool/lockdown/maindialog.py:62
+msgid "Disable _quit"
+msgstr "נטרל י_ציאה"
+
+#: ../admin-tool/lockdown/maindialog.py:63
+msgid "Disable _arbitrary URL"
+msgstr "נטרל כ_תובת שרירותית"
+
+#: ../admin-tool/lockdown/maindialog.py:64
+msgid "Disable _bookmark editing"
+msgstr "נטרל_ עריכת סימניות"
+
+#: ../admin-tool/lockdown/maindialog.py:65
+msgid "Disable _history"
+msgstr "נטרל הי_סטוריה"
+
+#: ../admin-tool/lockdown/maindialog.py:66
+msgid "Disable _javascript chrome"
+msgstr "נטרל את השליטה של JavaScript על _צבע החלון"
+
+#: ../admin-tool/lockdown/maindialog.py:67
+msgid "Disable _toolbar editing"
+msgstr "נטרל עריכת _סרגל הכלים"
+
+#: ../admin-tool/lockdown/maindialog.py:68
+#, fuzzy
+msgid "Force _fullscreen mode"
+msgstr "_מסך מלא"
+
+#: ../admin-tool/lockdown/maindialog.py:69
+msgid "Hide _menubar"
+msgstr "הסתר _תפריט"
+
+#: ../admin-tool/lockdown/maindialog.py:71
+msgid "Disable lock _screen"
+msgstr "נטרל _נעילת מסך"
+
+#: ../admin-tool/lockdown/maindialog.py:72
+#, fuzzy
+msgid "_Lock on activation"
+msgstr "נעל את ה_לוחות"
+
+#: ../admin-tool/lockdown/maindialog.py:73
+#, fuzzy
+msgid "Allow log _out"
+msgstr "נטרל _התנתקות"
+
+#: ../admin-tool/lockdown/maindialog.py:74
+msgid "Allow user _switching"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:233
+#, python-format
+msgid "Could not display help document '%s'"
+msgstr ""
+
+#: ../admin-tool/lockdown/pessulus.ui.h:1
+msgid "Disable _unsafe protocols"
+msgstr "נטרל _פרוטוקולים לא בטוחים"
+
+#: ../admin-tool/lockdown/pessulus.ui.h:2
+#, fuzzy
+msgid "Disabled Applets"
+msgstr "<b>יישומונים מנוטרלים</b>"
+
+#: ../admin-tool/lockdown/pessulus.ui.h:3
 msgid "Lockdown Editor"
 msgstr "עורך הנעילות"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:38
-msgid "Macro Security Level:"
-msgstr "רמת אבטחת מאקרו:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:39
-msgid "Number of undo steps:"
-msgstr "מספר צעדי הביטול:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:40
-msgid "OpenOffice.org"
-msgstr "OpenOffice.org"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:42
-msgid "Security"
-msgstr "אבטחה"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:43
-msgid "User Interface"
-msgstr "מנשק משתמש"
+#: ../admin-tool/lockdown/pessulus.ui.h:4
+#, fuzzy
+msgid "Safe Protocols"
+msgstr "<b>פרוטוקולים בטוחים</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -481,7 +317,7 @@ msgstr "מנשק משתמש"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:508
+#: ../admin-tool/profilesdialog.py:520
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -559,47 +395,47 @@ msgstr "Usage: %s <profile-name> <profile-path> <display-number>\n"
 msgid "Establish and Edit Profiles for Users"
 msgstr "צור וערוך פרופילי משתמשים"
 
-#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.glade.h:4
+#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.ui.h:4
 msgid "User Profile Editor"
 msgstr "עורך פרופיל משתמש"
 
-#: ../admin-tool/sabayon.glade.h:1
+#: ../admin-tool/sabayon.ui.h:1
 msgid "Add Profile"
 msgstr "הוסף פרופיל"
 
-#: ../admin-tool/sabayon.glade.h:2
+#: ../admin-tool/sabayon.ui.h:2
 msgid "Profile _name:"
 msgstr "שם _פרופיל:"
 
-#: ../admin-tool/sabayon.glade.h:3
+#: ../admin-tool/sabayon.ui.h:3
 msgid "Use this profile for _all users"
 msgstr "השתמש בפרופיל זה עבור _כל המשתמשים"
 
-#: ../admin-tool/sabayon.glade.h:5
+#: ../admin-tool/sabayon.ui.h:5
 msgid "_Base on:"
 msgstr "_בסס על:"
 
-#: ../admin-tool/sabayon.glade.h:6
+#: ../admin-tool/sabayon.ui.h:6
 msgid "_Details"
 msgstr "_פרטים"
 
-#: ../admin-tool/sabayon.glade.h:7
+#: ../admin-tool/sabayon.ui.h:7
 msgid "_Groups"
 msgstr "_קבוצות"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.ui.h:8
 msgid "_Groups:"
 msgstr "_קבוצות: "
 
-#: ../admin-tool/sabayon.glade.h:9
+#: ../admin-tool/sabayon.ui.h:9
 msgid "_Profiles:"
 msgstr "_פרופילים:"
 
-#: ../admin-tool/sabayon.glade.h:10
+#: ../admin-tool/sabayon.ui.h:10
 msgid "_Users"
 msgstr "_משתמשים"
 
-#: ../admin-tool/sabayon.glade.h:11
+#: ../admin-tool/sabayon.ui.h:11
 msgid "_Users:"
 msgstr "_משתמשים:"
 
@@ -612,105 +448,50 @@ msgstr "סגור מ_בלי לשמור"
 msgid "Save changes to profile \"%s\" before closing?"
 msgstr "לשמור את השינויים לפרופיל \"%s\" לפני הסגירה?"
 
-#: ../admin-tool/saveconfirm.py:45
-#, python-format
-msgid ""
-"If you don't save, changes from the last %ld second will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld seconds will be permanently "
-"lost."
-msgstr[0] "אם לא תשמור, שינויים מהשנייה אחרונה יאבדו."
-msgstr[1] "אם לא תשמור, שינויים מ-%ld השניות האחרונות יאבדו."
-
-#: ../admin-tool/saveconfirm.py:51
-msgid ""
-"If you don't save, changes from the last minute will be permanently lost."
-msgstr "אם לא תשמור, שינויים מהדקה האחרונה יאבדו."
-
-#: ../admin-tool/saveconfirm.py:55
-#, python-format
-msgid ""
-"If you don't save, changes from the last minute and %ld second will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last minute and %ld seconds will be "
-"permanently lost."
-msgstr[0] "אם לא תשמור, שינויים מהדקה והשניה האחרונות יאבדו."
-msgstr[1] "אם לא תשמור, שינויים מהדקה ו-%ld השניות האחרונות יאבדו."
-
-#: ../admin-tool/saveconfirm.py:62
-#, python-format
-msgid ""
-"If you don't save, changes from the last %ld minute will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld minutes will be permanently "
-"lost."
-msgstr[0] "אם לא תשמור, שינויים מהדקה האחרונה יאבדו."
-msgstr[1] "אם לא תשמור, שינויים מ-%ld הדקות האחרונות יאבדו."
-
-#: ../admin-tool/saveconfirm.py:71
-msgid "If you don't save, changes from the last hour will be permanently lost."
+#: ../admin-tool/saveconfirm.py:44
+#, fuzzy
+msgid "If you don't save, all changes will be permanently lost."
 msgstr "אם לא תשמור, שינויים מהשעה האחרונה יאבדו."
 
-#: ../admin-tool/saveconfirm.py:74
-#, python-format
-msgid ""
-"If you don't save, changes from the last hour and %d minute will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last hour and %d minutes will be "
-"permanently lost."
-msgstr[0] "אם לא תשמור, שינויים מהשעה והדקה האחרונות יאבדו."
-msgstr[1] "אם לא תשמור, שינויים מהשעה ו-%d הדקות האחרונות יאבדו."
-
-#: ../admin-tool/saveconfirm.py:81
-#, python-format
-msgid ""
-"If you don't save, changes from the last %d hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "אם לא תשמור, שינויים מהשעה האחרונה יאבדו."
-msgstr[1] "אם לא תשמור, שינויים מ-%d השעות האחרונות יאבדו."
-
-#: ../admin-tool/sessionwindow.py:154
+#: ../admin-tool/sessionwindow.py:155
 #, python-format
 msgid "Editing profile %s"
 msgstr "עורך פרופיל %s"
 
-#: ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/sessionwindow.py:179
 msgid "_Quit"
 msgstr "_יציאה"
 
-#: ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Changes"
 msgstr "_שינויים"
 
-#: ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/sessionwindow.py:181
 msgid "Edit changes"
 msgstr "ערוך את השינויים"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:182
 msgid "_Lockdown"
 msgstr "_נעילה"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:182
 msgid "Edit Lockdown settings"
 msgstr "עריכת הגדות נעילה"
 
-#: ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/sessionwindow.py:188
 msgid "Enforce Mandatory"
 msgstr "אכיפת אילוץ"
 
-#: ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/sessionwindow.py:188
 msgid "Enforce mandatory settings in the editing session"
 msgstr "אכיפת הגדרות מאולצות במהלך הכתיבה"
 
-#: ../admin-tool/sessionwindow.py:297
+#: ../admin-tool/sessionwindow.py:306
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "הגדרות נעילה עבור %s"
 
-#: ../admin-tool/sessionwindow.py:333
+#: ../admin-tool/sessionwindow.py:342
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
@@ -719,15 +500,15 @@ msgstr ""
 "ארעה שגיאה ברת-התאוששות בהחלת פרופיל המשתמש '%s'. באפשרותך לדווח על השגיאה "
 "עכשיו או להמשיך בעריכת פרופיל המשתמש."
 
-#: ../admin-tool/sessionwindow.py:337
+#: ../admin-tool/sessionwindow.py:346
 msgid "_Report this error"
 msgstr "_דווח על שגיאה זו"
 
-#: ../admin-tool/sessionwindow.py:338
+#: ../admin-tool/sessionwindow.py:347
 msgid "_Continue editing"
 msgstr "_המשך לערוך"
 
-#: ../admin-tool/usersdialog.py:67
+#: ../admin-tool/usersdialog.py:72
 #, python-format
 msgid "Users for profile %s"
 msgstr "משתמשים עבור פרופיל %s"
@@ -783,8 +564,9 @@ msgid "Applications menu"
 msgstr "תפריט יישומים"
 
 #: ../lib/sources/filessource.py:99
-msgid "Preferences menu"
-msgstr "תפריט העדפות"
+#, fuzzy
+msgid "Settings menu"
+msgstr "תפריט הגדרות שרת"
 
 #: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
@@ -937,141 +719,81 @@ msgstr "לוח '%s' הוסף"
 msgid "Panel '%s' removed"
 msgstr "לוח '%s' הוסר"
 
-#: ../lib/sources/paneldelegate.py:86
-#, python-format
-msgid "Applet %s added to top panel"
-msgstr "יישומון %s הוסף ללוח העליון"
+#: ../lib/sources/paneldelegate.py:77
+#, fuzzy, python-format
+msgid "Applet '%s' added"
+msgstr "לוח '%s' הוסף"
 
-#: ../lib/sources/paneldelegate.py:88
-#, python-format
-msgid "Applet %s added to bottom panel"
-msgstr "יישומון %s הוסף ללוח התחתון"
+#: ../lib/sources/paneldelegate.py:100
+#, fuzzy, python-format
+msgid "Applet '%s' removed"
+msgstr "לוח '%s' הוסר"
 
-#: ../lib/sources/paneldelegate.py:90
-#, python-format
-msgid "Applet %s added to left panel"
-msgstr "יישומון %s הוסף ללוח השמאלי"
+#: ../lib/sources/paneldelegate.py:123
+#, fuzzy, python-format
+msgid "Object '%s' added"
+msgstr "לוח '%s' הוסף"
 
-#: ../lib/sources/paneldelegate.py:92
-#, python-format
-msgid "Applet %s added to right panel"
-msgstr "יישומון %s הוסף ללוח הימני"
-
-#: ../lib/sources/paneldelegate.py:107
-#, python-format
-msgid "Applet %s removed from top panel"
-msgstr "יישומון %s הוסר מהלוח העליון"
-
-#: ../lib/sources/paneldelegate.py:109
-#, python-format
-msgid "Applet %s removed from bottom panel"
-msgstr "יישומון %s הוסר מהלוח התחתון"
-
-#: ../lib/sources/paneldelegate.py:111
-#, python-format
-msgid "Applet %s removed from left panel"
-msgstr "יישומון %s הוסר מהלוח השמאלי"
-
-#: ../lib/sources/paneldelegate.py:113
-#, python-format
-msgid "Applet %s removed from right panel"
-msgstr "יישומון %s הוסר מהלוח הימני"
-
-#: ../lib/sources/paneldelegate.py:127
-#, python-format
-msgid "%s added to top panel"
-msgstr "‏%s הוסף ללוח העליון"
-
-#: ../lib/sources/paneldelegate.py:129
-#, python-format
-msgid "%s added to bottom panel"
-msgstr "‏%s הוסף ללוח התחתון"
-
-#: ../lib/sources/paneldelegate.py:131
-#, python-format
-msgid "%s added to left panel"
-msgstr "‏%s הוסף ללוח השמאלי"
-
-#: ../lib/sources/paneldelegate.py:133
-#, python-format
-msgid "%s added to right panel"
-msgstr "‏%s הוסף ללוח הימני"
-
-#: ../lib/sources/paneldelegate.py:154
-#, python-format
-msgid "%s removed from top panel"
-msgstr "‏%s הוסר מהלוח העליון"
-
-#: ../lib/sources/paneldelegate.py:156
-#, python-format
-msgid "%s removed from bottom panel"
-msgstr "‏%s הוסר מהלוח התחתון"
-
-#: ../lib/sources/paneldelegate.py:158
-#, python-format
-msgid "%s removed from left panel"
-msgstr "‏%s הוסר מהלוח השמאלי"
-
-#: ../lib/sources/paneldelegate.py:160
-#, python-format
-msgid "%s removed from right panel"
-msgstr "‏%s הוסר מהלוח הימני"
+#: ../lib/sources/paneldelegate.py:152
+#, fuzzy, python-format
+msgid "Object '%s' removed"
+msgstr "לוח '%s' הוסר"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:231
+#: ../lib/sources/paneldelegate.py:240
 msgid "Drawer"
 msgstr "מגירה"
 
-#: ../lib/sources/paneldelegate.py:233
+#: ../lib/sources/paneldelegate.py:242
 msgid "Main Menu"
 msgstr "תפריט ראשי"
 
-#: ../lib/sources/paneldelegate.py:243
+#: ../lib/sources/paneldelegate.py:252
 #, python-format
 msgid "%s launcher"
 msgstr "מפעיל %s"
 
-#: ../lib/sources/paneldelegate.py:247
+#: ../lib/sources/paneldelegate.py:256
 msgid "Lock Screen button"
 msgstr "כפתור נעילת מסך"
 
-#: ../lib/sources/paneldelegate.py:249
+#: ../lib/sources/paneldelegate.py:258
 msgid "Logout button"
 msgstr "כפתור התנתקות"
 
-#: ../lib/sources/paneldelegate.py:251
+#: ../lib/sources/paneldelegate.py:260
 msgid "Run Application button"
 msgstr "כפתור הפעל יישום"
 
-#: ../lib/sources/paneldelegate.py:253
+#: ../lib/sources/paneldelegate.py:262
 msgid "Search button"
 msgstr "כפתור חיפוש"
 
-#: ../lib/sources/paneldelegate.py:255
+#: ../lib/sources/paneldelegate.py:264
 msgid "Force Quit button"
 msgstr "כפתור הכרח יציאה"
 
-#: ../lib/sources/paneldelegate.py:257
+#: ../lib/sources/paneldelegate.py:266
 msgid "Connect to Server button"
 msgstr "כפתור התחברות לשרת"
 
-#: ../lib/sources/paneldelegate.py:259
+#: ../lib/sources/paneldelegate.py:268
 msgid "Shutdown button"
 msgstr "כפתור כיבוי"
 
-#: ../lib/sources/paneldelegate.py:261
+#: ../lib/sources/paneldelegate.py:270
 msgid "Screenshot button"
 msgstr "כפתור צילום מסך"
 
-#: ../lib/sources/paneldelegate.py:264
+#: ../lib/sources/paneldelegate.py:273
 msgid "Unknown"
 msgstr "לא ידוע"
 
-#: ../lib/sources/paneldelegate.py:266
+#: ../lib/sources/paneldelegate.py:275
 msgid "Menu Bar"
 msgstr "סרגל תפריטים"
 
-#: ../lib/sources/paneldelegate.py:503
+#: ../lib/sources/paneldelegate.py:512
 msgid "Panel File"
 msgstr "קובץ לוח"
 
@@ -1108,69 +830,70 @@ msgstr "הפרופיל לקריאה בלבד %s"
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/systemdb.py:58
+#: ../lib/systemdb.py:67
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "סוג לא תקין לקביעת %(setting)s ב-%(np)s"
 
-#: ../lib/systemdb.py:103
+#: ../lib/systemdb.py:112
 msgid "No database file provided"
 msgstr "לא סופק קובץ בסיס נתונים"
 
-#: ../lib/systemdb.py:220
-#, python-format
-msgid "No search base specified for %s"
+#: ../lib/systemdb.py:232
+#, fuzzy, python-format
+msgid "No LDAP search base specified for %s"
 msgstr "לא צויין בסיס לחיפוש עבור %s"
 
-#: ../lib/systemdb.py:223
-#, python-format
-msgid "No query filter specified for %s"
+#: ../lib/systemdb.py:235
+#, fuzzy, python-format
+msgid "No LDAP query filter specified for %s"
 msgstr "לא צויין מסנן שאילתה עבור %s"
 
-#: ../lib/systemdb.py:226
-#, python-format
-msgid "No result attribute specified for %s"
+#: ../lib/systemdb.py:238
+#, fuzzy, python-format
+msgid "No LDAP result attribute specified for %s"
 msgstr "לא צויינה תכונת תוצאה עבור %s"
 
-#: ../lib/systemdb.py:235
-msgid "Scope must be one of sub, base and one"
+#: ../lib/systemdb.py:247
+#, fuzzy
+msgid "LDAP Scope must be one of: "
 msgstr "הטווח חייב להיות אחד מבין משנה, בסיס ואחד"
 
-#: ../lib/systemdb.py:255
-msgid "multiple_result must be one of first and random"
+#: ../lib/systemdb.py:268
+#, fuzzy
+msgid "multiple_result must be one of: "
 msgstr "‏multiple_result חייב להיות אחד מבין ראשון ואקראי"
 
-#: ../lib/systemdb.py:347
+#: ../lib/systemdb.py:361
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "לא ניתן לפתוח את %s לכתיבה"
 
-#: ../lib/systemdb.py:360
+#: ../lib/systemdb.py:374
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "נכשל בשמירת בסיס נתוני המשתמשים ל-%s"
 
-#: ../lib/systemdb.py:383 ../lib/systemdb.py:417
+#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "הקובץ %s אינו הגדרות פרופיל"
 
-#: ../lib/systemdb.py:390
+#: ../lib/systemdb.py:404
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "נכשל בהוספת פרופיל ברירת המחדל %s להגדרות"
 
-#: ../lib/systemdb.py:424
+#: ../lib/systemdb.py:438
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "נכשל בהוספת המשתמש %s להגדרות הפרופיל"
 
-#: ../lib/systemdb.py:496
+#: ../lib/systemdb.py:510
 msgid "Failed to get the user list"
 msgstr "נכשל בקבלת רשימת המשתמשים"
 
-#: ../lib/systemdb.py:546
-#| msgid "Failed to get the user list"
+#: ../lib/systemdb.py:560
 msgid "Failed to get the group list"
 msgstr "נכשל בקבלת רשימת הקבוצות"
 
@@ -1207,3 +930,259 @@ msgid ""
 msgstr ""
 "לא ניתן למצוא את שם המשתמש: לא נקבע ב־‎/etc/passwd‏ ואין ערך במשתנה הסביבה ‎"
 "$USER"
+
+#~ msgid "Remove personal information from documents when saving them"
+#~ msgstr "הסר נתונים אישיים ממסמכים בעת שמירתם"
+
+#~ msgid "Warn if macro tries to create a PDF"
+#~ msgstr "הזהר במידה והמאקרו מנסה ליצור PDF"
+
+#~ msgid "Warn if macro tries to print a document"
+#~ msgstr "הזהר במידה והמאקרו מנסה להדפיס מסמך"
+
+#~ msgid "Warn if macro tries to save a document"
+#~ msgstr "הזהר במידה והמאקרו מנסה לשמור מסמך"
+
+#~ msgid "Warn if macro tries to sign a document"
+#~ msgstr "הזהר במידה והמאקרו מנסה לחתום על מסמך"
+
+#~ msgid "Recommend password when saving a document"
+#~ msgstr "המלץ על סיסמה כאשר שומרים מסמך"
+
+#~ msgid "Enable auto-save"
+#~ msgstr "אפשר שמירה אוטומטית"
+
+#~ msgid "Printing should mark the document as modified"
+#~ msgstr "הדפסה צריכה לסמן את המסמך כאילו נקרא"
+
+#~ msgid "Use system's file dialog"
+#~ msgstr "השתמש בתיבת דו-שיח הקבצים של המערכת"
+
+#~ msgid "Create backup copy on save"
+#~ msgstr "צור העתק גיבוי בשמירה"
+
+#~ msgid "Warn when saving non-OpenOffice.org formats"
+#~ msgstr "הזהר כאשר שומרים בתצורה שאינה OpenOffice.org"
+
+#~ msgid "Use OpenGL"
+#~ msgstr "השתמש ב-OpenGL"
+
+#~ msgid "Use system font"
+#~ msgstr "השתמש בגופן המערכת"
+
+#~ msgid "Use anti-aliasing"
+#~ msgstr "השתמש בהחלקה"
+
+#~ msgid "Disable UI customization"
+#~ msgstr "בטל התאמת מנשק משתמש"
+
+#~ msgid "Show insensitive menu items"
+#~ msgstr "הצג פרטי תפריט לא רגישים"
+
+#~ msgid "Show font preview"
+#~ msgstr "הצג תצוגה מקדימה של הגופן"
+
+#~ msgid "Show font history"
+#~ msgstr "הצג את הסטוריית הגופנים"
+
+#~ msgid "Show icons in menus"
+#~ msgstr "הצג סמלים בתפריטים"
+
+#~ msgid ""
+#~ "\n"
+#~ "5\n"
+#~ "10\n"
+#~ "25\n"
+#~ "50"
+#~ msgstr ""
+#~ "\n"
+#~ "5\n"
+#~ "10\n"
+#~ "25\n"
+#~ "50"
+
+#~ msgid ""
+#~ "\n"
+#~ "Automatic\n"
+#~ "Large\n"
+#~ "Small"
+#~ msgstr ""
+#~ "\n"
+#~ "אוטומטי\n"
+#~ "גדול\n"
+#~ "קטן"
+
+#~ msgid ""
+#~ "\n"
+#~ "OpenDocument (.odp)\n"
+#~ "PowerPoint 97+ (.ppt)\n"
+#~ "OpenOffice.org 1.1 (.sxi)"
+#~ msgstr ""
+#~ "\n"
+#~ "OpenDocument (.odp)\n"
+#~ "PowerPoint 97+ (.ppt)\n"
+#~ "OpenOffice.org 1.1 (.sxi)"
+
+#~ msgid ""
+#~ "\n"
+#~ "OpenDocument (.ods)\n"
+#~ "Excel 97+ (.xls)\n"
+#~ "OpenOffice.org 1.1 (.sxc)"
+#~ msgstr ""
+#~ "\n"
+#~ "OpenDocument (.ods)\n"
+#~ "Excel 97+ (.xls)\n"
+#~ "OpenOffice.org 1.1 (.sxc)"
+
+#~ msgid ""
+#~ "\n"
+#~ "OpenDocument (.odt)\n"
+#~ "Word 97+ (.doc)\n"
+#~ "OpenOffice.org 1.1 (.sxw)"
+#~ msgstr ""
+#~ "\n"
+#~ "OpenDocument (.odt)\n"
+#~ "Word 97+ (.doc)\n"
+#~ "OpenOffice.org 1.1 (.sxw)"
+
+#~ msgid ""
+#~ "\n"
+#~ "Very High\n"
+#~ "High\n"
+#~ "Medium\n"
+#~ "Low"
+#~ msgstr ""
+#~ "\n"
+#~ "גבוה מאוד\n"
+#~ "גבוה\n"
+#~ "בינוני\n"
+#~ "נמוך"
+
+#~ msgid "Default format for presentations:"
+#~ msgstr "תצורת ברירת המחדל עבור מצגות:"
+
+#~ msgid "Default format for spreadsheet:"
+#~ msgstr "תצורת ברירת המחדל עבור גליונות אלקטרוניים:"
+
+#~ msgid "Default format for word processor:"
+#~ msgstr "תצורת ברירת המחדל עבור מעבדי תמלילים:"
+
+#~ msgid "Default icon size"
+#~ msgstr "ברירת המחדל עבור גודל סמל"
+
+#~ msgid "Load / Save"
+#~ msgstr "טען / שמור"
+
+#~ msgid "Macro Security Level:"
+#~ msgstr "רמת אבטחת מאקרו:"
+
+#~ msgid "Number of undo steps:"
+#~ msgstr "מספר צעדי הביטול:"
+
+#~ msgid "OpenOffice.org"
+#~ msgstr "OpenOffice.org"
+
+#~ msgid "Security"
+#~ msgstr "אבטחה"
+
+#~ msgid "User Interface"
+#~ msgstr "מנשק משתמש"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld second will be permanently "
+#~ "lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %ld seconds will be permanently "
+#~ "lost."
+#~ msgstr[0] "אם לא תשמור, שינויים מהשנייה אחרונה יאבדו."
+#~ msgstr[1] "אם לא תשמור, שינויים מ-%ld השניות האחרונות יאבדו."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last minute will be permanently lost."
+#~ msgstr "אם לא תשמור, שינויים מהדקה האחרונה יאבדו."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last minute and %ld second will be "
+#~ "permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last minute and %ld seconds will be "
+#~ "permanently lost."
+#~ msgstr[0] "אם לא תשמור, שינויים מהדקה והשניה האחרונות יאבדו."
+#~ msgstr[1] "אם לא תשמור, שינויים מהדקה ו-%ld השניות האחרונות יאבדו."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld minute will be permanently "
+#~ "lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %ld minutes will be permanently "
+#~ "lost."
+#~ msgstr[0] "אם לא תשמור, שינויים מהדקה האחרונה יאבדו."
+#~ msgstr[1] "אם לא תשמור, שינויים מ-%ld הדקות האחרונות יאבדו."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last hour and %d minute will be "
+#~ "permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last hour and %d minutes will be "
+#~ "permanently lost."
+#~ msgstr[0] "אם לא תשמור, שינויים מהשעה והדקה האחרונות יאבדו."
+#~ msgstr[1] "אם לא תשמור, שינויים מהשעה ו-%d הדקות האחרונות יאבדו."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %d hour will be permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %d hours will be permanently "
+#~ "lost."
+#~ msgstr[0] "אם לא תשמור, שינויים מהשעה האחרונה יאבדו."
+#~ msgstr[1] "אם לא תשמור, שינויים מ-%d השעות האחרונות יאבדו."
+
+#~ msgid "Preferences menu"
+#~ msgstr "תפריט העדפות"
+
+#~ msgid "Applet %s added to top panel"
+#~ msgstr "יישומון %s הוסף ללוח העליון"
+
+#~ msgid "Applet %s added to bottom panel"
+#~ msgstr "יישומון %s הוסף ללוח התחתון"
+
+#~ msgid "Applet %s added to left panel"
+#~ msgstr "יישומון %s הוסף ללוח השמאלי"
+
+#~ msgid "Applet %s added to right panel"
+#~ msgstr "יישומון %s הוסף ללוח הימני"
+
+#~ msgid "Applet %s removed from top panel"
+#~ msgstr "יישומון %s הוסר מהלוח העליון"
+
+#~ msgid "Applet %s removed from bottom panel"
+#~ msgstr "יישומון %s הוסר מהלוח התחתון"
+
+#~ msgid "Applet %s removed from left panel"
+#~ msgstr "יישומון %s הוסר מהלוח השמאלי"
+
+#~ msgid "Applet %s removed from right panel"
+#~ msgstr "יישומון %s הוסר מהלוח הימני"
+
+#~ msgid "%s added to top panel"
+#~ msgstr "‏%s הוסף ללוח העליון"
+
+#~ msgid "%s added to bottom panel"
+#~ msgstr "‏%s הוסף ללוח התחתון"
+
+#~ msgid "%s added to left panel"
+#~ msgstr "‏%s הוסף ללוח השמאלי"
+
+#~ msgid "%s added to right panel"
+#~ msgstr "‏%s הוסף ללוח הימני"
+
+#~ msgid "%s removed from top panel"
+#~ msgstr "‏%s הוסר מהלוח העליון"
+
+#~ msgid "%s removed from bottom panel"
+#~ msgstr "‏%s הוסר מהלוח התחתון"
+
+#~ msgid "%s removed from left panel"
+#~ msgstr "‏%s הוסר מהלוח השמאלי"
+
+#~ msgid "%s removed from right panel"
+#~ msgstr "‏%s הוסר מהלוח הימני"

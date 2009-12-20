@@ -10,9 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-12-20 05:50+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-12-20 09:43-0600\n"
 "PO-Revision-Date: 2009-12-20 13:36+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
@@ -457,8 +456,6 @@ msgid "Save changes to profile \"%s\" before closing?"
 msgstr "¿Desea guardar los cambios al perfil «%s» antes de cerrar?"
 
 #: ../admin-tool/saveconfirm.py:44
-#| msgid ""
-#| "If you don't save, changes from the last hour will be permanently lost."
 msgid "If you don't save, all changes will be permanently lost."
 msgstr "Si no guarda, se perderán permanentemente los cambios."
 
@@ -853,29 +850,24 @@ msgstr "No se proporcionó ningún archivo de base de datos"
 
 #: ../lib/systemdb.py:232
 #, python-format
-#| msgid "No search base specified for %s"
 msgid "No LDAP search base specified for %s"
 msgstr "Sin base de búsqueda LDAP especificada para %s"
 
 #: ../lib/systemdb.py:235
 #, python-format
-#| msgid "No query filter specified for %s"
 msgid "No LDAP query filter specified for %s"
 msgstr "Sin filtro de consulta LDAP especificado para %s"
 
 #: ../lib/systemdb.py:238
 #, python-format
-#| msgid "No result attribute specified for %s"
 msgid "No LDAP result attribute specified for %s"
 msgstr "No se ha especificado un atributo resultante LDAP para %s"
 
 #: ../lib/systemdb.py:247
-#| msgid "Scope must be one of sub, base and one"
 msgid "LDAP Scope must be one of: "
 msgstr "El ámbito LDAP debe ser uno de los siguientes: "
 
 #: ../lib/systemdb.py:268
-#| msgid "multiple_result must be one of first and random"
 msgid "multiple_result must be one of: "
 msgstr "multiple_result debe ser uno de los siguientes: "
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-01 13:12+0200\n"
+"POT-Creation-Date: 2009-12-20 09:43-0600\n"
 "PO-Revision-Date: 2007-09-13 01:52+0300\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: i18n@mova.org <i18n@mova.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../admin-tool/aboutdialog.py:63
+#: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
 msgstr "Prahrama, kab stvarać i redahavać profili karystalnikaŭ"
 
-#: ../admin-tool/aboutdialog.py:66
+#: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
 msgstr "Alaksandar Navicki & Łacinka.org"
 
@@ -39,7 +39,7 @@ msgstr "Ihnaravanaje"
 msgid "Lock"
 msgstr "Zablakavanaje"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:230
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
 msgid "Description"
 msgstr "Apisańnie"
 
@@ -48,61 +48,68 @@ msgstr "Apisańnie"
 msgid "Profile %s"
 msgstr "Profil %s"
 
-#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
 msgid "_Profile"
 msgstr "_Profil"
 
-#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
 msgid "_Save"
 msgstr "Z_apišy"
 
-#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
 msgid "Save profile"
 msgstr "Zapišy profil"
 
-#: ../admin-tool/editorwindow.py:197
+#: ../admin-tool/editorwindow.py:204
 msgid "_Close"
 msgstr "_Začyni"
 
-#: ../admin-tool/editorwindow.py:197 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
 msgid "Close the current window"
 msgstr "Začyniaje dziejnaje vakno"
 
-#: ../admin-tool/editorwindow.py:198 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
 msgid "_Edit"
 msgstr "_Redahuj"
 
-#: ../admin-tool/editorwindow.py:199
+#: ../admin-tool/editorwindow.py:206
 msgid "_Delete"
 msgstr "_Vydal"
 
-#: ../admin-tool/editorwindow.py:199
+#: ../admin-tool/editorwindow.py:206
 msgid "Delete item"
 msgstr "Vydalaje element"
 
-#: ../admin-tool/editorwindow.py:200 ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
 msgid "_Help"
 msgstr "Dapamo_ha"
 
-#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+msgid "_Contents"
+msgstr ""
+
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+msgid "Help Contents"
+msgstr ""
+
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
 msgid "_About"
 msgstr "I_nfarmacyja pra"
 
-#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
 msgid "About Sabayon"
 msgstr "Pra Sabayon"
 
-#: ../admin-tool/editorwindow.py:262 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
 msgid "Files"
 msgstr "Fajły"
 
-#: ../admin-tool/editorwindow.py:266
-#: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:229
+#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
+#: ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "Panel"
 
@@ -152,8 +159,8 @@ msgstr "para"
 msgid "Profile settings: %s"
 msgstr "Nałady profilu: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:384
-#: ../admin-tool/usersdialog.py:85
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "Nazva"
 
@@ -165,297 +172,141 @@ msgstr "Typ"
 msgid "Value"
 msgstr "Vartaść"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:101
+#: ../admin-tool/groupsdialog.py:61
+#, fuzzy, python-format
+msgid "Groups for profile %s"
+msgstr "Karystalniki profilu %s"
+
+#: ../admin-tool/groupsdialog.py:71
+msgid "Group"
+msgstr ""
+
+#: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
+msgid "Use This Profile"
+msgstr "Užyvaje hety profil"
+
+#: ../admin-tool/lockdown/lockdownbutton.py:100
 msgid "Click to make this setting not mandatory"
 msgstr "Klikni, kab hetaja nałada nie była abaviazkovaj"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:103
+#: ../admin-tool/lockdown/lockdownbutton.py:102
 msgid "Click to make this setting mandatory"
 msgstr "Klikni, kab hetaja nałada była abaviazkovaj"
 
-#: ../admin-tool/lockdown/maindialog.py:51
+#: ../admin-tool/lockdown/maindialog.py:40
+msgid "General"
+msgstr "Ahulnaje"
+
+#: ../admin-tool/lockdown/maindialog.py:42
+msgid "Epiphany Web Browser"
+msgstr "Hartač WWW Epiphany"
+
+#: ../admin-tool/lockdown/maindialog.py:43
+msgid "GNOME Screensaver"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:53
 msgid "Disable _command line"
 msgstr "Blakuj _zahadny radok"
 
-#: ../admin-tool/lockdown/maindialog.py:52
+#: ../admin-tool/lockdown/maindialog.py:54
 msgid "Disable _printing"
 msgstr "Blakuj mahčymaści _drukavańnia"
 
-#: ../admin-tool/lockdown/maindialog.py:53
+#: ../admin-tool/lockdown/maindialog.py:55
 msgid "Disable print _setup"
 msgstr "Blakuj źmieny _naładaŭ vydruku"
 
-#: ../admin-tool/lockdown/maindialog.py:54
+#: ../admin-tool/lockdown/maindialog.py:56
 msgid "Disable save to _disk"
 msgstr "Blakuj mahčymaści _zapisu na dysk"
 
-#: ../admin-tool/lockdown/maindialog.py:56
+#: ../admin-tool/lockdown/maindialog.py:58
 msgid "_Lock down the panels"
 msgstr "Blakuj p_aneli"
 
-#: ../admin-tool/lockdown/maindialog.py:57
+#: ../admin-tool/lockdown/maindialog.py:59
 msgid "Disable force _quit"
 msgstr "Blakuj mahčymaści _gvałtoŭnaha zakančeńnia prahramy"
 
-#: ../admin-tool/lockdown/maindialog.py:58
-msgid "Disable lock _screen"
-msgstr "Blakuj mahčymaści _blakavańnia ekranu"
-
-#: ../admin-tool/lockdown/maindialog.py:59
+#: ../admin-tool/lockdown/maindialog.py:60
 msgid "Disable log _out"
 msgstr "Blakuj mahčymaści vy_chadu"
 
-#: ../admin-tool/lockdown/maindialog.py:61
+#: ../admin-tool/lockdown/maindialog.py:62
 msgid "Disable _quit"
 msgstr "_Blakuj mahčymaści zakančeńnia prahramy"
 
 # FIXME: arbitrary?
-#: ../admin-tool/lockdown/maindialog.py:62
+#: ../admin-tool/lockdown/maindialog.py:63
 msgid "Disable _arbitrary URL"
 msgstr "Blakuj mahčymaści ŭviadzieńnia _arbitralnych URL-aŭ"
 
-#: ../admin-tool/lockdown/maindialog.py:63
+#: ../admin-tool/lockdown/maindialog.py:64
 msgid "Disable _bookmark editing"
 msgstr "Blakuj mahčymaści m_adyfikavańnia zakładak"
 
-#: ../admin-tool/lockdown/maindialog.py:64
+#: ../admin-tool/lockdown/maindialog.py:65
 msgid "Disable _history"
 msgstr "Blakuj dostup da _historyi"
 
-#: ../admin-tool/lockdown/maindialog.py:65
+#: ../admin-tool/lockdown/maindialog.py:66
 msgid "Disable _javascript chrome"
 msgstr "Blakuj chrome ja_vascript"
 
-#: ../admin-tool/lockdown/maindialog.py:66
+#: ../admin-tool/lockdown/maindialog.py:67
 msgid "Disable _toolbar editing"
 msgstr "Blakuj mahčymaści madyfikavańnia paneli _pryładździa"
 
-#: ../admin-tool/lockdown/maindialog.py:67
-msgid "_Fullscreen"
+#: ../admin-tool/lockdown/maindialog.py:68
+#, fuzzy
+msgid "Force _fullscreen mode"
 msgstr "_Poŭnaekranny režym"
 
-#: ../admin-tool/lockdown/maindialog.py:68
+#: ../admin-tool/lockdown/maindialog.py:69
 msgid "Hide _menubar"
 msgstr "Chavaj pa_nel menu"
 
-#. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
-#. This can be used to disable this, for when you don't want people to know you created the document.
+#: ../admin-tool/lockdown/maindialog.py:71
+msgid "Disable lock _screen"
+msgstr "Blakuj mahčymaści _blakavańnia ekranu"
+
 #: ../admin-tool/lockdown/maindialog.py:72
-msgid "Remove personal info from documents when saving them"
-msgstr "Vydal pryvatnyja źviestki z dakumentaŭ pry zapisie"
+#, fuzzy
+msgid "_Lock on activation"
+msgstr "Blakuj p_aneli"
 
 #: ../admin-tool/lockdown/maindialog.py:73
-msgid "Warn if macro tries to create a PDF"
-msgstr "Papiaredžvaj, kali makras sprabuje stvaryć PDF"
+#, fuzzy
+msgid "Allow log _out"
+msgstr "Blakuj mahčymaści vy_chadu"
 
 #: ../admin-tool/lockdown/maindialog.py:74
-msgid "Warn if macro tries to print a document"
-msgstr "Papiaredžvaj, kali makras sprabuje nadrukavać dakument"
-
-#: ../admin-tool/lockdown/maindialog.py:75
-msgid "Warn if macro tries to save a document"
-msgstr "Papiaredžvaj, kali makras sprabuje zapisać dakument"
-
-#: ../admin-tool/lockdown/maindialog.py:76
-msgid "Warn if macro tries to sign a document"
-msgstr "Papiaredžvaj, kali makras sprabuje padpisać dakument"
-
-#: ../admin-tool/lockdown/maindialog.py:77
-msgid "Recommend password when saving a document"
-msgstr "Rekamenduj parol pry zapisie dakumentu"
-
-#: ../admin-tool/lockdown/maindialog.py:79
-msgid "Enable auto-save"
-msgstr "Uklučy aŭtazapis"
-
-#. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
-#: ../admin-tool/lockdown/maindialog.py:81
-msgid "Printing should mark the document as modified"
-msgstr "Vydruk pavinny paznačać dakument madyfikavanym"
-
-#: ../admin-tool/lockdown/maindialog.py:82
-msgid "Use system's file dialog"
-msgstr "Užyj systemny dyjaloh fajłaŭ"
-
-#: ../admin-tool/lockdown/maindialog.py:83
-msgid "Create backup copy on save"
-msgstr "Stvaraj zapasnyja kopii pry zapisie"
-
-#: ../admin-tool/lockdown/maindialog.py:84
-msgid "Warn when saving non-OpenOffice.org formats"
-msgstr "Papiaredžvaj ab zapisie farmataŭ nie ad OpenOffice.org"
-
-#: ../admin-tool/lockdown/maindialog.py:86
-msgid "Use OpenGL"
-msgstr "Užyj OpenGL"
-
-#: ../admin-tool/lockdown/maindialog.py:87
-msgid "Use system font"
-msgstr "Užyj systemny šryft"
-
-#: ../admin-tool/lockdown/maindialog.py:88
-msgid "Use anti-aliasing"
-msgstr "Užyj anti-aliasing"
-
-#: ../admin-tool/lockdown/maindialog.py:89
-msgid "Disable UI customization"
-msgstr "Adklučy źmienu UI"
-
-#: ../admin-tool/lockdown/maindialog.py:90
-msgid "Show insensitive menu items"
-msgstr "Pakazvaj nieadčuvalnyja elementy menu"
-
-#: ../admin-tool/lockdown/maindialog.py:91
-msgid "Show font preview"
-msgstr "Pakažy pieradahlad šryfta"
-
-#: ../admin-tool/lockdown/maindialog.py:92
-msgid "Show font history"
-msgstr "Pakažy historyju šryfta"
-
-#: ../admin-tool/lockdown/maindialog.py:93
-msgid "Show icons in menus"
-msgstr "Pakazvaj ikony ŭ menu"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:1
-msgid ""
-"\n"
-"5\n"
-"10\n"
-"25\n"
-"50"
+msgid "Allow user _switching"
 msgstr ""
-"\n"
-"5\n"
-"10\n"
-"25\n"
-"50"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:6
-msgid ""
-"\n"
-"Automatic\n"
-"Large\n"
-"Small"
+#: ../admin-tool/lockdown/maindialog.py:233
+#, python-format
+msgid "Could not display help document '%s'"
 msgstr ""
-"\n"
-"Aŭtamatyčny\n"
-"Vialiki\n"
-"Mały"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:10
-msgid ""
-"\n"
-"OpenDocument (.odp)\n"
-"PowerPoint 97+ (.ppt)\n"
-"OpenOffice.org 1.1 (.sxi)"
-msgstr ""
-"\n"
-"OpenDocument (.odp)\n"
-"PowerPoint 97+ (.ppt)\n"
-"OpenOffice.org 1.1 (.sxi)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:14
-msgid ""
-"\n"
-"OpenDocument (.ods)\n"
-"Excel 97+ (.xls)\n"
-"OpenOffice.org 1.1 (.sxc)"
-msgstr ""
-"\n"
-"OpenDocument (.ods)\n"
-"Excel 97+ (.xls)\n"
-"OpenOffice.org 1.1 (.sxc)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:18
-msgid ""
-"\n"
-"OpenDocument (.odt)\n"
-"Word 97+ (.doc)\n"
-"OpenOffice.org 1.1 (.sxw)"
-msgstr ""
-"\n"
-"OpenDocument (.odt)\n"
-"Word 97+ (.doc)\n"
-"OpenOffice.org 1.1 (.sxw)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:22
-msgid ""
-"\n"
-"Very High\n"
-"High\n"
-"Medium\n"
-"Low"
-msgstr ""
-"\n"
-"Vielmi vysoki\n"
-"Vysoki\n"
-"Siaredni\n"
-"Nizki"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:27
-msgid "<b>Disabled Applets</b>"
-msgstr "<b>Zablakavanyja aplety</b>"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:28
-msgid "<b>Safe Protocols</b>"
-msgstr "<b>Biaśpiečnyja pratakoły</b>"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:29
-msgid "Default format for presentations:"
-msgstr "Zmoŭčany farmat dla prezentacyj:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:30
-msgid "Default format for spreadsheet:"
-msgstr "Zmoŭčany farmat dla raźlikovych arkušoŭ:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:31
-msgid "Default format for word processor:"
-msgstr "Zmoŭčany farmat dla tekstavaha pracesara:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:32
-msgid "Default icon size"
-msgstr "Zmoŭčany pamier ikonaŭ"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:33
+#: ../admin-tool/lockdown/pessulus.ui.h:1
 msgid "Disable _unsafe protocols"
 msgstr "Blakuj _niebiaśpiečnyja pratakoły"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:34
-msgid "Epiphany Web Browser"
-msgstr "Hartač WWW Epiphany"
+#: ../admin-tool/lockdown/pessulus.ui.h:2
+#, fuzzy
+msgid "Disabled Applets"
+msgstr "<b>Zablakavanyja aplety</b>"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:35
-msgid "General"
-msgstr "Ahulnaje"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:36
-msgid "Load / Save"
-msgstr "Adčyni / Zapišy"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:37
+#: ../admin-tool/lockdown/pessulus.ui.h:3
 msgid "Lockdown Editor"
 msgstr "Redaktar blakavańnia"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:38
-msgid "Macro Security Level:"
-msgstr "Uzrovień biaśpieki dla makrasaŭ:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:39
-msgid "Number of undo steps:"
-msgstr "Kolkaść krokaŭ viartańnia:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:40
-msgid "OpenOffice.org"
-msgstr "OpenOffice.org"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:42
-msgid "Security"
-msgstr "Biaśpieka"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:43
-msgid "User Interface"
-msgstr "Interfejs karystalnika"
+#: ../admin-tool/lockdown/pessulus.ui.h:4
+#, fuzzy
+msgid "Safe Protocols"
+msgstr "<b>Biaśpiečnyja pratakoły</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -463,7 +314,7 @@ msgstr "Interfejs karystalnika"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:494
+#: ../admin-tool/profilesdialog.py:520
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -529,14 +380,14 @@ msgstr ""
 "Sabayon zaraz skončyć pracu. Niekatoryja pamyłki pierachoplenyja, i ty možaš "
 "dapamahčy nam adładzić prablemu, dasłaŭšy dziońnik z %s na adras %s"
 
-#: ../admin-tool/sabayon-apply:98
+#: ../admin-tool/sabayon-apply:111
+msgid "Please use -h for usage options"
+msgstr "Užyj -h dla opcyj vykarystańnia"
+
+#: ../admin-tool/sabayon-apply:123
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Niemahčyma znajści profil karystalnika '%s'\n"
-
-#: ../admin-tool/sabayon-apply:103
-msgid "Please use -h for usage options"
-msgstr "Užyj -h dla opcyj vykarystańnia"
 
 #: ../admin-tool/sabayon-session:67
 #, c-format
@@ -544,43 +395,51 @@ msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
 msgstr ""
 "Sposab užyvańnia: %s <nazva-profilu> <ściežka-profilu> <numar-ekranu>\n"
 
-#: ../admin-tool/sabayon.desktop.in.h:1
+#: ../admin-tool/sabayon.desktop.in.in.h:1
 msgid "Establish and Edit Profiles for Users"
 msgstr "Stvaraje j madyfikuje profili dla karystalnikaŭ"
 
-#: ../admin-tool/sabayon.desktop.in.h:2 ../admin-tool/sabayon.glade.h:4
+#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.ui.h:4
 msgid "User Profile Editor"
 msgstr "Redaktar profilaŭ karystalnikaŭ"
 
-#: ../admin-tool/sabayon.glade.h:1
+#: ../admin-tool/sabayon.ui.h:1
 msgid "Add Profile"
 msgstr "Dadaj profil"
 
-#: ../admin-tool/sabayon.glade.h:2
+#: ../admin-tool/sabayon.ui.h:2
 msgid "Profile _name:"
 msgstr "_Nazva profilu:"
 
-#: ../admin-tool/sabayon.glade.h:3
+#: ../admin-tool/sabayon.ui.h:3
 msgid "Use this profile for _all users"
 msgstr "Užyćcio hetaha profilu dla _ŭsich karystalnikaŭ"
 
-#: ../admin-tool/sabayon.glade.h:5
+#: ../admin-tool/sabayon.ui.h:5
 msgid "_Base on:"
 msgstr "_Na padstavie:"
 
-#: ../admin-tool/sabayon.glade.h:6
+#: ../admin-tool/sabayon.ui.h:6
 msgid "_Details"
 msgstr "_Detali"
 
-#: ../admin-tool/sabayon.glade.h:7
+#: ../admin-tool/sabayon.ui.h:7
+msgid "_Groups"
+msgstr ""
+
+#: ../admin-tool/sabayon.ui.h:8
+msgid "_Groups:"
+msgstr ""
+
+#: ../admin-tool/sabayon.ui.h:9
 msgid "_Profiles:"
 msgstr "_Profili:"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.ui.h:10
 msgid "_Users"
 msgstr "_Karystalniki"
 
-#: ../admin-tool/sabayon.glade.h:9
+#: ../admin-tool/sabayon.ui.h:11
 msgid "_Users:"
 msgstr "_Karystalniki:"
 
@@ -593,136 +452,51 @@ msgstr "Začyni, _nie zapisaŭšy"
 msgid "Save changes to profile \"%s\" before closing?"
 msgstr "Ci zapisać źmieny ŭ profili '%s' pierad zakančeńniem?"
 
-#: ../admin-tool/saveconfirm.py:45
-#, python-format
-msgid ""
-"If you don't save, changes from the last %ld second will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld seconds will be permanently "
-"lost."
-msgstr[0] ""
-"Kali nie zapišaš, źmieny z apošniaj %ld sekundy buduć niezvarotna stračanyja."
-msgstr[1] ""
-"Kali nie zapišaš, źmieny z apošnich %ld sekundaŭ buduć niezvarotna "
-"stračanyja."
-msgstr[2] ""
-"Kali nie zapišaš, źmieny z apošnich %ld sekundaŭ buduć niezvarotna "
-"stračanyja."
-
-#: ../admin-tool/saveconfirm.py:51
-msgid ""
-"If you don't save, changes from the last minute will be permanently lost."
-msgstr ""
-"Kali nie zapišaš, źmieny z apošniaj chviliny buduć niezvarotna stračanyja."
-
-#: ../admin-tool/saveconfirm.py:55
-#, python-format
-msgid ""
-"If you don't save, changes from the last minute and %ld second will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last minute and %ld seconds will be "
-"permanently lost."
-msgstr[0] ""
-"Kali nie zapišaš, źmieny z apošniaj chviliny i %ld sekundy buduć niezvarotna "
-"stračanyja."
-msgstr[1] ""
-"Kali nie zapišaš, źmieny z apošniaj chviliny i %ld sekundaŭ buduć "
-"niezvarotna stračanyja."
-msgstr[2] ""
-"Kali nie zapišaš, źmieny z apošniaj chviliny i %ld sekundaŭ buduć "
-"niezvarotna stračanyja."
-
-#: ../admin-tool/saveconfirm.py:62
-#, python-format
-msgid ""
-"If you don't save, changes from the last %ld minute will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld minutes will be permanently "
-"lost."
-msgstr[0] ""
-"Kali nie zapišaš, źmieny z apošniaj %ld chviliny buduć niezvarotna "
-"stračanyja."
-msgstr[1] ""
-"Kali nie zapišaš, źmieny z apošnich %ld chvilin buduć niezvarotna stračanyja."
-msgstr[2] ""
-"Kali nie zapišaš, źmieny z apošnich %ld chvilin buduć niezvarotna stračanyja."
-
-#: ../admin-tool/saveconfirm.py:71
-msgid "If you don't save, changes from the last hour will be permanently lost."
+#: ../admin-tool/saveconfirm.py:44
+#, fuzzy
+msgid "If you don't save, all changes will be permanently lost."
 msgstr ""
 "Kali nie zapišaš, źmieny z apošniaj hadziny buduć niezvarotna stračanyja."
 
-#: ../admin-tool/saveconfirm.py:74
-#, python-format
-msgid ""
-"If you don't save, changes from the last hour and %d minute will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last hour and %d minutes will be "
-"permanently lost."
-msgstr[0] ""
-"Kali nie zapišaš, źmieny z apošniaj hadziny i %d chviliny buduć niezvarotna "
-"stračanyja."
-msgstr[1] ""
-"Kali nie zapišaš, źmieny z apošniaj hadziny i %d chvilin buduć niezvarotna "
-"stračanyja."
-msgstr[2] ""
-"Kali nie zapišaš, źmieny z apošniaj hadziny i %d chvilin buduć niezvarotna "
-"stračanyja."
-
-#: ../admin-tool/saveconfirm.py:81
-#, python-format
-msgid ""
-"If you don't save, changes from the last %d hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] ""
-"Kali nie zapišaš, źmieny z apošniaj %d hadziny buduć niezvarotna stračanyja."
-msgstr[1] ""
-"Kali nie zapišaš, źmieny z apošnich %d hadzin buduć niezvarotna stračanyja."
-msgstr[2] ""
-"Kali nie zapišaš, źmieny z apošnich %d hadzin buduć niezvarotna stračanyja."
-
-#: ../admin-tool/sessionwindow.py:154
+#: ../admin-tool/sessionwindow.py:155
 #, python-format
 msgid "Editing profile %s"
 msgstr "Redahavańnie profilu %s"
 
-#: ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/sessionwindow.py:179
 msgid "_Quit"
 msgstr "_Zakonč"
 
-#: ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Changes"
 msgstr "_Źmieny"
 
-#: ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/sessionwindow.py:181
 msgid "Edit changes"
 msgstr "Redahuj źmieny"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:182
 msgid "_Lockdown"
 msgstr "_Blakavańnie"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:182
 msgid "Edit Lockdown settings"
 msgstr "Redahuj nałady blakavańnia"
 
-#: ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/sessionwindow.py:188
 msgid "Enforce Mandatory"
 msgstr "Abaviazkovyja nałady"
 
-#: ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/sessionwindow.py:188
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Usialakija źmieny naładaŭ u hetaj sesii buduć abaviazkovymi naładami"
 
-#: ../admin-tool/sessionwindow.py:297
+#: ../admin-tool/sessionwindow.py:306
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Nałady blakavańnia dla %s"
 
-#: ../admin-tool/sessionwindow.py:333
+#: ../admin-tool/sessionwindow.py:342
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
@@ -732,44 +506,50 @@ msgstr ""
 "možaš paviedamić pra hetuju pamyłku raspracoŭnikam albo praciahnuć "
 "redahavańnie profilu karystalnika."
 
-#: ../admin-tool/sessionwindow.py:337
+#: ../admin-tool/sessionwindow.py:346
 msgid "_Report this error"
 msgstr "_Paviedam pra pamyłku"
 
-#: ../admin-tool/sessionwindow.py:338
+#: ../admin-tool/sessionwindow.py:347
 msgid "_Continue editing"
 msgstr "Pra_ciahvaj redahavańnie"
 
-#: ../admin-tool/usersdialog.py:67
+#: ../admin-tool/usersdialog.py:72
 #, python-format
 msgid "Users for profile %s"
 msgstr "Karystalniki profilu %s"
 
-#: ../admin-tool/usersdialog.py:95
-msgid "Use This Profile"
-msgstr "Užyvaje hety profil"
-
-#: ../lib/protosession.py:147
+#: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
 msgstr "Niemahčyma znajści volny ekran X"
 
-#: ../lib/protosession.py:414
-msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+#: ../lib/protosession.py:376
+#, fuzzy
+msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr ""
 "Niemahčyma ŭruchomić Xnest: skončyŭsia limit času čakańnia na syhnał USR1"
 
-#: ../lib/protosession.py:416
-msgid "Failed to start Xnest: died during startup"
+#: ../lib/protosession.py:378
+#, fuzzy
+msgid "Failed to start Xephyr: died during startup"
 msgstr "Niemahčyma ŭruchomić Xnest: prahrama zakončyła pracu padčas startu"
 
-#: ../lib/protosession.py:501
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:469
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
 msgstr ""
 "Pry zadziejničańni profilu karystalnika z fajłu '%s' pierachoplenaja pamyłka."
 
-#: ../lib/protosession.py:510
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (FATAL) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:478
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr ""
@@ -795,8 +575,9 @@ msgid "Applications menu"
 msgstr "Menu aplikacyj"
 
 #: ../lib/sources/filessource.py:99
-msgid "Preferences menu"
-msgstr "Menu naładaŭ"
+#, fuzzy
+msgid "Settings menu"
+msgstr "Menu naładaŭ servera"
 
 #: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
@@ -891,184 +672,143 @@ msgstr "Zakładki hartača WWW"
 msgid "Web browser profile list"
 msgstr "Śpis profilaŭ hartača WWW"
 
-#: ../lib/sources/mozillasource.py:522
+#: ../lib/sources/mozillasource.py:520
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Niemahčyma znajści fajł (%s)"
 
-#: ../lib/sources/mozillasource.py:873
+#: ../lib/sources/mozillasource.py:869
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "dublikat nazvy (%(name)s) ŭ sekcyi %(section)s"
 
-#: ../lib/sources/mozillasource.py:882
+#: ../lib/sources/mozillasource.py:878
 #, python-format
 msgid "redundant default in section %s"
 msgstr "zališniaja zmoŭčanaja vartaść u sekcyi %s"
 
-#: ../lib/sources/mozillasource.py:899
+#: ../lib/sources/mozillasource.py:895
 msgid "no default profile"
 msgstr "niama zmoŭčanaha profilu"
 
-#: ../lib/sources/mozillasource.py:954
+#: ../lib/sources/mozillasource.py:950
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Stvoranaja zakładka Mozilly '%s' -> '%s'"
 
-#: ../lib/sources/mozillasource.py:956
+#: ../lib/sources/mozillasource.py:952
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Stvorany kataloh zakładak Mozilly '%s'"
 
-#: ../lib/sources/mozillasource.py:959
+#: ../lib/sources/mozillasource.py:955
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Vydalenaja zakładka Mozilly '%s'"
 
-#: ../lib/sources/mozillasource.py:961
+#: ../lib/sources/mozillasource.py:957
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Vydaleny kataloh zakładak Mozilly '%s'"
 
-#: ../lib/sources/mozillasource.py:964
+#: ../lib/sources/mozillasource.py:960
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Źmienienaja zakładka Mozilly '%s' '%s'"
 
-#: ../lib/sources/mozillasource.py:966
+#: ../lib/sources/mozillasource.py:962
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Źmienieny kataloh zakładak Mozilly '%s'"
 
-#: ../lib/sources/paneldelegate.py:55
+#: ../lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel '%s' added"
 msgstr "Dadadzienaja panel '%s'"
 
-#: ../lib/sources/paneldelegate.py:61
+#: ../lib/sources/paneldelegate.py:71
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "Vydalenaja panel '%s'"
 
-#: ../lib/sources/paneldelegate.py:76
-#, python-format
-msgid "Applet %s added to top panel"
-msgstr "Na vierchniuju panel dadali aplet %s"
+#: ../lib/sources/paneldelegate.py:77
+#, fuzzy, python-format
+msgid "Applet '%s' added"
+msgstr "Dadadzienaja panel '%s'"
 
-#: ../lib/sources/paneldelegate.py:78
-#, python-format
-msgid "Applet %s added to bottom panel"
-msgstr "Na nižniuju panel dadali aplet %s"
-
-#: ../lib/sources/paneldelegate.py:80
-#, python-format
-msgid "Applet %s added to left panel"
-msgstr "Na levuju panel dadali aplet %s"
-
-#: ../lib/sources/paneldelegate.py:82
-#, python-format
-msgid "Applet %s added to right panel"
-msgstr "Na pravuju panel dadali aplet %s"
-
-#: ../lib/sources/paneldelegate.py:97
-#, python-format
-msgid "Applet %s removed from top panel"
-msgstr "Ź vierchniaj paneli vydalili aplet %s"
-
-#: ../lib/sources/paneldelegate.py:99
-#, python-format
-msgid "Applet %s removed from bottom panel"
-msgstr "Ź nižniaj paneli vydalili aplet %s"
-
-#: ../lib/sources/paneldelegate.py:101
-#, python-format
-msgid "Applet %s removed from left panel"
-msgstr "Ź lievaj paneli vydalili aplet %s"
-
-#: ../lib/sources/paneldelegate.py:103
-#, python-format
-msgid "Applet %s removed from right panel"
-msgstr "Z pravaj paneli vydalili aplet %s"
-
-#: ../lib/sources/paneldelegate.py:117
-#, python-format
-msgid "%s added to top panel"
-msgstr "Dadali %s da vierchniaj paneli"
-
-#: ../lib/sources/paneldelegate.py:119
-#, python-format
-msgid "%s added to bottom panel"
-msgstr "Dadali %s da nižniaj paneli"
-
-#: ../lib/sources/paneldelegate.py:121
-#, python-format
-msgid "%s added to left panel"
-msgstr "Dadali %s da levaj paneli"
+#: ../lib/sources/paneldelegate.py:100
+#, fuzzy, python-format
+msgid "Applet '%s' removed"
+msgstr "Vydalenaja panel '%s'"
 
 #: ../lib/sources/paneldelegate.py:123
-#, python-format
-msgid "%s added to right panel"
-msgstr "Dadali %s da pravaj paneli"
+#, fuzzy, python-format
+msgid "Object '%s' added"
+msgstr "Dadadzienaja panel '%s'"
 
-#: ../lib/sources/paneldelegate.py:144
-#, python-format
-msgid "%s removed from top panel"
-msgstr "Vydalili %s ź vierchniaj paneli"
-
-#: ../lib/sources/paneldelegate.py:146
-#, python-format
-msgid "%s removed from bottom panel"
-msgstr "Vydalili %s ź nižniaj paneli"
-
-#: ../lib/sources/paneldelegate.py:148
-#, python-format
-msgid "%s removed from left panel"
-msgstr "Vydalili %s ź levaj paneli"
-
-#: ../lib/sources/paneldelegate.py:150
-#, python-format
-msgid "%s removed from right panel"
-msgstr "Vydalili %s z pravaj paneli"
+#: ../lib/sources/paneldelegate.py:152
+#, fuzzy, python-format
+msgid "Object '%s' removed"
+msgstr "Vydalenaja panel '%s'"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:200
+#: ../lib/sources/paneldelegate.py:240
 msgid "Drawer"
 msgstr "Šuflada"
 
-#: ../lib/sources/paneldelegate.py:202
+#: ../lib/sources/paneldelegate.py:242
 msgid "Main Menu"
 msgstr "Hałoŭnaje menu"
 
-#: ../lib/sources/paneldelegate.py:212
+#: ../lib/sources/paneldelegate.py:252
 #, python-format
 msgid "%s launcher"
 msgstr "Aktyvatar %s"
 
-#: ../lib/sources/paneldelegate.py:216
+#: ../lib/sources/paneldelegate.py:256
 msgid "Lock Screen button"
 msgstr "Knopka blakavańnia ekranu"
 
-#: ../lib/sources/paneldelegate.py:218
+#: ../lib/sources/paneldelegate.py:258
 msgid "Logout button"
 msgstr "Knopka vychadu"
 
-#: ../lib/sources/paneldelegate.py:220
+#: ../lib/sources/paneldelegate.py:260
 msgid "Run Application button"
 msgstr "Knopka ŭruchamleńnia aplikacyi"
 
-#: ../lib/sources/paneldelegate.py:222
+#: ../lib/sources/paneldelegate.py:262
 msgid "Search button"
 msgstr "Knopka pošuku"
 
-#: ../lib/sources/paneldelegate.py:224
+#: ../lib/sources/paneldelegate.py:264
+#, fuzzy
+msgid "Force Quit button"
+msgstr "Knopka vychadu"
+
+#: ../lib/sources/paneldelegate.py:266
+#, fuzzy
+msgid "Connect to Server button"
+msgstr "Knopka blakavańnia ekranu"
+
+#: ../lib/sources/paneldelegate.py:268
+#, fuzzy
+msgid "Shutdown button"
+msgstr "Knopka vychadu"
+
+#: ../lib/sources/paneldelegate.py:270
 msgid "Screenshot button"
 msgstr "Knopka zdymku ekranu"
 
-#: ../lib/sources/paneldelegate.py:226
+#: ../lib/sources/paneldelegate.py:273
+msgid "Unknown"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:275
 msgid "Menu Bar"
 msgstr "Panel menu"
 
-#: ../lib/sources/paneldelegate.py:470
+#: ../lib/sources/paneldelegate.py:512
 msgid "Panel File"
 msgstr "Fajł paneli"
 
@@ -1092,10 +832,87 @@ msgstr "Niapravilnaja sekcyja metaźviestak u '%s': %s"
 msgid "Cannot add non-existent file '%s'"
 msgstr "Niemahčyma dadać fajł '%s', jakoha niama"
 
-#: ../lib/storage.py:568
+#: ../lib/storage.py:487
+#, python-format
+msgid "Couldn't unlink file '%s'"
+msgstr ""
+
+#: ../lib/storage.py:570
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Profil %s pryznačany tolki dla čytańnia"
+
+#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
+#. do not change the way they are written.  The intended string is
+#. something like "invalid type for setting blah in /ldap/path/to/blah"
+#: ../lib/systemdb.py:67
+#, python-format
+msgid "invalid type for setting %(setting)s in %(np)s"
+msgstr "niapravilny typ nałady %(setting)s u %(np)s"
+
+#: ../lib/systemdb.py:112
+msgid "No database file provided"
+msgstr ""
+
+#: ../lib/systemdb.py:232
+#, fuzzy, python-format
+msgid "No LDAP search base specified for %s"
+msgstr "Nie akreślili padstavy pošuku dla %s"
+
+#: ../lib/systemdb.py:235
+#, fuzzy, python-format
+msgid "No LDAP query filter specified for %s"
+msgstr "Nie akreślili filtru zapytaŭ dla %s"
+
+#: ../lib/systemdb.py:238
+#, fuzzy, python-format
+msgid "No LDAP result attribute specified for %s"
+msgstr "Nie akreślili vynikovaha atrybutu dla %s"
+
+#: ../lib/systemdb.py:247
+#, fuzzy
+msgid "LDAP Scope must be one of: "
+msgstr "Abšar musić mieć adnu z vartaściaŭ \"sub\", \"base\" albo \"one\""
+
+#: ../lib/systemdb.py:268
+#, fuzzy
+msgid "multiple_result must be one of: "
+msgstr ""
+"\"multiple_result\" musić mieć adnu z vartaściaŭ \"first\" albo \"random\""
+
+#: ../lib/systemdb.py:361
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "Niemahčyma adčynić %s, kab zapisać"
+
+#: ../lib/systemdb.py:374
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "Niemahčyma zapisać UserDatabase u %s"
+
+#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "Fajł %s nie źjaŭlajecca kanfihuracyjaj profilu"
+
+#: ../lib/systemdb.py:404
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "Niemahčyma dadać zmoŭčany profil %s da kanfihuracyi"
+
+#: ../lib/systemdb.py:438
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "Niemahčyma dadać karystalnika %s da kanfihuracyi profilu"
+
+#: ../lib/systemdb.py:510
+msgid "Failed to get the user list"
+msgstr "Niemahčyma atrymać śpis karystalnikaŭ"
+
+#: ../lib/systemdb.py:560
+#, fuzzy
+msgid "Failed to get the group list"
+msgstr "Niemahčyma atrymać śpis karystalnikaŭ"
 
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
@@ -1115,68 +932,7 @@ msgstr "Praviadzieńnie testaŭ %s (%s)"
 msgid "Success!"
 msgstr "Test paśpiachova zavieršany!"
 
-#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
-#. do not change the way they are written.  The intended string is
-#. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/userdb.py:54
-#, python-format
-msgid "invalid type for setting %(setting)s in %(np)s"
-msgstr "niapravilny typ nałady %(setting)s u %(np)s"
-
-#: ../lib/userdb.py:215
-#, python-format
-msgid "No search based specified for %s"
-msgstr "Nie akreślili padstavy pošuku dla %s"
-
-#: ../lib/userdb.py:218
-#, python-format
-msgid "No query filter specified for %s"
-msgstr "Nie akreślili filtru zapytaŭ dla %s"
-
-#: ../lib/userdb.py:221
-#, python-format
-msgid "No result attribute specified for %s"
-msgstr "Nie akreślili vynikovaha atrybutu dla %s"
-
-#: ../lib/userdb.py:230
-msgid "Scope must be one of sub, base and one"
-msgstr "Abšar musić mieć adnu z vartaściaŭ \"sub\", \"base\" albo \"one\""
-
-#: ../lib/userdb.py:250
-msgid "multiple_result must be one of first and random"
-msgstr ""
-"\"multiple_result\" musić mieć adnu z vartaściaŭ \"first\" albo \"random\""
-
-#: ../lib/userdb.py:342
-#, python-format
-msgid "Could not open %s for writing"
-msgstr "Niemahčyma adčynić %s, kab zapisać"
-
-#: ../lib/userdb.py:355
-#, python-format
-msgid "Failed to save UserDatabase to %s"
-msgstr "Niemahčyma zapisać UserDatabase u %s"
-
-#: ../lib/userdb.py:378 ../lib/userdb.py:413
-#, python-format
-msgid "File %s is not a profile configuration"
-msgstr "Fajł %s nie źjaŭlajecca kanfihuracyjaj profilu"
-
-#: ../lib/userdb.py:385
-#, python-format
-msgid "Failed to add default profile %s to configuration"
-msgstr "Niemahčyma dadać zmoŭčany profil %s da kanfihuracyi"
-
-#: ../lib/userdb.py:421
-#, python-format
-msgid "Failed to add user %s to profile configuration"
-msgstr "Niemahčyma dadać karystalnika %s da kanfihuracyi profilu"
-
-#: ../lib/userdb.py:472
-msgid "Failed to get the user list"
-msgstr "Niemahčyma atrymać śpis karystalnikaŭ"
-
-#: ../lib/util.py:91
+#: ../lib/util.py:94
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -1184,13 +940,305 @@ msgstr ""
 "Niemahčyma znajści chatni kataloh: niama zapisu ŭ /etc/passwd i niama "
 "vartaści ŭ źmiennaj asiarodździa $HOME"
 
-#: ../lib/util.py:104
+#: ../lib/util.py:110 ../lib/util.py:137
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr ""
 "Niemahčyma znajści nazvy karystalnika: niama zapisu ŭ /etc/passwd i niama "
 "vartaści ŭ źmiennaj asiarodździa $HOME"
+
+#~ msgid "Remove personal info from documents when saving them"
+#~ msgstr "Vydal pryvatnyja źviestki z dakumentaŭ pry zapisie"
+
+#~ msgid "Warn if macro tries to create a PDF"
+#~ msgstr "Papiaredžvaj, kali makras sprabuje stvaryć PDF"
+
+#~ msgid "Warn if macro tries to print a document"
+#~ msgstr "Papiaredžvaj, kali makras sprabuje nadrukavać dakument"
+
+#~ msgid "Warn if macro tries to save a document"
+#~ msgstr "Papiaredžvaj, kali makras sprabuje zapisać dakument"
+
+#~ msgid "Warn if macro tries to sign a document"
+#~ msgstr "Papiaredžvaj, kali makras sprabuje padpisać dakument"
+
+#~ msgid "Recommend password when saving a document"
+#~ msgstr "Rekamenduj parol pry zapisie dakumentu"
+
+#~ msgid "Enable auto-save"
+#~ msgstr "Uklučy aŭtazapis"
+
+#~ msgid "Printing should mark the document as modified"
+#~ msgstr "Vydruk pavinny paznačać dakument madyfikavanym"
+
+#~ msgid "Use system's file dialog"
+#~ msgstr "Užyj systemny dyjaloh fajłaŭ"
+
+#~ msgid "Create backup copy on save"
+#~ msgstr "Stvaraj zapasnyja kopii pry zapisie"
+
+#~ msgid "Warn when saving non-OpenOffice.org formats"
+#~ msgstr "Papiaredžvaj ab zapisie farmataŭ nie ad OpenOffice.org"
+
+#~ msgid "Use OpenGL"
+#~ msgstr "Užyj OpenGL"
+
+#~ msgid "Use system font"
+#~ msgstr "Užyj systemny šryft"
+
+#~ msgid "Use anti-aliasing"
+#~ msgstr "Užyj anti-aliasing"
+
+#~ msgid "Disable UI customization"
+#~ msgstr "Adklučy źmienu UI"
+
+#~ msgid "Show insensitive menu items"
+#~ msgstr "Pakazvaj nieadčuvalnyja elementy menu"
+
+#~ msgid "Show font preview"
+#~ msgstr "Pakažy pieradahlad šryfta"
+
+#~ msgid "Show font history"
+#~ msgstr "Pakažy historyju šryfta"
+
+#~ msgid "Show icons in menus"
+#~ msgstr "Pakazvaj ikony ŭ menu"
+
+#~ msgid ""
+#~ "\n"
+#~ "5\n"
+#~ "10\n"
+#~ "25\n"
+#~ "50"
+#~ msgstr ""
+#~ "\n"
+#~ "5\n"
+#~ "10\n"
+#~ "25\n"
+#~ "50"
+
+#~ msgid ""
+#~ "\n"
+#~ "Automatic\n"
+#~ "Large\n"
+#~ "Small"
+#~ msgstr ""
+#~ "\n"
+#~ "Aŭtamatyčny\n"
+#~ "Vialiki\n"
+#~ "Mały"
+
+#~ msgid ""
+#~ "\n"
+#~ "OpenDocument (.odp)\n"
+#~ "PowerPoint 97+ (.ppt)\n"
+#~ "OpenOffice.org 1.1 (.sxi)"
+#~ msgstr ""
+#~ "\n"
+#~ "OpenDocument (.odp)\n"
+#~ "PowerPoint 97+ (.ppt)\n"
+#~ "OpenOffice.org 1.1 (.sxi)"
+
+#~ msgid ""
+#~ "\n"
+#~ "OpenDocument (.ods)\n"
+#~ "Excel 97+ (.xls)\n"
+#~ "OpenOffice.org 1.1 (.sxc)"
+#~ msgstr ""
+#~ "\n"
+#~ "OpenDocument (.ods)\n"
+#~ "Excel 97+ (.xls)\n"
+#~ "OpenOffice.org 1.1 (.sxc)"
+
+#~ msgid ""
+#~ "\n"
+#~ "OpenDocument (.odt)\n"
+#~ "Word 97+ (.doc)\n"
+#~ "OpenOffice.org 1.1 (.sxw)"
+#~ msgstr ""
+#~ "\n"
+#~ "OpenDocument (.odt)\n"
+#~ "Word 97+ (.doc)\n"
+#~ "OpenOffice.org 1.1 (.sxw)"
+
+#~ msgid ""
+#~ "\n"
+#~ "Very High\n"
+#~ "High\n"
+#~ "Medium\n"
+#~ "Low"
+#~ msgstr ""
+#~ "\n"
+#~ "Vielmi vysoki\n"
+#~ "Vysoki\n"
+#~ "Siaredni\n"
+#~ "Nizki"
+
+#~ msgid "Default format for presentations:"
+#~ msgstr "Zmoŭčany farmat dla prezentacyj:"
+
+#~ msgid "Default format for spreadsheet:"
+#~ msgstr "Zmoŭčany farmat dla raźlikovych arkušoŭ:"
+
+#~ msgid "Default format for word processor:"
+#~ msgstr "Zmoŭčany farmat dla tekstavaha pracesara:"
+
+#~ msgid "Default icon size"
+#~ msgstr "Zmoŭčany pamier ikonaŭ"
+
+#~ msgid "Load / Save"
+#~ msgstr "Adčyni / Zapišy"
+
+#~ msgid "Macro Security Level:"
+#~ msgstr "Uzrovień biaśpieki dla makrasaŭ:"
+
+#~ msgid "Number of undo steps:"
+#~ msgstr "Kolkaść krokaŭ viartańnia:"
+
+#~ msgid "OpenOffice.org"
+#~ msgstr "OpenOffice.org"
+
+#~ msgid "Security"
+#~ msgstr "Biaśpieka"
+
+#~ msgid "User Interface"
+#~ msgstr "Interfejs karystalnika"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld second will be permanently "
+#~ "lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %ld seconds will be permanently "
+#~ "lost."
+#~ msgstr[0] ""
+#~ "Kali nie zapišaš, źmieny z apošniaj %ld sekundy buduć niezvarotna "
+#~ "stračanyja."
+#~ msgstr[1] ""
+#~ "Kali nie zapišaš, źmieny z apošnich %ld sekundaŭ buduć niezvarotna "
+#~ "stračanyja."
+#~ msgstr[2] ""
+#~ "Kali nie zapišaš, źmieny z apošnich %ld sekundaŭ buduć niezvarotna "
+#~ "stračanyja."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last minute will be permanently lost."
+#~ msgstr ""
+#~ "Kali nie zapišaš, źmieny z apošniaj chviliny buduć niezvarotna stračanyja."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last minute and %ld second will be "
+#~ "permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last minute and %ld seconds will be "
+#~ "permanently lost."
+#~ msgstr[0] ""
+#~ "Kali nie zapišaš, źmieny z apošniaj chviliny i %ld sekundy buduć "
+#~ "niezvarotna stračanyja."
+#~ msgstr[1] ""
+#~ "Kali nie zapišaš, źmieny z apošniaj chviliny i %ld sekundaŭ buduć "
+#~ "niezvarotna stračanyja."
+#~ msgstr[2] ""
+#~ "Kali nie zapišaš, źmieny z apošniaj chviliny i %ld sekundaŭ buduć "
+#~ "niezvarotna stračanyja."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld minute will be permanently "
+#~ "lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %ld minutes will be permanently "
+#~ "lost."
+#~ msgstr[0] ""
+#~ "Kali nie zapišaš, źmieny z apošniaj %ld chviliny buduć niezvarotna "
+#~ "stračanyja."
+#~ msgstr[1] ""
+#~ "Kali nie zapišaš, źmieny z apošnich %ld chvilin buduć niezvarotna "
+#~ "stračanyja."
+#~ msgstr[2] ""
+#~ "Kali nie zapišaš, źmieny z apošnich %ld chvilin buduć niezvarotna "
+#~ "stračanyja."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last hour and %d minute will be "
+#~ "permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last hour and %d minutes will be "
+#~ "permanently lost."
+#~ msgstr[0] ""
+#~ "Kali nie zapišaš, źmieny z apošniaj hadziny i %d chviliny buduć "
+#~ "niezvarotna stračanyja."
+#~ msgstr[1] ""
+#~ "Kali nie zapišaš, źmieny z apošniaj hadziny i %d chvilin buduć "
+#~ "niezvarotna stračanyja."
+#~ msgstr[2] ""
+#~ "Kali nie zapišaš, źmieny z apošniaj hadziny i %d chvilin buduć "
+#~ "niezvarotna stračanyja."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %d hour will be permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %d hours will be permanently "
+#~ "lost."
+#~ msgstr[0] ""
+#~ "Kali nie zapišaš, źmieny z apošniaj %d hadziny buduć niezvarotna "
+#~ "stračanyja."
+#~ msgstr[1] ""
+#~ "Kali nie zapišaš, źmieny z apošnich %d hadzin buduć niezvarotna "
+#~ "stračanyja."
+#~ msgstr[2] ""
+#~ "Kali nie zapišaš, źmieny z apošnich %d hadzin buduć niezvarotna "
+#~ "stračanyja."
+
+#~ msgid "Preferences menu"
+#~ msgstr "Menu naładaŭ"
+
+#~ msgid "Applet %s added to top panel"
+#~ msgstr "Na vierchniuju panel dadali aplet %s"
+
+#~ msgid "Applet %s added to bottom panel"
+#~ msgstr "Na nižniuju panel dadali aplet %s"
+
+#~ msgid "Applet %s added to left panel"
+#~ msgstr "Na levuju panel dadali aplet %s"
+
+#~ msgid "Applet %s added to right panel"
+#~ msgstr "Na pravuju panel dadali aplet %s"
+
+#~ msgid "Applet %s removed from top panel"
+#~ msgstr "Ź vierchniaj paneli vydalili aplet %s"
+
+#~ msgid "Applet %s removed from bottom panel"
+#~ msgstr "Ź nižniaj paneli vydalili aplet %s"
+
+#~ msgid "Applet %s removed from left panel"
+#~ msgstr "Ź lievaj paneli vydalili aplet %s"
+
+#~ msgid "Applet %s removed from right panel"
+#~ msgstr "Z pravaj paneli vydalili aplet %s"
+
+#~ msgid "%s added to top panel"
+#~ msgstr "Dadali %s da vierchniaj paneli"
+
+#~ msgid "%s added to bottom panel"
+#~ msgstr "Dadali %s da nižniaj paneli"
+
+#~ msgid "%s added to left panel"
+#~ msgstr "Dadali %s da levaj paneli"
+
+#~ msgid "%s added to right panel"
+#~ msgstr "Dadali %s da pravaj paneli"
+
+#~ msgid "%s removed from top panel"
+#~ msgstr "Vydalili %s ź vierchniaj paneli"
+
+#~ msgid "%s removed from bottom panel"
+#~ msgstr "Vydalili %s ź nižniaj paneli"
+
+#~ msgid "%s removed from left panel"
+#~ msgstr "Vydalili %s ź levaj paneli"
+
+#~ msgid "%s removed from right panel"
+#~ msgstr "Vydalili %s z pravaj paneli"
 
 #~ msgid "Warn if macro prints"
 #~ msgstr "Papiaredžvaj, kali makras drukuje"

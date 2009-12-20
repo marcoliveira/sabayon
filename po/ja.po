@@ -7,9 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-11-03 13:02+0900\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-12-20 09:43-0600\n"
 "PO-Revision-Date: 2009-11-03 13:10+0900\n"
 "Last-Translator: Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
@@ -42,7 +41,7 @@ msgstr "無視する"
 msgid "Lock"
 msgstr "ロックする"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:230
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
 msgid "Description"
 msgstr "説明"
 
@@ -51,61 +50,68 @@ msgstr "説明"
 msgid "Profile %s"
 msgstr "プロファイル %s"
 
-#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
 msgid "_Profile"
 msgstr "プロファイル(_P)"
 
-#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
 msgid "_Save"
 msgstr "保存(_S)"
 
-#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
 msgid "Save profile"
 msgstr "プロファイルを保存します"
 
-#: ../admin-tool/editorwindow.py:197
+#: ../admin-tool/editorwindow.py:204
 msgid "_Close"
 msgstr "閉じる(_C)"
 
-#: ../admin-tool/editorwindow.py:197 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
 msgid "Close the current window"
 msgstr "このウィンドウを閉じます"
 
-#: ../admin-tool/editorwindow.py:198 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
 msgid "_Edit"
 msgstr "編集(_E)"
 
-#: ../admin-tool/editorwindow.py:199
+#: ../admin-tool/editorwindow.py:206
 msgid "_Delete"
 msgstr "削除(_D)"
 
-#: ../admin-tool/editorwindow.py:199
+#: ../admin-tool/editorwindow.py:206
 msgid "Delete item"
 msgstr "アイテムを削除します"
 
-#: ../admin-tool/editorwindow.py:200 ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
 msgid "_Help"
 msgstr "ヘルプ(_H)"
 
-#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+msgid "_Contents"
+msgstr ""
+
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+msgid "Help Contents"
+msgstr ""
+
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
 msgid "_About"
 msgstr "情報(_A)"
 
-#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
 msgid "About Sabayon"
 msgstr "Sabayon について"
 
-#: ../admin-tool/editorwindow.py:262 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
 msgid "Files"
 msgstr "ファイル"
 
-#: ../admin-tool/editorwindow.py:266
-#: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:269
+#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
+#: ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "パネル"
 
@@ -155,8 +161,8 @@ msgstr "ペア"
 msgid "Profile settings: %s"
 msgstr "プロファイルの設定: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:392
-#: ../admin-tool/usersdialog.py:85
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "名前"
 
@@ -168,309 +174,140 @@ msgstr "型"
 msgid "Value"
 msgstr "値"
 
-#: ../admin-tool/groupsdialog.py:57
+#: ../admin-tool/groupsdialog.py:61
 #, python-format
 msgid "Groups for profile %s"
 msgstr "プロファイル %s のグループ"
 
-#: ../admin-tool/groupsdialog.py:70
+#: ../admin-tool/groupsdialog.py:71
 msgid "Group"
 msgstr "グループ"
 
-#: ../admin-tool/groupsdialog.py:80 ../admin-tool/usersdialog.py:95
+#: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
 msgstr "このプロファイルを使用する"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:99
+#: ../admin-tool/lockdown/lockdownbutton.py:100
 msgid "Click to make this setting not mandatory"
 msgstr "クリックすると、この設定を任意にします"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:101
+#: ../admin-tool/lockdown/lockdownbutton.py:102
 msgid "Click to make this setting mandatory"
 msgstr "クリックすると、この設定を必須にします"
 
-#: ../admin-tool/lockdown/maindialog.py:49
-msgid "Disable _command line"
-msgstr "コマンドラインを入力できないようにする(_C)"
-
-#: ../admin-tool/lockdown/maindialog.py:50
-msgid "Disable _printing"
-msgstr "印刷機能を使用不可にする(_P)"
-
-#: ../admin-tool/lockdown/maindialog.py:51
-msgid "Disable print _setup"
-msgstr "印刷設定を使用不可にする(_S)"
-
-#: ../admin-tool/lockdown/maindialog.py:52
-msgid "Disable save to _disk"
-msgstr "ディスクへ保存できないようにする(_D)"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "_Lock down the panels"
-msgstr "パネル操作を利用不可にする(_L)"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable force _quit"
-msgstr "強制終了できないようにする(_Q)"
-
-#: ../admin-tool/lockdown/maindialog.py:56
-msgid "Disable lock _screen"
-msgstr "画面をロックできないようにする(_S)"
-
-#: ../admin-tool/lockdown/maindialog.py:57
-msgid "Disable log _out"
-msgstr "ログアウトできないようにする(_O)"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable _quit"
-msgstr "終了できないようにする(_Q)"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable _arbitrary URL"
-msgstr "URL を入力できないようにする(_A)"
-
-#: ../admin-tool/lockdown/maindialog.py:61
-msgid "Disable _bookmark editing"
-msgstr "ブックマークを編集できないようにする(_B)"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _history"
-msgstr "履歴操作を使用不可にする(_H)"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _javascript chrome"
-msgstr "JavaScript の処理を無効にする(_J)"
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _toolbar editing"
-msgstr "ツールバーを編集できないようにする(_T)"
-
-#: ../admin-tool/lockdown/maindialog.py:65
-msgid "_Fullscreen"
-msgstr "フルスクリーン表示できないようにする(_F)"
-
-#: ../admin-tool/lockdown/maindialog.py:66
-msgid "Hide _menubar"
-msgstr "メニューバーを隠す(_M)"
-
-#. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
-#. This can be used to disable this, for when you don't want people to know you created the document.
-#: ../admin-tool/lockdown/maindialog.py:70
-msgid "Remove personal information from documents when saving them"
-msgstr "保存時にドキュメントから個人情報を削除する"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Warn if macro tries to create a PDF"
-msgstr "マクロから PDF を生成する場合は警告する"
-
-#: ../admin-tool/lockdown/maindialog.py:72
-msgid "Warn if macro tries to print a document"
-msgstr "マクロからドキュメントを印刷する場合は警告する"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-msgid "Warn if macro tries to save a document"
-msgstr "マクロからドキュメントを保存する場合は警告する"
-
-#: ../admin-tool/lockdown/maindialog.py:74
-msgid "Warn if macro tries to sign a document"
-msgstr "マクロからドキュメントに署名する場合は警告する"
-
-#: ../admin-tool/lockdown/maindialog.py:75
-msgid "Recommend password when saving a document"
-msgstr "ドキュメントを保存する時にパスワードを要求する"
-
-#: ../admin-tool/lockdown/maindialog.py:77
-msgid "Enable auto-save"
-msgstr "自動保存の機能を有効にする"
-
-#. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
-#: ../admin-tool/lockdown/maindialog.py:79
-msgid "Printing should mark the document as modified"
-msgstr "印刷したらドキュメントを変更済みとしてマークする"
-
-#: ../admin-tool/lockdown/maindialog.py:80
-msgid "Use system's file dialog"
-msgstr "システムのファイル選択ダイアログを使う"
-
-#: ../admin-tool/lockdown/maindialog.py:81
-msgid "Create backup copy on save"
-msgstr "保存時にバックアップを生成する"
-
-#: ../admin-tool/lockdown/maindialog.py:82
-msgid "Warn when saving non-OpenOffice.org formats"
-msgstr "OpenOffice.org ではない形式で保存する時は警告する"
-
-#: ../admin-tool/lockdown/maindialog.py:84
-msgid "Use OpenGL"
-msgstr "OpenGL を使用する"
-
-#: ../admin-tool/lockdown/maindialog.py:85
-msgid "Use system font"
-msgstr "システム規模のフォントを使用する"
-
-#: ../admin-tool/lockdown/maindialog.py:86
-msgid "Use anti-aliasing"
-msgstr "アンチ・エイリアス効果を使用する"
-
-#: ../admin-tool/lockdown/maindialog.py:87
-msgid "Disable UI customization"
-msgstr "UI をカスタマイズできないようにする"
-
-#: ../admin-tool/lockdown/maindialog.py:88
-msgid "Show insensitive menu items"
-msgstr "利用不可のメニュー項目を表示する"
-
-#: ../admin-tool/lockdown/maindialog.py:89
-msgid "Show font preview"
-msgstr "フォントのプレビューを表示する"
-
-#: ../admin-tool/lockdown/maindialog.py:90
-msgid "Show font history"
-msgstr "フォントの使用履歴を表示する"
-
-#: ../admin-tool/lockdown/maindialog.py:91
-msgid "Show icons in menus"
-msgstr "メニューの中にアイコンを表示する"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:1
-msgid ""
-"\n"
-"5\n"
-"10\n"
-"25\n"
-"50"
-msgstr ""
-"\n"
-"5\n"
-"10\n"
-"25\n"
-"50"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:6
-msgid ""
-"\n"
-"Automatic\n"
-"Large\n"
-"Small"
-msgstr ""
-"\n"
-"自動\n"
-"大きい\n"
-"小さい"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:10
-msgid ""
-"\n"
-"OpenDocument (.odp)\n"
-"PowerPoint 97+ (.ppt)\n"
-"OpenOffice.org 1.1 (.sxi)"
-msgstr ""
-"\n"
-"OpenDocument (.odp)\n"
-"PowerPoint 97+ (.ppt)\n"
-"OpenOffice.org 1.1 (.sxi)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:14
-msgid ""
-"\n"
-"OpenDocument (.ods)\n"
-"Excel 97+ (.xls)\n"
-"OpenOffice.org 1.1 (.sxc)"
-msgstr ""
-"\n"
-"OpenDocument (.ods)\n"
-"Excel 97+ (.xls)\n"
-"OpenOffice.org 1.1 (.sxc)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:18
-msgid ""
-"\n"
-"OpenDocument (.odt)\n"
-"Word 97+ (.doc)\n"
-"OpenOffice.org 1.1 (.sxw)"
-msgstr ""
-"\n"
-"OpenDocument (.odt)\n"
-"Word 97+ (.doc)\n"
-"OpenOffice.org 1.1 (.sxw)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:22
-msgid ""
-"\n"
-"Very High\n"
-"High\n"
-"Medium\n"
-"Low"
-msgstr ""
-"\n"
-"非常に高い\n"
-"高い\n"
-"中ぐらい\n"
-"低い"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:27
-msgid "<b>Disabled Applets</b>"
-msgstr "<b>利用不可にするアプレット</b>"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:28
-msgid "<b>Safe Protocols</b>"
-msgstr "<b>安全なプロトコル</b>"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:29
-msgid "Default format for presentations:"
-msgstr "Impress のフォーマット (デフォルト):"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:30
-msgid "Default format for spreadsheet:"
-msgstr "Calc のフォーマット (デフォルト):"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:31
-msgid "Default format for word processor:"
-msgstr "Writer のフォーマット (デフォルト):"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:32
-msgid "Default icon size"
-msgstr "デフォルトのアイコン・サイズ"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:33
-msgid "Disable _unsafe protocols"
-msgstr "安全ではないプロトコルを無効にする(_U)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:34
-msgid "Epiphany Web Browser"
-msgstr "Epiphany ウェブ・エディタ"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:35
+#: ../admin-tool/lockdown/maindialog.py:40
 msgid "General"
 msgstr "全般"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:36
-msgid "Load / Save"
-msgstr "読み込み/保存"
+#: ../admin-tool/lockdown/maindialog.py:42
+msgid "Epiphany Web Browser"
+msgstr "Epiphany ウェブ・エディタ"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:37
+#: ../admin-tool/lockdown/maindialog.py:43
+msgid "GNOME Screensaver"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:53
+msgid "Disable _command line"
+msgstr "コマンドラインを入力できないようにする(_C)"
+
+#: ../admin-tool/lockdown/maindialog.py:54
+msgid "Disable _printing"
+msgstr "印刷機能を使用不可にする(_P)"
+
+#: ../admin-tool/lockdown/maindialog.py:55
+msgid "Disable print _setup"
+msgstr "印刷設定を使用不可にする(_S)"
+
+#: ../admin-tool/lockdown/maindialog.py:56
+msgid "Disable save to _disk"
+msgstr "ディスクへ保存できないようにする(_D)"
+
+#: ../admin-tool/lockdown/maindialog.py:58
+msgid "_Lock down the panels"
+msgstr "パネル操作を利用不可にする(_L)"
+
+#: ../admin-tool/lockdown/maindialog.py:59
+msgid "Disable force _quit"
+msgstr "強制終了できないようにする(_Q)"
+
+#: ../admin-tool/lockdown/maindialog.py:60
+msgid "Disable log _out"
+msgstr "ログアウトできないようにする(_O)"
+
+#: ../admin-tool/lockdown/maindialog.py:62
+msgid "Disable _quit"
+msgstr "終了できないようにする(_Q)"
+
+#: ../admin-tool/lockdown/maindialog.py:63
+msgid "Disable _arbitrary URL"
+msgstr "URL を入力できないようにする(_A)"
+
+#: ../admin-tool/lockdown/maindialog.py:64
+msgid "Disable _bookmark editing"
+msgstr "ブックマークを編集できないようにする(_B)"
+
+#: ../admin-tool/lockdown/maindialog.py:65
+msgid "Disable _history"
+msgstr "履歴操作を使用不可にする(_H)"
+
+#: ../admin-tool/lockdown/maindialog.py:66
+msgid "Disable _javascript chrome"
+msgstr "JavaScript の処理を無効にする(_J)"
+
+#: ../admin-tool/lockdown/maindialog.py:67
+msgid "Disable _toolbar editing"
+msgstr "ツールバーを編集できないようにする(_T)"
+
+#: ../admin-tool/lockdown/maindialog.py:68
+#, fuzzy
+msgid "Force _fullscreen mode"
+msgstr "フルスクリーン表示できないようにする(_F)"
+
+#: ../admin-tool/lockdown/maindialog.py:69
+msgid "Hide _menubar"
+msgstr "メニューバーを隠す(_M)"
+
+#: ../admin-tool/lockdown/maindialog.py:71
+msgid "Disable lock _screen"
+msgstr "画面をロックできないようにする(_S)"
+
+#: ../admin-tool/lockdown/maindialog.py:72
+#, fuzzy
+msgid "_Lock on activation"
+msgstr "パネル操作を利用不可にする(_L)"
+
+#: ../admin-tool/lockdown/maindialog.py:73
+#, fuzzy
+msgid "Allow log _out"
+msgstr "ログアウトできないようにする(_O)"
+
+#: ../admin-tool/lockdown/maindialog.py:74
+msgid "Allow user _switching"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:233
+#, python-format
+msgid "Could not display help document '%s'"
+msgstr ""
+
+#: ../admin-tool/lockdown/pessulus.ui.h:1
+msgid "Disable _unsafe protocols"
+msgstr "安全ではないプロトコルを無効にする(_U)"
+
+#: ../admin-tool/lockdown/pessulus.ui.h:2
+#, fuzzy
+msgid "Disabled Applets"
+msgstr "<b>利用不可にするアプレット</b>"
+
+#: ../admin-tool/lockdown/pessulus.ui.h:3
 msgid "Lockdown Editor"
 msgstr "ロックダウン・エディタ"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:38
-msgid "Macro Security Level:"
-msgstr "マクロのセキュリティ・レベル:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:39
-msgid "Number of undo steps:"
-msgstr "アンドゥできる回数:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:40
-msgid "OpenOffice.org"
-msgstr "OpenOffice.org"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:42
-msgid "Security"
-msgstr "セキュリティ"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:43
-msgid "User Interface"
-msgstr "ユーザ・インタフェース"
+#: ../admin-tool/lockdown/pessulus.ui.h:4
+#, fuzzy
+msgid "Safe Protocols"
+msgstr "<b>安全なプロトコル</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -478,7 +315,7 @@ msgstr "ユーザ・インタフェース"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:508
+#: ../admin-tool/profilesdialog.py:520
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -562,47 +399,47 @@ msgstr "用法: %s <プロファイル名> <プロファイルのパス名> <デ
 msgid "Establish and Edit Profiles for Users"
 msgstr "ユーザ向けのプロファイルを設定したり編集します"
 
-#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.glade.h:4
+#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.ui.h:4
 msgid "User Profile Editor"
 msgstr "プロファイル・エディタ"
 
-#: ../admin-tool/sabayon.glade.h:1
+#: ../admin-tool/sabayon.ui.h:1
 msgid "Add Profile"
 msgstr "プロファイルの追加"
 
-#: ../admin-tool/sabayon.glade.h:2
+#: ../admin-tool/sabayon.ui.h:2
 msgid "Profile _name:"
 msgstr "プロファイル名(_N):"
 
-#: ../admin-tool/sabayon.glade.h:3
+#: ../admin-tool/sabayon.ui.h:3
 msgid "Use this profile for _all users"
 msgstr "このプロファイルを全てのユーザで使用する(_A)"
 
-#: ../admin-tool/sabayon.glade.h:5
+#: ../admin-tool/sabayon.ui.h:5
 msgid "_Base on:"
 msgstr "基準(_B):"
 
-#: ../admin-tool/sabayon.glade.h:6
+#: ../admin-tool/sabayon.ui.h:6
 msgid "_Details"
 msgstr "詳細(_D)"
 
-#: ../admin-tool/sabayon.glade.h:7
+#: ../admin-tool/sabayon.ui.h:7
 msgid "_Groups"
 msgstr "グループ(_G)"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.ui.h:8
 msgid "_Groups:"
 msgstr "グループ(_G):"
 
-#: ../admin-tool/sabayon.glade.h:9
+#: ../admin-tool/sabayon.ui.h:9
 msgid "_Profiles:"
 msgstr "プロファイルの一覧(_P):"
 
-#: ../admin-tool/sabayon.glade.h:10
+#: ../admin-tool/sabayon.ui.h:10
 msgid "_Users"
 msgstr "ユーザの一覧(_U)"
 
-#: ../admin-tool/sabayon.glade.h:11
+#: ../admin-tool/sabayon.ui.h:11
 msgid "_Users:"
 msgstr "ユーザ(_U):"
 
@@ -615,100 +452,50 @@ msgstr "保存せずに閉じる(_W)"
 msgid "Save changes to profile \"%s\" before closing?"
 msgstr "閉じる前に \"%s\" というプロファイルの変更点を保存しますか？"
 
-#: ../admin-tool/saveconfirm.py:45
-#, python-format
-msgid ""
-"If you don't save, changes from the last %ld second will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld seconds will be permanently "
-"lost."
-msgstr[0] "保存しないと%ld秒前からの変更を完全に失うことになります。"
-
-#: ../admin-tool/saveconfirm.py:51
-msgid ""
-"If you don't save, changes from the last minute will be permanently lost."
-msgstr "保存しないと 1分前からの変更を完全に失うことになります。"
-
-#: ../admin-tool/saveconfirm.py:55
-#, python-format
-msgid ""
-"If you don't save, changes from the last minute and %ld second will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last minute and %ld seconds will be "
-"permanently lost."
-msgstr[0] "保存しないと1分%ld秒前からの変更を完全に失うことになります。"
-
-#: ../admin-tool/saveconfirm.py:62
-#, python-format
-msgid ""
-"If you don't save, changes from the last %ld minute will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld minutes will be permanently "
-"lost."
-msgstr[0] "保存しないと%ld分前からの変更を完全に失うことになります。"
-
-#: ../admin-tool/saveconfirm.py:71
-msgid "If you don't save, changes from the last hour will be permanently lost."
+#: ../admin-tool/saveconfirm.py:44
+#, fuzzy
+msgid "If you don't save, all changes will be permanently lost."
 msgstr "保存しないと 1時間前からの変更を完全に失うことになります。"
 
-#: ../admin-tool/saveconfirm.py:74
-#, python-format
-msgid ""
-"If you don't save, changes from the last hour and %d minute will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last hour and %d minutes will be "
-"permanently lost."
-msgstr[0] "保存しないと1時間%d分前からの変更を完全に失うことになります。"
-
-#: ../admin-tool/saveconfirm.py:81
-#, python-format
-msgid ""
-"If you don't save, changes from the last %d hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "保存しないと%d時間前からの変更を完全に失うことになります。"
-
-#: ../admin-tool/sessionwindow.py:154
+#: ../admin-tool/sessionwindow.py:155
 #, python-format
 msgid "Editing profile %s"
 msgstr "プロファイル %s の編集"
 
-#: ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/sessionwindow.py:179
 msgid "_Quit"
 msgstr "終了(_Q)"
 
-#: ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Changes"
 msgstr "変更点(_C)"
 
-#: ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/sessionwindow.py:181
 msgid "Edit changes"
 msgstr "変更した内容を編集します"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:182
 msgid "_Lockdown"
 msgstr "ロックダウン(_L)"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:182
 msgid "Edit Lockdown settings"
 msgstr "ロックダウンの設定を編集します"
 
-#: ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/sessionwindow.py:188
 msgid "Enforce Mandatory"
 msgstr "強制適用"
 
-#: ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/sessionwindow.py:188
 msgid "Enforce mandatory settings in the editing session"
 msgstr "セッションを編集する際に必須の設定を強制的にに適用します"
 
-#: ../admin-tool/sessionwindow.py:297
+#: ../admin-tool/sessionwindow.py:306
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "%s のロックダウン設定"
 
-#: ../admin-tool/sessionwindow.py:333
+#: ../admin-tool/sessionwindow.py:342
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
@@ -717,15 +504,15 @@ msgstr ""
 "ユーザ・プロファイルの '%s' を適用している最中に復旧可能なエラーが発生しまし"
 "た。このエラーを報告するか、またはユーザ・プロファイルの編集を続行できます。"
 
-#: ../admin-tool/sessionwindow.py:337
+#: ../admin-tool/sessionwindow.py:346
 msgid "_Report this error"
 msgstr "このエラーを報告する(_R)"
 
-#: ../admin-tool/sessionwindow.py:338
+#: ../admin-tool/sessionwindow.py:347
 msgid "_Continue editing"
 msgstr "編集を続行する(_C)"
 
-#: ../admin-tool/usersdialog.py:67
+#: ../admin-tool/usersdialog.py:72
 #, python-format
 msgid "Users for profile %s"
 msgstr "プロファイル %s のユーザ"
@@ -785,8 +572,9 @@ msgid "Applications menu"
 msgstr "アプリケーション・メニュー"
 
 #: ../lib/sources/filessource.py:99
-msgid "Preferences menu"
-msgstr "設定メニュー"
+#, fuzzy
+msgid "Settings menu"
+msgstr "サーバ設定メニュー"
 
 #: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
@@ -939,141 +727,81 @@ msgstr "パネル '%s' を追加しました"
 msgid "Panel '%s' removed"
 msgstr "パネル '%s' を削除しました"
 
-#: ../lib/sources/paneldelegate.py:86
-#, python-format
-msgid "Applet %s added to top panel"
-msgstr "アプレット %s を上側のパネルに追加しました"
+#: ../lib/sources/paneldelegate.py:77
+#, fuzzy, python-format
+msgid "Applet '%s' added"
+msgstr "パネル '%s' を追加しました"
 
-#: ../lib/sources/paneldelegate.py:88
-#, python-format
-msgid "Applet %s added to bottom panel"
-msgstr "アプレット %s を下側のパネルに追加しました"
+#: ../lib/sources/paneldelegate.py:100
+#, fuzzy, python-format
+msgid "Applet '%s' removed"
+msgstr "パネル '%s' を削除しました"
 
-#: ../lib/sources/paneldelegate.py:90
-#, python-format
-msgid "Applet %s added to left panel"
-msgstr "アプレット %s を左側のパネルに追加しました"
+#: ../lib/sources/paneldelegate.py:123
+#, fuzzy, python-format
+msgid "Object '%s' added"
+msgstr "パネル '%s' を追加しました"
 
-#: ../lib/sources/paneldelegate.py:92
-#, python-format
-msgid "Applet %s added to right panel"
-msgstr "アプレット %s を右側のパネルに追加しました"
-
-#: ../lib/sources/paneldelegate.py:107
-#, python-format
-msgid "Applet %s removed from top panel"
-msgstr "上側のパネルからアプレット %s を削除しました"
-
-#: ../lib/sources/paneldelegate.py:109
-#, python-format
-msgid "Applet %s removed from bottom panel"
-msgstr "下側のパネルからアプレット %s を削除しました"
-
-#: ../lib/sources/paneldelegate.py:111
-#, python-format
-msgid "Applet %s removed from left panel"
-msgstr "左側のパネルからアプレット %s を削除しました"
-
-#: ../lib/sources/paneldelegate.py:113
-#, python-format
-msgid "Applet %s removed from right panel"
-msgstr "右側のパネルからアプレット %s を削除しました"
-
-#: ../lib/sources/paneldelegate.py:127
-#, python-format
-msgid "%s added to top panel"
-msgstr " %s を上側のパネルに追加しました"
-
-#: ../lib/sources/paneldelegate.py:129
-#, python-format
-msgid "%s added to bottom panel"
-msgstr " %s を下側のパネルに追加しました"
-
-#: ../lib/sources/paneldelegate.py:131
-#, python-format
-msgid "%s added to left panel"
-msgstr " %s を左側のパネルに追加しました"
-
-#: ../lib/sources/paneldelegate.py:133
-#, python-format
-msgid "%s added to right panel"
-msgstr " %s を右側のパネルに追加しました"
-
-#: ../lib/sources/paneldelegate.py:154
-#, python-format
-msgid "%s removed from top panel"
-msgstr "上側のパネルから %s を削除しました"
-
-#: ../lib/sources/paneldelegate.py:156
-#, python-format
-msgid "%s removed from bottom panel"
-msgstr "下側のパネルから %s を削除しました"
-
-#: ../lib/sources/paneldelegate.py:158
-#, python-format
-msgid "%s removed from left panel"
-msgstr "左側のパネルから %s を削除しました"
-
-#: ../lib/sources/paneldelegate.py:160
-#, python-format
-msgid "%s removed from right panel"
-msgstr "右側のパネルから %s を削除しました"
+#: ../lib/sources/paneldelegate.py:152
+#, fuzzy, python-format
+msgid "Object '%s' removed"
+msgstr "パネル '%s' を削除しました"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:231
+#: ../lib/sources/paneldelegate.py:240
 msgid "Drawer"
 msgstr "引き出し"
 
-#: ../lib/sources/paneldelegate.py:233
+#: ../lib/sources/paneldelegate.py:242
 msgid "Main Menu"
 msgstr "メイン・メニュー"
 
-#: ../lib/sources/paneldelegate.py:243
+#: ../lib/sources/paneldelegate.py:252
 #, python-format
 msgid "%s launcher"
 msgstr "%s のランチャ"
 
-#: ../lib/sources/paneldelegate.py:247
+#: ../lib/sources/paneldelegate.py:256
 msgid "Lock Screen button"
 msgstr "画面のロック・ボタン"
 
-#: ../lib/sources/paneldelegate.py:249
+#: ../lib/sources/paneldelegate.py:258
 msgid "Logout button"
 msgstr "ログアウトのボタン"
 
-#: ../lib/sources/paneldelegate.py:251
+#: ../lib/sources/paneldelegate.py:260
 msgid "Run Application button"
 msgstr "アプリを起動するボタン"
 
-#: ../lib/sources/paneldelegate.py:253
+#: ../lib/sources/paneldelegate.py:262
 msgid "Search button"
 msgstr "検索ボタン"
 
-#: ../lib/sources/paneldelegate.py:255
+#: ../lib/sources/paneldelegate.py:264
 msgid "Force Quit button"
 msgstr "強制終了のボタン"
 
-#: ../lib/sources/paneldelegate.py:257
+#: ../lib/sources/paneldelegate.py:266
 msgid "Connect to Server button"
 msgstr "サーバへ接続するボタン"
 
-#: ../lib/sources/paneldelegate.py:259
+#: ../lib/sources/paneldelegate.py:268
 msgid "Shutdown button"
 msgstr "シャットダウンのボタン"
 
-#: ../lib/sources/paneldelegate.py:261
+#: ../lib/sources/paneldelegate.py:270
 msgid "Screenshot button"
 msgstr "スクリーンショットのボタン"
 
-#: ../lib/sources/paneldelegate.py:264
+#: ../lib/sources/paneldelegate.py:273
 msgid "Unknown"
 msgstr "不明"
 
-#: ../lib/sources/paneldelegate.py:266
+#: ../lib/sources/paneldelegate.py:275
 msgid "Menu Bar"
 msgstr "メニュー・バー"
 
-#: ../lib/sources/paneldelegate.py:503
+#: ../lib/sources/paneldelegate.py:512
 msgid "Panel File"
 msgstr "パネルのファイル"
 
@@ -1110,68 +838,70 @@ msgstr "プロファイルの %s は読み込み専用です"
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/systemdb.py:58
+#: ../lib/systemdb.py:67
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "%(np)s にある %(setting)s の設定の型が間違っています"
 
-#: ../lib/systemdb.py:103
+#: ../lib/systemdb.py:112
 msgid "No database file provided"
 msgstr "データベース・ファイルが指定されていません"
 
-#: ../lib/systemdb.py:220
-#, python-format
-msgid "No search base specified for %s"
+#: ../lib/systemdb.py:232
+#, fuzzy, python-format
+msgid "No LDAP search base specified for %s"
 msgstr "%s で指定した検索ベースはありません"
 
-#: ../lib/systemdb.py:223
-#, python-format
-msgid "No query filter specified for %s"
+#: ../lib/systemdb.py:235
+#, fuzzy, python-format
+msgid "No LDAP query filter specified for %s"
 msgstr "%s で指定したクエリ・フィルタはありません"
 
-#: ../lib/systemdb.py:226
-#, python-format
-msgid "No result attribute specified for %s"
+#: ../lib/systemdb.py:238
+#, fuzzy, python-format
+msgid "No LDAP result attribute specified for %s"
 msgstr "%s で指定した属性はありません"
 
-#: ../lib/systemdb.py:235
-msgid "Scope must be one of sub, base and one"
+#: ../lib/systemdb.py:247
+#, fuzzy
+msgid "LDAP Scope must be one of: "
 msgstr "Scope must be one of sub, base and one"
 
-#: ../lib/systemdb.py:255
-msgid "multiple_result must be one of first and random"
+#: ../lib/systemdb.py:268
+#, fuzzy
+msgid "multiple_result must be one of: "
 msgstr "multiple_result must be one of first and random"
 
-#: ../lib/systemdb.py:347
+#: ../lib/systemdb.py:361
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "%s を書き込みモードで開けませんでした"
 
-#: ../lib/systemdb.py:360
+#: ../lib/systemdb.py:374
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "UserDatabase を %s に保存できませんでした"
 
-#: ../lib/systemdb.py:383 ../lib/systemdb.py:417
+#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "%s というファイルはプロファイル設定ではありません"
 
-#: ../lib/systemdb.py:390
+#: ../lib/systemdb.py:404
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "デフォルトのプロファイル %s を設定に追加できませんでした"
 
-#: ../lib/systemdb.py:424
+#: ../lib/systemdb.py:438
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "%s というユーザをプロファイルの設定に追加できませんでした"
 
-#: ../lib/systemdb.py:496
+#: ../lib/systemdb.py:510
 msgid "Failed to get the user list"
 msgstr "ユーザの一覧を取得できませんでした"
 
-#: ../lib/systemdb.py:546
+#: ../lib/systemdb.py:560
 msgid "Failed to get the group list"
 msgstr "グループの一覧を取得できませんでした"
 
@@ -1208,3 +938,254 @@ msgid ""
 msgstr ""
 "ユーザ名が見つかりません: /etc/passwd で設定されていないか環境変数 $USER が"
 "セットされていません"
+
+#~ msgid "Remove personal information from documents when saving them"
+#~ msgstr "保存時にドキュメントから個人情報を削除する"
+
+#~ msgid "Warn if macro tries to create a PDF"
+#~ msgstr "マクロから PDF を生成する場合は警告する"
+
+#~ msgid "Warn if macro tries to print a document"
+#~ msgstr "マクロからドキュメントを印刷する場合は警告する"
+
+#~ msgid "Warn if macro tries to save a document"
+#~ msgstr "マクロからドキュメントを保存する場合は警告する"
+
+#~ msgid "Warn if macro tries to sign a document"
+#~ msgstr "マクロからドキュメントに署名する場合は警告する"
+
+#~ msgid "Recommend password when saving a document"
+#~ msgstr "ドキュメントを保存する時にパスワードを要求する"
+
+#~ msgid "Enable auto-save"
+#~ msgstr "自動保存の機能を有効にする"
+
+#~ msgid "Printing should mark the document as modified"
+#~ msgstr "印刷したらドキュメントを変更済みとしてマークする"
+
+#~ msgid "Use system's file dialog"
+#~ msgstr "システムのファイル選択ダイアログを使う"
+
+#~ msgid "Create backup copy on save"
+#~ msgstr "保存時にバックアップを生成する"
+
+#~ msgid "Warn when saving non-OpenOffice.org formats"
+#~ msgstr "OpenOffice.org ではない形式で保存する時は警告する"
+
+#~ msgid "Use OpenGL"
+#~ msgstr "OpenGL を使用する"
+
+#~ msgid "Use system font"
+#~ msgstr "システム規模のフォントを使用する"
+
+#~ msgid "Use anti-aliasing"
+#~ msgstr "アンチ・エイリアス効果を使用する"
+
+#~ msgid "Disable UI customization"
+#~ msgstr "UI をカスタマイズできないようにする"
+
+#~ msgid "Show insensitive menu items"
+#~ msgstr "利用不可のメニュー項目を表示する"
+
+#~ msgid "Show font preview"
+#~ msgstr "フォントのプレビューを表示する"
+
+#~ msgid "Show font history"
+#~ msgstr "フォントの使用履歴を表示する"
+
+#~ msgid "Show icons in menus"
+#~ msgstr "メニューの中にアイコンを表示する"
+
+#~ msgid ""
+#~ "\n"
+#~ "5\n"
+#~ "10\n"
+#~ "25\n"
+#~ "50"
+#~ msgstr ""
+#~ "\n"
+#~ "5\n"
+#~ "10\n"
+#~ "25\n"
+#~ "50"
+
+#~ msgid ""
+#~ "\n"
+#~ "Automatic\n"
+#~ "Large\n"
+#~ "Small"
+#~ msgstr ""
+#~ "\n"
+#~ "自動\n"
+#~ "大きい\n"
+#~ "小さい"
+
+#~ msgid ""
+#~ "\n"
+#~ "OpenDocument (.odp)\n"
+#~ "PowerPoint 97+ (.ppt)\n"
+#~ "OpenOffice.org 1.1 (.sxi)"
+#~ msgstr ""
+#~ "\n"
+#~ "OpenDocument (.odp)\n"
+#~ "PowerPoint 97+ (.ppt)\n"
+#~ "OpenOffice.org 1.1 (.sxi)"
+
+#~ msgid ""
+#~ "\n"
+#~ "OpenDocument (.ods)\n"
+#~ "Excel 97+ (.xls)\n"
+#~ "OpenOffice.org 1.1 (.sxc)"
+#~ msgstr ""
+#~ "\n"
+#~ "OpenDocument (.ods)\n"
+#~ "Excel 97+ (.xls)\n"
+#~ "OpenOffice.org 1.1 (.sxc)"
+
+#~ msgid ""
+#~ "\n"
+#~ "OpenDocument (.odt)\n"
+#~ "Word 97+ (.doc)\n"
+#~ "OpenOffice.org 1.1 (.sxw)"
+#~ msgstr ""
+#~ "\n"
+#~ "OpenDocument (.odt)\n"
+#~ "Word 97+ (.doc)\n"
+#~ "OpenOffice.org 1.1 (.sxw)"
+
+#~ msgid ""
+#~ "\n"
+#~ "Very High\n"
+#~ "High\n"
+#~ "Medium\n"
+#~ "Low"
+#~ msgstr ""
+#~ "\n"
+#~ "非常に高い\n"
+#~ "高い\n"
+#~ "中ぐらい\n"
+#~ "低い"
+
+#~ msgid "Default format for presentations:"
+#~ msgstr "Impress のフォーマット (デフォルト):"
+
+#~ msgid "Default format for spreadsheet:"
+#~ msgstr "Calc のフォーマット (デフォルト):"
+
+#~ msgid "Default format for word processor:"
+#~ msgstr "Writer のフォーマット (デフォルト):"
+
+#~ msgid "Default icon size"
+#~ msgstr "デフォルトのアイコン・サイズ"
+
+#~ msgid "Load / Save"
+#~ msgstr "読み込み/保存"
+
+#~ msgid "Macro Security Level:"
+#~ msgstr "マクロのセキュリティ・レベル:"
+
+#~ msgid "Number of undo steps:"
+#~ msgstr "アンドゥできる回数:"
+
+#~ msgid "OpenOffice.org"
+#~ msgstr "OpenOffice.org"
+
+#~ msgid "Security"
+#~ msgstr "セキュリティ"
+
+#~ msgid "User Interface"
+#~ msgstr "ユーザ・インタフェース"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld second will be permanently "
+#~ "lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %ld seconds will be permanently "
+#~ "lost."
+#~ msgstr[0] "保存しないと%ld秒前からの変更を完全に失うことになります。"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last minute will be permanently lost."
+#~ msgstr "保存しないと 1分前からの変更を完全に失うことになります。"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last minute and %ld second will be "
+#~ "permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last minute and %ld seconds will be "
+#~ "permanently lost."
+#~ msgstr[0] "保存しないと1分%ld秒前からの変更を完全に失うことになります。"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld minute will be permanently "
+#~ "lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %ld minutes will be permanently "
+#~ "lost."
+#~ msgstr[0] "保存しないと%ld分前からの変更を完全に失うことになります。"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last hour and %d minute will be "
+#~ "permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last hour and %d minutes will be "
+#~ "permanently lost."
+#~ msgstr[0] "保存しないと1時間%d分前からの変更を完全に失うことになります。"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %d hour will be permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %d hours will be permanently "
+#~ "lost."
+#~ msgstr[0] "保存しないと%d時間前からの変更を完全に失うことになります。"
+
+#~ msgid "Preferences menu"
+#~ msgstr "設定メニュー"
+
+#~ msgid "Applet %s added to top panel"
+#~ msgstr "アプレット %s を上側のパネルに追加しました"
+
+#~ msgid "Applet %s added to bottom panel"
+#~ msgstr "アプレット %s を下側のパネルに追加しました"
+
+#~ msgid "Applet %s added to left panel"
+#~ msgstr "アプレット %s を左側のパネルに追加しました"
+
+#~ msgid "Applet %s added to right panel"
+#~ msgstr "アプレット %s を右側のパネルに追加しました"
+
+#~ msgid "Applet %s removed from top panel"
+#~ msgstr "上側のパネルからアプレット %s を削除しました"
+
+#~ msgid "Applet %s removed from bottom panel"
+#~ msgstr "下側のパネルからアプレット %s を削除しました"
+
+#~ msgid "Applet %s removed from left panel"
+#~ msgstr "左側のパネルからアプレット %s を削除しました"
+
+#~ msgid "Applet %s removed from right panel"
+#~ msgstr "右側のパネルからアプレット %s を削除しました"
+
+#~ msgid "%s added to top panel"
+#~ msgstr " %s を上側のパネルに追加しました"
+
+#~ msgid "%s added to bottom panel"
+#~ msgstr " %s を下側のパネルに追加しました"
+
+#~ msgid "%s added to left panel"
+#~ msgstr " %s を左側のパネルに追加しました"
+
+#~ msgid "%s added to right panel"
+#~ msgstr " %s を右側のパネルに追加しました"
+
+#~ msgid "%s removed from top panel"
+#~ msgstr "上側のパネルから %s を削除しました"
+
+#~ msgid "%s removed from bottom panel"
+#~ msgstr "下側のパネルから %s を削除しました"
+
+#~ msgid "%s removed from left panel"
+#~ msgstr "左側のパネルから %s を削除しました"
+
+#~ msgid "%s removed from right panel"
+#~ msgstr "右側のパネルから %s を削除しました"

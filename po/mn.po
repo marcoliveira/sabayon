@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-12 05:45+0200\n"
+"POT-Creation-Date: 2009-12-20 09:43-0600\n"
 "PO-Revision-Date: 2006-08-15 00:21+0200\n"
 "Last-Translator: Badral <badral@openmn.org>\n"
 "Language-Team: Mongolian <openmn-translation@lists.sourceforge.net>\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);X-Generator: KBabel 1.10.2\n"
 "X-Generator: KBabel 1.10.2\n"
 
-#: ../admin-tool/aboutdialog.py:63
+#: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
 msgstr "Хэрэглэгчдэд зориулагдсан пропайлыг үүсгэн засварладаг програм."
 
-#: ../admin-tool/aboutdialog.py:66
+#: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
 msgstr "Newcom systems Munkhtugs <munkhtugs@newcomsystems.mn>"
 
@@ -34,15 +34,15 @@ msgstr "Newcom systems Munkhtugs <munkhtugs@newcomsystems.mn>"
 msgid "Changes in profile %s"
 msgstr "%s профайл дээр өөрчлөлт хийх "
 
-#: ../admin-tool/changeswindow.py:106
+#: ../admin-tool/changeswindow.py:113
 msgid "Ignore"
 msgstr "Татгалзах"
 
-#: ../admin-tool/changeswindow.py:113
+#: ../admin-tool/changeswindow.py:120
 msgid "Lock"
 msgstr "Түгжих"
 
-#: ../admin-tool/changeswindow.py:120 ../admin-tool/editorwindow.py:224
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
 msgid "Description"
 msgstr "Тодорхойлолт"
 
@@ -51,217 +51,264 @@ msgstr "Тодорхойлолт"
 msgid "Profile %s"
 msgstr "%s профайл"
 
-#: ../admin-tool/editorwindow.py:189 ../admin-tool/sessionwindow.py:174
+#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
 msgid "_Profile"
 msgstr "_Профайл"
 
-#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
 msgid "_Save"
 msgstr "_Хадгалах"
 
-#: ../admin-tool/editorwindow.py:190 ../admin-tool/sessionwindow.py:175
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
 msgid "Save profile"
 msgstr "Профайлыг хадгалах"
 
-#: ../admin-tool/editorwindow.py:191
+#: ../admin-tool/editorwindow.py:204
 msgid "_Close"
 msgstr "_Хаах"
 
-#: ../admin-tool/editorwindow.py:191 ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
 msgid "Close the current window"
 msgstr "Одоогийн цонхыг хаах "
 
-#: ../admin-tool/editorwindow.py:192 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
 msgid "_Edit"
 msgstr "_Засварлах"
 
-#: ../admin-tool/editorwindow.py:193
+#: ../admin-tool/editorwindow.py:206
 msgid "_Delete"
 msgstr "_Устгах"
 
-#: ../admin-tool/editorwindow.py:193
+#: ../admin-tool/editorwindow.py:206
 msgid "Delete item"
 msgstr "Тэмдэглэлийг устгах"
 
-#: ../admin-tool/editorwindow.py:194 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
 msgid "_Help"
 msgstr "_Тусламж"
 
-#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+msgid "_Contents"
+msgstr ""
+
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+msgid "Help Contents"
+msgstr ""
+
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
 msgid "_About"
 msgstr "_Тухай"
 
-#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
 msgid "About Sabayon"
 msgstr "Sabayon- ны тухай"
 
-#: ../admin-tool/editorwindow.py:254 ../lib/sources/gconfsource.py:123
+#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:258 ../lib/sources/filessource.py:78
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
 msgid "Files"
 msgstr "Файлууд"
 
-#: ../admin-tool/editorwindow.py:258 ../admin-tool/lockdown/pessulus.glade.h:7
-#: ../lib/sources/paneldelegate.py:134
+#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
+#: ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "Панел"
 
-#: ../admin-tool/fileviewer.py:29
+#: ../admin-tool/fileviewer.py:27
 #, python-format
 msgid "Profile file: %s"
 msgstr "Профайл файл: %s"
 
-#: ../admin-tool/gconfviewer.py:59 ../admin-tool/gconfviewer.py:78
+#: ../admin-tool/gconfviewer.py:57 ../admin-tool/gconfviewer.py:76
 msgid "<no type>"
 msgstr "<Хэв шинжгүй>"
 
-#: ../admin-tool/gconfviewer.py:60
+#: ../admin-tool/gconfviewer.py:58
 msgid "<no value>"
 msgstr "<Үнэлгээгүй>"
 
-#: ../admin-tool/gconfviewer.py:64
+#: ../admin-tool/gconfviewer.py:62
 msgid "string"
 msgstr "стринг"
 
-#: ../admin-tool/gconfviewer.py:66
+#: ../admin-tool/gconfviewer.py:64
 msgid "integer"
 msgstr "бүхэл тоо"
 
-#: ../admin-tool/gconfviewer.py:68
+#: ../admin-tool/gconfviewer.py:66
 msgid "float"
 msgstr "ашиглалтанд оруулах"
 
-#: ../admin-tool/gconfviewer.py:70
+#: ../admin-tool/gconfviewer.py:68
 msgid "boolean"
 msgstr "боолеан"
 
-#: ../admin-tool/gconfviewer.py:72
+#: ../admin-tool/gconfviewer.py:70
 msgid "schema"
 msgstr "Схем"
 
-#: ../admin-tool/gconfviewer.py:74
+#: ../admin-tool/gconfviewer.py:72
 msgid "list"
 msgstr "жагсаалт"
 
-#: ../admin-tool/gconfviewer.py:76
+#: ../admin-tool/gconfviewer.py:74
 msgid "pair"
 msgstr "хос"
 
-#: ../admin-tool/gconfviewer.py:88
+#: ../admin-tool/gconfviewer.py:86
 #, python-format
 msgid "Profile settings: %s"
 msgstr "Профайлын орчин: %s"
 
-#: ../admin-tool/gconfviewer.py:112 ../admin-tool/profilesdialog.py:315
-#: ../admin-tool/usersdialog.py:85
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "Нэр"
 
-#: ../admin-tool/gconfviewer.py:117
+#: ../admin-tool/gconfviewer.py:115
 msgid "Type"
 msgstr "Хэв шинж"
 
-#: ../admin-tool/gconfviewer.py:122
+#: ../admin-tool/gconfviewer.py:120
 msgid "Value"
 msgstr "Үнэлэх"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:99
+#: ../admin-tool/groupsdialog.py:61
+#, fuzzy, python-format
+msgid "Groups for profile %s"
+msgstr "%s профайл бүхий хэрэглэгчид"
+
+#: ../admin-tool/groupsdialog.py:71
+msgid "Group"
+msgstr ""
+
+#: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
+msgid "Use This Profile"
+msgstr "Энэ профайлыг хэрэглэ"
+
+#: ../admin-tool/lockdown/lockdownbutton.py:100
 msgid "Click to make this setting not mandatory"
 msgstr "Энэ орчинг зааваргүй хийхийн тулд дар"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:101
+#: ../admin-tool/lockdown/lockdownbutton.py:102
 msgid "Click to make this setting mandatory"
 msgstr "Орчинг заавартай хийхийн тулд дар"
 
-#: ../admin-tool/lockdown/maindialog.py:47
-msgid "Disable _command line"
-msgstr "Командын мөр ашиглах боломжгүй байна"
-
-#: ../admin-tool/lockdown/maindialog.py:48
-msgid "Disable _printing"
-msgstr "_Хэвлэх  боломжгүй байна"
-
-#: ../admin-tool/lockdown/maindialog.py:49
-msgid "Disable print _setup"
-msgstr "_Хэвлэх ажиллагаа боломжгүй байна"
-
-#: ../admin-tool/lockdown/maindialog.py:50
-msgid "Disable save to _disk"
-msgstr "_Дискэнд хадгалах боломжгүй байна"
-
-#: ../admin-tool/lockdown/maindialog.py:52
-msgid "_Lock down the panels"
-msgstr "_Панелийн тугжээг буулгах"
-
-#: ../admin-tool/lockdown/maindialog.py:53
-msgid "Disable force _quit"
-msgstr "_Хаах боломжгүй байна"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "Disable lock _screen"
-msgstr "Дэлгэц түгжих боломжгүй байна"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable log _out"
-msgstr "_Гарах  боломжгүй байна"
-
-#: ../admin-tool/lockdown/maindialog.py:57
-msgid "Disable _quit"
-msgstr "_Хаах боломжгүй байна"
-
-#: ../admin-tool/lockdown/maindialog.py:58
-msgid "Disable _arbitrary URL"
-msgstr "_Дурын ULR-хаяг боломжгүй"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable _bookmark editing"
-msgstr "Тэмдэглэлгээний засвар хийх боломжгүй"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable _history"
-msgstr "_Түүх бичих боломжгүй"
-
-#: ../admin-tool/lockdown/maindialog.py:61
-msgid "Disable _javascript chrome"
-msgstr "_javascript chrome боломжгүй"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _toolbar editing"
-msgstr "_Хэрэгслийн мөрийг засварлах боломжгүй"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "_Fullscreen"
-msgstr "_Дэлгэц дүүрэн "
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Hide _menubar"
-msgstr "_Цэсийн мөрийг харагдахгүй байлгах"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:1
-msgid "<b>Disabled Applets</b>"
-msgstr "<b>хэрэглэх боломжгүй апплетүүд</b>"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:2
-msgid "<b>Safe Protocols</b>"
-msgstr "<b>Хамгаалалт бүхий протоколууд</b>"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:3
-msgid "Disable _unsafe protocols"
-msgstr "_Хамгаалалтгүй протокол руу орох боломжгүй"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:4
-msgid "Epiphany Web Browser"
-msgstr "Epiphany Web Browser"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:5
+#: ../admin-tool/lockdown/maindialog.py:40
 msgid "General"
 msgstr "Ерөнхий"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:6
+#: ../admin-tool/lockdown/maindialog.py:42
+msgid "Epiphany Web Browser"
+msgstr "Epiphany Web Browser"
+
+#: ../admin-tool/lockdown/maindialog.py:43
+msgid "GNOME Screensaver"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:53
+msgid "Disable _command line"
+msgstr "Командын мөр ашиглах боломжгүй байна"
+
+#: ../admin-tool/lockdown/maindialog.py:54
+msgid "Disable _printing"
+msgstr "_Хэвлэх  боломжгүй байна"
+
+#: ../admin-tool/lockdown/maindialog.py:55
+msgid "Disable print _setup"
+msgstr "_Хэвлэх ажиллагаа боломжгүй байна"
+
+#: ../admin-tool/lockdown/maindialog.py:56
+msgid "Disable save to _disk"
+msgstr "_Дискэнд хадгалах боломжгүй байна"
+
+#: ../admin-tool/lockdown/maindialog.py:58
+msgid "_Lock down the panels"
+msgstr "_Панелийн тугжээг буулгах"
+
+#: ../admin-tool/lockdown/maindialog.py:59
+msgid "Disable force _quit"
+msgstr "_Хаах боломжгүй байна"
+
+#: ../admin-tool/lockdown/maindialog.py:60
+msgid "Disable log _out"
+msgstr "_Гарах  боломжгүй байна"
+
+#: ../admin-tool/lockdown/maindialog.py:62
+msgid "Disable _quit"
+msgstr "_Хаах боломжгүй байна"
+
+#: ../admin-tool/lockdown/maindialog.py:63
+msgid "Disable _arbitrary URL"
+msgstr "_Дурын ULR-хаяг боломжгүй"
+
+#: ../admin-tool/lockdown/maindialog.py:64
+msgid "Disable _bookmark editing"
+msgstr "Тэмдэглэлгээний засвар хийх боломжгүй"
+
+#: ../admin-tool/lockdown/maindialog.py:65
+msgid "Disable _history"
+msgstr "_Түүх бичих боломжгүй"
+
+#: ../admin-tool/lockdown/maindialog.py:66
+msgid "Disable _javascript chrome"
+msgstr "_javascript chrome боломжгүй"
+
+#: ../admin-tool/lockdown/maindialog.py:67
+msgid "Disable _toolbar editing"
+msgstr "_Хэрэгслийн мөрийг засварлах боломжгүй"
+
+#: ../admin-tool/lockdown/maindialog.py:68
+#, fuzzy
+msgid "Force _fullscreen mode"
+msgstr "_Дэлгэц дүүрэн "
+
+#: ../admin-tool/lockdown/maindialog.py:69
+msgid "Hide _menubar"
+msgstr "_Цэсийн мөрийг харагдахгүй байлгах"
+
+#: ../admin-tool/lockdown/maindialog.py:71
+msgid "Disable lock _screen"
+msgstr "Дэлгэц түгжих боломжгүй байна"
+
+#: ../admin-tool/lockdown/maindialog.py:72
+#, fuzzy
+msgid "_Lock on activation"
+msgstr "_Панелийн тугжээг буулгах"
+
+#: ../admin-tool/lockdown/maindialog.py:73
+#, fuzzy
+msgid "Allow log _out"
+msgstr "_Гарах  боломжгүй байна"
+
+#: ../admin-tool/lockdown/maindialog.py:74
+msgid "Allow user _switching"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:233
+#, python-format
+msgid "Could not display help document '%s'"
+msgstr ""
+
+#: ../admin-tool/lockdown/pessulus.ui.h:1
+msgid "Disable _unsafe protocols"
+msgstr "_Хамгаалалтгүй протокол руу орох боломжгүй"
+
+#: ../admin-tool/lockdown/pessulus.ui.h:2
+#, fuzzy
+msgid "Disabled Applets"
+msgstr "<b>хэрэглэх боломжгүй апплетүүд</b>"
+
+#: ../admin-tool/lockdown/pessulus.ui.h:3
 msgid "Lockdown Editor"
 msgstr "Засварлагчийн түгжээг буулгах"
+
+#: ../admin-tool/lockdown/pessulus.ui.h:4
+#, fuzzy
+msgid "Safe Protocols"
+msgstr "<b>Хамгаалалт бүхий протоколууд</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -269,37 +316,44 @@ msgstr "Засварлагчийн түгжээг буулгах"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:415
+#: ../admin-tool/profilesdialog.py:520
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../admin-tool/sabayon:44
-msgid "Your account does not have permissions to run the Desktop User Profiles tool"
-msgstr "Таны мэдээлэл Desktop-ны хэрэглэгчийн профайлын хэрэгсэл рүү орох зөвшөөрөлгүй байна"
+#: ../admin-tool/sabayon:77
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr ""
+"Таны мэдээлэл Desktop-ны хэрэглэгчийн профайлын хэрэгсэл рүү орох "
+"зөвшөөрөлгүй байна"
 
-#: ../admin-tool/sabayon:45
+#: ../admin-tool/sabayon:78
 msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
-msgstr "Энэ програмыг ажиллуулахад Администраторын зөвшөөрөл шаардлагатай яагаад гэвэл энэ нь системийн файлуудыг өөрчлөх боломжтой."
+msgstr ""
+"Энэ програмыг ажиллуулахад Администраторын зөвшөөрөл шаардлагатай яагаад "
+"гэвэл энэ нь системийн файлуудыг өөрчлөх боломжтой."
 
-#: ../admin-tool/sabayon:50
+#: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
 msgstr "Desktop-ны хэрэглэгчийн профайлын хэрэгсэл ажиллаж байна"
 
-#: ../admin-tool/sabayon:51
+#: ../admin-tool/sabayon:84
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
-msgstr "Та профайл засвараас Desktop-ны хэрэглэгчийн профайлын хэрэгсэлийг ашиглах боломжгүй"
+msgstr ""
+"Та профайл засвараас Desktop-ны хэрэглэгчийн профайлын хэрэгсэлийг ашиглах "
+"боломжгүй"
 
-#: ../admin-tool/sabayon:58
+#: ../admin-tool/sabayon:91
 #, c-format
 msgid "User account '%s' was not found"
 msgstr "%s хэрэглэгчийн мэдээлэл олдсонгүй"
 
-#: ../admin-tool/sabayon:59
+#: ../admin-tool/sabayon:92
 #, c-format
 msgid ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
@@ -307,302 +361,303 @@ msgid ""
 "command)"
 msgstr ""
 "Sabayon '%s' тусгай хэрэглэгчийн данс энэ компьютер дээр байхыг шаардана. "
-"Данс үүсгэсэний дараа дахин оролдоно уу (жишээлбэл, 'adduser' тушаал хэрэглэж)"
+"Данс үүсгэсэний дараа дахин оролдоно уу (жишээлбэл, 'adduser' тушаал "
+"хэрэглэж)"
 
-#: ../admin-tool/sabayon-apply:39
+#: ../admin-tool/sabayon:131
+#, c-format
+msgid ""
+"A fatal error has occurred.  You can help us fix the problem by sending the "
+"log in %s to %s"
+msgstr ""
+
+#: ../admin-tool/sabayon:145
+#, c-format
+msgid ""
+"Sabayon will now exit.  There were some recoverable errors, and you can help "
+"us debug the problem by sending the log in %s to %s"
+msgstr ""
+
+#: ../admin-tool/sabayon-apply:111
+msgid "Please use -h for usage options"
+msgstr ""
+
+#: ../admin-tool/sabayon-apply:123
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "`%s` хэрэглэгчийн профайл алга\n"
 
-#: ../admin-tool/sabayon-apply:44
-#, c-format
-msgid "Usage: %s [<profile-name>]\n"
-msgstr "Хэрэглээ: %s [<профайл-нэр>]\n"
-
-#: ../admin-tool/sabayon-session:32
+#: ../admin-tool/sabayon-session:67
 #, c-format
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
 msgstr "Хэрэглээ: %s <профайл-нэр> <профайл-зам> <дэлгэцийн дугаар>\n"
 
-#: ../admin-tool/sabayon.desktop.in.h:1
+#: ../admin-tool/sabayon.desktop.in.in.h:1
 msgid "Establish and Edit Profiles for Users"
 msgstr "Хэрэглэгчид зориулсан Профайлуудыг үүсгэн засварлах"
 
-#: ../admin-tool/sabayon.desktop.in.h:2 ../admin-tool/sabayon.glade.h:4
+#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.ui.h:4
 msgid "User Profile Editor"
 msgstr "Хэрэглэгчийн Профайл Засварлагч "
 
-#: ../admin-tool/sabayon.glade.h:1
+#: ../admin-tool/sabayon.ui.h:1
 msgid "Add Profile"
 msgstr "Профайлыг нэмэх"
 
-#: ../admin-tool/sabayon.glade.h:2
+#: ../admin-tool/sabayon.ui.h:2
 msgid "Profile _name:"
 msgstr "Профайл _нэр:"
 
-#: ../admin-tool/sabayon.glade.h:3
+#: ../admin-tool/sabayon.ui.h:3
 msgid "Use this profile for _all users"
 msgstr "Бүх хэрэглэгчдэд зориулсан профайлыг ашиглах"
 
-#: ../admin-tool/sabayon.glade.h:5
+#: ../admin-tool/sabayon.ui.h:5
 msgid "_Base on:"
 msgstr "_Үндэслэх"
 
-#: ../admin-tool/sabayon.glade.h:6
+#: ../admin-tool/sabayon.ui.h:6
+msgid "_Details"
+msgstr ""
+
+#: ../admin-tool/sabayon.ui.h:7
+msgid "_Groups"
+msgstr ""
+
+#: ../admin-tool/sabayon.ui.h:8
+msgid "_Groups:"
+msgstr ""
+
+#: ../admin-tool/sabayon.ui.h:9
 msgid "_Profiles:"
 msgstr "_Профайлууд:"
 
-#: ../admin-tool/sabayon.glade.h:7
+#: ../admin-tool/sabayon.ui.h:10
 msgid "_Users"
 msgstr "_Хэрэглэгчид"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.ui.h:11
 msgid "_Users:"
 msgstr "_Хэрэглэгчид:"
 
-#: ../admin-tool/saveconfirm.py:36
+#: ../admin-tool/saveconfirm.py:34
 msgid "Close _Without Saving"
 msgstr "Хадгалахгүй _хаах"
 
-#: ../admin-tool/saveconfirm.py:43
+#: ../admin-tool/saveconfirm.py:41
 #, python-format
 msgid "Save changes to profile \"%s\" before closing?"
 msgstr "Хаахын өмнө \"%s\" профайлыг өөрчилж хадгалах уу?"
 
-#: ../admin-tool/saveconfirm.py:47
-#, python-format
-msgid ""
-"If you don't save, changes from the last %ld second will be permanently lost."
-"If you don't save, changes from the last %ld seconds will be permanently "
-"lost."
-msgstr ""
-"Хэрвээ та хадгалахгүй бол өөрчлөлтүүд нь сүүлчийн %ld секундэд устгагдана."
-"Хэрвээ та хадгалахгүй бол өөрчлөлтүүд нь сүүлчийн %ld секундэд устгагдана."
-
-#: ../admin-tool/saveconfirm.py:53
-msgid "If you don't save, changes from the last minute will be permanently lost."
+#: ../admin-tool/saveconfirm.py:44
+#, fuzzy
+msgid "If you don't save, all changes will be permanently lost."
 msgstr "Хэрвээ та хадгалахгүй бол өөрчлөлтүүд нь сүүлчийн минутанд устгагдана."
 
-#: ../admin-tool/saveconfirm.py:57
-#, python-format
-msgid ""
-"If you don't save, changes from the last minute and %ld second will be "
-"permanently lost."
-"If you don't save, changes from the last minute and %ld seconds will be "
-"permanently lost."
-msgstr ""
-"Хэрвээ та хадгалахгүй бол өөрчлөлтүүд нь сүүлчийн минут болон %ld секундэд устгагдана."
-"Хэрвээ та хадгалахгүй бол өөрчлөлтүүд нь сүүлчийн минут болон %ld секундэд устгагдана."
-
-#: ../admin-tool/saveconfirm.py:64
-#, python-format
-msgid ""
-"If you don't save, changes from the last %ld minute will be permanently lost."
-"If you don't save, changes from the last %ld minutes will be permanently "
-"lost."
-msgstr ""
-"Хэрвээ та хадгалахгүй бол өөрчлөлтүүд нь сүүлчийн %ld минутанд устгагдана."
-"Хэрвээ та хадгалахгүй бол өөрчлөлтүүд нь сүүлчийн %ld минутанд устгагдана."
-
-#: ../admin-tool/saveconfirm.py:73 ../admin-tool/saveconfirm.py:83
-#, python-format
-msgid ""
-"If you don't save, changes from the last hour will be permanently lost."
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr "Хэрвээ та хадгалахгүй бол өөрчлөлтүүд нь сүүлийн %d хугацаанд устгагдана."
-
-#: ../admin-tool/saveconfirm.py:76
-#, python-format
-msgid ""
-"If you don't save, changes from the last hour and %d minute will be "
-"permanently lost."
-"If you don't save, changes from the last hour and %d minutes will be "
-"permanently lost."
-msgstr ""
-"Хэрвээ та хадгалахгүй бол сүүлийн цаг болон %d минутын өөрчлөлтүүд устгагдана."
-"Хэрвээ та хадгалахгүй бол сүүлийн цаг болон %d минутын өөрчлөлтүүд устгагдана."
-
-#: ../admin-tool/sessionwindow.py:153
+#: ../admin-tool/sessionwindow.py:155
 #, python-format
 msgid "Editing profile %s"
 msgstr "%s профайлыг засварлах"
 
-#: ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/sessionwindow.py:179
 msgid "_Quit"
 msgstr "_Гарах"
 
-#: ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Changes"
 msgstr "_Өөрчлөх"
 
-#: ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/sessionwindow.py:181
 msgid "Edit changes"
 msgstr "Өөрчлөлтийг засварлах"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:182
 msgid "_Lockdown"
 msgstr "_Түгжээг буулгах"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:182
 msgid "Edit Lockdown settings"
 msgstr "Орчны түгжээг засварлах"
 
-#: ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/sessionwindow.py:188
 msgid "Enforce Mandatory"
 msgstr "Зааврыг шаардах"
 
-#: ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/sessionwindow.py:188
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Засварлах хугацаанд зааврыг шаардах"
 
-#: ../admin-tool/sessionwindow.py:273
+#: ../admin-tool/sessionwindow.py:306
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "%s орчны түгжээг буулгана"
 
-#: ../admin-tool/usersdialog.py:67
+#: ../admin-tool/sessionwindow.py:342
+#, python-format
+msgid ""
+"There was a recoverable error while applying the user profile '%s'.  You can "
+"report this error now or try to continue editing the user profile."
+msgstr ""
+
+#: ../admin-tool/sessionwindow.py:346
+msgid "_Report this error"
+msgstr ""
+
+#: ../admin-tool/sessionwindow.py:347
+msgid "_Continue editing"
+msgstr ""
+
+#: ../admin-tool/usersdialog.py:72
 #, python-format
 msgid "Users for profile %s"
 msgstr "%s профайл бүхий хэрэглэгчид"
 
-#: ../admin-tool/usersdialog.py:95
-msgid "Use This Profile"
-msgstr "Энэ профайлыг хэрэглэ"
-
-#: ../lib/dirmonitor.py:151
-#, python-format
-msgid "Failed to add monitor for %s"
-msgstr "%s-д мониторийг суулгах боломжгүй байна"
-
-#: ../lib/dirmonitor.py:231
-#, python-format
-msgid "Expected event: %s %s"
-msgstr "Үйл явдал хүлээгдэж байна: %s %s"
-
-#: ../lib/protosession.py:142
+#: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
 msgstr "Чөлөөт Х мэдээллийг олох боломжгүй байна"
 
-#: ../lib/protosession.py:409
-msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+#: ../lib/protosession.py:376
+#, fuzzy
+msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr "Хnest эхлэх боломжгүй:USR1 сигнал хүлээх хугацаа хязгаарлагдмал."
 
-#: ../lib/protosession.py:411
-msgid "Failed to start Xnest: died during startup"
+#: ../lib/protosession.py:378
+#, fuzzy
+msgid "Failed to start Xephyr: died during startup"
 msgstr "Хnest эхлэх боломжгүй:ажиллагааны явцад унасан байна"
 
-#: ../lib/sources/filessource.py:68
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:469
+#, python-format
+msgid ""
+"There was a recoverable error while applying the user profile from file '%s'."
+msgstr ""
+
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (FATAL) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:478
+#, python-format
+msgid "There was a fatal error while applying the user profile from '%s'."
+msgstr ""
+
+#: ../lib/sources/filessource.py:69
 #, python-format
 msgid "File '%s' created"
 msgstr "'%s' Файл хүлээгдэж байна"
 
-#: ../lib/sources/filessource.py:70
+#: ../lib/sources/filessource.py:71
 #, python-format
 msgid "File '%s' deleted"
 msgstr "'%s' Файл устгагдсан"
 
-#: ../lib/sources/filessource.py:72
+#: ../lib/sources/filessource.py:73
 #, python-format
 msgid "File '%s' changed"
 msgstr "'%s' Файл өөрчлөгдсөн"
 
-#: ../lib/sources/filessource.py:96
+#: ../lib/sources/filessource.py:97
 msgid "Applications menu"
 msgstr "Хэрэглээний программны цэс"
 
-#: ../lib/sources/filessource.py:98
-msgid "Preferences menu"
-msgstr "Тохиргооны цэс"
+#: ../lib/sources/filessource.py:99
+#, fuzzy
+msgid "Settings menu"
+msgstr "Сүлжээний удирдлагын цэс"
 
-#: ../lib/sources/filessource.py:100
+#: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
 msgstr "Сүлжээний удирдлагын цэс"
 
-#: ../lib/sources/filessource.py:102
+#: ../lib/sources/filessource.py:103
 msgid "System Settings menu"
 msgstr "Системний орчны цэс"
 
-#: ../lib/sources/filessource.py:104
+#: ../lib/sources/filessource.py:105
 msgid "Start Here menu"
 msgstr "Эндээс цэсийг эхэл"
 
-#: ../lib/sources/gconfsource.py:89
+#: ../lib/sources/gconfsource.py:90
 #, python-format
 msgid "GConf key '%s' unset"
 msgstr "GConf түлхүүр '%s' олгогдоогүй байна"
 
-#: ../lib/sources/gconfsource.py:91
+#: ../lib/sources/gconfsource.py:92
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
 msgstr "GConf түлхүүр '%s'-д '%s' тэмдэгт мөр олгох."
 
-#: ../lib/sources/gconfsource.py:93
+#: ../lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
 msgstr "GConf түлхүүр '%s'-д '%s' бүхэл тоон утга олгох."
 
-#: ../lib/sources/gconfsource.py:95
+#: ../lib/sources/gconfsource.py:96
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
 msgstr "GConf түлхүүр '%s'-д '%s' флоат утга олгох."
 
-#: ../lib/sources/gconfsource.py:97
+#: ../lib/sources/gconfsource.py:98
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
 msgstr "GConf түлхүүр '%s'-д '%s' боолеан утга олгох"
 
-#: ../lib/sources/gconfsource.py:99
+#: ../lib/sources/gconfsource.py:100
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
 msgstr "GConf түлхүүр '%s'-ийг '%s' схемд оруулах"
 
-#: ../lib/sources/gconfsource.py:101
+#: ../lib/sources/gconfsource.py:102
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
 msgstr "GConf түлхүүр '%s'-ийг '%s' жагсаалтад оруул"
 
-#: ../lib/sources/gconfsource.py:103
+#: ../lib/sources/gconfsource.py:104
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
 msgstr "GConf түлхүүр '%s'-ийг '%s' хосод оруул"
 
-#: ../lib/sources/gconfsource.py:105
+#: ../lib/sources/gconfsource.py:106
 #, python-format
 msgid "GConf key '%s' set to '%s'"
 msgstr "GConf түлхүүр '%s'-ийг '%s'-д оруул"
 
-#: ../lib/sources/gconfsource.py:136
+#: ../lib/sources/gconfsource.py:137
 msgid "Default GConf settings"
 msgstr "GConf орчны анхны төлөв байдал"
 
-#: ../lib/sources/gconfsource.py:138
+#: ../lib/sources/gconfsource.py:139
 msgid "Mandatory GConf settings"
 msgstr "GConf орчны зааварчилгаа"
 
-#: ../lib/sources/mozillasource.py:132
+#: ../lib/sources/mozillasource.py:133
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
 msgstr "Моцилла түлхүүр '%s'ийг '%s'-д суулгах"
 
-#: ../lib/sources/mozillasource.py:134
+#: ../lib/sources/mozillasource.py:135
 #, python-format
 msgid "Mozilla key '%s' unset"
 msgstr "Моцилла түлхүүр '%s' суугаагүй байна"
 
-#: ../lib/sources/mozillasource.py:136
+#: ../lib/sources/mozillasource.py:137
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Моцилла түлхүүр '%s'-ийг '%s'-д шилжүүлсэн"
 
-#: ../lib/sources/mozillasource.py:165 ../lib/sources/mozillasource.py:175
+#: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
 msgid "Web browser preferences"
 msgstr "Web browser-ийн тохиргоонууд"
 
-#: ../lib/sources/mozillasource.py:167 ../lib/sources/mozillasource.py:177
+#: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
 msgid "Web browser bookmarks"
 msgstr "Web browser- ийн тэмдэглэлгээ"
 
-#: ../lib/sources/mozillasource.py:169
+#: ../lib/sources/mozillasource.py:170
 msgid "Web browser profile list"
 msgstr "Web browser- ийн профайл жагсаалт"
 
@@ -611,108 +666,240 @@ msgstr "Web browser- ийн профайл жагсаалт"
 msgid "File Not Found (%s)"
 msgstr "(%s) файл олдоогүй"
 
-#: ../lib/sources/mozillasource.py:871
+#: ../lib/sources/mozillasource.py:869
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "Нэр(%(name)s)- ийг %(section)s хэсэгт хуулах"
 
-#: ../lib/sources/mozillasource.py:880
+#: ../lib/sources/mozillasource.py:878
 #, python-format
 msgid "redundant default in section %s"
 msgstr "%s хэсгийн нэмэлт төлөв байдал"
 
-#: ../lib/sources/mozillasource.py:897
+#: ../lib/sources/mozillasource.py:895
 msgid "no default profile"
 msgstr "Профайлын хэвийн байдал алдагдсан байна."
 
-#: ../lib/sources/mozillasource.py:952
+#: ../lib/sources/mozillasource.py:950
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Моцилла '%s' -> '%s' хүлээгдэж байна"
 
-#: ../lib/sources/mozillasource.py:954
+#: ../lib/sources/mozillasource.py:952
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Моцилла хавтас '%s' хүлээгдэж байна"
 
-#: ../lib/sources/mozillasource.py:957
+#: ../lib/sources/mozillasource.py:955
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Моцилла '%s' устгагдсан"
 
-#: ../lib/sources/mozillasource.py:959
+#: ../lib/sources/mozillasource.py:957
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Моцилла хавтас '%s' устгагдсан"
 
-#: ../lib/sources/mozillasource.py:962
+#: ../lib/sources/mozillasource.py:960
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Моцилла '%s' '%s' өөрчлөгдсөн"
 
-#: ../lib/sources/mozillasource.py:964
+#: ../lib/sources/mozillasource.py:962
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Моцилла хавтас '%s' өөрчлөгдсөн. "
 
-#: ../lib/sources/paneldelegate.py:58
+#: ../lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel '%s' added"
 msgstr "%s панел нэмэгдсэн."
 
-#: ../lib/sources/paneldelegate.py:64
+#: ../lib/sources/paneldelegate.py:71
 #, python-format
 msgid "Panel '%s' removed"
 msgstr "Панел '%s' устгагдсан."
 
-#: ../lib/sources/paneldelegate.py:70
-#, python-format
-msgid "Panel applet '%s' added"
+#: ../lib/sources/paneldelegate.py:77
+#, fuzzy, python-format
+msgid "Applet '%s' added"
 msgstr "Панел апплет '%s' нэмэгдсэн."
 
-#: ../lib/sources/paneldelegate.py:76
-#, python-format
-msgid "Panel applet '%s' removed"
+#: ../lib/sources/paneldelegate.py:100
+#, fuzzy, python-format
+msgid "Applet '%s' removed"
 msgstr "Панел апплет '%s' устгагдсан."
 
-#: ../lib/sources/paneldelegate.py:82
-#, python-format
-msgid "Panel object '%s' added"
+#: ../lib/sources/paneldelegate.py:123
+#, fuzzy, python-format
+msgid "Object '%s' added"
 msgstr "Панел обьект '%s' нэмэгдсэн."
 
-#: ../lib/sources/paneldelegate.py:94
-#, python-format
-msgid "Panel object '%s' removed"
+#: ../lib/sources/paneldelegate.py:152
+#, fuzzy, python-format
+msgid "Object '%s' removed"
 msgstr "Панел обьект '%s' устгагдсан."
 
-#: ../lib/sources/paneldelegate.py:375
+#. Translators: This is a drawer in gnome-panel (where you can put applets)
+#: ../lib/sources/paneldelegate.py:240
+msgid "Drawer"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:242
+msgid "Main Menu"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:252
+#, python-format
+msgid "%s launcher"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:256
+msgid "Lock Screen button"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:258
+msgid "Logout button"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:260
+#, fuzzy
+msgid "Run Application button"
+msgstr "Хэрэглээний программны цэс"
+
+#: ../lib/sources/paneldelegate.py:262
+msgid "Search button"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:264
+msgid "Force Quit button"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:266
+msgid "Connect to Server button"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:268
+msgid "Shutdown button"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:270
+msgid "Screenshot button"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:273
+msgid "Unknown"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:275
+msgid "Menu Bar"
+msgstr ""
+
+#: ../lib/sources/paneldelegate.py:512
 msgid "Panel File"
 msgstr "Панел Файл"
 
-#: ../lib/storage.py:173
+#: ../lib/storage.py:172
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "'%s':%s файлийг унших боломжгүй"
 
-#: ../lib/storage.py:183
+#: ../lib/storage.py:182
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "'%s': %s- ээс ерөнхий өгөгдлүүдийг унших боломжгүй"
 
-#: ../lib/storage.py:189
+#: ../lib/storage.py:188
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "'%s' хэсэгт ерөнхий өгөгдлүүд ажиллах боломжгүй: %s"
 
-#: ../lib/storage.py:363
+#: ../lib/storage.py:362
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Байхгүй байгаа файл '%s'-ийг нэмж чадахгүй"
 
-#: ../lib/storage.py:540
+#: ../lib/storage.py:487
+#, python-format
+msgid "Couldn't unlink file '%s'"
+msgstr ""
+
+#: ../lib/storage.py:570
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Профайл бол зөвхөн уншина %s"
+
+#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
+#. do not change the way they are written.  The intended string is
+#. something like "invalid type for setting blah in /ldap/path/to/blah"
+#: ../lib/systemdb.py:67
+#, fuzzy, python-format
+msgid "invalid type for setting %(setting)s in %(np)s"
+msgstr "%s-ийг %s-д суулгахад хүчингүй хэлбэр."
+
+#: ../lib/systemdb.py:112
+msgid "No database file provided"
+msgstr ""
+
+#: ../lib/systemdb.py:232
+#, fuzzy, python-format
+msgid "No LDAP search base specified for %s"
+msgstr "%s-д тусгайлан үндэслэсэн хайлт байхгүй."
+
+#: ../lib/systemdb.py:235
+#, fuzzy, python-format
+msgid "No LDAP query filter specified for %s"
+msgstr "%s-д тусгайлсан нэвтрэх мэдээлэл байхгүй."
+
+#: ../lib/systemdb.py:238
+#, fuzzy, python-format
+msgid "No LDAP result attribute specified for %s"
+msgstr "%s-д тусгайлсан шинж чанарын үр дүн байхгүй"
+
+#: ../lib/systemdb.py:247
+#, fuzzy
+msgid "LDAP Scope must be one of: "
+msgstr ""
+"Үйл ажиллагааны хүрээ нь дэд хэсэг, үндсэн хэсэг ба нэгийн аль нэг нь байна."
+
+#: ../lib/systemdb.py:268
+#, fuzzy
+msgid "multiple_result must be one of: "
+msgstr "Үр дүнгүүд нь анхны ба санамсаргүйн нэг нь байна."
+
+#: ../lib/systemdb.py:361
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "Бичихэд зориулагдсан %s нь нээгдэх боломжгүй байна. "
+
+#: ../lib/systemdb.py:374
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "Хэрэглэгчийн мэдээллийг %s-д хадгалах боломжгүй байна"
+
+#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "%s файл нь профайлын тохиргоо биш"
+
+#: ../lib/systemdb.py:404
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "%s анхны профайлыг тохиргоонд нэмэх боломжгүй байна"
+
+#: ../lib/systemdb.py:438
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "Профайлын тохиргоонд %s хэрэглэгчийг нэмэх боломжгүй"
+
+#: ../lib/systemdb.py:510
+msgid "Failed to get the user list"
+msgstr "Хэрэглэгчийн жагсаалт руу орох боломжгүй"
+
+#: ../lib/systemdb.py:560
+#, fuzzy
+msgid "Failed to get the group list"
+msgstr "Хэрэглэгчийн жагсаалт руу орох боломжгүй"
 
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
@@ -732,72 +919,69 @@ msgstr "%s сорилууд ажиллаж байна (%s)"
 msgid "Success!"
 msgstr "Амжилт!"
 
-#: ../lib/userdb.py:52
-#, python-format
-msgid "invalid type for setting %s in %s"
-msgstr "%s-ийг %s-д суулгахад хүчингүй хэлбэр."
-
-#: ../lib/userdb.py:212
-#, python-format
-msgid "No search based specified for %s"
-msgstr "%s-д тусгайлан үндэслэсэн хайлт байхгүй."
-
-#: ../lib/userdb.py:215
-#, python-format
-msgid "No query filter specified for %s"
-msgstr "%s-д тусгайлсан нэвтрэх мэдээлэл байхгүй."
-
-#: ../lib/userdb.py:218
-#, python-format
-msgid "No result attribute specified for %s"
-msgstr "%s-д тусгайлсан шинж чанарын үр дүн байхгүй"
-
-#: ../lib/userdb.py:227
-msgid "Scope must be one of sub, base and one"
-msgstr "Үйл ажиллагааны хүрээ нь дэд хэсэг, үндсэн хэсэг ба нэгийн аль нэг нь байна."
-
-#: ../lib/userdb.py:247
-msgid "multiple_result must be one of first and random"
-msgstr "Үр дүнгүүд нь анхны ба санамсаргүйн нэг нь байна."
-
-#: ../lib/userdb.py:339
-#, python-format
-msgid "Could not open %s for writing"
-msgstr "Бичихэд зориулагдсан %s нь нээгдэх боломжгүй байна. "
-
-#: ../lib/userdb.py:352
-#, python-format
-msgid "Failed to save UserDatabase to %s"
-msgstr "Хэрэглэгчийн мэдээллийг %s-д хадгалах боломжгүй байна"
-
-#: ../lib/userdb.py:375 ../lib/userdb.py:410
-#, python-format
-msgid "File %s is not a profile configuration"
-msgstr "%s файл нь профайлын тохиргоо биш"
-
-#: ../lib/userdb.py:382
-#, python-format
-msgid "Failed to add default profile %s to configuration"
-msgstr "%s анхны профайлыг тохиргоонд нэмэх боломжгүй байна"
-
-#: ../lib/userdb.py:418
-#, python-format
-msgid "Failed to add user %s to profile configuration"
-msgstr "Профайлын тохиргоонд %s хэрэглэгчийг нэмэх боломжгүй"
-
-#: ../lib/userdb.py:449
-msgid "Failed to get the user list"
-msgstr "Хэрэглэгчийн жагсаалт руу орох боломжгүй"
-
-#: ../lib/util.py:127
+#: ../lib/util.py:94
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
-msgstr "Home директор олдсонгүй: суулгахгүй/etc/нууц үг ба орчны $HOME-д үнэлгээгүй."
+msgstr ""
+"Home директор олдсонгүй: суулгахгүй/etc/нууц үг ба орчны $HOME-д үнэлгээгүй."
 
-#: ../lib/util.py:140
+#: ../lib/util.py:110 ../lib/util.py:137
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
-msgstr "Хэрэглэгчийн нэр олдсонгүй: суулгахгүй/etc/нууц үг ба орчны $хэрэглэгчид үнэлгээгүй."
+msgstr ""
+"Хэрэглэгчийн нэр олдсонгүй: суулгахгүй/etc/нууц үг ба орчны $хэрэглэгчид "
+"үнэлгээгүй."
 
+#~ msgid "Usage: %s [<profile-name>]\n"
+#~ msgstr "Хэрэглээ: %s [<профайл-нэр>]\n"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld second will be permanently "
+#~ "lost.If you don't save, changes from the last %ld seconds will be "
+#~ "permanently lost."
+#~ msgstr ""
+#~ "Хэрвээ та хадгалахгүй бол өөрчлөлтүүд нь сүүлчийн %ld секундэд устгагдана."
+#~ "Хэрвээ та хадгалахгүй бол өөрчлөлтүүд нь сүүлчийн %ld секундэд устгагдана."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last minute and %ld second will be "
+#~ "permanently lost.If you don't save, changes from the last minute and %ld "
+#~ "seconds will be permanently lost."
+#~ msgstr ""
+#~ "Хэрвээ та хадгалахгүй бол өөрчлөлтүүд нь сүүлчийн минут болон %ld "
+#~ "секундэд устгагдана.Хэрвээ та хадгалахгүй бол өөрчлөлтүүд нь сүүлчийн "
+#~ "минут болон %ld секундэд устгагдана."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld minute will be permanently "
+#~ "lost.If you don't save, changes from the last %ld minutes will be "
+#~ "permanently lost."
+#~ msgstr ""
+#~ "Хэрвээ та хадгалахгүй бол өөрчлөлтүүд нь сүүлчийн %ld минутанд устгагдана."
+#~ "Хэрвээ та хадгалахгүй бол өөрчлөлтүүд нь сүүлчийн %ld минутанд устгагдана."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last hour will be permanently lost.If "
+#~ "you don't save, changes from the last %d hours will be permanently lost."
+#~ msgstr ""
+#~ "Хэрвээ та хадгалахгүй бол өөрчлөлтүүд нь сүүлийн %d хугацаанд устгагдана."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last hour and %d minute will be "
+#~ "permanently lost.If you don't save, changes from the last hour and %d "
+#~ "minutes will be permanently lost."
+#~ msgstr ""
+#~ "Хэрвээ та хадгалахгүй бол сүүлийн цаг болон %d минутын өөрчлөлтүүд "
+#~ "устгагдана.Хэрвээ та хадгалахгүй бол сүүлийн цаг болон %d минутын "
+#~ "өөрчлөлтүүд устгагдана."
+
+#~ msgid "Failed to add monitor for %s"
+#~ msgstr "%s-д мониторийг суулгах боломжгүй байна"
+
+#~ msgid "Expected event: %s %s"
+#~ msgstr "Үйл явдал хүлээгдэж байна: %s %s"
+
+#~ msgid "Preferences menu"
+#~ msgstr "Тохиргооны цэс"

@@ -13,8 +13,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-09-14 11:24+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-12-20 09:43-0600\n"
 "PO-Revision-Date: 2009-09-21 16:33+0200\n"
 "Last-Translator: nikosCharonitakis <nikosx@gmail.com>\n"
 "Language-Team: Greek <team@gnome.gr>\n"
@@ -50,8 +50,7 @@ msgstr "Αγνόηση"
 msgid "Lock"
 msgstr "Κλείδωμα"
 
-#: ../admin-tool/changeswindow.py:127
-#: ../admin-tool/editorwindow.py:230
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
 msgid "Description"
 msgstr "Περιγραφή"
 
@@ -60,71 +59,68 @@ msgstr "Περιγραφή"
 msgid "Profile %s"
 msgstr "Προφίλ %s"
 
-#: ../admin-tool/editorwindow.py:195
-#: ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
 msgid "_Profile"
 msgstr "_Προφίλ"
 
-#: ../admin-tool/editorwindow.py:196
-#: ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
 msgid "_Save"
 msgstr "Αποθήκευ_ση"
 
-#: ../admin-tool/editorwindow.py:196
-#: ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
 msgid "Save profile"
 msgstr "Αποθήκευση προφίλ"
 
-#: ../admin-tool/editorwindow.py:197
+#: ../admin-tool/editorwindow.py:204
 msgid "_Close"
 msgstr "_Κλείσιμο"
 
-#: ../admin-tool/editorwindow.py:197
-#: ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
 msgid "Close the current window"
 msgstr "Κλείσιμο τρέχοντος παραθύρου"
 
-#: ../admin-tool/editorwindow.py:198
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
 msgid "_Edit"
 msgstr "_Επεξεργασία"
 
-#: ../admin-tool/editorwindow.py:199
+#: ../admin-tool/editorwindow.py:206
 msgid "_Delete"
 msgstr "_Διαγραφή"
 
-#: ../admin-tool/editorwindow.py:199
+#: ../admin-tool/editorwindow.py:206
 msgid "Delete item"
 msgstr "Διαγραφή αντικειμένου"
 
-#: ../admin-tool/editorwindow.py:200
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
 msgid "_Help"
 msgstr "_Βοήθεια"
 
-#: ../admin-tool/editorwindow.py:201
-#: ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+msgid "_Contents"
+msgstr ""
+
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+msgid "Help Contents"
+msgstr ""
+
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
 msgid "_About"
 msgstr "_Περί"
 
-#: ../admin-tool/editorwindow.py:201
-#: ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
 msgid "About Sabayon"
 msgstr "Περί Sabayon"
 
-#: ../admin-tool/editorwindow.py:262
-#: ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:266
-#: ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
 msgid "Files"
 msgstr "Αρχεία"
 
-#: ../admin-tool/editorwindow.py:266
-#: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:269
+#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
+#: ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "Πίνακας εφαρμογών"
 
@@ -133,8 +129,7 @@ msgstr "Πίνακας εφαρμογών"
 msgid "Profile file: %s"
 msgstr "Αρχείο προφίλ: %s"
 
-#: ../admin-tool/gconfviewer.py:57
-#: ../admin-tool/gconfviewer.py:76
+#: ../admin-tool/gconfviewer.py:57 ../admin-tool/gconfviewer.py:76
 msgid "<no type>"
 msgstr "<xωρίς τύπο>"
 
@@ -175,9 +170,8 @@ msgstr "ζεύγος"
 msgid "Profile settings: %s"
 msgstr "Ρυθμίσεις προφίλ: %s"
 
-#: ../admin-tool/gconfviewer.py:110
-#: ../admin-tool/profilesdialog.py:387
-#: ../admin-tool/usersdialog.py:85
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "Όνομα"
 
@@ -189,296 +183,140 @@ msgstr "Τύπος"
 msgid "Value"
 msgstr "Τιμή"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:99
+#: ../admin-tool/groupsdialog.py:61
+#, fuzzy, python-format
+msgid "Groups for profile %s"
+msgstr "Χρήστες για προφίλ %s"
+
+#: ../admin-tool/groupsdialog.py:71
+msgid "Group"
+msgstr ""
+
+#: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
+msgid "Use This Profile"
+msgstr "Χρήση αυτού του προφίλ"
+
+#: ../admin-tool/lockdown/lockdownbutton.py:100
 msgid "Click to make this setting not mandatory"
 msgstr "Κλικ για να γίνει αυτή η ρύθμιση προαιρετική"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:101
+#: ../admin-tool/lockdown/lockdownbutton.py:102
 msgid "Click to make this setting mandatory"
 msgstr "Κλικ για να γίνει αυτή η ρύθμιση υποχρεωτική"
 
-#: ../admin-tool/lockdown/maindialog.py:49
-msgid "Disable _command line"
-msgstr "Απενεργοποίηση γραμμής ε_ντολών"
-
-#: ../admin-tool/lockdown/maindialog.py:50
-msgid "Disable _printing"
-msgstr "Απενεργοποίηση εκτύ_πωσης"
-
-#: ../admin-tool/lockdown/maindialog.py:51
-msgid "Disable print _setup"
-msgstr "Απενεργοποίηση ρύθμι_σης εκτυπωτή"
-
-#: ../admin-tool/lockdown/maindialog.py:52
-msgid "Disable save to _disk"
-msgstr "Απενεργοποίηση αποθήκευσης στο _δίσκο"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "_Lock down the panels"
-msgstr "Κ_λείδωμα των πινάκων εφαρμογών"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable force _quit"
-msgstr "Απενεργοποίηση εξανα_γκασμού σε έξοδο"
-
-#: ../admin-tool/lockdown/maindialog.py:56
-msgid "Disable lock _screen"
-msgstr "Απενεργοποίη_ση κλειδώματος οθόνης"
-
-#: ../admin-tool/lockdown/maindialog.py:57
-msgid "Disable log _out"
-msgstr "Απενεργοποίηση απ_οσύνδεσης"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable _quit"
-msgstr "Απενεργοποίηση ε_ξόδου"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable _arbitrary URL"
-msgstr "Απενεργοποίηση τυχ_αίας URL"
-
-#: ../admin-tool/lockdown/maindialog.py:61
-msgid "Disable _bookmark editing"
-msgstr "Απενεργοποίηση επεξεργασίας _σελιδοδεικτών"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _history"
-msgstr "Απενεργοποί_ηση ιστορικού"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _javascript chrome"
-msgstr "Απενεργοποίηση _javascript chrome"
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _toolbar editing"
-msgstr "Απενεργοποίηση επεξεργασίας ερ_γαλειοθηκών"
-
-#: ../admin-tool/lockdown/maindialog.py:65
-msgid "_Fullscreen"
-msgstr "_Πλήρης οθόνη"
-
-#: ../admin-tool/lockdown/maindialog.py:66
-msgid "Hide _menubar"
-msgstr "Απόκρυψη γραμμής _μενού"
-
-#. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
-#. This can be used to disable this, for when you don't want people to know you created the document.
-#: ../admin-tool/lockdown/maindialog.py:70
-msgid "Remove personal information from documents when saving them"
-msgstr "Αφαίρεση προσωπικών δεδομένων από τα έγγραφα κατά την αποθήκευσή τους"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Warn if macro tries to create a PDF"
-msgstr "Προειδοποίηση αν η μακροεντολή προσπαθήσει να δημιουργήσει PDF"
-
-#: ../admin-tool/lockdown/maindialog.py:72
-msgid "Warn if macro tries to print a document"
-msgstr "Προειδοποίηση αν η μακροεντολή προσπαθήσει να εκτυπώσει έγγραφο"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-msgid "Warn if macro tries to save a document"
-msgstr "Προειδοποίηση αν η μακροεντολή προσπαθήσει να αποθηκεύσει έγγραφο"
-
-#: ../admin-tool/lockdown/maindialog.py:74
-msgid "Warn if macro tries to sign a document"
-msgstr "Προειδοποίηση αν η μακροεντολή προσπαθήσει να υπογράψει έγγραφο"
-
-#: ../admin-tool/lockdown/maindialog.py:75
-msgid "Recommend password when saving a document"
-msgstr "Να συστήνεται η χρήση κωδικού κατά την αποθήκευση εγγράφου"
-
-#: ../admin-tool/lockdown/maindialog.py:77
-msgid "Enable auto-save"
-msgstr "Ενεργοποίηση αυτόματης αποθήκευσης"
-
-#. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
-#: ../admin-tool/lockdown/maindialog.py:79
-msgid "Printing should mark the document as modified"
-msgstr "Η εκτύπωση θα σημειώνει το έγγραφο ως τροποποιημένο"
-
-#: ../admin-tool/lockdown/maindialog.py:80
-msgid "Use system's file dialog"
-msgstr "Χρήση επιλογέα αρχείου του συστήματος"
-
-#: ../admin-tool/lockdown/maindialog.py:81
-msgid "Create backup copy on save"
-msgstr "Δημιουργία αντιγράφου κατά την αποθήκευση"
-
-#: ../admin-tool/lockdown/maindialog.py:82
-msgid "Warn when saving non-OpenOffice.org formats"
-msgstr "Προειδοποίηση κατά την αποθήκευση για τύπους αρχείων που δεν είναι OpenOffice.org"
-
-#: ../admin-tool/lockdown/maindialog.py:84
-msgid "Use OpenGL"
-msgstr "Χρήση OpenGL"
-
-#: ../admin-tool/lockdown/maindialog.py:85
-msgid "Use system font"
-msgstr "Χρήση της γραμματοσειράς συστήματος"
-
-#: ../admin-tool/lockdown/maindialog.py:86
-msgid "Use anti-aliasing"
-msgstr "Χρήση εξομάλυνσης (anti-aliasing)"
-
-#: ../admin-tool/lockdown/maindialog.py:87
-msgid "Disable UI customization"
-msgstr "Απενεργοποίηση εξατομίκευσης του UI"
-
-#: ../admin-tool/lockdown/maindialog.py:88
-msgid "Show insensitive menu items"
-msgstr "Εμφάνιση μενού αντικειμένων χωρίς διάκριση πεζών/κεφαλαίων"
-
-#: ../admin-tool/lockdown/maindialog.py:89
-msgid "Show font preview"
-msgstr "Εμφάνιση προεπισκόπισης γραμματοσειρών"
-
-#: ../admin-tool/lockdown/maindialog.py:90
-msgid "Show font history"
-msgstr "Εμφάνιση ιστορικού γραμματοσειρών"
-
-#: ../admin-tool/lockdown/maindialog.py:91
-msgid "Show icons in menus"
-msgstr "Εμφάνιση εικονιδίων στα μενού"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:1
-msgid ""
-"\n"
-"5\n"
-"10\n"
-"25\n"
-"50"
-msgstr ""
-"\n"
-"5\n"
-"10\n"
-"25\n"
-"50"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:6
-msgid ""
-"\n"
-"Automatic\n"
-"Large\n"
-"Small"
-msgstr ""
-"\n"
-"Αυτόματο\n"
-"Μεγάλο\n"
-"Μικρό"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:10
-msgid ""
-"\n"
-"OpenDocument (.odp)\n"
-"PowerPoint 97+ (.ppt)\n"
-"OpenOffice.org 1.1 (.sxi)"
-msgstr ""
-"\n"
-"OpenDocument (.odp)\n"
-"PowerPoint 97+ (.ppt)\n"
-"OpenOffice.org 1.1 (.sxi)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:14
-msgid ""
-"\n"
-"OpenDocument (.ods)\n"
-"Excel 97+ (.xls)\n"
-"OpenOffice.org 1.1 (.sxc)"
-msgstr ""
-"\n"
-"OpenDocument (.ods)\n"
-"Excel 97+ (.xls)\n"
-"OpenOffice.org 1.1 (.sxc)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:18
-msgid ""
-"\n"
-"OpenDocument (.odt)\n"
-"Word 97+ (.doc)\n"
-"OpenOffice.org 1.1 (.sxw)"
-msgstr ""
-"\n"
-"OpenDocument (.odt)\n"
-"Word 97+ (.doc)\n"
-"OpenOffice.org 1.1 (.sxw)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:22
-msgid ""
-"\n"
-"Very High\n"
-"High\n"
-"Medium\n"
-"Low"
-msgstr ""
-"\n"
-"Πολύ υψηλή\n"
-"Υψηλή\n"
-"Μεσαία\n"
-"Χαμηλή"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:27
-msgid "<b>Disabled Applets</b>"
-msgstr "<b>Απενεργοποιημένες μικροεφαρμογές</b>"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:28
-msgid "<b>Safe Protocols</b>"
-msgstr "<b>Ασφαλή πρωτόκολλα</b>"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:29
-msgid "Default format for presentations:"
-msgstr "Προκαθορισμένη μορφή για παρουσιάσεις:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:30
-msgid "Default format for spreadsheet:"
-msgstr "Προεπιλεγμένος τύπος αρχείου για λογιστικό φύλλο:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:31
-msgid "Default format for word processor:"
-msgstr "Προεπιλεγμένος τύπος αρχείου για επεξεργαστή κειμένου:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:32
-msgid "Default icon size"
-msgstr "Προκαθορισμένο μέγεθος εικονιδίων"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:33
-msgid "Disable _unsafe protocols"
-msgstr "Απενεργοποίηση μη ασ_φαλών πρωτοκόλλων"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:34
-msgid "Epiphany Web Browser"
-msgstr "Περιηγητής Epiphany"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:35
+#: ../admin-tool/lockdown/maindialog.py:40
 msgid "General"
 msgstr "Γενικά"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:36
-msgid "Load / Save"
-msgstr "Φόρτωση / Αποθήκευση"
+#: ../admin-tool/lockdown/maindialog.py:42
+msgid "Epiphany Web Browser"
+msgstr "Περιηγητής Epiphany"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:37
+#: ../admin-tool/lockdown/maindialog.py:43
+msgid "GNOME Screensaver"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:53
+msgid "Disable _command line"
+msgstr "Απενεργοποίηση γραμμής ε_ντολών"
+
+#: ../admin-tool/lockdown/maindialog.py:54
+msgid "Disable _printing"
+msgstr "Απενεργοποίηση εκτύ_πωσης"
+
+#: ../admin-tool/lockdown/maindialog.py:55
+msgid "Disable print _setup"
+msgstr "Απενεργοποίηση ρύθμι_σης εκτυπωτή"
+
+#: ../admin-tool/lockdown/maindialog.py:56
+msgid "Disable save to _disk"
+msgstr "Απενεργοποίηση αποθήκευσης στο _δίσκο"
+
+#: ../admin-tool/lockdown/maindialog.py:58
+msgid "_Lock down the panels"
+msgstr "Κ_λείδωμα των πινάκων εφαρμογών"
+
+#: ../admin-tool/lockdown/maindialog.py:59
+msgid "Disable force _quit"
+msgstr "Απενεργοποίηση εξανα_γκασμού σε έξοδο"
+
+#: ../admin-tool/lockdown/maindialog.py:60
+msgid "Disable log _out"
+msgstr "Απενεργοποίηση απ_οσύνδεσης"
+
+#: ../admin-tool/lockdown/maindialog.py:62
+msgid "Disable _quit"
+msgstr "Απενεργοποίηση ε_ξόδου"
+
+#: ../admin-tool/lockdown/maindialog.py:63
+msgid "Disable _arbitrary URL"
+msgstr "Απενεργοποίηση τυχ_αίας URL"
+
+#: ../admin-tool/lockdown/maindialog.py:64
+msgid "Disable _bookmark editing"
+msgstr "Απενεργοποίηση επεξεργασίας _σελιδοδεικτών"
+
+#: ../admin-tool/lockdown/maindialog.py:65
+msgid "Disable _history"
+msgstr "Απενεργοποί_ηση ιστορικού"
+
+#: ../admin-tool/lockdown/maindialog.py:66
+msgid "Disable _javascript chrome"
+msgstr "Απενεργοποίηση _javascript chrome"
+
+#: ../admin-tool/lockdown/maindialog.py:67
+msgid "Disable _toolbar editing"
+msgstr "Απενεργοποίηση επεξεργασίας ερ_γαλειοθηκών"
+
+#: ../admin-tool/lockdown/maindialog.py:68
+#, fuzzy
+msgid "Force _fullscreen mode"
+msgstr "_Πλήρης οθόνη"
+
+#: ../admin-tool/lockdown/maindialog.py:69
+msgid "Hide _menubar"
+msgstr "Απόκρυψη γραμμής _μενού"
+
+#: ../admin-tool/lockdown/maindialog.py:71
+msgid "Disable lock _screen"
+msgstr "Απενεργοποίη_ση κλειδώματος οθόνης"
+
+#: ../admin-tool/lockdown/maindialog.py:72
+#, fuzzy
+msgid "_Lock on activation"
+msgstr "Κ_λείδωμα των πινάκων εφαρμογών"
+
+#: ../admin-tool/lockdown/maindialog.py:73
+#, fuzzy
+msgid "Allow log _out"
+msgstr "Απενεργοποίηση απ_οσύνδεσης"
+
+#: ../admin-tool/lockdown/maindialog.py:74
+msgid "Allow user _switching"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:233
+#, python-format
+msgid "Could not display help document '%s'"
+msgstr ""
+
+#: ../admin-tool/lockdown/pessulus.ui.h:1
+msgid "Disable _unsafe protocols"
+msgstr "Απενεργοποίηση μη ασ_φαλών πρωτοκόλλων"
+
+#: ../admin-tool/lockdown/pessulus.ui.h:2
+#, fuzzy
+msgid "Disabled Applets"
+msgstr "<b>Απενεργοποιημένες μικροεφαρμογές</b>"
+
+#: ../admin-tool/lockdown/pessulus.ui.h:3
 msgid "Lockdown Editor"
 msgstr "Επεξεργαστής κλειδώματος"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:38
-msgid "Macro Security Level:"
-msgstr "Ασφάλεια επιπέδου μακροεντολής:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:39
-msgid "Number of undo steps:"
-msgstr "Αριθμός βημάτων αναίρεσης:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:40
-msgid "OpenOffice.org"
-msgstr "OpenOffice.org"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:42
-msgid "Security"
-msgstr "Ασφάλεια"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:43
-msgid "User Interface"
-msgstr "Γραφικό περιβάλλον χρήστη"
+#: ../admin-tool/lockdown/pessulus.ui.h:4
+#, fuzzy
+msgid "Safe Protocols"
+msgstr "<b>Ασφαλή πρωτόκολλα</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -486,26 +324,37 @@ msgstr "Γραφικό περιβάλλον χρήστη"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:497
+#: ../admin-tool/profilesdialog.py:520
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:77
-msgid "Your account does not have permissions to run the Desktop User Profiles tool"
-msgstr "Ο λογαριασμός σας δεν έχει επαρκή δικαιώματα για να εκτελέσει το εργαλείο Προφίλ χρηστών"
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr ""
+"Ο λογαριασμός σας δεν έχει επαρκή δικαιώματα για να εκτελέσει το εργαλείο "
+"Προφίλ χρηστών"
 
 #: ../admin-tool/sabayon:78
-msgid "Administrator level permissions are needed to run this program because it can modify system files."
-msgstr "Απαιτούνται δικαιώματα διαχειριστή για να εκτελεστεί αυτό το πρόγραμμα επειδή το πρόγραμμα μπορεί να τροποποιήσει αρχεία συστήματος."
+msgid ""
+"Administrator level permissions are needed to run this program because it "
+"can modify system files."
+msgstr ""
+"Απαιτούνται δικαιώματα διαχειριστή για να εκτελεστεί αυτό το πρόγραμμα "
+"επειδή το πρόγραμμα μπορεί να τροποποιήσει αρχεία συστήματος."
 
 #: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
 msgstr "Το εργαλείο Προφίλ χρηστών εκτελείται ήδη"
 
 #: ../admin-tool/sabayon:84
-msgid "You may not use Desktop User Profiles tool from within a profile editing session"
-msgstr "Δεν μπορείτε να χρησιμοποιείτε το εργαλείο Προφίλ χρηστών σε μια συνεδρία επεξεργασίας προφίλ"
+msgid ""
+"You may not use Desktop User Profiles tool from within a profile editing "
+"session"
+msgstr ""
+"Δεν μπορείτε να χρησιμοποιείτε το εργαλείο Προφίλ χρηστών σε μια συνεδρία "
+"επεξεργασίας προφίλ"
 
 #: ../admin-tool/sabayon:91
 #, c-format
@@ -514,27 +363,41 @@ msgstr "Ο λογαριασμός χρήστη '%s' δεν βρέθηκε"
 
 #: ../admin-tool/sabayon:92
 #, c-format
-msgid "Sabayon requires a special user account '%s' to be present on this computer. Try again after creating the account (using, for example, the 'adduser' command)"
-msgstr "Το πρόγραμμα Sabayon απαιτεί ειδικό λογαριασμό χρήστη '%s' στον υπολογιστή. Προσπαθήστε ξανά αφού προηγουμένως δημιουργήσετε λογαριασμό (για παράδειγμα, δίνοντας την εντολή 'adduser')"
+msgid ""
+"Sabayon requires a special user account '%s' to be present on this computer. "
+"Try again after creating the account (using, for example, the 'adduser' "
+"command)"
+msgstr ""
+"Το πρόγραμμα Sabayon απαιτεί ειδικό λογαριασμό χρήστη '%s' στον υπολογιστή. "
+"Προσπαθήστε ξανά αφού προηγουμένως δημιουργήσετε λογαριασμό (για παράδειγμα, "
+"δίνοντας την εντολή 'adduser')"
 
 #: ../admin-tool/sabayon:131
 #, c-format
-msgid "A fatal error has occurred.  You can help us fix the problem by sending the log in %s to %s"
-msgstr "Προκλήθηκε μοιραίο σφάλμα. Μπορείτε να μας βοηθήσετε να διορθώσουμε το πρόβλημα αποστέλοντας την καταγραφή %s στο %s"
+msgid ""
+"A fatal error has occurred.  You can help us fix the problem by sending the "
+"log in %s to %s"
+msgstr ""
+"Προκλήθηκε μοιραίο σφάλμα. Μπορείτε να μας βοηθήσετε να διορθώσουμε το "
+"πρόβλημα αποστέλοντας την καταγραφή %s στο %s"
 
 #: ../admin-tool/sabayon:145
 #, c-format
-msgid "Sabayon will now exit.  There were some recoverable errors, and you can help us debug the problem by sending the log in %s to %s"
-msgstr "Έξοδος από το Sabayon τώρα λόγω μερικών αναστρέψιμων σφαλμάτων. Μπορείτε να μας βοηθήσετε να επιλύσουμε το πρόβλημα αποστέλοντας την καταγραφή %s στο %s"
+msgid ""
+"Sabayon will now exit.  There were some recoverable errors, and you can help "
+"us debug the problem by sending the log in %s to %s"
+msgstr ""
+"Έξοδος από το Sabayon τώρα λόγω μερικών αναστρέψιμων σφαλμάτων. Μπορείτε να "
+"μας βοηθήσετε να επιλύσουμε το πρόβλημα αποστέλοντας την καταγραφή %s στο %s"
 
-#: ../admin-tool/sabayon-apply:99
+#: ../admin-tool/sabayon-apply:111
+msgid "Please use -h for usage options"
+msgstr "Παρακαλώ χρησιμοποιήστε το -h για επιλογές χρήσης"
+
+#: ../admin-tool/sabayon-apply:123
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Δεν βρέθηκε προφίλ για τον χρήστη '%s'\n"
-
-#: ../admin-tool/sabayon-apply:104
-msgid "Please use -h for usage options"
-msgstr "Παρακαλώ χρησιμοποιήστε το -h για επιλογές χρήσης"
 
 #: ../admin-tool/sabayon-session:67
 #, c-format
@@ -545,40 +408,47 @@ msgstr "Χρήση: %s <profile-name> <profile-path> <display-number>\n"
 msgid "Establish and Edit Profiles for Users"
 msgstr "Δημιουργία και επεξεργασία προφίλ για χρήστες"
 
-#: ../admin-tool/sabayon.desktop.in.in.h:2
-#: ../admin-tool/sabayon.glade.h:4
+#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.ui.h:4
 msgid "User Profile Editor"
 msgstr "Επεξεργαστής προφίλ χρήστη"
 
-#: ../admin-tool/sabayon.glade.h:1
+#: ../admin-tool/sabayon.ui.h:1
 msgid "Add Profile"
 msgstr "Προσθήκη προφίλ"
 
-#: ../admin-tool/sabayon.glade.h:2
+#: ../admin-tool/sabayon.ui.h:2
 msgid "Profile _name:"
 msgstr "Ό_νομα προφίλ:"
 
-#: ../admin-tool/sabayon.glade.h:3
+#: ../admin-tool/sabayon.ui.h:3
 msgid "Use this profile for _all users"
 msgstr "Χρήση _αυτού του προφίλ για όλους τους χρήστες"
 
-#: ../admin-tool/sabayon.glade.h:5
+#: ../admin-tool/sabayon.ui.h:5
 msgid "_Base on:"
 msgstr "_Βασίζεται σε:"
 
-#: ../admin-tool/sabayon.glade.h:6
+#: ../admin-tool/sabayon.ui.h:6
 msgid "_Details"
 msgstr "_Λεπτομέρειες"
 
-#: ../admin-tool/sabayon.glade.h:7
+#: ../admin-tool/sabayon.ui.h:7
+msgid "_Groups"
+msgstr ""
+
+#: ../admin-tool/sabayon.ui.h:8
+msgid "_Groups:"
+msgstr ""
+
+#: ../admin-tool/sabayon.ui.h:9
 msgid "_Profiles:"
 msgstr "_Προφίλ:"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.ui.h:10
 msgid "_Users"
 msgstr "_Χρήστες"
 
-#: ../admin-tool/sabayon.glade.h:9
+#: ../admin-tool/sabayon.ui.h:11
 msgid "_Users:"
 msgstr "_Χρήστες:"
 
@@ -591,121 +461,83 @@ msgstr "Κλείσιμο χ_ωρίς αποθήκευση"
 msgid "Save changes to profile \"%s\" before closing?"
 msgstr "Αποθήκευση αλλαγών στο προφίλ \"%s\" πριν το κλείσιμο;"
 
-#: ../admin-tool/saveconfirm.py:45
-#, python-format
-msgid "If you don't save, changes from the last %ld second will be permanently lost."
-msgid_plural "If you don't save, changes from the last %ld seconds will be permanently lost."
-msgstr[0] "Αν δεν γίνει αποθήκευση, οι αλλαγές που έγιναν το %ld δευτερόλεπτο θα χαθούν οριστικά."
-msgstr[1] "Αν δεν γίνει αποθήκευση, οι αλλαγές που έγιναν τα τελευταία %ld δευτερόλεπτα θα χαθούν οριστικά."
+#: ../admin-tool/saveconfirm.py:44
+#, fuzzy
+msgid "If you don't save, all changes will be permanently lost."
+msgstr ""
+"Αν δεν γίνει αποθήκευση, οι αλλαγές που έγιναν την προηγούμενη ώρα θα χαθούν "
+"οριστικά."
 
-#: ../admin-tool/saveconfirm.py:51
-msgid "If you don't save, changes from the last minute will be permanently lost."
-msgstr "Αν δεν γίνει αποθήκευση, οι αλλαγές που έγιναν το τελευταίο λεπτό θα χαθούν οριστικά."
-
-#: ../admin-tool/saveconfirm.py:55
-#, python-format
-msgid "If you don't save, changes from the last minute and %ld second will be permanently lost."
-msgid_plural "If you don't save, changes from the last minute and %ld seconds will be permanently lost."
-msgstr[0] "Αν δεν γίνει αποθήκευση, οι αλλαγές που έγιναν το τελευταίο λεπτό και %ld δευτερόλεπτο θα χαθούν οριστικά."
-msgstr[1] "Αν δεν γίνει αποθήκευση, οι αλλαγές που έγιναν το τελευταίο λεπτό και %ld δευτερόλεπτα θα χαθούν οριστικά."
-
-#: ../admin-tool/saveconfirm.py:62
-#, python-format
-msgid "If you don't save, changes from the last %ld minute will be permanently lost."
-msgid_plural "If you don't save, changes from the last %ld minutes will be permanently lost."
-msgstr[0] "Αν δεν γίνει αποθήκευση, οι αλλαγές που έγιναν το τελευταίο %ld  λεπτό θα χαθούν οριστικά."
-msgstr[1] "Αν δεν γίνει αποθήκευση, οι αλλαγές που έγιναν τα τελευταία %ld  λεπτά θα χαθούν οριστικά."
-
-#: ../admin-tool/saveconfirm.py:71
-msgid "If you don't save, changes from the last hour will be permanently lost."
-msgstr "Αν δεν γίνει αποθήκευση, οι αλλαγές που έγιναν την προηγούμενη ώρα θα χαθούν οριστικά."
-
-#: ../admin-tool/saveconfirm.py:74
-#, python-format
-msgid "If you don't save, changes from the last hour and %d minute will be permanently lost."
-msgid_plural "If you don't save, changes from the last hour and %d minutes will be permanently lost."
-msgstr[0] "Αν δεν γίνει αποθήκευση, οι αλλαγές που έγιναν την τελευταία ώρα και %d λεπτό θα χαθούν οριστικά."
-msgstr[1] "Αν δεν γίνει αποθήκευση, οι αλλαγές που έγιναν την τελευταία ώρα και %d λεπτά θα χαθούν οριστικά."
-
-#: ../admin-tool/saveconfirm.py:81
-#, python-format
-msgid "If you don't save, changes from the last %d hour will be permanently lost."
-msgid_plural "If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "Αν δεν αποθηκεύσετε, οι αλλαγές που έγιναν την προηγούμενη %d  ώρα θα χαθούν οριστικά."
-msgstr[1] "Αν δεν γίνει αποθήκευση, οι αλλαγές που έγιναν τις προηγούμενες %d ώρες θα χαθούν οριστικά."
-
-#: ../admin-tool/sessionwindow.py:154
+#: ../admin-tool/sessionwindow.py:155
 #, python-format
 msgid "Editing profile %s"
 msgstr "Επεξεργασία προφίλ %s"
 
 # _Επεξεργασία
-#: ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/sessionwindow.py:179
 msgid "_Quit"
 msgstr "Έ_ξοδος"
 
-#: ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Changes"
 msgstr "Α_λλαγές"
 
-#: ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/sessionwindow.py:181
 msgid "Edit changes"
 msgstr "Επεξεργασία αλλαγών"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:182
 msgid "_Lockdown"
 msgstr "Κ_λείδωμα"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:182
 msgid "Edit Lockdown settings"
 msgstr "Επεξεργασία ρυθμίσεων κλειδώματος"
 
-#: ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/sessionwindow.py:188
 msgid "Enforce Mandatory"
 msgstr "Αναγκαστική εφαρμογή υποχρεωτικών ρυθμίσεων"
 
-#: ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/sessionwindow.py:188
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Αναγκαστική εφαρμογή υποχρεωτικών ρυθμίσεων στη συνεδρία επεξεργασίας"
 
-#: ../admin-tool/sessionwindow.py:297
+#: ../admin-tool/sessionwindow.py:306
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Ρυθμίσεις κλειδώματος για %s"
 
-#: ../admin-tool/sessionwindow.py:333
+#: ../admin-tool/sessionwindow.py:342
 #, python-format
-msgid "There was a recoverable error while applying the user profile '%s'.  You can report this error now or try to continue editing the user profile."
-msgstr "Προκλήθηκε αναστρέψιμο σφάλμα κατά την εφαρμογή του προφίλ χρήστη '%s'. Μπορείτε να το αναφέρετε ή  να συνεχίσετε την επεξεργασία του προφίλ χρήστη."
+msgid ""
+"There was a recoverable error while applying the user profile '%s'.  You can "
+"report this error now or try to continue editing the user profile."
+msgstr ""
+"Προκλήθηκε αναστρέψιμο σφάλμα κατά την εφαρμογή του προφίλ χρήστη '%s'. "
+"Μπορείτε να το αναφέρετε ή  να συνεχίσετε την επεξεργασία του προφίλ χρήστη."
 
-#: ../admin-tool/sessionwindow.py:337
+#: ../admin-tool/sessionwindow.py:346
 msgid "_Report this error"
 msgstr "_Αναφορά αυτού του προβλήματος"
 
-#: ../admin-tool/sessionwindow.py:338
+#: ../admin-tool/sessionwindow.py:347
 msgid "_Continue editing"
 msgstr "_Συνέχιση επεξεργασίας"
 
-#: ../admin-tool/usersdialog.py:67
+#: ../admin-tool/usersdialog.py:72
 #, python-format
 msgid "Users for profile %s"
 msgstr "Χρήστες για προφίλ %s"
-
-#: ../admin-tool/usersdialog.py:95
-msgid "Use This Profile"
-msgstr "Χρήση αυτού του προφίλ"
 
 #: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
 msgstr "Αδυναμία εύρεσης ελεύθερου X display"
 
-#: ../lib/protosession.py:377
-#| msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+#: ../lib/protosession.py:376
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr "Αποτυχία εκκίνησης του  Xephyr: τέλος χρόνου αναμονής για σήμα USR1"
 
-#: ../lib/protosession.py:379
-#| msgid "Failed to start Xnest: died during startup"
+#: ../lib/protosession.py:378
 msgid "Failed to start Xephyr: died during startup"
 msgstr "Αποτυχία εκκίνησης του  Xephyr: τερματίστηκε κατά την εκκίνηση"
 
@@ -713,19 +545,23 @@ msgstr "Αποτυχία εκκίνησης του  Xephyr: τερματίστη
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:470
+#: ../lib/protosession.py:469
 #, python-format
-msgid "There was a recoverable error while applying the user profile from file '%s'."
-msgstr "Προκλήθηκε αναστρέψιμο σφάλμα κατά την εφαρμογή του προφίλ χρήστη από το αρχείο '%s'."
+msgid ""
+"There was a recoverable error while applying the user profile from file '%s'."
+msgstr ""
+"Προκλήθηκε αναστρέψιμο σφάλμα κατά την εφαρμογή του προφίλ χρήστη από το "
+"αρχείο '%s'."
 
 #. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (FATAL) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:479
+#: ../lib/protosession.py:478
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
-msgstr "Προκλήθηκε μοιραίο σφάλμα κατά την εφαρμογή του προφίλ χρήστη από το '%s'."
+msgstr ""
+"Προκλήθηκε μοιραίο σφάλμα κατά την εφαρμογή του προφίλ χρήστη από το '%s'."
 
 #: ../lib/sources/filessource.py:69
 #, python-format
@@ -747,8 +583,9 @@ msgid "Applications menu"
 msgstr "Μενού εφαρμογών"
 
 #: ../lib/sources/filessource.py:99
-msgid "Preferences menu"
-msgstr "Μενού προτιμήσεων"
+#, fuzzy
+msgid "Settings menu"
+msgstr "Μενού Προτιμήσεων εξυπηρετητή"
 
 #: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
@@ -830,13 +667,11 @@ msgstr "Αρση ορισμού κλειδιού Mozilla '%s'"
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Το κλειδί Mozilla '%s' άλλαξε σε '%s'"
 
-#: ../lib/sources/mozillasource.py:166
-#: ../lib/sources/mozillasource.py:176
+#: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
 msgid "Web browser preferences"
 msgstr "Προτιμήσεις περιηγητή"
 
-#: ../lib/sources/mozillasource.py:168
-#: ../lib/sources/mozillasource.py:178
+#: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
 msgid "Web browser bookmarks"
 msgstr "Σελιδοδείκτες περιηγητή"
 
@@ -903,144 +738,81 @@ msgstr "Ο πίνακας εφαρμογών '%s' προστέθηκε"
 msgid "Panel '%s' removed"
 msgstr "Ο πίνακας εφαρμογών '%s' αφαιρέθηκε"
 
-#: ../lib/sources/paneldelegate.py:86
-#, python-format
-msgid "Applet %s added to top panel"
-msgstr "Η μικροεφαρμογή %s προστέθηκε στον επάνω πίνακα εφαρμογών"
+#: ../lib/sources/paneldelegate.py:77
+#, fuzzy, python-format
+msgid "Applet '%s' added"
+msgstr "Ο πίνακας εφαρμογών '%s' προστέθηκε"
 
-#: ../lib/sources/paneldelegate.py:88
-#, python-format
-msgid "Applet %s added to bottom panel"
-msgstr "Η μικροεφαρμογή %s προστέθηκε στον κάτω πίνακα εφαρμογών"
+#: ../lib/sources/paneldelegate.py:100
+#, fuzzy, python-format
+msgid "Applet '%s' removed"
+msgstr "Ο πίνακας εφαρμογών '%s' αφαιρέθηκε"
 
-#: ../lib/sources/paneldelegate.py:90
-#, python-format
-msgid "Applet %s added to left panel"
-msgstr "Η μικροεφαρμογή %s προστέθηκε στον αριστερό πίνακα εφαρμογών"
+#: ../lib/sources/paneldelegate.py:123
+#, fuzzy, python-format
+msgid "Object '%s' added"
+msgstr "Ο πίνακας εφαρμογών '%s' προστέθηκε"
 
-#: ../lib/sources/paneldelegate.py:92
-#, python-format
-msgid "Applet %s added to right panel"
-msgstr "Η μικροεφαρμογή %s προστέθηκε στον δεξιό πίνακα εφαρμογών"
-
-#: ../lib/sources/paneldelegate.py:107
-#, python-format
-msgid "Applet %s removed from top panel"
-msgstr "Η μικροεφαρμογή %s αφαιρέθηκε από τον επάνω πίνακα εφαρμογών"
-
-#: ../lib/sources/paneldelegate.py:109
-#, python-format
-msgid "Applet %s removed from bottom panel"
-msgstr "Η μικροεφαρμογή %s αφαιρέθηκε από τον κάτω πίνακα εφαρμογών"
-
-#: ../lib/sources/paneldelegate.py:111
-#, python-format
-msgid "Applet %s removed from left panel"
-msgstr "Η μικροεφαρμογή %s αφαιρέθηκε από τον αριστερό πίνακα εφαρμογών"
-
-#: ../lib/sources/paneldelegate.py:113
-#, python-format
-msgid "Applet %s removed from right panel"
-msgstr "Η μικροεφαρμογή %s αφαιρέθηκε από τον δεξιό πίνακα εφαρμογών"
-
-#: ../lib/sources/paneldelegate.py:127
-#, python-format
-msgid "%s added to top panel"
-msgstr "%s προστέθηκε στον επάνω πίνακα εφαρμογών"
-
-#: ../lib/sources/paneldelegate.py:129
-#, python-format
-msgid "%s added to bottom panel"
-msgstr "%s προστέθηκε στον κάτω πίνακα εφαρμογών"
-
-#: ../lib/sources/paneldelegate.py:131
-#, python-format
-msgid "%s added to left panel"
-msgstr "%s προστέθηκε στον αριστερό πίνακα εφαρμογών"
-
-#: ../lib/sources/paneldelegate.py:133
-#, python-format
-msgid "%s added to right panel"
-msgstr "%s προστέθηκε στον δεξιό πίνακα εφαρμογών"
-
-#: ../lib/sources/paneldelegate.py:154
-#, python-format
-msgid "%s removed from top panel"
-msgstr "%s αφαιρέθηκε από τον επάνω πίνακα εφαρμογών"
-
-#: ../lib/sources/paneldelegate.py:156
-#, python-format
-msgid "%s removed from bottom panel"
-msgstr "%s αφαιρέθηκε από τον κάτω πίνακα εφαρμογών"
-
-#: ../lib/sources/paneldelegate.py:158
-#, python-format
-msgid "%s removed from left panel"
-msgstr "%s αφαιρέθηκε από τον αριστερό πίνακα εφαρμογών"
-
-#: ../lib/sources/paneldelegate.py:160
-#, python-format
-msgid "%s removed from right panel"
-msgstr "%s αφαιρέθηκε από τον δεξιό πίνακα εφαρμογών"
+#: ../lib/sources/paneldelegate.py:152
+#, fuzzy, python-format
+msgid "Object '%s' removed"
+msgstr "Ο πίνακας εφαρμογών '%s' αφαιρέθηκε"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:231
+#: ../lib/sources/paneldelegate.py:240
 msgid "Drawer"
 msgstr "Συρτάρι"
 
-#: ../lib/sources/paneldelegate.py:233
+#: ../lib/sources/paneldelegate.py:242
 msgid "Main Menu"
 msgstr "Κύριο μενού"
 
-#: ../lib/sources/paneldelegate.py:243
+#: ../lib/sources/paneldelegate.py:252
 #, python-format
 msgid "%s launcher"
 msgstr "Εκκινητής %s"
 
-#: ../lib/sources/paneldelegate.py:247
+#: ../lib/sources/paneldelegate.py:256
 msgid "Lock Screen button"
 msgstr "Κουμπί κλειδώματος οθόνης"
 
-#: ../lib/sources/paneldelegate.py:249
+#: ../lib/sources/paneldelegate.py:258
 msgid "Logout button"
 msgstr "Κουμπί αποσύνδεσης"
 
-#: ../lib/sources/paneldelegate.py:251
+#: ../lib/sources/paneldelegate.py:260
 msgid "Run Application button"
 msgstr "Κουμπί εκτέλεσης εφαρμογής"
 
-#: ../lib/sources/paneldelegate.py:253
+#: ../lib/sources/paneldelegate.py:262
 msgid "Search button"
 msgstr "Κουμπί αναζήτησης"
 
-#: ../lib/sources/paneldelegate.py:255
-#| msgid "Logout button"
+#: ../lib/sources/paneldelegate.py:264
 msgid "Force Quit button"
 msgstr "Κουμπί εξαναγκασμού εξόδου"
 
-#: ../lib/sources/paneldelegate.py:257
-#| msgid "Lock Screen button"
+#: ../lib/sources/paneldelegate.py:266
 msgid "Connect to Server button"
 msgstr "Κουμπί σύνδεσης σε εξυπηρετητή"
 
-#: ../lib/sources/paneldelegate.py:259
-#| msgid "Logout button"
+#: ../lib/sources/paneldelegate.py:268
 msgid "Shutdown button"
 msgstr "Κουμπί τερματισμού"
 
-#: ../lib/sources/paneldelegate.py:261
+#: ../lib/sources/paneldelegate.py:270
 msgid "Screenshot button"
 msgstr "Κουμπί αρπαγής οθόνης"
 
-#: ../lib/sources/paneldelegate.py:264
+#: ../lib/sources/paneldelegate.py:273
 msgid "Unknown"
 msgstr "Άγνωστο"
 
-#: ../lib/sources/paneldelegate.py:266
+#: ../lib/sources/paneldelegate.py:275
 msgid "Menu Bar"
 msgstr "Γραμμή μενού"
 
-#: ../lib/sources/paneldelegate.py:503
+#: ../lib/sources/paneldelegate.py:512
 msgid "Panel File"
 msgstr "Αρχείο πίνακα εφαρμογών"
 
@@ -1064,13 +836,88 @@ msgstr "Μη έγκυρος τομέας μεταδεδομένων στο '%s':
 msgid "Cannot add non-existent file '%s'"
 msgstr "Αδυναμία προσθήκης μη υπάρχοντος αρχείου '%s'"
 
-#: ../lib/storage.py:568
+#: ../lib/storage.py:487
+#, python-format
+msgid "Couldn't unlink file '%s'"
+msgstr ""
+
+#: ../lib/storage.py:570
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Το προφίλ είναι μόνο για ανάγνωση %s"
 
-#: ../lib/unittests.py:38
-#: ../lib/unittests.py:39
+#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
+#. do not change the way they are written.  The intended string is
+#. something like "invalid type for setting blah in /ldap/path/to/blah"
+#: ../lib/systemdb.py:67
+#, python-format
+msgid "invalid type for setting %(setting)s in %(np)s"
+msgstr "μη έγκυρος τύπος για τη ρύθμιση του/των %(setting)s στα %(np)s"
+
+#: ../lib/systemdb.py:112
+msgid "No database file provided"
+msgstr ""
+
+#: ../lib/systemdb.py:232
+#, fuzzy, python-format
+msgid "No LDAP search base specified for %s"
+msgstr "Δεν καθορίστηκε βάση αναζήτησης για %s"
+
+#: ../lib/systemdb.py:235
+#, fuzzy, python-format
+msgid "No LDAP query filter specified for %s"
+msgstr "Δεν καθορίστηκε φίλτρο ερωτήματος για %s"
+
+#: ../lib/systemdb.py:238
+#, fuzzy, python-format
+msgid "No LDAP result attribute specified for %s"
+msgstr "Δεν καθορίστηκε γνώρισμα αποτελέσματος για %s"
+
+#: ../lib/systemdb.py:247
+#, fuzzy
+msgid "LDAP Scope must be one of: "
+msgstr "Το scope  πρέπει να είναι ένα εκ των sub, base και one"
+
+#: ../lib/systemdb.py:268
+#, fuzzy
+msgid "multiple_result must be one of: "
+msgstr "Το multiple_result πρέπει να είναι ένα εκ των first και random"
+
+#: ../lib/systemdb.py:361
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "Αδυναμία ανοίγματος %s για εγγραφή"
+
+#: ../lib/systemdb.py:374
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "Αδυναμία αποθήκευσης UserDatabase στο %s"
+
+#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "Το αρχείο %s δεν είναι ρύθμιση προφίλ"
+
+#: ../lib/systemdb.py:404
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "Αποτυχία προσθήκης προκαθορισμένου προφίλ %s στις ρυθμίσεις"
+
+#: ../lib/systemdb.py:438
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "Αποτυχία προσθήκης χρήστη %s στις ρυθμίσεις προφίλ"
+
+#: ../lib/systemdb.py:510
+msgid "Failed to get the user list"
+msgstr "Αποτυχία λήψης λίστας χρηστών"
+
+#: ../lib/systemdb.py:560
+#, fuzzy
+msgid "Failed to get the group list"
+msgstr "Αποτυχία λήψης λίστας χρηστών"
+
+#: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
 msgstr "Αγνόηση ΠΡΟΕΙΔΟΠΟΙΗΣης/εων"
 
@@ -1088,72 +935,299 @@ msgstr "Εκτέλεση ελέγχων %s (%s)"
 msgid "Success!"
 msgstr "Επιτυχής!"
 
-#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
-#. do not change the way they are written.  The intended string is
-#. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/userdb.py:54
-#, python-format
-msgid "invalid type for setting %(setting)s in %(np)s"
-msgstr "μη έγκυρος τύπος για τη ρύθμιση του/των %(setting)s στα %(np)s"
+#: ../lib/util.py:94
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"Αδυναμία εύρεσης αρχικού καταλόγου: δεν έχει οριστεί στο /etc/passwd και δεν "
+"υπάρχει τιμή για το $HOME στο περιβάλλον"
 
-#: ../lib/userdb.py:215
-#, python-format
-msgid "No search base specified for %s"
-msgstr "Δεν καθορίστηκε βάση αναζήτησης για %s"
+#: ../lib/util.py:110 ../lib/util.py:137
+msgid ""
+"Cannot find username: not set in /etc/passwd and no value for $USER in "
+"environment"
+msgstr ""
+"Αδυναμία εύρεσης ονόματος χρήστη: δεν έχει οριστεί στο /etc/passwd και δεν "
+"υπάρχει τιμή για το $USER στο περιβάλλον"
 
-#: ../lib/userdb.py:218
-#, python-format
-msgid "No query filter specified for %s"
-msgstr "Δεν καθορίστηκε φίλτρο ερωτήματος για %s"
+#~ msgid "Remove personal information from documents when saving them"
+#~ msgstr ""
+#~ "Αφαίρεση προσωπικών δεδομένων από τα έγγραφα κατά την αποθήκευσή τους"
 
-#: ../lib/userdb.py:221
-#, python-format
-msgid "No result attribute specified for %s"
-msgstr "Δεν καθορίστηκε γνώρισμα αποτελέσματος για %s"
+#~ msgid "Warn if macro tries to create a PDF"
+#~ msgstr "Προειδοποίηση αν η μακροεντολή προσπαθήσει να δημιουργήσει PDF"
 
-#: ../lib/userdb.py:230
-msgid "Scope must be one of sub, base and one"
-msgstr "Το scope  πρέπει να είναι ένα εκ των sub, base και one"
+#~ msgid "Warn if macro tries to print a document"
+#~ msgstr "Προειδοποίηση αν η μακροεντολή προσπαθήσει να εκτυπώσει έγγραφο"
 
-#: ../lib/userdb.py:250
-msgid "multiple_result must be one of first and random"
-msgstr "Το multiple_result πρέπει να είναι ένα εκ των first και random"
+#~ msgid "Warn if macro tries to save a document"
+#~ msgstr "Προειδοποίηση αν η μακροεντολή προσπαθήσει να αποθηκεύσει έγγραφο"
 
-#: ../lib/userdb.py:342
-#, python-format
-msgid "Could not open %s for writing"
-msgstr "Αδυναμία ανοίγματος %s για εγγραφή"
+#~ msgid "Warn if macro tries to sign a document"
+#~ msgstr "Προειδοποίηση αν η μακροεντολή προσπαθήσει να υπογράψει έγγραφο"
 
-#: ../lib/userdb.py:355
-#, python-format
-msgid "Failed to save UserDatabase to %s"
-msgstr "Αδυναμία αποθήκευσης UserDatabase στο %s"
+#~ msgid "Recommend password when saving a document"
+#~ msgstr "Να συστήνεται η χρήση κωδικού κατά την αποθήκευση εγγράφου"
 
-#: ../lib/userdb.py:378
-#: ../lib/userdb.py:413
-#, python-format
-msgid "File %s is not a profile configuration"
-msgstr "Το αρχείο %s δεν είναι ρύθμιση προφίλ"
+#~ msgid "Enable auto-save"
+#~ msgstr "Ενεργοποίηση αυτόματης αποθήκευσης"
 
-#: ../lib/userdb.py:385
-#, python-format
-msgid "Failed to add default profile %s to configuration"
-msgstr "Αποτυχία προσθήκης προκαθορισμένου προφίλ %s στις ρυθμίσεις"
+#~ msgid "Printing should mark the document as modified"
+#~ msgstr "Η εκτύπωση θα σημειώνει το έγγραφο ως τροποποιημένο"
 
-#: ../lib/userdb.py:421
-#, python-format
-msgid "Failed to add user %s to profile configuration"
-msgstr "Αποτυχία προσθήκης χρήστη %s στις ρυθμίσεις προφίλ"
+#~ msgid "Use system's file dialog"
+#~ msgstr "Χρήση επιλογέα αρχείου του συστήματος"
 
-#: ../lib/userdb.py:472
-msgid "Failed to get the user list"
-msgstr "Αποτυχία λήψης λίστας χρηστών"
+#~ msgid "Create backup copy on save"
+#~ msgstr "Δημιουργία αντιγράφου κατά την αποθήκευση"
 
-#: ../lib/util.py:93
-msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
-msgstr "Αδυναμία εύρεσης αρχικού καταλόγου: δεν έχει οριστεί στο /etc/passwd και δεν υπάρχει τιμή για το $HOME στο περιβάλλον"
+#~ msgid "Warn when saving non-OpenOffice.org formats"
+#~ msgstr ""
+#~ "Προειδοποίηση κατά την αποθήκευση για τύπους αρχείων που δεν είναι "
+#~ "OpenOffice.org"
 
-#: ../lib/util.py:106
-msgid "Cannot find username: not set in /etc/passwd and no value for $USER in environment"
-msgstr "Αδυναμία εύρεσης ονόματος χρήστη: δεν έχει οριστεί στο /etc/passwd και δεν υπάρχει τιμή για το $USER στο περιβάλλον"
+#~ msgid "Use OpenGL"
+#~ msgstr "Χρήση OpenGL"
 
+#~ msgid "Use system font"
+#~ msgstr "Χρήση της γραμματοσειράς συστήματος"
+
+#~ msgid "Use anti-aliasing"
+#~ msgstr "Χρήση εξομάλυνσης (anti-aliasing)"
+
+#~ msgid "Disable UI customization"
+#~ msgstr "Απενεργοποίηση εξατομίκευσης του UI"
+
+#~ msgid "Show insensitive menu items"
+#~ msgstr "Εμφάνιση μενού αντικειμένων χωρίς διάκριση πεζών/κεφαλαίων"
+
+#~ msgid "Show font preview"
+#~ msgstr "Εμφάνιση προεπισκόπισης γραμματοσειρών"
+
+#~ msgid "Show font history"
+#~ msgstr "Εμφάνιση ιστορικού γραμματοσειρών"
+
+#~ msgid "Show icons in menus"
+#~ msgstr "Εμφάνιση εικονιδίων στα μενού"
+
+#~ msgid ""
+#~ "\n"
+#~ "5\n"
+#~ "10\n"
+#~ "25\n"
+#~ "50"
+#~ msgstr ""
+#~ "\n"
+#~ "5\n"
+#~ "10\n"
+#~ "25\n"
+#~ "50"
+
+#~ msgid ""
+#~ "\n"
+#~ "Automatic\n"
+#~ "Large\n"
+#~ "Small"
+#~ msgstr ""
+#~ "\n"
+#~ "Αυτόματο\n"
+#~ "Μεγάλο\n"
+#~ "Μικρό"
+
+#~ msgid ""
+#~ "\n"
+#~ "OpenDocument (.odp)\n"
+#~ "PowerPoint 97+ (.ppt)\n"
+#~ "OpenOffice.org 1.1 (.sxi)"
+#~ msgstr ""
+#~ "\n"
+#~ "OpenDocument (.odp)\n"
+#~ "PowerPoint 97+ (.ppt)\n"
+#~ "OpenOffice.org 1.1 (.sxi)"
+
+#~ msgid ""
+#~ "\n"
+#~ "OpenDocument (.ods)\n"
+#~ "Excel 97+ (.xls)\n"
+#~ "OpenOffice.org 1.1 (.sxc)"
+#~ msgstr ""
+#~ "\n"
+#~ "OpenDocument (.ods)\n"
+#~ "Excel 97+ (.xls)\n"
+#~ "OpenOffice.org 1.1 (.sxc)"
+
+#~ msgid ""
+#~ "\n"
+#~ "OpenDocument (.odt)\n"
+#~ "Word 97+ (.doc)\n"
+#~ "OpenOffice.org 1.1 (.sxw)"
+#~ msgstr ""
+#~ "\n"
+#~ "OpenDocument (.odt)\n"
+#~ "Word 97+ (.doc)\n"
+#~ "OpenOffice.org 1.1 (.sxw)"
+
+#~ msgid ""
+#~ "\n"
+#~ "Very High\n"
+#~ "High\n"
+#~ "Medium\n"
+#~ "Low"
+#~ msgstr ""
+#~ "\n"
+#~ "Πολύ υψηλή\n"
+#~ "Υψηλή\n"
+#~ "Μεσαία\n"
+#~ "Χαμηλή"
+
+#~ msgid "Default format for presentations:"
+#~ msgstr "Προκαθορισμένη μορφή για παρουσιάσεις:"
+
+#~ msgid "Default format for spreadsheet:"
+#~ msgstr "Προεπιλεγμένος τύπος αρχείου για λογιστικό φύλλο:"
+
+#~ msgid "Default format for word processor:"
+#~ msgstr "Προεπιλεγμένος τύπος αρχείου για επεξεργαστή κειμένου:"
+
+#~ msgid "Default icon size"
+#~ msgstr "Προκαθορισμένο μέγεθος εικονιδίων"
+
+#~ msgid "Load / Save"
+#~ msgstr "Φόρτωση / Αποθήκευση"
+
+#~ msgid "Macro Security Level:"
+#~ msgstr "Ασφάλεια επιπέδου μακροεντολής:"
+
+#~ msgid "Number of undo steps:"
+#~ msgstr "Αριθμός βημάτων αναίρεσης:"
+
+#~ msgid "OpenOffice.org"
+#~ msgstr "OpenOffice.org"
+
+#~ msgid "Security"
+#~ msgstr "Ασφάλεια"
+
+#~ msgid "User Interface"
+#~ msgstr "Γραφικό περιβάλλον χρήστη"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld second will be permanently "
+#~ "lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %ld seconds will be permanently "
+#~ "lost."
+#~ msgstr[0] ""
+#~ "Αν δεν γίνει αποθήκευση, οι αλλαγές που έγιναν το %ld δευτερόλεπτο θα "
+#~ "χαθούν οριστικά."
+#~ msgstr[1] ""
+#~ "Αν δεν γίνει αποθήκευση, οι αλλαγές που έγιναν τα τελευταία %ld "
+#~ "δευτερόλεπτα θα χαθούν οριστικά."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last minute will be permanently lost."
+#~ msgstr ""
+#~ "Αν δεν γίνει αποθήκευση, οι αλλαγές που έγιναν το τελευταίο λεπτό θα "
+#~ "χαθούν οριστικά."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last minute and %ld second will be "
+#~ "permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last minute and %ld seconds will be "
+#~ "permanently lost."
+#~ msgstr[0] ""
+#~ "Αν δεν γίνει αποθήκευση, οι αλλαγές που έγιναν το τελευταίο λεπτό και %ld "
+#~ "δευτερόλεπτο θα χαθούν οριστικά."
+#~ msgstr[1] ""
+#~ "Αν δεν γίνει αποθήκευση, οι αλλαγές που έγιναν το τελευταίο λεπτό και %ld "
+#~ "δευτερόλεπτα θα χαθούν οριστικά."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld minute will be permanently "
+#~ "lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %ld minutes will be permanently "
+#~ "lost."
+#~ msgstr[0] ""
+#~ "Αν δεν γίνει αποθήκευση, οι αλλαγές που έγιναν το τελευταίο %ld  λεπτό θα "
+#~ "χαθούν οριστικά."
+#~ msgstr[1] ""
+#~ "Αν δεν γίνει αποθήκευση, οι αλλαγές που έγιναν τα τελευταία %ld  λεπτά θα "
+#~ "χαθούν οριστικά."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last hour and %d minute will be "
+#~ "permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last hour and %d minutes will be "
+#~ "permanently lost."
+#~ msgstr[0] ""
+#~ "Αν δεν γίνει αποθήκευση, οι αλλαγές που έγιναν την τελευταία ώρα και %d "
+#~ "λεπτό θα χαθούν οριστικά."
+#~ msgstr[1] ""
+#~ "Αν δεν γίνει αποθήκευση, οι αλλαγές που έγιναν την τελευταία ώρα και %d "
+#~ "λεπτά θα χαθούν οριστικά."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %d hour will be permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %d hours will be permanently "
+#~ "lost."
+#~ msgstr[0] ""
+#~ "Αν δεν αποθηκεύσετε, οι αλλαγές που έγιναν την προηγούμενη %d  ώρα θα "
+#~ "χαθούν οριστικά."
+#~ msgstr[1] ""
+#~ "Αν δεν γίνει αποθήκευση, οι αλλαγές που έγιναν τις προηγούμενες %d ώρες "
+#~ "θα χαθούν οριστικά."
+
+#~ msgid "Preferences menu"
+#~ msgstr "Μενού προτιμήσεων"
+
+#~ msgid "Applet %s added to top panel"
+#~ msgstr "Η μικροεφαρμογή %s προστέθηκε στον επάνω πίνακα εφαρμογών"
+
+#~ msgid "Applet %s added to bottom panel"
+#~ msgstr "Η μικροεφαρμογή %s προστέθηκε στον κάτω πίνακα εφαρμογών"
+
+#~ msgid "Applet %s added to left panel"
+#~ msgstr "Η μικροεφαρμογή %s προστέθηκε στον αριστερό πίνακα εφαρμογών"
+
+#~ msgid "Applet %s added to right panel"
+#~ msgstr "Η μικροεφαρμογή %s προστέθηκε στον δεξιό πίνακα εφαρμογών"
+
+#~ msgid "Applet %s removed from top panel"
+#~ msgstr "Η μικροεφαρμογή %s αφαιρέθηκε από τον επάνω πίνακα εφαρμογών"
+
+#~ msgid "Applet %s removed from bottom panel"
+#~ msgstr "Η μικροεφαρμογή %s αφαιρέθηκε από τον κάτω πίνακα εφαρμογών"
+
+#~ msgid "Applet %s removed from left panel"
+#~ msgstr "Η μικροεφαρμογή %s αφαιρέθηκε από τον αριστερό πίνακα εφαρμογών"
+
+#~ msgid "Applet %s removed from right panel"
+#~ msgstr "Η μικροεφαρμογή %s αφαιρέθηκε από τον δεξιό πίνακα εφαρμογών"
+
+#~ msgid "%s added to top panel"
+#~ msgstr "%s προστέθηκε στον επάνω πίνακα εφαρμογών"
+
+#~ msgid "%s added to bottom panel"
+#~ msgstr "%s προστέθηκε στον κάτω πίνακα εφαρμογών"
+
+#~ msgid "%s added to left panel"
+#~ msgstr "%s προστέθηκε στον αριστερό πίνακα εφαρμογών"
+
+#~ msgid "%s added to right panel"
+#~ msgstr "%s προστέθηκε στον δεξιό πίνακα εφαρμογών"
+
+#~ msgid "%s removed from top panel"
+#~ msgstr "%s αφαιρέθηκε από τον επάνω πίνακα εφαρμογών"
+
+#~ msgid "%s removed from bottom panel"
+#~ msgstr "%s αφαιρέθηκε από τον κάτω πίνακα εφαρμογών"
+
+#~ msgid "%s removed from left panel"
+#~ msgstr "%s αφαιρέθηκε από τον αριστερό πίνακα εφαρμογών"
+
+#~ msgid "%s removed from right panel"
+#~ msgstr "%s αφαιρέθηκε από τον δεξιό πίνακα εφαρμογών"

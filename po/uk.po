@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-11 01:33+0300\n"
+"POT-Creation-Date: 2009-12-20 09:43-0600\n"
 "PO-Revision-Date: 2009-06-24 11:39+0300\n"
 "Last-Translator: wanderlust <wanderlust@ukr.net>\n"
 "Language-Team: ukrainian <Ukrainian <uk@li.org>>\n"
@@ -37,7 +37,7 @@ msgstr "Ігнорувати"
 msgid "Lock"
 msgstr "Блокувати"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:230
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
 msgid "Description"
 msgstr "Опис"
 
@@ -46,61 +46,68 @@ msgstr "Опис"
 msgid "Profile %s"
 msgstr "Профіль %s"
 
-#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
 msgid "_Profile"
 msgstr "П_рофіль"
 
-#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
 msgid "_Save"
 msgstr "З_берегти"
 
-#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
 msgid "Save profile"
 msgstr "Зберегти профіль..."
 
-#: ../admin-tool/editorwindow.py:197
+#: ../admin-tool/editorwindow.py:204
 msgid "_Close"
 msgstr "_Закрити"
 
-#: ../admin-tool/editorwindow.py:197 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
 msgid "Close the current window"
 msgstr "Закрити поточне вікно"
 
-#: ../admin-tool/editorwindow.py:198 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
 msgid "_Edit"
 msgstr "_Правка"
 
-#: ../admin-tool/editorwindow.py:199
+#: ../admin-tool/editorwindow.py:206
 msgid "_Delete"
 msgstr "В_идалити"
 
-#: ../admin-tool/editorwindow.py:199
+#: ../admin-tool/editorwindow.py:206
 msgid "Delete item"
 msgstr "Видалити елемент"
 
-#: ../admin-tool/editorwindow.py:200 ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
 msgid "_Help"
 msgstr "_Довідка"
 
-#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+msgid "_Contents"
+msgstr ""
+
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+msgid "Help Contents"
+msgstr ""
+
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
 msgid "_About"
 msgstr "_Про програму"
 
-#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
 msgid "About Sabayon"
 msgstr "Про Sabayon"
 
-#: ../admin-tool/editorwindow.py:262 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
 msgid "Files"
 msgstr "Файли"
 
-#: ../admin-tool/editorwindow.py:266
-#: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:269
+#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
+#: ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "Панель"
 
@@ -150,8 +157,8 @@ msgstr "пара"
 msgid "Profile settings: %s"
 msgstr "Налаштовування профілю: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:387
-#: ../admin-tool/usersdialog.py:85
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "Назва"
 
@@ -163,296 +170,140 @@ msgstr "Тип"
 msgid "Value"
 msgstr "Значення"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:99
+#: ../admin-tool/groupsdialog.py:61
+#, fuzzy, python-format
+msgid "Groups for profile %s"
+msgstr "Користувачі для профілю %s"
+
+#: ../admin-tool/groupsdialog.py:71
+msgid "Group"
+msgstr ""
+
+#: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
+msgid "Use This Profile"
+msgstr "Використовувати цей профіль"
+
+#: ../admin-tool/lockdown/lockdownbutton.py:100
 msgid "Click to make this setting not mandatory"
 msgstr "Натисніть, щоб зробити цей параметр не примусовим"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:101
+#: ../admin-tool/lockdown/lockdownbutton.py:102
 msgid "Click to make this setting mandatory"
 msgstr "Натисніть, щоб зробити цей параметр примусовим"
 
-#: ../admin-tool/lockdown/maindialog.py:49
-msgid "Disable _command line"
-msgstr "Вимкнути _командний рядок"
-
-#: ../admin-tool/lockdown/maindialog.py:50
-msgid "Disable _printing"
-msgstr "Вимкнути _друк"
-
-#: ../admin-tool/lockdown/maindialog.py:51
-msgid "Disable print _setup"
-msgstr "Вимкнути _налаштовування друку"
-
-#: ../admin-tool/lockdown/maindialog.py:52
-msgid "Disable save to _disk"
-msgstr "Вимкнути збереження на _диск"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "_Lock down the panels"
-msgstr "_Блокувати панелі"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable force _quit"
-msgstr "Заборонити примусовий ви_хід"
-
-#: ../admin-tool/lockdown/maindialog.py:56
-msgid "Disable lock _screen"
-msgstr "Заборонити завершення _сеансу"
-
-#: ../admin-tool/lockdown/maindialog.py:57
-msgid "Disable log _out"
-msgstr "Заборонити завершення _сеансу"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable _quit"
-msgstr "Вимкнути ви_хід"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable _arbitrary URL"
-msgstr "Вимкнути довільні _URL"
-
-#: ../admin-tool/lockdown/maindialog.py:61
-msgid "Disable _bookmark editing"
-msgstr "Заборонити _редагування закладок"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _history"
-msgstr "Заборонити _історію"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _javascript chrome"
-msgstr "Заборонити підтримку _javascript"
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _toolbar editing"
-msgstr "Заборонити редагування _панелі інструментів"
-
-#: ../admin-tool/lockdown/maindialog.py:65
-msgid "_Fullscreen"
-msgstr "_На весь екран"
-
-#: ../admin-tool/lockdown/maindialog.py:66
-msgid "Hide _menubar"
-msgstr "Сховати _меню"
-
-#. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
-#. This can be used to disable this, for when you don't want people to know you created the document.
-#: ../admin-tool/lockdown/maindialog.py:70
-msgid "Remove personal information from documents when saving them"
-msgstr "Видаляти особисту інформацію з документів, при їх збереженні"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Warn if macro tries to create a PDF"
-msgstr "Попереджати, якщо макрос намагається створити PDF"
-
-#: ../admin-tool/lockdown/maindialog.py:72
-msgid "Warn if macro tries to print a document"
-msgstr "Попереджати, якщо макрос намагається друкувати документ"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-msgid "Warn if macro tries to save a document"
-msgstr "Попереджати, якщо макрос намагається зберегти документ"
-
-#: ../admin-tool/lockdown/maindialog.py:74
-msgid "Warn if macro tries to sign a document"
-msgstr "Попереджати, якщо макрос намагається підписати документ"
-
-#: ../admin-tool/lockdown/maindialog.py:75
-msgid "Recommend password when saving a document"
-msgstr "Рекомендувати пароль при збереженні документу"
-
-#: ../admin-tool/lockdown/maindialog.py:77
-msgid "Enable auto-save"
-msgstr "Увімкнути автоматичне збереження"
-
-#. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
-#: ../admin-tool/lockdown/maindialog.py:79
-msgid "Printing should mark the document as modified"
-msgstr "Після друку документ маж позначатись як змінений"
-
-#: ../admin-tool/lockdown/maindialog.py:80
-msgid "Use system's file dialog"
-msgstr "Системний діалог вибору файлу"
-
-#: ../admin-tool/lockdown/maindialog.py:81
-msgid "Create backup copy on save"
-msgstr "Створювати резервну копію при збереженні"
-
-#: ../admin-tool/lockdown/maindialog.py:82
-msgid "Warn when saving non-OpenOffice.org formats"
-msgstr "Попереджати при збереженні не у форматі OpenOffice.org"
-
-#: ../admin-tool/lockdown/maindialog.py:84
-msgid "Use OpenGL"
-msgstr "Використовувати OpenGL"
-
-#: ../admin-tool/lockdown/maindialog.py:85
-msgid "Use system font"
-msgstr "Використовувати системний шрифт"
-
-#: ../admin-tool/lockdown/maindialog.py:86
-msgid "Use anti-aliasing"
-msgstr "Використовувати згладжування шрифтів"
-
-#: ../admin-tool/lockdown/maindialog.py:87
-msgid "Disable UI customization"
-msgstr "Вимкнути налаштовування вигляду"
-
-#: ../admin-tool/lockdown/maindialog.py:88
-msgid "Show insensitive menu items"
-msgstr "Показувати неактивні пункти меню"
-
-#: ../admin-tool/lockdown/maindialog.py:89
-msgid "Show font preview"
-msgstr "Попередній перегляд шрифту"
-
-#: ../admin-tool/lockdown/maindialog.py:90
-msgid "Show font history"
-msgstr "Відображати історію шрифту"
-
-#: ../admin-tool/lockdown/maindialog.py:91
-msgid "Show icons in menus"
-msgstr "Відображати значки у меню"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:1
-msgid ""
-"\n"
-"5\n"
-"10\n"
-"25\n"
-"50"
-msgstr ""
-"\n"
-"5\n"
-"10\n"
-"25\n"
-"50"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:6
-msgid ""
-"\n"
-"Automatic\n"
-"Large\n"
-"Small"
-msgstr ""
-"\n"
-"Автоматично\n"
-"Великі\n"
-"Маленькі"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:10
-msgid ""
-"\n"
-"OpenDocument (.odp)\n"
-"PowerPoint 97+ (.ppt)\n"
-"OpenOffice.org 1.1 (.sxi)"
-msgstr ""
-"\n"
-"OpenDocument (.odp)\n"
-"PowerPoint 97+ (.ppt)\n"
-"OpenOffice.org 1.1 (.sxi)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:14
-msgid ""
-"\n"
-"OpenDocument (.ods)\n"
-"Excel 97+ (.xls)\n"
-"OpenOffice.org 1.1 (.sxc)"
-msgstr ""
-"\n"
-"OpenDocument (.ods)\n"
-"Excel 97+ (.xls)\n"
-"OpenOffice.org 1.1 (.sxc)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:18
-msgid ""
-"\n"
-"OpenDocument (.odt)\n"
-"Word 97+ (.doc)\n"
-"OpenOffice.org 1.1 (.sxw)"
-msgstr ""
-"\n"
-"OpenDocument (.odt)\n"
-"Word 97+ (.doc)\n"
-"OpenOffice.org 1.1 (.sxw)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:22
-msgid ""
-"\n"
-"Very High\n"
-"High\n"
-"Medium\n"
-"Low"
-msgstr ""
-"\n"
-"Дуже висока\n"
-"Висока\n"
-"Середня\n"
-"Низька"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:27
-msgid "<b>Disabled Applets</b>"
-msgstr "<b>Заборонені аплети</b>"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:28
-msgid "<b>Safe Protocols</b>"
-msgstr "<b>Безпечні протоколи</b>"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:29
-msgid "Default format for presentations:"
-msgstr "Типовий формат презентацій:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:30
-msgid "Default format for spreadsheet:"
-msgstr "Типовий формат електронних таблиць:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:31
-msgid "Default format for word processor:"
-msgstr "Типовий формат текстових документів:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:32
-msgid "Default icon size"
-msgstr "Типовий розмір значків"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:33
-msgid "Disable _unsafe protocols"
-msgstr "Заборонити _небезпечні протоколи"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:34
-msgid "Epiphany Web Browser"
-msgstr "Веб-переглядач Epiphany"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:35
+#: ../admin-tool/lockdown/maindialog.py:40
 msgid "General"
 msgstr "Загальне"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:36
-msgid "Load / Save"
-msgstr "Завантажити / зберегти"
+#: ../admin-tool/lockdown/maindialog.py:42
+msgid "Epiphany Web Browser"
+msgstr "Веб-переглядач Epiphany"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:37
+#: ../admin-tool/lockdown/maindialog.py:43
+msgid "GNOME Screensaver"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:53
+msgid "Disable _command line"
+msgstr "Вимкнути _командний рядок"
+
+#: ../admin-tool/lockdown/maindialog.py:54
+msgid "Disable _printing"
+msgstr "Вимкнути _друк"
+
+#: ../admin-tool/lockdown/maindialog.py:55
+msgid "Disable print _setup"
+msgstr "Вимкнути _налаштовування друку"
+
+#: ../admin-tool/lockdown/maindialog.py:56
+msgid "Disable save to _disk"
+msgstr "Вимкнути збереження на _диск"
+
+#: ../admin-tool/lockdown/maindialog.py:58
+msgid "_Lock down the panels"
+msgstr "_Блокувати панелі"
+
+#: ../admin-tool/lockdown/maindialog.py:59
+msgid "Disable force _quit"
+msgstr "Заборонити примусовий ви_хід"
+
+#: ../admin-tool/lockdown/maindialog.py:60
+msgid "Disable log _out"
+msgstr "Заборонити завершення _сеансу"
+
+#: ../admin-tool/lockdown/maindialog.py:62
+msgid "Disable _quit"
+msgstr "Вимкнути ви_хід"
+
+#: ../admin-tool/lockdown/maindialog.py:63
+msgid "Disable _arbitrary URL"
+msgstr "Вимкнути довільні _URL"
+
+#: ../admin-tool/lockdown/maindialog.py:64
+msgid "Disable _bookmark editing"
+msgstr "Заборонити _редагування закладок"
+
+#: ../admin-tool/lockdown/maindialog.py:65
+msgid "Disable _history"
+msgstr "Заборонити _історію"
+
+#: ../admin-tool/lockdown/maindialog.py:66
+msgid "Disable _javascript chrome"
+msgstr "Заборонити підтримку _javascript"
+
+#: ../admin-tool/lockdown/maindialog.py:67
+msgid "Disable _toolbar editing"
+msgstr "Заборонити редагування _панелі інструментів"
+
+#: ../admin-tool/lockdown/maindialog.py:68
+#, fuzzy
+msgid "Force _fullscreen mode"
+msgstr "_На весь екран"
+
+#: ../admin-tool/lockdown/maindialog.py:69
+msgid "Hide _menubar"
+msgstr "Сховати _меню"
+
+#: ../admin-tool/lockdown/maindialog.py:71
+msgid "Disable lock _screen"
+msgstr "Заборонити завершення _сеансу"
+
+#: ../admin-tool/lockdown/maindialog.py:72
+#, fuzzy
+msgid "_Lock on activation"
+msgstr "_Блокувати панелі"
+
+#: ../admin-tool/lockdown/maindialog.py:73
+#, fuzzy
+msgid "Allow log _out"
+msgstr "Заборонити завершення _сеансу"
+
+#: ../admin-tool/lockdown/maindialog.py:74
+msgid "Allow user _switching"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:233
+#, python-format
+msgid "Could not display help document '%s'"
+msgstr ""
+
+#: ../admin-tool/lockdown/pessulus.ui.h:1
+msgid "Disable _unsafe protocols"
+msgstr "Заборонити _небезпечні протоколи"
+
+#: ../admin-tool/lockdown/pessulus.ui.h:2
+#, fuzzy
+msgid "Disabled Applets"
+msgstr "<b>Заборонені аплети</b>"
+
+#: ../admin-tool/lockdown/pessulus.ui.h:3
 msgid "Lockdown Editor"
 msgstr "Редактор ізоляції"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:38
-msgid "Macro Security Level:"
-msgstr "Рівень безпеки макросів:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:39
-msgid "Number of undo steps:"
-msgstr "Кількість кроків скасування:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:40
-msgid "OpenOffice.org"
-msgstr "OpenOffice.org"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:42
-msgid "Security"
-msgstr "Безпека"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:43
-msgid "User Interface"
-msgstr "Інтерфейс користувача"
+#: ../admin-tool/lockdown/pessulus.ui.h:4
+#, fuzzy
+msgid "Safe Protocols"
+msgstr "<b>Безпечні протоколи</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -460,7 +311,7 @@ msgstr "Інтерфейс користувача"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:497
+#: ../admin-tool/profilesdialog.py:520
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -526,14 +377,14 @@ msgstr ""
 "помилок, і ви можете допомогти нам усунути її, якщо надішлете журнал з файлу "
 "%s до %s"
 
-#: ../admin-tool/sabayon-apply:99
+#: ../admin-tool/sabayon-apply:111
+msgid "Please use -h for usage options"
+msgstr "Для перегляду довідки з параметрів вкажіть -h"
+
+#: ../admin-tool/sabayon-apply:123
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "для користувача '%s' профіль не знайдено\n"
-
-#: ../admin-tool/sabayon-apply:104
-msgid "Please use -h for usage options"
-msgstr "Для перегляду довідки з параметрів вкажіть -h"
 
 #: ../admin-tool/sabayon-session:67
 #, c-format
@@ -544,39 +395,47 @@ msgstr "Використання: %s <назва-профілю> <шлях-пр�
 msgid "Establish and Edit Profiles for Users"
 msgstr "Встановлення та редагування профілів користувачів"
 
-#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.glade.h:4
+#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.ui.h:4
 msgid "User Profile Editor"
 msgstr "Редактор профілів користувачів"
 
-#: ../admin-tool/sabayon.glade.h:1
+#: ../admin-tool/sabayon.ui.h:1
 msgid "Add Profile"
 msgstr "Додати профіль"
 
-#: ../admin-tool/sabayon.glade.h:2
+#: ../admin-tool/sabayon.ui.h:2
 msgid "Profile _name:"
 msgstr "_Назва профілю:"
 
-#: ../admin-tool/sabayon.glade.h:3
+#: ../admin-tool/sabayon.ui.h:3
 msgid "Use this profile for _all users"
 msgstr "Використовувати цей профіль для _усіх користувачів"
 
-#: ../admin-tool/sabayon.glade.h:5
+#: ../admin-tool/sabayon.ui.h:5
 msgid "_Base on:"
 msgstr "_Базуватись на:"
 
-#: ../admin-tool/sabayon.glade.h:6
+#: ../admin-tool/sabayon.ui.h:6
 msgid "_Details"
 msgstr "_Подробиці"
 
-#: ../admin-tool/sabayon.glade.h:7
+#: ../admin-tool/sabayon.ui.h:7
+msgid "_Groups"
+msgstr ""
+
+#: ../admin-tool/sabayon.ui.h:8
+msgid "_Groups:"
+msgstr ""
+
+#: ../admin-tool/sabayon.ui.h:9
 msgid "_Profiles:"
 msgstr "П_рофілі:"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.ui.h:10
 msgid "_Users"
 msgstr "_Користувачі"
 
-#: ../admin-tool/sabayon.glade.h:9
+#: ../admin-tool/sabayon.ui.h:11
 msgid "_Users:"
 msgstr "_Користувачі:"
 
@@ -589,133 +448,51 @@ msgstr "_Закрити без збереження"
 msgid "Save changes to profile \"%s\" before closing?"
 msgstr "Зберегти зміни у профілі \"%s\" перед закриванням?"
 
-#: ../admin-tool/saveconfirm.py:45
-#, python-format
-msgid ""
-"If you don't save, changes from the last %ld second will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld seconds will be permanently "
-"lost."
-msgstr[0] ""
-"Якщо ви не збережете, зміни за останню %ld секунду будуть остаточно втрачені."
-msgstr[1] ""
-"Якщо ви не збережете, зміни за останні %ld секунди будуть остаточно втрачені."
-msgstr[2] ""
-"Якщо ви не збережете, зміни за останні %ld секунд будуть остаточно втрачені."
-
-#: ../admin-tool/saveconfirm.py:51
-msgid ""
-"If you don't save, changes from the last minute will be permanently lost."
-msgstr ""
-"Якщо ви не збережете, зміни за останню хвилину будуть остаточно втрачені."
-
-#: ../admin-tool/saveconfirm.py:55
-#, python-format
-msgid ""
-"If you don't save, changes from the last minute and %ld second will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last minute and %ld seconds will be "
-"permanently lost."
-msgstr[0] ""
-"Якщо ви не збережете, зміни за останню хвилину та %ld секунду будуть "
-"остаточно втрачені."
-msgstr[1] ""
-"Якщо ви не збережете, зміни за останню хвилину та %ld секунди будуть "
-"остаточно втрачені."
-msgstr[2] ""
-"Якщо ви не збережете, зміни за останню хвилину та %ld секунд будуть "
-"остаточно втрачені."
-
-#: ../admin-tool/saveconfirm.py:62
-#, python-format
-msgid ""
-"If you don't save, changes from the last %ld minute will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld minutes will be permanently "
-"lost."
-msgstr[0] ""
-"Якщо ви не збережете, зміни за останню %ld хвилину будуть остаточно втрачені."
-msgstr[1] ""
-"Якщо ви не збережете, зміни за останні %ld хвилини будуть остаточно втрачені."
-msgstr[2] ""
-"Якщо ви не збережете, зміни за останні %ld хвилин будуть остаточно втрачені."
-
-#: ../admin-tool/saveconfirm.py:71
-msgid "If you don't save, changes from the last hour will be permanently lost."
+#: ../admin-tool/saveconfirm.py:44
+#, fuzzy
+msgid "If you don't save, all changes will be permanently lost."
 msgstr ""
 "Якщо ви не збережете, зміни за останню годину будуть остаточно втрачені."
 
-#: ../admin-tool/saveconfirm.py:74
-#, python-format
-msgid ""
-"If you don't save, changes from the last hour and %d minute will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last hour and %d minutes will be "
-"permanently lost."
-msgstr[0] ""
-"Якщо ви не збережете, зміни за останню годину та %d хвилину будуть остаточно "
-"втрачені."
-msgstr[1] ""
-"Якщо ви не збережете, зміни за останню годину та %d хвилини будуть остаточно "
-"втрачені."
-msgstr[2] ""
-"Якщо ви не збережете, зміни за останню годину та %d хвилин будуть остаточно "
-"втрачені."
-
-#: ../admin-tool/saveconfirm.py:81
-#, python-format
-msgid ""
-"If you don't save, changes from the last %d hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] ""
-"Якщо ви не збережете, зміни за останню %d годину будуть остаточно втрачені."
-msgstr[1] ""
-"Якщо ви не збережете, зміни за останні %d години будуть остаточно втрачені."
-msgstr[2] ""
-"Якщо ви не збережете, зміни за останні %d годин будуть остаточно втрачені."
-
-#: ../admin-tool/sessionwindow.py:154
+#: ../admin-tool/sessionwindow.py:155
 #, python-format
 msgid "Editing profile %s"
 msgstr "Зміна профілю %s"
 
-#: ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/sessionwindow.py:179
 msgid "_Quit"
 msgstr "Ви_йти"
 
-#: ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Changes"
 msgstr "_Зміни"
 
-#: ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/sessionwindow.py:181
 msgid "Edit changes"
 msgstr "Редагувати зміни"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:182
 msgid "_Lockdown"
 msgstr "_Блокувати"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:182
 msgid "Edit Lockdown settings"
 msgstr "Змінити параметри блокування"
 
-#: ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/sessionwindow.py:188
 msgid "Enforce Mandatory"
 msgstr "Нав'язувати примусові програми"
 
-#: ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/sessionwindow.py:188
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Нав'язувати примусові параметри у сеансі редагування"
 
-#: ../admin-tool/sessionwindow.py:297
+#: ../admin-tool/sessionwindow.py:306
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Параметри ізоляції для %s"
 
-#: ../admin-tool/sessionwindow.py:333
+#: ../admin-tool/sessionwindow.py:342
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
@@ -725,32 +502,28 @@ msgstr ""
 "можете сповістити про неї зараз або спробувати продовжити редагування "
 "профілю користувача."
 
-#: ../admin-tool/sessionwindow.py:337
+#: ../admin-tool/sessionwindow.py:346
 msgid "_Report this error"
 msgstr "_Сповістити про помилку"
 
-#: ../admin-tool/sessionwindow.py:338
+#: ../admin-tool/sessionwindow.py:347
 msgid "_Continue editing"
 msgstr "_Продовжити редагування"
 
-#: ../admin-tool/usersdialog.py:67
+#: ../admin-tool/usersdialog.py:72
 #, python-format
 msgid "Users for profile %s"
 msgstr "Користувачі для профілю %s"
-
-#: ../admin-tool/usersdialog.py:95
-msgid "Use This Profile"
-msgstr "Використовувати цей профіль"
 
 #: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
 msgstr "Не вдається знайти вільний X дисплей"
 
-#: ../lib/protosession.py:377
+#: ../lib/protosession.py:376
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr "Не вдається запустити Xnest: вийшов час очікування сигналу USR1"
 
-#: ../lib/protosession.py:379
+#: ../lib/protosession.py:378
 msgid "Failed to start Xephyr: died during startup"
 msgstr "Не вдається запустити Xnest: завершився на старті"
 
@@ -758,7 +531,7 @@ msgstr "Не вдається запустити Xnest: завершився н�
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:470
+#: ../lib/protosession.py:469
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
@@ -768,7 +541,7 @@ msgstr "При застосуванні профілю з файлу '%s' вин
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (FATAL) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:479
+#: ../lib/protosession.py:478
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "Критична помилка при застосуванні профілю з '%s'."
@@ -793,8 +566,9 @@ msgid "Applications menu"
 msgstr "Меню програм"
 
 #: ../lib/sources/filessource.py:99
-msgid "Preferences menu"
-msgstr "Меню параметрів"
+#, fuzzy
+msgid "Settings menu"
+msgstr "Меню параметрів сервера"
 
 #: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
@@ -947,141 +721,81 @@ msgstr "Додано панель '%s' "
 msgid "Panel '%s' removed"
 msgstr "Видалено панель '%s'"
 
-#: ../lib/sources/paneldelegate.py:86
-#, python-format
-msgid "Applet %s added to top panel"
-msgstr "Аплет %s додано до верхньої панелі"
+#: ../lib/sources/paneldelegate.py:77
+#, fuzzy, python-format
+msgid "Applet '%s' added"
+msgstr "Додано аплет панелі '%s'"
 
-#: ../lib/sources/paneldelegate.py:88
-#, python-format
-msgid "Applet %s added to bottom panel"
-msgstr "Аплет %s додано до нижньої панелі"
+#: ../lib/sources/paneldelegate.py:100
+#, fuzzy, python-format
+msgid "Applet '%s' removed"
+msgstr "Видалено аплет панелі '%s'"
 
-#: ../lib/sources/paneldelegate.py:90
-#, python-format
-msgid "Applet %s added to left panel"
-msgstr "Аплет %s додано до лівої панелі"
+#: ../lib/sources/paneldelegate.py:123
+#, fuzzy, python-format
+msgid "Object '%s' added"
+msgstr "Додано об'єкт панелі '%s'"
 
-#: ../lib/sources/paneldelegate.py:92
-#, python-format
-msgid "Applet %s added to right panel"
-msgstr "Аплет %s додано до правої панелі"
-
-#: ../lib/sources/paneldelegate.py:107
-#, python-format
-msgid "Applet %s removed from top panel"
-msgstr "Аплет %s видалено з верхньої панелі"
-
-#: ../lib/sources/paneldelegate.py:109
-#, python-format
-msgid "Applet %s removed from bottom panel"
-msgstr "Аплет %s видалено з нижньої панелі"
-
-#: ../lib/sources/paneldelegate.py:111
-#, python-format
-msgid "Applet %s removed from left panel"
-msgstr "Аплет %s видалено з лівої панелі"
-
-#: ../lib/sources/paneldelegate.py:113
-#, python-format
-msgid "Applet %s removed from right panel"
-msgstr "Аплет %s видалено з правої панелі"
-
-#: ../lib/sources/paneldelegate.py:127
-#, python-format
-msgid "%s added to top panel"
-msgstr "%s додано до верхньої панелі"
-
-#: ../lib/sources/paneldelegate.py:129
-#, python-format
-msgid "%s added to bottom panel"
-msgstr "%s додано до нижньої панелі"
-
-#: ../lib/sources/paneldelegate.py:131
-#, python-format
-msgid "%s added to left panel"
-msgstr "%s додано до лівої панелі"
-
-#: ../lib/sources/paneldelegate.py:133
-#, python-format
-msgid "%s added to right panel"
-msgstr "%s додано до правої панелі"
-
-#: ../lib/sources/paneldelegate.py:154
-#, python-format
-msgid "%s removed from top panel"
-msgstr "%s видалено з верхньої панелі"
-
-#: ../lib/sources/paneldelegate.py:156
-#, python-format
-msgid "%s removed from bottom panel"
-msgstr "%s видалено з нижньої панелі"
-
-#: ../lib/sources/paneldelegate.py:158
-#, python-format
-msgid "%s removed from left panel"
-msgstr "%s видалено з лівої панелі"
-
-#: ../lib/sources/paneldelegate.py:160
-#, python-format
-msgid "%s removed from right panel"
-msgstr "%s видалено з правої панелі"
+#: ../lib/sources/paneldelegate.py:152
+#, fuzzy, python-format
+msgid "Object '%s' removed"
+msgstr "Видалено об'єкт панелі '%s'"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:231
+#: ../lib/sources/paneldelegate.py:240
 msgid "Drawer"
 msgstr "Кресляр"
 
-#: ../lib/sources/paneldelegate.py:233
+#: ../lib/sources/paneldelegate.py:242
 msgid "Main Menu"
 msgstr "Головне меню"
 
-#: ../lib/sources/paneldelegate.py:243
+#: ../lib/sources/paneldelegate.py:252
 #, python-format
 msgid "%s launcher"
 msgstr "Кнопка запуску %s"
 
-#: ../lib/sources/paneldelegate.py:247
+#: ../lib/sources/paneldelegate.py:256
 msgid "Lock Screen button"
 msgstr "Кнопка блокування екрану"
 
-#: ../lib/sources/paneldelegate.py:249
+#: ../lib/sources/paneldelegate.py:258
 msgid "Logout button"
 msgstr "Кнопка завершення сеансу"
 
-#: ../lib/sources/paneldelegate.py:251
+#: ../lib/sources/paneldelegate.py:260
 msgid "Run Application button"
 msgstr "Кнопка запуску програм"
 
-#: ../lib/sources/paneldelegate.py:253
+#: ../lib/sources/paneldelegate.py:262
 msgid "Search button"
 msgstr "Кнопка пошуку"
 
-#: ../lib/sources/paneldelegate.py:255
+#: ../lib/sources/paneldelegate.py:264
 msgid "Force Quit button"
 msgstr "Кнопка примусового виходу"
 
-#: ../lib/sources/paneldelegate.py:257
+#: ../lib/sources/paneldelegate.py:266
 msgid "Connect to Server button"
 msgstr "Кнопка з'єднання з сервером"
 
-#: ../lib/sources/paneldelegate.py:259
+#: ../lib/sources/paneldelegate.py:268
 msgid "Shutdown button"
 msgstr "Кнопка вимикання"
 
-#: ../lib/sources/paneldelegate.py:261
+#: ../lib/sources/paneldelegate.py:270
 msgid "Screenshot button"
 msgstr "Кнопка створення знімку екрану"
 
-#: ../lib/sources/paneldelegate.py:264
+#: ../lib/sources/paneldelegate.py:273
 msgid "Unknown"
 msgstr "Невідомо"
 
-#: ../lib/sources/paneldelegate.py:266
+#: ../lib/sources/paneldelegate.py:275
 msgid "Menu Bar"
 msgstr "Панель меню"
 
-#: ../lib/sources/paneldelegate.py:503
+#: ../lib/sources/paneldelegate.py:512
 msgid "Panel File"
 msgstr "Файл панелі"
 
@@ -1105,10 +819,86 @@ msgstr "Неправильні метадані у розділі '%s': %s"
 msgid "Cannot add non-existent file '%s'"
 msgstr "Не вдається додати неіснуючий файл '%s'"
 
-#: ../lib/storage.py:568
+#: ../lib/storage.py:487
+#, python-format
+msgid "Couldn't unlink file '%s'"
+msgstr ""
+
+#: ../lib/storage.py:570
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Профіль лише для читання %s"
+
+#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
+#. do not change the way they are written.  The intended string is
+#. something like "invalid type for setting blah in /ldap/path/to/blah"
+#: ../lib/systemdb.py:67
+#, python-format
+msgid "invalid type for setting %(setting)s in %(np)s"
+msgstr "неправильний тип для встановлення %(setting)s у %(np)s"
+
+#: ../lib/systemdb.py:112
+msgid "No database file provided"
+msgstr ""
+
+#: ../lib/systemdb.py:232
+#, fuzzy, python-format
+msgid "No LDAP search base specified for %s"
+msgstr "Базу пошуку не вказано для %s"
+
+#: ../lib/systemdb.py:235
+#, fuzzy, python-format
+msgid "No LDAP query filter specified for %s"
+msgstr "Фільтр запиту не вказаний для %s"
+
+#: ../lib/systemdb.py:238
+#, fuzzy, python-format
+msgid "No LDAP result attribute specified for %s"
+msgstr "Атрибут результату не вказаний для %s"
+
+#: ../lib/systemdb.py:247
+#, fuzzy
+msgid "LDAP Scope must be one of: "
+msgstr "Scope має бути одним з sub, base чи one"
+
+#: ../lib/systemdb.py:268
+#, fuzzy
+msgid "multiple_result must be one of: "
+msgstr "multiple_result має бути одне з first чи random"
+
+#: ../lib/systemdb.py:361
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "Не вдається відкрити %s для запису"
+
+#: ../lib/systemdb.py:374
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "Не вдається зберегти UserDatabase у %s"
+
+#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "Файл %s не є конфігурацією профілю"
+
+#: ../lib/systemdb.py:404
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "Не вдається додати у конфігурацію типовий профіль %s"
+
+#: ../lib/systemdb.py:438
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "Не вдається додати користувача %s у конфігурацію профілю"
+
+#: ../lib/systemdb.py:510
+msgid "Failed to get the user list"
+msgstr "Не вдається отримати список користувачів"
+
+#: ../lib/systemdb.py:560
+#, fuzzy
+msgid "Failed to get the group list"
+msgstr "Не вдається отримати список користувачів"
 
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
@@ -1128,67 +918,7 @@ msgstr "Запущено %s тестів (%s)"
 msgid "Success!"
 msgstr "Успішно!"
 
-#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
-#. do not change the way they are written.  The intended string is
-#. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/userdb.py:54
-#, python-format
-msgid "invalid type for setting %(setting)s in %(np)s"
-msgstr "неправильний тип для встановлення %(setting)s у %(np)s"
-
-#: ../lib/userdb.py:215
-#, python-format
-msgid "No search base specified for %s"
-msgstr "Базу пошуку не вказано для %s"
-
-#: ../lib/userdb.py:218
-#, python-format
-msgid "No query filter specified for %s"
-msgstr "Фільтр запиту не вказаний для %s"
-
-#: ../lib/userdb.py:221
-#, python-format
-msgid "No result attribute specified for %s"
-msgstr "Атрибут результату не вказаний для %s"
-
-#: ../lib/userdb.py:230
-msgid "Scope must be one of sub, base and one"
-msgstr "Scope має бути одним з sub, base чи one"
-
-#: ../lib/userdb.py:250
-msgid "multiple_result must be one of first and random"
-msgstr "multiple_result має бути одне з first чи random"
-
-#: ../lib/userdb.py:342
-#, python-format
-msgid "Could not open %s for writing"
-msgstr "Не вдається відкрити %s для запису"
-
-#: ../lib/userdb.py:355
-#, python-format
-msgid "Failed to save UserDatabase to %s"
-msgstr "Не вдається зберегти UserDatabase у %s"
-
-#: ../lib/userdb.py:378 ../lib/userdb.py:413
-#, python-format
-msgid "File %s is not a profile configuration"
-msgstr "Файл %s не є конфігурацією профілю"
-
-#: ../lib/userdb.py:385
-#, python-format
-msgid "Failed to add default profile %s to configuration"
-msgstr "Не вдається додати у конфігурацію типовий профіль %s"
-
-#: ../lib/userdb.py:421
-#, python-format
-msgid "Failed to add user %s to profile configuration"
-msgstr "Не вдається додати користувача %s у конфігурацію профілю"
-
-#: ../lib/userdb.py:472
-msgid "Failed to get the user list"
-msgstr "Не вдається отримати список користувачів"
-
-#: ../lib/util.py:93
+#: ../lib/util.py:94
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -1196,13 +926,304 @@ msgstr ""
 "Не вдається отримати домашній каталог: не встановлено у /etc/passwd та не "
 "встановлено значення змінної $HOME"
 
-#: ../lib/util.py:106
+#: ../lib/util.py:110 ../lib/util.py:137
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr ""
 "Не вдається знайти користувача:  не встановлено у /etc/passwd та не "
 "встановлено значення змінної $USER"
+
+#~ msgid "Remove personal information from documents when saving them"
+#~ msgstr "Видаляти особисту інформацію з документів, при їх збереженні"
+
+#~ msgid "Warn if macro tries to create a PDF"
+#~ msgstr "Попереджати, якщо макрос намагається створити PDF"
+
+#~ msgid "Warn if macro tries to print a document"
+#~ msgstr "Попереджати, якщо макрос намагається друкувати документ"
+
+#~ msgid "Warn if macro tries to save a document"
+#~ msgstr "Попереджати, якщо макрос намагається зберегти документ"
+
+#~ msgid "Warn if macro tries to sign a document"
+#~ msgstr "Попереджати, якщо макрос намагається підписати документ"
+
+#~ msgid "Recommend password when saving a document"
+#~ msgstr "Рекомендувати пароль при збереженні документу"
+
+#~ msgid "Enable auto-save"
+#~ msgstr "Увімкнути автоматичне збереження"
+
+#~ msgid "Printing should mark the document as modified"
+#~ msgstr "Після друку документ маж позначатись як змінений"
+
+#~ msgid "Use system's file dialog"
+#~ msgstr "Системний діалог вибору файлу"
+
+#~ msgid "Create backup copy on save"
+#~ msgstr "Створювати резервну копію при збереженні"
+
+#~ msgid "Warn when saving non-OpenOffice.org formats"
+#~ msgstr "Попереджати при збереженні не у форматі OpenOffice.org"
+
+#~ msgid "Use OpenGL"
+#~ msgstr "Використовувати OpenGL"
+
+#~ msgid "Use system font"
+#~ msgstr "Використовувати системний шрифт"
+
+#~ msgid "Use anti-aliasing"
+#~ msgstr "Використовувати згладжування шрифтів"
+
+#~ msgid "Disable UI customization"
+#~ msgstr "Вимкнути налаштовування вигляду"
+
+#~ msgid "Show insensitive menu items"
+#~ msgstr "Показувати неактивні пункти меню"
+
+#~ msgid "Show font preview"
+#~ msgstr "Попередній перегляд шрифту"
+
+#~ msgid "Show font history"
+#~ msgstr "Відображати історію шрифту"
+
+#~ msgid "Show icons in menus"
+#~ msgstr "Відображати значки у меню"
+
+#~ msgid ""
+#~ "\n"
+#~ "5\n"
+#~ "10\n"
+#~ "25\n"
+#~ "50"
+#~ msgstr ""
+#~ "\n"
+#~ "5\n"
+#~ "10\n"
+#~ "25\n"
+#~ "50"
+
+#~ msgid ""
+#~ "\n"
+#~ "Automatic\n"
+#~ "Large\n"
+#~ "Small"
+#~ msgstr ""
+#~ "\n"
+#~ "Автоматично\n"
+#~ "Великі\n"
+#~ "Маленькі"
+
+#~ msgid ""
+#~ "\n"
+#~ "OpenDocument (.odp)\n"
+#~ "PowerPoint 97+ (.ppt)\n"
+#~ "OpenOffice.org 1.1 (.sxi)"
+#~ msgstr ""
+#~ "\n"
+#~ "OpenDocument (.odp)\n"
+#~ "PowerPoint 97+ (.ppt)\n"
+#~ "OpenOffice.org 1.1 (.sxi)"
+
+#~ msgid ""
+#~ "\n"
+#~ "OpenDocument (.ods)\n"
+#~ "Excel 97+ (.xls)\n"
+#~ "OpenOffice.org 1.1 (.sxc)"
+#~ msgstr ""
+#~ "\n"
+#~ "OpenDocument (.ods)\n"
+#~ "Excel 97+ (.xls)\n"
+#~ "OpenOffice.org 1.1 (.sxc)"
+
+#~ msgid ""
+#~ "\n"
+#~ "OpenDocument (.odt)\n"
+#~ "Word 97+ (.doc)\n"
+#~ "OpenOffice.org 1.1 (.sxw)"
+#~ msgstr ""
+#~ "\n"
+#~ "OpenDocument (.odt)\n"
+#~ "Word 97+ (.doc)\n"
+#~ "OpenOffice.org 1.1 (.sxw)"
+
+#~ msgid ""
+#~ "\n"
+#~ "Very High\n"
+#~ "High\n"
+#~ "Medium\n"
+#~ "Low"
+#~ msgstr ""
+#~ "\n"
+#~ "Дуже висока\n"
+#~ "Висока\n"
+#~ "Середня\n"
+#~ "Низька"
+
+#~ msgid "Default format for presentations:"
+#~ msgstr "Типовий формат презентацій:"
+
+#~ msgid "Default format for spreadsheet:"
+#~ msgstr "Типовий формат електронних таблиць:"
+
+#~ msgid "Default format for word processor:"
+#~ msgstr "Типовий формат текстових документів:"
+
+#~ msgid "Default icon size"
+#~ msgstr "Типовий розмір значків"
+
+#~ msgid "Load / Save"
+#~ msgstr "Завантажити / зберегти"
+
+#~ msgid "Macro Security Level:"
+#~ msgstr "Рівень безпеки макросів:"
+
+#~ msgid "Number of undo steps:"
+#~ msgstr "Кількість кроків скасування:"
+
+#~ msgid "OpenOffice.org"
+#~ msgstr "OpenOffice.org"
+
+#~ msgid "Security"
+#~ msgstr "Безпека"
+
+#~ msgid "User Interface"
+#~ msgstr "Інтерфейс користувача"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld second will be permanently "
+#~ "lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %ld seconds will be permanently "
+#~ "lost."
+#~ msgstr[0] ""
+#~ "Якщо ви не збережете, зміни за останню %ld секунду будуть остаточно "
+#~ "втрачені."
+#~ msgstr[1] ""
+#~ "Якщо ви не збережете, зміни за останні %ld секунди будуть остаточно "
+#~ "втрачені."
+#~ msgstr[2] ""
+#~ "Якщо ви не збережете, зміни за останні %ld секунд будуть остаточно "
+#~ "втрачені."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last minute will be permanently lost."
+#~ msgstr ""
+#~ "Якщо ви не збережете, зміни за останню хвилину будуть остаточно втрачені."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last minute and %ld second will be "
+#~ "permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last minute and %ld seconds will be "
+#~ "permanently lost."
+#~ msgstr[0] ""
+#~ "Якщо ви не збережете, зміни за останню хвилину та %ld секунду будуть "
+#~ "остаточно втрачені."
+#~ msgstr[1] ""
+#~ "Якщо ви не збережете, зміни за останню хвилину та %ld секунди будуть "
+#~ "остаточно втрачені."
+#~ msgstr[2] ""
+#~ "Якщо ви не збережете, зміни за останню хвилину та %ld секунд будуть "
+#~ "остаточно втрачені."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld minute will be permanently "
+#~ "lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %ld minutes will be permanently "
+#~ "lost."
+#~ msgstr[0] ""
+#~ "Якщо ви не збережете, зміни за останню %ld хвилину будуть остаточно "
+#~ "втрачені."
+#~ msgstr[1] ""
+#~ "Якщо ви не збережете, зміни за останні %ld хвилини будуть остаточно "
+#~ "втрачені."
+#~ msgstr[2] ""
+#~ "Якщо ви не збережете, зміни за останні %ld хвилин будуть остаточно "
+#~ "втрачені."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last hour and %d minute will be "
+#~ "permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last hour and %d minutes will be "
+#~ "permanently lost."
+#~ msgstr[0] ""
+#~ "Якщо ви не збережете, зміни за останню годину та %d хвилину будуть "
+#~ "остаточно втрачені."
+#~ msgstr[1] ""
+#~ "Якщо ви не збережете, зміни за останню годину та %d хвилини будуть "
+#~ "остаточно втрачені."
+#~ msgstr[2] ""
+#~ "Якщо ви не збережете, зміни за останню годину та %d хвилин будуть "
+#~ "остаточно втрачені."
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %d hour will be permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %d hours will be permanently "
+#~ "lost."
+#~ msgstr[0] ""
+#~ "Якщо ви не збережете, зміни за останню %d годину будуть остаточно "
+#~ "втрачені."
+#~ msgstr[1] ""
+#~ "Якщо ви не збережете, зміни за останні %d години будуть остаточно "
+#~ "втрачені."
+#~ msgstr[2] ""
+#~ "Якщо ви не збережете, зміни за останні %d годин будуть остаточно втрачені."
+
+#~ msgid "Preferences menu"
+#~ msgstr "Меню параметрів"
+
+#~ msgid "Applet %s added to top panel"
+#~ msgstr "Аплет %s додано до верхньої панелі"
+
+#~ msgid "Applet %s added to bottom panel"
+#~ msgstr "Аплет %s додано до нижньої панелі"
+
+#~ msgid "Applet %s added to left panel"
+#~ msgstr "Аплет %s додано до лівої панелі"
+
+#~ msgid "Applet %s added to right panel"
+#~ msgstr "Аплет %s додано до правої панелі"
+
+#~ msgid "Applet %s removed from top panel"
+#~ msgstr "Аплет %s видалено з верхньої панелі"
+
+#~ msgid "Applet %s removed from bottom panel"
+#~ msgstr "Аплет %s видалено з нижньої панелі"
+
+#~ msgid "Applet %s removed from left panel"
+#~ msgstr "Аплет %s видалено з лівої панелі"
+
+#~ msgid "Applet %s removed from right panel"
+#~ msgstr "Аплет %s видалено з правої панелі"
+
+#~ msgid "%s added to top panel"
+#~ msgstr "%s додано до верхньої панелі"
+
+#~ msgid "%s added to bottom panel"
+#~ msgstr "%s додано до нижньої панелі"
+
+#~ msgid "%s added to left panel"
+#~ msgstr "%s додано до лівої панелі"
+
+#~ msgid "%s added to right panel"
+#~ msgstr "%s додано до правої панелі"
+
+#~ msgid "%s removed from top panel"
+#~ msgstr "%s видалено з верхньої панелі"
+
+#~ msgid "%s removed from bottom panel"
+#~ msgstr "%s видалено з нижньої панелі"
+
+#~ msgid "%s removed from left panel"
+#~ msgstr "%s видалено з лівої панелі"
+
+#~ msgid "%s removed from right panel"
+#~ msgstr "%s видалено з правої панелі"
 
 #~ msgid "Usage: %s [<profile-name>]\n"
 #~ msgstr "Використання: %s [<назва-профілю>]\n"
@@ -1212,18 +1233,6 @@ msgstr ""
 
 #~ msgid "Expected event: %s %s"
 #~ msgstr "Очікувана подія: %s %s"
-
-#~ msgid "Panel applet '%s' added"
-#~ msgstr "Додано аплет панелі '%s'"
-
-#~ msgid "Panel applet '%s' removed"
-#~ msgstr "Видалено аплет панелі '%s'"
-
-#~ msgid "Panel object '%s' added"
-#~ msgstr "Додано об'єкт панелі '%s'"
-
-#~ msgid "Panel object '%s' removed"
-#~ msgstr "Видалено об'єкт панелі '%s'"
 
 #~ msgid "All Your Settings Are Belong To Us"
 #~ msgstr "Усі ваші параметри належать нам"

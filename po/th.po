@@ -7,9 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon 2.19.1\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-08-23 16:14+0700\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-12-20 09:43-0600\n"
 "PO-Revision-Date: 2009-08-23 16:17+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -41,7 +40,7 @@ msgstr "ละเลย"
 msgid "Lock"
 msgstr "ล็อค"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:230
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
 msgid "Description"
 msgstr "คำบรรยาย"
 
@@ -50,61 +49,68 @@ msgstr "คำบรรยาย"
 msgid "Profile %s"
 msgstr "โพรไฟล์ %s"
 
-#: ../admin-tool/editorwindow.py:195 ../admin-tool/sessionwindow.py:176
+#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
 msgid "_Profile"
 msgstr "โ_พรไฟล์"
 
-#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
 msgid "_Save"
 msgstr "_บันทึก"
 
-#: ../admin-tool/editorwindow.py:196 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
 msgid "Save profile"
 msgstr "บันทึกโพรไฟล์"
 
-#: ../admin-tool/editorwindow.py:197
+#: ../admin-tool/editorwindow.py:204
 msgid "_Close"
 msgstr "_ปิด"
 
-#: ../admin-tool/editorwindow.py:197 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
 msgid "Close the current window"
 msgstr "ปิดหน้าต่างปัจจุบัน"
 
-#: ../admin-tool/editorwindow.py:198 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
 msgid "_Edit"
 msgstr "แ_ก้ไข"
 
-#: ../admin-tool/editorwindow.py:199
+#: ../admin-tool/editorwindow.py:206
 msgid "_Delete"
 msgstr "_ลบ"
 
-#: ../admin-tool/editorwindow.py:199
+#: ../admin-tool/editorwindow.py:206
 msgid "Delete item"
 msgstr "ลบรายการออก"
 
-#: ../admin-tool/editorwindow.py:200 ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
 msgid "_Help"
 msgstr "_วิธีใช้"
 
-#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+msgid "_Contents"
+msgstr ""
+
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+msgid "Help Contents"
+msgstr ""
+
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
 msgid "_About"
 msgstr "เ_กี่ยวกับ"
 
-#: ../admin-tool/editorwindow.py:201 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
 msgid "About Sabayon"
 msgstr "เกี่ยวกับ Sabayon"
 
-#: ../admin-tool/editorwindow.py:262 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:266 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
 msgid "Files"
 msgstr "แฟ้ม"
 
-#: ../admin-tool/editorwindow.py:266
-#: ../admin-tool/lockdown/pessulus.glade.h:41
-#: ../lib/sources/paneldelegate.py:269
+#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
+#: ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "พาเนล"
 
@@ -154,8 +160,8 @@ msgstr "คู่"
 msgid "Profile settings: %s"
 msgstr "ค่าตั้งของโพรไฟล์: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:387
-#: ../admin-tool/usersdialog.py:85
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "ชื่อ"
 
@@ -167,296 +173,140 @@ msgstr "ชนิด"
 msgid "Value"
 msgstr "ค่า"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:99
+#: ../admin-tool/groupsdialog.py:61
+#, fuzzy, python-format
+msgid "Groups for profile %s"
+msgstr "ผู้ใช้สำหรับโพรไฟล์ %s"
+
+#: ../admin-tool/groupsdialog.py:71
+msgid "Group"
+msgstr ""
+
+#: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
+msgid "Use This Profile"
+msgstr "ใช้โพรไฟล์นี้"
+
+#: ../admin-tool/lockdown/lockdownbutton.py:100
 msgid "Click to make this setting not mandatory"
 msgstr "คลิกเพื่อให้ค่าตั้งนี้ไม่เป็นค่าบังคับ"
 
-#: ../admin-tool/lockdown/lockdownbutton.py:101
+#: ../admin-tool/lockdown/lockdownbutton.py:102
 msgid "Click to make this setting mandatory"
 msgstr "คลิกเพื่อให้ค่าตั้งนี้เป็นค่าบังคับ"
 
-#: ../admin-tool/lockdown/maindialog.py:49
-msgid "Disable _command line"
-msgstr "ห้ามใช้บรรทัดคำ_สั่ง"
-
-#: ../admin-tool/lockdown/maindialog.py:50
-msgid "Disable _printing"
-msgstr "ห้าม_พิมพ์"
-
-#: ../admin-tool/lockdown/maindialog.py:51
-msgid "Disable print _setup"
-msgstr "ห้าม_ตั้งค่าการพิมพ์"
-
-#: ../admin-tool/lockdown/maindialog.py:52
-msgid "Disable save to _disk"
-msgstr "ห้าม_บันทึกลงดิสก์"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "_Lock down the panels"
-msgstr "_ล็อคพาเนล"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable force _quit"
-msgstr "ห้าม_บังคับออก"
-
-#: ../admin-tool/lockdown/maindialog.py:56
-msgid "Disable lock _screen"
-msgstr "ห้ามล็อคหน้า_จอ"
-
-#: ../admin-tool/lockdown/maindialog.py:57
-msgid "Disable log _out"
-msgstr "ห้าม_ออกจากระบบ"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable _quit"
-msgstr "_ห้ามออก"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable _arbitrary URL"
-msgstr "ห้ามป้อน URL อิ_สระ"
-
-#: ../admin-tool/lockdown/maindialog.py:61
-msgid "Disable _bookmark editing"
-msgstr "ห้ามแก้ไข_ที่คั่นหน้า"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _history"
-msgstr "ห้ามใช้_ประวัติการท่องเว็บ"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _javascript chrome"
-msgstr "ห้าม_จาวาสคริปต์ดัดแปลงหน้าตาโปรแกรม"
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _toolbar editing"
-msgstr "ห้ามแก้ไขแถบเ_ครื่องมือ"
-
-#: ../admin-tool/lockdown/maindialog.py:65
-msgid "_Fullscreen"
-msgstr "เ_ต็มจอ"
-
-#: ../admin-tool/lockdown/maindialog.py:66
-msgid "Hide _menubar"
-msgstr "ซ่อนแถบเ_มนู"
-
-#. Translators: OO.o normally saves personal information (name/email of author, etc.) to files.
-#. This can be used to disable this, for when you don't want people to know you created the document.
-#: ../admin-tool/lockdown/maindialog.py:70
-msgid "Remove personal information from documents when saving them"
-msgstr "ลบข้อมูลส่วนตัวออกจากเอกสารขณะบันทึก"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Warn if macro tries to create a PDF"
-msgstr "เตือนถ้าแมโครพยายามสร้าง PDF"
-
-#: ../admin-tool/lockdown/maindialog.py:72
-msgid "Warn if macro tries to print a document"
-msgstr "เตือนถ้าแมโครพยายามพิมพ์เอกสาร"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-msgid "Warn if macro tries to save a document"
-msgstr "เตือนถ้าแมโครพยายามบันทึกเอกสาร"
-
-#: ../admin-tool/lockdown/maindialog.py:74
-msgid "Warn if macro tries to sign a document"
-msgstr "เตือนถ้าแมโครพยายามเซ็นกำกับเอกสาร"
-
-#: ../admin-tool/lockdown/maindialog.py:75
-msgid "Recommend password when saving a document"
-msgstr "แนะนำรหัสผ่านขณะบันทึกเอกสาร"
-
-#: ../admin-tool/lockdown/maindialog.py:77
-msgid "Enable auto-save"
-msgstr "เปิดใช้การบันทึกอัตโนมัติ"
-
-#. ( "/apps/openoffice/auto_save_interval", _("Auto save interval"), "oooio" ),
-#: ../admin-tool/lockdown/maindialog.py:79
-msgid "Printing should mark the document as modified"
-msgstr "การพิมพ์ควรถือว่าทำให้เอกสารถูกเปลี่ยนแปลง"
-
-#: ../admin-tool/lockdown/maindialog.py:80
-msgid "Use system's file dialog"
-msgstr "ใช้กล่องเลือกแฟ้มของระบบ"
-
-#: ../admin-tool/lockdown/maindialog.py:81
-msgid "Create backup copy on save"
-msgstr "สร้างสำเนาแฟ้มสำรองขณะบันทึก"
-
-#: ../admin-tool/lockdown/maindialog.py:82
-msgid "Warn when saving non-OpenOffice.org formats"
-msgstr "เตือนเมื่อมีการบันทึกเอกสารในรูปแบบที่ไม่ใช่ OpenOffice.org"
-
-#: ../admin-tool/lockdown/maindialog.py:84
-msgid "Use OpenGL"
-msgstr "ใช้ OpenGL"
-
-#: ../admin-tool/lockdown/maindialog.py:85
-msgid "Use system font"
-msgstr "ใช้แบบอักษรของระบบ"
-
-#: ../admin-tool/lockdown/maindialog.py:86
-msgid "Use anti-aliasing"
-msgstr "ใช้ตัวอักษรแบบไร้รอยหยัก"
-
-#: ../admin-tool/lockdown/maindialog.py:87
-msgid "Disable UI customization"
-msgstr "ห้ามปรับแต่ง UI"
-
-#: ../admin-tool/lockdown/maindialog.py:88
-msgid "Show insensitive menu items"
-msgstr "แสดงรายการเมนูที่ไม่ตอบสนองด้วย"
-
-#: ../admin-tool/lockdown/maindialog.py:89
-msgid "Show font preview"
-msgstr "แสดงตัวอย่างแบบอักษร"
-
-#: ../admin-tool/lockdown/maindialog.py:90
-msgid "Show font history"
-msgstr "แสดงประวัติแบบอักษร"
-
-#: ../admin-tool/lockdown/maindialog.py:91
-msgid "Show icons in menus"
-msgstr "แสดงไอคอนในเมนู"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:1
-msgid ""
-"\n"
-"5\n"
-"10\n"
-"25\n"
-"50"
-msgstr ""
-"\n"
-"5\n"
-"10\n"
-"25\n"
-"50"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:6
-msgid ""
-"\n"
-"Automatic\n"
-"Large\n"
-"Small"
-msgstr ""
-"\n"
-"อัตโนมัติ\n"
-"ใหญ่\n"
-"เล็ก"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:10
-msgid ""
-"\n"
-"OpenDocument (.odp)\n"
-"PowerPoint 97+ (.ppt)\n"
-"OpenOffice.org 1.1 (.sxi)"
-msgstr ""
-"\n"
-"OpenDocument (.odp)\n"
-"PowerPoint 97+ (.ppt)\n"
-"OpenOffice.org 1.1 (.sxi)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:14
-msgid ""
-"\n"
-"OpenDocument (.ods)\n"
-"Excel 97+ (.xls)\n"
-"OpenOffice.org 1.1 (.sxc)"
-msgstr ""
-"\n"
-"OpenDocument (.ods)\n"
-"Excel 97+ (.xls)\n"
-"OpenOffice.org 1.1 (.sxc)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:18
-msgid ""
-"\n"
-"OpenDocument (.odt)\n"
-"Word 97+ (.doc)\n"
-"OpenOffice.org 1.1 (.sxw)"
-msgstr ""
-"\n"
-"OpenDocument (.odt)\n"
-"Word 97+ (doc)\n"
-"OpenOffice.org 1.1 (.sxw)"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:22
-msgid ""
-"\n"
-"Very High\n"
-"High\n"
-"Medium\n"
-"Low"
-msgstr ""
-"\n"
-"สูงมาก\n"
-"สูง\n"
-"ปานกลาง\n"
-"ต่ำ"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:27
-msgid "<b>Disabled Applets</b>"
-msgstr "<b>แอพเพล็ตห้ามใช้</b>"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:28
-msgid "<b>Safe Protocols</b>"
-msgstr "<b>โพรโทคอลที่ปลอดภัย</b>"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:29
-msgid "Default format for presentations:"
-msgstr "ฟอร์แมตปริยายสำหรับการนำเสนอ:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:30
-msgid "Default format for spreadsheet:"
-msgstr "ฟอร์แมตปริยายสำหรับตารางคำนวณ:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:31
-msgid "Default format for word processor:"
-msgstr "ฟอร์แมตปริยายสำหรับโปรแกรมประมวลคำ:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:32
-msgid "Default icon size"
-msgstr "ขนาดไอคอนปริยาย"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:33
-msgid "Disable _unsafe protocols"
-msgstr "ห้ามใช้โพรโทคอลที่ไม่ป_ลอดภัย"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:34
-msgid "Epiphany Web Browser"
-msgstr "เว็บเบราว์เซอร์ Epiphany"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:35
+#: ../admin-tool/lockdown/maindialog.py:40
 msgid "General"
 msgstr "ทั่วไป"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:36
-msgid "Load / Save"
-msgstr "เปิด / บันทึก"
+#: ../admin-tool/lockdown/maindialog.py:42
+msgid "Epiphany Web Browser"
+msgstr "เว็บเบราว์เซอร์ Epiphany"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:37
+#: ../admin-tool/lockdown/maindialog.py:43
+msgid "GNOME Screensaver"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:53
+msgid "Disable _command line"
+msgstr "ห้ามใช้บรรทัดคำ_สั่ง"
+
+#: ../admin-tool/lockdown/maindialog.py:54
+msgid "Disable _printing"
+msgstr "ห้าม_พิมพ์"
+
+#: ../admin-tool/lockdown/maindialog.py:55
+msgid "Disable print _setup"
+msgstr "ห้าม_ตั้งค่าการพิมพ์"
+
+#: ../admin-tool/lockdown/maindialog.py:56
+msgid "Disable save to _disk"
+msgstr "ห้าม_บันทึกลงดิสก์"
+
+#: ../admin-tool/lockdown/maindialog.py:58
+msgid "_Lock down the panels"
+msgstr "_ล็อคพาเนล"
+
+#: ../admin-tool/lockdown/maindialog.py:59
+msgid "Disable force _quit"
+msgstr "ห้าม_บังคับออก"
+
+#: ../admin-tool/lockdown/maindialog.py:60
+msgid "Disable log _out"
+msgstr "ห้าม_ออกจากระบบ"
+
+#: ../admin-tool/lockdown/maindialog.py:62
+msgid "Disable _quit"
+msgstr "_ห้ามออก"
+
+#: ../admin-tool/lockdown/maindialog.py:63
+msgid "Disable _arbitrary URL"
+msgstr "ห้ามป้อน URL อิ_สระ"
+
+#: ../admin-tool/lockdown/maindialog.py:64
+msgid "Disable _bookmark editing"
+msgstr "ห้ามแก้ไข_ที่คั่นหน้า"
+
+#: ../admin-tool/lockdown/maindialog.py:65
+msgid "Disable _history"
+msgstr "ห้ามใช้_ประวัติการท่องเว็บ"
+
+#: ../admin-tool/lockdown/maindialog.py:66
+msgid "Disable _javascript chrome"
+msgstr "ห้าม_จาวาสคริปต์ดัดแปลงหน้าตาโปรแกรม"
+
+#: ../admin-tool/lockdown/maindialog.py:67
+msgid "Disable _toolbar editing"
+msgstr "ห้ามแก้ไขแถบเ_ครื่องมือ"
+
+#: ../admin-tool/lockdown/maindialog.py:68
+#, fuzzy
+msgid "Force _fullscreen mode"
+msgstr "เ_ต็มจอ"
+
+#: ../admin-tool/lockdown/maindialog.py:69
+msgid "Hide _menubar"
+msgstr "ซ่อนแถบเ_มนู"
+
+#: ../admin-tool/lockdown/maindialog.py:71
+msgid "Disable lock _screen"
+msgstr "ห้ามล็อคหน้า_จอ"
+
+#: ../admin-tool/lockdown/maindialog.py:72
+#, fuzzy
+msgid "_Lock on activation"
+msgstr "_ล็อคพาเนล"
+
+#: ../admin-tool/lockdown/maindialog.py:73
+#, fuzzy
+msgid "Allow log _out"
+msgstr "ห้าม_ออกจากระบบ"
+
+#: ../admin-tool/lockdown/maindialog.py:74
+msgid "Allow user _switching"
+msgstr ""
+
+#: ../admin-tool/lockdown/maindialog.py:233
+#, python-format
+msgid "Could not display help document '%s'"
+msgstr ""
+
+#: ../admin-tool/lockdown/pessulus.ui.h:1
+msgid "Disable _unsafe protocols"
+msgstr "ห้ามใช้โพรโทคอลที่ไม่ป_ลอดภัย"
+
+#: ../admin-tool/lockdown/pessulus.ui.h:2
+#, fuzzy
+msgid "Disabled Applets"
+msgstr "<b>แอพเพล็ตห้ามใช้</b>"
+
+#: ../admin-tool/lockdown/pessulus.ui.h:3
 msgid "Lockdown Editor"
 msgstr "แก้ไขการจำกัดการใช้งาน"
 
-#: ../admin-tool/lockdown/pessulus.glade.h:38
-msgid "Macro Security Level:"
-msgstr "ระดับการรักษาความปลอดภัยของแมโคร:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:39
-msgid "Number of undo steps:"
-msgstr "จำนวนขั้นการเรียกคืนคำสั่ง:"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:40
-msgid "OpenOffice.org"
-msgstr "OpenOffice.org"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:42
-msgid "Security"
-msgstr "การรักษาความปลอดภัย"
-
-#: ../admin-tool/lockdown/pessulus.glade.h:43
-msgid "User Interface"
-msgstr "ส่วนติดต่อผู้ใช้"
+#: ../admin-tool/lockdown/pessulus.ui.h:4
+#, fuzzy
+msgid "Safe Protocols"
+msgstr "<b>โพรโทคอลที่ปลอดภัย</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -464,7 +314,7 @@ msgstr "ส่วนติดต่อผู้ใช้"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:497
+#: ../admin-tool/profilesdialog.py:520
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -521,14 +371,14 @@ msgstr ""
 "Sabayon จะจบการทำงาน  มีข้อผิดพลาดบางอย่างที่พอฟื้นตัวได้ "
 "และคุณสามารถช่วยเราตรวจสอบปัญหานี้ได้ โดยส่งปูมใน %s ไปยัง %s"
 
-#: ../admin-tool/sabayon-apply:99
+#: ../admin-tool/sabayon-apply:111
+msgid "Please use -h for usage options"
+msgstr "กรุณาใช้ตัวเลือก -h เพื่อดูวิธีใช้ตัวเลือกต่าง ๆ"
+
+#: ../admin-tool/sabayon-apply:123
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "ไม่พบโพรไฟล์สำหรับผู้ใช้ '%s'\n"
-
-#: ../admin-tool/sabayon-apply:104
-msgid "Please use -h for usage options"
-msgstr "กรุณาใช้ตัวเลือก -h เพื่อดูวิธีใช้ตัวเลือกต่าง ๆ"
 
 #: ../admin-tool/sabayon-session:67
 #, c-format
@@ -539,39 +389,47 @@ msgstr "วิธีใช้: %s <ชื่อโพรไฟล์> <พาธ
 msgid "Establish and Edit Profiles for Users"
 msgstr "สร้างและแก้ไขโพรไฟล์สำหรับผู้ใช้"
 
-#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.glade.h:4
+#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.ui.h:4
 msgid "User Profile Editor"
 msgstr "เครื่องมือแก้ไขโพรไฟล์ผู้ใช้"
 
-#: ../admin-tool/sabayon.glade.h:1
+#: ../admin-tool/sabayon.ui.h:1
 msgid "Add Profile"
 msgstr "เพิ่มโพรไฟล์"
 
-#: ../admin-tool/sabayon.glade.h:2
+#: ../admin-tool/sabayon.ui.h:2
 msgid "Profile _name:"
 msgstr "_ชื่อโพรไฟล์:"
 
-#: ../admin-tool/sabayon.glade.h:3
+#: ../admin-tool/sabayon.ui.h:3
 msgid "Use this profile for _all users"
 msgstr "ใช้โพรไฟล์นี้สำหรับผู้ใช้_ทั้งหมด"
 
-#: ../admin-tool/sabayon.glade.h:5
+#: ../admin-tool/sabayon.ui.h:5
 msgid "_Base on:"
 msgstr "สร้าง_จาก:"
 
-#: ../admin-tool/sabayon.glade.h:6
+#: ../admin-tool/sabayon.ui.h:6
 msgid "_Details"
 msgstr "_รายละเอียด"
 
-#: ../admin-tool/sabayon.glade.h:7
+#: ../admin-tool/sabayon.ui.h:7
+msgid "_Groups"
+msgstr ""
+
+#: ../admin-tool/sabayon.ui.h:8
+msgid "_Groups:"
+msgstr ""
+
+#: ../admin-tool/sabayon.ui.h:9
 msgid "_Profiles:"
 msgstr "โ_พรไฟล์:"
 
-#: ../admin-tool/sabayon.glade.h:8
+#: ../admin-tool/sabayon.ui.h:10
 msgid "_Users"
 msgstr "_ผู้ใช้"
 
-#: ../admin-tool/sabayon.glade.h:9
+#: ../admin-tool/sabayon.ui.h:11
 msgid "_Users:"
 msgstr "_ผู้ใช้:"
 
@@ -584,100 +442,50 @@ msgstr "_ปิดโดยไม่บันทึก"
 msgid "Save changes to profile \"%s\" before closing?"
 msgstr "บันทึกการเปลี่ยนแปลงในโพรไฟล์ \"%s\" ก่อนปิดหรือไม่?"
 
-#: ../admin-tool/saveconfirm.py:45
-#, python-format
-msgid ""
-"If you don't save, changes from the last %ld second will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld seconds will be permanently "
-"lost."
-msgstr[0] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดใน %ld วินาทีที่ผ่านมาจะสูญหายอย่างถาวร"
-
-#: ../admin-tool/saveconfirm.py:51
-msgid ""
-"If you don't save, changes from the last minute will be permanently lost."
-msgstr "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดในนาทีที่ผ่านมาจะสูญหายอย่างถาวร"
-
-#: ../admin-tool/saveconfirm.py:55
-#, python-format
-msgid ""
-"If you don't save, changes from the last minute and %ld second will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last minute and %ld seconds will be "
-"permanently lost."
-msgstr[0] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดในนาทีกับ %ld วินาทีที่ผ่านมาจะสูญหายอย่างถาวร"
-
-#: ../admin-tool/saveconfirm.py:62
-#, python-format
-msgid ""
-"If you don't save, changes from the last %ld minute will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %ld minutes will be permanently "
-"lost."
-msgstr[0] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดใน %ld นาทีที่ผ่านมาจะสูญหายอย่างถาวร"
-
-#: ../admin-tool/saveconfirm.py:71
-msgid "If you don't save, changes from the last hour will be permanently lost."
+#: ../admin-tool/saveconfirm.py:44
+#, fuzzy
+msgid "If you don't save, all changes will be permanently lost."
 msgstr "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดในชั่วโมงที่ผ่านมาจะสูญหายอย่างถาวร"
 
-#: ../admin-tool/saveconfirm.py:74
-#, python-format
-msgid ""
-"If you don't save, changes from the last hour and %d minute will be "
-"permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last hour and %d minutes will be "
-"permanently lost."
-msgstr[0] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดในชั่วโมงกับ %d นาทีที่ผ่านมาจะสูญหายอย่างถาวร"
-
-#: ../admin-tool/saveconfirm.py:81
-#, python-format
-msgid ""
-"If you don't save, changes from the last %d hour will be permanently lost."
-msgid_plural ""
-"If you don't save, changes from the last %d hours will be permanently lost."
-msgstr[0] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดใน %d ชั่วโมงที่ผ่านมาจะสูญหายอย่างถาวร"
-
-#: ../admin-tool/sessionwindow.py:154
+#: ../admin-tool/sessionwindow.py:155
 #, python-format
 msgid "Editing profile %s"
 msgstr "กำลังแก้ไขโพรไฟล์ %s"
 
-#: ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/sessionwindow.py:179
 msgid "_Quit"
 msgstr "_ออก"
 
-#: ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Changes"
 msgstr "_การเปลี่ยนแปลง"
 
-#: ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/sessionwindow.py:181
 msgid "Edit changes"
 msgstr "แก้ไขการเปลี่ยนแปลง"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:182
 msgid "_Lockdown"
 msgstr "_จำกัดการใช้งาน"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:182
 msgid "Edit Lockdown settings"
 msgstr "แก้ไขค่าตั้งการจำกัดการใช้งาน"
 
-#: ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/sessionwindow.py:188
 msgid "Enforce Mandatory"
 msgstr "ใช้ค่าตั้งบังคับ"
 
-#: ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/sessionwindow.py:188
 msgid "Enforce mandatory settings in the editing session"
 msgstr "บังคับใช้ค่าตั้งบังคับกับวาระที่กำลังแก้ไข"
 
-#: ../admin-tool/sessionwindow.py:297
+#: ../admin-tool/sessionwindow.py:306
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "ค่าตั้งการจำกัดการใช้งานสำหรับ %s"
 
-#: ../admin-tool/sessionwindow.py:333
+#: ../admin-tool/sessionwindow.py:342
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
@@ -686,32 +494,28 @@ msgstr ""
 "มีข้อผิดพลาดที่พอจะฟื้นตัวได้ขณะเริ่มใช้โพรไฟล์ผู้ใช้ '%s' คุณสามารถรายงานข้อผิดพลาดนี้ทันที "
 "หรือจะพยายามแก้ไขโพรไฟล์ผู้ใช้ต่อไปก็ได้"
 
-#: ../admin-tool/sessionwindow.py:337
+#: ../admin-tool/sessionwindow.py:346
 msgid "_Report this error"
 msgstr "_รายงานข้อผิดพลาดนี้"
 
-#: ../admin-tool/sessionwindow.py:338
+#: ../admin-tool/sessionwindow.py:347
 msgid "_Continue editing"
 msgstr "แ_ก้ไขต่อไป"
 
-#: ../admin-tool/usersdialog.py:67
+#: ../admin-tool/usersdialog.py:72
 #, python-format
 msgid "Users for profile %s"
 msgstr "ผู้ใช้สำหรับโพรไฟล์ %s"
-
-#: ../admin-tool/usersdialog.py:95
-msgid "Use This Profile"
-msgstr "ใช้โพรไฟล์นี้"
 
 #: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
 msgstr "หาดิสเพลย์ของ X ที่ว่างไม่พบ"
 
-#: ../lib/protosession.py:377
+#: ../lib/protosession.py:376
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr "เริ่มใช้ Xephyr ไม่สำเร็จ: ไม่มีสัญญาณ USR1 เข้ามาในเวลาที่กำหนด"
 
-#: ../lib/protosession.py:379
+#: ../lib/protosession.py:378
 msgid "Failed to start Xephyr: died during startup"
 msgstr "เริ่มใช้ Xephyr ไม่สำเร็จ: โปรแกรมตายระหว่างเริ่มทำงาน"
 
@@ -719,7 +523,7 @@ msgstr "เริ่มใช้ Xephyr ไม่สำเร็จ: โปร�
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:470
+#: ../lib/protosession.py:469
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
@@ -729,7 +533,7 @@ msgstr "เกิดข้อผิดพลาดที่พอฟื้นต
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (FATAL) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:479
+#: ../lib/protosession.py:478
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "เกิดข้อผิดพลาดร้ายแรงขณะเริ่มใช้โพรไฟล์ผู้ใช้จาก '%s'"
@@ -754,8 +558,9 @@ msgid "Applications menu"
 msgstr "เมนูโปรแกรม"
 
 #: ../lib/sources/filessource.py:99
-msgid "Preferences menu"
-msgstr "เมนูปรับแต่ง"
+#, fuzzy
+msgid "Settings menu"
+msgstr "เมนูค่าตั้งเซิร์ฟเวอร์"
 
 #: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
@@ -908,141 +713,81 @@ msgstr "เพิ่มพาเนล '%s' แล้ว"
 msgid "Panel '%s' removed"
 msgstr "ลบพาเนล '%s' แล้ว"
 
-#: ../lib/sources/paneldelegate.py:86
-#, python-format
-msgid "Applet %s added to top panel"
-msgstr "เพิ่มแอพเพล็ต %s ในพาเนลด้านบนแล้ว"
+#: ../lib/sources/paneldelegate.py:77
+#, fuzzy, python-format
+msgid "Applet '%s' added"
+msgstr "เพิ่มแอพเพล็ต '%s' แล้ว"
 
-#: ../lib/sources/paneldelegate.py:88
-#, python-format
-msgid "Applet %s added to bottom panel"
-msgstr "เพิ่มแอพเพล็ต %s ในพาเนลด้านล่างแล้ว"
+#: ../lib/sources/paneldelegate.py:100
+#, fuzzy, python-format
+msgid "Applet '%s' removed"
+msgstr "ลบแอพเพล็ต '%s' แล้ว"
 
-#: ../lib/sources/paneldelegate.py:90
-#, python-format
-msgid "Applet %s added to left panel"
-msgstr "เพิ่มแอพเพล็ต %s ในพาเนลด้านซ้ายแล้ว"
+#: ../lib/sources/paneldelegate.py:123
+#, fuzzy, python-format
+msgid "Object '%s' added"
+msgstr "เพิ่มวัตถุพาเนล '%s' แล้ว"
 
-#: ../lib/sources/paneldelegate.py:92
-#, python-format
-msgid "Applet %s added to right panel"
-msgstr "เพิ่มแอพเพล็ต %s ในพาเนลด้านขวาแล้ว"
-
-#: ../lib/sources/paneldelegate.py:107
-#, python-format
-msgid "Applet %s removed from top panel"
-msgstr "ลบแอพเพล็ต %s ออกจากพาเนลด้านบนแล้ว"
-
-#: ../lib/sources/paneldelegate.py:109
-#, python-format
-msgid "Applet %s removed from bottom panel"
-msgstr "ลบแอพเพล็ต %s ออกจากพาเนลด้านล่างแล้ว"
-
-#: ../lib/sources/paneldelegate.py:111
-#, python-format
-msgid "Applet %s removed from left panel"
-msgstr "ลบแอพเพล็ต %s ออกจากพาเนลด้านซ้ายแล้ว"
-
-#: ../lib/sources/paneldelegate.py:113
-#, python-format
-msgid "Applet %s removed from right panel"
-msgstr "ลบแอพเพล็ต %s ออกจากพาเนลด้านขวาแล้ว"
-
-#: ../lib/sources/paneldelegate.py:127
-#, python-format
-msgid "%s added to top panel"
-msgstr "เพิ่ม %s ในพาเนลด้านบนแล้ว"
-
-#: ../lib/sources/paneldelegate.py:129
-#, python-format
-msgid "%s added to bottom panel"
-msgstr "เพิ่ม %s ในพาเนลด้านล่างแล้ว"
-
-#: ../lib/sources/paneldelegate.py:131
-#, python-format
-msgid "%s added to left panel"
-msgstr "เพิ่ม %s ในพาเนลด้านซ้ายแล้ว"
-
-#: ../lib/sources/paneldelegate.py:133
-#, python-format
-msgid "%s added to right panel"
-msgstr "เพิ่ม %s ในพาเนลด้านขวาแล้ว"
-
-#: ../lib/sources/paneldelegate.py:154
-#, python-format
-msgid "%s removed from top panel"
-msgstr "ลบ %s ออกจากพาเนลด้านบนแล้ว"
-
-#: ../lib/sources/paneldelegate.py:156
-#, python-format
-msgid "%s removed from bottom panel"
-msgstr "ลบ %s ออกจากพาเนลด้านล่างแล้ว"
-
-#: ../lib/sources/paneldelegate.py:158
-#, python-format
-msgid "%s removed from left panel"
-msgstr "ลบ %s ออกจากพาเนลด้านซ้ายแล้ว"
-
-#: ../lib/sources/paneldelegate.py:160
-#, python-format
-msgid "%s removed from right panel"
-msgstr "ลบ %s ออกจากพาเนลด้านขวาแล้ว"
+#: ../lib/sources/paneldelegate.py:152
+#, fuzzy, python-format
+msgid "Object '%s' removed"
+msgstr "ลบวัตถุพาเนล '%s' แล้ว"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:231
+#: ../lib/sources/paneldelegate.py:240
 msgid "Drawer"
 msgstr "ลิ้นชัก"
 
-#: ../lib/sources/paneldelegate.py:233
+#: ../lib/sources/paneldelegate.py:242
 msgid "Main Menu"
 msgstr "เมนูหลัก"
 
-#: ../lib/sources/paneldelegate.py:243
+#: ../lib/sources/paneldelegate.py:252
 #, python-format
 msgid "%s launcher"
 msgstr "ปุ่มเรียก %s"
 
-#: ../lib/sources/paneldelegate.py:247
+#: ../lib/sources/paneldelegate.py:256
 msgid "Lock Screen button"
 msgstr "ปุ่มล็อคหน้าจอ"
 
-#: ../lib/sources/paneldelegate.py:249
+#: ../lib/sources/paneldelegate.py:258
 msgid "Logout button"
 msgstr "ปุ่มออกจากระบบ"
 
-#: ../lib/sources/paneldelegate.py:251
+#: ../lib/sources/paneldelegate.py:260
 msgid "Run Application button"
 msgstr "ปุ่มเรียกโปรแกรม"
 
-#: ../lib/sources/paneldelegate.py:253
+#: ../lib/sources/paneldelegate.py:262
 msgid "Search button"
 msgstr "ปุ่มค้นหา"
 
-#: ../lib/sources/paneldelegate.py:255
+#: ../lib/sources/paneldelegate.py:264
 msgid "Force Quit button"
 msgstr "ปุ่มบังคับออก"
 
-#: ../lib/sources/paneldelegate.py:257
+#: ../lib/sources/paneldelegate.py:266
 msgid "Connect to Server button"
 msgstr "ปุ่มเชื่อมต่อไปยังเซิร์ฟเวอร์"
 
-#: ../lib/sources/paneldelegate.py:259
+#: ../lib/sources/paneldelegate.py:268
 msgid "Shutdown button"
 msgstr "ปุ่มปิดเครื่อง"
 
-#: ../lib/sources/paneldelegate.py:261
+#: ../lib/sources/paneldelegate.py:270
 msgid "Screenshot button"
 msgstr "ปุ่มจับภาพหน้าจอ"
 
-#: ../lib/sources/paneldelegate.py:264
+#: ../lib/sources/paneldelegate.py:273
 msgid "Unknown"
 msgstr "ไม่ทราบ"
 
-#: ../lib/sources/paneldelegate.py:266
+#: ../lib/sources/paneldelegate.py:275
 msgid "Menu Bar"
 msgstr "แถบเมนู"
 
-#: ../lib/sources/paneldelegate.py:503
+#: ../lib/sources/paneldelegate.py:512
 msgid "Panel File"
 msgstr "แฟ้มพาเนล"
 
@@ -1066,10 +811,86 @@ msgstr "หัวข้อ metadata ไม่ถูกต้องใน '%s' : 
 msgid "Cannot add non-existent file '%s'"
 msgstr "ไม่สามารถเพิ่มแฟ้ม '%s' ที่ไม่มีอยู่ได้"
 
-#: ../lib/storage.py:568
+#: ../lib/storage.py:487
+#, python-format
+msgid "Couldn't unlink file '%s'"
+msgstr ""
+
+#: ../lib/storage.py:570
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "โพรไฟล์ %s ห้ามเขียน"
+
+#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
+#. do not change the way they are written.  The intended string is
+#. something like "invalid type for setting blah in /ldap/path/to/blah"
+#: ../lib/systemdb.py:67
+#, python-format
+msgid "invalid type for setting %(setting)s in %(np)s"
+msgstr "ชนิดสำหรับค่าตั้ง %(setting)s ไม่ถูกต้องใน %(np)s"
+
+#: ../lib/systemdb.py:112
+msgid "No database file provided"
+msgstr ""
+
+#: ../lib/systemdb.py:232
+#, fuzzy, python-format
+msgid "No LDAP search base specified for %s"
+msgstr "ไม่พบตำแหน่งเริ่มค้นหาสำหรับ %s"
+
+#: ../lib/systemdb.py:235
+#, fuzzy, python-format
+msgid "No LDAP query filter specified for %s"
+msgstr "ไม่มีตัวกรองคำสืบค้นสำหรับ %s"
+
+#: ../lib/systemdb.py:238
+#, fuzzy, python-format
+msgid "No LDAP result attribute specified for %s"
+msgstr "ไม่ได้ระบุแอตทริบิวต์ของผลลัพธ์สำหรับ %s"
+
+#: ../lib/systemdb.py:247
+#, fuzzy
+msgid "LDAP Scope must be one of: "
+msgstr "ขอบเขตต้องมีค่าเป็น sub, base หรือ one"
+
+#: ../lib/systemdb.py:268
+#, fuzzy
+msgid "multiple_result must be one of: "
+msgstr "multiple_result ต้องมีค่าเป็น first หรือ random"
+
+#: ../lib/systemdb.py:361
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "ไม่สามารถเปิด %s เพื่อเขียนได้"
+
+#: ../lib/systemdb.py:374
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "ไม่สามารถบันทึก UserDatabase ไปยัง %s"
+
+#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "แฟ้ม %s ไม่ใช่ค่าตั้งโพรไฟล์"
+
+#: ../lib/systemdb.py:404
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "ไม่สามารถเพิ่มโพรไฟล์ปริยาย %s เข้าในค่าตั้งได้"
+
+#: ../lib/systemdb.py:438
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "ไม่สามารถเพิ่มผู้ใช้ %s เข้าในค่าตั้งโพรไฟล์ได้"
+
+#: ../lib/systemdb.py:510
+msgid "Failed to get the user list"
+msgstr "ไม่สามารถอ่านรายการผู้ใช้ได้"
+
+#: ../lib/systemdb.py:560
+#, fuzzy
+msgid "Failed to get the group list"
+msgstr "ไม่สามารถอ่านรายการผู้ใช้ได้"
 
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
@@ -1089,67 +910,7 @@ msgstr "กำลังทดสอบ %s (%s)"
 msgid "Success!"
 msgstr "สำเร็จ!"
 
-#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
-#. do not change the way they are written.  The intended string is
-#. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/userdb.py:54
-#, python-format
-msgid "invalid type for setting %(setting)s in %(np)s"
-msgstr "ชนิดสำหรับค่าตั้ง %(setting)s ไม่ถูกต้องใน %(np)s"
-
-#: ../lib/userdb.py:215
-#, python-format
-msgid "No search base specified for %s"
-msgstr "ไม่พบตำแหน่งเริ่มค้นหาสำหรับ %s"
-
-#: ../lib/userdb.py:218
-#, python-format
-msgid "No query filter specified for %s"
-msgstr "ไม่มีตัวกรองคำสืบค้นสำหรับ %s"
-
-#: ../lib/userdb.py:221
-#, python-format
-msgid "No result attribute specified for %s"
-msgstr "ไม่ได้ระบุแอตทริบิวต์ของผลลัพธ์สำหรับ %s"
-
-#: ../lib/userdb.py:230
-msgid "Scope must be one of sub, base and one"
-msgstr "ขอบเขตต้องมีค่าเป็น sub, base หรือ one"
-
-#: ../lib/userdb.py:250
-msgid "multiple_result must be one of first and random"
-msgstr "multiple_result ต้องมีค่าเป็น first หรือ random"
-
-#: ../lib/userdb.py:342
-#, python-format
-msgid "Could not open %s for writing"
-msgstr "ไม่สามารถเปิด %s เพื่อเขียนได้"
-
-#: ../lib/userdb.py:355
-#, python-format
-msgid "Failed to save UserDatabase to %s"
-msgstr "ไม่สามารถบันทึก UserDatabase ไปยัง %s"
-
-#: ../lib/userdb.py:378 ../lib/userdb.py:413
-#, python-format
-msgid "File %s is not a profile configuration"
-msgstr "แฟ้ม %s ไม่ใช่ค่าตั้งโพรไฟล์"
-
-#: ../lib/userdb.py:385
-#, python-format
-msgid "Failed to add default profile %s to configuration"
-msgstr "ไม่สามารถเพิ่มโพรไฟล์ปริยาย %s เข้าในค่าตั้งได้"
-
-#: ../lib/userdb.py:421
-#, python-format
-msgid "Failed to add user %s to profile configuration"
-msgstr "ไม่สามารถเพิ่มผู้ใช้ %s เข้าในค่าตั้งโพรไฟล์ได้"
-
-#: ../lib/userdb.py:472
-msgid "Failed to get the user list"
-msgstr "ไม่สามารถอ่านรายการผู้ใช้ได้"
-
-#: ../lib/util.py:93
+#: ../lib/util.py:94
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
@@ -1157,12 +918,263 @@ msgstr ""
 "หาไดเรกทอรีบ้านไม่พบ: ไม่ได้กำหนดใน /etc/passwd และไม่ได้กำหนดค่า $HOME "
 "ในตัวแปรสภาพแวดล้อม"
 
-#: ../lib/util.py:106
+#: ../lib/util.py:110 ../lib/util.py:137
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr ""
 "หาชื่อผู้ใช้ไม่พบ: ไม่ได้กำหนดใน /etc/passwd และไม่ได้กำหนดค่า $USER ในตัวแปรสภาพแวดล้อม"
+
+#~ msgid "Remove personal information from documents when saving them"
+#~ msgstr "ลบข้อมูลส่วนตัวออกจากเอกสารขณะบันทึก"
+
+#~ msgid "Warn if macro tries to create a PDF"
+#~ msgstr "เตือนถ้าแมโครพยายามสร้าง PDF"
+
+#~ msgid "Warn if macro tries to print a document"
+#~ msgstr "เตือนถ้าแมโครพยายามพิมพ์เอกสาร"
+
+#~ msgid "Warn if macro tries to save a document"
+#~ msgstr "เตือนถ้าแมโครพยายามบันทึกเอกสาร"
+
+#~ msgid "Warn if macro tries to sign a document"
+#~ msgstr "เตือนถ้าแมโครพยายามเซ็นกำกับเอกสาร"
+
+#~ msgid "Recommend password when saving a document"
+#~ msgstr "แนะนำรหัสผ่านขณะบันทึกเอกสาร"
+
+#~ msgid "Enable auto-save"
+#~ msgstr "เปิดใช้การบันทึกอัตโนมัติ"
+
+#~ msgid "Printing should mark the document as modified"
+#~ msgstr "การพิมพ์ควรถือว่าทำให้เอกสารถูกเปลี่ยนแปลง"
+
+#~ msgid "Use system's file dialog"
+#~ msgstr "ใช้กล่องเลือกแฟ้มของระบบ"
+
+#~ msgid "Create backup copy on save"
+#~ msgstr "สร้างสำเนาแฟ้มสำรองขณะบันทึก"
+
+#~ msgid "Warn when saving non-OpenOffice.org formats"
+#~ msgstr "เตือนเมื่อมีการบันทึกเอกสารในรูปแบบที่ไม่ใช่ OpenOffice.org"
+
+#~ msgid "Use OpenGL"
+#~ msgstr "ใช้ OpenGL"
+
+#~ msgid "Use system font"
+#~ msgstr "ใช้แบบอักษรของระบบ"
+
+#~ msgid "Use anti-aliasing"
+#~ msgstr "ใช้ตัวอักษรแบบไร้รอยหยัก"
+
+#~ msgid "Disable UI customization"
+#~ msgstr "ห้ามปรับแต่ง UI"
+
+#~ msgid "Show insensitive menu items"
+#~ msgstr "แสดงรายการเมนูที่ไม่ตอบสนองด้วย"
+
+#~ msgid "Show font preview"
+#~ msgstr "แสดงตัวอย่างแบบอักษร"
+
+#~ msgid "Show font history"
+#~ msgstr "แสดงประวัติแบบอักษร"
+
+#~ msgid "Show icons in menus"
+#~ msgstr "แสดงไอคอนในเมนู"
+
+#~ msgid ""
+#~ "\n"
+#~ "5\n"
+#~ "10\n"
+#~ "25\n"
+#~ "50"
+#~ msgstr ""
+#~ "\n"
+#~ "5\n"
+#~ "10\n"
+#~ "25\n"
+#~ "50"
+
+#~ msgid ""
+#~ "\n"
+#~ "Automatic\n"
+#~ "Large\n"
+#~ "Small"
+#~ msgstr ""
+#~ "\n"
+#~ "อัตโนมัติ\n"
+#~ "ใหญ่\n"
+#~ "เล็ก"
+
+#~ msgid ""
+#~ "\n"
+#~ "OpenDocument (.odp)\n"
+#~ "PowerPoint 97+ (.ppt)\n"
+#~ "OpenOffice.org 1.1 (.sxi)"
+#~ msgstr ""
+#~ "\n"
+#~ "OpenDocument (.odp)\n"
+#~ "PowerPoint 97+ (.ppt)\n"
+#~ "OpenOffice.org 1.1 (.sxi)"
+
+#~ msgid ""
+#~ "\n"
+#~ "OpenDocument (.ods)\n"
+#~ "Excel 97+ (.xls)\n"
+#~ "OpenOffice.org 1.1 (.sxc)"
+#~ msgstr ""
+#~ "\n"
+#~ "OpenDocument (.ods)\n"
+#~ "Excel 97+ (.xls)\n"
+#~ "OpenOffice.org 1.1 (.sxc)"
+
+#~ msgid ""
+#~ "\n"
+#~ "OpenDocument (.odt)\n"
+#~ "Word 97+ (.doc)\n"
+#~ "OpenOffice.org 1.1 (.sxw)"
+#~ msgstr ""
+#~ "\n"
+#~ "OpenDocument (.odt)\n"
+#~ "Word 97+ (doc)\n"
+#~ "OpenOffice.org 1.1 (.sxw)"
+
+#~ msgid ""
+#~ "\n"
+#~ "Very High\n"
+#~ "High\n"
+#~ "Medium\n"
+#~ "Low"
+#~ msgstr ""
+#~ "\n"
+#~ "สูงมาก\n"
+#~ "สูง\n"
+#~ "ปานกลาง\n"
+#~ "ต่ำ"
+
+#~ msgid "Default format for presentations:"
+#~ msgstr "ฟอร์แมตปริยายสำหรับการนำเสนอ:"
+
+#~ msgid "Default format for spreadsheet:"
+#~ msgstr "ฟอร์แมตปริยายสำหรับตารางคำนวณ:"
+
+#~ msgid "Default format for word processor:"
+#~ msgstr "ฟอร์แมตปริยายสำหรับโปรแกรมประมวลคำ:"
+
+#~ msgid "Default icon size"
+#~ msgstr "ขนาดไอคอนปริยาย"
+
+#~ msgid "Load / Save"
+#~ msgstr "เปิด / บันทึก"
+
+#~ msgid "Macro Security Level:"
+#~ msgstr "ระดับการรักษาความปลอดภัยของแมโคร:"
+
+#~ msgid "Number of undo steps:"
+#~ msgstr "จำนวนขั้นการเรียกคืนคำสั่ง:"
+
+#~ msgid "OpenOffice.org"
+#~ msgstr "OpenOffice.org"
+
+#~ msgid "Security"
+#~ msgstr "การรักษาความปลอดภัย"
+
+#~ msgid "User Interface"
+#~ msgstr "ส่วนติดต่อผู้ใช้"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld second will be permanently "
+#~ "lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %ld seconds will be permanently "
+#~ "lost."
+#~ msgstr[0] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดใน %ld วินาทีที่ผ่านมาจะสูญหายอย่างถาวร"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last minute will be permanently lost."
+#~ msgstr "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดในนาทีที่ผ่านมาจะสูญหายอย่างถาวร"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last minute and %ld second will be "
+#~ "permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last minute and %ld seconds will be "
+#~ "permanently lost."
+#~ msgstr[0] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดในนาทีกับ %ld วินาทีที่ผ่านมาจะสูญหายอย่างถาวร"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %ld minute will be permanently "
+#~ "lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %ld minutes will be permanently "
+#~ "lost."
+#~ msgstr[0] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดใน %ld นาทีที่ผ่านมาจะสูญหายอย่างถาวร"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last hour and %d minute will be "
+#~ "permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last hour and %d minutes will be "
+#~ "permanently lost."
+#~ msgstr[0] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดในชั่วโมงกับ %d นาทีที่ผ่านมาจะสูญหายอย่างถาวร"
+
+#~ msgid ""
+#~ "If you don't save, changes from the last %d hour will be permanently lost."
+#~ msgid_plural ""
+#~ "If you don't save, changes from the last %d hours will be permanently "
+#~ "lost."
+#~ msgstr[0] "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดใน %d ชั่วโมงที่ผ่านมาจะสูญหายอย่างถาวร"
+
+#~ msgid "Preferences menu"
+#~ msgstr "เมนูปรับแต่ง"
+
+#~ msgid "Applet %s added to top panel"
+#~ msgstr "เพิ่มแอพเพล็ต %s ในพาเนลด้านบนแล้ว"
+
+#~ msgid "Applet %s added to bottom panel"
+#~ msgstr "เพิ่มแอพเพล็ต %s ในพาเนลด้านล่างแล้ว"
+
+#~ msgid "Applet %s added to left panel"
+#~ msgstr "เพิ่มแอพเพล็ต %s ในพาเนลด้านซ้ายแล้ว"
+
+#~ msgid "Applet %s added to right panel"
+#~ msgstr "เพิ่มแอพเพล็ต %s ในพาเนลด้านขวาแล้ว"
+
+#~ msgid "Applet %s removed from top panel"
+#~ msgstr "ลบแอพเพล็ต %s ออกจากพาเนลด้านบนแล้ว"
+
+#~ msgid "Applet %s removed from bottom panel"
+#~ msgstr "ลบแอพเพล็ต %s ออกจากพาเนลด้านล่างแล้ว"
+
+#~ msgid "Applet %s removed from left panel"
+#~ msgstr "ลบแอพเพล็ต %s ออกจากพาเนลด้านซ้ายแล้ว"
+
+#~ msgid "Applet %s removed from right panel"
+#~ msgstr "ลบแอพเพล็ต %s ออกจากพาเนลด้านขวาแล้ว"
+
+#~ msgid "%s added to top panel"
+#~ msgstr "เพิ่ม %s ในพาเนลด้านบนแล้ว"
+
+#~ msgid "%s added to bottom panel"
+#~ msgstr "เพิ่ม %s ในพาเนลด้านล่างแล้ว"
+
+#~ msgid "%s added to left panel"
+#~ msgstr "เพิ่ม %s ในพาเนลด้านซ้ายแล้ว"
+
+#~ msgid "%s added to right panel"
+#~ msgstr "เพิ่ม %s ในพาเนลด้านขวาแล้ว"
+
+#~ msgid "%s removed from top panel"
+#~ msgstr "ลบ %s ออกจากพาเนลด้านบนแล้ว"
+
+#~ msgid "%s removed from bottom panel"
+#~ msgstr "ลบ %s ออกจากพาเนลด้านล่างแล้ว"
+
+#~ msgid "%s removed from left panel"
+#~ msgstr "ลบ %s ออกจากพาเนลด้านซ้ายแล้ว"
+
+#~ msgid "%s removed from right panel"
+#~ msgstr "ลบ %s ออกจากพาเนลด้านขวาแล้ว"
 
 #~ msgid "Warn if macro prints"
 #~ msgstr "เตือนถ้าแมโครพิมพ์"
@@ -1204,15 +1216,3 @@ msgstr ""
 
 #~ msgid "Usage: %s [<profile-name>]\n"
 #~ msgstr "วิธีใช้: %s [<ชื่อโพรไฟล์>]\n"
-
-#~ msgid "Panel applet '%s' added"
-#~ msgstr "เพิ่มแอพเพล็ต '%s' แล้ว"
-
-#~ msgid "Panel applet '%s' removed"
-#~ msgstr "ลบแอพเพล็ต '%s' แล้ว"
-
-#~ msgid "Panel object '%s' added"
-#~ msgstr "เพิ่มวัตถุพาเนล '%s' แล้ว"
-
-#~ msgid "Panel object '%s' removed"
-#~ msgstr "ลบวัตถุพาเนล '%s' แล้ว"
