@@ -41,47 +41,6 @@ class SaveConfirmationAlert (gtk.MessageDialog):
                          _("Save changes to profile \"%s\" before closing?") % profile_name
                          + "</b>")
 
-        if seconds < 55:
-            secondary_msg = ngettext ("If you don't save, changes from the last %ld second "
-                                      "will be permanently lost.",
-                                      "If you don't save, changes from the last %ld seconds "
-                                      "will be permanently lost.",
-                                      seconds) % seconds
-        elif seconds < 75:
-            secondary_msg = _("If you don't save, changes from the last minute will be permanently lost.")
-            
-        elif seconds < 110:
-            seconds -= 60
-            secondary_msg = ngettext ("If you don't save, changes from the last minute and %ld "
-                                      "second will be permanently lost.",
-                                      "If you don't save, changes from the last minute and %ld "
-                                      "seconds will be permanently lost.",
-                                      seconds) % seconds
-        elif seconds < 3600:
-            minutes = seconds / 60
-            secondary_msg = ngettext ("If you don't save, changes from the last %ld minute "
-                                      "will be permanently lost.",
-                                      "If you don't save, changes from the last %ld minutes "
-                                      "will be permanently lost.",
-                                      minutes) % minutes
-        elif seconds < 7200:
-            seconds -= 3600;
-            minutes = seconds / 60;
-            if minutes < 5:
-                secondary_msg = _("If you don't save, changes from the last hour "
-                                  "will be permanently lost.")
-            else:
-                secondary_msg = ngettext ("If you don't save, changes from the last hour and %d "
-                                          "minute will be permanently lost.",
-                                          "If you don't save, changes from the last hour and %d "
-                                          "minutes will be permanently lost.",
-                                          minutes) % minutes
-        else:
-            hours = seconds / 3600;
-            secondary_msg = ngettext ("If you don't save, changes from the last %d hour "
-                                      "will be permanently lost.",
-                                      "If you don't save, changes from the last %d hours "
-                                      "will be permanently lost.",
-                                      hours) % hours
+        secondary_msg = _("If you don't save, all changes will be permanently lost.")
                                                             
         self.format_secondary_text (secondary_msg)
