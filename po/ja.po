@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-20 09:43-0600\n"
+"POT-Creation-Date: 2009-12-21 21:44-0600\n"
 "PO-Revision-Date: 2009-11-03 13:10+0900\n"
 "Last-Translator: Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
@@ -110,8 +110,7 @@ msgstr "GConf"
 msgid "Files"
 msgstr "ファイル"
 
-#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
-#: ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "パネル"
 
@@ -186,128 +185,6 @@ msgstr "グループ"
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
 msgstr "このプロファイルを使用する"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:100
-msgid "Click to make this setting not mandatory"
-msgstr "クリックすると、この設定を任意にします"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:102
-msgid "Click to make this setting mandatory"
-msgstr "クリックすると、この設定を必須にします"
-
-#: ../admin-tool/lockdown/maindialog.py:40
-msgid "General"
-msgstr "全般"
-
-#: ../admin-tool/lockdown/maindialog.py:42
-msgid "Epiphany Web Browser"
-msgstr "Epiphany ウェブ・エディタ"
-
-#: ../admin-tool/lockdown/maindialog.py:43
-msgid "GNOME Screensaver"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:53
-msgid "Disable _command line"
-msgstr "コマンドラインを入力できないようにする(_C)"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "Disable _printing"
-msgstr "印刷機能を使用不可にする(_P)"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable print _setup"
-msgstr "印刷設定を使用不可にする(_S)"
-
-#: ../admin-tool/lockdown/maindialog.py:56
-msgid "Disable save to _disk"
-msgstr "ディスクへ保存できないようにする(_D)"
-
-#: ../admin-tool/lockdown/maindialog.py:58
-msgid "_Lock down the panels"
-msgstr "パネル操作を利用不可にする(_L)"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable force _quit"
-msgstr "強制終了できないようにする(_Q)"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable log _out"
-msgstr "ログアウトできないようにする(_O)"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _quit"
-msgstr "終了できないようにする(_Q)"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _arbitrary URL"
-msgstr "URL を入力できないようにする(_A)"
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _bookmark editing"
-msgstr "ブックマークを編集できないようにする(_B)"
-
-#: ../admin-tool/lockdown/maindialog.py:65
-msgid "Disable _history"
-msgstr "履歴操作を使用不可にする(_H)"
-
-#: ../admin-tool/lockdown/maindialog.py:66
-msgid "Disable _javascript chrome"
-msgstr "JavaScript の処理を無効にする(_J)"
-
-#: ../admin-tool/lockdown/maindialog.py:67
-msgid "Disable _toolbar editing"
-msgstr "ツールバーを編集できないようにする(_T)"
-
-#: ../admin-tool/lockdown/maindialog.py:68
-#, fuzzy
-msgid "Force _fullscreen mode"
-msgstr "フルスクリーン表示できないようにする(_F)"
-
-#: ../admin-tool/lockdown/maindialog.py:69
-msgid "Hide _menubar"
-msgstr "メニューバーを隠す(_M)"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Disable lock _screen"
-msgstr "画面をロックできないようにする(_S)"
-
-#: ../admin-tool/lockdown/maindialog.py:72
-#, fuzzy
-msgid "_Lock on activation"
-msgstr "パネル操作を利用不可にする(_L)"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-#, fuzzy
-msgid "Allow log _out"
-msgstr "ログアウトできないようにする(_O)"
-
-#: ../admin-tool/lockdown/maindialog.py:74
-msgid "Allow user _switching"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:233
-#, python-format
-msgid "Could not display help document '%s'"
-msgstr ""
-
-#: ../admin-tool/lockdown/pessulus.ui.h:1
-msgid "Disable _unsafe protocols"
-msgstr "安全ではないプロトコルを無効にする(_U)"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:2
-#, fuzzy
-msgid "Disabled Applets"
-msgstr "<b>利用不可にするアプレット</b>"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:3
-msgid "Lockdown Editor"
-msgstr "ロックダウン・エディタ"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:4
-#, fuzzy
-msgid "Safe Protocols"
-msgstr "<b>安全なプロトコル</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -938,6 +815,89 @@ msgid ""
 msgstr ""
 "ユーザ名が見つかりません: /etc/passwd で設定されていないか環境変数 $USER が"
 "セットされていません"
+
+#~ msgid "Click to make this setting not mandatory"
+#~ msgstr "クリックすると、この設定を任意にします"
+
+#~ msgid "Click to make this setting mandatory"
+#~ msgstr "クリックすると、この設定を必須にします"
+
+#~ msgid "General"
+#~ msgstr "全般"
+
+#~ msgid "Epiphany Web Browser"
+#~ msgstr "Epiphany ウェブ・エディタ"
+
+#~ msgid "Disable _command line"
+#~ msgstr "コマンドラインを入力できないようにする(_C)"
+
+#~ msgid "Disable _printing"
+#~ msgstr "印刷機能を使用不可にする(_P)"
+
+#~ msgid "Disable print _setup"
+#~ msgstr "印刷設定を使用不可にする(_S)"
+
+#~ msgid "Disable save to _disk"
+#~ msgstr "ディスクへ保存できないようにする(_D)"
+
+#~ msgid "_Lock down the panels"
+#~ msgstr "パネル操作を利用不可にする(_L)"
+
+#~ msgid "Disable force _quit"
+#~ msgstr "強制終了できないようにする(_Q)"
+
+#~ msgid "Disable log _out"
+#~ msgstr "ログアウトできないようにする(_O)"
+
+#~ msgid "Disable _quit"
+#~ msgstr "終了できないようにする(_Q)"
+
+#~ msgid "Disable _arbitrary URL"
+#~ msgstr "URL を入力できないようにする(_A)"
+
+#~ msgid "Disable _bookmark editing"
+#~ msgstr "ブックマークを編集できないようにする(_B)"
+
+#~ msgid "Disable _history"
+#~ msgstr "履歴操作を使用不可にする(_H)"
+
+#~ msgid "Disable _javascript chrome"
+#~ msgstr "JavaScript の処理を無効にする(_J)"
+
+#~ msgid "Disable _toolbar editing"
+#~ msgstr "ツールバーを編集できないようにする(_T)"
+
+#, fuzzy
+#~ msgid "Force _fullscreen mode"
+#~ msgstr "フルスクリーン表示できないようにする(_F)"
+
+#~ msgid "Hide _menubar"
+#~ msgstr "メニューバーを隠す(_M)"
+
+#~ msgid "Disable lock _screen"
+#~ msgstr "画面をロックできないようにする(_S)"
+
+#, fuzzy
+#~ msgid "_Lock on activation"
+#~ msgstr "パネル操作を利用不可にする(_L)"
+
+#, fuzzy
+#~ msgid "Allow log _out"
+#~ msgstr "ログアウトできないようにする(_O)"
+
+#~ msgid "Disable _unsafe protocols"
+#~ msgstr "安全ではないプロトコルを無効にする(_U)"
+
+#, fuzzy
+#~ msgid "Disabled Applets"
+#~ msgstr "<b>利用不可にするアプレット</b>"
+
+#~ msgid "Lockdown Editor"
+#~ msgstr "ロックダウン・エディタ"
+
+#, fuzzy
+#~ msgid "Safe Protocols"
+#~ msgstr "<b>安全なプロトコル</b>"
 
 #~ msgid "Remove personal information from documents when saving them"
 #~ msgstr "保存時にドキュメントから個人情報を削除する"

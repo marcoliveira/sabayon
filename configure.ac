@@ -308,7 +308,6 @@ help/Makefile
 admin-tool/Makefile
 admin-tool/sabayon.console
 admin-tool/sabayon.desktop.in
-admin-tool/lockdown/Makefile
 po/Makefile.in
 ])
 

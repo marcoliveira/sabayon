@@ -22,7 +22,7 @@ import sessionwindow
 
 import debuglog
 import errors
-from sabayon.lockdown import lockdownapplier
+from Pessulus import lockdownappliergconf
 
 def dprint (fmt, *args):
     debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL, fmt % args)
@@ -34,7 +34,7 @@ class LockdownMonitor:
         self.handler = handler
         self.data = data
 
-class LockdownApplierSabayon (lockdownapplier.PessulusLockdownApplier):
+class LockdownApplierSabayon (lockdownappliergconf.PessulusLockdownApplierGconf):
     def __init__ (self, profile, changes_model):
         self.changes_model = changes_model
         self.source = profile.get_source ("GConf")

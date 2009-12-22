@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon 2.29.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-20 09:43-0600\n"
+"POT-Creation-Date: 2009-12-21 21:44-0600\n"
 "PO-Revision-Date: 2009-12-17 20:27+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian Bokmaal <i18n-nb@lister.ping.uio.no>\n"
@@ -108,8 +108,7 @@ msgstr "GConf"
 msgid "Files"
 msgstr "Filer"
 
-#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
-#: ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "Panel"
 
@@ -184,123 +183,6 @@ msgstr "Gruppe"
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
 msgstr "Bruk denne profilen"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:100
-msgid "Click to make this setting not mandatory"
-msgstr "Klikk for å gjøre denne innstillingen valgfri"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:102
-msgid "Click to make this setting mandatory"
-msgstr "Klikk for å gjøre denne innstillingen tvungen"
-
-#: ../admin-tool/lockdown/maindialog.py:40
-msgid "General"
-msgstr "Generelle"
-
-#: ../admin-tool/lockdown/maindialog.py:42
-msgid "Epiphany Web Browser"
-msgstr "Epiphany nettleser"
-
-#: ../admin-tool/lockdown/maindialog.py:43
-msgid "GNOME Screensaver"
-msgstr "GNOME skjermsparer"
-
-#: ../admin-tool/lockdown/maindialog.py:53
-msgid "Disable _command line"
-msgstr "Deaktiver _kommandolinjen"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "Disable _printing"
-msgstr "Deaktiver _utskrift"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable print _setup"
-msgstr "Deaktiver opp_sett av utskrift"
-
-#: ../admin-tool/lockdown/maindialog.py:56
-msgid "Disable save to _disk"
-msgstr "Deaktiver lagring til _disk"
-
-#: ../admin-tool/lockdown/maindialog.py:58
-msgid "_Lock down the panels"
-msgstr "_Lås ned panelene"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable force _quit"
-msgstr "Deaktiver _tvungen avslutting"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable log _out"
-msgstr "Deaktiver logg _ut"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _quit"
-msgstr "Deaktiver a_vslutt"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _arbitrary URL"
-msgstr "Deaktiver _tilfeldig URL"
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _bookmark editing"
-msgstr "Deaktiver redigering av _bokmerker"
-
-#: ../admin-tool/lockdown/maindialog.py:65
-msgid "Disable _history"
-msgstr "Deaktiver _historikk"
-
-#: ../admin-tool/lockdown/maindialog.py:66
-msgid "Disable _javascript chrome"
-msgstr "Deaktiver _javascript chrome"
-
-#: ../admin-tool/lockdown/maindialog.py:67
-msgid "Disable _toolbar editing"
-msgstr "Deaktiver redigering av verk_tøylinje"
-
-#: ../admin-tool/lockdown/maindialog.py:68
-msgid "Force _fullscreen mode"
-msgstr "Tvungen _fullskjermmodus"
-
-#: ../admin-tool/lockdown/maindialog.py:69
-msgid "Hide _menubar"
-msgstr "Skjul _menylinjen"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Disable lock _screen"
-msgstr "Deaktiver lås _skjerm"
-
-#: ../admin-tool/lockdown/maindialog.py:72
-msgid "_Lock on activation"
-msgstr "_Lås ved aktivering"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-msgid "Allow log _out"
-msgstr "Tillat _utlogging"
-
-#: ../admin-tool/lockdown/maindialog.py:74
-msgid "Allow user _switching"
-msgstr "Tillat bruker_bytte"
-
-#: ../admin-tool/lockdown/maindialog.py:233
-#, python-format
-msgid "Could not display help document '%s'"
-msgstr "Kunne ikke vise hjelpdokument «%s»"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:1
-msgid "Disable _unsafe protocols"
-msgstr "Deaktiver _utrygge protokoller"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:2
-msgid "Disabled Applets"
-msgstr "Deaktiverte panelprogrammer"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:3
-msgid "Lockdown Editor"
-msgstr "Rediger nedlåsing"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:4
-msgid "Safe Protocols"
-msgstr "Trygge protokoller"
 
 #.
 #. Translators: this string specifies how a profile
@@ -926,6 +808,93 @@ msgid ""
 msgstr ""
 "Kan ikke finne brukernavn: ikke satt i /etc/passwd og det finnes ingen verdi "
 "for $USER i miljøet"
+
+#~ msgid "Click to make this setting not mandatory"
+#~ msgstr "Klikk for å gjøre denne innstillingen valgfri"
+
+#~ msgid "Click to make this setting mandatory"
+#~ msgstr "Klikk for å gjøre denne innstillingen tvungen"
+
+#~ msgid "General"
+#~ msgstr "Generelle"
+
+#~ msgid "Epiphany Web Browser"
+#~ msgstr "Epiphany nettleser"
+
+#~ msgid "GNOME Screensaver"
+#~ msgstr "GNOME skjermsparer"
+
+#~ msgid "Disable _command line"
+#~ msgstr "Deaktiver _kommandolinjen"
+
+#~ msgid "Disable _printing"
+#~ msgstr "Deaktiver _utskrift"
+
+#~ msgid "Disable print _setup"
+#~ msgstr "Deaktiver opp_sett av utskrift"
+
+#~ msgid "Disable save to _disk"
+#~ msgstr "Deaktiver lagring til _disk"
+
+#~ msgid "_Lock down the panels"
+#~ msgstr "_Lås ned panelene"
+
+#~ msgid "Disable force _quit"
+#~ msgstr "Deaktiver _tvungen avslutting"
+
+#~ msgid "Disable log _out"
+#~ msgstr "Deaktiver logg _ut"
+
+#~ msgid "Disable _quit"
+#~ msgstr "Deaktiver a_vslutt"
+
+#~ msgid "Disable _arbitrary URL"
+#~ msgstr "Deaktiver _tilfeldig URL"
+
+#~ msgid "Disable _bookmark editing"
+#~ msgstr "Deaktiver redigering av _bokmerker"
+
+#~ msgid "Disable _history"
+#~ msgstr "Deaktiver _historikk"
+
+#~ msgid "Disable _javascript chrome"
+#~ msgstr "Deaktiver _javascript chrome"
+
+#~ msgid "Disable _toolbar editing"
+#~ msgstr "Deaktiver redigering av verk_tøylinje"
+
+#~ msgid "Force _fullscreen mode"
+#~ msgstr "Tvungen _fullskjermmodus"
+
+#~ msgid "Hide _menubar"
+#~ msgstr "Skjul _menylinjen"
+
+#~ msgid "Disable lock _screen"
+#~ msgstr "Deaktiver lås _skjerm"
+
+#~ msgid "_Lock on activation"
+#~ msgstr "_Lås ved aktivering"
+
+#~ msgid "Allow log _out"
+#~ msgstr "Tillat _utlogging"
+
+#~ msgid "Allow user _switching"
+#~ msgstr "Tillat bruker_bytte"
+
+#~ msgid "Could not display help document '%s'"
+#~ msgstr "Kunne ikke vise hjelpdokument «%s»"
+
+#~ msgid "Disable _unsafe protocols"
+#~ msgstr "Deaktiver _utrygge protokoller"
+
+#~ msgid "Disabled Applets"
+#~ msgstr "Deaktiverte panelprogrammer"
+
+#~ msgid "Lockdown Editor"
+#~ msgstr "Rediger nedlåsing"
+
+#~ msgid "Safe Protocols"
+#~ msgstr "Trygge protokoller"
 
 #~ msgid ""
 #~ "If you don't save, changes from the last %ld second will be permanently "

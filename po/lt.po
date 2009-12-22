@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-20 09:43-0600\n"
+"POT-Creation-Date: 2009-12-21 21:44-0600\n"
 "PO-Revision-Date: 2009-09-21 21:35+0200\n"
 "Last-Translator: Rimas Kudelis <rq@akl.lt>\n"
 "Language-Team: Lithuanian <gnome-lt@lists.akl.lt>\n"
@@ -110,8 +110,7 @@ msgstr "GConf"
 msgid "Files"
 msgstr "Failai"
 
-#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
-#: ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "Skydelis"
 
@@ -186,128 +185,6 @@ msgstr ""
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
 msgstr "Naudoti šį profilį"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:100
-msgid "Click to make this setting not mandatory"
-msgstr "Spragtelėkite norėdami padaryti šį nustatymą neprivalomu"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:102
-msgid "Click to make this setting mandatory"
-msgstr "Spragtelėkite norėdami padaryti šį nustatymą privalomu"
-
-#: ../admin-tool/lockdown/maindialog.py:40
-msgid "General"
-msgstr "Bendra"
-
-#: ../admin-tool/lockdown/maindialog.py:42
-msgid "Epiphany Web Browser"
-msgstr "Epiphany web naršyklė"
-
-#: ../admin-tool/lockdown/maindialog.py:43
-msgid "GNOME Screensaver"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:53
-msgid "Disable _command line"
-msgstr "Išjungti _komandų eilutę"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "Disable _printing"
-msgstr "Išjungti s_pausdinimą"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable print _setup"
-msgstr "Išjungti spausdinimo _nustatymus"
-
-#: ../admin-tool/lockdown/maindialog.py:56
-msgid "Disable save to _disk"
-msgstr "Išjungti saugojimą į _diską"
-
-#: ../admin-tool/lockdown/maindialog.py:58
-msgid "_Lock down the panels"
-msgstr "_Užrakinti skydelius"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable force _quit"
-msgstr "Išjungti priverstinį _užvėrimą"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable log _out"
-msgstr "Išjungti _atsijungimą"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _quit"
-msgstr "Išjungti _išėjimą"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _arbitrary URL"
-msgstr "Išjungti _atsitiktinius URL"
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _bookmark editing"
-msgstr "Išjungti ž_ymėlių redagavimą"
-
-#: ../admin-tool/lockdown/maindialog.py:65
-msgid "Disable _history"
-msgstr "Išjungti ist_oriją"
-
-#: ../admin-tool/lockdown/maindialog.py:66
-msgid "Disable _javascript chrome"
-msgstr "Išjungti _javascript chromą"
-
-#: ../admin-tool/lockdown/maindialog.py:67
-msgid "Disable _toolbar editing"
-msgstr "Išjungti į_rankių juostų redagavimą"
-
-#: ../admin-tool/lockdown/maindialog.py:68
-#, fuzzy
-msgid "Force _fullscreen mode"
-msgstr "_Visame ekrane"
-
-#: ../admin-tool/lockdown/maindialog.py:69
-msgid "Hide _menubar"
-msgstr "Paslėpti _meniu juostą"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Disable lock _screen"
-msgstr "Išjungti _ekrano užrakinimą"
-
-#: ../admin-tool/lockdown/maindialog.py:72
-#, fuzzy
-msgid "_Lock on activation"
-msgstr "_Užrakinti skydelius"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-#, fuzzy
-msgid "Allow log _out"
-msgstr "Išjungti _atsijungimą"
-
-#: ../admin-tool/lockdown/maindialog.py:74
-msgid "Allow user _switching"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:233
-#, python-format
-msgid "Could not display help document '%s'"
-msgstr ""
-
-#: ../admin-tool/lockdown/pessulus.ui.h:1
-msgid "Disable _unsafe protocols"
-msgstr "Išjungti _nesaugius protokolus"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:2
-#, fuzzy
-msgid "Disabled Applets"
-msgstr "<b>Išjungti įtaisai</b>"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:3
-msgid "Lockdown Editor"
-msgstr "Užrakinimo redaktorius"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:4
-#, fuzzy
-msgid "Safe Protocols"
-msgstr "<b>Saugūs protokolai</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -938,6 +815,89 @@ msgid ""
 msgstr ""
 "Nepavyko rasti naudotojo vardo: nenurodytas nei /etc/passwd, nei aplinkos "
 "kintamąjame $USER"
+
+#~ msgid "Click to make this setting not mandatory"
+#~ msgstr "Spragtelėkite norėdami padaryti šį nustatymą neprivalomu"
+
+#~ msgid "Click to make this setting mandatory"
+#~ msgstr "Spragtelėkite norėdami padaryti šį nustatymą privalomu"
+
+#~ msgid "General"
+#~ msgstr "Bendra"
+
+#~ msgid "Epiphany Web Browser"
+#~ msgstr "Epiphany web naršyklė"
+
+#~ msgid "Disable _command line"
+#~ msgstr "Išjungti _komandų eilutę"
+
+#~ msgid "Disable _printing"
+#~ msgstr "Išjungti s_pausdinimą"
+
+#~ msgid "Disable print _setup"
+#~ msgstr "Išjungti spausdinimo _nustatymus"
+
+#~ msgid "Disable save to _disk"
+#~ msgstr "Išjungti saugojimą į _diską"
+
+#~ msgid "_Lock down the panels"
+#~ msgstr "_Užrakinti skydelius"
+
+#~ msgid "Disable force _quit"
+#~ msgstr "Išjungti priverstinį _užvėrimą"
+
+#~ msgid "Disable log _out"
+#~ msgstr "Išjungti _atsijungimą"
+
+#~ msgid "Disable _quit"
+#~ msgstr "Išjungti _išėjimą"
+
+#~ msgid "Disable _arbitrary URL"
+#~ msgstr "Išjungti _atsitiktinius URL"
+
+#~ msgid "Disable _bookmark editing"
+#~ msgstr "Išjungti ž_ymėlių redagavimą"
+
+#~ msgid "Disable _history"
+#~ msgstr "Išjungti ist_oriją"
+
+#~ msgid "Disable _javascript chrome"
+#~ msgstr "Išjungti _javascript chromą"
+
+#~ msgid "Disable _toolbar editing"
+#~ msgstr "Išjungti į_rankių juostų redagavimą"
+
+#, fuzzy
+#~ msgid "Force _fullscreen mode"
+#~ msgstr "_Visame ekrane"
+
+#~ msgid "Hide _menubar"
+#~ msgstr "Paslėpti _meniu juostą"
+
+#~ msgid "Disable lock _screen"
+#~ msgstr "Išjungti _ekrano užrakinimą"
+
+#, fuzzy
+#~ msgid "_Lock on activation"
+#~ msgstr "_Užrakinti skydelius"
+
+#, fuzzy
+#~ msgid "Allow log _out"
+#~ msgstr "Išjungti _atsijungimą"
+
+#~ msgid "Disable _unsafe protocols"
+#~ msgstr "Išjungti _nesaugius protokolus"
+
+#, fuzzy
+#~ msgid "Disabled Applets"
+#~ msgstr "<b>Išjungti įtaisai</b>"
+
+#~ msgid "Lockdown Editor"
+#~ msgstr "Užrakinimo redaktorius"
+
+#, fuzzy
+#~ msgid "Safe Protocols"
+#~ msgstr "<b>Saugūs protokolai</b>"
 
 #~ msgid "Remove personal information from documents when saving them"
 #~ msgstr "Pašalinti asmeninę informaciją iš dokumentų juos įrašant"

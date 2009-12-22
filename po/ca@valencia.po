@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-20 09:43-0600\n"
+"POT-Creation-Date: 2009-12-21 21:44-0600\n"
 "PO-Revision-Date: 2009-10-04 09:23+0200\n"
 "Last-Translator: Carles Ferrando Garcia <carles.ferrando@gmail.com>\n"
 "Language-Team: Catalan (Valencià) <tradgnome@softcatala.org>\n"
@@ -109,8 +109,7 @@ msgstr "GConf"
 msgid "Files"
 msgstr "Fitxers"
 
-#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
-#: ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "Quadre"
 
@@ -185,130 +184,6 @@ msgstr ""
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
 msgstr "Utilitza este perfil"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:100
-msgid "Click to make this setting not mandatory"
-msgstr "Feu clic perquè este paràmetre no siga obligatori"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:102
-msgid "Click to make this setting mandatory"
-msgstr "Feu clic perquè este paràmetre siga obligatori"
-
-#: ../admin-tool/lockdown/maindialog.py:40
-msgid "General"
-msgstr "General"
-
-#: ../admin-tool/lockdown/maindialog.py:42
-msgid "Epiphany Web Browser"
-msgstr "Navegador web Epiphany"
-
-#: ../admin-tool/lockdown/maindialog.py:43
-msgid "GNOME Screensaver"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:53
-msgid "Disable _command line"
-msgstr "Inhabilita la línia d'_ordes"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "Disable _printing"
-msgstr "Inhabilita la im_pressió"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable print _setup"
-msgstr "Inhabilita la _configuració de la impressió"
-
-#: ../admin-tool/lockdown/maindialog.py:56
-msgid "Disable save to _disk"
-msgstr "Inhabilita alçar al _disc"
-
-# FIXME
-#: ../admin-tool/lockdown/maindialog.py:58
-msgid "_Lock down the panels"
-msgstr "_Fixa els quadres"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable force _quit"
-msgstr "Inhabilita f_orçar la eixida"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable log _out"
-msgstr "Inhabilita poder ei_xir"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _quit"
-msgstr "Inhabilita poder ei_xir dels programes"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _arbitrary URL"
-msgstr "Inhabilita URL _arbitraris"
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _bookmark editing"
-msgstr "Inhabilita l'edició d'adreces d'_interés"
-
-#: ../admin-tool/lockdown/maindialog.py:65
-msgid "Disable _history"
-msgstr "Inhabilita l'_historial"
-
-#: ../admin-tool/lockdown/maindialog.py:66
-msgid "Disable _javascript chrome"
-msgstr "Inhabilita el _javascript del chrome"
-
-#: ../admin-tool/lockdown/maindialog.py:67
-msgid "Disable _toolbar editing"
-msgstr "Inhabili_ta l'edició de la barra d'eines"
-
-#: ../admin-tool/lockdown/maindialog.py:68
-#, fuzzy
-msgid "Force _fullscreen mode"
-msgstr "_Pantalla completa"
-
-#: ../admin-tool/lockdown/maindialog.py:69
-msgid "Hide _menubar"
-msgstr "Oculta la barra de _menú"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Disable lock _screen"
-msgstr "Inhabilita _blocar la pantalla"
-
-# FIXME
-#: ../admin-tool/lockdown/maindialog.py:72
-#, fuzzy
-msgid "_Lock on activation"
-msgstr "_Fixa els quadres"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-#, fuzzy
-msgid "Allow log _out"
-msgstr "Inhabilita poder ei_xir"
-
-#: ../admin-tool/lockdown/maindialog.py:74
-msgid "Allow user _switching"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:233
-#, python-format
-msgid "Could not display help document '%s'"
-msgstr ""
-
-#: ../admin-tool/lockdown/pessulus.ui.h:1
-msgid "Disable _unsafe protocols"
-msgstr "Inhabilita els protocols inseg_urs"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:2
-#, fuzzy
-msgid "Disabled Applets"
-msgstr "<b>Miniaplicacions inhabilitades</b>"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:3
-msgid "Lockdown Editor"
-msgstr "Editor de restriccions"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:4
-#, fuzzy
-msgid "Safe Protocols"
-msgstr "<b>Protocols segurs</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -940,6 +815,91 @@ msgid ""
 msgstr ""
 "No s'ha pogut trobar el nom d'usuari: no està especificat a /etc/passwd, i "
 "la variable d'entorn $USER no conté cap valor"
+
+#~ msgid "Click to make this setting not mandatory"
+#~ msgstr "Feu clic perquè este paràmetre no siga obligatori"
+
+#~ msgid "Click to make this setting mandatory"
+#~ msgstr "Feu clic perquè este paràmetre siga obligatori"
+
+#~ msgid "General"
+#~ msgstr "General"
+
+#~ msgid "Epiphany Web Browser"
+#~ msgstr "Navegador web Epiphany"
+
+#~ msgid "Disable _command line"
+#~ msgstr "Inhabilita la línia d'_ordes"
+
+#~ msgid "Disable _printing"
+#~ msgstr "Inhabilita la im_pressió"
+
+#~ msgid "Disable print _setup"
+#~ msgstr "Inhabilita la _configuració de la impressió"
+
+#~ msgid "Disable save to _disk"
+#~ msgstr "Inhabilita alçar al _disc"
+
+# FIXME
+#~ msgid "_Lock down the panels"
+#~ msgstr "_Fixa els quadres"
+
+#~ msgid "Disable force _quit"
+#~ msgstr "Inhabilita f_orçar la eixida"
+
+#~ msgid "Disable log _out"
+#~ msgstr "Inhabilita poder ei_xir"
+
+#~ msgid "Disable _quit"
+#~ msgstr "Inhabilita poder ei_xir dels programes"
+
+#~ msgid "Disable _arbitrary URL"
+#~ msgstr "Inhabilita URL _arbitraris"
+
+#~ msgid "Disable _bookmark editing"
+#~ msgstr "Inhabilita l'edició d'adreces d'_interés"
+
+#~ msgid "Disable _history"
+#~ msgstr "Inhabilita l'_historial"
+
+#~ msgid "Disable _javascript chrome"
+#~ msgstr "Inhabilita el _javascript del chrome"
+
+#~ msgid "Disable _toolbar editing"
+#~ msgstr "Inhabili_ta l'edició de la barra d'eines"
+
+#, fuzzy
+#~ msgid "Force _fullscreen mode"
+#~ msgstr "_Pantalla completa"
+
+#~ msgid "Hide _menubar"
+#~ msgstr "Oculta la barra de _menú"
+
+#~ msgid "Disable lock _screen"
+#~ msgstr "Inhabilita _blocar la pantalla"
+
+# FIXME
+#, fuzzy
+#~ msgid "_Lock on activation"
+#~ msgstr "_Fixa els quadres"
+
+#, fuzzy
+#~ msgid "Allow log _out"
+#~ msgstr "Inhabilita poder ei_xir"
+
+#~ msgid "Disable _unsafe protocols"
+#~ msgstr "Inhabilita els protocols inseg_urs"
+
+#, fuzzy
+#~ msgid "Disabled Applets"
+#~ msgstr "<b>Miniaplicacions inhabilitades</b>"
+
+#~ msgid "Lockdown Editor"
+#~ msgstr "Editor de restriccions"
+
+#, fuzzy
+#~ msgid "Safe Protocols"
+#~ msgstr "<b>Protocols segurs</b>"
 
 #~ msgid "Remove personal information from documents when saving them"
 #~ msgstr "Suprimeix la informació personal dels documents en alçar-los"

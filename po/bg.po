@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-20 09:43-0600\n"
+"POT-Creation-Date: 2009-12-21 21:44-0600\n"
 "PO-Revision-Date: 2009-08-13 08:06+0300\n"
 "Last-Translator: Alexander Shopov <ash@contact.bg>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
@@ -115,8 +115,7 @@ msgstr "GConf"
 msgid "Files"
 msgstr "Файлове"
 
-#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
-#: ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "Панел"
 
@@ -191,128 +190,6 @@ msgstr ""
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
 msgstr "Използване на този профил"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:100
-msgid "Click to make this setting not mandatory"
-msgstr "Натиснете, за да направите настройката незадължителна"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:102
-msgid "Click to make this setting mandatory"
-msgstr "Натиснете, за да направите настройката задължителна"
-
-#: ../admin-tool/lockdown/maindialog.py:40
-msgid "General"
-msgstr "Общи"
-
-#: ../admin-tool/lockdown/maindialog.py:42
-msgid "Epiphany Web Browser"
-msgstr "Уеб браузър — Epiphany"
-
-#: ../admin-tool/lockdown/maindialog.py:43
-msgid "GNOME Screensaver"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:53
-msgid "Disable _command line"
-msgstr "Забраняване на _командния ред"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "Disable _printing"
-msgstr "Забраняване на _печата"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable print _setup"
-msgstr "Забраняване на _настройването на печата"
-
-#: ../admin-tool/lockdown/maindialog.py:56
-msgid "Disable save to _disk"
-msgstr "Забраняване на _запазването върху носител"
-
-#: ../admin-tool/lockdown/maindialog.py:58
-msgid "_Lock down the panels"
-msgstr "Закл_ючване на панелите"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable force _quit"
-msgstr "Забраняване на прину_дителното спиране"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable log _out"
-msgstr "Забраняване на _изхода"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _quit"
-msgstr "Забраняване на _спирането"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _arbitrary URL"
-msgstr "Забраняване на п_роизволен адрес"
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _bookmark editing"
-msgstr "Забраняване на редактирането на _отметки"
-
-#: ../admin-tool/lockdown/maindialog.py:65
-msgid "Disable _history"
-msgstr "Забраняване на _историята"
-
-#: ../admin-tool/lockdown/maindialog.py:66
-msgid "Disable _javascript chrome"
-msgstr "Забраняване на _javascript за chrome"
-
-#: ../admin-tool/lockdown/maindialog.py:67
-msgid "Disable _toolbar editing"
-msgstr "Забраняване на редактирането на _лентите с инструменти"
-
-#: ../admin-tool/lockdown/maindialog.py:68
-#, fuzzy
-msgid "Force _fullscreen mode"
-msgstr "На _цял екран"
-
-#: ../admin-tool/lockdown/maindialog.py:69
-msgid "Hide _menubar"
-msgstr "Скриване на лентата с _менюта"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Disable lock _screen"
-msgstr "Забраняване на заключването на _екрана"
-
-#: ../admin-tool/lockdown/maindialog.py:72
-#, fuzzy
-msgid "_Lock on activation"
-msgstr "Закл_ючване на панелите"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-#, fuzzy
-msgid "Allow log _out"
-msgstr "Забраняване на _изхода"
-
-#: ../admin-tool/lockdown/maindialog.py:74
-msgid "Allow user _switching"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:233
-#, python-format
-msgid "Could not display help document '%s'"
-msgstr ""
-
-#: ../admin-tool/lockdown/pessulus.ui.h:1
-msgid "Disable _unsafe protocols"
-msgstr "Изключване на _опасните протоколи"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:2
-#, fuzzy
-msgid "Disabled Applets"
-msgstr "<b>Изключени аплети</b>"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:3
-msgid "Lockdown Editor"
-msgstr "Редактор на забраните"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:4
-#, fuzzy
-msgid "Safe Protocols"
-msgstr "<b>Безопасни протоколи</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -951,6 +828,89 @@ msgid ""
 msgstr ""
 "Не може да се открие името на потребителя: не е зададено в /etc/passwd и "
 "променливата $USER, ако съществува, е без стойност"
+
+#~ msgid "Click to make this setting not mandatory"
+#~ msgstr "Натиснете, за да направите настройката незадължителна"
+
+#~ msgid "Click to make this setting mandatory"
+#~ msgstr "Натиснете, за да направите настройката задължителна"
+
+#~ msgid "General"
+#~ msgstr "Общи"
+
+#~ msgid "Epiphany Web Browser"
+#~ msgstr "Уеб браузър — Epiphany"
+
+#~ msgid "Disable _command line"
+#~ msgstr "Забраняване на _командния ред"
+
+#~ msgid "Disable _printing"
+#~ msgstr "Забраняване на _печата"
+
+#~ msgid "Disable print _setup"
+#~ msgstr "Забраняване на _настройването на печата"
+
+#~ msgid "Disable save to _disk"
+#~ msgstr "Забраняване на _запазването върху носител"
+
+#~ msgid "_Lock down the panels"
+#~ msgstr "Закл_ючване на панелите"
+
+#~ msgid "Disable force _quit"
+#~ msgstr "Забраняване на прину_дителното спиране"
+
+#~ msgid "Disable log _out"
+#~ msgstr "Забраняване на _изхода"
+
+#~ msgid "Disable _quit"
+#~ msgstr "Забраняване на _спирането"
+
+#~ msgid "Disable _arbitrary URL"
+#~ msgstr "Забраняване на п_роизволен адрес"
+
+#~ msgid "Disable _bookmark editing"
+#~ msgstr "Забраняване на редактирането на _отметки"
+
+#~ msgid "Disable _history"
+#~ msgstr "Забраняване на _историята"
+
+#~ msgid "Disable _javascript chrome"
+#~ msgstr "Забраняване на _javascript за chrome"
+
+#~ msgid "Disable _toolbar editing"
+#~ msgstr "Забраняване на редактирането на _лентите с инструменти"
+
+#, fuzzy
+#~ msgid "Force _fullscreen mode"
+#~ msgstr "На _цял екран"
+
+#~ msgid "Hide _menubar"
+#~ msgstr "Скриване на лентата с _менюта"
+
+#~ msgid "Disable lock _screen"
+#~ msgstr "Забраняване на заключването на _екрана"
+
+#, fuzzy
+#~ msgid "_Lock on activation"
+#~ msgstr "Закл_ючване на панелите"
+
+#, fuzzy
+#~ msgid "Allow log _out"
+#~ msgstr "Забраняване на _изхода"
+
+#~ msgid "Disable _unsafe protocols"
+#~ msgstr "Изключване на _опасните протоколи"
+
+#, fuzzy
+#~ msgid "Disabled Applets"
+#~ msgstr "<b>Изключени аплети</b>"
+
+#~ msgid "Lockdown Editor"
+#~ msgstr "Редактор на забраните"
+
+#, fuzzy
+#~ msgid "Safe Protocols"
+#~ msgstr "<b>Безопасни протоколи</b>"
 
 #~ msgid "Remove personal information from documents when saving them"
 #~ msgstr "Махане на личната информация от документите при запазване"

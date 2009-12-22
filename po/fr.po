@@ -11,9 +11,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon HEAD\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-12-20 05:50+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-12-21 21:44-0600\n"
 "PO-Revision-Date: 2009-12-21 18:16+0100\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
@@ -118,8 +117,7 @@ msgstr "GConf"
 msgid "Files"
 msgstr "Fichiers"
 
-#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
-#: ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "Tableau de bord"
 
@@ -194,123 +192,6 @@ msgstr "Groupe"
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
 msgstr "Utiliser ce profil"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:100
-msgid "Click to make this setting not mandatory"
-msgstr "Cliquez pour rendre ce paramètre non-obligatoire"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:102
-msgid "Click to make this setting mandatory"
-msgstr "Cliquez pour rendre ce paramètre obligatoire"
-
-#: ../admin-tool/lockdown/maindialog.py:40
-msgid "General"
-msgstr "Général"
-
-#: ../admin-tool/lockdown/maindialog.py:42
-msgid "Epiphany Web Browser"
-msgstr "Navigateur Web Epiphany"
-
-#: ../admin-tool/lockdown/maindialog.py:43
-msgid "GNOME Screensaver"
-msgstr "Économiseur d'écran GNOME"
-
-#: ../admin-tool/lockdown/maindialog.py:53
-msgid "Disable _command line"
-msgstr "Désactiver la ligne de _commande"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "Disable _printing"
-msgstr "Désactiver l'im_pression"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable print _setup"
-msgstr "Dé_sactiver la configuration de l'impression"
-
-#: ../admin-tool/lockdown/maindialog.py:56
-msgid "Disable save to _disk"
-msgstr "Désactiver l'enregistrement sur le _disque"
-
-#: ../admin-tool/lockdown/maindialog.py:58
-msgid "_Lock down the panels"
-msgstr "_Verrouiller les tableaux de bord"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable force _quit"
-msgstr "Désactiver forcer à _quitter"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable log _out"
-msgstr "Désactiver la fermeture de sessi_on"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _quit"
-msgstr "Désactiver _quitter"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _arbitrary URL"
-msgstr "Désactiver les URLs _arbitraires"
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _bookmark editing"
-msgstr "Désactiver l'édition des _signets"
-
-#: ../admin-tool/lockdown/maindialog.py:65
-msgid "Disable _history"
-msgstr "Désactiver l'_historique"
-
-#: ../admin-tool/lockdown/maindialog.py:66
-msgid "Disable _javascript chrome"
-msgstr "Désactiver le chrome _JavaScript"
-
-#: ../admin-tool/lockdown/maindialog.py:67
-msgid "Disable _toolbar editing"
-msgstr "Désactiver la modification de la barre d'ou_tils"
-
-#: ../admin-tool/lockdown/maindialog.py:68
-msgid "Force _fullscreen mode"
-msgstr "Forcer le mode p_lein écran"
-
-#: ../admin-tool/lockdown/maindialog.py:69
-msgid "Hide _menubar"
-msgstr "Masquer la _barre de menus"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Disable lock _screen"
-msgstr "Dé_sactiver le verrouillage de l'écran"
-
-#: ../admin-tool/lockdown/maindialog.py:72
-msgid "_Lock on activation"
-msgstr "_Verrouiller lors de l'activation"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-msgid "Allow log _out"
-msgstr "Autoriser la _clôture de session"
-
-#: ../admin-tool/lockdown/maindialog.py:74
-msgid "Allow user _switching"
-msgstr "Autoriser le changement d'_utilisateur"
-
-#: ../admin-tool/lockdown/maindialog.py:233
-#, python-format
-msgid "Could not display help document '%s'"
-msgstr "Impossible d'afficher le document d'aide « %s »"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:1
-msgid "Disable _unsafe protocols"
-msgstr "Désactiver les protocoles non-sécurisés"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:2
-msgid "Disabled Applets"
-msgstr "Applets désactivées"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:3
-msgid "Lockdown Editor"
-msgstr "Éditeur de verrouillage"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:4
-msgid "Safe Protocols"
-msgstr "Protocoles sécurisés"
 
 #.
 #. Translators: this string specifies how a profile
@@ -944,3 +825,90 @@ msgid ""
 msgstr ""
 "Impossible de localiser le nom de l'utilisateur : non défini dans /etc/"
 "passwd et la variable d'environnement $USER n'est pas définie"
+
+#~ msgid "Click to make this setting not mandatory"
+#~ msgstr "Cliquez pour rendre ce paramètre non-obligatoire"
+
+#~ msgid "Click to make this setting mandatory"
+#~ msgstr "Cliquez pour rendre ce paramètre obligatoire"
+
+#~ msgid "General"
+#~ msgstr "Général"
+
+#~ msgid "Epiphany Web Browser"
+#~ msgstr "Navigateur Web Epiphany"
+
+#~ msgid "GNOME Screensaver"
+#~ msgstr "Économiseur d'écran GNOME"
+
+#~ msgid "Disable _command line"
+#~ msgstr "Désactiver la ligne de _commande"
+
+#~ msgid "Disable _printing"
+#~ msgstr "Désactiver l'im_pression"
+
+#~ msgid "Disable print _setup"
+#~ msgstr "Dé_sactiver la configuration de l'impression"
+
+#~ msgid "Disable save to _disk"
+#~ msgstr "Désactiver l'enregistrement sur le _disque"
+
+#~ msgid "_Lock down the panels"
+#~ msgstr "_Verrouiller les tableaux de bord"
+
+#~ msgid "Disable force _quit"
+#~ msgstr "Désactiver forcer à _quitter"
+
+#~ msgid "Disable log _out"
+#~ msgstr "Désactiver la fermeture de sessi_on"
+
+#~ msgid "Disable _quit"
+#~ msgstr "Désactiver _quitter"
+
+#~ msgid "Disable _arbitrary URL"
+#~ msgstr "Désactiver les URLs _arbitraires"
+
+#~ msgid "Disable _bookmark editing"
+#~ msgstr "Désactiver l'édition des _signets"
+
+#~ msgid "Disable _history"
+#~ msgstr "Désactiver l'_historique"
+
+#~ msgid "Disable _javascript chrome"
+#~ msgstr "Désactiver le chrome _JavaScript"
+
+#~ msgid "Disable _toolbar editing"
+#~ msgstr "Désactiver la modification de la barre d'ou_tils"
+
+#~ msgid "Force _fullscreen mode"
+#~ msgstr "Forcer le mode p_lein écran"
+
+#~ msgid "Hide _menubar"
+#~ msgstr "Masquer la _barre de menus"
+
+#~ msgid "Disable lock _screen"
+#~ msgstr "Dé_sactiver le verrouillage de l'écran"
+
+#~ msgid "_Lock on activation"
+#~ msgstr "_Verrouiller lors de l'activation"
+
+#~ msgid "Allow log _out"
+#~ msgstr "Autoriser la _clôture de session"
+
+#~ msgid "Allow user _switching"
+#~ msgstr "Autoriser le changement d'_utilisateur"
+
+#~ msgid "Could not display help document '%s'"
+#~ msgstr "Impossible d'afficher le document d'aide « %s »"
+
+#~ msgid "Disable _unsafe protocols"
+#~ msgstr "Désactiver les protocoles non-sécurisés"
+
+#~ msgid "Disabled Applets"
+#~ msgstr "Applets désactivées"
+
+#~ msgid "Lockdown Editor"
+#~ msgstr "Éditeur de verrouillage"
+
+#~ msgid "Safe Protocols"
+#~ msgstr "Protocoles sécurisés"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-20 09:43-0600\n"
+"POT-Creation-Date: 2009-12-21 21:44-0600\n"
 "PO-Revision-Date: 2009-12-20 16:16+0100\n"
 "Last-Translator: Nils-Christoph Fiedler <fiedler@medienkompanie.de>\n"
 "Language-Team: Low German <nds-lowgerman@lists.sourceforge.net>\n"
@@ -106,8 +106,7 @@ msgstr "GConf"
 msgid "Files"
 msgstr "Dateien"
 
-#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
-#: ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "Balken"
 
@@ -182,127 +181,6 @@ msgstr "Grupp"
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
 msgstr "Düssen Togang bruken"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:100
-msgid "Click to make this setting not mandatory"
-msgstr ""
-
-#: ../admin-tool/lockdown/lockdownbutton.py:102
-msgid "Click to make this setting mandatory"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:40
-msgid "General"
-msgstr "Allgemeen"
-
-#: ../admin-tool/lockdown/maindialog.py:42
-msgid "Epiphany Web Browser"
-msgstr "Epiphany Netkieker"
-
-#: ../admin-tool/lockdown/maindialog.py:43
-msgid "GNOME Screensaver"
-msgstr "GNOME Billschirmschoner"
-
-#: ../admin-tool/lockdown/maindialog.py:53
-msgid "Disable _command line"
-msgstr "_Orderreeg deaktiveren"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "Disable _printing"
-msgstr "_Ducken deaktiveren"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable print _setup"
-msgstr "_Duckinstellens deaktiveren"
-
-#: ../admin-tool/lockdown/maindialog.py:56
-msgid "Disable save to _disk"
-msgstr "_Op Disk spiekern deaktiveren"
-
-#: ../admin-tool/lockdown/maindialog.py:58
-msgid "_Lock down the panels"
-msgstr "_Balken avsluten"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable force _quit"
-msgstr "_Sluten ertwingen deaktiveren"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable log _out"
-msgstr "_Avmellen deaktiveren"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _quit"
-msgstr "_Sluten deaktiveren"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _arbitrary URL"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _bookmark editing"
-msgstr "_Leseteken bewarken deaktiveren"
-
-#: ../admin-tool/lockdown/maindialog.py:65
-msgid "Disable _history"
-msgstr "_Historie deaktiveren"
-
-#: ../admin-tool/lockdown/maindialog.py:66
-msgid "Disable _javascript chrome"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:67
-msgid "Disable _toolbar editing"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:68
-#, fuzzy
-msgid "Force _fullscreen mode"
-msgstr "_Fullbill"
-
-#: ../admin-tool/lockdown/maindialog.py:69
-msgid "Hide _menubar"
-msgstr "_Menübalken verbargen"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Disable lock _screen"
-msgstr "_Billschirm avsluten deaktiveren"
-
-#: ../admin-tool/lockdown/maindialog.py:72
-#, fuzzy
-msgid "_Lock on activation"
-msgstr "_Balken avsluten"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-msgid "Allow log _out"
-msgstr "_Avmellen tolaten"
-
-#: ../admin-tool/lockdown/maindialog.py:74
-msgid "Allow user _switching"
-msgstr "_Brukerwessel tolaten"
-
-#: ../admin-tool/lockdown/maindialog.py:233
-#, python-format
-msgid "Could not display help document '%s'"
-msgstr ""
-
-#: ../admin-tool/lockdown/pessulus.ui.h:1
-msgid "Disable _unsafe protocols"
-msgstr ""
-
-#: ../admin-tool/lockdown/pessulus.ui.h:2
-#, fuzzy
-msgid "Disabled Applets"
-msgstr "_Avmellen deaktiveren"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:3
-msgid "Lockdown Editor"
-msgstr ""
-
-#: ../admin-tool/lockdown/pessulus.ui.h:4
-#, fuzzy
-msgid "Safe Protocols"
-msgstr "<b>Seker Protokolls</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -907,6 +785,73 @@ msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr ""
+
+#~ msgid "General"
+#~ msgstr "Allgemeen"
+
+#~ msgid "Epiphany Web Browser"
+#~ msgstr "Epiphany Netkieker"
+
+#~ msgid "GNOME Screensaver"
+#~ msgstr "GNOME Billschirmschoner"
+
+#~ msgid "Disable _command line"
+#~ msgstr "_Orderreeg deaktiveren"
+
+#~ msgid "Disable _printing"
+#~ msgstr "_Ducken deaktiveren"
+
+#~ msgid "Disable print _setup"
+#~ msgstr "_Duckinstellens deaktiveren"
+
+#~ msgid "Disable save to _disk"
+#~ msgstr "_Op Disk spiekern deaktiveren"
+
+#~ msgid "_Lock down the panels"
+#~ msgstr "_Balken avsluten"
+
+#~ msgid "Disable force _quit"
+#~ msgstr "_Sluten ertwingen deaktiveren"
+
+#~ msgid "Disable log _out"
+#~ msgstr "_Avmellen deaktiveren"
+
+#~ msgid "Disable _quit"
+#~ msgstr "_Sluten deaktiveren"
+
+#~ msgid "Disable _bookmark editing"
+#~ msgstr "_Leseteken bewarken deaktiveren"
+
+#~ msgid "Disable _history"
+#~ msgstr "_Historie deaktiveren"
+
+#, fuzzy
+#~ msgid "Force _fullscreen mode"
+#~ msgstr "_Fullbill"
+
+#~ msgid "Hide _menubar"
+#~ msgstr "_Menübalken verbargen"
+
+#~ msgid "Disable lock _screen"
+#~ msgstr "_Billschirm avsluten deaktiveren"
+
+#, fuzzy
+#~ msgid "_Lock on activation"
+#~ msgstr "_Balken avsluten"
+
+#~ msgid "Allow log _out"
+#~ msgstr "_Avmellen tolaten"
+
+#~ msgid "Allow user _switching"
+#~ msgstr "_Brukerwessel tolaten"
+
+#, fuzzy
+#~ msgid "Disabled Applets"
+#~ msgstr "_Avmellen deaktiveren"
+
+#, fuzzy
+#~ msgid "Safe Protocols"
+#~ msgstr "<b>Seker Protokolls</b>"
 
 #~ msgid "Load / Save"
 #~ msgstr "Laden / Spiekern"

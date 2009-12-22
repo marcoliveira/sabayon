@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.head\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-20 09:43-0600\n"
+"POT-Creation-Date: 2009-12-21 21:44-0600\n"
 "PO-Revision-Date: 2009-04-12 16:59-0800\n"
 "Last-Translator: \n"
 "Language-Team: Pashto <pathanisation@googlegroups.com>\n"
@@ -109,8 +109,7 @@ msgstr "GConf"
 msgid "Files"
 msgstr "دوتنې"
 
-#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
-#: ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "چوکاټ"
 
@@ -185,128 +184,6 @@ msgstr ""
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
 msgstr "دا پېژنيال کارول"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:100
-msgid "Click to make this setting not mandatory"
-msgstr "د دې امستنې د نه اړينولو لپاره دلته کېکاږﺉ"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:102
-msgid "Click to make this setting mandatory"
-msgstr "د دې امستنې د اړينولو لپاره دلته کېکاږﺉ"
-
-#: ../admin-tool/lockdown/maindialog.py:40
-msgid "General"
-msgstr "ټولګړي"
-
-#: ../admin-tool/lockdown/maindialog.py:42
-msgid "Epiphany Web Browser"
-msgstr "اېپېفېني ګورت لټونی"
-
-#: ../admin-tool/lockdown/maindialog.py:43
-msgid "GNOME Screensaver"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:53
-msgid "Disable _command line"
-msgstr "بولۍ _ليکه ناتوانول"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "Disable _printing"
-msgstr "چاپونه _ناتوانول"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable print _setup"
-msgstr "د چاپونې امسته ناتوانول"
-
-#: ../admin-tool/lockdown/maindialog.py:56
-msgid "Disable save to _disk"
-msgstr "ټيکلي کې ساتل ناتوانول"
-
-#: ../admin-tool/lockdown/maindialog.py:58
-msgid "_Lock down the panels"
-msgstr "چوکاټونه کولپول_"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable force _quit"
-msgstr "ځواکيزه _بندونه ناتوانول"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable log _out"
-msgstr "وتون ناتوانول"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _quit"
-msgstr "بندول ناتوانول"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _arbitrary URL"
-msgstr "ناتوانول URL خپلسری"
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _bookmark editing"
-msgstr "د ليکنښې سمونه ناتوانول"
-
-#: ../admin-tool/lockdown/maindialog.py:65
-msgid "Disable _history"
-msgstr "مخينه ناتوانول_"
-
-#: ../admin-tool/lockdown/maindialog.py:66
-msgid "Disable _javascript chrome"
-msgstr "جاواسکرېپټ کروم ناتوانول"
-
-#: ../admin-tool/lockdown/maindialog.py:67
-msgid "Disable _toolbar editing"
-msgstr "د توکپټې سمونه ناتوانول"
-
-#: ../admin-tool/lockdown/maindialog.py:68
-#, fuzzy
-msgid "Force _fullscreen mode"
-msgstr "ټوله پرده_"
-
-#: ../admin-tool/lockdown/maindialog.py:69
-msgid "Hide _menubar"
-msgstr "غورنۍ پټه پټول_"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Disable lock _screen"
-msgstr "پرده کولپول ناتوانول"
-
-#: ../admin-tool/lockdown/maindialog.py:72
-#, fuzzy
-msgid "_Lock on activation"
-msgstr "چوکاټونه کولپول_"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-#, fuzzy
-msgid "Allow log _out"
-msgstr "وتون ناتوانول"
-
-#: ../admin-tool/lockdown/maindialog.py:74
-msgid "Allow user _switching"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:233
-#, python-format
-msgid "Could not display help document '%s'"
-msgstr ""
-
-#: ../admin-tool/lockdown/pessulus.ui.h:1
-msgid "Disable _unsafe protocols"
-msgstr "ناخوندي باندرې ناتوانول"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:2
-#, fuzzy
-msgid "Disabled Applets"
-msgstr "<b>ناتوانول شوي څېرمه کړنلارې</b>"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:3
-msgid "Lockdown Editor"
-msgstr "سمونګر کولپول"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:4
-#, fuzzy
-msgid "Safe Protocols"
-msgstr "<b>خوندي باندرې</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -917,6 +794,89 @@ msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr ""
+
+#~ msgid "Click to make this setting not mandatory"
+#~ msgstr "د دې امستنې د نه اړينولو لپاره دلته کېکاږﺉ"
+
+#~ msgid "Click to make this setting mandatory"
+#~ msgstr "د دې امستنې د اړينولو لپاره دلته کېکاږﺉ"
+
+#~ msgid "General"
+#~ msgstr "ټولګړي"
+
+#~ msgid "Epiphany Web Browser"
+#~ msgstr "اېپېفېني ګورت لټونی"
+
+#~ msgid "Disable _command line"
+#~ msgstr "بولۍ _ليکه ناتوانول"
+
+#~ msgid "Disable _printing"
+#~ msgstr "چاپونه _ناتوانول"
+
+#~ msgid "Disable print _setup"
+#~ msgstr "د چاپونې امسته ناتوانول"
+
+#~ msgid "Disable save to _disk"
+#~ msgstr "ټيکلي کې ساتل ناتوانول"
+
+#~ msgid "_Lock down the panels"
+#~ msgstr "چوکاټونه کولپول_"
+
+#~ msgid "Disable force _quit"
+#~ msgstr "ځواکيزه _بندونه ناتوانول"
+
+#~ msgid "Disable log _out"
+#~ msgstr "وتون ناتوانول"
+
+#~ msgid "Disable _quit"
+#~ msgstr "بندول ناتوانول"
+
+#~ msgid "Disable _arbitrary URL"
+#~ msgstr "ناتوانول URL خپلسری"
+
+#~ msgid "Disable _bookmark editing"
+#~ msgstr "د ليکنښې سمونه ناتوانول"
+
+#~ msgid "Disable _history"
+#~ msgstr "مخينه ناتوانول_"
+
+#~ msgid "Disable _javascript chrome"
+#~ msgstr "جاواسکرېپټ کروم ناتوانول"
+
+#~ msgid "Disable _toolbar editing"
+#~ msgstr "د توکپټې سمونه ناتوانول"
+
+#, fuzzy
+#~ msgid "Force _fullscreen mode"
+#~ msgstr "ټوله پرده_"
+
+#~ msgid "Hide _menubar"
+#~ msgstr "غورنۍ پټه پټول_"
+
+#~ msgid "Disable lock _screen"
+#~ msgstr "پرده کولپول ناتوانول"
+
+#, fuzzy
+#~ msgid "_Lock on activation"
+#~ msgstr "چوکاټونه کولپول_"
+
+#, fuzzy
+#~ msgid "Allow log _out"
+#~ msgstr "وتون ناتوانول"
+
+#~ msgid "Disable _unsafe protocols"
+#~ msgstr "ناخوندي باندرې ناتوانول"
+
+#, fuzzy
+#~ msgid "Disabled Applets"
+#~ msgstr "<b>ناتوانول شوي څېرمه کړنلارې</b>"
+
+#~ msgid "Lockdown Editor"
+#~ msgstr "سمونګر کولپول"
+
+#, fuzzy
+#~ msgid "Safe Protocols"
+#~ msgstr "<b>خوندي باندرې</b>"
 
 #~ msgid "Remove personal information from documents when saving them"
 #~ msgstr "د لاسوندونو د ساتلو پر مهال ترې وګړيزې خبرتياوې ړنګول"

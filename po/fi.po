@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-20 09:43-0600\n"
+"POT-Creation-Date: 2009-12-21 21:44-0600\n"
 "PO-Revision-Date: 2009-08-14 00:23+0300\n"
 "Last-Translator: Tommi Vainikainen <thv@iki.fi>\n"
 "Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
@@ -112,8 +112,7 @@ msgstr "GConf"
 msgid "Files"
 msgstr "Tiedostot"
 
-#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
-#: ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "Paneeli"
 
@@ -188,128 +187,6 @@ msgstr ""
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
 msgstr "Käytä tätä profiilia"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:100
-msgid "Click to make this setting not mandatory"
-msgstr "Tee asetuksesta vapaaehtoinen napsauttamalla tästä"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:102
-msgid "Click to make this setting mandatory"
-msgstr "Tee asetuksesta vaadittu napsauttamalla tästä"
-
-#: ../admin-tool/lockdown/maindialog.py:40
-msgid "General"
-msgstr "Yleistä"
-
-#: ../admin-tool/lockdown/maindialog.py:42
-msgid "Epiphany Web Browser"
-msgstr "Epiphany WWW-selain"
-
-#: ../admin-tool/lockdown/maindialog.py:43
-msgid "GNOME Screensaver"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:53
-msgid "Disable _command line"
-msgstr "Estä _komentorivi"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "Disable _printing"
-msgstr "Estä _tulostus"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable print _setup"
-msgstr "Estä tulostus_asetukset"
-
-#: ../admin-tool/lockdown/maindialog.py:56
-msgid "Disable save to _disk"
-msgstr "Estä levylle t_allennus"
-
-#: ../admin-tool/lockdown/maindialog.py:58
-msgid "_Lock down the panels"
-msgstr "_Lukitse paneelit"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable force _quit"
-msgstr "Estä pakotettu _sulkeminen"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable log _out"
-msgstr "Estä ulos_kirjautuminen"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _quit"
-msgstr "Estä _sulkeminen"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _arbitrary URL"
-msgstr "Estä _mielivaltaiset URL:it"
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _bookmark editing"
-msgstr "Estä _kirjanmerkkien muokkaus"
-
-#: ../admin-tool/lockdown/maindialog.py:65
-msgid "Disable _history"
-msgstr "Estä _historia"
-
-#: ../admin-tool/lockdown/maindialog.py:66
-msgid "Disable _javascript chrome"
-msgstr "Estä _javascriptin chromet"
-
-#: ../admin-tool/lockdown/maindialog.py:67
-msgid "Disable _toolbar editing"
-msgstr "Estä _työkalupalkkien muokkaus"
-
-#: ../admin-tool/lockdown/maindialog.py:68
-#, fuzzy
-msgid "Force _fullscreen mode"
-msgstr "_Kokoruutu"
-
-#: ../admin-tool/lockdown/maindialog.py:69
-msgid "Hide _menubar"
-msgstr "Piilota _valikkopalkki"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Disable lock _screen"
-msgstr "Estä _näytön lukitus"
-
-#: ../admin-tool/lockdown/maindialog.py:72
-#, fuzzy
-msgid "_Lock on activation"
-msgstr "_Lukitse paneelit"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-#, fuzzy
-msgid "Allow log _out"
-msgstr "Estä ulos_kirjautuminen"
-
-#: ../admin-tool/lockdown/maindialog.py:74
-msgid "Allow user _switching"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:233
-#, python-format
-msgid "Could not display help document '%s'"
-msgstr ""
-
-#: ../admin-tool/lockdown/pessulus.ui.h:1
-msgid "Disable _unsafe protocols"
-msgstr "Estä _turvattomat protokollat"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:2
-#, fuzzy
-msgid "Disabled Applets"
-msgstr "<b>Estetyt sovelmat</b>"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:3
-msgid "Lockdown Editor"
-msgstr "Käyttörajoitusten muokkain"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:4
-#, fuzzy
-msgid "Safe Protocols"
-msgstr "<b>Turvalliset protokollat</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -940,6 +817,89 @@ msgid ""
 msgstr ""
 "Käyttäjätunnusta ei löydy: se ei ole asetettu /etc/passwd-tiedostossa eikä "
 "muuttujassa $USER"
+
+#~ msgid "Click to make this setting not mandatory"
+#~ msgstr "Tee asetuksesta vapaaehtoinen napsauttamalla tästä"
+
+#~ msgid "Click to make this setting mandatory"
+#~ msgstr "Tee asetuksesta vaadittu napsauttamalla tästä"
+
+#~ msgid "General"
+#~ msgstr "Yleistä"
+
+#~ msgid "Epiphany Web Browser"
+#~ msgstr "Epiphany WWW-selain"
+
+#~ msgid "Disable _command line"
+#~ msgstr "Estä _komentorivi"
+
+#~ msgid "Disable _printing"
+#~ msgstr "Estä _tulostus"
+
+#~ msgid "Disable print _setup"
+#~ msgstr "Estä tulostus_asetukset"
+
+#~ msgid "Disable save to _disk"
+#~ msgstr "Estä levylle t_allennus"
+
+#~ msgid "_Lock down the panels"
+#~ msgstr "_Lukitse paneelit"
+
+#~ msgid "Disable force _quit"
+#~ msgstr "Estä pakotettu _sulkeminen"
+
+#~ msgid "Disable log _out"
+#~ msgstr "Estä ulos_kirjautuminen"
+
+#~ msgid "Disable _quit"
+#~ msgstr "Estä _sulkeminen"
+
+#~ msgid "Disable _arbitrary URL"
+#~ msgstr "Estä _mielivaltaiset URL:it"
+
+#~ msgid "Disable _bookmark editing"
+#~ msgstr "Estä _kirjanmerkkien muokkaus"
+
+#~ msgid "Disable _history"
+#~ msgstr "Estä _historia"
+
+#~ msgid "Disable _javascript chrome"
+#~ msgstr "Estä _javascriptin chromet"
+
+#~ msgid "Disable _toolbar editing"
+#~ msgstr "Estä _työkalupalkkien muokkaus"
+
+#, fuzzy
+#~ msgid "Force _fullscreen mode"
+#~ msgstr "_Kokoruutu"
+
+#~ msgid "Hide _menubar"
+#~ msgstr "Piilota _valikkopalkki"
+
+#~ msgid "Disable lock _screen"
+#~ msgstr "Estä _näytön lukitus"
+
+#, fuzzy
+#~ msgid "_Lock on activation"
+#~ msgstr "_Lukitse paneelit"
+
+#, fuzzy
+#~ msgid "Allow log _out"
+#~ msgstr "Estä ulos_kirjautuminen"
+
+#~ msgid "Disable _unsafe protocols"
+#~ msgstr "Estä _turvattomat protokollat"
+
+#, fuzzy
+#~ msgid "Disabled Applets"
+#~ msgstr "<b>Estetyt sovelmat</b>"
+
+#~ msgid "Lockdown Editor"
+#~ msgstr "Käyttörajoitusten muokkain"
+
+#, fuzzy
+#~ msgid "Safe Protocols"
+#~ msgstr "<b>Turvalliset protokollat</b>"
 
 #~ msgid "Remove personal information from documents when saving them"
 #~ msgstr "Poista yksityiset tiedot asiakirjoista tallennettaessa"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-20 09:43-0600\n"
+"POT-Creation-Date: 2009-12-21 21:44-0600\n"
 "PO-Revision-Date: 2009-11-24 19:47+0100\n"
 "Last-Translator: Tao Wei <weitao1979@gmail.com>\n"
 "Language-Team: Chinese/Simplified <i18n-translation@lists.linux.net.cn>\n"
@@ -108,8 +108,7 @@ msgstr "GConf"
 msgid "Files"
 msgstr "文件"
 
-#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
-#: ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "面板"
 
@@ -184,128 +183,6 @@ msgstr "组"
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
 msgstr "使用此配置文件"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:100
-msgid "Click to make this setting not mandatory"
-msgstr "单击可将此设置设定为非强制值"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:102
-msgid "Click to make this setting mandatory"
-msgstr "单击可将此设置设定为强制值"
-
-#: ../admin-tool/lockdown/maindialog.py:40
-msgid "General"
-msgstr "常规"
-
-#: ../admin-tool/lockdown/maindialog.py:42
-msgid "Epiphany Web Browser"
-msgstr "Epiphany 网络浏览器"
-
-#: ../admin-tool/lockdown/maindialog.py:43
-msgid "GNOME Screensaver"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:53
-msgid "Disable _command line"
-msgstr "禁用命令行(_C)"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "Disable _printing"
-msgstr "禁止打印(_P)"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable print _setup"
-msgstr "禁止设置打印(_S)"
-
-#: ../admin-tool/lockdown/maindialog.py:56
-msgid "Disable save to _disk"
-msgstr "禁止保存到磁盘(_D)"
-
-#: ../admin-tool/lockdown/maindialog.py:58
-msgid "_Lock down the panels"
-msgstr "锁定面板(_L)"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable force _quit"
-msgstr "强制退出按钮(_Q)"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable log _out"
-msgstr "禁止注销(_O)"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _quit"
-msgstr "禁止退出(_Q)"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _arbitrary URL"
-msgstr "禁止滥用 URL(_A)"
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _bookmark editing"
-msgstr "禁止编辑书签(_B)"
-
-#: ../admin-tool/lockdown/maindialog.py:65
-msgid "Disable _history"
-msgstr "禁用历史(_H)"
-
-#: ../admin-tool/lockdown/maindialog.py:66
-msgid "Disable _javascript chrome"
-msgstr "禁用 _javascript chrome"
-
-#: ../admin-tool/lockdown/maindialog.py:67
-msgid "Disable _toolbar editing"
-msgstr "禁止编辑工具栏(_T)"
-
-#: ../admin-tool/lockdown/maindialog.py:68
-#, fuzzy
-msgid "Force _fullscreen mode"
-msgstr "全屏(_F)"
-
-#: ../admin-tool/lockdown/maindialog.py:69
-msgid "Hide _menubar"
-msgstr "隐藏菜单栏(_M)"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Disable lock _screen"
-msgstr "禁止锁定屏幕(_S)"
-
-#: ../admin-tool/lockdown/maindialog.py:72
-#, fuzzy
-msgid "_Lock on activation"
-msgstr "锁定面板(_L)"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-#, fuzzy
-msgid "Allow log _out"
-msgstr "禁止注销(_O)"
-
-#: ../admin-tool/lockdown/maindialog.py:74
-msgid "Allow user _switching"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:233
-#, python-format
-msgid "Could not display help document '%s'"
-msgstr ""
-
-#: ../admin-tool/lockdown/pessulus.ui.h:1
-msgid "Disable _unsafe protocols"
-msgstr "禁用不安全的协议(_U)"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:2
-#, fuzzy
-msgid "Disabled Applets"
-msgstr "<b>禁用的小程序</b>"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:3
-msgid "Lockdown Editor"
-msgstr "锁闭编辑器"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:4
-#, fuzzy
-msgid "Safe Protocols"
-msgstr "<b>安全协议</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -919,6 +796,89 @@ msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr "找不到用户名：未在 /etc/passwd 中设定，也未在 $USER 环境变量中设定"
+
+#~ msgid "Click to make this setting not mandatory"
+#~ msgstr "单击可将此设置设定为非强制值"
+
+#~ msgid "Click to make this setting mandatory"
+#~ msgstr "单击可将此设置设定为强制值"
+
+#~ msgid "General"
+#~ msgstr "常规"
+
+#~ msgid "Epiphany Web Browser"
+#~ msgstr "Epiphany 网络浏览器"
+
+#~ msgid "Disable _command line"
+#~ msgstr "禁用命令行(_C)"
+
+#~ msgid "Disable _printing"
+#~ msgstr "禁止打印(_P)"
+
+#~ msgid "Disable print _setup"
+#~ msgstr "禁止设置打印(_S)"
+
+#~ msgid "Disable save to _disk"
+#~ msgstr "禁止保存到磁盘(_D)"
+
+#~ msgid "_Lock down the panels"
+#~ msgstr "锁定面板(_L)"
+
+#~ msgid "Disable force _quit"
+#~ msgstr "强制退出按钮(_Q)"
+
+#~ msgid "Disable log _out"
+#~ msgstr "禁止注销(_O)"
+
+#~ msgid "Disable _quit"
+#~ msgstr "禁止退出(_Q)"
+
+#~ msgid "Disable _arbitrary URL"
+#~ msgstr "禁止滥用 URL(_A)"
+
+#~ msgid "Disable _bookmark editing"
+#~ msgstr "禁止编辑书签(_B)"
+
+#~ msgid "Disable _history"
+#~ msgstr "禁用历史(_H)"
+
+#~ msgid "Disable _javascript chrome"
+#~ msgstr "禁用 _javascript chrome"
+
+#~ msgid "Disable _toolbar editing"
+#~ msgstr "禁止编辑工具栏(_T)"
+
+#, fuzzy
+#~ msgid "Force _fullscreen mode"
+#~ msgstr "全屏(_F)"
+
+#~ msgid "Hide _menubar"
+#~ msgstr "隐藏菜单栏(_M)"
+
+#~ msgid "Disable lock _screen"
+#~ msgstr "禁止锁定屏幕(_S)"
+
+#, fuzzy
+#~ msgid "_Lock on activation"
+#~ msgstr "锁定面板(_L)"
+
+#, fuzzy
+#~ msgid "Allow log _out"
+#~ msgstr "禁止注销(_O)"
+
+#~ msgid "Disable _unsafe protocols"
+#~ msgstr "禁用不安全的协议(_U)"
+
+#, fuzzy
+#~ msgid "Disabled Applets"
+#~ msgstr "<b>禁用的小程序</b>"
+
+#~ msgid "Lockdown Editor"
+#~ msgstr "锁闭编辑器"
+
+#, fuzzy
+#~ msgid "Safe Protocols"
+#~ msgstr "<b>安全协议</b>"
 
 #~ msgid "Remove personal information from documents when saving them"
 #~ msgstr "保存文档时从文档中移除个人信息"

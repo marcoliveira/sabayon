@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-20 09:43-0600\n"
+"POT-Creation-Date: 2009-12-21 21:44-0600\n"
 "PO-Revision-Date: 2009-02-12 23:45+0100\n"
 "Last-Translator: Wouter Bolsterlee <wbolster@gnome.org>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
@@ -118,8 +118,7 @@ msgstr "GConf"
 msgid "Files"
 msgstr "Bestanden"
 
-#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
-#: ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "Paneel"
 
@@ -196,133 +195,6 @@ msgstr ""
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
 msgstr "Dit profiel gebruiken"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:100
-msgid "Click to make this setting not mandatory"
-msgstr "Klik om deze instelling niet verplicht te maken"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:102
-msgid "Click to make this setting mandatory"
-msgstr "Klik om deze instelling verplicht te maken"
-
-#: ../admin-tool/lockdown/maindialog.py:40
-msgid "General"
-msgstr "Algemeen"
-
-#: ../admin-tool/lockdown/maindialog.py:42
-msgid "Epiphany Web Browser"
-msgstr "Epiphany webbrowser"
-
-#: ../admin-tool/lockdown/maindialog.py:43
-msgid "GNOME Screensaver"
-msgstr ""
-
-# disable:
-# uitzetten/niet gebruiken/verbieden/onmogelijk maken/mag niet.../kan niet.../
-# bij de ene optie is verbieden beter, bij de andere onmogelijk maken beter, of uitzetten.
-# voorlopig steeds dezelfde vertaling gebruikt, uitzetten wat de beste oplossing is.
-#: ../admin-tool/lockdown/maindialog.py:53
-msgid "Disable _command line"
-msgstr "_Opdrachtregel uitzetten"
-
-# onmogelijk maken
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "Disable _printing"
-msgstr "_Afdrukken uitzetten"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable print _setup"
-msgstr "A_fdrukinstellingen uitzetten"
-
-#: ../admin-tool/lockdown/maindialog.py:56
-msgid "Disable save to _disk"
-msgstr "Op_slaan naar schijf uitzetten"
-
-#: ../admin-tool/lockdown/maindialog.py:58
-msgid "_Lock down the panels"
-msgstr "_Panelen vergrendelen"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable force _quit"
-msgstr "_Geforceerd afsluiten uitzetten"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable log _out"
-msgstr "Af_melden uitzetten"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _quit"
-msgstr "_Afsluiten uitzetten"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _arbitrary URL"
-msgstr "_Willekeurige URL uitzetten"
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _bookmark editing"
-msgstr "_Bladwijzers bewerken uitzetten"
-
-#: ../admin-tool/lockdown/maindialog.py:65
-msgid "Disable _history"
-msgstr "G_eschiedenis uitzetten"
-
-#: ../admin-tool/lockdown/maindialog.py:66
-msgid "Disable _javascript chrome"
-msgstr "_Javascript chrome uitzetten"
-
-#: ../admin-tool/lockdown/maindialog.py:67
-msgid "Disable _toolbar editing"
-msgstr "_Werkbalk bewerken uitzetten"
-
-#: ../admin-tool/lockdown/maindialog.py:68
-#, fuzzy
-msgid "Force _fullscreen mode"
-msgstr "_Volledig scherm"
-
-#: ../admin-tool/lockdown/maindialog.py:69
-msgid "Hide _menubar"
-msgstr "_Werkbalk verbergen"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Disable lock _screen"
-msgstr "S_chermvergrendeling uitzetten"
-
-#: ../admin-tool/lockdown/maindialog.py:72
-#, fuzzy
-msgid "_Lock on activation"
-msgstr "_Panelen vergrendelen"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-#, fuzzy
-msgid "Allow log _out"
-msgstr "Af_melden uitzetten"
-
-#: ../admin-tool/lockdown/maindialog.py:74
-msgid "Allow user _switching"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:233
-#, python-format
-msgid "Could not display help document '%s'"
-msgstr ""
-
-#: ../admin-tool/lockdown/pessulus.ui.h:1
-msgid "Disable _unsafe protocols"
-msgstr "On_veilige protocollen uitzetten"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:2
-#, fuzzy
-msgid "Disabled Applets"
-msgstr "<b>Uitgezette applets</b>"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:3
-msgid "Lockdown Editor"
-msgstr "Vergrendelingseditor"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:4
-#, fuzzy
-msgid "Safe Protocols"
-msgstr "<b>Veilige protocollen</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -968,6 +840,94 @@ msgid ""
 msgstr ""
 "Kan gebruikersnaam niet vinden: deze is niet ingesteld in /etc/passwd en ook "
 "niet in de omgeving als $USER"
+
+#~ msgid "Click to make this setting not mandatory"
+#~ msgstr "Klik om deze instelling niet verplicht te maken"
+
+#~ msgid "Click to make this setting mandatory"
+#~ msgstr "Klik om deze instelling verplicht te maken"
+
+#~ msgid "General"
+#~ msgstr "Algemeen"
+
+#~ msgid "Epiphany Web Browser"
+#~ msgstr "Epiphany webbrowser"
+
+# disable:
+# uitzetten/niet gebruiken/verbieden/onmogelijk maken/mag niet.../kan niet.../
+# bij de ene optie is verbieden beter, bij de andere onmogelijk maken beter, of uitzetten.
+# voorlopig steeds dezelfde vertaling gebruikt, uitzetten wat de beste oplossing is.
+#~ msgid "Disable _command line"
+#~ msgstr "_Opdrachtregel uitzetten"
+
+# onmogelijk maken
+#~ msgid "Disable _printing"
+#~ msgstr "_Afdrukken uitzetten"
+
+#~ msgid "Disable print _setup"
+#~ msgstr "A_fdrukinstellingen uitzetten"
+
+#~ msgid "Disable save to _disk"
+#~ msgstr "Op_slaan naar schijf uitzetten"
+
+#~ msgid "_Lock down the panels"
+#~ msgstr "_Panelen vergrendelen"
+
+#~ msgid "Disable force _quit"
+#~ msgstr "_Geforceerd afsluiten uitzetten"
+
+#~ msgid "Disable log _out"
+#~ msgstr "Af_melden uitzetten"
+
+#~ msgid "Disable _quit"
+#~ msgstr "_Afsluiten uitzetten"
+
+#~ msgid "Disable _arbitrary URL"
+#~ msgstr "_Willekeurige URL uitzetten"
+
+#~ msgid "Disable _bookmark editing"
+#~ msgstr "_Bladwijzers bewerken uitzetten"
+
+#~ msgid "Disable _history"
+#~ msgstr "G_eschiedenis uitzetten"
+
+#~ msgid "Disable _javascript chrome"
+#~ msgstr "_Javascript chrome uitzetten"
+
+#~ msgid "Disable _toolbar editing"
+#~ msgstr "_Werkbalk bewerken uitzetten"
+
+#, fuzzy
+#~ msgid "Force _fullscreen mode"
+#~ msgstr "_Volledig scherm"
+
+#~ msgid "Hide _menubar"
+#~ msgstr "_Werkbalk verbergen"
+
+#~ msgid "Disable lock _screen"
+#~ msgstr "S_chermvergrendeling uitzetten"
+
+#, fuzzy
+#~ msgid "_Lock on activation"
+#~ msgstr "_Panelen vergrendelen"
+
+#, fuzzy
+#~ msgid "Allow log _out"
+#~ msgstr "Af_melden uitzetten"
+
+#~ msgid "Disable _unsafe protocols"
+#~ msgstr "On_veilige protocollen uitzetten"
+
+#, fuzzy
+#~ msgid "Disabled Applets"
+#~ msgstr "<b>Uitgezette applets</b>"
+
+#~ msgid "Lockdown Editor"
+#~ msgstr "Vergrendelingseditor"
+
+#, fuzzy
+#~ msgid "Safe Protocols"
+#~ msgstr "<b>Veilige protocollen</b>"
 
 #~ msgid "Remove personal information from documents when saving them"
 #~ msgstr "Persoonlijke gegevens uit documenten verwijderen bij opslaan"

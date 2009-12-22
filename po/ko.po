@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-20 09:43-0600\n"
+"POT-Creation-Date: 2009-12-21 21:44-0600\n"
 "PO-Revision-Date: 2009-02-13 05:18+0900\n"
 "Last-Translator: Young-Ho Cha <ganadist@gmail.com>\n"
 "Language-Team: GNOME Korea <gnome-kr-hackers@lists.kldp.net>\n"
@@ -113,8 +113,7 @@ msgstr "GConf"
 msgid "Files"
 msgstr "파일"
 
-#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
-#: ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "패널"
 
@@ -189,128 +188,6 @@ msgstr ""
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
 msgstr "이 프로파일 사용"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:100
-msgid "Click to make this setting not mandatory"
-msgstr "이 설정을 강제하지 않으려면 누르십시오"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:102
-msgid "Click to make this setting mandatory"
-msgstr "이 설정을 강제하려면 누르십시오"
-
-#: ../admin-tool/lockdown/maindialog.py:40
-msgid "General"
-msgstr "일반"
-
-#: ../admin-tool/lockdown/maindialog.py:42
-msgid "Epiphany Web Browser"
-msgstr "에피파니 웹 브라우저"
-
-#: ../admin-tool/lockdown/maindialog.py:43
-msgid "GNOME Screensaver"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:53
-msgid "Disable _command line"
-msgstr "명령행 사용 금지(_C)"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "Disable _printing"
-msgstr "인쇄 사용 금지(_P)"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable print _setup"
-msgstr "인쇄 설정 사용 금지(_S)"
-
-#: ../admin-tool/lockdown/maindialog.py:56
-msgid "Disable save to _disk"
-msgstr "디스크 저장 사용 금지(_D)"
-
-#: ../admin-tool/lockdown/maindialog.py:58
-msgid "_Lock down the panels"
-msgstr "패널 잠그기(_L)"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable force _quit"
-msgstr "강제 종료 사용 금지(_Q)"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable log _out"
-msgstr "로그 아웃 사용 금지(_O)"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _quit"
-msgstr "끝내기 사용 못함(_Q)"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _arbitrary URL"
-msgstr "임의 URL 사용 금지(_A)"
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _bookmark editing"
-msgstr "책갈피 편집 사용 금지(_B)"
-
-#: ../admin-tool/lockdown/maindialog.py:65
-msgid "Disable _history"
-msgstr "기록 사용 금지(_H)"
-
-#: ../admin-tool/lockdown/maindialog.py:66
-msgid "Disable _javascript chrome"
-msgstr "자바스크립트 chrome 사용 금지(_J)"
-
-#: ../admin-tool/lockdown/maindialog.py:67
-msgid "Disable _toolbar editing"
-msgstr "도구 모음 편집 금지(_T)"
-
-#: ../admin-tool/lockdown/maindialog.py:68
-#, fuzzy
-msgid "Force _fullscreen mode"
-msgstr "전체 화면(_F)"
-
-#: ../admin-tool/lockdown/maindialog.py:69
-msgid "Hide _menubar"
-msgstr "메뉴 모음 숨기기(_M)"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Disable lock _screen"
-msgstr "화면 잠금 사용 금지(_S)"
-
-#: ../admin-tool/lockdown/maindialog.py:72
-#, fuzzy
-msgid "_Lock on activation"
-msgstr "패널 잠그기(_L)"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-#, fuzzy
-msgid "Allow log _out"
-msgstr "로그 아웃 사용 금지(_O)"
-
-#: ../admin-tool/lockdown/maindialog.py:74
-msgid "Allow user _switching"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:233
-#, python-format
-msgid "Could not display help document '%s'"
-msgstr ""
-
-#: ../admin-tool/lockdown/pessulus.ui.h:1
-msgid "Disable _unsafe protocols"
-msgstr "안전하지 않은 프로토콜 사용 금지(_U)"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:2
-#, fuzzy
-msgid "Disabled Applets"
-msgstr "<b>사용 못하는 애플릿</b>"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:3
-msgid "Lockdown Editor"
-msgstr "잠금 편집기"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:4
-#, fuzzy
-msgid "Safe Protocols"
-msgstr "<b>안전한 프로토콜</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -940,6 +817,89 @@ msgid ""
 msgstr ""
 "사용자 이름이 없습니다: /etc/passwd에 설정되어 있지 않고 환경변수에 $USER 값"
 "이 없습니다"
+
+#~ msgid "Click to make this setting not mandatory"
+#~ msgstr "이 설정을 강제하지 않으려면 누르십시오"
+
+#~ msgid "Click to make this setting mandatory"
+#~ msgstr "이 설정을 강제하려면 누르십시오"
+
+#~ msgid "General"
+#~ msgstr "일반"
+
+#~ msgid "Epiphany Web Browser"
+#~ msgstr "에피파니 웹 브라우저"
+
+#~ msgid "Disable _command line"
+#~ msgstr "명령행 사용 금지(_C)"
+
+#~ msgid "Disable _printing"
+#~ msgstr "인쇄 사용 금지(_P)"
+
+#~ msgid "Disable print _setup"
+#~ msgstr "인쇄 설정 사용 금지(_S)"
+
+#~ msgid "Disable save to _disk"
+#~ msgstr "디스크 저장 사용 금지(_D)"
+
+#~ msgid "_Lock down the panels"
+#~ msgstr "패널 잠그기(_L)"
+
+#~ msgid "Disable force _quit"
+#~ msgstr "강제 종료 사용 금지(_Q)"
+
+#~ msgid "Disable log _out"
+#~ msgstr "로그 아웃 사용 금지(_O)"
+
+#~ msgid "Disable _quit"
+#~ msgstr "끝내기 사용 못함(_Q)"
+
+#~ msgid "Disable _arbitrary URL"
+#~ msgstr "임의 URL 사용 금지(_A)"
+
+#~ msgid "Disable _bookmark editing"
+#~ msgstr "책갈피 편집 사용 금지(_B)"
+
+#~ msgid "Disable _history"
+#~ msgstr "기록 사용 금지(_H)"
+
+#~ msgid "Disable _javascript chrome"
+#~ msgstr "자바스크립트 chrome 사용 금지(_J)"
+
+#~ msgid "Disable _toolbar editing"
+#~ msgstr "도구 모음 편집 금지(_T)"
+
+#, fuzzy
+#~ msgid "Force _fullscreen mode"
+#~ msgstr "전체 화면(_F)"
+
+#~ msgid "Hide _menubar"
+#~ msgstr "메뉴 모음 숨기기(_M)"
+
+#~ msgid "Disable lock _screen"
+#~ msgstr "화면 잠금 사용 금지(_S)"
+
+#, fuzzy
+#~ msgid "_Lock on activation"
+#~ msgstr "패널 잠그기(_L)"
+
+#, fuzzy
+#~ msgid "Allow log _out"
+#~ msgstr "로그 아웃 사용 금지(_O)"
+
+#~ msgid "Disable _unsafe protocols"
+#~ msgstr "안전하지 않은 프로토콜 사용 금지(_U)"
+
+#, fuzzy
+#~ msgid "Disabled Applets"
+#~ msgstr "<b>사용 못하는 애플릿</b>"
+
+#~ msgid "Lockdown Editor"
+#~ msgstr "잠금 편집기"
+
+#, fuzzy
+#~ msgid "Safe Protocols"
+#~ msgstr "<b>안전한 프로토콜</b>"
 
 #~ msgid "Remove personal information from documents when saving them"
 #~ msgstr "저장할 때 문서에서 개인 정보 제거"

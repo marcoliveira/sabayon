@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-20 09:43-0600\n"
+"POT-Creation-Date: 2009-12-21 21:44-0600\n"
 "PO-Revision-Date: 2009-08-27 23:51+0300\n"
 "Last-Translator: Alexander Nyakhaychyk <nyakhaychyk@gmail.com>\n"
 "Language-Team: Belarusian <i18n@mova.org>\n"
@@ -109,8 +109,7 @@ msgstr "GConf"
 msgid "Files"
 msgstr "Файлы"
 
-#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
-#: ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "Панэль"
 
@@ -185,128 +184,6 @@ msgstr ""
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
 msgstr "Ужыць гэты профіль"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:100
-msgid "Click to make this setting not mandatory"
-msgstr "Клікні, каб зрабіць гэтую наладку неабавязковай"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:102
-msgid "Click to make this setting mandatory"
-msgstr "Клікні, каб зрабіць гэтую наладку абавязковай"
-
-#: ../admin-tool/lockdown/maindialog.py:40
-msgid "General"
-msgstr "Агульнае"
-
-#: ../admin-tool/lockdown/maindialog.py:42
-msgid "Epiphany Web Browser"
-msgstr "Гартач сеціва Epiphany"
-
-#: ../admin-tool/lockdown/maindialog.py:43
-msgid "GNOME Screensaver"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:53
-msgid "Disable _command line"
-msgstr "Адключыць _загадны радок"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "Disable _printing"
-msgstr "Адключыць _друк"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable print _setup"
-msgstr "Адключыць наладкі _друку"
-
-#: ../admin-tool/lockdown/maindialog.py:56
-msgid "Disable save to _disk"
-msgstr "Адключыць запіс на _дыск"
-
-#: ../admin-tool/lockdown/maindialog.py:58
-msgid "_Lock down the panels"
-msgstr "_Заблякаваць панэлі"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable force _quit"
-msgstr "Адключыць _прымусовы выхад"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable log _out"
-msgstr "Адключыць _сканчэньне сэансу"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _quit"
-msgstr "Адключыць _выхад"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _arbitrary URL"
-msgstr "Выключыць _адвольныя URL"
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _bookmark editing"
-msgstr "Адключыць _рэдагаваньне закладак"
-
-#: ../admin-tool/lockdown/maindialog.py:65
-msgid "Disable _history"
-msgstr "Адключыць _гісторыю"
-
-#: ../admin-tool/lockdown/maindialog.py:66
-msgid "Disable _javascript chrome"
-msgstr "Адключыць _javascript chrome"
-
-#: ../admin-tool/lockdown/maindialog.py:67
-msgid "Disable _toolbar editing"
-msgstr "Адключыць _рэдагаваньне панэлі інструмэнтаў"
-
-#: ../admin-tool/lockdown/maindialog.py:68
-#, fuzzy
-msgid "Force _fullscreen mode"
-msgstr "_На поўны экран"
-
-#: ../admin-tool/lockdown/maindialog.py:69
-msgid "Hide _menubar"
-msgstr "Схаваць _панэль мэню"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Disable lock _screen"
-msgstr "Адключыць _блякаваньне экрану"
-
-#: ../admin-tool/lockdown/maindialog.py:72
-#, fuzzy
-msgid "_Lock on activation"
-msgstr "_Заблякаваць панэлі"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-#, fuzzy
-msgid "Allow log _out"
-msgstr "Адключыць _сканчэньне сэансу"
-
-#: ../admin-tool/lockdown/maindialog.py:74
-msgid "Allow user _switching"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:233
-#, python-format
-msgid "Could not display help document '%s'"
-msgstr ""
-
-#: ../admin-tool/lockdown/pessulus.ui.h:1
-msgid "Disable _unsafe protocols"
-msgstr "Адключыць _небясьпечныя пратаколы"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:2
-#, fuzzy
-msgid "Disabled Applets"
-msgstr "<b>Адключаныя аплеты</b>"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:3
-msgid "Lockdown Editor"
-msgstr "Рэдактар палітыкі блякаваньняў"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:4
-#, fuzzy
-msgid "Safe Protocols"
-msgstr "<b>Бясьпечныя пратаколы</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -936,6 +813,89 @@ msgid ""
 msgstr ""
 "Немагчыма знайсці імя карыстальніка: яно не акрэсьленае ў /etc/passwd, і "
 "няма значэньня для $USER у асяродзьдзі"
+
+#~ msgid "Click to make this setting not mandatory"
+#~ msgstr "Клікні, каб зрабіць гэтую наладку неабавязковай"
+
+#~ msgid "Click to make this setting mandatory"
+#~ msgstr "Клікні, каб зрабіць гэтую наладку абавязковай"
+
+#~ msgid "General"
+#~ msgstr "Агульнае"
+
+#~ msgid "Epiphany Web Browser"
+#~ msgstr "Гартач сеціва Epiphany"
+
+#~ msgid "Disable _command line"
+#~ msgstr "Адключыць _загадны радок"
+
+#~ msgid "Disable _printing"
+#~ msgstr "Адключыць _друк"
+
+#~ msgid "Disable print _setup"
+#~ msgstr "Адключыць наладкі _друку"
+
+#~ msgid "Disable save to _disk"
+#~ msgstr "Адключыць запіс на _дыск"
+
+#~ msgid "_Lock down the panels"
+#~ msgstr "_Заблякаваць панэлі"
+
+#~ msgid "Disable force _quit"
+#~ msgstr "Адключыць _прымусовы выхад"
+
+#~ msgid "Disable log _out"
+#~ msgstr "Адключыць _сканчэньне сэансу"
+
+#~ msgid "Disable _quit"
+#~ msgstr "Адключыць _выхад"
+
+#~ msgid "Disable _arbitrary URL"
+#~ msgstr "Выключыць _адвольныя URL"
+
+#~ msgid "Disable _bookmark editing"
+#~ msgstr "Адключыць _рэдагаваньне закладак"
+
+#~ msgid "Disable _history"
+#~ msgstr "Адключыць _гісторыю"
+
+#~ msgid "Disable _javascript chrome"
+#~ msgstr "Адключыць _javascript chrome"
+
+#~ msgid "Disable _toolbar editing"
+#~ msgstr "Адключыць _рэдагаваньне панэлі інструмэнтаў"
+
+#, fuzzy
+#~ msgid "Force _fullscreen mode"
+#~ msgstr "_На поўны экран"
+
+#~ msgid "Hide _menubar"
+#~ msgstr "Схаваць _панэль мэню"
+
+#~ msgid "Disable lock _screen"
+#~ msgstr "Адключыць _блякаваньне экрану"
+
+#, fuzzy
+#~ msgid "_Lock on activation"
+#~ msgstr "_Заблякаваць панэлі"
+
+#, fuzzy
+#~ msgid "Allow log _out"
+#~ msgstr "Адключыць _сканчэньне сэансу"
+
+#~ msgid "Disable _unsafe protocols"
+#~ msgstr "Адключыць _небясьпечныя пратаколы"
+
+#, fuzzy
+#~ msgid "Disabled Applets"
+#~ msgstr "<b>Адключаныя аплеты</b>"
+
+#~ msgid "Lockdown Editor"
+#~ msgstr "Рэдактар палітыкі блякаваньняў"
+
+#, fuzzy
+#~ msgid "Safe Protocols"
+#~ msgstr "<b>Бясьпечныя пратаколы</b>"
 
 #~ msgid "Remove personal information from documents when saving them"
 #~ msgstr "Выдаліць асабістую інфармацыю з дакумэнта падчас захаваньня"

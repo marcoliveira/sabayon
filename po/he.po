@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-20 09:43-0600\n"
+"POT-Creation-Date: 2009-12-21 21:44-0600\n"
 "PO-Revision-Date: 2009-10-24 11:29+0200\n"
 "Last-Translator: Mark Krapivner <mark125@gmail.com>\n"
 "Language-Team: he\n"
@@ -112,8 +112,7 @@ msgstr "GConf"
 msgid "Files"
 msgstr "קבצים"
 
-#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
-#: ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "לוח"
 
@@ -188,128 +187,6 @@ msgstr "קבוצה"
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
 msgstr "השתמש בפרופיל זה"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:100
-msgid "Click to make this setting not mandatory"
-msgstr "לחץ כדי להפוך את הגדרות אלו ללא הכרחיות"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:102
-msgid "Click to make this setting mandatory"
-msgstr "לחץ כדי להפוך את הגדרות אלו להכרחיות"
-
-#: ../admin-tool/lockdown/maindialog.py:40
-msgid "General"
-msgstr "כללי"
-
-#: ../admin-tool/lockdown/maindialog.py:42
-msgid "Epiphany Web Browser"
-msgstr "דפדפן אינטרנט Epiphany"
-
-#: ../admin-tool/lockdown/maindialog.py:43
-msgid "GNOME Screensaver"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:53
-msgid "Disable _command line"
-msgstr "נטרל _שורת פקודה"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "Disable _printing"
-msgstr "נטרל ה_דפסה"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable print _setup"
-msgstr "נטרל ה_גדרות הדפסה"
-
-#: ../admin-tool/lockdown/maindialog.py:56
-msgid "Disable save to _disk"
-msgstr "נטרל שמירה ל_דיסק"
-
-#: ../admin-tool/lockdown/maindialog.py:58
-msgid "_Lock down the panels"
-msgstr "נעל את ה_לוחות"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable force _quit"
-msgstr "נטרל את ה_כרח יציאה"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable log _out"
-msgstr "נטרל _התנתקות"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _quit"
-msgstr "נטרל י_ציאה"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _arbitrary URL"
-msgstr "נטרל כ_תובת שרירותית"
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _bookmark editing"
-msgstr "נטרל_ עריכת סימניות"
-
-#: ../admin-tool/lockdown/maindialog.py:65
-msgid "Disable _history"
-msgstr "נטרל הי_סטוריה"
-
-#: ../admin-tool/lockdown/maindialog.py:66
-msgid "Disable _javascript chrome"
-msgstr "נטרל את השליטה של JavaScript על _צבע החלון"
-
-#: ../admin-tool/lockdown/maindialog.py:67
-msgid "Disable _toolbar editing"
-msgstr "נטרל עריכת _סרגל הכלים"
-
-#: ../admin-tool/lockdown/maindialog.py:68
-#, fuzzy
-msgid "Force _fullscreen mode"
-msgstr "_מסך מלא"
-
-#: ../admin-tool/lockdown/maindialog.py:69
-msgid "Hide _menubar"
-msgstr "הסתר _תפריט"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Disable lock _screen"
-msgstr "נטרל _נעילת מסך"
-
-#: ../admin-tool/lockdown/maindialog.py:72
-#, fuzzy
-msgid "_Lock on activation"
-msgstr "נעל את ה_לוחות"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-#, fuzzy
-msgid "Allow log _out"
-msgstr "נטרל _התנתקות"
-
-#: ../admin-tool/lockdown/maindialog.py:74
-msgid "Allow user _switching"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:233
-#, python-format
-msgid "Could not display help document '%s'"
-msgstr ""
-
-#: ../admin-tool/lockdown/pessulus.ui.h:1
-msgid "Disable _unsafe protocols"
-msgstr "נטרל _פרוטוקולים לא בטוחים"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:2
-#, fuzzy
-msgid "Disabled Applets"
-msgstr "<b>יישומונים מנוטרלים</b>"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:3
-msgid "Lockdown Editor"
-msgstr "עורך הנעילות"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:4
-#, fuzzy
-msgid "Safe Protocols"
-msgstr "<b>פרוטוקולים בטוחים</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -930,6 +807,89 @@ msgid ""
 msgstr ""
 "לא ניתן למצוא את שם המשתמש: לא נקבע ב־‎/etc/passwd‏ ואין ערך במשתנה הסביבה ‎"
 "$USER"
+
+#~ msgid "Click to make this setting not mandatory"
+#~ msgstr "לחץ כדי להפוך את הגדרות אלו ללא הכרחיות"
+
+#~ msgid "Click to make this setting mandatory"
+#~ msgstr "לחץ כדי להפוך את הגדרות אלו להכרחיות"
+
+#~ msgid "General"
+#~ msgstr "כללי"
+
+#~ msgid "Epiphany Web Browser"
+#~ msgstr "דפדפן אינטרנט Epiphany"
+
+#~ msgid "Disable _command line"
+#~ msgstr "נטרל _שורת פקודה"
+
+#~ msgid "Disable _printing"
+#~ msgstr "נטרל ה_דפסה"
+
+#~ msgid "Disable print _setup"
+#~ msgstr "נטרל ה_גדרות הדפסה"
+
+#~ msgid "Disable save to _disk"
+#~ msgstr "נטרל שמירה ל_דיסק"
+
+#~ msgid "_Lock down the panels"
+#~ msgstr "נעל את ה_לוחות"
+
+#~ msgid "Disable force _quit"
+#~ msgstr "נטרל את ה_כרח יציאה"
+
+#~ msgid "Disable log _out"
+#~ msgstr "נטרל _התנתקות"
+
+#~ msgid "Disable _quit"
+#~ msgstr "נטרל י_ציאה"
+
+#~ msgid "Disable _arbitrary URL"
+#~ msgstr "נטרל כ_תובת שרירותית"
+
+#~ msgid "Disable _bookmark editing"
+#~ msgstr "נטרל_ עריכת סימניות"
+
+#~ msgid "Disable _history"
+#~ msgstr "נטרל הי_סטוריה"
+
+#~ msgid "Disable _javascript chrome"
+#~ msgstr "נטרל את השליטה של JavaScript על _צבע החלון"
+
+#~ msgid "Disable _toolbar editing"
+#~ msgstr "נטרל עריכת _סרגל הכלים"
+
+#, fuzzy
+#~ msgid "Force _fullscreen mode"
+#~ msgstr "_מסך מלא"
+
+#~ msgid "Hide _menubar"
+#~ msgstr "הסתר _תפריט"
+
+#~ msgid "Disable lock _screen"
+#~ msgstr "נטרל _נעילת מסך"
+
+#, fuzzy
+#~ msgid "_Lock on activation"
+#~ msgstr "נעל את ה_לוחות"
+
+#, fuzzy
+#~ msgid "Allow log _out"
+#~ msgstr "נטרל _התנתקות"
+
+#~ msgid "Disable _unsafe protocols"
+#~ msgstr "נטרל _פרוטוקולים לא בטוחים"
+
+#, fuzzy
+#~ msgid "Disabled Applets"
+#~ msgstr "<b>יישומונים מנוטרלים</b>"
+
+#~ msgid "Lockdown Editor"
+#~ msgstr "עורך הנעילות"
+
+#, fuzzy
+#~ msgid "Safe Protocols"
+#~ msgstr "<b>פרוטוקולים בטוחים</b>"
 
 #~ msgid "Remove personal information from documents when saving them"
 #~ msgstr "הסר נתונים אישיים ממסמכים בעת שמירתם"

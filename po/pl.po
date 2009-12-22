@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-20 09:43-0600\n"
+"POT-Creation-Date: 2009-12-21 21:44-0600\n"
 "PO-Revision-Date: 2009-08-31 14:31+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
@@ -113,8 +113,7 @@ msgstr "GConf"
 msgid "Files"
 msgstr "Pliki"
 
-#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
-#: ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "Panel"
 
@@ -189,128 +188,6 @@ msgstr ""
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
 msgstr "Używa tego profilu"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:100
-msgid "Click to make this setting not mandatory"
-msgstr "Można kliknąć, aby ustawienie nie było obowiązkowe"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:102
-msgid "Click to make this setting mandatory"
-msgstr "Można kliknąć, aby to ustawienie było obowiązkowe"
-
-#: ../admin-tool/lockdown/maindialog.py:40
-msgid "General"
-msgstr "Ogólne"
-
-#: ../admin-tool/lockdown/maindialog.py:42
-msgid "Epiphany Web Browser"
-msgstr "Przeglądarka WWW Epiphany"
-
-#: ../admin-tool/lockdown/maindialog.py:43
-msgid "GNOME Screensaver"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:53
-msgid "Disable _command line"
-msgstr "Zablokowanie _wiersza poleceń"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "Disable _printing"
-msgstr "Zablokowanie możliwości _drukowania"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable print _setup"
-msgstr "Zablokowanie możliwości _ustawienia wydruków"
-
-#: ../admin-tool/lockdown/maindialog.py:56
-msgid "Disable save to _disk"
-msgstr "Zablokowanie możliwości _zapisu na dysk"
-
-#: ../admin-tool/lockdown/maindialog.py:58
-msgid "_Lock down the panels"
-msgstr "Zablokowanie p_aneli"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable force _quit"
-msgstr "Zablokowanie możliwości _wymuszonego zakończenia programu"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable log _out"
-msgstr "Zablokowanie możliwości wyl_ogowania"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _quit"
-msgstr "_Zablokowanie możliwości zakończenia programu"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _arbitrary URL"
-msgstr "Zablokowanie możliwości wprowadzania _arbitralnych adresów URL"
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _bookmark editing"
-msgstr "Zablokowanie możliwości m_odyfikowania zakładek"
-
-#: ../admin-tool/lockdown/maindialog.py:65
-msgid "Disable _history"
-msgstr "Zablokowanie dostępu do _historii"
-
-#: ../admin-tool/lockdown/maindialog.py:66
-msgid "Disable _javascript chrome"
-msgstr "Zablokowanie Chrome Ja_vaScript"
-
-#: ../admin-tool/lockdown/maindialog.py:67
-msgid "Disable _toolbar editing"
-msgstr "Zablokowanie możliwości modyfikowania paska _narzędziowego"
-
-#: ../admin-tool/lockdown/maindialog.py:68
-#, fuzzy
-msgid "Force _fullscreen mode"
-msgstr "_Tryb pełnoekranowy"
-
-#: ../admin-tool/lockdown/maindialog.py:69
-msgid "Hide _menubar"
-msgstr "Ukrywanie pa_ska menu"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Disable lock _screen"
-msgstr "Wyłączenie możliwości _blokowania ekranu"
-
-#: ../admin-tool/lockdown/maindialog.py:72
-#, fuzzy
-msgid "_Lock on activation"
-msgstr "Zablokowanie p_aneli"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-#, fuzzy
-msgid "Allow log _out"
-msgstr "Zablokowanie możliwości wyl_ogowania"
-
-#: ../admin-tool/lockdown/maindialog.py:74
-msgid "Allow user _switching"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:233
-#, python-format
-msgid "Could not display help document '%s'"
-msgstr ""
-
-#: ../admin-tool/lockdown/pessulus.ui.h:1
-msgid "Disable _unsafe protocols"
-msgstr "Zablokowanie _niebezpiecznych protokołów"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:2
-#, fuzzy
-msgid "Disabled Applets"
-msgstr "<b>Zablokowane aplety</b>"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:3
-msgid "Lockdown Editor"
-msgstr "Edytor blokowania"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:4
-#, fuzzy
-msgid "Safe Protocols"
-msgstr "<b>Bezpieczne protokoły</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -948,6 +825,89 @@ msgid ""
 msgstr ""
 "Nie można odnaleźć nazwy użytkownika: brak wpisu w /etc/passwd i brak "
 "wartości w zmiennej środowiskowej $HOME"
+
+#~ msgid "Click to make this setting not mandatory"
+#~ msgstr "Można kliknąć, aby ustawienie nie było obowiązkowe"
+
+#~ msgid "Click to make this setting mandatory"
+#~ msgstr "Można kliknąć, aby to ustawienie było obowiązkowe"
+
+#~ msgid "General"
+#~ msgstr "Ogólne"
+
+#~ msgid "Epiphany Web Browser"
+#~ msgstr "Przeglądarka WWW Epiphany"
+
+#~ msgid "Disable _command line"
+#~ msgstr "Zablokowanie _wiersza poleceń"
+
+#~ msgid "Disable _printing"
+#~ msgstr "Zablokowanie możliwości _drukowania"
+
+#~ msgid "Disable print _setup"
+#~ msgstr "Zablokowanie możliwości _ustawienia wydruków"
+
+#~ msgid "Disable save to _disk"
+#~ msgstr "Zablokowanie możliwości _zapisu na dysk"
+
+#~ msgid "_Lock down the panels"
+#~ msgstr "Zablokowanie p_aneli"
+
+#~ msgid "Disable force _quit"
+#~ msgstr "Zablokowanie możliwości _wymuszonego zakończenia programu"
+
+#~ msgid "Disable log _out"
+#~ msgstr "Zablokowanie możliwości wyl_ogowania"
+
+#~ msgid "Disable _quit"
+#~ msgstr "_Zablokowanie możliwości zakończenia programu"
+
+#~ msgid "Disable _arbitrary URL"
+#~ msgstr "Zablokowanie możliwości wprowadzania _arbitralnych adresów URL"
+
+#~ msgid "Disable _bookmark editing"
+#~ msgstr "Zablokowanie możliwości m_odyfikowania zakładek"
+
+#~ msgid "Disable _history"
+#~ msgstr "Zablokowanie dostępu do _historii"
+
+#~ msgid "Disable _javascript chrome"
+#~ msgstr "Zablokowanie Chrome Ja_vaScript"
+
+#~ msgid "Disable _toolbar editing"
+#~ msgstr "Zablokowanie możliwości modyfikowania paska _narzędziowego"
+
+#, fuzzy
+#~ msgid "Force _fullscreen mode"
+#~ msgstr "_Tryb pełnoekranowy"
+
+#~ msgid "Hide _menubar"
+#~ msgstr "Ukrywanie pa_ska menu"
+
+#~ msgid "Disable lock _screen"
+#~ msgstr "Wyłączenie możliwości _blokowania ekranu"
+
+#, fuzzy
+#~ msgid "_Lock on activation"
+#~ msgstr "Zablokowanie p_aneli"
+
+#, fuzzy
+#~ msgid "Allow log _out"
+#~ msgstr "Zablokowanie możliwości wyl_ogowania"
+
+#~ msgid "Disable _unsafe protocols"
+#~ msgstr "Zablokowanie _niebezpiecznych protokołów"
+
+#, fuzzy
+#~ msgid "Disabled Applets"
+#~ msgstr "<b>Zablokowane aplety</b>"
+
+#~ msgid "Lockdown Editor"
+#~ msgstr "Edytor blokowania"
+
+#, fuzzy
+#~ msgid "Safe Protocols"
+#~ msgstr "<b>Bezpieczne protokoły</b>"
 
 #~ msgid "Remove personal information from documents when saving them"
 #~ msgstr "Usuwanie informacji osobistych podczas zapisywania dokumentów"

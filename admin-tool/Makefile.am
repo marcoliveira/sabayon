@@ -1,5 +1,3 @@
-SUBDIRS = lockdown
-
 PYTHON_FILES =				\
 	editorwindow.py			\
 	profilesdialog.py		\

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon 2.19.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-20 09:43-0600\n"
+"POT-Creation-Date: 2009-12-21 21:44-0600\n"
 "PO-Revision-Date: 2009-08-23 16:17+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -109,8 +109,7 @@ msgstr "GConf"
 msgid "Files"
 msgstr "แฟ้ม"
 
-#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
-#: ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "พาเนล"
 
@@ -185,128 +184,6 @@ msgstr ""
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
 msgstr "ใช้โพรไฟล์นี้"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:100
-msgid "Click to make this setting not mandatory"
-msgstr "คลิกเพื่อให้ค่าตั้งนี้ไม่เป็นค่าบังคับ"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:102
-msgid "Click to make this setting mandatory"
-msgstr "คลิกเพื่อให้ค่าตั้งนี้เป็นค่าบังคับ"
-
-#: ../admin-tool/lockdown/maindialog.py:40
-msgid "General"
-msgstr "ทั่วไป"
-
-#: ../admin-tool/lockdown/maindialog.py:42
-msgid "Epiphany Web Browser"
-msgstr "เว็บเบราว์เซอร์ Epiphany"
-
-#: ../admin-tool/lockdown/maindialog.py:43
-msgid "GNOME Screensaver"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:53
-msgid "Disable _command line"
-msgstr "ห้ามใช้บรรทัดคำ_สั่ง"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "Disable _printing"
-msgstr "ห้าม_พิมพ์"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable print _setup"
-msgstr "ห้าม_ตั้งค่าการพิมพ์"
-
-#: ../admin-tool/lockdown/maindialog.py:56
-msgid "Disable save to _disk"
-msgstr "ห้าม_บันทึกลงดิสก์"
-
-#: ../admin-tool/lockdown/maindialog.py:58
-msgid "_Lock down the panels"
-msgstr "_ล็อคพาเนล"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable force _quit"
-msgstr "ห้าม_บังคับออก"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable log _out"
-msgstr "ห้าม_ออกจากระบบ"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _quit"
-msgstr "_ห้ามออก"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _arbitrary URL"
-msgstr "ห้ามป้อน URL อิ_สระ"
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _bookmark editing"
-msgstr "ห้ามแก้ไข_ที่คั่นหน้า"
-
-#: ../admin-tool/lockdown/maindialog.py:65
-msgid "Disable _history"
-msgstr "ห้ามใช้_ประวัติการท่องเว็บ"
-
-#: ../admin-tool/lockdown/maindialog.py:66
-msgid "Disable _javascript chrome"
-msgstr "ห้าม_จาวาสคริปต์ดัดแปลงหน้าตาโปรแกรม"
-
-#: ../admin-tool/lockdown/maindialog.py:67
-msgid "Disable _toolbar editing"
-msgstr "ห้ามแก้ไขแถบเ_ครื่องมือ"
-
-#: ../admin-tool/lockdown/maindialog.py:68
-#, fuzzy
-msgid "Force _fullscreen mode"
-msgstr "เ_ต็มจอ"
-
-#: ../admin-tool/lockdown/maindialog.py:69
-msgid "Hide _menubar"
-msgstr "ซ่อนแถบเ_มนู"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Disable lock _screen"
-msgstr "ห้ามล็อคหน้า_จอ"
-
-#: ../admin-tool/lockdown/maindialog.py:72
-#, fuzzy
-msgid "_Lock on activation"
-msgstr "_ล็อคพาเนล"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-#, fuzzy
-msgid "Allow log _out"
-msgstr "ห้าม_ออกจากระบบ"
-
-#: ../admin-tool/lockdown/maindialog.py:74
-msgid "Allow user _switching"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:233
-#, python-format
-msgid "Could not display help document '%s'"
-msgstr ""
-
-#: ../admin-tool/lockdown/pessulus.ui.h:1
-msgid "Disable _unsafe protocols"
-msgstr "ห้ามใช้โพรโทคอลที่ไม่ป_ลอดภัย"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:2
-#, fuzzy
-msgid "Disabled Applets"
-msgstr "<b>แอพเพล็ตห้ามใช้</b>"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:3
-msgid "Lockdown Editor"
-msgstr "แก้ไขการจำกัดการใช้งาน"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:4
-#, fuzzy
-msgid "Safe Protocols"
-msgstr "<b>โพรโทคอลที่ปลอดภัย</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -924,6 +801,89 @@ msgid ""
 "environment"
 msgstr ""
 "หาชื่อผู้ใช้ไม่พบ: ไม่ได้กำหนดใน /etc/passwd และไม่ได้กำหนดค่า $USER ในตัวแปรสภาพแวดล้อม"
+
+#~ msgid "Click to make this setting not mandatory"
+#~ msgstr "คลิกเพื่อให้ค่าตั้งนี้ไม่เป็นค่าบังคับ"
+
+#~ msgid "Click to make this setting mandatory"
+#~ msgstr "คลิกเพื่อให้ค่าตั้งนี้เป็นค่าบังคับ"
+
+#~ msgid "General"
+#~ msgstr "ทั่วไป"
+
+#~ msgid "Epiphany Web Browser"
+#~ msgstr "เว็บเบราว์เซอร์ Epiphany"
+
+#~ msgid "Disable _command line"
+#~ msgstr "ห้ามใช้บรรทัดคำ_สั่ง"
+
+#~ msgid "Disable _printing"
+#~ msgstr "ห้าม_พิมพ์"
+
+#~ msgid "Disable print _setup"
+#~ msgstr "ห้าม_ตั้งค่าการพิมพ์"
+
+#~ msgid "Disable save to _disk"
+#~ msgstr "ห้าม_บันทึกลงดิสก์"
+
+#~ msgid "_Lock down the panels"
+#~ msgstr "_ล็อคพาเนล"
+
+#~ msgid "Disable force _quit"
+#~ msgstr "ห้าม_บังคับออก"
+
+#~ msgid "Disable log _out"
+#~ msgstr "ห้าม_ออกจากระบบ"
+
+#~ msgid "Disable _quit"
+#~ msgstr "_ห้ามออก"
+
+#~ msgid "Disable _arbitrary URL"
+#~ msgstr "ห้ามป้อน URL อิ_สระ"
+
+#~ msgid "Disable _bookmark editing"
+#~ msgstr "ห้ามแก้ไข_ที่คั่นหน้า"
+
+#~ msgid "Disable _history"
+#~ msgstr "ห้ามใช้_ประวัติการท่องเว็บ"
+
+#~ msgid "Disable _javascript chrome"
+#~ msgstr "ห้าม_จาวาสคริปต์ดัดแปลงหน้าตาโปรแกรม"
+
+#~ msgid "Disable _toolbar editing"
+#~ msgstr "ห้ามแก้ไขแถบเ_ครื่องมือ"
+
+#, fuzzy
+#~ msgid "Force _fullscreen mode"
+#~ msgstr "เ_ต็มจอ"
+
+#~ msgid "Hide _menubar"
+#~ msgstr "ซ่อนแถบเ_มนู"
+
+#~ msgid "Disable lock _screen"
+#~ msgstr "ห้ามล็อคหน้า_จอ"
+
+#, fuzzy
+#~ msgid "_Lock on activation"
+#~ msgstr "_ล็อคพาเนล"
+
+#, fuzzy
+#~ msgid "Allow log _out"
+#~ msgstr "ห้าม_ออกจากระบบ"
+
+#~ msgid "Disable _unsafe protocols"
+#~ msgstr "ห้ามใช้โพรโทคอลที่ไม่ป_ลอดภัย"
+
+#, fuzzy
+#~ msgid "Disabled Applets"
+#~ msgstr "<b>แอพเพล็ตห้ามใช้</b>"
+
+#~ msgid "Lockdown Editor"
+#~ msgstr "แก้ไขการจำกัดการใช้งาน"
+
+#, fuzzy
+#~ msgid "Safe Protocols"
+#~ msgstr "<b>โพรโทคอลที่ปลอดภัย</b>"
 
 #~ msgid "Remove personal information from documents when saving them"
 #~ msgstr "ลบข้อมูลส่วนตัวออกจากเอกสารขณะบันทึก"

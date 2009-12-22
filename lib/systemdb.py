@@ -244,8 +244,7 @@ class SystemDatabase(object):
         elif scope == "one":
             scope = ldap.SCOPE_ONELEVEL
         else:
-            raise SystemDatabaseException(_("LDAP Scope must be one of: ") +
-                    "sub, base, one"))
+            raise SystemDatabaseException(_("LDAP Scope must be one of: ") + "sub, base, one")
         
         query_filter = expand_string (query_filter, replace)
         search_base = expand_string (search_base, replace)
@@ -265,8 +264,7 @@ class SystemDatabase(object):
         elif multiple_result == "random":
             val = vals[random.randint(0, len(vals)-1)]
         else:
-            raise SystemDatabaseException(_("multiple_result must be one of: ")
-                + "first, random")
+            raise SystemDatabaseException(_("multiple_result must be one of: ") + "first, random")
 
         l.unbind ()
         

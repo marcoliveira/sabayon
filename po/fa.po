@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-20 09:43-0600\n"
+"POT-Creation-Date: 2009-12-21 21:44-0600\n"
 "PO-Revision-Date: 2006-09-03 19:46+0430\n"
 "Last-Translator: Meelad Zakaria <meelad@farsiweb.info>\n"
 "Language-Team: Persian \n"
@@ -108,8 +108,7 @@ msgstr "GConf"
 msgid "Files"
 msgstr "پرونده‌ها"
 
-#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
-#: ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "تابلو"
 
@@ -184,128 +183,6 @@ msgstr ""
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
 msgstr "استفاده از این مجموعه تنظیمات"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:100
-msgid "Click to make this setting not mandatory"
-msgstr "برای غیراجباری کردن این تنظیمات کلیک کنید"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:102
-msgid "Click to make this setting mandatory"
-msgstr "برای اجباری کردن این تنظیمات کلیک کنید"
-
-#: ../admin-tool/lockdown/maindialog.py:40
-msgid "General"
-msgstr "کلیات"
-
-#: ../admin-tool/lockdown/maindialog.py:42
-msgid "Epiphany Web Browser"
-msgstr "مرورگر وب اِپیفانی"
-
-#: ../admin-tool/lockdown/maindialog.py:43
-msgid "GNOME Screensaver"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:53
-msgid "Disable _command line"
-msgstr "از کار انداختن _سطر فرمان"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "Disable _printing"
-msgstr "از کار انداختن _چاپ"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable print _setup"
-msgstr "از کار انداختن _تنظیمات چاپ"
-
-#: ../admin-tool/lockdown/maindialog.py:56
-msgid "Disable save to _disk"
-msgstr "از کار انداختن ذخیره در _دیسک"
-
-#: ../admin-tool/lockdown/maindialog.py:58
-msgid "_Lock down the panels"
-msgstr "_قفل کردن تابلوها"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable force _quit"
-msgstr "از کار انداختن _ترک اجباری"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable log _out"
-msgstr "از کار انداختن _خروج از سیستم"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _quit"
-msgstr "از کار انداختن _ترک"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _arbitrary URL"
-msgstr "از کار انداختن نشانی _اختیاری"
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _bookmark editing"
-msgstr "از کار انداختن ویرایش _چوب‌الف"
-
-#: ../admin-tool/lockdown/maindialog.py:65
-msgid "Disable _history"
-msgstr "از کار انداختن _تاریخچه"
-
-#: ../admin-tool/lockdown/maindialog.py:66
-msgid "Disable _javascript chrome"
-msgstr "از کار انداختن کروم _جاوااسکریپت"
-
-#: ../admin-tool/lockdown/maindialog.py:67
-msgid "Disable _toolbar editing"
-msgstr "از کار انداختن ویرایش _نوار ابزار"
-
-#: ../admin-tool/lockdown/maindialog.py:68
-#, fuzzy
-msgid "Force _fullscreen mode"
-msgstr "_تمام صفحه"
-
-#: ../admin-tool/lockdown/maindialog.py:69
-msgid "Hide _menubar"
-msgstr "مخفی کردن _نوار منو"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Disable lock _screen"
-msgstr "از کار انداختن قفل _صفحهٔ نمایش"
-
-#: ../admin-tool/lockdown/maindialog.py:72
-#, fuzzy
-msgid "_Lock on activation"
-msgstr "_قفل کردن تابلوها"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-#, fuzzy
-msgid "Allow log _out"
-msgstr "از کار انداختن _خروج از سیستم"
-
-#: ../admin-tool/lockdown/maindialog.py:74
-msgid "Allow user _switching"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:233
-#, python-format
-msgid "Could not display help document '%s'"
-msgstr ""
-
-#: ../admin-tool/lockdown/pessulus.ui.h:1
-msgid "Disable _unsafe protocols"
-msgstr "از کار انداختن قراردادهای _ناامن"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:2
-#, fuzzy
-msgid "Disabled Applets"
-msgstr "<b>از کار انداختن برنامک‌ها</b>"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:3
-msgid "Lockdown Editor"
-msgstr "قفل کردن ویرایشگر"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:4
-#, fuzzy
-msgid "Safe Protocols"
-msgstr "<b>قراردادهای امن</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -928,6 +805,89 @@ msgid ""
 msgstr ""
 "پیدا کردن نام کاربر ممکن نیست: در ‎/etc/passwd تنظیم نشده و  هیچ محیطی برای "
 "$USER وجود ندارد"
+
+#~ msgid "Click to make this setting not mandatory"
+#~ msgstr "برای غیراجباری کردن این تنظیمات کلیک کنید"
+
+#~ msgid "Click to make this setting mandatory"
+#~ msgstr "برای اجباری کردن این تنظیمات کلیک کنید"
+
+#~ msgid "General"
+#~ msgstr "کلیات"
+
+#~ msgid "Epiphany Web Browser"
+#~ msgstr "مرورگر وب اِپیفانی"
+
+#~ msgid "Disable _command line"
+#~ msgstr "از کار انداختن _سطر فرمان"
+
+#~ msgid "Disable _printing"
+#~ msgstr "از کار انداختن _چاپ"
+
+#~ msgid "Disable print _setup"
+#~ msgstr "از کار انداختن _تنظیمات چاپ"
+
+#~ msgid "Disable save to _disk"
+#~ msgstr "از کار انداختن ذخیره در _دیسک"
+
+#~ msgid "_Lock down the panels"
+#~ msgstr "_قفل کردن تابلوها"
+
+#~ msgid "Disable force _quit"
+#~ msgstr "از کار انداختن _ترک اجباری"
+
+#~ msgid "Disable log _out"
+#~ msgstr "از کار انداختن _خروج از سیستم"
+
+#~ msgid "Disable _quit"
+#~ msgstr "از کار انداختن _ترک"
+
+#~ msgid "Disable _arbitrary URL"
+#~ msgstr "از کار انداختن نشانی _اختیاری"
+
+#~ msgid "Disable _bookmark editing"
+#~ msgstr "از کار انداختن ویرایش _چوب‌الف"
+
+#~ msgid "Disable _history"
+#~ msgstr "از کار انداختن _تاریخچه"
+
+#~ msgid "Disable _javascript chrome"
+#~ msgstr "از کار انداختن کروم _جاوااسکریپت"
+
+#~ msgid "Disable _toolbar editing"
+#~ msgstr "از کار انداختن ویرایش _نوار ابزار"
+
+#, fuzzy
+#~ msgid "Force _fullscreen mode"
+#~ msgstr "_تمام صفحه"
+
+#~ msgid "Hide _menubar"
+#~ msgstr "مخفی کردن _نوار منو"
+
+#~ msgid "Disable lock _screen"
+#~ msgstr "از کار انداختن قفل _صفحهٔ نمایش"
+
+#, fuzzy
+#~ msgid "_Lock on activation"
+#~ msgstr "_قفل کردن تابلوها"
+
+#, fuzzy
+#~ msgid "Allow log _out"
+#~ msgstr "از کار انداختن _خروج از سیستم"
+
+#~ msgid "Disable _unsafe protocols"
+#~ msgstr "از کار انداختن قراردادهای _ناامن"
+
+#, fuzzy
+#~ msgid "Disabled Applets"
+#~ msgstr "<b>از کار انداختن برنامک‌ها</b>"
+
+#~ msgid "Lockdown Editor"
+#~ msgstr "قفل کردن ویرایشگر"
+
+#, fuzzy
+#~ msgid "Safe Protocols"
+#~ msgstr "<b>قراردادهای امن</b>"
 
 #~ msgid "Usage: %s [<profile-name>]\n"
 #~ msgstr "طرز کار: %s [<مجموعه تنظیمات-نام>]\n"

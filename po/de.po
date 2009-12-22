@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-20 09:43-0600\n"
+"POT-Creation-Date: 2009-12-21 21:44-0600\n"
 "PO-Revision-Date: 2009-08-08 18:34+0200\n"
 "Last-Translator: Christian Kirbach <Christian.Kirbach@googlemail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
@@ -114,8 +114,7 @@ msgstr "GConf"
 msgid "Files"
 msgstr "Dateien"
 
-#: ../admin-tool/editorwindow.py:274 ../admin-tool/lockdown/maindialog.py:41
-#: ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "Panel"
 
@@ -190,128 +189,6 @@ msgstr ""
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
 msgstr "Dieses Profil verwenden"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:100
-msgid "Click to make this setting not mandatory"
-msgstr "Anklicken, um diese Einstellung optional zu machen"
-
-#: ../admin-tool/lockdown/lockdownbutton.py:102
-msgid "Click to make this setting mandatory"
-msgstr "Anklicken, um diese Einstellung zu erzwingen"
-
-#: ../admin-tool/lockdown/maindialog.py:40
-msgid "General"
-msgstr "Allgemein"
-
-#: ../admin-tool/lockdown/maindialog.py:42
-msgid "Epiphany Web Browser"
-msgstr "Epiphany-Internet-Browser"
-
-#: ../admin-tool/lockdown/maindialog.py:43
-msgid "GNOME Screensaver"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:53
-msgid "Disable _command line"
-msgstr "_Kommandozeile abschalten"
-
-#: ../admin-tool/lockdown/maindialog.py:54
-msgid "Disable _printing"
-msgstr "_Drucken deaktivieren"
-
-#: ../admin-tool/lockdown/maindialog.py:55
-msgid "Disable print _setup"
-msgstr "Drucker_einrichtung deaktivieren"
-
-#: ../admin-tool/lockdown/maindialog.py:56
-msgid "Disable save to _disk"
-msgstr "Speichern auf _Festplatte verbieten"
-
-#: ../admin-tool/lockdown/maindialog.py:58
-msgid "_Lock down the panels"
-msgstr "Alle _Panel sperren"
-
-#: ../admin-tool/lockdown/maindialog.py:59
-msgid "Disable force _quit"
-msgstr "Erzwungenes _Beenden deaktivieren"
-
-#: ../admin-tool/lockdown/maindialog.py:60
-msgid "Disable log _out"
-msgstr "_Abmelden deaktivieren"
-
-#: ../admin-tool/lockdown/maindialog.py:62
-msgid "Disable _quit"
-msgstr "B_eenden deaktivieren"
-
-#: ../admin-tool/lockdown/maindialog.py:63
-msgid "Disable _arbitrary URL"
-msgstr "Aufrufen beliebiger Adressen unterbinden"
-
-#: ../admin-tool/lockdown/maindialog.py:64
-msgid "Disable _bookmark editing"
-msgstr "Bearbeiten der _Lesezeichen verbieten"
-
-#: ../admin-tool/lockdown/maindialog.py:65
-msgid "Disable _history"
-msgstr "_Chronik deaktivieren"
-
-#: ../admin-tool/lockdown/maindialog.py:66
-msgid "Disable _javascript chrome"
-msgstr "_Javascript-Chrome deaktiveren"
-
-#: ../admin-tool/lockdown/maindialog.py:67
-msgid "Disable _toolbar editing"
-msgstr "Bearbeiten der _Werkzeugleisten verbieten"
-
-#: ../admin-tool/lockdown/maindialog.py:68
-#, fuzzy
-msgid "Force _fullscreen mode"
-msgstr "_Vollbild"
-
-#: ../admin-tool/lockdown/maindialog.py:69
-msgid "Hide _menubar"
-msgstr "_Menüleiste verbergen"
-
-#: ../admin-tool/lockdown/maindialog.py:71
-msgid "Disable lock _screen"
-msgstr "_Bildschirm sperren verbieten"
-
-#: ../admin-tool/lockdown/maindialog.py:72
-#, fuzzy
-msgid "_Lock on activation"
-msgstr "Alle _Panel sperren"
-
-#: ../admin-tool/lockdown/maindialog.py:73
-#, fuzzy
-msgid "Allow log _out"
-msgstr "_Abmelden deaktivieren"
-
-#: ../admin-tool/lockdown/maindialog.py:74
-msgid "Allow user _switching"
-msgstr ""
-
-#: ../admin-tool/lockdown/maindialog.py:233
-#, python-format
-msgid "Could not display help document '%s'"
-msgstr ""
-
-#: ../admin-tool/lockdown/pessulus.ui.h:1
-msgid "Disable _unsafe protocols"
-msgstr "_Unsichere Protokolle verbieten"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:2
-#, fuzzy
-msgid "Disabled Applets"
-msgstr "<b>Deaktivierte Applets</b>"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:3
-msgid "Lockdown Editor"
-msgstr "Zugriffsrechte anpassen"
-
-#: ../admin-tool/lockdown/pessulus.ui.h:4
-#, fuzzy
-msgid "Safe Protocols"
-msgstr "<b>Sichere Protokolle</b>"
 
 #.
 #. Translators: this string specifies how a profile
@@ -950,6 +827,89 @@ msgid ""
 msgstr ""
 "Benutzername konnte nicht gefunden werden: nicht in /etc/passwd gesetzt und "
 "kein Wert in Umgebungsvariable $USER"
+
+#~ msgid "Click to make this setting not mandatory"
+#~ msgstr "Anklicken, um diese Einstellung optional zu machen"
+
+#~ msgid "Click to make this setting mandatory"
+#~ msgstr "Anklicken, um diese Einstellung zu erzwingen"
+
+#~ msgid "General"
+#~ msgstr "Allgemein"
+
+#~ msgid "Epiphany Web Browser"
+#~ msgstr "Epiphany-Internet-Browser"
+
+#~ msgid "Disable _command line"
+#~ msgstr "_Kommandozeile abschalten"
+
+#~ msgid "Disable _printing"
+#~ msgstr "_Drucken deaktivieren"
+
+#~ msgid "Disable print _setup"
+#~ msgstr "Drucker_einrichtung deaktivieren"
+
+#~ msgid "Disable save to _disk"
+#~ msgstr "Speichern auf _Festplatte verbieten"
+
+#~ msgid "_Lock down the panels"
+#~ msgstr "Alle _Panel sperren"
+
+#~ msgid "Disable force _quit"
+#~ msgstr "Erzwungenes _Beenden deaktivieren"
+
+#~ msgid "Disable log _out"
+#~ msgstr "_Abmelden deaktivieren"
+
+#~ msgid "Disable _quit"
+#~ msgstr "B_eenden deaktivieren"
+
+#~ msgid "Disable _arbitrary URL"
+#~ msgstr "Aufrufen beliebiger Adressen unterbinden"
+
+#~ msgid "Disable _bookmark editing"
+#~ msgstr "Bearbeiten der _Lesezeichen verbieten"
+
+#~ msgid "Disable _history"
+#~ msgstr "_Chronik deaktivieren"
+
+#~ msgid "Disable _javascript chrome"
+#~ msgstr "_Javascript-Chrome deaktiveren"
+
+#~ msgid "Disable _toolbar editing"
+#~ msgstr "Bearbeiten der _Werkzeugleisten verbieten"
+
+#, fuzzy
+#~ msgid "Force _fullscreen mode"
+#~ msgstr "_Vollbild"
+
+#~ msgid "Hide _menubar"
+#~ msgstr "_Menüleiste verbergen"
+
+#~ msgid "Disable lock _screen"
+#~ msgstr "_Bildschirm sperren verbieten"
+
+#, fuzzy
+#~ msgid "_Lock on activation"
+#~ msgstr "Alle _Panel sperren"
+
+#, fuzzy
+#~ msgid "Allow log _out"
+#~ msgstr "_Abmelden deaktivieren"
+
+#~ msgid "Disable _unsafe protocols"
+#~ msgstr "_Unsichere Protokolle verbieten"
+
+#, fuzzy
+#~ msgid "Disabled Applets"
+#~ msgstr "<b>Deaktivierte Applets</b>"
+
+#~ msgid "Lockdown Editor"
+#~ msgstr "Zugriffsrechte anpassen"
+
+#, fuzzy
+#~ msgid "Safe Protocols"
+#~ msgstr "<b>Sichere Protokolle</b>"
 
 #~ msgid "Remove personal information from documents when saving them"
 #~ msgstr ""

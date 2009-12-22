@@ -31,7 +31,7 @@ import aboutdialog
 import debuglog
 import errors
 from lockdownappliersabayon import LockdownApplierSabayon
-from sabayon.lockdown import maindialog as lockdowndialog
+from Pessulus import maindialog as lockdowndialog
 from config import *
 
 _ui_string = '''
