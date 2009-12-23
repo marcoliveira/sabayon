@@ -92,7 +92,7 @@ class ProfileStorage:
     fact that there is a temporary directory are both
     implementation details and not exposed in the API.
 
-    Profile files are stored in /etc/desktop-profiles.
+    Profile files are stored in /etc/sabayon/profiles.
 
     Each file or directory in the profile has metadata
     associated with it - the "source" of the file/directory
@@ -104,7 +104,7 @@ class ProfileStorage:
         """Create a ProfileStorage.
 
         @name: the name of the profile - translates to
-        /etc/desktop-profiles/$(name).zip.
+        /etc/sabayon/profiles/$(name).zip.
         """
         self.name = name
         self.readonly = 0
@@ -564,7 +564,7 @@ class ProfileStorage:
 
     def save (self):
         """Save the contents of the profile to
-        /etc/desktop-profiles/$(name).zip.
+        /etc/sabayon/profiles/$(name).zip.
         """
         if self.readonly:
             raise ProfileStorageException (_("Profile is read-only %s") %

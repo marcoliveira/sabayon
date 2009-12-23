@@ -10,7 +10,7 @@ attributetype ( 1.3.6.1.4.1.2312.4.3.3.1 NAME 'sabayonProfileURL'
 
 # This attribute is used to store the name of a sabayon profile.
 # It can refer to either a local zipfile (which will be looked up
-# in /etc/desktop-profiles/$(name).zip), or it can be used to
+# in /etc/sabayon/profiles/$(name).zip), or it can be used to
 # map to another ldap object that maps to the final profile URL
 attributetype ( 1.3.6.1.4.1.2312.4.3.3.2 NAME 'sabayonProfileName'
 		DESC 'The Name of a sabayon profile'

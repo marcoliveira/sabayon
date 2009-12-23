@@ -354,7 +354,7 @@ gksu sabayon
             </orderedlist>
             <para>
                 Then save the profile by selecting Profile -&gt; Save
-                The profile is saved in /etc/desktop-profiles, as a .zip file
+                The profile is saved in /etc/sabayon/profiles, as a .zip file
                 with the name you selected for the profile.
             </para>
          </sect2>
@@ -460,7 +460,7 @@ fi
 #Argument 1 : name of the profile
 #Argument 2 : name of the group
 #
-chemin_profil="/etc/desktop-profiles/$1".zip
+chemin_profil="/etc/sabayon/profiles/$1".zip
 if [ $# -eq 2 ]
 then
  if [ -a $chemin_profil ]
@@ -577,7 +577,7 @@ Usage :
             </para>
             <para>
                 This file is located under
-                <filename>/etc/desktop-profiles/users.xml</filename>
+                <filename>/etc/sabayon/users.xml</filename>
                 (see PROFILESDIR in the config.py file to change the
                 prefix), as the name makes clear it is an XML file and
                 usually look like:
@@ -807,14 +807,14 @@ Usage :
                     The container is a Zip, its content can be viewed using the command
                 </para>
                 <screen>
-unzip -l /etc/desktop-profiles/test.zip
+unzip -l /etc/sabayon/profiles/test.zip
                 </screen>
                 <para>
                     The first entry is the metadata part, it is an XML file describing the
                     content of the archive. It can be viewed using the command
                 </para>
                 <screen>
-unzip -p /etc/desktop-profiles/test.zip metadata
+unzip -p /etc/sabayon/profiles/test.zip metadata
                 </screen>
                 <para>
                     Currently, the metadata contains
@@ -897,7 +897,7 @@ unzip -p /etc/desktop-profiles/test.zip metadata
             <para>
                 Sabayon supports using LDAP to get profiles in a very flexible way.
                 By defining server settings and queries in the
-                <filename>/etc/desktop-profiles/users.xml</filename> file it can do the mapping from user
+                <filename>/etc/sabayon/users.xml</filename> file it can do the mapping from user
                 to profile file using LDAP queries. An example setup can look like:
             </para>
             <screen>
@@ -959,8 +959,8 @@ unzip -p /etc/desktop-profiles/test.zip metadata
                     name to use for the user. The profile name is just a string, and it can be
                     either an absolute URI, a URI relative to the config file, or just a name.
                     If it is a name it will be looked up in the locationmap LDAP query (if specified)
-                    and if that didn't match, it will be converted to a filename in /etc/desktop-profiles
-                    by appending ".zip".
+                    and if that didn't match, it will be converted to a
+                    filename in <filename>/etc/sabayon/profiles</filename> by appending ".zip".
                 </para>
                 <para>
                     The locationmap query specifies the mapping from profile name to profile

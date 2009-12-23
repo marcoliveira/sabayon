@@ -93,12 +93,12 @@ class SystemDatabase(object):
     association between users and profiles.
 
     This database is stored by default in
-    $(sysconfdir)/desktop-profiles/users.xml and contains a
+    $(sysconfdir)/sabayon/profiles/users.xml and contains a
     list of users and the profile associated with each of
     those users.
 
     A profile can be reference by either its name (in which case
-    the profile is stored at /etc/desktop-profiles/$(name).zip),
+    the profile is stored at /etc/sabayon/profiles/$(name).zip),
     an absolute path or a http/file URL.
     """
     def __init__ (self, db_file = None):
@@ -106,12 +106,12 @@ class SystemDatabase(object):
 
         @db_file: a mandatory path which specifes the location
         of the database file. If only a file is specified, the
-        directory /etc/desktop-profiles is used.
+        directory /etc/sabayon is used.
         """
         if db_file is None:
             raise SystemDatabaseException(_("No database file provided"))
         elif db_file[0] != '/':
-            file = os.path.join (config.PROFILESDIR, db_file)
+            file = os.path.join (config.CONFIGDIR, db_file)
         else:
             file = db_file
         self.file = file
@@ -462,7 +462,7 @@ class SystemDatabase(object):
     def get_profiles (self):
         """Return the list of currently available profiles.
         This is basically just list of zip files in
-        /etc/desktop-profiles, each without the .zip extension.
+        /etc/sabayon/profiles, each without the .zip extension.
         """
         list = []
         try:
@@ -611,11 +611,11 @@ def run_unit_tests ():
     db.set_profile("localuser", "groupA")
     res = db.get_profile("localuser")
     assert not res is None
-    assert res[-28:] == "/desktop-profiles/groupA.zip"
+    assert res[-20:] == "/profiles/groupA.zip"
     db.set_profile("localuser", "groupB")
     res = db.get_profile("localuser")
     assert not res is None
-    assert res[-28:] == "/desktop-profiles/groupB.zip"
+    assert res[-20:] == "/profiles/groupB.zip"
     res = db.get_users()
     print res
     db = GroupDatabase(testgroupfile)
@@ -626,11 +626,11 @@ def run_unit_tests ():
     db.set_profile("localgroup", "groupA")
     res = db.get_profile("localgroup")
     assert not res is None
-    assert res[-28:] == "/desktop-profiles/groupA.zip"
+    assert res[-20:] == "/profiles/groupA.zip"
     db.set_profile("localgroup", "groupB")
     res = db.get_profile("localgroup")
     assert not res is None
-    assert res[-28:] == "/desktop-profiles/groupB.zip"
+    assert res[-20:] == "/profiles/groupB.zip"
     res = db.get_groups()
     print res
 

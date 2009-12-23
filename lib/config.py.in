@@ -26,8 +26,9 @@ SYSCONFDIR = "@SYSCONFDIR@"
 LIBEXECDIR = "@LIBEXECDIR@"
 SBINDIR    = "@SBINDIR@"
 
-BUILDERDIR  = os.path.join (DATADIR, "sabayon", "ui")
-PROFILESDIR = os.path.join (SYSCONFDIR, "desktop-profiles")
+BUILDERDIR  = os.path.join (DATADIR,    "sabayon", "ui")
+CONFIGDIR   = os.path.join (SYSCONFDIR, "sabayon")
+PROFILESDIR = os.path.join (CONFIGDIR,  "profiles")
 
 MONITOR_TOOL_ARGV = [ os.path.join (LIBEXECDIR, "sabayon-monitor") ]
 SESSION_TOOL_ARGV = [ os.path.join (LIBEXECDIR, "sabayon-session") ]
@@ -157,6 +158,6 @@ GCONF_KEYS_TO_IGNORE = [
     "/desktop/gnome/peripherals/keyboard/kbd.sysbackup/*",
 ]
 
-LOG_CONFIG_FILENAME = "sabayon-debug-log.conf"
+LOG_CONFIG_FILENAME = os.path.join (CONFIGDIR, "sabayon-debug-log.conf")
 
 BUG_TRACKING_SYSTEM = "http://bugzilla.gnome.org"

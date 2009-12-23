@@ -56,7 +56,7 @@ xinitrc_SCRIPTS = sabayon-xinitrc.sh
 endif
 
 install-exec-local:
-	mkdir -p $(DESTDIR)$(sysconfdir)/desktop-profiles/
+	mkdir -p $(DESTDIR)$(sysconfdir)/sabayon/profiles/
 if CONSOLE_HELPER
 	$(INSTALL_DATA) -D $(srcdir)/sabayon.pam $(DESTDIR)$(PAM_PREFIX)/pam.d/sabayon
 	$(INSTALL_DATA) -D sabayon.console $(DESTDIR)$(PAM_PREFIX)/security/console.apps/sabayon
@@ -66,7 +66,8 @@ if CONSOLE_HELPER
 endif
 
 uninstall-local:
-	rmdir --ignore-fail-on-non-empty $(DESTDIR)$(sysconfdir)/desktop-profiles/
+	rmdir --ignore-fail-on-non-empty $(DESTDIR)$(sysconfdir)/sabayon/profiles/
+	rmdir --ignore-fail-on-non-empty $(DESTDIR)$(sysconfdir)/sabayon/
 if CONSOLE_HELPER
 	rm -f $(DESTDIR)$(PAM_PREFIX)/pam.d/sabayon
 	rm -f $(DESTDIR)$(PAM_PREFIX)/security/console.apps/sabayon
