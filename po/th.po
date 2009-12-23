@@ -7,9 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon 2.19.1\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-21 21:44-0600\n"
-"PO-Revision-Date: 2009-08-23 16:17+0700\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=sabayon&component=general\n"
+"POT-Creation-Date: 2009-12-22 04:31+0000\n"
+"PO-Revision-Date: 2009-12-23 09:06+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -87,11 +88,11 @@ msgstr "_วิธีใช้"
 
 #: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
 msgid "_Contents"
-msgstr ""
+msgstr "_สารบัญ"
 
 #: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
 msgid "Help Contents"
-msgstr ""
+msgstr "สารบัญวิธีใช้"
 
 #: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
 msgid "_About"
@@ -173,13 +174,13 @@ msgid "Value"
 msgstr "ค่า"
 
 #: ../admin-tool/groupsdialog.py:61
-#, fuzzy, python-format
+#, python-format
 msgid "Groups for profile %s"
-msgstr "ผู้ใช้สำหรับโพรไฟล์ %s"
+msgstr "กลุ่มผู้ใช้สำหรับโพรไฟล์ %s"
 
 #: ../admin-tool/groupsdialog.py:71
 msgid "Group"
-msgstr ""
+msgstr "กลุ่มผู้ใช้"
 
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
@@ -292,11 +293,11 @@ msgstr "_รายละเอียด"
 
 #: ../admin-tool/sabayon.ui.h:7
 msgid "_Groups"
-msgstr ""
+msgstr "_กลุ่มผู้ใช้"
 
 #: ../admin-tool/sabayon.ui.h:8
 msgid "_Groups:"
-msgstr ""
+msgstr "_กลุ่มผู้ใช้:"
 
 #: ../admin-tool/sabayon.ui.h:9
 msgid "_Profiles:"
@@ -320,9 +321,8 @@ msgid "Save changes to profile \"%s\" before closing?"
 msgstr "บันทึกการเปลี่ยนแปลงในโพรไฟล์ \"%s\" ก่อนปิดหรือไม่?"
 
 #: ../admin-tool/saveconfirm.py:44
-#, fuzzy
 msgid "If you don't save, all changes will be permanently lost."
-msgstr "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดในชั่วโมงที่ผ่านมาจะสูญหายอย่างถาวร"
+msgstr "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดจะสูญหายอย่างถาวร"
 
 #: ../admin-tool/sessionwindow.py:155
 #, python-format
@@ -435,9 +435,8 @@ msgid "Applications menu"
 msgstr "เมนูโปรแกรม"
 
 #: ../lib/sources/filessource.py:99
-#, fuzzy
 msgid "Settings menu"
-msgstr "เมนูค่าตั้งเซิร์ฟเวอร์"
+msgstr "เมนูค่าตั้ง"
 
 #: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
@@ -591,22 +590,22 @@ msgid "Panel '%s' removed"
 msgstr "ลบพาเนล '%s' แล้ว"
 
 #: ../lib/sources/paneldelegate.py:77
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' added"
 msgstr "เพิ่มแอพเพล็ต '%s' แล้ว"
 
 #: ../lib/sources/paneldelegate.py:100
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' removed"
 msgstr "ลบแอพเพล็ต '%s' แล้ว"
 
 #: ../lib/sources/paneldelegate.py:123
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' added"
 msgstr "เพิ่มวัตถุพาเนล '%s' แล้ว"
 
 #: ../lib/sources/paneldelegate.py:152
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' removed"
 msgstr "ลบวัตถุพาเนล '%s' แล้ว"
 
@@ -691,7 +690,7 @@ msgstr "ไม่สามารถเพิ่มแฟ้ม '%s' ที่ไ
 #: ../lib/storage.py:487
 #, python-format
 msgid "Couldn't unlink file '%s'"
-msgstr ""
+msgstr "ไม่สามารถ unlink แฟ้ม '%s'"
 
 #: ../lib/storage.py:570
 #, python-format
@@ -708,70 +707,67 @@ msgstr "ชนิดสำหรับค่าตั้ง %(setting)s ไม�
 
 #: ../lib/systemdb.py:112
 msgid "No database file provided"
-msgstr ""
+msgstr "ไม่ได้ระบุแฟ้มฐานข้อมูล"
 
 #: ../lib/systemdb.py:232
-#, fuzzy, python-format
+#, python-format
 msgid "No LDAP search base specified for %s"
-msgstr "ไม่พบตำแหน่งเริ่มค้นหาสำหรับ %s"
+msgstr "ไม่พบตำแหน่งเริ่มค้นหา LDAP สำหรับ %s"
 
 #: ../lib/systemdb.py:235
-#, fuzzy, python-format
+#, python-format
 msgid "No LDAP query filter specified for %s"
-msgstr "ไม่มีตัวกรองคำสืบค้นสำหรับ %s"
+msgstr "ไม่มีตัวกรองคำสืบค้น LDAP สำหรับ %s"
 
 #: ../lib/systemdb.py:238
-#, fuzzy, python-format
+#, python-format
 msgid "No LDAP result attribute specified for %s"
-msgstr "ไม่ได้ระบุแอตทริบิวต์ของผลลัพธ์สำหรับ %s"
+msgstr "ไม่ได้ระบุแอตทริบิวต์ของผลลัพธ์ LDAP สำหรับ %s"
 
 #: ../lib/systemdb.py:247
-#, fuzzy
 msgid "LDAP Scope must be one of: "
-msgstr "ขอบเขตต้องมีค่าเป็น sub, base หรือ one"
+msgstr "ขอบเขต LDAP ต้องมีค่าเป็นค่าใดค่าหนึ่งต่อไปนี้: "
 
-#: ../lib/systemdb.py:268
-#, fuzzy
+#: ../lib/systemdb.py:267
 msgid "multiple_result must be one of: "
-msgstr "multiple_result ต้องมีค่าเป็น first หรือ random"
+msgstr "multiple_result ต้องมีค่าเป็นค่าใดค่าหนึ่งต่อไปนี้: "
 
-#: ../lib/systemdb.py:361
+#: ../lib/systemdb.py:359
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "ไม่สามารถเปิด %s เพื่อเขียนได้"
 
-#: ../lib/systemdb.py:374
+#: ../lib/systemdb.py:372
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "ไม่สามารถบันทึก UserDatabase ไปยัง %s"
 
-#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
+#: ../lib/systemdb.py:395 ../lib/systemdb.py:429
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "แฟ้ม %s ไม่ใช่ค่าตั้งโพรไฟล์"
 
-#: ../lib/systemdb.py:404
+#: ../lib/systemdb.py:402
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "ไม่สามารถเพิ่มโพรไฟล์ปริยาย %s เข้าในค่าตั้งได้"
 
-#: ../lib/systemdb.py:438
+#: ../lib/systemdb.py:436
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "ไม่สามารถเพิ่มผู้ใช้ %s เข้าในค่าตั้งโพรไฟล์ได้"
 
-#: ../lib/systemdb.py:510
+#: ../lib/systemdb.py:508
 msgid "Failed to get the user list"
-msgstr "ไม่สามารถอ่านรายการผู้ใช้ได้"
+msgstr "ไม่สามารถอ่านรายชื่อผู้ใช้ได้"
 
-#: ../lib/systemdb.py:560
-#, fuzzy
+#: ../lib/systemdb.py:558
 msgid "Failed to get the group list"
-msgstr "ไม่สามารถอ่านรายการผู้ใช้ได้"
+msgstr "ไม่สามารถอ่านรายชื่อกลุ่มผู้ใช้ได้"
 
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
-msgstr "ละเลย WARNING"
+msgstr "ละเลยคำเตือน"
 
 #: ../lib/unittests.py:61
 #, python-format
