@@ -40,6 +40,16 @@ else
 	AC_MSG_RESULT(yes)
 fi
 
+# Hard dependency on Pessulus
+
+AC_MSG_CHECKING(whether Pessulus is available)
+if [ ! python -c "import Pessulus" 2> /dev/null ]
+then
+	AC_MSG_FAILURE([Please install Pessulus])
+else
+	AC_MSG_RESULT(yes)
+fi
+
 #
 # Do a soft check for Python bindings for LDAP.  They're not strictly
 # necessary, but if you don't have them, you won't be able to do LDAP
