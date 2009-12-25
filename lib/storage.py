@@ -151,6 +151,7 @@ class ProfileStorage:
         metadata = libxml2.newDoc ("1.0")
         root = metadata.newChild (None, "metadata", None)
         root.newChild (None, "directories", None)
+        root.newChild (None, "links", None)
         root.newChild (None, "files", None)
         return metadata
 
@@ -257,6 +258,24 @@ class ProfileStorage:
 
         self.__update_file_or_dir_node (directory_node, source, attributes, metadata)
 
+    def __update_link_node (self, path, source, attributes, metadata = None):
+        if metadata is None:
+            metadata = self.metadata
+        assert metadata
+
+        files_node = metadata.xpathEval ("/metadata/links")[0]
+
+        # Ensure the directory node exists
+        nodes = files_node.xpathEval ("link[@path='%s']" % path)
+        if len (nodes):
+            link_node = nodes[0]
+        else:
+            link_node = files_node.newChild (None, "link", None)
+            link_node.setProp ("path", path)
+            link_node.setProp ("dest", os.readlink(path))
+
+        self.__update_file_or_dir_node (link_node, source, attributes, metadata)
+
     def __unpack (self):
         self.__read_metadata ()
 
@@ -359,7 +378,10 @@ class ProfileStorage:
         dst_path = os.path.join (self.temp_path, path)
 
         if not os.path.exists (src_path):
-            raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
+            # change the raise to a dprint, since some files seem to disappear.
+            # raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
+            dprint (_("Cannot add non-existent file '%s'"), src_path)
+            return
 
         # Remove old version
         node = self.__get_node (path)
@@ -371,7 +393,9 @@ class ProfileStorage:
         if os.path.isdir (src_path):
             self.__update_directory_node (path, source, attributes)
             copy_tree (self.temp_path, src_dir, path)
-        else:
+        elif os.path.islink (src_path):
+            self.__update_link_node (path, source, attributes)
+        elif os.path.isfile (src_path) and not os.path.islink (src_path):
             self.__update_file_node (path, source, attributes)
             dirname = os.path.dirname (dst_path)
             if not os.path.exists (dirname):
@@ -389,6 +413,15 @@ class ProfileStorage:
             return dir_nodes[0]
         return None
 
+    def __get_link_node (self, path, metadata = None):
+        if metadata is None:
+            metadata = self.metadata
+        assert metadata
+        link_nodes = metadata.xpathEval ("/metadata/links/link[@path='%s']" % path)
+        if len (link_nodes) > 0:
+            return link_nodes[0]
+        return None
+
     def __get_file_node (self, path, metadata = None):
         if metadata is None:
             metadata = self.metadata
@@ -402,6 +435,9 @@ class ProfileStorage:
         self.__read_metadata ()
 
         node = self.__get_dir_node (path, metadata)
+        if node:
+            return node
+        node = self.__get_link_node (path, metadata)
         if node:
             return node
         node = self.__get_file_node (path, metadata)
@@ -436,6 +472,9 @@ class ProfileStorage:
         node = self.__get_dir_node (path)
         if node:
             return "directory"
+        node = self.__get_link_node (path)
+        if node:
+            return "link"
         node = self.__get_file_node (path)
         if node:
             return "file"
@@ -472,6 +511,7 @@ class ProfileStorage:
             # preserve the mode of those files, then delete them,
             # write new versions, and restore the mode.
 
+            dprint ("copy_preserving_permissions('%s', '%s')", src, dest)
             got_stat = False
             try:
                 buf = os.stat (dest)
@@ -481,10 +521,16 @@ class ProfileStorage:
                     raise err
 
             if got_stat:
-                try:
-                    os.unlink (dest)
-                except OSError, err:
-                    raise ProfileStorageException (_("Couldn't unlink file '%s'") % dest)
+                if os.path.isdir (dest):
+                    try:
+                        os.rmdir (dest)
+                    except OSError, err:
+                        raise ProfileStorageException (_("Couldn't rmdir '%s'") % dest)
+                else:
+                    try:
+                        os.unlink (dest)
+                    except OSError, err:
+                        raise ProfileStorageException (_("Couldn't unlink file '%s'") % dest)
 
             # FIXME: we lose the "original" permissions, mtime, etc. with ZIP files.
             shutil.copy2 (src, dest)
@@ -498,8 +544,14 @@ class ProfileStorage:
 
         item_type = self.__get_item_type (path)
 
+        dprint ("Item Type %s", item_type)
+
         if item_type == "directory":
             copy_tree (dst_dir, self.temp_path, path, None, overwrite)
+        elif item_type == "link":
+            link_node = self.__get_link_node (path)
+            dest = link_node.prop("dest")
+            os.symlink(dest, path)
         else:
             dst_path = os.path.join (dst_dir, path)
             if overwrite or not os.path.exists (dst_path):
@@ -556,10 +608,13 @@ class ProfileStorage:
         """
         self.__read_metadata ()
 
-        for node in self.metadata.xpathEval ("/metadata/files/file"):
+        for node in self.metadata.xpathEval ("/metadata/directories/directory"):
             self.__foreach_node (node, callback, user_data, source)
 
-        for node in self.metadata.xpathEval ("/metadata/directories/directory"):
+        for node in self.metadata.xpathEval ("/metadata/links/link"):
+            self.__foreach_node (node, callback, user_data, source)
+
+        for node in self.metadata.xpathEval ("/metadata/files/file"):
             self.__foreach_node (node, callback, user_data, source)
 
     def save (self):
@@ -602,7 +657,7 @@ class ProfileStorage:
                     if os.path.isdir (path):
                         # We need to stop if we are recursing inside a ignored 
                         # directory.
-                        if util.should_ignore_dir (homedir, 
+                        if util.should_ignore_dir (homedir,
                                                    DIRECTORIES_TO_IGNORE_PROFILE,
                                                    os.path.join (homedir, name, f)):
                             dprint ("Not going inside %s as it is an ignored directory.", path)
@@ -610,12 +665,12 @@ class ProfileStorage:
                             zip_directory (save_zip,
                                         path,
                                         os.path.join (name, f))
-                    elif os.path.isfile (path):
+                    elif os.path.isfile (path) and not os.path.islink (path):
                         # Avoid putting in a duplicate file entry
                         # See bug #476761
                         if os.path.join (name, f) in zip_filelist:
                             dprint ("Not adding %s to zipfile since it is already in the file", os.path.join (name, f))
-                        elif util.should_ignore_file (homedir, 
+                        elif util.should_ignore_file (homedir,
                                                       DIRECTORIES_TO_IGNORE_PROFILE,
                                                       FILES_TO_IGNORE,
                                                       os.path.join (homedir, name, f)):
