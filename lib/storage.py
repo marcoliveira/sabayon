@@ -511,7 +511,6 @@ class ProfileStorage:
             # preserve the mode of those files, then delete them,
             # write new versions, and restore the mode.
 
-            dprint ("copy_preserving_permissions('%s', '%s')", src, dest)
             got_stat = False
             try:
                 buf = os.stat (dest)
@@ -543,8 +542,6 @@ class ProfileStorage:
         self.__unpack ()
 
         item_type = self.__get_item_type (path)
-
-        dprint ("Item Type %s", item_type)
 
         if item_type == "directory":
             copy_tree (dst_dir, self.temp_path, path, None, overwrite)

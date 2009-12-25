@@ -72,12 +72,14 @@ class ProfileChangesModel (gtk.ListStore):
     ) = range (5)
 
     def __init__ (self, profile):
-        gtk.ListStore.__init__ (self, userprofile.ProfileChange, bool, bool, gtk.gdk.Pixbuf, str, str)
+        gtk.ListStore.__init__ (self, userprofile.ProfileChange, bool, bool, gtk.gdk.Pixbuf, str)
 
         icon_theme = gtk.icon_theme_get_default ()
 
-        self.locked_pixbuf   = icon_theme.load_icon ("stock_lock",      16, 0)
-        self.unlocked_pixbuf = icon_theme.load_icon ("stock_lock-open", 16, 0)
+        self.locked_pixbuf   = icon_theme.load_icon ("stock_lock",      22,
+                gtk.ICON_LOOKUP_FORCE_SVG)
+        self.unlocked_pixbuf = icon_theme.load_icon ("stock_lock-open", 22,
+                gtk.ICON_LOOKUP_FORCE_SVG)
 
         self.profile = profile
         self.profile.connect ("changed", self.handle_profile_change)
