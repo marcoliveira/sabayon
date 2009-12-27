@@ -22,7 +22,6 @@ import os
 import stat
 import string
 import libxml2
-import StringIO
 import debuglog
 
 def dprint(fmt, *args):

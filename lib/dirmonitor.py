@@ -21,9 +21,7 @@ import os.path
 import gobject
 import gio
 import util
-import fnmatch
 import debuglog
-import urllib
 
 N_WATCHES_LIMIT = 200
 
@@ -120,7 +118,7 @@ class DirectoryMonitor:
         try:
             gfile = gio.File (dir)
             self.watches [dir] = gfile.monitor_directory ()
-            self.watches [dir].connect ("changed", self.__handle_file_monitor_event) 
+            self.watches [dir].connect ("changed", self.__handle_file_monitor_event)
             dprint ("Added directory watch for '%s'", dir)
         except:
             print ("Failed to add monitor for %s") % (dir)
@@ -230,7 +228,7 @@ def run_unit_tests ():
     expect (expected, os.path.join (temp_path, "foobar"), DELETED)
     
     # FIXME: we should be getting this event, but we don't seem to be
-    # expect (expected, os.path.join (temp_path, "foo.txt"), DELETED)
+    expect (expected, os.path.join (temp_path, "foo.txt"), DELETED)
     
     # ignore:
     # expect (expected, os.path.join (temp_path, "bar"), DELETED)
