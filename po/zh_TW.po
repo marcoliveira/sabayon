@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sabayon 2.25.0\n"
+"Project-Id-Version: sabayon 2.29.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-21 21:44-0600\n"
-"PO-Revision-Date: 2009-08-08 15:25+0800\n"
+"POT-Creation-Date: 2009-12-28 20:53+0800\n"
+"PO-Revision-Date: 2009-12-27 13:40+0800\n"
 "Last-Translator: Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>\n"
 "Language-Team: Chinese (Taiwan) <zh-l10n@lists.linux.org.tw>\n"
 "MIME-Version: 1.0\n"
@@ -46,15 +46,15 @@ msgstr "描述"
 msgid "Profile %s"
 msgstr "設定組合 %s"
 
-#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:179
 msgid "_Profile"
 msgstr "設定組合(_P)"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:180
 msgid "_Save"
 msgstr "儲存(_S)"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:180
 msgid "Save profile"
 msgstr "儲存設定組合"
 
@@ -62,11 +62,11 @@ msgstr "儲存設定組合"
 msgid "_Close"
 msgstr "關閉(_C)"
 
-#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:181
 msgid "Close the current window"
 msgstr "關閉目前的視窗"
 
-#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:182
 msgid "_Edit"
 msgstr "編輯 (_E)"
 
@@ -78,23 +78,23 @@ msgstr "刪除(_D)"
 msgid "Delete item"
 msgstr "刪除項目"
 
-#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:185
 msgid "_Help"
 msgstr "求助(_H)"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:186
 msgid "_Contents"
-msgstr ""
+msgstr "內容(_C)"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:186
 msgid "Help Contents"
-msgstr ""
+msgstr "求助內容"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:187
 msgid "_About"
 msgstr "關於(_A)"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:187
 msgid "About Sabayon"
 msgstr "關於 Sabayon"
 
@@ -170,13 +170,13 @@ msgid "Value"
 msgstr "數值"
 
 #: ../admin-tool/groupsdialog.py:61
-#, fuzzy, python-format
+#, python-format
 msgid "Groups for profile %s"
-msgstr "設定組合 %s 的使用者"
+msgstr "設定組合 %s 的群組"
 
 #: ../admin-tool/groupsdialog.py:71
 msgid "Group"
-msgstr ""
+msgstr "群組"
 
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
@@ -289,11 +289,11 @@ msgstr "詳細資料(_D)"
 
 #: ../admin-tool/sabayon.ui.h:7
 msgid "_Groups"
-msgstr ""
+msgstr "群組(_G)"
 
 #: ../admin-tool/sabayon.ui.h:8
 msgid "_Groups:"
-msgstr ""
+msgstr "群組(_G):"
 
 #: ../admin-tool/sabayon.ui.h:9
 msgid "_Profiles:"
@@ -317,49 +317,48 @@ msgid "Save changes to profile \"%s\" before closing?"
 msgstr "關閉前是否將變更儲存至設定組合‘%s’？"
 
 #: ../admin-tool/saveconfirm.py:44
-#, fuzzy
 msgid "If you don't save, all changes will be permanently lost."
-msgstr "如果不儲存，將會永久地失去 1 小時前所作的修改。"
+msgstr "如果不儲存，所有的變更將會永久地遺失。"
 
-#: ../admin-tool/sessionwindow.py:155
+#: ../admin-tool/sessionwindow.py:157
 #, python-format
 msgid "Editing profile %s"
 msgstr "編輯設定組合 %s"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Quit"
 msgstr "結束(_Q)"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "_Changes"
 msgstr "變更(_C)"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "Edit changes"
 msgstr "編輯變更"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "_Lockdown"
 msgstr "鎖定(_L)"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "Edit Lockdown settings"
 msgstr "編輯鎖定設定值"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce Mandatory"
 msgstr "強制命令"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce mandatory settings in the editing session"
 msgstr "在編輯作業階段中強制使用設定值"
 
-#: ../admin-tool/sessionwindow.py:306
+#: ../admin-tool/sessionwindow.py:308
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "鎖定 %s 的設定值"
 
-#: ../admin-tool/sessionwindow.py:342
+#: ../admin-tool/sessionwindow.py:344
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
@@ -368,11 +367,11 @@ msgstr ""
 "在套用使用者設定組合「%s」時發生部分錯誤。您可以現在就回報這個錯誤或是繼續編"
 "輯該使用者設定組合。"
 
-#: ../admin-tool/sessionwindow.py:346
+#: ../admin-tool/sessionwindow.py:348
 msgid "_Report this error"
 msgstr "回報這個錯誤(_R)"
 
-#: ../admin-tool/sessionwindow.py:347
+#: ../admin-tool/sessionwindow.py:349
 msgid "_Continue editing"
 msgstr "繼續編輯(_C)"
 
@@ -432,9 +431,8 @@ msgid "Applications menu"
 msgstr "應用程式選單"
 
 #: ../lib/sources/filessource.py:99
-#, fuzzy
 msgid "Settings menu"
-msgstr "伺服器設定值選單"
+msgstr "設定值選單"
 
 #: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
@@ -588,24 +586,24 @@ msgid "Panel '%s' removed"
 msgstr "面板‘%s’已經移除"
 
 #: ../lib/sources/paneldelegate.py:77
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' added"
-msgstr "已加入面板‘%s’"
+msgstr "已加入面板程式「%s」"
 
 #: ../lib/sources/paneldelegate.py:100
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' removed"
-msgstr "面板‘%s’已經移除"
+msgstr "已移除面板程式「%s」"
 
 #: ../lib/sources/paneldelegate.py:123
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' added"
-msgstr "已加入面板‘%s’"
+msgstr "已加入物件「%s」"
 
 #: ../lib/sources/paneldelegate.py:152
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' removed"
-msgstr "面板‘%s’已經移除"
+msgstr "已移除物件「%s」"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
 #: ../lib/sources/paneldelegate.py:240
@@ -665,32 +663,39 @@ msgstr "選單列"
 msgid "Panel File"
 msgstr "面板檔案"
 
-#: ../lib/storage.py:172
+#: ../lib/storage.py:173
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "讀取檔案‘%s’失敗：%s"
 
-#: ../lib/storage.py:182
+#: ../lib/storage.py:183
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "從‘%s’讀取中繼資料失敗：%s"
 
-#: ../lib/storage.py:188
+#: ../lib/storage.py:189
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "在‘%s’中有無效的中繼資料節區：%s"
 
-#: ../lib/storage.py:362
+#. change the raise to a dprint, since some files seem to disappear.
+#. raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
+#: ../lib/storage.py:383
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "無法加入不存在的檔案‘%s’"
 
-#: ../lib/storage.py:487
+#: ../lib/storage.py:527
+#, python-format
+msgid "Couldn't rmdir '%s'"
+msgstr "無法 rmdir 「%s」"
+
+#: ../lib/storage.py:532
 #, python-format
 msgid "Couldn't unlink file '%s'"
-msgstr ""
+msgstr "無法取消連結檔案「%s」"
 
-#: ../lib/storage.py:570
+#: ../lib/storage.py:622
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "設定組合是唯讀的 %s"
@@ -705,66 +710,63 @@ msgstr "%(np)s 中的設定值 %(setting)s 為無效的類型"
 
 #: ../lib/systemdb.py:112
 msgid "No database file provided"
-msgstr ""
+msgstr "沒有提供資料庫檔案"
 
 #: ../lib/systemdb.py:232
-#, fuzzy, python-format
+#, python-format
 msgid "No LDAP search base specified for %s"
-msgstr "沒有指定 %s 的搜尋基礎"
+msgstr "沒有指定 %s 的 LDAP 搜尋基礎"
 
 #: ../lib/systemdb.py:235
-#, fuzzy, python-format
+#, python-format
 msgid "No LDAP query filter specified for %s"
-msgstr "沒有指定 %s 的查詢過濾器"
+msgstr "沒有指定 %s 的 LDAP 查詢過濾條件"
 
 #: ../lib/systemdb.py:238
-#, fuzzy, python-format
+#, python-format
 msgid "No LDAP result attribute specified for %s"
-msgstr "沒有指定 %s 的結果屬性"
+msgstr "沒有指定 %s 的 LDAP 結果屬性"
 
 #: ../lib/systemdb.py:247
-#, fuzzy
 msgid "LDAP Scope must be one of: "
-msgstr "範圍必須是 sub，base 或 one"
+msgstr "LDAP 範圍必須是："
 
-#: ../lib/systemdb.py:268
-#, fuzzy
+#: ../lib/systemdb.py:267
 msgid "multiple_result must be one of: "
-msgstr "multiple_result 必須為 first 或 random"
+msgstr "multiple_result 範圍必須是："
 
-#: ../lib/systemdb.py:361
+#: ../lib/systemdb.py:359
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "無法開啟要寫入的 %s"
 
-#: ../lib/systemdb.py:374
+#: ../lib/systemdb.py:372
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "儲存 UserDatabase 至 %s 失敗"
 
-#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
+#: ../lib/systemdb.py:395 ../lib/systemdb.py:429
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "檔案 %s 不是設定組合組態"
 
-#: ../lib/systemdb.py:404
+#: ../lib/systemdb.py:402
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "將預設設定組合 %s 加入組態失敗"
 
-#: ../lib/systemdb.py:438
+#: ../lib/systemdb.py:436
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "將使用者 %s 加入組態失敗"
 
-#: ../lib/systemdb.py:510
+#: ../lib/systemdb.py:508
 msgid "Failed to get the user list"
 msgstr "取得使用者清單失敗"
 
-#: ../lib/systemdb.py:560
-#, fuzzy
+#: ../lib/systemdb.py:558
 msgid "Failed to get the group list"
-msgstr "取得使用者清單失敗"
+msgstr "取得群組清單失敗"
 
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
