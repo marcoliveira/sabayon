@@ -10,9 +10,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-21 21:44-0600\n"
-"PO-Revision-Date: 2009-12-20 13:36+0100\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=sabayon&component=general\n"
+"POT-Creation-Date: 2009-12-25 03:01+0000\n"
+"PO-Revision-Date: 2009-12-28 02:07+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -688,32 +689,40 @@ msgstr "Barra de menús"
 msgid "Panel File"
 msgstr "Archivo del panel"
 
-#: ../lib/storage.py:172
+#: ../lib/storage.py:173
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "No se pudo leer el archivo «%s»: %s"
 
-#: ../lib/storage.py:182
+#: ../lib/storage.py:183
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "No se pudieron leer los metadatos de «%s»: %s»"
 
-#: ../lib/storage.py:188
+#: ../lib/storage.py:189
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "Sección de metadatos inválida en «%s»: «%s»"
 
-#: ../lib/storage.py:362
+#. change the raise to a dprint, since some files seem to disappear.
+#. raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
+#: ../lib/storage.py:383
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "No se ha podido añadir el archivo inexistente «%s»"
 
-#: ../lib/storage.py:487
+#: ../lib/storage.py:528
+#, python-format
+#| msgid "Couldn't unlink file '%s'"
+msgid "Couldn't rmdir '%s'"
+msgstr "No se pudo borrar la carpeta «%s»"
+
+#: ../lib/storage.py:533
 #, python-format
 msgid "Couldn't unlink file '%s'"
 msgstr "No se pudo desenlazar el archivo «%s»"
 
-#: ../lib/storage.py:570
+#: ../lib/storage.py:625
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "El perfil es de sólo lectura %s"
@@ -749,40 +758,40 @@ msgstr "No se ha especificado un atributo resultante LDAP para %s"
 msgid "LDAP Scope must be one of: "
 msgstr "El ámbito LDAP debe ser uno de los siguientes: "
 
-#: ../lib/systemdb.py:268
+#: ../lib/systemdb.py:267
 msgid "multiple_result must be one of: "
 msgstr "multiple_result debe ser uno de los siguientes: "
 
-#: ../lib/systemdb.py:361
+#: ../lib/systemdb.py:359
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "No se pudo abrir %s en para escritura"
 
-#: ../lib/systemdb.py:374
+#: ../lib/systemdb.py:372
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "No se pudo guardar UserDatabase en %s"
 
-#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
+#: ../lib/systemdb.py:395 ../lib/systemdb.py:429
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "El archivo %s no es una configuración de perfil"
 
-#: ../lib/systemdb.py:404
+#: ../lib/systemdb.py:402
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "No se pudo añadir el perfil predeterminado %s a la configuración"
 
-#: ../lib/systemdb.py:438
+#: ../lib/systemdb.py:436
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "No se pudo añadir el usuario %s a la configuración de perfil"
 
-#: ../lib/systemdb.py:510
+#: ../lib/systemdb.py:508
 msgid "Failed to get the user list"
 msgstr "No se pudo recuperar la lista de usuarios"
 
-#: ../lib/systemdb.py:560
+#: ../lib/systemdb.py:558
 msgid "Failed to get the group list"
 msgstr "Falló al obtener la lista de grupos"
 
