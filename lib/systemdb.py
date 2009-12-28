@@ -526,7 +526,7 @@ class UserDatabase(SystemDatabase):
         return list
 
 class GroupDatabase(SystemDatabase):
-    """Encapsulate a user mapping
+    """Encapsulate a group mapping
     """
     def __init__ (self, db_file = None):
         if db_file is None:
