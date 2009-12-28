@@ -3,6 +3,7 @@ SUBDIRS =			\
 	admin-tool		\
 	data			\
 	help			\
+	man			\
 	po
 
 EXTRA_DIST =			\
