@@ -1,0 +1,1374 @@
+# translation of sabayon.help.master.po to Español
+# Spanish translation for sabayon.
+# Copyright (C) 2009 sabayon's COPYRIGHT HOLDER
+# This file is distributed under the same license as the sabayon package.
+#
+# Jorge González González <aloriel@gmail.com>, 2009.
+# Jorge González <jorgegonz@svn.gnome.org>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: sabayon.help.master\n"
+"POT-Creation-Date: 2009-12-20 12:37+0000\n"
+"PO-Revision-Date: 2009-12-29 20:29+0100\n"
+"Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
+"Language-Team: Español <gnome-es-list@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/sabayon.xml:222(None)
+msgid "@@image: 'figures/main-window.png'; md5=3d88bd174b42a3fd282733b215b4c2dd"
+msgstr "@@image: 'figures/main-window.png'; md5=3d88bd174b42a3fd282733b215b4c2dd"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/sabayon.xml:246(None)
+msgid "@@image: 'figures/add-profile.png'; md5=9e32b75142c4a3a47a1a4c33aeca8c03"
+msgstr "@@image: 'figures/add-profile.png'; md5=9e32b75142c4a3a47a1a4c33aeca8c03"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/sabayon.xml:267(None)
+msgid "@@image: 'figures/main-window-edit.png'; md5=e96673f9f7c1ac0e86ddb5ecdcba2e2b"
+msgstr "@@image: 'figures/main-window-edit.png'; md5=e96673f9f7c1ac0e86ddb5ecdcba2e2b"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/sabayon.xml:287(None)
+msgid "@@image: 'figures/edit-desktop.png'; md5=a747cdec58440f4f2c279df2edea00de"
+msgstr "@@image: 'figures/edit-desktop.png'; md5=a747cdec58440f4f2c279df2edea00de"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/sabayon.xml:317(None)
+msgid "@@image: 'figures/changes.png'; md5=56a2beb89b4504b189368a166ed47a03"
+msgstr "@@image: 'figures/changes.png'; md5=56a2beb89b4504b189368a166ed47a03"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/sabayon.xml:377(None)
+msgid "@@image: 'figures/lockdown.png'; md5=b3c3a4c52c38749a2d1eb564dfa0708e"
+msgstr "@@image: 'figures/lockdown.png'; md5=b3c3a4c52c38749a2d1eb564dfa0708e"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/sabayon.xml:431(None)
+msgid "@@image: 'figures/apply-by-user.png'; md5=afb4f97931f700c1d52d1d8251f70f13"
+msgstr "@@image: 'figures/apply-by-user.png'; md5=afb4f97931f700c1d52d1d8251f70f13"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/sabayon.xml:550(None)
+msgid "@@image: 'figures/apply-by-group.png'; md5=5f7516941e47cf55fbcc7cb5c016710b"
+msgstr "@@image: 'figures/apply-by-group.png'; md5=5f7516941e47cf55fbcc7cb5c016710b"
+
+#: C/sabayon.xml:16(title)
+msgid "Sabayon Administrator's Reference"
+msgstr "Manual del administrador de Sabayon"
+
+#: C/sabayon.xml:18(para)
+msgid "Sabayon is a profile editor for GNOME."
+msgstr "Sabayon es un editor de perfiles para GNOME."
+
+#: C/sabayon.xml:24(year)
+msgid "2005"
+msgstr "2005"
+
+#: C/sabayon.xml:25(year)
+msgid "2009"
+msgstr "2009"
+
+#: C/sabayon.xml:26(holder)
+msgid "CRI74"
+msgstr "CRI74"
+
+#: C/sabayon.xml:27(holder) C/sabayon.xml:31(publishername)
+msgid "Scott Balneaves"
+msgstr "Scott Balneaves"
+
+#: C/sabayon.xml:2(para)
+msgid ""
+"Permission is granted to copy, distribute and/or modify this document under "
+"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
+"later version published by the Free Software Foundation with no Invariant "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
+"of the GFDL at this <ulink type=\"help\" url=\"ghelp:fdl\">link</ulink> or "
+"in the file COPYING-DOCS distributed with this manual."
+msgstr ""
+"Se otorga permiso para copiar, distribuir y/o modificar este documento bajo "
+"los términos de la Licencia de Documentación Libre de GNU, Versión 1.1 o "
+"cualquier otra versión posterior publicada por la Free Software Foundation; "
+"sin Secciones Invariantes ni Textos de Cubierta Delantera ni Textos de "
+"Cubierta Trasera. Puede encontrar una copia de la licencia GFDL en este "
+"<ulink type=\"help\" url=\"ghelp:fdl\">enlace</ulink> o en el archivo "
+"COPYING-DOCS distribuido con este manual."
+
+#: C/sabayon.xml:12(para)
+msgid ""
+"This manual is part of a collection of GNOME manuals distributed under the "
+"GFDL. If you want to distribute this manual separately from the collection, "
+"you can do so by adding a copy of the license to the manual, as described in "
+"section 6 of the license."
+msgstr ""
+"Este manual es parte de una colección de manuales de GNOME distribuido bajo "
+"la GFDL. Si quiere distribuir este manual por separado de la colección, "
+"puede hacerlo añadiendo una copia de la licencia al manual, tal como se "
+"describe en la sección 6 de la licencia."
+
+#: C/sabayon.xml:19(para)
+msgid ""
+"Many of the names used by companies to distinguish their products and "
+"services are claimed as trademarks. Where those names appear in any GNOME "
+"documentation, and the members of the GNOME Documentation Project are made "
+"aware of those trademarks, then the names are in capital letters or initial "
+"capital letters."
+msgstr ""
+"Muchos de los nombres utilizados por las empresas para distinguir sus "
+"productos y servicios se consideran marcas comerciales. Cuando estos nombres "
+"aparezcan en la documentación de GNOME, y siempre que se haya informado a "
+"los miembros del Proyecto de documentación de GNOME de dichas marcas "
+"comerciales, los nombres aparecerán en mayúsculas o con las iniciales en "
+"mayúsculas."
+
+#: C/sabayon.xml:35(para)
+msgid ""
+"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
+"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
+"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
+"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
+"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
+"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
+"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
+"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
+"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
+"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
+"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
+msgstr ""
+"EL DOCUMENTO SE PROPORCIONA \"TAL CUAL\", SIN GARANTÍA DE NINGÚN TIPO, NI "
+"EXPLÍCITA NI IMPLÍCITA INCLUYENDO, SIN LIMITACIÓN, GARANTÍA DE QUE EL "
+"DOCUMENTO O VERSIÓN MODIFICADA DE ÉSTE CAREZCA DE DEFECTOS COMERCIALES, SEA "
+"ADECUADO A UN FIN CONCRETO O INCUMPLA ALGUNA NORMATIVA. TODO EL RIESGO "
+"RELATIVO A LA CALIDAD, PRECISIÓN Y UTILIDAD DEL DOCUMENTO O SU VERSIÓN "
+"MODIFICADA RECAE EN USTED. SI CUALQUIER DOCUMENTO O VERSIÓN MODIFICADA DE "
+"AQUÉL RESULTARA DEFECTUOSO EN CUALQUIER ASPECTO, USTED (Y NO EL REDACTOR "
+"INICIAL, AUTOR O CONTRIBUYENTE) ASUMIRÁ LOS COSTES DE TODA REPARACIÓN, "
+"MANTENIMIENTO O CORRECCIÓN NECESARIOS. ESTA RENUNCIA DE GARANTÍA ES UNA "
+"PARTE ESENCIAL DE ESTA LICENCIA. NO SE AUTORIZA EL USO DE NINGÚN DOCUMENTO "
+"NI VERSIÓN MODIFICADA DE ÉSTE POR EL PRESENTE, SALVO DENTRO DEL CUMPLIMIENTO "
+"DE LA RENUNCIA;Y"
+
+#: C/sabayon.xml:55(para)
+msgid ""
+"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
+"NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
+"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
+"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
+"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
+"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
+"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES "
+"OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
+"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
+"POSSIBILITY OF SUCH DAMAGES."
+msgstr ""
+"EN NINGUNA CIRCUNSTANCIA NI SEGÚN NINGÚN ARGUMENTO LEGAL, SEA POR MOTIVOS "
+"CULPOSOS (INCLUIDA LA NEGLIGENCIA), CONTRACTUALES O DE OTRO TIPO, NI EL "
+"AUTOR, NI EL REDACTOR INICIAL, NI CUALQUIER COLABORADOR, NI CUALQUIER "
+"DISTRIBUIDOR DEL DOCUMENTO O VERSIÓN MODIFICADA DEL MISMO, NI CUALQUIER "
+"PROVEEDOR DE CUALQUIERA DE DICHAS PARTES, SERÁN RESPONSABLES, ANTE NINGÚN "
+"TERCERO, DE NINGÚN DAÑO O PERJUICIO DIRECTO, INDIRECTO, ESPECIAL, INCIDENTAL "
+"O CONSIGUIENTE DE NINGÚN TIPO, INCLUIDOS, SIN LIMITACIÓN, LOS DAÑOS POR "
+"PÉRDIDA DE FONDO DE COMERCIO, INTERRUPCIÓN DEL TRABAJO, FALLO O MAL "
+"FUNCIONAMIENTO INFORMÁTICO, NI CUALQUIER OTRO DAÑO O PÉRDIDA DERIVADOS DEL "
+"USO DEL DOCUMENTO Y LAS VERSIONES MODIFICADAS DEL MISMO, O RELACIONADO CON "
+"ELLO, INCLUSO SI SE HABÍA COMUNICADO A AQUELLA PARTE LA POSIBILIDAD DE TALES "
+"DAÑOS."
+
+#: C/sabayon.xml:28(para)
+msgid ""
+"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
+"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
+"<placeholder-1/>"
+msgstr ""
+"ESTE DOCUMENTO Y LAS VERSIONES MODIFICADAS DEL MISMO SE PROPORCIONAN SEGÚN "
+"LAS CONDICIONES ESTABLECIDAS EN LA LICENCIA DE DOCUMENTACIÓN LIBRE DE GNU "
+"(GFDL) Y TENIENDO EN CUENTA QUE: <placeholder-1/>"
+
+#: C/sabayon.xml:39(firstname)
+msgid "Phillipe"
+msgstr "Phillipe"
+
+#: C/sabayon.xml:40(surname)
+msgid "Tonguet"
+msgstr "Tonguet"
+
+#: C/sabayon.xml:43(firstname)
+msgid "Scott"
+msgstr "Scott"
+
+#: C/sabayon.xml:44(surname)
+msgid "Balneaves"
+msgstr "Balneaves"
+
+#: C/sabayon.xml:50(revnumber)
+msgid "Sabayon V1.0"
+msgstr "Sabayon V1.0"
+
+#: C/sabayon.xml:51(date)
+msgid "November 2009"
+msgstr "Noviembre de 2009"
+
+#: C/sabayon.xml:55(releaseinfo)
+msgid "This manual describes version 2.29.0 of Sabayon."
+msgstr "Este manual describe la versión 2.29.0 de Sabayon."
+
+#: C/sabayon.xml:60(title)
+msgid "Feedback"
+msgstr "Comentarios"
+
+#: C/sabayon.xml:61(para)
+msgid ""
+"To report a bug or make a suggestion regarding the <application>sabayon</"
+"application> application or this manual, follow the directions in the <ulink "
+"url=\"ghelp:gnome-feedback\" type=\"help\">GNOME Feedback Page</ulink>."
+msgstr ""
+
+#: C/sabayon.xml:0(application)
+msgid "sabayon"
+msgstr "sabayon"
+
+#: C/sabayon.xml:73(primary)
+msgid "Profiles"
+msgstr "Perfiles"
+
+#: C/sabayon.xml:79(title)
+msgid "Introduction"
+msgstr "Introducción"
+
+#: C/sabayon.xml:81(title)
+msgid "Description"
+msgstr "Descripción"
+
+#: C/sabayon.xml:82(para)
+msgid ""
+"Sabayon is a system administration tool to manage GNOME desktop settings. "
+"Sabayon provides a sane way to edit GConf defaults and GConf mandatory keys: "
+"the same way you edit your desktop. Sabayon launches profiles in a Xephyr "
+"window, which provides an X session within an X session, like Xnest."
+msgstr ""
+
+#: C/sabayon.xml:89(para)
+msgid ""
+"Any changes you make in the Xnest window are saved back to the profile file, "
+"which can then be applied to user's accounts. Currently Sabayon is limited "
+"to the creation and update of user preference profiles. It does not deal "
+"with the very large problem of actually populating target system with those "
+"preferences. So far Sabayon supports complete files and the configuration "
+"format for:"
+msgstr ""
+
+#: C/sabayon.xml:99(para)
+msgid "GConf"
+msgstr "GConf"
+
+#: C/sabayon.xml:104(para)
+msgid "Mozilla/Firefox"
+msgstr "Mozilla/Firefox"
+
+#: C/sabayon.xml:109(para)
+msgid "OpenOffice.org"
+msgstr "OpenOffice.org"
+
+#: C/sabayon.xml:117(title)
+msgid "Installation"
+msgstr "Instalación"
+
+#: C/sabayon.xml:119(title)
+msgid "Installation from a tarball"
+msgstr "Instalación desde un tarball"
+
+#: C/sabayon.xml:120(para)
+msgid ""
+"Download Sabayon at <ulink url=\"http://ftp.gnome.org/pub/GNOME/sources/"
+"sabayon/\"/>"
+msgstr ""
+"Descargue Sabayon desde <ulink url=\"http://ftp.gnome.org/pub/GNOME/sources/"
+"sabayon/\"/>"
+
+#: C/sabayon.xml:124(para)
+msgid "To unpack the source, open a terminal and type :"
+msgstr "Para desempaquetar los fuentes abra un terminal y escriba:"
+
+#: C/sabayon.xml:127(screen)
+#, no-wrap
+msgid ""
+"\n"
+"$  tar -zxvf ~/sabayon-2.29.0.tar.gz\n"
+"$  cd sabayon-2.29.0\n"
+"            "
+msgstr ""
+"\n"
+"$  tar -zxvf ~/sabayon-2.29.0.tar.gz\n"
+"$  cd sabayon-2.29.0\n"
+"            "
+
+#: C/sabayon.xml:131(para)
+msgid "Then you can configure and compile the program:"
+msgstr "Después podrá configurar y compilar el programa:"
+
+#: C/sabayon.xml:134(screen)
+#, no-wrap
+msgid ""
+"\n"
+"$  ./configure --prefix=/usr --sysconfdir=/etc --mandir=/usr/share/man\n"
+"$  make\n"
+"$  sudo make install\n"
+"            "
+msgstr ""
+"\n"
+"$  ./configure --prefix=/usr --sysconfdir=/etc --mandir=/usr/share/man\n"
+"$  make\n"
+"$  sudo make install\n"
+"            "
+
+#: C/sabayon.xml:139(para)
+msgid "Add a user (you must have root permissions) :"
+msgstr "Añada un usuario (debe tener permisos de súper usuario):"
+
+#: C/sabayon.xml:142(screen)
+#, no-wrap
+msgid ""
+"\n"
+"# /usr/sbin/useradd -c \"Sabayon user\" -d /var/sabayon -g nogroup -s /sbin/nologin sabayon\n"
+"            "
+msgstr ""
+"\n"
+"# /usr/sbin/useradd -c \"Sabayon user\" -d /var/sabayon -g nogroup -s /sbin/nologin sabayon\n"
+"            "
+
+#: C/sabayon.xml:145(para)
+msgid "Create the directory /var/sabayon :"
+msgstr "Cree el directorio /var/sabayon:"
+
+#: C/sabayon.xml:148(screen)
+#, no-wrap
+msgid ""
+"\n"
+"# mkdir /var/sabayon\n"
+"            "
+msgstr ""
+"\n"
+"# mkdir /var/sabayon\n"
+"            "
+
+#: C/sabayon.xml:151(para)
+msgid "Apply the following permissions :"
+msgstr "Aplique los siguientes permisos:"
+
+#: C/sabayon.xml:154(screen)
+#, no-wrap
+msgid ""
+"\n"
+"# chown -R sabayon /var/sabayon\n"
+"# chgrp -R nogroup /var/sabayon\n"
+"            "
+msgstr ""
+"\n"
+"# chown -R sabayon /var/sabayon\n"
+"# chgrp -R nogroup /var/sabayon\n"
+"            "
+
+#: C/sabayon.xml:160(title)
+msgid "Installing your distributions package"
+msgstr "Instalar el paquete de su distribución"
+
+#: C/sabayon.xml:161(para)
+msgid ""
+"Your distribution probably contains a pre-packaged version of Sabayon which "
+"will be supported directly by your distribution. Search for the package "
+"'sabayon' in your distribution's package management tools."
+msgstr ""
+
+#: C/sabayon.xml:169(title)
+msgid "Installing from the git repository"
+msgstr "Instalar desde el repositorio git"
+
+#: C/sabayon.xml:170(para)
+msgid ""
+"For those who wish to be on the bleeding edge, you can install Sabayon from "
+"GNOME's git repository."
+msgstr ""
+
+#: C/sabayon.xml:174(para)
+msgid ""
+"Installing from git is precisely the procedure as installing from the "
+"tarball, with the exception of obtaining the release from git, and running "
+"the autoconfigure tools."
+msgstr ""
+
+#: C/sabayon.xml:179(screen)
+#, no-wrap
+msgid ""
+"\n"
+"$ git clone git://git.gnome.org/sabayon\n"
+"$ cd sabayon\n"
+"$ ./autogen.sh –prefix=/usr\n"
+"            "
+msgstr ""
+"\n"
+"$ git clone git://git.gnome.org/sabayon\n"
+"$ cd sabayon\n"
+"$ ./autogen.sh –prefix=/usr\n"
+"            "
+
+#: C/sabayon.xml:184(para)
+msgid ""
+"At this point, simply follow the same instructions for configuring and "
+"compiling the program as you did for installing from a tarball."
+msgstr ""
+
+#: C/sabayon.xml:192(title)
+msgid "Create a profile"
+msgstr ""
+
+#: C/sabayon.xml:193(para)
+msgid ""
+"Your first step in creating profiles for your users will be to map out what "
+"functions you want your users to have. If you're a business, you may wish to "
+"provide a GNOME top panel with a set of launchers already pre-defined. A "
+"teacher may want to disable the \"Administration\" and \"Preferences\" menu "
+"items. These are all things you can do with Sabayon."
+msgstr ""
+
+#: C/sabayon.xml:202(title)
+msgid "Creating a profile"
+msgstr ""
+
+#: C/sabayon.xml:203(para)
+msgid ""
+"Your first step will be to launch Sabayon. If you've installed Sabyon from "
+"your distribution's package manager, it may have an icon available for you "
+"under the \"Administration\" menu. If you've installed from source, you may "
+"need to launch it manually. Press &lt;alt&gt;&lt;F2&gt;, and type:"
+msgstr ""
+
+#: C/sabayon.xml:210(screen)
+#, no-wrap
+msgid ""
+"\n"
+"gksu sabayon\n"
+"            "
+msgstr ""
+
+#: C/sabayon.xml:213(para)
+msgid ""
+"and press enter. After you've authenticated, you should see the main window "
+"for Sabayon:"
+msgstr ""
+
+#: C/sabayon.xml:218(title)
+msgid "Main Window"
+msgstr "Ventana principal"
+
+#: C/sabayon.xml:225(phrase)
+msgid "Main window for Sabayon"
+msgstr ""
+
+#: C/sabayon.xml:228(para)
+msgid "Sabayon's main window for creating, and applying profiles."
+msgstr ""
+
+#: C/sabayon.xml:235(para)
+msgid ""
+"To create a new profile, just click on the \"Add\" button. You'll see a "
+"window, called \"Add Profile\", where you can name the profile, and "
+"optionally, select an existing profile which will be the basis, or starting "
+"point of this profile:"
+msgstr ""
+
+#: C/sabayon.xml:242(title)
+msgid "Add Profile"
+msgstr "Añadir perfil"
+
+#: C/sabayon.xml:249(phrase)
+msgid "Add Profile window for Sabayon"
+msgstr ""
+
+#: C/sabayon.xml:252(para)
+msgid "Add Profile window for Sabayon."
+msgstr ""
+
+#: C/sabayon.xml:258(para)
+msgid ""
+"Now that you've created the profile, you will want to edit it. Select the "
+"profile name, and click on Edit button:"
+msgstr ""
+
+#: C/sabayon.xml:263(title) C/sabayon.xml:270(phrase) C/sabayon.xml:273(para)
+msgid "Main window - Edit"
+msgstr ""
+
+#: C/sabayon.xml:279(para)
+msgid "A \"desktop within a window\" is opened:"
+msgstr ""
+
+#: C/sabayon.xml:283(title)
+msgid "Edit Desktop"
+msgstr ""
+
+#: C/sabayon.xml:290(phrase) C/sabayon.xml:293(para)
+msgid "Edit desktop"
+msgstr ""
+
+#: C/sabayon.xml:299(para)
+msgid ""
+"Within this window, you may make whatever changes to the profile that you "
+"wish. You can add launchers or applets to the panels, add launchers to the "
+"desktop, or create example files in the home directory."
+msgstr ""
+
+#: C/sabayon.xml:305(para)
+msgid ""
+"When you are done, you may want to look at what changes to the default "
+"session that Sabayon has detected you've made. You may do this by clicking "
+"on the \"Edit\" menu, and selecting \"Changes\". You should see a screen "
+"that looks like the following:"
+msgstr ""
+
+#: C/sabayon.xml:313(title) C/sabayon.xml:320(phrase)
+msgid "Changes window"
+msgstr ""
+
+#: C/sabayon.xml:323(para)
+msgid "Edit Sabayon's saved actions in the changes window Edit desktop"
+msgstr ""
+
+#: C/sabayon.xml:330(para)
+msgid "You can modify what Sabayon will save in the profile in the changes screen:"
+msgstr ""
+
+#: C/sabayon.xml:336(para)
+msgid ""
+"If you want Sabayon to ignore a setting that's been made, check the \"Ignore"
+"\" checkbox for that item."
+msgstr ""
+
+#: C/sabayon.xml:342(para)
+msgid ""
+"To have a gconf key set as a \"default\" setting, click the small shield in "
+"front of it once, so that it's silver."
+msgstr ""
+
+#: C/sabayon.xml:349(para)
+msgid ""
+"To have a gconf key set as a \"manditory\" setting, simply leave it as a "
+"gold shield."
+msgstr ""
+
+#: C/sabayon.xml:355(para)
+msgid ""
+"Then save the profile by selecting Profile -&gt; Save The profile is saved "
+"in /etc/desktop-profiles, as a .zip file with the name you selected for the "
+"profile."
+msgstr ""
+
+#: C/sabayon.xml:362(title)
+msgid "Lockdown Editor"
+msgstr "Editor de restricciones"
+
+#: C/sabayon.xml:363(para)
+msgid ""
+"GNOME also has lockdown features, which allow you to do things like prevent "
+"users from modifying their panels, opening a \"Run Application\" dialogue, "
+"etc."
+msgstr ""
+
+#: C/sabayon.xml:368(para)
+msgid ""
+"You can use Sabayon's lockdown editor by selecting Edit -&gt; Lockdown on "
+"the Desktop editor window."
+msgstr ""
+
+#: C/sabayon.xml:373(title) C/sabayon.xml:380(phrase)
+msgid "Lockdown editor"
+msgstr ""
+
+#: C/sabayon.xml:383(para)
+msgid "Edit GNOME's lockdown settings from Sabayon."
+msgstr ""
+
+#: C/sabayon.xml:392(title)
+msgid "Applying Profiles"
+msgstr ""
+
+#: C/sabayon.xml:394(title)
+msgid "Applying a profile"
+msgstr ""
+
+#: C/sabayon.xml:395(para)
+msgid ""
+"Important : I advise you creating a new user to test the profile. Add the "
+"following lines in /etc/gconf/2/path (add them at the beginning of the "
+"file) :"
+msgstr ""
+
+#: C/sabayon.xml:399(screen)
+#, no-wrap
+msgid ""
+"\n"
+"xml:readonly:$(HOME)/.gconf.xml.mandatory\n"
+"xml:readwrite:$(HOME)/.gconf\n"
+"xml:readonly:$(HOME)/.gconf.xml.defaults\n"
+"           "
+msgstr ""
+
+#: C/sabayon.xml:406(title)
+msgid "Applying profiles by user"
+msgstr ""
+
+#: C/sabayon.xml:407(para)
+msgid "Create and edit /etc/X11/Xsesssion.d/60sabayon_apply."
+msgstr ""
+
+#: C/sabayon.xml:410(screen)
+#, no-wrap
+msgid ""
+"\n"
+"#\n"
+"# Apply the Sabayon profile for the current user (if any)\n"
+"#\n"
+"if [ \"x$DISABLE_SABAYON_XINITRC\" = \"x\" ] ; then\n"
+"    if [ -x /usr/sbin/sabayon-apply ] ; then\n"
+"        /usr/sbin/sabayon-apply\n"
+"    fi\n"
+"fi\n"
+"            "
+msgstr ""
+
+#: C/sabayon.xml:420(para)
+msgid ""
+"Select the profile that you want to apply and click on Users : Then, select "
+"the users that you want to apply the profile. In this example Eleve1 and "
+"Eleve 2 will have the profile my_profile."
+msgstr ""
+
+#: C/sabayon.xml:427(title) C/sabayon.xml:434(phrase)
+msgid "Apply profile by user"
+msgstr ""
+
+#: C/sabayon.xml:437(para)
+msgid "Apply a profile to only certain users."
+msgstr ""
+
+#: C/sabayon.xml:445(title)
+msgid "Applying profiles by group"
+msgstr ""
+
+#: C/sabayon.xml:446(para)
+msgid ""
+"A common desire of systems administrators is to apply profiles by group. You "
+"can do this either in the gui tool itself, or alternatively, by a manual "
+"script."
+msgstr ""
+
+#: C/sabayon.xml:452(title)
+msgid "Manually with a script"
+msgstr ""
+
+#: C/sabayon.xml:453(para)
+msgid "The following is a script to apply a profile to a group of users :"
+msgstr ""
+
+#: C/sabayon.xml:456(screen)
+#, no-wrap
+msgid ""
+"\n"
+"#!/bin/bash\n"
+"#\n"
+"#Script : apply a profile to a group of users\n"
+"#Argument 1 : name of the profile\n"
+"#Argument 2 : name of the group\n"
+"#\n"
+"chemin_profil=\"/etc/desktop-profiles/$1\".zip\n"
+"if [ $# -eq 2 ]\n"
+"then\n"
+" if [ -a $chemin_profil ]\n"
+" then\n"
+"    getent group | cut -d \":\" -f 1 | grep $2 &gt; /dev/null\n"
+"    result=$?\n"
+"    if [ $result -eq 0 ]\n"
+"    then\n"
+"        if [ -x /usr/sbin/sabayon-apply ]\n"
+"        then\n"
+"          groupe=`getent group | cut -d \":\" -f 1,3 | grep $2 | cut -d \":\" -f 2`\n"
+"          getent passwd | while read ligne\n"
+"          do\n"
+"              gid=$(echo $ligne | cut -d \":\" -f 4)\n"
+"              name=$(echo $ligne | cut -d \":\" -f 1)\n"
+"              if [ $gid -eq $groupe ]\n"
+"              then\n"
+"                 home=$(getent passwd | cut -d \":\" -f 1,6 | grep $name | cut -d \":\" -f 2)\n"
+"                 touch $home/.gconf.path\n"
+"                 touch $home/.gconf.path.defaults\n"
+"                 touch $home/.gconf.path.mandatory\n"
+"                 echo \"include $home/.gconf.path.defaults\" &gt; $home/.gconf.path\n"
+"                 echo \"include $home/.gconf.path.mandatory\" &gt;&gt; $home/.gconf.path\n"
+"                 echo xml:readonly:$home/.gconf.xml.defaults &gt; $home/.gconf.path.defaults\n"
+"                 echo xml:readonly:$home/.gconf.xml.mandatory &gt; $home/.gconf.path.mandatory\n"
+"                 if [ -a $home/.gconf.xml.defaults ]\n"
+"                 then\n"
+"                    rm -r $home/.gconf.xml.defaults\n"
+"                 fi\n"
+"                 if [ -a $home/.gconf.xml.mandatory ]\n"
+"                 then\n"
+"                    rm -r $home/.gconf.xml.mandatory\n"
+"                 fi\n"
+"                 su $name -c \"/usr/sbin/sabayon-apply $chemin_profil\"\n"
+"                 chown -R root $home/.gconf.path\n"
+"                 chgrp -R root $home/.gconf.path\n"
+"                 chmod 755 $home/.gconf.path\n"
+"                 chown -R root $home/.gconf.path.defaults\n"
+"                 chgrp -R root $home/.gconf.path.defaults\n"
+"                 chmod 755 $home/.gconf.path.defaults\n"
+"                 chown -R root $home/.gconf.path.mandatory\n"
+"                 chgrp -R root $home/.gconf.path.mandatory\n"
+"                 chmod 755 $home/.gconf.path.mandatory\n"
+"                 chown -R root $home/.gconf.xml.defaults\n"
+"                 chgrp -R root $home/.gconf.xml.defaults\n"
+"                 chmod 755 $home/.gconf.xml.defaults\n"
+"                 chown -R root $home/.gconf.xml.mandatory\n"
+"                 chgrp -R root $home/.gconf.xml.mandatory\n"
+"                 chmod 755 $home/.gconf.xml.mandatory\n"
+"                 echo \"The profile $1 has been applied to $name.\"\n"
+"              fi\n"
+"           done\n"
+"           echo \"The profile $1 has been applied to the group $2.\"\n"
+"        fi\n"
+"    else\n"
+"        echo \"The group does not exist.\"\n"
+"    fi\n"
+" else\n"
+"    echo \"The profile does not exist.\"\n"
+" fi\n"
+"else\n"
+" echo \"\"\n"
+" echo \"Usage: $0 [name of the profile] [name of the group]\"\n"
+" echo \"\"\n"
+"fi\n"
+"\n"
+"\n"
+"Usage :\n"
+"# sudo ./sabayon.sh my_profil eleves\n"
+"    - The name of the script is sabayon.sh.\n"
+"    - 1st argument : my_profil which is the name of the profile.\n"
+"    - 2nd argument : eleves which is the name of the group.\n"
+"                "
+msgstr ""
+
+#: C/sabayon.xml:539(title)
+msgid "Via the gui"
+msgstr ""
+
+#: C/sabayon.xml:540(para)
+msgid ""
+"Simply use the simply sabayon-apply script above, but within the gui tool, "
+"select the 'Group' button, and check off which groups you wish to apply the "
+"profile to."
+msgstr ""
+
+#: C/sabayon.xml:546(title) C/sabayon.xml:553(phrase)
+msgid "Apply profile by group"
+msgstr ""
+
+#: C/sabayon.xml:556(para)
+msgid "Apply a profile to users who are members of a group."
+msgstr ""
+
+#: C/sabayon.xml:567(title)
+msgid "Sabayon Internals"
+msgstr ""
+
+#: C/sabayon.xml:568(para)
+msgid ""
+"This section outlines some information about Sabayon that Administrators, or "
+"potential Sabayon developers may find useful."
+msgstr ""
+
+#: C/sabayon.xml:573(title)
+msgid "User database"
+msgstr ""
+
+#: C/sabayon.xml:574(para)
+msgid ""
+"This page details the format of the user configuration file, where to store "
+"and access them."
+msgstr ""
+
+#: C/sabayon.xml:578(para)
+msgid ""
+"This file is located under <filename>/etc/desktop-profiles/users.xml</"
+"filename> (see PROFILESDIR in the config.py file to change the prefix), as "
+"the name makes clear it is an XML file and usually look like:"
+msgstr ""
+
+#: C/sabayon.xml:585(screen)
+#, no-wrap
+msgid ""
+"\n"
+"&lt;profiles&gt;\n"
+"    &lt;user name=\"titeuf\" profile=\"developer\"/&gt;\n"
+"    &lt;user name=\"fab\" profile=\"developer\"/&gt;\n"
+"    &lt;user name=\"bianca\" profile=\"secretary\"/&gt;\n"
+"\t...\n"
+"    &lt;default profile=\"default\"/&gt;\n"
+"&lt;/profiles&gt;\n"
+"            "
+msgstr ""
+
+#: C/sabayon.xml:594(para)
+msgid ""
+"It contains a list of named users, and their associated profile. The profile "
+"in that case are aliases, for example <emphasis>developer</emphasis> is a "
+"shortcut for <filename>developer.zip</filename> in the same directory."
+msgstr ""
+
+#: C/sabayon.xml:600(para)
+msgid ""
+"The default profile will be applied for any login not listed explicitely in "
+"the set of users."
+msgstr ""
+
+#: C/sabayon.xml:606(title)
+msgid "Centralized user databases and profiles"
+msgstr ""
+
+#: C/sabayon.xml:607(para)
+msgid ""
+"For large and automated deployement, maintaining copies of the user database "
+"and profiles on all machines does not really make sense. To avoid the "
+"problem, the profile values can be an URI - preferably using HTTP - to "
+"reference a remote resource like:"
+msgstr ""
+
+#: C/sabayon.xml:613(screen)
+#, no-wrap
+msgid ""
+"\n"
+"...\n"
+"&lt;user name=\"titeuf\"\n"
+"    profile=\"http://server.corp.com/prof/developers.zip\"/&gt;\n"
+"&lt;user name=\"fab\"\n"
+"    profile=\"http://server.corp.com/prof/developers.zip\"/&gt;\n"
+"...\n"
+"            "
+msgstr ""
+
+#: C/sabayon.xml:621(para)
+msgid ""
+"The profiles should then be maintained on a separate machine and copied over "
+"to the server when updated."
+msgstr ""
+
+#: C/sabayon.xml:625(para)
+msgid ""
+"The user database can also be centralized, using the <emphasis>XInclude</"
+"emphasis> mechanism for XML. For example the following assume there is a "
+"developer list maintained separately on the server, and defining the "
+"profiles for them:"
+msgstr ""
+
+#: C/sabayon.xml:632(screen)
+#, no-wrap
+msgid ""
+"\n"
+"&lt;profiles&gt;\n"
+"    &lt;xi:include xmlns:xi=\"http://www.w3.org/2001/XInclude\"\n"
+"\t   href=\"http://server.corp.com/user/devel.xml#xpointer(//user)\"/&gt;\n"
+"    ...\n"
+"    &lt;default profile=\"default\"/&gt;\n"
+"&lt;/profiles&gt;\n"
+"            "
+msgstr ""
+
+#: C/sabayon.xml:640(para)
+msgid ""
+"This XInclude will just collect all user definitions in the developer list "
+"at <emphasis>http://server.corp.com/user/devel.xml</emphasis> and replace "
+"the include statement with that list, and process the XML as usual. The only "
+"difference is that the profile values are then assumed to be URI-References "
+"and for example if the <emphasis>devel.xml</emphasis> contains"
+msgstr ""
+
+#: C/sabayon.xml:648(screen)
+#, no-wrap
+msgid ""
+"\n"
+"...\n"
+"    &lt;user name=\"titeuf\" profile=\"../prof/developers.zip\"/&gt;\n"
+"...\n"
+"            "
+msgstr ""
+
+#: C/sabayon.xml:653(para)
+msgid ""
+"then Sabayon will fetch the profile relative to the location of devel.xml, "
+"that is it will lookup the profiles relative to the base of where the "
+"fragment was defined and use <emphasis>http://server.corp.com/prof/"
+"developers.zip</emphasis>. Also note that shortcut are not allowed there, "
+"the trailing <emphasis>.zip</emphasis> is needed."
+msgstr ""
+
+#: C/sabayon.xml:661(para)
+msgid ""
+"The last point about the centralized support is that Sabayon will use a "
+"cache located in the user home directory under <filename>.sabayon/"
+"profile_cache</filename> to keep a copy of the non-local files, this allows "
+"profile to function normally in disconnected operations or in case of server "
+"failures."
+msgstr ""
+
+#: C/sabayon.xml:670(title)
+msgid "Format of profile storage"
+msgstr ""
+
+#: C/sabayon.xml:671(para)
+msgid ""
+"The following is a description of the requirement and the choices made when "
+"designing the user profile files. The existing format may change in the "
+"future but unless some of the requirement were missing it seems the existing "
+"choice is simple and flexible enough that no big change should be needed in "
+"the future."
+msgstr ""
+
+#: C/sabayon.xml:679(title)
+msgid "Format requiements"
+msgstr ""
+
+#: C/sabayon.xml:682(para)
+msgid "incremental update"
+msgstr ""
+
+#: C/sabayon.xml:687(para)
+msgid "container for sets of settings of different apps"
+msgstr ""
+
+#: C/sabayon.xml:692(para)
+msgid "associate apps with settings"
+msgstr ""
+
+#: C/sabayon.xml:697(para)
+msgid "independent update of one set of settings"
+msgstr ""
+
+#: C/sabayon.xml:702(para)
+msgid "ability to store full file"
+msgstr ""
+
+#: C/sabayon.xml:707(para)
+msgid "ability to save path with the content"
+msgstr ""
+
+#: C/sabayon.xml:712(para)
+msgid "provide metadata for the whole set and for each apps settings"
+msgstr ""
+
+#: C/sabayon.xml:717(para)
+msgid "possibility to merge and detect potential clashes on merges"
+msgstr ""
+
+#: C/sabayon.xml:722(para)
+msgid "possibility to extract or remove a simple set of data"
+msgstr ""
+
+#: C/sabayon.xml:727(para)
+msgid "allow to process with as standard tools as possible"
+msgstr ""
+
+#: C/sabayon.xml:734(title)
+msgid "Design Choices"
+msgstr ""
+
+#: C/sabayon.xml:735(para)
+msgid "Use ZIP for the container format:"
+msgstr ""
+
+#: C/sabayon.xml:740(para)
+msgid "platform ubiquity Linux/Windows/Mac..."
+msgstr ""
+
+#: C/sabayon.xml:745(para)
+msgid "free software tools and libraries"
+msgstr ""
+
+#: C/sabayon.xml:750(para)
+msgid "compressed"
+msgstr ""
+
+#: C/sabayon.xml:755(para)
+msgid ""
+"allows to access a single stream without exploding everything like a "
+"compressed tar or cpio requires"
+msgstr ""
+
+#: C/sabayon.xml:760(para)
+msgid "allow to store name/paths"
+msgstr ""
+
+#: C/sabayon.xml:767(title)
+msgid "XML Metadata description"
+msgstr ""
+
+#: C/sabayon.xml:768(para)
+msgid "Add an XML metadata section as the first entry:"
+msgstr ""
+
+#: C/sabayon.xml:773(para)
+msgid "classic design (jar)"
+msgstr ""
+
+#: C/sabayon.xml:778(para)
+msgid "allow to store all metadata informations associated"
+msgstr ""
+
+#: C/sabayon.xml:783(para)
+msgid "easy to extend in a backward and forward compatible way"
+msgstr ""
+
+#: C/sabayon.xml:788(para)
+msgid "open source tools and local knowledge"
+msgstr ""
+
+#: C/sabayon.xml:793(para)
+msgid ""
+"a lot of configuration data already require XML handling so this doesn't add "
+"an extra dependancy"
+msgstr ""
+
+#: C/sabayon.xml:798(para)
+msgid "load/modify subpart/save operations are easy on an XML tree"
+msgstr ""
+
+#: C/sabayon.xml:805(title)
+msgid "Internal structure"
+msgstr ""
+
+#: C/sabayon.xml:806(para)
+msgid "The container is a Zip, its content can be viewed using the command"
+msgstr ""
+
+#: C/sabayon.xml:809(screen)
+#, no-wrap
+msgid ""
+"\n"
+"unzip -l /etc/desktop-profiles/test.zip\n"
+"                "
+msgstr ""
+
+#: C/sabayon.xml:812(para)
+msgid ""
+"The first entry is the metadata part, it is an XML file describing the "
+"content of the archive. It can be viewed using the command"
+msgstr ""
+
+#: C/sabayon.xml:816(screen)
+#, no-wrap
+msgid ""
+"\n"
+"unzip -p /etc/desktop-profiles/test.zip metadata\n"
+"                "
+msgstr ""
+
+#: C/sabayon.xml:819(para)
+msgid "Currently, the metadata contains"
+msgstr ""
+
+#: C/sabayon.xml:824(para)
+msgid ""
+"general description for the whole set of settings e.g. \"Configuration for "
+"developers in project foo\":"
+msgstr ""
+
+#: C/sabayon.xml:829(para)
+msgid "administrative informations"
+msgstr ""
+
+#: C/sabayon.xml:834(para)
+msgid "last change timestamp"
+msgstr ""
+
+#: C/sabayon.xml:839(para)
+msgid "contact"
+msgstr "contacto"
+
+#: C/sabayon.xml:844(para)
+msgid "changelog"
+msgstr ""
+
+#: C/sabayon.xml:851(para)
+msgid "per stream description"
+msgstr ""
+
+#: C/sabayon.xml:856(para)
+msgid "name of the stream in the archive"
+msgstr ""
+
+#: C/sabayon.xml:861(para)
+msgid "associated application"
+msgstr ""
+
+#: C/sabayon.xml:866(para)
+msgid "description for settings e.g. \"Mozilla starts full screen\""
+msgstr ""
+
+#: C/sabayon.xml:871(para)
+msgid "administrative info"
+msgstr ""
+
+#: C/sabayon.xml:878(para)
+msgid ""
+"Then in the ZIP, each update has its own stream, the format is left to the "
+"corresponding user profile writer module. It can potentially be a full raw "
+"file, or a more synthetic description recognized by the specific profile "
+"module."
+msgstr ""
+
+#: C/sabayon.xml:884(para)
+msgid ""
+"Note that an application can have one stream per different configuration "
+"file for example .openoffice1.1/user/registry/data/org/openoffice/Inet.xcu "
+"and .openoffice1.1/user/registry/data/org/openoffice/Office/Common.xcu would "
+"be 2 different streams maintained by the OpenOffice reader writer module. An "
+"application may have both raw configuration files and digested name/values "
+"pairs, but in different files."
+msgstr ""
+
+#: C/sabayon.xml:896(title)
+msgid "LDAP profile storage"
+msgstr ""
+
+#: C/sabayon.xml:897(para)
+msgid ""
+"Sabayon supports using LDAP to get profiles in a very flexible way. By "
+"defining server settings and queries in the <filename>/etc/desktop-profiles/"
+"users.xml</filename> file it can do the mapping from user to profile file "
+"using LDAP queries. An example setup can look like:"
+msgstr ""
+
+#: C/sabayon.xml:903(screen)
+#, no-wrap
+msgid ""
+"\n"
+"&lt;profiles&gt;\n"
+" &lt;ldap server=\"ldap.example.com\"&gt;\n"
+"  &lt;profilemap search_base=\"ou=People,dc=example,dc=com\"\n"
+"           scope=\"one\"\n"
+"           query_filter=\"(uid=%u)\"\n"
+"           result_attribute=\"sabayonProfileURL\"/&gt;\n"
+"  &lt;/ldap&gt;\n"
+"  &lt;default profile=\"default\"/&gt;\n"
+"&lt;/profiles&gt;\n"
+"            "
+msgstr ""
+
+#: C/sabayon.xml:915(title)
+msgid "LDAP server configuration"
+msgstr ""
+
+#: C/sabayon.xml:916(para)
+msgid ""
+"The toplevel ldap tag sets up the server connection. Availible attributes "
+"are:"
+msgstr ""
+
+#: C/sabayon.xml:922(para)
+msgid "server (default: localhost): The address of the ldap server"
+msgstr ""
+
+#: C/sabayon.xml:927(para)
+msgid "port (default: 389): The port of the ldap server"
+msgstr ""
+
+#: C/sabayon.xml:932(para)
+msgid "version (default: 3): The ldap version to use"
+msgstr ""
+
+#: C/sabayon.xml:937(para)
+msgid "timeout (default: 10): Timeout to use for ldap operations, 0 to disable"
+msgstr ""
+
+#: C/sabayon.xml:942(para)
+msgid "bind_dn: dn to bind as, or leave out to run queries without binding"
+msgstr ""
+
+#: C/sabayon.xml:947(para)
+msgid "bind_pw: password used when binding"
+msgstr ""
+
+#: C/sabayon.xml:954(title)
+msgid "LDAP queries"
+msgstr ""
+
+#: C/sabayon.xml:955(para)
+msgid ""
+"Inside the ldap tag you can define the two queries used by Sabayon. The "
+"first is the profilemap query, which maps from the username to the profile "
+"name to use for the user. The profile name is just a string, and it can be "
+"either an absolute URI, a URI relative to the config file, or just a name. "
+"If it is a name it will be looked up in the locationmap LDAP query (if "
+"specified) and if that didn't match, it will be converted to a filename in /"
+"etc/desktop-profiles by appending \".zip\"."
+msgstr ""
+
+#: C/sabayon.xml:965(para)
+msgid ""
+"The locationmap query specifies the mapping from profile name to profile "
+"URI. This can optinally be used instead of storing the profile URI directly "
+"in the LDAP user object, to allow more flexibility in changing the URI."
+msgstr ""
+
+#: C/sabayon.xml:970(para)
+msgid "Both queries support these attributes:"
+msgstr ""
+
+#: C/sabayon.xml:975(para)
+msgid "search_base: The search base of the query"
+msgstr ""
+
+#: C/sabayon.xml:980(para)
+msgid "query_filter: the LDAP filter to use"
+msgstr ""
+
+#: C/sabayon.xml:985(para)
+msgid "result_attribute: The name of the attribute to look at in the query result"
+msgstr ""
+
+#: C/sabayon.xml:990(para)
+msgid "scope (default \"sub\"): The search scope. Can be sub, base or one."
+msgstr ""
+
+#: C/sabayon.xml:995(para)
+msgid ""
+"multiple_result (default \"first\"): How to handle multiple values in the "
+"resulting attribute. Can be \"first\", use the first attribute or \"random"
+"\", pick a random one (for e.g. load balancing)."
+msgstr ""
+
+#: C/sabayon.xml:1002(para)
+msgid ""
+"Both search_base and query_filter are expanded. In profilemap %u expands to "
+"the username and in locationmap %p expands to the profile name. In both maps "
+"%h expands to the full hostname of the client, and %% expands to %."
+msgstr ""
+
+#: C/sabayon.xml:1009(title)
+msgid "Examples"
+msgstr "Ejemplos"
+
+#: C/sabayon.xml:1010(para)
+msgid ""
+"There are many way to set up the Sabayon LDAP integration. Here are some "
+"examples, all using the Sabayon LDAP schema that comes in the Sabayon "
+"package."
+msgstr ""
+
+#: C/sabayon.xml:1016(title)
+msgid "Store profile URL in the user"
+msgstr ""
+
+#: C/sabayon.xml:1017(para)
+msgid ""
+"This is the simplest setup. Add a sabayonProfileURLObject to your user "
+"objects and set the sabayonProfileURL property for each user to a URI of the "
+"profile."
+msgstr ""
+
+#: C/sabayon.xml:1021(screen)
+#, no-wrap
+msgid ""
+"\n"
+"  ...\n"
+"  &lt;ldap server=\"...\"&gt;\n"
+"     &lt;profilemap search_base=\"ou=People,dc=example,dc=com\"\n"
+"                 scope=\"one\"\n"
+"                 query_filter=\"(uid=%u)\"\n"
+"                 result_attribute=\"sabayonProfileURL\"/&gt;\n"
+"  &lt;/ldap&gt;\n"
+"  ...\n"
+"                    "
+msgstr ""
+
+#: C/sabayon.xml:1033(title)
+msgid "Store profile as a separate entity in ldap"
+msgstr ""
+
+#: C/sabayon.xml:1034(para)
+msgid ""
+"Store the name of the profile for each user (using a "
+"sabayonProfileNameObject object), and store the actual URI in a "
+"sabayonProfile object. This gives a lot of flexibility to change the URI of "
+"the profile, without having to update each user."
+msgstr ""
+
+#: C/sabayon.xml:1040(screen)
+#, no-wrap
+msgid ""
+"\n"
+"  ...\n"
+"  &lt;ldap server=\"...\"&gt;\n"
+"     &lt;profilemap search_base=\"ou=People,dc=example,dc=com\"\n"
+"                 scope=\"one\"\n"
+"                 query_filter=\"(uid=%u)\"\n"
+"                 result_attribute=\"sabayonProfileName\"/&gt;\n"
+"     &lt;locationmap search_base=\"ou=Profiles,dc=example,dc=com\"\n"
+"                  scope=\"one\"\n"
+"                  query_filter=\"(cn=%p)\"\n"
+"                  result_attribute=\"sabayonProfileURL\"/&gt;\n"
+"  &lt;/ldap&gt;\n"
+"  ...\n"
+"                    "
+msgstr ""
+
+#: C/sabayon.xml:1056(title)
+msgid "Pick profile based on group membership"
+msgstr ""
+
+#: C/sabayon.xml:1057(para)
+msgid ""
+"This lets you pick a profile based on what group the user is part of by "
+"adding the sabayonProfileURL attribute to the group object."
+msgstr ""
+
+#: C/sabayon.xml:1062(screen)
+#, no-wrap
+msgid ""
+"\n"
+"  ...\n"
+"  &lt;ldap server=\"...\"&gt;\n"
+"     &lt;profilemap search_base=\"ou=Group,dc=example,dc=com\"\n"
+"                 scope=\"one\"\n"
+"                 query_filter=\"(memberUid=%u)\"\n"
+"                 result_attribute=\"sabayonProfileURL\"/&gt;\n"
+"  &lt;/ldap&gt;\n"
+"  ...\n"
+"                    "
+msgstr ""
+
+#: C/sabayon.xml:1074(title)
+msgid "Others"
+msgstr "Otros"
+
+#: C/sabayon.xml:1075(para)
+msgid ""
+"There are countless other ways, for example you could combine the group "
+"example and the separate profile object example. If you come up with an "
+"interesting way, please tell us on the mailing list."
+msgstr ""
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
+#: C/sabayon.xml:0(None)
+msgid "translator-credits"
+msgstr "Jorge González <jorgegonz@svn.gnome.org>, 2009."
+
