@@ -40,6 +40,16 @@ except ImportError:
     has_ldap = False;
 
 #
+# selinux should be a soft dependency.
+#
+
+try:
+    import selinux
+    has_selinux = True;
+except ImportError:
+    has_selinux = False;
+
+#
 # Default empty config.
 #
 defaultConf="""<profiles>
@@ -333,6 +343,7 @@ class SystemDatabase(object):
         return self.__profile_name_to_location (profile, user)
 
     def __save_as(self, filename = None):
+        global has_selinux
         """Save the current version to the given filename"""
         if filename == None:
             filename = self.file
@@ -370,6 +381,12 @@ class SystemDatabase(object):
 
             raise SystemDatabaseException(
                 _("Failed to save UserDatabase to %s") % filename)
+
+        if has_selinux:
+            if selinux.is_selinux_enabled() > 0:
+                rc, con = selinux.matchpathcon(filename, 0)
+                if rc == 0:
+                    selinux.setfilecon(filename, con)
 
         self.modified = 0
 

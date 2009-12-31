@@ -1,4 +1,4 @@
-AC_INIT([sabayon], [2.29.5-rc1],
+AC_INIT([sabayon], [2.29.5-rc2],
         [http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon])
 AC_CONFIG_SRCDIR(lib/userprofile.py)
 
@@ -58,6 +58,20 @@ fi
 
 AC_MSG_CHECKING(whether the ldap module for Python is available)
 if [ ! python -c "import ldap" 2> /dev/null ]
+then
+    AC_MSG_RESULT(no)
+else
+    AC_MSG_RESULT(yes)
+fi
+
+#
+# Do a soft check for Python bindings for selinux.  They're not strictly
+# necessary, but are used by Fedora, and some other distros, so we'll
+# issue a status message.
+#
+
+AC_MSG_CHECKING(whether the selinux module for Python is available)
+if [ ! python -c "import selinux" 2> /dev/null ]
 then
     AC_MSG_RESULT(no)
 else

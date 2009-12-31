@@ -35,6 +35,16 @@ import debuglog
 import errors
 from config import *
 
+#
+# Try to import selinux
+#
+
+try:
+    import selinux
+    has_selinux = True;
+except ImportError:
+    has_selinux = False;
+
 def dprint (fmt, *args):
     debuglog.debug_log (False, debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL, fmt % args)
 
@@ -108,8 +118,15 @@ class Session (gobject.GObject):
         return user_path
 
     def __copy_from_user (self, user_path, profile_path):
+        global has_selinux
         os.chown (user_path, os.geteuid (), os.getegid ())
         shutil.move (user_path, profile_path)
+        if has_selinux:
+            if selinux.is_selinux_enabled() > 0:
+                rc, con = selinux.matchpathcon(profile_path, 0)
+                if rc == 0:
+                    selinux.setfilecon(profile_path, con)
+
         dprint ("Moved %s back from %s", user_path, profile_path)
 
     @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_ADMIN_TOOL)
