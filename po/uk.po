@@ -6,10 +6,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-21 21:44-0600\n"
-"PO-Revision-Date: 2009-06-24 11:39+0300\n"
-"Last-Translator: wanderlust <wanderlust@ukr.net>\n"
-"Language-Team: ukrainian <Ukrainian <uk@li.org>>\n"
+"POT-Creation-Date: 2010-01-05 17:15+0200\n"
+"PO-Revision-Date: 2010-01-05 11:39+0300\n"
+"Last-Translator: Maxim Dziumanenko <dziumanenko@gmail.com>\n"
+"Language-Team: ukrainian <Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -46,15 +46,15 @@ msgstr "Опис"
 msgid "Profile %s"
 msgstr "Профіль %s"
 
-#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:179
 msgid "_Profile"
 msgstr "П_рофіль"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:180
 msgid "_Save"
 msgstr "З_берегти"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:180
 msgid "Save profile"
 msgstr "Зберегти профіль..."
 
@@ -62,11 +62,11 @@ msgstr "Зберегти профіль..."
 msgid "_Close"
 msgstr "_Закрити"
 
-#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:181
 msgid "Close the current window"
 msgstr "Закрити поточне вікно"
 
-#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:182
 msgid "_Edit"
 msgstr "_Правка"
 
@@ -78,23 +78,23 @@ msgstr "В_идалити"
 msgid "Delete item"
 msgstr "Видалити елемент"
 
-#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:185
 msgid "_Help"
 msgstr "_Довідка"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:186
 msgid "_Contents"
-msgstr ""
+msgstr "_Зміст"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:186
 msgid "Help Contents"
-msgstr ""
+msgstr "Зміст довідки"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:187
 msgid "_About"
 msgstr "_Про програму"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:187
 msgid "About Sabayon"
 msgstr "Про Sabayon"
 
@@ -156,7 +156,7 @@ msgstr "пара"
 msgid "Profile settings: %s"
 msgstr "Налаштовування профілю: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:421
 #: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "Назва"
@@ -170,13 +170,13 @@ msgid "Value"
 msgstr "Значення"
 
 #: ../admin-tool/groupsdialog.py:61
-#, fuzzy, python-format
+#, python-format
 msgid "Groups for profile %s"
-msgstr "Користувачі для профілю %s"
+msgstr "Групи для профілю %s"
 
 #: ../admin-tool/groupsdialog.py:71
 msgid "Group"
-msgstr ""
+msgstr "Група"
 
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
@@ -188,7 +188,7 @@ msgstr "Використовувати цей профіль"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:520
+#: ../admin-tool/profilesdialog.py:537
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -298,11 +298,11 @@ msgstr "_Подробиці"
 
 #: ../admin-tool/sabayon.ui.h:7
 msgid "_Groups"
-msgstr ""
+msgstr "_Групи"
 
 #: ../admin-tool/sabayon.ui.h:8
 msgid "_Groups:"
-msgstr ""
+msgstr "_Групи:"
 
 #: ../admin-tool/sabayon.ui.h:9
 msgid "_Profiles:"
@@ -326,50 +326,49 @@ msgid "Save changes to profile \"%s\" before closing?"
 msgstr "Зберегти зміни у профілі \"%s\" перед закриванням?"
 
 #: ../admin-tool/saveconfirm.py:44
-#, fuzzy
 msgid "If you don't save, all changes will be permanently lost."
 msgstr ""
 "Якщо ви не збережете, зміни за останню годину будуть остаточно втрачені."
 
-#: ../admin-tool/sessionwindow.py:155
+#: ../admin-tool/sessionwindow.py:157
 #, python-format
 msgid "Editing profile %s"
 msgstr "Зміна профілю %s"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Quit"
 msgstr "Ви_йти"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "_Changes"
 msgstr "_Зміни"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "Edit changes"
 msgstr "Редагувати зміни"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "_Lockdown"
 msgstr "_Блокувати"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "Edit Lockdown settings"
 msgstr "Змінити параметри блокування"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce Mandatory"
 msgstr "Нав'язувати примусові програми"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Нав'язувати примусові параметри у сеансі редагування"
 
-#: ../admin-tool/sessionwindow.py:306
+#: ../admin-tool/sessionwindow.py:308
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Параметри ізоляції для %s"
 
-#: ../admin-tool/sessionwindow.py:342
+#: ../admin-tool/sessionwindow.py:344
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
@@ -379,11 +378,11 @@ msgstr ""
 "можете сповістити про неї зараз або спробувати продовжити редагування "
 "профілю користувача."
 
-#: ../admin-tool/sessionwindow.py:346
+#: ../admin-tool/sessionwindow.py:348
 msgid "_Report this error"
 msgstr "_Сповістити про помилку"
 
-#: ../admin-tool/sessionwindow.py:347
+#: ../admin-tool/sessionwindow.py:349
 msgid "_Continue editing"
 msgstr "_Продовжити редагування"
 
@@ -443,9 +442,8 @@ msgid "Applications menu"
 msgstr "Меню програм"
 
 #: ../lib/sources/filessource.py:99
-#, fuzzy
 msgid "Settings menu"
-msgstr "Меню параметрів сервера"
+msgstr "Меню параметрів"
 
 #: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
@@ -599,24 +597,24 @@ msgid "Panel '%s' removed"
 msgstr "Видалено панель '%s'"
 
 #: ../lib/sources/paneldelegate.py:77
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' added"
-msgstr "Додано аплет панелі '%s'"
+msgstr "Додано аплет «%s»"
 
 #: ../lib/sources/paneldelegate.py:100
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' removed"
-msgstr "Видалено аплет панелі '%s'"
+msgstr "Видалено аплет «%s»"
 
 #: ../lib/sources/paneldelegate.py:123
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' added"
-msgstr "Додано об'єкт панелі '%s'"
+msgstr "Додано об'єкт «%s»"
 
 #: ../lib/sources/paneldelegate.py:152
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' removed"
-msgstr "Видалено об'єкт панелі '%s'"
+msgstr "Видалено об'єкт «%s»"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
 #: ../lib/sources/paneldelegate.py:240
@@ -676,32 +674,39 @@ msgstr "Панель меню"
 msgid "Panel File"
 msgstr "Файл панелі"
 
-#: ../lib/storage.py:172
+#: ../lib/storage.py:173
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "Не вдається прочитати файл \"%s\": %s"
 
-#: ../lib/storage.py:182
+#: ../lib/storage.py:183
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "Не вдається прочитати метадані з \"%s\": %s"
 
-#: ../lib/storage.py:188
+#: ../lib/storage.py:189
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "Неправильні метадані у розділі '%s': %s"
 
-#: ../lib/storage.py:362
+#. change the raise to a dprint, since some files seem to disappear.
+#. raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
+#: ../lib/storage.py:383
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Не вдається додати неіснуючий файл '%s'"
 
-#: ../lib/storage.py:487
+#: ../lib/storage.py:527
+#, python-format
+msgid "Couldn't rmdir '%s'"
+msgstr "Не вдається видалити каталог «%s»"
+
+#: ../lib/storage.py:532
 #, python-format
 msgid "Couldn't unlink file '%s'"
-msgstr ""
+msgstr "Не вдається видалити файл «%s»"
 
-#: ../lib/storage.py:570
+#: ../lib/storage.py:622
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Профіль лише для читання %s"
@@ -709,73 +714,70 @@ msgstr "Профіль лише для читання %s"
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/systemdb.py:67
+#: ../lib/systemdb.py:77
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "неправильний тип для встановлення %(setting)s у %(np)s"
 
-#: ../lib/systemdb.py:112
+#: ../lib/systemdb.py:122
 msgid "No database file provided"
-msgstr ""
+msgstr "Не вказано файл бази даних"
 
-#: ../lib/systemdb.py:232
-#, fuzzy, python-format
+#: ../lib/systemdb.py:242
+#, python-format
 msgid "No LDAP search base specified for %s"
-msgstr "Базу пошуку не вказано для %s"
+msgstr "Не вказано базу пошуку LDAP для %s"
 
-#: ../lib/systemdb.py:235
-#, fuzzy, python-format
+#: ../lib/systemdb.py:245
+#, python-format
 msgid "No LDAP query filter specified for %s"
-msgstr "Фільтр запиту не вказаний для %s"
+msgstr "Не вказано фільтр запиту LDAP для %s"
 
-#: ../lib/systemdb.py:238
-#, fuzzy, python-format
+#: ../lib/systemdb.py:248
+#, python-format
 msgid "No LDAP result attribute specified for %s"
-msgstr "Атрибут результату не вказаний для %s"
+msgstr "Не вказано атрибут результату LDAP для %s"
 
-#: ../lib/systemdb.py:247
-#, fuzzy
+#: ../lib/systemdb.py:257
 msgid "LDAP Scope must be one of: "
-msgstr "Scope має бути одним з sub, base чи one"
+msgstr "LDAP Scope має бути одним з:"
 
-#: ../lib/systemdb.py:268
-#, fuzzy
+#: ../lib/systemdb.py:277
 msgid "multiple_result must be one of: "
-msgstr "multiple_result має бути одне з first чи random"
+msgstr "multiple_result має бути одне з: "
 
-#: ../lib/systemdb.py:361
+#: ../lib/systemdb.py:370
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Не вдається відкрити %s для запису"
 
-#: ../lib/systemdb.py:374
+#: ../lib/systemdb.py:383
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Не вдається зберегти UserDatabase у %s"
 
-#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
+#: ../lib/systemdb.py:412 ../lib/systemdb.py:446
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Файл %s не є конфігурацією профілю"
 
-#: ../lib/systemdb.py:404
+#: ../lib/systemdb.py:419
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Не вдається додати у конфігурацію типовий профіль %s"
 
-#: ../lib/systemdb.py:438
+#: ../lib/systemdb.py:453
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Не вдається додати користувача %s у конфігурацію профілю"
 
-#: ../lib/systemdb.py:510
+#: ../lib/systemdb.py:525
 msgid "Failed to get the user list"
 msgstr "Не вдається отримати список користувачів"
 
-#: ../lib/systemdb.py:560
-#, fuzzy
+#: ../lib/systemdb.py:575
 msgid "Failed to get the group list"
-msgstr "Не вдається отримати список користувачів"
+msgstr "Не вдається отримати список груп"
 
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
@@ -811,420 +813,4 @@ msgstr ""
 "Не вдається знайти користувача:  не встановлено у /etc/passwd та не "
 "встановлено значення змінної $USER"
 
-#~ msgid "Click to make this setting not mandatory"
-#~ msgstr "Натисніть, щоб зробити цей параметр не примусовим"
 
-#~ msgid "Click to make this setting mandatory"
-#~ msgstr "Натисніть, щоб зробити цей параметр примусовим"
-
-#~ msgid "General"
-#~ msgstr "Загальне"
-
-#~ msgid "Epiphany Web Browser"
-#~ msgstr "Веб-переглядач Epiphany"
-
-#~ msgid "Disable _command line"
-#~ msgstr "Вимкнути _командний рядок"
-
-#~ msgid "Disable _printing"
-#~ msgstr "Вимкнути _друк"
-
-#~ msgid "Disable print _setup"
-#~ msgstr "Вимкнути _налаштовування друку"
-
-#~ msgid "Disable save to _disk"
-#~ msgstr "Вимкнути збереження на _диск"
-
-#~ msgid "_Lock down the panels"
-#~ msgstr "_Блокувати панелі"
-
-#~ msgid "Disable force _quit"
-#~ msgstr "Заборонити примусовий ви_хід"
-
-#~ msgid "Disable log _out"
-#~ msgstr "Заборонити завершення _сеансу"
-
-#~ msgid "Disable _quit"
-#~ msgstr "Вимкнути ви_хід"
-
-#~ msgid "Disable _arbitrary URL"
-#~ msgstr "Вимкнути довільні _URL"
-
-#~ msgid "Disable _bookmark editing"
-#~ msgstr "Заборонити _редагування закладок"
-
-#~ msgid "Disable _history"
-#~ msgstr "Заборонити _історію"
-
-#~ msgid "Disable _javascript chrome"
-#~ msgstr "Заборонити підтримку _javascript"
-
-#~ msgid "Disable _toolbar editing"
-#~ msgstr "Заборонити редагування _панелі інструментів"
-
-#, fuzzy
-#~ msgid "Force _fullscreen mode"
-#~ msgstr "_На весь екран"
-
-#~ msgid "Hide _menubar"
-#~ msgstr "Сховати _меню"
-
-#~ msgid "Disable lock _screen"
-#~ msgstr "Заборонити завершення _сеансу"
-
-#, fuzzy
-#~ msgid "_Lock on activation"
-#~ msgstr "_Блокувати панелі"
-
-#, fuzzy
-#~ msgid "Allow log _out"
-#~ msgstr "Заборонити завершення _сеансу"
-
-#~ msgid "Disable _unsafe protocols"
-#~ msgstr "Заборонити _небезпечні протоколи"
-
-#, fuzzy
-#~ msgid "Disabled Applets"
-#~ msgstr "<b>Заборонені аплети</b>"
-
-#~ msgid "Lockdown Editor"
-#~ msgstr "Редактор ізоляції"
-
-#, fuzzy
-#~ msgid "Safe Protocols"
-#~ msgstr "<b>Безпечні протоколи</b>"
-
-#~ msgid "Remove personal information from documents when saving them"
-#~ msgstr "Видаляти особисту інформацію з документів, при їх збереженні"
-
-#~ msgid "Warn if macro tries to create a PDF"
-#~ msgstr "Попереджати, якщо макрос намагається створити PDF"
-
-#~ msgid "Warn if macro tries to print a document"
-#~ msgstr "Попереджати, якщо макрос намагається друкувати документ"
-
-#~ msgid "Warn if macro tries to save a document"
-#~ msgstr "Попереджати, якщо макрос намагається зберегти документ"
-
-#~ msgid "Warn if macro tries to sign a document"
-#~ msgstr "Попереджати, якщо макрос намагається підписати документ"
-
-#~ msgid "Recommend password when saving a document"
-#~ msgstr "Рекомендувати пароль при збереженні документу"
-
-#~ msgid "Enable auto-save"
-#~ msgstr "Увімкнути автоматичне збереження"
-
-#~ msgid "Printing should mark the document as modified"
-#~ msgstr "Після друку документ маж позначатись як змінений"
-
-#~ msgid "Use system's file dialog"
-#~ msgstr "Системний діалог вибору файлу"
-
-#~ msgid "Create backup copy on save"
-#~ msgstr "Створювати резервну копію при збереженні"
-
-#~ msgid "Warn when saving non-OpenOffice.org formats"
-#~ msgstr "Попереджати при збереженні не у форматі OpenOffice.org"
-
-#~ msgid "Use OpenGL"
-#~ msgstr "Використовувати OpenGL"
-
-#~ msgid "Use system font"
-#~ msgstr "Використовувати системний шрифт"
-
-#~ msgid "Use anti-aliasing"
-#~ msgstr "Використовувати згладжування шрифтів"
-
-#~ msgid "Disable UI customization"
-#~ msgstr "Вимкнути налаштовування вигляду"
-
-#~ msgid "Show insensitive menu items"
-#~ msgstr "Показувати неактивні пункти меню"
-
-#~ msgid "Show font preview"
-#~ msgstr "Попередній перегляд шрифту"
-
-#~ msgid "Show font history"
-#~ msgstr "Відображати історію шрифту"
-
-#~ msgid "Show icons in menus"
-#~ msgstr "Відображати значки у меню"
-
-#~ msgid ""
-#~ "\n"
-#~ "5\n"
-#~ "10\n"
-#~ "25\n"
-#~ "50"
-#~ msgstr ""
-#~ "\n"
-#~ "5\n"
-#~ "10\n"
-#~ "25\n"
-#~ "50"
-
-#~ msgid ""
-#~ "\n"
-#~ "Automatic\n"
-#~ "Large\n"
-#~ "Small"
-#~ msgstr ""
-#~ "\n"
-#~ "Автоматично\n"
-#~ "Великі\n"
-#~ "Маленькі"
-
-#~ msgid ""
-#~ "\n"
-#~ "OpenDocument (.odp)\n"
-#~ "PowerPoint 97+ (.ppt)\n"
-#~ "OpenOffice.org 1.1 (.sxi)"
-#~ msgstr ""
-#~ "\n"
-#~ "OpenDocument (.odp)\n"
-#~ "PowerPoint 97+ (.ppt)\n"
-#~ "OpenOffice.org 1.1 (.sxi)"
-
-#~ msgid ""
-#~ "\n"
-#~ "OpenDocument (.ods)\n"
-#~ "Excel 97+ (.xls)\n"
-#~ "OpenOffice.org 1.1 (.sxc)"
-#~ msgstr ""
-#~ "\n"
-#~ "OpenDocument (.ods)\n"
-#~ "Excel 97+ (.xls)\n"
-#~ "OpenOffice.org 1.1 (.sxc)"
-
-#~ msgid ""
-#~ "\n"
-#~ "OpenDocument (.odt)\n"
-#~ "Word 97+ (.doc)\n"
-#~ "OpenOffice.org 1.1 (.sxw)"
-#~ msgstr ""
-#~ "\n"
-#~ "OpenDocument (.odt)\n"
-#~ "Word 97+ (.doc)\n"
-#~ "OpenOffice.org 1.1 (.sxw)"
-
-#~ msgid ""
-#~ "\n"
-#~ "Very High\n"
-#~ "High\n"
-#~ "Medium\n"
-#~ "Low"
-#~ msgstr ""
-#~ "\n"
-#~ "Дуже висока\n"
-#~ "Висока\n"
-#~ "Середня\n"
-#~ "Низька"
-
-#~ msgid "Default format for presentations:"
-#~ msgstr "Типовий формат презентацій:"
-
-#~ msgid "Default format for spreadsheet:"
-#~ msgstr "Типовий формат електронних таблиць:"
-
-#~ msgid "Default format for word processor:"
-#~ msgstr "Типовий формат текстових документів:"
-
-#~ msgid "Default icon size"
-#~ msgstr "Типовий розмір значків"
-
-#~ msgid "Load / Save"
-#~ msgstr "Завантажити / зберегти"
-
-#~ msgid "Macro Security Level:"
-#~ msgstr "Рівень безпеки макросів:"
-
-#~ msgid "Number of undo steps:"
-#~ msgstr "Кількість кроків скасування:"
-
-#~ msgid "OpenOffice.org"
-#~ msgstr "OpenOffice.org"
-
-#~ msgid "Security"
-#~ msgstr "Безпека"
-
-#~ msgid "User Interface"
-#~ msgstr "Інтерфейс користувача"
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld second will be permanently "
-#~ "lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %ld seconds will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Якщо ви не збережете, зміни за останню %ld секунду будуть остаточно "
-#~ "втрачені."
-#~ msgstr[1] ""
-#~ "Якщо ви не збережете, зміни за останні %ld секунди будуть остаточно "
-#~ "втрачені."
-#~ msgstr[2] ""
-#~ "Якщо ви не збережете, зміни за останні %ld секунд будуть остаточно "
-#~ "втрачені."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last minute will be permanently lost."
-#~ msgstr ""
-#~ "Якщо ви не збережете, зміни за останню хвилину будуть остаточно втрачені."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last minute and %ld second will be "
-#~ "permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last minute and %ld seconds will be "
-#~ "permanently lost."
-#~ msgstr[0] ""
-#~ "Якщо ви не збережете, зміни за останню хвилину та %ld секунду будуть "
-#~ "остаточно втрачені."
-#~ msgstr[1] ""
-#~ "Якщо ви не збережете, зміни за останню хвилину та %ld секунди будуть "
-#~ "остаточно втрачені."
-#~ msgstr[2] ""
-#~ "Якщо ви не збережете, зміни за останню хвилину та %ld секунд будуть "
-#~ "остаточно втрачені."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld minute will be permanently "
-#~ "lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %ld minutes will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Якщо ви не збережете, зміни за останню %ld хвилину будуть остаточно "
-#~ "втрачені."
-#~ msgstr[1] ""
-#~ "Якщо ви не збережете, зміни за останні %ld хвилини будуть остаточно "
-#~ "втрачені."
-#~ msgstr[2] ""
-#~ "Якщо ви не збережете, зміни за останні %ld хвилин будуть остаточно "
-#~ "втрачені."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last hour and %d minute will be "
-#~ "permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last hour and %d minutes will be "
-#~ "permanently lost."
-#~ msgstr[0] ""
-#~ "Якщо ви не збережете, зміни за останню годину та %d хвилину будуть "
-#~ "остаточно втрачені."
-#~ msgstr[1] ""
-#~ "Якщо ви не збережете, зміни за останню годину та %d хвилини будуть "
-#~ "остаточно втрачені."
-#~ msgstr[2] ""
-#~ "Якщо ви не збережете, зміни за останню годину та %d хвилин будуть "
-#~ "остаточно втрачені."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %d hour will be permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %d hours will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Якщо ви не збережете, зміни за останню %d годину будуть остаточно "
-#~ "втрачені."
-#~ msgstr[1] ""
-#~ "Якщо ви не збережете, зміни за останні %d години будуть остаточно "
-#~ "втрачені."
-#~ msgstr[2] ""
-#~ "Якщо ви не збережете, зміни за останні %d годин будуть остаточно втрачені."
-
-#~ msgid "Preferences menu"
-#~ msgstr "Меню параметрів"
-
-#~ msgid "Applet %s added to top panel"
-#~ msgstr "Аплет %s додано до верхньої панелі"
-
-#~ msgid "Applet %s added to bottom panel"
-#~ msgstr "Аплет %s додано до нижньої панелі"
-
-#~ msgid "Applet %s added to left panel"
-#~ msgstr "Аплет %s додано до лівої панелі"
-
-#~ msgid "Applet %s added to right panel"
-#~ msgstr "Аплет %s додано до правої панелі"
-
-#~ msgid "Applet %s removed from top panel"
-#~ msgstr "Аплет %s видалено з верхньої панелі"
-
-#~ msgid "Applet %s removed from bottom panel"
-#~ msgstr "Аплет %s видалено з нижньої панелі"
-
-#~ msgid "Applet %s removed from left panel"
-#~ msgstr "Аплет %s видалено з лівої панелі"
-
-#~ msgid "Applet %s removed from right panel"
-#~ msgstr "Аплет %s видалено з правої панелі"
-
-#~ msgid "%s added to top panel"
-#~ msgstr "%s додано до верхньої панелі"
-
-#~ msgid "%s added to bottom panel"
-#~ msgstr "%s додано до нижньої панелі"
-
-#~ msgid "%s added to left panel"
-#~ msgstr "%s додано до лівої панелі"
-
-#~ msgid "%s added to right panel"
-#~ msgstr "%s додано до правої панелі"
-
-#~ msgid "%s removed from top panel"
-#~ msgstr "%s видалено з верхньої панелі"
-
-#~ msgid "%s removed from bottom panel"
-#~ msgstr "%s видалено з нижньої панелі"
-
-#~ msgid "%s removed from left panel"
-#~ msgstr "%s видалено з лівої панелі"
-
-#~ msgid "%s removed from right panel"
-#~ msgstr "%s видалено з правої панелі"
-
-#~ msgid "Usage: %s [<profile-name>]\n"
-#~ msgstr "Використання: %s [<назва-профілю>]\n"
-
-#~ msgid "Failed to add monitor for %s"
-#~ msgstr "Не вдається додати монітор для %s"
-
-#~ msgid "Expected event: %s %s"
-#~ msgstr "Очікувана подія: %s %s"
-
-#~ msgid "All Your Settings Are Belong To Us"
-#~ msgstr "Усі ваші параметри належать нам"
-
-#~ msgid "Clear revision history"
-#~ msgstr "Очистити історію перегляду"
-
-#~ msgid "_Version:"
-#~ msgstr "_Версія:"
-
-#~ msgid "Version"
-#~ msgstr "Версія"
-
-#~ msgid "Desktop User Profiles"
-#~ msgstr "Профілі користувачів"
-
-#~ msgid "dialog1"
-#~ msgstr "dialog1"
-
-#~ msgid "'xauth list' returned error"
-#~ msgstr "команда 'xauth list' повернула помилку"
-
-#~ msgid "'xauth list' returned no records or records in unknown format"
-#~ msgstr ""
-#~ "команда 'xauth list' не повернула записи або повернула їх у невідомому "
-#~ "форматі"
-
-#~ msgid "No current revision"
-#~ msgstr "Немає поточної версії"
-
-#~ msgid "'%(path)s' does not exist in profile revision '%(profile_revision)s'"
-#~ msgstr "'%(path)s' не існує у версії профіля '%(profile_revision)s'"
-
-#~ msgid "Not a valid profile revision"
-#~ msgstr "Не є правильною версією профілю"
