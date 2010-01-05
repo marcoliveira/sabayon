@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon 2.29.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-21 21:44-0600\n"
-"PO-Revision-Date: 2009-12-17 20:27+0100\n"
+"POT-Creation-Date: 2010-01-05 13:48+0100\n"
+"PO-Revision-Date: 2010-01-05 13:50+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian Bokmaal <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -48,15 +48,15 @@ msgstr "Beskrivelse"
 msgid "Profile %s"
 msgstr "Profil %s"
 
-#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:179
 msgid "_Profile"
 msgstr "_Profil"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:180
 msgid "_Save"
 msgstr "_Lagre"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:180
 msgid "Save profile"
 msgstr "Lagre profil"
 
@@ -64,11 +64,11 @@ msgstr "Lagre profil"
 msgid "_Close"
 msgstr "L_ukk"
 
-#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:181
 msgid "Close the current window"
 msgstr "Lukk dette vinduet"
 
-#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:182
 msgid "_Edit"
 msgstr "R_ediger"
 
@@ -80,23 +80,23 @@ msgstr "_Slett"
 msgid "Delete item"
 msgstr "Slett oppføring"
 
-#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:185
 msgid "_Help"
 msgstr "_Hjelp"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:186
 msgid "_Contents"
 msgstr "_Innhold"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:186
 msgid "Help Contents"
 msgstr "Innhold i hjelp"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:187
 msgid "_About"
 msgstr "_Om"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:187
 msgid "About Sabayon"
 msgstr "Om Sabayon"
 
@@ -158,7 +158,7 @@ msgstr "par"
 msgid "Profile settings: %s"
 msgstr "Innstillinger for profil: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:421
 #: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "Navn"
@@ -190,7 +190,7 @@ msgstr "Bruk denne profilen"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:520
+#: ../admin-tool/profilesdialog.py:537
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -326,49 +326,48 @@ msgid "Save changes to profile \"%s\" before closing?"
 msgstr "Lagre endringer i profil «%s» før programmet lukkes?"
 
 #: ../admin-tool/saveconfirm.py:44
-#, fuzzy
 msgid "If you don't save, all changes will be permanently lost."
-msgstr "Hvis du ikke lagrer vil endringer fra den siste timen gå tapt."
+msgstr "Hvis du ikke lagrer vil alle endringer gå tapt."
 
-#: ../admin-tool/sessionwindow.py:155
+#: ../admin-tool/sessionwindow.py:157
 #, python-format
 msgid "Editing profile %s"
 msgstr "Redigerer profil %s"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Quit"
 msgstr "A_vslutt"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "_Changes"
 msgstr "_Endringer"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "Edit changes"
 msgstr "Rediger endringer"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "_Lockdown"
 msgstr "Ned_låsing"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "Edit Lockdown settings"
 msgstr "Rediger innstillinger for nedlåsing"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce Mandatory"
 msgstr "Bruk tvungne"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Bruk tvungne innstillinger i redigeringssesjonen"
 
-#: ../admin-tool/sessionwindow.py:306
+#: ../admin-tool/sessionwindow.py:308
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Innstillinger for nedlåsing for %s"
 
-#: ../admin-tool/sessionwindow.py:342
+#: ../admin-tool/sessionwindow.py:344
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
@@ -377,11 +376,11 @@ msgstr ""
 "Det oppsto en feil under bruk av brukerprofil «%s». Du kan rapportere denne "
 "feilen nå eller fortsette å redigere brukerprofilen."
 
-#: ../admin-tool/sessionwindow.py:346
+#: ../admin-tool/sessionwindow.py:348
 msgid "_Report this error"
 msgstr "_Rapporter denne feilen"
 
-#: ../admin-tool/sessionwindow.py:347
+#: ../admin-tool/sessionwindow.py:349
 msgid "_Continue editing"
 msgstr "_Fortsett redigering"
 
@@ -442,9 +441,8 @@ msgid "Applications menu"
 msgstr "Programmeny"
 
 #: ../lib/sources/filessource.py:99
-#, fuzzy
 msgid "Settings menu"
-msgstr "Meny for tjenerinnstillinger"
+msgstr "Meny for innstillinger"
 
 #: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
@@ -675,32 +673,39 @@ msgstr "Menylinje"
 msgid "Panel File"
 msgstr "Panelfil"
 
-#: ../lib/storage.py:172
+#: ../lib/storage.py:173
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "Kunne ikke lese fil «%s»: %s"
 
-#: ../lib/storage.py:182
+#: ../lib/storage.py:183
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "Kunne ikke lese metadata fra «%s»: %s"
 
-#: ../lib/storage.py:188
+#: ../lib/storage.py:189
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "Ugyldig metadatakomponent i «%s»: %s"
 
-#: ../lib/storage.py:362
+#. change the raise to a dprint, since some files seem to disappear.
+#. raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
+#: ../lib/storage.py:383
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Kan ikke legge til ikke-eksisterende fil «%s»"
 
-#: ../lib/storage.py:487
+#: ../lib/storage.py:527
+#, python-format
+msgid "Couldn't rmdir '%s'"
+msgstr "Kunne ikke kjøre rmdir() på fil «%s»"
+
+#: ../lib/storage.py:532
 #, python-format
 msgid "Couldn't unlink file '%s'"
 msgstr "Kunne ikke kjøre unlink() på fil «%s»"
 
-#: ../lib/storage.py:570
+#: ../lib/storage.py:622
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Profilen er skrivebeskyttet %s"
@@ -708,70 +713,68 @@ msgstr "Profilen er skrivebeskyttet %s"
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/systemdb.py:67
+#: ../lib/systemdb.py:77
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "ugyldig type for innstilling %(setting)s i %(np)s"
 
-#: ../lib/systemdb.py:112
+#: ../lib/systemdb.py:122
 msgid "No database file provided"
 msgstr "Ingen databasefil oppgitt"
 
-#: ../lib/systemdb.py:232
-#, fuzzy, python-format
+#: ../lib/systemdb.py:242
+#, python-format
 msgid "No LDAP search base specified for %s"
-msgstr "Ingen søkebase oppgitt for %s"
+msgstr "Ingen LDAP-søkebase oppgitt for %s"
 
-#: ../lib/systemdb.py:235
-#, fuzzy, python-format
+#: ../lib/systemdb.py:245
+#, python-format
 msgid "No LDAP query filter specified for %s"
-msgstr "Ingen filter oppgitt for spørring %s"
+msgstr "Ingen LDAP-spørringsfilter oppgitt for %s"
 
-#: ../lib/systemdb.py:238
-#, fuzzy, python-format
+#: ../lib/systemdb.py:248
+#, python-format
 msgid "No LDAP result attribute specified for %s"
-msgstr "Ingen resultatattributt oppgitt for %s"
+msgstr "Ingen LDAP-resultatattributt oppgitt for %s"
 
-#: ../lib/systemdb.py:247
-#, fuzzy
+#: ../lib/systemdb.py:257
 msgid "LDAP Scope must be one of: "
-msgstr "Området må være en av sub, base og en"
+msgstr "LDAP-området må være en av: "
 
-#: ../lib/systemdb.py:268
-#, fuzzy
+#: ../lib/systemdb.py:277
 msgid "multiple_result must be one of: "
-msgstr "multiple_result må være en av first og random"
+msgstr "multiple_result må være en av: "
 
-#: ../lib/systemdb.py:361
+#: ../lib/systemdb.py:370
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Kunne ikke åpne %s for skriving"
 
-#: ../lib/systemdb.py:374
+#: ../lib/systemdb.py:383
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Kunne ikke lagre UserDatabase til %s"
 
-#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
+#: ../lib/systemdb.py:412 ../lib/systemdb.py:446
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Fil %s er ikke en profilkonfigurasjon"
 
-#: ../lib/systemdb.py:404
+#: ../lib/systemdb.py:419
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Kunne ikke legge til forvalgt profil %s i konfigurasjonen"
 
-#: ../lib/systemdb.py:438
+#: ../lib/systemdb.py:453
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Kunne ikke legge til bruker %s i profilkonfigurasjonen"
 
-#: ../lib/systemdb.py:510
+#: ../lib/systemdb.py:525
 msgid "Failed to get the user list"
 msgstr "Kunne ikke hente brukerlisten"
 
-#: ../lib/systemdb.py:560
+#: ../lib/systemdb.py:575
 msgid "Failed to get the group list"
 msgstr "Kunne ikke hente gruppelisten"
 
@@ -808,156 +811,3 @@ msgid ""
 msgstr ""
 "Kan ikke finne brukernavn: ikke satt i /etc/passwd og det finnes ingen verdi "
 "for $USER i miljøet"
-
-#~ msgid "Click to make this setting not mandatory"
-#~ msgstr "Klikk for å gjøre denne innstillingen valgfri"
-
-#~ msgid "Click to make this setting mandatory"
-#~ msgstr "Klikk for å gjøre denne innstillingen tvungen"
-
-#~ msgid "General"
-#~ msgstr "Generelle"
-
-#~ msgid "Epiphany Web Browser"
-#~ msgstr "Epiphany nettleser"
-
-#~ msgid "GNOME Screensaver"
-#~ msgstr "GNOME skjermsparer"
-
-#~ msgid "Disable _command line"
-#~ msgstr "Deaktiver _kommandolinjen"
-
-#~ msgid "Disable _printing"
-#~ msgstr "Deaktiver _utskrift"
-
-#~ msgid "Disable print _setup"
-#~ msgstr "Deaktiver opp_sett av utskrift"
-
-#~ msgid "Disable save to _disk"
-#~ msgstr "Deaktiver lagring til _disk"
-
-#~ msgid "_Lock down the panels"
-#~ msgstr "_Lås ned panelene"
-
-#~ msgid "Disable force _quit"
-#~ msgstr "Deaktiver _tvungen avslutting"
-
-#~ msgid "Disable log _out"
-#~ msgstr "Deaktiver logg _ut"
-
-#~ msgid "Disable _quit"
-#~ msgstr "Deaktiver a_vslutt"
-
-#~ msgid "Disable _arbitrary URL"
-#~ msgstr "Deaktiver _tilfeldig URL"
-
-#~ msgid "Disable _bookmark editing"
-#~ msgstr "Deaktiver redigering av _bokmerker"
-
-#~ msgid "Disable _history"
-#~ msgstr "Deaktiver _historikk"
-
-#~ msgid "Disable _javascript chrome"
-#~ msgstr "Deaktiver _javascript chrome"
-
-#~ msgid "Disable _toolbar editing"
-#~ msgstr "Deaktiver redigering av verk_tøylinje"
-
-#~ msgid "Force _fullscreen mode"
-#~ msgstr "Tvungen _fullskjermmodus"
-
-#~ msgid "Hide _menubar"
-#~ msgstr "Skjul _menylinjen"
-
-#~ msgid "Disable lock _screen"
-#~ msgstr "Deaktiver lås _skjerm"
-
-#~ msgid "_Lock on activation"
-#~ msgstr "_Lås ved aktivering"
-
-#~ msgid "Allow log _out"
-#~ msgstr "Tillat _utlogging"
-
-#~ msgid "Allow user _switching"
-#~ msgstr "Tillat bruker_bytte"
-
-#~ msgid "Could not display help document '%s'"
-#~ msgstr "Kunne ikke vise hjelpdokument «%s»"
-
-#~ msgid "Disable _unsafe protocols"
-#~ msgstr "Deaktiver _utrygge protokoller"
-
-#~ msgid "Disabled Applets"
-#~ msgstr "Deaktiverte panelprogrammer"
-
-#~ msgid "Lockdown Editor"
-#~ msgstr "Rediger nedlåsing"
-
-#~ msgid "Safe Protocols"
-#~ msgstr "Trygge protokoller"
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld second will be permanently "
-#~ "lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %ld seconds will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Hvis du ikke lagrer vil endringer fra siste %ld sekund gå tapt permanent."
-#~ msgstr[1] ""
-#~ "Hvis du ikke lagrer vil endringer fra de siste %ld sekunder gå tapt "
-#~ "permanent."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last minute will be permanently lost."
-#~ msgstr "Hvis du ikke lagrer vil endringer fra det siste minuttet gå tapt."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last minute and %ld second will be "
-#~ "permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last minute and %ld seconds will be "
-#~ "permanently lost."
-#~ msgstr[0] ""
-#~ "Hvis du ikke lagrer vil endringer fra det siste minuttet og %ld sekundet "
-#~ "gå tapt."
-#~ msgstr[1] ""
-#~ "Hvis du ikke lagrer vil endringer fra det siste minuttet og de siste %ld "
-#~ "sekundene gå tapt."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld minute will be permanently "
-#~ "lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %ld minutes will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Hvis du ikke lagrer vil endringer fra det siste %ld miunttet gå tapt."
-#~ msgstr[1] ""
-#~ "Hvis du ikke lagrer vil endringer fra de siste %ld minuttene gå tapt."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last hour and %d minute will be "
-#~ "permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last hour and %d minutes will be "
-#~ "permanently lost."
-#~ msgstr[0] ""
-#~ "Hvis du ikke lagrer vil endringer fra den siste timen og det siste %d "
-#~ "minuttet gå tapt."
-#~ msgstr[1] ""
-#~ "Hvis du ikke lagrer vil endringer fra den siste timen og de siste %d "
-#~ "minuttene gå tapt."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %d hour will be permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %d hours will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Hvis du ikke lagrer vil endringer fra den siste %d timen gå tapt."
-#~ msgstr[1] ""
-#~ "Hvis du ikke lagrer vil endringer fra de siste %d timene gå tapt."
-
-#~ msgid "Preferences menu"
-#~ msgstr "Meny for brukervalg"
