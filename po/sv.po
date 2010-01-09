@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-21 21:44-0600\n"
-"PO-Revision-Date: 2009-11-08 23:39+0100\n"
+"POT-Creation-Date: 2010-01-09 16:05+0100\n"
+"PO-Revision-Date: 2010-01-09 16:07+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -42,7 +42,8 @@ msgstr "Ignorera"
 msgid "Lock"
 msgstr "Lås"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
+#: ../admin-tool/changeswindow.py:127
+#: ../admin-tool/editorwindow.py:238
 msgid "Description"
 msgstr "Beskrivning"
 
@@ -51,15 +52,18 @@ msgstr "Beskrivning"
 msgid "Profile %s"
 msgstr "Profil %s"
 
-#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:202
+#: ../admin-tool/sessionwindow.py:179
 msgid "_Profile"
 msgstr "_Profil"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:203
+#: ../admin-tool/sessionwindow.py:180
 msgid "_Save"
 msgstr "_Spara"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:203
+#: ../admin-tool/sessionwindow.py:180
 msgid "Save profile"
 msgstr "Spara profil"
 
@@ -67,11 +71,13 @@ msgstr "Spara profil"
 msgid "_Close"
 msgstr "S_täng"
 
-#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:204
+#: ../admin-tool/sessionwindow.py:181
 msgid "Close the current window"
 msgstr "Stäng det aktuella fönstret"
 
-#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:205
+#: ../admin-tool/sessionwindow.py:182
 msgid "_Edit"
 msgstr "_Redigera"
 
@@ -83,36 +89,43 @@ msgstr "_Ta bort"
 msgid "Delete item"
 msgstr "Ta bort objekt"
 
-#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:207
+#: ../admin-tool/sessionwindow.py:185
 msgid "_Help"
 msgstr "_Hjälp"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:208
+#: ../admin-tool/sessionwindow.py:186
 msgid "_Contents"
 msgstr "_Innehåll"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
-#, fuzzy
+#: ../admin-tool/editorwindow.py:208
+#: ../admin-tool/sessionwindow.py:186
 msgid "Help Contents"
-msgstr "_Innehåll"
+msgstr "Hjälpinnehåll"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:209
+#: ../admin-tool/sessionwindow.py:187
 msgid "_About"
 msgstr "_Om"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:209
+#: ../admin-tool/sessionwindow.py:187
 msgid "About Sabayon"
 msgstr "Om Sabayon"
 
-#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:270
+#: ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:274
+#: ../lib/sources/filessource.py:79
 msgid "Files"
 msgstr "Filer"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:274
+#: ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "Panel"
 
@@ -121,7 +134,8 @@ msgstr "Panel"
 msgid "Profile file: %s"
 msgstr "Profilfil: %s"
 
-#: ../admin-tool/gconfviewer.py:57 ../admin-tool/gconfviewer.py:76
+#: ../admin-tool/gconfviewer.py:57
+#: ../admin-tool/gconfviewer.py:76
 msgid "<no type>"
 msgstr "<ingen typ>"
 
@@ -162,7 +176,8 @@ msgstr "par"
 msgid "Profile settings: %s"
 msgstr "Profilinställningar: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/gconfviewer.py:110
+#: ../admin-tool/profilesdialog.py:421
 #: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "Namn"
@@ -184,7 +199,8 @@ msgstr "Grupper för profilen %s"
 msgid "Group"
 msgstr "Grupp"
 
-#: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
+#: ../admin-tool/groupsdialog.py:81
+#: ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
 msgstr "Använd denna profil"
 
@@ -194,37 +210,26 @@ msgstr "Använd denna profil"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:520
+#: ../admin-tool/profilesdialog.py:537
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:77
-msgid ""
-"Your account does not have permissions to run the Desktop User Profiles tool"
-msgstr ""
-"Ditt konto har inte rättigheter för att köra verktyget för "
-"skrivbordsanvändarprofiler"
+msgid "Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr "Ditt konto har inte rättigheter för att köra verktyget för skrivbordsanvändarprofiler"
 
 #: ../admin-tool/sabayon:78
-msgid ""
-"Administrator level permissions are needed to run this program because it "
-"can modify system files."
-msgstr ""
-"Administratörsrättigheter krävs för att köra detta program eftersom det kan "
-"ändra systemfiler."
+msgid "Administrator level permissions are needed to run this program because it can modify system files."
+msgstr "Administratörsrättigheter krävs för att köra detta program eftersom det kan ändra systemfiler."
 
 #: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
 msgstr "Verktyget för skrivbordsanvändarprofiler kör redan"
 
 #: ../admin-tool/sabayon:84
-msgid ""
-"You may not use Desktop User Profiles tool from within a profile editing "
-"session"
-msgstr ""
-"Du kan inte använda verktyget för skrivbordsanvändarprofiler inifrån en "
-"profilredigeringssession"
+msgid "You may not use Desktop User Profiles tool from within a profile editing session"
+msgstr "Du kan inte använda verktyget för skrivbordsanvändarprofiler inifrån en profilredigeringssession"
 
 #: ../admin-tool/sabayon:91
 #, c-format
@@ -233,33 +238,18 @@ msgstr "Användarkontot \"%s\" hittades inte"
 
 #: ../admin-tool/sabayon:92
 #, c-format
-msgid ""
-"Sabayon requires a special user account '%s' to be present on this computer. "
-"Try again after creating the account (using, for example, the 'adduser' "
-"command)"
-msgstr ""
-"Sabayon kräver att ett speciellt användarkonto med namnet \"%s\" finns på "
-"denna dator. Försök igen efter det att du skapat detta konto (genom att "
-"använda till exempel kommandot \"adduser\")"
+msgid "Sabayon requires a special user account '%s' to be present on this computer. Try again after creating the account (using, for example, the 'adduser' command)"
+msgstr "Sabayon kräver att ett speciellt användarkonto med namnet \"%s\" finns på denna dator. Försök igen efter det att du skapat detta konto (genom att använda till exempel kommandot \"adduser\")"
 
 #: ../admin-tool/sabayon:131
 #, c-format
-msgid ""
-"A fatal error has occurred.  You can help us fix the problem by sending the "
-"log in %s to %s"
-msgstr ""
-"Ett ödesdigert fel har inträffat.  Du kan hjälpa oss att rätta till "
-"problemet genom att skicka loggfilen i %s till %s."
+msgid "A fatal error has occurred.  You can help us fix the problem by sending the log in %s to %s"
+msgstr "Ett ödesdigert fel har inträffat.  Du kan hjälpa oss att rätta till problemet genom att skicka loggfilen i %s till %s."
 
 #: ../admin-tool/sabayon:145
 #, c-format
-msgid ""
-"Sabayon will now exit.  There were some recoverable errors, and you can help "
-"us debug the problem by sending the log in %s to %s"
-msgstr ""
-"Sabayon kommer nu att avslutas.  Det inträffade några återhämtningsbara fel "
-"och du kan hjälpa oss att felsöka problemet genom att skicka in loggfilen i %"
-"s till %s"
+msgid "Sabayon will now exit.  There were some recoverable errors, and you can help us debug the problem by sending the log in %s to %s"
+msgstr "Sabayon kommer nu att avslutas.  Det inträffade några återhämtningsbara fel och du kan hjälpa oss att felsöka problemet genom att skicka in loggfilen i %s till %s"
 
 #: ../admin-tool/sabayon-apply:111
 msgid "Please use -h for usage options"
@@ -279,7 +269,8 @@ msgstr "Användning: %s <profilnamn>  <profilsökväg> <display-nummer>\n"
 msgid "Establish and Edit Profiles for Users"
 msgstr "Etablera och redigera profiler för användare"
 
-#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.ui.h:4
+#: ../admin-tool/sabayon.desktop.in.in.h:2
+#: ../admin-tool/sabayon.ui.h:4
 msgid "User Profile Editor"
 msgstr "Redigerare för användarprofil"
 
@@ -333,65 +324,57 @@ msgid "Save changes to profile \"%s\" before closing?"
 msgstr "Spara ändringarna till profilen \"%s\" innan avslutande?"
 
 #: ../admin-tool/saveconfirm.py:44
-#, fuzzy
 msgid "If you don't save, all changes will be permanently lost."
-msgstr ""
-"Om du inte sparar kommer ändringar gjorda under den senaste timmen att vara "
-"borta för alltid."
+msgstr "Om du inte sparar så kommer alla ändringar att gå förlorade för alltid."
 
-#: ../admin-tool/sessionwindow.py:155
+#: ../admin-tool/sessionwindow.py:157
 #, python-format
 msgid "Editing profile %s"
 msgstr "Redigerar profilen %s"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Quit"
 msgstr "_Avsluta"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "_Changes"
 msgstr "_Ändringar"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "Edit changes"
 msgstr "Redigera ändringar"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "_Lockdown"
 msgstr "_Nedlåsning"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "Edit Lockdown settings"
 msgstr "Redigera nedlåsningsinställningar"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce Mandatory"
 msgstr "Tvinga som obligatorisk"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Tvinga obligatoriska inställningar i redigeringssessionen"
 
-#: ../admin-tool/sessionwindow.py:306
+#: ../admin-tool/sessionwindow.py:308
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Nedlåsningsinställningar för %s"
 
-#: ../admin-tool/sessionwindow.py:342
+#: ../admin-tool/sessionwindow.py:344
 #, python-format
-msgid ""
-"There was a recoverable error while applying the user profile '%s'.  You can "
-"report this error now or try to continue editing the user profile."
-msgstr ""
-"Det inträffade ett återhämtningsbart fel vid tillämpandet av "
-"användarprofilen \"%s\".  Du kan rapportera det här felet nu eller försöka "
-"att fortsätta att redigera användarprofilen."
+msgid "There was a recoverable error while applying the user profile '%s'.  You can report this error now or try to continue editing the user profile."
+msgstr "Det inträffade ett återhämtningsbart fel vid tillämpandet av användarprofilen \"%s\".  Du kan rapportera det här felet nu eller försöka att fortsätta att redigera användarprofilen."
 
-#: ../admin-tool/sessionwindow.py:346
+#: ../admin-tool/sessionwindow.py:348
 msgid "_Report this error"
 msgstr "_Rapportera det här felet"
 
-#: ../admin-tool/sessionwindow.py:347
+#: ../admin-tool/sessionwindow.py:349
 msgid "_Continue editing"
 msgstr "_Fortsätt redigera"
 
@@ -418,11 +401,8 @@ msgstr "Misslyckades med att starta Xephyr: dog under uppstart"
 #. stderr_str)
 #: ../lib/protosession.py:469
 #, python-format
-msgid ""
-"There was a recoverable error while applying the user profile from file '%s'."
-msgstr ""
-"Det inträffade ett återhämtningsbart fel vid tillämpandet av "
-"användarprofilen från \"%s\"."
+msgid "There was a recoverable error while applying the user profile from file '%s'."
+msgstr "Det inträffade ett återhämtningsbart fel vid tillämpandet av användarprofilen från \"%s\"."
 
 #. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
 #. "%s\n"
@@ -431,9 +411,7 @@ msgstr ""
 #: ../lib/protosession.py:478
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
-msgstr ""
-"Det inträffade ett ödesdigert fel vid tillämpandet av användarprofilen från "
-"\"%s\"."
+msgstr "Det inträffade ett ödesdigert fel vid tillämpandet av användarprofilen från \"%s\"."
 
 #: ../lib/sources/filessource.py:69
 #, python-format
@@ -455,9 +433,8 @@ msgid "Applications menu"
 msgstr "Programmeny"
 
 #: ../lib/sources/filessource.py:99
-#, fuzzy
 msgid "Settings menu"
-msgstr "Serverinställningsmeny"
+msgstr "Inställningsmeny"
 
 #: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
@@ -539,11 +516,13 @@ msgstr "Mozilla-nyckeln \"%s\" nollställdes"
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Mozilla-nyckeln \"%s\" ändrades till \"%s\""
 
-#: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
+#: ../lib/sources/mozillasource.py:166
+#: ../lib/sources/mozillasource.py:176
 msgid "Web browser preferences"
 msgstr "Webbläsarinställningar"
 
-#: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
+#: ../lib/sources/mozillasource.py:168
+#: ../lib/sources/mozillasource.py:178
 msgid "Web browser bookmarks"
 msgstr "Webbläsarbokmärken"
 
@@ -611,24 +590,24 @@ msgid "Panel '%s' removed"
 msgstr "Panelen \"%s\" togs bort"
 
 #: ../lib/sources/paneldelegate.py:77
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' added"
 msgstr "Panelprogrammet \"%s\" lades till"
 
 #: ../lib/sources/paneldelegate.py:100
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' removed"
 msgstr "Panelprogrammet \"%s\" togs bort"
 
 #: ../lib/sources/paneldelegate.py:123
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' added"
-msgstr "Panelobjektet \"%s\" lades till"
+msgstr "Objektet \"%s\" lades till"
 
 #: ../lib/sources/paneldelegate.py:152
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' removed"
-msgstr "Panelobjektet \"%s\" togs bort"
+msgstr "Objektet \"%s\" togs bort"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
 #: ../lib/sources/paneldelegate.py:240
@@ -688,32 +667,39 @@ msgstr "Menyrad"
 msgid "Panel File"
 msgstr "Panelfil"
 
-#: ../lib/storage.py:172
+#: ../lib/storage.py:173
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "Misslyckades med att läsa filen \"%s\": %s"
 
-#: ../lib/storage.py:182
+#: ../lib/storage.py:183
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "Misslyckades med att läsa metadata från \"%s\": %s"
 
-#: ../lib/storage.py:188
+#: ../lib/storage.py:189
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "Ogiltig metadatasektion i \"%s\": %s"
 
-#: ../lib/storage.py:362
+#. change the raise to a dprint, since some files seem to disappear.
+#. raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
+#: ../lib/storage.py:383
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Kan inte lägga till en icke-existerande fil \"%s\""
 
-#: ../lib/storage.py:487
+#: ../lib/storage.py:527
+#, python-format
+msgid "Couldn't rmdir '%s'"
+msgstr "Kunde inte ta bort katalogen \"%s\""
+
+#: ../lib/storage.py:532
 #, python-format
 msgid "Couldn't unlink file '%s'"
 msgstr "Kunde inte avlänka filen \"%s\""
 
-#: ../lib/storage.py:570
+#: ../lib/storage.py:622
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Profilen är skrivskyddad %s"
@@ -721,78 +707,75 @@ msgstr "Profilen är skrivskyddad %s"
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/systemdb.py:67
+#: ../lib/systemdb.py:77
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "ogiltig typ för inställningen %(setting)s i %(np)s"
 
-#: ../lib/systemdb.py:112
+#: ../lib/systemdb.py:122
 msgid "No database file provided"
 msgstr "Ingen databasfil tillhandahölls"
 
-# FIXME. base?
-#: ../lib/systemdb.py:232
-#, fuzzy, python-format
+#: ../lib/systemdb.py:242
+#, python-format
 msgid "No LDAP search base specified for %s"
-msgstr "Ingen sökbas angiven för %s"
+msgstr "Ingen LDAP-sökbas angiven för %s"
 
-#: ../lib/systemdb.py:235
-#, fuzzy, python-format
+#: ../lib/systemdb.py:245
+#, python-format
 msgid "No LDAP query filter specified for %s"
-msgstr "Inget frågefilter angivet för %s"
+msgstr "Inget LDAP-frågefilter angivet för %s"
 
-#: ../lib/systemdb.py:238
-#, fuzzy, python-format
+#: ../lib/systemdb.py:248
+#, python-format
 msgid "No LDAP result attribute specified for %s"
-msgstr "Inget resultatattribut angivet för %s"
+msgstr "Inget LDAP-resultatattribut angivet för %s"
 
-#: ../lib/systemdb.py:247
-#, fuzzy
+#: ../lib/systemdb.py:257
 msgid "LDAP Scope must be one of: "
-msgstr "Område måste vara en av sub, base och one"
+msgstr "LDAP Scope måste vara en av: "
 
-#: ../lib/systemdb.py:268
-#, fuzzy
+#: ../lib/systemdb.py:277
 msgid "multiple_result must be one of: "
-msgstr "multiple_result måste vara en av first och random"
+msgstr "multiple_result måste vara en av: "
 
-#: ../lib/systemdb.py:361
+#: ../lib/systemdb.py:370
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Kunde inte öppna %s för skrivning"
 
 # FIXME. UserDatabase is what? A function?
-#: ../lib/systemdb.py:374
+#: ../lib/systemdb.py:383
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Misslyckades med att spara UserDatabase till %s"
 
-#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
+#: ../lib/systemdb.py:412
+#: ../lib/systemdb.py:446
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Filen %s är inte en profilkonfiguration"
 
-#: ../lib/systemdb.py:404
+#: ../lib/systemdb.py:419
 #, python-format
 msgid "Failed to add default profile %s to configuration"
-msgstr ""
-"Misslyckades med att lägga till standardprofilen %s till konfigurationen"
+msgstr "Misslyckades med att lägga till standardprofilen %s till konfigurationen"
 
-#: ../lib/systemdb.py:438
+#: ../lib/systemdb.py:453
 #, python-format
 msgid "Failed to add user %s to profile configuration"
-msgstr ""
-"Misslyckades med att lägga till användaren %s till profilkonfigurationen"
+msgstr "Misslyckades med att lägga till användaren %s till profilkonfigurationen"
 
-#: ../lib/systemdb.py:510
+#: ../lib/systemdb.py:525
 msgid "Failed to get the user list"
 msgstr "Misslyckades med att få användarlistan"
 
-#: ../lib/systemdb.py:560
+#: ../lib/systemdb.py:575
 msgid "Failed to get the group list"
 msgstr "Misslyckades med att få grupplistan"
 
-#: ../lib/unittests.py:38 ../lib/unittests.py:39
+#: ../lib/unittests.py:38
+#: ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
 msgstr "Ignorera VARNINGar"
 
@@ -811,79 +794,54 @@ msgid "Success!"
 msgstr "Lyckades!"
 
 #: ../lib/util.py:94
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"Kan inte hitta hemkatalog: inte inställd i /etc/passwd och inget värde för "
-"$HOME i miljön"
+msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+msgstr "Kan inte hitta hemkatalog: inte inställd i /etc/passwd och inget värde för $HOME i miljön"
 
-#: ../lib/util.py:110 ../lib/util.py:137
-msgid ""
-"Cannot find username: not set in /etc/passwd and no value for $USER in "
-"environment"
-msgstr ""
-"Kan inte hitta användarnamn: inte inställd i /etc/passwd och inget värde för "
-"$HOME i miljön"
+#: ../lib/util.py:110
+#: ../lib/util.py:137
+msgid "Cannot find username: not set in /etc/passwd and no value for $USER in environment"
+msgstr "Kan inte hitta användarnamn: inte inställd i /etc/passwd och inget värde för $HOME i miljön"
 
 #~ msgid "Click to make this setting not mandatory"
 #~ msgstr "Klicka för att göra det här inställningen ej obligatorisk"
-
 #~ msgid "Click to make this setting mandatory"
 #~ msgstr "Klicka för att göra det här inställningen obligatorisk"
-
 #~ msgid "General"
 #~ msgstr "Allmänt"
-
 #~ msgid "Epiphany Web Browser"
 #~ msgstr "Webbläsaren Epiphany"
-
 #~ msgid "Disable _command line"
 #~ msgstr "Inaktivera _kommandorad"
-
 #~ msgid "Disable _printing"
 #~ msgstr "Inaktivera _utskrifter"
-
 #~ msgid "Disable print _setup"
 #~ msgstr "Inaktivera utskrifts_konfiguration"
-
 #~ msgid "Disable save to _disk"
 #~ msgstr "Inaktivera spara till _disk"
-
 #~ msgid "_Lock down the panels"
 #~ msgstr "_Lås panelerna"
-
 #~ msgid "Disable force _quit"
 #~ msgstr "Inaktivera tvinga a_vslut"
-
 #~ msgid "Disable log _out"
 #~ msgstr "Inaktivera _utloggning"
-
 #~ msgid "Disable _quit"
 #~ msgstr "Inaktivera _avslut"
-
 #~ msgid "Disable _arbitrary URL"
 #~ msgstr "Inaktivera _godtycklig url"
-
 #~ msgid "Disable _bookmark editing"
 #~ msgstr "Inaktivera _bokmärkesredigering"
-
 #~ msgid "Disable _history"
 #~ msgstr "Inaktivera _historik"
-
 #~ msgid "Disable _javascript chrome"
 #~ msgstr "Inaktivera _javascript-chrome"
-
 #~ msgid "Disable _toolbar editing"
 #~ msgstr "Inaktivera _verktygsradredigering"
 
 #, fuzzy
 #~ msgid "Force _fullscreen mode"
 #~ msgstr "_Helskärm"
-
 #~ msgid "Hide _menubar"
 #~ msgstr "Dölj _menyrad"
-
 #~ msgid "Disable lock _screen"
 #~ msgstr "Inaktivera lås _skärm"
 
@@ -894,78 +852,56 @@ msgstr ""
 #, fuzzy
 #~ msgid "Allow log _out"
 #~ msgstr "Inaktivera _utloggning"
-
 #~ msgid "Disable _unsafe protocols"
 #~ msgstr "Inaktivera _osäkra protokoll"
 
 #, fuzzy
 #~ msgid "Disabled Applets"
 #~ msgstr "<b>Inaktiverade panelprogram</b>"
-
 #~ msgid "Lockdown Editor"
 #~ msgstr "Nedlåsningsredigerare"
 
 #, fuzzy
 #~ msgid "Safe Protocols"
 #~ msgstr "<b>Säkra protokoll</b>"
-
 #~ msgid "Remove personal information from documents when saving them"
 #~ msgstr "Ta bort personlig information från dokument när de sparas"
-
 #~ msgid "Warn if macro tries to create a PDF"
 #~ msgstr "Varna om makro försöker skapa en PDF"
-
 #~ msgid "Warn if macro tries to print a document"
 #~ msgstr "Varna om makro försöker skriva ut ett dokument"
-
 #~ msgid "Warn if macro tries to save a document"
 #~ msgstr "Varna om makro försöker spara ett dokument"
-
 #~ msgid "Warn if macro tries to sign a document"
 #~ msgstr "Varna om makro försöker att signera ett dokument"
-
 #~ msgid "Recommend password when saving a document"
 #~ msgstr "Rekommendera lösenord när ett dokument sparas"
-
 #~ msgid "Enable auto-save"
 #~ msgstr "Aktivera automatisk sparning"
-
 #~ msgid "Printing should mark the document as modified"
 #~ msgstr "Utskrift ska markera dokumentet som ändrat"
-
 #~ msgid "Use system's file dialog"
 #~ msgstr "Använd systemets fildialog"
-
 #~ msgid "Create backup copy on save"
 #~ msgstr "Skapa säkerhetskopia vid sparning"
-
 #~ msgid "Warn when saving non-OpenOffice.org formats"
 #~ msgstr "Varna vid sparning av icke-OpenOffice.org-format"
-
 #~ msgid "Use OpenGL"
 #~ msgstr "Använd OpenGL"
-
 #~ msgid "Use system font"
 #~ msgstr "Använd systemtypsnitt"
-
 #~ msgid "Use anti-aliasing"
 #~ msgstr "Använd kantutjämning"
-
 #~ msgid "Disable UI customization"
 #~ msgstr "Inaktivera gränssnittsanpassningar"
-
 #~ msgid "Show insensitive menu items"
 #~ msgstr "Visa okänsliga menyobjekt"
-
 #~ msgid "Show font preview"
 #~ msgstr "Visa typsnittsförhandsvisning"
-
 #~ msgid "Show font history"
 #~ msgstr "Visa typsnittshistorik"
-
 #~ msgid "Show icons in menus"
 #~ msgstr "Visa ikoner i menyer"
-
 #~ msgid ""
 #~ "\n"
 #~ "5\n"
@@ -978,7 +914,6 @@ msgstr ""
 #~ "10\n"
 #~ "25\n"
 #~ "50"
-
 #~ msgid ""
 #~ "\n"
 #~ "Automatic\n"
@@ -989,7 +924,6 @@ msgstr ""
 #~ "Automatisk\n"
 #~ "Stor\n"
 #~ "Liten"
-
 #~ msgid ""
 #~ "\n"
 #~ "OpenDocument (.odp)\n"
@@ -1000,7 +934,6 @@ msgstr ""
 #~ "OpenDocument (.odp)\n"
 #~ "PowerPoint 97+ (.ppt)\n"
 #~ "OpenOffice.org 1.1 (.sxi)"
-
 #~ msgid ""
 #~ "\n"
 #~ "OpenDocument (.ods)\n"
@@ -1011,7 +944,6 @@ msgstr ""
 #~ "OpenDocument (.ods)\n"
 #~ "Excel 97+ (.xls)\n"
 #~ "OpenOffice.org 1.1 (.sxc)"
-
 #~ msgid ""
 #~ "\n"
 #~ "OpenDocument (.odt)\n"
@@ -1022,7 +954,6 @@ msgstr ""
 #~ "OpenDocument (.odt)\n"
 #~ "Word 97+ (.doc)\n"
 #~ "OpenOffice.org 1.1 (.sxw)"
-
 #~ msgid ""
 #~ "\n"
 #~ "Very High\n"
@@ -1035,37 +966,26 @@ msgstr ""
 #~ "Hög\n"
 #~ "Medel\n"
 #~ "Låg"
-
 #~ msgid "Default format for presentations:"
 #~ msgstr "Standardformat för presentationer:"
-
 #~ msgid "Default format for spreadsheet:"
 #~ msgstr "Standardformat för kalkylblad:"
-
 #~ msgid "Default format for word processor:"
 #~ msgstr "Standardformat för ordbehandlare:"
-
 #~ msgid "Default icon size"
 #~ msgstr "Standardikonstorlek"
-
 #~ msgid "Load / Save"
 #~ msgstr "Läs in / Spara"
-
 #~ msgid "Macro Security Level:"
 #~ msgstr "Säkerhetsnivå för makro:"
-
 #~ msgid "Number of undo steps:"
 #~ msgstr "Antal ångringssteg:"
-
 #~ msgid "OpenOffice.org"
 #~ msgstr "OpenOffice.org"
-
 #~ msgid "Security"
 #~ msgstr "Säkerhet"
-
 #~ msgid "User Interface"
 #~ msgstr "Användargränssnitt"
-
 #~ msgid ""
 #~ "If you don't save, changes from the last %ld second will be permanently "
 #~ "lost."
@@ -1078,13 +998,11 @@ msgstr ""
 #~ msgstr[1] ""
 #~ "Om du inte sparar kommer ändringar gjorda under de senaste %ld sekunderna "
 #~ "att vara borta för alltid."
-
 #~ msgid ""
 #~ "If you don't save, changes from the last minute will be permanently lost."
 #~ msgstr ""
 #~ "Om du inte sparar kommer ändringar gjorda under den senaste minuten att "
 #~ "vara borta för alltid."
-
 #~ msgid ""
 #~ "If you don't save, changes from the last minute and %ld second will be "
 #~ "permanently lost."
@@ -1097,7 +1015,6 @@ msgstr ""
 #~ msgstr[1] ""
 #~ "Om du inte sparar kommer ändringar gjorda under den senaste minuten och %"
 #~ "ld sekunderna att vara borta för alltid."
-
 #~ msgid ""
 #~ "If you don't save, changes from the last %ld minute will be permanently "
 #~ "lost."
@@ -1110,7 +1027,6 @@ msgstr ""
 #~ msgstr[1] ""
 #~ "Om du inte sparar kommer ändringar gjorda under de senaste %ld minuterna "
 #~ "att vara borta för alltid."
-
 #~ msgid ""
 #~ "If you don't save, changes from the last hour and %d minute will be "
 #~ "permanently lost."
@@ -1123,7 +1039,6 @@ msgstr ""
 #~ msgstr[1] ""
 #~ "Om du inte sparar kommer ändringar gjorda under den senaste timmen och %d "
 #~ "minuterna att vara borta för alltid."
-
 #~ msgid ""
 #~ "If you don't save, changes from the last %d hour will be permanently lost."
 #~ msgid_plural ""
@@ -1135,79 +1050,54 @@ msgstr ""
 #~ msgstr[1] ""
 #~ "Om du inte sparar kommer ändringar gjorda under de senaste %d timmarna "
 #~ "att vara borta för alltid."
-
 #~ msgid "Preferences menu"
 #~ msgstr "Inställningsmeny"
-
 #~ msgid "Applet %s added to top panel"
 #~ msgstr "Panelprogrammet %s lades till i överpanelen"
-
 #~ msgid "Applet %s added to bottom panel"
 #~ msgstr "Panelprogrammet %s lades till i nederpanelen"
-
 #~ msgid "Applet %s added to left panel"
 #~ msgstr "Panelprogrammet %s lades till i vänstra panelen"
-
 #~ msgid "Applet %s added to right panel"
 #~ msgstr "Panelprogrammet %s lades till i högra panelen"
-
 #~ msgid "Applet %s removed from top panel"
 #~ msgstr "Panelprogrammet %s togs bort från överpanelen"
-
 #~ msgid "Applet %s removed from bottom panel"
 #~ msgstr "Panelprogrammet %s togs bort från nederpanelen"
-
 #~ msgid "Applet %s removed from left panel"
 #~ msgstr "Panelprogrammet %s togs bort från vänstra panelen"
-
 #~ msgid "Applet %s removed from right panel"
 #~ msgstr "Panelprogrammet %s togs bort från högra panelen"
-
 #~ msgid "%s added to top panel"
 #~ msgstr "%s lades till i överpanelen"
-
 #~ msgid "%s added to bottom panel"
 #~ msgstr "%s lades till i nederpanelen"
-
 #~ msgid "%s added to left panel"
 #~ msgstr "%s lades till i vänstra panelen"
-
 #~ msgid "%s added to right panel"
 #~ msgstr "%s lades till i högra panelen"
-
 #~ msgid "%s removed from top panel"
 #~ msgstr "%s togs bort från överpanelen"
-
 #~ msgid "%s removed from bottom panel"
 #~ msgstr "%s togs bort från nederpanelen"
-
 #~ msgid "%s removed from left panel"
 #~ msgstr "%s togs bort från vänstra panelen"
-
 #~ msgid "%s removed from right panel"
 #~ msgstr "%s togs bort från högra panelen"
-
 #~ msgid "Warn if macro prints"
 #~ msgstr "Varna om makro skriver ut"
-
 #~ msgid "Printing modifies document"
 #~ msgstr "Utskrift ändrar dokument"
-
 #~ msgid "Warn for external formats"
 #~ msgstr "Varna för externa format"
-
 #~ msgid "Calc default format:"
 #~ msgstr "Standardformat för Calc:"
-
 #~ msgid "Impress default format:"
 #~ msgstr "Standardformat för Impress:"
-
 #~ msgid "Undo Steps:"
 #~ msgstr "Ångra-steg:"
-
 #~ msgid "Writer default format:"
 #~ msgstr "Standardformat för Writer:"
-
 #~ msgid ""
 #~ "Could not create the 'sabayon-apply' process: %s\n"
 #~ "The command line used is '%s'\n"
@@ -1218,227 +1108,162 @@ msgstr ""
 #~ "Kommandoraden som användes var '%s'\n"
 #~ "Bakåtspårning för barnet:\n"
 #~ "%s"
-
 #~ msgid "Failed to add monitor for %s"
 #~ msgstr "Misslyckades med att lägga till övervakare för %s"
-
 #~ msgid "Expected event: %s %s"
 #~ msgstr "Händelse förväntades: %s %s"
-
 #~ msgid "Usage: %s [<profile-name>]\n"
 #~ msgstr "Användning: %s [<profilnamn>]\n"
-
 #~ msgid "All Your Settings Are Belong To Us"
 #~ msgstr "Alla dina inställningar oss tillhör"
-
 #~ msgid "Clear revision history"
 #~ msgstr "Töm revisionshistoriken"
-
 #~ msgid "_Version:"
 #~ msgstr "_Version:"
-
 #~ msgid "Version"
 #~ msgstr "Version"
-
 #~ msgid "Desktop User Profiles"
 #~ msgstr "Skrivbordsanvändarprofiler"
-
 #~ msgid "dialog1"
 #~ msgstr "dialog1"
-
 #~ msgid "User '%s' does not exist"
 #~ msgstr "Användaren \"%s\" finns inte"
-
 #~ msgid "No current revision"
 #~ msgstr "Ingen aktuell revision"
-
 #~ msgid "'%s' does not exist in profile revision '%s'"
 #~ msgstr "\"%s\" finns inte i profilrevisionen \"%s\""
-
 #~ msgid "File Not Found"
 #~ msgstr "Filen hittades inte"
-
 #~ msgid "Establish and edit profiles for users"
 #~ msgstr "Etablera och redigera profiler för användare"
-
 #~ msgid "Save"
 #~ msgstr "Spara"
-
 #~ msgid "String"
 #~ msgstr "Sträng"
-
 #~ msgid "Integer"
 #~ msgstr "Heltal"
-
 #~ msgid "Float"
 #~ msgstr "Flyttal"
-
 #~ msgid "Boolean"
 #~ msgstr "Booleskt värde"
-
 #~ msgid "Schema"
 #~ msgstr "Schema"
-
 #~ msgid "List"
 #~ msgstr "Lista"
-
 #~ msgid "Pair"
 #~ msgstr "Par"
-
 #~ msgid "C_reate"
 #~ msgstr "S_kapa"
-
 #~ msgid "New Profile"
 #~ msgstr "Ny profil"
-
 #~ msgid "Desktop Users"
 #~ msgstr "Skrivbordsanvändare"
-
 #~ msgid "Create"
 #~ msgstr "Skapa"
-
 #~ msgid "_Profiles"
 #~ msgstr "_Profiler"
-
 #~ msgid "_Profil"
 #~ msgstr "_Profil"
-
 #~ msgid "Profil"
 #~ msgstr "Profil"
-
 #~ msgid "_Commit"
 #~ msgstr "_Verkställ"
-
 #~ msgid "Commit"
 #~ msgstr "Verkställ"
-
 #~ msgid "Configuration Editor"
 #~ msgstr "Konfigurationsredigerare"
-
 #~ msgid "Directly edit your entire configuration database"
 #~ msgstr "Redigera hela din konfigurationsdatabas direkt"
-
 #~ msgid "Bookmarks"
 #~ msgstr "Bokmärken"
-
 #~ msgid "Edit Bookmarks"
 #~ msgstr "Redigera bokmärken"
-
 #~ msgid ""
 #~ "Cannot create GConf engine. Error was:\n"
 #~ "%s"
 #~ msgstr ""
 #~ "Kunde inte skapa GConf-motor. Felet var:\n"
 #~ "%s"
-
 #~ msgid "translator_credits"
 #~ msgstr ""
 #~ "Christian Rose\n"
 #~ "Skicka synpunkter på översättningen till sv@li.org."
-
 #~ msgid "An editor for the GConf configuration system."
 #~ msgstr "En redigerare för konfigurationssystemet GConf."
-
 #~ msgid ""
 #~ "Couldn't unset key. Error was:\n"
 #~ "%s"
 #~ msgstr ""
 #~ "Kunde inte nollställa nyckeln. Felet var:\n"
 #~ "%s"
-
 #~ msgid ""
 #~ "Could not create key. The error is:\n"
 #~ "%s"
 #~ msgstr ""
 #~ "Kunde inte skapa nyckel. Felet är:\n"
 #~ "%s"
-
 #~ msgid ""
 #~ "Could not change key value. Error message:\n"
 #~ "%s"
 #~ msgstr ""
 #~ "Kunde inte ändra nyckelvärde. Felmeddelande:\n"
 #~ "%s"
-
 #~ msgid ""
 #~ "Currently pairs and schemas can't be edited. This will be changed in a "
 #~ "later version."
 #~ msgstr ""
 #~ "För tillfället kan par och scheman inte redigeras. Detta kommer att "
 #~ "ändras i en senare version."
-
 #~ msgid ""
 #~ "Could not sync value. Error was:\n"
 #~ "%s"
 #~ msgstr ""
 #~ "Kunde inte synkronisera värde. Felet var:\n"
 #~ "%s"
-
 #~ msgid "_Search"
 #~ msgstr "_Sök"
-
 #~ msgid "_Bookmarks"
 #~ msgstr "_Bokmärken"
-
 #~ msgid "New _Defaults Window"
 #~ msgstr "Nytt _standardinställningsfönster"
-
 #~ msgid "New _Mandatory Window"
 #~ msgstr "Nytt _obligatoriskt fönster"
-
 #~ msgid "_Close Window"
 #~ msgstr "_Stäng fönster"
-
 #~ msgid "Close this window"
 #~ msgstr "Stäng detta fönster"
-
 #~ msgid "_Copy Key Name"
 #~ msgstr "_Kopiera nyckelnamn"
-
 #~ msgid "Copy the name of the selected key"
 #~ msgstr "Kopiera namnet på den valda nyckeln"
-
 #~ msgid "_Find..."
 #~ msgstr "_Sök..."
-
 #~ msgid "Find patterns in keys and values"
 #~ msgstr "Sök mönster i nycklar och värden"
-
 #~ msgid "_List Recent Keys"
 #~ msgstr "_Visa senaste nycklar i lista"
-
 #~ msgid "Show recently modified keys"
 #~ msgstr "Visa nyligen ändrade nycklar"
-
 #~ msgid "_Add Bookmark"
 #~ msgstr "_Lägg till bokmärke"
-
 #~ msgid "Add a bookmark to the selected directory"
 #~ msgstr "Lägg till ett bokmärke till den valda katalogen"
-
 #~ msgid "_Edit Bookmarks"
 #~ msgstr "_Redigera bokmärken"
-
 #~ msgid "_New Key..."
 #~ msgstr "_Ny nyckel..."
-
 #~ msgid "Create a new key"
 #~ msgstr "Skapa en ny nyckel"
-
 #~ msgid "_Edit Key..."
 #~ msgstr "_Redigera nyckel..."
-
 #~ msgid "Edit the selected key"
 #~ msgstr "Redigera den valda nyckeln"
-
 #~ msgid "_Unset Key..."
 #~ msgstr "_Nollställ nyckel..."
-
 #~ msgid "Unset the selected key"
 #~ msgstr "Nollställ den valda nyckeln"
-
 #~ msgid "Set as _Default"
 #~ msgstr "Ställ in som _standard"
-
 #~ msgid "Set the selected key to be the default"
 #~ msgstr "Ställ in den valda nyckeln att vara standardvärdet"
+
