@@ -4,14 +4,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 #
 # Iñaki Larrañaga <dooteo@euskalgnu.org>, 2006.
-# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2007, 2009.
+# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2007, 2009, 2010.
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-21 21:44-0600\n"
-"PO-Revision-Date: 2009-08-10 13:28+0200\n"
+"POT-Creation-Date: 2010-01-13 16:18+0100\n"
+"PO-Revision-Date: 2010-01-13 16:23+0100\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
 "Language-Team: Basque <itzulpena@euskalgnu.org>\n"
 "MIME-Version: 1.0\n"
@@ -50,15 +50,15 @@ msgstr "Azalpena"
 msgid "Profile %s"
 msgstr "%s profila"
 
-#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:179
 msgid "_Profile"
 msgstr "_Profila"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:180
 msgid "_Save"
 msgstr "_Gorde"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:180
 msgid "Save profile"
 msgstr "Gorde profila"
 
@@ -66,11 +66,11 @@ msgstr "Gorde profila"
 msgid "_Close"
 msgstr "It_xi"
 
-#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:181
 msgid "Close the current window"
 msgstr "Itxi uneko leihoa"
 
-#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:182
 msgid "_Edit"
 msgstr "_Editatu"
 
@@ -82,23 +82,23 @@ msgstr "E_zabatu"
 msgid "Delete item"
 msgstr "Ezabatu elementua"
 
-#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:185
 msgid "_Help"
 msgstr "_Laguntza"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:186
 msgid "_Contents"
-msgstr ""
+msgstr "_Edukia"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:186
 msgid "Help Contents"
-msgstr ""
+msgstr "Laguntzaren edukia"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:187
 msgid "_About"
 msgstr "Honi _buruz"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:187
 msgid "About Sabayon"
 msgstr "Sabayon-i buruz"
 
@@ -160,7 +160,7 @@ msgstr "bikotea"
 msgid "Profile settings: %s"
 msgstr "Profilaren ezarpenak: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:421
 #: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "Izena"
@@ -174,13 +174,13 @@ msgid "Value"
 msgstr "Balioa"
 
 #: ../admin-tool/groupsdialog.py:61
-#, fuzzy, python-format
+#, python-format
 msgid "Groups for profile %s"
-msgstr "%s profilaren erabiltzaileak"
+msgstr "%s profilaren taldeak"
 
 #: ../admin-tool/groupsdialog.py:71
 msgid "Group"
-msgstr ""
+msgstr "Taldea"
 
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
@@ -192,14 +192,13 @@ msgstr "Erabili profil hau"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:520
+#: ../admin-tool/profilesdialog.py:537
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:77
-msgid ""
-"Your account does not have permissions to run the Desktop User Profiles tool"
+msgid "Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr ""
 "Zure kontuak ez ditu nahikoa baimen 'Mahaigaineko erabiltzaileen profilak' "
 "tresna exekutatzeko"
@@ -302,11 +301,11 @@ msgstr "_Xehetasunak"
 
 #: ../admin-tool/sabayon.ui.h:7
 msgid "_Groups"
-msgstr ""
+msgstr "_Taldeak"
 
 #: ../admin-tool/sabayon.ui.h:8
 msgid "_Groups:"
-msgstr ""
+msgstr "_Taldeak:"
 
 #: ../admin-tool/sabayon.ui.h:9
 msgid "_Profiles:"
@@ -330,49 +329,48 @@ msgid "Save changes to profile \"%s\" before closing?"
 msgstr "Gorde aldaketak \"%s\" profilan itxi aurretik?"
 
 #: ../admin-tool/saveconfirm.py:44
-#, fuzzy
 msgid "If you don't save, all changes will be permanently lost."
-msgstr "Ez baduzu gordetzen, azken orduko aldaketak betirako galduko dira."
+msgstr "Ez baduzu gordetzen, aldaketak guztiak betirako galduko dira."
 
-#: ../admin-tool/sessionwindow.py:155
+#: ../admin-tool/sessionwindow.py:157
 #, python-format
 msgid "Editing profile %s"
 msgstr "%s profila editatzen"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Quit"
 msgstr "I_rten"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "_Changes"
 msgstr "_Aldaketak"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "Edit changes"
 msgstr "Editatu aldaketak"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "_Lockdown"
 msgstr "_Blokeatu"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "Edit Lockdown settings"
 msgstr "Editatu blokeatutako ezarpenak"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce Mandatory"
 msgstr "Derrigortu beharrezkoak"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Derrigortu beharrezko ezarpenak edizioko saioan"
 
-#: ../admin-tool/sessionwindow.py:306
+#: ../admin-tool/sessionwindow.py:308
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Blokeatu %s(r)en ezarpenak"
 
-#: ../admin-tool/sessionwindow.py:342
+#: ../admin-tool/sessionwindow.py:344
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
@@ -382,11 +380,11 @@ msgstr ""
 "aplikatzean. Errore honi buruz berri eman dezakezu orain, edo "
 "erabiltzailearen profila editatzen jarrai dezakezu."
 
-#: ../admin-tool/sessionwindow.py:346
+#: ../admin-tool/sessionwindow.py:348
 msgid "_Report this error"
 msgstr "_Eman errorearen berri"
 
-#: ../admin-tool/sessionwindow.py:347
+#: ../admin-tool/sessionwindow.py:349
 msgid "_Continue editing"
 msgstr "_Jarraitu editatzen"
 
@@ -401,8 +399,7 @@ msgstr "Ezin da X pantaila librerik aurkitu"
 
 #: ../lib/protosession.py:376
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
-msgstr ""
-"Huts egin du Xephyr abiaraztean: denbora gainditu du USR1 seinalearen zai"
+msgstr "Huts egin du Xephyr abiaraztean: denbora gainditu du USR1 seinalearen zai"
 
 #: ../lib/protosession.py:378
 msgid "Failed to start Xephyr: died during startup"
@@ -414,8 +411,7 @@ msgstr "Huts egin du Xephyr abiaraztean: abioan hil egin da"
 #. stderr_str)
 #: ../lib/protosession.py:469
 #, python-format
-msgid ""
-"There was a recoverable error while applying the user profile from file '%s'."
+msgid "There was a recoverable error while applying the user profile from file '%s'."
 msgstr ""
 "Errore berreskuragarria gertatu da erabiltzailearen profila '%s' "
 "fitxategitik aplikatzean."
@@ -427,8 +423,7 @@ msgstr ""
 #: ../lib/protosession.py:478
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
-msgstr ""
-"Errore larria gertatu da erabiltzailearen profila '%s'(e)ndik aplikatzean."
+msgstr "Errore larria gertatu da erabiltzailearen profila '%s'(e)ndik aplikatzean."
 
 #: ../lib/sources/filessource.py:69
 #, python-format
@@ -450,9 +445,8 @@ msgid "Applications menu"
 msgstr "Aplikazioen menua"
 
 #: ../lib/sources/filessource.py:99
-#, fuzzy
 msgid "Settings menu"
-msgstr "Zerbitzariaren ezarpenen menua"
+msgstr "Ezarpenen menua"
 
 #: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
@@ -606,24 +600,24 @@ msgid "Panel '%s' removed"
 msgstr "'%s' panela kendu da"
 
 #: ../lib/sources/paneldelegate.py:77
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' added"
-msgstr "'%s' panela gehitu da"
+msgstr "'%s' miniaplikazioa gehitu da"
 
 #: ../lib/sources/paneldelegate.py:100
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' removed"
-msgstr "'%s' panela kendu da"
+msgstr "'%s' miniaplikazioa kendu da"
 
 #: ../lib/sources/paneldelegate.py:123
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' added"
-msgstr "'%s' panela gehitu da"
+msgstr "'%s' objektua gehitu da"
 
 #: ../lib/sources/paneldelegate.py:152
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' removed"
-msgstr "'%s' panela kendu da"
+msgstr "'%s' objektua kendu da"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
 #: ../lib/sources/paneldelegate.py:240
@@ -683,32 +677,39 @@ msgstr "Menu-barra"
 msgid "Panel File"
 msgstr "Panelaren fitxategia"
 
-#: ../lib/storage.py:172
+#: ../lib/storage.py:173
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "Huts egin du '%s' fitxategia irakurtzean: %s"
 
-#: ../lib/storage.py:182
+#: ../lib/storage.py:183
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "Huts egin du '%s'(e)ko meta-datuak irakurtzean: %s"
 
-#: ../lib/storage.py:188
+#: ../lib/storage.py:189
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "'%s'(e)n metadatuen baliogabeko atala: %s"
 
-#: ../lib/storage.py:362
+#. change the raise to a dprint, since some files seem to disappear.
+#. raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
+#: ../lib/storage.py:383
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Ezin da existitzen ez den '%s' fitxategia gehitu"
 
-#: ../lib/storage.py:487
+#: ../lib/storage.py:527
+#, python-format
+msgid "Couldn't rmdir '%s'"
+msgstr "Ezin izan da '%s' ezabatu (rmdir)"
+
+#: ../lib/storage.py:532
 #, python-format
 msgid "Couldn't unlink file '%s'"
-msgstr ""
+msgstr "Ezin izan da '%s' fitxategia desestekatu"
 
-#: ../lib/storage.py:570
+#: ../lib/storage.py:622
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "'%s' profilea irakurtzeko soilik da"
@@ -716,73 +717,70 @@ msgstr "'%s' profilea irakurtzeko soilik da"
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/systemdb.py:67
+#: ../lib/systemdb.py:77
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "%(setting)s ezarpenaren mota baliogabea %(np)s"
 
-#: ../lib/systemdb.py:112
+#: ../lib/systemdb.py:122
 msgid "No database file provided"
-msgstr ""
+msgstr "Ez da datu-basearen fitxategirik eman"
 
-#: ../lib/systemdb.py:232
-#, fuzzy, python-format
+#: ../lib/systemdb.py:242
+#, python-format
 msgid "No LDAP search base specified for %s"
-msgstr "Ez da %s(r)en bilaketa-oinarririk zehaztu"
+msgstr "Ez da %s(r)en LDAPen bilaketa-oinarririk zehaztu"
 
-#: ../lib/systemdb.py:235
-#, fuzzy, python-format
+#: ../lib/systemdb.py:245
+#, python-format
 msgid "No LDAP query filter specified for %s"
-msgstr "Ez da %s(r)en kontsulta-iragazkirik zehaztu"
+msgstr "Ez da %s(r)en LDAPen kontsulta-iragazkirik zehaztu"
 
-#: ../lib/systemdb.py:238
-#, fuzzy, python-format
+#: ../lib/systemdb.py:248
+#, python-format
 msgid "No LDAP result attribute specified for %s"
-msgstr "Ez da '%s'(r)en emaitz-atributurik zehaztu"
+msgstr "Ez da '%s'(r)en LDAPen emaitz-atributurik zehaztu"
 
-#: ../lib/systemdb.py:247
-#, fuzzy
+#: ../lib/systemdb.py:257
 msgid "LDAP Scope must be one of: "
-msgstr "Esparruak hauetariko bat izan behar du: 'sub', 'base' edo 'one' "
+msgstr "LDAPen esparruak hauetariko bat izan behar du: "
 
-#: ../lib/systemdb.py:268
-#, fuzzy
+#: ../lib/systemdb.py:277
 msgid "multiple_result must be one of: "
-msgstr "multiple_result bakarra eta ausazkoa izan behar du"
+msgstr "multiple_result hauetariko bat izan behar du: "
 
-#: ../lib/systemdb.py:361
+#: ../lib/systemdb.py:370
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Ezin izan da %s idazteko ireki"
 
-#: ../lib/systemdb.py:374
+#: ../lib/systemdb.py:383
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Huts eign du UserDatabase %s(e)n gordetzean"
 
-#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
+#: ../lib/systemdb.py:412 ../lib/systemdb.py:446
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "%s fitxategia ez da profil-konfiguraziokoa"
 
-#: ../lib/systemdb.py:404
+#: ../lib/systemdb.py:419
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Huts egin du %s profil lehenetsia konfigurazioari gehitzean"
 
-#: ../lib/systemdb.py:438
+#: ../lib/systemdb.py:453
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Huts egin du %s erabiltzailea profilaren konfigurazioari gehitzean"
 
-#: ../lib/systemdb.py:510
+#: ../lib/systemdb.py:525
 msgid "Failed to get the user list"
 msgstr "Huts egin du erabiltzaileen zerrenda lortzean"
 
-#: ../lib/systemdb.py:560
-#, fuzzy
+#: ../lib/systemdb.py:575
 msgid "Failed to get the group list"
-msgstr "Huts egin du erabiltzaileen zerrenda lortzean"
+msgstr "Huts egin du taldeen zerrenda lortzean"
 
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
@@ -818,357 +816,3 @@ msgstr ""
 "Ezin da erabiltzaile-izena aurkitu: ez dago /etc/passwd fitxategian ezarrita "
 "eta ez dago baliorik inguruneko $USER aldagaian"
 
-#~ msgid "Click to make this setting not mandatory"
-#~ msgstr "Egin klik ezarpen hau beharrezkoa ez izateko"
-
-#~ msgid "Click to make this setting mandatory"
-#~ msgstr "Egin klik ezarpen hau beharrezkoa izateko"
-
-#~ msgid "General"
-#~ msgstr "Orokorra"
-
-#~ msgid "Epiphany Web Browser"
-#~ msgstr "Epiphany web arakatzailea"
-
-#~ msgid "Disable _command line"
-#~ msgstr "Desgaitu _komando-lerroa"
-
-#~ msgid "Disable _printing"
-#~ msgstr "Desgaitu _inprimatzea"
-
-#~ msgid "Disable print _setup"
-#~ msgstr "Desgaitu inprimatze-ezarpenak"
-
-#~ msgid "Disable save to _disk"
-#~ msgstr "Desgaitu _diskoan gordetzea"
-
-#~ msgid "_Lock down the panels"
-#~ msgstr "_Blokeatu panelak"
-
-#~ msgid "Disable force _quit"
-#~ msgstr "Desgaitu derrigorrez _irtetzea"
-
-#~ msgid "Disable log _out"
-#~ msgstr "Desgaitu _saioa amaitzea"
-
-#~ msgid "Disable _quit"
-#~ msgstr "Desgaitu _irtetzea"
-
-#~ msgid "Disable _arbitrary URL"
-#~ msgstr "Desgaitu URL _arbitrarioa"
-
-#~ msgid "Disable _bookmark editing"
-#~ msgstr "Desgaitu _laster-markak editatzea"
-
-#~ msgid "Disable _history"
-#~ msgstr "Desgaitu _historia"
-
-#~ msgid "Disable _javascript chrome"
-#~ msgstr "Desgaitu _javascript chrome"
-
-#~ msgid "Disable _toolbar editing"
-#~ msgstr "DEsgaitu _tresna-barra editatzea"
-
-#, fuzzy
-#~ msgid "Force _fullscreen mode"
-#~ msgstr "_Pantaila osoa"
-
-#~ msgid "Hide _menubar"
-#~ msgstr "Ezkutatu _menu-barra"
-
-#~ msgid "Disable lock _screen"
-#~ msgstr "Desgaitu p_antaila blokeatzea"
-
-#, fuzzy
-#~ msgid "_Lock on activation"
-#~ msgstr "_Blokeatu panelak"
-
-#, fuzzy
-#~ msgid "Allow log _out"
-#~ msgstr "Desgaitu _saioa amaitzea"
-
-#~ msgid "Disable _unsafe protocols"
-#~ msgstr "Desgaitu protokolo _ez seguruak"
-
-#, fuzzy
-#~ msgid "Disabled Applets"
-#~ msgstr "<b>Desgaitu applet-ak</b>"
-
-#~ msgid "Lockdown Editor"
-#~ msgstr "Blokeatu editorea"
-
-#, fuzzy
-#~ msgid "Safe Protocols"
-#~ msgstr "<b>Protokolo seguruak</b>"
-
-#~ msgid "Remove personal information from documents when saving them"
-#~ msgstr "Kendu datu pertsonalak dokumentuetatik gordetzean"
-
-#~ msgid "Warn if macro tries to create a PDF"
-#~ msgstr "Abisatu makroak PDFa sortzen saiatzen bada"
-
-#~ msgid "Warn if macro tries to print a document"
-#~ msgstr "Abisatu makroak dokumentua inprimatzea saiatzen badu"
-
-#~ msgid "Warn if macro tries to save a document"
-#~ msgstr "Abisatu makroak dokumentua gordetzea saiatzen badu"
-
-#~ msgid "Warn if macro tries to sign a document"
-#~ msgstr "Abisatu makroak dokumentua sinatzea saiatzen badu"
-
-#~ msgid "Recommend password when saving a document"
-#~ msgstr "Gomendatu pasahitza dokumentua gordetzean"
-
-#~ msgid "Enable auto-save"
-#~ msgstr "Gaitu automatikoki gordetzea"
-
-#~ msgid "Printing should mark the document as modified"
-#~ msgstr "Inprimatzean markatu dokumentua aldatuta bezala"
-
-#~ msgid "Use system's file dialog"
-#~ msgstr "Erabili sistemako fitxategi-hautatzailea"
-
-#~ msgid "Create backup copy on save"
-#~ msgstr "Sortu babes-kopia gordetzean"
-
-#~ msgid "Warn when saving non-OpenOffice.org formats"
-#~ msgstr "Abisatu OpenOffice.org-ekoa ez den formatuan gordetzean"
-
-#~ msgid "Use OpenGL"
-#~ msgstr "Erabili OpenGL"
-
-#~ msgid "Use system font"
-#~ msgstr "Erabili sistemako letra-tipoa"
-
-#~ msgid "Use anti-aliasing"
-#~ msgstr "Erabili anti-aliasing"
-
-#~ msgid "Disable UI customization"
-#~ msgstr "Desgaitu interfazea pertsonalizatzea"
-
-#~ msgid "Show insensitive menu items"
-#~ msgstr "Erakutsi sentikortasun gabe menuko elementuak"
-
-#~ msgid "Show font preview"
-#~ msgstr "Erakutsi letra-tipoaren aurrebista"
-
-#~ msgid "Show font history"
-#~ msgstr "Erakutsi letra-tipoaren historia"
-
-#~ msgid "Show icons in menus"
-#~ msgstr "Erakutsi ikonoak menuetan"
-
-#~ msgid ""
-#~ "\n"
-#~ "5\n"
-#~ "10\n"
-#~ "25\n"
-#~ "50"
-#~ msgstr ""
-#~ "\n"
-#~ "5\n"
-#~ "10\n"
-#~ "25\n"
-#~ "50"
-
-#~ msgid ""
-#~ "\n"
-#~ "Automatic\n"
-#~ "Large\n"
-#~ "Small"
-#~ msgstr ""
-#~ "\n"
-#~ "Automatikoa\n"
-#~ "Handia\n"
-#~ "Txikia"
-
-#~ msgid ""
-#~ "\n"
-#~ "OpenDocument (.odp)\n"
-#~ "PowerPoint 97+ (.ppt)\n"
-#~ "OpenOffice.org 1.1 (.sxi)"
-#~ msgstr ""
-#~ "\n"
-#~ "OpenDocument (.odp)\n"
-#~ "PowerPoint 97+ (.ppt)\n"
-#~ "OpenOffice.org 1.1 (.sxi)"
-
-#~ msgid ""
-#~ "\n"
-#~ "OpenDocument (.ods)\n"
-#~ "Excel 97+ (.xls)\n"
-#~ "OpenOffice.org 1.1 (.sxc)"
-#~ msgstr ""
-#~ "\n"
-#~ "OpenDocument (.ods)\n"
-#~ "Excel 97+ (.xls)\n"
-#~ "OpenOffice.org 1.1 (.sxc)"
-
-#~ msgid ""
-#~ "\n"
-#~ "OpenDocument (.odt)\n"
-#~ "Word 97+ (.doc)\n"
-#~ "OpenOffice.org 1.1 (.sxw)"
-#~ msgstr ""
-#~ "\n"
-#~ "OpenDocument (.odt)\n"
-#~ "Word 97+ (.doc)\n"
-#~ "OpenOffice.org 1.1 (.sxw)"
-
-#~ msgid ""
-#~ "\n"
-#~ "Very High\n"
-#~ "High\n"
-#~ "Medium\n"
-#~ "Low"
-#~ msgstr ""
-#~ "\n"
-#~ "Oso altua\n"
-#~ "Altua\n"
-#~ "Tartekoa\n"
-#~ "Baxua"
-
-#~ msgid "Default format for presentations:"
-#~ msgstr "Aurkezpenen formatu lehenetsia:"
-
-#~ msgid "Default format for spreadsheet:"
-#~ msgstr "Kalkulu-orrien formatu lehenetsia:"
-
-#~ msgid "Default format for word processor:"
-#~ msgstr "Testu-prozesadorearen formatu lehenetsia:"
-
-#~ msgid "Default icon size"
-#~ msgstr "Ikono-tamaina lehenetsia"
-
-#~ msgid "Load / Save"
-#~ msgstr "Kargatu / Gorde"
-
-#~ msgid "Macro Security Level:"
-#~ msgstr "Makroen segurtasun-maila:"
-
-#~ msgid "Number of undo steps:"
-#~ msgstr "Desegiteko urrats-kopurua:"
-
-#~ msgid "OpenOffice.org"
-#~ msgstr "OpenOffice.org"
-
-#~ msgid "Security"
-#~ msgstr "Segurtasuna"
-
-#~ msgid "User Interface"
-#~ msgstr "Interfazea"
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld second will be permanently "
-#~ "lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %ld seconds will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Ez baduzu gordetzen, azken segundo %ld-eko aldaketak betirako galduko "
-#~ "dira."
-#~ msgstr[1] ""
-#~ "Ez baduzu gordetzen, azken %ld segundoko aldaketak betirako galduko dira."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last minute will be permanently lost."
-#~ msgstr ""
-#~ "Ez baduzu gordetzen, azken minutuko aldaketak betirako galduko dira."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last minute and %ld second will be "
-#~ "permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last minute and %ld seconds will be "
-#~ "permanently lost."
-#~ msgstr[0] ""
-#~ "Ez baduzu gordetzen, azken minutuko eta %ld segundoko aldaketak betirako "
-#~ "galduko dira."
-#~ msgstr[1] ""
-#~ "Ez baduzu gordetzen, azken minutuko eta %ld segundoko aldaketak betirako "
-#~ "galduko dira."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld minute will be permanently "
-#~ "lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %ld minutes will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Ez baduzu gordetzen, azken minutu %ld-eko aldaketak betirako galduko dira."
-#~ msgstr[1] ""
-#~ "Ez baduzu gordetzen, azken %ld minutuko aldaketak betirako galduko dira."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last hour and %d minute will be "
-#~ "permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last hour and %d minutes will be "
-#~ "permanently lost."
-#~ msgstr[0] ""
-#~ "Ez baduzu gordetzen, azken orduko eta %d minutuko aldaketak betirako "
-#~ "galduko dira."
-#~ msgstr[1] ""
-#~ "Ez baduzu gordetzen, azken orduko eta %d minutuko aldaketak betirako "
-#~ "galduko dira."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %d hour will be permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %d hours will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Ez baduzu gordetzen, azken ordu %d-eko aldaketak betirako galduko dira."
-#~ msgstr[1] ""
-#~ "Ez baduzu gordetzen, azken %d orduko aldaketak betirako galduko dira."
-
-#~ msgid "Preferences menu"
-#~ msgstr "Hobespenen menua"
-
-#~ msgid "Applet %s added to top panel"
-#~ msgstr "%s applet-a goiko panelari gehituta"
-
-#~ msgid "Applet %s added to bottom panel"
-#~ msgstr "%s applet-a beheko panelari gehituta"
-
-#~ msgid "Applet %s added to left panel"
-#~ msgstr "%s applet-a ezkerreko panelari gehituta"
-
-#~ msgid "Applet %s added to right panel"
-#~ msgstr "%s applet-a eskuineko panelari gehituta"
-
-#~ msgid "Applet %s removed from top panel"
-#~ msgstr "%s applet-a goiko paneletik kenduta"
-
-#~ msgid "Applet %s removed from bottom panel"
-#~ msgstr "%s applet-a azpiko paneletik kenduta"
-
-#~ msgid "Applet %s removed from left panel"
-#~ msgstr "%s applet-a ezkerreko paneletik kenduta"
-
-#~ msgid "Applet %s removed from right panel"
-#~ msgstr "%s applet-a eskuineko paneletik kenduta"
-
-#~ msgid "%s added to top panel"
-#~ msgstr "%s goiko panelari gehituta"
-
-#~ msgid "%s added to bottom panel"
-#~ msgstr "%s beheko panelari gehituta"
-
-#~ msgid "%s added to left panel"
-#~ msgstr "%s ezkerreko panelari gehituta"
-
-#~ msgid "%s added to right panel"
-#~ msgstr "%s eskuineko panelari gehituta"
-
-#~ msgid "%s removed from top panel"
-#~ msgstr "%s goiko paneletik kenduta"
-
-#~ msgid "%s removed from bottom panel"
-#~ msgstr "%s beheko paneletik kenduta"
-
-#~ msgid "%s removed from left panel"
-#~ msgstr "%s ezkerreko paneletik kenduta"
-
-#~ msgid "%s removed from right panel"
-#~ msgstr "%s eskuineko paneletik kenduta"
