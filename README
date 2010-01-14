@@ -1,4 +1,4 @@
-Welcome to Sabayon 2.29.2
+Welcome to Sabayon 2.29.5
 =========================
 
 Why the name?
@@ -14,12 +14,7 @@ http://www.ibiblio.org/expo/restaurant/chef/sabayon.html
 Dependencies
 ============
 
-For the GConf module you need GConf2-2.8.1-2 and gnome-python2-2.6.0-5
-from rawhide.
-To make "Enforce Mandatory" work well you need GConf2 2.12.1.
-You also need libxml2-python for XML parsing.
-And the very recent gamin-python bindings for file monitoring
-The session launching stuff also requires a fix for bug #154779
+All dependencies are handled in the configure.ac
 
 You'll also need to put
 

@@ -1,4 +1,53 @@
 ==============
+Version 2.29.5
+==============
+
+  Code Name:
+
+    * "Chutney and Oratory"
+
+  Fixes:
+
+    * Removed gtk.glade dependencies
+    * Added help menu
+    * Fix for Bug #596106: crash when clicking on an empty directory
+    * Fix for Bug #528562: replace preferences.menu with settings.menu
+    * Turned ldap into a soft dependency, issue a message in configure
+    * Removed complicated, and hard-to-translate time based save confirm
+      messages with a single nice easy to translate string.
+    * Fixed some unclear strings for the translators. Bug #527722
+    * Fixed translation problems with groupsdialog.py.
+    * Moved sabayon's conf dir to /etc/sabayon
+    * Removed local copy of Pessulus, we now import it.
+    * Sabayon now supports symlinks. Bug #374861
+    * Created upstream man pages.
+    * Added selinux support (if available) Bug #486218
+
+  Migration Notes:
+
+    * Sabayon now stores it's config files in /etc/sabayon, and it's profiles
+      in /etc/sabayon/profiles.
+    * To migrate existing profiles, perform the following steps:
+      cp /etc/desktop-profiles/*.xml /etc/sabayon
+      cp /etc/desktop-profiles/*.zip /etc/sabayon/profiles
+
+  Translators:
+
+    * es, courtesy of Jorge González
+    * et, courtesy of Ivar Smolin
+    * fr, courtesy of Claude Paroz
+    * it, courtesy of Gianvito Cavasoli
+    * nb, courtesy of Kjartan Maraas
+    * nds, courtesy of Nils-Christoph Fiedler
+    * sl, courtesy of Matej Urbančič
+    * sv, courtesy of Daniel Nylander
+    * th, courtesy of Theppitak Karoonboonyanan
+    * uk, courtesy of Maxim Dziumanenko
+    * zh_HK, courtesy of Chao-Hsiung Liao
+    * zh_TW, courtesy of Chao-Hsiung Liao
+
+
+==============
 Version 2.29.2
 ==============
 
