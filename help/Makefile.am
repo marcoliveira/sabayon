@@ -14,4 +14,4 @@ DOC_FIGURES = \
 	figures/main-window.png \
 	figures/menu.png
 
-DOC_LINGUAS = es
+DOC_LINGUAS = es sv
