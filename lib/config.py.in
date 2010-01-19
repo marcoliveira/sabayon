@@ -101,34 +101,8 @@ FILES_TO_IGNORE = [
 ]
 
 #
-# Directories which we don't want to see change notifications for
-# 
-DIRECTORIES_TO_IGNORE = [
-    ".beagle",
-    ".cache",
-    ".ccache",
-    ".dbus",
-    ".fontconfig",
-    ".gconf",
-    ".gconf.xml.defaults",
-    ".gconf.xml.mandatory",
-    ".gconf.xml.mandatory-alt",
-    ".gconfd",
-    ".gstreamer-0.8",
-    ".gstreamer-0.10",
-    ".gvfs",
-    ".local/share/tracker",
-    ".metacity/sessions",
-    ".profile_cache",
-    ".pulse",
-    ".thumbnails",
-    ".wapi",
-    ".Trash"
-]
-
-#
 # Directories which we don't want to add when saving profile
-# 
+#
 DIRECTORIES_TO_IGNORE_PROFILE = [
     ".beagle",
     ".cache",
@@ -146,6 +120,16 @@ DIRECTORIES_TO_IGNORE_PROFILE = [
     ".thumbnails",
     ".wapi",
     ".Trash"
+]
+
+#
+# Directories which we don't want to see change notifications for
+#
+DIRECTORIES_TO_IGNORE = DIRECTORIES_TO_IGNORE_PROFILE + [
+    ".gconf",
+    ".gconf.xml.defaults",
+    ".gconf.xml.mandatory",
+    ".gconf.xml.mandatory-alt"
 ]
 
 #
