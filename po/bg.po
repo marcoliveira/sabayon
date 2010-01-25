@@ -1,17 +1,17 @@
-# Bulgarian translation of sabayon.
-# Copyright (C) 2005, 2007, 2009 Free Software Foundation, Inc.
+# Bulgarian translation of sabayon po-file.
+# Copyright (C) 2005, 2007, 2009, 2010 Free Software Foundation, Inc.
 # This file is distributed under the same license as the sabayon package.
 # Rostislav Raykov <zbrox@i-space.org>, 2005.
-# Alexander Shopov <ash@contact.bg>, 2005, 2007, 2009.
+# Alexander Shopov <ash@contact.bg>, 2005, 2007, 2009, 2010.
 # Yavor Doganov <yavor@doganov.org>, 2007.
 #
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sabayon trunk\n"
+"Project-Id-Version: sabayon master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-21 21:44-0600\n"
-"PO-Revision-Date: 2009-08-13 08:06+0300\n"
+"POT-Creation-Date: 2010-01-25 10:34+0200\n"
+"PO-Revision-Date: 2010-01-25 10:34+0200\n"
 "Last-Translator: Alexander Shopov <ash@contact.bg>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "MIME-Version: 1.0\n"
@@ -55,15 +55,15 @@ msgstr "Описание"
 msgid "Profile %s"
 msgstr "Профил „%s“"
 
-#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:179
 msgid "_Profile"
 msgstr "_Профил"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:180
 msgid "_Save"
 msgstr "_Запазване"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:180
 msgid "Save profile"
 msgstr "Запазване на профила"
 
@@ -71,11 +71,11 @@ msgstr "Запазване на профила"
 msgid "_Close"
 msgstr "_Затваряне"
 
-#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:181
 msgid "Close the current window"
 msgstr "Затваряне на текущия прозорец"
 
-#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:182
 msgid "_Edit"
 msgstr "_Редактиране"
 
@@ -87,23 +87,23 @@ msgstr "_Изтриване"
 msgid "Delete item"
 msgstr "Изтриване на елемент"
 
-#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:185
 msgid "_Help"
 msgstr "Помо_щ"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:186
 msgid "_Contents"
-msgstr ""
+msgstr "_Ръководство"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:186
 msgid "Help Contents"
-msgstr ""
+msgstr "Съдържание на помощта"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:187
 msgid "_About"
 msgstr "_Относно"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:187
 msgid "About Sabayon"
 msgstr "Относно Sabayon"
 
@@ -165,7 +165,7 @@ msgstr "двойка"
 msgid "Profile settings: %s"
 msgstr "Настройки на профила: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:421
 #: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "Име"
@@ -179,13 +179,13 @@ msgid "Value"
 msgstr "Стойност"
 
 #: ../admin-tool/groupsdialog.py:61
-#, fuzzy, python-format
+#, python-format
 msgid "Groups for profile %s"
-msgstr "Потребители с профил %s"
+msgstr "Групи за профила %s"
 
 #: ../admin-tool/groupsdialog.py:71
 msgid "Group"
-msgstr ""
+msgstr "Група"
 
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
@@ -197,7 +197,7 @@ msgstr "Използване на този профил"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:520
+#: ../admin-tool/profilesdialog.py:537
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -307,11 +307,11 @@ msgstr "П_одробности"
 
 #: ../admin-tool/sabayon.ui.h:7
 msgid "_Groups"
-msgstr ""
+msgstr "_Групи"
 
 #: ../admin-tool/sabayon.ui.h:8
 msgid "_Groups:"
-msgstr ""
+msgstr "_Групи:"
 
 #: ../admin-tool/sabayon.ui.h:9
 msgid "_Profiles:"
@@ -335,50 +335,49 @@ msgid "Save changes to profile \"%s\" before closing?"
 msgstr "Запазване на промените в профила „%s“ преди затваряне?"
 
 #: ../admin-tool/saveconfirm.py:44
-#, fuzzy
 msgid "If you don't save, all changes will be permanently lost."
-msgstr "Промените от последния час ще бъдат загубени, ако не ги запазите."
+msgstr "Всички промените ще бъдат загубени, ако не ги запазите."
 
-#: ../admin-tool/sessionwindow.py:155
+#: ../admin-tool/sessionwindow.py:157
 #, python-format
 msgid "Editing profile %s"
 msgstr "Редактиране на профила %s"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Quit"
 msgstr "_Спиране на програмата"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "_Changes"
 msgstr "_Промени"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "Edit changes"
 msgstr "Редактиране на промените"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "_Lockdown"
 msgstr "_Заключване"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "Edit Lockdown settings"
 msgstr "Редактиране на настройките на заключването"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce Mandatory"
 msgstr "Задължително прилагане"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce mandatory settings in the editing session"
 msgstr ""
 "Задаване на задължително прилаганите настройки в сесията за редактиране"
 
-#: ../admin-tool/sessionwindow.py:306
+#: ../admin-tool/sessionwindow.py:308
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Настройки на заключването за %s"
 
-#: ../admin-tool/sessionwindow.py:342
+#: ../admin-tool/sessionwindow.py:344
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
@@ -388,11 +387,11 @@ msgstr ""
 "Можете да докладвате тази грешка сега или да продължите да редактирате "
 "потребителския профил."
 
-#: ../admin-tool/sessionwindow.py:346
+#: ../admin-tool/sessionwindow.py:348
 msgid "_Report this error"
 msgstr "_Докладване на тази грешка"
 
-#: ../admin-tool/sessionwindow.py:347
+#: ../admin-tool/sessionwindow.py:349
 msgid "_Continue editing"
 msgstr "_Продължаване на редактирането"
 
@@ -458,9 +457,8 @@ msgid "Applications menu"
 msgstr "Меню „Програми“"
 
 #: ../lib/sources/filessource.py:99
-#, fuzzy
 msgid "Settings menu"
-msgstr "Меню „Настройки на сървъра“"
+msgstr "Меню „Настройки“"
 
 #: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
@@ -617,24 +615,24 @@ msgid "Panel '%s' removed"
 msgstr "Панелът „%s“ е премахнат"
 
 #: ../lib/sources/paneldelegate.py:77
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' added"
-msgstr "Панелът „%s“ е добавен"
+msgstr "Аплетът „%s“ е добавен"
 
 #: ../lib/sources/paneldelegate.py:100
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' removed"
-msgstr "Панелът „%s“ е премахнат"
+msgstr "Аплетът „%s“ е премахнат"
 
 #: ../lib/sources/paneldelegate.py:123
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' added"
-msgstr "Панелът „%s“ е добавен"
+msgstr "Обектът „%s“ е добавен"
 
 #: ../lib/sources/paneldelegate.py:152
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' removed"
-msgstr "Панелът „%s“ е премахнат"
+msgstr "Обектът „%s“ е премахнат"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
 #: ../lib/sources/paneldelegate.py:240
@@ -694,32 +692,39 @@ msgstr "Лента с меню"
 msgid "Panel File"
 msgstr "Файл за панел"
 
-#: ../lib/storage.py:172
+#: ../lib/storage.py:173
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "Неуспех при прочитането на файла „%s“: %s"
 
-#: ../lib/storage.py:182
+#: ../lib/storage.py:183
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "Неуспех при прочитането на метаданните от „%s“: %s"
 
-#: ../lib/storage.py:188
+#: ../lib/storage.py:189
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "Невалиден раздел с метаданни в „%s“: %s"
 
-#: ../lib/storage.py:362
+#. change the raise to a dprint, since some files seem to disappear.
+#. raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
+#: ../lib/storage.py:383
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Несъществуващият файл „%s“ не може да бъде добавен"
 
-#: ../lib/storage.py:487
+#: ../lib/storage.py:527
+#, python-format
+msgid "Couldn't rmdir '%s'"
+msgstr "Папката „%s“ не може да се изтрие"
+
+#: ../lib/storage.py:532
 #, python-format
 msgid "Couldn't unlink file '%s'"
-msgstr ""
+msgstr "Файлът „%s“ не може да се изтрие"
 
-#: ../lib/storage.py:570
+#: ../lib/storage.py:622
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Профилът „%s“ е само за четене"
@@ -727,73 +732,70 @@ msgstr "Профилът „%s“ е само за четене"
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/systemdb.py:67
+#: ../lib/systemdb.py:77
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "невалиден вид на настройката %(setting)s в %(np)s"
 
-#: ../lib/systemdb.py:112
+#: ../lib/systemdb.py:122
 msgid "No database file provided"
-msgstr ""
+msgstr "Не е указан файл с база от данни"
 
-#: ../lib/systemdb.py:232
-#, fuzzy, python-format
+#: ../lib/systemdb.py:242
+#, python-format
 msgid "No LDAP search base specified for %s"
-msgstr "Не е указана база за търсене за %s"
+msgstr "Не е указана база в LDAP за търсене за %s"
 
-#: ../lib/systemdb.py:235
-#, fuzzy, python-format
+#: ../lib/systemdb.py:245
+#, python-format
 msgid "No LDAP query filter specified for %s"
-msgstr "Не е зададен филтър на заявката %s"
+msgstr "Не е зададен филтър на заявката към LDAP %s"
 
-#: ../lib/systemdb.py:238
-#, fuzzy, python-format
+#: ../lib/systemdb.py:248
+#, python-format
 msgid "No LDAP result attribute specified for %s"
-msgstr "Не е зададен атрибут на резултата за %s"
+msgstr "Не е зададен атрибут в LDAP на резултата за %s"
 
-#: ../lib/systemdb.py:247
-#, fuzzy
+#: ../lib/systemdb.py:257
 msgid "LDAP Scope must be one of: "
-msgstr "Обхватът може да е „sub“, „base“ и „one“"
+msgstr "Обхватът в LDAP може да е един от:"
 
-#: ../lib/systemdb.py:268
-#, fuzzy
+#: ../lib/systemdb.py:277
 msgid "multiple_result must be one of: "
-msgstr "множественият резултат може да е „first“ (първи) и „random“ (случаен)"
+msgstr "множественият_резултат може да е един от:"
 
-#: ../lib/systemdb.py:361
+#: ../lib/systemdb.py:370
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Неуспех при отварянето на „%s“ за запис"
 
-#: ../lib/systemdb.py:374
+#: ../lib/systemdb.py:383
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Неуспех при запазването на потребителската база от данни в „%s“"
 
-#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
+#: ../lib/systemdb.py:412 ../lib/systemdb.py:446
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Файлът „%s“ не е настройка на профил"
 
-#: ../lib/systemdb.py:404
+#: ../lib/systemdb.py:419
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Неуспех при добавянето на стандартния профил „%s“ към настройките"
 
-#: ../lib/systemdb.py:438
+#: ../lib/systemdb.py:453
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Неуспех при добавянето на потребителя „%s“ към настройките на профила"
 
-#: ../lib/systemdb.py:510
+#: ../lib/systemdb.py:525
 msgid "Failed to get the user list"
 msgstr "Неуспех при получаването на списъка с потребители"
 
-#: ../lib/systemdb.py:560
-#, fuzzy
+#: ../lib/systemdb.py:575
 msgid "Failed to get the group list"
-msgstr "Неуспех при получаването на списъка с потребители"
+msgstr "Неуспех при получаването на списъка с групи"
 
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
@@ -828,358 +830,3 @@ msgid ""
 msgstr ""
 "Не може да се открие името на потребителя: не е зададено в /etc/passwd и "
 "променливата $USER, ако съществува, е без стойност"
-
-#~ msgid "Click to make this setting not mandatory"
-#~ msgstr "Натиснете, за да направите настройката незадължителна"
-
-#~ msgid "Click to make this setting mandatory"
-#~ msgstr "Натиснете, за да направите настройката задължителна"
-
-#~ msgid "General"
-#~ msgstr "Общи"
-
-#~ msgid "Epiphany Web Browser"
-#~ msgstr "Уеб браузър — Epiphany"
-
-#~ msgid "Disable _command line"
-#~ msgstr "Забраняване на _командния ред"
-
-#~ msgid "Disable _printing"
-#~ msgstr "Забраняване на _печата"
-
-#~ msgid "Disable print _setup"
-#~ msgstr "Забраняване на _настройването на печата"
-
-#~ msgid "Disable save to _disk"
-#~ msgstr "Забраняване на _запазването върху носител"
-
-#~ msgid "_Lock down the panels"
-#~ msgstr "Закл_ючване на панелите"
-
-#~ msgid "Disable force _quit"
-#~ msgstr "Забраняване на прину_дителното спиране"
-
-#~ msgid "Disable log _out"
-#~ msgstr "Забраняване на _изхода"
-
-#~ msgid "Disable _quit"
-#~ msgstr "Забраняване на _спирането"
-
-#~ msgid "Disable _arbitrary URL"
-#~ msgstr "Забраняване на п_роизволен адрес"
-
-#~ msgid "Disable _bookmark editing"
-#~ msgstr "Забраняване на редактирането на _отметки"
-
-#~ msgid "Disable _history"
-#~ msgstr "Забраняване на _историята"
-
-#~ msgid "Disable _javascript chrome"
-#~ msgstr "Забраняване на _javascript за chrome"
-
-#~ msgid "Disable _toolbar editing"
-#~ msgstr "Забраняване на редактирането на _лентите с инструменти"
-
-#, fuzzy
-#~ msgid "Force _fullscreen mode"
-#~ msgstr "На _цял екран"
-
-#~ msgid "Hide _menubar"
-#~ msgstr "Скриване на лентата с _менюта"
-
-#~ msgid "Disable lock _screen"
-#~ msgstr "Забраняване на заключването на _екрана"
-
-#, fuzzy
-#~ msgid "_Lock on activation"
-#~ msgstr "Закл_ючване на панелите"
-
-#, fuzzy
-#~ msgid "Allow log _out"
-#~ msgstr "Забраняване на _изхода"
-
-#~ msgid "Disable _unsafe protocols"
-#~ msgstr "Изключване на _опасните протоколи"
-
-#, fuzzy
-#~ msgid "Disabled Applets"
-#~ msgstr "<b>Изключени аплети</b>"
-
-#~ msgid "Lockdown Editor"
-#~ msgstr "Редактор на забраните"
-
-#, fuzzy
-#~ msgid "Safe Protocols"
-#~ msgstr "<b>Безопасни протоколи</b>"
-
-#~ msgid "Remove personal information from documents when saving them"
-#~ msgstr "Махане на личната информация от документите при запазване"
-
-#~ msgid "Warn if macro tries to create a PDF"
-#~ msgstr "Предупреждение, ако макрос се опита да създаде PDF"
-
-#~ msgid "Warn if macro tries to print a document"
-#~ msgstr "Предупреждение, ако макрос се опита да отпечата документ"
-
-#~ msgid "Warn if macro tries to save a document"
-#~ msgstr "Предупреждение, ако макрос се опита да запази документ"
-
-#~ msgid "Warn if macro tries to sign a document"
-#~ msgstr "Предупреждение, ако макрос се опита да подпише документ"
-
-#~ msgid "Recommend password when saving a document"
-#~ msgstr "Препоръчване на парола при запазване на документ"
-
-#~ msgid "Enable auto-save"
-#~ msgstr "Включване на автоматичното запазване"
-
-#~ msgid "Printing should mark the document as modified"
-#~ msgstr "Отпечатването трябва да отбелязва документа като променен"
-
-#~ msgid "Use system's file dialog"
-#~ msgstr "Използване на системния диалог за избор на файл"
-
-#~ msgid "Create backup copy on save"
-#~ msgstr "Създаване на резервно копие при запазване"
-
-#~ msgid "Warn when saving non-OpenOffice.org formats"
-#~ msgstr ""
-#~ "Предупреждение при запазване във формати, които не са на OpenOffice.org"
-
-#~ msgid "Use OpenGL"
-#~ msgstr "Използване на OpenGL"
-
-#~ msgid "Use system font"
-#~ msgstr "Използване на системен шрифт"
-
-#~ msgid "Use anti-aliasing"
-#~ msgstr "Използване на заглаждане на шрифтове"
-
-#~ msgid "Disable UI customization"
-#~ msgstr "Забраняване на настройването на ГПИ"
-
-#~ msgid "Show insensitive menu items"
-#~ msgstr "Показването на неактивните елементи в менюто"
-
-#~ msgid "Show font preview"
-#~ msgstr "Показване на прегледа на шрифтове"
-
-#~ msgid "Show font history"
-#~ msgstr "Показване на историята на шрифтовете"
-
-#~ msgid "Show icons in menus"
-#~ msgstr "Показване на икони в менютата"
-
-#~ msgid ""
-#~ "\n"
-#~ "5\n"
-#~ "10\n"
-#~ "25\n"
-#~ "50"
-#~ msgstr ""
-#~ "\n"
-#~ "5\n"
-#~ "10\n"
-#~ "25\n"
-#~ "50"
-
-#~ msgid ""
-#~ "\n"
-#~ "Automatic\n"
-#~ "Large\n"
-#~ "Small"
-#~ msgstr ""
-#~ "\n"
-#~ "автоматичен\n"
-#~ "голям\n"
-#~ "малък"
-
-#~ msgid ""
-#~ "\n"
-#~ "OpenDocument (.odp)\n"
-#~ "PowerPoint 97+ (.ppt)\n"
-#~ "OpenOffice.org 1.1 (.sxi)"
-#~ msgstr ""
-#~ "\n"
-#~ "OpenDocument (.odp)\n"
-#~ "PowerPoint 97+ (.ppt)\n"
-#~ "OpenOffice 1.1 (.sxi)"
-
-#~ msgid ""
-#~ "\n"
-#~ "OpenDocument (.ods)\n"
-#~ "Excel 97+ (.xls)\n"
-#~ "OpenOffice.org 1.1 (.sxc)"
-#~ msgstr ""
-#~ "\n"
-#~ "OpenDocument (.ods)\n"
-#~ "Excel 97+ (.xls)\n"
-#~ "OpenOffice 1.1 (.sxc)"
-
-#~ msgid ""
-#~ "\n"
-#~ "OpenDocument (.odt)\n"
-#~ "Word 97+ (.doc)\n"
-#~ "OpenOffice.org 1.1 (.sxw)"
-#~ msgstr ""
-#~ "\n"
-#~ "OpenDocument (.odt)\n"
-#~ "Word 97+ (.doc)\n"
-#~ "OpenOffice 1.1 (.sxw)"
-
-#~ msgid ""
-#~ "\n"
-#~ "Very High\n"
-#~ "High\n"
-#~ "Medium\n"
-#~ "Low"
-#~ msgstr ""
-#~ "\n"
-#~ "много високо\n"
-#~ "високо\n"
-#~ "средно\n"
-#~ "ниско"
-
-#~ msgid "Default format for presentations:"
-#~ msgstr "Стандартен формат за презентации:"
-
-#~ msgid "Default format for spreadsheet:"
-#~ msgstr "Стандартен формат за електронните таблици:"
-
-#~ msgid "Default format for word processor:"
-#~ msgstr "Стандартен формат за текстообработващата програма:"
-
-#~ msgid "Default icon size"
-#~ msgstr "Стандартен размер на иконите"
-
-#~ msgid "Load / Save"
-#~ msgstr "Отваряне и запазване"
-
-#~ msgid "Macro Security Level:"
-#~ msgstr "Ниво на сигурност на макросите:"
-
-#~ msgid "Number of undo steps:"
-#~ msgstr "Брой отменими стъпки:"
-
-#~ msgid "OpenOffice.org"
-#~ msgstr "OpenOffice.org"
-
-#~ msgid "Security"
-#~ msgstr "Сигурност"
-
-#~ msgid "User Interface"
-#~ msgstr "Потребителски интерфейс"
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld second will be permanently "
-#~ "lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %ld seconds will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Промените от последната %ld секунда ще бъдат загубени, ако не ги запазите."
-#~ msgstr[1] ""
-#~ "Промените от последните %ld секунди ще бъдат загубени, ако не ги запазите."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last minute will be permanently lost."
-#~ msgstr ""
-#~ "Промените от последната минута ще бъдат загубени, ако не ги запазите."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last minute and %ld second will be "
-#~ "permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last minute and %ld seconds will be "
-#~ "permanently lost."
-#~ msgstr[0] ""
-#~ "Промените от последната минута и %ld секунда ще бъдат загубени, ако не ги "
-#~ "запазите."
-#~ msgstr[1] ""
-#~ "Промените от последната минута и %ld секунди ще бъдат загубени, ако не ги "
-#~ "запазите."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld minute will be permanently "
-#~ "lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %ld minutes will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Промените от последната %ld минута ще бъдат загубени, ако не ги запазите."
-#~ msgstr[1] ""
-#~ "Промените от последните %ld минути ще бъдат загубени, ако не ги запазите."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last hour and %d minute will be "
-#~ "permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last hour and %d minutes will be "
-#~ "permanently lost."
-#~ msgstr[0] ""
-#~ "Промените от последния час и %d минута ще бъдат загубени, ако не ги "
-#~ "запазите."
-#~ msgstr[1] ""
-#~ "Промените от последния час и %d минути ще бъдат загубени, ако не ги "
-#~ "запазите."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %d hour will be permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %d hours will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Промените от последния %d час ще бъдат загубени, ако не ги запазите."
-#~ msgstr[1] ""
-#~ "Промените от последните %d часа ще бъдат загубени, ако не ги запазите."
-
-#~ msgid "Preferences menu"
-#~ msgstr "Меню „Настройки“"
-
-#~ msgid "Applet %s added to top panel"
-#~ msgstr "Аплетът „%s“ е добавен към горния панел"
-
-#~ msgid "Applet %s added to bottom panel"
-#~ msgstr "Аплетът „%s“ е добавен към долния панел"
-
-#~ msgid "Applet %s added to left panel"
-#~ msgstr "Аплетът „%s“ е добавен към левия панел"
-
-#~ msgid "Applet %s added to right panel"
-#~ msgstr "Аплетът „%s“ е добавен към десния панел"
-
-#~ msgid "Applet %s removed from top panel"
-#~ msgstr "Аплетът „%s“ е премахнат от горния панел"
-
-#~ msgid "Applet %s removed from bottom panel"
-#~ msgstr "Аплетът „%s“ е премахнат от долния панел"
-
-#~ msgid "Applet %s removed from left panel"
-#~ msgstr "Аплетът „%s“ е премахнат от левия панел"
-
-#~ msgid "Applet %s removed from right panel"
-#~ msgstr "Аплетът „%s“ е премахнат от десния панел"
-
-#~ msgid "%s added to top panel"
-#~ msgstr "%s е добавен към горния панел"
-
-#~ msgid "%s added to bottom panel"
-#~ msgstr "%s е добавен към долния панел"
-
-#~ msgid "%s added to left panel"
-#~ msgstr "%s е добавен към левия панел"
-
-#~ msgid "%s added to right panel"
-#~ msgstr "%s е добавен към десния панел"
-
-#~ msgid "%s removed from top panel"
-#~ msgstr "%s е премахнат от горния панел"
-
-#~ msgid "%s removed from bottom panel"
-#~ msgstr "%s е премахнат от долния панел"
-
-#~ msgid "%s removed from left panel"
-#~ msgstr "%s е премахнат от левия панел"
-
-#~ msgid "%s removed from right panel"
-#~ msgstr "%s е премахнат от десния панел"
