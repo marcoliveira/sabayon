@@ -202,20 +202,30 @@ class SystemDatabase(object):
     def __open_ldap (self):
         ldap_node = self.nodes[0]
 
-        server = get_setting (ldap_node, "server", "localhost")
-        port = get_setting (ldap_node, "port", ldap.PORT, int)
+        #
+        # Get a list of uri's from the "uri" setting on the ldap node.
+        #
+        uris = get_setting (ldap_node, "uri", "ldap://localhost")
 
-        l = ldap.open (server, port)
-        
-        l.protocol_version = get_setting (ldap_node, "version", ldap.VERSION3, int)
-        l.timeout =  get_setting (ldap_node, "timeout", 10, int)
-        
-        bind_dn = get_setting (ldap_node, "bind_dn", "")
-        bind_pw = get_setting (ldap_node, "bind_pw", "")
-        if bind_dn != "":
+        #
+        # Could be a comma separated list.
+        # 
+        urilist = uris.split(',')
+
+        for uri in urilist:
+            l = ldap.initialize (uri)
+            
+            l.protocol_version = get_setting (ldap_node, "version", ldap.VERSION3, int)
+            l.timeout =  get_setting (ldap_node, "timeout", 10, int)
+            
+            bind_dn = get_setting (ldap_node, "bind_dn", "")
+            bind_pw = get_setting (ldap_node, "bind_pw", "")
+            # Bind no matter what, so we know the server's there.
             l.simple_bind (bind_dn, bind_pw)
-        
-        return l
+            
+            return l
+        execpt ldap.LDAPError, error_message:
+            dprint("Couldn't bind to %s: %s\n", uri, error_message)
 
     def __ldap_query (self, map, replace):
         global has_ldap
