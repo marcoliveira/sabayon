@@ -1,7 +1,7 @@
 # Thai translation of sabayon.
-# Copyright (C) 2005-2009 Free Software Foundation, Inc.
+# Copyright (C) 2005-2010 Free Software Foundation, Inc.
 # This file is distributed under the same license as the sabayon package.
-# Theppitak Karoonboonyanan <thep@linux.thai.net>, 2005-2009.
+# Theppitak Karoonboonyanan <thep@linux.thai.net>, 2005-2010.
 # aka.ape <aka.ape@gmail.com>, 2007.
 #
 msgid ""
@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: sabayon 2.19.1\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-12-22 04:31+0000\n"
-"PO-Revision-Date: 2009-12-23 09:06+0700\n"
+"POT-Creation-Date: 2009-12-25 03:01+0000\n"
+"PO-Revision-Date: 2010-01-27 20:20+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -88,11 +88,11 @@ msgstr "_วิธีใช้"
 
 #: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
 msgid "_Contents"
-msgstr "_สารบัญ"
+msgstr "เนื้อ_หา"
 
 #: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
 msgid "Help Contents"
-msgstr "สารบัญวิธีใช้"
+msgstr "เนื้อหาวิธีใช้"
 
 #: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
 msgid "_About"
@@ -667,32 +667,39 @@ msgstr "แถบเมนู"
 msgid "Panel File"
 msgstr "แฟ้มพาเนล"
 
-#: ../lib/storage.py:172
+#: ../lib/storage.py:173
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "อ่านแฟ้ม '%s' ไม่สำเร็จ: %s"
 
-#: ../lib/storage.py:182
+#: ../lib/storage.py:183
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "อ่าน metadata จาก '%s' ไม่สำเร็จ: %s"
 
-#: ../lib/storage.py:188
+#: ../lib/storage.py:189
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "หัวข้อ metadata ไม่ถูกต้องใน '%s' : %s"
 
-#: ../lib/storage.py:362
+#. change the raise to a dprint, since some files seem to disappear.
+#. raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
+#: ../lib/storage.py:383
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "ไม่สามารถเพิ่มแฟ้ม '%s' ที่ไม่มีอยู่ได้"
 
-#: ../lib/storage.py:487
+#: ../lib/storage.py:528
+#, python-format
+msgid "Couldn't rmdir '%s'"
+msgstr "ไม่สามารถ rmdir '%s'"
+
+#: ../lib/storage.py:533
 #, python-format
 msgid "Couldn't unlink file '%s'"
 msgstr "ไม่สามารถ unlink แฟ้ม '%s'"
 
-#: ../lib/storage.py:570
+#: ../lib/storage.py:625
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "โพรไฟล์ %s ห้ามเขียน"
