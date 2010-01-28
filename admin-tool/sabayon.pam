@@ -1,8 +1,13 @@
 #%PAM-1.0
-auth       sufficient	pam_rootok.so
-auth       sufficient	pam_timestamp.so
-auth       required	pam_stack.so service=system-auth
-session    required	pam_permit.so
-session    optional	pam_xauth.so
-session    optional	pam_timestamp.so
-account    required	pam_permit.so
+# We think it's only Fedora that's still using consolehelper
+# So this has been modified to make it correct for Fedora.
+#auth       sufficient	pam_rootok.so
+#auth       sufficient	pam_timestamp.so
+#auth       required	pam_stack.so service=system-auth
+#session    required	pam_permit.so
+#session    optional	pam_xauth.so
+#session    optional	pam_timestamp.so
+#account    required	pam_permit.so
+auth include config-util
+account include config-util
+session include config-util
