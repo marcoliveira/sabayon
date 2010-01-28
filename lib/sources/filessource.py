@@ -69,7 +69,7 @@ class FilesChange (userprofile.ProfileChange):
             filetype = _("Directory")
         elif os.path.islink(self.rel_path):
             filetype = _("Link")
-        else
+        else:
             filetype = _("File")
         if self.event == dirmonitor.CREATED:
             return _("%s '%s' created") % (filetype, utf8_rel_path)
