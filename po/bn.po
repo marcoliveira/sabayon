@@ -5,15 +5,17 @@
 # Progga <progga@BengaLinux.Org>, 2006.
 # Runa Bhattacharjee <runabh@gmail.com>, 2007.
 # Runa Bhattacharjee <runab@redhat.com>, 2009.
-# Saad M Niamatullah <saadmniamatullah@gmail.com>, 2009
+# Saad M Niamatullah <saadmniamatullah@gmail.com>, 2009.
+# Israt Jahan <israt@ankur.org.bd>, 2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: bn\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-21 21:44-0600\n"
-"PO-Revision-Date: 2009-09-11 17:57+0600\n"
-"Last-Translator: Saad M Niamatullah <saadmniamatullah@gmail.com>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=sabayon&component=general\n"
+"POT-Creation-Date: 2009-12-25 03:01+0000\n"
+"PO-Revision-Date: 2010-01-28 17:57+0600\n"
+"Last-Translator: Israt Jahan <israt@ankur.org.bd>\n"
 "Language-Team: Bengali <ankur-bd-l10n@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -91,11 +93,11 @@ msgstr "সহায়তা (_H)"
 
 #: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
 msgid "_Contents"
-msgstr ""
+msgstr "বিষয়বস্তু (_C)"
 
 #: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
 msgid "Help Contents"
-msgstr ""
+msgstr "সহায়তা বিষয়বস্তু"
 
 #: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
 msgid "_About"
@@ -177,13 +179,13 @@ msgid "Value"
 msgstr "মান"
 
 #: ../admin-tool/groupsdialog.py:61
-#, fuzzy, python-format
+#, python-format
 msgid "Groups for profile %s"
-msgstr "প্রোফাইল %s-র ব্যবহারকারী"
+msgstr "প্রোফাইল %s-র গ্রুপ"
 
 #: ../admin-tool/groupsdialog.py:71
 msgid "Group"
-msgstr ""
+msgstr "গ্রুপ"
 
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
@@ -305,11 +307,11 @@ msgstr "বিবরণ (_D)"
 
 #: ../admin-tool/sabayon.ui.h:7
 msgid "_Groups"
-msgstr ""
+msgstr "গ্রুপ (_G)"
 
 #: ../admin-tool/sabayon.ui.h:8
 msgid "_Groups:"
-msgstr ""
+msgstr "গ্রুপ: (_G)"
 
 #: ../admin-tool/sabayon.ui.h:9
 msgid "_Profiles:"
@@ -333,9 +335,9 @@ msgid "Save changes to profile \"%s\" before closing?"
 msgstr "বন্ধ করার পূর্বে \"%s\" প্রোফাইলে পরিবর্তন সংরক্ষণ করা হবে?"
 
 #: ../admin-tool/saveconfirm.py:44
-#, fuzzy
 msgid "If you don't save, all changes will be permanently lost."
-msgstr "সংরক্ষণ করা না হলে গত এক ঘন্টায় করা সমস্ত পরিবর্তন স্থায়ীরূপে মুছে যাবে।"
+msgstr ""
+"সংরক্ষণ করা না হলে গত এক ঘন্টায় করা সমস্ত পরিবর্তন স্থায়ীরূপে মুছে যাবে।"
 
 #: ../admin-tool/sessionwindow.py:155
 #, python-format
@@ -451,9 +453,8 @@ msgid "Applications menu"
 msgstr "অ্যাপলিকেশন মেনু"
 
 #: ../lib/sources/filessource.py:99
-#, fuzzy
 msgid "Settings menu"
-msgstr "সার্ভারের বৈশিষ্ট্যের মেনু"
+msgstr "সেটিং মেনু"
 
 #: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
@@ -607,24 +608,24 @@ msgid "Panel '%s' removed"
 msgstr "প্যানেল '%s' মুছে ফেলা হয়েছে"
 
 #: ../lib/sources/paneldelegate.py:77
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' added"
-msgstr "প্যানেল '%s' যোগ করা হয়েছে"
+msgstr "অ্যাপলেট '%s' যোগ করা হয়েছে"
 
 #: ../lib/sources/paneldelegate.py:100
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' removed"
-msgstr "প্যানেল '%s' মুছে ফেলা হয়েছে"
+msgstr "অ্যাপলেট '%s' মুছে ফেলা হয়েছে"
 
 #: ../lib/sources/paneldelegate.py:123
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' added"
-msgstr "প্যানেল '%s' যোগ করা হয়েছে"
+msgstr "অবজেক্ট '%s' যোগ করা হয়েছে"
 
 #: ../lib/sources/paneldelegate.py:152
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' removed"
-msgstr "প্যানেল '%s' মুছে ফেলা হয়েছে"
+msgstr "অবজেক্ট '%s' মুছে ফেলা হয়েছে"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
 #: ../lib/sources/paneldelegate.py:240
@@ -684,32 +685,39 @@ msgstr "মেনু-বার"
 msgid "Panel File"
 msgstr "প্যানেল ফাইল"
 
-#: ../lib/storage.py:172
+#: ../lib/storage.py:173
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "'%s' ফাইল পড়তে ব্যর্থ: %s"
 
-#: ../lib/storage.py:182
+#: ../lib/storage.py:183
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "'%s' থেকে মিটা-ডাটা পড়তে ব্যর্থ: %s"
 
-#: ../lib/storage.py:188
+#: ../lib/storage.py:189
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "'%s'-র মধ্যে অবৈধ মিটা-ডাটা বিভাগ: %s"
 
-#: ../lib/storage.py:362
+#. change the raise to a dprint, since some files seem to disappear.
+#. raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
+#: ../lib/storage.py:383
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "অনুপস্থিত ফাইল '%s' যোগ করতে ব্যর্থ"
 
-#: ../lib/storage.py:487
+#: ../lib/storage.py:528
+#, python-format
+msgid "Couldn't rmdir '%s'"
+msgstr "'%s' rmdir করতে পারেনি"
+
+#: ../lib/storage.py:533
 #, python-format
 msgid "Couldn't unlink file '%s'"
-msgstr ""
+msgstr "'%s' ফাইলকে লিংক বিহীন করতে পারেনি"
 
-#: ../lib/storage.py:570
+#: ../lib/storage.py:625
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "প্রোফাইল শুধুমাত্র পাঠযোগ্য %s"
@@ -724,65 +732,61 @@ msgstr "%(setting)s, %(np)s-র মধ্যে নির্ধারণের �
 
 #: ../lib/systemdb.py:112
 msgid "No database file provided"
-msgstr ""
+msgstr "ডাটাবেস ফাইল নেই"
 
 #: ../lib/systemdb.py:232
-#, fuzzy, python-format
+#, python-format
 msgid "No LDAP search base specified for %s"
-msgstr "%s-র জন্য অনুসন্ধানের স্থান উল্লিখিত হয়নি"
+msgstr "%s-র জন্য LDAP অনুসন্ধানের স্থান উল্লিখিত হয়নি"
 
 #: ../lib/systemdb.py:235
-#, fuzzy, python-format
+#, python-format
 msgid "No LDAP query filter specified for %s"
-msgstr "%s-র জন্য কোয়েরি ফিল্টার উল্লিখিত হয়নি"
+msgstr "%s-র জন্য LDAP কোয়েরি ফিল্টার উল্লিখিত হয়নি"
 
 #: ../lib/systemdb.py:238
-#, fuzzy, python-format
+#, python-format
 msgid "No LDAP result attribute specified for %s"
-msgstr "%s-র জন্য ফলাফলের বৈশিষ্ট্য উল্লিখিত হয়নি"
+msgstr "%s-র জন্য LDAP ফলাফলের বৈশিষ্ট্য উল্লিখিত হয়নি"
 
 #: ../lib/systemdb.py:247
-#, fuzzy
 msgid "LDAP Scope must be one of: "
-msgstr "পরিধি sub (সাব), base(বেস) ও one (এক)-র মধ্যে একটি হওয়া আবশ্যক"
+msgstr "LDAP স্কোপ অবশ্যই এদের মধ্যে যেকোন একটি হতে হবে:"
 
-#: ../lib/systemdb.py:268
-#, fuzzy
+#: ../lib/systemdb.py:267
 msgid "multiple_result must be one of: "
-msgstr ""
-"multiple_result-র মান first (প্রথম) অথবা random (যথেচ্ছ)-র মধ্যে একটি হওয়া আবশ্যক"
+msgstr "multiple_result-র মান এদের মধ্যে একটি হওয়া আবশ্যক:"
 
-#: ../lib/systemdb.py:361
+#: ../lib/systemdb.py:359
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "লেখার উদ্দেশ্যে %s খুলতে ব্যর্থ"
 
-#: ../lib/systemdb.py:374
+#: ../lib/systemdb.py:372
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "UserDatabase, %s-এ সংরক্ষণ করতে ব্যর্থ"
 
-#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
+#: ../lib/systemdb.py:395 ../lib/systemdb.py:429
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "%s ফাইলের প্রোফাইল কনফিগারেশন নয়"
 
-#: ../lib/systemdb.py:404
+#: ../lib/systemdb.py:402
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "কনফিগারেশনের মধ্যে ডিফল্ট প্রোফাইল %s যোগ করতে ব্যর্থ"
 
-#: ../lib/systemdb.py:438
+#: ../lib/systemdb.py:436
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "প্রোফাইল কনফিগারেশনের মধ্যে %s ব্যবহারকারীর তথ্য যোগ করতে ব্যর্থ"
 
-#: ../lib/systemdb.py:510
+#: ../lib/systemdb.py:508
 msgid "Failed to get the user list"
 msgstr "ব্যবহারকারীর তালিকা প্রাপ্ত করতে ব্যর্থ"
 
-#: ../lib/systemdb.py:560
-#, fuzzy
+#: ../lib/systemdb.py:558
 msgid "Failed to get the group list"
 msgstr "ব্যবহারকারীর তালিকা প্রাপ্ত করতে ব্যর্থ"
 
