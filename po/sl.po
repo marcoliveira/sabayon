@@ -1,14 +1,16 @@
-# This file is distributed under the same license as the program package.
+# Slovenian translation for sabayon.
+# Copyright (C) 2009 sabayon COPYRIGHT HOLDER
+# This file is distributed under the same license as the sabayon package.
 #
 # Matjaž Horvat <m@owca.info>, 2006.
-# Matej Urbančič <mateju@svn.gnome.org>, 2005 - 2009.
+# Matej Urbančič <mateju@svn.gnome.org>, 2005 - 2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-12-29 19:31+0000\n"
-"PO-Revision-Date: 2009-12-30 09:48+0100\n"
+"POT-Creation-Date: 2010-01-28 21:58+0000\n"
+"PO-Revision-Date: 2010-01-29 08:05+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -120,7 +122,7 @@ msgid "GConf"
 msgstr "GConf"
 
 #: ../admin-tool/editorwindow.py:274
-#: ../lib/sources/filessource.py:79
+#: ../lib/sources/filessource.py:86
 msgid "Files"
 msgstr "Datoteke"
 
@@ -177,7 +179,7 @@ msgid "Profile settings: %s"
 msgstr "Nastavitve profila: %s"
 
 #: ../admin-tool/gconfviewer.py:110
-#: ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/profilesdialog.py:421
 #: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "Ime"
@@ -210,7 +212,7 @@ msgstr "Uporabi ta profil"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:520
+#: ../admin-tool/profilesdialog.py:537
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -221,7 +223,7 @@ msgstr "Ni ustreznih dovoljenj za zagon orodja za namizne uporabniške profile"
 
 #: ../admin-tool/sabayon:78
 msgid "Administrator level permissions are needed to run this program because it can modify system files."
-msgstr "Zagon tega programa zahteva skrbniške pravice, saj je mogoče spreminjati sistemske datoteke"
+msgstr "Zagon tega programa zahteva skrbniške pravice, saj spreminja nastavitve sistemskih datotek."
 
 #: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
@@ -229,27 +231,27 @@ msgstr "Orodje za namizne uporabniške profile že teče"
 
 #: ../admin-tool/sabayon:84
 msgid "You may not use Desktop User Profiles tool from within a profile editing session"
-msgstr "Orodja za namizne uporabniške profile ne smete uporabljati znotraj seje za urejanje profila"
+msgstr "Orodja za prilagajanje namiznih uporabniških profilov ni priporočeno uporabljati znotraj seje za urejanje profila."
 
 #: ../admin-tool/sabayon:91
 #, c-format
 msgid "User account '%s' was not found"
-msgstr "Uporabnik '%s' ni bil najden"
+msgstr "Uporabniškega računa '%s' ni mogoče najti."
 
 #: ../admin-tool/sabayon:92
 #, c-format
 msgid "Sabayon requires a special user account '%s' to be present on this computer. Try again after creating the account (using, for example, the 'adduser' command)"
-msgstr "Sabayon zahteva poseben uporabniški račun '%s'. Potem ko ustvarite račun (na primer z ukazom 'adduser'), poskusite znova."
+msgstr "Sabayon zahteva poseben uporabniški račun '%s', ki pa ga ni mogoče najti. Ustvarite zahtevan račun (na primer z ukazom 'adduser') in nato poskusite znova."
 
 #: ../admin-tool/sabayon:131
 #, c-format
 msgid "A fatal error has occurred.  You can help us fix the problem by sending the log in %s to %s"
-msgstr "Prišlo je do usodne napake. Napako nam lahko pomagate odpraviti, če pošljete podatke beleženja v  %s na %s"
+msgstr "Prišlo je do usodne napake. Napako nam lahko pomagate odpraviti, če pošljete podatke beleženja v %s na %s"
 
 #: ../admin-tool/sabayon:145
 #, c-format
 msgid "Sabayon will now exit.  There were some recoverable errors, and you can help us debug the problem by sending the log in %s to %s"
-msgstr "Program Sabayon se bo zaprl. Prišlo je do nekaj obnovljivih napak, ki jih lahko iz beležnice pošljete %s na %s"
+msgstr "Program Sabayon se bo zaprl. Prišlo je do nekaj obnovljivih napak. Napako lahko sporočite razvijalcem programa tako, da pošljete dnevnik %s na %s."
 
 #: ../admin-tool/sabayon-apply:111
 msgid "Please use -h for usage options"
@@ -414,37 +416,49 @@ msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "Prišlo je do usodne napake med pripravo uporabniških nastavitev preko '%s'."
 
 #: ../lib/sources/filessource.py:69
-#, python-format
-msgid "File '%s' created"
-msgstr "Datoteka '%s' ustvarjena"
+msgid "Directory"
+msgstr "Mapa"
 
 #: ../lib/sources/filessource.py:71
-#, python-format
-msgid "File '%s' deleted"
-msgstr "Datoteka '%s' je izbrisana"
+msgid "Link"
+msgstr "Povezava"
 
 #: ../lib/sources/filessource.py:73
-#, python-format
-msgid "File '%s' changed"
-msgstr "Datoteka '%s' spremenjena"
+msgid "File"
+msgstr "Datoteke"
 
-#: ../lib/sources/filessource.py:97
+#: ../lib/sources/filessource.py:75
+#, python-format
+msgid "%s '%s' created"
+msgstr "%s '%s'  je ustvarjena"
+
+#: ../lib/sources/filessource.py:77
+#, python-format
+msgid "%s '%s' deleted"
+msgstr "%s '%s' je izbrisana"
+
+#: ../lib/sources/filessource.py:79
+#, python-format
+msgid "%s '%s' changed"
+msgstr "%s '%s' je spremenjena"
+
+#: ../lib/sources/filessource.py:104
 msgid "Applications menu"
 msgstr "Meni Programi"
 
-#: ../lib/sources/filessource.py:99
+#: ../lib/sources/filessource.py:106
 msgid "Settings menu"
 msgstr "Meni nastavitev"
 
-#: ../lib/sources/filessource.py:101
+#: ../lib/sources/filessource.py:108
 msgid "Server Settings menu"
 msgstr "Meni možnosti strežnika"
 
-#: ../lib/sources/filessource.py:103
+#: ../lib/sources/filessource.py:110
 msgid "System Settings menu"
 msgstr "Meni možnosti sistema"
 
-#: ../lib/sources/filessource.py:105
+#: ../lib/sources/filessource.py:112
 msgid "Start Here menu"
 msgstr "Začetni meni"
 
@@ -707,69 +721,69 @@ msgstr "Profil je le za branje %s"
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/systemdb.py:67
+#: ../lib/systemdb.py:77
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "neveljavna vrsta nastavitve %(setting)s v %(np)s"
 
-#: ../lib/systemdb.py:112
+#: ../lib/systemdb.py:122
 msgid "No database file provided"
 msgstr "Ni dodeljene datoteke podatkovne zbirke"
 
-#: ../lib/systemdb.py:232
+#: ../lib/systemdb.py:252
 #, python-format
 msgid "No LDAP search base specified for %s"
 msgstr "Ni LDAP iskalne osnove za %s"
 
-#: ../lib/systemdb.py:235
+#: ../lib/systemdb.py:255
 #, python-format
 msgid "No LDAP query filter specified for %s"
 msgstr "Ni LDAP filtra poizvedbe za %s"
 
-#: ../lib/systemdb.py:238
+#: ../lib/systemdb.py:258
 #, python-format
 msgid "No LDAP result attribute specified for %s"
 msgstr "Ni LDAP iskalnega atributa za %s"
 
-#: ../lib/systemdb.py:247
+#: ../lib/systemdb.py:267
 msgid "LDAP Scope must be one of: "
 msgstr "LDAP obseg mora biti:"
 
-#: ../lib/systemdb.py:267
+#: ../lib/systemdb.py:287
 msgid "multiple_result must be one of: "
 msgstr "več rezultatov mora biti:"
 
-#: ../lib/systemdb.py:359
+#: ../lib/systemdb.py:380
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Ni mogoče odpreti %s za pisanje"
 
-#: ../lib/systemdb.py:372
+#: ../lib/systemdb.py:393
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Ni mogoče shraniti UserDatabase v %s"
 
-#: ../lib/systemdb.py:395
-#: ../lib/systemdb.py:429
+#: ../lib/systemdb.py:422
+#: ../lib/systemdb.py:456
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Datoteka %s ni nastavitvena datoteka profila"
 
-#: ../lib/systemdb.py:402
+#: ../lib/systemdb.py:429
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Nastavitvam ni mogoče dodati privzetega profila %s"
 
-#: ../lib/systemdb.py:436
+#: ../lib/systemdb.py:463
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Nastavitvam profila ni mogoče dodati uporabnika %s"
 
-#: ../lib/systemdb.py:508
+#: ../lib/systemdb.py:535
 msgid "Failed to get the user list"
 msgstr "Ni mogoče dobiti seznama uporabnikov"
 
-#: ../lib/systemdb.py:558
+#: ../lib/systemdb.py:585
 msgid "Failed to get the group list"
 msgstr "Ni mogoče pridobiti seznama uporabnikov"
 
@@ -964,7 +978,7 @@ msgstr "Ni mogoče najti uporabniškega imena: ni nastavljeno v /etc/passwd in n
 #~ msgid "Default format for presentations:"
 #~ msgstr "Privzeta oblika predstavitve:"
 #~ msgid "Default format for spreadsheet:"
-#~ msgstr "Privzeta oblika razpredelničnih datotek:"
+#~ msgstr "Privzeta oblika pregledničnih datotek:"
 #~ msgid "Default format for word processor:"
 #~ msgstr "Privzeta oblika besedilnih datotek:"
 #~ msgid "Default icon size"
