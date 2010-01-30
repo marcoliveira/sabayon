@@ -6,21 +6,21 @@
 # Jaime Iniesta Alemán <capitanplaneta@gmail.com>, 2005.
 # Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2005, 2006.
 # Daniel Baeyens <dbaeyens@warp.es>, 2007.
-# Jorge González <jorgegonz@svn.gnome.org>, 2007, 200, 2009.
+# Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-12-25 03:01+0000\n"
-"PO-Revision-Date: 2009-12-28 02:07+0100\n"
+"POT-Creation-Date: 2010-01-28 21:52+0000\n"
+"PO-Revision-Date: 2010-01-30 12:36+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
@@ -29,7 +29,7 @@ msgstr "Programa para establecer y editar perfiles para usuarios"
 #: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
 msgstr ""
-"Jorge González <jorgegonz@svn.gnome.org>, 2007-2009\n"
+"Jorge González <jorgegonz@svn.gnome.org>, 2007-2010\n"
 "Daniel Baeyens Sicilia<dbaeyens@warp.es>, 2007\n"
 "Jaime Iniesta Alemán <capitanplaneta@gmail.com>, 2006\n"
 "QA: Francisco Javier F. Serrador, <serrador@cvs.gnome.org>\n"
@@ -57,15 +57,15 @@ msgstr "Descripción"
 msgid "Profile %s"
 msgstr "Perfil %s"
 
-#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:179
 msgid "_Profile"
 msgstr "_Perfil"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:180
 msgid "_Save"
 msgstr "_Guardar"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:180
 msgid "Save profile"
 msgstr "Guardar perfil"
 
@@ -73,11 +73,11 @@ msgstr "Guardar perfil"
 msgid "_Close"
 msgstr "_Cerrar"
 
-#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:181
 msgid "Close the current window"
 msgstr "Cierra la ventana actual"
 
-#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:182
 msgid "_Edit"
 msgstr "_Editar"
 
@@ -89,23 +89,23 @@ msgstr "_Borrar"
 msgid "Delete item"
 msgstr "Borrar elemento"
 
-#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:185
 msgid "_Help"
 msgstr "Ay_uda"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:186
 msgid "_Contents"
 msgstr "Índ_ice"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:186
 msgid "Help Contents"
 msgstr "Contenido de la ayuda"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:187
 msgid "_About"
 msgstr "Acerca _de"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:187
 msgid "About Sabayon"
 msgstr "Acerca de Sabayon"
 
@@ -113,7 +113,7 @@ msgstr "Acerca de Sabayon"
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:86
 msgid "Files"
 msgstr "Archivos"
 
@@ -167,7 +167,7 @@ msgstr "par"
 msgid "Profile settings: %s"
 msgstr "Ajustes del perfil: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:421
 #: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "Nombre"
@@ -199,7 +199,7 @@ msgstr "Usar este perfil"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:520
+#: ../admin-tool/profilesdialog.py:537
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -342,45 +342,45 @@ msgstr "¿Desea guardar los cambios al perfil «%s» antes de cerrar?"
 msgid "If you don't save, all changes will be permanently lost."
 msgstr "Si no guarda, se perderán permanentemente los cambios."
 
-#: ../admin-tool/sessionwindow.py:155
+#: ../admin-tool/sessionwindow.py:157
 #, python-format
 msgid "Editing profile %s"
 msgstr "Editando el perfil %s"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Quit"
 msgstr "_Salir"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "_Changes"
 msgstr "_Cambios"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "Edit changes"
 msgstr "Editar cambios"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "_Lockdown"
 msgstr "_Bloquear"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "Edit Lockdown settings"
 msgstr "Editar ajustes de bloqueo"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce Mandatory"
 msgstr "Forzar obligatorios"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Forzar ajustes obligatorios en la sesión de edición"
 
-#: ../admin-tool/sessionwindow.py:306
+#: ../admin-tool/sessionwindow.py:308
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Configuraciones restringidas para %s"
 
-#: ../admin-tool/sessionwindow.py:342
+#: ../admin-tool/sessionwindow.py:344
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
@@ -390,11 +390,11 @@ msgstr ""
 "informar de este error ahora o intentar continuar editando el perfil del "
 "usuario."
 
-#: ../admin-tool/sessionwindow.py:346
+#: ../admin-tool/sessionwindow.py:348
 msgid "_Report this error"
 msgstr "Informar de este e_rror"
 
-#: ../admin-tool/sessionwindow.py:347
+#: ../admin-tool/sessionwindow.py:349
 msgid "_Continue editing"
 msgstr "_Continuar editando"
 
@@ -438,37 +438,53 @@ msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "Hubo un error fatal al aplicar el perfil del usuario desde «%s»."
 
 #: ../lib/sources/filessource.py:69
-#, python-format
-msgid "File '%s' created"
-msgstr "Se ha creado el archivo «%s»"
+msgid "Directory"
+msgstr "Directorio"
 
 #: ../lib/sources/filessource.py:71
-#, python-format
-msgid "File '%s' deleted"
-msgstr "Se ha borrado el archivo «%s»"
+msgid "Link"
+msgstr "Enlace"
 
 #: ../lib/sources/filessource.py:73
-#, python-format
-msgid "File '%s' changed"
-msgstr "Se ha cambiado el archivo «%s»"
+#| msgid "Files"
+msgid "File"
+msgstr "Archivo"
 
-#: ../lib/sources/filessource.py:97
+#: ../lib/sources/filessource.py:75
+#, python-format
+#| msgid "File '%s' created"
+msgid "%s '%s' created"
+msgstr "Se creó %s «%s»"
+
+#: ../lib/sources/filessource.py:77
+#, python-format
+#| msgid "File '%s' deleted"
+msgid "%s '%s' deleted"
+msgstr "Se borró %s «%s»"
+
+#: ../lib/sources/filessource.py:79
+#, python-format
+#| msgid "File '%s' changed"
+msgid "%s '%s' changed"
+msgstr "Se cambió %s «%s»"
+
+#: ../lib/sources/filessource.py:104
 msgid "Applications menu"
 msgstr "Menú de aplicaciones"
 
-#: ../lib/sources/filessource.py:99
+#: ../lib/sources/filessource.py:106
 msgid "Settings menu"
 msgstr "Menú de ajustes"
 
-#: ../lib/sources/filessource.py:101
+#: ../lib/sources/filessource.py:108
 msgid "Server Settings menu"
 msgstr "Menú de configuración del servidor"
 
-#: ../lib/sources/filessource.py:103
+#: ../lib/sources/filessource.py:110
 msgid "System Settings menu"
 msgstr "Menú de configuración del sistema"
 
-#: ../lib/sources/filessource.py:105
+#: ../lib/sources/filessource.py:112
 msgid "Start Here menu"
 msgstr "Menú Empezar aquí"
 
@@ -711,18 +727,17 @@ msgstr "Sección de metadatos inválida en «%s»: «%s»"
 msgid "Cannot add non-existent file '%s'"
 msgstr "No se ha podido añadir el archivo inexistente «%s»"
 
-#: ../lib/storage.py:528
+#: ../lib/storage.py:527
 #, python-format
-#| msgid "Couldn't unlink file '%s'"
 msgid "Couldn't rmdir '%s'"
 msgstr "No se pudo borrar la carpeta «%s»"
 
-#: ../lib/storage.py:533
+#: ../lib/storage.py:532
 #, python-format
 msgid "Couldn't unlink file '%s'"
 msgstr "No se pudo desenlazar el archivo «%s»"
 
-#: ../lib/storage.py:625
+#: ../lib/storage.py:622
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "El perfil es de sólo lectura %s"
@@ -730,68 +745,68 @@ msgstr "El perfil es de sólo lectura %s"
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/systemdb.py:67
+#: ../lib/systemdb.py:77
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "tipo no válido para el ajuste %(setting)s en %(np)s"
 
-#: ../lib/systemdb.py:112
+#: ../lib/systemdb.py:122
 msgid "No database file provided"
 msgstr "No se proporcionó ningún archivo de base de datos"
 
-#: ../lib/systemdb.py:232
+#: ../lib/systemdb.py:252
 #, python-format
 msgid "No LDAP search base specified for %s"
 msgstr "Sin base de búsqueda LDAP especificada para %s"
 
-#: ../lib/systemdb.py:235
+#: ../lib/systemdb.py:255
 #, python-format
 msgid "No LDAP query filter specified for %s"
 msgstr "Sin filtro de consulta LDAP especificado para %s"
 
-#: ../lib/systemdb.py:238
+#: ../lib/systemdb.py:258
 #, python-format
 msgid "No LDAP result attribute specified for %s"
 msgstr "No se ha especificado un atributo resultante LDAP para %s"
 
-#: ../lib/systemdb.py:247
+#: ../lib/systemdb.py:267
 msgid "LDAP Scope must be one of: "
 msgstr "El ámbito LDAP debe ser uno de los siguientes: "
 
-#: ../lib/systemdb.py:267
+#: ../lib/systemdb.py:287
 msgid "multiple_result must be one of: "
 msgstr "multiple_result debe ser uno de los siguientes: "
 
-#: ../lib/systemdb.py:359
+#: ../lib/systemdb.py:380
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "No se pudo abrir %s en para escritura"
 
-#: ../lib/systemdb.py:372
+#: ../lib/systemdb.py:393
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "No se pudo guardar UserDatabase en %s"
 
-#: ../lib/systemdb.py:395 ../lib/systemdb.py:429
+#: ../lib/systemdb.py:422 ../lib/systemdb.py:456
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "El archivo %s no es una configuración de perfil"
 
-#: ../lib/systemdb.py:402
+#: ../lib/systemdb.py:429
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "No se pudo añadir el perfil predeterminado %s a la configuración"
 
-#: ../lib/systemdb.py:436
+#: ../lib/systemdb.py:463
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "No se pudo añadir el usuario %s a la configuración de perfil"
 
-#: ../lib/systemdb.py:508
+#: ../lib/systemdb.py:535
 msgid "Failed to get the user list"
 msgstr "No se pudo recuperar la lista de usuarios"
 
-#: ../lib/systemdb.py:558
+#: ../lib/systemdb.py:585
 msgid "Failed to get the group list"
 msgstr "Falló al obtener la lista de grupos"
 
