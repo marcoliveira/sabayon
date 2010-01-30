@@ -225,7 +225,7 @@ class SystemDatabase(object):
                 l.simple_bind (bind_dn, bind_pw)
                 
                 return l
-            execpt ldap.LDAPError, error_message:
+            except ldap.LDAPError, error_message:
                 dprint("Couldn't bind to %s: %s\n", uri, error_message)
 
     def __ldap_query (self, map, replace):
