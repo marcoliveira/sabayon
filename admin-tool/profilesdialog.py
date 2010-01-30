@@ -368,6 +368,8 @@ class ProfilesDialog:
         self.__setup_profiles_list ()
 
         self.profiles_list.connect ("key-press-event", self.__handle_key_press)
+        self.profiles_list.connect ("row-activated", self.__profile_row_activated)
+
 
         self.add_button = self.builder.get_object ("add_button")
         self.add_button.connect ("clicked", self.__add_button_clicked)
@@ -446,6 +448,17 @@ class ProfilesDialog:
 
     @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __edit_button_clicked (self, button):
+        profile_name = self.__get_selected_profile ()
+        if profile_name:
+            self.dialog.set_sensitive (False)
+
+            session = Session (PROTOTYPE_USER, profile_name)
+            session.connect ("finished", self.__session_finished)
+            debuglog.uprint ("Starting to edit profile '%s'", profile_name)
+            session.start ()
+
+    @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
+    def __profile_row_activated (self, treeview, path, column):
         profile_name = self.__get_selected_profile ()
         if profile_name:
             self.dialog.set_sensitive (False)

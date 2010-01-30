@@ -213,19 +213,20 @@ class SystemDatabase(object):
         urilist = uris.split(',')
 
         for uri in urilist:
-            l = ldap.initialize (uri)
-            
-            l.protocol_version = get_setting (ldap_node, "version", ldap.VERSION3, int)
-            l.timeout =  get_setting (ldap_node, "timeout", 10, int)
-            
-            bind_dn = get_setting (ldap_node, "bind_dn", "")
-            bind_pw = get_setting (ldap_node, "bind_pw", "")
-            # Bind no matter what, so we know the server's there.
-            l.simple_bind (bind_dn, bind_pw)
-            
-            return l
-        execpt ldap.LDAPError, error_message:
-            dprint("Couldn't bind to %s: %s\n", uri, error_message)
+            try:
+                l = ldap.initialize (uri)
+                
+                l.protocol_version = get_setting (ldap_node, "version", ldap.VERSION3, int)
+                l.timeout =  get_setting (ldap_node, "timeout", 10, int)
+                
+                bind_dn = get_setting (ldap_node, "bind_dn", "")
+                bind_pw = get_setting (ldap_node, "bind_pw", "")
+                # Bind no matter what, so we know the server's there.
+                l.simple_bind (bind_dn, bind_pw)
+                
+                return l
+            execpt ldap.LDAPError, error_message:
+                dprint("Couldn't bind to %s: %s\n", uri, error_message)
 
     def __ldap_query (self, map, replace):
         global has_ldap

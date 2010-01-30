@@ -97,7 +97,8 @@ FILES_TO_IGNORE = [
     ".gtkrc-1.2-gnome2*",
     ".pulse-cookie",
     ".recently-used*",
-    ".xsession-errors"
+    ".xsession-errors",
+    ".imsettings.log"
 ]
 
 #
@@ -119,7 +120,9 @@ DIRECTORIES_TO_IGNORE_PROFILE = [
     ".pulse",
     ".thumbnails",
     ".wapi",
-    ".Trash"
+    ".Trash",
+    ".evolution/cache",
+    ".local/share/gvfs-metadata"
 ]
 
 #
