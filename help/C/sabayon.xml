@@ -47,14 +47,16 @@
 
         <revhistory>
             <revision>
-                <revnumber>&appname; V&manrevision;</revnumber>
+                <revnumber>V&manrevision;</revnumber>
                 <date>&date;</date>
             </revision>
         </revhistory>
 
+<!--
         <releaseinfo>
-            This manual describes version &appversion; of &appname;.
+            This manual describes.
         </releaseinfo>
+-->
 
         <legalnotice>
             <title>Feedback</title>
@@ -208,8 +210,8 @@ $ ./autogen.sh –prefix=/usr
                 &appname; from your distribution's package manager, it may have an
                 icon available for you under the <guimenu>Administration</guimenu>
 				menu.  If you've installed from source, you may need to launch it
-                manually.  Press <shortcut><keycombo><keycap>Alt</keycap><keycap>F2
-				</keycap></keycombo></shortcut>, and type:
+                manually.  Press
+            <keycombo><keycap>Alt</keycap><keycap>F2</keycap></keycombo>, and type:
             </para>
             <screen>
 gksu sabayon
