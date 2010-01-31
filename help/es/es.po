@@ -2,22 +2,19 @@
 # Spanish translation for sabayon.
 # Copyright (C) 2009 sabayon's COPYRIGHT HOLDER
 # This file is distributed under the same license as the sabayon package.
-#
-# Jorge González González <aloriel@gmail.com>, 2009.
 # Jorge González <jorgegonz@svn.gnome.org>, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.help.master\n"
 "POT-Creation-Date: 2009-12-29 19:31+0000\n"
-"PO-Revision-Date: 2010-01-08 20:51+0100\n"
+"PO-Revision-Date: 2010-01-31 22:17+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: KBabel 1.11.4\n"
-"Report-Msgid-Bugs-To: \n"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -272,6 +269,11 @@ msgid ""
 "the same way you edit your desktop. Sabayon launches profiles in a Xephyr "
 "window, which provides an X session within an X session, like Xnest."
 msgstr ""
+"Sabayon es una herramienta de administración del sistema para gestionar la "
+"configuración del escritorio GNOME. Sabayon proporciona una forma fácil de "
+"editar las claves predeterminadas y obligatorias de GConf: de la misma forma "
+"que edita su escritorio. Sabayon lanza perfiles en una ventana Xephyr, que "
+"proporciona una sesión X dentro de una sesión X, como Xnest."
 
 #: C/sabayon.xml:89(para)
 msgid ""
@@ -404,6 +406,9 @@ msgid ""
 "will be supported directly by your distribution. Search for the package "
 "'sabayon' in your distribution's package management tools."
 msgstr ""
+"Su distribución probablemente contiene una versión preempaquetada de Sabayon "
+"que su distribución soportará directamente. Busque el paquete «sabayon» en "
+"las herramientas de gestión de paquetes de su distribución."
 
 #: C/sabayon.xml:169(title)
 msgid "Installing from the git repository"
@@ -414,6 +419,8 @@ msgid ""
 "For those who wish to be on the bleeding edge, you can install Sabayon from "
 "GNOME's git repository."
 msgstr ""
+"Para los que prefieran usar lo último, pueden instalar Sabayon desde el "
+"repositorio git de GNOME."
 
 #: C/sabayon.xml:174(para)
 msgid ""
@@ -421,6 +428,9 @@ msgid ""
 "tarball, with the exception of obtaining the release from git, and running "
 "the autoconfigure tools."
 msgstr ""
+"Para instalar desde git se usa el mismo procedimiento que para instalar "
+"desde un tarball, a excepción de que se obtiene la publicación desde git, y "
+"ejecutar las herramientas de acutoconfiguración."
 
 #: C/sabayon.xml:179(screen)
 #, no-wrap
@@ -442,10 +452,12 @@ msgid ""
 "At this point, simply follow the same instructions for configuring and "
 "compiling the program as you did for installing from a tarball."
 msgstr ""
+"En este punto, simplemente siga las mismas instrucciones para configurar y "
+"compilar el programa tal y como si lo instalase desde un tarball."
 
 #: C/sabayon.xml:192(title)
 msgid "Create a profile"
-msgstr ""
+msgstr "Crear un perfil"
 
 #: C/sabayon.xml:193(para)
 msgid ""
@@ -458,7 +470,7 @@ msgstr ""
 
 #: C/sabayon.xml:202(title)
 msgid "Creating a profile"
-msgstr "Crear un perfil"
+msgstr ""
 
 #: C/sabayon.xml:203(para)
 msgid ""
@@ -491,7 +503,7 @@ msgstr "Ventana principal"
 
 #: C/sabayon.xml:225(phrase)
 msgid "Main window for Sabayon"
-msgstr ""
+msgstr "Ventana principal de Sabayon"
 
 #: C/sabayon.xml:228(para)
 msgid "Sabayon's main window for creating, and applying profiles."
@@ -511,11 +523,11 @@ msgstr "Añadir perfil"
 
 #: C/sabayon.xml:249(phrase)
 msgid "Add Profile window for Sabayon"
-msgstr "Ventana de Añadir perfil de Sabayon"
+msgstr ""
 
 #: C/sabayon.xml:252(para)
 msgid "Add Profile window for Sabayon."
-msgstr "Ventana de Añadir perfil de Sabayon."
+msgstr ""
 
 #: C/sabayon.xml:258(para)
 msgid ""
@@ -525,7 +537,7 @@ msgstr ""
 
 #: C/sabayon.xml:263(title) C/sabayon.xml:270(phrase) C/sabayon.xml:273(para)
 msgid "Main window - Edit"
-msgstr "Ventana principal: Editar"
+msgstr ""
 
 #: C/sabayon.xml:279(para)
 msgid "A \"desktop within a window\" is opened:"
@@ -533,11 +545,11 @@ msgstr ""
 
 #: C/sabayon.xml:283(title)
 msgid "Edit Desktop"
-msgstr "Editar escritorio"
+msgstr ""
 
 #: C/sabayon.xml:290(phrase) C/sabayon.xml:293(para)
 msgid "Edit desktop"
-msgstr "Editar escritorio"
+msgstr ""
 
 #: C/sabayon.xml:299(para)
 msgid ""
@@ -611,7 +623,7 @@ msgstr ""
 
 #: C/sabayon.xml:376(title) C/sabayon.xml:383(phrase)
 msgid "Lockdown editor"
-msgstr "Editor de restricciones"
+msgstr ""
 
 #: C/sabayon.xml:386(para)
 msgid "Edit GNOME's lockdown settings from Sabayon."
@@ -677,7 +689,7 @@ msgstr ""
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
 #: C/sabayon.xml:0(None)
 msgid "translator-credits"
-msgstr "Jorge González <jorgegonz@svn.gnome.org>, 2009, 2010"
+msgstr "Jorge González <jorgegonz@svn.gnome.org>, 2009."
 
 #~ msgid "contact"
 #~ msgstr "contacto"
