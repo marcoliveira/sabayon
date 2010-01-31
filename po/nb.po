@@ -1,14 +1,14 @@
 # Norwegian bokmål translation of sabayon.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the sabayon package.
-# Kjartan Maraas <kmaraas@gnome.org>, 2005-2009.
+# Kjartan Maraas <kmaraas@gnome.org>, 2005-2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon 2.29.x\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-05 13:48+0100\n"
-"PO-Revision-Date: 2010-01-05 13:50+0100\n"
+"Report-Msgid-Bugs-To:\n"
+"POT-Creation-Date: 2010-01-31 19:55+0100\n"
+"PO-Revision-Date: 2010-01-31 19:55+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian Bokmaal <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -104,7 +104,7 @@ msgstr "Om Sabayon"
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:86
 msgid "Files"
 msgstr "Filer"
 
@@ -158,7 +158,7 @@ msgstr "par"
 msgid "Profile settings: %s"
 msgstr "Innstillinger for profil: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:421
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:423
 #: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "Navn"
@@ -190,7 +190,7 @@ msgstr "Bruk denne profilen"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:537
+#: ../admin-tool/profilesdialog.py:550
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -422,37 +422,49 @@ msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "Det oppsto en fatal feil ved bruk av brukerprofil fra «%s»."
 
 #: ../lib/sources/filessource.py:69
-#, python-format
-msgid "File '%s' created"
-msgstr "Fil «%s» opprettet"
+msgid "Directory"
+msgstr "Katalog"
 
 #: ../lib/sources/filessource.py:71
-#, python-format
-msgid "File '%s' deleted"
-msgstr "Fil «%s» slettet"
+msgid "Link"
+msgstr "Lenke"
 
 #: ../lib/sources/filessource.py:73
-#, python-format
-msgid "File '%s' changed"
-msgstr "Fil «%s» endret"
+msgid "File"
+msgstr "Fil"
 
-#: ../lib/sources/filessource.py:97
+#: ../lib/sources/filessource.py:75
+#, python-format
+msgid "%s '%s' created"
+msgstr "%s «%s» opprettet"
+
+#: ../lib/sources/filessource.py:77
+#, python-format
+msgid "%s '%s' deleted"
+msgstr "%s «%s» slettet"
+
+#: ../lib/sources/filessource.py:79
+#, python-format
+msgid "%s '%s' changed"
+msgstr "%s «%s» endret"
+
+#: ../lib/sources/filessource.py:104
 msgid "Applications menu"
 msgstr "Programmeny"
 
-#: ../lib/sources/filessource.py:99
+#: ../lib/sources/filessource.py:106
 msgid "Settings menu"
 msgstr "Meny for innstillinger"
 
-#: ../lib/sources/filessource.py:101
+#: ../lib/sources/filessource.py:108
 msgid "Server Settings menu"
 msgstr "Meny for tjenerinnstillinger"
 
-#: ../lib/sources/filessource.py:103
+#: ../lib/sources/filessource.py:110
 msgid "System Settings menu"
 msgstr "Meny for systeminnstillinger"
 
-#: ../lib/sources/filessource.py:105
+#: ../lib/sources/filessource.py:112
 msgid "Start Here menu"
 msgstr "Start her-meny"
 
@@ -722,59 +734,59 @@ msgstr "ugyldig type for innstilling %(setting)s i %(np)s"
 msgid "No database file provided"
 msgstr "Ingen databasefil oppgitt"
 
-#: ../lib/systemdb.py:242
+#: ../lib/systemdb.py:253
 #, python-format
 msgid "No LDAP search base specified for %s"
 msgstr "Ingen LDAP-søkebase oppgitt for %s"
 
-#: ../lib/systemdb.py:245
+#: ../lib/systemdb.py:256
 #, python-format
 msgid "No LDAP query filter specified for %s"
 msgstr "Ingen LDAP-spørringsfilter oppgitt for %s"
 
-#: ../lib/systemdb.py:248
+#: ../lib/systemdb.py:259
 #, python-format
 msgid "No LDAP result attribute specified for %s"
 msgstr "Ingen LDAP-resultatattributt oppgitt for %s"
 
-#: ../lib/systemdb.py:257
+#: ../lib/systemdb.py:268
 msgid "LDAP Scope must be one of: "
 msgstr "LDAP-området må være en av: "
 
-#: ../lib/systemdb.py:277
+#: ../lib/systemdb.py:288
 msgid "multiple_result must be one of: "
 msgstr "multiple_result må være en av: "
 
-#: ../lib/systemdb.py:370
+#: ../lib/systemdb.py:381
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Kunne ikke åpne %s for skriving"
 
-#: ../lib/systemdb.py:383
+#: ../lib/systemdb.py:394
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Kunne ikke lagre UserDatabase til %s"
 
-#: ../lib/systemdb.py:412 ../lib/systemdb.py:446
+#: ../lib/systemdb.py:423 ../lib/systemdb.py:457
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Fil %s er ikke en profilkonfigurasjon"
 
-#: ../lib/systemdb.py:419
+#: ../lib/systemdb.py:430
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Kunne ikke legge til forvalgt profil %s i konfigurasjonen"
 
-#: ../lib/systemdb.py:453
+#: ../lib/systemdb.py:464
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Kunne ikke legge til bruker %s i profilkonfigurasjonen"
 
-#: ../lib/systemdb.py:525
+#: ../lib/systemdb.py:536
 msgid "Failed to get the user list"
 msgstr "Kunne ikke hente brukerlisten"
 
-#: ../lib/systemdb.py:575
+#: ../lib/systemdb.py:586
 msgid "Failed to get the group list"
 msgstr "Kunne ikke hente gruppelisten"
 
