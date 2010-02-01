@@ -149,6 +149,9 @@ class DebugLog:
             self.set_max_lines (i)
 
     def load_configuration (self, filename):
+        if not os.path.exists (filename):
+            return False 
+
         config = ConfigParser.ConfigParser ()
 
         config.read (filename)
