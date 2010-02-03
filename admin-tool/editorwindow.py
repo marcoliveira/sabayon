@@ -222,10 +222,46 @@ class ProfileEditorWindow:
         self.save_action = action_group.get_action ("Save")
         self.delete_action = action_group.get_action ("Delete")
 
+    # Sort by Source then alphabetically
+    # Generally this means GConf and other app specific prefs are listed before files
+    def __pref_object_sort_func (self, model, iter1, iter2):
+        source1 = model.get_value (iter1, ProfileModel.COLUMN_SOURCE)
+        source2 = model.get_value (iter2, ProfileModel.COLUMN_SOURCE)
+        path1   = model.get_value (iter1, ProfileModel.COLUMN_PATH)
+        path2   = model.get_value (iter2, ProfileModel.COLUMN_PATH)
+
+        # FIXME: Add priority integer to source modules to get rid of hardcoded priorities here
+        # This is temporarily hard-coded here to make the change self-contained and easy to understand.
+        def __source_to_priority (source):
+            if source == "GConf":
+                return 10
+            if source == "Firefox":
+                return 90
+            if source == "Files":
+                return 255
+            return 500
+
+        priority1 = __source_to_priority(source1)
+        priority2 = __source_to_priority(source2)
+        
+        if priority1 < priority2:
+            return -1
+        if priority1 == priority2:
+            if path1 < path2:
+                return -1
+            if path1 == path2:
+                return 0
+            if path1 > path2:
+                return 1
+        if priority1 > priority2:
+            return 1
+
     def __setup_treeview (self):
         self.profile_model = ProfileModel (self.profile)
+        self.profile_sortable = gtk.TreeModelSort (self.profile_model)
+        self.profile_sortable.set_default_sort_func(self.__pref_object_sort_func)
         
-        self.treeview = gtk.TreeView (self.profile_model)
+        self.treeview = gtk.TreeView (self.profile_sortable)
         self.treeview.show ()
         self.scrolled.add (self.treeview)
         
@@ -233,11 +269,15 @@ class ProfileEditorWindow:
         self.treeview.get_selection ().connect ("changed",
                                                 self.__treeview_selection_changed)
 
-        self.treeview.set_headers_visible (False)
+        self.treeview.set_headers_visible (True)
 
         c = gtk.TreeViewColumn (_("Description"),
                                 gtk.CellRendererText (),
                                 text = ProfileModel.COLUMN_DESCRIPTION)
+        self.treeview.append_column (c)
+        c = gtk.TreeViewColumn (_("Source"),
+                                gtk.CellRendererText (),
+                                text = ProfileModel.COLUMN_SOURCE)
         self.treeview.append_column (c)
 
         self.treeview.connect ("key-press-event", self.__handle_key_press)
@@ -256,6 +296,7 @@ class ProfileEditorWindow:
 
     @errors.checked_callback (debuglog.DEBUG_LOG_DOMAIN_USER)
     def __handle_row_activation (self, treeview, tree_path, column):
+        tree_path = self.profile_sortable.convert_path_to_child_path (tree_path)
         iter = self.profile_model.get_iter (tree_path)
         path = self.profile_model[iter][ProfileModel.COLUMN_PATH]
         description = self.profile_model[iter][ProfileModel.COLUMN_DESCRIPTION]
