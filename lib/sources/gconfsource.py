@@ -133,36 +133,36 @@ class GConfSource (userprofile.ProfileSource):
         self.enforce_mandatory    = True
 
     def get_path_description (self, path):
-        if path == ".gconf.xml.defaults":
+        if path == GCONF_DEFAULTS_SOURCE:
             return _("Default GConf settings")
-        elif path == ".gconf.xml.mandatory":
+        elif path == GCONF_MANDATORY_SOURCE:
             return _("Mandatory GConf settings")
         else:
             return path
 
     def get_committing_client_and_address (self, mandatory):
-        """Get a GConfClient using either .gconf.xml.defaults or
-        .gconf.xml.mandatory (in the temporary profile location)
+        """Get a GConfClient using either GCONF_DEFAULTS_SOURCE or
+        GCONF_MANDATORY_SOURCE (in the temporary profile location)
         as its source.
 
         mandatory: whether to get the mandatory or defaults source
         """
         if not mandatory:
             if not self.defaults_client:
-                (client, address) = get_client_and_address_for_path (os.path.join (self.home_dir, ".gconf.xml.defaults"))
+                (client, address) = get_client_and_address_for_path (os.path.join (self.home_dir, GCONF_DEFAULTS_SOURCE))
                 self.defaults_client = client
                 self.defaults_address = address
             return (self.defaults_client, self.defaults_address)
         else:
             if self.enforce_mandatory:
                 if not self.mandatory_client:
-                    (client, address) = get_client_and_address_for_path (os.path.join (self.home_dir, ".gconf.xml.mandatory"))
+                    (client, address) = get_client_and_address_for_path (os.path.join (self.home_dir, GCONF_MANDATORY_SOURCE))
                     self.mandatory_client = client
                     self.mandatory_address = address
                 return (self.mandatory_client, self.mandatory_address)
             else:
                 if not self.mandatory_alt_client:
-                    (client, address) = get_client_and_address_for_path (os.path.join (self.home_dir, ".gconf.xml.mandatory-alt"))
+                    (client, address) = get_client_and_address_for_path (os.path.join (self.home_dir, GCONF_MANDATORY_ALT_SOURCE))
                     self.mandatory_alt_client = client
                     self.mandatory_alt_address = address
                 return (self.mandatory_alt_client, self.mandatory_alt_address)
@@ -243,15 +243,15 @@ class GConfSource (userprofile.ProfileSource):
         time.sleep (2)
         
 
-        if os.path.exists (os.path.join (self.home_dir, ".gconf.xml.defaults")):
-            self.storage.add (".gconf.xml.defaults", self.home_dir, self.name)
+        if os.path.exists (os.path.join (self.home_dir, GCONF_DEFAULTS_SOURCE)):
+            self.storage.add (GCONF_DEFAULTS_SOURCE, self.home_dir, self.name)
 
         if self.enforce_mandatory:
-            mandatory_src = ".gconf.xml.mandatory"
+            mandatory_src = GCONF_MANDATORY_SOURCE
         else:
-            mandatory_src = ".gconf.xml.mandatory-alt"
+            mandatory_src = GCONF_MANDATORY_ALT_SOURCE
         if os.path.exists (os.path.join (self.home_dir, mandatory_src)):
-            self.storage.add (".gconf.xml.mandatory", self.home_dir, self.name, src_path = mandatory_src)
+            self.storage.add (GCONF_MANDATORY_SOURCE, self.home_dir, self.name, src_path = mandatory_src)
 
     def set_enforce_mandatory (self, enforce):
         if enforce == self.enforce_mandatory:
@@ -304,18 +304,18 @@ class GConfSource (userprofile.ProfileSource):
 
         storage_contents = self.storage.list (self.name)
 
-        if ("GConf", ".gconf.xml.defaults") in storage_contents:
-            self.storage.extract (".gconf.xml.defaults", self.home_dir, True)
-        default_path = "xml:readonly:" + os.path.join (self.home_dir, ".gconf.xml.defaults");
+        if ("GConf", GCONF_DEFAULTS_SOURCE) in storage_contents:
+            self.storage.extract (GCONF_DEFAULTS_SOURCE, self.home_dir, True)
+        default_path = "xml:readonly:" + os.path.join (self.home_dir, GCONF_DEFAULTS_SOURCE);
         if is_sabayon_session:
-            default_path = "xml:readonly:" + os.path.join (self.home_dir, ".gconf.xml.mandatory-alt") + "\n" + default_path
+            default_path = "xml:readonly:" + os.path.join (self.home_dir, GCONF_MANDATORY_ALT_SOURCE) + "\n" + default_path
                                                   
         write_path_file (os.path.join (self.home_dir, ".gconf.path.defaults"), default_path)
         
-        if ("GConf", ".gconf.xml.mandatory") in storage_contents:
-            self.storage.extract (".gconf.xml.mandatory", self.home_dir, True)
+        if ("GConf", GCONF_MANDATORY_SOURCE) in storage_contents:
+            self.storage.extract (GCONF_MANDATORY_SOURCE, self.home_dir, True)
         write_path_file (os.path.join (self.home_dir, ".gconf.path.mandatory"),
-                         "xml:readonly:" + os.path.join (self.home_dir, ".gconf.xml.mandatory"))
+                         "xml:readonly:" + os.path.join (self.home_dir, GCONF_MANDATORY_SOURCE))
 
         # FIXME: perhaps just kill -HUP it? It would really just be better
         #        if we could guarantee that there wasn't a gconfd already

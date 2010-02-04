@@ -185,7 +185,7 @@ class PanelDelegate (userprofile.SourceDelegate):
         def _copy_tree (self, dir):
             if not self.gconf_client.dir_exists(dir):
                 (src_client, src_address) = gconfsource.get_client_and_address_for_path (os.path.join (util.get_home_dir (), '.gconf'))
-                (dst_client, dst_address) = gconfsource.get_client_and_address_for_path (os.path.join (util.get_home_dir (), '.gconf.xml.defaults'))
+                (dst_client, dst_address) = gconfsource.get_client_and_address_for_path (os.path.join (util.get_home_dir (), GCONF_DEFAULTS_SOURCE))
                 copy_dir (src_client, dst_client, dst_address, dir)
 
     class PanelToplevel (PanelThing):
@@ -575,14 +575,14 @@ def run_unit_tests ():
             if not mandatory:
                 if not self.defaults_client:
                     (client, address) = gconfsource.get_client_and_address_for_path (
-                        os.path.join (self.temp_path, ".gconf.xml.defaults"))
+                        os.path.join (self.temp_path, GCONF_DEFAULTS_SOURCE))
                     self.defaults_client = client
                     self.defaults_address = address
                 return (self.defaults_client, self.defaults_address)
             else:
                 if not self.mandatory_client:
                     (client, address) = gconfsource.get_client_and_address_for_path (
-                        os.path.join (self.temp_path, ".gconf.xml.mandatory"))
+                        os.path.join (self.temp_path, GCONF_MANDATORY_SOURCE))
                     self.mandatory_client = client
                     self.mandatory_address = address
                 return (self.mandatory_client, self.mandatory_address)
@@ -686,8 +686,8 @@ def run_unit_tests ():
     subprocess.call (["gconftool-2", "--shutdown"])
     time.sleep (1)
 
-    assert os.access (os.path.join (temp_path, ".gconf.xml.defaults/apps/panel/general/%gconf.xml"), os.F_OK)
-    assert os.access (os.path.join (temp_path, ".gconf.xml.defaults/apps/panel/toplevels/foo/%gconf.xml"), os.F_OK)
+    assert os.access (os.path.join (temp_path, GCONF_DEFAULTS_SOURCE + "/apps/panel/general/%gconf.xml"), os.F_OK)
+    assert os.access (os.path.join (temp_path, GCONF_DEFAULTS_SOURCE + "/apps/panel/toplevels/foo/%gconf.xml"), os.F_OK)
 
     changes = []
 
@@ -742,7 +742,7 @@ def run_unit_tests ():
     subprocess.call (["gconftool-2", "--shutdown"])
     time.sleep (1)
     
-    assert not os.access (os.path.join (temp_path, ".gconf.xml.defaults/apps/panel/toplevels/foo/%gconf.xml"), os.F_OK)
+    assert not os.access (os.path.join (temp_path, GCONF_DEFAULTS_SOURCE + "/apps/panel/toplevels/foo/%gconf.xml"), os.F_OK)
 
     # Bye, bye cruft
     subprocess.call (["gconftool-2", "--recursive-unset", "%s/toplevels/foo" % PANEL_KEY_BASE])

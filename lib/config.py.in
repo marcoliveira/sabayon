@@ -47,6 +47,15 @@ XEPHYR_USR1_TIMEOUT = 10
 #
 PROTOTYPE_USER = "@PROTOTYPE_USER@"
 
+#
+# default, mandatory, and mandatory-alt gconf key trees in users
+# home directory.
+#
+
+GCONF_DEFAULT_SOURCE       = ".gconf.xml.defaults"
+GCONF_MANDATORY_SOURCE     = ".gconf.xml.mandatory"
+GCONF_MANDATORY_ALT_SOURCE = ".gconf.xml.mandatory-alt"
+
 # FIXME: should all of these be options passed to the "configure" script?
 DEFAULT_PATH  = "/usr/local/bin:/usr/bin:/bin:/usr/X11R6/bin"
 DEFAULT_SHELL = "/bin/bash"
@@ -130,9 +139,9 @@ DIRECTORIES_TO_IGNORE_PROFILE = [
 #
 DIRECTORIES_TO_IGNORE = DIRECTORIES_TO_IGNORE_PROFILE + [
     ".gconf",
-    ".gconf.xml.defaults",
-    ".gconf.xml.mandatory",
-    ".gconf.xml.mandatory-alt"
+    GCONF_DEFAULT_SOURCE,
+    GCONF_MANDATORY_SOURCE,
+    GCONF_MANDATORY_ALT_SOURCE,
 ]
 
 #
