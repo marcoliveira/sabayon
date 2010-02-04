@@ -84,6 +84,18 @@ if __name__ == '__main__':
         group_membership = util.get_group_membership ()
 
         #
+        # Remove any existing gconf sources.  Should be done here, just in case
+        # a user's been removed from both users.xml and groups.xml, so that
+        # their gconf sources will be cleanly removed regardless.
+        #
+
+        try:
+            shutil.rmtree (os.path.join (util.get_home_dir (), GCONF_DEFAULTS_SOURCE), True)
+            shutil.rmtree (os.path.join (util.get_home_dir (), GCONF_MANDATORY_SOURCE), True)
+        except:
+            pass
+
+        #
         # Begin the process of determining WHICH profile to apply.
         # We have 4 possibilities, rated in order of priority (highest first)
         # 1) We've been passed a profile on the command line.  We'll apply
@@ -124,13 +136,10 @@ if __name__ == '__main__':
             sys.exit (util.EXIT_CODE_NO_USER_PROFILE)
 
         #
-        # We've determined a profile applies to us.  Clean up existing
-        # defaults.
+        # We've determined a profile applies to us.  re-create source trees.
         #
 
         try:
-            shutil.rmtree (os.path.join (util.get_home_dir (), GCONF_DEFAULTS_SOURCE), True)
-            shutil.rmtree (os.path.join (util.get_home_dir (), GCONF_MANDATORY_SOURCE), True)
             os.mkdir (os.path.join (util.get_home_dir (), GCONF_DEFAULTS_SOURCE))
             os.mkdir (os.path.join (util.get_home_dir (), GCONF_MANDATORY_SOURCE))
         except:
