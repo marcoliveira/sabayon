@@ -58,11 +58,12 @@ class ProfileModel (gtk.ListStore):
     (
         COLUMN_SOURCE,
         COLUMN_PATH,
-        COLUMN_DESCRIPTION
-    ) = range (3)
+        COLUMN_DESCRIPTION,
+        COLUMN_SORTPRIORITY
+    ) = range (4)
 
     def __init__ (self, profile):
-        gtk.ListStore.__init__ (self, str, str, str)
+        gtk.ListStore.__init__ (self, str, str, str, int)
 
         self.profile = profile
         self.reload ()
@@ -75,15 +76,17 @@ class ProfileModel (gtk.ListStore):
             if source is None:
                 source = self.profile.get_delegate (source_name)
             
-            dprint ("  source %s, path %s, description %s",
+            dprint ("  source %s, path %s, description %s, sortpriority %d",
                     source_name,
                     path,
-                    source.get_path_description (path))
+                    source.get_path_description (path),
+                    source.SORTPRIORITY)
             
             self.set (self.prepend (),
                       self.COLUMN_SOURCE,          source_name,
                       self.COLUMN_PATH,            path,
-                      self.COLUMN_DESCRIPTION,     source.get_path_description (path))
+                      self.COLUMN_DESCRIPTION,     source.get_path_description (path),
+                      self.COLUMN_SORTPRIORITY,       source.SORTPRIORITY)
 
 
 class ProfileEditorWindow:
@@ -225,35 +228,21 @@ class ProfileEditorWindow:
     # Sort by Source then alphabetically
     # Generally this means GConf and other app specific prefs are listed before files
     def __pref_object_sort_func (self, model, iter1, iter2):
-        source1 = model.get_value (iter1, ProfileModel.COLUMN_SOURCE)
-        source2 = model.get_value (iter2, ProfileModel.COLUMN_SOURCE)
-        path1   = model.get_value (iter1, ProfileModel.COLUMN_PATH)
-        path2   = model.get_value (iter2, ProfileModel.COLUMN_PATH)
-
-        # FIXME: Add priority integer to source modules to get rid of hardcoded priorities here
-        # This is temporarily hard-coded here to make the change self-contained and easy to understand.
-        def __source_to_priority (source):
-            if source == "GConf":
-                return 10
-            if source == "Firefox":
-                return 90
-            if source == "Files":
-                return 255
-            return 500
-
-        priority1 = __source_to_priority(source1)
-        priority2 = __source_to_priority(source2)
+        sortprio1 = model.get_value (iter1, ProfileModel.COLUMN_SORTPRIORITY)
+        sortprio2 = model.get_value (iter2, ProfileModel.COLUMN_SORTPRIORITY)
+        path1      = model.get_value (iter1, ProfileModel.COLUMN_PATH)
+        path2      = model.get_value (iter2, ProfileModel.COLUMN_PATH)
         
-        if priority1 < priority2:
+        if sortprio1 < sortprio2:
             return -1
-        if priority1 == priority2:
+        if sortprio1 == sortprio2:
             if path1 < path2:
                 return -1
             if path1 == path2:
                 return 0
             if path1 > path2:
                 return 1
-        if priority1 > priority2:
+        if sortprio1 > sortprio2:
             return 1
 
     def __setup_treeview (self):

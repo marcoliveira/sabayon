@@ -131,6 +131,7 @@ class GConfSource (userprofile.ProfileSource):
         self.mandatory_client     = None
         self.mandatory_alt_client = None
         self.enforce_mandatory    = True
+        self.SORTPRIORITY         = 10
 
     def get_path_description (self, path):
         if path == GCONF_DEFAULTS_SOURCE:

@@ -181,6 +181,7 @@ class PanelDelegate (userprofile.SourceDelegate):
             self.added        = added
             self.removed      = removed
             self.gconf_client = self.delegate.get_gconf_client ()
+            self.SORTPRIORITY = 60
     
         def _copy_tree (self, dir):
             if not self.gconf_client.dir_exists(dir):

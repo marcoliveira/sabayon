@@ -229,6 +229,8 @@ class ProfileSource (gobject.GObject):
         self.delegates = []
         if delegate_constructor:
             self.delegates = module_loader.construct_objects (delegate_constructor, self)
+        # Set the priority level for sorting in Details view, lower numbers appear first
+        self.SORTPRIORITY = 1000
     
     def get_delegate (self, delegate_name):
         """Return a delegate named @delegate_name."""

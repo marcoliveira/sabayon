@@ -90,6 +90,7 @@ class FilesSource (userprofile.ProfileSource):
                                                     self.__handle_monitor_event)
         self.monitor.set_directories_to_ignore (DIRECTORIES_TO_IGNORE)
         self.monitor.set_files_to_ignore (FILES_TO_IGNORE)
+        self.SORTPRIORITY = 500
 
     def __handle_monitor_event (self, path, event):
         if event == dirmonitor.DELETED or os.path.isfile (path) or os.path.isdir (path):

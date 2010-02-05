@@ -51,6 +51,7 @@ class TestSource (userprofile.ProfileSource):
     def __init__ (self, storage):
         userprofile.ProfileSource.__init__ (self, "test", "get_test_delegate")
         self.storage = storage
+        self.SORTPRIORITY = 75
 
     def commit_change (self, change):
         pass

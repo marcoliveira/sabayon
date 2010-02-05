@@ -152,6 +152,7 @@ class MozillaDelegate(userprofile.SourceDelegate):
         self.committed_bookmarks = mozilla_bookmarks.BookmarkFolder("Null", None)
         self.committed_mandatory_bookmarks = mozilla_bookmarks.BookmarkFolder("Null", None)
         self.ini_file = None
+        self.SORTPRIORITY = 50
 
     def get_full_path(self, path):
         return os.path.join(self.home_dir, path)        
