@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.help.master\n"
 "POT-Creation-Date: 2010-02-01 18:04+0000\n"
-"PO-Revision-Date: 2010-02-06 11:35+0100\n"
+"PO-Revision-Date: 2010-02-06 13:16+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -298,6 +298,13 @@ msgid ""
 "preferences. So far <application>Sabayon</application> supports complete "
 "files and the configuration format for:"
 msgstr ""
+"Cualquier cambio que haga en la ventana de <application>Xnest</application> "
+"se guardará en el archivo del perfil, que se puede aplicar a las cuentas de "
+"usuarios. Actualmente <application>Sabayon</application> está limitado a la "
+"creación y actualización de perfiles de usuarios. No trata con el gran "
+"problema de llenar de datos el sistema objetivo con esas preferencias. Hasta "
+"ahora <application>Sabayon</application> soporta archivos y formato de "
+"configuración para:"
 
 #: C/sabayon.xml:103(para)
 msgid "GConf"
@@ -504,6 +511,13 @@ msgid ""
 "and <guimenuitem>Preferences</guimenuitem> menu items. These are all things "
 "you can do with <application>Sabayon</application>."
 msgstr ""
+"Su primer paso para crear perfiles para sus usuarios será ver qué funciones "
+"quiere que sus usuarios tengan. Si tiene un negocio, puede querer "
+"proporcionar un panel superior de GNOME con un conjunto de lanzadores "
+"predefinidos. Un profesor puede querer desactivar los elementos de menú "
+"<guimenuitem>Administración</guimenuitem> y <guimenuitem>Preferencias</"
+"guimenuitem>. Esto es lo que puede hacer con <application>Sabayon</"
+"application>."
 
 #: C/sabayon.xml:207(title)
 msgid "Creating a profile"
@@ -518,6 +532,12 @@ msgid ""
 "may need to launch it manually. Press <keycombo><keycap>Alt</"
 "keycap><keycap>F2</keycap></keycombo>, and type:"
 msgstr ""
+"Su primer paso será lanzar <application>Sabayon</application>. Si ha "
+"instalado <application>Sabayon</application> desde el gestor de paquetes de "
+"su distribución, debería haber un icono disponible bajo el menú "
+"<guimenu>Administración</guimenu>. Si lo ha instalado desde los fuentes, "
+"puede que necesite lanzarlo manualmente. Pulse <keycombo><keycap>Alt</"
+"keycap><keycap>F2</keycap></keycombo> y escriba:"
 
 #: C/sabayon.xml:216(screen)
 #, no-wrap
@@ -563,6 +583,10 @@ msgid ""
 "you can name the profile, and optionally, select an existing profile which "
 "will be the basis, or starting point of this profile:"
 msgstr ""
+"Para crear un perfil nuevo pulse el botón <guibutton>Add</guibutton>. Verá "
+"una ventana, llamada <guilabel>Añadir perfil</guilabel>, donde puede dar un "
+"nombre al perfil y, opcionalmente, seleccionar un perfil existente que será "
+"la base o el punto de inicio de este perfil:"
 
 #: C/sabayon.xml:248(title)
 msgid "Add Profile"
@@ -608,6 +632,9 @@ msgid ""
 "wish. You can add launchers or applets to the panels, add launchers to the "
 "desktop, or create example files in the home directory."
 msgstr ""
+"En esta ventana puede realizar los cambios que quiera sobre el perfil. Puede "
+"añadir lanzadores o miniaplicaciones a los paneles, añadir lanzadores al "
+"escritorio o crear archivos de ejemplo en la carpeta personal."
 
 #: C/sabayon.xml:312(para)
 msgid ""
@@ -617,6 +644,11 @@ msgid ""
 "selecting <guibutton>Changes</guibutton>. You should see a screen that looks "
 "like the following:"
 msgstr ""
+"Cuando termine, puede querer ver los cambios que <application>Sabayon</"
+"application> ha detectado que ha realizado sobre la sesión predeterminada. "
+"Puede hacerlo pulsando el menú <guimenu>Editar</guimenu> y seleccionando "
+"<guibutton>Cambios</guibutton>. Debería ver una pantalla que se parece a la "
+"siguiente:"
 
 #: C/sabayon.xml:320(title) C/sabayon.xml:327(phrase)
 msgid "Changes window"
@@ -652,12 +684,16 @@ msgid ""
 "To have a gconf key set as a \"default\" setting, simply leave it as is on "
 "the <emphasis>wooden</emphasis> shield. it's silver."
 msgstr ""
+"Para tener una clave de GConf como un ajuste «predeterminado», simplemente "
+"déjelo con su escudo de <emphasis>madera</emphasis>, es plateado."
 
 #: C/sabayon.xml:357(para)
 msgid ""
 "To have a gconf key set as a \"mandatory\" setting, click on it once to turn "
 "it into a <emphasis>iron</emphasis> shield."
 msgstr ""
+"Para tener una clave de GConf como un ajuste «obligatorio», pulse una vez "
+"para convertirlo en un escudo de <emphasis>hierro</emphasis>."
 
 #: C/sabayon.xml:364(para)
 msgid ""
@@ -666,6 +702,10 @@ msgid ""
 "<filename>/etc/sabayon/profiles</filename>, as a <emphasis>.zip</emphasis> "
 "file with the name you selected for the profile."
 msgstr ""
+"Después guarde el perfil seleccionando <menuchoice><guimenu>Perfil</"
+"guimenu><guimenuitem>Guardar el perfil</guimenuitem></menuchoice>, se guarda "
+"en <filename>/etc/sabayon/profiles</filename> como un archivo <emphasis>."
+"zip</emphasis> con el nombre que haya seleccionado para el perfil."
 
 #: C/sabayon.xml:373(title)
 msgid "Lockdown Editor"
@@ -677,6 +717,10 @@ msgid ""
 "application>, which allow you to do things like prevent users from modifying "
 "their panels, opening a <guilabel>Run Application</guilabel> dialogue, etc."
 msgstr ""
+"GNOME también incluye las características de restricciones de "
+"<application>Pessulus</application> que le permiten prevenir que los "
+"usuarios modifiquen los paneles, abran el diálogo <guilabel>Ejecutar "
+"aplicación</guilabel>, etc."
 
 #: C/sabayon.xml:380(para)
 msgid ""
@@ -684,14 +728,19 @@ msgid ""
 "guimenu><guimenuitem>Lockdown</guimenuitem></menuchoice> on the "
 "<guilabel>Desktop editor</guilabel> window."
 msgstr ""
+"Puede usar el editor de restricciones seleccionando "
+"<menuchoice><guimenu>Editar</guimenu><guimenuitem>Restringir</guimenuitem></"
+"menuchoice> en la ventana <guilabel>Editor del escritorio</guilabel>."
 
 #: C/sabayon.xml:386(title) C/sabayon.xml:393(phrase)
 msgid "Lockdown editor"
-msgstr ""
+msgstr "Editor de restricciones"
 
 #: C/sabayon.xml:396(para)
 msgid "Edit GNOME's lockdown settings from <application>Sabayon</application>."
 msgstr ""
+"Editar los ajustes de bloqueo de GNOME desde <application>Sabayon</"
+"application>."
 
 #: C/sabayon.xml:405(title)
 msgid "Applying Profiles"
@@ -704,6 +753,7 @@ msgstr "Aplicar un perfil"
 #: C/sabayon.xml:408(para)
 msgid "Important: it is advisable to create a new user to test the profile."
 msgstr ""
+"Importante: se recomienda crear un usuario nuevo para probar el perfil."
 
 #: C/sabayon.xml:411(para)
 msgid ""
@@ -712,6 +762,10 @@ msgid ""
 "this example <emphasis>Eleve1 </emphasis> and <emphasis>Eleve 2</emphasis> "
 "will have the profile <filename>my_profile</filename>."
 msgstr ""
+"Seleccione el perfil que quiera aplicar y pulse <guibutton>Usuarios</"
+"guibutton>: después, seleccione los usuarios a los que quiera aplicar el "
+"perfil. En este ejemplo, <emphasis>Eleve1</emphasis> y <emphasis>Eleve2</"
+"emphasis> tendrán el perfil <filename>mi_perfil</filename>."
 
 #: C/sabayon.xml:419(title) C/sabayon.xml:426(phrase)
 msgid "Apply profile by user"
