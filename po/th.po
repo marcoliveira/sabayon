@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: sabayon 2.19.1\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-12-25 03:01+0000\n"
-"PO-Revision-Date: 2010-01-27 20:20+0700\n"
+"POT-Creation-Date: 2010-02-03 17:52+0000\n"
+"PO-Revision-Date: 2010-02-08 11:45+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -41,7 +41,7 @@ msgstr "ละเลย"
 msgid "Lock"
 msgstr "ล็อค"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:274
 msgid "Description"
 msgstr "คำบรรยาย"
 
@@ -50,15 +50,15 @@ msgstr "คำบรรยาย"
 msgid "Profile %s"
 msgstr "โพรไฟล์ %s"
 
-#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:179
 msgid "_Profile"
 msgstr "โ_พรไฟล์"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:180
 msgid "_Save"
 msgstr "_บันทึก"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:180
 msgid "Save profile"
 msgstr "บันทึกโพรไฟล์"
 
@@ -66,11 +66,11 @@ msgstr "บันทึกโพรไฟล์"
 msgid "_Close"
 msgstr "_ปิด"
 
-#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:181
 msgid "Close the current window"
 msgstr "ปิดหน้าต่างปัจจุบัน"
 
-#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:182
 msgid "_Edit"
 msgstr "แ_ก้ไข"
 
@@ -82,35 +82,39 @@ msgstr "_ลบ"
 msgid "Delete item"
 msgstr "ลบรายการออก"
 
-#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:185
 msgid "_Help"
 msgstr "_วิธีใช้"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:186
 msgid "_Contents"
 msgstr "เนื้อ_หา"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:186
 msgid "Help Contents"
 msgstr "เนื้อหาวิธีใช้"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:187
 msgid "_About"
 msgstr "เ_กี่ยวกับ"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:187
 msgid "About Sabayon"
 msgstr "เกี่ยวกับ Sabayon"
 
-#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:278
+msgid "Source"
+msgstr "ที่มา"
+
+#: ../admin-tool/editorwindow.py:311 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:315 ../lib/sources/filessource.py:86
 msgid "Files"
 msgstr "แฟ้ม"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:315 ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "พาเนล"
 
@@ -160,7 +164,7 @@ msgstr "คู่"
 msgid "Profile settings: %s"
 msgstr "ค่าตั้งของโพรไฟล์: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:423
 #: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "ชื่อ"
@@ -192,7 +196,7 @@ msgstr "ใช้โพรไฟล์นี้"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:520
+#: ../admin-tool/profilesdialog.py:550
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -324,45 +328,45 @@ msgstr "บันทึกการเปลี่ยนแปลงในโพ
 msgid "If you don't save, all changes will be permanently lost."
 msgstr "ถ้าคุณไม่บันทึก การแก้ไขทั้งหมดจะสูญหายอย่างถาวร"
 
-#: ../admin-tool/sessionwindow.py:155
+#: ../admin-tool/sessionwindow.py:157
 #, python-format
 msgid "Editing profile %s"
 msgstr "กำลังแก้ไขโพรไฟล์ %s"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Quit"
 msgstr "_ออก"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "_Changes"
 msgstr "_การเปลี่ยนแปลง"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "Edit changes"
 msgstr "แก้ไขการเปลี่ยนแปลง"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "_Lockdown"
 msgstr "_จำกัดการใช้งาน"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "Edit Lockdown settings"
 msgstr "แก้ไขค่าตั้งการจำกัดการใช้งาน"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce Mandatory"
 msgstr "ใช้ค่าตั้งบังคับ"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce mandatory settings in the editing session"
 msgstr "บังคับใช้ค่าตั้งบังคับกับวาระที่กำลังแก้ไข"
 
-#: ../admin-tool/sessionwindow.py:306
+#: ../admin-tool/sessionwindow.py:308
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "ค่าตั้งการจำกัดการใช้งานสำหรับ %s"
 
-#: ../admin-tool/sessionwindow.py:342
+#: ../admin-tool/sessionwindow.py:344
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
@@ -371,11 +375,11 @@ msgstr ""
 "มีข้อผิดพลาดที่พอจะฟื้นตัวได้ขณะเริ่มใช้โพรไฟล์ผู้ใช้ '%s' คุณสามารถรายงานข้อผิดพลาดนี้ทันที "
 "หรือจะพยายามแก้ไขโพรไฟล์ผู้ใช้ต่อไปก็ได้"
 
-#: ../admin-tool/sessionwindow.py:346
+#: ../admin-tool/sessionwindow.py:348
 msgid "_Report this error"
 msgstr "_รายงานข้อผิดพลาดนี้"
 
-#: ../admin-tool/sessionwindow.py:347
+#: ../admin-tool/sessionwindow.py:349
 msgid "_Continue editing"
 msgstr "แ_ก้ไขต่อไป"
 
@@ -416,37 +420,49 @@ msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "เกิดข้อผิดพลาดร้ายแรงขณะเริ่มใช้โพรไฟล์ผู้ใช้จาก '%s'"
 
 #: ../lib/sources/filessource.py:69
-#, python-format
-msgid "File '%s' created"
-msgstr "สร้างแฟ้ม '%s' แล้ว"
+msgid "Directory"
+msgstr "ไดเรกทอรี"
 
 #: ../lib/sources/filessource.py:71
-#, python-format
-msgid "File '%s' deleted"
-msgstr "ลบแฟ้ม '%s' แล้ว"
+msgid "Link"
+msgstr "ลิงก์"
 
 #: ../lib/sources/filessource.py:73
-#, python-format
-msgid "File '%s' changed"
-msgstr "เปลี่ยนแปลงแฟ้ม '%s' แล้ว"
+msgid "File"
+msgstr "แฟ้ม"
 
-#: ../lib/sources/filessource.py:97
+#: ../lib/sources/filessource.py:75
+#, python-format
+msgid "%s '%s' created"
+msgstr "สร้าง%s '%s' แล้ว"
+
+#: ../lib/sources/filessource.py:77
+#, python-format
+msgid "%s '%s' deleted"
+msgstr "ลบ%s '%s' แล้ว"
+
+#: ../lib/sources/filessource.py:79
+#, python-format
+msgid "%s '%s' changed"
+msgstr "เปลี่ยนแปลง%s '%s' แล้ว"
+
+#: ../lib/sources/filessource.py:104
 msgid "Applications menu"
 msgstr "เมนูโปรแกรม"
 
-#: ../lib/sources/filessource.py:99
+#: ../lib/sources/filessource.py:106
 msgid "Settings menu"
 msgstr "เมนูค่าตั้ง"
 
-#: ../lib/sources/filessource.py:101
+#: ../lib/sources/filessource.py:108
 msgid "Server Settings menu"
 msgstr "เมนูค่าตั้งเซิร์ฟเวอร์"
 
-#: ../lib/sources/filessource.py:103
+#: ../lib/sources/filessource.py:110
 msgid "System Settings menu"
 msgstr "เมนูค่าตั้งระบบ"
 
-#: ../lib/sources/filessource.py:105
+#: ../lib/sources/filessource.py:112
 msgid "Start Here menu"
 msgstr "เมนูเริ่มต้น"
 
@@ -689,17 +705,17 @@ msgstr "หัวข้อ metadata ไม่ถูกต้องใน '%s' : 
 msgid "Cannot add non-existent file '%s'"
 msgstr "ไม่สามารถเพิ่มแฟ้ม '%s' ที่ไม่มีอยู่ได้"
 
-#: ../lib/storage.py:528
+#: ../lib/storage.py:527
 #, python-format
 msgid "Couldn't rmdir '%s'"
 msgstr "ไม่สามารถ rmdir '%s'"
 
-#: ../lib/storage.py:533
+#: ../lib/storage.py:532
 #, python-format
 msgid "Couldn't unlink file '%s'"
 msgstr "ไม่สามารถ unlink แฟ้ม '%s'"
 
-#: ../lib/storage.py:625
+#: ../lib/storage.py:622
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "โพรไฟล์ %s ห้ามเขียน"
@@ -707,68 +723,68 @@ msgstr "โพรไฟล์ %s ห้ามเขียน"
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/systemdb.py:67
+#: ../lib/systemdb.py:77
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "ชนิดสำหรับค่าตั้ง %(setting)s ไม่ถูกต้องใน %(np)s"
 
-#: ../lib/systemdb.py:112
+#: ../lib/systemdb.py:122
 msgid "No database file provided"
 msgstr "ไม่ได้ระบุแฟ้มฐานข้อมูล"
 
-#: ../lib/systemdb.py:232
+#: ../lib/systemdb.py:253
 #, python-format
 msgid "No LDAP search base specified for %s"
 msgstr "ไม่พบตำแหน่งเริ่มค้นหา LDAP สำหรับ %s"
 
-#: ../lib/systemdb.py:235
+#: ../lib/systemdb.py:256
 #, python-format
 msgid "No LDAP query filter specified for %s"
 msgstr "ไม่มีตัวกรองคำสืบค้น LDAP สำหรับ %s"
 
-#: ../lib/systemdb.py:238
+#: ../lib/systemdb.py:259
 #, python-format
 msgid "No LDAP result attribute specified for %s"
 msgstr "ไม่ได้ระบุแอตทริบิวต์ของผลลัพธ์ LDAP สำหรับ %s"
 
-#: ../lib/systemdb.py:247
+#: ../lib/systemdb.py:268
 msgid "LDAP Scope must be one of: "
 msgstr "ขอบเขต LDAP ต้องมีค่าเป็นค่าใดค่าหนึ่งต่อไปนี้: "
 
-#: ../lib/systemdb.py:267
+#: ../lib/systemdb.py:288
 msgid "multiple_result must be one of: "
 msgstr "multiple_result ต้องมีค่าเป็นค่าใดค่าหนึ่งต่อไปนี้: "
 
-#: ../lib/systemdb.py:359
+#: ../lib/systemdb.py:381
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "ไม่สามารถเปิด %s เพื่อเขียนได้"
 
-#: ../lib/systemdb.py:372
+#: ../lib/systemdb.py:394
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "ไม่สามารถบันทึก UserDatabase ไปยัง %s"
 
-#: ../lib/systemdb.py:395 ../lib/systemdb.py:429
+#: ../lib/systemdb.py:423 ../lib/systemdb.py:457
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "แฟ้ม %s ไม่ใช่ค่าตั้งโพรไฟล์"
 
-#: ../lib/systemdb.py:402
+#: ../lib/systemdb.py:430
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "ไม่สามารถเพิ่มโพรไฟล์ปริยาย %s เข้าในค่าตั้งได้"
 
-#: ../lib/systemdb.py:436
+#: ../lib/systemdb.py:464
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "ไม่สามารถเพิ่มผู้ใช้ %s เข้าในค่าตั้งโพรไฟล์ได้"
 
-#: ../lib/systemdb.py:508
+#: ../lib/systemdb.py:536
 msgid "Failed to get the user list"
 msgstr "ไม่สามารถอ่านรายชื่อผู้ใช้ได้"
 
-#: ../lib/systemdb.py:558
+#: ../lib/systemdb.py:586
 msgid "Failed to get the group list"
 msgstr "ไม่สามารถอ่านรายชื่อกลุ่มผู้ใช้ได้"
 
