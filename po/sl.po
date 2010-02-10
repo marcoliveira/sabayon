@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon&component=general\n"
-"POT-Creation-Date: 2010-01-28 21:58+0000\n"
-"PO-Revision-Date: 2010-01-29 08:05+0100\n"
+"POT-Creation-Date: 2010-02-10 03:42+0000\n"
+"PO-Revision-Date: 2010-02-10 09:24+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -45,89 +45,93 @@ msgid "Lock"
 msgstr "Zakleni"
 
 #: ../admin-tool/changeswindow.py:127
-#: ../admin-tool/editorwindow.py:238
+#: ../admin-tool/editorwindow.py:263
 msgid "Description"
 msgstr "Opis"
 
-#: ../admin-tool/editorwindow.py:97
+#: ../admin-tool/editorwindow.py:100
 #, python-format
 msgid "Profile %s"
 msgstr "Profil %s"
 
-#: ../admin-tool/editorwindow.py:202
+#: ../admin-tool/editorwindow.py:205
 #: ../admin-tool/sessionwindow.py:179
 msgid "_Profile"
 msgstr "_Profil"
 
-#: ../admin-tool/editorwindow.py:203
+#: ../admin-tool/editorwindow.py:206
 #: ../admin-tool/sessionwindow.py:180
 msgid "_Save"
 msgstr "_Shrani"
 
-#: ../admin-tool/editorwindow.py:203
+#: ../admin-tool/editorwindow.py:206
 #: ../admin-tool/sessionwindow.py:180
 msgid "Save profile"
 msgstr "Shrani profil"
 
-#: ../admin-tool/editorwindow.py:204
+#: ../admin-tool/editorwindow.py:207
 msgid "_Close"
 msgstr "_Zapri"
 
-#: ../admin-tool/editorwindow.py:204
+#: ../admin-tool/editorwindow.py:207
 #: ../admin-tool/sessionwindow.py:181
 msgid "Close the current window"
 msgstr "Zapri trenutno okno"
 
-#: ../admin-tool/editorwindow.py:205
+#: ../admin-tool/editorwindow.py:208
 #: ../admin-tool/sessionwindow.py:182
 msgid "_Edit"
 msgstr "_Uredi"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "_Delete"
 msgstr "_Izbriši"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "Delete item"
 msgstr "Izbriši predmet"
 
-#: ../admin-tool/editorwindow.py:207
+#: ../admin-tool/editorwindow.py:210
 #: ../admin-tool/sessionwindow.py:185
 msgid "_Help"
 msgstr "_Pomoč"
 
-#: ../admin-tool/editorwindow.py:208
+#: ../admin-tool/editorwindow.py:211
 #: ../admin-tool/sessionwindow.py:186
 msgid "_Contents"
 msgstr "_Vsebina"
 
-#: ../admin-tool/editorwindow.py:208
+#: ../admin-tool/editorwindow.py:211
 #: ../admin-tool/sessionwindow.py:186
 msgid "Help Contents"
 msgstr "Vsebina pomoči"
 
-#: ../admin-tool/editorwindow.py:209
+#: ../admin-tool/editorwindow.py:212
 #: ../admin-tool/sessionwindow.py:187
 msgid "_About"
 msgstr "_O programu"
 
-#: ../admin-tool/editorwindow.py:209
+#: ../admin-tool/editorwindow.py:212
 #: ../admin-tool/sessionwindow.py:187
 msgid "About Sabayon"
 msgstr "O programu"
 
-#: ../admin-tool/editorwindow.py:270
+#: ../admin-tool/editorwindow.py:267
+msgid "Source"
+msgstr "Izvor"
+
+#: ../admin-tool/editorwindow.py:300
 #: ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:274
+#: ../admin-tool/editorwindow.py:304
 #: ../lib/sources/filessource.py:86
 msgid "Files"
 msgstr "Datoteke"
 
-#: ../admin-tool/editorwindow.py:274
-#: ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:304
+#: ../lib/sources/paneldelegate.py:279
 msgid "Panel"
 msgstr "Pult"
 
@@ -179,7 +183,7 @@ msgid "Profile settings: %s"
 msgstr "Nastavitve profila: %s"
 
 #: ../admin-tool/gconfviewer.py:110
-#: ../admin-tool/profilesdialog.py:421
+#: ../admin-tool/profilesdialog.py:423
 #: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "Ime"
@@ -212,7 +216,7 @@ msgstr "Uporabi ta profil"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:537
+#: ../admin-tool/profilesdialog.py:550
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -253,11 +257,11 @@ msgstr "Prišlo je do usodne napake. Napako nam lahko pomagate odpraviti, če po
 msgid "Sabayon will now exit.  There were some recoverable errors, and you can help us debug the problem by sending the log in %s to %s"
 msgstr "Program Sabayon se bo zaprl. Prišlo je do nekaj obnovljivih napak. Napako lahko sporočite razvijalcem programa tako, da pošljete dnevnik %s na %s."
 
-#: ../admin-tool/sabayon-apply:111
+#: ../admin-tool/sabayon-apply:125
 msgid "Please use -h for usage options"
 msgstr "Uporabite -h zastavico za podrobnosti uporabe"
 
-#: ../admin-tool/sabayon-apply:123
+#: ../admin-tool/sabayon-apply:137
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Ni profila za uporabnika '%s'\n"
@@ -442,23 +446,23 @@ msgstr "%s '%s' je izbrisana"
 msgid "%s '%s' changed"
 msgstr "%s '%s' je spremenjena"
 
-#: ../lib/sources/filessource.py:104
+#: ../lib/sources/filessource.py:105
 msgid "Applications menu"
 msgstr "Meni Programi"
 
-#: ../lib/sources/filessource.py:106
+#: ../lib/sources/filessource.py:107
 msgid "Settings menu"
 msgstr "Meni nastavitev"
 
-#: ../lib/sources/filessource.py:108
+#: ../lib/sources/filessource.py:109
 msgid "Server Settings menu"
 msgstr "Meni možnosti strežnika"
 
-#: ../lib/sources/filessource.py:110
+#: ../lib/sources/filessource.py:111
 msgid "System Settings menu"
 msgstr "Meni možnosti sistema"
 
-#: ../lib/sources/filessource.py:112
+#: ../lib/sources/filessource.py:113
 msgid "Start Here menu"
 msgstr "Začetni meni"
 
@@ -507,11 +511,11 @@ msgstr "Ključ GConf '%s' nastavljen na par '%s'"
 msgid "GConf key '%s' set to '%s'"
 msgstr "Ključ GConf '%s' nastavljen na '%s'"
 
-#: ../lib/sources/gconfsource.py:137
+#: ../lib/sources/gconfsource.py:138
 msgid "Default GConf settings"
 msgstr "Privzete nastavitve GConf"
 
-#: ../lib/sources/gconfsource.py:139
+#: ../lib/sources/gconfsource.py:140
 msgid "Mandatory GConf settings"
 msgstr "Obvezne nastavitve GConf"
 
@@ -530,65 +534,65 @@ msgstr "Ključ Mozille '%s' ni nastavljen"
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Ključ Mozille '%s' spremenjen na '%s'"
 
-#: ../lib/sources/mozillasource.py:166
-#: ../lib/sources/mozillasource.py:176
+#: ../lib/sources/mozillasource.py:167
+#: ../lib/sources/mozillasource.py:177
 msgid "Web browser preferences"
 msgstr "Možnosti spletnega brskalnika"
 
-#: ../lib/sources/mozillasource.py:168
-#: ../lib/sources/mozillasource.py:178
+#: ../lib/sources/mozillasource.py:169
+#: ../lib/sources/mozillasource.py:179
 msgid "Web browser bookmarks"
 msgstr "Zaznamki spletnega brskalnika"
 
-#: ../lib/sources/mozillasource.py:170
+#: ../lib/sources/mozillasource.py:171
 msgid "Web browser profile list"
 msgstr "Sezam profilov spletnega brskalnika"
 
-#: ../lib/sources/mozillasource.py:520
+#: ../lib/sources/mozillasource.py:521
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Datoteke ni mogoče najti (%s)"
 
-#: ../lib/sources/mozillasource.py:869
+#: ../lib/sources/mozillasource.py:870
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "podvojeno ime(%(name)s) v razdelku %(section)s"
 
-#: ../lib/sources/mozillasource.py:878
+#: ../lib/sources/mozillasource.py:879
 #, python-format
 msgid "redundant default in section %s"
 msgstr "odvečna privzeta vrednost v razdelku %s"
 
-#: ../lib/sources/mozillasource.py:895
+#: ../lib/sources/mozillasource.py:896
 msgid "no default profile"
 msgstr "ni privzetega profila"
 
-#: ../lib/sources/mozillasource.py:950
+#: ../lib/sources/mozillasource.py:951
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Ustvarjen je zaznamek Mozille '%s' -> '%s'"
 
-#: ../lib/sources/mozillasource.py:952
+#: ../lib/sources/mozillasource.py:953
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Mapa zaznamkov Mozille ustvarjena '%s'"
 
-#: ../lib/sources/mozillasource.py:955
+#: ../lib/sources/mozillasource.py:956
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Izbrisan je zaznamek Mozille '%s'"
 
-#: ../lib/sources/mozillasource.py:957
+#: ../lib/sources/mozillasource.py:958
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Mapa zaznamkov Mozille zbrisana '%s'"
 
-#: ../lib/sources/mozillasource.py:960
+#: ../lib/sources/mozillasource.py:961
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Spremenjen je zaznamek Mozille '%s' '%s'"
 
-#: ../lib/sources/mozillasource.py:962
+#: ../lib/sources/mozillasource.py:963
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mapa zaznamkov Mozille spremenjena '%s'"
@@ -624,60 +628,60 @@ msgid "Object '%s' removed"
 msgstr "Predmet '%s' je odstranjen"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:240
+#: ../lib/sources/paneldelegate.py:241
 msgid "Drawer"
 msgstr "Predalnik"
 
-#: ../lib/sources/paneldelegate.py:242
+#: ../lib/sources/paneldelegate.py:243
 msgid "Main Menu"
 msgstr "Glavni menu"
 
-#: ../lib/sources/paneldelegate.py:252
+#: ../lib/sources/paneldelegate.py:253
 #, python-format
 msgid "%s launcher"
 msgstr "%s zaganjalnik"
 
-#: ../lib/sources/paneldelegate.py:256
+#: ../lib/sources/paneldelegate.py:257
 msgid "Lock Screen button"
 msgstr "Gumb za zaklep zaslona"
 
-#: ../lib/sources/paneldelegate.py:258
+#: ../lib/sources/paneldelegate.py:259
 msgid "Logout button"
 msgstr "Gumb za odjavo"
 
-#: ../lib/sources/paneldelegate.py:260
+#: ../lib/sources/paneldelegate.py:261
 msgid "Run Application button"
 msgstr "Gumb za zagon programov"
 
-#: ../lib/sources/paneldelegate.py:262
+#: ../lib/sources/paneldelegate.py:263
 msgid "Search button"
 msgstr "Gumb za iskanje"
 
-#: ../lib/sources/paneldelegate.py:264
+#: ../lib/sources/paneldelegate.py:265
 msgid "Force Quit button"
 msgstr "Gumb za vsiljeni konec"
 
-#: ../lib/sources/paneldelegate.py:266
+#: ../lib/sources/paneldelegate.py:267
 msgid "Connect to Server button"
 msgstr "Gumb za povezavo s strežnikom"
 
-#: ../lib/sources/paneldelegate.py:268
+#: ../lib/sources/paneldelegate.py:269
 msgid "Shutdown button"
 msgstr "Gumb za ugašanje"
 
-#: ../lib/sources/paneldelegate.py:270
+#: ../lib/sources/paneldelegate.py:271
 msgid "Screenshot button"
 msgstr "Gumb za zajem slike"
 
-#: ../lib/sources/paneldelegate.py:273
+#: ../lib/sources/paneldelegate.py:274
 msgid "Unknown"
 msgstr "Neznano"
 
-#: ../lib/sources/paneldelegate.py:275
+#: ../lib/sources/paneldelegate.py:276
 msgid "Menu Bar"
 msgstr "Menijska vrstica"
 
-#: ../lib/sources/paneldelegate.py:512
+#: ../lib/sources/paneldelegate.py:513
 msgid "Panel File"
 msgstr "Datoteka pulta"
 
@@ -730,60 +734,60 @@ msgstr "neveljavna vrsta nastavitve %(setting)s v %(np)s"
 msgid "No database file provided"
 msgstr "Ni dodeljene datoteke podatkovne zbirke"
 
-#: ../lib/systemdb.py:252
+#: ../lib/systemdb.py:253
 #, python-format
 msgid "No LDAP search base specified for %s"
 msgstr "Ni LDAP iskalne osnove za %s"
 
-#: ../lib/systemdb.py:255
+#: ../lib/systemdb.py:256
 #, python-format
 msgid "No LDAP query filter specified for %s"
 msgstr "Ni LDAP filtra poizvedbe za %s"
 
-#: ../lib/systemdb.py:258
+#: ../lib/systemdb.py:259
 #, python-format
 msgid "No LDAP result attribute specified for %s"
 msgstr "Ni LDAP iskalnega atributa za %s"
 
-#: ../lib/systemdb.py:267
+#: ../lib/systemdb.py:268
 msgid "LDAP Scope must be one of: "
 msgstr "LDAP obseg mora biti:"
 
-#: ../lib/systemdb.py:287
+#: ../lib/systemdb.py:288
 msgid "multiple_result must be one of: "
 msgstr "več rezultatov mora biti:"
 
-#: ../lib/systemdb.py:380
+#: ../lib/systemdb.py:381
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Ni mogoče odpreti %s za pisanje"
 
-#: ../lib/systemdb.py:393
+#: ../lib/systemdb.py:394
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Ni mogoče shraniti UserDatabase v %s"
 
-#: ../lib/systemdb.py:422
-#: ../lib/systemdb.py:456
+#: ../lib/systemdb.py:423
+#: ../lib/systemdb.py:457
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Datoteka %s ni nastavitvena datoteka profila"
 
-#: ../lib/systemdb.py:429
+#: ../lib/systemdb.py:430
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Nastavitvam ni mogoče dodati privzetega profila %s"
 
-#: ../lib/systemdb.py:463
+#: ../lib/systemdb.py:464
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Nastavitvam profila ni mogoče dodati uporabnika %s"
 
-#: ../lib/systemdb.py:535
+#: ../lib/systemdb.py:536
 msgid "Failed to get the user list"
 msgstr "Ni mogoče dobiti seznama uporabnikov"
 
-#: ../lib/systemdb.py:585
+#: ../lib/systemdb.py:586
 msgid "Failed to get the group list"
 msgstr "Ni mogoče pridobiti seznama uporabnikov"
 
