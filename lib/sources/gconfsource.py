@@ -311,11 +311,11 @@ class GConfSource (userprofile.ProfileSource):
         if is_sabayon_session:
             default_path = "xml:readonly:" + os.path.join (self.home_dir, GCONF_MANDATORY_ALT_SOURCE) + "\n" + default_path
                                                   
-        write_path_file (os.path.join (self.home_dir, ".gconf.path.defaults"), default_path)
+        write_path_file (os.path.join (self.home_dir, GCONF_PATH_DEFAULTS), default_path)
         
         if ("GConf", GCONF_MANDATORY_SOURCE) in storage_contents:
             self.storage.extract (GCONF_MANDATORY_SOURCE, self.home_dir, True)
-        write_path_file (os.path.join (self.home_dir, ".gconf.path.mandatory"),
+        write_path_file (os.path.join (self.home_dir, GCONF_PATH_MANDATORY),
                          "xml:readonly:" + os.path.join (self.home_dir, GCONF_MANDATORY_SOURCE))
 
         # FIXME: perhaps just kill -HUP it? It would really just be better
@@ -391,8 +391,8 @@ def run_unit_tests ():
 
     # Remove any stale path files
     try:
-        os.remove (os.path.join (util.get_home_dir (), ".gconf.path.defaults"))
-        os.remove (os.path.join (util.get_home_dir (), ".gconf.path.mandatory"))
+        os.remove (os.path.join (util.get_home_dir (), GCONF_PATH_DEFAULTS))
+        os.remove (os.path.join (util.get_home_dir (), GCONF_PATH_MANDATORY))
     except:
         pass
 
@@ -452,8 +452,8 @@ def run_unit_tests ():
     source.sync_changes ()
     source.apply (False)
 
-    assert os.access (os.path.join (util.get_home_dir (), ".gconf.path.defaults"), os.F_OK)
-    assert os.access (os.path.join (util.get_home_dir (), ".gconf.path.mandatory"), os.F_OK)
+    assert os.access (os.path.join (util.get_home_dir (), GCONF_PATH_DEFAULTS), os.F_OK)
+    assert os.access (os.path.join (util.get_home_dir (), GCONF_PATH_MANDATORY), os.F_OK)
 
     # We need to clear the cache because GConfClient doesn't know
     # some new sources have been added to the sources stack so it
@@ -479,8 +479,8 @@ def run_unit_tests ():
     subprocess.call (["gconftool-2", "--shutdown"])
     time.sleep (1)
 
-    os.remove (os.path.join (util.get_home_dir (), ".gconf.path.defaults"))
-    os.remove (os.path.join (util.get_home_dir (), ".gconf.path.mandatory"))
+    os.remove (os.path.join (util.get_home_dir (), GCONF_PATH_DEFAULTS))
+    os.remove (os.path.join (util.get_home_dir (), GCONF_PATH_MANDATORY))
     
     if os.path.exists (profile_path):
         os.remove (profile_path)

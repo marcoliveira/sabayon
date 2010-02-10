@@ -56,6 +56,9 @@ GCONF_DEFAULTS_SOURCE      = ".gconf.xml.defaults"
 GCONF_MANDATORY_SOURCE     = ".gconf.xml.mandatory"
 GCONF_MANDATORY_ALT_SOURCE = ".gconf.xml.mandatory-alt"
 
+GCONF_PATH_DEFAULTS        = ".gconf.path.defaults"
+GCONF_PATH_MANDATORY       = ".gconf.path.mandatory"
+
 # FIXME: should all of these be options passed to the "configure" script?
 DEFAULT_PATH  = "/usr/local/bin:/usr/bin:/bin:/usr/X11R6/bin"
 DEFAULT_SHELL = "/bin/bash"
@@ -93,13 +96,13 @@ PASSTHROUGH_ENVIRONMENT = [
 # Files which we don't want to see change notifications for
 #
 FILES_TO_IGNORE = [
+    GCONF_PATH_DEFAULTS,
+    GCONF_PATH_DEFAULTS + ".new",
+    GCONF_PATH_MANDATORY,
+    GCONF_PATH_MANDATORY + ".new",
     ".ICEauthority*",
     ".esd_auth",
     ".fonts.cache-1*",
-    ".gconf.path.defaults",
-    ".gconf.path.defaults.new",
-    ".gconf.path.mandatory",
-    ".gconf.path.mandatory.new",
     ".gnome/gnome-vfs/.trash_entry_cache",
     ".gnome2/share/cursor-fonts/fonts.dir",
     ".gnome2/share/fonts/fonts.dir",

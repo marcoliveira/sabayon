@@ -90,6 +90,8 @@ if __name__ == '__main__':
         #
 
         try:
+            os.remove (os.path.join (util.get_home_dir (), GCONF_PATH_DEFAULTS))
+            os.remove (os.path.join (util.get_home_dir (), GCONF_PATH_MANDATORY))
             shutil.rmtree (os.path.join (util.get_home_dir (), GCONF_DEFAULTS_SOURCE), True)
             shutil.rmtree (os.path.join (util.get_home_dir (), GCONF_MANDATORY_SOURCE), True)
         except:
