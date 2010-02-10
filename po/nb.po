@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon 2.29.x\n"
-"Report-Msgid-Bugs-To:\n"
-"POT-Creation-Date: 2010-01-31 19:55+0100\n"
-"PO-Revision-Date: 2010-01-31 19:55+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-02-10 19:50+0100\n"
+"PO-Revision-Date: 2010-02-10 19:50+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian Bokmaal <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -39,76 +39,80 @@ msgstr "Ignorer"
 msgid "Lock"
 msgstr "Lås"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:263
 msgid "Description"
 msgstr "Beskrivelse"
 
-#: ../admin-tool/editorwindow.py:97
+#: ../admin-tool/editorwindow.py:100
 #, python-format
 msgid "Profile %s"
 msgstr "Profil %s"
 
-#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:179
 msgid "_Profile"
 msgstr "_Profil"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
 msgid "_Save"
 msgstr "_Lagre"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
 msgid "Save profile"
 msgstr "Lagre profil"
 
-#: ../admin-tool/editorwindow.py:204
+#: ../admin-tool/editorwindow.py:207
 msgid "_Close"
 msgstr "L_ukk"
 
-#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:181
 msgid "Close the current window"
 msgstr "Lukk dette vinduet"
 
-#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:182
 msgid "_Edit"
 msgstr "R_ediger"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "_Delete"
 msgstr "_Slett"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "Delete item"
 msgstr "Slett oppføring"
 
-#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:210 ../admin-tool/sessionwindow.py:185
 msgid "_Help"
 msgstr "_Hjelp"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
 msgid "_Contents"
 msgstr "_Innhold"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
 msgid "Help Contents"
 msgstr "Innhold i hjelp"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:187
+#: ../admin-tool/editorwindow.py:212 ../admin-tool/sessionwindow.py:187
 msgid "_About"
 msgstr "_Om"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:187
+#: ../admin-tool/editorwindow.py:212 ../admin-tool/sessionwindow.py:187
 msgid "About Sabayon"
 msgstr "Om Sabayon"
 
-#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:267
+msgid "Source"
+msgstr "Kilde"
+
+#: ../admin-tool/editorwindow.py:300 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:86
+#: ../admin-tool/editorwindow.py:304 ../lib/sources/filessource.py:86
 msgid "Files"
 msgstr "Filer"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:304 ../lib/sources/paneldelegate.py:279
 msgid "Panel"
 msgstr "Panel"
 
@@ -254,11 +258,11 @@ msgstr ""
 "Sabayon vil nå avslutte. Det oppsto noen feil underveis og du kan hjelpe oss "
 "med feilsøking ved å sende loggen i %s til %s"
 
-#: ../admin-tool/sabayon-apply:111
+#: ../admin-tool/sabayon-apply:125
 msgid "Please use -h for usage options"
 msgstr "Vennligst bruk -h for å få informasjon om bruk"
 
-#: ../admin-tool/sabayon-apply:123
+#: ../admin-tool/sabayon-apply:137
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Ingen profil funnet for bruker «%s»\n"
@@ -448,23 +452,23 @@ msgstr "%s «%s» slettet"
 msgid "%s '%s' changed"
 msgstr "%s «%s» endret"
 
-#: ../lib/sources/filessource.py:104
+#: ../lib/sources/filessource.py:105
 msgid "Applications menu"
 msgstr "Programmeny"
 
-#: ../lib/sources/filessource.py:106
+#: ../lib/sources/filessource.py:107
 msgid "Settings menu"
 msgstr "Meny for innstillinger"
 
-#: ../lib/sources/filessource.py:108
+#: ../lib/sources/filessource.py:109
 msgid "Server Settings menu"
 msgstr "Meny for tjenerinnstillinger"
 
-#: ../lib/sources/filessource.py:110
+#: ../lib/sources/filessource.py:111
 msgid "System Settings menu"
 msgstr "Meny for systeminnstillinger"
 
-#: ../lib/sources/filessource.py:112
+#: ../lib/sources/filessource.py:113
 msgid "Start Here menu"
 msgstr "Start her-meny"
 
@@ -513,11 +517,11 @@ msgstr "GConf-nøkkel «%s» satt til par «%s»"
 msgid "GConf key '%s' set to '%s'"
 msgstr "GConf-nøkkel «%s» satt til «%s»"
 
-#: ../lib/sources/gconfsource.py:137
+#: ../lib/sources/gconfsource.py:138
 msgid "Default GConf settings"
 msgstr "Forvalgte innstillinger for GConf"
 
-#: ../lib/sources/gconfsource.py:139
+#: ../lib/sources/gconfsource.py:140
 msgid "Mandatory GConf settings"
 msgstr "Tvungne GConf-innstillinger"
 
@@ -536,63 +540,63 @@ msgstr "Mozilla-nøkkel «%s» tømt"
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Mozilla-nøkkel «%s» endret til «%s»"
 
-#: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
+#: ../lib/sources/mozillasource.py:167 ../lib/sources/mozillasource.py:177
 msgid "Web browser preferences"
 msgstr "Brukervalg for nettleser"
 
-#: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
+#: ../lib/sources/mozillasource.py:169 ../lib/sources/mozillasource.py:179
 msgid "Web browser bookmarks"
 msgstr "Nettleserbokmerker"
 
-#: ../lib/sources/mozillasource.py:170
+#: ../lib/sources/mozillasource.py:171
 msgid "Web browser profile list"
 msgstr "Profilliste for nettleser"
 
-#: ../lib/sources/mozillasource.py:520
+#: ../lib/sources/mozillasource.py:521
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Filen ble ikke funnet (%s)"
 
-#: ../lib/sources/mozillasource.py:869
+#: ../lib/sources/mozillasource.py:870
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "duplisert navn(%(name)s) i del %(section)s"
 
-#: ../lib/sources/mozillasource.py:878
+#: ../lib/sources/mozillasource.py:879
 #, python-format
 msgid "redundant default in section %s"
 msgstr "redundant forvalg i seksjon %s"
 
-#: ../lib/sources/mozillasource.py:895
+#: ../lib/sources/mozillasource.py:896
 msgid "no default profile"
 msgstr "ingen forvalgt profil"
 
-#: ../lib/sources/mozillasource.py:950
+#: ../lib/sources/mozillasource.py:951
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Mozilla-bokmerke opprettet «%s» -> «%s»"
 
-#: ../lib/sources/mozillasource.py:952
+#: ../lib/sources/mozillasource.py:953
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Bokmerkemappe for Mozilla opprettet «%s»"
 
-#: ../lib/sources/mozillasource.py:955
+#: ../lib/sources/mozillasource.py:956
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Mozilla-bokmerke slettet «%s»"
 
-#: ../lib/sources/mozillasource.py:957
+#: ../lib/sources/mozillasource.py:958
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Bokmerkemappe for Mozilla slettet «%s»"
 
-#: ../lib/sources/mozillasource.py:960
+#: ../lib/sources/mozillasource.py:961
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Mozilla-bokmerke endret «%s» «%s»"
 
-#: ../lib/sources/mozillasource.py:962
+#: ../lib/sources/mozillasource.py:963
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Bokmerkemappe for Mozilla endret «%s»"
@@ -628,60 +632,60 @@ msgid "Object '%s' removed"
 msgstr "Objekt «%s» fjernet"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:240
+#: ../lib/sources/paneldelegate.py:241
 msgid "Drawer"
 msgstr "Skuff"
 
-#: ../lib/sources/paneldelegate.py:242
+#: ../lib/sources/paneldelegate.py:243
 msgid "Main Menu"
 msgstr "Hovedmeny"
 
-#: ../lib/sources/paneldelegate.py:252
+#: ../lib/sources/paneldelegate.py:253
 #, python-format
 msgid "%s launcher"
 msgstr "oppstarter for %s"
 
-#: ../lib/sources/paneldelegate.py:256
+#: ../lib/sources/paneldelegate.py:257
 msgid "Lock Screen button"
 msgstr "Knapp som låser skjermen"
 
-#: ../lib/sources/paneldelegate.py:258
+#: ../lib/sources/paneldelegate.py:259
 msgid "Logout button"
 msgstr "Knapp som logger brukeren ut"
 
-#: ../lib/sources/paneldelegate.py:260
+#: ../lib/sources/paneldelegate.py:261
 msgid "Run Application button"
 msgstr "Knapp som kjører program"
 
-#: ../lib/sources/paneldelegate.py:262
+#: ../lib/sources/paneldelegate.py:263
 msgid "Search button"
 msgstr "Søkeknapp"
 
-#: ../lib/sources/paneldelegate.py:264
+#: ../lib/sources/paneldelegate.py:265
 msgid "Force Quit button"
 msgstr "Knapp som logger brukeren ut"
 
-#: ../lib/sources/paneldelegate.py:266
+#: ../lib/sources/paneldelegate.py:267
 msgid "Connect to Server button"
 msgstr "Knapp for å koble til tjener"
 
-#: ../lib/sources/paneldelegate.py:268
+#: ../lib/sources/paneldelegate.py:269
 msgid "Shutdown button"
 msgstr "Knapp for å slå av"
 
-#: ../lib/sources/paneldelegate.py:270
+#: ../lib/sources/paneldelegate.py:271
 msgid "Screenshot button"
 msgstr "Knapp for skjermdump"
 
-#: ../lib/sources/paneldelegate.py:273
+#: ../lib/sources/paneldelegate.py:274
 msgid "Unknown"
 msgstr "Ukjent"
 
-#: ../lib/sources/paneldelegate.py:275
+#: ../lib/sources/paneldelegate.py:276
 msgid "Menu Bar"
 msgstr "Menylinje"
 
-#: ../lib/sources/paneldelegate.py:512
+#: ../lib/sources/paneldelegate.py:513
 msgid "Panel File"
 msgstr "Panelfil"
 
