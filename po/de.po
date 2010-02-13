@@ -11,9 +11,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-19 14:31+0100\n"
-"PO-Revision-Date: 2010-01-08 21:17+0100\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=sabayon&component=general\n"
+"POT-Creation-Date: 2010-02-03 17:52+0000\n"
+"PO-Revision-Date: 2010-02-13 18:32+0100\n"
 "Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -47,7 +48,7 @@ msgstr "Ignorieren"
 msgid "Lock"
 msgstr "Sperren"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:274
 msgid "Description"
 msgstr "Beschreibung"
 
@@ -108,15 +109,19 @@ msgstr "_Info"
 msgid "About Sabayon"
 msgstr "Info zu Sabayon"
 
-#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:278
+msgid "Source"
+msgstr "Quelle"
+
+#: ../admin-tool/editorwindow.py:311 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:315 ../lib/sources/filessource.py:86
 msgid "Files"
 msgstr "Dateien"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:315 ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "Panel"
 
@@ -166,7 +171,7 @@ msgstr "Paar"
 msgid "Profile settings: %s"
 msgstr "Profileinstellungen: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:421
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:423
 #: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "Name"
@@ -198,7 +203,7 @@ msgstr "Dieses Profil verwenden"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:537
+#: ../admin-tool/profilesdialog.py:550
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -212,11 +217,11 @@ msgstr ""
 
 #: ../admin-tool/sabayon:78
 msgid ""
-"Administrator level permissions are needed to run this program because it "
-"can modify system files."
+"Administrator level permissions are needed to run this program because it can "
+"modify system files."
 msgstr ""
-"Zum Starten dieses Programms sind Administratorrechte notwendig, da es in "
-"der Lage ist, Systemdateien zu ändern."
+"Zum Starten dieses Programms sind Administratorrechte notwendig, da es in der "
+"Lage ist, Systemdateien zu ändern."
 
 #: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
@@ -409,8 +414,8 @@ msgstr "Es konnte keine freie X-Anzeige gefunden werden"
 #: ../lib/protosession.py:376
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr ""
-"Xephyr konnte nicht gestartet werden: Zeitüberschreitung beim Warten auf "
-"USR1-Signal"
+"Xephyr konnte nicht gestartet werden: Zeitüberschreitung beim Warten auf USR1-"
+"Signal"
 
 #: ../lib/protosession.py:378
 msgid "Failed to start Xephyr: died during startup"
@@ -440,37 +445,53 @@ msgstr ""
 "aufgetreten."
 
 #: ../lib/sources/filessource.py:69
-#, python-format
-msgid "File '%s' created"
-msgstr "Datei »%s« wurde erstellt"
+msgid "Directory"
+msgstr "Ordner"
 
 #: ../lib/sources/filessource.py:71
-#, python-format
-msgid "File '%s' deleted"
-msgstr "Datei »%s« wurde gelöscht"
+msgid "Link"
+msgstr "Verknüpfung"
 
 #: ../lib/sources/filessource.py:73
-#, python-format
-msgid "File '%s' changed"
-msgstr "Datei »%s« wurde geändert"
+#| msgid "Files"
+msgid "File"
+msgstr "Datei"
 
-#: ../lib/sources/filessource.py:97
+#: ../lib/sources/filessource.py:75
+#, python-format
+#| msgid "File '%s' created"
+msgid "%s '%s' created"
+msgstr "%s »%s« wurde erstellt"
+
+#: ../lib/sources/filessource.py:77
+#, python-format
+#| msgid "File '%s' deleted"
+msgid "%s '%s' deleted"
+msgstr "%s »%s« wurde gelöscht"
+
+#: ../lib/sources/filessource.py:79
+#, python-format
+#| msgid "File '%s' changed"
+msgid "%s '%s' changed"
+msgstr "%s »%s« wurde geändert"
+
+#: ../lib/sources/filessource.py:104
 msgid "Applications menu"
 msgstr "Anwendungen-Menü"
 
-#: ../lib/sources/filessource.py:99
+#: ../lib/sources/filessource.py:106
 msgid "Settings menu"
 msgstr "Einstellungsmenü"
 
-#: ../lib/sources/filessource.py:101
+#: ../lib/sources/filessource.py:108
 msgid "Server Settings menu"
 msgstr "Serververwaltung-Menü"
 
-#: ../lib/sources/filessource.py:103
+#: ../lib/sources/filessource.py:110
 msgid "System Settings menu"
 msgstr "Systemverwaltung-Menü"
 
-#: ../lib/sources/filessource.py:105
+#: ../lib/sources/filessource.py:112
 msgid "Start Here menu"
 msgstr "Hier starten-Menü"
 
@@ -740,59 +761,59 @@ msgstr "ungültiger Typ für Einstellung %(setting)s in %(np)s"
 msgid "No database file provided"
 msgstr "Es wurde keine Datenbank-Datei angegeben"
 
-#: ../lib/systemdb.py:242
+#: ../lib/systemdb.py:253
 #, python-format
 msgid "No LDAP search base specified for %s"
 msgstr "Keine LDAP-Suchbasis für %s angegeben"
 
-#: ../lib/systemdb.py:245
+#: ../lib/systemdb.py:256
 #, python-format
 msgid "No LDAP query filter specified for %s"
 msgstr "Es wurde kein LDAP-Anfragefilter für %s angegeben"
 
-#: ../lib/systemdb.py:248
+#: ../lib/systemdb.py:259
 #, python-format
 msgid "No LDAP result attribute specified for %s"
 msgstr "Es wurden keine Merkmale für das LDAP-Suchergebnis von %s angegeben"
 
-#: ../lib/systemdb.py:257
+#: ../lib/systemdb.py:268
 msgid "LDAP Scope must be one of: "
 msgstr "LDAP-Bereich muss einer sein von:"
 
-#: ../lib/systemdb.py:277
+#: ../lib/systemdb.py:288
 msgid "multiple_result must be one of: "
 msgstr "mehrere_Ergebnisse muss eines sein von:"
 
-#: ../lib/systemdb.py:370
+#: ../lib/systemdb.py:381
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "%s konnte nicht zum Schreiben geöffnet werden"
 
-#: ../lib/systemdb.py:383
+#: ../lib/systemdb.py:394
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Benutzer-Datenbank konnte nicht in %s gespeichert werden"
 
-#: ../lib/systemdb.py:412 ../lib/systemdb.py:446
+#: ../lib/systemdb.py:423 ../lib/systemdb.py:457
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Datei %s ist keine Profilkonfiguration"
 
-#: ../lib/systemdb.py:419
+#: ../lib/systemdb.py:430
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Standardprofil %s konnte nicht der Konfiguration hinzugefügt werden"
 
-#: ../lib/systemdb.py:453
+#: ../lib/systemdb.py:464
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Benutzer %s konnte der Profilkonfiguration nicht hinzugefügt werden"
 
-#: ../lib/systemdb.py:525
+#: ../lib/systemdb.py:536
 msgid "Failed to get the user list"
 msgstr "Benutzerliste konnte nicht gelesen werden"
 
-#: ../lib/systemdb.py:575
+#: ../lib/systemdb.py:586
 msgid "Failed to get the group list"
 msgstr "Gruppenliste konnte nicht gelesen werden"
 
@@ -819,8 +840,8 @@ msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"Persönlicher Order konnte nicht gefunden werden: nicht in /etc/passwd "
-"gesetzt und kein Wert in Umgebungsvariable $HOME"
+"Persönlicher Order konnte nicht gefunden werden: nicht in /etc/passwd gesetzt "
+"und kein Wert in Umgebungsvariable $HOME"
 
 #: ../lib/util.py:110 ../lib/util.py:137
 msgid ""
@@ -1086,8 +1107,8 @@ msgstr ""
 #~ "If you don't save, changes from the last minute and %ld seconds will be "
 #~ "permanently lost."
 #~ msgstr[0] ""
-#~ "Falls Sie sie nicht speichern, gehen in der letzten Minute und %ld "
-#~ "Sekunde vorgenommene Änderungen unwiderruflich verloren."
+#~ "Falls Sie sie nicht speichern, gehen in der letzten Minute und %ld Sekunde "
+#~ "vorgenommene Änderungen unwiderruflich verloren."
 #~ msgstr[1] ""
 #~ "Falls Sie sie nicht speichern, gehen in der letzten Minute und %ld "
 #~ "Sekunden vorgenommene Änderungen unwiderruflich verloren."
@@ -1121,11 +1142,10 @@ msgstr ""
 #~ msgid ""
 #~ "If you don't save, changes from the last %d hour will be permanently lost."
 #~ msgid_plural ""
-#~ "If you don't save, changes from the last %d hours will be permanently "
-#~ "lost."
+#~ "If you don't save, changes from the last %d hours will be permanently lost."
 #~ msgstr[0] ""
-#~ "Falls Sie sie nicht speichern, gehen in der letzten %d Stunde "
-#~ "vorgenommene Änderungen unwiderruflich verloren."
+#~ "Falls Sie sie nicht speichern, gehen in der letzten %d Stunde vorgenommene "
+#~ "Änderungen unwiderruflich verloren."
 #~ msgstr[1] ""
 #~ "Falls Sie sie nicht speichern, gehen in den letzten %d Stunden "
 #~ "vorgenommene Änderungen unwiderruflich verloren."
