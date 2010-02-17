@@ -205,14 +205,15 @@ class ProfileStorage:
             attributes[attrnode.prop ("name")]  = attrnode.prop ("value")
         return attributes
 
-    def __update_file_or_dir_node (self, file_or_dir_node, source, attributes, metadata):
+    def __update_file_or_dir_node (self, file_or_dir_node, statinfo, source, attributes, metadata):
         # Set properties
-
         unlink_children (file_or_dir_node)
 
         file_or_dir_node.setProp ("timestamp", str (int (time.time ())))
         file_or_dir_node.setProp ("user",      util.get_user_name ())
         file_or_dir_node.setProp ("host",      socket.gethostname ())
+        file_or_dir_node.setProp ("st_mode",   str (statinfo.st_mode))
+        file_or_dir_node.setProp ("st_mtime",  str (statinfo.st_mtime))
 
         # Set source and attributes
         file_or_dir_node.newChild (None, "source", source)
@@ -224,7 +225,7 @@ class ProfileStorage:
                 attribute_node.setProp ("name",  str (name))
                 attribute_node.setProp ("value", str (attributes[name]))
 
-    def __update_file_node (self, path, source, attributes, metadata = None):
+    def __update_file_node (self, path, statinfo, source, attributes, metadata = None):
         if metadata is None:
             metadata = self.metadata
         assert metadata
@@ -239,9 +240,9 @@ class ProfileStorage:
             file_node = files_node.newChild (None, "file", None)
             file_node.setProp ("path", path)
 
-        self.__update_file_or_dir_node (file_node, source, attributes, metadata)
+        self.__update_file_or_dir_node (file_node, statinfo, source, attributes, metadata)
 
-    def __update_directory_node (self, path, source, attributes, metadata = None):
+    def __update_directory_node (self, path, statinfo, source, attributes, metadata = None):
         if metadata is None:
             metadata = self.metadata
         assert metadata
@@ -256,9 +257,9 @@ class ProfileStorage:
             directory_node = files_node.newChild (None, "directory", None)
             directory_node.setProp ("path", path)
 
-        self.__update_file_or_dir_node (directory_node, source, attributes, metadata)
+        self.__update_file_or_dir_node (directory_node, statinfo, source, attributes, metadata)
 
-    def __update_link_node (self, path, source, attributes, metadata = None):
+    def __update_link_node (self, path, statinfo, source, attributes, metadata = None):
         if metadata is None:
             metadata = self.metadata
         assert metadata
@@ -274,7 +275,7 @@ class ProfileStorage:
             link_node.setProp ("path", path)
             link_node.setProp ("dest", os.readlink(path))
 
-        self.__update_file_or_dir_node (link_node, source, attributes, metadata)
+        self.__update_file_or_dir_node (link_node, statinfo, source, attributes, metadata)
 
     def __unpack (self):
         self.__read_metadata ()
@@ -376,6 +377,7 @@ class ProfileStorage:
             src_path = path
         src_path = os.path.join (src_dir, src_path)
         dst_path = os.path.join (self.temp_path, path)
+        statinfo = os.lstat(src_path)
 
         if not os.path.exists (src_path):
             # change the raise to a dprint, since some files seem to disappear.
@@ -391,12 +393,12 @@ class ProfileStorage:
         recursive_del (dst_path)
 
         if os.path.isdir (src_path):
-            self.__update_directory_node (path, source, attributes)
+            self.__update_directory_node (path, statinfo, source, attributes)
             copy_tree (self.temp_path, src_dir, path)
         elif os.path.islink (src_path):
-            self.__update_link_node (path, source, attributes)
+            self.__update_link_node (path, statinfo, source, attributes)
         elif os.path.isfile (src_path) and not os.path.islink (src_path):
-            self.__update_file_node (path, source, attributes)
+            self.__update_file_node (path, statinfo, source, attributes)
             dirname = os.path.dirname (dst_path)
             if not os.path.exists (dirname):
                 os.makedirs (dirname)
