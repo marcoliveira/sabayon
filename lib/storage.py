@@ -546,7 +546,8 @@ class ProfileStorage:
             copy_tree (dst_dir, self.temp_path, path, None, overwrite)
             dir_node = self.__get_dir_node (path)
             st_mode = dir_node.prop ("st_mode")
-            os.chmod (os.path.join(dst_dir,path), int (st_mode))
+            if st_mode:
+                os.chmod (os.path.join(dst_dir,path), int (st_mode))
         elif item_type == "link":
             link_node = self.__get_link_node (path)
             dest = link_node.prop("dest")
@@ -561,7 +562,8 @@ class ProfileStorage:
                 copy_preserving_permissions (os.path.join (self.temp_path, path), dst_path)
                 file_node = self.__get_file_node (path)
                 st_mode = file_node.prop ("st_mode")
-                os.chmod (dst_path, int (st_mode))
+                if st_mode:
+                    os.chmod (dst_path, int (st_mode))
 
     def list (self, source = None):
         """List the current contents of the profile.
