@@ -303,7 +303,6 @@ class ProfileStorage:
                 if not os.path.exists (dest_dir):
                     os.makedirs (dest_dir)
 
-                # It sucks that we lose file permissions, mtime etc. with ZIP
                 zip.extract(f, dir)
 
         def unzip_foreach (path, is_directory, data):
@@ -321,7 +320,6 @@ class ProfileStorage:
                 if not os.path.exists (dest_dir):
                     os.makedirs (dest_dir)
 
-                # It sucks that we lose file permissions, mtime etc. with ZIP
                 zip.extract(path, temp_path)
 
         self.__foreach_all (unzip_foreach, (self.zip, self.temp_path))
@@ -533,7 +531,6 @@ class ProfileStorage:
                     except OSError, err:
                         raise ProfileStorageException (_("Couldn't unlink file '%s'") % dest)
 
-            # FIXME: we lose the "original" permissions, mtime, etc. with ZIP files.
             shutil.copy2 (src, dest)
 
             if got_stat:
@@ -547,6 +544,9 @@ class ProfileStorage:
 
         if item_type == "directory":
             copy_tree (dst_dir, self.temp_path, path, None, overwrite)
+            dir_node = self.__get_dir_node (path)
+            st_mode = dir_node.prop ("st_mode")
+            os.chmod (os.path.join(dst_dir,path), int (st_mode))
         elif item_type == "link":
             link_node = self.__get_link_node (path)
             dest = link_node.prop("dest")
@@ -559,6 +559,9 @@ class ProfileStorage:
                     os.makedirs (dirname)
 
                 copy_preserving_permissions (os.path.join (self.temp_path, path), dst_path)
+                file_node = self.__get_file_node (path)
+                st_mode = file_node.prop ("st_mode")
+                os.chmod (dst_path, int (st_mode))
 
     def list (self, source = None):
         """List the current contents of the profile.
