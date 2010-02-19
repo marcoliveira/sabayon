@@ -36,6 +36,7 @@ if __name__ == '__main__':
     import sys
     import optparse
     import shutil
+    import subprocess
 
     from sabayon import userprofile
     from sabayon import config
@@ -96,6 +97,16 @@ if __name__ == '__main__':
             shutil.rmtree (os.path.join (util.get_home_dir (), GCONF_MANDATORY_SOURCE), True)
         except:
             pass
+
+        #
+        # Shutdown any existing gconfd server.  Since we're going to be
+        # applying a new profile, with new gconf keys, we should shutdown any
+        # existing gconfd process, so that the new keys will be applied when
+        # gnome-session starts back up.  Theoretically there shouldn't be one,
+        # but sometimes they "hang around".
+        #
+
+        subprocess.call (["gconftool-2", "--shutdown"])
 
         #
         # Begin the process of determining WHICH profile to apply.
