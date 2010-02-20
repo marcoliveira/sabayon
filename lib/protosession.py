@@ -29,6 +29,7 @@ import binascii
 import struct
 import subprocess
 import tempfile
+import time
 import shutil
 import gobject
 import gtk
@@ -64,9 +65,15 @@ def setup_shell_and_homedir (username):
     dprint ("Setting shell for '%s' to '%s'", username, DEFAULT_SHELL)
     usermod.set_shell (username, DEFAULT_SHELL)
 
-    temp_homedir = usermod.create_temporary_homedir (pw.pw_uid, pw.pw_gid)
-    dprint ("Setting temporary home directory for '%s' to '%s'", username, temp_homedir)
-    usermod.set_homedir (username, temp_homedir)
+    # Wait for previous sabayon processes to die before proceeding
+    for i in range (1,30):
+        temp_homedir = usermod.create_temporary_homedir (pw.pw_uid, pw.pw_gid)
+        dprint ("Setting temporary home directory for '%s' to '%s' attempt %d", username, temp_homedir, i)
+        retval = usermod.set_homedir (username, temp_homedir)
+        dprint ("retval=%d", retval)
+        if retval == 0:
+            break
+        time.sleep(1)
 
     return temp_homedir
         

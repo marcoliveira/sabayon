@@ -225,8 +225,8 @@ class Session (gobject.GObject):
 
     def start (self):
         self.user_profile_path = self.__copy_to_user (self.profile_path)
-        self.temp_homedir = protosession.setup_shell_and_homedir (self.username)
         protosession.clobber_user_processes (self.username)
+        self.temp_homedir = protosession.setup_shell_and_homedir (self.username)
 
         display_number = protosession.find_free_display ()
 

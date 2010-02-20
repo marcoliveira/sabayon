@@ -41,7 +41,7 @@ def set_shell (username, shell):
 def set_homedir (username, homedir):
     argv = USERMOD_ARGV + [ "-d", homedir, username ]
     dprint ("Executing %s" % argv)
-    subprocess.call (argv)
+    return subprocess.call (argv)
 
 def create_temporary_homedir (uid, gid):
     temp_homedir = tempfile.mkdtemp (prefix = "sabayon-temp-home-")
