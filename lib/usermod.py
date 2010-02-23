@@ -56,6 +56,7 @@ def create_temporary_homedir (uid, gid):
                 os.symlink (linkto, dst_path)
             elif os.path.isdir (src_path):
                 os.mkdir (dst_path)
+                os.chmod (dst_path, os.lstat(src_path).st_mode)
                 copy_tree (src_path, dst_path, uid, gid)
                 os.chown (dst_path, uid, gid)
             else:
