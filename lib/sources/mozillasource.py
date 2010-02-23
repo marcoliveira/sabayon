@@ -22,6 +22,8 @@ import tempfile, types
 import traceback
 import errno
 import time
+import getpass
+import subprocess
 
 try:
     import util
@@ -391,9 +393,20 @@ class MozillaDelegate(userprofile.SourceDelegate):
         dprint(LOG_APPLY, "apply: ini_files=%s pref_files=%s bookmark_files=%s other_files=%s",
                ini_files, pref_files, bookmark_files, other_files)
 
+        def which_firefox ():
+            path = os.environ['PATH']
+            paths = path.split(os.pathsep)
+            for p in paths:
+                f = os.path.join (p, "firefox")
+                if os.path.exists (f):
+                    return f
+            else:
+                return None
+
         # Profiles.ini file must be done first, if the target does not
         # exist then extract it from the profile.
         # Parse the profiles.ini file to learn the target profiles
+        # If no profile exists in homedir or .zip, create new profile
         self.load_profiles_ini()
         if not self.ini_file.is_valid():
             dprint(LOG_APPLY, "apply: no valid ini file, extracting %s", profiles_ini_rel_path)
@@ -401,7 +414,13 @@ class MozillaDelegate(userprofile.SourceDelegate):
                 self.source.storage.extract(profiles_ini_rel_path, self.home_dir, True)
                 self.load_profiles_ini()
             else:
-                dprint(LOG_APPLY, "apply: but there isn't an ini file in the profile!")
+                dprint(LOG_APPLY, "apply: but there isn't an ini file in the profile.  Creating new profile.")
+                firefoxpath = which_firefox ()
+                if firefoxpath:
+                    subprocess.call ([firefoxpath, "-createProfile", getpass.getuser ()])
+                    self.load_profiles_ini()
+                else:
+                    print "Firefox not found in PATH.  Unable to create new profile."
 
         # --------------------
         if sabayon_pref_rel_path in pref_files:
