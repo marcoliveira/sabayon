@@ -419,8 +419,18 @@ class MozillaDelegate(userprofile.SourceDelegate):
                 if firefoxpath:
                     subprocess.call ([firefoxpath, "-createProfile", getpass.getuser ()])
                     self.load_profiles_ini()
+                    # XXX: Temporary Workaround for Mozilla Bug #333479
+                    # Delete bookmarks.html created by firefox -createProfile
+                    for profile in self.ini_file.get_profiles():
+                        # There should only be one profile
+                        profile_rel_dir = profile.get_rel_dir()
+                        bogusbookmarks = os.path.join(profile_rel_dir, "bookmarks.html")
+                        if os.path.exists (bogusbookmarks):
+                            dprint (LOG_APPLY, "apply: Remove bogus file %s, see Mozilla Bug #333479.", bogusbookmarks)
+                            os.remove (bogusbookmarks)
+
                 else:
-                    print "Firefox not found in PATH.  Unable to create new profile."
+                    dprint (APPLY, "apply: Firefox not found in PATH.  Unable to create new profile.")
 
         # --------------------
         if sabayon_pref_rel_path in pref_files:
@@ -990,6 +1000,8 @@ gobject.type_register(BookmarkChange)
 
 class BookmarksFile(FirefoxProfileFile):
     def __init__(self, home_dir, rel_path):
+        # XXX: It says it is created, but if it doesn't exist it does not.
+        # Rewrite this when we properly handle sqlite bookmarks.
         dprint(LOG_OPERATION, "BookmarksFile: created (%s)", rel_path)
         FirefoxProfileFile.__init__(self, home_dir, rel_path)
         self.parser = mozilla_bookmarks.BookmarkHTMLParser()
