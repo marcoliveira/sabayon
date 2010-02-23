@@ -2,7 +2,7 @@
 # Copyright (C) 2005, 2007, 2009, 2010 Free Software Foundation, Inc.
 # This file is distributed under the same license as the sabayon package.
 # Rostislav Raykov <zbrox@i-space.org>, 2005.
-# Alexander Shopov <ash@contact.bg>, 2005, 2007, 2009, 2010.
+# Alexander Shopov <ash@kambanaria.org>, 2005, 2007, 2009, 2010.
 # Yavor Doganov <yavor@doganov.org>, 2007.
 #
 #
@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-25 10:34+0200\n"
-"PO-Revision-Date: 2010-01-25 10:34+0200\n"
-"Last-Translator: Alexander Shopov <ash@contact.bg>\n"
+"POT-Creation-Date: 2010-02-23 09:33+0200\n"
+"PO-Revision-Date: 2010-02-23 09:33+0200\n"
+"Last-Translator: Alexander Shopov <ash@kambanaria.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +27,7 @@ msgstr "Настройване и редактиране на потребите
 msgid "translator-credits"
 msgstr ""
 "Ростислав Райков <zbrox@i-space.org>\n"
-"Александър Шопов <ash@contact.bg>\n"
+"Александър Шопов <ash@kambanaria.org>\n"
 "\n"
 "Проектът за превод на GNOME има нужда от подкрепа.\n"
 "Научете повече за нас на http://gnome.cult.bg\n"
@@ -46,76 +46,80 @@ msgstr "Игнориране"
 msgid "Lock"
 msgstr "Заключване"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:263
 msgid "Description"
 msgstr "Описание"
 
-#: ../admin-tool/editorwindow.py:97
+#: ../admin-tool/editorwindow.py:100
 #, python-format
 msgid "Profile %s"
 msgstr "Профил „%s“"
 
-#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:179
 msgid "_Profile"
 msgstr "_Профил"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
 msgid "_Save"
 msgstr "_Запазване"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
 msgid "Save profile"
 msgstr "Запазване на профила"
 
-#: ../admin-tool/editorwindow.py:204
+#: ../admin-tool/editorwindow.py:207
 msgid "_Close"
 msgstr "_Затваряне"
 
-#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:181
 msgid "Close the current window"
 msgstr "Затваряне на текущия прозорец"
 
-#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:182
 msgid "_Edit"
 msgstr "_Редактиране"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "_Delete"
 msgstr "_Изтриване"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "Delete item"
 msgstr "Изтриване на елемент"
 
-#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:210 ../admin-tool/sessionwindow.py:185
 msgid "_Help"
 msgstr "Помо_щ"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
 msgid "_Contents"
 msgstr "_Ръководство"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
 msgid "Help Contents"
 msgstr "Съдържание на помощта"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:187
+#: ../admin-tool/editorwindow.py:212 ../admin-tool/sessionwindow.py:187
 msgid "_About"
 msgstr "_Относно"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:187
+#: ../admin-tool/editorwindow.py:212 ../admin-tool/sessionwindow.py:187
 msgid "About Sabayon"
 msgstr "Относно Sabayon"
 
-#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:267
+msgid "Source"
+msgstr "Източник"
+
+#: ../admin-tool/editorwindow.py:300 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:304 ../lib/sources/filessource.py:86
 msgid "Files"
 msgstr "Файлове"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:304 ../lib/sources/paneldelegate.py:279
 msgid "Panel"
 msgstr "Панел"
 
@@ -165,7 +169,7 @@ msgstr "двойка"
 msgid "Profile settings: %s"
 msgstr "Настройки на профила: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:421
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:423
 #: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "Име"
@@ -197,7 +201,7 @@ msgstr "Използване на този профил"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:537
+#: ../admin-tool/profilesdialog.py:550
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -263,11 +267,11 @@ msgstr ""
 "Sabayon ще спре работа. Възникнаха някои поправими грешки.  Можете да ни "
 "помогнете да ги коригираме като изпратите дневника в %s на %s"
 
-#: ../admin-tool/sabayon-apply:111
+#: ../admin-tool/sabayon-apply:136
 msgid "Please use -h for usage options"
 msgstr "Използвайте „-h“ за опциите за употреба"
 
-#: ../admin-tool/sabayon-apply:123
+#: ../admin-tool/sabayon-apply:148
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Профилът на потребителя „%s“ не е открит\n"
@@ -400,16 +404,16 @@ msgstr "_Продължаване на редактирането"
 msgid "Users for profile %s"
 msgstr "Потребители с профил %s"
 
-#: ../lib/protosession.py:112
+#: ../lib/protosession.py:119
 msgid "Unable to find a free X display"
 msgstr "Не е открит свободен дисплей на X"
 
-#: ../lib/protosession.py:376
+#: ../lib/protosession.py:383
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr ""
 "Неуспех при стартирането на Xnest: свърши времето за изчакване на сигнал USR1"
 
-#: ../lib/protosession.py:378
+#: ../lib/protosession.py:385
 msgid "Failed to start Xephyr: died during startup"
 msgstr ""
 "Неуспех при стартирането на Xnest: процесът завърши работа още при "
@@ -419,7 +423,7 @@ msgstr ""
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:469
+#: ../lib/protosession.py:476
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
@@ -431,44 +435,56 @@ msgstr ""
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (FATAL) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:478
+#: ../lib/protosession.py:485
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr ""
 "Възникна фатална грешка при прилагането на потребителския от профил „%s“."
 
 #: ../lib/sources/filessource.py:69
-#, python-format
-msgid "File '%s' created"
-msgstr "Файлът „%s“ е създаден"
+msgid "Directory"
+msgstr "Папката"
 
 #: ../lib/sources/filessource.py:71
-#, python-format
-msgid "File '%s' deleted"
-msgstr "Файлът „%s“ е изтрит"
+msgid "Link"
+msgstr "Връзката"
 
 #: ../lib/sources/filessource.py:73
-#, python-format
-msgid "File '%s' changed"
-msgstr "Файлът „%s“ е променен"
+msgid "File"
+msgstr "Файлът"
 
-#: ../lib/sources/filessource.py:97
+#: ../lib/sources/filessource.py:75
+#, python-format
+msgid "%s '%s' created"
+msgstr "%s „%s“ е създаден"
+
+#: ../lib/sources/filessource.py:77
+#, python-format
+msgid "%s '%s' deleted"
+msgstr "%s „%s“ е изтрит"
+
+#: ../lib/sources/filessource.py:79
+#, python-format
+msgid "%s '%s' changed"
+msgstr "%s „%s“ е променен"
+
+#: ../lib/sources/filessource.py:105
 msgid "Applications menu"
 msgstr "Меню „Програми“"
 
-#: ../lib/sources/filessource.py:99
+#: ../lib/sources/filessource.py:107
 msgid "Settings menu"
 msgstr "Меню „Настройки“"
 
-#: ../lib/sources/filessource.py:101
+#: ../lib/sources/filessource.py:109
 msgid "Server Settings menu"
 msgstr "Меню „Настройки на сървъра“"
 
-#: ../lib/sources/filessource.py:103
+#: ../lib/sources/filessource.py:111
 msgid "System Settings menu"
 msgstr "Меню „Системни настройки“"
 
-#: ../lib/sources/filessource.py:105
+#: ../lib/sources/filessource.py:113
 msgid "Start Here menu"
 msgstr "Меню „Основно меню“"
 
@@ -520,86 +536,86 @@ msgstr "Стойността на ключа на GConf „%s“ е зададе
 msgid "GConf key '%s' set to '%s'"
 msgstr "Стойността на ключа на GConf „%s“ е зададена да е „%s“"
 
-#: ../lib/sources/gconfsource.py:137
+#: ../lib/sources/gconfsource.py:138
 msgid "Default GConf settings"
 msgstr "Настройки на GConf по подразбиране"
 
-#: ../lib/sources/gconfsource.py:139
+#: ../lib/sources/gconfsource.py:140
 msgid "Mandatory GConf settings"
 msgstr "Задължителни настройки на GConf"
 
-#: ../lib/sources/mozillasource.py:133
+#: ../lib/sources/mozillasource.py:135
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
 msgstr "Стойността на ключа на Mozilla „%s“ е зададена да е „%s“"
 
-#: ../lib/sources/mozillasource.py:135
+#: ../lib/sources/mozillasource.py:137
 #, python-format
 msgid "Mozilla key '%s' unset"
 msgstr "Стойността на ключа на Mozilla „%s“ е премахната"
 
-#: ../lib/sources/mozillasource.py:137
+#: ../lib/sources/mozillasource.py:139
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Стойността на ключа на GConf „%s“ е променена на „%s“"
 
-#: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
+#: ../lib/sources/mozillasource.py:169 ../lib/sources/mozillasource.py:179
 msgid "Web browser preferences"
 msgstr "Настройки на уеб браузъра"
 
-#: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
+#: ../lib/sources/mozillasource.py:171 ../lib/sources/mozillasource.py:181
 msgid "Web browser bookmarks"
 msgstr "Отметки за уеб браузъра"
 
-#: ../lib/sources/mozillasource.py:170
+#: ../lib/sources/mozillasource.py:173
 msgid "Web browser profile list"
 msgstr "Списък с профилите за уеб браузъра"
 
-#: ../lib/sources/mozillasource.py:520
+#: ../lib/sources/mozillasource.py:540
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Не е открит файл (%s)"
 
-#: ../lib/sources/mozillasource.py:869
+#: ../lib/sources/mozillasource.py:889
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "повторение на име (%(name)s) в раздела %(section)s"
 
-#: ../lib/sources/mozillasource.py:878
+#: ../lib/sources/mozillasource.py:898
 #, python-format
 msgid "redundant default in section %s"
 msgstr "излишна стойност в раздела %s, която има стойността по подразбиране"
 
-#: ../lib/sources/mozillasource.py:895
+#: ../lib/sources/mozillasource.py:915
 msgid "no default profile"
 msgstr "няма профил по подразбиране"
 
-#: ../lib/sources/mozillasource.py:950
+#: ../lib/sources/mozillasource.py:970
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Създадена е отметка в Mozilla: „%s“ → „%s“"
 
-#: ../lib/sources/mozillasource.py:952
+#: ../lib/sources/mozillasource.py:972
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Създадена е папка за отметки в Mozilla: „%s“"
 
-#: ../lib/sources/mozillasource.py:955
+#: ../lib/sources/mozillasource.py:975
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Изтрита е отметка в Mozilla: „%s“"
 
-#: ../lib/sources/mozillasource.py:957
+#: ../lib/sources/mozillasource.py:977
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Изтрита е папка за отметки в Mozilla: „%s“"
 
-#: ../lib/sources/mozillasource.py:960
+#: ../lib/sources/mozillasource.py:980
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Отметката „%s“ в Mozilla е променена на „%s“"
 
-#: ../lib/sources/mozillasource.py:962
+#: ../lib/sources/mozillasource.py:982
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Папката за отметки в Mozilla е променена: „%s“"
@@ -635,60 +651,60 @@ msgid "Object '%s' removed"
 msgstr "Обектът „%s“ е премахнат"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:240
+#: ../lib/sources/paneldelegate.py:241
 msgid "Drawer"
 msgstr "Шкаф"
 
-#: ../lib/sources/paneldelegate.py:242
+#: ../lib/sources/paneldelegate.py:243
 msgid "Main Menu"
 msgstr "Главно меню"
 
-#: ../lib/sources/paneldelegate.py:252
+#: ../lib/sources/paneldelegate.py:253
 #, python-format
 msgid "%s launcher"
 msgstr "стартер на %s"
 
-#: ../lib/sources/paneldelegate.py:256
+#: ../lib/sources/paneldelegate.py:257
 msgid "Lock Screen button"
 msgstr "Бутон за заключване на екрана"
 
-#: ../lib/sources/paneldelegate.py:258
+#: ../lib/sources/paneldelegate.py:259
 msgid "Logout button"
 msgstr "Бутон за изход"
 
-#: ../lib/sources/paneldelegate.py:260
+#: ../lib/sources/paneldelegate.py:261
 msgid "Run Application button"
 msgstr "Бутон за стартиране на програма"
 
-#: ../lib/sources/paneldelegate.py:262
+#: ../lib/sources/paneldelegate.py:263
 msgid "Search button"
 msgstr "Бутон за търсене"
 
-#: ../lib/sources/paneldelegate.py:264
+#: ../lib/sources/paneldelegate.py:265
 msgid "Force Quit button"
 msgstr "Бутон за принудително спиране"
 
-#: ../lib/sources/paneldelegate.py:266
+#: ../lib/sources/paneldelegate.py:267
 msgid "Connect to Server button"
 msgstr "Бутон за свързване към сървър"
 
-#: ../lib/sources/paneldelegate.py:268
+#: ../lib/sources/paneldelegate.py:269
 msgid "Shutdown button"
 msgstr "Бутон за спиране на системата"
 
-#: ../lib/sources/paneldelegate.py:270
+#: ../lib/sources/paneldelegate.py:271
 msgid "Screenshot button"
 msgstr "Бутон за снимка на екрана"
 
-#: ../lib/sources/paneldelegate.py:273
+#: ../lib/sources/paneldelegate.py:274
 msgid "Unknown"
 msgstr "Непознат"
 
-#: ../lib/sources/paneldelegate.py:275
+#: ../lib/sources/paneldelegate.py:276
 msgid "Menu Bar"
 msgstr "Лента с меню"
 
-#: ../lib/sources/paneldelegate.py:512
+#: ../lib/sources/paneldelegate.py:513
 msgid "Panel File"
 msgstr "Файл за панел"
 
@@ -724,7 +740,7 @@ msgstr "Папката „%s“ не може да се изтрие"
 msgid "Couldn't unlink file '%s'"
 msgstr "Файлът „%s“ не може да се изтрие"
 
-#: ../lib/storage.py:622
+#: ../lib/storage.py:629
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Профилът „%s“ е само за четене"
@@ -741,59 +757,59 @@ msgstr "невалиден вид на настройката %(setting)s в %(n
 msgid "No database file provided"
 msgstr "Не е указан файл с база от данни"
 
-#: ../lib/systemdb.py:242
+#: ../lib/systemdb.py:253
 #, python-format
 msgid "No LDAP search base specified for %s"
 msgstr "Не е указана база в LDAP за търсене за %s"
 
-#: ../lib/systemdb.py:245
+#: ../lib/systemdb.py:256
 #, python-format
 msgid "No LDAP query filter specified for %s"
 msgstr "Не е зададен филтър на заявката към LDAP %s"
 
-#: ../lib/systemdb.py:248
+#: ../lib/systemdb.py:259
 #, python-format
 msgid "No LDAP result attribute specified for %s"
 msgstr "Не е зададен атрибут в LDAP на резултата за %s"
 
-#: ../lib/systemdb.py:257
+#: ../lib/systemdb.py:268
 msgid "LDAP Scope must be one of: "
 msgstr "Обхватът в LDAP може да е един от:"
 
-#: ../lib/systemdb.py:277
+#: ../lib/systemdb.py:288
 msgid "multiple_result must be one of: "
 msgstr "множественият_резултат може да е един от:"
 
-#: ../lib/systemdb.py:370
+#: ../lib/systemdb.py:381
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Неуспех при отварянето на „%s“ за запис"
 
-#: ../lib/systemdb.py:383
+#: ../lib/systemdb.py:394
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Неуспех при запазването на потребителската база от данни в „%s“"
 
-#: ../lib/systemdb.py:412 ../lib/systemdb.py:446
+#: ../lib/systemdb.py:423 ../lib/systemdb.py:457
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Файлът „%s“ не е настройка на профил"
 
-#: ../lib/systemdb.py:419
+#: ../lib/systemdb.py:430
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Неуспех при добавянето на стандартния профил „%s“ към настройките"
 
-#: ../lib/systemdb.py:453
+#: ../lib/systemdb.py:464
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Неуспех при добавянето на потребителя „%s“ към настройките на профила"
 
-#: ../lib/systemdb.py:525
+#: ../lib/systemdb.py:536
 msgid "Failed to get the user list"
 msgstr "Неуспех при получаването на списъка с потребители"
 
-#: ../lib/systemdb.py:575
+#: ../lib/systemdb.py:586
 msgid "Failed to get the group list"
 msgstr "Неуспех при получаването на списъка с групи"
 
