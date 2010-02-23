@@ -1,3 +1,63 @@
+===============
+Version 2.29.91
+===============
+
+  Code Name:
+
+    * "Drainage and the Desert"
+
+  Fixes:
+
+    * Help file docbook tags patch thanks to Mario Blättermann
+    * Manpages patch thanks to Luca Falavigna of the Debian project
+    * Fix Bug #321450: allow multiple LDAP uri's to be specified.
+    * Changes window now distinguishes between files, dirs, and links
+    * Documentation fixes.
+    * Fix Bug #608697: sabayon-debug-log.conf does not exist, but sabayon
+      thinks it does
+    * Remove hard-coded gconf source strings, add gconf sources to config.py.in
+      for easier customization/patching by distros
+    * Always clean up the gconf source trees
+    * xinitrc file cleaned up.
+    * Added file/directory permission handling.
+    * Gracefully handle gconfd shutdowns in sabayon-apply
+    * Fix Bug #608720: Make Details pane less confusing with sorting
+    * Fix Bug #607030: depend on Python 2.6
+    * Fix Bug #610488: Patches to admin tools to properly wait for usermod changes to apply.
+    * Fix Bug #610736: Create firefox profile during sabayon-apply if it doesn't
+      already exist.
+
+  Notes:
+
+    * Thanks to Luca Falavigna of the Debian project, we now have a working
+      Sabayon in Debian again.
+    * Thanks to Warren Togami of the Fedora project for a lot of work in this
+      release.  He's being added to AUTHORS.
+
+  Translators:
+
+    * bg, courtesy of Alexander Shopov
+    * bn, courtesy of Israt Jahan
+    * de, courtesy of Mario Blättermann
+    * el, courtesy of Μάριος Ζηντίλης
+    * es, courtesy of Jorge González
+    * et, courtesy of Ivar Smolin
+    * eu, courtesy of Iñaki Larrañaga Murgoitio
+    * fr, courtesy of Claude Paroz
+    * fr, courtesy of Bruno Brouard
+    * gl, courtesy of Fran Diéguez
+    * nb, courtesy of Kjartan Maraas
+    * pl, courtesy of Piotr Drąg
+    * pt_BR, courtesy of Flamarion Jorge
+    * sk, courtesy of Peter Mráz
+    * sl, courtesy of Matej Urbančič
+    * sv, courtesy of Daniel Nylander
+    * ta, courtesy of Dr,T,Vasudevan
+    * th, courtesy of Theppitak Karoonboonyanan
+    * uk, courtesy of Maxim V. Dziumanenko
+    * zh_HK, courtesy of Chao-Hsiung Liao
+    * zh_TW, courtesy of Chao-Hsiung Liao
+
 ==============
 Version 2.29.5
 ==============
