@@ -57,10 +57,10 @@ def create_temporary_homedir (uid, gid):
             elif os.path.isdir (src_path):
                 os.mkdir (dst_path)
                 copy_tree (src_path, dst_path, uid, gid)
+                os.chown (dst_path, uid, gid)
             else:
                 shutil.copy2 (src_path, dst_path)
-            
-            os.chown (dst_path, uid, gid)
+                os.chown (dst_path, uid, gid)
 
     copy_tree (SKEL_HOMEDIR, temp_homedir, uid, gid)
     os.chown (temp_homedir, uid, gid)
