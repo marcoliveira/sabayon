@@ -341,7 +341,10 @@ class BookmarkHTMLParser(HTMLParser):
             # currently open folder, it is effectively a push of the folder
             # stack, but we maintain it as simply the currently open folder.
             if top.tag == 'h3':
-                self.cur_folder = self.cur_folder.add_folder(top.data)
+                if self.cur_folder:
+                    self.cur_folder = self.cur_folder.add_folder(top.data)
+                else:
+                    self.cur_folder = self.folder_root
             else:
                 # Tag is h1, must be the root folder
                 self.folder_root.reset(top.data, None)
@@ -364,7 +367,7 @@ class BookmarkHTMLParser(HTMLParser):
 
     def handle_endtag(self, tag):
         self.implicit_close('end', tag)
-        assert tag == self.stack[-1].tag
+        # assert tag == self.stack[-1].tag
         self._handle_endtag(tag)
 
     def handle_data(self, data):
