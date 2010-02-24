@@ -98,7 +98,7 @@ class Bookmark:
             return join.join(path)
 
     def path_as_string(self):
-        return self.path_as_names(bookmark_separator)                       
+        return self.path_as_names(bookmark_separator)
 
 class BookmarkFolder:
     def __init__(self, name, parent):
@@ -208,7 +208,7 @@ class BookmarkFolder:
             return join.join(path)
         
     def path_as_string(self):
-        return self.path_as_names(bookmark_separator)                       
+        return self.path_as_names(bookmark_separator)
 
     def _traverse(self, visit_func, path, data):
         assert isinstance(self, BookmarkFolder)
@@ -397,39 +397,10 @@ def visit(entry, type, path, data=None):
 # -----------------------
 
 if __name__ == "__main__":
-    bm_root = []
+    bm_root = BookmarkFolder('bm', None)
     bm_file = BookmarkHTMLParser()
     bm_file.set_root(bm_root)
     bm_file.feed(open('bookmarks.html').read())
     bm_file.close()
 
-    bm_root_1 = []
-    bm_file_1 = BookmarkHTMLParser(bm_root_1)
-    bm_file_1.feed(open('bookmarks1.html').read())
-    bm_file_1.close()
-
-    if False:
-        bm_name = "libical"
-        bm_list = bm_file.folder_root.find_bookmark(bm_name)
-        if bm_list:
-            for bm in bm_list:
-                print "found bookmark %s url=%s" % (bm.name, bm.get_attr("href"))
-                print "path = %s" % bm.path_as_string()
-        else:
-            print "%s not found" % bm_name
-
-    if False:
-        bm_file.folder_root.traverse(visit)
-
-    if True:
-        bm_dict   = bm_file.folder_root.convert_to_dict()
-        bm_dict_1 = bm_file_1.folder_root.convert_to_dict()
-
-        dc = util.DictCompare(bm_dict, bm_dict_1)
-        dc.compare()
-        cs = dc.get_change_set('a', 'b')
-        util.dump_change_set(cs)
-
-    if False:
-        bm_file.folder_root.write("tmp_bookmarks.html", exclude_attrs=bm_file.bookmark_exclude_attrs)
 
