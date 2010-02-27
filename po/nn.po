@@ -1,31 +1,33 @@
 # translation of nn.po to Norwegian Nynorsk
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
-#
 # Åsmund Skjæveland <aasmunds@fys.uio.no>, 2006.
 # Åsmund Skjæveland <aasmunds@ulrik.uio.no>, 2008.
+# Torstein Adolf Winterseth <kvikende@yahoo.no>, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: nn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-21 21:44-0600\n"
-"PO-Revision-Date: 2008-02-05 10:48+0100\n"
-"Last-Translator: Åsmund Skjæveland <aasmunds@ulrik.uio.no>\n"
+"POT-Creation-Date: 2010-02-27 15:17+0100\n"
+"PO-Revision-Date: 2010-02-05 08:36+0000\n"
+"Last-Translator: Torstein Adolf Winterseth <kvikende@yahoo.no>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
-"X-Generator: KBabel 1.11.4\n"
+"Language: nn\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.0\n"
 
 #: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
-msgstr "Program til å laga og redigera brukarprofilar med"
+msgstr "Program til å laga og endra brukarprofilar med"
 
 #: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
 msgstr ""
 "Åsmund Skjæveland <aasmunds@ulrik.uio.no>\n"
+"Torstein Adolf Winterseth <kvikende@yahoo.no>\n"
 "\n"
 "Send feilmeldingar og kommentarar til <i18n-nn@lister.ping.uio.no>"
 
@@ -42,76 +44,80 @@ msgstr "Ignorer"
 msgid "Lock"
 msgstr "Lås"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:263
 msgid "Description"
 msgstr "Skildring"
 
-#: ../admin-tool/editorwindow.py:97
+#: ../admin-tool/editorwindow.py:100
 #, python-format
 msgid "Profile %s"
 msgstr "Profil %s"
 
-#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:179
 msgid "_Profile"
 msgstr "_Profil"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
 msgid "_Save"
 msgstr "_Lagra"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
 msgid "Save profile"
 msgstr "Lagra profil"
 
-#: ../admin-tool/editorwindow.py:204
+#: ../admin-tool/editorwindow.py:207
 msgid "_Close"
 msgstr "_Lukk"
 
-#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:181
 msgid "Close the current window"
 msgstr "Lukk dette vindauget"
 
-#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:182
 msgid "_Edit"
-msgstr "R_ediger"
+msgstr "_Endra"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "_Delete"
 msgstr "_Slett"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "Delete item"
 msgstr "Slett oppføring"
 
-#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:210 ../admin-tool/sessionwindow.py:185
 msgid "_Help"
 msgstr "_Hjelp"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
 msgid "_Contents"
-msgstr ""
+msgstr "_Innhald"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
 msgid "Help Contents"
-msgstr ""
+msgstr "Hjelpinnhald"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:212 ../admin-tool/sessionwindow.py:187
 msgid "_About"
 msgstr "_Om"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:212 ../admin-tool/sessionwindow.py:187
 msgid "About Sabayon"
 msgstr "Om Sabayon"
 
-#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:267
+msgid "Source"
+msgstr "Kjeldekode"
+
+#: ../admin-tool/editorwindow.py:300 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:304 ../lib/sources/filessource.py:86
 msgid "Files"
 msgstr "Filer"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:304 ../lib/sources/paneldelegate.py:279
 msgid "Panel"
 msgstr "Panel"
 
@@ -161,7 +167,7 @@ msgstr "par"
 msgid "Profile settings: %s"
 msgstr "Profilinnstillingar: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:423
 #: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "Namn"
@@ -175,13 +181,13 @@ msgid "Value"
 msgstr "Verdi"
 
 #: ../admin-tool/groupsdialog.py:61
-#, fuzzy, python-format
+#, python-format
 msgid "Groups for profile %s"
-msgstr "Brukarar for profil %s"
+msgstr "Grupper for profil %s"
 
 #: ../admin-tool/groupsdialog.py:71
 msgid "Group"
-msgstr ""
+msgstr "Gruppe"
 
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
@@ -193,7 +199,7 @@ msgstr "Bruk denne profilen"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:520
+#: ../admin-tool/profilesdialog.py:550
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -223,7 +229,7 @@ msgid ""
 "session"
 msgstr ""
 "Du kan ikkje bruka verktøyet for skrivebordbrukarprofilar frå inni ei "
-"profilredigeringsøkt"
+"profilendringsøkt"
 
 #: ../admin-tool/sabayon:91
 #, c-format
@@ -258,11 +264,11 @@ msgstr ""
 "Sabayon avsluttar no. Det var somme feil som kunne rettast, og du kan hjelpa "
 "oss å reparera programmet ved å senda feilloggen i %s til %s"
 
-#: ../admin-tool/sabayon-apply:111
+#: ../admin-tool/sabayon-apply:136
 msgid "Please use -h for usage options"
 msgstr "Bruk parameteren «-h» for informasjon om bruk av programmet"
 
-#: ../admin-tool/sabayon-apply:123
+#: ../admin-tool/sabayon-apply:148
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Fann ingen profil for brukaren «%s»\n"
@@ -278,7 +284,7 @@ msgstr "Opprett og endra eigenskapane til brukarar"
 
 #: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.ui.h:4
 msgid "User Profile Editor"
-msgstr "Brukarprofilredigering"
+msgstr "Brukarprofilendrar"
 
 #: ../admin-tool/sabayon.ui.h:1
 msgid "Add Profile"
@@ -302,11 +308,11 @@ msgstr "_Detaljar"
 
 #: ../admin-tool/sabayon.ui.h:7
 msgid "_Groups"
-msgstr ""
+msgstr "_Grupper"
 
 #: ../admin-tool/sabayon.ui.h:8
 msgid "_Groups:"
-msgstr ""
+msgstr "_Grupper:"
 
 #: ../admin-tool/sabayon.ui.h:9
 msgid "_Profiles:"
@@ -330,49 +336,48 @@ msgid "Save changes to profile \"%s\" before closing?"
 msgstr "Lagra endringane i profilen «%s» før programmet avsluttar?"
 
 #: ../admin-tool/saveconfirm.py:44
-#, fuzzy
 msgid "If you don't save, all changes will be permanently lost."
-msgstr "Dersom du ikkje lagrar, vil endringane frå den siste timen gå tapt."
+msgstr "Dersom du ikkje lagrar vil endringane gå tapt."
 
-#: ../admin-tool/sessionwindow.py:155
+#: ../admin-tool/sessionwindow.py:157
 #, python-format
 msgid "Editing profile %s"
-msgstr "Redigerer profilen %s"
+msgstr "Endra profilen %s"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Quit"
 msgstr "_Avslutt"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "_Changes"
 msgstr "_Endringar"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "Edit changes"
-msgstr "Rediger endringar"
+msgstr "Endra på endringane"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "_Lockdown"
 msgstr "_Låsing"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "Edit Lockdown settings"
-msgstr "Rediger innstillingar for låsing"
+msgstr "Endra innstillingar for låsing"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce Mandatory"
 msgstr "Tving gjennom obligatoriske"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce mandatory settings in the editing session"
-msgstr "Tving gjennom obligatoriske innstillingar i redigeringsøkta"
+msgstr "Tving gjennom obligatoriske innstillingar i endringsøkta"
 
-#: ../admin-tool/sessionwindow.py:306
+#: ../admin-tool/sessionwindow.py:308
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Låsingsinnstillingar for %s"
 
-#: ../admin-tool/sessionwindow.py:342
+#: ../admin-tool/sessionwindow.py:344
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
@@ -380,40 +385,39 @@ msgid ""
 msgstr ""
 "Det skjedde ein feil som kan rettast då brukarprofilen «%s» vart teken i "
 "bruk. Du kan melda ifrå om denne feilen no, eller prøva å halda fram med å "
-"redigera brukarprofilen."
+"endra brukarprofilen."
 
-#: ../admin-tool/sessionwindow.py:346
+#: ../admin-tool/sessionwindow.py:348
 msgid "_Report this error"
 msgstr "_Meld frå om denne feilen"
 
-#: ../admin-tool/sessionwindow.py:347
+#: ../admin-tool/sessionwindow.py:349
 msgid "_Continue editing"
-msgstr "_Hald fram med å redigera"
+msgstr "_Hald fram med å endra"
 
 #: ../admin-tool/usersdialog.py:72
 #, python-format
 msgid "Users for profile %s"
 msgstr "Brukarar for profil %s"
 
-#: ../lib/protosession.py:112
+#: ../lib/protosession.py:119
 msgid "Unable to find a free X display"
 msgstr "Klarte ikkje å finna eit ledig X-display"
 
-#: ../lib/protosession.py:376
-#, fuzzy
+#: ../lib/protosession.py:383
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
-msgstr "Klarte ikkje å starta Xnest: Tidsavbrot medan venta på signalet USR1"
+msgstr ""
+"Klarte ikkje å starta Xephyr: Tidsavbrot under venting på signalet USR1"
 
-#: ../lib/protosession.py:378
-#, fuzzy
+#: ../lib/protosession.py:385
 msgid "Failed to start Xephyr: died during startup"
-msgstr "Klarte ikkje å starta Xnest: Døydde under oppstart"
+msgstr "Klarte ikkje å starta Xephyr: Døydde under oppstart"
 
 #. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:469
+#: ../lib/protosession.py:476
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
@@ -424,7 +428,7 @@ msgstr ""
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (FATAL) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:478
+#: ../lib/protosession.py:485
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr ""
@@ -432,40 +436,51 @@ msgstr ""
 "i bruk."
 
 #: ../lib/sources/filessource.py:69
-#, python-format
-msgid "File '%s' created"
-msgstr "Fila «%s» oppretta"
+msgid "Directory"
+msgstr "Mappe"
 
 #: ../lib/sources/filessource.py:71
-#, python-format
-msgid "File '%s' deleted"
-msgstr "Fila «%s» sletta"
+msgid "Link"
+msgstr "Lenkje"
 
 #: ../lib/sources/filessource.py:73
+msgid "File"
+msgstr "Fil"
+
+#: ../lib/sources/filessource.py:75
 #, python-format
-msgid "File '%s' changed"
-msgstr "Fila «%s» endra"
+msgid "%s '%s' created"
+msgstr "%s «%s» oppretta"
 
-#: ../lib/sources/filessource.py:97
-msgid "Applications menu"
-msgstr "Program-meny"
+#: ../lib/sources/filessource.py:77
+#, python-format
+msgid "%s '%s' deleted"
+msgstr "%s «%s» sletta"
 
-#: ../lib/sources/filessource.py:99
-#, fuzzy
-msgid "Settings menu"
-msgstr "Tenarinnstillingar-meny"
-
-#: ../lib/sources/filessource.py:101
-msgid "Server Settings menu"
-msgstr "Tenarinnstillingar-meny"
-
-#: ../lib/sources/filessource.py:103
-msgid "System Settings menu"
-msgstr "Systeminnstillingar-meny"
+#: ../lib/sources/filessource.py:79
+#, python-format
+msgid "%s '%s' changed"
+msgstr "%s «%s» endra"
 
 #: ../lib/sources/filessource.py:105
+msgid "Applications menu"
+msgstr "Programmeny"
+
+#: ../lib/sources/filessource.py:107
+msgid "Settings menu"
+msgstr "Meny over innstillingar"
+
+#: ../lib/sources/filessource.py:109
+msgid "Server Settings menu"
+msgstr "Meny over tenarinnstillingar"
+
+#: ../lib/sources/filessource.py:111
+msgid "System Settings menu"
+msgstr "Meny over systeminnstillingar"
+
+#: ../lib/sources/filessource.py:113
 msgid "Start Here menu"
-msgstr "Start her-meny"
+msgstr "Oppstartsmeny"
 
 #: ../lib/sources/gconfsource.py:90
 #, python-format
@@ -512,86 +527,86 @@ msgstr "GConf-nøkkel «%s» stilt til paret «%s»"
 msgid "GConf key '%s' set to '%s'"
 msgstr "GConf-nøkkel «%s» stilt til «%s»"
 
-#: ../lib/sources/gconfsource.py:137
+#: ../lib/sources/gconfsource.py:138
 msgid "Default GConf settings"
 msgstr "Standard GConf-innstillingar"
 
-#: ../lib/sources/gconfsource.py:139
+#: ../lib/sources/gconfsource.py:140
 msgid "Mandatory GConf settings"
 msgstr "Obligatoriske innstillingar"
 
-#: ../lib/sources/mozillasource.py:133
+#: ../lib/sources/mozillasource.py:135
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
 msgstr "Mozilla-nøkkelen «%s» stilt til «%s»"
 
-#: ../lib/sources/mozillasource.py:135
+#: ../lib/sources/mozillasource.py:137
 #, python-format
 msgid "Mozilla key '%s' unset"
 msgstr "Mozilla-nøkkelen «%s» nullstilt"
 
-#: ../lib/sources/mozillasource.py:137
+#: ../lib/sources/mozillasource.py:139
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Mozilla-nøkkelen «%s» endra til «%s»"
 
-#: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
+#: ../lib/sources/mozillasource.py:169 ../lib/sources/mozillasource.py:179
 msgid "Web browser preferences"
 msgstr "Brukarval for nettlesar"
 
-#: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
+#: ../lib/sources/mozillasource.py:171 ../lib/sources/mozillasource.py:181
 msgid "Web browser bookmarks"
 msgstr "Bokmerker i nettlesaren"
 
-#: ../lib/sources/mozillasource.py:170
+#: ../lib/sources/mozillasource.py:173
 msgid "Web browser profile list"
 msgstr "Brukarprofilliste i nettlesaren"
 
-#: ../lib/sources/mozillasource.py:520
+#: ../lib/sources/mozillasource.py:550
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Fann ikkje fila (%s)"
 
-#: ../lib/sources/mozillasource.py:869
+#: ../lib/sources/mozillasource.py:899
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "duplisert namn (%(name)s) i del %(section)s"
 
-#: ../lib/sources/mozillasource.py:878
+#: ../lib/sources/mozillasource.py:908
 #, python-format
 msgid "redundant default in section %s"
 msgstr "overflødig standardinnstilling i del %s"
 
-#: ../lib/sources/mozillasource.py:895
+#: ../lib/sources/mozillasource.py:925
 msgid "no default profile"
 msgstr "ingen standardprofil"
 
-#: ../lib/sources/mozillasource.py:950
+#: ../lib/sources/mozillasource.py:980
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Mozilla-bokmerke oppretta: «%s» -> «%s»"
 
-#: ../lib/sources/mozillasource.py:952
+#: ../lib/sources/mozillasource.py:982
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Mozilla-bokmerkemappe oppretta: «%s» "
 
-#: ../lib/sources/mozillasource.py:955
+#: ../lib/sources/mozillasource.py:985
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Mozilla-bokmerke sletta: «%s»"
 
-#: ../lib/sources/mozillasource.py:957
+#: ../lib/sources/mozillasource.py:987
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Mozilla-bokmerkemappe sletta: «%s»"
 
-#: ../lib/sources/mozillasource.py:960
+#: ../lib/sources/mozillasource.py:990
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Mozilla-bokmerke endra: «%s» «%s»"
 
-#: ../lib/sources/mozillasource.py:962
+#: ../lib/sources/mozillasource.py:992
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mozilla-bokmerkemappe endra: «%s»"
@@ -607,112 +622,116 @@ msgid "Panel '%s' removed"
 msgstr "Panel «%s» fjerna"
 
 #: ../lib/sources/paneldelegate.py:77
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' added"
-msgstr "Panel «%s» lagt til"
+msgstr "Panelprogram «%s» lagt til"
 
 #: ../lib/sources/paneldelegate.py:100
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' removed"
-msgstr "Panel «%s» fjerna"
+msgstr "Panelprogram «%s» fjerna"
 
 #: ../lib/sources/paneldelegate.py:123
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' added"
-msgstr "Panel «%s» lagt til"
+msgstr "Objekt «%s» lagt til"
 
 #: ../lib/sources/paneldelegate.py:152
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' removed"
-msgstr "Panel «%s» fjerna"
+msgstr "Objekt «%s» fjerna"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:240
+#: ../lib/sources/paneldelegate.py:241
 msgid "Drawer"
 msgstr "Skuff"
 
-#: ../lib/sources/paneldelegate.py:242
+#: ../lib/sources/paneldelegate.py:243
 msgid "Main Menu"
 msgstr "Hovudmeny"
 
-#: ../lib/sources/paneldelegate.py:252
+#: ../lib/sources/paneldelegate.py:253
 #, python-format
 msgid "%s launcher"
 msgstr "%s-oppstartar"
 
-#: ../lib/sources/paneldelegate.py:256
+#: ../lib/sources/paneldelegate.py:257
 msgid "Lock Screen button"
 msgstr "Låseknapp"
 
-#: ../lib/sources/paneldelegate.py:258
+#: ../lib/sources/paneldelegate.py:259
 msgid "Logout button"
-msgstr "Logg ut-knapp"
+msgstr "Utloggingsknapp"
 
-#: ../lib/sources/paneldelegate.py:260
+#: ../lib/sources/paneldelegate.py:261
 msgid "Run Application button"
-msgstr "Køyr program-knapp"
+msgstr "Knapp for å køyra program"
 
-#: ../lib/sources/paneldelegate.py:262
+#: ../lib/sources/paneldelegate.py:263
 msgid "Search button"
-msgstr "Søkeknapp"
+msgstr "Søkjeknapp"
 
-#: ../lib/sources/paneldelegate.py:264
-#, fuzzy
+#: ../lib/sources/paneldelegate.py:265
 msgid "Force Quit button"
-msgstr "Logg ut-knapp"
+msgstr "Knapp for å tvinga avslutting"
 
-#: ../lib/sources/paneldelegate.py:266
-#, fuzzy
+#: ../lib/sources/paneldelegate.py:267
 msgid "Connect to Server button"
-msgstr "Låseknapp"
+msgstr "Knapp for å kopla til tenar"
 
-#: ../lib/sources/paneldelegate.py:268
-#, fuzzy
+#: ../lib/sources/paneldelegate.py:269
 msgid "Shutdown button"
-msgstr "Logg ut-knapp"
+msgstr "Knapp for å slå av"
 
-#: ../lib/sources/paneldelegate.py:270
+#: ../lib/sources/paneldelegate.py:271
 msgid "Screenshot button"
 msgstr "Skjermbileteknapp"
 
-#: ../lib/sources/paneldelegate.py:273
+#: ../lib/sources/paneldelegate.py:274
 msgid "Unknown"
-msgstr ""
+msgstr "Ukjend"
 
-#: ../lib/sources/paneldelegate.py:275
+#: ../lib/sources/paneldelegate.py:276
 msgid "Menu Bar"
 msgstr "Menylinje"
 
-#: ../lib/sources/paneldelegate.py:512
+#: ../lib/sources/paneldelegate.py:513
 msgid "Panel File"
 msgstr "Panelfil"
 
-#: ../lib/storage.py:172
+#: ../lib/storage.py:173
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "Klarte ikkje å lesa fila «%s»: %s"
 
-#: ../lib/storage.py:182
+#: ../lib/storage.py:183
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "Klarte ikkje å lesa metadata frå «%s»: %s"
 
-#: ../lib/storage.py:188
+#: ../lib/storage.py:189
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
-msgstr "Ugyldig metadata-del i «%s»: %s"
+msgstr "Ugyldig metadatadel i «%s»: %s"
 
-#: ../lib/storage.py:362
+#. change the raise to a dprint, since some files seem to disappear.
+#. raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
+#: ../lib/storage.py:387
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Kan ikkje leggja til ikkje-eksisterane fil «%s»"
 
-#: ../lib/storage.py:487
+#: ../lib/storage.py:531
+#, python-format
+msgid "Couldn't rmdir '%s'"
+msgstr "Klarte ikkje å sletta mappa «%s»"
+
+#: ../lib/storage.py:536
 #, python-format
 msgid "Couldn't unlink file '%s'"
-msgstr ""
+msgstr "Klarte ikkje å fjerna lenkje «%s»"
 
-#: ../lib/storage.py:570
+#: ../lib/storage.py:633
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Profilen er skrivebeskytta: %s"
@@ -720,73 +739,70 @@ msgstr "Profilen er skrivebeskytta: %s"
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/systemdb.py:67
+#: ../lib/systemdb.py:77
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "Ugyldig type i innstillinga %(setting)s i %(np)s"
 
-#: ../lib/systemdb.py:112
+#: ../lib/systemdb.py:122
 msgid "No database file provided"
-msgstr ""
+msgstr "Inga databasefil gjeven"
 
-#: ../lib/systemdb.py:232
-#, fuzzy, python-format
+#: ../lib/systemdb.py:253
+#, python-format
 msgid "No LDAP search base specified for %s"
-msgstr "Søkebase ikkje spesifisert for %s"
+msgstr "Inga LDAP-søkjebase valt for %s"
 
-#: ../lib/systemdb.py:235
-#, fuzzy, python-format
+#: ../lib/systemdb.py:256
+#, python-format
 msgid "No LDAP query filter specified for %s"
-msgstr "Spørjingsfilter ikkje spesifisert for %s"
+msgstr "Inkje LDAP-spørjingsfilter valt for %s"
 
-#: ../lib/systemdb.py:238
-#, fuzzy, python-format
+#: ../lib/systemdb.py:259
+#, python-format
 msgid "No LDAP result attribute specified for %s"
-msgstr "Resultat-attributt ikkje spesifisert for %s"
-
-#: ../lib/systemdb.py:247
-#, fuzzy
-msgid "LDAP Scope must be one of: "
-msgstr "Skop må vera «sub», «base» eller «one»"
+msgstr "Ingen LDAP-resultatattributt valt for %s"
 
 #: ../lib/systemdb.py:268
-#, fuzzy
-msgid "multiple_result must be one of: "
-msgstr "«multiple_result» må vera ein av «first» og «random»"
+msgid "LDAP Scope must be one of: "
+msgstr "LDAP-verkefelt må vera éin av: "
 
-#: ../lib/systemdb.py:361
+#: ../lib/systemdb.py:288
+msgid "multiple_result must be one of: "
+msgstr "«multiple_result» må vera éin av:"
+
+#: ../lib/systemdb.py:381
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Klarte ikkje å opna «%s» for å skriva"
 
-#: ../lib/systemdb.py:374
+#: ../lib/systemdb.py:394
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Klarte ikkje å lagra brukardatabasen i «%s»"
 
-#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
+#: ../lib/systemdb.py:423 ../lib/systemdb.py:457
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Fila «%s» er ikkje eit profiloppsett"
 
-#: ../lib/systemdb.py:404
+#: ../lib/systemdb.py:430
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Klarte ikkje å leggja standardprofilen «%s» til i oppsettet"
 
-#: ../lib/systemdb.py:438
+#: ../lib/systemdb.py:464
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Klarte ikkje å leggja brukaren «%s» til i profiloppsettet"
 
-#: ../lib/systemdb.py:510
+#: ../lib/systemdb.py:536
 msgid "Failed to get the user list"
 msgstr "Klarte ikkje å henta brukarlista"
 
-#: ../lib/systemdb.py:560
-#, fuzzy
+#: ../lib/systemdb.py:586
 msgid "Failed to get the group list"
-msgstr "Klarte ikkje å henta brukarlista"
+msgstr "Klarte ikkje å henta gruppelista"
 
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
