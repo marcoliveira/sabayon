@@ -1,5 +1,5 @@
 # Czech translation of Sabayon.
-# Copyright (C) 2005, 2008, 2009 the author(s) of Sabayon.
+# Copyright (C) 2005, 2008, 2009, 2010 the author(s) of Sabayon.
 # Copyright (C) 2005, 2006 Miloslav Trmac <mitr@volny.cz>.
 # Copyright (C) 2006 Lukas Novotny <lukasnov@cvs.gnome.org>.
 # Copyright (C) 2007 Martin Picek <picek.martin@gmail.com>.
@@ -9,15 +9,15 @@
 # Petr Tomeš <ptomes@gmail.com>, 2006.
 # Jakub Friedl <jfriedl@suse.cz>, 2007.
 # Martin Picek <picek.martin@gmail.com>, 2007.
-# Lucas Lommer <llommer@svn.gnome.org>, 2008, 2009.
+# Lucas Lommer <llommer@svn.gnome.org>, 2008, 2009, 2010.
 # Petr Kovar <pknbe@volny.cz>, 2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-21 21:44-0600\n"
-"PO-Revision-Date: 2009-09-18 00:28+0100\n"
+"POT-Creation-Date: 2010-03-01 19:04+0100\n"
+"PO-Revision-Date: 2010-02-23 22:06+0100\n"
 "Last-Translator: Lucas Lommer <llommer@svn.gnome.org>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -53,76 +53,80 @@ msgstr "Ignorovat"
 msgid "Lock"
 msgstr "Zamknout"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:263
 msgid "Description"
 msgstr "Popis"
 
-#: ../admin-tool/editorwindow.py:97
+#: ../admin-tool/editorwindow.py:100
 #, python-format
 msgid "Profile %s"
 msgstr "Profil %s"
 
-#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:179
 msgid "_Profile"
 msgstr "_Profil"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
 msgid "_Save"
 msgstr "_Uložit"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
 msgid "Save profile"
 msgstr "Uložit profil"
 
-#: ../admin-tool/editorwindow.py:204
+#: ../admin-tool/editorwindow.py:207
 msgid "_Close"
 msgstr "_Zavřít"
 
-#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:181
 msgid "Close the current window"
 msgstr "Zavřít aktuální okno"
 
-#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:182
 msgid "_Edit"
 msgstr "_Upravit"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "_Delete"
 msgstr "_Odstranit"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "Delete item"
 msgstr "Odstranit položku"
 
-#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:210 ../admin-tool/sessionwindow.py:185
 msgid "_Help"
 msgstr "_Nápověda"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
 msgid "_Contents"
-msgstr ""
+msgstr "_Obsah"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
 msgid "Help Contents"
-msgstr ""
+msgstr "Obsah nápovědy"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:212 ../admin-tool/sessionwindow.py:187
 msgid "_About"
 msgstr "O _aplikaci"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:212 ../admin-tool/sessionwindow.py:187
 msgid "About Sabayon"
 msgstr "O Sabayon"
 
-#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:267
+msgid "Source"
+msgstr "Zdroj"
+
+#: ../admin-tool/editorwindow.py:300 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:304 ../lib/sources/filessource.py:86
 msgid "Files"
 msgstr "Soubory"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:304 ../lib/sources/paneldelegate.py:279
 msgid "Panel"
 msgstr "Panel"
 
@@ -172,7 +176,7 @@ msgstr "dvojice"
 msgid "Profile settings: %s"
 msgstr "Nastavení profilu: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:423
 #: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "Název"
@@ -186,13 +190,13 @@ msgid "Value"
 msgstr "Hodnota"
 
 #: ../admin-tool/groupsdialog.py:61
-#, fuzzy, python-format
+#, python-format
 msgid "Groups for profile %s"
-msgstr "Uživatelé pro profil %s"
+msgstr "Skupiny pro profil %s"
 
 #: ../admin-tool/groupsdialog.py:71
 msgid "Group"
-msgstr ""
+msgstr "Skupina"
 
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
@@ -204,7 +208,7 @@ msgstr "Používat tento profil"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:520
+#: ../admin-tool/profilesdialog.py:550
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -267,11 +271,11 @@ msgstr ""
 "Sabayon bude nyní ukončen. Vyskytly se nějaké obnovitelné chyby, ale vy nám "
 "můžete pomoci je vyladit odesláním protokolu v %s na %s"
 
-#: ../admin-tool/sabayon-apply:111
+#: ../admin-tool/sabayon-apply:136
 msgid "Please use -h for usage options"
 msgstr "Možnosti použití viz -h"
 
-#: ../admin-tool/sabayon-apply:123
+#: ../admin-tool/sabayon-apply:148
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Nebyl nalezen profil uživatele „%s“\n"
@@ -311,11 +315,11 @@ msgstr "_Podrobnosti"
 
 #: ../admin-tool/sabayon.ui.h:7
 msgid "_Groups"
-msgstr ""
+msgstr "_Skupiny"
 
 #: ../admin-tool/sabayon.ui.h:8
 msgid "_Groups:"
-msgstr ""
+msgstr "_Skupiny:"
 
 #: ../admin-tool/sabayon.ui.h:9
 msgid "_Profiles:"
@@ -339,51 +343,48 @@ msgid "Save changes to profile \"%s\" before closing?"
 msgstr "Uložit změny v profilu „%s“ před zavřením?"
 
 #: ../admin-tool/saveconfirm.py:44
-#, fuzzy
 msgid "If you don't save, all changes will be permanently lost."
-msgstr ""
-"Pokud je neuložíte, budou změny provedené během poslední hodiny navždy "
-"ztraceny."
+msgstr "Pokud je neuložíte, budou provedené změny navždy ztraceny."
 
-#: ../admin-tool/sessionwindow.py:155
+#: ../admin-tool/sessionwindow.py:157
 #, python-format
 msgid "Editing profile %s"
 msgstr "Edituje se profil %s"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Quit"
 msgstr "U_končit"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "_Changes"
 msgstr "_Změny"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "Edit changes"
 msgstr "Upravit změny"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "_Lockdown"
 msgstr "_Omezení práv"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "Edit Lockdown settings"
 msgstr "Úpravy nastavení omezení práv"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce Mandatory"
 msgstr "Vynucovat povinné"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Vynucovat povinná nastavení v upravovacím sezení"
 
-#: ../admin-tool/sessionwindow.py:306
+#: ../admin-tool/sessionwindow.py:308
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Nastavení omezení práv pro %s"
 
-#: ../admin-tool/sessionwindow.py:342
+#: ../admin-tool/sessionwindow.py:344
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
@@ -392,11 +393,11 @@ msgstr ""
 "Při používání uživatelského profilu „%s“ se vyskytla obnovitelná chyba. "
 "Můžete tuto chybu nahlásit, nebo zkusit pokračovat v editaci profilu."
 
-#: ../admin-tool/sessionwindow.py:346
+#: ../admin-tool/sessionwindow.py:348
 msgid "_Report this error"
 msgstr "_Nahlásit tuto chybu"
 
-#: ../admin-tool/sessionwindow.py:347
+#: ../admin-tool/sessionwindow.py:349
 msgid "_Continue editing"
 msgstr "_Pokračovat v editaci"
 
@@ -405,15 +406,15 @@ msgstr "_Pokračovat v editaci"
 msgid "Users for profile %s"
 msgstr "Uživatelé pro profil %s"
 
-#: ../lib/protosession.py:112
+#: ../lib/protosession.py:119
 msgid "Unable to find a free X display"
 msgstr "Nepodařilo se najít volný monitor X"
 
-#: ../lib/protosession.py:376
+#: ../lib/protosession.py:383
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr "Nepodařilo se spustit Xephyr: čas vypršel při čekání na signál USR1"
 
-#: ../lib/protosession.py:378
+#: ../lib/protosession.py:385
 msgid "Failed to start Xephyr: died during startup"
 msgstr "Nepodařilo se spustit Xephyr: zaniklo při spouštění"
 
@@ -421,7 +422,7 @@ msgstr "Nepodařilo se spustit Xephyr: zaniklo při spouštění"
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:469
+#: ../lib/protosession.py:476
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
@@ -432,44 +433,55 @@ msgstr ""
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (FATAL) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:478
+#: ../lib/protosession.py:485
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "Vyskytla se kritická chyba při používání uživatelského profilu z „%s“."
 
 #: ../lib/sources/filessource.py:69
-#, python-format
-msgid "File '%s' created"
-msgstr "Soubor „%s“ byl vytvořen"
+msgid "Directory"
+msgstr "Adresář"
 
 #: ../lib/sources/filessource.py:71
-#, python-format
-msgid "File '%s' deleted"
-msgstr "Soubor „%s“ byl odstraněn"
+msgid "Link"
+msgstr "Odkaz"
 
 #: ../lib/sources/filessource.py:73
-#, python-format
-msgid "File '%s' changed"
-msgstr "Soubor „%s“ byl změněn"
+msgid "File"
+msgstr "Soubor"
 
-#: ../lib/sources/filessource.py:97
+#: ../lib/sources/filessource.py:75
+#, python-format
+msgid "%s '%s' created"
+msgstr "%s „%s“ byl vytvořen"
+
+#: ../lib/sources/filessource.py:77
+#, python-format
+msgid "%s '%s' deleted"
+msgstr "%s „%s“ byl odstraněn"
+
+#: ../lib/sources/filessource.py:79
+#, python-format
+msgid "%s '%s' changed"
+msgstr "%s „%s“ byl změněn"
+
+#: ../lib/sources/filessource.py:105
 msgid "Applications menu"
 msgstr "Nabídka Aplikace"
 
-#: ../lib/sources/filessource.py:99
-#, fuzzy
+#: ../lib/sources/filessource.py:107
 msgid "Settings menu"
-msgstr "Nabídka Nastavení serveru"
+msgstr "Nabídka Nastavení"
 
-#: ../lib/sources/filessource.py:101
+#: ../lib/sources/filessource.py:109
 msgid "Server Settings menu"
 msgstr "Nabídka Nastavení serveru"
 
-#: ../lib/sources/filessource.py:103
+#: ../lib/sources/filessource.py:111
 msgid "System Settings menu"
 msgstr "Nabídka Nastavení systému"
 
-#: ../lib/sources/filessource.py:105
+#: ../lib/sources/filessource.py:113
 msgid "Start Here menu"
 msgstr "Nabídka Začněte zde"
 
@@ -518,86 +530,86 @@ msgstr "Klíč GConf „%s“ byl nastaven na dvojici „%s“"
 msgid "GConf key '%s' set to '%s'"
 msgstr "Klíč GConf „%s“ byl nastaven na „%s“"
 
-#: ../lib/sources/gconfsource.py:137
+#: ../lib/sources/gconfsource.py:138
 msgid "Default GConf settings"
 msgstr "Výchozí nastavení GConf"
 
-#: ../lib/sources/gconfsource.py:139
+#: ../lib/sources/gconfsource.py:140
 msgid "Mandatory GConf settings"
 msgstr "Povinná nastavení GConf"
 
-#: ../lib/sources/mozillasource.py:133
+#: ../lib/sources/mozillasource.py:135
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
 msgstr "Klíč Mozilly „%s“ byl nastaven na „%s“"
 
-#: ../lib/sources/mozillasource.py:135
+#: ../lib/sources/mozillasource.py:137
 #, python-format
 msgid "Mozilla key '%s' unset"
 msgstr "Klíč Mozilly „%s“ byl zrušen"
 
-#: ../lib/sources/mozillasource.py:137
+#: ../lib/sources/mozillasource.py:139
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Klíč Mozilly „%s“ byl změněn na „%s“"
 
-#: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
+#: ../lib/sources/mozillasource.py:169 ../lib/sources/mozillasource.py:179
 msgid "Web browser preferences"
 msgstr "Nastavení webového prohlížeče"
 
-#: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
+#: ../lib/sources/mozillasource.py:171 ../lib/sources/mozillasource.py:181
 msgid "Web browser bookmarks"
 msgstr "Záložky webového prohlížeče"
 
-#: ../lib/sources/mozillasource.py:170
+#: ../lib/sources/mozillasource.py:173
 msgid "Web browser profile list"
 msgstr "Seznam profilů webového prohlížeče"
 
-#: ../lib/sources/mozillasource.py:520
+#: ../lib/sources/mozillasource.py:550
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Soubor nenalezen (%s)"
 
-#: ../lib/sources/mozillasource.py:869
+#: ../lib/sources/mozillasource.py:899
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "duplikované jméno (%(name)s) v oddílu %(section)s"
 
-#: ../lib/sources/mozillasource.py:878
+#: ../lib/sources/mozillasource.py:908
 #, python-format
 msgid "redundant default in section %s"
 msgstr "redundantní výchozí v oddílu %s"
 
-#: ../lib/sources/mozillasource.py:895
+#: ../lib/sources/mozillasource.py:925
 msgid "no default profile"
 msgstr "žádný výchozí profil"
 
-#: ../lib/sources/mozillasource.py:950
+#: ../lib/sources/mozillasource.py:980
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Záložka Mozilly vytvořena „%s“ -> „%s“"
 
-#: ../lib/sources/mozillasource.py:952
+#: ../lib/sources/mozillasource.py:982
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Složka záložek Mozilly „%s“ byla vytvořena"
 
-#: ../lib/sources/mozillasource.py:955
+#: ../lib/sources/mozillasource.py:985
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Záložka Mozilly „%s“ byla odstraněna"
 
-#: ../lib/sources/mozillasource.py:957
+#: ../lib/sources/mozillasource.py:987
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Složka záložek Mozilly „%s“ byla odstraněna"
 
-#: ../lib/sources/mozillasource.py:960
+#: ../lib/sources/mozillasource.py:990
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Záložka Mozilly změněna „%s“ „%s“"
 
-#: ../lib/sources/mozillasource.py:962
+#: ../lib/sources/mozillasource.py:992
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Složka záložek Mozilly byla změněna „%s“"
@@ -613,109 +625,116 @@ msgid "Panel '%s' removed"
 msgstr "Panel „%s“ byl odstraněn"
 
 #: ../lib/sources/paneldelegate.py:77
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' added"
-msgstr "Panel „%s“ byl přidán"
+msgstr "Applet „%s“ byl přidán"
 
 #: ../lib/sources/paneldelegate.py:100
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' removed"
-msgstr "Panel „%s“ byl odstraněn"
+msgstr "Applet „%s“ byl odstraněn"
 
 #: ../lib/sources/paneldelegate.py:123
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' added"
-msgstr "Panel „%s“ byl přidán"
+msgstr "Objekt „%s“ byl přidán"
 
 #: ../lib/sources/paneldelegate.py:152
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' removed"
-msgstr "Panel „%s“ byl odstraněn"
+msgstr "Objekt „%s“ byl odstraněn"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:240
+#: ../lib/sources/paneldelegate.py:241
 msgid "Drawer"
 msgstr "Zásuvka"
 
-#: ../lib/sources/paneldelegate.py:242
+#: ../lib/sources/paneldelegate.py:243
 msgid "Main Menu"
 msgstr "Hlavní nabídka"
 
-#: ../lib/sources/paneldelegate.py:252
+#: ../lib/sources/paneldelegate.py:253
 #, python-format
 msgid "%s launcher"
 msgstr "%s spouštěč"
 
-#: ../lib/sources/paneldelegate.py:256
+#: ../lib/sources/paneldelegate.py:257
 msgid "Lock Screen button"
 msgstr "Tlačítko uzamčení obrazovky"
 
-#: ../lib/sources/paneldelegate.py:258
+#: ../lib/sources/paneldelegate.py:259
 msgid "Logout button"
 msgstr "Tlačítko odhlášení"
 
-#: ../lib/sources/paneldelegate.py:260
+#: ../lib/sources/paneldelegate.py:261
 msgid "Run Application button"
 msgstr "Tlačítko spouštění aplikace"
 
-#: ../lib/sources/paneldelegate.py:262
+#: ../lib/sources/paneldelegate.py:263
 msgid "Search button"
 msgstr "Tlačítko hledání"
 
-#: ../lib/sources/paneldelegate.py:264
+#: ../lib/sources/paneldelegate.py:265
 msgid "Force Quit button"
 msgstr "Tlačítko Vynutit ukončení"
 
-#: ../lib/sources/paneldelegate.py:266
+#: ../lib/sources/paneldelegate.py:267
 msgid "Connect to Server button"
 msgstr "Tlačítko Připojit k serveru"
 
-#: ../lib/sources/paneldelegate.py:268
+#: ../lib/sources/paneldelegate.py:269
 msgid "Shutdown button"
 msgstr "Tlačítko Vypnutí"
 
-#: ../lib/sources/paneldelegate.py:270
+#: ../lib/sources/paneldelegate.py:271
 msgid "Screenshot button"
 msgstr "Tlačítko snímku obrazovky"
 
-#: ../lib/sources/paneldelegate.py:273
+#: ../lib/sources/paneldelegate.py:274
 msgid "Unknown"
 msgstr "Neznámé"
 
-#: ../lib/sources/paneldelegate.py:275
+#: ../lib/sources/paneldelegate.py:276
 msgid "Menu Bar"
 msgstr "Lišta nabídky"
 
-#: ../lib/sources/paneldelegate.py:512
+#: ../lib/sources/paneldelegate.py:513
 msgid "Panel File"
 msgstr "Soubor panelu"
 
-#: ../lib/storage.py:172
+#: ../lib/storage.py:173
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "Nepodařilo se číst soubor „%s“: %s"
 
-#: ../lib/storage.py:182
+#: ../lib/storage.py:183
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "Nepodařilo se číst metadata z „%s“: %s"
 
-#: ../lib/storage.py:188
+#: ../lib/storage.py:189
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "Neplatný oddíl metadat v „%s“: %s"
 
-#: ../lib/storage.py:362
+#. change the raise to a dprint, since some files seem to disappear.
+#. raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
+#: ../lib/storage.py:387
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Nelze přidat neexistující soubor „%s“"
 
-#: ../lib/storage.py:487
+#: ../lib/storage.py:531
+#, python-format
+msgid "Couldn't rmdir '%s'"
+msgstr "Nelze provést rmdir „%s“"
+
+#: ../lib/storage.py:536
 #, python-format
 msgid "Couldn't unlink file '%s'"
-msgstr ""
+msgstr "Nelze provést unlink souboru „%s“"
 
-#: ../lib/storage.py:570
+#: ../lib/storage.py:633
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Profil je jen pro čtení %s"
@@ -723,73 +742,70 @@ msgstr "Profil je jen pro čtení %s"
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/systemdb.py:67
+#: ../lib/systemdb.py:77
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "neplatný typ pro nastavení %(setting)s v %(np)s"
 
-#: ../lib/systemdb.py:112
+#: ../lib/systemdb.py:122
 msgid "No database file provided"
-msgstr ""
+msgstr "Nebyla zadána žádná databáze"
 
-#: ../lib/systemdb.py:232
-#, fuzzy, python-format
+#: ../lib/systemdb.py:253
+#, python-format
 msgid "No LDAP search base specified for %s"
-msgstr "Není specifikován Základ vyhledávání (search base) pro %s"
+msgstr "Není specifikován Základ vyhledávání LDAP (search base) pro %s"
 
-#: ../lib/systemdb.py:235
-#, fuzzy, python-format
+#: ../lib/systemdb.py:256
+#, python-format
 msgid "No LDAP query filter specified for %s"
-msgstr "Neurčený dotaz filtru pro %s"
+msgstr "Neurčený dotaz filtru LDAP pro %s"
 
-#: ../lib/systemdb.py:238
-#, fuzzy, python-format
+#: ../lib/systemdb.py:259
+#, python-format
 msgid "No LDAP result attribute specified for %s"
-msgstr "Nespecifikovaný výsledek pro vlastnost %s"
-
-#: ../lib/systemdb.py:247
-#, fuzzy
-msgid "LDAP Scope must be one of: "
-msgstr "Rozsah musí být jedním ze sub, base a one"
+msgstr "Nespecifikovaný výsledek LDAP pro vlastnost %s"
 
 #: ../lib/systemdb.py:268
-#, fuzzy
-msgid "multiple_result must be one of: "
-msgstr "multiple_result musí být jedno z first a random"
+msgid "LDAP Scope must be one of: "
+msgstr "Rozsah LDAP musí být jedním z:"
 
-#: ../lib/systemdb.py:361
+#: ../lib/systemdb.py:288
+msgid "multiple_result must be one of: "
+msgstr "multiple_result musí být jedno z:"
+
+#: ../lib/systemdb.py:381
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Nepodařilo se otevřít %s pro zápis"
 
-#: ../lib/systemdb.py:374
+#: ../lib/systemdb.py:394
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Nepodařilo se uložit UserDatabase do %s"
 
-#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
+#: ../lib/systemdb.py:423 ../lib/systemdb.py:457
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Soubor %s není nastavením profilu"
 
-#: ../lib/systemdb.py:404
+#: ../lib/systemdb.py:430
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Nepodařilo se přidat výchozí profil %s do nastavení"
 
-#: ../lib/systemdb.py:438
+#: ../lib/systemdb.py:464
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Nepodařilo se přidat uživatele %s do nastavení profilu"
 
-#: ../lib/systemdb.py:510
+#: ../lib/systemdb.py:536
 msgid "Failed to get the user list"
 msgstr "Nepodařilo se získat seznam uživatelů"
 
-#: ../lib/systemdb.py:560
-#, fuzzy
+#: ../lib/systemdb.py:586
 msgid "Failed to get the group list"
-msgstr "Nepodařilo se získat seznam uživatelů"
+msgstr "Nepodařilo se získat seznam skupin"
 
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
@@ -824,371 +840,3 @@ msgid ""
 msgstr ""
 "Nepodařilo se najít jméno uživatele: není nenastaveno v /etc/passwd a není "
 "žádná hodnota proměnné $USER v prostředí"
-
-#~ msgid "Click to make this setting not mandatory"
-#~ msgstr "Klikněte pro vytvoření nepovinného nastavení"
-
-#~ msgid "Click to make this setting mandatory"
-#~ msgstr "Klikněte pro vytvoření povinného nastavení"
-
-#~ msgid "General"
-#~ msgstr "Obecné"
-
-#~ msgid "Epiphany Web Browser"
-#~ msgstr "Webový prohlížeč Epiphany"
-
-#~ msgid "Disable _command line"
-#~ msgstr "Zakázat _příkazový řádek"
-
-#~ msgid "Disable _printing"
-#~ msgstr "Zakázat _tisknutí"
-
-#~ msgid "Disable print _setup"
-#~ msgstr "Zakázat _nastavování tisku"
-
-#~ msgid "Disable save to _disk"
-#~ msgstr "Zakázat u_kládání na disk"
-
-#~ msgid "_Lock down the panels"
-#~ msgstr "_Uzamknout panely"
-
-#~ msgid "Disable force _quit"
-#~ msgstr "Zakázat _vynucené ukončení"
-
-#~ msgid "Disable log _out"
-#~ msgstr "Zakázat o_dhlašování"
-
-#~ msgid "Disable _quit"
-#~ msgstr "Zakázat _ukončení"
-
-#~ msgid "Disable _arbitrary URL"
-#~ msgstr "Zakázat z_adávání URL"
-
-#~ msgid "Disable _bookmark editing"
-#~ msgstr "Zakázat úpravy _záložek"
-
-#~ msgid "Disable _history"
-#~ msgstr "Zakázat _historii"
-
-#~ msgid "Disable _javascript chrome"
-#~ msgstr "Zakázat _JavaScript chrome"
-
-#~ msgid "Disable _toolbar editing"
-#~ msgstr "Zakázat úpravy _lišty nástrojů"
-
-#, fuzzy
-#~ msgid "Force _fullscreen mode"
-#~ msgstr "_Celá obrazovka"
-
-#~ msgid "Hide _menubar"
-#~ msgstr "Skrýt panel nabídk_y"
-
-#~ msgid "Disable lock _screen"
-#~ msgstr "Zakázat uzamčení _obrazovky"
-
-#, fuzzy
-#~ msgid "_Lock on activation"
-#~ msgstr "_Uzamknout panely"
-
-#, fuzzy
-#~ msgid "Allow log _out"
-#~ msgstr "Zakázat o_dhlašování"
-
-#~ msgid "Disable _unsafe protocols"
-#~ msgstr "Zakázat _nebezpečné protokoly"
-
-#, fuzzy
-#~ msgid "Disabled Applets"
-#~ msgstr "<b>Zakázané applety</b>"
-
-#~ msgid "Lockdown Editor"
-#~ msgstr "Editor omezení práv"
-
-#, fuzzy
-#~ msgid "Safe Protocols"
-#~ msgstr "<b>Bezpečné protokoly</b>"
-
-#~ msgid "Remove personal information from documents when saving them"
-#~ msgstr "Odstranit z dokumentu při uložení osobní informace"
-
-#~ msgid "Warn if macro tries to create a PDF"
-#~ msgstr "Varovat, když se makro pokusí vytvořit PDF"
-
-#~ msgid "Warn if macro tries to print a document"
-#~ msgstr "Varovat, když se makro pokusí vytisknout dokument"
-
-#~ msgid "Warn if macro tries to save a document"
-#~ msgstr "Varovat, když se makro pokusí uložit dokument"
-
-#~ msgid "Warn if macro tries to sign a document"
-#~ msgstr "Varovat, když se makro pokusí podepsat dokument"
-
-#~ msgid "Recommend password when saving a document"
-#~ msgstr "Doporučit opatření heslem při ukládání dokumentu"
-
-#~ msgid "Enable auto-save"
-#~ msgstr "Povolit automatické ukládání"
-
-#~ msgid "Printing should mark the document as modified"
-#~ msgstr "Tisk může dokument označit jako upravený"
-
-#~ msgid "Use system's file dialog"
-#~ msgstr "Použít systémový souborový dialog"
-
-#~ msgid "Create backup copy on save"
-#~ msgstr "Vytvořit záložní kopii při uložení"
-
-#~ msgid "Warn when saving non-OpenOffice.org formats"
-#~ msgstr "Varovat při ukládání jiných formátů než OpenOffice.org"
-
-#~ msgid "Use OpenGL"
-#~ msgstr "Použít OpenGL"
-
-#~ msgid "Use system font"
-#~ msgstr "Použít systémové písmo"
-
-#~ msgid "Use anti-aliasing"
-#~ msgstr "Použít anti-aliasing"
-
-#~ msgid "Disable UI customization"
-#~ msgstr "Zakázat úpravy uživatelského rozhraní"
-
-#~ msgid "Show insensitive menu items"
-#~ msgstr "Zobrazovat nečinné položky nabídky"
-
-#~ msgid "Show font preview"
-#~ msgstr "Zobrazovat náhledy písem"
-
-#~ msgid "Show font history"
-#~ msgstr "Zobrazovat historii písem"
-
-#~ msgid "Show icons in menus"
-#~ msgstr "Zobrazovat ikonky v nabídkách"
-
-#~ msgid ""
-#~ "\n"
-#~ "5\n"
-#~ "10\n"
-#~ "25\n"
-#~ "50"
-#~ msgstr ""
-#~ "\n"
-#~ "5\n"
-#~ "10\n"
-#~ "25\n"
-#~ "50"
-
-#~ msgid ""
-#~ "\n"
-#~ "Automatic\n"
-#~ "Large\n"
-#~ "Small"
-#~ msgstr ""
-#~ "\n"
-#~ "Automaticky\n"
-#~ "Velké\n"
-#~ "Malé"
-
-#~ msgid ""
-#~ "\n"
-#~ "OpenDocument (.odp)\n"
-#~ "PowerPoint 97+ (.ppt)\n"
-#~ "OpenOffice.org 1.1 (.sxi)"
-#~ msgstr ""
-#~ "\n"
-#~ "OpenDocument (.odp)\n"
-#~ "PowerPoint 97+ (.ppt)\n"
-#~ "OpenOffice 1.1 (.sxi)"
-
-#~ msgid ""
-#~ "\n"
-#~ "OpenDocument (.ods)\n"
-#~ "Excel 97+ (.xls)\n"
-#~ "OpenOffice.org 1.1 (.sxc)"
-#~ msgstr ""
-#~ "\n"
-#~ "OpenDocument (.ods)\n"
-#~ "Excel 97+ (.xls)\n"
-#~ "OpenOffice 1.1 (.sxc)"
-
-#~ msgid ""
-#~ "\n"
-#~ "OpenDocument (.odt)\n"
-#~ "Word 97+ (.doc)\n"
-#~ "OpenOffice.org 1.1 (.sxw)"
-#~ msgstr ""
-#~ "\n"
-#~ "OpenDocument (.odt)\n"
-#~ "Word 97+ (.doc)\n"
-#~ "OpenOffice 1.1 (.sxw)"
-
-#~ msgid ""
-#~ "\n"
-#~ "Very High\n"
-#~ "High\n"
-#~ "Medium\n"
-#~ "Low"
-#~ msgstr ""
-#~ "\n"
-#~ "Velmi vysoké\n"
-#~ "Vysoké\n"
-#~ "Střední\n"
-#~ "Nízké"
-
-#~ msgid "Default format for presentations:"
-#~ msgstr "Výchozí formát pro prezentace:"
-
-#~ msgid "Default format for spreadsheet:"
-#~ msgstr "Výchozí formát pro tabulkový kalkulátor:"
-
-#~ msgid "Default format for word processor:"
-#~ msgstr "Výchozí formát pro textový procesor:"
-
-#~ msgid "Default icon size"
-#~ msgstr "Výchozí velikost ikon"
-
-#~ msgid "Load / Save"
-#~ msgstr "Načíst nebo uložit"
-
-#~ msgid "Macro Security Level:"
-#~ msgstr "Úroveň zabezpečení maker"
-
-#~ msgid "Number of undo steps:"
-#~ msgstr "Počet kroků pro návrat zpět:"
-
-#~ msgid "OpenOffice.org"
-#~ msgstr "OpenOffice.org"
-
-#~ msgid "Security"
-#~ msgstr "Bezpečnost"
-
-#~ msgid "User Interface"
-#~ msgstr "Uživatelské rozhraní"
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld second will be permanently "
-#~ "lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %ld seconds will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Pokud je neuložíte, budou změny za poslední %ld sekundu navždy ztraceny."
-#~ msgstr[1] ""
-#~ "Pokud je neuložíte, budou změny za poslední %ld sekundy navždy ztraceny."
-#~ msgstr[2] ""
-#~ "Pokud je neuložíte, budou změny za posledních %ld sekund navždy ztraceny."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last minute will be permanently lost."
-#~ msgstr "Pokud je neuložíte, budou změny za poslední minutu navždy ztraceny."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last minute and %ld second will be "
-#~ "permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last minute and %ld seconds will be "
-#~ "permanently lost."
-#~ msgstr[0] ""
-#~ "Pokud je neuložíte, budou změny za poslední minutu a %ld sekundu navždy "
-#~ "ztraceny."
-#~ msgstr[1] ""
-#~ "Pokud je neuložíte, budou změny za poslední minutu a %ld sekundy navždy "
-#~ "ztraceny."
-#~ msgstr[2] ""
-#~ "Pokud je neuložíte, budou změny za poslední minutu a %ld sekund navždy "
-#~ "ztraceny."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld minute will be permanently "
-#~ "lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %ld minutes will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Pokud je neuložíte, budou změny za poslední %ld minutu navždy ztraceny."
-#~ msgstr[1] ""
-#~ "Pokud je neuložíte, budou změny za poslední %ld minuty navždy ztraceny."
-#~ msgstr[2] ""
-#~ "Pokud je neuložíte, budou změny za posledních %ld minut navždy ztraceny."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last hour and %d minute will be "
-#~ "permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last hour and %d minutes will be "
-#~ "permanently lost."
-#~ msgstr[0] ""
-#~ "Pokud je neuložíte, budou změny za poslední hodinu a %ld minutu navždy "
-#~ "ztraceny."
-#~ msgstr[1] ""
-#~ "Pokud je neuložíte, budou změny za poslední hodinu a %ld minuty navždy "
-#~ "ztraceny."
-#~ msgstr[2] ""
-#~ "Pokud je neuložíte, budou změny za poslední hodinu a %ld minut navždy "
-#~ "ztraceny."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %d hour will be permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %d hours will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Pokud je neuložíte, budou změny provedené během poslední %d hodiny navždy "
-#~ "ztraceny."
-#~ msgstr[1] ""
-#~ "Pokud je neuložíte, budou změny provedené během posledních %d hodin "
-#~ "navždy ztraceny."
-#~ msgstr[2] ""
-#~ "Pokud je neuložíte, budou změny provedené během posledních %d hodin "
-#~ "navždy ztraceny."
-
-#~ msgid "Preferences menu"
-#~ msgstr "Nabídka Nastavení"
-
-#~ msgid "Applet %s added to top panel"
-#~ msgstr "Applet %s byl přidán do horního panelu"
-
-#~ msgid "Applet %s added to bottom panel"
-#~ msgstr "Applet %s byl přidán do dolního panelu"
-
-#~ msgid "Applet %s added to left panel"
-#~ msgstr "Applet %s byl přidán do levého panelu"
-
-#~ msgid "Applet %s added to right panel"
-#~ msgstr "Applet %s byl přidán do pravého panelu"
-
-#~ msgid "Applet %s removed from top panel"
-#~ msgstr "Applet %s byl odstraněn z horního panelu"
-
-#~ msgid "Applet %s removed from bottom panel"
-#~ msgstr "Applet %s byl odstraněn z dolního panelu"
-
-#~ msgid "Applet %s removed from left panel"
-#~ msgstr "Applet %s byl odstraněn z levého panelu"
-
-#~ msgid "Applet %s removed from right panel"
-#~ msgstr "Applet %s byl odstraněn z pravého panelu"
-
-#~ msgid "%s added to top panel"
-#~ msgstr "%s byl přidán do horního panelu"
-
-#~ msgid "%s added to bottom panel"
-#~ msgstr "%s byl přidán do spodního panelu"
-
-#~ msgid "%s added to left panel"
-#~ msgstr "%s byl přidán do levého panelu"
-
-#~ msgid "%s added to right panel"
-#~ msgstr "%s byl přidán do pravého panelu"
-
-#~ msgid "%s removed from top panel"
-#~ msgstr "%s byl odstraněn z horního panelu"
-
-#~ msgid "%s removed from bottom panel"
-#~ msgstr "%s byl odstraněn ze spodního panelu"
-
-#~ msgid "%s removed from left panel"
-#~ msgstr "%s byl odstraněn z levého panelu"
-
-#~ msgid "%s removed from right panel"
-#~ msgstr "%s byl odstraněn z pravého panelu"
