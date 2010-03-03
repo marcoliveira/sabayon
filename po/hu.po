@@ -1,16 +1,16 @@
 # translation of sabayon.HEAD.hu.po to Hungarian
 # Hungarian translation of sabayon
 # This file is distributed under the same license as the sabayon package.
-# Copyright (C) 2005, 2007, 2008, 2009, Free Software Foundation, Inc.
+# Copyright (C) 2005, 2007, 2008, 2009, 2010, Free Software Foundation, Inc.
 #
 # Gabor Kelemen <kelemeng@gnome.hu>, 2005, 2007, 2008, 2009.
-# Gabor Kelemen <kelemeng at gnome dot hu>, 2009.
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-21 21:44-0600\n"
-"PO-Revision-Date: 2009-11-03 20:17+0100\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon&component=general\n"
+"POT-Creation-Date: 2010-02-03 17:52+0000\n"
+"PO-Revision-Date: 2010-03-03 17:50+0100\n"
 "Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
 "Language-Team: Hungarian <gnome at fsf dot hu>\n"
 "MIME-Version: 1.0\n"
@@ -40,7 +40,7 @@ msgstr "Mellőzendő"
 msgid "Lock"
 msgstr "Zárolás"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:274
 msgid "Description"
 msgstr "Leírás"
 
@@ -49,15 +49,15 @@ msgstr "Leírás"
 msgid "Profile %s"
 msgstr "%s profil"
 
-#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:179
 msgid "_Profile"
 msgstr "_Profil"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:180
 msgid "_Save"
 msgstr "M_entés"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:180
 msgid "Save profile"
 msgstr "Profil mentése"
 
@@ -65,11 +65,11 @@ msgstr "Profil mentése"
 msgid "_Close"
 msgstr "_Bezárás"
 
-#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:181
 msgid "Close the current window"
 msgstr "A jelenlegi ablak bezárása"
 
-#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:182
 msgid "_Edit"
 msgstr "S_zerkesztés"
 
@@ -81,35 +81,39 @@ msgstr "Tö_rlés"
 msgid "Delete item"
 msgstr "Elem törlése"
 
-#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:185
 msgid "_Help"
 msgstr "_Súgó"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:186
 msgid "_Contents"
-msgstr ""
+msgstr "_Tartalom"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:186
 msgid "Help Contents"
-msgstr ""
+msgstr "Súgó tartalomjegyzéke"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:187
 msgid "_About"
 msgstr "_Névjegy"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:187
 msgid "About Sabayon"
 msgstr "A Sabayon névjegye"
 
-#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:278
+msgid "Source"
+msgstr "Forrás"
+
+#: ../admin-tool/editorwindow.py:311 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:315 ../lib/sources/filessource.py:86
 msgid "Files"
 msgstr "Fájlok"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:315 ../lib/sources/paneldelegate.py:278
 msgid "Panel"
 msgstr "Panel"
 
@@ -159,7 +163,7 @@ msgstr "pár"
 msgid "Profile settings: %s"
 msgstr "Profilbeállítások: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:423
 #: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "Név"
@@ -191,14 +195,13 @@ msgstr "Ezen profil használata"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:520
+#: ../admin-tool/profilesdialog.py:550
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:77
-msgid ""
-"Your account does not have permissions to run the Desktop User Profiles tool"
+msgid "Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr ""
 "A felhasználói fiókjának nincs jogosultsága futtatni az Asztalfelhasználói "
 "profilok eszközt"
@@ -329,50 +332,48 @@ msgid "Save changes to profile \"%s\" before closing?"
 msgstr "Elmenti „%s” profil változásait mielőtt kilép?"
 
 #: ../admin-tool/saveconfirm.py:44
-#, fuzzy
 msgid "If you don't save, all changes will be permanently lost."
-msgstr ""
-"Ha nem menti, akkor az elmúlt órában történt változások véglegesen elvesznek."
+msgstr "Ha nem menti, akkor minden változtatás véglegesen elvész."
 
-#: ../admin-tool/sessionwindow.py:155
+#: ../admin-tool/sessionwindow.py:157
 #, python-format
 msgid "Editing profile %s"
 msgstr "%s profil szerkesztése"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Quit"
 msgstr "_Kilépés"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "_Changes"
 msgstr "_Változtatások"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "Edit changes"
 msgstr "Változtatások szerkesztése"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "_Lockdown"
 msgstr "_Zárolás"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "Edit Lockdown settings"
 msgstr "Zárolási beállítások szerkesztése"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce Mandatory"
 msgstr "Kötelezőek kikényszerítése"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Kötelező beállítások kikényszerítése a szerkesztő munkamenetben"
 
-#: ../admin-tool/sessionwindow.py:306
+#: ../admin-tool/sessionwindow.py:308
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "%s zárolási beállításai"
 
-#: ../admin-tool/sessionwindow.py:342
+#: ../admin-tool/sessionwindow.py:344
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
@@ -382,11 +383,11 @@ msgstr ""
 "Jelentheti ezt a hibát, vagy megpróbálhatja folytatni a felhasználói profil "
 "szerkesztését."
 
-#: ../admin-tool/sessionwindow.py:346
+#: ../admin-tool/sessionwindow.py:348
 msgid "_Report this error"
 msgstr "_Hiba jelentése"
 
-#: ../admin-tool/sessionwindow.py:347
+#: ../admin-tool/sessionwindow.py:349
 msgid "_Continue editing"
 msgstr "S_zerkesztés folytatása"
 
@@ -415,8 +416,7 @@ msgstr "Nem sikerült elindítani az Xephyrt: indítás közben összeomlott"
 #. stderr_str)
 #: ../lib/protosession.py:469
 #, python-format
-msgid ""
-"There was a recoverable error while applying the user profile from file '%s'."
+msgid "There was a recoverable error while applying the user profile from file '%s'."
 msgstr ""
 "Helyreállítható hiba történt a(z) „%s” fájlból származó felhasználói profil "
 "alkalmazásakor."
@@ -431,38 +431,53 @@ msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "Végzetes hiba történt a(z) „%s” felhasználói profil alkalmazásakor."
 
 #: ../lib/sources/filessource.py:69
-#, python-format
-msgid "File '%s' created"
-msgstr "„%s” fájl létrehozva"
+msgid "Directory"
+msgstr "könyvtár"
 
 #: ../lib/sources/filessource.py:71
-#, python-format
-msgid "File '%s' deleted"
-msgstr "„%s” fájl törölve"
+msgid "Link"
+msgstr "link"
 
 #: ../lib/sources/filessource.py:73
-#, python-format
-msgid "File '%s' changed"
-msgstr "„%s” fájl megváltoztatva"
+#| msgid "Files"
+msgid "File"
+msgstr "fájl"
 
-#: ../lib/sources/filessource.py:97
+#: ../lib/sources/filessource.py:75
+#, python-format
+#| msgid "File '%s' created"
+msgid "%s '%s' created"
+msgstr "A %s („%s”) létrehozva"
+
+#: ../lib/sources/filessource.py:77
+#, python-format
+#| msgid "File '%s' deleted"
+msgid "%s '%s' deleted"
+msgstr "A %s („%s”) törölve"
+
+#: ../lib/sources/filessource.py:79
+#, python-format
+#| msgid "File '%s' changed"
+msgid "%s '%s' changed"
+msgstr "A %s („%s”) megváltoztatva"
+
+#: ../lib/sources/filessource.py:104
 msgid "Applications menu"
 msgstr "Alkalmazások menü"
 
-#: ../lib/sources/filessource.py:99
-#, fuzzy
+#: ../lib/sources/filessource.py:106
 msgid "Settings menu"
-msgstr "Kiszolgálóbeállítások menü"
+msgstr "Beállítások menü"
 
-#: ../lib/sources/filessource.py:101
+#: ../lib/sources/filessource.py:108
 msgid "Server Settings menu"
 msgstr "Kiszolgálóbeállítások menü"
 
-#: ../lib/sources/filessource.py:103
+#: ../lib/sources/filessource.py:110
 msgid "System Settings menu"
 msgstr "Rendszerbeállítások menü"
 
-#: ../lib/sources/filessource.py:105
+#: ../lib/sources/filessource.py:112
 msgid "Start Here menu"
 msgstr "Kezdje itt menü"
 
@@ -606,24 +621,24 @@ msgid "Panel '%s' removed"
 msgstr "„%s” panel eltávolítva"
 
 #: ../lib/sources/paneldelegate.py:77
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' added"
-msgstr "„%s” panel hozzáadva"
+msgstr "„%s” kisalkalmazás hozzáadva"
 
 #: ../lib/sources/paneldelegate.py:100
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' removed"
-msgstr "„%s” panel eltávolítva"
+msgstr "„%s” kisalkalmazás eltávolítva"
 
 #: ../lib/sources/paneldelegate.py:123
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' added"
-msgstr "„%s” panel hozzáadva"
+msgstr "„%s” objektum hozzáadva"
 
 #: ../lib/sources/paneldelegate.py:152
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' removed"
-msgstr "„%s” panel eltávolítva"
+msgstr "„%s” objektum eltávolítva"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
 #: ../lib/sources/paneldelegate.py:240
@@ -683,32 +698,40 @@ msgstr "Menüsáv"
 msgid "Panel File"
 msgstr "Panelfájl"
 
-#: ../lib/storage.py:172
+#: ../lib/storage.py:173
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "Nem sikerült a(z) „%s” fájlt olvasni: %s"
 
-#: ../lib/storage.py:182
+#: ../lib/storage.py:183
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "Nem sikerült metaadatokat olvasni a következőből: „%s”: %s"
 
-#: ../lib/storage.py:188
+#: ../lib/storage.py:189
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "Érvénytelen metaadat-szakasz a következőben: „%s”: %s"
 
-#: ../lib/storage.py:362
+#. change the raise to a dprint, since some files seem to disappear.
+#. raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
+#: ../lib/storage.py:383
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Nem lehet hozzáadni „%s” nem létező fájlt"
 
-#: ../lib/storage.py:487
+#: ../lib/storage.py:527
+#, python-format
+#| msgid "Couldn't unlink file '%s'"
+msgid "Couldn't rmdir '%s'"
+msgstr "A könyvtár („%s”) nem törölhető"
+
+#: ../lib/storage.py:532
 #, python-format
 msgid "Couldn't unlink file '%s'"
 msgstr "A fájl („%s”) nem törölhető"
 
-#: ../lib/storage.py:570
+#: ../lib/storage.py:622
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "A profil csak olvasható %s"
@@ -716,72 +739,70 @@ msgstr "A profil csak olvasható %s"
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/systemdb.py:67
+#: ../lib/systemdb.py:77
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr ""
 "A(z) %(setting)s beállításhoz megadott típus érvénytelen a következőben: %"
 "(np)s"
 
-#: ../lib/systemdb.py:112
+#: ../lib/systemdb.py:122
 msgid "No database file provided"
 msgstr "Nincs megadva adatbázisfájl"
 
-#: ../lib/systemdb.py:232
-#, fuzzy, python-format
+#: ../lib/systemdb.py:253
+#, python-format
 msgid "No LDAP search base specified for %s"
-msgstr "Nincs keresési alap megadva a következőhöz: %s"
+msgstr "Nincs LDAP keresési alap megadva a következőhöz: %s"
 
-#: ../lib/systemdb.py:235
-#, fuzzy, python-format
+#: ../lib/systemdb.py:256
+#, python-format
 msgid "No LDAP query filter specified for %s"
-msgstr "Nincs lekérdezési szűrő megadva a következőhöz: %s"
+msgstr "Nincs LDAP lekérdezési szűrő megadva a következőhöz: %s"
 
-#: ../lib/systemdb.py:238
-#, fuzzy, python-format
+#: ../lib/systemdb.py:259
+#, python-format
 msgid "No LDAP result attribute specified for %s"
-msgstr "Nincs eredményattribútum megadva a következőhöz: %s"
-
-#: ../lib/systemdb.py:247
-#, fuzzy
-msgid "LDAP Scope must be one of: "
-msgstr "A hatókörnek az al, alap, és egy egyikének kell lennie"
+msgstr "Nincs LDAP eredményattribútum megadva a következőhöz: %s"
 
 #: ../lib/systemdb.py:268
-#, fuzzy
-msgid "multiple_result must be one of: "
-msgstr "a multiple_result az első és a véletlen egyike kell legyen"
+msgid "LDAP Scope must be one of: "
+msgstr "Az LDAP hatókörnek a következők egyikének kell lennie: "
 
-#: ../lib/systemdb.py:361
+#: ../lib/systemdb.py:288
+msgid "multiple_result must be one of: "
+msgstr "a multiple_result a következők egyike kell legyen: "
+
+#: ../lib/systemdb.py:381
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Nem sikerült megnyitni olvasásra a következőt: %s"
 
-#: ../lib/systemdb.py:374
+#: ../lib/systemdb.py:394
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Nem sikerült menteni a felhasználó-adatbázist ide: %s"
 
-#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
+#: ../lib/systemdb.py:423 ../lib/systemdb.py:457
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "%s fájl nem egy profilbeállítás"
 
-#: ../lib/systemdb.py:404
+#: ../lib/systemdb.py:430
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "%s alapértelmezett profil hozzáadása a beállításhoz sikertelen"
 
-#: ../lib/systemdb.py:438
+#: ../lib/systemdb.py:464
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "%s felhasználó hozzáadása a profilbeállításhoz sikertelen"
 
-#: ../lib/systemdb.py:510
+#: ../lib/systemdb.py:536
 msgid "Failed to get the user list"
 msgstr "A felhasználók listájának lekérése sikertelen"
 
-#: ../lib/systemdb.py:560
+#: ../lib/systemdb.py:586
 msgid "Failed to get the group list"
 msgstr "A csoportlista lekérése sikertelen"
 
@@ -819,364 +840,3 @@ msgstr ""
 "Nem található a felhasználónév: nincs beállítva az /etc/passwd-ben és a "
 "$USER környezeti változónak nincs értéke"
 
-#~ msgid "Click to make this setting not mandatory"
-#~ msgstr "Ide kattintva ez a beállítás nem lesz kötelező"
-
-#~ msgid "Click to make this setting mandatory"
-#~ msgstr "Ide kattintva ez a beállítás kötelező lesz"
-
-#~ msgid "General"
-#~ msgstr "Általános"
-
-#~ msgid "Epiphany Web Browser"
-#~ msgstr "Epiphany webböngésző"
-
-#~ msgid "Disable _command line"
-#~ msgstr "_Parancssor tiltása"
-
-#~ msgid "Disable _printing"
-#~ msgstr "_Nyomtatás letiltása"
-
-#~ msgid "Disable print _setup"
-#~ msgstr "Ny_omtatás beállításának letiltása"
-
-#~ msgid "Disable save to _disk"
-#~ msgstr "_Lemezre mentés letiltása"
-
-#~ msgid "_Lock down the panels"
-#~ msgstr "Panelek _zárolása"
-
-#~ msgid "Disable force _quit"
-#~ msgstr "_Erőltetett kilépés tiltása"
-
-#~ msgid "Disable log _out"
-#~ msgstr "Kijele_ntkezés letiltása"
-
-#~ msgid "Disable _quit"
-#~ msgstr "_Kilépés letiltása"
-
-#~ msgid "Disable _arbitrary URL"
-#~ msgstr "Tetszőleges _URL-ek kikapcsolása"
-
-#~ msgid "Disable _bookmark editing"
-#~ msgstr "Köny_vjelzők szerkesztésének letiltása"
-
-#~ msgid "Disable _history"
-#~ msgstr "_Előzmények letiltása"
-
-#~ msgid "Disable _javascript chrome"
-#~ msgstr "_Javascript chrome letiltása"
-
-#~ msgid "Disable _toolbar editing"
-#~ msgstr "Eszköztár szerkesztésé_nek letiltása"
-
-#, fuzzy
-#~ msgid "Force _fullscreen mode"
-#~ msgstr "_Teljes képernyő"
-
-#~ msgid "Hide _menubar"
-#~ msgstr "_Menüsor elrejtése"
-
-#~ msgid "Disable lock _screen"
-#~ msgstr "_Képernyő zárolásának tiltása"
-
-#, fuzzy
-#~ msgid "_Lock on activation"
-#~ msgstr "Panelek _zárolása"
-
-#, fuzzy
-#~ msgid "Allow log _out"
-#~ msgstr "Kijele_ntkezés letiltása"
-
-#~ msgid "Disable _unsafe protocols"
-#~ msgstr "Nem _biztonságos protokollok kikapcsolása"
-
-#, fuzzy
-#~ msgid "Disabled Applets"
-#~ msgstr "<b>Letiltott kisalkalmazások</b>"
-
-#~ msgid "Lockdown Editor"
-#~ msgstr "Zárolásszerkesztő"
-
-#, fuzzy
-#~ msgid "Safe Protocols"
-#~ msgstr "<b>Biztonságos protokollok</b>"
-
-#~ msgid "Remove personal information from documents when saving them"
-#~ msgstr ""
-#~ "Személyes információk eltávolítása a dokumentumokból azok mentésekor"
-
-#~ msgid "Warn if macro tries to create a PDF"
-#~ msgstr "Figyelmeztetés, ha egy makró PDF-et próbál létrehozni"
-
-#~ msgid "Warn if macro tries to print a document"
-#~ msgstr "Figyelmeztetés, ha egy makró dokumentumot próbál nyomtatni"
-
-#~ msgid "Warn if macro tries to save a document"
-#~ msgstr "Figyelmeztetés, ha egy makró dokumentumot próbál menteni"
-
-#~ msgid "Warn if macro tries to sign a document"
-#~ msgstr "Figyelmeztetés, ha egy makró dokumentumot próbál aláírni"
-
-#~ msgid "Recommend password when saving a document"
-#~ msgstr "Jelszó kérése dokumentum mentésekor"
-
-#~ msgid "Enable auto-save"
-#~ msgstr "Automatikus mentés engedélyezése"
-
-#~ msgid "Printing should mark the document as modified"
-#~ msgstr "A nyomtatás módosítottként jelöli a dokumentumot"
-
-#~ msgid "Use system's file dialog"
-#~ msgstr "A rendszer fájl párbeszédablakának használata"
-
-#~ msgid "Create backup copy on save"
-#~ msgstr "Biztonsági másolat létrehozása mentéskor"
-
-#~ msgid "Warn when saving non-OpenOffice.org formats"
-#~ msgstr "Figyelmeztetés nem OpenOffice.org formátumokba mentéskor"
-
-#~ msgid "Use OpenGL"
-#~ msgstr "OpenGL használata"
-
-#~ msgid "Use system font"
-#~ msgstr "Rendszer betűkészletének használata"
-
-#~ msgid "Use anti-aliasing"
-#~ msgstr "Élsimítás használata"
-
-#~ msgid "Disable UI customization"
-#~ msgstr "A felület személyre szabásának tiltása"
-
-#~ msgid "Show insensitive menu items"
-#~ msgstr "Nem érzékeny menüelemek megjelenítése"
-
-#~ msgid "Show font preview"
-#~ msgstr "Betűkészlet előnézetének megjelenítése"
-
-#~ msgid "Show font history"
-#~ msgstr "Betűkészlet előzményeinek megjelenítése"
-
-#~ msgid "Show icons in menus"
-#~ msgstr "Ikonok megjelenítése a menükben"
-
-#~ msgid ""
-#~ "\n"
-#~ "5\n"
-#~ "10\n"
-#~ "25\n"
-#~ "50"
-#~ msgstr ""
-#~ "\n"
-#~ "5\n"
-#~ "10\n"
-#~ "25\n"
-#~ "50"
-
-#~ msgid ""
-#~ "\n"
-#~ "Automatic\n"
-#~ "Large\n"
-#~ "Small"
-#~ msgstr ""
-#~ "\n"
-#~ "Automatikus\n"
-#~ "Nagy\n"
-#~ "Kicsi"
-
-#~ msgid ""
-#~ "\n"
-#~ "OpenDocument (.odp)\n"
-#~ "PowerPoint 97+ (.ppt)\n"
-#~ "OpenOffice.org 1.1 (.sxi)"
-#~ msgstr ""
-#~ "\n"
-#~ "OpenDocument (.odp)\n"
-#~ "PowerPoint 97+ (.ppt)\n"
-#~ "OpenOffice.org 1.1 (.sxi)"
-
-#~ msgid ""
-#~ "\n"
-#~ "OpenDocument (.ods)\n"
-#~ "Excel 97+ (.xls)\n"
-#~ "OpenOffice.org 1.1 (.sxc)"
-#~ msgstr ""
-#~ "\n"
-#~ "OpenDocument (.ods)\n"
-#~ "Excel 97+ (.xls)\n"
-#~ "OpenOffice.org 1.1 (.sxc)"
-
-#~ msgid ""
-#~ "\n"
-#~ "OpenDocument (.odt)\n"
-#~ "Word 97+ (.doc)\n"
-#~ "OpenOffice.org 1.1 (.sxw)"
-#~ msgstr ""
-#~ "\n"
-#~ "OpenDocument (.odt)\n"
-#~ "Word 97+ (.doc)\n"
-#~ "OpenOffice.org 1.1 (.sxw)"
-
-#~ msgid ""
-#~ "\n"
-#~ "Very High\n"
-#~ "High\n"
-#~ "Medium\n"
-#~ "Low"
-#~ msgstr ""
-#~ "\n"
-#~ "Nagyon nagy\n"
-#~ "Nagy\n"
-#~ "Közepes\n"
-#~ "Alacsony"
-
-#~ msgid "Default format for presentations:"
-#~ msgstr "Prezentációk alapértelmezett formátuma:"
-
-#~ msgid "Default format for spreadsheet:"
-#~ msgstr "Táblázatok alapértelmezett formátuma:"
-
-#~ msgid "Default format for word processor:"
-#~ msgstr "Szövegszerkesztő alapértelmezett formátuma:"
-
-#~ msgid "Default icon size"
-#~ msgstr "Alapértelmezett ikonméret"
-
-#~ msgid "Load / Save"
-#~ msgstr "Betöltés/mentés"
-
-#~ msgid "Macro Security Level:"
-#~ msgstr "Makró biztonsági szintje:"
-
-#~ msgid "Number of undo steps:"
-#~ msgstr "Visszavonási lépések száma:"
-
-#~ msgid "OpenOffice.org"
-#~ msgstr "OpenOffice.org"
-
-#~ msgid "Security"
-#~ msgstr "Biztonság"
-
-#~ msgid "User Interface"
-#~ msgstr "Felhasználói felület"
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld second will be permanently "
-#~ "lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %ld seconds will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Ha nem menti, akkor az elmúlt %ld másodpercben történt változások "
-#~ "véglegesen elvesznek."
-#~ msgstr[1] ""
-#~ "Ha nem menti, akkor az elmúlt %ld másodpercben történt változások "
-#~ "véglegesen elvesznek."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last minute will be permanently lost."
-#~ msgstr ""
-#~ "Ha nem menti, akkor az elmúlt percben történt változások véglegesen "
-#~ "elvesznek."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last minute and %ld second will be "
-#~ "permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last minute and %ld seconds will be "
-#~ "permanently lost."
-#~ msgstr[0] ""
-#~ "Ha nem menti, akkor az elmúlt egy percben és %ld másodpercben történt "
-#~ "változások véglegesen elvesznek."
-#~ msgstr[1] ""
-#~ "Ha nem menti, akkor az elmúlt egy percben és %ld másodpercben történt "
-#~ "változások véglegesen elvesznek."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld minute will be permanently "
-#~ "lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %ld minutes will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Ha nem menti, akkor az elmúlt %ld percben történt változások véglegesen "
-#~ "elvesznek."
-#~ msgstr[1] ""
-#~ "Ha nem menti, akkor az elmúlt %ld percben történt változások véglegesen "
-#~ "elvesznek."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last hour and %d minute will be "
-#~ "permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last hour and %d minutes will be "
-#~ "permanently lost."
-#~ msgstr[0] ""
-#~ "Ha nem menti, akkor az elmúlt egy órában és %d percben történt változások "
-#~ "véglegesen elvesznek."
-#~ msgstr[1] ""
-#~ "Ha nem menti, akkor az elmúlt egy órában és %d percben történt változások "
-#~ "véglegesen elvesznek."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %d hour will be permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %d hours will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Ha nem menti, akkor az elmúlt %d órában történt változások véglegesen "
-#~ "elvesznek."
-#~ msgstr[1] ""
-#~ "Ha nem menti, akkor az elmúlt %d órában történt változások véglegesen "
-#~ "elvesznek."
-
-#~ msgid "Preferences menu"
-#~ msgstr "Tulajdonságok menü"
-
-#~ msgid "Applet %s added to top panel"
-#~ msgstr "A(z) %s kisalkalmazás hozzáadva a felső panelhez"
-
-#~ msgid "Applet %s added to bottom panel"
-#~ msgstr "A(z) %s kisalkalmazás hozzáadva az alsó panelhez"
-
-#~ msgid "Applet %s added to left panel"
-#~ msgstr "A(z) %s kisalkalmazás hozzáadva a bal panelhez"
-
-#~ msgid "Applet %s added to right panel"
-#~ msgstr "A(z) %s kisalkalmazás hozzáadva a jobb panelhez"
-
-#~ msgid "Applet %s removed from top panel"
-#~ msgstr "A(z) %s kisalkalmazás eltávolítva a felső panelról"
-
-#~ msgid "Applet %s removed from bottom panel"
-#~ msgstr "A(z) %s kisalkalmazás eltávolítva az alsó panelról"
-
-#~ msgid "Applet %s removed from left panel"
-#~ msgstr "A(z) %s kisalkalmazás eltávolítva a bal panelról"
-
-#~ msgid "Applet %s removed from right panel"
-#~ msgstr "A(z) %s kisalkalmazás eltávolítva a jobb panelról"
-
-#~ msgid "%s added to top panel"
-#~ msgstr "%s hozzáadva a felső panelhez"
-
-#~ msgid "%s added to bottom panel"
-#~ msgstr "%s hozzáadva az alsó panelhez"
-
-#~ msgid "%s added to left panel"
-#~ msgstr "%s hozzáadva a bal panelhez"
-
-#~ msgid "%s added to right panel"
-#~ msgstr "%s hozzáadva a jobb panelhez"
-
-#~ msgid "%s removed from top panel"
-#~ msgstr "%s eltávolítva a felső panelról"
-
-#~ msgid "%s removed from bottom panel"
-#~ msgstr "%s eltávolítva az alsó panelról"
-
-#~ msgid "%s removed from left panel"
-#~ msgstr "%s eltávolítva a bal panelról"
-
-#~ msgid "%s removed from right panel"
-#~ msgstr "%s eltávolítva a jobb panelról"
