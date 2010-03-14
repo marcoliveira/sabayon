@@ -5,16 +5,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-21 21:44-0600\n"
-"PO-Revision-Date: 2009-09-10 21:33+0300\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon&component=general\n"
+"POT-Creation-Date: 2010-03-03 23:40+0000\n"
+"PO-Revision-Date: 2010-03-14 19:31+0200\n"
 "Last-Translator: Adi Roiban <adi@roiban.ro>\n"
 "Language-Team: Gnome Romanian Team <gnomero-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n == 1 ? 0: (((n % 100 > 19) || ((n % 100 "
-"== 0) && (n != 0))) ? 2: 1));\n"
+"Plural-Forms: nplurals=3; plural=(n == 1 ? 0: (((n % 100 > 19) || ((n % 100 == 0) && (n != 0))) ? 2: 1));\n"
 
 #: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
@@ -43,85 +42,104 @@ msgstr "Ignoră"
 msgid "Lock"
 msgstr "Blochează"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
+#: ../admin-tool/changeswindow.py:127
+#: ../admin-tool/editorwindow.py:263
 msgid "Description"
 msgstr "Descriere"
 
-#: ../admin-tool/editorwindow.py:97
+#: ../admin-tool/editorwindow.py:100
 #, python-format
 msgid "Profile %s"
 msgstr "Profil %s"
 
-#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:205
+#: ../admin-tool/sessionwindow.py:179
 msgid "_Profile"
 msgstr "_Profil"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/sessionwindow.py:180
 msgid "_Save"
-msgstr "_Salvare"
+msgstr "_Salvează"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/sessionwindow.py:180
 msgid "Save profile"
 msgstr "Salvează profilul"
 
-#: ../admin-tool/editorwindow.py:204
+#: ../admin-tool/editorwindow.py:207
 msgid "_Close"
 msgstr "În_chide"
 
-#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:207
+#: ../admin-tool/sessionwindow.py:181
 msgid "Close the current window"
 msgstr "Închide fereastra curentă"
 
-#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:208
+#: ../admin-tool/sessionwindow.py:182
 msgid "_Edit"
 msgstr "_Editare"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "_Delete"
 msgstr "Șt_ergere"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "Delete item"
-msgstr "Șterge obiectul"
+msgstr "Șterge elementul"
 
-#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:210
+#: ../admin-tool/sessionwindow.py:185
 msgid "_Help"
 msgstr "_Ajutor"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:211
+#: ../admin-tool/sessionwindow.py:186
 msgid "_Contents"
-msgstr ""
+msgstr "_Cuprins"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:211
+#: ../admin-tool/sessionwindow.py:186
 msgid "Help Contents"
-msgstr ""
+msgstr "Cuprins ajutor"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:212
+#: ../admin-tool/sessionwindow.py:187
 msgid "_About"
 msgstr "_Despre"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:212
+#: ../admin-tool/sessionwindow.py:187
 msgid "About Sabayon"
 msgstr "Despre Sabayon"
 
-#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:267
+msgid "Source"
+msgstr "Sursă"
+
+#: ../admin-tool/editorwindow.py:300
+#: ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:304
+#: ../lib/sources/filessource.py:86
 msgid "Files"
 msgstr "Fișiere"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:304
+#: ../lib/sources/paneldelegate.py:279
 msgid "Panel"
 msgstr "Panou"
 
 #: ../admin-tool/fileviewer.py:27
 #, python-format
 msgid "Profile file: %s"
-msgstr "Fișierul profilului: %s"
+msgstr "Fișier profil: %s"
 
-#: ../admin-tool/gconfviewer.py:57 ../admin-tool/gconfviewer.py:76
+#: ../admin-tool/gconfviewer.py:57
+#: ../admin-tool/gconfviewer.py:76
 msgid "<no type>"
 msgstr "<fără tip>"
 
@@ -162,7 +180,8 @@ msgstr "pereche"
 msgid "Profile settings: %s"
 msgstr "Opțiunile profilului: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/gconfviewer.py:110
+#: ../admin-tool/profilesdialog.py:423
 #: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "Nume"
@@ -176,15 +195,16 @@ msgid "Value"
 msgstr "Valoare"
 
 #: ../admin-tool/groupsdialog.py:61
-#, fuzzy, python-format
+#, python-format
 msgid "Groups for profile %s"
-msgstr "Utilizatori pentru profilul %s"
+msgstr "Grupuri pentru profilul %s"
 
 #: ../admin-tool/groupsdialog.py:71
 msgid "Group"
-msgstr ""
+msgstr "Grup"
 
-#: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
+#: ../admin-tool/groupsdialog.py:81
+#: ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
 msgstr "Utilizează acest profil"
 
@@ -194,37 +214,26 @@ msgstr "Utilizează acest profil"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:520
+#: ../admin-tool/profilesdialog.py:550
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:77
-msgid ""
-"Your account does not have permissions to run the Desktop User Profiles tool"
-msgstr ""
-"Contul curent nu are permisiunea de a utiliza editorul profilurilor "
-"utilizatorilor"
+msgid "Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr "Contul curent nu are permisiunea de a utiliza editorul profilurilor utilizatorilor"
 
 #: ../admin-tool/sabayon:78
-msgid ""
-"Administrator level permissions are needed to run this program because it "
-"can modify system files."
-msgstr ""
-"Pentru utilizarea acestui program sunt necesare drepturi de administrator "
-"deoarece acesta poate modifica fișierele sistem."
+msgid "Administrator level permissions are needed to run this program because it can modify system files."
+msgstr "Pentru utilizarea acestui program sunt necesare drepturi de administrator deoarece acesta poate modifica fișierele sistem."
 
 #: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
 msgstr "Editorul profilurilor utilizatorilor este deja pornit"
 
 #: ../admin-tool/sabayon:84
-msgid ""
-"You may not use Desktop User Profiles tool from within a profile editing "
-"session"
-msgstr ""
-"Nu puteți utiliza editorul profilurilor utilizatorilor dintr-o sesiune de "
-"editare de profiluri"
+msgid "You may not use Desktop User Profiles tool from within a profile editing session"
+msgstr "Nu puteți utiliza editorul profilurilor utilizatorilor dintr-o sesiune de editare de profiluri"
 
 #: ../admin-tool/sabayon:91
 #, c-format
@@ -233,38 +242,24 @@ msgstr "Contul de utilizator „%s” nu a fost găsit"
 
 #: ../admin-tool/sabayon:92
 #, c-format
-msgid ""
-"Sabayon requires a special user account '%s' to be present on this computer. "
-"Try again after creating the account (using, for example, the 'adduser' "
-"command)"
-msgstr ""
-"Sabayon necesită un cont special de utilizator „%s” pe acest calculator. "
-"Încercați din nou după crearea contului (utilizând de exemplu comanda "
-"„adduser”)"
+msgid "Sabayon requires a special user account '%s' to be present on this computer. Try again after creating the account (using, for example, the 'adduser' command)"
+msgstr "Sabayon necesită un cont special de utilizator „%s” pe acest calculator. Încercați din nou după crearea contului (utilizând de exemplu comanda „adduser”)"
 
 #: ../admin-tool/sabayon:131
 #, c-format
-msgid ""
-"A fatal error has occurred.  You can help us fix the problem by sending the "
-"log in %s to %s"
-msgstr ""
-"S-a produs o eroare fatală. Ne puteți ajuta pentru rezolvarea problemei "
-"trimițând înregistrarea din %s la %s"
+msgid "A fatal error has occurred.  You can help us fix the problem by sending the log in %s to %s"
+msgstr "S-a produs o eroare fatală. Ne puteți ajuta pentru rezolvarea problemei trimițând înregistrarea din %s la %s"
 
 #: ../admin-tool/sabayon:145
 #, c-format
-msgid ""
-"Sabayon will now exit.  There were some recoverable errors, and you can help "
-"us debug the problem by sending the log in %s to %s"
-msgstr ""
-"Sabayon se va închide. Există unele erori recuperabile și ne puteți ajuta la "
-"rezolvarea problemei trimițând înregistrarea din %s la %s"
+msgid "Sabayon will now exit.  There were some recoverable errors, and you can help us debug the problem by sending the log in %s to %s"
+msgstr "Sabayon se va închide. Există unele erori recuperabile și ne puteți ajuta la rezolvarea problemei trimițând înregistrarea din %s la %s"
 
-#: ../admin-tool/sabayon-apply:111
+#: ../admin-tool/sabayon-apply:136
 msgid "Please use -h for usage options"
 msgstr "Adăugați -h pentru a consulta opțiunile de utilizare"
 
-#: ../admin-tool/sabayon-apply:123
+#: ../admin-tool/sabayon-apply:148
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Nu s-a găsit un profil pentru utilizatorul „%s”\n"
@@ -278,7 +273,8 @@ msgstr "Utilizare: %s <nume-profil> <cale-profil> <număr-ecran>\n"
 msgid "Establish and Edit Profiles for Users"
 msgstr "Creare și editare de profiluri de utilizatori"
 
-#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.ui.h:4
+#: ../admin-tool/sabayon.desktop.in.in.h:2
+#: ../admin-tool/sabayon.ui.h:4
 msgid "User Profile Editor"
 msgstr "Editor de profiluri de utilizatori"
 
@@ -304,11 +300,11 @@ msgstr "Deta_lii"
 
 #: ../admin-tool/sabayon.ui.h:7
 msgid "_Groups"
-msgstr ""
+msgstr "_Grupuri"
 
 #: ../admin-tool/sabayon.ui.h:8
 msgid "_Groups:"
-msgstr ""
+msgstr "_Grupuri:"
 
 #: ../admin-tool/sabayon.ui.h:9
 msgid "_Profiles:"
@@ -332,64 +328,57 @@ msgid "Save changes to profile \"%s\" before closing?"
 msgstr "Salvați modificările în profilul „%s” înainte de închidere?"
 
 #: ../admin-tool/saveconfirm.py:44
-#, fuzzy
 msgid "If you don't save, all changes will be permanently lost."
-msgstr ""
-"Dacă nu salvați, modificările din ultima oră vor fi pierdute definitiv."
+msgstr "Dacă nu salvați, toate modificările vor fi pierdute definitiv."
 
-#: ../admin-tool/sessionwindow.py:155
+#: ../admin-tool/sessionwindow.py:157
 #, python-format
 msgid "Editing profile %s"
 msgstr "Editare a profilului %s"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Quit"
 msgstr "_Ieșire"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "_Changes"
 msgstr "_Modificări"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "Edit changes"
 msgstr "Editare modificări"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "_Lockdown"
 msgstr "_Restricții"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "Edit Lockdown settings"
 msgstr "Editare configurări de restricții"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce Mandatory"
 msgstr "Impune obligativitatea"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Impune opțiunile ca obligatorii în sesiunea modificată"
 
-#: ../admin-tool/sessionwindow.py:306
+#: ../admin-tool/sessionwindow.py:308
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Configurări ale restricțiilor pentru %s"
 
-#: ../admin-tool/sessionwindow.py:342
+#: ../admin-tool/sessionwindow.py:344
 #, python-format
-msgid ""
-"There was a recoverable error while applying the user profile '%s'.  You can "
-"report this error now or try to continue editing the user profile."
-msgstr ""
-"A apărut o eroare recuperabilă la aplicarea profilului utilizatorului „%s”. "
-"Puteți raporta această eroare acum sau puteți continua editarea profilului "
-"utilizatorului."
+msgid "There was a recoverable error while applying the user profile '%s'.  You can report this error now or try to continue editing the user profile."
+msgstr "A apărut o eroare recuperabilă la aplicarea profilului utilizatorului „%s”. Puteți raporta această eroare acum sau puteți continua editarea profilului utilizatorului."
 
-#: ../admin-tool/sessionwindow.py:346
+#: ../admin-tool/sessionwindow.py:348
 msgid "_Report this error"
 msgstr "_Raportați această eroare"
 
-#: ../admin-tool/sessionwindow.py:347
+#: ../admin-tool/sessionwindow.py:349
 msgid "_Continue editing"
 msgstr "_Continuați editarea"
 
@@ -398,15 +387,15 @@ msgstr "_Continuați editarea"
 msgid "Users for profile %s"
 msgstr "Utilizatori pentru profilul %s"
 
-#: ../lib/protosession.py:112
+#: ../lib/protosession.py:119
 msgid "Unable to find a free X display"
 msgstr "Nu s-a găsit un ecran X liber"
 
-#: ../lib/protosession.py:376
+#: ../lib/protosession.py:383
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr "Eșec la pornirea Xephyr: timp expirat la așteptarea semnalului USR1"
 
-#: ../lib/protosession.py:378
+#: ../lib/protosession.py:385
 msgid "Failed to start Xephyr: died during startup"
 msgstr "Eșec la pornirea Xephyr: procesul a murit la pornire"
 
@@ -414,57 +403,64 @@ msgstr "Eșec la pornirea Xephyr: procesul a murit la pornire"
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:469
+#: ../lib/protosession.py:476
 #, python-format
-msgid ""
-"There was a recoverable error while applying the user profile from file '%s'."
-msgstr ""
-"A apărut o eroare recuperabilă la aplicarea profilului utilizatorului din "
-"fișierul „%s”."
+msgid "There was a recoverable error while applying the user profile from file '%s'."
+msgstr "A apărut o eroare recuperabilă la aplicarea profilului utilizatorului din fișierul „%s”."
 
 #. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (FATAL) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:478
+#: ../lib/protosession.py:485
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
-msgstr ""
-"A apărut o eroare fatală la aplicarea profilului utilizatorului din „%s”."
+msgstr "A apărut o eroare fatală la aplicarea profilului utilizatorului din „%s”."
 
 #: ../lib/sources/filessource.py:69
-#, python-format
-msgid "File '%s' created"
-msgstr "A fost creat fișierul „%s” "
+msgid "Directory"
+msgstr "Director"
 
 #: ../lib/sources/filessource.py:71
-#, python-format
-msgid "File '%s' deleted"
-msgstr "A fost șters fișierul „%s”"
+msgid "Link"
+msgstr "Legătură"
 
 #: ../lib/sources/filessource.py:73
-#, python-format
-msgid "File '%s' changed"
-msgstr "A fost modificat fișierul „%s”"
+msgid "File"
+msgstr "Fișier"
 
-#: ../lib/sources/filessource.py:97
+#: ../lib/sources/filessource.py:75
+#, python-format
+msgid "%s '%s' created"
+msgstr "A fost creat %s „%s” "
+
+#: ../lib/sources/filessource.py:77
+#, python-format
+msgid "%s '%s' deleted"
+msgstr "A fost șters %s „%s”"
+
+#: ../lib/sources/filessource.py:79
+#, python-format
+msgid "%s '%s' changed"
+msgstr "A fost schimbat %s „%s”"
+
+#: ../lib/sources/filessource.py:105
 msgid "Applications menu"
 msgstr "Meniu aplicații"
 
-#: ../lib/sources/filessource.py:99
-#, fuzzy
+#: ../lib/sources/filessource.py:107
 msgid "Settings menu"
-msgstr "Meniu configurări server"
+msgstr "Meniu configurări"
 
-#: ../lib/sources/filessource.py:101
+#: ../lib/sources/filessource.py:109
 msgid "Server Settings menu"
 msgstr "Meniu configurări server"
 
-#: ../lib/sources/filessource.py:103
+#: ../lib/sources/filessource.py:111
 msgid "System Settings menu"
 msgstr "Meniu administrare sistem"
 
-#: ../lib/sources/filessource.py:105
+#: ../lib/sources/filessource.py:113
 msgid "Start Here menu"
 msgstr "Meniu „Pornește de aici”"
 
@@ -513,86 +509,88 @@ msgstr "Cheie GConf „%s” schimbată în perechea „%s”"
 msgid "GConf key '%s' set to '%s'"
 msgstr "Cheie GConf „%s” schimbată în „%s”"
 
-#: ../lib/sources/gconfsource.py:137
+#: ../lib/sources/gconfsource.py:138
 msgid "Default GConf settings"
 msgstr "Configurări implicite GConf"
 
-#: ../lib/sources/gconfsource.py:139
+#: ../lib/sources/gconfsource.py:140
 msgid "Mandatory GConf settings"
 msgstr "Configurări obligatorii GConf"
 
-#: ../lib/sources/mozillasource.py:133
+#: ../lib/sources/mozillasource.py:135
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
 msgstr "Cheie Mozilla „%s” schimbată în „%s”"
 
-#: ../lib/sources/mozillasource.py:135
+#: ../lib/sources/mozillasource.py:137
 #, python-format
 msgid "Mozilla key '%s' unset"
 msgstr "Cheie Mozilla „%s” nedefinită"
 
-#: ../lib/sources/mozillasource.py:137
+#: ../lib/sources/mozillasource.py:139
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Cheie Mozilla „%s” schimbată în „%s”"
 
-#: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
+#: ../lib/sources/mozillasource.py:169
+#: ../lib/sources/mozillasource.py:179
 msgid "Web browser preferences"
 msgstr "Preferințe navigator web"
 
-#: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
+#: ../lib/sources/mozillasource.py:171
+#: ../lib/sources/mozillasource.py:181
 msgid "Web browser bookmarks"
 msgstr "Adrese favorite în navigatorul web"
 
-#: ../lib/sources/mozillasource.py:170
+#: ../lib/sources/mozillasource.py:173
 msgid "Web browser profile list"
 msgstr "Listă de profiluri pentru navigatorul web"
 
-#: ../lib/sources/mozillasource.py:520
+#: ../lib/sources/mozillasource.py:550
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Fișier nu a fost găsit (%s)"
 
-#: ../lib/sources/mozillasource.py:869
+#: ../lib/sources/mozillasource.py:899
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "nume duplicat (%(name)s) în secțiunea %(section)s"
 
-#: ../lib/sources/mozillasource.py:878
+#: ../lib/sources/mozillasource.py:908
 #, python-format
 msgid "redundant default in section %s"
 msgstr "valoare implicită redundantă în secțiunea %s"
 
-#: ../lib/sources/mozillasource.py:895
+#: ../lib/sources/mozillasource.py:925
 msgid "no default profile"
 msgstr "fără profil implicit"
 
-#: ../lib/sources/mozillasource.py:950
+#: ../lib/sources/mozillasource.py:980
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Favorit Mozilla creat „%s” -> „%s”"
 
-#: ../lib/sources/mozillasource.py:952
+#: ../lib/sources/mozillasource.py:982
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Dosar favorite Mozilla creat „%s”"
 
-#: ../lib/sources/mozillasource.py:955
+#: ../lib/sources/mozillasource.py:985
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Favorit Mozilla șters „%s”"
 
-#: ../lib/sources/mozillasource.py:957
+#: ../lib/sources/mozillasource.py:987
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Dosar favorit Mozilla șters „%s”"
 
-#: ../lib/sources/mozillasource.py:960
+#: ../lib/sources/mozillasource.py:990
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Favorit Mozilla schimbat „%s” „%s”"
 
-#: ../lib/sources/mozillasource.py:962
+#: ../lib/sources/mozillasource.py:992
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Dosar favorite Mozilla schimbat „%s”"
@@ -608,109 +606,116 @@ msgid "Panel '%s' removed"
 msgstr "Panou „%s” șters"
 
 #: ../lib/sources/paneldelegate.py:77
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' added"
-msgstr "Panou „%s” adăugat"
+msgstr "Miniaplicația „%s” a fost adăugată"
 
 #: ../lib/sources/paneldelegate.py:100
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' removed"
-msgstr "Panou „%s” șters"
+msgstr "Miniaplicația „%s” a fost eliminată"
 
 #: ../lib/sources/paneldelegate.py:123
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' added"
-msgstr "Panou „%s” adăugat"
+msgstr "Miniaplicația „%s” a fost adăugată"
 
 #: ../lib/sources/paneldelegate.py:152
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' removed"
-msgstr "Panou „%s” șters"
+msgstr "Obiectul „%s” a fost eliminat"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:240
+#: ../lib/sources/paneldelegate.py:241
 msgid "Drawer"
 msgstr "Sertar"
 
-#: ../lib/sources/paneldelegate.py:242
+#: ../lib/sources/paneldelegate.py:243
 msgid "Main Menu"
 msgstr "Meniu principal"
 
-#: ../lib/sources/paneldelegate.py:252
+#: ../lib/sources/paneldelegate.py:253
 #, python-format
 msgid "%s launcher"
 msgstr "Lansator %s"
 
-#: ../lib/sources/paneldelegate.py:256
+#: ../lib/sources/paneldelegate.py:257
 msgid "Lock Screen button"
 msgstr "Buton de blocare a ecranului"
 
-#: ../lib/sources/paneldelegate.py:258
+#: ../lib/sources/paneldelegate.py:259
 msgid "Logout button"
 msgstr "Buton de ieșire din sesiune"
 
-#: ../lib/sources/paneldelegate.py:260
+#: ../lib/sources/paneldelegate.py:261
 msgid "Run Application button"
 msgstr "Buton de pornire a aplicațiilor"
 
-#: ../lib/sources/paneldelegate.py:262
+#: ../lib/sources/paneldelegate.py:263
 msgid "Search button"
 msgstr "Buton de căutare"
 
-#: ../lib/sources/paneldelegate.py:264
+#: ../lib/sources/paneldelegate.py:265
 msgid "Force Quit button"
 msgstr "Buton de ieșire forțată"
 
-#: ../lib/sources/paneldelegate.py:266
+#: ../lib/sources/paneldelegate.py:267
 msgid "Connect to Server button"
 msgstr "Buton de conectare server"
 
-#: ../lib/sources/paneldelegate.py:268
+#: ../lib/sources/paneldelegate.py:269
 msgid "Shutdown button"
 msgstr "Buton de închidere"
 
-#: ../lib/sources/paneldelegate.py:270
+#: ../lib/sources/paneldelegate.py:271
 msgid "Screenshot button"
 msgstr "Buton de captură a ecranului"
 
-#: ../lib/sources/paneldelegate.py:273
+#: ../lib/sources/paneldelegate.py:274
 msgid "Unknown"
 msgstr "Necunoscut"
 
-#: ../lib/sources/paneldelegate.py:275
+#: ../lib/sources/paneldelegate.py:276
 msgid "Menu Bar"
 msgstr "Bară de meniu"
 
-#: ../lib/sources/paneldelegate.py:512
+#: ../lib/sources/paneldelegate.py:513
 msgid "Panel File"
 msgstr "Fișier panou"
 
-#: ../lib/storage.py:172
+#: ../lib/storage.py:173
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "Eșec la citirea fișierului „%s”: %s"
 
-#: ../lib/storage.py:182
+#: ../lib/storage.py:183
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "Eșec la citirea meta-datelor din „%s”: %s"
 
-#: ../lib/storage.py:188
+#: ../lib/storage.py:189
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "Secțiune cu meta-date invalide în „%s”: %s"
 
-#: ../lib/storage.py:362
+#. change the raise to a dprint, since some files seem to disappear.
+#. raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
+#: ../lib/storage.py:387
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Nu se poate adăuga fișierul inexistent „%s”"
 
-#: ../lib/storage.py:487
+#: ../lib/storage.py:531
+#, python-format
+msgid "Couldn't rmdir '%s'"
+msgstr "Nu s-a putut șterge dosarul „%s”"
+
+#: ../lib/storage.py:536
 #, python-format
 msgid "Couldn't unlink file '%s'"
-msgstr ""
+msgstr "Nu s-a putut șterge legătura către fișierul „%s”"
 
-#: ../lib/storage.py:570
+#: ../lib/storage.py:633
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Profilul %s este protejat la scriere"
@@ -718,75 +723,74 @@ msgstr "Profilul %s este protejat la scriere"
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/systemdb.py:67
+#: ../lib/systemdb.py:77
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "tip invalid pentru opțiunea %(setting)s din %(np)s"
 
-#: ../lib/systemdb.py:112
+#: ../lib/systemdb.py:122
 msgid "No database file provided"
-msgstr ""
+msgstr "Nu a fost dată nici o bază de date"
 
-#: ../lib/systemdb.py:232
-#, fuzzy, python-format
+#: ../lib/systemdb.py:253
+#, python-format
 msgid "No LDAP search base specified for %s"
-msgstr "Nu s-a specificat baza de căutare pentru %s"
+msgstr "Nu s-a specificat nici o bază de căutare LDAP pentru %s"
 
-#: ../lib/systemdb.py:235
-#, fuzzy, python-format
+#: ../lib/systemdb.py:256
+#, python-format
 msgid "No LDAP query filter specified for %s"
-msgstr "Nu s-a specificat un filtru de interogare pentru %s"
+msgstr "Nu s-a specificat nici un filtru de interogare LDAP pentru %s"
 
-#: ../lib/systemdb.py:238
-#, fuzzy, python-format
+#: ../lib/systemdb.py:259
+#, python-format
 msgid "No LDAP result attribute specified for %s"
-msgstr "Nu s-a specificat un atribut de rezultat pentru %s"
-
-#: ../lib/systemdb.py:247
-#, fuzzy
-msgid "LDAP Scope must be one of: "
-msgstr "Domeniul de căutare trebuie să fie „sub”, „base” sau „one”"
+msgstr "Nu s-a specificat nici un atribut de rezultat LDAP pentru %s"
 
 #: ../lib/systemdb.py:268
-#, fuzzy
-msgid "multiple_result must be one of: "
-msgstr "„multiple_result” trebuie să fie „first” sau „random”"
+msgid "LDAP Scope must be one of: "
+msgstr "Domeniul de căutare LDAP trebuie să fie unul dintre:"
 
-#: ../lib/systemdb.py:361
+#: ../lib/systemdb.py:288
+msgid "multiple_result must be one of: "
+msgstr "„multiple_result” trebuie să fie unul dintre:"
+
+#: ../lib/systemdb.py:381
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Nu s-a putut deschide %s pentru scriere"
 
-#: ../lib/systemdb.py:374
+#: ../lib/systemdb.py:394
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Nu s-a putut salva „UserDatabase” pentru %s"
 
-#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
+#: ../lib/systemdb.py:423
+#: ../lib/systemdb.py:457
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Fișierul %s nu este o configurare de profil"
 
-#: ../lib/systemdb.py:404
+#: ../lib/systemdb.py:430
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Eșec la adăugarea profilului implicit %s la configurare"
 
-#: ../lib/systemdb.py:438
+#: ../lib/systemdb.py:464
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Eșec la adăugarea utilizatorului %s la configurarea profilului"
 
-#: ../lib/systemdb.py:510
+#: ../lib/systemdb.py:536
 msgid "Failed to get the user list"
 msgstr "Eșec la obținerea listei de utilizatori"
 
-#: ../lib/systemdb.py:560
-#, fuzzy
+#: ../lib/systemdb.py:586
 msgid "Failed to get the group list"
-msgstr "Eșec la obținerea listei de utilizatori"
+msgstr "Eșec la obținerea listei de grupuri"
 
-#: ../lib/unittests.py:38 ../lib/unittests.py:39
+#: ../lib/unittests.py:38
+#: ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
 msgstr "Ignoră AVERTIZĂRILE"
 
@@ -805,79 +809,54 @@ msgid "Success!"
 msgstr "Succes!"
 
 #: ../lib/util.py:94
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"Nu se găsește dosarul utilizatorului: nu este precizat în /etc/passwd și "
-"variabila de mediu $HOME este neinițializată"
+msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+msgstr "Nu se găsește dosarul utilizatorului: nu este precizat în /etc/passwd și variabila de mediu $HOME este neinițializată"
 
-#: ../lib/util.py:110 ../lib/util.py:137
-msgid ""
-"Cannot find username: not set in /etc/passwd and no value for $USER in "
-"environment"
-msgstr ""
-"Nu se găsește utilizatorul: nu este precizat în /etc/passwd și variabila de "
-"mediu $USER este neinițializată"
+#: ../lib/util.py:110
+#: ../lib/util.py:137
+msgid "Cannot find username: not set in /etc/passwd and no value for $USER in environment"
+msgstr "Nu se găsește utilizatorul: nu este precizat în /etc/passwd și variabila de mediu $USER este neinițializată"
 
 #~ msgid "Click to make this setting not mandatory"
 #~ msgstr "Clic aici pentru ca opțiunile să nu mai fie obligatorii"
-
 #~ msgid "Click to make this setting mandatory"
 #~ msgstr "Clic aici pentru ca opțiunile să nu mai fie obligatorii"
-
 #~ msgid "General"
 #~ msgstr "Generale"
-
 #~ msgid "Epiphany Web Browser"
 #~ msgstr "Navigator web Epiphany"
-
 #~ msgid "Disable _command line"
 #~ msgstr "Dezactivează linia de _comandă"
-
 #~ msgid "Disable _printing"
 #~ msgstr "Nu permite ti_părirea"
-
 #~ msgid "Disable print _setup"
 #~ msgstr "Nu permite confi_gurarea tipăririi"
-
 #~ msgid "Disable save to _disk"
 #~ msgstr "Nu permite salvarea pe _disc"
-
 #~ msgid "_Lock down the panels"
 #~ msgstr "B_lochează panourile"
-
 #~ msgid "Disable force _quit"
 #~ msgstr "Nu permite înc_hiderea forțată"
-
 #~ msgid "Disable log _out"
 #~ msgstr "Nu permite ieșirea din _sesiune"
-
 #~ msgid "Disable _quit"
 #~ msgstr "_Nu permite închiderea"
-
 #~ msgid "Disable _arbitrary URL"
 #~ msgstr "Dezactivează introducerea de noi _adrese URL"
-
 #~ msgid "Disable _bookmark editing"
 #~ msgstr "Nu permite modificarea _favoritelor"
-
 #~ msgid "Disable _history"
 #~ msgstr "Dezactivează _istoricul"
-
 #~ msgid "Disable _javascript chrome"
 #~ msgstr "Dezactivează controalele _javascript chrome"
-
 #~ msgid "Disable _toolbar editing"
 #~ msgstr "Nu permite edi_tarea barei de unelte"
 
 #, fuzzy
 #~ msgid "Force _fullscreen mode"
 #~ msgstr "Pe t_ot ecranul"
-
 #~ msgid "Hide _menubar"
 #~ msgstr "Ascunde bara de _meniu"
-
 #~ msgid "Disable lock _screen"
 #~ msgstr "Nu permite blocarea _ecranului"
 
@@ -888,78 +867,56 @@ msgstr ""
 #, fuzzy
 #~ msgid "Allow log _out"
 #~ msgstr "Nu permite ieșirea din _sesiune"
-
 #~ msgid "Disable _unsafe protocols"
 #~ msgstr "Dezactivează protocoalele nesig_ure"
 
 #, fuzzy
 #~ msgid "Disabled Applets"
 #~ msgstr "<b>Mini-aplicații dezactivate</b>"
-
 #~ msgid "Lockdown Editor"
 #~ msgstr "Editor de restricții"
 
 #, fuzzy
 #~ msgid "Safe Protocols"
 #~ msgstr "<b>Protocoale sigure</b>"
-
 #~ msgid "Remove personal information from documents when saving them"
 #~ msgstr "Șterge datele personale la salvarea documentelor"
-
 #~ msgid "Warn if macro tries to create a PDF"
 #~ msgstr "Avertizează dacă un macro încearcă să creeze un PDF"
-
 #~ msgid "Warn if macro tries to print a document"
 #~ msgstr "Avertizează dacă un macro încercă să tipărească un document"
-
 #~ msgid "Warn if macro tries to save a document"
 #~ msgstr "Avertizează dacă un macro încercă să salveze un document"
-
 #~ msgid "Warn if macro tries to sign a document"
 #~ msgstr "Avertizează dacă un macro încearcă să semneze un document"
-
 #~ msgid "Recommend password when saving a document"
 #~ msgstr "La salvarea unui document recomandă folosirea unei parole"
-
 #~ msgid "Enable auto-save"
 #~ msgstr "Activează salvarea automată"
-
 #~ msgid "Printing should mark the document as modified"
 #~ msgstr "Tipărirea ar trebui să marcheze documentul ca modificat"
-
 #~ msgid "Use system's file dialog"
 #~ msgstr "Utilizează dialogul de fișiere al sistemului"
-
 #~ msgid "Create backup copy on save"
 #~ msgstr "La salvare creează o copie de siguranță"
-
 #~ msgid "Warn when saving non-OpenOffice.org formats"
 #~ msgstr "Avertizează la salvarea în format non-OpenOffice.org"
-
 #~ msgid "Use OpenGL"
 #~ msgstr "Utilizează OpenGL"
-
 #~ msgid "Use system font"
 #~ msgstr "Utilizează fontul sistemului"
-
 #~ msgid "Use anti-aliasing"
 #~ msgstr "Utilizează antialiere"
-
 #~ msgid "Disable UI customization"
 #~ msgstr "Nu permite personalizarea interfeței"
-
 #~ msgid "Show insensitive menu items"
 #~ msgstr "Arată intrările dezactivate în meniuri"
-
 #~ msgid "Show font preview"
 #~ msgstr "Arată o previzualizare a fontului"
-
 #~ msgid "Show font history"
 #~ msgstr "Arată un istoric al fontului"
-
 #~ msgid "Show icons in menus"
 #~ msgstr "Arată iconițe în meniuri"
-
 #~ msgid ""
 #~ "\n"
 #~ "5\n"
@@ -972,7 +929,6 @@ msgstr ""
 #~ "10\n"
 #~ "25\n"
 #~ "50"
-
 #~ msgid ""
 #~ "\n"
 #~ "Automatic\n"
@@ -983,7 +939,6 @@ msgstr ""
 #~ "Automat\n"
 #~ "Mare\n"
 #~ "Mic"
-
 #~ msgid ""
 #~ "\n"
 #~ "OpenDocument (.odp)\n"
@@ -994,7 +949,6 @@ msgstr ""
 #~ "OpenDocument (.odp)\n"
 #~ "PowerPoint 97+ (.ppt)\n"
 #~ "OpenOffice.org 1.1 (.sxi)"
-
 #~ msgid ""
 #~ "\n"
 #~ "OpenDocument (.ods)\n"
@@ -1005,7 +959,6 @@ msgstr ""
 #~ "OpenDocument (.ods)\n"
 #~ "Excel 97+ (.xls)\n"
 #~ "OpenOffice.org 1.1 (.sxc)"
-
 #~ msgid ""
 #~ "\n"
 #~ "OpenDocument (.odt)\n"
@@ -1016,7 +969,6 @@ msgstr ""
 #~ "OpenDocument (.odt)\n"
 #~ "Word 97+ (.doc)\n"
 #~ "OpenOffice.org 1.1 (.sxw)"
-
 #~ msgid ""
 #~ "\n"
 #~ "Very High\n"
@@ -1029,37 +981,26 @@ msgstr ""
 #~ "Ridicat\n"
 #~ "Mediu\n"
 #~ "Redus"
-
 #~ msgid "Default format for presentations:"
 #~ msgstr "Format implicit pentru prezentări:"
-
 #~ msgid "Default format for spreadsheet:"
 #~ msgstr "Format implicit pentru foi de calcul:"
-
 #~ msgid "Default format for word processor:"
 #~ msgstr "Format implicit pentru documente:"
-
 #~ msgid "Default icon size"
 #~ msgstr "Mărime iconițe standard"
-
 #~ msgid "Load / Save"
 #~ msgstr "Deschidere / Salvare"
-
 #~ msgid "Macro Security Level:"
 #~ msgstr "Nivel de securitate pentru macrouri:"
-
 #~ msgid "Number of undo steps:"
 #~ msgstr "Număr maxim de anulări:"
-
 #~ msgid "OpenOffice.org"
 #~ msgstr "OpenOffice.org"
-
 #~ msgid "Security"
 #~ msgstr "Securitate"
-
 #~ msgid "User Interface"
 #~ msgstr "Interfață utilizator"
-
 #~ msgid ""
 #~ "If you don't save, changes from the last %ld second will be permanently "
 #~ "lost."
@@ -1075,12 +1016,10 @@ msgstr ""
 #~ msgstr[2] ""
 #~ "Dacă nu salvați, modificările din ultimele %ld de secunde vor fi pierdute "
 #~ "definitiv."
-
 #~ msgid ""
 #~ "If you don't save, changes from the last minute will be permanently lost."
 #~ msgstr ""
 #~ "Dacă nu salvați, modificările din ultimul minut vor fi pierdute definitiv."
-
 #~ msgid ""
 #~ "If you don't save, changes from the last minute and %ld second will be "
 #~ "permanently lost."
@@ -1096,7 +1035,6 @@ msgstr ""
 #~ msgstr[2] ""
 #~ "Dacă nu salvați, modificările din ultimul minut și %ld de secunde vor fi "
 #~ "pierdute definitiv."
-
 #~ msgid ""
 #~ "If you don't save, changes from the last %ld minute will be permanently "
 #~ "lost."
@@ -1111,7 +1049,6 @@ msgstr ""
 #~ msgstr[2] ""
 #~ "Dacă nu salvați, modificările din ultimele %ld minute vor fi pierdute "
 #~ "definitiv."
-
 #~ msgid ""
 #~ "If you don't save, changes from the last hour and %d minute will be "
 #~ "permanently lost."
@@ -1127,7 +1064,6 @@ msgstr ""
 #~ msgstr[2] ""
 #~ "Dacă nu salvați, modificările din ultima oră și %d de minute vor fi "
 #~ "pierdute definitiv."
-
 #~ msgid ""
 #~ "If you don't save, changes from the last %d hour will be permanently lost."
 #~ msgid_plural ""
@@ -1141,54 +1077,38 @@ msgstr ""
 #~ msgstr[2] ""
 #~ "Dacă nu salvați, modificările din ultimele %d de ore vor fi pierdute "
 #~ "definitiv."
-
 #~ msgid "Preferences menu"
 #~ msgstr "Meniu preferințe"
-
 #~ msgid "Applet %s added to top panel"
 #~ msgstr "Mini-aplicație %s adăugată la panoul de sus"
-
 #~ msgid "Applet %s added to bottom panel"
 #~ msgstr "Mini-aplicație %s adăugată la panoul de jos"
-
 #~ msgid "Applet %s added to left panel"
 #~ msgstr "Mini-aplicație %s adăugată la panoul din stânga"
-
 #~ msgid "Applet %s added to right panel"
 #~ msgstr "Mini-aplicație %s adăugată la panoul din dreapta"
-
 #~ msgid "Applet %s removed from top panel"
 #~ msgstr "Mini-aplicație %s ștearsă din panoul de sus"
-
 #~ msgid "Applet %s removed from bottom panel"
 #~ msgstr "Mini-aplicație %s ștearsă din panoul de jos"
-
 #~ msgid "Applet %s removed from left panel"
 #~ msgstr "Mini-aplicație %s ștearsă din panoul din stânga"
-
 #~ msgid "Applet %s removed from right panel"
 #~ msgstr "Mini-aplicație %s ștearsă din panoul din dreapta"
-
 #~ msgid "%s added to top panel"
 #~ msgstr "%s adăugat la panoul de sus"
-
 #~ msgid "%s added to bottom panel"
 #~ msgstr "%s adăugat la panoul de jos"
-
 #~ msgid "%s added to left panel"
 #~ msgstr "%s adăugat la panoul din stânga"
-
 #~ msgid "%s added to right panel"
 #~ msgstr "%s adăugat la panoul din dreapta"
-
 #~ msgid "%s removed from top panel"
 #~ msgstr "%s șters din panoul de sus"
-
 #~ msgid "%s removed from bottom panel"
 #~ msgstr "%s șters din panoul de jos"
-
 #~ msgid "%s removed from left panel"
 #~ msgstr "%s șters din panoul din stânga"
-
 #~ msgid "%s removed from right panel"
 #~ msgstr "%s șters din panoul din dreapta"
+
