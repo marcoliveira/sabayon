@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-24 12:37+0200\n"
-"PO-Revision-Date: 2009-10-04 09:23+0200\n"
+"POT-Creation-Date: 2010-03-21 13:00+0100\n"
+"PO-Revision-Date: 2009-11-27 16:01+0100\n"
 "Last-Translator: Carles Ferrando Garcia <carles.ferrando@gmail.com>\n"
 "Language-Team: Catalan (Valencià) <tradgnome@softcatala.org>\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
-msgstr "Un programa per a establir i editar perfils per a usuaris"
+msgstr "Un programa per establir i editar perfils per a usuaris"
 
 #: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
@@ -197,7 +197,7 @@ msgstr "_Fixa els quadres"
 
 #: ../admin-tool/lockdown/maindialog.py:55
 msgid "Disable force _quit"
-msgstr "Inhabilita f_orçar la eixida"
+msgstr "Inhabilita f_orçar l'eixida"
 
 #: ../admin-tool/lockdown/maindialog.py:56
 msgid "Disable lock _screen"
@@ -482,8 +482,8 @@ msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
 msgstr ""
-"Es requereix permís d'administrador per a poder executar este programa, ja "
-"que modifica fitxers del sistema."
+"Es requereix permís d'administrador per poder executar este programa, ja que "
+"modifica fitxers del sistema."
 
 #: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
@@ -494,8 +494,8 @@ msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
 msgstr ""
-"No podeu fer servir l'eina de perfils d'usuari d'escriptori dins d'una "
-"sessió on s'editen els perfils"
+"No podeu utilitzar l'eina de perfils d'usuari d'escriptori dins d'una sessió "
+"on s'editen els perfils"
 
 #: ../admin-tool/sabayon:91
 #, c-format
@@ -538,7 +538,7 @@ msgstr "No s'ha trobat el perfil de l'usuari «%s»\n"
 
 #: ../admin-tool/sabayon-apply:104
 msgid "Please use -h for usage options"
-msgstr "Feu servir -h per a les opcions d'ús"
+msgstr "Empreu -h per les opcions d'ús"
 
 #: ../admin-tool/sabayon-session:67
 #, c-format
@@ -564,7 +564,7 @@ msgstr "_Nom del perfil:"
 
 #: ../admin-tool/sabayon.glade.h:3
 msgid "Use this profile for _all users"
-msgstr "Utilitza este perfil per a tots els usu_aris"
+msgstr "Utilitza _este perfil per a tots els usuaris"
 
 #: ../admin-tool/sabayon.glade.h:5
 msgid "_Base on:"
@@ -670,7 +670,7 @@ msgstr[1] ""
 #: ../admin-tool/sessionwindow.py:154
 #, python-format
 msgid "Editing profile %s"
-msgstr "S'està editat el perfil %s"
+msgstr "S'està editant el perfil %s"
 
 #: ../admin-tool/sessionwindow.py:178
 msgid "_Quit"
@@ -703,7 +703,7 @@ msgstr "Fes complir els paràmetres obligatoris en la sessió d'edició"
 #: ../admin-tool/sessionwindow.py:297
 #, python-format
 msgid "Lockdown settings for %s"
-msgstr "Paràmetres de restriccions per a %s"
+msgstr "Paràmetres de restriccions per %s"
 
 #: ../admin-tool/sessionwindow.py:333
 #, python-format
@@ -1051,7 +1051,7 @@ msgstr "Botó de cerca"
 
 #: ../lib/sources/paneldelegate.py:255
 msgid "Force Quit button"
-msgstr "Botó de forçar la eixida"
+msgstr "Botó de forçar l'eixida"
 
 #: ../lib/sources/paneldelegate.py:257
 msgid "Connect to Server button"
@@ -1085,7 +1085,7 @@ msgstr "No s'ha pogut llegir el fitxer «%s»: %s"
 #: ../lib/storage.py:182
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
-msgstr "No s'ha pogut llegir les metadades de «%s»: %s"
+msgstr "No s'han pogut llegir les metadades de «%s»: %s"
 
 #: ../lib/storage.py:188
 #, python-format
@@ -1096,11 +1096,6 @@ msgstr "La secció de metadades de «%s» no és vàlida: %s"
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "No es pot afegir el fitxer «%s» perquè no existeix"
-
-#: ../lib/storage.py:487
-#, python-format
-msgid "Couldn't unlink file '%s'"
-msgstr ""
 
 #: ../lib/storage.py:570
 #, python-format
@@ -1136,17 +1131,17 @@ msgstr "el tipus no és vàlid per al paràmetre %(setting)s a %(np)s"
 #: ../lib/userdb.py:215
 #, python-format
 msgid "No search base specified for %s"
-msgstr "No s'ha especificat cap base de cerca per a %s"
+msgstr "No s'ha especificat cap base de cerca per %s"
 
 #: ../lib/userdb.py:218
 #, python-format
 msgid "No query filter specified for %s"
-msgstr "No s'ha especificat cap filtre de consulta per a %s"
+msgstr "No s'ha especificat cap filtre de consulta per %s"
 
 #: ../lib/userdb.py:221
 #, python-format
 msgid "No result attribute specified for %s"
-msgstr "No s'ha especificat l'atribut resultant per a %s"
+msgstr "No s'ha especificat l'atribut resultant per %s"
 
 #: ../lib/userdb.py:230
 msgid "Scope must be one of sub, base and one"
@@ -1159,7 +1154,7 @@ msgstr "multiple_result ha de ser «first» (primer) o «random» (aleatori)"
 #: ../lib/userdb.py:342
 #, python-format
 msgid "Could not open %s for writing"
-msgstr "No s'ha pogut obrir %s per a l'escriptura"
+msgstr "No s'ha pogut obrir %s per l'escriptura"
 
 #: ../lib/userdb.py:355
 #, python-format
@@ -1200,6 +1195,9 @@ msgid ""
 msgstr ""
 "No s'ha pogut trobar el nom d'usuari: no està especificat a /etc/passwd, i "
 "la variable d'entorn $USER no conté cap valor"
+
+#~ msgid "Couldn't unlink file '%s'"
+#~ msgstr "No s'ha pogut desenllaçar el fitxer «%s»"
 
 #~ msgid "Warn if macro prints"
 #~ msgstr "Avisa si la macroinstrucció imprimeix"
