@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-16 19:13+0100\n"
-"PO-Revision-Date: 2010-02-16 19:14+0100\n"
+"POT-Creation-Date: 2010-03-22 11:16+0100\n"
+"PO-Revision-Date: 2010-03-22 11:20+0100\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
 "Language-Team: Basque <itzulpena@euskalgnu.org>\n"
 "MIME-Version: 1.0\n"
@@ -31,7 +31,7 @@ msgstr "Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>"
 #: ../admin-tool/changeswindow.py:50
 #, python-format
 msgid "Changes in profile %s"
-msgstr "Aldaketak %s profilan"
+msgstr "Aldaketak %s profilean"
 
 #: ../admin-tool/changeswindow.py:113
 msgid "Ignore"
@@ -249,8 +249,8 @@ msgid ""
 "A fatal error has occurred.  You can help us fix the problem by sending the "
 "log in %s to %s"
 msgstr ""
-"Errore larria gertatu da. Arazoa konpontzen lagun gaitzakezu %s(r)"
-"enegunkaria hona bidaliz: %s"
+"Errore larria gertatu da. Arazoa konpontzen lagun gaitzakezu %s(r)en "
+"egunkaria hona bidaliz: %s"
 
 #: ../admin-tool/sabayon:145
 #, c-format
@@ -261,11 +261,11 @@ msgstr ""
 "Sabayon irten egingo da. Zenbait errore berreskuragarri daude, eta arazoa "
 "arazten lagun gaitzakezu %s(r)en egunkaria hona bidaliz: %s"
 
-#: ../admin-tool/sabayon-apply:125
+#: ../admin-tool/sabayon-apply:136
 msgid "Please use -h for usage options"
 msgstr "Erabili '-h' aukera erabilgarriak ikusteko"
 
-#: ../admin-tool/sabayon-apply:137
+#: ../admin-tool/sabayon-apply:148
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Ez da '%s' erabiltzailearen profilik aurkitu\n"
@@ -330,7 +330,7 @@ msgstr "Itxi gorde g_abe"
 #: ../admin-tool/saveconfirm.py:41
 #, python-format
 msgid "Save changes to profile \"%s\" before closing?"
-msgstr "Gorde aldaketak \"%s\" profilan itxi aurretik?"
+msgstr "Gorde aldaketak \"%s\" profilean itxi aurretik?"
 
 #: ../admin-tool/saveconfirm.py:44
 msgid "If you don't save, all changes will be permanently lost."
@@ -397,15 +397,15 @@ msgstr "_Jarraitu editatzen"
 msgid "Users for profile %s"
 msgstr "%s profilaren erabiltzaileak"
 
-#: ../lib/protosession.py:112
+#: ../lib/protosession.py:119
 msgid "Unable to find a free X display"
 msgstr "Ezin da X pantaila librerik aurkitu"
 
-#: ../lib/protosession.py:376
+#: ../lib/protosession.py:383
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr "Huts egin du Xephyr abiaraztean: denbora gainditu du USR1 seinalearen zai"
 
-#: ../lib/protosession.py:378
+#: ../lib/protosession.py:385
 msgid "Failed to start Xephyr: died during startup"
 msgstr "Huts egin du Xephyr abiaraztean: abioan hil egin da"
 
@@ -413,7 +413,7 @@ msgstr "Huts egin du Xephyr abiaraztean: abioan hil egin da"
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:469
+#: ../lib/protosession.py:476
 #, python-format
 msgid "There was a recoverable error while applying the user profile from file '%s'."
 msgstr ""
@@ -424,7 +424,7 @@ msgstr ""
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (FATAL) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:478
+#: ../lib/protosession.py:485
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "Errore larria gertatu da erabiltzailearen profila '%s'(e)ndik aplikatzean."
@@ -529,78 +529,78 @@ msgstr "GConf-eko ezarpen lehenetsiak"
 msgid "Mandatory GConf settings"
 msgstr "Beharrezko GConf-eko ezarpenak"
 
-#: ../lib/sources/mozillasource.py:133
+#: ../lib/sources/mozillasource.py:135
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
 msgstr "Mozilla-ren '%s' gakoa '%s'(r)ekin ezarrita"
 
-#: ../lib/sources/mozillasource.py:135
+#: ../lib/sources/mozillasource.py:137
 #, python-format
 msgid "Mozilla key '%s' unset"
 msgstr "Mozilla-ren '%s' gakoa ezarri gabe"
 
-#: ../lib/sources/mozillasource.py:137
+#: ../lib/sources/mozillasource.py:139
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Mozilla-ren '%s' gakoa '%s'(r)ekin aldatua"
 
-#: ../lib/sources/mozillasource.py:167 ../lib/sources/mozillasource.py:177
+#: ../lib/sources/mozillasource.py:169 ../lib/sources/mozillasource.py:179
 msgid "Web browser preferences"
 msgstr "Web arakatzailearen hobespenak"
 
-#: ../lib/sources/mozillasource.py:169 ../lib/sources/mozillasource.py:179
+#: ../lib/sources/mozillasource.py:171 ../lib/sources/mozillasource.py:181
 msgid "Web browser bookmarks"
 msgstr "Web arakatzailearen laster-markak"
 
-#: ../lib/sources/mozillasource.py:171
+#: ../lib/sources/mozillasource.py:173
 msgid "Web browser profile list"
 msgstr "Web arakatzailearen profil-zerrenda"
 
-#: ../lib/sources/mozillasource.py:521
+#: ../lib/sources/mozillasource.py:550
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Ez da fitxategia aurkitu (%s)"
 
-#: ../lib/sources/mozillasource.py:870
+#: ../lib/sources/mozillasource.py:899
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "bikoiztutako izena (%(name)s) %(section)s atalean"
 
-#: ../lib/sources/mozillasource.py:879
+#: ../lib/sources/mozillasource.py:908
 #, python-format
 msgid "redundant default in section %s"
 msgstr "lehenespen erredundantea %s atalean"
 
-#: ../lib/sources/mozillasource.py:896
+#: ../lib/sources/mozillasource.py:925
 msgid "no default profile"
 msgstr "ez dago profil lehenetsirik"
 
-#: ../lib/sources/mozillasource.py:951
+#: ../lib/sources/mozillasource.py:980
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Mozilla-ren laster-marka sortu da: '%s' -> '%s'"
 
-#: ../lib/sources/mozillasource.py:953
+#: ../lib/sources/mozillasource.py:982
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Mozilla-ren laster-marken karpeta sortu da: '%s'"
 
-#: ../lib/sources/mozillasource.py:956
+#: ../lib/sources/mozillasource.py:985
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Mozilla-ren laster-marka ezabatu da: '%s'"
 
-#: ../lib/sources/mozillasource.py:958
+#: ../lib/sources/mozillasource.py:987
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Mozilla-ren laster-marken karpeta ezabatu da: '%s'"
 
-#: ../lib/sources/mozillasource.py:961
+#: ../lib/sources/mozillasource.py:990
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Mozilla-ren '%s' laster-marka aldatu da: '%s'"
 
-#: ../lib/sources/mozillasource.py:963
+#: ../lib/sources/mozillasource.py:992
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mozilla-ren laster-marken karpeta aldatu da: '%s'"
@@ -710,22 +710,22 @@ msgstr "'%s'(e)n metadatuen baliogabeko atala: %s"
 
 #. change the raise to a dprint, since some files seem to disappear.
 #. raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
-#: ../lib/storage.py:383
+#: ../lib/storage.py:387
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Ezin da existitzen ez den '%s' fitxategia gehitu"
 
-#: ../lib/storage.py:527
+#: ../lib/storage.py:531
 #, python-format
 msgid "Couldn't rmdir '%s'"
 msgstr "Ezin izan da '%s' ezabatu (rmdir)"
 
-#: ../lib/storage.py:532
+#: ../lib/storage.py:536
 #, python-format
 msgid "Couldn't unlink file '%s'"
 msgstr "Ezin izan da '%s' fitxategia desestekatu"
 
-#: ../lib/storage.py:622
+#: ../lib/storage.py:633
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "'%s' profilea irakurtzeko soilik da"
