@@ -1,13 +1,13 @@
 # Vietnamese translation for Sabayon.
-# Copyright © 2009 GNOME i18n Project for Vietnamese.
-# Clytie Siddall <clytie@riverland.net.au>, 2005-2009.
+# Copyright © 2010 GNOME i18n Project for Vietnamese.
+# Clytie Siddall <clytie@riverland.net.au>, 2005-2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Sabayon 2.22.1\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-21 21:44-0600\n"
-"PO-Revision-Date: 2009-02-07 19:00+0930\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon&component=general\n"
+"POT-Creation-Date: 2010-03-22 02:22+0000\n"
+"PO-Revision-Date: 2010-03-22 22:43+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -37,76 +37,94 @@ msgstr "Bỏ qua"
 msgid "Lock"
 msgstr "Khoá"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
+#: ../admin-tool/changeswindow.py:127
+#: ../admin-tool/editorwindow.py:263
 msgid "Description"
 msgstr "Mô tả"
 
-#: ../admin-tool/editorwindow.py:97
+#: ../admin-tool/editorwindow.py:100
 #, python-format
 msgid "Profile %s"
 msgstr "Hồ sơ %s"
 
-#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:205
+#: ../admin-tool/sessionwindow.py:179
 msgid "_Profile"
 msgstr "_Hồ sơ"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/sessionwindow.py:180
 msgid "_Save"
 msgstr "_Lưu"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/sessionwindow.py:180
 msgid "Save profile"
 msgstr "Lưu hồ sơ"
 
-#: ../admin-tool/editorwindow.py:204
+#: ../admin-tool/editorwindow.py:207
 msgid "_Close"
 msgstr "Đón_g"
 
-#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:207
+#: ../admin-tool/sessionwindow.py:181
 msgid "Close the current window"
 msgstr "Đóng cửa sổ hiện có"
 
-#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:208
+#: ../admin-tool/sessionwindow.py:182
 msgid "_Edit"
 msgstr "_Sửa"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "_Delete"
 msgstr "_Xoá"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "Delete item"
 msgstr "Xoá mục"
 
-#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:210
+#: ../admin-tool/sessionwindow.py:185
 msgid "_Help"
 msgstr "Trợ g_iúp"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:211
+#: ../admin-tool/sessionwindow.py:186
 msgid "_Contents"
-msgstr ""
+msgstr "Mục lụ_c"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:211
+#: ../admin-tool/sessionwindow.py:186
 msgid "Help Contents"
-msgstr ""
+msgstr "Mục lục trợ giúp"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:212
+#: ../admin-tool/sessionwindow.py:187
 msgid "_About"
 msgstr "_Giới thiệu"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:212
+#: ../admin-tool/sessionwindow.py:187
 msgid "About Sabayon"
 msgstr "Giới thiệu về Sabayon"
 
-#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:267
+msgid "Source"
+msgstr "Nguồn"
+
+#: ../admin-tool/editorwindow.py:300
+#: ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:304
+#: ../lib/sources/filessource.py:86
 msgid "Files"
 msgstr "Tập tin"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:304
+#: ../lib/sources/paneldelegate.py:279
 msgid "Panel"
 msgstr "Bảng"
 
@@ -115,7 +133,8 @@ msgstr "Bảng"
 msgid "Profile file: %s"
 msgstr "Tập tin hồ sơ : %s"
 
-#: ../admin-tool/gconfviewer.py:57 ../admin-tool/gconfviewer.py:76
+#: ../admin-tool/gconfviewer.py:57
+#: ../admin-tool/gconfviewer.py:76
 msgid "<no type>"
 msgstr "<không có kiểu>"
 
@@ -156,7 +175,8 @@ msgstr "cặp"
 msgid "Profile settings: %s"
 msgstr "Thiết lập hồ sơ : %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/gconfviewer.py:110
+#: ../admin-tool/profilesdialog.py:423
 #: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "Tên"
@@ -170,15 +190,16 @@ msgid "Value"
 msgstr "Giá trị"
 
 #: ../admin-tool/groupsdialog.py:61
-#, fuzzy, python-format
+#, python-format
 msgid "Groups for profile %s"
-msgstr "Người dùng cho hồ sơ %s"
+msgstr "Nhóm cho hồ sơ %s"
 
 #: ../admin-tool/groupsdialog.py:71
 msgid "Group"
-msgstr ""
+msgstr "Nhóm lại"
 
-#: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
+#: ../admin-tool/groupsdialog.py:81
+#: ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
 msgstr "Dùng hồ sơ này"
 
@@ -189,36 +210,26 @@ msgstr "Dùng hồ sơ này"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:520
+#: ../admin-tool/profilesdialog.py:550
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:77
-msgid ""
-"Your account does not have permissions to run the Desktop User Profiles tool"
-msgstr ""
-"Tài khoản của bạn không có quyền chạy công cụ Hồ sơ Người dùng Môi trường"
+msgid "Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr "Tài khoản của bạn không có quyền chạy công cụ Hồ sơ Người dùng Môi trường"
 
 #: ../admin-tool/sabayon:78
-msgid ""
-"Administrator level permissions are needed to run this program because it "
-"can modify system files."
-msgstr ""
-"Cần thiết quyền quản trị để chạy chương trình này vì nó có thể sửa đổi tập "
-"tin hệ thống."
+msgid "Administrator level permissions are needed to run this program because it can modify system files."
+msgstr "Cần thiết quyền quản trị để chạy chương trình này vì nó có thể sửa đổi tập tin hệ thống."
 
 #: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
 msgstr "Công cụ Hồ sơ Người dùng Môi trường đang chạy"
 
 #: ../admin-tool/sabayon:84
-msgid ""
-"You may not use Desktop User Profiles tool from within a profile editing "
-"session"
-msgstr ""
-"Không cho phép bạn sử dụng công cụ Hồ sơ Người dùng Môi trường bên trong "
-"phiên chạy sửa hồ sơ"
+msgid "You may not use Desktop User Profiles tool from within a profile editing session"
+msgstr "Không cho phép bạn sử dụng công cụ Hồ sơ Người dùng Môi trường bên trong phiên chạy sửa hồ sơ"
 
 #: ../admin-tool/sabayon:91
 #, c-format
@@ -227,38 +238,24 @@ msgstr "Không tìm thấy tài khoản người dùng « %s »"
 
 #: ../admin-tool/sabayon:92
 #, c-format
-msgid ""
-"Sabayon requires a special user account '%s' to be present on this computer. "
-"Try again after creating the account (using, for example, the 'adduser' "
-"command)"
-msgstr ""
-"Sabayon cần thiết một tài khoản người dùng đặc biệt « %s » nằm trong máy tính "
-"này. Hãy thử lại sau khi tạo tài khoản này (chẳng hạn, bằng lệnh « adduser "
-"» [thêm người dùng])"
+msgid "Sabayon requires a special user account '%s' to be present on this computer. Try again after creating the account (using, for example, the 'adduser' command)"
+msgstr "Sabayon cần thiết một tài khoản người dùng đặc biệt « %s » nằm trong máy tính này. Hãy thử lại sau khi tạo tài khoản này (chẳng hạn, bằng lệnh « adduser » [thêm người dùng])"
 
 #: ../admin-tool/sabayon:131
 #, c-format
-msgid ""
-"A fatal error has occurred.  You can help us fix the problem by sending the "
-"log in %s to %s"
-msgstr ""
-"Gặp lỗi nghiệm trọng. Xin giúp đỡ sửa lỗi này bằng cách gửi cho %s bản ghi "
-"nằm trong %s"
+msgid "A fatal error has occurred.  You can help us fix the problem by sending the log in %s to %s"
+msgstr "Gặp lỗi nghiệm trọng. Xin giúp đỡ sửa lỗi này bằng cách gửi cho %s bản ghi nằm trong %s"
 
 #: ../admin-tool/sabayon:145
 #, c-format
-msgid ""
-"Sabayon will now exit.  There were some recoverable errors, and you can help "
-"us debug the problem by sending the log in %s to %s"
-msgstr ""
-"Trình Sabayon sắp thoát. Nó đã gặp một số lỗi không thể phục hồi: bạn có thể "
-"giúp đỡ gỡ lỗi bằng cách gửi cho %s bản ghi nằm trong %s"
+msgid "Sabayon will now exit.  There were some recoverable errors, and you can help us debug the problem by sending the log in %s to %s"
+msgstr "Trình Sabayon sắp thoát. Nó đã gặp một số lỗi không thể phục hồi: bạn có thể giúp đỡ gỡ lỗi bằng cách gửi cho %s bản ghi nằm trong %s"
 
-#: ../admin-tool/sabayon-apply:111
+#: ../admin-tool/sabayon-apply:136
 msgid "Please use -h for usage options"
 msgstr "Hãy dùng tùy chọn « -h » để xem thông tin về cách sử dụng"
 
-#: ../admin-tool/sabayon-apply:123
+#: ../admin-tool/sabayon-apply:148
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Không tìm thấy hồ sơ cho người dùng « %s »\n"
@@ -266,14 +263,14 @@ msgstr "Không tìm thấy hồ sơ cho người dùng « %s »\n"
 #: ../admin-tool/sabayon-session:67
 #, c-format
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
-msgstr ""
-"Cách sử dụng: %s <tên_hồ_sơ> <đường_dẫn_hồ_sơ> <số_hiệu_bộ_trình_bày>\n"
+msgstr "Cách sử dụng: %s <tên_hồ_sơ> <đường_dẫn_hồ_sơ> <số_hiệu_bộ_trình_bày>\n"
 
 #: ../admin-tool/sabayon.desktop.in.in.h:1
 msgid "Establish and Edit Profiles for Users"
 msgstr "Tạo và Sửa Hồ sơ cho Người dùng"
 
-#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.ui.h:4
+#: ../admin-tool/sabayon.desktop.in.in.h:2
+#: ../admin-tool/sabayon.ui.h:4
 msgid "User Profile Editor"
 msgstr "Bộ Sửa Hồ sơ Người dùng"
 
@@ -299,11 +296,11 @@ msgstr "_Chi tiết"
 
 #: ../admin-tool/sabayon.ui.h:7
 msgid "_Groups"
-msgstr ""
+msgstr "_Nhóm"
 
 #: ../admin-tool/sabayon.ui.h:8
 msgid "_Groups:"
-msgstr ""
+msgstr "_Nhóm:"
 
 #: ../admin-tool/sabayon.ui.h:9
 msgid "_Profiles:"
@@ -327,64 +324,57 @@ msgid "Save changes to profile \"%s\" before closing?"
 msgstr "Lưu các thay đổi trong hồ sơ « %s » trước khi đóng không?"
 
 #: ../admin-tool/saveconfirm.py:44
-#, fuzzy
 msgid "If you don't save, all changes will be permanently lost."
-msgstr ""
-"Không lưu thì các thay đổi trong vòng %d giờ sau chót sẽ bị mất hoàn toàn."
+msgstr "Không lưu thì tất cả các thay đổi bị mất hẳn."
 
-#: ../admin-tool/sessionwindow.py:155
+#: ../admin-tool/sessionwindow.py:157
 #, python-format
 msgid "Editing profile %s"
 msgstr "Đang sửa hồ sơ %s"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Quit"
 msgstr "T_hoát"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "_Changes"
 msgstr "_Cạc thay đổi"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "Edit changes"
 msgstr "Sửa các thay đổi"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "_Lockdown"
 msgstr "_Khoá xuống"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "Edit Lockdown settings"
 msgstr "Sửa thiết lập Khoá xuống"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce Mandatory"
 msgstr "Ép làm việc Bắt buộc"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Ép làm dùng thiết lập bắt buộc trong phiên chạy sửa đổi"
 
-#: ../admin-tool/sessionwindow.py:306
+#: ../admin-tool/sessionwindow.py:308
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Thiết lập khoá xuống cho %s"
 
-#: ../admin-tool/sessionwindow.py:342
+#: ../admin-tool/sessionwindow.py:344
 #, python-format
-msgid ""
-"There was a recoverable error while applying the user profile '%s'.  You can "
-"report this error now or try to continue editing the user profile."
-msgstr ""
-"Gặp lỗi có thể phục hồi trong khi áp dụng hồ sơ người dùng « %s ». Bây giờ "
-"bạn có dịp thông báo lỗi này, hoặc bạn có thể thử tiếp tục sửa hồ sơ người "
-"dùng đó."
+msgid "There was a recoverable error while applying the user profile '%s'.  You can report this error now or try to continue editing the user profile."
+msgstr "Gặp lỗi có thể phục hồi trong khi áp dụng hồ sơ người dùng « %s ». Bây giờ bạn có dịp thông báo lỗi này, hoặc bạn có thể thử tiếp tục sửa hồ sơ người dùng đó."
 
-#: ../admin-tool/sessionwindow.py:346
+#: ../admin-tool/sessionwindow.py:348
 msgid "_Report this error"
 msgstr "Thông _báo lỗi này"
 
-#: ../admin-tool/sessionwindow.py:347
+#: ../admin-tool/sessionwindow.py:349
 msgid "_Continue editing"
 msgstr "Tiếp tục _sửa"
 
@@ -393,75 +383,86 @@ msgstr "Tiếp tục _sửa"
 msgid "Users for profile %s"
 msgstr "Người dùng cho hồ sơ %s"
 
-#: ../lib/protosession.py:112
+#: ../lib/protosession.py:119
 msgid "Unable to find a free X display"
 msgstr "Không tìm thấy bộ trình bày X còn rảnh"
 
-#: ../lib/protosession.py:376
-#, fuzzy
+#: ../lib/protosession.py:383
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
-msgstr "Lỗi khởi chạy Xnest: quá giờ trong khi đợi ký hiệu USR1"
+msgstr "Lỗi khởi chạy Xephyr: quá giờ trong khi đợi tín hiệu USR1"
 
-#: ../lib/protosession.py:378
-#, fuzzy
+#: ../lib/protosession.py:385
 msgid "Failed to start Xephyr: died during startup"
-msgstr "Lỗi khởi chạy Xnest: chết trong khi khởi chạy"
+msgstr "Lỗi khởi chạy Xephyr: chết trong khi khởi chạy"
 
 #. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:469
+#: ../lib/protosession.py:476
 #, python-format
-msgid ""
-"There was a recoverable error while applying the user profile from file '%s'."
-msgstr ""
-"Gặp lỗi có thể phục hồi trong khi áp dụng hồ sơ người dùng từ tập tin « %s »."
+msgid "There was a recoverable error while applying the user profile from file '%s'."
+msgstr "Gặp lỗi có thể phục hồi trong khi áp dụng hồ sơ người dùng từ tập tin « %s »."
 
 #. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (FATAL) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:478
+#: ../lib/protosession.py:485
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "Gặp lỗi nghiệm trọng trong khi áp dụng hồ sơ người dùng từ « %s »."
 
 #: ../lib/sources/filessource.py:69
-#, python-format
-msgid "File '%s' created"
-msgstr "Tập tin « %s » đã được tạo"
+msgid "Directory"
+msgstr "Thư mục"
 
 #: ../lib/sources/filessource.py:71
-#, python-format
-msgid "File '%s' deleted"
-msgstr "Tập tin « %s » bị xóa"
+msgid "Link"
+msgstr "Liên kết"
 
 #: ../lib/sources/filessource.py:73
-#, python-format
-msgid "File '%s' changed"
-msgstr "Tập tin « %s » bị thay đổi"
+#| msgid "Files"
+msgid "File"
+msgstr "Tập tin"
 
-#: ../lib/sources/filessource.py:97
+#: ../lib/sources/filessource.py:75
+#, python-format
+#| msgid "File '%s' created"
+msgid "%s '%s' created"
+msgstr "%s '%s' được tạo"
+
+#: ../lib/sources/filessource.py:77
+#, python-format
+#| msgid "File '%s' deleted"
+msgid "%s '%s' deleted"
+msgstr "%s '%s' bị xoá"
+
+#: ../lib/sources/filessource.py:79
+#, python-format
+#| msgid "File '%s' changed"
+msgid "%s '%s' changed"
+msgstr "%s '%s' bị thay đổi"
+
+#: ../lib/sources/filessource.py:105
 msgid "Applications menu"
 msgstr "Trình đơn Ứng dụng"
 
-#: ../lib/sources/filessource.py:99
-#, fuzzy
+#: ../lib/sources/filessource.py:107
 msgid "Settings menu"
-msgstr "Trình đơn Thiết lập máy phục vụ"
+msgstr "Trình đơn Thiết lập"
 
-#: ../lib/sources/filessource.py:101
+#: ../lib/sources/filessource.py:109
 msgid "Server Settings menu"
 msgstr "Trình đơn Thiết lập máy phục vụ"
 
-#: ../lib/sources/filessource.py:103
+#: ../lib/sources/filessource.py:111
 msgid "System Settings menu"
 msgstr "Trình đơn Thiết lập hệ thống"
 
 # Type: note
 # Description
-#: ../lib/sources/filessource.py:105
+#: ../lib/sources/filessource.py:113
 msgid "Start Here menu"
 msgstr "Trình đơn Bắt đầu từ đây"
 
@@ -510,86 +511,88 @@ msgstr "Khoá GConf « %s » được đặt thành cặp « %s »"
 msgid "GConf key '%s' set to '%s'"
 msgstr "Khoá GConf « %s » được đặt thành « %s »"
 
-#: ../lib/sources/gconfsource.py:137
+#: ../lib/sources/gconfsource.py:138
 msgid "Default GConf settings"
 msgstr "Thiết lập GConf mặc định"
 
-#: ../lib/sources/gconfsource.py:139
+#: ../lib/sources/gconfsource.py:140
 msgid "Mandatory GConf settings"
 msgstr "Thiết lập GConf bắt buộc"
 
-#: ../lib/sources/mozillasource.py:133
+#: ../lib/sources/mozillasource.py:135
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
 msgstr "Khoá Mozilla « %s » được đặt thành « %s »"
 
-#: ../lib/sources/mozillasource.py:135
+#: ../lib/sources/mozillasource.py:137
 #, python-format
 msgid "Mozilla key '%s' unset"
 msgstr "Khoá Mozilla « %s » chưa đặt"
 
-#: ../lib/sources/mozillasource.py:137
+#: ../lib/sources/mozillasource.py:139
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Khoá Mozilla « %s » đã thay đổi thành « %s »"
 
-#: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
+#: ../lib/sources/mozillasource.py:169
+#: ../lib/sources/mozillasource.py:179
 msgid "Web browser preferences"
 msgstr "Tùy trích bộ duyệt Mạng"
 
-#: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
+#: ../lib/sources/mozillasource.py:171
+#: ../lib/sources/mozillasource.py:181
 msgid "Web browser bookmarks"
 msgstr "Dấu nhớ bộ duyệt Mạng"
 
-#: ../lib/sources/mozillasource.py:170
+#: ../lib/sources/mozillasource.py:173
 msgid "Web browser profile list"
 msgstr "Danh sách hồ sơ bộ duyệt Mạng"
 
-#: ../lib/sources/mozillasource.py:520
+#: ../lib/sources/mozillasource.py:550
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Không tìm thấy tập tin (%s)"
 
-#: ../lib/sources/mozillasource.py:869
+#: ../lib/sources/mozillasource.py:899
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "gặp tên trùng(%(name)s) trong phần %(section)s"
 
-#: ../lib/sources/mozillasource.py:878
+#: ../lib/sources/mozillasource.py:908
 #, python-format
 msgid "redundant default in section %s"
 msgstr "mặc định thừa trong phần %s"
 
-#: ../lib/sources/mozillasource.py:895
+#: ../lib/sources/mozillasource.py:925
 msgid "no default profile"
 msgstr "không có hồ sơ mặc định"
 
-#: ../lib/sources/mozillasource.py:950
+#: ../lib/sources/mozillasource.py:980
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Dấu nhớ Mozilla được tạo « %s » -> « %s »"
 
-#: ../lib/sources/mozillasource.py:952
+#: ../lib/sources/mozillasource.py:982
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Thư mục dấu nhớ Mozilla được tạo « %s »"
 
-#: ../lib/sources/mozillasource.py:955
+#: ../lib/sources/mozillasource.py:985
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Dấu nhớ Mozilla bị xóa « %s »"
 
-#: ../lib/sources/mozillasource.py:957
+#: ../lib/sources/mozillasource.py:987
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Thư mục dấu nhớ Mozilla bị xóa « %s »"
 
-#: ../lib/sources/mozillasource.py:960
+#: ../lib/sources/mozillasource.py:990
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Dấu nhớ Mozilla được thay đổi « %s » « %s »"
 
-#: ../lib/sources/mozillasource.py:962
+#: ../lib/sources/mozillasource.py:992
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Thư mục dấu nhớ Mozilla được thay đổi « %s »"
@@ -605,112 +608,116 @@ msgid "Panel '%s' removed"
 msgstr "Bảng « %s » bị gỡ bỏ"
 
 #: ../lib/sources/paneldelegate.py:77
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' added"
-msgstr "Bảng « %s » được thêm"
+msgstr "Tiểu dụng « %s » được thêm"
 
 #: ../lib/sources/paneldelegate.py:100
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' removed"
-msgstr "Bảng « %s » bị gỡ bỏ"
+msgstr "Tiểu dụng « %s » bị gỡ bỏ"
 
 #: ../lib/sources/paneldelegate.py:123
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' added"
-msgstr "Bảng « %s » được thêm"
+msgstr "Đối tượng « %s » được thêm"
 
 #: ../lib/sources/paneldelegate.py:152
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' removed"
-msgstr "Bảng « %s » bị gỡ bỏ"
+msgstr "Đối tượng « %s » bị gỡ bỏ"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:240
+#: ../lib/sources/paneldelegate.py:241
 msgid "Drawer"
 msgstr "Ngăn kéo"
 
-#: ../lib/sources/paneldelegate.py:242
+#: ../lib/sources/paneldelegate.py:243
 msgid "Main Menu"
 msgstr "Trình đơn chính"
 
-#: ../lib/sources/paneldelegate.py:252
+#: ../lib/sources/paneldelegate.py:253
 #, python-format
 msgid "%s launcher"
 msgstr "Bộ khởi chạy %s"
 
-#: ../lib/sources/paneldelegate.py:256
+#: ../lib/sources/paneldelegate.py:257
 msgid "Lock Screen button"
 msgstr "Nút Khoá màn hình"
 
-#: ../lib/sources/paneldelegate.py:258
+#: ../lib/sources/paneldelegate.py:259
 msgid "Logout button"
 msgstr "Nút Đăng xuất"
 
-#: ../lib/sources/paneldelegate.py:260
+#: ../lib/sources/paneldelegate.py:261
 msgid "Run Application button"
 msgstr "Nút Chạy ứng dụng"
 
-#: ../lib/sources/paneldelegate.py:262
+#: ../lib/sources/paneldelegate.py:263
 msgid "Search button"
 msgstr "Nút Tìm"
 
-#: ../lib/sources/paneldelegate.py:264
-#, fuzzy
+#: ../lib/sources/paneldelegate.py:265
 msgid "Force Quit button"
-msgstr "Nút Đăng xuất"
+msgstr "Nút Buộc Thoát"
 
-#: ../lib/sources/paneldelegate.py:266
-#, fuzzy
+#: ../lib/sources/paneldelegate.py:267
 msgid "Connect to Server button"
-msgstr "Nút Khoá màn hình"
+msgstr "Nút Kết nối tới Máy phục vụ"
 
-#: ../lib/sources/paneldelegate.py:268
-#, fuzzy
+#: ../lib/sources/paneldelegate.py:269
 msgid "Shutdown button"
-msgstr "Nút Đăng xuất"
+msgstr "Nút Tắt Máy"
 
-#: ../lib/sources/paneldelegate.py:270
+#: ../lib/sources/paneldelegate.py:271
 msgid "Screenshot button"
 msgstr "Nút Chụp ảnh"
 
-#: ../lib/sources/paneldelegate.py:273
+#: ../lib/sources/paneldelegate.py:274
 msgid "Unknown"
-msgstr ""
+msgstr "Không rõ"
 
-#: ../lib/sources/paneldelegate.py:275
+#: ../lib/sources/paneldelegate.py:276
 msgid "Menu Bar"
 msgstr "Thanh trình đơn"
 
-#: ../lib/sources/paneldelegate.py:512
+#: ../lib/sources/paneldelegate.py:513
 msgid "Panel File"
 msgstr "Tập tin Bảng"
 
-#: ../lib/storage.py:172
+#: ../lib/storage.py:173
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "Lỗi đọc tập tin « %s »: %s"
 
-#: ../lib/storage.py:182
+#: ../lib/storage.py:183
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "Lỗi đọc siêu dữ liệu từ « %s »: %s"
 
-#: ../lib/storage.py:188
+#: ../lib/storage.py:189
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "Phần siêu dữ liệu không hợp lệ trong « %s »: %s"
 
-#: ../lib/storage.py:362
+#. change the raise to a dprint, since some files seem to disappear.
+#. raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
+#: ../lib/storage.py:387
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Không thể thêm tập tin không tồn tại « %s »"
 
-#: ../lib/storage.py:487
+#: ../lib/storage.py:531
+#, python-format
+msgid "Couldn't rmdir '%s'"
+msgstr "Lỗi rmdir (gỡ bỏ thư mục) « %s »"
+
+#: ../lib/storage.py:536
 #, python-format
 msgid "Couldn't unlink file '%s'"
-msgstr ""
+msgstr "Không thể bỏ liên kết tập tin « %s »"
 
-#: ../lib/storage.py:570
+#: ../lib/storage.py:633
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Hồ sơ chỉ cho phép đọc %s"
@@ -718,88 +725,80 @@ msgstr "Hồ sơ chỉ cho phép đọc %s"
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/systemdb.py:67
+#: ../lib/systemdb.py:77
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "kiểu không hợp lệ cho thiết lập %(setting)s trong %(np)s"
 
-#: ../lib/systemdb.py:112
+#: ../lib/systemdb.py:122
 msgid "No database file provided"
-msgstr ""
+msgstr "Chưa cung cấp tập tin cơ sở dữ liệu"
 
-#: ../lib/systemdb.py:232
-#, fuzzy, python-format
+#: ../lib/systemdb.py:253
+#, python-format
 msgid "No LDAP search base specified for %s"
-msgstr "Chưa ghi rõ cơ bản tìm kiếm cho %s"
+msgstr "Chưa ghi rõ cơ bản tìm kiếm LDAP cho %s"
 
-#: ../lib/systemdb.py:235
-#, fuzzy, python-format
+#: ../lib/systemdb.py:256
+#, python-format
 msgid "No LDAP query filter specified for %s"
-msgstr "Chưa ghi rõ bộ lọc truy vấn cho %s"
+msgstr "Chưa ghi rõ bộ lọc truy vấn LDAP cho %s"
 
-#: ../lib/systemdb.py:238
-#, fuzzy, python-format
+#: ../lib/systemdb.py:259
+#, python-format
 msgid "No LDAP result attribute specified for %s"
-msgstr "Chưa ghi rõ thuộc tính kết quả cho %s"
-
-#: ../lib/systemdb.py:247
-#, fuzzy
-msgid "LDAP Scope must be one of: "
-msgstr ""
-"Phạm vi phải là một của:\n"
-" • sub (dưới)\n"
-" • base (cơ bản)\n"
-" • one (một)"
+msgstr "Chưa ghi rõ thuộc tính kết quả LDAP cho %s"
 
 #: ../lib/systemdb.py:268
-#, fuzzy
-msgid "multiple_result must be one of: "
-msgstr ""
-"multiple_result (đa kết quả) phải là một của:\n"
-" • first (thứ nhất)\n"
-" • random (ngẫu nhiên)"
+msgid "LDAP Scope must be one of: "
+msgstr "Phạm vi LDAP phải là một của:"
 
-#: ../lib/systemdb.py:361
+#: ../lib/systemdb.py:288
+msgid "multiple_result must be one of: "
+msgstr "multiple_result phải là một của:"
+
+#: ../lib/systemdb.py:381
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Không thể mở %s để ghi"
 
-#: ../lib/systemdb.py:374
+#: ../lib/systemdb.py:394
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Lỗi lưu UserDatabase (cơ sở dữ liệu người dùng) vào %s"
 
 # Type: text
 # Description
-#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
+#: ../lib/systemdb.py:423
+#: ../lib/systemdb.py:457
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "Tập tin %s không phải cấu hình hồ sơ"
 
 # Type: error
 # Description
-#: ../lib/systemdb.py:404
+#: ../lib/systemdb.py:430
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Lỗi thêm hồ sơ mặc định %s vào cấu hình"
 
 # Type: error
 # Description
-#: ../lib/systemdb.py:438
+#: ../lib/systemdb.py:464
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Lỗi thêm người dùng %s vào cấu hình hồ sơ"
 
-#: ../lib/systemdb.py:510
+#: ../lib/systemdb.py:536
 msgid "Failed to get the user list"
 msgstr "Lỗi lấy danh sách người dùng"
 
-#: ../lib/systemdb.py:560
-#, fuzzy
+#: ../lib/systemdb.py:586
 msgid "Failed to get the group list"
-msgstr "Lỗi lấy danh sách người dùng"
+msgstr "Lỗi lấy danh sách nhóm"
 
-#: ../lib/unittests.py:38 ../lib/unittests.py:39
+#: ../lib/unittests.py:38
+#: ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
 msgstr "Bỏ qua các CẢNH BÁO"
 
@@ -818,361 +817,11 @@ msgid "Success!"
 msgstr "Thành công !"
 
 #: ../lib/util.py:94
-msgid ""
-"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
-"environment"
-msgstr ""
-"Không tìm thấy thư mục chính: chưa lập nó trong « /etc/passwd » và không có "
-"giá trị cho biến « $HOME » trong môi trường."
+msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
+msgstr "Không tìm thấy thư mục chính: chưa lập nó trong « /etc/passwd » và không có giá trị cho biến « $HOME » trong môi trường."
 
-#: ../lib/util.py:110 ../lib/util.py:137
-msgid ""
-"Cannot find username: not set in /etc/passwd and no value for $USER in "
-"environment"
-msgstr ""
-"Không tìm thấy tên người dùng: chưa lập nó trong « /etc/passwd » và không có "
-"giá trị cho biến « $USER » trong môi trường."
+#: ../lib/util.py:110
+#: ../lib/util.py:137
+msgid "Cannot find username: not set in /etc/passwd and no value for $USER in environment"
+msgstr "Không tìm thấy tên người dùng: chưa lập nó trong « /etc/passwd » và không có giá trị cho biến « $USER » trong môi trường."
 
-#~ msgid "Click to make this setting not mandatory"
-#~ msgstr "Nhấn chuột để làm cho thiết lập này không bắt buộc"
-
-#~ msgid "Click to make this setting mandatory"
-#~ msgstr "Nhấn chuột để làm cho thiết lập này bắt buộc"
-
-#~ msgid "General"
-#~ msgstr "Chung"
-
-#~ msgid "Epiphany Web Browser"
-#~ msgstr "Bộ Duyệt Mạng Epiphany"
-
-#~ msgid "Disable _command line"
-#~ msgstr "Tắt dòng _lệnh"
-
-#~ msgid "Disable _printing"
-#~ msgstr "Tắt khả năng _in"
-
-#~ msgid "Disable print _setup"
-#~ msgstr "Tắt thiết lậ_p in"
-
-#~ msgid "Disable save to _disk"
-#~ msgstr "Tắt khả năng lưu _vào đĩa"
-
-#~ msgid "_Lock down the panels"
-#~ msgstr "_Khoá xuống Bảng"
-
-#~ msgid "Disable force _quit"
-#~ msgstr "Tắt khả năng buộc t_hoát"
-
-#~ msgid "Disable log _out"
-#~ msgstr "Tắt khả năng đăng _xuất"
-
-#~ msgid "Disable _quit"
-#~ msgstr "Tắt khả năng t_hoát"
-
-#~ msgid "Disable _arbitrary URL"
-#~ msgstr "Tắt địa chỉ Mạng tù_y ý"
-
-#~ msgid "Disable _bookmark editing"
-#~ msgstr "Tắt khả năng _sửa dấu nhớ"
-
-#~ msgid "Disable _history"
-#~ msgstr "Tắt _lược sử"
-
-#~ msgid "Disable _javascript chrome"
-#~ msgstr "Tắt crom _JavaScript"
-
-#~ msgid "Disable _toolbar editing"
-#~ msgstr "Tắt khả năng sửa _thanh công cụ"
-
-#, fuzzy
-#~ msgid "Force _fullscreen mode"
-#~ msgstr "Toàn _màn hình"
-
-#~ msgid "Hide _menubar"
-#~ msgstr "Ẩn thanh trình đơ_n"
-
-#~ msgid "Disable lock _screen"
-#~ msgstr "Tắt khả năng khóa _màn hình"
-
-#, fuzzy
-#~ msgid "_Lock on activation"
-#~ msgstr "_Khoá xuống Bảng"
-
-#, fuzzy
-#~ msgid "Allow log _out"
-#~ msgstr "Tắt khả năng đăng _xuất"
-
-#~ msgid "Disable _unsafe protocols"
-#~ msgstr "Tắt các giao thức _bất an"
-
-#, fuzzy
-#~ msgid "Disabled Applets"
-#~ msgstr "<b>Tiểu dụng bị tắt</b>"
-
-#~ msgid "Lockdown Editor"
-#~ msgstr "Bộ sửa khóa xuống"
-
-#, fuzzy
-#~ msgid "Safe Protocols"
-#~ msgstr "<b>Giao thức an toàn</b>"
-
-#~| msgid "Remove personal info from documents when saving them"
-#~ msgid "Remove personal information from documents when saving them"
-#~ msgstr "Gỡ bỏ thông tin cá nhân khỏi tài liệu khi lưu nó"
-
-#~ msgid "Warn if macro tries to create a PDF"
-#~ msgstr "Cảnh báo nếu vĩ lệnh thử tạo PDF"
-
-#~ msgid "Warn if macro tries to print a document"
-#~ msgstr "Cảnh báo nếu vĩ lệnh thử in tài liệu"
-
-#~ msgid "Warn if macro tries to save a document"
-#~ msgstr "Cảnh báo nếu vĩ lệnh thử lưu tài liệu"
-
-#~ msgid "Warn if macro tries to sign a document"
-#~ msgstr "Cảnh báo nếu vĩ lệnh thử ký tài liệu"
-
-#~ msgid "Recommend password when saving a document"
-#~ msgstr "Khuyên đặt mật khẩu khi lưu tài liệu"
-
-#~ msgid "Enable auto-save"
-#~ msgstr "Bật tự động lưu"
-
-#~ msgid "Printing should mark the document as modified"
-#~ msgstr "In thì đánh dấu tài liệu « đã sửa đổi »"
-
-#~ msgid "Use system's file dialog"
-#~ msgstr "Dùng hộp thoại tập tin của hệ thống"
-
-#~ msgid "Create backup copy on save"
-#~ msgstr "Tạo bản sao lưu khi lưu"
-
-#~ msgid "Warn when saving non-OpenOffice.org formats"
-#~ msgstr "Cảnh báo khi lưu theo định dạng không phải OpenOffice.org"
-
-#~ msgid "Use OpenGL"
-#~ msgstr "Dùng OpenGL"
-
-#~ msgid "Use system font"
-#~ msgstr "Dùng phông của hệ thống"
-
-#~ msgid "Use anti-aliasing"
-#~ msgstr "Làm trơn phông"
-
-#~ msgid "Disable UI customization"
-#~ msgstr "Tắt tùy chỉnh giao diện người dùng"
-
-#~ msgid "Show insensitive menu items"
-#~ msgstr "Hiện tên trình đơn không đáp ứng"
-
-#~ msgid "Show font preview"
-#~ msgstr "Hiện ô xem thử phông"
-
-#~ msgid "Show font history"
-#~ msgstr "Hiện lược sử phông"
-
-#~ msgid "Show icons in menus"
-#~ msgstr "Hiện biểu tượng trong trình đơn"
-
-#~ msgid ""
-#~ "\n"
-#~ "5\n"
-#~ "10\n"
-#~ "25\n"
-#~ "50"
-#~ msgstr ""
-#~ "\n"
-#~ "5\n"
-#~ "10\n"
-#~ "25\n"
-#~ "50"
-
-#~ msgid ""
-#~ "\n"
-#~ "Automatic\n"
-#~ "Large\n"
-#~ "Small"
-#~ msgstr ""
-#~ "\n"
-#~ "Tự động\n"
-#~ "Lớn\n"
-#~ "Nhỏ"
-
-#~ msgid ""
-#~ "\n"
-#~ "OpenDocument (.odp)\n"
-#~ "PowerPoint 97+ (.ppt)\n"
-#~ "OpenOffice.org 1.1 (.sxi)"
-#~ msgstr ""
-#~ "\n"
-#~ "OpenDocument (.odp)\n"
-#~ "PowerPoint 97+ (.ppt)\n"
-#~ "OpenOffice.org 1.1 (.sxi)"
-
-#~ msgid ""
-#~ "\n"
-#~ "OpenDocument (.ods)\n"
-#~ "Excel 97+ (.xls)\n"
-#~ "OpenOffice.org 1.1 (.sxc)"
-#~ msgstr ""
-#~ "\n"
-#~ "OpenDocument (.ods)\n"
-#~ "Excel 97+ (.xls)\n"
-#~ "OpenOffice.org 1.1 (.sxc)"
-
-#~ msgid ""
-#~ "\n"
-#~ "OpenDocument (.odt)\n"
-#~ "Word 97+ (.doc)\n"
-#~ "OpenOffice.org 1.1 (.sxw)"
-#~ msgstr ""
-#~ "\n"
-#~ "OpenDocument (.odt)\n"
-#~ "Word 97+ (.doc)\n"
-#~ "OpenOffice.org 1.1 (.sxw)"
-
-#~ msgid ""
-#~ "\n"
-#~ "Very High\n"
-#~ "High\n"
-#~ "Medium\n"
-#~ "Low"
-#~ msgstr ""
-#~ "\n"
-#~ "Rất cao\n"
-#~ "Cao\n"
-#~ "Vừa\n"
-#~ "Thấp"
-
-#~ msgid "Default format for presentations:"
-#~ msgstr "Định dạng mặc định cho trình diễn:"
-
-#~ msgid "Default format for spreadsheet:"
-#~ msgstr "Định dạng mặc định cho bảng tính:"
-
-#~ msgid "Default format for word processor:"
-#~ msgstr "Định dạng mặc định cho trình xử lý văn bản:"
-
-#~ msgid "Default icon size"
-#~ msgstr "Kích cỡ biểu tượng mặc định"
-
-#~ msgid "Load / Save"
-#~ msgstr "Nạp / Lưu"
-
-#~ msgid "Macro Security Level:"
-#~ msgstr "Cấp bảo mật vĩ lệnh:"
-
-#~ msgid "Number of undo steps:"
-#~ msgstr "Số bước có thể hủy:"
-
-# Name: don't translate/Tên: đừng dịch
-#~ msgid "OpenOffice.org"
-#~ msgstr "OpenOffice.org"
-
-#~ msgid "Security"
-#~ msgstr "Bảo mật"
-
-#~ msgid "User Interface"
-#~ msgstr "Giao diện người dùng"
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld second will be permanently "
-#~ "lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %ld seconds will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Không lưu thì các thay đổi trong vòng %ld giây chót sẽ bị mất hoàn toàn."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last minute will be permanently lost."
-#~ msgstr ""
-#~ "Không lưu thì các thay đổi trong vòng phút chót sẽ bị mất hoàn toàn."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last minute and %ld second will be "
-#~ "permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last minute and %ld seconds will be "
-#~ "permanently lost."
-#~ msgstr[0] ""
-#~ "Không lưu thì các thay đổi trong vòng phút chót và %ld giây sẽ bị mất "
-#~ "hoàn toàn."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld minute will be permanently "
-#~ "lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %ld minutes will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Không lưu thì các thay đổi trong vòng %ld phút chót sẽ bị mất hoàn toàn."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last hour and %d minute will be "
-#~ "permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last hour and %d minutes will be "
-#~ "permanently lost."
-#~ msgstr[0] ""
-#~ "Không lưu thì các thay đổi trong vòng giờ sau chót và %d phút chót sẽ bị "
-#~ "mất hoàn toàn."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %d hour will be permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %d hours will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Không lưu thì các thay đổi trong vòng %d giờ sau chót sẽ bị mất hoàn toàn."
-
-#~ msgid "Preferences menu"
-#~ msgstr "Trình đơn Tùy thích"
-
-#~ msgid "Applet %s added to top panel"
-#~ msgstr "Tiểu dụng %s đã thêm vào bảng bên trên"
-
-#~ msgid "Applet %s added to bottom panel"
-#~ msgstr "Tiểu dụng %s đã thêm vào bảng bên dưới"
-
-#~ msgid "Applet %s added to left panel"
-#~ msgstr "Tiểu dụng %s đã thêm vào bảng bên trái"
-
-#~ msgid "Applet %s added to right panel"
-#~ msgstr "Tiểu dụng %s đã thêm vào bảng bên phải"
-
-#~ msgid "Applet %s removed from top panel"
-#~ msgstr "Tiểu dụng %s bị bỏ khỏi bảng bên trên"
-
-#~ msgid "Applet %s removed from bottom panel"
-#~ msgstr "Tiểu dụng %s bị bỏ khỏi bảng bên dưới"
-
-#~ msgid "Applet %s removed from left panel"
-#~ msgstr "Tiểu dụng %s bị bỏ khỏi bảng bên trái"
-
-#~ msgid "Applet %s removed from right panel"
-#~ msgstr "Tiểu dụng %s bị bỏ khỏi bảng bên phải"
-
-#~ msgid "%s added to top panel"
-#~ msgstr "%s đã thêm vào bảng bên trên"
-
-#~ msgid "%s added to bottom panel"
-#~ msgstr "%s đã thêm vào bảng bên dưới"
-
-#~ msgid "%s added to left panel"
-#~ msgstr "%s đã thêm vào bảng bên trái"
-
-#~ msgid "%s added to right panel"
-#~ msgstr "%s đã thêm vào bảng bên phải"
-
-#~ msgid "%s removed from top panel"
-#~ msgstr "%s bị bỏ khỏi bảng bên trên"
-
-#~ msgid "%s removed from bottom panel"
-#~ msgstr "%s bị bỏ khỏi bảng bên dưới"
-
-#~ msgid "%s removed from left panel"
-#~ msgstr "%s bị bỏ khỏi bảng bên trái"
-
-#~ msgid "%s removed from right panel"
-#~ msgstr "%s bị bỏ khỏi bảng bên phải"
