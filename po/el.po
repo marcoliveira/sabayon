@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-31 02:00+0200\n"
-"PO-Revision-Date: 2010-01-30 21:42+0200\n"
-"Last-Translator: Μάριος Ζηντίλης <m.zindilis@dmajor.org>\n"
+"POT-Creation-Date: 2010-03-25 09:52+0200\n"
+"PO-Revision-Date: 2010-03-23 17:36+0200\n"
+"Last-Translator: Bakaoukas Nikolaos <nikolaosx1@gmail.com>\n"
 "Language-Team: Greek <team@gnome.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,76 +51,80 @@ msgstr "Αγνόηση"
 msgid "Lock"
 msgstr "Κλείδωμα"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:263
 msgid "Description"
 msgstr "Περιγραφή"
 
-#: ../admin-tool/editorwindow.py:97
+#: ../admin-tool/editorwindow.py:100
 #, python-format
 msgid "Profile %s"
 msgstr "Προφίλ %s"
 
-#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:179
 msgid "_Profile"
 msgstr "_Προφίλ"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
 msgid "_Save"
 msgstr "Αποθήκευ_ση"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
 msgid "Save profile"
 msgstr "Αποθήκευση προφίλ"
 
-#: ../admin-tool/editorwindow.py:204
+#: ../admin-tool/editorwindow.py:207
 msgid "_Close"
 msgstr "_Κλείσιμο"
 
-#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:181
 msgid "Close the current window"
 msgstr "Κλείσιμο τρέχοντος παραθύρου"
 
-#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:182
 msgid "_Edit"
 msgstr "_Επεξεργασία"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "_Delete"
 msgstr "_Διαγραφή"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "Delete item"
 msgstr "Διαγραφή αντικειμένου"
 
-#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:210 ../admin-tool/sessionwindow.py:185
 msgid "_Help"
 msgstr "_Βοήθεια"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
 msgid "_Contents"
 msgstr "_Περιεχόμενα"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
 msgid "Help Contents"
 msgstr "Περιεχόμενα βοήθειας"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:187
+#: ../admin-tool/editorwindow.py:212 ../admin-tool/sessionwindow.py:187
 msgid "_About"
 msgstr "_Περί"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:187
+#: ../admin-tool/editorwindow.py:212 ../admin-tool/sessionwindow.py:187
 msgid "About Sabayon"
 msgstr "Περί Sabayon"
 
-#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:267
+msgid "Source"
+msgstr "Πηγή"
+
+#: ../admin-tool/editorwindow.py:300 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:86
+#: ../admin-tool/editorwindow.py:304 ../lib/sources/filessource.py:86
 msgid "Files"
 msgstr "Αρχεία"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:304 ../lib/sources/paneldelegate.py:279
 msgid "Panel"
 msgstr "Πίνακας εφαρμογών"
 
@@ -268,11 +272,11 @@ msgstr ""
 "Έξοδος από το Sabayon τώρα λόγω μερικών αναστρέψιμων σφαλμάτων. Μπορείτε να "
 "μας βοηθήσετε να επιλύσουμε το πρόβλημα αποστέλοντας την καταγραφή %s στο %s"
 
-#: ../admin-tool/sabayon-apply:111
+#: ../admin-tool/sabayon-apply:136
 msgid "Please use -h for usage options"
 msgstr "Παρακαλώ χρησιμοποιήστε το -h για επιλογές χρήσης"
 
-#: ../admin-tool/sabayon-apply:123
+#: ../admin-tool/sabayon-apply:148
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Δεν βρέθηκε προφίλ για τον χρήστη '%s'\n"
@@ -404,15 +408,15 @@ msgstr "_Συνέχιση επεξεργασίας"
 msgid "Users for profile %s"
 msgstr "Χρήστες για προφίλ %s"
 
-#: ../lib/protosession.py:112
+#: ../lib/protosession.py:119
 msgid "Unable to find a free X display"
 msgstr "Αδυναμία εύρεσης ελεύθερου X display"
 
-#: ../lib/protosession.py:376
+#: ../lib/protosession.py:383
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr "Αποτυχία εκκίνησης του  Xephyr: τέλος χρόνου αναμονής για σήμα USR1"
 
-#: ../lib/protosession.py:378
+#: ../lib/protosession.py:385
 msgid "Failed to start Xephyr: died during startup"
 msgstr "Αποτυχία εκκίνησης του  Xephyr: τερματίστηκε κατά την εκκίνηση"
 
@@ -420,7 +424,7 @@ msgstr "Αποτυχία εκκίνησης του  Xephyr: τερματίστη
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:469
+#: ../lib/protosession.py:476
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
@@ -432,7 +436,7 @@ msgstr ""
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (FATAL) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:478
+#: ../lib/protosession.py:485
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr ""
@@ -465,23 +469,23 @@ msgstr "%s '%s' διαγράφηκε"
 msgid "%s '%s' changed"
 msgstr "%s '%s' τροποποιήθηκε"
 
-#: ../lib/sources/filessource.py:104
+#: ../lib/sources/filessource.py:105
 msgid "Applications menu"
 msgstr "Μενού εφαρμογών"
 
-#: ../lib/sources/filessource.py:106
+#: ../lib/sources/filessource.py:107
 msgid "Settings menu"
 msgstr "Μενού προτιμήσεων"
 
-#: ../lib/sources/filessource.py:108
+#: ../lib/sources/filessource.py:109
 msgid "Server Settings menu"
 msgstr "Μενού Προτιμήσεων εξυπηρετητή"
 
-#: ../lib/sources/filessource.py:110
+#: ../lib/sources/filessource.py:111
 msgid "System Settings menu"
 msgstr "Μενού Προτιμήσεων συστήματος"
 
-#: ../lib/sources/filessource.py:112
+#: ../lib/sources/filessource.py:113
 msgid "Start Here menu"
 msgstr "Μενού Ξεκινήστε εδώ"
 
@@ -530,86 +534,86 @@ msgstr "Το κλειδί GConf '%s' ορίστηκε σε ζεύγος '%s'"
 msgid "GConf key '%s' set to '%s'"
 msgstr "Το κλειδί GConf '%s' ορίστηκε σε '%s'"
 
-#: ../lib/sources/gconfsource.py:137
+#: ../lib/sources/gconfsource.py:138
 msgid "Default GConf settings"
 msgstr "Προκαθορισμένες ρυθμίσεις GConf"
 
-#: ../lib/sources/gconfsource.py:139
+#: ../lib/sources/gconfsource.py:140
 msgid "Mandatory GConf settings"
 msgstr "Απαραίτητες ρυθμίσεις GConf"
 
-#: ../lib/sources/mozillasource.py:133
+#: ../lib/sources/mozillasource.py:135
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
 msgstr "Το κλειδί Mozilla '%s' ορίστηκε σε '%s'"
 
-#: ../lib/sources/mozillasource.py:135
+#: ../lib/sources/mozillasource.py:137
 #, python-format
 msgid "Mozilla key '%s' unset"
 msgstr "Αρση ορισμού κλειδιού Mozilla '%s'"
 
-#: ../lib/sources/mozillasource.py:137
+#: ../lib/sources/mozillasource.py:139
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Το κλειδί Mozilla '%s' άλλαξε σε '%s'"
 
-#: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
+#: ../lib/sources/mozillasource.py:169 ../lib/sources/mozillasource.py:179
 msgid "Web browser preferences"
 msgstr "Προτιμήσεις περιηγητή"
 
-#: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
+#: ../lib/sources/mozillasource.py:171 ../lib/sources/mozillasource.py:181
 msgid "Web browser bookmarks"
 msgstr "Σελιδοδείκτες περιηγητή"
 
-#: ../lib/sources/mozillasource.py:170
+#: ../lib/sources/mozillasource.py:173
 msgid "Web browser profile list"
 msgstr "Λίστα προφίλ περιηγητή"
 
-#: ../lib/sources/mozillasource.py:520
+#: ../lib/sources/mozillasource.py:550
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Το αρχείο δεν βρέθηκε (%s)"
 
-#: ../lib/sources/mozillasource.py:869
+#: ../lib/sources/mozillasource.py:899
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "διπλοεγγραφή ονόματος (%(name)s) στην ενότητα %(section)s"
 
-#: ../lib/sources/mozillasource.py:878
+#: ../lib/sources/mozillasource.py:908
 #, python-format
 msgid "redundant default in section %s"
 msgstr "περιττή προεπιλογή στην ενότητα %s"
 
-#: ../lib/sources/mozillasource.py:895
+#: ../lib/sources/mozillasource.py:925
 msgid "no default profile"
 msgstr "δεν υπάρχει προεπιλεγμένο προφίλ"
 
-#: ../lib/sources/mozillasource.py:950
+#: ../lib/sources/mozillasource.py:980
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Δημιουργήθηκε σελιδοδείκτης Mozilla '%s' -> '%s'"
 
-#: ../lib/sources/mozillasource.py:952
+#: ../lib/sources/mozillasource.py:982
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Δημιουργήθηκε φάκελος σελιδοδεικτών Mozilla '%s'"
 
-#: ../lib/sources/mozillasource.py:955
+#: ../lib/sources/mozillasource.py:985
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Διαγράφηκε σελιδοδείκτης Mozilla '%s'"
 
-#: ../lib/sources/mozillasource.py:957
+#: ../lib/sources/mozillasource.py:987
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Διαγράφηκε φάκελος σελιδοδεικτών Mozilla '%s'"
 
-#: ../lib/sources/mozillasource.py:960
+#: ../lib/sources/mozillasource.py:990
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Ο σελιδοδείκτης Mozilla άλλαξε '%s' '%s'"
 
-#: ../lib/sources/mozillasource.py:962
+#: ../lib/sources/mozillasource.py:992
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Ο φάκελος σελιδοδεικτών Mozilla άλλαξε '%s'"
@@ -645,60 +649,60 @@ msgid "Object '%s' removed"
 msgstr "Αφαιρέθηκε το αντικείμενο '%s'"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:240
+#: ../lib/sources/paneldelegate.py:241
 msgid "Drawer"
 msgstr "Συρτάρι"
 
-#: ../lib/sources/paneldelegate.py:242
+#: ../lib/sources/paneldelegate.py:243
 msgid "Main Menu"
 msgstr "Κύριο μενού"
 
-#: ../lib/sources/paneldelegate.py:252
+#: ../lib/sources/paneldelegate.py:253
 #, python-format
 msgid "%s launcher"
 msgstr "Εκκινητής %s"
 
-#: ../lib/sources/paneldelegate.py:256
+#: ../lib/sources/paneldelegate.py:257
 msgid "Lock Screen button"
 msgstr "Κουμπί κλειδώματος οθόνης"
 
-#: ../lib/sources/paneldelegate.py:258
+#: ../lib/sources/paneldelegate.py:259
 msgid "Logout button"
 msgstr "Κουμπί αποσύνδεσης"
 
-#: ../lib/sources/paneldelegate.py:260
+#: ../lib/sources/paneldelegate.py:261
 msgid "Run Application button"
 msgstr "Κουμπί εκτέλεσης εφαρμογής"
 
-#: ../lib/sources/paneldelegate.py:262
+#: ../lib/sources/paneldelegate.py:263
 msgid "Search button"
 msgstr "Κουμπί αναζήτησης"
 
-#: ../lib/sources/paneldelegate.py:264
+#: ../lib/sources/paneldelegate.py:265
 msgid "Force Quit button"
 msgstr "Κουμπί εξαναγκασμού εξόδου"
 
-#: ../lib/sources/paneldelegate.py:266
+#: ../lib/sources/paneldelegate.py:267
 msgid "Connect to Server button"
 msgstr "Κουμπί σύνδεσης σε εξυπηρετητή"
 
-#: ../lib/sources/paneldelegate.py:268
+#: ../lib/sources/paneldelegate.py:269
 msgid "Shutdown button"
 msgstr "Κουμπί τερματισμού"
 
-#: ../lib/sources/paneldelegate.py:270
+#: ../lib/sources/paneldelegate.py:271
 msgid "Screenshot button"
 msgstr "Κουμπί αρπαγής οθόνης"
 
-#: ../lib/sources/paneldelegate.py:273
+#: ../lib/sources/paneldelegate.py:274
 msgid "Unknown"
 msgstr "Άγνωστο"
 
-#: ../lib/sources/paneldelegate.py:275
+#: ../lib/sources/paneldelegate.py:276
 msgid "Menu Bar"
 msgstr "Γραμμή μενού"
 
-#: ../lib/sources/paneldelegate.py:512
+#: ../lib/sources/paneldelegate.py:513
 msgid "Panel File"
 msgstr "Αρχείο πίνακα εφαρμογών"
 
@@ -719,22 +723,22 @@ msgstr "Μη έγκυρος τομέας μεταδεδομένων στο '%s':
 
 #. change the raise to a dprint, since some files seem to disappear.
 #. raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
-#: ../lib/storage.py:383
+#: ../lib/storage.py:387
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Αδυναμία προσθήκης μη υπάρχοντος αρχείου '%s'"
 
-#: ../lib/storage.py:527
+#: ../lib/storage.py:531
 #, python-format
 msgid "Couldn't rmdir '%s'"
 msgstr "Δεν ήταν δυνατό το rmdir '%s'"
 
-#: ../lib/storage.py:532
+#: ../lib/storage.py:536
 #, python-format
 msgid "Couldn't unlink file '%s'"
 msgstr "Δεν ήταν δυνατή η αφαίρεση του συνδέσμου από το αρχείο '%s'"
 
-#: ../lib/storage.py:622
+#: ../lib/storage.py:633
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Το προφίλ είναι μόνο για ανάγνωση %s"
