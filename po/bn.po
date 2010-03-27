@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: bn\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=sabayon&component=general\n"
-"POT-Creation-Date: 2009-12-25 03:01+0000\n"
-"PO-Revision-Date: 2010-01-28 17:57+0600\n"
+"POT-Creation-Date: 2010-03-22 02:22+0000\n"
+"PO-Revision-Date: 2010-03-22 17:57+0600\n"
 "Last-Translator: Israt Jahan <israt@ankur.org.bd>\n"
 "Language-Team: Bengali <ankur-bd-l10n@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -31,7 +31,9 @@ msgstr "ব্যবহারকারীদের প্রোফাইল ন�
 msgid "translator-credits"
 msgstr ""
 "অঙ্কুর প্রকল্পের পক্ষে, প্রজ্ঞা [ progga@BengaLinux.Org ]\n"
-"রুণা ভট্টাচার্য (runabh@gmail.com)"
+"রুণা ভট্টাচার্য (runabh@gmail.com)\n"
+"সাদ এম নিয়ামতুল্লাহ <saadmniamatullah@gmail.com>\n"
+"ইসরাত জাহান <israt@ankur.org.bd>"
 
 #: ../admin-tool/changeswindow.py:50
 #, python-format
@@ -46,76 +48,80 @@ msgstr "অগ্রাহ্য করা হবে"
 msgid "Lock"
 msgstr "লক করা হবে"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:263
 msgid "Description"
 msgstr "বিবরণ"
 
-#: ../admin-tool/editorwindow.py:97
+#: ../admin-tool/editorwindow.py:100
 #, python-format
 msgid "Profile %s"
 msgstr "প্রোফাইল %s"
 
-#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:179
 msgid "_Profile"
 msgstr "প্রোফাইল (_P)"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
 msgid "_Save"
 msgstr "সংরক্ষণ করুন (_S)"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
 msgid "Save profile"
 msgstr "প্রোফাইল সংরক্ষণ করুন"
 
-#: ../admin-tool/editorwindow.py:204
+#: ../admin-tool/editorwindow.py:207
 msgid "_Close"
 msgstr "বন্ধ করুন (_C)"
 
-#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:181
 msgid "Close the current window"
 msgstr "বর্তমান উইন্ডো বন্ধ করুন"
 
-#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:182
 msgid "_Edit"
 msgstr "সম্পাদনা (_E)"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "_Delete"
 msgstr "মুছে ফেলুন (_D)"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "Delete item"
 msgstr "বস্তুটি মুছে ফেলুন"
 
-#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:210 ../admin-tool/sessionwindow.py:185
 msgid "_Help"
 msgstr "সহায়তা (_H)"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
 msgid "_Contents"
 msgstr "বিষয়বস্তু (_C)"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
 msgid "Help Contents"
 msgstr "সহায়তা বিষয়বস্তু"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:212 ../admin-tool/sessionwindow.py:187
 msgid "_About"
 msgstr "পরিচিতি (_A)"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:212 ../admin-tool/sessionwindow.py:187
 msgid "About Sabayon"
 msgstr "Sabayon পরিচিতি"
 
-#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:267
+msgid "Source"
+msgstr "সোর্স"
+
+#: ../admin-tool/editorwindow.py:300 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:304 ../lib/sources/filessource.py:86
 msgid "Files"
 msgstr "ফাইল"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:304 ../lib/sources/paneldelegate.py:279
 msgid "Panel"
 msgstr "প্যানেল"
 
@@ -165,7 +171,7 @@ msgstr "জুটি"
 msgid "Profile settings: %s"
 msgstr "প্রোফাইলের বৈশিষ্ট্য: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:423
 #: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "নাম"
@@ -197,7 +203,7 @@ msgstr "চিহ্নিত প্রোফাইল ব্যবহার ক
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:520
+#: ../admin-tool/profilesdialog.py:550
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -263,11 +269,11 @@ msgstr ""
 "Sabayon বন্ধ করা হবে। কয়েকটি সমাধান যোগ্য সমস্যা উৎপন্ন হয়েছে এবং %s-র মধ্যে "
 "উপস্থিত লগ, %s-এ পাঠিয়ে এই সমস্যা ডিবাগ করতে সহায়তা করুন।"
 
-#: ../admin-tool/sabayon-apply:111
+#: ../admin-tool/sabayon-apply:136
 msgid "Please use -h for usage options"
 msgstr "ব্যবহারযোগ্য বিভিন্ন বিকল্প দেখতে -h প্রয়োগ করুন"
 
-#: ../admin-tool/sabayon-apply:123
+#: ../admin-tool/sabayon-apply:148
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "'%s' ব্যবহারকারীর প্রোফাইল পাওয়া যায়নি\n"
@@ -336,48 +342,47 @@ msgstr "বন্ধ করার পূর্বে \"%s\" প্রোফা�
 
 #: ../admin-tool/saveconfirm.py:44
 msgid "If you don't save, all changes will be permanently lost."
-msgstr ""
-"সংরক্ষণ করা না হলে গত এক ঘন্টায় করা সমস্ত পরিবর্তন স্থায়ীরূপে মুছে যাবে।"
+msgstr "সংরক্ষণ করা না হলে গত এক ঘন্টায় করা সমস্ত পরিবর্তন স্থায়ীরূপে মুছে যাবে।"
 
-#: ../admin-tool/sessionwindow.py:155
+#: ../admin-tool/sessionwindow.py:157
 #, python-format
 msgid "Editing profile %s"
 msgstr "প্রোফাইল %s সম্পাদন করা হচ্ছে"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Quit"
 msgstr "প্রস্থান (_Q)"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "_Changes"
 msgstr "পরিবর্তন (_C)"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "Edit changes"
 msgstr "সম্পাদনাস সময় করা পরিবর্তন"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "_Lockdown"
 msgstr "লক-ডাউন (_L)"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "Edit Lockdown settings"
 msgstr "লক-ডাউন সংক্রান্ত বৈশিষ্ট্য সম্পাদন করা হবে"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce Mandatory"
 msgstr "বাধ্যতামূলক বৈশিষ্ট্য প্রয়োগ করুন"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce mandatory settings in the editing session"
 msgstr "সম্পাদনা সেশানের জন্য বাধ্যতামূলক বৈশিষ্ট্য প্রয়োগ করুন"
 
-#: ../admin-tool/sessionwindow.py:306
+#: ../admin-tool/sessionwindow.py:308
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "%s-র জন্য লক-ডাউন সংক্রান্ত বৈশিষ্ট্য"
 
-#: ../admin-tool/sessionwindow.py:342
+#: ../admin-tool/sessionwindow.py:344
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
@@ -387,11 +392,11 @@ msgstr ""
 "সমস্যা সম্বন্ধে এই মুহূর্তে সূচিত করা যাবে অথবা ব্যবহারকারীর প্রোফাইল পরিবর্তনের "
 "প্রচেষ্টা করুন।"
 
-#: ../admin-tool/sessionwindow.py:346
+#: ../admin-tool/sessionwindow.py:348
 msgid "_Report this error"
 msgstr "সমস্যা সম্পর্কে সূচিত করুন (_R)"
 
-#: ../admin-tool/sessionwindow.py:347
+#: ../admin-tool/sessionwindow.py:349
 msgid "_Continue editing"
 msgstr "সম্পাদনা করুন (_C)"
 
@@ -400,15 +405,15 @@ msgstr "সম্পাদনা করুন (_C)"
 msgid "Users for profile %s"
 msgstr "প্রোফাইল %s-র ব্যবহারকারী"
 
-#: ../lib/protosession.py:112
+#: ../lib/protosession.py:119
 msgid "Unable to find a free X display"
 msgstr "অব্যবহৃত X ডিসপ্লে পাওয়া যায়নি"
 
-#: ../lib/protosession.py:376
+#: ../lib/protosession.py:383
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr "Xephyr আরম্ভ করতে ব্যর্থ: USR1 সিগন্যালের অপেক্ষায় সময়সীমা অতিক্রান্ত হয়েছে"
 
-#: ../lib/protosession.py:378
+#: ../lib/protosession.py:385
 msgid "Failed to start Xephyr: died during startup"
 msgstr "Xephyr আরম্ভ করতে ব্যর্থ: আরম্ভকালে বন্ধ হয়ে গেছে"
 
@@ -416,7 +421,7 @@ msgstr "Xephyr আরম্ভ করতে ব্যর্থ: আরম্ভ�
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:469
+#: ../lib/protosession.py:476
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
@@ -427,44 +432,57 @@ msgstr ""
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (FATAL) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:478
+#: ../lib/protosession.py:485
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr ""
 "'%s' থেকে প্রাপ্ত ব্যবহারকারীর প্রোফাইল প্রয়োগ করার সময় গুরুতর সমস্যা উৎপন্ন হয়েছে।"
 
 #: ../lib/sources/filessource.py:69
-#, python-format
-msgid "File '%s' created"
-msgstr "'%s' ফাইল নির্মিত হয়েছে"
+msgid "Directory"
+msgstr "ডিরেক্টরি"
 
 #: ../lib/sources/filessource.py:71
-#, python-format
-msgid "File '%s' deleted"
-msgstr "'%s' ফাইল মুছে ফেলা হয়েছে"
+msgid "Link"
+msgstr "লিংক"
 
 #: ../lib/sources/filessource.py:73
-#, python-format
-msgid "File '%s' changed"
-msgstr "'%s' ফাইল পরিবর্তিত হয়েছে"
+#| msgid "Files"
+msgid "File"
+msgstr "ফাইল"
 
-#: ../lib/sources/filessource.py:97
+#: ../lib/sources/filessource.py:75
+#| msgid "File '%s' created"
+msgid "%s '%s' created"
+msgstr "%s '%s' ফাইল নির্মিত হয়েছে"
+
+#: ../lib/sources/filessource.py:77
+#| msgid "File '%s' deleted"
+msgid "%s '%s' deleted"
+msgstr "%s '%s' ফাইল মুছে ফেলা হয়েছে"
+
+#: ../lib/sources/filessource.py:79
+#| msgid "File '%s' changed"
+msgid "%s '%s' changed"
+msgstr "%s '%s' ফাইল পরিবর্তিত হয়েছে"
+
+#: ../lib/sources/filessource.py:105
 msgid "Applications menu"
 msgstr "অ্যাপলিকেশন মেনু"
 
-#: ../lib/sources/filessource.py:99
+#: ../lib/sources/filessource.py:107
 msgid "Settings menu"
 msgstr "সেটিং মেনু"
 
-#: ../lib/sources/filessource.py:101
+#: ../lib/sources/filessource.py:109
 msgid "Server Settings menu"
 msgstr "সার্ভারের বৈশিষ্ট্যের মেনু"
 
-#: ../lib/sources/filessource.py:103
+#: ../lib/sources/filessource.py:111
 msgid "System Settings menu"
 msgstr "সিস্টেমের বৈশিষ্ট্যের মেনু"
 
-#: ../lib/sources/filessource.py:105
+#: ../lib/sources/filessource.py:113
 msgid "Start Here menu"
 msgstr "প্রারম্ভিক মেনু"
 
@@ -513,86 +531,86 @@ msgstr "GConf-কি '%s'-র মান '%s' জুটি রূপে নির
 msgid "GConf key '%s' set to '%s'"
 msgstr "GConf-কি '%s'-র মান '%s' রূপে নির্ধারিত"
 
-#: ../lib/sources/gconfsource.py:137
+#: ../lib/sources/gconfsource.py:138
 msgid "Default GConf settings"
 msgstr "GConf-র ডিফল্ট বৈশিষ্ট্য"
 
-#: ../lib/sources/gconfsource.py:139
+#: ../lib/sources/gconfsource.py:140
 msgid "Mandatory GConf settings"
 msgstr "GConf-র আবশ্যক বৈশিষ্ট্য"
 
-#: ../lib/sources/mozillasource.py:133
+#: ../lib/sources/mozillasource.py:135
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
 msgstr "Mozilla-কি '%s'-র মান '%s' রূপে নির্ধারিত"
 
-#: ../lib/sources/mozillasource.py:135
+#: ../lib/sources/mozillasource.py:137
 #, python-format
 msgid "Mozilla key '%s' unset"
 msgstr "Mozilla-কি '%s' নির্ধারিত হয়নি"
 
-#: ../lib/sources/mozillasource.py:137
+#: ../lib/sources/mozillasource.py:139
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Mozilla-কি '%s' '%s'-তে পরিবর্তন করা হয়েছে "
 
-#: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
+#: ../lib/sources/mozillasource.py:169 ../lib/sources/mozillasource.py:179
 msgid "Web browser preferences"
 msgstr "ওয়েব ব্রাউজার সংক্রান্ত পছন্দসমূহ"
 
-#: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
+#: ../lib/sources/mozillasource.py:171 ../lib/sources/mozillasource.py:181
 msgid "Web browser bookmarks"
 msgstr "ওয়েব ব্রাউজারের বুকমার্ক"
 
-#: ../lib/sources/mozillasource.py:170
+#: ../lib/sources/mozillasource.py:173
 msgid "Web browser profile list"
 msgstr "ওয়েব ব্রাউজারের প্রোফাইলের তালিকা"
 
-#: ../lib/sources/mozillasource.py:520
+#: ../lib/sources/mozillasource.py:550
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "ফাইল পাওয়া যায়নি (%s)"
 
-#: ../lib/sources/mozillasource.py:869
+#: ../lib/sources/mozillasource.py:899
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "এক নাম (%(name)s) %(section)s বিভাগে একাধিকবার উপস্থিত রয়েছে"
 
-#: ../lib/sources/mozillasource.py:878
+#: ../lib/sources/mozillasource.py:908
 #, python-format
 msgid "redundant default in section %s"
 msgstr "%s বিভাগে অপ্রয়োজনীয় ডিফল্ট মান উপস্থিত"
 
-#: ../lib/sources/mozillasource.py:895
+#: ../lib/sources/mozillasource.py:925
 msgid "no default profile"
 msgstr "ডিফল্ট প্রোফাইল অনুপস্থিত"
 
-#: ../lib/sources/mozillasource.py:950
+#: ../lib/sources/mozillasource.py:980
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Mozilla বুকমার্ক নির্মিত হয়েছে '%s' -> '%s'"
 
-#: ../lib/sources/mozillasource.py:952
+#: ../lib/sources/mozillasource.py:982
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Mozilla বুকমার্ক ফোল্ডার নির্মিত হয়েছে '%s'"
 
-#: ../lib/sources/mozillasource.py:955
+#: ../lib/sources/mozillasource.py:985
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Mozilla বুকমার্ক মুছে ফেলা হয়েছে '%s'"
 
-#: ../lib/sources/mozillasource.py:957
+#: ../lib/sources/mozillasource.py:987
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Mozilla বুকমার্ক ফোল্ডার মুছে ফেলা হয়েছে '%s'"
 
-#: ../lib/sources/mozillasource.py:960
+#: ../lib/sources/mozillasource.py:990
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Mozilla বুকমার্ক পরিবর্তিত হয়েছে '%s' '%s'"
 
-#: ../lib/sources/mozillasource.py:962
+#: ../lib/sources/mozillasource.py:992
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mozilla বুকমার্ক ফোল্ডার পরিবর্তিত হয়েছে '%s'"
@@ -628,60 +646,60 @@ msgid "Object '%s' removed"
 msgstr "অবজেক্ট '%s' মুছে ফেলা হয়েছে"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:240
+#: ../lib/sources/paneldelegate.py:241
 msgid "Drawer"
 msgstr "ড্রয়ার"
 
-#: ../lib/sources/paneldelegate.py:242
+#: ../lib/sources/paneldelegate.py:243
 msgid "Main Menu"
 msgstr "প্রধান মেনু"
 
-#: ../lib/sources/paneldelegate.py:252
+#: ../lib/sources/paneldelegate.py:253
 #, python-format
 msgid "%s launcher"
 msgstr "%s লঞ্চার"
 
-#: ../lib/sources/paneldelegate.py:256
+#: ../lib/sources/paneldelegate.py:257
 msgid "Lock Screen button"
 msgstr "স্ক্রিন লক করার বাটন"
 
-#: ../lib/sources/paneldelegate.py:258
+#: ../lib/sources/paneldelegate.py:259
 msgid "Logout button"
 msgstr "লগ-আউট বাটন"
 
-#: ../lib/sources/paneldelegate.py:260
+#: ../lib/sources/paneldelegate.py:261
 msgid "Run Application button"
 msgstr "অ্যাপলিকেশন সঞ্চালন বাটন"
 
-#: ../lib/sources/paneldelegate.py:262
+#: ../lib/sources/paneldelegate.py:263
 msgid "Search button"
 msgstr "অনুসন্ধান বাটন"
 
-#: ../lib/sources/paneldelegate.py:264
+#: ../lib/sources/paneldelegate.py:265
 msgid "Force Quit button"
 msgstr "বাধ্যতামলূকভাবে প্রস্থানের বাটন"
 
-#: ../lib/sources/paneldelegate.py:266
+#: ../lib/sources/paneldelegate.py:267
 msgid "Connect to Server button"
 msgstr "সার্ভারের সাথে সংযোগস্থাপনের বাটন"
 
-#: ../lib/sources/paneldelegate.py:268
+#: ../lib/sources/paneldelegate.py:269
 msgid "Shutdown button"
 msgstr "বন্ধ করার বাটন"
 
-#: ../lib/sources/paneldelegate.py:270
+#: ../lib/sources/paneldelegate.py:271
 msgid "Screenshot button"
 msgstr "পর্দার ছবির বাটন"
 
-#: ../lib/sources/paneldelegate.py:273
+#: ../lib/sources/paneldelegate.py:274
 msgid "Unknown"
 msgstr "অজানা"
 
-#: ../lib/sources/paneldelegate.py:275
+#: ../lib/sources/paneldelegate.py:276
 msgid "Menu Bar"
 msgstr "মেনু-বার"
 
-#: ../lib/sources/paneldelegate.py:512
+#: ../lib/sources/paneldelegate.py:513
 msgid "Panel File"
 msgstr "প্যানেল ফাইল"
 
@@ -702,22 +720,22 @@ msgstr "'%s'-র মধ্যে অবৈধ মিটা-ডাটা বি�
 
 #. change the raise to a dprint, since some files seem to disappear.
 #. raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
-#: ../lib/storage.py:383
+#: ../lib/storage.py:387
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "অনুপস্থিত ফাইল '%s' যোগ করতে ব্যর্থ"
 
-#: ../lib/storage.py:528
+#: ../lib/storage.py:531
 #, python-format
 msgid "Couldn't rmdir '%s'"
 msgstr "'%s' rmdir করতে পারেনি"
 
-#: ../lib/storage.py:533
+#: ../lib/storage.py:536
 #, python-format
 msgid "Couldn't unlink file '%s'"
 msgstr "'%s' ফাইলকে লিংক বিহীন করতে পারেনি"
 
-#: ../lib/storage.py:625
+#: ../lib/storage.py:633
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "প্রোফাইল শুধুমাত্র পাঠযোগ্য %s"
@@ -725,68 +743,68 @@ msgstr "প্রোফাইল শুধুমাত্র পাঠযোগ�
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/systemdb.py:67
+#: ../lib/systemdb.py:77
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "%(setting)s, %(np)s-র মধ্যে নির্ধারণের জন্য বৈধ ধরন নয়"
 
-#: ../lib/systemdb.py:112
+#: ../lib/systemdb.py:122
 msgid "No database file provided"
 msgstr "ডাটাবেস ফাইল নেই"
 
-#: ../lib/systemdb.py:232
+#: ../lib/systemdb.py:253
 #, python-format
 msgid "No LDAP search base specified for %s"
 msgstr "%s-র জন্য LDAP অনুসন্ধানের স্থান উল্লিখিত হয়নি"
 
-#: ../lib/systemdb.py:235
+#: ../lib/systemdb.py:256
 #, python-format
 msgid "No LDAP query filter specified for %s"
 msgstr "%s-র জন্য LDAP কোয়েরি ফিল্টার উল্লিখিত হয়নি"
 
-#: ../lib/systemdb.py:238
+#: ../lib/systemdb.py:259
 #, python-format
 msgid "No LDAP result attribute specified for %s"
 msgstr "%s-র জন্য LDAP ফলাফলের বৈশিষ্ট্য উল্লিখিত হয়নি"
 
-#: ../lib/systemdb.py:247
+#: ../lib/systemdb.py:268
 msgid "LDAP Scope must be one of: "
 msgstr "LDAP স্কোপ অবশ্যই এদের মধ্যে যেকোন একটি হতে হবে:"
 
-#: ../lib/systemdb.py:267
+#: ../lib/systemdb.py:288
 msgid "multiple_result must be one of: "
 msgstr "multiple_result-র মান এদের মধ্যে একটি হওয়া আবশ্যক:"
 
-#: ../lib/systemdb.py:359
+#: ../lib/systemdb.py:381
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "লেখার উদ্দেশ্যে %s খুলতে ব্যর্থ"
 
-#: ../lib/systemdb.py:372
+#: ../lib/systemdb.py:394
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "UserDatabase, %s-এ সংরক্ষণ করতে ব্যর্থ"
 
-#: ../lib/systemdb.py:395 ../lib/systemdb.py:429
+#: ../lib/systemdb.py:423 ../lib/systemdb.py:457
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "%s ফাইলের প্রোফাইল কনফিগারেশন নয়"
 
-#: ../lib/systemdb.py:402
+#: ../lib/systemdb.py:430
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "কনফিগারেশনের মধ্যে ডিফল্ট প্রোফাইল %s যোগ করতে ব্যর্থ"
 
-#: ../lib/systemdb.py:436
+#: ../lib/systemdb.py:464
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "প্রোফাইল কনফিগারেশনের মধ্যে %s ব্যবহারকারীর তথ্য যোগ করতে ব্যর্থ"
 
-#: ../lib/systemdb.py:508
+#: ../lib/systemdb.py:536
 msgid "Failed to get the user list"
 msgstr "ব্যবহারকারীর তালিকা প্রাপ্ত করতে ব্যর্থ"
 
-#: ../lib/systemdb.py:558
+#: ../lib/systemdb.py:586
 msgid "Failed to get the group list"
 msgstr "ব্যবহারকারীর তালিকা প্রাপ্ত করতে ব্যর্থ"
 
