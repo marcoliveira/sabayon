@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-10 13:27+0200\n"
-"PO-Revision-Date: 2010-03-27 11:37+0100\n"
+"POT-Creation-Date: 2010-03-31 16:38+0200\n"
+"PO-Revision-Date: 2010-03-31 16:40+0200\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
 "Language-Team: Basque <itzulpena@euskalgnu.org>\n"
 "MIME-Version: 1.0\n"
@@ -31,7 +31,7 @@ msgstr "Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>"
 #: ../admin-tool/changeswindow.py:50
 #, python-format
 msgid "Changes in profile %s"
-msgstr "Aldaketak %s profilan"
+msgstr "Aldaketak %s profilean"
 
 #: ../admin-tool/changeswindow.py:113
 msgid "Ignore"
@@ -229,7 +229,7 @@ msgstr "Desgaitu _javascript chrome"
 
 #: ../admin-tool/lockdown/maindialog.py:64
 msgid "Disable _toolbar editing"
-msgstr "DEsgaitu _tresna-barra editatzea"
+msgstr "Desgaitu _tresna-barra editatzea"
 
 #: ../admin-tool/lockdown/maindialog.py:65
 msgid "_Fullscreen"
@@ -396,7 +396,7 @@ msgstr ""
 
 #: ../admin-tool/lockdown/pessulus.glade.h:27
 msgid "<b>Disabled Applets</b>"
-msgstr "<b>Desgaitu applet-ak</b>"
+msgstr "<b>Desgaitu miniaplikazioak</b>"
 
 #: ../admin-tool/lockdown/pessulus.glade.h:28
 msgid "<b>Safe Protocols</b>"
@@ -517,8 +517,8 @@ msgid ""
 "A fatal error has occurred.  You can help us fix the problem by sending the "
 "log in %s to %s"
 msgstr ""
-"Errore larria gertatu da. Arazoa konpontzen lagun gaitzakezu %s(r)"
-"enegunkaria hona bidaliz: %s"
+"Errore larria gertatu da. Arazoa konpontzen lagun gaitzakezu %s(r)en "
+"egunkaria hona bidaliz: %s"
 
 #: ../admin-tool/sabayon:145
 #, c-format
@@ -590,7 +590,7 @@ msgstr "Itxi gorde g_abe"
 #: ../admin-tool/saveconfirm.py:41
 #, python-format
 msgid "Save changes to profile \"%s\" before closing?"
-msgstr "Gorde aldaketak \"%s\" profilan itxi aurretik?"
+msgstr "Gorde aldaketak \"%s\" profilean itxi aurretik?"
 
 #: ../admin-tool/saveconfirm.py:45
 #, python-format
@@ -720,26 +720,34 @@ msgstr "%s profilaren erabiltzaileak"
 msgid "Use This Profile"
 msgstr "Erabili profil hau"
 
-#: ../lib/protosession.py:147
+#: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
 msgstr "Ezin da X pantaila librerik aurkitu"
 
-#: ../lib/protosession.py:414
+#: ../lib/protosession.py:376
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr "Huts egin du Xephyr abiaraztean: denbora gainditu du USR1 seinalearen zai"
 
-#: ../lib/protosession.py:416
+#: ../lib/protosession.py:378
 msgid "Failed to start Xephyr: died during startup"
 msgstr "Huts egin du Xephyr abiaraztean: abioan hil egin da"
 
-#: ../lib/protosession.py:501
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:469
 #, python-format
 msgid "There was a recoverable error while applying the user profile from file '%s'."
 msgstr ""
 "Errore berreskuragarria gertatu da erabiltzailearen profila '%s' "
 "fitxategitik aplikatzean."
 
-#: ../lib/protosession.py:510
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (FATAL) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:478
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "Errore larria gertatu da erabiltzailearen profila '%s'(e)ndik aplikatzean."
@@ -859,51 +867,51 @@ msgstr "Web arakatzailearen laster-markak"
 msgid "Web browser profile list"
 msgstr "Web arakatzailearen profil-zerrenda"
 
-#: ../lib/sources/mozillasource.py:522
+#: ../lib/sources/mozillasource.py:520
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Ez da fitxategia aurkitu (%s)"
 
-#: ../lib/sources/mozillasource.py:873
+#: ../lib/sources/mozillasource.py:869
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "bikoiztutako izena (%(name)s) %(section)s atalean"
 
-#: ../lib/sources/mozillasource.py:882
+#: ../lib/sources/mozillasource.py:878
 #, python-format
 msgid "redundant default in section %s"
 msgstr "lehenespen erredundantea %s atalean"
 
-#: ../lib/sources/mozillasource.py:899
+#: ../lib/sources/mozillasource.py:895
 msgid "no default profile"
 msgstr "ez dago profil lehenetsirik"
 
-#: ../lib/sources/mozillasource.py:954
+#: ../lib/sources/mozillasource.py:950
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Mozilla-ren laster-marka sortu da: '%s' -> '%s'"
 
-#: ../lib/sources/mozillasource.py:956
+#: ../lib/sources/mozillasource.py:952
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Mozilla-ren laster-marken karpeta sortu da: '%s'"
 
-#: ../lib/sources/mozillasource.py:959
+#: ../lib/sources/mozillasource.py:955
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Mozilla-ren laster-marka ezabatu da: '%s'"
 
-#: ../lib/sources/mozillasource.py:961
+#: ../lib/sources/mozillasource.py:957
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Mozilla-ren laster-marken karpeta ezabatu da: '%s'"
 
-#: ../lib/sources/mozillasource.py:964
+#: ../lib/sources/mozillasource.py:960
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Mozilla-ren '%s' laster-marka aldatu da: '%s'"
 
-#: ../lib/sources/mozillasource.py:966
+#: ../lib/sources/mozillasource.py:962
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Mozilla-ren laster-marken karpeta aldatu da: '%s'"
@@ -921,42 +929,42 @@ msgstr "'%s' panela kendu da"
 #: ../lib/sources/paneldelegate.py:86
 #, python-format
 msgid "Applet %s added to top panel"
-msgstr "%s applet-a goiko panelari gehituta"
+msgstr "%s miniaplikazioa goiko panelari gehituta"
 
 #: ../lib/sources/paneldelegate.py:88
 #, python-format
 msgid "Applet %s added to bottom panel"
-msgstr "%s applet-a beheko panelari gehituta"
+msgstr "%s miniaplikazioa beheko panelari gehituta"
 
 #: ../lib/sources/paneldelegate.py:90
 #, python-format
 msgid "Applet %s added to left panel"
-msgstr "%s applet-a ezkerreko panelari gehituta"
+msgstr "%s miniaplikazioa ezkerreko panelari gehituta"
 
 #: ../lib/sources/paneldelegate.py:92
 #, python-format
 msgid "Applet %s added to right panel"
-msgstr "%s applet-a eskuineko panelari gehituta"
+msgstr "%s miniaplikazioa eskuineko panelari gehituta"
 
 #: ../lib/sources/paneldelegate.py:107
 #, python-format
 msgid "Applet %s removed from top panel"
-msgstr "%s applet-a goiko paneletik kenduta"
+msgstr "%s miniaplikazioa goiko paneletik kenduta"
 
 #: ../lib/sources/paneldelegate.py:109
 #, python-format
 msgid "Applet %s removed from bottom panel"
-msgstr "%s applet-a azpiko paneletik kenduta"
+msgstr "%s miniaplikazioa azpiko paneletik kenduta"
 
 #: ../lib/sources/paneldelegate.py:111
 #, python-format
 msgid "Applet %s removed from left panel"
-msgstr "%s applet-a ezkerreko paneletik kenduta"
+msgstr "%s miniaplikazioa ezkerreko paneletik kenduta"
 
 #: ../lib/sources/paneldelegate.py:113
 #, python-format
 msgid "Applet %s removed from right panel"
-msgstr "%s applet-a eskuineko paneletik kenduta"
+msgstr "%s miniaplikazioa eskuineko paneletik kenduta"
 
 #: ../lib/sources/paneldelegate.py:127
 #, python-format
@@ -1076,7 +1084,7 @@ msgstr "'%s'(e)n metadatuen baliogabeko atala: %s"
 msgid "Cannot add non-existent file '%s'"
 msgstr "Ezin da existitzen ez den '%s' fitxategia gehitu"
 
-#: ../lib/storage.py:568
+#: ../lib/storage.py:570
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "'%s' profila irakurtzeko soilik da"
