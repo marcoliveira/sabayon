@@ -1,14 +1,14 @@
 # Përkthimi i mesazheve të sabayon në shqip
-# Copyright (C) 2006 - 2009 Free Software Foundation, Inc.
+# Copyright (C) 2006 - 2009, 2010 Free Software Foundation, Inc.
 # This file is distributed under the same license as the SABAYON package.
 #
-# Laurent Dhima <laurenti@alblinux.net>, 2006 - 2009.
+# Laurent Dhima <laurenti@alblinux.net>, 2006 - 2009, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: sabayon.master\n"
+"Project-Id-Version: sabayon HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-21 21:44-0600\n"
-"PO-Revision-Date: 2009-11-19 12:20+0100\n"
+"POT-Creation-Date: 2010-05-11 18:10+0200\n"
+"PO-Revision-Date: 2010-05-11 18:10+0200\n"
 "Last-Translator: Laurent Dhima <laurenti@alblinux.net>\n"
 "Language-Team: albanian <gnome-albanian-perkthyesit@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -37,76 +37,80 @@ msgstr "Shpërfill"
 msgid "Lock"
 msgstr "Blloko"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:263
 msgid "Description"
 msgstr "Përshkrimi"
 
-#: ../admin-tool/editorwindow.py:97
+#: ../admin-tool/editorwindow.py:100
 #, python-format
 msgid "Profile %s"
 msgstr "Profili %s"
 
-#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:179
 msgid "_Profile"
 msgstr "_Profili"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
 msgid "_Save"
 msgstr "_Ruaj"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
 msgid "Save profile"
 msgstr "Ruaj profilin"
 
-#: ../admin-tool/editorwindow.py:204
+#: ../admin-tool/editorwindow.py:207
 msgid "_Close"
 msgstr "_Mbyll"
 
-#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:181
 msgid "Close the current window"
 msgstr "Mbyll dritaren aktuale"
 
-#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:182
 msgid "_Edit"
 msgstr "_Ndrysho"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "_Delete"
 msgstr "_Elemino"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "Delete item"
 msgstr "Elemino elementin"
 
-#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:210 ../admin-tool/sessionwindow.py:185
 msgid "_Help"
 msgstr "_Ndihmë"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
 msgid "_Contents"
-msgstr ""
+msgstr "_Përmbajtja"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
 msgid "Help Contents"
-msgstr ""
+msgstr "Përmbajtja e ndihmës"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:212 ../admin-tool/sessionwindow.py:187
 msgid "_About"
 msgstr "_Informacione"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:212 ../admin-tool/sessionwindow.py:187
 msgid "About Sabayon"
 msgstr "Informacione mbi Sabayon"
 
-#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:267
+msgid "Source"
+msgstr "Burimi"
+
+#: ../admin-tool/editorwindow.py:300 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:304 ../lib/sources/filessource.py:86
 msgid "Files"
 msgstr "File"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:304 ../lib/sources/paneldelegate.py:279
 msgid "Panel"
 msgstr "Paneli"
 
@@ -157,7 +161,7 @@ msgstr "çift"
 msgid "Profile settings: %s"
 msgstr "Rregullimet e profilit: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:423
 #: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "Emri"
@@ -189,7 +193,7 @@ msgstr "Përdor këtë profil"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:520
+#: ../admin-tool/profilesdialog.py:550
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -259,12 +263,12 @@ msgstr ""
 "të na ndihmoni të zbulojmë problemin duke dërguar regjistrin e ruajtur në %s "
 "tek %s"
 
-#: ../admin-tool/sabayon-apply:111
+#: ../admin-tool/sabayon-apply:136
 msgid "Please use -h for usage options"
 msgstr "Përdor -h për ospionet e përdorimit"
 
 # (pofilter) puncspacing: checks for bad spacing after punctuation
-#: ../admin-tool/sabayon-apply:123
+#: ../admin-tool/sabayon-apply:148
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Nuk u gjet asnjë profil për përdoruesin '%s'\n"
@@ -334,50 +338,48 @@ msgid "Save changes to profile \"%s\" before closing?"
 msgstr "Ruan ndryshimet tek profili \"%s\" para se ta mbyllësh?"
 
 #: ../admin-tool/saveconfirm.py:44
-#, fuzzy
 msgid "If you don't save, all changes will be permanently lost."
-msgstr ""
-"Nëse nuk ruani, ndryshimet nga ora e fundit do të humben përfundimisht."
+msgstr "Nëse nuk ruani, të gjitha ndryshimet do të humbasin përfundimisht."
 
-#: ../admin-tool/sessionwindow.py:155
+#: ../admin-tool/sessionwindow.py:157
 #, python-format
 msgid "Editing profile %s"
 msgstr "Duke ndryshuar profilin %s"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Quit"
 msgstr "_Dalja"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "_Changes"
 msgstr "_Ndryshimet"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "Edit changes"
 msgstr "Shkruaj ndryshimet"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "_Lockdown"
 msgstr "_Blloko"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "Edit Lockdown settings"
 msgstr "Ndrysho rregullimet e bllokimit"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce Mandatory"
 msgstr "Bëj që të respektohet detyrimi"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Detyro rregullimet e detyrueshme në seancën e editimit"
 
-#: ../admin-tool/sessionwindow.py:306
+#: ../admin-tool/sessionwindow.py:308
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Rregullimet e bllokimit për %s"
 
-#: ../admin-tool/sessionwindow.py:342
+#: ../admin-tool/sessionwindow.py:344
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
@@ -387,11 +389,11 @@ msgstr ""
 "raportoni këtë gabim ose përpiquni të vazhdoni ndryshimin e profilit të "
 "përdoruesit."
 
-#: ../admin-tool/sessionwindow.py:346
+#: ../admin-tool/sessionwindow.py:348
 msgid "_Report this error"
 msgstr "_Raporto këtë gabim"
 
-#: ../admin-tool/sessionwindow.py:347
+#: ../admin-tool/sessionwindow.py:349
 msgid "_Continue editing"
 msgstr "_Vazhdo ndryshimin"
 
@@ -400,15 +402,15 @@ msgstr "_Vazhdo ndryshimin"
 msgid "Users for profile %s"
 msgstr "Përdorues për profilin %s"
 
-#: ../lib/protosession.py:112
+#: ../lib/protosession.py:119
 msgid "Unable to find a free X display"
 msgstr "E pamundur gjetja e një display X të lirë"
 
-#: ../lib/protosession.py:376
+#: ../lib/protosession.py:383
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr "Nisja e Xephyr dështoi: skadoi koha e pritjes së sinjalit USR1"
 
-#: ../lib/protosession.py:378
+#: ../lib/protosession.py:385
 msgid "Failed to start Xephyr: died during startup"
 msgstr "Nisja e Xephyr dështoi: u ndërpre gjatë nisjes"
 
@@ -416,7 +418,7 @@ msgstr "Nisja e Xephyr dështoi: u ndërpre gjatë nisjes"
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:469
+#: ../lib/protosession.py:476
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
@@ -428,46 +430,57 @@ msgstr ""
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (FATAL) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:478
+#: ../lib/protosession.py:485
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr ""
 "U ndesh një gabim fatal gjatë aplikimit të profilit të përdoruesit nga '%s'."
 
 #: ../lib/sources/filessource.py:69
-#, python-format
-msgid "File '%s' created"
-msgstr "File '%s' u krijua"
+msgid "Directory"
+msgstr "Directory"
 
 #: ../lib/sources/filessource.py:71
-#, python-format
-msgid "File '%s' deleted"
-msgstr "File '%s' u eleminua"
+msgid "Link"
+msgstr "Lidhje"
 
 #: ../lib/sources/filessource.py:73
-#, python-format
-msgid "File '%s' changed"
-msgstr "File '%s' u ndryshua"
+msgid "File"
+msgstr "File"
 
-#: ../lib/sources/filessource.py:97
+#: ../lib/sources/filessource.py:75
+#, python-format
+msgid "%s '%s' created"
+msgstr "%s '%s' u krijua"
+
+#: ../lib/sources/filessource.py:77
+#, python-format
+msgid "%s '%s' deleted"
+msgstr "%s '%s' u eleminua"
+
+#: ../lib/sources/filessource.py:79
+#, python-format
+msgid "%s '%s' changed"
+msgstr "%s '%s' u ndryshua"
+
+#: ../lib/sources/filessource.py:105
 msgid "Applications menu"
 msgstr "Menuja e aplikativëve"
 
-#: ../lib/sources/filessource.py:99
-#, fuzzy
+#: ../lib/sources/filessource.py:107
 msgid "Settings menu"
-msgstr "Menuja e rregullimeve të serverit"
+msgstr "Menu e rregullimeve"
 
-#: ../lib/sources/filessource.py:101
+#: ../lib/sources/filessource.py:109
 msgid "Server Settings menu"
 msgstr "Menuja e rregullimeve të serverit"
 
-#: ../lib/sources/filessource.py:103
+#: ../lib/sources/filessource.py:111
 msgid "System Settings menu"
 msgstr "Menuja e rregullimeve të sistemit"
 
 # (pofilter) doublequoting: checks whether doublequoting is consistent between the two strings
-#: ../lib/sources/filessource.py:105
+#: ../lib/sources/filessource.py:113
 msgid "Start Here menu"
 msgstr "Menuja \"Fillo këtu\""
 
@@ -516,93 +529,93 @@ msgstr "Kyçi i GConf '%s' është caktuar tek çifti '%s'"
 msgid "GConf key '%s' set to '%s'"
 msgstr "Kyçi i GConf '%s' është caktuar tek '%s'"
 
-#: ../lib/sources/gconfsource.py:137
+#: ../lib/sources/gconfsource.py:138
 msgid "Default GConf settings"
 msgstr "Rregullimet e przgjedhura të GConf"
 
-#: ../lib/sources/gconfsource.py:139
+#: ../lib/sources/gconfsource.py:140
 msgid "Mandatory GConf settings"
 msgstr "Rregullimet e detyrueshme GConf"
 
-#: ../lib/sources/mozillasource.py:133
+#: ../lib/sources/mozillasource.py:135
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
 msgstr "Kyçi i Mozilla '%s' është caktuar tek '%s'"
 
-#: ../lib/sources/mozillasource.py:135
+#: ../lib/sources/mozillasource.py:137
 #, python-format
 msgid "Mozilla key '%s' unset"
 msgstr "Kyçi i Mozilla '%s' papërcaktuar"
 
-#: ../lib/sources/mozillasource.py:137
+#: ../lib/sources/mozillasource.py:139
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Kyçi i Mozilla '%s' është ndryshuar në '%s'"
 
-#: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
+#: ../lib/sources/mozillasource.py:169 ../lib/sources/mozillasource.py:179
 msgid "Web browser preferences"
 msgstr "Preferimet e shfletuesit web"
 
-#: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
+#: ../lib/sources/mozillasource.py:171 ../lib/sources/mozillasource.py:181
 msgid "Web browser bookmarks"
 msgstr "Libërshënuesit e shfletuesit web"
 
-#: ../lib/sources/mozillasource.py:170
+#: ../lib/sources/mozillasource.py:173
 msgid "Web browser profile list"
 msgstr "Lista e profileve të shfletuesit web"
 
-#: ../lib/sources/mozillasource.py:520
+#: ../lib/sources/mozillasource.py:550
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "File nuk u gjet (%s)"
 
-#: ../lib/sources/mozillasource.py:869
+#: ../lib/sources/mozillasource.py:899
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "emër i duplikuar(%(name)s) në seksionin %(section)s"
 
-#: ../lib/sources/mozillasource.py:878
+#: ../lib/sources/mozillasource.py:908
 #, python-format
 msgid "redundant default in section %s"
 msgstr "prezgjedhje e përsëritur në seksionin %s"
 
-#: ../lib/sources/mozillasource.py:895
+#: ../lib/sources/mozillasource.py:925
 msgid "no default profile"
 msgstr "asnjë profil i paracaktuar"
 
 # (pofilter) simplecaps: checks the capitalisation of two strings isn't wildly different
-#: ../lib/sources/mozillasource.py:950
+#: ../lib/sources/mozillasource.py:980
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "U krijua libërshënuesi i Mozilla '%s' -> '%s'"
 
 # (pofilter) simplecaps: checks the capitalisation of two strings isn't wildly different
-#: ../lib/sources/mozillasource.py:952
+#: ../lib/sources/mozillasource.py:982
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "U krijua kartela e libërshënuesëve Mozilla '%s'"
 
 # (pofilter) simplecaps: checks the capitalisation of two strings isn't wildly different
-#: ../lib/sources/mozillasource.py:955
+#: ../lib/sources/mozillasource.py:985
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "U eleminua libërshënuesi i Mozilla '%s'"
 
 # (pofilter) simplecaps: checks the capitalisation of two strings isn't wildly different
-#: ../lib/sources/mozillasource.py:957
+#: ../lib/sources/mozillasource.py:987
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "U eleminua kartela e libërshënuesëve Mozilla '%s'"
 
 # (pofilter) simplecaps: checks the capitalisation of two strings isn't wildly different
 # (pofilter) doublewords: The word '''' is repeated
-#: ../lib/sources/mozillasource.py:960
+#: ../lib/sources/mozillasource.py:990
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "U ndryshua libërshënuesi Mozilla '%s' '%s'"
 
 # (pofilter) simplecaps: checks the capitalisation of two strings isn't wildly different
-#: ../lib/sources/mozillasource.py:962
+#: ../lib/sources/mozillasource.py:992
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "U ndryshua kartela e libërshënuesëve Mozilla '%s'"
@@ -618,111 +631,118 @@ msgid "Panel '%s' removed"
 msgstr "Paneli '%s' u eleminua"
 
 #: ../lib/sources/paneldelegate.py:77
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' added"
-msgstr "U shtua paneli '%s'"
+msgstr "U shtua komponenti '%s'"
 
 #: ../lib/sources/paneldelegate.py:100
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' removed"
-msgstr "Paneli '%s' u eleminua"
+msgstr "Komponenti '%s' u eleminua"
 
 #: ../lib/sources/paneldelegate.py:123
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' added"
-msgstr "U shtua paneli '%s'"
+msgstr "U shtua objekti '%s'"
 
 #: ../lib/sources/paneldelegate.py:152
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' removed"
-msgstr "Paneli '%s' u eleminua"
+msgstr "Objekti '%s' u eleminua"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:240
+#: ../lib/sources/paneldelegate.py:241
 msgid "Drawer"
 msgstr "Sirtari"
 
-#: ../lib/sources/paneldelegate.py:242
+#: ../lib/sources/paneldelegate.py:243
 msgid "Main Menu"
 msgstr "Menuja kryesore"
 
-#: ../lib/sources/paneldelegate.py:252
+#: ../lib/sources/paneldelegate.py:253
 #, python-format
 msgid "%s launcher"
 msgstr "Lëshues «%s»"
 
-#: ../lib/sources/paneldelegate.py:256
+#: ../lib/sources/paneldelegate.py:257
 msgid "Lock Screen button"
 msgstr "Pulsant për bllokimin e ekranit"
 
-#: ../lib/sources/paneldelegate.py:258
+#: ../lib/sources/paneldelegate.py:259
 msgid "Logout button"
 msgstr "Pulsant për dalje nga seanca"
 
-#: ../lib/sources/paneldelegate.py:260
+#: ../lib/sources/paneldelegate.py:261
 msgid "Run Application button"
 msgstr "Pulsant për nisje aplikativi"
 
-#: ../lib/sources/paneldelegate.py:262
+#: ../lib/sources/paneldelegate.py:263
 msgid "Search button"
 msgstr "Pulsant kërkimi"
 
-#: ../lib/sources/paneldelegate.py:264
+#: ../lib/sources/paneldelegate.py:265
 msgid "Force Quit button"
 msgstr "Pulsant për dalje të detyruar"
 
-#: ../lib/sources/paneldelegate.py:266
+#: ../lib/sources/paneldelegate.py:267
 msgid "Connect to Server button"
 msgstr "Pulsant për lidhje me serverin"
 
-#: ../lib/sources/paneldelegate.py:268
+#: ../lib/sources/paneldelegate.py:269
 msgid "Shutdown button"
 msgstr "Pulsant për fikjen e kompjuterit"
 
-#: ../lib/sources/paneldelegate.py:270
+#: ../lib/sources/paneldelegate.py:271
 msgid "Screenshot button"
 msgstr "Pulsant për marrjen e pamjes së ekranit"
 
-#: ../lib/sources/paneldelegate.py:273
+#: ../lib/sources/paneldelegate.py:274
 msgid "Unknown"
 msgstr "Nuk njihet"
 
-#: ../lib/sources/paneldelegate.py:275
+#: ../lib/sources/paneldelegate.py:276
 msgid "Menu Bar"
 msgstr "Shtyllë menuje"
 
-#: ../lib/sources/paneldelegate.py:512
+#: ../lib/sources/paneldelegate.py:513
 msgid "Panel File"
 msgstr "File i panelit"
 
 # (pofilter) puncspacing: checks for bad spacing after punctuation
-#: ../lib/storage.py:172
+#: ../lib/storage.py:173
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "Ngarkimi i file '%s' dështoi: %s"
 
 # (pofilter) puncspacing: checks for bad spacing after punctuation
-#: ../lib/storage.py:182
+#: ../lib/storage.py:183
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "Ngarkimi i metadata nga '%s' dështoi: %s"
 
-#: ../lib/storage.py:188
+#: ../lib/storage.py:189
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "Seksion i pavlefshëm metadata tek '%s': %s"
 
-#: ../lib/storage.py:362
+#. change the raise to a dprint, since some files seem to disappear.
+#. raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
+#: ../lib/storage.py:387
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "I pamundur shtimi i file joekzistues '%s'"
 
-#: ../lib/storage.py:487
+#: ../lib/storage.py:531
+#, python-format
+msgid "Couldn't rmdir '%s'"
+msgstr "E pamundur rmdir '%s'"
+
+#: ../lib/storage.py:536
 #, python-format
 msgid "Couldn't unlink file '%s'"
 msgstr "E pamundur heqja e lidhjes me file '%s'"
 
-#: ../lib/storage.py:570
+#: ../lib/storage.py:633
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Profili është në vetëm-lexim %s"
@@ -730,70 +750,68 @@ msgstr "Profili është në vetëm-lexim %s"
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/systemdb.py:67
+#: ../lib/systemdb.py:77
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "lloj i pavlefshëm për parametrin %(setting)s në %(np)s"
 
-#: ../lib/systemdb.py:112
+#: ../lib/systemdb.py:122
 msgid "No database file provided"
 msgstr "Nuk është dhënë asnjë databazë file"
 
-#: ../lib/systemdb.py:232
-#, fuzzy, python-format
+#: ../lib/systemdb.py:253
+#, python-format
 msgid "No LDAP search base specified for %s"
-msgstr "Asnjë bazë kërkimi specifikuar për %s"
+msgstr "Asnjë bazë kërkimi LDAP specifikuar për %s"
 
-#: ../lib/systemdb.py:235
-#, fuzzy, python-format
+#: ../lib/systemdb.py:256
+#, python-format
 msgid "No LDAP query filter specified for %s"
-msgstr "Asnjë filtër kërkimi përcaktuar për %s"
+msgstr "Asnjë filtër kërkimi LDAP specifikuar për %s"
 
-#: ../lib/systemdb.py:238
-#, fuzzy, python-format
+#: ../lib/systemdb.py:259
+#, python-format
 msgid "No LDAP result attribute specified for %s"
-msgstr "Asnjë atribut rezultues përcaktuar për %s"
-
-#: ../lib/systemdb.py:247
-#, fuzzy
-msgid "LDAP Scope must be one of: "
-msgstr "Qëllimi duhet të jetë një prej sub, base dhe one"
+msgstr "Asnjë atribut rezultues LDAP përcaktuar për %s"
 
 #: ../lib/systemdb.py:268
-#, fuzzy
-msgid "multiple_result must be one of: "
-msgstr "multiple_result duhet të jetë njëri prej first dhe random"
+msgid "LDAP Scope must be one of: "
+msgstr "Objektivi LDAP duhet të jetë një prej: "
 
-#: ../lib/systemdb.py:361
+#: ../lib/systemdb.py:288
+msgid "multiple_result must be one of: "
+msgstr "multiple_result duhet të jetë një prej: "
+
+#: ../lib/systemdb.py:381
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "E pamundur hapja e %s për shkrim"
 
-#: ../lib/systemdb.py:374
+#: ../lib/systemdb.py:394
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Dështoi ruajtja e UserDatabase në %s"
 
-#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
+#: ../lib/systemdb.py:423 ../lib/systemdb.py:457
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "File %s nuk është një konfigurim profili"
 
-#: ../lib/systemdb.py:404
+#: ../lib/systemdb.py:430
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Dështoi shtimi i profilit të paracaktuar %s në konfigurim"
 
-#: ../lib/systemdb.py:438
+#: ../lib/systemdb.py:464
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Dështoi shtimi i përdoruesit %s tek konfigurimi i profilit"
 
-#: ../lib/systemdb.py:510
+#: ../lib/systemdb.py:536
 msgid "Failed to get the user list"
 msgstr "Dështoi marrja e listës së përdoruesve"
 
-#: ../lib/systemdb.py:560
+#: ../lib/systemdb.py:586
 msgid "Failed to get the group list"
 msgstr "Dështoi marrja e listës së grupeve"
 
@@ -830,368 +848,3 @@ msgid ""
 msgstr ""
 "E pamundur gjetja e emrit të përdoruesit: papërcaktuar tek /etc/passwd dhe "
 "asnjë vlerë për të ndryshueshmen e mjedisit $USER"
-
-#~ msgid "Click to make this setting not mandatory"
-#~ msgstr "Kliko për ta bërë këtë konfigurim jo të detyrueshëm"
-
-#~ msgid "Click to make this setting mandatory"
-#~ msgstr "Kliko për ta bërë këtë konfigurim të detyrueshëm"
-
-#~ msgid "General"
-#~ msgstr "Të përgjithshme"
-
-#~ msgid "Epiphany Web Browser"
-#~ msgstr "Shfletuesi Web Epiphany"
-
-#~ msgid "Disable _command line"
-#~ msgstr "Çaktivizo rreshtin e _komandës"
-
-#~ msgid "Disable _printing"
-#~ msgstr "Çaktivizo _printimin"
-
-#~ msgid "Disable print _setup"
-#~ msgstr "Çaktivizo _konfigurimin e printimit"
-
-#~ msgid "Disable save to _disk"
-#~ msgstr "Çaktivizo ruajtjen në _disk"
-
-#~ msgid "_Lock down the panels"
-#~ msgstr "B_lloko panelët"
-
-#~ msgid "Disable force _quit"
-#~ msgstr "Çaktivizo _daljen e detyrueshme"
-
-#~ msgid "Disable log _out"
-#~ msgstr "Çaktiv_o shkëputjen"
-
-#~ msgid "Disable _quit"
-#~ msgstr "Çaktivizo _daljen"
-
-#~ msgid "Disable _arbitrary URL"
-#~ msgstr "Çaktivizo URL _arbitrare"
-
-#~ msgid "Disable _bookmark editing"
-#~ msgstr "Çaktivizo ndryshimin e li_bërshënuesve"
-
-#~ msgid "Disable _history"
-#~ msgstr "Çaktivizo _historikun"
-
-#~ msgid "Disable _javascript chrome"
-#~ msgstr "Çaktivizo chrome _javascript"
-
-#~ msgid "Disable _toolbar editing"
-#~ msgstr "Çaktivizo ndryshimin e panelit të ins_trumentëve"
-
-#, fuzzy
-#~ msgid "Force _fullscreen mode"
-#~ msgstr "_Ekran i plotë"
-
-#~ msgid "Hide _menubar"
-#~ msgstr "Fshih panelin e _menusë"
-
-#~ msgid "Disable lock _screen"
-#~ msgstr "Çaktivizo bllokimin e _ekranit"
-
-#, fuzzy
-#~ msgid "_Lock on activation"
-#~ msgstr "B_lloko panelët"
-
-#, fuzzy
-#~ msgid "Allow log _out"
-#~ msgstr "Çaktiv_o shkëputjen"
-
-#~ msgid "Disable _unsafe protocols"
-#~ msgstr "Çaktivizo protokollët e pasig_urtë"
-
-#, fuzzy
-#~ msgid "Disabled Applets"
-#~ msgstr "<b>Ndihmues jo aktivë</b>"
-
-#~ msgid "Lockdown Editor"
-#~ msgstr "Editori i bllokimeve"
-
-#, fuzzy
-#~ msgid "Safe Protocols"
-#~ msgstr "<b>Protokollë të sigurt</b>"
-
-#~ msgid "Remove personal information from documents when saving them"
-#~ msgstr "Hiq të dhënat personale nga dokumentët kur i ruani"
-
-#~ msgid "Warn if macro tries to create a PDF"
-#~ msgstr "Lajmëro nëse macro përpiqet të krijojë një PDF"
-
-#~ msgid "Warn if macro tries to print a document"
-#~ msgstr "Lajmëro nëse macro përpiqet të printojë një dokument"
-
-#~ msgid "Warn if macro tries to save a document"
-#~ msgstr "Lajmëro nëse macro përpiqet të ruaj një dokument"
-
-#~ msgid "Warn if macro tries to sign a document"
-#~ msgstr "Lajmëro nëse macro përpiqet të firmosë një dokument"
-
-#~ msgid "Recommend password when saving a document"
-#~ msgstr "Rakomando fjalëkalimin kur ruhet një dokument"
-
-#~ msgid "Enable auto-save"
-#~ msgstr "Aktivizo ruajtjen automatike"
-
-#~ msgid "Printing should mark the document as modified"
-#~ msgstr "Printimi duhet të shënojë si të ndryshuar dokumentin"
-
-#~ msgid "Use system's file dialog"
-#~ msgstr "Përdor dritaren e dialogut të sistemit për file"
-
-#~ msgid "Create backup copy on save"
-#~ msgstr "Krijo kopje rezervë kur ruan"
-
-#~ msgid "Warn when saving non-OpenOffice.org formats"
-#~ msgstr "Lajmëro kur ruhen formate jo-OpenOffice.org"
-
-#~ msgid "Use OpenGL"
-#~ msgstr "Përdor OpenGL"
-
-#~ msgid "Use system font"
-#~ msgstr "Përdor gërmat e sistemit"
-
-#~ msgid "Use anti-aliasing"
-#~ msgstr "Përdor anti-aliasing"
-
-#~ msgid "Disable UI customization"
-#~ msgstr "Çaktivizo personalizimin e UI"
-
-#~ msgid "Show insensitive menu items"
-#~ msgstr "Shfaq elementët e paktivueshëm të menusë"
-
-#~ msgid "Show font preview"
-#~ msgstr "Shfaq pamjen e parë të llojit të gërmave"
-
-#~ msgid "Show font history"
-#~ msgstr "Shfaq kronollogjinë e llojeve të gërmave"
-
-#~ msgid "Show icons in menus"
-#~ msgstr "Shfaq ikonat në menu"
-
-#~ msgid ""
-#~ "\n"
-#~ "5\n"
-#~ "10\n"
-#~ "25\n"
-#~ "50"
-#~ msgstr ""
-#~ "\n"
-#~ "5\n"
-#~ "10\n"
-#~ "25\n"
-#~ "50"
-
-#~ msgid ""
-#~ "\n"
-#~ "Automatic\n"
-#~ "Large\n"
-#~ "Small"
-#~ msgstr ""
-#~ "\n"
-#~ "Automatike\n"
-#~ "E madhe\n"
-#~ "E vogël"
-
-# (pofilter) unchanged: please translate
-#~ msgid ""
-#~ "\n"
-#~ "OpenDocument (.odp)\n"
-#~ "PowerPoint 97+ (.ppt)\n"
-#~ "OpenOffice.org 1.1 (.sxi)"
-#~ msgstr ""
-#~ "\n"
-#~ "OpenDocument (.odp)\n"
-#~ "PowerPoint 97+ (.ppt)\n"
-#~ "OpenOffice.org 1.1 (.sxi)"
-
-# (pofilter) unchanged: please translate
-#~ msgid ""
-#~ "\n"
-#~ "OpenDocument (.ods)\n"
-#~ "Excel 97+ (.xls)\n"
-#~ "OpenOffice.org 1.1 (.sxc)"
-#~ msgstr ""
-#~ "\n"
-#~ "OpenDocument (.ods)\n"
-#~ "Excel 97+ (.xls)\n"
-#~ "OpenOffice.org 1.1 (.sxc)"
-
-# (pofilter) unchanged: please translate
-#~ msgid ""
-#~ "\n"
-#~ "OpenDocument (.odt)\n"
-#~ "Word 97+ (.doc)\n"
-#~ "OpenOffice.org 1.1 (.sxw)"
-#~ msgstr ""
-#~ "\n"
-#~ "OpenDocument (.odt)\n"
-#~ "Word 97+ (.doc)\n"
-#~ "OpenOffice.org 1.1 (.sxw)"
-
-#~ msgid ""
-#~ "\n"
-#~ "Very High\n"
-#~ "High\n"
-#~ "Medium\n"
-#~ "Low"
-#~ msgstr ""
-#~ "\n"
-#~ "Tepër i lartë\n"
-#~ "I lartë\n"
-#~ "Mesatar\n"
-#~ "I ulët"
-
-#~ msgid "Default format for presentations:"
-#~ msgstr "Formati i paracaktuar për prezantime:"
-
-#~ msgid "Default format for spreadsheet:"
-#~ msgstr "Formati i paracaktuar për fletët e llogarive:"
-
-#~ msgid "Default format for word processor:"
-#~ msgstr "Formati i paracaktuar për word processor:"
-
-#~ msgid "Default icon size"
-#~ msgstr "Madhësia e paracaktuar e ikonave"
-
-#~ msgid "Load / Save"
-#~ msgstr "Ngarko / Ruaj"
-
-#~ msgid "Macro Security Level:"
-#~ msgstr "Niveli i sigurisë të macro:"
-
-#~ msgid "Number of undo steps:"
-#~ msgstr "Numri i hapave të anullimit:"
-
-# (pofilter) unchanged: please translate
-#~ msgid "OpenOffice.org"
-#~ msgstr "OpenOffice.org"
-
-#~ msgid "Security"
-#~ msgstr "Siguria"
-
-#~ msgid "User Interface"
-#~ msgstr "Interfaqja e përdorimit"
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld second will be permanently "
-#~ "lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %ld seconds will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Nëse nuk ruani, ndryshimet nga %ld sekonda e fundit do të humben "
-#~ "përfundimisht."
-#~ msgstr[1] ""
-#~ "Nëse nuk ruani, ndryshimet nga %ld sekondat e fundit do të humben "
-#~ "përfundimisht."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last minute will be permanently lost."
-#~ msgstr ""
-#~ "Nëse nuk ruani, ndryshimet nga minuta e fundit do të humben përfundimisht."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last minute and %ld second will be "
-#~ "permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last minute and %ld seconds will be "
-#~ "permanently lost."
-#~ msgstr[0] ""
-#~ "Nëse nuk ruani, ndryshimet nga minuti i fundit dhe %ld sekondë do të "
-#~ "humben përfundimisht."
-#~ msgstr[1] ""
-#~ "Nëse nuk ruani, ndryshimet nga minuti i fundit dhe %ld sekonda do të "
-#~ "humben përfundimisht."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld minute will be permanently "
-#~ "lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %ld minutes will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Nëse nuk ruani, ndryshimet nga %ld minuti i fundit do të humben "
-#~ "përfundimisht."
-#~ msgstr[1] ""
-#~ "Nëse nuk ruani, ndryshimet nga %ld minutat e fundit do të humben "
-#~ "përfundimisht."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last hour and %d minute will be "
-#~ "permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last hour and %d minutes will be "
-#~ "permanently lost."
-#~ msgstr[0] ""
-#~ "Nëse nuk ruani, ndryshimet nga ora e fundit dhe %d minutë do të humben "
-#~ "përfundimisht."
-#~ msgstr[1] ""
-#~ "Nëse nuk ruani, ndryshimet nga ora e fundit dhe %d minuta do të humben "
-#~ "përfundimisht."
-
-# (pofilter) variables: do not translate: %d
-# (pofilter) isreview: Check if the unit has been marked review.
-#~ msgid ""
-#~ "If you don't save, changes from the last %d hour will be permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %d hours will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Nëse nuk ruani, ndryshimet nga %d ora e fundit do të humben përfundimisht."
-#~ msgstr[1] ""
-#~ "Nëse nuk ruani, ndryshimet nga %d orët e fundit do të humben "
-#~ "përfundimisht."
-
-#~ msgid "Preferences menu"
-#~ msgstr "Menuja e preferimeve"
-
-#~ msgid "Applet %s added to top panel"
-#~ msgstr "Applet %s u shtua tek paneli i sipërm"
-
-#~ msgid "Applet %s added to bottom panel"
-#~ msgstr "Applet %s u shtua tek paneli i poshtëm"
-
-#~ msgid "Applet %s added to left panel"
-#~ msgstr "Applet %s u shtua tek paneli i majtë"
-
-#~ msgid "Applet %s added to right panel"
-#~ msgstr "Applet %s u shtua tek paneli i djathtë"
-
-#~ msgid "Applet %s removed from top panel"
-#~ msgstr "Applet %s u hoq nga paneli i sipërm"
-
-#~ msgid "Applet %s removed from bottom panel"
-#~ msgstr "Applet %s u hoq nga paneli i poshtëm"
-
-#~ msgid "Applet %s removed from left panel"
-#~ msgstr "Applet %s u hoq nga paneli i majtë"
-
-#~ msgid "Applet %s removed from right panel"
-#~ msgstr "Applet %s u hoq nga paneli i djathtë"
-
-#~ msgid "%s added to top panel"
-#~ msgstr "%s u shtua tek paneli i sipërm"
-
-#~ msgid "%s added to bottom panel"
-#~ msgstr "%s u shtua tek paneli i poshtëm"
-
-#~ msgid "%s added to left panel"
-#~ msgstr "%s u shtua tek paneli i majtë"
-
-#~ msgid "%s added to right panel"
-#~ msgstr "%s u shtua tek paneli i djathtë"
-
-#~ msgid "%s removed from top panel"
-#~ msgstr "%s u hoq nga paneli i sipërm"
-
-#~ msgid "%s removed from bottom panel"
-#~ msgstr "%s u hoq nga paneli i poshtëm"
-
-#~ msgid "%s removed from left panel"
-#~ msgstr "%s u hoq nga paneli i majtë"
-
-#~ msgid "%s removed from right panel"
-#~ msgstr "%s u hoq nga paneli i djathtë"
