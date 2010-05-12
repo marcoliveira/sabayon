@@ -4,14 +4,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-21 21:44-0600\n"
-"PO-Revision-Date: 2009-11-06 19:17+0200\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon&component=general\n"
+"POT-Creation-Date: 2010-05-12 12:39+0000\n"
+"PO-Revision-Date: 2010-05-12 18:37 -0400\n"
 "Last-Translator: Thomas Thurman <tthurman@gnome.org>\n"
-"Language-Team: Shavian <ubuntu-l10n-en-shaw@lists.launchpad.net>\n"
+"Language-Team: Shavian <ubuntu-l10n-en-shaw@launchpad.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
 
 #: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
@@ -21,8 +22,8 @@ msgstr "𐑐𐑮𐑴𐑜𐑮𐑨𐑥 𐑑 𐑩𐑕𐑑𐑨𐑚𐑤𐑦𐑖 𐑯 
 msgid "translator-credits"
 msgstr "·𐑑𐑪𐑥𐑩𐑕 ·𐑔𐑻𐑥𐑩𐑯"
 
-#: ../admin-tool/changeswindow.py:50
 #, python-format
+#: ../admin-tool/changeswindow.py:50
 msgid "Changes in profile %s"
 msgstr "𐑗𐑱𐑯𐑡𐑩𐑟 𐑦𐑯 𐑐𐑮𐑴𐑓𐑲𐑤 %s"
 
@@ -34,81 +35,90 @@ msgstr "𐑦𐑜𐑯𐑹"
 msgid "Lock"
 msgstr "𐑤𐑪𐑒"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:263
 msgid "Description"
 msgstr "𐑛𐑦𐑕𐑒𐑮𐑦𐑐𐑖𐑩𐑯"
 
-#: ../admin-tool/editorwindow.py:97
 #, python-format
+#: ../admin-tool/editorwindow.py:100
 msgid "Profile %s"
 msgstr "𐑐𐑮𐑴𐑓𐑲𐑤 %s"
 
-#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:179
 msgid "_Profile"
 msgstr "_𐑐𐑮𐑴𐑓𐑲𐑤"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
 msgid "_Save"
 msgstr "_𐑕𐑱𐑝"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
 msgid "Save profile"
 msgstr "𐑕𐑱𐑝 𐑐𐑮𐑴𐑓𐑲𐑤"
 
-#: ../admin-tool/editorwindow.py:204
+#: ../admin-tool/editorwindow.py:207
 msgid "_Close"
 msgstr "_𐑒𐑤𐑴𐑟"
 
-#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:181
 msgid "Close the current window"
 msgstr "𐑒𐑤𐑴𐑟 𐑞 𐑒𐑳𐑮𐑩𐑯𐑑 𐑢𐑦𐑯𐑛𐑴"
 
-#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:182
 msgid "_Edit"
 msgstr "_𐑧𐑛𐑦𐑑"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "_Delete"
 msgstr "_𐑛𐑦𐑤𐑰𐑑"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "Delete item"
 msgstr "𐑛𐑦𐑤𐑰𐑑 𐑲𐑑𐑩𐑥"
 
-#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:210 ../admin-tool/sessionwindow.py:185
 msgid "_Help"
 msgstr "_𐑣𐑧𐑤𐑐"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#, fuzzy
+#: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
 msgid "_Contents"
-msgstr ""
+msgstr "_Contents"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#, fuzzy
+#: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
 msgid "Help Contents"
-msgstr ""
+msgstr "𐑣𐑧𐑤𐑐 𐑒𐑪𐑯𐑑𐑩𐑯𐑑𐑕"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:212 ../admin-tool/sessionwindow.py:187
 msgid "_About"
 msgstr "_𐑩𐑚𐑬𐑑"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#, fuzzy
+#: ../admin-tool/editorwindow.py:212 ../admin-tool/sessionwindow.py:187
 msgid "About Sabayon"
-msgstr ""
+msgstr "𐑩𐑚𐑬𐑑 Sabayon"
 
-#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
+#, fuzzy
+#: ../admin-tool/editorwindow.py:267
+msgid "Source"
+msgstr "𐑕𐑹𐑕"
+
+#, fuzzy
+#: ../admin-tool/editorwindow.py:300 ../lib/sources/gconfsource.py:124
 msgid "GConf"
-msgstr ""
+msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:304 ../lib/sources/filessource.py:86
 msgid "Files"
 msgstr "𐑓𐑲𐑤𐑟"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:304 ../lib/sources/paneldelegate.py:279
 msgid "Panel"
 msgstr "𐑐𐑨𐑯𐑩𐑤"
 
-#: ../admin-tool/fileviewer.py:27
 #, python-format
+#: ../admin-tool/fileviewer.py:27
 msgid "Profile file: %s"
 msgstr "𐑐𐑮𐑴𐑓𐑲𐑤 𐑓𐑲𐑤: %s"
 
@@ -136,9 +146,10 @@ msgstr "𐑓𐑤𐑴𐑑"
 msgid "boolean"
 msgstr "𐑚𐑵𐑤𐑰𐑩𐑯"
 
+#, fuzzy
 #: ../admin-tool/gconfviewer.py:70
 msgid "schema"
-msgstr ""
+msgstr "schema"
 
 #: ../admin-tool/gconfviewer.py:72
 msgid "list"
@@ -148,12 +159,12 @@ msgstr "𐑤𐑦𐑕𐑑"
 msgid "pair"
 msgstr "𐑐𐑺"
 
-#: ../admin-tool/gconfviewer.py:86
 #, python-format
+#: ../admin-tool/gconfviewer.py:86
 msgid "Profile settings: %s"
 msgstr "𐑐𐑮𐑴𐑓𐑲𐑤 𐑕𐑧𐑑𐑦𐑙𐑟: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:423
 #: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "𐑯𐑱𐑥"
@@ -166,8 +177,8 @@ msgstr "𐑑𐑲𐑐"
 msgid "Value"
 msgstr "𐑝𐑨𐑤𐑿"
 
-#: ../admin-tool/groupsdialog.py:61
 #, python-format
+#: ../admin-tool/groupsdialog.py:61
 msgid "Groups for profile %s"
 msgstr "𐑜𐑮𐑵𐑐𐑕 𐑓𐑹 𐑐𐑮𐑴𐑓𐑲𐑤 %s"
 
@@ -185,8 +196,8 @@ msgstr "𐑿𐑟 𐑞𐑦𐑕 𐑐𐑮𐑴𐑓𐑲𐑤"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:520
 #, python-format
+#: ../admin-tool/profilesdialog.py:550
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
@@ -197,8 +208,8 @@ msgstr "𐑿𐑼 𐑩𐑒𐑬𐑯𐑑 𐑛𐑳𐑟 𐑯𐑪𐑑 𐑣𐑨𐑝 �
 
 #: ../admin-tool/sabayon:78
 msgid ""
-"Administrator level permissions are needed to run this program because it "
-"can modify system files."
+"Administrator level permissions are needed to run this program because it can "
+"modify system files."
 msgstr ""
 "𐑩𐑛𐑥𐑦𐑯𐑦𐑕𐑑𐑮𐑱𐑑𐑼 𐑤𐑧𐑝𐑩𐑤 𐑐𐑻𐑥𐑦𐑖𐑪𐑯𐑟 𐑸 𐑯𐑰𐑛𐑩𐑛 𐑑 𐑮𐑳𐑯 𐑞𐑦𐑕 𐑐𐑮𐑴𐑜𐑮𐑨𐑥 𐑚𐑦𐑒𐑪𐑟 𐑦𐑑 𐑒𐑨𐑯 𐑥𐑪𐑛𐑦𐑓𐑲 "
 "𐑕𐑦𐑕𐑑𐑩𐑥 𐑓𐑲𐑤𐑟."
@@ -213,46 +224,49 @@ msgid ""
 "session"
 msgstr "𐑿 𐑥𐑱 𐑯𐑪𐑑 𐑿𐑟 𐑛𐑧𐑕𐑒𐑑𐑪𐑐 𐑿𐑟𐑼 𐑐𐑮𐑴𐑓𐑲𐑤𐑟 𐑑𐑵𐑤 𐑓𐑮𐑪𐑥 𐑢𐑦𐑞𐑦𐑯 𐑩 𐑐𐑮𐑴𐑓𐑲𐑤 𐑧𐑛𐑦𐑑𐑦𐑙 𐑕𐑧𐑖𐑩𐑯"
 
-#: ../admin-tool/sabayon:91
 #, c-format
+#: ../admin-tool/sabayon:91
 msgid "User account '%s' was not found"
 msgstr "𐑿𐑟𐑼 𐑩𐑒𐑬𐑯𐑑 '%s' 𐑢𐑪𐑟 𐑯𐑪𐑑 𐑓𐑬𐑯𐑛"
 
-#: ../admin-tool/sabayon:92
 #, c-format
+#, fuzzy
+#: ../admin-tool/sabayon:92
 msgid ""
 "Sabayon requires a special user account '%s' to be present on this computer. "
 "Try again after creating the account (using, for example, the 'adduser' "
 "command)"
 msgstr ""
+"Sabayon 𐑮𐑦𐑒𐑢𐑲𐑼𐑟 𐑩 𐑕𐑐𐑧𐑖𐑩𐑤 𐑿𐑟𐑼 𐑩𐑒𐑬𐑯𐑑 '%s' 𐑑 𐑚𐑰 𐑐𐑮𐑩𐑟𐑧𐑯𐑑 𐑪𐑯 𐑞𐑦𐑕 𐑒𐑩𐑥𐑐𐑿𐑑𐑼. 𐑑𐑮𐑲 𐑩𐑜𐑱𐑯 "
+"𐑭𐑓𐑑𐑼 𐑒𐑮𐑦𐑱𐑑𐑦𐑙 𐑞 𐑩𐑒𐑬𐑯𐑑 (𐑿𐑟𐑦𐑙, 𐑓𐑹 𐑦𐑜𐑟𐑭𐑥𐑐𐑩𐑤, 𐑞 'adduser' 𐑒𐑩𐑥𐑭𐑯𐑛)"
 
-#: ../admin-tool/sabayon:131
 #, c-format
+#: ../admin-tool/sabayon:131
 msgid ""
 "A fatal error has occurred.  You can help us fix the problem by sending the "
 "log in %s to %s"
 msgstr ""
 "𐑩 𐑓𐑱𐑑𐑩𐑤 𐑻𐑼 𐑣𐑨𐑟 𐑪𐑒𐑻𐑛.  𐑿 𐑒𐑨𐑯 𐑣𐑧𐑤𐑐 𐑳𐑕 𐑓𐑦𐑒𐑕 𐑞 𐑐𐑮𐑪𐑚𐑤𐑩𐑥 𐑚𐑲 𐑕𐑧𐑯𐑛𐑦𐑙 𐑞 𐑤𐑪𐑜 𐑦𐑯 %s 𐑑 %s"
 
-#: ../admin-tool/sabayon:145
 #, fuzzy, c-format
+#: ../admin-tool/sabayon:145
 msgid ""
 "Sabayon will now exit.  There were some recoverable errors, and you can help "
 "us debug the problem by sending the log in %s to %s"
 msgstr ""
 "𐑩 𐑓𐑱𐑑𐑩𐑤 𐑻𐑼 𐑣𐑨𐑟 𐑪𐑒𐑻𐑛.  𐑿 𐑒𐑨𐑯 𐑣𐑧𐑤𐑐 𐑳𐑕 𐑓𐑦𐑒𐑕 𐑞 𐑐𐑮𐑪𐑚𐑤𐑩𐑥 𐑚𐑲 𐑕𐑧𐑯𐑛𐑦𐑙 𐑞 𐑤𐑪𐑜 𐑦𐑯 %s 𐑑 %s"
 
-#: ../admin-tool/sabayon-apply:111
+#: ../admin-tool/sabayon-apply:136
 msgid "Please use -h for usage options"
 msgstr "𐑐𐑤𐑰𐑟 𐑿𐑟 -h 𐑓𐑹 𐑿𐑕𐑦𐑡 𐑪𐑐𐑖𐑩𐑯𐑟"
 
-#: ../admin-tool/sabayon-apply:123
 #, c-format
+#: ../admin-tool/sabayon-apply:148
 msgid "No profile for user '%s' found\n"
 msgstr "𐑯𐑴 𐑐𐑮𐑴𐑓𐑲𐑤 𐑓𐑹 𐑿𐑟𐑼 '%s' 𐑓𐑬𐑯𐑛\n"
 
-#: ../admin-tool/sabayon-session:67
 #, c-format
+#: ../admin-tool/sabayon-session:67
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
 msgstr "𐑿𐑕𐑦𐑡: %s <𐑐𐑮𐑴𐑓𐑲𐑤-𐑯𐑱𐑥> <𐑐𐑮𐑴𐑓𐑲𐑤-𐑐𐑭𐑔> <𐑛𐑩𐑕𐑐𐑤𐑱-𐑯𐑳𐑥𐑚𐑼>\n"
 
@@ -308,94 +322,96 @@ msgstr "_𐑿𐑟𐑼𐑟:"
 msgid "Close _Without Saving"
 msgstr "𐑒𐑤𐑴𐑟 _𐑢𐑦𐑞𐑬𐑑 𐑕𐑱𐑝𐑦𐑙"
 
-#: ../admin-tool/saveconfirm.py:41
 #, python-format
+#: ../admin-tool/saveconfirm.py:41
 msgid "Save changes to profile \"%s\" before closing?"
 msgstr "𐑕𐑱𐑝 𐑗𐑱𐑯𐑡𐑩𐑟 𐑑 𐑐𐑮𐑴𐑓𐑲𐑤 \"%s\" 𐑚𐑦𐑓𐑹 𐑒𐑤𐑴𐑟𐑦𐑙?"
 
-#: ../admin-tool/saveconfirm.py:44
 #, fuzzy
+#: ../admin-tool/saveconfirm.py:44
 msgid "If you don't save, all changes will be permanently lost."
-msgstr "𐑦𐑓 𐑿 𐑛𐑴𐑯𐑑 𐑕𐑱𐑝, 𐑗𐑱𐑯𐑡𐑩𐑟 𐑓𐑮𐑪𐑥 𐑞 𐑤𐑭𐑕𐑑 𐑬𐑼 𐑢𐑦𐑤 𐑚𐑰 𐑐𐑻𐑥𐑩𐑯𐑩𐑯𐑑𐑤𐑦 𐑤𐑪𐑕𐑑."
+msgstr "𐑦𐑓 𐑿 𐑛𐑴𐑯𐑑 𐑕𐑱𐑝, 𐑷𐑤 𐑗𐑱𐑯𐑡𐑩𐑟 𐑢𐑦𐑤 𐑚𐑰 𐑐𐑻𐑥𐑩𐑯𐑩𐑯𐑑𐑤𐑦 𐑤𐑪𐑕𐑑."
 
-#: ../admin-tool/sessionwindow.py:155
 #, python-format
+#: ../admin-tool/sessionwindow.py:157
 msgid "Editing profile %s"
 msgstr "𐑧𐑛𐑦𐑑𐑦𐑙 𐑐𐑮𐑴𐑓𐑲𐑤 %s"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Quit"
 msgstr "_𐑒𐑢𐑦𐑑"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "_Changes"
 msgstr "_𐑗𐑱𐑯𐑡𐑩𐑟"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "Edit changes"
 msgstr "𐑧𐑛𐑦𐑑 𐑗𐑱𐑯𐑡𐑩𐑟"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "_Lockdown"
 msgstr "_𐑤𐑭𐑒𐑛𐑶𐑯"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "Edit Lockdown settings"
 msgstr "𐑧𐑛𐑦𐑑 𐑤𐑭𐑒𐑛𐑶𐑯 𐑕𐑧𐑑𐑦𐑙𐑟"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce Mandatory"
 msgstr "𐑧𐑯𐑓𐑪𐑮𐑕 𐑥𐑨𐑯𐑛𐑩𐑑𐑪𐑮𐑰"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce mandatory settings in the editing session"
 msgstr "𐑧𐑯𐑓𐑪𐑮𐑕 𐑥𐑨𐑯𐑛𐑩𐑑𐑪𐑮𐑰 𐑕𐑧𐑑𐑦𐑙𐑟 𐑦𐑯 𐑞 𐑧𐑛𐑦𐑑𐑦𐑙 𐑕𐑧𐑖𐑩𐑯"
 
-#: ../admin-tool/sessionwindow.py:306
 #, python-format
+#: ../admin-tool/sessionwindow.py:308
 msgid "Lockdown settings for %s"
 msgstr "𐑤𐑭𐑒𐑛𐑶𐑯 𐑕𐑧𐑑𐑦𐑙𐑟 𐑓𐑹 %s"
 
-#: ../admin-tool/sessionwindow.py:342
 #, python-format
+#: ../admin-tool/sessionwindow.py:344
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
 "report this error now or try to continue editing the user profile."
 msgstr ""
-"𐑞𐑺 𐑢𐑪𐑟 𐑩 𐑮𐑦𐑒𐑩𐑝𐑻𐑩𐑚𐑩𐑤 𐑻𐑼 𐑢𐑲𐑤 𐑩𐑐𐑤𐑲𐑦𐑙 𐑞 𐑿𐑟𐑼 𐑐𐑮𐑴𐑓𐑲𐑤 '%s'.  𐑿 𐑒𐑨𐑯 𐑮𐑩𐑐𐑹𐑑 𐑞𐑦𐑕 𐑻𐑼 𐑯𐑬 "
-"𐑹 𐑑𐑮𐑲 𐑑 𐑒𐑩𐑯𐑑𐑦𐑯𐑿 𐑧𐑛𐑦𐑑𐑦𐑙 𐑞 𐑿𐑟𐑼 𐑐𐑮𐑴𐑓𐑲𐑤."
+"𐑞𐑺 𐑢𐑪𐑟 𐑩 𐑮𐑦𐑒𐑩𐑝𐑻𐑩𐑚𐑩𐑤 𐑻𐑼 𐑢𐑲𐑤 𐑩𐑐𐑤𐑲𐑦𐑙 𐑞 𐑿𐑟𐑼 𐑐𐑮𐑴𐑓𐑲𐑤 '%s'.  𐑿 𐑒𐑨𐑯 𐑮𐑩𐑐𐑹𐑑 𐑞𐑦𐑕 𐑻𐑼 𐑯𐑬 𐑹 "
+"𐑑𐑮𐑲 𐑑 𐑒𐑩𐑯𐑑𐑦𐑯𐑿 𐑧𐑛𐑦𐑑𐑦𐑙 𐑞 𐑿𐑟𐑼 𐑐𐑮𐑴𐑓𐑲𐑤."
 
-#: ../admin-tool/sessionwindow.py:346
+#: ../admin-tool/sessionwindow.py:348
 msgid "_Report this error"
 msgstr "_𐑮𐑩𐑐𐑹𐑑 𐑞𐑦𐑕 𐑻𐑼"
 
-#: ../admin-tool/sessionwindow.py:347
+#: ../admin-tool/sessionwindow.py:349
 msgid "_Continue editing"
 msgstr "_𐑒𐑩𐑯𐑑𐑦𐑯𐑿 𐑧𐑛𐑦𐑑𐑦𐑙"
 
-#: ../admin-tool/usersdialog.py:72
 #, python-format
+#: ../admin-tool/usersdialog.py:72
 msgid "Users for profile %s"
 msgstr "𐑿𐑟𐑼𐑟 𐑓𐑹 𐑐𐑮𐑴𐑓𐑲𐑤 %s"
 
-#: ../lib/protosession.py:112
+#: ../lib/protosession.py:119
 msgid "Unable to find a free X display"
 msgstr "𐑳𐑯𐑱𐑚𐑩𐑤 𐑑 𐑓𐑲𐑯𐑛 𐑩 𐑓𐑮𐑰 𐑧𐑒𐑕 𐑛𐑩𐑕𐑐𐑤𐑱"
 
-#: ../lib/protosession.py:376
+#, fuzzy
+#: ../lib/protosession.py:383
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
-msgstr ""
+msgstr "𐑓𐑱𐑤𐑛 𐑑 𐑕𐑑𐑸𐑑 Xephyr: 𐑑𐑲𐑥𐑛 𐑬𐑑 𐑢𐑱𐑑𐑦𐑙 𐑓𐑹 USR1 𐑕𐑦𐑜𐑯𐑩𐑤"
 
-#: ../lib/protosession.py:378
+#, fuzzy
+#: ../lib/protosession.py:385
 msgid "Failed to start Xephyr: died during startup"
-msgstr ""
+msgstr "𐑓𐑱𐑤𐑛 𐑑 𐑕𐑑𐑸𐑑 Xephyr: 𐑛𐑲𐑛 𐑛𐑘𐑫𐑼𐑦𐑙 𐑕𐑑𐑸𐑑𐑳𐑐"
 
 #. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:469
 #, python-format
+#: ../lib/protosession.py:476
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
 msgstr "𐑞𐑺 𐑢𐑪𐑟 𐑩 𐑮𐑦𐑒𐑩𐑝𐑻𐑩𐑚𐑩𐑤 𐑻𐑼 𐑢𐑲𐑤 𐑩𐑐𐑤𐑲𐑦𐑙 𐑞 𐑿𐑟𐑼 𐑐𐑮𐑴𐑓𐑲𐑤 𐑓𐑮𐑪𐑥 𐑓𐑲𐑤 '%s'."
@@ -404,365 +420,409 @@ msgstr "𐑞𐑺 𐑢𐑪𐑟 𐑩 𐑮𐑦𐑒𐑩𐑝𐑻𐑩𐑚𐑩𐑤 𐑻
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (FATAL) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:478
 #, python-format
+#: ../lib/protosession.py:485
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "𐑞𐑺 𐑢𐑪𐑟 𐑩 𐑓𐑱𐑑𐑩𐑤 𐑻𐑼 𐑢𐑲𐑤 𐑩𐑐𐑤𐑲𐑦𐑙 𐑞 𐑿𐑟𐑼 𐑐𐑮𐑴𐑓𐑲𐑤 𐑓𐑮𐑪𐑥 '%s'."
 
+#, fuzzy
 #: ../lib/sources/filessource.py:69
-#, python-format
-msgid "File '%s' created"
+msgid "Directory"
+msgstr "𐑛𐑲𐑮𐑧𐑒𐑑𐑼𐑦"
+
+#, fuzzy
+#: ../lib/sources/filessource.py:71
+msgid "Link"
+msgstr "𐑤𐑦𐑙𐑒"
+
+#, fuzzy
+#: ../lib/sources/filessource.py:73
+msgid "File"
+msgstr "𐑓𐑲𐑤"
+
+#, fuzzy, python-format
+#: ../lib/sources/filessource.py:75
+msgid "%s '%s' created"
 msgstr "𐑓𐑲𐑤 '%s' 𐑒𐑮𐑦𐑱𐑑𐑩𐑛"
 
-#: ../lib/sources/filessource.py:71
-#, python-format
-msgid "File '%s' deleted"
+#, fuzzy, python-format
+#: ../lib/sources/filessource.py:77
+msgid "%s '%s' deleted"
 msgstr "𐑓𐑲𐑤 '%s' 𐑛𐑦𐑤𐑰𐑑𐑩𐑛"
 
-#: ../lib/sources/filessource.py:73
-#, python-format
-msgid "File '%s' changed"
+#, fuzzy, python-format
+#: ../lib/sources/filessource.py:79
+msgid "%s '%s' changed"
 msgstr "𐑓𐑲𐑤 '%s' 𐑗𐑱𐑯𐑡𐑛"
 
-#: ../lib/sources/filessource.py:97
+#: ../lib/sources/filessource.py:105
 msgid "Applications menu"
 msgstr "𐑩𐑐𐑤𐑦𐑒𐑱𐑕𐑩𐑯𐑟 𐑥𐑧𐑯𐑿"
 
-#: ../lib/sources/filessource.py:99
 #, fuzzy
+#: ../lib/sources/filessource.py:107
 msgid "Settings menu"
-msgstr "𐑕𐑻𐑝𐑼 𐑕𐑧𐑑𐑦𐑙𐑟 𐑥𐑧𐑯𐑿"
+msgstr "𐑕𐑧𐑑𐑦𐑙𐑟 𐑥𐑧𐑯𐑿"
 
-#: ../lib/sources/filessource.py:101
+#: ../lib/sources/filessource.py:109
 msgid "Server Settings menu"
 msgstr "𐑕𐑻𐑝𐑼 𐑕𐑧𐑑𐑦𐑙𐑟 𐑥𐑧𐑯𐑿"
 
-#: ../lib/sources/filessource.py:103
+#: ../lib/sources/filessource.py:111
 msgid "System Settings menu"
 msgstr "𐑕𐑦𐑕𐑑𐑩𐑥 𐑕𐑧𐑑𐑦𐑙𐑟 𐑥𐑧𐑯𐑿"
 
-#: ../lib/sources/filessource.py:105
+#: ../lib/sources/filessource.py:113
 msgid "Start Here menu"
 msgstr "𐑕𐑑𐑸𐑑 𐑣𐑽 𐑥𐑧𐑯𐑿"
 
+#, fuzzy
+#, python-format
 #: ../lib/sources/gconfsource.py:90
-#, python-format
 msgid "GConf key '%s' unset"
-msgstr ""
+msgstr "GConf 𐑒𐑰 '%s' 𐑩𐑯𐑕𐑧𐑑"
 
+#, fuzzy
+#, python-format
 #: ../lib/sources/gconfsource.py:92
-#, python-format
 msgid "GConf key '%s' set to string '%s'"
-msgstr ""
+msgstr "GConf 𐑒𐑰 '%s' 𐑕𐑧𐑑 𐑑 𐑕𐑑𐑮𐑦𐑙 '%s'"
 
+#, fuzzy
+#, python-format
 #: ../lib/sources/gconfsource.py:94
-#, python-format
 msgid "GConf key '%s' set to integer '%s'"
-msgstr ""
+msgstr "GConf 𐑒𐑰 '%s' 𐑕𐑧𐑑 𐑑 𐑦𐑯𐑑𐑩𐑡𐑼 '%s'"
 
+#, fuzzy
+#, python-format
 #: ../lib/sources/gconfsource.py:96
-#, python-format
 msgid "GConf key '%s' set to float '%s'"
-msgstr ""
+msgstr "GConf 𐑒𐑰 '%s' 𐑕𐑧𐑑 𐑑 𐑓𐑤𐑴𐑑 '%s'"
 
+#, fuzzy
+#, python-format
 #: ../lib/sources/gconfsource.py:98
-#, python-format
 msgid "GConf key '%s' set to boolean '%s'"
-msgstr ""
+msgstr "GConf 𐑒𐑰 '%s' 𐑕𐑧𐑑 𐑑 𐑚𐑵𐑤𐑰𐑩𐑯 '%s'"
 
+#, fuzzy
+#, python-format
 #: ../lib/sources/gconfsource.py:100
-#, python-format
 msgid "GConf key '%s' set to schema '%s'"
-msgstr ""
+msgstr "GConf 𐑒𐑰 '%s' 𐑕𐑧𐑑 𐑑 schema '%s'"
 
+#, fuzzy
+#, python-format
 #: ../lib/sources/gconfsource.py:102
-#, python-format
 msgid "GConf key '%s' set to list '%s'"
-msgstr ""
+msgstr "GConf 𐑒𐑰 '%s' 𐑕𐑧𐑑 𐑑 𐑤𐑦𐑕𐑑 '%s'"
 
+#, fuzzy
+#, python-format
 #: ../lib/sources/gconfsource.py:104
-#, python-format
 msgid "GConf key '%s' set to pair '%s'"
-msgstr ""
+msgstr "GConf 𐑒𐑰 '%s' 𐑕𐑧𐑑 𐑑 𐑐𐑺 '%s'"
 
+#, fuzzy
+#, python-format
 #: ../lib/sources/gconfsource.py:106
-#, python-format
 msgid "GConf key '%s' set to '%s'"
-msgstr ""
+msgstr "GConf 𐑒𐑰 '%s' 𐑕𐑧𐑑 𐑑 '%s'"
 
-#: ../lib/sources/gconfsource.py:137
 #, fuzzy
+#: ../lib/sources/gconfsource.py:138
 msgid "Default GConf settings"
-msgstr "𐑛𐑦𐑓𐑷𐑤𐑑 𐑲𐑒𐑪𐑯 𐑕𐑲𐑟"
+msgstr "𐑛𐑦𐑓𐑷𐑤𐑑 GConf 𐑕𐑧𐑑𐑦𐑙𐑟"
 
-#: ../lib/sources/gconfsource.py:139
 #, fuzzy
+#: ../lib/sources/gconfsource.py:140
 msgid "Mandatory GConf settings"
-msgstr "𐑧𐑛𐑦𐑑 𐑤𐑭𐑒𐑛𐑶𐑯 𐑕𐑧𐑑𐑦𐑙𐑟"
+msgstr "𐑥𐑨𐑯𐑛𐑩𐑑𐑪𐑮𐑰 GConf 𐑕𐑧𐑑𐑦𐑙𐑟"
 
-#: ../lib/sources/mozillasource.py:133
+#, fuzzy
 #, python-format
-msgid "Mozilla key '%s' set to '%s'"
-msgstr ""
-
 #: ../lib/sources/mozillasource.py:135
-#, python-format
-msgid "Mozilla key '%s' unset"
-msgstr ""
+msgid "Mozilla key '%s' set to '%s'"
+msgstr "Mozilla 𐑒𐑰 '%s' 𐑕𐑧𐑑 𐑑 '%s'"
 
+#, fuzzy
+#, python-format
 #: ../lib/sources/mozillasource.py:137
+msgid "Mozilla key '%s' unset"
+msgstr "Mozilla 𐑒𐑰 '%s' 𐑩𐑯𐑕𐑧𐑑"
+
 #, fuzzy, python-format
+#: ../lib/sources/mozillasource.py:139
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "𐑓𐑲𐑤 '%s' 𐑗𐑱𐑯𐑡𐑛"
 
-#: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
+#: ../lib/sources/mozillasource.py:169 ../lib/sources/mozillasource.py:179
 msgid "Web browser preferences"
 msgstr "𐑢𐑧𐑚 𐑚𐑮𐑬𐑟𐑼 𐑐𐑮𐑧𐑓𐑼𐑩𐑯𐑕𐑩𐑟"
 
-#: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
+#: ../lib/sources/mozillasource.py:171 ../lib/sources/mozillasource.py:181
 msgid "Web browser bookmarks"
 msgstr "𐑢𐑧𐑚 𐑚𐑮𐑬𐑟𐑼 𐑚𐑫𐑒𐑥𐑸𐑒𐑕"
 
-#: ../lib/sources/mozillasource.py:170
+#: ../lib/sources/mozillasource.py:173
 msgid "Web browser profile list"
 msgstr "𐑢𐑧𐑚 𐑚𐑮𐑬𐑟𐑼 𐑐𐑮𐑴𐑓𐑲𐑤 𐑤𐑦𐑕𐑑"
 
-#: ../lib/sources/mozillasource.py:520
 #, python-format
+#: ../lib/sources/mozillasource.py:550
 msgid "File Not Found (%s)"
 msgstr "𐑓𐑲𐑤 𐑯𐑪𐑑 𐑓𐑬𐑯𐑛 (%s)"
 
-#: ../lib/sources/mozillasource.py:869
 #, python-format
+#: ../lib/sources/mozillasource.py:899
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "𐑛𐑿𐑐𐑤𐑦𐑒𐑱𐑑 𐑯𐑱𐑥(%(name)s) 𐑦𐑯 𐑕𐑧𐑒𐑖𐑩𐑯 %(section)s"
 
-#: ../lib/sources/mozillasource.py:878
 #, python-format
+#: ../lib/sources/mozillasource.py:908
 msgid "redundant default in section %s"
 msgstr "𐑮𐑦𐑛𐑩𐑯𐑛𐑩𐑯𐑑 𐑛𐑦𐑓𐑷𐑤𐑑 𐑦𐑯 𐑕𐑧𐑒𐑖𐑩𐑯 %s"
 
-#: ../lib/sources/mozillasource.py:895
+#: ../lib/sources/mozillasource.py:925
 msgid "no default profile"
 msgstr "𐑯𐑴 𐑛𐑦𐑓𐑷𐑤𐑑 𐑐𐑮𐑴𐑓𐑲𐑤"
 
-#: ../lib/sources/mozillasource.py:950
+#, fuzzy
 #, python-format
+#: ../lib/sources/mozillasource.py:980
 msgid "Mozilla bookmark created '%s' -> '%s'"
-msgstr ""
+msgstr "Mozilla 𐑚𐑫𐑒𐑥𐑸𐑒 𐑒𐑮𐑦𐑱𐑑𐑩𐑛 '%s' -> '%s'"
 
-#: ../lib/sources/mozillasource.py:952
+#, fuzzy
 #, python-format
+#: ../lib/sources/mozillasource.py:982
 msgid "Mozilla bookmark folder created '%s'"
-msgstr ""
+msgstr "Mozilla 𐑚𐑫𐑒𐑥𐑸𐑒 𐑓𐑴𐑤𐑛𐑼 𐑒𐑮𐑦𐑱𐑑𐑩𐑛 '%s'"
 
-#: ../lib/sources/mozillasource.py:955
+#, fuzzy
 #, python-format
+#: ../lib/sources/mozillasource.py:985
 msgid "Mozilla bookmark deleted '%s'"
-msgstr ""
+msgstr "Mozilla 𐑚𐑫𐑒𐑥𐑸𐑒 𐑛𐑦𐑤𐑰𐑑𐑩𐑛 '%s'"
 
-#: ../lib/sources/mozillasource.py:957
+#, fuzzy
 #, python-format
+#: ../lib/sources/mozillasource.py:987
 msgid "Mozilla bookmark folder deleted '%s'"
-msgstr ""
+msgstr "Mozilla 𐑚𐑫𐑒𐑥𐑸𐑒 𐑓𐑴𐑤𐑛𐑼 𐑛𐑦𐑤𐑰𐑑𐑩𐑛 '%s'"
 
-#: ../lib/sources/mozillasource.py:960
+#, fuzzy
 #, python-format
+#: ../lib/sources/mozillasource.py:990
 msgid "Mozilla bookmark changed '%s' '%s'"
-msgstr ""
+msgstr "Mozilla 𐑚𐑫𐑒𐑥𐑸𐑒 𐑗𐑱𐑯𐑡𐑛 '%s' '%s'"
 
-#: ../lib/sources/mozillasource.py:962
+#, fuzzy
 #, python-format
+#: ../lib/sources/mozillasource.py:992
 msgid "Mozilla bookmark folder changed '%s'"
-msgstr ""
+msgstr "Mozilla 𐑚𐑫𐑒𐑥𐑸𐑒 𐑓𐑴𐑤𐑛𐑼 𐑗𐑱𐑯𐑡𐑛 '%s'"
 
-#: ../lib/sources/paneldelegate.py:65
 #, python-format
+#: ../lib/sources/paneldelegate.py:65
 msgid "Panel '%s' added"
 msgstr "𐑐𐑨𐑯𐑩𐑤 '%s' 𐑨𐑛𐑩𐑛"
 
-#: ../lib/sources/paneldelegate.py:71
 #, python-format
+#: ../lib/sources/paneldelegate.py:71
 msgid "Panel '%s' removed"
 msgstr "𐑐𐑨𐑯𐑩𐑤 '%s' 𐑮𐑦𐑥𐑵𐑝𐑛"
 
-#: ../lib/sources/paneldelegate.py:77
 #, fuzzy, python-format
+#: ../lib/sources/paneldelegate.py:77
 msgid "Applet '%s' added"
 msgstr "𐑐𐑨𐑯𐑩𐑤 '%s' 𐑨𐑛𐑩𐑛"
 
-#: ../lib/sources/paneldelegate.py:100
 #, fuzzy, python-format
+#: ../lib/sources/paneldelegate.py:100
 msgid "Applet '%s' removed"
 msgstr "𐑐𐑨𐑯𐑩𐑤 '%s' 𐑮𐑦𐑥𐑵𐑝𐑛"
 
-#: ../lib/sources/paneldelegate.py:123
 #, fuzzy, python-format
+#: ../lib/sources/paneldelegate.py:123
 msgid "Object '%s' added"
 msgstr "𐑐𐑨𐑯𐑩𐑤 '%s' 𐑨𐑛𐑩𐑛"
 
-#: ../lib/sources/paneldelegate.py:152
 #, fuzzy, python-format
+#: ../lib/sources/paneldelegate.py:152
 msgid "Object '%s' removed"
 msgstr "𐑐𐑨𐑯𐑩𐑤 '%s' 𐑮𐑦𐑥𐑵𐑝𐑛"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:240
+#: ../lib/sources/paneldelegate.py:241
 msgid "Drawer"
 msgstr "𐑛𐑮𐑷𐑼"
 
-#: ../lib/sources/paneldelegate.py:242
+#: ../lib/sources/paneldelegate.py:243
 msgid "Main Menu"
 msgstr "𐑥𐑱𐑯 𐑥𐑧𐑯𐑿"
 
-#: ../lib/sources/paneldelegate.py:252
 #, python-format
+#: ../lib/sources/paneldelegate.py:253
 msgid "%s launcher"
 msgstr "%s 𐑤𐑪𐑯𐑗𐑻"
 
-#: ../lib/sources/paneldelegate.py:256
+#: ../lib/sources/paneldelegate.py:257
 msgid "Lock Screen button"
 msgstr "𐑤𐑪𐑒 𐑕𐑒𐑮𐑰𐑯 𐑚𐑳𐑑𐑩𐑯"
 
-#: ../lib/sources/paneldelegate.py:258
 #, fuzzy
+#: ../lib/sources/paneldelegate.py:259
 msgid "Logout button"
-msgstr "𐑓𐑹𐑕 𐑒𐑢𐑦𐑑 𐑚𐑳𐑑𐑩𐑯"
+msgstr "Logout 𐑚𐑳𐑑𐑩𐑯"
 
-#: ../lib/sources/paneldelegate.py:260
+#: ../lib/sources/paneldelegate.py:261
 msgid "Run Application button"
 msgstr "𐑮𐑳𐑯 𐑩𐑐𐑤𐑦𐑒𐑱𐑕𐑩𐑯 𐑚𐑳𐑑𐑩𐑯"
 
-#: ../lib/sources/paneldelegate.py:262
+#: ../lib/sources/paneldelegate.py:263
 msgid "Search button"
 msgstr "𐑕𐑻𐑗 𐑚𐑳𐑑𐑩𐑯"
 
-#: ../lib/sources/paneldelegate.py:264
+#: ../lib/sources/paneldelegate.py:265
 msgid "Force Quit button"
 msgstr "𐑓𐑹𐑕 𐑒𐑢𐑦𐑑 𐑚𐑳𐑑𐑩𐑯"
 
-#: ../lib/sources/paneldelegate.py:266
+#: ../lib/sources/paneldelegate.py:267
 msgid "Connect to Server button"
 msgstr "𐑒𐑩𐑯𐑧𐑒𐑑 𐑑 𐑕𐑻𐑝𐑼 𐑚𐑳𐑑𐑩𐑯"
 
-#: ../lib/sources/paneldelegate.py:268
+#: ../lib/sources/paneldelegate.py:269
 msgid "Shutdown button"
 msgstr "𐑖𐑩𐑑𐑛𐑶𐑯 𐑚𐑳𐑑𐑩𐑯"
 
-#: ../lib/sources/paneldelegate.py:270
 #, fuzzy
+#: ../lib/sources/paneldelegate.py:271
 msgid "Screenshot button"
-msgstr "𐑤𐑪𐑒 𐑕𐑒𐑮𐑰𐑯 𐑚𐑳𐑑𐑩𐑯"
+msgstr "Screenshot 𐑚𐑳𐑑𐑩𐑯"
 
-#: ../lib/sources/paneldelegate.py:273
+#: ../lib/sources/paneldelegate.py:274
 msgid "Unknown"
 msgstr "𐑳𐑯𐑴𐑯"
 
-#: ../lib/sources/paneldelegate.py:275
+#: ../lib/sources/paneldelegate.py:276
 msgid "Menu Bar"
 msgstr "𐑥𐑧𐑯𐑿 𐑚𐑸"
 
-#: ../lib/sources/paneldelegate.py:512
+#: ../lib/sources/paneldelegate.py:513
 msgid "Panel File"
 msgstr "𐑐𐑨𐑯𐑩𐑤 𐑓𐑲𐑤"
 
-#: ../lib/storage.py:172
 #, python-format
+#: ../lib/storage.py:173
 msgid "Failed to read file '%s': %s"
 msgstr "𐑓𐑱𐑤𐑛 𐑑 𐑮𐑰𐑛 𐑓𐑲𐑤 '%s': %s"
 
-#: ../lib/storage.py:182
 #, fuzzy, python-format
+#: ../lib/storage.py:183
 msgid "Failed to read metadata from '%s': %s"
 msgstr "𐑓𐑱𐑤𐑛 𐑑 𐑮𐑰𐑛 𐑓𐑲𐑤 '%s': %s"
 
-#: ../lib/storage.py:188
+#, fuzzy
 #, python-format
+#: ../lib/storage.py:189
 msgid "Invalid metadata section in '%s': %s"
-msgstr ""
+msgstr "𐑦𐑯𐑝𐑨𐑤𐑦𐑛 metadata 𐑕𐑧𐑒𐑖𐑩𐑯 𐑦𐑯 '%s': %s"
 
-#: ../lib/storage.py:362
+#. change the raise to a dprint, since some files seem to disappear.
+#. raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
 #, python-format
+#: ../lib/storage.py:387
 msgid "Cannot add non-existent file '%s'"
 msgstr "𐑒𐑨𐑯𐑪𐑑 𐑨𐑛 𐑯𐑪𐑯-𐑧𐑜𐑟𐑦𐑕𐑑𐑩𐑯𐑑 𐑓𐑲𐑤 '%s'"
 
-#: ../lib/storage.py:487
+#, fuzzy
 #, python-format
-msgid "Couldn't unlink file '%s'"
-msgstr ""
+#: ../lib/storage.py:531
+msgid "Couldn't rmdir '%s'"
+msgstr "𐑒𐑫𐑛𐑯𐑑 rmdir '%s'"
 
-#: ../lib/storage.py:570
+#, fuzzy
 #, python-format
+#: ../lib/storage.py:536
+msgid "Couldn't unlink file '%s'"
+msgstr "𐑒𐑫𐑛𐑯𐑑 unlink 𐑓𐑲𐑤 '%s'"
+
+#, python-format
+#: ../lib/storage.py:633
 msgid "Profile is read-only %s"
 msgstr "𐑐𐑮𐑴𐑓𐑲𐑤 𐑦𐑟 𐑮𐑧𐑛-𐑴𐑯𐑤𐑦 %s"
 
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/systemdb.py:67
+#, fuzzy
 #, python-format
+#: ../lib/systemdb.py:77
 msgid "invalid type for setting %(setting)s in %(np)s"
-msgstr ""
+msgstr "𐑦𐑯𐑝𐑨𐑤𐑦𐑛 𐑑𐑲𐑐 𐑓𐑹 𐑕𐑧𐑑𐑦𐑙 %(setting)s 𐑦𐑯 %(np)s"
 
-#: ../lib/systemdb.py:112
+#: ../lib/systemdb.py:122
 msgid "No database file provided"
 msgstr "𐑯𐑴 𐑛𐑱𐑑𐑩𐑚𐑱𐑕 𐑓𐑲𐑤 𐑐𐑮𐑩𐑝𐑲𐑛𐑩𐑛"
 
-#: ../lib/systemdb.py:232
 #, fuzzy, python-format
+#: ../lib/systemdb.py:253
 msgid "No LDAP search base specified for %s"
 msgstr "𐑯𐑴 𐑕𐑻𐑗 𐑚𐑱𐑕 𐑕𐑐𐑧𐑕𐑦𐑓𐑲𐑛 𐑓𐑹 %s"
 
-#: ../lib/systemdb.py:235
 #, fuzzy, python-format
+#: ../lib/systemdb.py:256
 msgid "No LDAP query filter specified for %s"
 msgstr "𐑯𐑴 𐑒𐑢𐑽𐑦 𐑓𐑦𐑤𐑑𐑼 𐑕𐑐𐑧𐑕𐑦𐑓𐑲𐑛 𐑓𐑹 %s"
 
-#: ../lib/systemdb.py:238
 #, fuzzy, python-format
+#: ../lib/systemdb.py:259
 msgid "No LDAP result attribute specified for %s"
 msgstr "𐑯𐑴 𐑮𐑦𐑟𐑳𐑤𐑑 𐑩𐑑𐑮𐑦𐑚𐑿𐑑 𐑕𐑐𐑧𐑕𐑦𐑓𐑲𐑛 𐑓𐑹 %s"
 
-#: ../lib/systemdb.py:247
 #, fuzzy
-msgid "LDAP Scope must be one of: "
-msgstr "𐑕𐑒𐑴𐑐 𐑥𐑳𐑕𐑑 𐑚𐑰 𐑢𐑳𐑯 𐑝 𐑕𐑳𐑚, 𐑚𐑱𐑕 𐑯 𐑢𐑳𐑯"
-
 #: ../lib/systemdb.py:268
-#, fuzzy
-msgid "multiple_result must be one of: "
-msgstr "multiple_result 𐑥𐑳𐑕𐑑 𐑚𐑰 𐑢𐑳𐑯 𐑝 𐑓𐑻𐑕𐑑 𐑯 𐑮𐑨𐑯𐑛𐑩𐑥"
+msgid "LDAP Scope must be one of: "
+msgstr "·𐑤·𐑛·𐑨·𐑐 𐑕𐑒𐑴𐑐 𐑥𐑳𐑕𐑑 𐑚𐑰 𐑢𐑳𐑯 𐑝: "
 
-#: ../lib/systemdb.py:361
+#, fuzzy
+#: ../lib/systemdb.py:288
+msgid "multiple_result must be one of: "
+msgstr "multiple_result 𐑥𐑳𐑕𐑑 𐑚𐑰 𐑢𐑳𐑯 𐑝: "
+
 #, python-format
+#: ../lib/systemdb.py:381
 msgid "Could not open %s for writing"
 msgstr "𐑒𐑫𐑛 𐑯𐑪𐑑 𐑴𐑐𐑩𐑯 %s 𐑓𐑹 𐑮𐑲𐑑𐑦𐑙"
 
-#: ../lib/systemdb.py:374
+#, fuzzy
 #, python-format
+#: ../lib/systemdb.py:394
 msgid "Failed to save UserDatabase to %s"
-msgstr ""
+msgstr "𐑓𐑱𐑤𐑛 𐑑 𐑕𐑱𐑝 UserDatabase 𐑑 %s"
 
-#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
 #, python-format
+#: ../lib/systemdb.py:423 ../lib/systemdb.py:457
 msgid "File %s is not a profile configuration"
 msgstr "𐑓𐑲𐑤 %s 𐑦𐑟 𐑯𐑪𐑑 𐑩 𐑐𐑮𐑴𐑓𐑲𐑤 𐑒𐑩𐑯𐑓𐑦𐑜𐑘𐑼𐑱𐑖𐑩𐑯"
 
-#: ../lib/systemdb.py:404
 #, python-format
+#: ../lib/systemdb.py:430
 msgid "Failed to add default profile %s to configuration"
 msgstr "𐑓𐑱𐑤𐑛 𐑑 𐑨𐑛 𐑛𐑦𐑓𐑷𐑤𐑑 𐑐𐑮𐑴𐑓𐑲𐑤 %s 𐑑 𐑒𐑩𐑯𐑓𐑦𐑜𐑘𐑼𐑱𐑖𐑩𐑯"
 
-#: ../lib/systemdb.py:438
 #, python-format
+#: ../lib/systemdb.py:464
 msgid "Failed to add user %s to profile configuration"
 msgstr "𐑓𐑱𐑤𐑛 𐑑 𐑨𐑛 𐑿𐑟𐑼 %s 𐑑 𐑐𐑮𐑴𐑓𐑲𐑤 𐑒𐑩𐑯𐑓𐑦𐑜𐑘𐑼𐑱𐑖𐑩𐑯"
 
-#: ../lib/systemdb.py:510
+#: ../lib/systemdb.py:536
 msgid "Failed to get the user list"
 msgstr "𐑓𐑱𐑤𐑛 𐑑 𐑜𐑧𐑑 𐑞 𐑿𐑟𐑼 𐑤𐑦𐑕𐑑"
 
-#: ../lib/systemdb.py:560
+#: ../lib/systemdb.py:586
 msgid "Failed to get the group list"
 msgstr "𐑓𐑱𐑤𐑛 𐑑 𐑜𐑧𐑑 𐑞 𐑜𐑮𐑵𐑐 𐑤𐑦𐑕𐑑"
 
@@ -770,13 +830,13 @@ msgstr "𐑓𐑱𐑤𐑛 𐑑 𐑜𐑧𐑑 𐑞 𐑜𐑮𐑵𐑐 𐑤𐑦𐑕�
 msgid "Ignore WARNINGs"
 msgstr "𐑦𐑜𐑯𐑹 𐑢𐑪𐑮𐑯𐑦𐑙𐑟"
 
-#: ../lib/unittests.py:61
 #, python-format
+#: ../lib/unittests.py:61
 msgid "Running %s tests"
 msgstr "𐑮𐑳𐑯𐑦𐑙 %s 𐑑𐑧𐑕𐑑𐑕"
 
-#: ../lib/unittests.py:63
 #, python-format
+#: ../lib/unittests.py:63
 msgid "Running %s tests (%s)"
 msgstr "𐑮𐑳𐑯𐑦𐑙 %s 𐑑𐑧𐑕𐑑𐑕 (%s)"
 
@@ -784,257 +844,20 @@ msgstr "𐑮𐑳𐑯𐑦𐑙 %s 𐑑𐑧𐑕𐑑𐑕 (%s)"
 msgid "Success!"
 msgstr "𐑕𐑩𐑒𐑕𐑧𐑕!"
 
+#, fuzzy
 #: ../lib/util.py:94
 msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
+"𐑒𐑨𐑯𐑪𐑑 𐑓𐑲𐑯𐑛 𐑣𐑴𐑥 𐑛𐑲𐑮𐑧𐑒𐑑𐑼𐑦: 𐑯𐑪𐑑 𐑕𐑧𐑑 𐑦𐑯 /𐑧𐑑𐑕/passwd 𐑯 𐑯𐑴 𐑝𐑨𐑤𐑿 𐑓𐑹 $𐑣𐑴𐑥 𐑦𐑯 "
+"𐑧𐑯𐑝𐑲𐑼𐑯𐑥𐑩𐑯𐑑"
 
+#, fuzzy
 #: ../lib/util.py:110 ../lib/util.py:137
 msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr ""
+"𐑒𐑨𐑯𐑪𐑑 𐑓𐑲𐑯𐑛 𐑿𐑟𐑼𐑯𐑱𐑥: 𐑯𐑪𐑑 𐑕𐑧𐑑 𐑦𐑯 /𐑧𐑑𐑕/passwd 𐑯 𐑯𐑴 𐑝𐑨𐑤𐑿 𐑓𐑹 $𐑿𐑟𐑼 𐑦𐑯 𐑧𐑯𐑝𐑲𐑼𐑯𐑥𐑩𐑯𐑑"
 
-#~ msgid "Click to make this setting not mandatory"
-#~ msgstr "𐑒𐑤𐑦𐑒 𐑑 𐑥𐑱𐑒 𐑞𐑦𐑕 𐑕𐑧𐑑𐑦𐑙 𐑯𐑪𐑑 𐑥𐑨𐑯𐑛𐑩𐑑𐑪𐑮𐑰"
-
-#~ msgid "Click to make this setting mandatory"
-#~ msgstr "𐑒𐑤𐑦𐑒 𐑑 𐑥𐑱𐑒 𐑞𐑦𐑕 𐑕𐑧𐑑𐑦𐑙 𐑥𐑨𐑯𐑛𐑩𐑑𐑪𐑮𐑰"
-
-#~ msgid "General"
-#~ msgstr "𐑡𐑧𐑯𐑼𐑩𐑤"
-
-#~ msgid "Epiphany Web Browser"
-#~ msgstr "𐑦𐑐𐑦𐑓𐑩𐑯𐑰 𐑢𐑧𐑚 𐑚𐑮𐑬𐑟𐑼"
-
-#~ msgid "Disable _command line"
-#~ msgstr "𐑛𐑦𐑕𐑱𐑚𐑩𐑤 _𐑒𐑩𐑥𐑭𐑯𐑛 𐑤𐑲𐑯"
-
-#~ msgid "Disable _printing"
-#~ msgstr "𐑛𐑦𐑕𐑱𐑚𐑩𐑤 _𐑐𐑮𐑦𐑯𐑑𐑦𐑙"
-
-#~ msgid "Disable print _setup"
-#~ msgstr "𐑛𐑦𐑕𐑱𐑚𐑩𐑤 𐑐𐑮𐑦𐑯𐑑 _𐑕𐑧𐑑𐑳𐑐"
-
-#~ msgid "Disable save to _disk"
-#~ msgstr "𐑛𐑦𐑕𐑱𐑚𐑩𐑤 𐑕𐑱𐑝 𐑑 _𐑛𐑦𐑕𐑒"
-
-#~ msgid "_Lock down the panels"
-#~ msgstr "_𐑤𐑪𐑒 𐑛𐑬𐑯 𐑞 𐑐𐑨𐑯𐑩𐑤𐑟"
-
-#~ msgid "Disable force _quit"
-#~ msgstr "𐑛𐑦𐑕𐑱𐑚𐑩𐑤 𐑓𐑹𐑕 _𐑒𐑢𐑦𐑑"
-
-#~ msgid "Disable log _out"
-#~ msgstr "𐑛𐑦𐑕𐑱𐑚𐑩𐑤 𐑤𐑪𐑜 _𐑬𐑑"
-
-#~ msgid "Disable _quit"
-#~ msgstr "𐑛𐑦𐑕𐑱𐑚𐑩𐑤 _𐑒𐑢𐑦𐑑"
-
-#~ msgid "Disable _arbitrary URL"
-#~ msgstr "𐑛𐑦𐑕𐑱𐑚𐑩𐑤 _𐑸𐑚𐑦𐑑𐑮𐑼𐑦 URL"
-
-#~ msgid "Disable _bookmark editing"
-#~ msgstr "𐑛𐑦𐑕𐑱𐑚𐑩𐑤 _𐑚𐑫𐑒𐑥𐑸𐑒 𐑧𐑛𐑦𐑑𐑦𐑙"
-
-#~ msgid "Disable _history"
-#~ msgstr "𐑛𐑦𐑕𐑱𐑚𐑩𐑤 _𐑣𐑦𐑕𐑑𐑼𐑦"
-
-#~ msgid "Disable _javascript chrome"
-#~ msgstr "𐑛𐑦𐑕𐑱𐑚𐑩𐑤 _·𐑡𐑭𐑝𐑩𐑕𐑒𐑮𐑦𐑐𐑑 𐑒𐑮𐑴𐑥"
-
-#~ msgid "Disable _toolbar editing"
-#~ msgstr "𐑛𐑦𐑕𐑱𐑚𐑩𐑤 _𐑑𐑵𐑤𐑚𐑸 𐑧𐑛𐑦𐑑𐑦𐑙"
-
-#~ msgid "Disable lock _screen"
-#~ msgstr "𐑛𐑦𐑕𐑱𐑚𐑩𐑤 𐑤𐑪𐑒 _𐑕𐑒𐑮𐑰𐑯"
-
-#, fuzzy
-#~ msgid "_Lock on activation"
-#~ msgstr "_𐑤𐑪𐑒 𐑛𐑬𐑯 𐑞 𐑐𐑨𐑯𐑩𐑤𐑟"
-
-#, fuzzy
-#~ msgid "Allow log _out"
-#~ msgstr "𐑛𐑦𐑕𐑱𐑚𐑩𐑤 𐑤𐑪𐑜 _𐑬𐑑"
-
-#~ msgid "Disable _unsafe protocols"
-#~ msgstr "𐑛𐑦𐑕𐑱𐑚𐑩𐑤 _𐑩𐑯𐑕𐑱𐑓 𐑐𐑮𐑴𐑑𐑩𐑒𐑪𐑤𐑟"
-
-#, fuzzy
-#~ msgid "Disabled Applets"
-#~ msgstr "<b>𐑛𐑦𐑕𐑱𐑚𐑩𐑤𐑛 𐑨𐑐𐑤𐑩𐑑𐑕</b>"
-
-#~ msgid "Lockdown Editor"
-#~ msgstr "𐑤𐑭𐑒𐑛𐑶𐑯 𐑧𐑛𐑦𐑑𐑹"
-
-#, fuzzy
-#~ msgid "Safe Protocols"
-#~ msgstr "<b>𐑕𐑱𐑓 𐑐𐑮𐑴𐑑𐑩𐑒𐑪𐑤𐑟</b>"
-
-#~ msgid "Remove personal information from documents when saving them"
-#~ msgstr "𐑮𐑦𐑥𐑵𐑝 𐑐𐑻𐑕𐑩𐑯𐑩𐑤 𐑦𐑯𐑓𐑼𐑥𐑱𐑖𐑩𐑯 𐑓𐑮𐑪𐑥 𐑛𐑪𐑒𐑿𐑥𐑩𐑯𐑑𐑕 𐑢𐑧𐑯 𐑕𐑱𐑝𐑦𐑙 𐑞𐑧𐑥"
-
-#~ msgid "Warn if macro tries to create a PDF"
-#~ msgstr "𐑢𐑹𐑯 𐑦𐑓 𐑥𐑨𐑒𐑮𐑴 𐑑𐑮𐑲𐑟 𐑑 𐑒𐑮𐑦𐑱𐑑 𐑩 PDF"
-
-#~ msgid "Warn if macro tries to print a document"
-#~ msgstr "𐑢𐑹𐑯 𐑦𐑓 𐑥𐑨𐑒𐑮𐑴 𐑑𐑮𐑲𐑟 𐑑 𐑐𐑮𐑦𐑯𐑑 𐑩 𐑛𐑪𐑒𐑿𐑥𐑩𐑯𐑑"
-
-#~ msgid "Warn if macro tries to save a document"
-#~ msgstr "𐑢𐑹𐑯 𐑦𐑓 𐑥𐑨𐑒𐑮𐑴 𐑑𐑮𐑲𐑟 𐑑 𐑕𐑱𐑝 𐑩 𐑛𐑪𐑒𐑿𐑥𐑩𐑯𐑑"
-
-#~ msgid "Warn if macro tries to sign a document"
-#~ msgstr "𐑢𐑹𐑯 𐑦𐑓 𐑥𐑨𐑒𐑮𐑴 𐑑𐑮𐑲𐑟 𐑑 𐑕𐑲𐑯 𐑩 𐑛𐑪𐑒𐑿𐑥𐑩𐑯𐑑"
-
-#~ msgid "Recommend password when saving a document"
-#~ msgstr "𐑮𐑧𐑒𐑩𐑥𐑧𐑯𐑛 𐑐𐑭𐑕𐑢𐑼𐑛 𐑢𐑧𐑯 𐑕𐑱𐑝𐑦𐑙 𐑩 𐑛𐑪𐑒𐑿𐑥𐑩𐑯𐑑"
-
-#~ msgid "Enable auto-save"
-#~ msgstr "𐑦𐑯𐑱𐑚𐑩𐑤 𐑷𐑑𐑴-𐑕𐑱𐑝"
-
-#~ msgid "Printing should mark the document as modified"
-#~ msgstr "𐑐𐑮𐑦𐑯𐑑𐑦𐑙 𐑖𐑫𐑛 ·𐑥𐑸𐑒 𐑞 𐑛𐑪𐑒𐑿𐑥𐑩𐑯𐑑 𐑨𐑟 𐑥𐑪𐑛𐑦𐑓𐑲𐑛"
-
-#~ msgid "Use system's file dialog"
-#~ msgstr "𐑿𐑟 𐑕𐑦𐑕𐑑𐑩𐑥'𐑕 𐑓𐑲𐑤 𐑛𐑲𐑩𐑤𐑪𐑜"
-
-#~ msgid "Create backup copy on save"
-#~ msgstr "𐑒𐑮𐑦𐑱𐑑 𐑚𐑨𐑒𐑳𐑐 𐑒𐑪𐑐𐑦 𐑪𐑯 𐑕𐑱𐑝"
-
-#~ msgid "Warn when saving non-OpenOffice.org formats"
-#~ msgstr "𐑢𐑹𐑯 𐑢𐑧𐑯 𐑕𐑱𐑝𐑦𐑙 𐑯𐑪𐑯-·𐑴𐑐𐑩𐑯·𐑪𐑓𐑦𐑕.𐑹𐑜 𐑓𐑹𐑥𐑨𐑑𐑕"
-
-#~ msgid "Use system font"
-#~ msgstr "𐑿𐑟 𐑕𐑦𐑕𐑑𐑩𐑥 𐑓𐑪𐑯𐑑"
-
-#~ msgid "Show insensitive menu items"
-#~ msgstr "𐑖𐑴 𐑦𐑯𐑕𐑧𐑯𐑕𐑩𐑑𐑦𐑝 𐑥𐑧𐑯𐑿 𐑲𐑑𐑩𐑥𐑟"
-
-#~ msgid "Show font preview"
-#~ msgstr "𐑖𐑴 𐑓𐑪𐑯𐑑 𐑐𐑮𐑰𐑝𐑿"
-
-#~ msgid "Show font history"
-#~ msgstr "𐑖𐑴 𐑓𐑪𐑯𐑑 𐑣𐑦𐑕𐑑𐑼𐑦"
-
-#~ msgid "Show icons in menus"
-#~ msgstr "𐑖𐑴 𐑲𐑒𐑪𐑯𐑟 𐑦𐑯 𐑥𐑧𐑯𐑿𐑟"
-
-#~ msgid ""
-#~ "\n"
-#~ "5\n"
-#~ "10\n"
-#~ "25\n"
-#~ "50"
-#~ msgstr ""
-#~ "\n"
-#~ "5\n"
-#~ "10\n"
-#~ "25\n"
-#~ "50"
-
-#~ msgid ""
-#~ "\n"
-#~ "Automatic\n"
-#~ "Large\n"
-#~ "Small"
-#~ msgstr ""
-#~ "\n"
-#~ "𐑷𐑑𐑴𐑥𐑨𐑑𐑦𐑒\n"
-#~ "𐑤𐑸𐑡\n"
-#~ "𐑕𐑥𐑷𐑤"
-
-#~ msgid ""
-#~ "\n"
-#~ "Very High\n"
-#~ "High\n"
-#~ "Medium\n"
-#~ "Low"
-#~ msgstr ""
-#~ "\n"
-#~ "𐑝𐑧𐑮𐑦 𐑣𐑲\n"
-#~ "𐑣𐑲\n"
-#~ "𐑥𐑰𐑛𐑦𐑩𐑥\n"
-#~ "𐑤𐑴"
-
-#~ msgid "Default format for presentations:"
-#~ msgstr "𐑛𐑦𐑓𐑷𐑤𐑑 𐑓𐑹𐑥𐑨𐑑 𐑓𐑹 𐑐𐑮𐑧𐑟𐑩𐑯𐑑𐑱𐑖𐑩𐑯𐑟:"
-
-#~ msgid "Default format for spreadsheet:"
-#~ msgstr "𐑛𐑦𐑓𐑷𐑤𐑑 𐑓𐑹𐑥𐑨𐑑 𐑓𐑹 𐑕𐑐𐑮𐑧𐑛𐑖𐑰𐑑:"
-
-#~ msgid "Default format for word processor:"
-#~ msgstr "𐑛𐑦𐑓𐑷𐑤𐑑 𐑓𐑹𐑥𐑨𐑑 𐑓𐑹 𐑢𐑻𐑛 𐑐𐑮𐑭𐑕𐑧𐑕𐑻:"
-
-#~ msgid "Load / Save"
-#~ msgstr "𐑤𐑴𐑛 / 𐑕𐑱𐑝"
-
-#~ msgid "Macro Security Level:"
-#~ msgstr "𐑥𐑨𐑒𐑮𐑴 𐑕𐑦𐑒𐑘𐑫𐑼𐑦𐑑𐑦 𐑤𐑧𐑝𐑩𐑤:"
-
-#~ msgid "Number of undo steps:"
-#~ msgstr "𐑯𐑳𐑥𐑚𐑼 𐑝 𐑳𐑯𐑛𐑵 𐑕𐑑𐑧𐑐𐑕:"
-
-#~ msgid "OpenOffice.org"
-#~ msgstr "·𐑴𐑐𐑩𐑯·𐑪𐑓𐑦𐑕.𐑹𐑜"
-
-#~ msgid "Security"
-#~ msgstr "𐑕𐑦𐑒𐑘𐑫𐑼𐑦𐑑𐑦"
-
-#~ msgid "User Interface"
-#~ msgstr "𐑿𐑟𐑼 𐑦𐑯𐑑𐑼𐑓𐑱𐑕"
-
-#~ msgid ""
-#~ "If you don't save, changes from the last minute will be permanently lost."
-#~ msgstr "𐑦𐑓 𐑿 𐑛𐑴𐑯𐑑 𐑕𐑱𐑝, 𐑗𐑱𐑯𐑡𐑩𐑟 𐑓𐑮𐑪𐑥 𐑞 𐑤𐑭𐑕𐑑 𐑥𐑦𐑯𐑩𐑑 𐑢𐑦𐑤 𐑚𐑰 𐑐𐑻𐑥𐑩𐑯𐑩𐑯𐑑𐑤𐑦 𐑤𐑪𐑕𐑑."
-
-#~ msgid "Preferences menu"
-#~ msgstr "𐑐𐑮𐑧𐑓𐑼𐑩𐑯𐑕𐑩𐑟 𐑥𐑧𐑯𐑿"
-
-#~ msgid "Applet %s added to top panel"
-#~ msgstr "𐑨𐑐𐑤𐑩𐑑 %s 𐑨𐑛𐑩𐑛 𐑑 𐑑𐑪𐑐 𐑐𐑨𐑯𐑩𐑤"
-
-#~ msgid "Applet %s added to bottom panel"
-#~ msgstr "𐑨𐑐𐑤𐑩𐑑 %s 𐑨𐑛𐑩𐑛 𐑑 𐑚𐑪𐑑𐑫𐑥 𐑐𐑨𐑯𐑩𐑤"
-
-#~ msgid "Applet %s added to left panel"
-#~ msgstr "𐑨𐑐𐑤𐑩𐑑 %s 𐑨𐑛𐑩𐑛 𐑑 𐑤𐑧𐑓𐑑 𐑐𐑨𐑯𐑩𐑤"
-
-#~ msgid "Applet %s added to right panel"
-#~ msgstr "𐑨𐑐𐑤𐑩𐑑 %s 𐑨𐑛𐑩𐑛 𐑑 𐑮𐑲𐑑 𐑐𐑨𐑯𐑩𐑤"
-
-#~ msgid "Applet %s removed from top panel"
-#~ msgstr "𐑨𐑐𐑤𐑩𐑑 %s 𐑮𐑦𐑥𐑵𐑝𐑛 𐑓𐑮𐑪𐑥 𐑑𐑪𐑐 𐑐𐑨𐑯𐑩𐑤"
-
-#~ msgid "Applet %s removed from bottom panel"
-#~ msgstr "𐑨𐑐𐑤𐑩𐑑 %s 𐑮𐑦𐑥𐑵𐑝𐑛 𐑓𐑮𐑪𐑥 𐑚𐑪𐑑𐑫𐑥 𐑐𐑨𐑯𐑩𐑤"
-
-#~ msgid "Applet %s removed from left panel"
-#~ msgstr "𐑨𐑐𐑤𐑩𐑑 %s 𐑮𐑦𐑥𐑵𐑝𐑛 𐑓𐑮𐑪𐑥 𐑤𐑧𐑓𐑑 𐑐𐑨𐑯𐑩𐑤"
-
-#~ msgid "Applet %s removed from right panel"
-#~ msgstr "𐑨𐑐𐑤𐑩𐑑 %s 𐑮𐑦𐑥𐑵𐑝𐑛 𐑓𐑮𐑪𐑥 𐑮𐑲𐑑 𐑐𐑨𐑯𐑩𐑤"
-
-#~ msgid "%s added to top panel"
-#~ msgstr "%s 𐑨𐑛𐑩𐑛 𐑑 𐑑𐑪𐑐 𐑐𐑨𐑯𐑩𐑤"
-
-#~ msgid "%s added to bottom panel"
-#~ msgstr "%s 𐑨𐑛𐑩𐑛 𐑑 𐑚𐑪𐑑𐑫𐑥 𐑐𐑨𐑯𐑩𐑤"
-
-#~ msgid "%s added to left panel"
-#~ msgstr "%s 𐑨𐑛𐑩𐑛 𐑑 𐑤𐑧𐑓𐑑 𐑐𐑨𐑯𐑩𐑤"
-
-#~ msgid "%s added to right panel"
-#~ msgstr "%s 𐑨𐑛𐑩𐑛 𐑑 𐑮𐑲𐑑 𐑐𐑨𐑯𐑩𐑤"
-
-#~ msgid "%s removed from top panel"
-#~ msgstr "%s 𐑮𐑦𐑥𐑵𐑝𐑛 𐑓𐑮𐑪𐑥 𐑑𐑪𐑐 𐑐𐑨𐑯𐑩𐑤"
-
-#~ msgid "%s removed from bottom panel"
-#~ msgstr "%s 𐑮𐑦𐑥𐑵𐑝𐑛 𐑓𐑮𐑪𐑥 𐑚𐑪𐑑𐑫𐑥 𐑐𐑨𐑯𐑩𐑤"
-
-#~ msgid "%s removed from left panel"
-#~ msgstr "%s 𐑮𐑦𐑥𐑵𐑝𐑛 𐑓𐑮𐑪𐑥 𐑤𐑧𐑓𐑑 𐑐𐑨𐑯𐑩𐑤"
-
-#~ msgid "%s removed from right panel"
-#~ msgstr "%s 𐑮𐑦𐑥𐑵𐑝𐑛 𐑓𐑮𐑪𐑥 𐑮𐑲𐑑 𐑐𐑨𐑯𐑩𐑤"
