@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sabayon 2.29.x\n"
+"Project-Id-Version: sabayon 2.31.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-10 19:50+0100\n"
+"POT-Creation-Date: 2010-05-23 16:36+0200\n"
 "PO-Revision-Date: 2010-02-10 19:50+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian Bokmaal <i18n-nb@lister.ping.uio.no>\n"
@@ -258,11 +258,11 @@ msgstr ""
 "Sabayon vil nå avslutte. Det oppsto noen feil underveis og du kan hjelpe oss "
 "med feilsøking ved å sende loggen i %s til %s"
 
-#: ../admin-tool/sabayon-apply:125
+#: ../admin-tool/sabayon-apply:136
 msgid "Please use -h for usage options"
 msgstr "Vennligst bruk -h for å få informasjon om bruk"
 
-#: ../admin-tool/sabayon-apply:137
+#: ../admin-tool/sabayon-apply:148
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Ingen profil funnet for bruker «%s»\n"
@@ -393,15 +393,15 @@ msgstr "_Fortsett redigering"
 msgid "Users for profile %s"
 msgstr "Brukere for profil %s"
 
-#: ../lib/protosession.py:112
+#: ../lib/protosession.py:119
 msgid "Unable to find a free X display"
 msgstr "Kan ikke finne en ledig X-skjerm"
 
-#: ../lib/protosession.py:376
+#: ../lib/protosession.py:383
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr "Kunne ikke starte Xephyr: tidsavbrudd ved venting på signal USR1"
 
-#: ../lib/protosession.py:378
+#: ../lib/protosession.py:385
 msgid "Failed to start Xephyr: died during startup"
 msgstr "Kunne ikke starte Xephyr: terminerte ved oppstart"
 
@@ -409,7 +409,7 @@ msgstr "Kunne ikke starte Xephyr: terminerte ved oppstart"
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:469
+#: ../lib/protosession.py:476
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
@@ -420,7 +420,7 @@ msgstr ""
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (FATAL) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:478
+#: ../lib/protosession.py:485
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "Det oppsto en fatal feil ved bruk av brukerprofil fra «%s»."
@@ -525,78 +525,78 @@ msgstr "Forvalgte innstillinger for GConf"
 msgid "Mandatory GConf settings"
 msgstr "Tvungne GConf-innstillinger"
 
-#: ../lib/sources/mozillasource.py:133
+#: ../lib/sources/mozillasource.py:135
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
 msgstr "Mozilla-nøkkel «%s» satt til «%s»"
 
-#: ../lib/sources/mozillasource.py:135
+#: ../lib/sources/mozillasource.py:137
 #, python-format
 msgid "Mozilla key '%s' unset"
 msgstr "Mozilla-nøkkel «%s» tømt"
 
-#: ../lib/sources/mozillasource.py:137
+#: ../lib/sources/mozillasource.py:139
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Mozilla-nøkkel «%s» endret til «%s»"
 
-#: ../lib/sources/mozillasource.py:167 ../lib/sources/mozillasource.py:177
+#: ../lib/sources/mozillasource.py:169 ../lib/sources/mozillasource.py:179
 msgid "Web browser preferences"
 msgstr "Brukervalg for nettleser"
 
-#: ../lib/sources/mozillasource.py:169 ../lib/sources/mozillasource.py:179
+#: ../lib/sources/mozillasource.py:171 ../lib/sources/mozillasource.py:181
 msgid "Web browser bookmarks"
 msgstr "Nettleserbokmerker"
 
-#: ../lib/sources/mozillasource.py:171
+#: ../lib/sources/mozillasource.py:173
 msgid "Web browser profile list"
 msgstr "Profilliste for nettleser"
 
-#: ../lib/sources/mozillasource.py:521
+#: ../lib/sources/mozillasource.py:550
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Filen ble ikke funnet (%s)"
 
-#: ../lib/sources/mozillasource.py:870
+#: ../lib/sources/mozillasource.py:899
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "duplisert navn(%(name)s) i del %(section)s"
 
-#: ../lib/sources/mozillasource.py:879
+#: ../lib/sources/mozillasource.py:908
 #, python-format
 msgid "redundant default in section %s"
 msgstr "redundant forvalg i seksjon %s"
 
-#: ../lib/sources/mozillasource.py:896
+#: ../lib/sources/mozillasource.py:925
 msgid "no default profile"
 msgstr "ingen forvalgt profil"
 
-#: ../lib/sources/mozillasource.py:951
+#: ../lib/sources/mozillasource.py:980
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Mozilla-bokmerke opprettet «%s» -> «%s»"
 
-#: ../lib/sources/mozillasource.py:953
+#: ../lib/sources/mozillasource.py:982
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Bokmerkemappe for Mozilla opprettet «%s»"
 
-#: ../lib/sources/mozillasource.py:956
+#: ../lib/sources/mozillasource.py:985
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Mozilla-bokmerke slettet «%s»"
 
-#: ../lib/sources/mozillasource.py:958
+#: ../lib/sources/mozillasource.py:987
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Bokmerkemappe for Mozilla slettet «%s»"
 
-#: ../lib/sources/mozillasource.py:961
+#: ../lib/sources/mozillasource.py:990
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Mozilla-bokmerke endret «%s» «%s»"
 
-#: ../lib/sources/mozillasource.py:963
+#: ../lib/sources/mozillasource.py:992
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Bokmerkemappe for Mozilla endret «%s»"
@@ -706,22 +706,22 @@ msgstr "Ugyldig metadatakomponent i «%s»: %s"
 
 #. change the raise to a dprint, since some files seem to disappear.
 #. raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
-#: ../lib/storage.py:383
+#: ../lib/storage.py:387
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Kan ikke legge til ikke-eksisterende fil «%s»"
 
-#: ../lib/storage.py:527
+#: ../lib/storage.py:531
 #, python-format
 msgid "Couldn't rmdir '%s'"
 msgstr "Kunne ikke kjøre rmdir() på fil «%s»"
 
-#: ../lib/storage.py:532
+#: ../lib/storage.py:536
 #, python-format
 msgid "Couldn't unlink file '%s'"
 msgstr "Kunne ikke kjøre unlink() på fil «%s»"
 
-#: ../lib/storage.py:622
+#: ../lib/storage.py:633
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Profilen er skrivebeskyttet %s"
