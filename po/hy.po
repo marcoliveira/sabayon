@@ -1,0 +1,833 @@
+# Translation of sabayon to Armenian
+# This file is distributed under the same license as the sabayon package.
+# Copyright (C) 2010, Karo Mkrtchyan
+# Karo Mkrtchyan <020113@mail.ru>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sabayon\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-05-31 11:44+0500\n"
+"PO-Revision-Date: 2010-05-27 10:42+0400\n"
+"Last-Translator: Karo <020113@mail.ru>\n"
+"Language-Team:  <norik@freenet.am>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../admin-tool/aboutdialog.py:66
+msgid "Program to establish and edit profiles for users"
+msgstr "Օգտագործողների պրոֆիլը ստեղծելու և խմբագրելու համար ծրագիր"
+
+#: ../admin-tool/aboutdialog.py:69
+msgid "translator-credits"
+msgstr "Կարո Մկրտչյան «020113@mail.ru>"
+
+#: ../admin-tool/changeswindow.py:50
+#, python-format
+msgid "Changes in profile %s"
+msgstr "Փոփոխություններ %s պրոֆիլում"
+
+#: ../admin-tool/changeswindow.py:113
+msgid "Ignore"
+msgstr "Անտեսել"
+
+#: ../admin-tool/changeswindow.py:120
+msgid "Lock"
+msgstr "Արգելափակել"
+
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:263
+msgid "Description"
+msgstr "Նկարագրություն"
+
+#: ../admin-tool/editorwindow.py:100
+#, python-format
+msgid "Profile %s"
+msgstr "%s պրոֆիլ"
+
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:179
+msgid "_Profile"
+msgstr "_Պրոֆիլ"
+
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
+msgid "_Save"
+msgstr "Պա_հպանել"
+
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
+msgid "Save profile"
+msgstr "Պահպանել պրոֆիլը"
+
+#: ../admin-tool/editorwindow.py:207
+msgid "_Close"
+msgstr "_Փակել"
+
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:181
+msgid "Close the current window"
+msgstr "Փակել ընթացիկ պատուհանը"
+
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:182
+msgid "_Edit"
+msgstr "_Խմբագրել"
+
+#: ../admin-tool/editorwindow.py:209
+msgid "_Delete"
+msgstr "_Ջնջել"
+
+#: ../admin-tool/editorwindow.py:209
+msgid "Delete item"
+msgstr "Ջնջել տարրը"
+
+#: ../admin-tool/editorwindow.py:210 ../admin-tool/sessionwindow.py:185
+msgid "_Help"
+msgstr "_Օգնություն"
+
+#: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
+msgid "_Contents"
+msgstr "_Բովանդակություն"
+
+#: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
+msgid "Help Contents"
+msgstr "Օգնության Բովանդակություն"
+
+#: ../admin-tool/editorwindow.py:212 ../admin-tool/sessionwindow.py:187
+msgid "_About"
+msgstr "Ծրագրի _մասին"
+
+#: ../admin-tool/editorwindow.py:212 ../admin-tool/sessionwindow.py:187
+msgid "About Sabayon"
+msgstr "Sabayon ծրագրի մասին"
+
+#: ../admin-tool/editorwindow.py:267
+msgid "Source"
+msgstr "Աղբյուր"
+
+#: ../admin-tool/editorwindow.py:300 ../lib/sources/gconfsource.py:124
+msgid "GConf"
+msgstr "GConf"
+
+#: ../admin-tool/editorwindow.py:304 ../lib/sources/filessource.py:86
+msgid "Files"
+msgstr "Ֆայլեր"
+
+#: ../admin-tool/editorwindow.py:304 ../lib/sources/paneldelegate.py:279
+msgid "Panel"
+msgstr "Վահանակ"
+
+#: ../admin-tool/fileviewer.py:27
+#, python-format
+msgid "Profile file: %s"
+msgstr " %s պրոֆիլի ֆայլ"
+
+#: ../admin-tool/gconfviewer.py:57 ../admin-tool/gconfviewer.py:76
+msgid "<no type>"
+msgstr "<տեսակը բացակայում է>"
+
+#: ../admin-tool/gconfviewer.py:58
+msgid "<no value>"
+msgstr "<արժեքը բացակայում է>"
+
+#: ../admin-tool/gconfviewer.py:62
+msgid "string"
+msgstr "տող"
+
+#: ../admin-tool/gconfviewer.py:64
+msgid "integer"
+msgstr "ամբողջ"
+
+#: ../admin-tool/gconfviewer.py:66
+msgid "float"
+msgstr "սահող ստորակետով"
+
+#: ../admin-tool/gconfviewer.py:68
+msgid "boolean"
+msgstr "բուլյան"
+
+#: ../admin-tool/gconfviewer.py:70
+msgid "schema"
+msgstr "սխեմա"
+
+#: ../admin-tool/gconfviewer.py:72
+msgid "list"
+msgstr "ցուցակ"
+
+#: ../admin-tool/gconfviewer.py:74
+msgid "pair"
+msgstr "զույգ"
+
+#: ../admin-tool/gconfviewer.py:86
+#, python-format
+msgid "Profile settings: %s"
+msgstr "պրոֆիլի պարամետր․ %s "
+
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:423
+#: ../admin-tool/usersdialog.py:87
+msgid "Name"
+msgstr "Անուն"
+
+#: ../admin-tool/gconfviewer.py:115
+msgid "Type"
+msgstr "Տեսակ"
+
+#: ../admin-tool/gconfviewer.py:120
+msgid "Value"
+msgstr "Արժեք"
+
+#: ../admin-tool/groupsdialog.py:61
+#, python-format
+msgid "Groups for profile %s"
+msgstr "Խմբեր %s պրոֆիլի համար"
+
+#: ../admin-tool/groupsdialog.py:71
+msgid "Group"
+msgstr "Խումբ"
+
+#: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
+msgid "Use This Profile"
+msgstr "Օգտագործել այս պրոֆիլը"
+
+#.
+#. Translators: this string specifies how a profile
+#. name is concatenated with an integer
+#. to form a unique profile name e.g.
+#. "Artist Workstation (5)"
+#.
+#: ../admin-tool/profilesdialog.py:550
+#, python-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../admin-tool/sabayon:77
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr ""
+"Ձեր օգտագործողն արտոնություն չունի գործարկել աշխատասեղանի օգտագործողների "
+"պրոֆիլների խմբագրման գործիքը "
+
+#: ../admin-tool/sabayon:78
+msgid ""
+"Administrator level permissions are needed to run this program because it "
+"can modify system files."
+msgstr ""
+"Այս ծրագիրը գործարկելու համար անհաժեշտ է ունենալ ադմինիստրատորի "
+"արտոնություն, որովհետև այն կարող է փոփոխել համակարգի ֆայլերը։"
+
+#: ../admin-tool/sabayon:83
+msgid "Desktop User Profiles tool is already running"
+msgstr ""
+"Աշխատասեղանի օգտագործողների պրոֆիլների խմբագրման գործիքը  արդեն գործարկված է"
+
+#: ../admin-tool/sabayon:84
+msgid ""
+"You may not use Desktop User Profiles tool from within a profile editing "
+"session"
+msgstr ""
+"Դուք չէք կարող օգտագործել աշխատասեղանի օգտագործողների պրոֆիլների խմբագրման "
+"գործիքը պրոֆիլները փոփոխող սեանսի միջից"
+
+#: ../admin-tool/sabayon:91
+#, c-format
+msgid "User account '%s' was not found"
+msgstr "'%s' օգտագործողը չի գտնվել"
+
+#: ../admin-tool/sabayon:92
+#, c-format
+msgid ""
+"Sabayon requires a special user account '%s' to be present on this computer. "
+"Try again after creating the account (using, for example, the 'adduser' "
+"command)"
+msgstr ""
+"Sabayon ծրագրի աշխատանքի համար պահանջում է հատուկ օգտագործող '%s'։ Այդպիսի "
+"օգտագործող ստեղծելուց հետո  փորձեք կրկին (օգտագործելով օրինակ` 'adduser' "
+"հրամանը):"
+
+#: ../admin-tool/sabayon:131
+#, c-format
+msgid ""
+"A fatal error has occurred.  You can help us fix the problem by sending the "
+"log in %s to %s"
+msgstr ""
+"Տեղի է ունեցել վճռորոշ սխալ։ Դուք կարող եք օգնել մեզ վերացնելու այդ խնդիրը` "
+"ուղարկելով արձանագրությունների ֆայլը %s -ից %s հասցեով"
+
+#: ../admin-tool/sabayon:145
+#, c-format
+msgid ""
+"Sabayon will now exit.  There were some recoverable errors, and you can help "
+"us debug the problem by sending the log in %s to %s"
+msgstr ""
+"Sabayon ծրագիրը ավարտում է աշխատանքը։ Առաջացել են որոշ վերականգնելի սխալներ,"
+"դուք կարող եք օգնել մեզ վրիպազերծել այդ խնդիրը` ուղարկելով "
+"արձանագրությունների ֆայլը %s -ից %s հասցեով"
+
+#: ../admin-tool/sabayon-apply:136
+msgid "Please use -h for usage options"
+msgstr "Օգտագործեք -h պարամետրը օգտագործման ընտրանքների համար"
+
+#: ../admin-tool/sabayon-apply:148
+#, c-format
+msgid "No profile for user '%s' found\n"
+msgstr "«%s» օգտագործողի համար ոչ մի պրոֆիլ գտնված չէ\n"
+
+#: ../admin-tool/sabayon-session:67
+#, c-format
+msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
+msgstr "Օգտագործում. %s  <պրոֆիլի-անուն> <պրոֆիլի-ուղի> <էկրանի-համար>\n"
+
+#: ../admin-tool/sabayon.desktop.in.in.h:1
+msgid "Establish and Edit Profiles for Users"
+msgstr "Ստեղծել և խմբագրել պրոֆիլներ օգտագործողների համար"
+
+#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.ui.h:4
+msgid "User Profile Editor"
+msgstr "Օգտագործողի պրոֆիլի խմբագրիչ "
+
+#: ../admin-tool/sabayon.ui.h:1
+msgid "Add Profile"
+msgstr "Ավելացնել պրոֆիլ"
+
+#: ../admin-tool/sabayon.ui.h:2
+msgid "Profile _name:"
+msgstr "Պրոֆիլի _անուն"
+
+#: ../admin-tool/sabayon.ui.h:3
+msgid "Use this profile for _all users"
+msgstr "Օգտագործել այս պրոֆիլը _բոլոր օգտագործողների համար"
+
+#: ../admin-tool/sabayon.ui.h:5
+msgid "_Base on:"
+msgstr "_Հիմնված է․"
+
+#: ../admin-tool/sabayon.ui.h:6
+msgid "_Details"
+msgstr "Ման_րամասներ"
+
+#: ../admin-tool/sabayon.ui.h:7
+msgid "_Groups"
+msgstr "Խմբ_եր"
+
+#: ../admin-tool/sabayon.ui.h:8
+msgid "_Groups:"
+msgstr "_Խմբ_եր․"
+
+#: ../admin-tool/sabayon.ui.h:9
+msgid "_Profiles:"
+msgstr "Պրո_ֆիլեր․"
+
+#: ../admin-tool/sabayon.ui.h:10
+msgid "_Users"
+msgstr "Օգտա_գործողներ"
+
+#: ../admin-tool/sabayon.ui.h:11
+msgid "_Users:"
+msgstr "Օգտա_գործողներ․"
+
+#: ../admin-tool/saveconfirm.py:34
+msgid "Close _Without Saving"
+msgstr "Փակել առանց պահպանելու"
+
+#: ../admin-tool/saveconfirm.py:41
+#, python-format
+msgid "Save changes to profile \"%s\" before closing?"
+msgstr "Պահպանե՞լ  \"%s\" պրոֆիլի փոփոխությունները փակելուց առաջ"
+
+#: ../admin-tool/saveconfirm.py:44
+msgid "If you don't save, all changes will be permanently lost."
+msgstr "Եթե չպահպանեք, բոլոր փոփոխությունները անվերադարձ կկորեն"
+
+#: ../admin-tool/sessionwindow.py:157
+#, python-format
+msgid "Editing profile %s"
+msgstr "%s պրոֆիլի խմբագրում"
+
+#: ../admin-tool/sessionwindow.py:181
+msgid "_Quit"
+msgstr "_Դուրս գալ"
+
+#: ../admin-tool/sessionwindow.py:183
+msgid "_Changes"
+msgstr "_Փոփոխություններ"
+
+#: ../admin-tool/sessionwindow.py:183
+msgid "Edit changes"
+msgstr "Խմբագրել փոփոխությունները"
+
+#: ../admin-tool/sessionwindow.py:184
+msgid "_Lockdown"
+msgstr "_Արգելափակել"
+
+#: ../admin-tool/sessionwindow.py:184
+msgid "Edit Lockdown settings"
+msgstr "Խմբագրել արգելափակման պարամետրերը"
+
+#: ../admin-tool/sessionwindow.py:190
+msgid "Enforce Mandatory"
+msgstr "Ստիպել օգտագործել Պարտադիր պարամետրերը"
+
+#: ../admin-tool/sessionwindow.py:190
+msgid "Enforce mandatory settings in the editing session"
+msgstr "Ստիպել օգտագործել պարտադիր պարամետրերը խմբագրվող սեանսում "
+
+#: ../admin-tool/sessionwindow.py:308
+#, python-format
+msgid "Lockdown settings for %s"
+msgstr "Արգելափակել պարամետրերը %s - ի համար"
+
+#: ../admin-tool/sessionwindow.py:344
+#, python-format
+msgid ""
+"There was a recoverable error while applying the user profile '%s'.  You can "
+"report this error now or try to continue editing the user profile."
+msgstr ""
+"Առաջացել է վերականգնելի սխալ '%s' օգտագործողի պրոֆիլի կիրառման ժամանակ։ Դուք "
+"կարող եք զեկուցել այս սխալի մասին հիմա կամ շարունակել խմբագրել օգտագործողի "
+"պրոֆիլը։"
+
+#: ../admin-tool/sessionwindow.py:348
+msgid "_Report this error"
+msgstr "Զե_կուցել այս սխալի մասին"
+
+#: ../admin-tool/sessionwindow.py:349
+msgid "_Continue editing"
+msgstr "_Շարունակել խմբագրումը"
+
+#: ../admin-tool/usersdialog.py:72
+#, python-format
+msgid "Users for profile %s"
+msgstr "Օգտագործողներ %s պրոֆիլի համար"
+
+#: ../lib/protosession.py:119
+msgid "Unable to find a free X display"
+msgstr "Չի հաջողվել գտնել ազատ X էկրան"
+
+#: ../lib/protosession.py:383
+msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
+msgstr "Չհաջողվեց գործարկել Xephyr․ USR1 ազդանշանի սպասման ժամանակը լրացել է"
+
+#: ../lib/protosession.py:385
+msgid "Failed to start Xephyr: died during startup"
+msgstr "Չհաջողվեց գործարկել Xephyr․ Մահացել է գործարկման ժամանակ"
+
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:476
+#, python-format
+msgid ""
+"There was a recoverable error while applying the user profile from file '%s'."
+msgstr ""
+"'%s' ֆայլից օգտագործողի պրոֆիլի կիրառման ժամանակ առաջացել է վերականգնելի "
+"սխալ։"
+
+#. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
+#. "%s\n"
+#. "========== END SABAYON-APPLY LOG (FATAL) ==========",
+#. stderr_str)
+#: ../lib/protosession.py:485
+#, python-format
+msgid "There was a fatal error while applying the user profile from '%s'."
+msgstr ""
+"'%s' ֆայլից օգտագործողի պրոֆիլի կիրառման ժամանակ առաջացել է վճռորոշ սխալ։"
+
+#: ../lib/sources/filessource.py:69
+msgid "Directory"
+msgstr "Պանակ"
+
+#: ../lib/sources/filessource.py:71
+msgid "Link"
+msgstr "Հղում"
+
+#: ../lib/sources/filessource.py:73
+msgid "File"
+msgstr "Ֆայլ"
+
+#: ../lib/sources/filessource.py:75
+#, python-format
+msgid "%s '%s' created"
+msgstr "%s '%s' ստեղծված է"
+
+#: ../lib/sources/filessource.py:77
+#, python-format
+msgid "%s '%s' deleted"
+msgstr "%s '%s' ջնջված է"
+
+#: ../lib/sources/filessource.py:79
+#, python-format
+msgid "%s '%s' changed"
+msgstr "%s '%s' փոփոխված է"
+
+#: ../lib/sources/filessource.py:105
+msgid "Applications menu"
+msgstr "Աշխատածրագրերի մենյու"
+
+#: ../lib/sources/filessource.py:107
+msgid "Settings menu"
+msgstr "Պարամետրերի մենյու"
+
+#: ../lib/sources/filessource.py:109
+msgid "Server Settings menu"
+msgstr "Սերվերի պարամետրերի մենյու"
+
+#: ../lib/sources/filessource.py:111
+msgid "System Settings menu"
+msgstr "Համակարգի պարամետրերի մենյու"
+
+#: ../lib/sources/filessource.py:113
+msgid "Start Here menu"
+msgstr "Մենյու \"Սկսել Այստեղից\""
+
+#: ../lib/sources/gconfsource.py:90
+#, python-format
+msgid "GConf key '%s' unset"
+msgstr "'%s' GConf բանալին հանված է"
+
+#: ../lib/sources/gconfsource.py:92
+#, python-format
+msgid "GConf key '%s' set to string '%s'"
+msgstr "GConf '%s' բանալին սահմանված է որպես '%s' տող"
+
+#: ../lib/sources/gconfsource.py:94
+#, python-format
+msgid "GConf key '%s' set to integer '%s'"
+msgstr "GConf '%s' բանալին սահմանված է որպես '%s' ամբողջ"
+
+#: ../lib/sources/gconfsource.py:96
+#, python-format
+msgid "GConf key '%s' set to float '%s'"
+msgstr "GConf '%s' բանալին սահմանված է որպես '%s' սահող ստորակետով"
+
+#: ../lib/sources/gconfsource.py:98
+#, python-format
+msgid "GConf key '%s' set to boolean '%s'"
+msgstr "GConf '%s' բանալին սահմանված է որպես '%s' բուլյան"
+
+#: ../lib/sources/gconfsource.py:100
+#, python-format
+msgid "GConf key '%s' set to schema '%s'"
+msgstr "GConf '%s' բանալին սահմանված է որպես '%s' սխեմա"
+
+#: ../lib/sources/gconfsource.py:102
+#, python-format
+msgid "GConf key '%s' set to list '%s'"
+msgstr "GConf '%s' բանալին սահմանված է որպես '%s' ցուցակ"
+
+#: ../lib/sources/gconfsource.py:104
+#, python-format
+msgid "GConf key '%s' set to pair '%s'"
+msgstr "GConf '%s' բանալին սահմանված է որպես '%s' զույգ"
+
+#: ../lib/sources/gconfsource.py:106
+#, python-format
+msgid "GConf key '%s' set to '%s'"
+msgstr "GConf '%s' բանալին սահմանված է '%s' -ում"
+
+#: ../lib/sources/gconfsource.py:138
+msgid "Default GConf settings"
+msgstr "GConf -ի լռելայն պարամերեր"
+
+#: ../lib/sources/gconfsource.py:140
+msgid "Mandatory GConf settings"
+msgstr "GConf -ի պարտադիր պարամետրեր"
+
+#: ../lib/sources/mozillasource.py:135
+#, python-format
+msgid "Mozilla key '%s' set to '%s'"
+msgstr "'%s' Mozilla բանալին սահմանված է  '%s' -ում"
+
+#: ../lib/sources/mozillasource.py:137
+#, python-format
+msgid "Mozilla key '%s' unset"
+msgstr "'%s' Mozilla բանալին հանված է"
+
+#: ../lib/sources/mozillasource.py:139
+#, python-format
+msgid "Mozilla key '%s' changed to '%s'"
+msgstr "'%s' Mozilla բանալին փոփոխվել է '%s' -ի"
+
+#: ../lib/sources/mozillasource.py:169 ../lib/sources/mozillasource.py:179
+msgid "Web browser preferences"
+msgstr "Վեբ զննիչի պարամետրեր"
+
+#: ../lib/sources/mozillasource.py:171 ../lib/sources/mozillasource.py:181
+msgid "Web browser bookmarks"
+msgstr "Վեբ զննիչի էջանիշեր"
+
+#: ../lib/sources/mozillasource.py:173
+msgid "Web browser profile list"
+msgstr "Վեբ զննիչի պրոֆիլների ցուցակը"
+
+#: ../lib/sources/mozillasource.py:550
+#, python-format
+msgid "File Not Found (%s)"
+msgstr "Ֆայլը գտնված չէ (%s)"
+
+#: ../lib/sources/mozillasource.py:899
+#, python-format
+msgid "duplicate name(%(name)s) in section %(section)s"
+msgstr "կրկնօրինակել (%(name)s) -ի  անունը %(section)s բաժնում"
+
+#: ../lib/sources/mozillasource.py:908
+#, python-format
+msgid "redundant default in section %s"
+msgstr "կրկնվող լռելայն արժեք %s բաժնում"
+
+#: ../lib/sources/mozillasource.py:925
+msgid "no default profile"
+msgstr "գոյություն չունի լռելայն պրոֆիլ"
+
+#: ../lib/sources/mozillasource.py:980
+#, python-format
+msgid "Mozilla bookmark created '%s' -> '%s'"
+msgstr "Ստեղծված է Mozilla-ի էջանիշ '%s' -> '%s'"
+
+#: ../lib/sources/mozillasource.py:982
+#, python-format
+msgid "Mozilla bookmark folder created '%s'"
+msgstr "Ստեղծված է Mozilla-ի էջանիշների պանակ '%s' "
+
+#: ../lib/sources/mozillasource.py:985
+#, python-format
+msgid "Mozilla bookmark deleted '%s'"
+msgstr "Mozilla-ի '%s' էջանիշը ջնջված է"
+
+#: ../lib/sources/mozillasource.py:987
+#, python-format
+msgid "Mozilla bookmark folder deleted '%s'"
+msgstr "Mozilla-ի էջանիշների '%s' պանակը ջնջված է"
+
+#: ../lib/sources/mozillasource.py:990
+#, python-format
+msgid "Mozilla bookmark changed '%s' '%s'"
+msgstr "Mozilla-ի էջանիշը փոփոխվել է '%s' '%s'"
+
+#: ../lib/sources/mozillasource.py:992
+#, python-format
+msgid "Mozilla bookmark folder changed '%s'"
+msgstr "Mozilla-ի էջանիշների '%s' պանակը փոփոխվել է"
+
+#: ../lib/sources/paneldelegate.py:65
+#, python-format
+msgid "Panel '%s' added"
+msgstr "'%s' վահանակը ավելացված է"
+
+#: ../lib/sources/paneldelegate.py:71
+#, python-format
+msgid "Panel '%s' removed"
+msgstr "'%s' վահանակը ջնջված է"
+
+#: ../lib/sources/paneldelegate.py:77
+#, python-format
+msgid "Applet '%s' added"
+msgstr "'%s' ապլետը ավելացված է"
+
+#: ../lib/sources/paneldelegate.py:100
+#, python-format
+msgid "Applet '%s' removed"
+msgstr "'%s' ապլետը ջնջված է"
+
+#: ../lib/sources/paneldelegate.py:123
+#, python-format
+msgid "Object '%s' added"
+msgstr "'%s' օբյեկտը ավելացված է"
+
+#: ../lib/sources/paneldelegate.py:152
+#, python-format
+msgid "Object '%s' removed"
+msgstr "'%s' օբյեկտը ջնջված է"
+
+#. Translators: This is a drawer in gnome-panel (where you can put applets)
+#: ../lib/sources/paneldelegate.py:241
+msgid "Drawer"
+msgstr "Դարակ"
+
+#: ../lib/sources/paneldelegate.py:243
+msgid "Main Menu"
+msgstr "Գլխավոր մենյու"
+
+#: ../lib/sources/paneldelegate.py:253
+#, python-format
+msgid "%s launcher"
+msgstr "%s մեկնարկ"
+
+#: ../lib/sources/paneldelegate.py:257
+msgid "Lock Screen button"
+msgstr "Էկրանի արգելափակման կոճակ "
+
+#: ../lib/sources/paneldelegate.py:259
+msgid "Logout button"
+msgstr "Սեանսից դուրս գալու կոճակ "
+
+#: ../lib/sources/paneldelegate.py:261
+msgid "Run Application button"
+msgstr "Աշխատածրագիրը գործարկելու կոճակ"
+
+#: ../lib/sources/paneldelegate.py:263
+msgid "Search button"
+msgstr "Որոնման կոճակ"
+
+#: ../lib/sources/paneldelegate.py:265
+msgid "Force Quit button"
+msgstr "Ծրագրից ստիպողաբար դուրս գալու կոճակ"
+
+#: ../lib/sources/paneldelegate.py:267
+msgid "Connect to Server button"
+msgstr "Սերվերին միանալու կոճակ"
+
+#: ../lib/sources/paneldelegate.py:269
+msgid "Shutdown button"
+msgstr "Անջատման կոճակ"
+
+#: ../lib/sources/paneldelegate.py:271
+msgid "Screenshot button"
+msgstr "Էկրանը անջատման կոճակ"
+
+#: ../lib/sources/paneldelegate.py:274
+msgid "Unknown"
+msgstr "Անհայտ"
+
+#: ../lib/sources/paneldelegate.py:276
+msgid "Menu Bar"
+msgstr "Մենյուի վահանակ"
+
+#: ../lib/sources/paneldelegate.py:513
+msgid "Panel File"
+msgstr "Վահանակի Ֆայլ"
+
+#: ../lib/storage.py:173
+#, python-format
+msgid "Failed to read file '%s': %s"
+msgstr "Չհաջողվեց կարդալ '%s': %s ֆայլը"
+
+#: ../lib/storage.py:183
+#, python-format
+msgid "Failed to read metadata from '%s': %s"
+msgstr "Չհաջողվեց կարդալ մետատվյալները '%s': %s -ից"
+
+#: ../lib/storage.py:189
+#, python-format
+msgid "Invalid metadata section in '%s': %s"
+msgstr "Անվավեր մետատվյալի բաժին '%s': %s -ում"
+
+#. change the raise to a dprint, since some files seem to disappear.
+#. raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
+#: ../lib/storage.py:387
+#, python-format
+msgid "Cannot add non-existent file '%s'"
+msgstr "Չհաջողվեց ավելացնել '%s' գոյություն չունեցող ֆայլը"
+
+#: ../lib/storage.py:531
+#, python-format
+msgid "Couldn't rmdir '%s'"
+msgstr "Չհաջողվեց ջնջել '%s' պանակը"
+
+#: ../lib/storage.py:536
+#, python-format
+msgid "Couldn't unlink file '%s'"
+msgstr "Չհաջողվեց ջնջել '%s' ֆայլը"
+
+#: ../lib/storage.py:633
+#, python-format
+msgid "Profile is read-only %s"
+msgstr "Պրոֆիլը միայն %s կարդալու համար է"
+
+#. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
+#. do not change the way they are written.  The intended string is
+#. something like "invalid type for setting blah in /ldap/path/to/blah"
+#: ../lib/systemdb.py:77
+#, python-format
+msgid "invalid type for setting %(setting)s in %(np)s"
+msgstr "Պարամետրի անվավեր տիպ %(setting)s -ի համար %(np)s -ում"
+
+#: ../lib/systemdb.py:122
+msgid "No database file provided"
+msgstr "Տվյալների բազայի ֆայլը նշված չէ"
+
+#: ../lib/systemdb.py:253
+#, python-format
+msgid "No LDAP search base specified for %s"
+msgstr "%s -ի համար նշված չէ LDAP -ի որոնման բազա"
+
+#: ../lib/systemdb.py:256
+#, python-format
+msgid "No LDAP query filter specified for %s"
+msgstr "%s -ի համար գոյություն չունի LDAP հարցման ֆիլտր"
+
+#: ../lib/systemdb.py:259
+#, python-format
+msgid "No LDAP result attribute specified for %s"
+msgstr "%s -ի համար գոյություն չունի LDAP -ի արդյունքի ատրիբուտ "
+
+#: ../lib/systemdb.py:268
+msgid "LDAP Scope must be one of: "
+msgstr "LDAP Scope -ի արժեքը պետք է լինի նշվածներից մեկը․"
+
+#: ../lib/systemdb.py:288
+msgid "multiple_result must be one of: "
+msgstr "multiple_result -ի արժեեքը պետք է լինի նշվածներից մեկը․"
+
+#: ../lib/systemdb.py:381
+#, python-format
+msgid "Could not open %s for writing"
+msgstr "Գրելու համար հնարավոր չէ բացել %s -ը "
+
+#: ../lib/systemdb.py:394
+#, python-format
+msgid "Failed to save UserDatabase to %s"
+msgstr "Չհաջողվեց պահել UserDatabase-ը %s-ում"
+
+#: ../lib/systemdb.py:423 ../lib/systemdb.py:457
+#, python-format
+msgid "File %s is not a profile configuration"
+msgstr "Ֆայլ %s -ը չի հանդիսանում պրոֆիլի կոնֆիգուրացիա"
+
+#: ../lib/systemdb.py:430
+#, python-format
+msgid "Failed to add default profile %s to configuration"
+msgstr "Չհաջողվեց ավելացնել %s լռելայն պրոֆիլը կոնֆիգուրացիային"
+
+#: ../lib/systemdb.py:464
+#, python-format
+msgid "Failed to add user %s to profile configuration"
+msgstr "Չհաջողվեց ավելացնել %s օգտագործողին պրոֆիլի կոնֆիգուրացիային"
+
+#: ../lib/systemdb.py:536
+msgid "Failed to get the user list"
+msgstr "Չհաջողվեց ստանալ օգտագործողների ցուցակը"
+
+#: ../lib/systemdb.py:586
+msgid "Failed to get the group list"
+msgstr "Չհաջողվեց ստանալ խմբի ցուցակը"
+
+#: ../lib/unittests.py:38 ../lib/unittests.py:39
+msgid "Ignore WARNINGs"
+msgstr "Անտեսել զգուշացումները"
+
+#: ../lib/unittests.py:61
+#, python-format
+msgid "Running %s tests"
+msgstr "Գործարկվում են %s տեստերը"
+
+#: ../lib/unittests.py:63
+#, python-format
+msgid "Running %s tests (%s)"
+msgstr "Գործարկվում են %s (%s) տեստերը"
+
+#: ../lib/unittests.py:70
+msgid "Success!"
+msgstr "Հաջողվեց!"
+
+#: ../lib/util.py:94
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"Չհաջողվեց գտնել գլխավոր պանակը․ սահմանված չէ ոչ /etc/passwd -ում ոչ էլ $HOME "
+"միջավայրային փոփոխականում"
+
+#: ../lib/util.py:110 ../lib/util.py:137
+msgid ""
+"Cannot find username: not set in /etc/passwd and no value for $USER in "
+"environment"
+msgstr ""
+"Չհաջողվեց գտնել օգտագործողի անունը․ սահմանված չէ ոչ /etc/passwd -ում ոչ էլ "
+"$USER միջավայրային փոփոխականում"
