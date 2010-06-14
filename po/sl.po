@@ -1,4 +1,4 @@
-# Slovenian translation for sabayon.
+# Slovenian translations for sabayon.
 # Copyright (C) 2009 sabayon COPYRIGHT HOLDER
 # This file is distributed under the same license as the sabayon package.
 #
@@ -7,10 +7,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sabayon\n"
+"Project-Id-Version: sabayon master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon&component=general\n"
 "POT-Creation-Date: 2010-02-10 03:42+0000\n"
-"PO-Revision-Date: 2010-02-10 09:24+0100\n"
+"PO-Revision-Date: 2010-06-14 14:13+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -94,7 +94,7 @@ msgstr "Izbriši predmet"
 #: ../admin-tool/editorwindow.py:210
 #: ../admin-tool/sessionwindow.py:185
 msgid "_Help"
-msgstr "_Pomoč"
+msgstr "Pomo_č"
 
 #: ../admin-tool/editorwindow.py:211
 #: ../admin-tool/sessionwindow.py:186
@@ -223,19 +223,19 @@ msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:77
 msgid "Your account does not have permissions to run the Desktop User Profiles tool"
-msgstr "Ni ustreznih dovoljenj za zagon orodja za namizne uporabniške profile"
+msgstr "Ni ustreznih dovoljenj za zagon orodja za upravljanje namiznih uporabniških profilov"
 
 #: ../admin-tool/sabayon:78
 msgid "Administrator level permissions are needed to run this program because it can modify system files."
-msgstr "Zagon tega programa zahteva skrbniške pravice, saj spreminja nastavitve sistemskih datotek."
+msgstr "Zagon tega programa zahteva skrbniška dovoljenja, saj spreminja nastavitve sistemskih datotek."
 
 #: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
-msgstr "Orodje za namizne uporabniške profile že teče"
+msgstr "Orodje za upravljanje namiznih uporabniških profilov je že zagnano"
 
 #: ../admin-tool/sabayon:84
 msgid "You may not use Desktop User Profiles tool from within a profile editing session"
-msgstr "Orodja za prilagajanje namiznih uporabniških profilov ni priporočeno uporabljati znotraj seje za urejanje profila."
+msgstr "Orodja za upravljanje namiznih uporabniških profilov ni priporočeno uporabljati znotraj seje za urejanje profila."
 
 #: ../admin-tool/sabayon:91
 #, c-format
@@ -245,12 +245,12 @@ msgstr "Uporabniškega računa '%s' ni mogoče najti."
 #: ../admin-tool/sabayon:92
 #, c-format
 msgid "Sabayon requires a special user account '%s' to be present on this computer. Try again after creating the account (using, for example, the 'adduser' command)"
-msgstr "Sabayon zahteva poseben uporabniški račun '%s', ki pa ga ni mogoče najti. Ustvarite zahtevan račun (na primer z ukazom 'adduser') in nato poskusite znova."
+msgstr "Program Sabayon zahteva poseben uporabniški račun '%s', ki pa ga ni mogoče najti. Ustvarite zahtevan račun (na primer z ukazom 'adduser') in nato poskusite znova."
 
 #: ../admin-tool/sabayon:131
 #, c-format
 msgid "A fatal error has occurred.  You can help us fix the problem by sending the log in %s to %s"
-msgstr "Prišlo je do usodne napake. Napako nam lahko pomagate odpraviti, če pošljete podatke beleženja v %s na %s"
+msgstr "Prišlo je do usodne napake. Napako nam lahko pomagate odpraviti, če pošljete podatke dnevnika v %s na %s"
 
 #: ../admin-tool/sabayon:145
 #, c-format
@@ -259,12 +259,12 @@ msgstr "Program Sabayon se bo zaprl. Prišlo je do nekaj obnovljivih napak. Napa
 
 #: ../admin-tool/sabayon-apply:125
 msgid "Please use -h for usage options"
-msgstr "Uporabite -h zastavico za podrobnosti uporabe"
+msgstr "Uporabite -h zastavico za izpis možnosti uporabe"
 
 #: ../admin-tool/sabayon-apply:137
 #, c-format
 msgid "No profile for user '%s' found\n"
-msgstr "Ni profila za uporabnika '%s'\n"
+msgstr "Ni določenega profila za uporabnika '%s'\n"
 
 #: ../admin-tool/sabayon-session:67
 #, c-format
@@ -395,11 +395,11 @@ msgstr "Ni mogoče najti prostega zaslona X"
 
 #: ../lib/protosession.py:376
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
-msgstr "Neuspešen Zagon Xephyr: čas čakanja na signal USR1 je potekel"
+msgstr "Neuspešen zagon programa Xephyr: čas čakanja na signal USR1 je potekel."
 
 #: ../lib/protosession.py:378
 msgid "Failed to start Xephyr: died during startup"
-msgstr "Zagon Xnesta ni uspel: opravilo ustavljeno med zagonom"
+msgstr "Zagon Xephyr ni uspel: opravilo je bilo prekinjeno med začenjanjem"
 
 #. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
 #. "%s\n"
@@ -460,7 +460,7 @@ msgstr "Meni možnosti strežnika"
 
 #: ../lib/sources/filessource.py:111
 msgid "System Settings menu"
-msgstr "Meni možnosti sistema"
+msgstr "Meni sistemskih možnosti"
 
 #: ../lib/sources/filessource.py:113
 msgid "Start Here menu"
@@ -575,7 +575,7 @@ msgstr "Ustvarjen je zaznamek Mozille '%s' -> '%s'"
 #: ../lib/sources/mozillasource.py:953
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
-msgstr "Mapa zaznamkov Mozille ustvarjena '%s'"
+msgstr "Ustvarjena je mapa zaznamkov Mozille '%s'"
 
 #: ../lib/sources/mozillasource.py:956
 #, python-format
@@ -585,7 +585,7 @@ msgstr "Izbrisan je zaznamek Mozille '%s'"
 #: ../lib/sources/mozillasource.py:958
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
-msgstr "Mapa zaznamkov Mozille zbrisana '%s'"
+msgstr "Izbrisana je mapa zaznamkov Mozille '%s'"
 
 #: ../lib/sources/mozillasource.py:961
 #, python-format
@@ -595,17 +595,17 @@ msgstr "Spremenjen je zaznamek Mozille '%s' '%s'"
 #: ../lib/sources/mozillasource.py:963
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
-msgstr "Mapa zaznamkov Mozille spremenjena '%s'"
+msgstr "Spremenjena je mapa zaznamkov Mozille '%s'"
 
 #: ../lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel '%s' added"
-msgstr "Pult '%s' dodan"
+msgstr "Pult '%s' je dodan"
 
 #: ../lib/sources/paneldelegate.py:71
 #, python-format
 msgid "Panel '%s' removed"
-msgstr "Pult '%s' odstranjen"
+msgstr "Pult '%s' je odstranjen"
 
 #: ../lib/sources/paneldelegate.py:77
 #, python-format
@@ -634,7 +634,7 @@ msgstr "Predalnik"
 
 #: ../lib/sources/paneldelegate.py:243
 msgid "Main Menu"
-msgstr "Glavni menu"
+msgstr "Glavni meni"
 
 #: ../lib/sources/paneldelegate.py:253
 #, python-format
@@ -643,7 +643,7 @@ msgstr "%s zaganjalnik"
 
 #: ../lib/sources/paneldelegate.py:257
 msgid "Lock Screen button"
-msgstr "Gumb za zaklep zaslona"
+msgstr "Gumb za zaklepanje zaslona"
 
 #: ../lib/sources/paneldelegate.py:259
 msgid "Logout button"
@@ -667,7 +667,7 @@ msgstr "Gumb za povezavo s strežnikom"
 
 #: ../lib/sources/paneldelegate.py:269
 msgid "Shutdown button"
-msgstr "Gumb za ugašanje"
+msgstr "Gumb za izklapljanje"
 
 #: ../lib/sources/paneldelegate.py:271
 msgid "Screenshot button"
@@ -737,17 +737,17 @@ msgstr "Ni dodeljene datoteke podatkovne zbirke"
 #: ../lib/systemdb.py:253
 #, python-format
 msgid "No LDAP search base specified for %s"
-msgstr "Ni LDAP iskalne osnove za %s"
+msgstr "Ni določene LDAP iskalne osnove za %s"
 
 #: ../lib/systemdb.py:256
 #, python-format
 msgid "No LDAP query filter specified for %s"
-msgstr "Ni LDAP filtra poizvedbe za %s"
+msgstr "Ni določenega LDAP filtra poizvedbe za %s"
 
 #: ../lib/systemdb.py:259
 #, python-format
 msgid "No LDAP result attribute specified for %s"
-msgstr "Ni LDAP iskalnega atributa za %s"
+msgstr "Ni določenega LDAP iskalnega atributa za %s"
 
 #: ../lib/systemdb.py:268
 msgid "LDAP Scope must be one of: "
@@ -785,11 +785,11 @@ msgstr "Nastavitvam profila ni mogoče dodati uporabnika %s"
 
 #: ../lib/systemdb.py:536
 msgid "Failed to get the user list"
-msgstr "Ni mogoče dobiti seznama uporabnikov"
+msgstr "Ni mogoče pridobiti seznama uporabnikov"
 
 #: ../lib/systemdb.py:586
 msgid "Failed to get the group list"
-msgstr "Ni mogoče pridobiti seznama uporabnikov"
+msgstr "Ni mogoče pridobiti seznama skupin"
 
 #: ../lib/unittests.py:38
 #: ../lib/unittests.py:39
@@ -799,12 +799,12 @@ msgstr "Prezri opozorila"
 #: ../lib/unittests.py:61
 #, python-format
 msgid "Running %s tests"
-msgstr "Preizkus %s teče"
+msgstr "Zagnanih je %s preizkusov"
 
 #: ../lib/unittests.py:63
 #, python-format
 msgid "Running %s tests (%s)"
-msgstr "Preizkus %s teče (%s)"
+msgstr "Zagnanih je %s preizkusov (%s)"
 
 #: ../lib/unittests.py:70
 msgid "Success!"
@@ -817,7 +817,7 @@ msgstr "Ni mogoče najti domače mape: ni določila v /etc/passwd in ni vrednost
 #: ../lib/util.py:110
 #: ../lib/util.py:137
 msgid "Cannot find username: not set in /etc/passwd and no value for $USER in environment"
-msgstr "Ni mogoče najti uporabniškega imena: ni nastavljeno v /etc/passwd in ni vrednosti za spremenljivko $USER"
+msgstr "Ni mogoče najti uporabniškega imena: ni nastavljene vrednosti v /etc/passwd in ni vrednosti za spremenljivko $USER"
 
 #~ msgid "Click to make this setting not mandatory"
 #~ msgstr "S klikom se nastavitev določi kot neobvezna"
@@ -861,8 +861,6 @@ msgstr "Ni mogoče najti uporabniškega imena: ni nastavljeno v /etc/passwd in n
 #~ msgstr "Skrij _menijsko vrstico"
 #~ msgid "Disable lock _screen"
 #~ msgstr "Onemogoči zaklepanje _zaslona"
-#~ msgid "_Lock on activation"
-#~ msgstr "_Zakleni ob zagonu"
 #~ msgid "Allow log _out"
 #~ msgstr "Dovoli _odjavo"
 #~ msgid "Allow user _switching"
@@ -880,25 +878,25 @@ msgstr "Ni mogoče najti uporabniškega imena: ni nastavljeno v /etc/passwd in n
 #~ msgid "Remove personal information from documents when saving them"
 #~ msgstr "Med shranjevanjem odstrani osebne podatke iz dokumentov"
 #~ msgid "Warn if macro tries to create a PDF"
-#~ msgstr "Opozori v primeru, da želi makro program ustvariti PDF"
+#~ msgstr "Opozori, da želi makro program ustvariti PDF"
 #~ msgid "Warn if macro tries to print a document"
-#~ msgstr "Opozori v primeru, da želi makro program natisniti dokument"
+#~ msgstr "Opozori, da želi makro program natisniti dokument"
 #~ msgid "Warn if macro tries to save a document"
-#~ msgstr "Opozori v primeru, da želi makro program shraniti dokument"
+#~ msgstr "Opozori, da želi makro program shraniti dokument"
 #~ msgid "Warn if macro tries to sign a document"
-#~ msgstr "Opozori v primeru, da želi makro program podpisati dokument"
+#~ msgstr "Opozori, da želi makro program podpisati dokument"
 #~ msgid "Recommend password when saving a document"
-#~ msgstr "Priporoči geslo med shranjevanjem dokumenta"
+#~ msgstr "Priporoči vpis gesla med shranjevanjem dokumenta"
 #~ msgid "Enable auto-save"
 #~ msgstr "Omogoči samodejno shranjevanje"
 #~ msgid "Printing should mark the document as modified"
-#~ msgstr "Tiskanje označi dokument kot spremenjen"
+#~ msgstr "Po tiskanju se dokument označi kot spremenjen"
 #~ msgid "Use system's file dialog"
 #~ msgstr "Uporabi sistemsko pogovorno okno"
 #~ msgid "Create backup copy on save"
 #~ msgstr "Ustvari varnostno kopijo ob shranjevanju"
 #~ msgid "Warn when saving non-OpenOffice.org formats"
-#~ msgstr "Opozori ob shranjevanju v zapisu drugačnem od zapisa OpenOffice.org"
+#~ msgstr "Ob shranjevanju opozori na drugačen zapis od zapisa OpenOffice.org"
 #~ msgid "Use OpenGL"
 #~ msgstr "Uporabi OpenGL"
 #~ msgid "Use system font"
@@ -935,8 +933,8 @@ msgstr "Ni mogoče najti uporabniškega imena: ni nastavljeno v /etc/passwd in n
 #~ msgstr ""
 #~ "\n"
 #~ "samodejno\n"
-#~ "Veliko\n"
-#~ "Malo"
+#~ "veliko\n"
+#~ "malo"
 #~ msgid ""
 #~ "\n"
 #~ "OpenDocument (.odp)\n"
@@ -975,18 +973,18 @@ msgstr "Ni mogoče najti uporabniškega imena: ni nastavljeno v /etc/passwd in n
 #~ "Low"
 #~ msgstr ""
 #~ "\n"
-#~ "Zelo visoko\n"
-#~ "Visoko\n"
-#~ "Srednje\n"
-#~ "Nizko"
+#~ "zelo visoko\n"
+#~ "visoko\n"
+#~ "srednje\n"
+#~ "nizko"
 #~ msgid "Default format for presentations:"
-#~ msgstr "Privzeta oblika predstavitve:"
+#~ msgstr "Privzet zapis predstavitve:"
 #~ msgid "Default format for spreadsheet:"
-#~ msgstr "Privzeta oblika pregledničnih datotek:"
+#~ msgstr "Privzet zapis pregledničnih datotek:"
 #~ msgid "Default format for word processor:"
-#~ msgstr "Privzeta oblika besedilnih datotek:"
+#~ msgstr "Privzet zapis besedilnih datotek:"
 #~ msgid "Default icon size"
-#~ msgstr "Privzeta velikost ikon"
+#~ msgstr "Privzeta velikost kon"
 #~ msgid "Load / Save"
 #~ msgstr "Naloži / Shrani"
 #~ msgid "Macro Security Level:"
@@ -999,99 +997,6 @@ msgstr "Ni mogoče najti uporabniškega imena: ni nastavljeno v /etc/passwd in n
 #~ msgstr "Varnost"
 #~ msgid "User Interface"
 #~ msgstr "Uporabniški vmesnik"
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld second will be permanently "
-#~ "lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %ld seconds will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %ld sekund "
-#~ "trajno izgubljene."
-#~ msgstr[1] ""
-#~ "V primeru, da datoteke ne shranite, bodo spremembe zadnje %ld sekunde "
-#~ "trajno izgubljene."
-#~ msgstr[2] ""
-#~ "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %ld sekund "
-#~ "trajno izgubljene."
-#~ msgstr[3] ""
-#~ "Če ne shranite, bodo za vedno izgubljene spremembe zadnjih %ld sekund."
-#~ msgid ""
-#~ "If you don't save, changes from the last minute will be permanently lost."
-#~ msgstr ""
-#~ "V primeru, da datoteke ne shranite, bodo  spremembe v zadnji minut trajno "
-#~ "izgubljene."
-#~ msgid ""
-#~ "If you don't save, changes from the last minute and %ld second will be "
-#~ "permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last minute and %ld seconds will be "
-#~ "permanently lost."
-#~ msgstr[0] ""
-#~ "V primeru, da datoteke ne shranite, bodo spremembe zadnje minute in %ld "
-#~ "sekund trajno izgubljene."
-#~ msgstr[1] ""
-#~ "V primeru, da datoteke ne shranite, bodo spremembe zadnje minute in %ld "
-#~ "sekunde trajno izgubljene."
-#~ msgstr[2] ""
-#~ "V primeru, da datoteke ne shranite, bodo spremembe zadnje minute in %ld "
-#~ "sekund trajno izgubljene."
-#~ msgstr[3] ""
-#~ "V primeru, da datoteke ne shranite, bodo spremembe zadnje minute in %ld "
-#~ "sekund trajno izgubljene."
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld minute will be permanently "
-#~ "lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %ld minutes will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %ld minut "
-#~ "trajno izgubljene."
-#~ msgstr[1] ""
-#~ "V primeru, da datoteke ne shranite, bodo spremembe zadnji %ld minuti "
-#~ "trajno izgubljene"
-#~ msgstr[2] ""
-#~ "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %ld minutah "
-#~ "trajno izgubljene."
-#~ msgstr[3] ""
-#~ "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %ld minutah "
-#~ "trajno izgubljene."
-#~ msgid ""
-#~ "If you don't save, changes from the last hour and %d minute will be "
-#~ "permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last hour and %d minutes will be "
-#~ "permanently lost."
-#~ msgstr[0] ""
-#~ "V primeru, da datoteke ne shranite, bodo spremembe zadnje ure in %d minut "
-#~ "trajno izgubljene."
-#~ msgstr[1] ""
-#~ "V primeru, da datoteke ne shranite, bodo spremembe zadnje ure in %d "
-#~ "minute trajno izgubljene."
-#~ msgstr[2] ""
-#~ "V primeru, da datoteke ne shranite, bodo spremembe zadnje ure in %d minut "
-#~ "trajno izgubljene."
-#~ msgstr[3] ""
-#~ "V primeru, da datoteke ne shranite, bodo spremembe zadnje ure in %d minut "
-#~ "trajno izgubljene."
-#~ msgid ""
-#~ "If you don't save, changes from the last %d hour will be permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %d hours will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %d ur trajno "
-#~ "izgubljene."
-#~ msgstr[1] ""
-#~ "V primeru, da datoteke ne shranite, bodo spremembe zadnje %d ure trajno "
-#~ "izgubljene."
-#~ msgstr[2] ""
-#~ "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %d ur trajno "
-#~ "izgubljene."
-#~ msgstr[3] ""
-#~ "V primeru, da datoteke ne shranite, bodo spremembe zadnjih %d ur trajno "
-#~ "izgubljene."
 #~ msgid "Preferences menu"
 #~ msgstr "Meni možnosti"
 #~ msgid "Applet %s added to top panel"
@@ -1118,12 +1023,4 @@ msgstr "Ni mogoče najti uporabniškega imena: ni nastavljeno v /etc/passwd in n
 #~ msgstr "%s dodan na levi pult"
 #~ msgid "%s added to right panel"
 #~ msgstr "%s dodan na desni pult"
-#~ msgid "%s removed from top panel"
-#~ msgstr "%s odstranjen z zgornjega pladnja"
-#~ msgid "%s removed from bottom panel"
-#~ msgstr "%s odstranjen s spodnjega pladnja"
-#~ msgid "%s removed from left panel"
-#~ msgstr "%s odstranjen z levega pladnja"
-#~ msgid "%s removed from right panel"
-#~ msgstr "%s odstranjen z desnega pladnja"
 
