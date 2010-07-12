@@ -14,4 +14,4 @@ DOC_FIGURES = \
 	figures/main-window.png \
 	figures/menu.png
 
-DOC_LINGUAS = de el es fr sv uk
+DOC_LINGUAS = de el es fr sv uk zh_CN
