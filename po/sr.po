@@ -4,14 +4,16 @@
 # This file is distributed under the same license as the Sabayon package.
 #
 # Maintainer: Слободан Д. Средојевић <ssl@uns.ns.ac.yu>
+# Translated on 2010-08-22 by: Бранко Кокановић <branko.kokanovic@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Sabayon-2.12.1\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-21 21:44-0600\n"
-"PO-Revision-Date: 2005-12-29 20:25+0100\n"
-"Last-Translator: Слободан Д. Средојевић <ssl@uns.ns.ac.yu>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=sabayon&component=general\n"
+"POT-Creation-Date: 2010-07-21 12:49+0000\n"
+"PO-Revision-Date: 2010-08-22 18:10+0200\n"
+"Last-Translator: Бранко Кокановић <branko.kokanovic@gmail.com>\n"
 "Language-Team: Serbian (sr) <gnom@prevod.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,6 +29,7 @@ msgstr "Програм за успостављање и уређивање по�
 msgid "translator-credits"
 msgstr ""
 "Слободан Д. Средојевић <ssl@uns.ns.ac.yu>\n"
+"Бранко Кокановић <branko.kokanovic@gmail.com>\n"
 "\n"
 "Prevod.org — превод на српски језик."
 
@@ -43,76 +46,80 @@ msgstr "Занемари"
 msgid "Lock"
 msgstr "Закључај"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:263
 msgid "Description"
 msgstr "Опис"
 
-#: ../admin-tool/editorwindow.py:97
+#: ../admin-tool/editorwindow.py:100
 #, python-format
 msgid "Profile %s"
 msgstr "Поставка %s"
 
-#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:179
 msgid "_Profile"
 msgstr "По_ставка"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
 msgid "_Save"
 msgstr "_Сачувај"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
 msgid "Save profile"
 msgstr "Сачувај поставку"
 
-#: ../admin-tool/editorwindow.py:204
+#: ../admin-tool/editorwindow.py:207
 msgid "_Close"
 msgstr "_Затвори"
 
-#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:181
 msgid "Close the current window"
 msgstr "Затвори текући прозор"
 
-#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:182
 msgid "_Edit"
 msgstr "_Уређивање"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "_Delete"
 msgstr "_Уклони"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "Delete item"
 msgstr "Уклони ставку"
 
-#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:210 ../admin-tool/sessionwindow.py:185
 msgid "_Help"
 msgstr "_Помоћ"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
 msgid "_Contents"
-msgstr ""
+msgstr "_Садржај"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
 msgid "Help Contents"
-msgstr ""
+msgstr "Садржај помоћи"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:212 ../admin-tool/sessionwindow.py:187
 msgid "_About"
 msgstr "_О програму"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:212 ../admin-tool/sessionwindow.py:187
 msgid "About Sabayon"
 msgstr "О Сабајону"
 
-#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:267
+msgid "Source"
+msgstr "Извор"
+
+#: ../admin-tool/editorwindow.py:300 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "Гконф"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:304 ../lib/sources/filessource.py:86
 msgid "Files"
 msgstr "Датотеке"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:304 ../lib/sources/paneldelegate.py:279
 msgid "Panel"
 msgstr "Панел"
 
@@ -162,7 +169,7 @@ msgstr "пар"
 msgid "Profile settings: %s"
 msgstr "Подешавања поставке: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:423
 #: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "Име"
@@ -176,13 +183,13 @@ msgid "Value"
 msgstr "Вредност"
 
 #: ../admin-tool/groupsdialog.py:61
-#, fuzzy, python-format
+#, python-format
 msgid "Groups for profile %s"
-msgstr "Корисници поставке %s"
+msgstr "Групе поставке %s"
 
 #: ../admin-tool/groupsdialog.py:71
 msgid "Group"
-msgstr ""
+msgstr "Група"
 
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
@@ -194,7 +201,7 @@ msgstr "Користи ову поставку"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:520
+#: ../admin-tool/profilesdialog.py:550
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -248,6 +255,8 @@ msgid ""
 "A fatal error has occurred.  You can help us fix the problem by sending the "
 "log in %s to %s"
 msgstr ""
+"Дошло је до кобне грешке, Можете нам помоћи да исправимо проблем тако што "
+"ћете послати дневнике из %s на %s"
 
 #: ../admin-tool/sabayon:145
 #, c-format
@@ -255,12 +264,15 @@ msgid ""
 "Sabayon will now exit.  There were some recoverable errors, and you can help "
 "us debug the problem by sending the log in %s to %s"
 msgstr ""
+"Сабајон ће сада завршити са радом. Било је неких грешака од којих се програм "
+"опоравио,а ви нам можете помоћи у отклањањуу грешака шаљући дневнике из %s "
+"на %s"
 
-#: ../admin-tool/sabayon-apply:111
+#: ../admin-tool/sabayon-apply:136
 msgid "Please use -h for usage options"
-msgstr ""
+msgstr "Користите -h за опције коришћења"
 
-#: ../admin-tool/sabayon-apply:123
+#: ../admin-tool/sabayon-apply:148
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Није пронађена поставка за корисника „%s“\n"
@@ -296,15 +308,15 @@ msgstr "Зас_нован на:"
 
 #: ../admin-tool/sabayon.ui.h:6
 msgid "_Details"
-msgstr ""
+msgstr "_Детаљи"
 
 #: ../admin-tool/sabayon.ui.h:7
 msgid "_Groups"
-msgstr ""
+msgstr "_Групе"
 
 #: ../admin-tool/sabayon.ui.h:8
 msgid "_Groups:"
-msgstr ""
+msgstr "_Групе:"
 
 #: ../admin-tool/sabayon.ui.h:9
 msgid "_Profiles:"
@@ -328,135 +340,147 @@ msgid "Save changes to profile \"%s\" before closing?"
 msgstr "Да ли желите да сачувате измене за поставку „%s“ пре затварања?"
 
 #: ../admin-tool/saveconfirm.py:44
-#, fuzzy
 msgid "If you don't save, all changes will be permanently lost."
-msgstr ""
-"Уколико их не сачувате, измене за протекли %d сат биће трајно изгубљене."
+msgstr "Уколико их не сачувате, све измене ће бити трајно изгубљене."
 
-#: ../admin-tool/sessionwindow.py:155
+#: ../admin-tool/sessionwindow.py:157
 #, python-format
 msgid "Editing profile %s"
 msgstr "Уређивање поставке %s"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Quit"
 msgstr "_Заврши"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "_Changes"
 msgstr "_Измене"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "Edit changes"
 msgstr "Прегледај измене"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "_Lockdown"
 msgstr "За_вежи"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "Edit Lockdown settings"
 msgstr "Уреди ограничавајућа подешавања"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce Mandatory"
 msgstr "Наметни обавезу"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce mandatory settings in the editing session"
 msgstr "Наметни обавезна подешавања при уређивању"
 
-#: ../admin-tool/sessionwindow.py:306
+#: ../admin-tool/sessionwindow.py:308
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "Подешавање ограничења за %s"
 
-#: ../admin-tool/sessionwindow.py:342
+#: ../admin-tool/sessionwindow.py:344
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
 "report this error now or try to continue editing the user profile."
 msgstr ""
+"Десила се грешка од које се програм опоравио, док су примењиване корисничке "
+"поставке „%s“. Можете пријавити ову грешку одмах или наставити уређивање "
+"корисничких поставки."
 
-#: ../admin-tool/sessionwindow.py:346
+#: ../admin-tool/sessionwindow.py:348
 msgid "_Report this error"
-msgstr ""
+msgstr "П_ријави ову грешку"
 
-#: ../admin-tool/sessionwindow.py:347
+#: ../admin-tool/sessionwindow.py:349
 msgid "_Continue editing"
-msgstr ""
+msgstr "_Настави уређивање"
 
 #: ../admin-tool/usersdialog.py:72
 #, python-format
 msgid "Users for profile %s"
 msgstr "Корисници поставке %s"
 
-#: ../lib/protosession.py:112
+#: ../lib/protosession.py:119
 msgid "Unable to find a free X display"
 msgstr "Не могу да пронађем ниједан слободан Икс екран"
 
-#: ../lib/protosession.py:376
-#, fuzzy
+#: ../lib/protosession.py:383
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
-msgstr "Не могу да покренем Xnest: истекло је време чекајући USR1 сигнал"
+msgstr "Не могу да покренем Xephyr: истекло је време чекајући USR1 сигнал"
 
-#: ../lib/protosession.py:378
-#, fuzzy
+#: ../lib/protosession.py:385
 msgid "Failed to start Xephyr: died during startup"
-msgstr "Не могу да покренем Xnest: прекид приликом покретања"
+msgstr "Не могу да покренем Xephyr: прекид приликом покретања"
 
 #. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:469
+#: ../lib/protosession.py:476
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
 msgstr ""
+"Десила се грешка од које се програм опоравио, док су примењиване корисничке "
+"поставке из датотеке „%s“"
 
 #. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (FATAL) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:478
+#: ../lib/protosession.py:485
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
-msgstr ""
+msgstr "Десила се кобна грешка док су примењиване корисничке поставке из „%s“"
 
 #: ../lib/sources/filessource.py:69
-#, python-format
-msgid "File '%s' created"
-msgstr "Датотека „%s“ је створена"
+msgid "Directory"
+msgstr "Фасцикла"
 
 #: ../lib/sources/filessource.py:71
-#, python-format
-msgid "File '%s' deleted"
-msgstr "Датотека „%s“ је обрисана"
+msgid "Link"
+msgstr "Веза"
 
 #: ../lib/sources/filessource.py:73
-#, python-format
-msgid "File '%s' changed"
-msgstr "Датотека „%s“ је доживела измену"
+msgid "File"
+msgstr "Датотека"
 
-#: ../lib/sources/filessource.py:97
+#: ../lib/sources/filessource.py:75
+#, python-format
+msgid "%s '%s' created"
+msgstr "%s „%s„ створена"
+
+#: ../lib/sources/filessource.py:77
+#, python-format
+msgid "%s '%s' deleted"
+msgstr "%s „%s“ је обрисана"
+
+#: ../lib/sources/filessource.py:79
+#, python-format
+msgid "%s '%s' changed"
+msgstr "%s „%s“ је промењена"
+
+#: ../lib/sources/filessource.py:105
 msgid "Applications menu"
 msgstr "Програмски мени"
 
-#: ../lib/sources/filessource.py:99
-#, fuzzy
+#: ../lib/sources/filessource.py:107
 msgid "Settings menu"
-msgstr "Мени за подешавања послужитеља"
+msgstr "Мени поставки"
 
-#: ../lib/sources/filessource.py:101
+#: ../lib/sources/filessource.py:109
 msgid "Server Settings menu"
 msgstr "Мени за подешавања послужитеља"
 
-#: ../lib/sources/filessource.py:103
+#: ../lib/sources/filessource.py:111
 msgid "System Settings menu"
 msgstr "Мени системских подешавања"
 
-#: ../lib/sources/filessource.py:105
+#: ../lib/sources/filessource.py:113
 msgid "Start Here menu"
 msgstr "Мени „Крените одавде“"
 
@@ -506,86 +530,86 @@ msgstr "Гконф кључ „%s“ добија вредност пара „%
 msgid "GConf key '%s' set to '%s'"
 msgstr "Гконф кључ „%s“ је постављен на „%s“"
 
-#: ../lib/sources/gconfsource.py:137
+#: ../lib/sources/gconfsource.py:138
 msgid "Default GConf settings"
 msgstr "Подразумевана Гконф подешавања"
 
-#: ../lib/sources/gconfsource.py:139
+#: ../lib/sources/gconfsource.py:140
 msgid "Mandatory GConf settings"
 msgstr "Обавезна Гконф подешавања"
 
-#: ../lib/sources/mozillasource.py:133
+#: ../lib/sources/mozillasource.py:135
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
 msgstr "Мозила кључ „%s“ је постављен на „%s“"
 
-#: ../lib/sources/mozillasource.py:135
+#: ../lib/sources/mozillasource.py:137
 #, python-format
 msgid "Mozilla key '%s' unset"
 msgstr "Мозила кључ „%s“ поново није постављен"
 
-#: ../lib/sources/mozillasource.py:137
+#: ../lib/sources/mozillasource.py:139
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Мозила кључ „%s“ је промењен на „%s“"
 
-#: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
+#: ../lib/sources/mozillasource.py:169 ../lib/sources/mozillasource.py:179
 msgid "Web browser preferences"
 msgstr "Поставке веб прегледника"
 
-#: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
+#: ../lib/sources/mozillasource.py:171 ../lib/sources/mozillasource.py:181
 msgid "Web browser bookmarks"
 msgstr "Обележивачи веб прегледника"
 
-#: ../lib/sources/mozillasource.py:170
+#: ../lib/sources/mozillasource.py:173
 msgid "Web browser profile list"
 msgstr "Списак поставки веб прегледника"
 
-#: ../lib/sources/mozillasource.py:520
+#: ../lib/sources/mozillasource.py:550
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Датотека није пронађена (%s)"
 
-#: ../lib/sources/mozillasource.py:869
+#: ../lib/sources/mozillasource.py:899
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "дупло име(%(name)s) у одељку %(section)s"
 
-#: ../lib/sources/mozillasource.py:878
+#: ../lib/sources/mozillasource.py:908
 #, python-format
 msgid "redundant default in section %s"
 msgstr "Вишеструке подразумеване вредности у одељку %s"
 
-#: ../lib/sources/mozillasource.py:895
+#: ../lib/sources/mozillasource.py:925
 msgid "no default profile"
 msgstr "не постоји подразумевана поставка"
 
-#: ../lib/sources/mozillasource.py:950
+#: ../lib/sources/mozillasource.py:980
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Мозила обележивач је створен „%s“ -> „%s“"
 
-#: ../lib/sources/mozillasource.py:952
+#: ../lib/sources/mozillasource.py:982
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Фасцикла са Мозила обележивачима је створена „%s“"
 
-#: ../lib/sources/mozillasource.py:955
+#: ../lib/sources/mozillasource.py:985
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Мозила обележивач „%s“ је уклоњен"
 
-#: ../lib/sources/mozillasource.py:957
+#: ../lib/sources/mozillasource.py:987
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Мозилина фасцикла са обележивачима „%s“ је уклоњена"
 
-#: ../lib/sources/mozillasource.py:960
+#: ../lib/sources/mozillasource.py:990
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Измењен Мозилиа обележивач „%s“ „%s“"
 
-#: ../lib/sources/mozillasource.py:962
+#: ../lib/sources/mozillasource.py:992
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Мозилина фасцикла са обележивачима „%s“ је измењена"
@@ -601,110 +625,116 @@ msgid "Panel '%s' removed"
 msgstr "Панел „%s“ је уклоњен"
 
 #: ../lib/sources/paneldelegate.py:77
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' added"
-msgstr "Програмче панела „%s“ је додато"
+msgstr "Програмче „%s“ је додато"
 
 #: ../lib/sources/paneldelegate.py:100
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' removed"
-msgstr "Програмче панела „%s“ је уклоњено"
+msgstr "Програмче „%s“ је уклоњено"
 
 #: ../lib/sources/paneldelegate.py:123
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' added"
-msgstr "Објекат панела „%s“ је додат"
+msgstr "Објекат „%s“ је додат"
 
 #: ../lib/sources/paneldelegate.py:152
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' removed"
-msgstr "Објекат панела „%s“ је уклоњен"
+msgstr "Објекат „%s“ је уклоњен"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:240
+#: ../lib/sources/paneldelegate.py:241
 msgid "Drawer"
-msgstr ""
+msgstr "Фиока"
 
-#: ../lib/sources/paneldelegate.py:242
+#: ../lib/sources/paneldelegate.py:243
 msgid "Main Menu"
-msgstr ""
+msgstr "Главни мени"
 
-#: ../lib/sources/paneldelegate.py:252
+#: ../lib/sources/paneldelegate.py:253
 #, python-format
 msgid "%s launcher"
-msgstr ""
+msgstr "%s покретач"
 
-#: ../lib/sources/paneldelegate.py:256
+#: ../lib/sources/paneldelegate.py:257
 msgid "Lock Screen button"
-msgstr ""
+msgstr "Дугме „Закључај екран“"
 
-#: ../lib/sources/paneldelegate.py:258
+#: ../lib/sources/paneldelegate.py:259
 msgid "Logout button"
-msgstr ""
+msgstr "Дугме за одјаву"
 
-#: ../lib/sources/paneldelegate.py:260
-#, fuzzy
+#: ../lib/sources/paneldelegate.py:261
 msgid "Run Application button"
-msgstr "Програмски мени"
+msgstr "Дугме за покретање програма"
 
-#: ../lib/sources/paneldelegate.py:262
+#: ../lib/sources/paneldelegate.py:263
 msgid "Search button"
-msgstr ""
+msgstr "Дугме за претрагу"
 
-#: ../lib/sources/paneldelegate.py:264
+#: ../lib/sources/paneldelegate.py:265
 msgid "Force Quit button"
-msgstr ""
+msgstr "Дугме за приморавање затварања"
 
-#: ../lib/sources/paneldelegate.py:266
+#: ../lib/sources/paneldelegate.py:267
 msgid "Connect to Server button"
-msgstr ""
+msgstr "Дугме за повезивање на сервер"
 
-#: ../lib/sources/paneldelegate.py:268
+#: ../lib/sources/paneldelegate.py:269
 msgid "Shutdown button"
-msgstr ""
+msgstr "Дугме за искључивање рачунара"
 
-#: ../lib/sources/paneldelegate.py:270
+#: ../lib/sources/paneldelegate.py:271
 msgid "Screenshot button"
-msgstr ""
+msgstr "Дугме за снимак екрана"
 
-#: ../lib/sources/paneldelegate.py:273
+#: ../lib/sources/paneldelegate.py:274
 msgid "Unknown"
-msgstr ""
+msgstr "Непознато"
 
-#: ../lib/sources/paneldelegate.py:275
+#: ../lib/sources/paneldelegate.py:276
 msgid "Menu Bar"
-msgstr ""
+msgstr "Трака менија"
 
-#: ../lib/sources/paneldelegate.py:512
+#: ../lib/sources/paneldelegate.py:513
 msgid "Panel File"
 msgstr "Панел датотека"
 
-#: ../lib/storage.py:172
+#: ../lib/storage.py:173
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "Нисам успео да прочитам датотеку „%s“: %s"
 
-#: ../lib/storage.py:182
+#: ../lib/storage.py:183
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "Не могу да учитам описне податке са „%s“: %s"
 
-#: ../lib/storage.py:188
+#: ../lib/storage.py:189
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "Неисправни описни одељак у „%s“: %s"
 
-#: ../lib/storage.py:362
+#. change the raise to a dprint, since some files seem to disappear.
+#. raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
+#: ../lib/storage.py:387
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Не могу да додам непостојећу датотеку „%s“"
 
-#: ../lib/storage.py:487
+#: ../lib/storage.py:531
+#, python-format
+msgid "Couldn't rmdir '%s'"
+msgstr "Не могу да избришем фасциклу „%s“"
+
+#: ../lib/storage.py:536
 #, python-format
 msgid "Couldn't unlink file '%s'"
-msgstr ""
+msgstr "Не могу да уклоним везу „%s“"
 
-#: ../lib/storage.py:570
+#: ../lib/storage.py:633
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Поставка је само за читање %s"
@@ -712,75 +742,72 @@ msgstr "Поставка је само за читање %s"
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/systemdb.py:67
-#, fuzzy, python-format
+#: ../lib/systemdb.py:77
+#, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
-msgstr "неисправн тип за постављање %s у %s"
+msgstr "Неисправан тип за поставку %(setting)s у %(np)s"
 
-#: ../lib/systemdb.py:112
+#: ../lib/systemdb.py:122
 msgid "No database file provided"
-msgstr ""
+msgstr "Није дата датотека базе података"
 
 # bug(slobo): провери, вероватно је везано за LDAP и вероватно није based
-#: ../lib/systemdb.py:232
-#, fuzzy, python-format
+#: ../lib/systemdb.py:253
+#, python-format
 msgid "No LDAP search base specified for %s"
-msgstr "Није наведена база за претрагу за %s"
+msgstr "Није наведена LDAP база за претрагу за %s"
 
-#: ../lib/systemdb.py:235
-#, fuzzy, python-format
+#: ../lib/systemdb.py:256
+#, python-format
 msgid "No LDAP query filter specified for %s"
-msgstr "Није наведен упитни филтер за %s"
+msgstr "Није наведен LDAP упитни филтер за %s"
 
-#: ../lib/systemdb.py:238
-#, fuzzy, python-format
+#: ../lib/systemdb.py:259
+#, python-format
 msgid "No LDAP result attribute specified for %s"
-msgstr "Није задана крајња особина за %s"
+msgstr "Није задана LDAP крајња особина за %s"
 
 # bug(slobo): ово је нејасно, превод је вероватно погрешан за следећа два слога
-#: ../lib/systemdb.py:247
-#, fuzzy
-msgid "LDAP Scope must be one of: "
-msgstr "Домет мора бити један од под, основних или један"
-
 #: ../lib/systemdb.py:268
-#, fuzzy
-msgid "multiple_result must be one of: "
-msgstr "вишеструки резултат мора бити један од првих или случајни"
+msgid "LDAP Scope must be one of: "
+msgstr "LDAP домет мора бити један од: "
 
-#: ../lib/systemdb.py:361
+#: ../lib/systemdb.py:288
+msgid "multiple_result must be one of: "
+msgstr "вишеструки резултат мора бити један од:"
+
+#: ../lib/systemdb.py:381
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "Не могу да отворим %s ради уписа"
 
-#: ../lib/systemdb.py:374
+#: ../lib/systemdb.py:394
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "Не могу да сачувам базу корисника на %s"
 
-#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
+#: ../lib/systemdb.py:423 ../lib/systemdb.py:457
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "%s није датотека са подешавањима поставки"
 
-#: ../lib/systemdb.py:404
+#: ../lib/systemdb.py:430
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "Не могу да додам подразумевану поставку %s у датотеку са подешавањима"
 
-#: ../lib/systemdb.py:438
+#: ../lib/systemdb.py:464
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "Не могу да додам корисника %s у датотеку са подешавањима поставки"
 
-#: ../lib/systemdb.py:510
+#: ../lib/systemdb.py:536
 msgid "Failed to get the user list"
 msgstr "Не могу да добијем списак корисника"
 
-#: ../lib/systemdb.py:560
-#, fuzzy
+#: ../lib/systemdb.py:586
 msgid "Failed to get the group list"
-msgstr "Не могу да добијем списак корисника"
+msgstr "Не могу да добијем списак група"
 
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
@@ -815,167 +842,3 @@ msgid ""
 msgstr ""
 "Не могу да пронађем корисничко име: није наведено у датотеци /etc/passwd а "
 "променљива окружења $USER не постоји"
-
-#~ msgid "Click to make this setting not mandatory"
-#~ msgstr "Ово подешавање није обавезујуће"
-
-#~ msgid "Click to make this setting mandatory"
-#~ msgstr "Ово подешавање је обавезујуће"
-
-#~ msgid "General"
-#~ msgstr "Опште"
-
-#~ msgid "Epiphany Web Browser"
-#~ msgstr "Веб прегледник „Спознаја“"
-
-#~ msgid "Disable _command line"
-#~ msgstr "Искључи линију _наредби"
-
-#~ msgid "Disable _printing"
-#~ msgstr "Онемогући ш_тампање"
-
-#~ msgid "Disable print _setup"
-#~ msgstr "Онемогући подешавање шта_мпача"
-
-#~ msgid "Disable save to _disk"
-#~ msgstr "Онемогући упис на _диск"
-
-#~ msgid "_Lock down the panels"
-#~ msgstr "_Привежи панеле"
-
-#~ msgid "Disable force _quit"
-#~ msgstr "Онемогући насилно прекидање програма"
-
-#~ msgid "Disable log _out"
-#~ msgstr "Онемогући одјављив_ање"
-
-#~ msgid "Disable _quit"
-#~ msgstr "Онемогући _завршетак рада"
-
-#~ msgid "Disable _arbitrary URL"
-#~ msgstr "Онемогући п_роизвољну адресу"
-
-#~ msgid "Disable _bookmark editing"
-#~ msgstr "Онемогући уређивање о_бележивача"
-
-#~ msgid "Disable _history"
-#~ msgstr "Онемогући _историјат"
-
-#~ msgid "Disable _javascript chrome"
-#~ msgstr "Онемогући јаваскрипт"
-
-#~ msgid "Disable _toolbar editing"
-#~ msgstr "Онемогући преслагање палете а_латки"
-
-#, fuzzy
-#~ msgid "Force _fullscreen mode"
-#~ msgstr "При_каз преко целог екрана"
-
-#~ msgid "Hide _menubar"
-#~ msgstr "Сакриј линију _менија"
-
-#~ msgid "Disable lock _screen"
-#~ msgstr "Онемогући закључавање екрана"
-
-#, fuzzy
-#~ msgid "_Lock on activation"
-#~ msgstr "_Привежи панеле"
-
-#, fuzzy
-#~ msgid "Allow log _out"
-#~ msgstr "Онемогући одјављив_ање"
-
-#~ msgid "Disable _unsafe protocols"
-#~ msgstr "Онемогући не_сигурне протоколе"
-
-#, fuzzy
-#~ msgid "Disabled Applets"
-#~ msgstr "<b>Недозвољени програмчићи</b>"
-
-#~ msgid "Lockdown Editor"
-#~ msgstr "Уређивач ограничења"
-
-#, fuzzy
-#~ msgid "Safe Protocols"
-#~ msgstr "<b>Сигурни протоколи</b>"
-
-#~ msgid "Usage: %s [<profile-name>]\n"
-#~ msgstr "Коришћење: %s [<име поставке>]\n"
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld second will be permanently "
-#~ "lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %ld seconds will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Уколико их не сачувате, измене за протеклу %ld секунду биће трајно "
-#~ "изгубљене."
-#~ msgstr[1] ""
-#~ "Уколико их не сачувате, измене за протекле %ld секунде биће трајно "
-#~ "изгубљене."
-#~ msgstr[2] ""
-#~ "Уколико их не сачувате, измене за протеклих  %ld секунди биће трајно "
-#~ "изгубљене."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last minute will be permanently lost."
-#~ msgstr ""
-#~ "Уколико их не сачувате, измене у последњем минуту биће трајно изгубљене."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last minute and %ld second will be "
-#~ "permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last minute and %ld seconds will be "
-#~ "permanently lost."
-#~ msgstr[0] ""
-#~ "Уколико их не сачувате, измене за протекли минут и %ld секунду биће "
-#~ "трајно изгубљене."
-#~ msgstr[1] ""
-#~ "Уколико их не сачувате, измене за протекли минут и %ld секунде биће "
-#~ "трајно изгубљене."
-#~ msgstr[2] ""
-#~ "Уколико их не сачувате, измене за протекли минут и %ld секунди биће "
-#~ "трајно изгубљене."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld minute will be permanently "
-#~ "lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %ld minutes will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Уколико их не сачувате, измене за протекли %ld минут биће трајно "
-#~ "изгубљене."
-#~ msgstr[1] ""
-#~ "Уколико их не сачувате, измене за протекла %ld минута биће трајно "
-#~ "изгубљене."
-#~ msgstr[2] ""
-#~ "Уколико их не сачувате, измене за протеклих %ld минута биће трајно "
-#~ "изгубљене."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last hour and %d minute will be "
-#~ "permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last hour and %d minutes will be "
-#~ "permanently lost."
-#~ msgstr[0] ""
-#~ "Уколико их не сачувате, измене за протекли сат и %d минут биће трајно "
-#~ "изгубљене."
-#~ msgstr[1] ""
-#~ "Уколико их не сачувате, измене за протекли сат и %d минута биће трајно "
-#~ "изгубљене."
-#~ msgstr[2] ""
-#~ "Уколико их не сачувате, измене за протекли сат и %d минута биће трајно "
-#~ "изгубљене."
-
-#~ msgid "Failed to add monitor for %s"
-#~ msgstr "Не могу да додам надзор за %s"
-
-#~ msgid "Expected event: %s %s"
-#~ msgstr "Очекивани догађај: %s %s"
-
-#~ msgid "Preferences menu"
-#~ msgstr "Мени подешавања"
