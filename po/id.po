@@ -1,15 +1,18 @@
-# Indonesian translation of sabayon.
+# translation of sabayon master to Indonesian
 # Copyright (C) 2006 THE sabayon'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the sabayon package.
-# ahmad riza h nst <rizahnst@id.gnome.org>, 2006.
 #
+# ahmad riza h nst <rizahnst@id.gnome.org>, 2006.
+# Andika Triwidada <andika@gmail.com>, 2009, 2010.
+# Dirgita <dirgitadevina@yahoo.co.id>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: sabayon master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=sabayon&component=general\n"
-"POT-Creation-Date: 2010-04-13 17:49+0000\n"
-"PO-Revision-Date: 2010-04-16 18:53+0700\n"
-"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
+"Project-Id-Version: sabayon.master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=sabayon&component=general\n"
+"POT-Creation-Date: 2010-08-24 01:19+0000\n"
+"PO-Revision-Date: 2010-08-30 23:50+0700\n"
+"Last-Translator: Dirgita <dirgitadevina@yahoo.co.id>\n"
 "Language-Team: GNOME Indonesian Translation Team <gnome@i15n.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,8 +20,8 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-Language: Indonesian\n"
 "X-Poedit-Country: Indonesia\n"
+"X-Generator: Lokalize 1.1\n"
 
-# "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;"
 #: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
 msgstr "Program untuk menyusun dan menyunting profil bagi para pengguna"
@@ -26,8 +29,9 @@ msgstr "Program untuk menyusun dan menyunting profil bagi para pengguna"
 #: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
 msgstr ""
-"ahmad riza h nst <rizahnst@id.gnome.org>, 2006\n"
-"Andika Triwidada <andika@gmail.com>, 2009"
+"ahmad riza h nst <rizahnst@id.gnome.org>, 2006.\n"
+"Andika Triwidada <andika@gmail.com>, 2009.\n"
+"Dirgita <dirgitadevina@yahoo.co.id>, 2010."
 
 #: ../admin-tool/changeswindow.py:50
 #, python-format
@@ -42,44 +46,38 @@ msgstr "Abaikan"
 msgid "Lock"
 msgstr "Kunci"
 
-#: ../admin-tool/changeswindow.py:127
-#: ../admin-tool/editorwindow.py:263
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:263
 msgid "Description"
-msgstr "Penjelasan"
+msgstr "Deskripsi"
 
 #: ../admin-tool/editorwindow.py:100
 #, python-format
 msgid "Profile %s"
 msgstr "Profil %s"
 
-#: ../admin-tool/editorwindow.py:205
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:179
 msgid "_Profile"
 msgstr "_Profil"
 
-#: ../admin-tool/editorwindow.py:206
-#: ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
 msgid "_Save"
 msgstr "_Simpan"
 
-#: ../admin-tool/editorwindow.py:206
-#: ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
 msgid "Save profile"
-msgstr "Simpan profil"
+msgstr "Menyimpan profil"
 
 #: ../admin-tool/editorwindow.py:207
 msgid "_Close"
 msgstr "_Tutup"
 
-#: ../admin-tool/editorwindow.py:207
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:181
 msgid "Close the current window"
-msgstr "Tutup jendela kini"
+msgstr "Menutup jendela ini"
 
-#: ../admin-tool/editorwindow.py:208
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:182
 msgid "_Edit"
-msgstr "_Edit"
+msgstr "_Sunting"
 
 #: ../admin-tool/editorwindow.py:209
 msgid "_Delete"
@@ -87,30 +85,25 @@ msgstr "_Hapus"
 
 #: ../admin-tool/editorwindow.py:209
 msgid "Delete item"
-msgstr "Hapus objek"
+msgstr "Menghapus item"
 
-#: ../admin-tool/editorwindow.py:210
-#: ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:210 ../admin-tool/sessionwindow.py:185
 msgid "_Help"
-msgstr "_Bantuan"
+msgstr "Ba_ntuan"
 
-#: ../admin-tool/editorwindow.py:211
-#: ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
 msgid "_Contents"
-msgstr "Daftar _Isi"
+msgstr "_Isi"
 
-#: ../admin-tool/editorwindow.py:211
-#: ../admin-tool/sessionwindow.py:186
+#: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
 msgid "Help Contents"
 msgstr "Isi Bantuan"
 
-#: ../admin-tool/editorwindow.py:212
-#: ../admin-tool/sessionwindow.py:187
+#: ../admin-tool/editorwindow.py:212 ../admin-tool/sessionwindow.py:187
 msgid "_About"
-msgstr "_Tentang"
+msgstr "Tent_ang"
 
-#: ../admin-tool/editorwindow.py:212
-#: ../admin-tool/sessionwindow.py:187
+#: ../admin-tool/editorwindow.py:212 ../admin-tool/sessionwindow.py:187
 msgid "About Sabayon"
 msgstr "Tentang Sabayon"
 
@@ -118,18 +111,15 @@ msgstr "Tentang Sabayon"
 msgid "Source"
 msgstr "Sumber"
 
-#: ../admin-tool/editorwindow.py:300
-#: ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:300 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:304
-#: ../lib/sources/filessource.py:86
+#: ../admin-tool/editorwindow.py:304 ../lib/sources/filessource.py:86
 msgid "Files"
 msgstr "Berkas"
 
-#: ../admin-tool/editorwindow.py:304
-#: ../lib/sources/paneldelegate.py:279
+#: ../admin-tool/editorwindow.py:304 ../lib/sources/paneldelegate.py:279
 msgid "Panel"
 msgstr "Panel"
 
@@ -138,8 +128,7 @@ msgstr "Panel"
 msgid "Profile file: %s"
 msgstr "Berkas profil: %s"
 
-#: ../admin-tool/gconfviewer.py:57
-#: ../admin-tool/gconfviewer.py:76
+#: ../admin-tool/gconfviewer.py:57 ../admin-tool/gconfviewer.py:76
 msgid "<no type>"
 msgstr "<tanpa jenis>"
 
@@ -157,7 +146,7 @@ msgstr "integer"
 
 #: ../admin-tool/gconfviewer.py:66
 msgid "float"
-msgstr "float"
+msgstr "pecahan"
 
 #: ../admin-tool/gconfviewer.py:68
 msgid "boolean"
@@ -165,23 +154,22 @@ msgstr "boolean"
 
 #: ../admin-tool/gconfviewer.py:70
 msgid "schema"
-msgstr "schema"
+msgstr "skema"
 
 #: ../admin-tool/gconfviewer.py:72
 msgid "list"
-msgstr "list"
+msgstr "daftar"
 
 #: ../admin-tool/gconfviewer.py:74
 msgid "pair"
-msgstr "pair"
+msgstr "pasangan"
 
 #: ../admin-tool/gconfviewer.py:86
 #, python-format
 msgid "Profile settings: %s"
-msgstr "Setingan profil: %s"
+msgstr "Pengaturan profil: %s"
 
-#: ../admin-tool/gconfviewer.py:110
-#: ../admin-tool/profilesdialog.py:423
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:423
 #: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "Nama"
@@ -197,16 +185,15 @@ msgstr "Nilai"
 #: ../admin-tool/groupsdialog.py:61
 #, python-format
 msgid "Groups for profile %s"
-msgstr "Kelompok untuk profil %s"
+msgstr "Kelompok profil %s"
 
 #: ../admin-tool/groupsdialog.py:71
 msgid "Group"
 msgstr "Kelompok"
 
-#: ../admin-tool/groupsdialog.py:81
-#: ../admin-tool/usersdialog.py:96
+#: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
-msgstr "Pergunakan Profil Ini"
+msgstr "Gunakan Profil Ini"
 
 #.
 #. Translators: this string specifies how a profile
@@ -220,44 +207,67 @@ msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #: ../admin-tool/sabayon:77
-msgid "Your account does not have permissions to run the Desktop User Profiles tool"
-msgstr "Anda tidak memiliki hak untuk menjalankan Profil Pengguna Desktop"
+msgid ""
+"Your account does not have permissions to run the Desktop User Profiles tool"
+msgstr ""
+"Akun Anda tidak memiliki izin untuk menjalakan perkakas Profil Pengguna "
+"Desktop"
 
 #: ../admin-tool/sabayon:78
-msgid "Administrator level permissions are needed to run this program because it can modify system files."
-msgstr "Hak setingkat Administrator dibutuhkan untuk menjalan program ini karenahal ini dapat merubahan berkas system."
+msgid ""
+"Administrator level permissions are needed to run this program because it "
+"can modify system files."
+msgstr "Hak akses administrator diperlukan untuk menjalankan program ini."
 
 #: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
-msgstr "Profil Pengguna Desktop telah berjalan"
+msgstr "Perkakas Profil Pengguna Desktop sudah berjalan"
 
 #: ../admin-tool/sabayon:84
-msgid "You may not use Desktop User Profiles tool from within a profile editing session"
-msgstr "Anda tidak boleh menggunakan Profil Pengguna Desktop pada saat menjalankan penyuntingan profil"
+msgid ""
+"You may not use Desktop User Profiles tool from within a profile editing "
+"session"
+msgstr ""
+"Anda tidak boleh menggunakan Profil Pengguna Desktop pada saat menjalankan "
+"penyuntingan profil"
 
 #: ../admin-tool/sabayon:91
 #, c-format
 msgid "User account '%s' was not found"
-msgstr "Pengguna '%s' tidak ditemukan"
+msgstr "Akun pengguna '%s' tidak ditemukan"
 
 #: ../admin-tool/sabayon:92
 #, c-format
-msgid "Sabayon requires a special user account '%s' to be present on this computer. Try again after creating the account (using, for example, the 'adduser' command)"
-msgstr "Sabayon membutuhkan pengguna istimewa '%s' pada komputer ini.Coba lagi setelah membuat pengguna tersebut(misalnya dengan menggunakan perintah 'adduser')"
+msgid ""
+"Sabayon requires a special user account '%s' to be present on this computer. "
+"Try again after creating the account (using, for example, the 'adduser' "
+"command)"
+msgstr ""
+"Sabayon membutuhkan pengguna istimewa '%s' pada komputer ini.Coba lagi "
+"setelah membuat pengguna tersebut(misalnya dengan menggunakan perintah "
+"'adduser')"
 
 #: ../admin-tool/sabayon:131
 #, c-format
-msgid "A fatal error has occurred.  You can help us fix the problem by sending the log in %s to %s"
-msgstr "Galat fatal telah terjadi. Anda dapat membantu kami memperbaiki masalah ini dengan mengirim log di %s ke %s"
+msgid ""
+"A fatal error has occurred.  You can help us fix the problem by sending the "
+"log in %s to %s"
+msgstr ""
+"Galat fatal telah terjadi. Anda dapat membantu kami memperbaiki masalah ini "
+"dengan mengirim log di %s ke %s"
 
 #: ../admin-tool/sabayon:145
 #, c-format
-msgid "Sabayon will now exit.  There were some recoverable errors, and you can help us debug the problem by sending the log in %s to %s"
-msgstr "Sabayon kini akan keluar. Ada beberapa galat yang dapat diperbaiki, dan Anda dapat membantu kami mengawa kutu masalah dengan mengirim log di %s ke %s"
+msgid ""
+"Sabayon will now exit.  There were some recoverable errors, and you can help "
+"us debug the problem by sending the log in %s to %s"
+msgstr ""
+"Sabayon kini akan keluar. Ada beberapa galat yang dapat diperbaiki, dan Anda "
+"dapat membantu kami mengawa kutu masalah dengan mengirim log di %s ke %s"
 
 #: ../admin-tool/sabayon-apply:136
 msgid "Please use -h for usage options"
-msgstr "Silakan gunakan -h untuk opsi penggunaan"
+msgstr "Gunakanlah -h untuk daftar opsi yang tersedia"
 
 #: ../admin-tool/sabayon-apply:148
 #, c-format
@@ -267,14 +277,13 @@ msgstr "Tidak menemukan profil untuk pengguna '%s'\n"
 #: ../admin-tool/sabayon-session:67
 #, c-format
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
-msgstr "Menggunakan: %s <nama profil> <letak profle> <nomor tampilan>\n"
+msgstr "Penggunaan: %s <profile-name> <profile-path> <display-number>\n"
 
 #: ../admin-tool/sabayon.desktop.in.in.h:1
 msgid "Establish and Edit Profiles for Users"
 msgstr "Menyusun dan Menyunting Profil bagi Pengguna"
 
-#: ../admin-tool/sabayon.desktop.in.in.h:2
-#: ../admin-tool/sabayon.ui.h:4
+#: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.ui.h:4
 msgid "User Profile Editor"
 msgstr "Penyunting Profil Pengguna"
 
@@ -284,19 +293,19 @@ msgstr "Tambah Profil"
 
 #: ../admin-tool/sabayon.ui.h:2
 msgid "Profile _name:"
-msgstr "_Nama Profil"
+msgstr "_Nama profil:"
 
 #: ../admin-tool/sabayon.ui.h:3
 msgid "Use this profile for _all users"
-msgstr "Gunakan profil ini untuk _semua pengguna"
+msgstr "Gun_akan profil ini untuk semua pengguna"
 
 #: ../admin-tool/sabayon.ui.h:5
 msgid "_Base on:"
-msgstr "_Berdasarkan pada:"
+msgstr "_Berdasarkan:"
 
 #: ../admin-tool/sabayon.ui.h:6
 msgid "_Details"
-msgstr "_Detil"
+msgstr "_Detail"
 
 #: ../admin-tool/sabayon.ui.h:7
 msgid "_Groups"
@@ -312,11 +321,11 @@ msgstr "_Profil:"
 
 #: ../admin-tool/sabayon.ui.h:10
 msgid "_Users"
-msgstr "_Pengguna"
+msgstr "Pengg_una"
 
 #: ../admin-tool/sabayon.ui.h:11
 msgid "_Users:"
-msgstr "_Pengguna:"
+msgstr "Pengg_una:"
 
 #: ../admin-tool/saveconfirm.py:34
 msgid "Close _Without Saving"
@@ -325,11 +334,11 @@ msgstr "Tutup _Tanpa Menyimpan"
 #: ../admin-tool/saveconfirm.py:41
 #, python-format
 msgid "Save changes to profile \"%s\" before closing?"
-msgstr "Simpan perubahan pada profil \"%s\" sebelum menutup?"
+msgstr "Simpan perubahan profil \"%s\" sebelum ditutup?"
 
 #: ../admin-tool/saveconfirm.py:44
 msgid "If you don't save, all changes will be permanently lost."
-msgstr "Jika Anda tidak menyimpan, semua perubahan akan hilang selamanya."
+msgstr "Jika tidak disimpan, perubahan yang telah dibuat akan hilang."
 
 #: ../admin-tool/sessionwindow.py:157
 #, python-format
@@ -342,7 +351,7 @@ msgstr "_Keluar"
 
 #: ../admin-tool/sessionwindow.py:183
 msgid "_Changes"
-msgstr "_Perubahan"
+msgstr "_Ubah"
 
 #: ../admin-tool/sessionwindow.py:183
 msgid "Edit changes"
@@ -371,8 +380,13 @@ msgstr "Tatanan penguncian bagi %s"
 
 #: ../admin-tool/sessionwindow.py:344
 #, python-format
-msgid "There was a recoverable error while applying the user profile '%s'.  You can report this error now or try to continue editing the user profile."
-msgstr "Ada galat yang dapat diperbaiki ketika menerapkan profil pengguna '%s'. Anda dapat melaporkan galat ini sekarang atau mencoba meneruskan menyunting profil pengguna."
+msgid ""
+"There was a recoverable error while applying the user profile '%s'.  You can "
+"report this error now or try to continue editing the user profile."
+msgstr ""
+"Ada galat yang dapat diperbaiki ketika menerapkan profil pengguna '%s'. Anda "
+"dapat melaporkan galat ini sekarang atau mencoba meneruskan menyunting "
+"profil pengguna."
 
 #: ../admin-tool/sessionwindow.py:348
 msgid "_Report this error"
@@ -380,7 +394,7 @@ msgstr "Lapo_rkan galat ini"
 
 #: ../admin-tool/sessionwindow.py:349
 msgid "_Continue editing"
-msgstr "_Lanjutkan menyunting"
+msgstr "_Lanjut menyunting"
 
 #: ../admin-tool/usersdialog.py:72
 #, python-format
@@ -389,11 +403,11 @@ msgstr "Pengguna untuk profil %s"
 
 #: ../lib/protosession.py:119
 msgid "Unable to find a free X display"
-msgstr "Tidak bisa menemukan tampilan X yang bebas"
+msgstr "Tidak menemukan tampilan X yang bebas"
 
 #: ../lib/protosession.py:383
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
-msgstr "Gagal menjalankan Xephyr: terlalu lama menunggu tanda USR1"
+msgstr "Gagal menjalankan Xephyr: waktu habis menunggu sinyal USR1"
 
 #: ../lib/protosession.py:385
 msgid "Failed to start Xephyr: died during startup"
@@ -405,8 +419,11 @@ msgstr "Gagal menjalankan Xephyr: mati ketika hendak mulai"
 #. stderr_str)
 #: ../lib/protosession.py:476
 #, python-format
-msgid "There was a recoverable error while applying the user profile from file '%s'."
-msgstr "Ada galat yang masih dapat diperbaiki ketika menerapkan profil pengguna dari berkas '%s'."
+msgid ""
+"There was a recoverable error while applying the user profile from file '%s'."
+msgstr ""
+"Ada galat yang masih dapat diperbaiki ketika menerapkan profil pengguna dari "
+"berkas '%s'."
 
 #. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
 #. "%s\n"
@@ -442,105 +459,103 @@ msgstr "%s '%s' telah dihapus"
 #: ../lib/sources/filessource.py:79
 #, python-format
 msgid "%s '%s' changed"
-msgstr "%s '%s' telah dirubah"
+msgstr "%s '%s' telah diubah"
 
 #: ../lib/sources/filessource.py:105
 msgid "Applications menu"
-msgstr "Menu aplikasi"
+msgstr "Menu Aplikasi"
 
 #: ../lib/sources/filessource.py:107
 msgid "Settings menu"
-msgstr "Menu tatanan"
+msgstr "Menu Pengaturan"
 
 #: ../lib/sources/filessource.py:109
 msgid "Server Settings menu"
-msgstr "Menu Tatanan Server"
+msgstr "Menu Pengaturan Server"
 
 #: ../lib/sources/filessource.py:111
 msgid "System Settings menu"
-msgstr "Menu Tatanan System"
+msgstr "Menu Pengaturan Sistem"
 
 #: ../lib/sources/filessource.py:113
 msgid "Start Here menu"
-msgstr "Menu Mulai Disini"
+msgstr "Menu Jalankan di Sini"
 
 #: ../lib/sources/gconfsource.py:90
 #, python-format
 msgid "GConf key '%s' unset"
-msgstr "Tombol GConf '%s' belum ditata"
+msgstr "Kunci GConf '%s' tidak disetel"
 
 #: ../lib/sources/gconfsource.py:92
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
-msgstr "Tombol GConf '%s' ditata ke kalimat '%s'"
+msgstr "Kunci GConf '%s' disetel menjadi string '%s'"
 
 #: ../lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
-msgstr "Tombol GConf '%s' ditata ke integer '%s'"
+msgstr "Kunci GConf '%s' disetel menjadi integer '%s'"
 
 #: ../lib/sources/gconfsource.py:96
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
-msgstr "Tombol GConf '%s' ditata ke float '%s'"
+msgstr "Kunci GConf '%s' disetel menjadi pecahan '%s'"
 
 #: ../lib/sources/gconfsource.py:98
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
-msgstr "Tombol GConf '%s' ditata ke boolean '%s'"
+msgstr "Kunci GConf '%s' disetel menjadi boolean '%s'"
 
 #: ../lib/sources/gconfsource.py:100
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
-msgstr "Tombol GConf '%s' ditata ke bagan '%s'"
+msgstr "Kunci GConf '%s' disetel menjadi skema '%s'"
 
 #: ../lib/sources/gconfsource.py:102
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
-msgstr "Tombol GConf '%s' ditata ke daftar '%s'"
+msgstr "Kunci GConf '%s' disetel menjadi daftar '%s'"
 
 #: ../lib/sources/gconfsource.py:104
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
-msgstr "Tombol GConf '%s' ditata ke pasangan '%s'"
+msgstr "Kunci GConf '%s' disetel menjadi pasangan '%s'"
 
 #: ../lib/sources/gconfsource.py:106
 #, python-format
 msgid "GConf key '%s' set to '%s'"
-msgstr "Tombol GConf '%s' ditata ke '%s'"
+msgstr "Kunci GConf '%s' disetel menjadi '%s'"
 
 #: ../lib/sources/gconfsource.py:138
 msgid "Default GConf settings"
-msgstr "Tatanan Bawaan GConf"
+msgstr "Pengaturan baku GConf"
 
 #: ../lib/sources/gconfsource.py:140
 msgid "Mandatory GConf settings"
-msgstr "Tatanan wajib GConf"
+msgstr "Pengaturan mandatori GConf"
 
 #: ../lib/sources/mozillasource.py:135
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
-msgstr "Kunci Mozilla '%s' ditata ke '%s'"
+msgstr "Kunci Mozilla '%s' disetel menjadi '%s'"
 
 #: ../lib/sources/mozillasource.py:137
 #, python-format
 msgid "Mozilla key '%s' unset"
-msgstr "Kunci Mozilla '%s' belum ditata"
+msgstr "Kunci Mozilla '%s' tidak disetel"
 
 #: ../lib/sources/mozillasource.py:139
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
-msgstr "Kunci Mozilla '%s' diubah menjadi '%s'"
+msgstr "Kunzi Mozilla '%s' diubah menjadi '%s'"
 
-#: ../lib/sources/mozillasource.py:169
-#: ../lib/sources/mozillasource.py:179
+#: ../lib/sources/mozillasource.py:169 ../lib/sources/mozillasource.py:179
 msgid "Web browser preferences"
 msgstr "Preferensi peramban web"
 
-#: ../lib/sources/mozillasource.py:171
-#: ../lib/sources/mozillasource.py:181
+#: ../lib/sources/mozillasource.py:171 ../lib/sources/mozillasource.py:181
 msgid "Web browser bookmarks"
-msgstr "Bookmarks peramban web"
+msgstr "Penada tautan peramban web"
 
 #: ../lib/sources/mozillasource.py:173
 msgid "Web browser profile list"
@@ -563,7 +578,7 @@ msgstr "bawaan redundan di bagian %s"
 
 #: ../lib/sources/mozillasource.py:925
 msgid "no default profile"
-msgstr "tiada profil bawaan"
+msgstr "tidak ada profil utama"
 
 #: ../lib/sources/mozillasource.py:980
 #, python-format
@@ -645,7 +660,7 @@ msgstr "Tombol Kunci Layar"
 
 #: ../lib/sources/paneldelegate.py:259
 msgid "Logout button"
-msgstr "Tombol log keluar"
+msgstr "Tombol Log Keluar"
 
 #: ../lib/sources/paneldelegate.py:261
 msgid "Run Application button"
@@ -653,23 +668,23 @@ msgstr "Tombol Jalankan Aplikasi"
 
 #: ../lib/sources/paneldelegate.py:263
 msgid "Search button"
-msgstr "Tombol cari"
+msgstr "Tombol Cari"
 
 #: ../lib/sources/paneldelegate.py:265
 msgid "Force Quit button"
-msgstr "Tombol Paksa Keluar"
+msgstr "Tombol Tutup Paksa"
 
 #: ../lib/sources/paneldelegate.py:267
 msgid "Connect to Server button"
-msgstr "Tombol Menyambung ke Server"
+msgstr "Tombol Terhubung ke Server"
 
 #: ../lib/sources/paneldelegate.py:269
 msgid "Shutdown button"
-msgstr "Tombol matikan mesin"
+msgstr "Tombol Matikan"
 
 #: ../lib/sources/paneldelegate.py:271
 msgid "Screenshot button"
-msgstr "Tombol cuplik layar"
+msgstr "Tombol Cuplikan Layar"
 
 #: ../lib/sources/paneldelegate.py:274
 msgid "Unknown"
@@ -677,7 +692,7 @@ msgstr "Tak dikenal"
 
 #: ../lib/sources/paneldelegate.py:276
 msgid "Menu Bar"
-msgstr "Batang Menu"
+msgstr "Baris Menu"
 
 #: ../lib/sources/paneldelegate.py:513
 msgid "Panel File"
@@ -691,7 +706,7 @@ msgstr "Gagal membaca berkas '%s': %s"
 #: ../lib/storage.py:183
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
-msgstr "Gagal untuk membaca metadata dari '%s': %s"
+msgstr "Gagal membaca metadata dari '%s': %s"
 
 #: ../lib/storage.py:189
 #, python-format
@@ -765,11 +780,10 @@ msgstr "Tidak dapat membuka %s untuk penulisan"
 msgid "Failed to save UserDatabase to %s"
 msgstr "Gagal menyimpan UserDatabase untuk %s"
 
-#: ../lib/systemdb.py:423
-#: ../lib/systemdb.py:457
+#: ../lib/systemdb.py:423 ../lib/systemdb.py:457
 #, python-format
 msgid "File %s is not a profile configuration"
-msgstr "Berkas %s bukan suatu configurasi profil"
+msgstr "Berkas %s bukanlah konfigurasi profil"
 
 #: ../lib/systemdb.py:430
 #, python-format
@@ -783,14 +797,13 @@ msgstr "Gagal menambahkan pengguna %s ke konfigurasi profil"
 
 #: ../lib/systemdb.py:536
 msgid "Failed to get the user list"
-msgstr "Gagal untuk mendapatkan daftar pengguna"
+msgstr "Gagal memperoleh daftar pengguna"
 
 #: ../lib/systemdb.py:586
 msgid "Failed to get the group list"
 msgstr "Gagal untuk mendapatkan daftar kelompok"
 
-#: ../lib/unittests.py:38
-#: ../lib/unittests.py:39
+#: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
 msgstr "Abaikan PERINGATAN"
 
@@ -806,14 +819,20 @@ msgstr "Menjalankan %s pengujian (%s)"
 
 #: ../lib/unittests.py:70
 msgid "Success!"
-msgstr "Sukses!"
+msgstr "Berhasil!"
 
 #: ../lib/util.py:94
-msgid "Cannot find home directory: not set in /etc/passwd and no value for $HOME in environment"
-msgstr "Tidak bisa menemukan direktori rumah. tidak ditentukan di /etc/passwd dan tidak ada nilai untuk $HOME pada lingkungan"
+msgid ""
+"Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
+"environment"
+msgstr ""
+"Tidak bisa menemukan direktori rumah. tidak ditentukan di /etc/passwd dan "
+"tidak ada nilai untuk $HOME pada lingkungan"
 
-#: ../lib/util.py:110
-#: ../lib/util.py:137
-msgid "Cannot find username: not set in /etc/passwd and no value for $USER in environment"
-msgstr "Tidak menemukan nama pengguna. tidak ditentukan di /etc/passwd dan tidak ada nilai untuk $USER pada lingkungan"
-
+#: ../lib/util.py:110 ../lib/util.py:137
+msgid ""
+"Cannot find username: not set in /etc/passwd and no value for $USER in "
+"environment"
+msgstr ""
+"Tidak menemukan nama pengguna. tidak ditentukan di /etc/passwd dan tidak ada "
+"nilai untuk $USER pada lingkungan"
