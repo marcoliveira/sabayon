@@ -2,15 +2,15 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Yousef Raffah <yousef@raffah.com>, 2006.
-# Khaled Hosny <khaledhosny@eglug.org>, 2007, 2009.
+# Khaled Hosny <khaledhosny@eglug.org>, 2007, 2009, 2010.
 # Djihed Afifi <djihed@gmail.com>, 2007.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-21 21:44-0600\n"
-"PO-Revision-Date: 2009-08-08 21:17+0300\n"
+"POT-Creation-Date: 2010-09-24 15:28+0300\n"
+"PO-Revision-Date: 2010-09-24 15:28+0300\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,8 +18,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ar\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Virtaal 0.4.0\n"
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Virtaal 0.6.1\n"
 
 #: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
@@ -46,76 +46,80 @@ msgstr "تجاهل"
 msgid "Lock"
 msgstr "أقفل"
 
-#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:238
+#: ../admin-tool/changeswindow.py:127 ../admin-tool/editorwindow.py:263
 msgid "Description"
 msgstr "شرح"
 
-#: ../admin-tool/editorwindow.py:97
+#: ../admin-tool/editorwindow.py:100
 #, python-format
 msgid "Profile %s"
 msgstr "الملف الشخصي %s"
 
-#: ../admin-tool/editorwindow.py:202 ../admin-tool/sessionwindow.py:177
+#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:179
 msgid "_Profile"
 msgstr "_ملف شخصي"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
 msgid "_Save"
 msgstr "ا_حفظ"
 
-#: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
+#: ../admin-tool/editorwindow.py:206 ../admin-tool/sessionwindow.py:180
 msgid "Save profile"
 msgstr "احفظ الملف الشخصي"
 
-#: ../admin-tool/editorwindow.py:204
+#: ../admin-tool/editorwindow.py:207
 msgid "_Close"
 msgstr "أ_غلق"
 
-#: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:181
 msgid "Close the current window"
 msgstr "أغلق النافذة الحالية"
 
-#: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
+#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:182
 msgid "_Edit"
 msgstr "_حرِّر"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "_Delete"
 msgstr "اح_ذف"
 
-#: ../admin-tool/editorwindow.py:206
+#: ../admin-tool/editorwindow.py:209
 msgid "Delete item"
 msgstr "احذف عنصر"
 
-#: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:183
+#: ../admin-tool/editorwindow.py:210 ../admin-tool/sessionwindow.py:185
 msgid "_Help"
 msgstr "_مساعدة"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
 msgid "_Contents"
-msgstr ""
+msgstr "ال_محتويات"
 
-#: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
+#: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
 msgid "Help Contents"
-msgstr ""
+msgstr "محتويات المساعدة"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:212 ../admin-tool/sessionwindow.py:187
 msgid "_About"
 msgstr "_عن"
 
-#: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
+#: ../admin-tool/editorwindow.py:212 ../admin-tool/sessionwindow.py:187
 msgid "About Sabayon"
 msgstr "عن سابايون"
 
-#: ../admin-tool/editorwindow.py:270 ../lib/sources/gconfsource.py:124
+#: ../admin-tool/editorwindow.py:267
+msgid "Source"
+msgstr "المصدر"
+
+#: ../admin-tool/editorwindow.py:300 ../lib/sources/gconfsource.py:124
 msgid "GConf"
 msgstr "GConf"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
+#: ../admin-tool/editorwindow.py:304 ../lib/sources/filessource.py:86
 msgid "Files"
 msgstr "ملفات"
 
-#: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
+#: ../admin-tool/editorwindow.py:304 ../lib/sources/paneldelegate.py:279
 msgid "Panel"
 msgstr "شريط"
 
@@ -165,7 +169,7 @@ msgstr "زوج"
 msgid "Profile settings: %s"
 msgstr "خصائص الملف الشخصي: %s"
 
-#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:404
+#: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:423
 #: ../admin-tool/usersdialog.py:87
 msgid "Name"
 msgstr "اسم"
@@ -179,13 +183,13 @@ msgid "Value"
 msgstr "قيمة"
 
 #: ../admin-tool/groupsdialog.py:61
-#, fuzzy, python-format
+#, python-format
 msgid "Groups for profile %s"
-msgstr "مستخدمي الملف الشخصي %s"
+msgstr "مجموعات الملف الشخصي %s"
 
 #: ../admin-tool/groupsdialog.py:71
 msgid "Group"
-msgstr ""
+msgstr "المجموعة"
 
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
@@ -197,7 +201,7 @@ msgstr "استخدم هذا الملف الشخصي"
 #. to form a unique profile name e.g.
 #. "Artist Workstation (5)"
 #.
-#: ../admin-tool/profilesdialog.py:520
+#: ../admin-tool/profilesdialog.py:550
 #, python-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -260,11 +264,11 @@ msgstr ""
 "سيغادر سابايون الآن. كانت هناك أخطاء يمكن حلها، يمكنك المساعدة على حل هذا "
 "المشكل بإرسال اسم الولوج %s إلى %s"
 
-#: ../admin-tool/sabayon-apply:111
+#: ../admin-tool/sabayon-apply:136
 msgid "Please use -h for usage options"
 msgstr "المرجو استعمال -h للحصول على خيارات الاستعمال"
 
-#: ../admin-tool/sabayon-apply:123
+#: ../admin-tool/sabayon-apply:148
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "لايوجد ملف شخصي للمستخدم '%s'\n"
@@ -305,11 +309,11 @@ msgstr "_تفاصيل"
 
 #: ../admin-tool/sabayon.ui.h:7
 msgid "_Groups"
-msgstr ""
+msgstr "المجمو_عات"
 
 #: ../admin-tool/sabayon.ui.h:8
 msgid "_Groups:"
-msgstr ""
+msgstr "المجمو_عات:"
 
 #: ../admin-tool/sabayon.ui.h:9
 msgid "_Profiles:"
@@ -333,49 +337,48 @@ msgid "Save changes to profile \"%s\" before closing?"
 msgstr "حفظ التعديلات للحساب الشخصي \"%s\" قبل الإغلاق؟"
 
 #: ../admin-tool/saveconfirm.py:44
-#, fuzzy
 msgid "If you don't save, all changes will be permanently lost."
-msgstr "إذا لم تحفظ، ستُفقد تغييرات آخر ساعة بشكل دائم."
+msgstr "ستضيع جميع التغييرات للأبد إذا لم تحفظ."
 
-#: ../admin-tool/sessionwindow.py:155
+#: ../admin-tool/sessionwindow.py:157
 #, python-format
 msgid "Editing profile %s"
 msgstr "يجري تحرير الملف الشخصي %s"
 
-#: ../admin-tool/sessionwindow.py:179
+#: ../admin-tool/sessionwindow.py:181
 msgid "_Quit"
 msgstr "ا_خرج"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "_Changes"
 msgstr "ال_تعديلات"
 
-#: ../admin-tool/sessionwindow.py:181
+#: ../admin-tool/sessionwindow.py:183
 msgid "Edit changes"
 msgstr "حرِّر التعديلات"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "_Lockdown"
 msgstr "أ_قفل"
 
-#: ../admin-tool/sessionwindow.py:182
+#: ../admin-tool/sessionwindow.py:184
 msgid "Edit Lockdown settings"
 msgstr "حرِّر إ_عدادات القفل"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce Mandatory"
 msgstr "ألزم الفرض"
 
-#: ../admin-tool/sessionwindow.py:188
+#: ../admin-tool/sessionwindow.py:190
 msgid "Enforce mandatory settings in the editing session"
 msgstr "افرض الإعدادات الإلزامية أثناء تحرير الجلسة"
 
-#: ../admin-tool/sessionwindow.py:306
+#: ../admin-tool/sessionwindow.py:308
 #, python-format
 msgid "Lockdown settings for %s"
 msgstr "أقفل الإعدادات الخاصة بـ %s"
 
-#: ../admin-tool/sessionwindow.py:342
+#: ../admin-tool/sessionwindow.py:344
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
@@ -384,11 +387,11 @@ msgstr ""
 "حدث خطأ يمكن حلّه أثناء تطبيق الملف الشخصي '%s'. يمكن التقرير عن هذا الخطأ "
 "الآن أو المواصلة في تحرير الملف الشخصي للمستخدم."
 
-#: ../admin-tool/sessionwindow.py:346
+#: ../admin-tool/sessionwindow.py:348
 msgid "_Report this error"
 msgstr "_قرّر عن هذا الخطأ"
 
-#: ../admin-tool/sessionwindow.py:347
+#: ../admin-tool/sessionwindow.py:349
 msgid "_Continue editing"
 msgstr "وا_صل التحرير"
 
@@ -397,15 +400,15 @@ msgstr "وا_صل التحرير"
 msgid "Users for profile %s"
 msgstr "مستخدمي الملف الشخصي %s"
 
-#: ../lib/protosession.py:112
+#: ../lib/protosession.py:119
 msgid "Unable to find a free X display"
 msgstr "عجز في إيجاد شاشة X متاحة"
 
-#: ../lib/protosession.py:376
+#: ../lib/protosession.py:383
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr "فشل في بدء تشغيل Xephyr: انتهاء الوقت المسموح أثناء انتظار إشارة USR1"
 
-#: ../lib/protosession.py:378
+#: ../lib/protosession.py:385
 msgid "Failed to start Xephyr: died during startup"
 msgstr "فشل في بدء تشغيل Xephyr: ماتت العملية أثناء بدء التشغيل"
 
@@ -413,7 +416,7 @@ msgstr "فشل في بدء تشغيل Xephyr: ماتت العملية أثناء
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:469
+#: ../lib/protosession.py:476
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
@@ -423,44 +426,55 @@ msgstr "حدث خطأ يمكن حلّه أثناء تطبيق الملف الش�
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (FATAL) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:478
+#: ../lib/protosession.py:485
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "حدث خطأ فادح أثناء تطبيق الملف الشخصي للمستخدم من '%s'."
 
 #: ../lib/sources/filessource.py:69
-#, python-format
-msgid "File '%s' created"
-msgstr "أُنشيء الملف '%s'"
+msgid "Directory"
+msgstr "دليل"
 
 #: ../lib/sources/filessource.py:71
-#, python-format
-msgid "File '%s' deleted"
-msgstr "حُذِف الملف '%s'"
+msgid "Link"
+msgstr "رابط"
 
 #: ../lib/sources/filessource.py:73
-#, python-format
-msgid "File '%s' changed"
-msgstr "عُدِّل الملف '%s'"
+msgid "File"
+msgstr "ملف"
 
-#: ../lib/sources/filessource.py:97
+#: ../lib/sources/filessource.py:75
+#, python-format
+msgid "%s '%s' created"
+msgstr "أُُنشئ %s‏ '%s'"
+
+#: ../lib/sources/filessource.py:77
+#, python-format
+msgid "%s '%s' deleted"
+msgstr "حُذِف %s‏ '%s'"
+
+#: ../lib/sources/filessource.py:79
+#, python-format
+msgid "%s '%s' changed"
+msgstr "عُدِّل %s‏ '%s'"
+
+#: ../lib/sources/filessource.py:105
 msgid "Applications menu"
 msgstr "قائمة التطبيقات"
 
-#: ../lib/sources/filessource.py:99
-#, fuzzy
+#: ../lib/sources/filessource.py:107
 msgid "Settings menu"
-msgstr "قائمة خيارات الخادوم"
+msgstr "قائمة الخيارات"
 
-#: ../lib/sources/filessource.py:101
+#: ../lib/sources/filessource.py:109
 msgid "Server Settings menu"
 msgstr "قائمة خيارات الخادوم"
 
-#: ../lib/sources/filessource.py:103
+#: ../lib/sources/filessource.py:111
 msgid "System Settings menu"
 msgstr "قائمة خيارات النظام"
 
-#: ../lib/sources/filessource.py:105
+#: ../lib/sources/filessource.py:113
 msgid "Start Here menu"
 msgstr "قائمة البداية"
 
@@ -509,86 +523,86 @@ msgstr "مفتاح GConf '%s' محدد بالزوج '%s'"
 msgid "GConf key '%s' set to '%s'"
 msgstr "مفتاح GConf '%s' محدد بـ '%s'"
 
-#: ../lib/sources/gconfsource.py:137
+#: ../lib/sources/gconfsource.py:138
 msgid "Default GConf settings"
 msgstr "إعدادات GConf الافتراضية"
 
-#: ../lib/sources/gconfsource.py:139
+#: ../lib/sources/gconfsource.py:140
 msgid "Mandatory GConf settings"
 msgstr "إعدادات GConf الإلزامية"
 
-#: ../lib/sources/mozillasource.py:133
+#: ../lib/sources/mozillasource.py:135
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
 msgstr "مفتاح موزيلا '%s' محدد بـ '%s'"
 
-#: ../lib/sources/mozillasource.py:135
+#: ../lib/sources/mozillasource.py:137
 #, python-format
 msgid "Mozilla key '%s' unset"
 msgstr "مفتاح موزيلا '%s' غير محدد"
 
-#: ../lib/sources/mozillasource.py:137
+#: ../lib/sources/mozillasource.py:139
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "مفتاح موزيلا '%s' تغير إلى '%s'"
 
-#: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
+#: ../lib/sources/mozillasource.py:169 ../lib/sources/mozillasource.py:179
 msgid "Web browser preferences"
 msgstr "خصائص متصفح الوب"
 
-#: ../lib/sources/mozillasource.py:168 ../lib/sources/mozillasource.py:178
+#: ../lib/sources/mozillasource.py:171 ../lib/sources/mozillasource.py:181
 msgid "Web browser bookmarks"
 msgstr "علامات المواقع لمتصفح الوب"
 
-#: ../lib/sources/mozillasource.py:170
+#: ../lib/sources/mozillasource.py:173
 msgid "Web browser profile list"
 msgstr "قائمة الملفات الشخصية لمتصفح الوب"
 
-#: ../lib/sources/mozillasource.py:520
+#: ../lib/sources/mozillasource.py:550
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "الملف غير موجود (%s)"
 
-#: ../lib/sources/mozillasource.py:869
+#: ../lib/sources/mozillasource.py:899
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "الاسم (%(name)s) متكرر في القسم %(section)s"
 
-#: ../lib/sources/mozillasource.py:878
+#: ../lib/sources/mozillasource.py:908
 #, python-format
 msgid "redundant default in section %s"
 msgstr "إفتراض عاطل في القسم %s"
 
-#: ../lib/sources/mozillasource.py:895
+#: ../lib/sources/mozillasource.py:925
 msgid "no default profile"
 msgstr "لايوجد ملف شخصي افتراضي"
 
-#: ../lib/sources/mozillasource.py:950
+#: ../lib/sources/mozillasource.py:980
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "تم إنشاء علامة موقع موزيلا %s -> '%s'"
 
-#: ../lib/sources/mozillasource.py:952
+#: ../lib/sources/mozillasource.py:982
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "تم إنشاء مجلد علامة موقع موزيلا '%s'"
 
-#: ../lib/sources/mozillasource.py:955
+#: ../lib/sources/mozillasource.py:985
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "حُذِفت علامة موقع موزيلا '%s'"
 
-#: ../lib/sources/mozillasource.py:957
+#: ../lib/sources/mozillasource.py:987
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "حُذِفت مجلد علامة موقع موزيلا '%s'"
 
-#: ../lib/sources/mozillasource.py:960
+#: ../lib/sources/mozillasource.py:990
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "تم تغير علامة موقع موزيلا '%s' '%s'"
 
-#: ../lib/sources/mozillasource.py:962
+#: ../lib/sources/mozillasource.py:992
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "تم تغير علامة موقع موزيلا '%s'"
@@ -604,109 +618,116 @@ msgid "Panel '%s' removed"
 msgstr "حُذِفت لوحة المهام '%s'"
 
 #: ../lib/sources/paneldelegate.py:77
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' added"
-msgstr "أضيفت لوحة المهام '%s'"
+msgstr "أضيف البريمج '%s'"
 
 #: ../lib/sources/paneldelegate.py:100
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' removed"
-msgstr "حُذِفت لوحة المهام '%s'"
+msgstr "حُذِف البريمج '%s'"
 
 #: ../lib/sources/paneldelegate.py:123
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' added"
-msgstr "أضيفت لوحة المهام '%s'"
+msgstr "أضيف العنصر '%s'"
 
 #: ../lib/sources/paneldelegate.py:152
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' removed"
-msgstr "حُذِفت لوحة المهام '%s'"
+msgstr "حُذِف العنصر '%s'"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
-#: ../lib/sources/paneldelegate.py:240
+#: ../lib/sources/paneldelegate.py:241
 msgid "Drawer"
 msgstr "درج"
 
-#: ../lib/sources/paneldelegate.py:242
+#: ../lib/sources/paneldelegate.py:243
 msgid "Main Menu"
 msgstr "القائمة الرئيسيّة"
 
-#: ../lib/sources/paneldelegate.py:252
+#: ../lib/sources/paneldelegate.py:253
 #, python-format
 msgid "%s launcher"
 msgstr "%s مُطلِق"
 
-#: ../lib/sources/paneldelegate.py:256
+#: ../lib/sources/paneldelegate.py:257
 msgid "Lock Screen button"
 msgstr "زر قفل الشاشة"
 
-#: ../lib/sources/paneldelegate.py:258
+#: ../lib/sources/paneldelegate.py:259
 msgid "Logout button"
 msgstr "زر الخروج"
 
-#: ../lib/sources/paneldelegate.py:260
+#: ../lib/sources/paneldelegate.py:261
 msgid "Run Application button"
 msgstr "زر تشغيل التطبيقات"
 
-#: ../lib/sources/paneldelegate.py:262
+#: ../lib/sources/paneldelegate.py:263
 msgid "Search button"
 msgstr "زر البحث"
 
-#: ../lib/sources/paneldelegate.py:264
+#: ../lib/sources/paneldelegate.py:265
 msgid "Force Quit button"
 msgstr "زر إجبار الخروج"
 
-#: ../lib/sources/paneldelegate.py:266
+#: ../lib/sources/paneldelegate.py:267
 msgid "Connect to Server button"
 msgstr "زر الاتصال بخادوم"
 
-#: ../lib/sources/paneldelegate.py:268
+#: ../lib/sources/paneldelegate.py:269
 msgid "Shutdown button"
 msgstr "زر الإغلاق"
 
-#: ../lib/sources/paneldelegate.py:270
+#: ../lib/sources/paneldelegate.py:271
 msgid "Screenshot button"
 msgstr "زر لقطة الشاشة"
 
-#: ../lib/sources/paneldelegate.py:273
+#: ../lib/sources/paneldelegate.py:274
 msgid "Unknown"
 msgstr "مجهول"
 
-#: ../lib/sources/paneldelegate.py:275
+#: ../lib/sources/paneldelegate.py:276
 msgid "Menu Bar"
 msgstr "شريط القوائم"
 
-#: ../lib/sources/paneldelegate.py:512
+#: ../lib/sources/paneldelegate.py:513
 msgid "Panel File"
 msgstr "ملف لوحة المهام"
 
-#: ../lib/storage.py:172
+#: ../lib/storage.py:173
 #, python-format
 msgid "Failed to read file '%s': %s"
 msgstr "فشل في قراءة الملف '%s': %s"
 
-#: ../lib/storage.py:182
+#: ../lib/storage.py:183
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
 msgstr "فشل في قراءة البيانات العامة من '%s': %s"
 
-#: ../lib/storage.py:188
+#: ../lib/storage.py:189
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
 msgstr "قسم خاطئ في البيانات العامة '%s': %s"
 
-#: ../lib/storage.py:362
+#. change the raise to a dprint, since some files seem to disappear.
+#. raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
+#: ../lib/storage.py:387
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "لايمكن إضافة ملف غير موجود '%s'"
 
-#: ../lib/storage.py:487
+#: ../lib/storage.py:531
+#, python-format
+msgid "Couldn't rmdir '%s'"
+msgstr "تعذّر حذف الدليل '%s'"
+
+#: ../lib/storage.py:536
 #, python-format
 msgid "Couldn't unlink file '%s'"
-msgstr ""
+msgstr "تعذر فك وصل الملف '%s'"
 
-#: ../lib/storage.py:570
+#: ../lib/storage.py:633
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "الملف الشخصي للقراءة فقط %s"
@@ -714,73 +735,70 @@ msgstr "الملف الشخصي للقراءة فقط %s"
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
 #. something like "invalid type for setting blah in /ldap/path/to/blah"
-#: ../lib/systemdb.py:67
+#: ../lib/systemdb.py:77
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
 msgstr "نوع غير صالح للإعدادات %(setting)s في %(np)s"
 
-#: ../lib/systemdb.py:112
+#: ../lib/systemdb.py:122
 msgid "No database file provided"
-msgstr ""
+msgstr "لم يزود أي ملف قاعدة بيانات"
 
-#: ../lib/systemdb.py:232
-#, fuzzy, python-format
+#: ../lib/systemdb.py:253
+#, python-format
 msgid "No LDAP search base specified for %s"
-msgstr "لم تحدد قاعدة البحث ل‍ %s"
+msgstr "لم تحدد قاعدة بحث LDAP ل‍ %s"
 
-#: ../lib/systemdb.py:235
-#, fuzzy, python-format
+#: ../lib/systemdb.py:256
+#, python-format
 msgid "No LDAP query filter specified for %s"
-msgstr "لم يحدد مرشح استعلام لـ %s"
+msgstr "لم يحدد مرشح استعلام LDAP ل‍ %s"
 
-#: ../lib/systemdb.py:238
-#, fuzzy, python-format
+#: ../lib/systemdb.py:259
+#, python-format
 msgid "No LDAP result attribute specified for %s"
-msgstr "صفات النتائج غير محددة لـ %s"
-
-#: ../lib/systemdb.py:247
-#, fuzzy
-msgid "LDAP Scope must be one of: "
-msgstr "يجب أن يكون المدى أحد الفروع أو القاعدة و الواحد"
+msgstr "لم تحدد صفات نتائج LDAP ل‍ %s"
 
 #: ../lib/systemdb.py:268
-#, fuzzy
-msgid "multiple_result must be one of: "
-msgstr "الخيارات الم_تعددة يجب أن تكون أحد الأوائل و عشوائية"
+msgid "LDAP Scope must be one of: "
+msgstr "يجب أن يكون مدى LDAP أحد:"
 
-#: ../lib/systemdb.py:361
+#: ../lib/systemdb.py:288
+msgid "multiple_result must be one of: "
+msgstr "الخيارات الم_تعددة يجب أن تكون أحد:"
+
+#: ../lib/systemdb.py:381
 #, python-format
 msgid "Could not open %s for writing"
 msgstr "تعذر فتح %s للكتابة"
 
-#: ../lib/systemdb.py:374
+#: ../lib/systemdb.py:394
 #, python-format
 msgid "Failed to save UserDatabase to %s"
 msgstr "فشل في حفظ قاعدة بيانات المستخدم إلى %s"
 
-#: ../lib/systemdb.py:397 ../lib/systemdb.py:431
+#: ../lib/systemdb.py:423 ../lib/systemdb.py:457
 #, python-format
 msgid "File %s is not a profile configuration"
 msgstr "%s ليس بملف إعدادات الملف الشخصي"
 
-#: ../lib/systemdb.py:404
+#: ../lib/systemdb.py:430
 #, python-format
 msgid "Failed to add default profile %s to configuration"
 msgstr "فشل في إضافة الملف الشخصي الافتراضي %s إلى الإعدادات"
 
-#: ../lib/systemdb.py:438
+#: ../lib/systemdb.py:464
 #, python-format
 msgid "Failed to add user %s to profile configuration"
 msgstr "فشل في إضافة المستخدم %s إلى إعدادات الملف الشخصي"
 
-#: ../lib/systemdb.py:510
+#: ../lib/systemdb.py:536
 msgid "Failed to get the user list"
 msgstr "فشل في الحصول على قائمة المستخدمين"
 
-#: ../lib/systemdb.py:560
-#, fuzzy
+#: ../lib/systemdb.py:586
 msgid "Failed to get the group list"
-msgstr "فشل في الحصول على قائمة المستخدمين"
+msgstr "فشل في الحصول على قائمة المجموعة"
 
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
