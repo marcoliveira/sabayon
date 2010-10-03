@@ -10,16 +10,14 @@ msgstr ""
 "Project-Id-Version: sabayon\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=sabayon&component=general\n"
-"POT-Creation-Date: 2010-02-18 18:40+0000\n"
-"PO-Revision-Date: 2010-02-19 00:45+0100\n"
+"POT-Creation-Date: 2010-06-14 12:14+0000\n"
+"PO-Revision-Date: 2010-10-03 22:35+0200\n"
 "Last-Translator: Peter Mráz <etkinator@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
-"X-Poedit-Language: Slovak\n"
-"X-Poedit-Country: SLOVAKIA\n"
 
 #: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
@@ -67,7 +65,7 @@ msgstr "Uložiť profil"
 
 #: ../admin-tool/editorwindow.py:207
 msgid "_Close"
-msgstr "_Zavrieť"
+msgstr "Za_vrieť"
 
 #: ../admin-tool/editorwindow.py:207 ../admin-tool/sessionwindow.py:181
 msgid "Close the current window"
@@ -91,11 +89,11 @@ msgstr "_Pomocník"
 
 #: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
 msgid "_Contents"
-msgstr ""
+msgstr "Ob_sah"
 
 #: ../admin-tool/editorwindow.py:211 ../admin-tool/sessionwindow.py:186
 msgid "Help Contents"
-msgstr ""
+msgstr "Obsah pomocníka"
 
 #: ../admin-tool/editorwindow.py:212 ../admin-tool/sessionwindow.py:187
 msgid "_About"
@@ -107,7 +105,7 @@ msgstr "O programe Sabayon"
 
 #: ../admin-tool/editorwindow.py:267
 msgid "Source"
-msgstr ""
+msgstr "Zdroj"
 
 #: ../admin-tool/editorwindow.py:300 ../lib/sources/gconfsource.py:124
 msgid "GConf"
@@ -168,6 +166,7 @@ msgid "Profile settings: %s"
 msgstr "Nastavenia profilu: %s"
 
 # * https://bugzilla.gnome.org/show_bug.cgi?id=609972
+# 2x Názov (profilu), 1x meno (používateľa) - a teraz sa rozhodni ;-)
 #: ../admin-tool/gconfviewer.py:110 ../admin-tool/profilesdialog.py:423
 #: ../admin-tool/usersdialog.py:87
 msgid "Name"
@@ -182,14 +181,13 @@ msgid "Value"
 msgstr "Hodnota"
 
 #: ../admin-tool/groupsdialog.py:61
-#, fuzzy, python-format
-#| msgid "Users for profile %s"
+#, python-format
 msgid "Groups for profile %s"
-msgstr "Používatelia používajúci profil %s"
+msgstr "Skupiny pre profil %s"
 
 #: ../admin-tool/groupsdialog.py:71
 msgid "Group"
-msgstr ""
+msgstr "Skupina"
 
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
@@ -210,7 +208,7 @@ msgstr "%s (%s)"
 msgid ""
 "Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr ""
-"Vaše konto nemá práva na spustenie nástroja Profily používateľov pracovnej "
+"Váš účet nemá práva na spustenie nástroja Profily používateľov pracovnej "
 "plochy"
 
 #: ../admin-tool/sabayon:78
@@ -266,11 +264,11 @@ msgstr ""
 "Sabayon sa teraz ukončí. Vyskytli sa nejaké odstrániteľné chyby, ktoré nám "
 "môžete pomôcť odladiť odoslaním záznamu v %s na %s"
 
-#: ../admin-tool/sabayon-apply:125
+#: ../admin-tool/sabayon-apply:136
 msgid "Please use -h for usage options"
 msgstr "Prosím, použite -h, aby ste sa dozvedeli možnosti použitia"
 
-#: ../admin-tool/sabayon-apply:137
+#: ../admin-tool/sabayon-apply:148
 #, c-format
 msgid "No profile for user '%s' found\n"
 msgstr "Nebol nájdený žiadny profil pre používateľa '%s'\n"
@@ -310,11 +308,11 @@ msgstr "Po_drobnosti"
 
 #: ../admin-tool/sabayon.ui.h:7
 msgid "_Groups"
-msgstr ""
+msgstr "_Skupiny"
 
 #: ../admin-tool/sabayon.ui.h:8
 msgid "_Groups:"
-msgstr ""
+msgstr "_Skupiny:"
 
 #: ../admin-tool/sabayon.ui.h:9
 msgid "_Profiles:"
@@ -322,7 +320,7 @@ msgstr "P_rofily:"
 
 #: ../admin-tool/sabayon.ui.h:10
 msgid "_Users"
-msgstr "P_oužívatelia"
+msgstr "Po_užívatelia"
 
 #: ../admin-tool/sabayon.ui.h:11
 msgid "_Users:"
@@ -337,12 +335,13 @@ msgstr "Zavrieť _bez uloženia"
 msgid "Save changes to profile \"%s\" before closing?"
 msgstr "Uložiť pred zatvorením zmeny do profilu \"%s\"?"
 
+# Sme si istí, že (ne)ukladáme "zmeny" (ich)?
+# Možno ukladáme súbor, alebo nastavenie a v závislosti od kontextu by
+# mohol byť aktuálny preklad nesprávny.
+# (takmer) rovnaké reťazce (predchádzajúci sa nachádza v dialógovom okne nad týmto) sú v gedit a tam je to preložené neutrálnejšie. Zmenené.
 #: ../admin-tool/saveconfirm.py:44
-#, fuzzy
-#| msgid ""
-#| "If you don't save, changes from the last hour will be permanently lost."
 msgid "If you don't save, all changes will be permanently lost."
-msgstr "Zmeny vykonané za poslednú hodinu sa stratia, ak ich neuložíte."
+msgstr "Ak neuložíte, všetky vaše zmeny budú definitívne stratené."
 
 #: ../admin-tool/sessionwindow.py:157
 #, python-format
@@ -351,7 +350,7 @@ msgstr "Úprava profilu %s"
 
 #: ../admin-tool/sessionwindow.py:181
 msgid "_Quit"
-msgstr "_Ukončiť"
+msgstr "U_končiť"
 
 #: ../admin-tool/sessionwindow.py:183
 msgid "_Changes"
@@ -405,84 +404,81 @@ msgstr "_Pokračovať v upravovaní"
 msgid "Users for profile %s"
 msgstr "Používatelia pre profil %s"
 
-#: ../lib/protosession.py:112
+#: ../lib/protosession.py:119
 msgid "Unable to find a free X display"
 msgstr "Nepodarilo sa nájsť voľný displej systému X"
 
-#: ../lib/protosession.py:376
-#, fuzzy
-#| msgid "Failed to start Xnest: timed out waiting for USR1 signal"
+#: ../lib/protosession.py:383
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
-msgstr "Zlyhalo spustenie Xnest: vypršal limit pri čakaní na signál USR1"
+msgstr ""
+"Nepodarilo sa spustiť Xephyr: vypršal časový limit pri čakaní na signál USR1"
 
-#: ../lib/protosession.py:378
-#, fuzzy
-#| msgid "Failed to start Xnest: died during startup"
+#: ../lib/protosession.py:385
 msgid "Failed to start Xephyr: died during startup"
-msgstr "Zlyhalo spustenie Xnest: ukončil sa počas spúšťania"
+msgstr "Nepodarilo sa spustiť Xephyr: počas spúšťania sa nečakane ukončil"
 
 #. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (RECOVERABLE) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:469
+#: ../lib/protosession.py:476
 #, python-format
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
 msgstr ""
-"Prie aplikovaní používateľského profilu zo súboru '%s' nastala odstrániteľná "
+"Pri aplikovaní používateľského profilu zo súboru '%s' nastala odstrániteľná "
 "chyba."
 
 #. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
 #. "%s\n"
 #. "========== END SABAYON-APPLY LOG (FATAL) ==========",
 #. stderr_str)
-#: ../lib/protosession.py:478
+#: ../lib/protosession.py:485
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr "Pri aplikovaní používateľského profilu zo '%s' nastala závažná chyba."
 
+# * https://bugzilla.gnome.org/show_bug.cgi?id=611388
 #: ../lib/sources/filessource.py:69
 msgid "Directory"
-msgstr ""
+msgstr "Adresár"
 
 #: ../lib/sources/filessource.py:71
 msgid "Link"
-msgstr ""
+msgstr "Odkaz"
 
 #: ../lib/sources/filessource.py:73
-#, fuzzy
-#| msgid "Files"
 msgid "File"
-msgstr "Súbory"
+msgstr "Súbor"
 
+# * https://bugzilla.gnome.org/show_bug.cgi?id=611389
+# (Súbor|Adresár|Odkaz) 'názov' vytvorený
 #: ../lib/sources/filessource.py:75
-#, fuzzy, python-format
-#| msgid "File '%s' created"
+#, python-format
 msgid "%s '%s' created"
-msgstr "Bol vytvorený súbor '%s'"
+msgstr "%s '%s' vytvorený"
 
+# * https://bugzilla.gnome.org/show_bug.cgi?id=611389
+# (Súbor|Adresár|Odkaz) 'názov' odstránený
 #: ../lib/sources/filessource.py:77
-#, fuzzy, python-format
-#| msgid "File '%s' deleted"
+#, python-format
 msgid "%s '%s' deleted"
-msgstr "Bol odstránený súbor '%s'"
+msgstr "%s '%s' odstránený"
 
+# * https://bugzilla.gnome.org/show_bug.cgi?id=611389
+# (Súbor|Adresár|Odkaz) 'názov' zmenený
 #: ../lib/sources/filessource.py:79
-#, fuzzy, python-format
-#| msgid "File '%s' changed"
+#, python-format
 msgid "%s '%s' changed"
-msgstr "Bol zmenený súbor '%s'"
+msgstr "%s '%s' zmenený"
 
 #: ../lib/sources/filessource.py:105
 msgid "Applications menu"
 msgstr "Ponuka Aplikácie"
 
 #: ../lib/sources/filessource.py:107
-#, fuzzy
-#| msgid "Server Settings menu"
 msgid "Settings menu"
-msgstr "Ponuka Nastavenia servera"
+msgstr "Ponuka Nastavenia"
 
 #: ../lib/sources/filessource.py:109
 msgid "Server Settings menu"
@@ -549,86 +545,86 @@ msgstr "Predvolené nastavenia GConf"
 msgid "Mandatory GConf settings"
 msgstr "Povinné nastavenia GConf"
 
-#: ../lib/sources/mozillasource.py:133
+#: ../lib/sources/mozillasource.py:135
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
 msgstr "Mozilla kľúč '%s' nastavený na '%s'"
 
-#: ../lib/sources/mozillasource.py:135
+#: ../lib/sources/mozillasource.py:137
 #, python-format
 msgid "Mozilla key '%s' unset"
 msgstr "Mozilla kľúč '%s' odnastavený"
 
-#: ../lib/sources/mozillasource.py:137
+#: ../lib/sources/mozillasource.py:139
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
 msgstr "Mozilla kľúč '%s' zmenený na '%s'"
 
-#: ../lib/sources/mozillasource.py:167 ../lib/sources/mozillasource.py:177
+#: ../lib/sources/mozillasource.py:169 ../lib/sources/mozillasource.py:179
 msgid "Web browser preferences"
 msgstr "Predvoľby internetového prehliadača"
 
-#: ../lib/sources/mozillasource.py:169 ../lib/sources/mozillasource.py:179
+#: ../lib/sources/mozillasource.py:171 ../lib/sources/mozillasource.py:181
 msgid "Web browser bookmarks"
 msgstr "Záložky internetového prehliadača"
 
-#: ../lib/sources/mozillasource.py:171
+#: ../lib/sources/mozillasource.py:173
 msgid "Web browser profile list"
 msgstr "Zoznam profilov internetového prehliadača"
 
-#: ../lib/sources/mozillasource.py:521
+#: ../lib/sources/mozillasource.py:550
 #, python-format
 msgid "File Not Found (%s)"
 msgstr "Súbor nenájdený (%s)"
 
 # * https://bugzilla.gnome.org/show_bug.cgi?id=609973
-#: ../lib/sources/mozillasource.py:870
+#: ../lib/sources/mozillasource.py:899
 #, fuzzy, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
 msgstr "duplicitný názov (%(name)s) v sekcii %(section)s"
 
 # * https://bugzilla.gnome.org/show_bug.cgi?id=609974
-#: ../lib/sources/mozillasource.py:879
+#: ../lib/sources/mozillasource.py:908
 #, fuzzy, python-format
 msgid "redundant default in section %s"
 msgstr "nadbytočná predvoľba v sekcii %s"
 
-#: ../lib/sources/mozillasource.py:896
+#: ../lib/sources/mozillasource.py:925
 msgid "no default profile"
 msgstr "žiadny predvolený profil"
 
 # * https://bugzilla.gnome.org/show_bug.cgi?id=609975
-#: ../lib/sources/mozillasource.py:951
+#: ../lib/sources/mozillasource.py:980
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
 msgstr "Mozilla záložka vytvorená '%s' -> '%s'"
 
 # * https://bugzilla.gnome.org/show_bug.cgi?id=609975
-#: ../lib/sources/mozillasource.py:953
+#: ../lib/sources/mozillasource.py:982
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
 msgstr "Priečinok Mozilla záložiek vytvorený '%s'"
 
 # * https://bugzilla.gnome.org/show_bug.cgi?id=609975
-#: ../lib/sources/mozillasource.py:956
+#: ../lib/sources/mozillasource.py:985
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
 msgstr "Mozilla záložka odstránená '%s'"
 
 # * https://bugzilla.gnome.org/show_bug.cgi?id=609975
-#: ../lib/sources/mozillasource.py:958
+#: ../lib/sources/mozillasource.py:987
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
 msgstr "Priečinok Mozilla záložiek odstránený '%s'"
 
 # * https://bugzilla.gnome.org/show_bug.cgi?id=609975
-#: ../lib/sources/mozillasource.py:961
+#: ../lib/sources/mozillasource.py:990
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
 msgstr "Mozilla záložka zmenená '%s' '%s'"
 
 # * https://bugzilla.gnome.org/show_bug.cgi?id=609975
-#: ../lib/sources/mozillasource.py:963
+#: ../lib/sources/mozillasource.py:992
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
 msgstr "Priečinok Mozilla záložiek zmenený '%s'"
@@ -644,28 +640,24 @@ msgid "Panel '%s' removed"
 msgstr "Panel '%s' odstránený"
 
 #: ../lib/sources/paneldelegate.py:77
-#, fuzzy, python-format
-#| msgid "Panel '%s' added"
+#, python-format
 msgid "Applet '%s' added"
-msgstr "Panel '%s' bol pridaný"
+msgstr "Aplet '%s' pridaný"
 
 #: ../lib/sources/paneldelegate.py:100
-#, fuzzy, python-format
-#| msgid "Panel '%s' removed"
+#, python-format
 msgid "Applet '%s' removed"
-msgstr "Panel '%s' bol odstránený"
+msgstr "Aplet '%s' odstránený"
 
 #: ../lib/sources/paneldelegate.py:123
-#, fuzzy, python-format
-#| msgid "Panel '%s' added"
+#, python-format
 msgid "Object '%s' added"
-msgstr "Panel '%s' bol pridaný"
+msgstr "Objekt '%s' pridaný"
 
 #: ../lib/sources/paneldelegate.py:152
-#, fuzzy, python-format
-#| msgid "Panel '%s' removed"
+#, python-format
 msgid "Object '%s' removed"
-msgstr "Panel '%s' bol odstránený"
+msgstr "Objekt '%s' odstránený"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
 #: ../lib/sources/paneldelegate.py:241
@@ -681,47 +673,51 @@ msgstr "Hlavná ponuka"
 msgid "%s launcher"
 msgstr "Spúšťač %s"
 
+# * https://bugzilla.gnome.org/show_bug.cgi?id=611390
 #: ../lib/sources/paneldelegate.py:257
 msgid "Lock Screen button"
-msgstr "Tlačidlo Zamknúť obrazovku"
+msgstr "Tlačidlo Uzamknúť obrazovku"
 
+# * https://bugzilla.gnome.org/show_bug.cgi?id=611390
 #: ../lib/sources/paneldelegate.py:259
 msgid "Logout button"
 msgstr "Tlačidlo Odhlásiť"
 
+# * https://bugzilla.gnome.org/show_bug.cgi?id=611390
 #: ../lib/sources/paneldelegate.py:261
 msgid "Run Application button"
 msgstr "Tlačidlo Spustiť aplikáciu"
 
+# * https://bugzilla.gnome.org/show_bug.cgi?id=611390
 #: ../lib/sources/paneldelegate.py:263
 msgid "Search button"
 msgstr "Tlačidlo Hľadať"
 
+# * https://bugzilla.gnome.org/show_bug.cgi?id=611390
+# Všetky ostatné sú v neurčitku. Zmenené
 #: ../lib/sources/paneldelegate.py:265
-#, fuzzy
-#| msgid "Logout button"
 msgid "Force Quit button"
-msgstr "Tlačidlo Odhlásiť"
+msgstr "Tlačidlo Vynútiť ukončenie"
 
+# * https://bugzilla.gnome.org/show_bug.cgi?id=611390
 #: ../lib/sources/paneldelegate.py:267
-#, fuzzy
-#| msgid "Lock Screen button"
 msgid "Connect to Server button"
-msgstr "Tlačidlo Zamknúť obrazovku"
+msgstr "Tlačidlo Pripojiť na server"
 
+# * https://bugzilla.gnome.org/show_bug.cgi?id=611390
 #: ../lib/sources/paneldelegate.py:269
-#, fuzzy
-#| msgid "Logout button"
 msgid "Shutdown button"
-msgstr "Tlačidlo Odhlásiť"
+msgstr "Tlačidlo Vypnúť"
 
+# * https://bugzilla.gnome.org/show_bug.cgi?id=611390
 #: ../lib/sources/paneldelegate.py:271
 msgid "Screenshot button"
 msgstr "Tlačidlo Zachytiť obrazovku"
 
+# * https://bugzilla.gnome.org/show_bug.cgi?id=621748
 #: ../lib/sources/paneldelegate.py:274
 msgid "Unknown"
-msgstr ""
+msgstr "Neznámy"
 
 #: ../lib/sources/paneldelegate.py:276
 msgid "Menu Bar"
@@ -734,12 +730,12 @@ msgstr "Panel Súbor"
 #: ../lib/storage.py:173
 #, python-format
 msgid "Failed to read file '%s': %s"
-msgstr "Zlyhalo čítanie súboru '%s': %s"
+msgstr "Nepodarilo sa prečítať súbor '%s': %s"
 
 #: ../lib/storage.py:183
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
-msgstr "Zlyhalo čítanie metadát z '%s': %s"
+msgstr "Nepodarilo sa prečítať metadáta z '%s': %s"
 
 #: ../lib/storage.py:189
 #, python-format
@@ -748,22 +744,28 @@ msgstr "Chybná sekcia metadát v '%s': %s"
 
 #. change the raise to a dprint, since some files seem to disappear.
 #. raise ProfileStorageException (_("Cannot add non-existent file '%s'") % src_path)
-#: ../lib/storage.py:383
+#: ../lib/storage.py:387
 #, python-format
 msgid "Cannot add non-existent file '%s'"
 msgstr "Nedá sa pridať neexistujúci súbor '%s'"
 
-#: ../lib/storage.py:527
+# Obávam sa, že rmdir by sa v reťazcoch pre bežného používateľa nemalo objavovať.
+# peter: nahlásiť ako bug alebo čo s tým?
+# áno, nahlásiť
+#: ../lib/storage.py:531
 #, python-format
 msgid "Couldn't rmdir '%s'"
-msgstr ""
+msgstr "Nepodarilo sa odstrániť priečinok '%s'"
 
-#: ../lib/storage.py:532
+# Obávam sa, že unlink by sa v reťazcoch pre bežného používateľa nemalo objavovať.
+# peter: nahlásiť ako bug alebo čo s tým?
+# áno, nahlásiť
+#: ../lib/storage.py:536
 #, python-format
 msgid "Couldn't unlink file '%s'"
-msgstr ""
+msgstr "Nepodarilo sa odstrániť súbor '%s'"
 
-#: ../lib/storage.py:629
+#: ../lib/storage.py:633
 #, python-format
 msgid "Profile is read-only %s"
 msgstr "Profil je určený iba na čítanie %s"
@@ -778,37 +780,45 @@ msgstr "chybný typ nastavenia %(setting)s v %(np)s"
 
 #: ../lib/systemdb.py:122
 msgid "No database file provided"
-msgstr ""
+msgstr "Nebol poskytnutý databázový súbor"
 
+# Myslím, že "LDAP search base" je odborný termín, ktorého
+# preklad by mal byť citlivo zvolený. Myslím, že aktuálny preklad nie je správny.
+# Peter: ja nemyslím, že by to bol nejaký terminus technikus a myslím, že preklad je správny. 
+# Marcel má pravdu. Koreňom vyhľadávania reálne určuješ (zužuješ) rozsah vyhľadávania, nie je to však to pravé.
 #: ../lib/systemdb.py:253
 #, fuzzy, python-format
-#| msgid "No search base specified for %s"
 msgid "No LDAP search base specified for %s"
-msgstr "Nebolo určené miesto hľadania %s"
+msgstr "Nebol stanovený rozsah vyhľadávania v LDAP pre %s"
 
+# Myslím, že "LDAP query filter" je odborný termín, ktorého
+# preklad by mal byť citlivo zvolený. Myslím, že aktuálny preklad nie je správny.
+# Peter: ja nemyslím, že by to bol nejaký terminus technikus a myslím, že preklad je správny 
+# Marcel má pravdu. A query nie je požiadavka, ale otázka (vyhľadávacia).
 #: ../lib/systemdb.py:256
 #, fuzzy, python-format
-#| msgid "No query filter specified for %s"
 msgid "No LDAP query filter specified for %s"
-msgstr "Nebol určený filter požiadavky %s"
+msgstr "Nebol stanovený filter požiadavky v LDAP pre %s"
 
+# Toto tiež nevyzerá na správny preklad. "Požadovaný" sa tam ako dostalo?
 #: ../lib/systemdb.py:259
-#, fuzzy, python-format
-#| msgid "No result attribute specified for %s"
+#, python-format
 msgid "No LDAP result attribute specified for %s"
-msgstr "Nebol určený výstupný parameter %s"
+msgstr "Nebol stanovený požadovaný atribút result v LDAP pre %s"
 
+# Myslím, že "LDAP Scope" je odborný termín, ktorého
+# preklad by mal byť citlivo zvolený. Myslím, že aktuálny preklad nie je správny.
+# Peter: ja nemyslím, že by to bol nejaký terminus technikus a myslím, že preklad je správny
+# Marcel má pravdu, ale tento preklad je podľa mňa Ok.
 #: ../lib/systemdb.py:268
-#, fuzzy
-#| msgid "Scope must be one of sub, base and one"
 msgid "LDAP Scope must be one of: "
-msgstr "Rozsah musí byť buď sub, base alebo one"
+msgstr "Rozsah vyhľadávania v LDAP musí byť jeden z nasledovných: "
 
+# Nemá tam byť iný rod? Napr. "jedna z" alebo "jedno z"?
+# peter: Podľa pravidiel slovenčiny je multiple_result mužského rodu ak by sme dali napr "Hodnota v multiple_result" bolo by to o niečom inom
 #: ../lib/systemdb.py:288
-#, fuzzy
-#| msgid "multiple_result must be one of first and random"
 msgid "multiple_result must be one of: "
-msgstr "multiple_result musí byť buď first alebo random"
+msgstr "multiple_result musí byť jeden z: "
 
 #: ../lib/systemdb.py:381
 #, python-format
@@ -841,10 +851,8 @@ msgid "Failed to get the user list"
 msgstr "Nepodarilo sa získať zoznam používateľov"
 
 #: ../lib/systemdb.py:586
-#, fuzzy
-#| msgid "Failed to get the user list"
 msgid "Failed to get the group list"
-msgstr "Nepodarilo sa získať zoznam používateľov"
+msgstr "Nepodarilo sa získať zoznam skupín"
 
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
@@ -879,357 +887,3 @@ msgid ""
 msgstr ""
 "Nepodarilo sa nájsť používateľské meno: nie je nastavené v /etc/passwd a v "
 "prostredí neobsahuje $USER žiadnu hodnotu"
-
-#~ msgid "Click to make this setting not mandatory"
-#~ msgstr "Kliknutím zmeníte toto nastavenie na nepovinné"
-
-#~ msgid "Click to make this setting mandatory"
-#~ msgstr "Kliknutím zmeníte toto nastavenie na povinné"
-
-#~ msgid "Disable _command line"
-#~ msgstr "Zakázať _príkazový riadok"
-
-#~ msgid "Disable _printing"
-#~ msgstr "Zakázať _tlačenie"
-
-#~ msgid "Disable print _setup"
-#~ msgstr "Zakázať _nastavenie tlačiarní"
-
-#~ msgid "Disable save to _disk"
-#~ msgstr "Zakázať _ukladanie na disk"
-
-#~ msgid "_Lock down the panels"
-#~ msgstr "_Uzamknúť panely"
-
-#~ msgid "Disable force _quit"
-#~ msgstr "Zakázať _vynútené ukončenie"
-
-#~ msgid "Disable lock _screen"
-#~ msgstr "Zakázať _zamknutie obrazovky"
-
-#~ msgid "Disable log _out"
-#~ msgstr "Zakázať _odhlásenie"
-
-#~ msgid "Disable _quit"
-#~ msgstr "Zakázať u_končenie"
-
-#~ msgid "Disable _arbitrary URL"
-#~ msgstr "Zakázať ľubovoľné _URL"
-
-#~ msgid "Disable _bookmark editing"
-#~ msgstr "Zakázať úpravu _záložiek"
-
-#~ msgid "Disable _history"
-#~ msgstr "Zakázať _históriu"
-
-#~ msgid "Disable _javascript chrome"
-#~ msgstr "Zakázať _javaskript chrome"
-
-#~ msgid "Disable _toolbar editing"
-#~ msgstr "Zakázať úpravu _panelu nástrojov"
-
-#~ msgid "_Fullscreen"
-#~ msgstr "Zobraziť na _celú obrazovku"
-
-#~ msgid "Hide _menubar"
-#~ msgstr "Skryť _lištu s ponukou"
-
-#~ msgid "Remove personal information from documents when saving them"
-#~ msgstr "Odstrániť osobné údaje z dokumentov pri ich ukladaní"
-
-#~ msgid "Warn if macro tries to create a PDF"
-#~ msgstr "Upozorniť, ak sa makro pokúša vytvoriť PDF"
-
-#~ msgid "Warn if macro tries to print a document"
-#~ msgstr "Upozorniť, ak sa makro pokúša vytlačiť dokument"
-
-#~ msgid "Warn if macro tries to save a document"
-#~ msgstr "Upozorniť, ak sa makro pokúša uložiť dokument"
-
-#~ msgid "Warn if macro tries to sign a document"
-#~ msgstr "Upozorniť, ak sa makro pokúša podpísať dokument"
-
-#~ msgid "Recommend password when saving a document"
-#~ msgstr "Pri ukladaní dokumentu odporučiť nastavenie hesla"
-
-#~ msgid "Enable auto-save"
-#~ msgstr "Povoliť automatické ukladanie"
-
-#~ msgid "Printing should mark the document as modified"
-#~ msgstr "Po vytlačení dokument označiť ako zmenený"
-
-#~ msgid "Use system's file dialog"
-#~ msgstr "Používať súborové dialógové okno zo systému"
-
-#~ msgid "Create backup copy on save"
-#~ msgstr "Vytvoriť záložnú kópiu pri ukladaní"
-
-#~ msgid "Warn when saving non-OpenOffice.org formats"
-#~ msgstr "Upozorniť pri ukladaní do iného formátu ako používa OpenOffice.org"
-
-#~ msgid "Use OpenGL"
-#~ msgstr "Používať OpenGL"
-
-#~ msgid "Use system font"
-#~ msgstr "Používať systémové písmo"
-
-#~ msgid "Use anti-aliasing"
-#~ msgstr "Používať vyhladzovanie písma"
-
-#~ msgid "Disable UI customization"
-#~ msgstr "Zakázať prispôsobenie používateľského prostredia"
-
-#~ msgid "Show insensitive menu items"
-#~ msgstr "Zobraziť neaktívne položky ponuky"
-
-#~ msgid "Show font preview"
-#~ msgstr "Zobraziť náhľad písma"
-
-#~ msgid "Show font history"
-#~ msgstr "Zobraziť históriu písiem"
-
-#~ msgid "Show icons in menus"
-#~ msgstr "Zobraziť ikony v ponukách"
-
-#~ msgid ""
-#~ "\n"
-#~ "5\n"
-#~ "10\n"
-#~ "25\n"
-#~ "50"
-#~ msgstr ""
-#~ "\n"
-#~ "5\n"
-#~ "10\n"
-#~ "25\n"
-#~ "50"
-
-#~ msgid ""
-#~ "\n"
-#~ "Automatic\n"
-#~ "Large\n"
-#~ "Small"
-#~ msgstr ""
-#~ "\n"
-#~ "Automatická\n"
-#~ "Veľká\n"
-#~ "Malá"
-
-#~ msgid ""
-#~ "\n"
-#~ "OpenDocument (.odp)\n"
-#~ "PowerPoint 97+ (.ppt)\n"
-#~ "OpenOffice.org 1.1 (.sxi)"
-#~ msgstr ""
-#~ "\n"
-#~ "OpenDocument (.odp)\n"
-#~ "PowerPoint 97+ (.ppt)\n"
-#~ "OpenOffice.org 1.1 (.sxi)"
-
-#~ msgid ""
-#~ "\n"
-#~ "OpenDocument (.ods)\n"
-#~ "Excel 97+ (.xls)\n"
-#~ "OpenOffice.org 1.1 (.sxc)"
-#~ msgstr ""
-#~ "\n"
-#~ "OpenDocument (.ods)\n"
-#~ "Excel 97+ (.xls)\n"
-#~ "OpenOffice.org 1.1 (.sxc)"
-
-#~ msgid ""
-#~ "\n"
-#~ "OpenDocument (.odt)\n"
-#~ "Word 97+ (.doc)\n"
-#~ "OpenOffice.org 1.1 (.sxw)"
-#~ msgstr ""
-#~ "\n"
-#~ "OpenDocument (.odt)\n"
-#~ "Word 97+ (.doc)\n"
-#~ "OpenOffice.org 1.1 (.sxw)"
-
-#~ msgid ""
-#~ "\n"
-#~ "Very High\n"
-#~ "High\n"
-#~ "Medium\n"
-#~ "Low"
-#~ msgstr ""
-#~ "\n"
-#~ "Veľmi vysoká\n"
-#~ "Vysoká\n"
-#~ "Stredná\n"
-#~ "Nízka"
-
-#~ msgid "<b>Disabled Applets</b>"
-#~ msgstr "<b>Zakázané aplety</b>"
-
-#~ msgid "<b>Safe Protocols</b>"
-#~ msgstr "<b>Bezpečné protokoly</b>"
-
-#~ msgid "Default format for presentations:"
-#~ msgstr "Predvolený formát prezentácií:"
-
-#~ msgid "Default format for spreadsheet:"
-#~ msgstr "Predvolený formát tabuliek:"
-
-#~ msgid "Default format for word processor:"
-#~ msgstr "Predvolený formát textového dokumentu:"
-
-#~ msgid "Default icon size"
-#~ msgstr "Predvolená veľkosť ikon"
-
-#~ msgid "Disable _unsafe protocols"
-#~ msgstr "Zakázať _nebezpečné protokoly"
-
-#~ msgid "Epiphany Web Browser"
-#~ msgstr "Internetový prehliadač Epiphany"
-
-#~ msgid "General"
-#~ msgstr "Všeobecné"
-
-#~ msgid "Load / Save"
-#~ msgstr "Otvoriť / Uložiť"
-
-#~ msgid "Lockdown Editor"
-#~ msgstr "Editor uzamknutí"
-
-#~ msgid "Macro Security Level:"
-#~ msgstr "Bezpečnostná úroveň spúšťania makier:"
-
-#~ msgid "Number of undo steps:"
-#~ msgstr "Počet vrátiteľných krokov:"
-
-#~ msgid "OpenOffice.org"
-#~ msgstr "OpenOffice.org"
-
-#~ msgid "Security"
-#~ msgstr "Bezpečnosť"
-
-#~ msgid "User Interface"
-#~ msgstr "Používateľské rozhranie"
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld second will be permanently "
-#~ "lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %ld seconds will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Zmeny vykonané za posledných %ld sekúnd sa stratia, ak ich neuložíte."
-#~ msgstr[1] ""
-#~ "Zmeny vykonané za poslednú %ld sekundu sa stratia, ak ich neuložíte."
-#~ msgstr[2] ""
-#~ "Zmeny vykonané za posledné %ld sekundy sa stratia, ak ich neuložíte."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last minute will be permanently lost."
-#~ msgstr "Zmeny vykonané za poslednú minútu sa stratia, ak ich neuložíte."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last minute and %ld second will be "
-#~ "permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last minute and %ld seconds will be "
-#~ "permanently lost."
-#~ msgstr[0] ""
-#~ "Zmeny vykonané za poslednú minútu a %ld sekúnd sa stratia, ak ich "
-#~ "neuložíte."
-#~ msgstr[1] ""
-#~ "Zmeny vykonané za poslednú minútu a %ld sekundu sa stratia, ak ich "
-#~ "neuložíte."
-#~ msgstr[2] ""
-#~ "Zmeny vykonané za poslednú minútu a %ld sekundy sa stratia, ak ich "
-#~ "neuložíte."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %ld minute will be permanently "
-#~ "lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %ld minutes will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Zmeny vykonané za posledných %ld minút sa stratia, ak ich neuložíte."
-#~ msgstr[1] ""
-#~ "Zmeny vykonané za poslednú %ld minútu sa stratia, ak ich neuložíte."
-#~ msgstr[2] ""
-#~ "Zmeny vykonané za posledné %ld minúty sa stratia, ak ich neuložíte."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last hour and %d minute will be "
-#~ "permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last hour and %d minutes will be "
-#~ "permanently lost."
-#~ msgstr[0] ""
-#~ "Zmeny vykonané za poslednú hodinu a %ld minút sa stratia, ak ich "
-#~ "neuložíte."
-#~ msgstr[1] ""
-#~ "Zmeny vykonané za poslednú hodinu a %ld minútu sa stratia, ak ich "
-#~ "neuložíte."
-#~ msgstr[2] ""
-#~ "Zmeny vykonané za poslednú hodinu a %ld minúty sa stratia, ak ich "
-#~ "neuložíte."
-
-#~ msgid ""
-#~ "If you don't save, changes from the last %d hour will be permanently lost."
-#~ msgid_plural ""
-#~ "If you don't save, changes from the last %d hours will be permanently "
-#~ "lost."
-#~ msgstr[0] ""
-#~ "Zmeny vykonané za posledných %ld hodín sa stratia, ak ich neuložíte."
-#~ msgstr[1] ""
-#~ "Zmeny vykonané za poslednú %ld hodinu sa stratia, ak ich neuložíte."
-#~ msgstr[2] ""
-#~ "Zmeny vykonané za posledné %ld hodiny sa stratia, ak ich neuložíte."
-
-#~ msgid "Preferences menu"
-#~ msgstr "Ponuka Predvoľby"
-
-#~ msgid "Applet %s added to top panel"
-#~ msgstr "Aplet %s bol pridaný na horný panel"
-
-#~ msgid "Applet %s added to bottom panel"
-#~ msgstr "Aplet %s bol pridaný na spodný panel"
-
-#~ msgid "Applet %s added to left panel"
-#~ msgstr "Aplet %s bol pridaný na ľavý panel"
-
-#~ msgid "Applet %s added to right panel"
-#~ msgstr "Aplet %s bol pridaný na pravý panel"
-
-#~ msgid "Applet %s removed from top panel"
-#~ msgstr "Aplet %s bol odstránený z horného panelu"
-
-#~ msgid "Applet %s removed from bottom panel"
-#~ msgstr "Aplet %s bol odstránený zo spodného panelu"
-
-#~ msgid "Applet %s removed from left panel"
-#~ msgstr "Aplet %s odstránený z ľavého panelu"
-
-#~ msgid "Applet %s removed from right panel"
-#~ msgstr "Aplet %s bol odstránený z pravého panelu"
-
-#~ msgid "%s added to top panel"
-#~ msgstr "%s: pridané do horného panelu"
-
-#~ msgid "%s added to bottom panel"
-#~ msgstr "%s: pridané do dolného panelu"
-
-#~ msgid "%s added to left panel"
-#~ msgstr "%s: pridané do ľavého panelu"
-
-#~ msgid "%s added to right panel"
-#~ msgstr "%s: pridané do pravého panelu"
-
-#~ msgid "%s removed from top panel"
-#~ msgstr "%s: odstránené z horného panelu"
-
-#~ msgid "%s removed from bottom panel"
-#~ msgstr "%s: odstránené z dolného panelu"
-
-#~ msgid "%s removed from left panel"
-#~ msgstr "%s: odstránené z ľavého panelu"
-
-#~ msgid "%s removed from right panel"
-#~ msgstr "%s: odstránené z pravého panelu"
