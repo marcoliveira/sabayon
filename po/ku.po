@@ -2,26 +2,27 @@
 # Kurdish translation for sabayon
 # Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006
 # This file is distributed under the same license as the sabayon package.
-#
-#
 # Erdal Ronahi <erdal.ronahi@gmail.com>, 2006.
+# OMER ENSARİ <oensari@gmail.com>, 2010.
+# Erdal Ronahî <erdal dot ronahi at gmail dot com>, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: ku\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-12-21 21:44-0600\n"
-"PO-Revision-Date: 2006-02-19 04:57+0100\n"
-"Last-Translator: Erdal Ronahi <erdal.ronahi@gmail.com>\n"
-"Language-Team: Kurdish <ku@li.org>\n"
+"PO-Revision-Date: 2010-10-26 18:44+0200\n"
+"Last-Translator: Erdal Ronahî <erdal dot ronahi at gmail dot com>\n"
+"Language-Team: Kurdish Team http://pckurd.net\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural= n != 1\n"
-"X-Generator: KBabel 1.11\n"
+"Language: ku\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.6.1\n"
 
 #: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
-msgstr ""
+msgstr "Bername ji bo avakirin û guherandina profîlên bikarhêneran"
 
 #: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
@@ -55,7 +56,7 @@ msgstr "_Profîl"
 
 #: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
 msgid "_Save"
-msgstr "_Tomar bike"
+msgstr "_Tomarkirin"
 
 #: ../admin-tool/editorwindow.py:203 ../admin-tool/sessionwindow.py:178
 msgid "Save profile"
@@ -63,19 +64,19 @@ msgstr "Profîlê tomar bike"
 
 #: ../admin-tool/editorwindow.py:204
 msgid "_Close"
-msgstr "_Bigire"
+msgstr "_Girtin"
 
 #: ../admin-tool/editorwindow.py:204 ../admin-tool/sessionwindow.py:179
 msgid "Close the current window"
-msgstr ""
+msgstr "Paceya vekirî bigire"
 
 #: ../admin-tool/editorwindow.py:205 ../admin-tool/sessionwindow.py:180
 msgid "_Edit"
-msgstr "_Biguherîne"
+msgstr "_Guherandin"
 
 #: ../admin-tool/editorwindow.py:206
 msgid "_Delete"
-msgstr "_Jê bibe"
+msgstr "_Jêbirin"
 
 #: ../admin-tool/editorwindow.py:206
 msgid "Delete item"
@@ -87,11 +88,11 @@ msgstr "_Alîkarî"
 
 #: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
 msgid "_Contents"
-msgstr ""
+msgstr "_Naverok"
 
 #: ../admin-tool/editorwindow.py:208 ../admin-tool/sessionwindow.py:184
 msgid "Help Contents"
-msgstr ""
+msgstr "Naveroka alîkariyê"
 
 #: ../admin-tool/editorwindow.py:209 ../admin-tool/sessionwindow.py:185
 msgid "_About"
@@ -107,7 +108,7 @@ msgstr "GConf"
 
 #: ../admin-tool/editorwindow.py:274 ../lib/sources/filessource.py:79
 msgid "Files"
-msgstr "Dosya"
+msgstr "Pel"
 
 #: ../admin-tool/editorwindow.py:274 ../lib/sources/paneldelegate.py:278
 msgid "Panel"
@@ -116,7 +117,7 @@ msgstr "Panel"
 #: ../admin-tool/fileviewer.py:27
 #, python-format
 msgid "Profile file: %s"
-msgstr "Dosiya profîlê: %s"
+msgstr "Pela profîlê: %s"
 
 #: ../admin-tool/gconfviewer.py:57 ../admin-tool/gconfviewer.py:76
 msgid "<no type>"
@@ -128,23 +129,23 @@ msgstr "<nirx tune>"
 
 #: ../admin-tool/gconfviewer.py:62
 msgid "string"
-msgstr ""
+msgstr "rêzik"
 
 #: ../admin-tool/gconfviewer.py:64
 msgid "integer"
-msgstr "integer"
+msgstr "hejmara tam"
 
 #: ../admin-tool/gconfviewer.py:66
 msgid "float"
-msgstr ""
+msgstr "hejmara rasteqîn"
 
 #: ../admin-tool/gconfviewer.py:68
 msgid "boolean"
-msgstr ""
+msgstr "mantiqî"
 
 #: ../admin-tool/gconfviewer.py:70
 msgid "schema"
-msgstr ""
+msgstr "şema"
 
 #: ../admin-tool/gconfviewer.py:72
 msgid "list"
@@ -173,13 +174,13 @@ msgid "Value"
 msgstr "Nirx"
 
 #: ../admin-tool/groupsdialog.py:61
-#, fuzzy, python-format
+#, python-format
 msgid "Groups for profile %s"
-msgstr "Bikarhênerên profîla %s"
+msgstr "Komên profîlê %s"
 
 #: ../admin-tool/groupsdialog.py:71
 msgid "Group"
-msgstr ""
+msgstr "Kom"
 
 #: ../admin-tool/groupsdialog.py:81 ../admin-tool/usersdialog.py:96
 msgid "Use This Profile"
@@ -200,27 +201,32 @@ msgstr "%s (%s)"
 msgid ""
 "Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr ""
+"Hisaba we ne xwedî destûra xebitandina amûra Profîlên Bikarhênerê Sermasê ye"
 
 #: ../admin-tool/sabayon:78
 msgid ""
 "Administrator level permissions are needed to run this program because it "
 "can modify system files."
 msgstr ""
+"Destûrên asta rêveberiyê pêwist e ji bo meşandina vê bernamê, ji ber ku ev "
+"dikare pelên pergalê biguherîne."
 
 #: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
-msgstr ""
+msgstr "Amûra Profîlên Bikarhênerê Sermasê jixwe dixebite"
 
 #: ../admin-tool/sabayon:84
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
 msgstr ""
+"Hun dibe ku nekarin amûra Profîlên Bikarhênerê Sermasê ji navbera danişîna "
+"guherandina profîlê de bi kar bînin"
 
 #: ../admin-tool/sabayon:91
 #, c-format
 msgid "User account '%s' was not found"
-msgstr ""
+msgstr "Hisaba bikarhêner '%s' nehat dîtin"
 
 #: ../admin-tool/sabayon:92
 #, c-format
@@ -229,6 +235,8 @@ msgid ""
 "Try again after creating the account (using, for example, the 'adduser' "
 "command)"
 msgstr ""
+"Ji bo xwedîbûna Sabayon hisabekî taybet ya bikarhêner '%s' pêwist e. Piştî "
+"afirandina hisabê (mînak; bi bikaranîna fermana 'adduser') cardin biceribînin"
 
 #: ../admin-tool/sabayon:131
 #, c-format
@@ -236,6 +244,8 @@ msgid ""
 "A fatal error has occurred.  You can help us fix the problem by sending the "
 "log in %s to %s"
 msgstr ""
+"Çewtiyekî mezin çêbû.  Bi şandina rojnivîska di %s de ji %s re, hun dikarin "
+"alîkariya çareserîkirina vê bernamê bikin."
 
 #: ../admin-tool/sabayon:145
 #, c-format
@@ -243,24 +253,27 @@ msgid ""
 "Sabayon will now exit.  There were some recoverable errors, and you can help "
 "us debug the problem by sending the log in %s to %s"
 msgstr ""
+"Sabayon dê niha derkeve.  Li vir hinek çewtiyên tên sererastkirin hene, û bi "
+"şandina rojnivîska di %s de ji %s re, hun dikarin alîkariya sererastkirina "
+"vê bernamê bikin."
 
 #: ../admin-tool/sabayon-apply:111
 msgid "Please use -h for usage options"
-msgstr ""
+msgstr "Ji kerema xwe ji bo vebijêrka bikaranînê -h bi kar binin"
 
 #: ../admin-tool/sabayon-apply:123
 #, c-format
 msgid "No profile for user '%s' found\n"
-msgstr ""
+msgstr "Ji bo bikarhêner '%s' tu profîl nehat dîtin\n"
 
 #: ../admin-tool/sabayon-session:67
 #, c-format
 msgid "Usage: %s <profile-name> <profile-path> <display-number>\n"
-msgstr ""
+msgstr "Bikaranîn: %s <profile-name> <profile-path> <display-number>\n"
 
 #: ../admin-tool/sabayon.desktop.in.in.h:1
 msgid "Establish and Edit Profiles for Users"
-msgstr ""
+msgstr "Ji bo bikarhêneran profîlan ava bike û biguherîne"
 
 #: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.ui.h:4
 msgid "User Profile Editor"
@@ -268,7 +281,7 @@ msgstr "Edîtora profîlên bikarhêner"
 
 #: ../admin-tool/sabayon.ui.h:1
 msgid "Add Profile"
-msgstr ""
+msgstr "Profîl lê zêde bike"
 
 #: ../admin-tool/sabayon.ui.h:2
 msgid "Profile _name:"
@@ -276,23 +289,23 @@ msgstr "_Navê profîlê:"
 
 #: ../admin-tool/sabayon.ui.h:3
 msgid "Use this profile for _all users"
-msgstr ""
+msgstr "Vê profîlê ji bo _hemû bikarhêneran bi kar bîne"
 
 #: ../admin-tool/sabayon.ui.h:5
 msgid "_Base on:"
-msgstr ""
+msgstr "_Bingeha vê:"
 
 #: ../admin-tool/sabayon.ui.h:6
 msgid "_Details"
-msgstr ""
+msgstr "_Kitekit"
 
 #: ../admin-tool/sabayon.ui.h:7
 msgid "_Groups"
-msgstr ""
+msgstr "_Kom"
 
 #: ../admin-tool/sabayon.ui.h:8
 msgid "_Groups:"
-msgstr ""
+msgstr "_Kom:"
 
 #: ../admin-tool/sabayon.ui.h:9
 msgid "_Profiles:"
@@ -308,21 +321,21 @@ msgstr "_Bikarhêner:"
 
 #: ../admin-tool/saveconfirm.py:34
 msgid "Close _Without Saving"
-msgstr ""
+msgstr "_Bê tomarkirinê bigire"
 
 #: ../admin-tool/saveconfirm.py:41
 #, python-format
 msgid "Save changes to profile \"%s\" before closing?"
-msgstr ""
+msgstr "Bila guherînên profîla \"%s\" beriya girtinê tomar bike?"
 
 #: ../admin-tool/saveconfirm.py:44
 msgid "If you don't save, all changes will be permanently lost."
-msgstr ""
+msgstr "Heke hun tomar nekin, dê hemû guherîn winda bin."
 
 #: ../admin-tool/sessionwindow.py:155
 #, python-format
 msgid "Editing profile %s"
-msgstr ""
+msgstr "Guherandina profîla %s"
 
 #: ../admin-tool/sessionwindow.py:179
 msgid "_Quit"
@@ -334,28 +347,28 @@ msgstr "_Guhartin"
 
 #: ../admin-tool/sessionwindow.py:181
 msgid "Edit changes"
-msgstr ""
+msgstr "Guherînan sererast bike"
 
 #: ../admin-tool/sessionwindow.py:182
 msgid "_Lockdown"
-msgstr "_Qefil bike"
+msgstr "_Qufl bike"
 
 #: ../admin-tool/sessionwindow.py:182
 msgid "Edit Lockdown settings"
-msgstr ""
+msgstr "Mîhengên quflkirinê sererast bike"
 
 #: ../admin-tool/sessionwindow.py:188
 msgid "Enforce Mandatory"
-msgstr ""
+msgstr "Pêwistiya bi zordarî"
 
 #: ../admin-tool/sessionwindow.py:188
 msgid "Enforce mandatory settings in the editing session"
-msgstr ""
+msgstr "Di danişîna sererastkirinê de mîhengên pêwist bi zordarî bisepîne"
 
 #: ../admin-tool/sessionwindow.py:306
 #, python-format
 msgid "Lockdown settings for %s"
-msgstr ""
+msgstr "Mîhengên quflkirinê ji bo %s"
 
 #: ../admin-tool/sessionwindow.py:342
 #, python-format
@@ -363,14 +376,17 @@ msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
 "report this error now or try to continue editing the user profile."
 msgstr ""
+"Demê sepandina profîla bikarhêner '%s' de çewtiyekî sererast dibe çêbû. Hun "
+"dikarin vê çewtiyê niha rapor bikin an jî domkirina guherandina profîla "
+"bikarhêner biceribînin."
 
 #: ../admin-tool/sessionwindow.py:346
 msgid "_Report this error"
-msgstr ""
+msgstr "Vê çewtiyê _rapor bike"
 
 #: ../admin-tool/sessionwindow.py:347
 msgid "_Continue editing"
-msgstr ""
+msgstr "Guherandinê _bidomîne"
 
 #: ../admin-tool/usersdialog.py:72
 #, python-format
@@ -379,15 +395,16 @@ msgstr "Bikarhênerên profîla %s"
 
 #: ../lib/protosession.py:112
 msgid "Unable to find a free X display"
-msgstr ""
+msgstr "Nekarî dîmenderekî X yê vala bibîne"
 
 #: ../lib/protosession.py:376
 msgid "Failed to start Xephyr: timed out waiting for USR1 signal"
 msgstr ""
+"Destpêkirina Xephyr pêk nehat: dem têra lê bendê mayîna sînyala USR1 nekir"
 
 #: ../lib/protosession.py:378
 msgid "Failed to start Xephyr: died during startup"
-msgstr ""
+msgstr "Destpêkirina Xephyr pêk nehat: demê destpêkirinê de têk çû"
 
 #. mprint ("========== BEGIN SABAYON-APPLY LOG (RECOVERABLE) ==========\n"
 #. "%s\n"
@@ -398,6 +415,8 @@ msgstr ""
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
 msgstr ""
+"Demê sepandina profîla bikarhêner ji pela '%s' de çewtiyekî sererast dibe "
+"çêbû."
 
 #. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
 #. "%s\n"
@@ -407,110 +426,110 @@ msgstr ""
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr ""
+"Demê sepandina profîla bikarhêner ji pela '%s' de çewtiyekî mezin çêbû."
 
 #: ../lib/sources/filessource.py:69
-#, python-format
+#, fuzzy, python-format
 msgid "File '%s' created"
-msgstr "Dosiya '%s' hat afirandin"
+msgstr "%s '%s' hat afirandin"
 
 #: ../lib/sources/filessource.py:71
-#, python-format
+#, fuzzy, python-format
 msgid "File '%s' deleted"
-msgstr "Dosiya '%s' hat jê birin"
+msgstr "%s '%s' hat jêbirin"
 
 #: ../lib/sources/filessource.py:73
-#, python-format
+#, fuzzy, python-format
 msgid "File '%s' changed"
-msgstr "Dosiya '%s' guhartî"
+msgstr "%s '%s' hat guhartin"
 
 #: ../lib/sources/filessource.py:97
 msgid "Applications menu"
-msgstr "Menuya sepanan"
+msgstr "Pêşeka Sepanan"
 
 #: ../lib/sources/filessource.py:99
-#, fuzzy
 msgid "Settings menu"
-msgstr "Menuya sepanan"
+msgstr "Pêşeka Mîhengan"
 
 #: ../lib/sources/filessource.py:101
 msgid "Server Settings menu"
-msgstr ""
+msgstr "Pêşeka Mîhengên Pêşkêşkerê"
 
 #: ../lib/sources/filessource.py:103
 msgid "System Settings menu"
-msgstr ""
+msgstr "Pêşeka Mîhengên Pergalê"
 
 #: ../lib/sources/filessource.py:105
 msgid "Start Here menu"
-msgstr ""
+msgstr "Pêşeka Destpêkirinê"
 
 #: ../lib/sources/gconfsource.py:90
 #, python-format
 msgid "GConf key '%s' unset"
-msgstr ""
+msgstr "Mifteya GConf '%s' neavakirî ye"
 
 #: ../lib/sources/gconfsource.py:92
 #, python-format
 msgid "GConf key '%s' set to string '%s'"
-msgstr ""
+msgstr "Mifteya GConf '%s' êdî rêzika '%s' e"
 
 #: ../lib/sources/gconfsource.py:94
 #, python-format
 msgid "GConf key '%s' set to integer '%s'"
-msgstr ""
+msgstr "Mifteya GConf '%s' êdî hejmara tam '%s' e"
 
 #: ../lib/sources/gconfsource.py:96
 #, python-format
 msgid "GConf key '%s' set to float '%s'"
-msgstr ""
+msgstr "Mifteya GConf '%s' êdî hejmara rasteqîn '%s' e"
 
 #: ../lib/sources/gconfsource.py:98
 #, python-format
 msgid "GConf key '%s' set to boolean '%s'"
-msgstr ""
+msgstr "Mifteya GConf '%s' êdî hejmara mantiqî '%s' e"
 
 #: ../lib/sources/gconfsource.py:100
 #, python-format
 msgid "GConf key '%s' set to schema '%s'"
-msgstr ""
+msgstr "Mifteya GConf '%s' êdî şemaya '%s' e"
 
 #: ../lib/sources/gconfsource.py:102
 #, python-format
 msgid "GConf key '%s' set to list '%s'"
-msgstr ""
+msgstr "Mifteya GConf '%s' êdî lîsteya '%s' e"
 
 #: ../lib/sources/gconfsource.py:104
 #, python-format
 msgid "GConf key '%s' set to pair '%s'"
-msgstr ""
+msgstr "Mifteya GConf '%s' êdî cot '%s' e"
 
 #: ../lib/sources/gconfsource.py:106
 #, python-format
 msgid "GConf key '%s' set to '%s'"
-msgstr ""
+msgstr "Mifteya GConf '%s' êdî '%s' e"
 
 #: ../lib/sources/gconfsource.py:137
 msgid "Default GConf settings"
-msgstr ""
+msgstr "Mîhengên GConf yên standard"
 
 #: ../lib/sources/gconfsource.py:139
 msgid "Mandatory GConf settings"
-msgstr ""
+msgstr "Mîhengên GConf yên pêwist"
 
 #: ../lib/sources/mozillasource.py:133
 #, python-format
 msgid "Mozilla key '%s' set to '%s'"
-msgstr ""
+msgstr "Mifteya Mozilla '%s' êdî '%s' e"
 
 #: ../lib/sources/mozillasource.py:135
 #, python-format
 msgid "Mozilla key '%s' unset"
-msgstr ""
+msgstr "Mifteya Mozilla '%s' neavakirî ye"
 
 #: ../lib/sources/mozillasource.py:137
 #, python-format
 msgid "Mozilla key '%s' changed to '%s'"
-msgstr ""
+msgstr "Mifteya Mozilla '%s' bi '%s' re hate guherandin"
 
 #: ../lib/sources/mozillasource.py:166 ../lib/sources/mozillasource.py:176
 msgid "Web browser preferences"
@@ -527,56 +546,56 @@ msgstr "Lîsteya profîlên gerokên torê"
 #: ../lib/sources/mozillasource.py:520
 #, python-format
 msgid "File Not Found (%s)"
-msgstr "Dosya nehat dîtin (%s)"
+msgstr "Pel nehat dîtin (%s)"
 
 #: ../lib/sources/mozillasource.py:869
 #, python-format
 msgid "duplicate name(%(name)s) in section %(section)s"
-msgstr ""
+msgstr "navê dubare(%(name)s) di beşa %(section)s de"
 
 #: ../lib/sources/mozillasource.py:878
 #, python-format
 msgid "redundant default in section %s"
-msgstr ""
+msgstr "standardên nehewce di beşa %s de"
 
 #: ../lib/sources/mozillasource.py:895
 msgid "no default profile"
-msgstr ""
+msgstr "profîla standard tune"
 
 #: ../lib/sources/mozillasource.py:950
 #, python-format
 msgid "Mozilla bookmark created '%s' -> '%s'"
-msgstr ""
+msgstr "Bijareyên Mozilla hatin afirandin '%s' -> '%s'"
 
 #: ../lib/sources/mozillasource.py:952
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
-msgstr ""
+msgstr "Peldanka bijareyên Mozilla hate afirandin '%s'"
 
 #: ../lib/sources/mozillasource.py:955
 #, python-format
 msgid "Mozilla bookmark deleted '%s'"
-msgstr ""
+msgstr "Bijareyên Mozilla '%s' hate jêbirin"
 
 #: ../lib/sources/mozillasource.py:957
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
-msgstr ""
+msgstr "Peldanka bijareyên Mozilla hate jêbirin '%s'"
 
 #: ../lib/sources/mozillasource.py:960
 #, python-format
 msgid "Mozilla bookmark changed '%s' '%s'"
-msgstr ""
+msgstr "Bijareyên Mozilla hatin guherandin '%s' '%s'"
 
 #: ../lib/sources/mozillasource.py:962
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
-msgstr ""
+msgstr "Peldanka bijareyên Mozilla hate guherandin '%s'"
 
 #: ../lib/sources/paneldelegate.py:65
 #, python-format
 msgid "Panel '%s' added"
-msgstr ""
+msgstr "Panela '%s' hat lêzêdekirin"
 
 #: ../lib/sources/paneldelegate.py:71
 #, python-format
@@ -584,113 +603,112 @@ msgid "Panel '%s' removed"
 msgstr "Panela '%s' hat jê birin"
 
 #: ../lib/sources/paneldelegate.py:77
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' added"
-msgstr "Dosiya '%s' hat afirandin"
+msgstr "Sepanoka '%s' hat lêzêdekirin"
 
 #: ../lib/sources/paneldelegate.py:100
-#, fuzzy, python-format
+#, python-format
 msgid "Applet '%s' removed"
-msgstr "Panela '%s' hat jê birin"
+msgstr "Sepanoka '%s' hat rakirin"
 
 #: ../lib/sources/paneldelegate.py:123
 #, python-format
 msgid "Object '%s' added"
-msgstr ""
+msgstr "Biresera '%s' hat lêzêdekirin"
 
 #: ../lib/sources/paneldelegate.py:152
-#, fuzzy, python-format
+#, python-format
 msgid "Object '%s' removed"
-msgstr "Panela '%s' hat jê birin"
+msgstr "Biresera '%s' hat rakirin"
 
 #. Translators: This is a drawer in gnome-panel (where you can put applets)
 #: ../lib/sources/paneldelegate.py:240
 msgid "Drawer"
-msgstr ""
+msgstr "Berkêşk"
 
 #: ../lib/sources/paneldelegate.py:242
 msgid "Main Menu"
-msgstr ""
+msgstr "Pêşeka Bingeh"
 
 #: ../lib/sources/paneldelegate.py:252
 #, python-format
 msgid "%s launcher"
-msgstr ""
+msgstr "%s destpêker"
 
 #: ../lib/sources/paneldelegate.py:256
 msgid "Lock Screen button"
-msgstr ""
+msgstr "Bişkoka Quflkirina Dîmender"
 
 #: ../lib/sources/paneldelegate.py:258
 msgid "Logout button"
-msgstr ""
+msgstr "Bişkoka derketinê"
 
 #: ../lib/sources/paneldelegate.py:260
-#, fuzzy
 msgid "Run Application button"
-msgstr "Menuya sepanan"
+msgstr "Bişkoka Sepan Bimeşîne"
 
 #: ../lib/sources/paneldelegate.py:262
 msgid "Search button"
-msgstr ""
+msgstr "Bişkoka lêgerînê"
 
 #: ../lib/sources/paneldelegate.py:264
 msgid "Force Quit button"
-msgstr ""
+msgstr "Bişkoka Bi zordarî Derkeve"
 
 #: ../lib/sources/paneldelegate.py:266
 msgid "Connect to Server button"
-msgstr ""
+msgstr "Bişkoka Girêdana Pêşkêşker"
 
 #: ../lib/sources/paneldelegate.py:268
 msgid "Shutdown button"
-msgstr ""
+msgstr "Bişkoka Girtinê"
 
 #: ../lib/sources/paneldelegate.py:270
 msgid "Screenshot button"
-msgstr ""
+msgstr "Bişkoka wêneya sermasê"
 
 #: ../lib/sources/paneldelegate.py:273
 msgid "Unknown"
-msgstr ""
+msgstr "Nenas"
 
 #: ../lib/sources/paneldelegate.py:275
 msgid "Menu Bar"
-msgstr ""
+msgstr "Darika Pêşekê"
 
 #: ../lib/sources/paneldelegate.py:512
 msgid "Panel File"
-msgstr "Dosiya Panelê"
+msgstr "Pela Panelê"
 
 #: ../lib/storage.py:172
 #, python-format
 msgid "Failed to read file '%s': %s"
-msgstr "Xwendina dosizy '%s' serneket: %s"
+msgstr "Xwendina pela '%s' pêk nehat: %s"
 
 #: ../lib/storage.py:182
 #, python-format
 msgid "Failed to read metadata from '%s': %s"
-msgstr ""
+msgstr "Xwendina seredane ji '%s' pêk nehat: %s"
 
 #: ../lib/storage.py:188
 #, python-format
 msgid "Invalid metadata section in '%s': %s"
-msgstr ""
+msgstr "Seredaneya di beşa '%s' de nederbasdar e: %s"
 
 #: ../lib/storage.py:362
 #, python-format
 msgid "Cannot add non-existent file '%s'"
-msgstr ""
+msgstr "Nikare pela tuneyî '%s' lê zêde bike"
 
 #: ../lib/storage.py:487
 #, python-format
 msgid "Couldn't unlink file '%s'"
-msgstr ""
+msgstr "Nikare girêdana pela '%s' rake"
 
 #: ../lib/storage.py:570
 #, python-format
 msgid "Profile is read-only %s"
-msgstr ""
+msgstr "Profîla %s tenê-xwendin e"
 
 #. Translators: You may move the "%(setting)s" and "%(np)s" items as you wish, but
 #. do not change the way they are written.  The intended string is
@@ -698,81 +716,81 @@ msgstr ""
 #: ../lib/systemdb.py:67
 #, python-format
 msgid "invalid type for setting %(setting)s in %(np)s"
-msgstr ""
+msgstr "cureya nederbasdar ji bo mîhenga %(setting)s di %(np)s de"
 
 #: ../lib/systemdb.py:112
 msgid "No database file provided"
-msgstr ""
+msgstr "Tu pela danegeh tune"
 
 #: ../lib/systemdb.py:232
 #, python-format
 msgid "No LDAP search base specified for %s"
-msgstr ""
+msgstr "Tu bingeha lêgerînê LDAP ji bo %s nehatiye diyarkirin"
 
 #: ../lib/systemdb.py:235
 #, python-format
 msgid "No LDAP query filter specified for %s"
-msgstr ""
+msgstr "Tu parzûna lêpirsînê LDAP ji bo %s nehatiye diyarkirin"
 
 #: ../lib/systemdb.py:238
 #, python-format
 msgid "No LDAP result attribute specified for %s"
-msgstr ""
+msgstr "Tu taybetiyê encam LDAP ji bo %s nehatiye diyarkirin"
 
 #: ../lib/systemdb.py:247
 msgid "LDAP Scope must be one of: "
-msgstr ""
+msgstr "Qada LDAP divê yek ji wan be:"
 
 #: ../lib/systemdb.py:268
 msgid "multiple_result must be one of: "
-msgstr ""
+msgstr "multiple_result divê yek ji wan be:"
 
 #: ../lib/systemdb.py:361
 #, python-format
 msgid "Could not open %s for writing"
-msgstr ""
+msgstr "Nikare %s ji bo nivîsandinê veke"
 
 #: ../lib/systemdb.py:374
 #, python-format
 msgid "Failed to save UserDatabase to %s"
-msgstr ""
+msgstr "Tomarkirina UserDatabase li %s pêk nehat"
 
 #: ../lib/systemdb.py:397 ../lib/systemdb.py:431
 #, python-format
 msgid "File %s is not a profile configuration"
-msgstr ""
+msgstr "Pela %s ne veavakirina profîlê ye"
 
 #: ../lib/systemdb.py:404
 #, python-format
 msgid "Failed to add default profile %s to configuration"
-msgstr ""
+msgstr "Lêzêdekirina profîla standard %s li veavakirinê pêk nehat"
 
 #: ../lib/systemdb.py:438
 #, python-format
 msgid "Failed to add user %s to profile configuration"
-msgstr ""
+msgstr "Lêzêdekirina profîla bikarhêner %s li veavakirinê pêk nehat"
 
 #: ../lib/systemdb.py:510
 msgid "Failed to get the user list"
-msgstr ""
+msgstr "Anîna lîsteya bikarhêner pêk nehat"
 
 #: ../lib/systemdb.py:560
 msgid "Failed to get the group list"
-msgstr ""
+msgstr "Anîna lîsteya komê pêk nehat"
 
 #: ../lib/unittests.py:38 ../lib/unittests.py:39
 msgid "Ignore WARNINGs"
-msgstr ""
+msgstr "Guh nede Hişyariyan"
 
 #: ../lib/unittests.py:61
 #, python-format
 msgid "Running %s tests"
-msgstr ""
+msgstr "Ceribînên %s tên meşandin"
 
 #: ../lib/unittests.py:63
 #, python-format
 msgid "Running %s tests (%s)"
-msgstr ""
+msgstr "Ceribînên %s tên meşandin (%s)"
 
 #: ../lib/unittests.py:70
 msgid "Success!"
@@ -791,9 +809,27 @@ msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr ""
+"Navê bikarhêner nayê dîtin: di /etc/passwd de nehat mîhengkirin û di "
+"environment de nirxa $USER tune"
 
 #~ msgid "General"
 #~ msgstr "Giştî"
 
 #~ msgid "Usage: %s [<profile-name>]\n"
 #~ msgstr "Bikaranîn> %s [<navê-profîlê>]\n"
+
+#~ msgid "Source"
+#~ msgstr "Çavkanî"
+
+#~ msgid "Directory"
+#~ msgstr "Pelrêç"
+
+#~ msgid "Link"
+#~ msgstr "Girêdan"
+
+#~| msgid "Files"
+#~ msgid "File"
+#~ msgstr "Pel"
+
+#~ msgid "Couldn't rmdir '%s'"
+#~ msgstr "Nikare rmdir '%s'"
