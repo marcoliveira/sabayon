@@ -3,12 +3,14 @@
 # Copyright (C) 2009 sabayon's COPYRIGHT HOLDER
 # This file is distributed under the same license as the sabayon package.
 # Jorge González <jorgegonz@svn.gnome.org>, 2009, 2010.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: sabayon.help.master\n"
-"POT-Creation-Date: 2010-02-01 18:04+0000\n"
-"PO-Revision-Date: 2010-02-06 13:16+0100\n"
-"Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
+"POT-Creation-Date: 2010-11-13 21:56+0000\n"
+"PO-Revision-Date: 2011-09-15 12:39+0200\n"
+"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -77,12 +79,10 @@ msgstr ""
 "@@image: 'figures/apply-by-group.png'; md5=5f7516941e47cf55fbcc7cb5c016710b"
 
 #: C/sabayon.xml:16(title)
-#| msgid "Sabayon Administrator's Reference"
 msgid "<application>Sabayon</application> Administrator's Reference"
 msgstr "Referencia del administrador de <application>Sabayon</application>"
 
 #: C/sabayon.xml:18(para)
-#| msgid "Sabayon is a profile editor for GNOME."
 msgid "<application>Sabayon</application> is a profile editor for GNOME."
 msgstr ""
 "<application>Sabayon</application> es un editor de perfiles para GNOME."
@@ -266,12 +266,6 @@ msgid "Description"
 msgstr "Descripción"
 
 #: C/sabayon.xml:84(para)
-#| msgid ""
-#| "Sabayon is a system administration tool to manage GNOME desktop settings. "
-#| "Sabayon provides a sane way to edit GConf defaults and GConf mandatory "
-#| "keys: the same way you edit your desktop. Sabayon launches profiles in a "
-#| "Xephyr window, which provides an X session within an X session, like "
-#| "Xnest."
 msgid ""
 "<application>Sabayon</application> is a system administration tool to manage "
 "GNOME desktop settings. <application>Sabayon</application> provides a sane "
@@ -327,9 +321,6 @@ msgid "Installation from a tarball"
 msgstr "Instalación desde un tarball"
 
 #: C/sabayon.xml:124(para)
-#| msgid ""
-#| "Download Sabayon at <ulink url=\"http://ftp.gnome.org/pub/GNOME/sources/"
-#| "sabayon/\"/>"
 msgid ""
 "Download <application>Sabayon</application> at <ulink url=\"http://ftp.gnome."
 "org/pub/GNOME/sources/sabayon/\"/>"
@@ -378,16 +369,11 @@ msgid "Add a user (you must have root permissions) :"
 msgstr "Añada un usuario (debe tener permisos de súper usuario):"
 
 #: C/sabayon.xml:0(application)
-#| msgid "sabayon"
 msgid "Sabayon"
 msgstr "Sabayon"
 
 #: C/sabayon.xml:146(screen)
 #, no-wrap
-#| msgid ""
-#| "\n"
-#| "# /usr/sbin/useradd -c \"Sabayon user\" -d /var/sabayon -g nogroup -s /sbin/nologin sabayon\n"
-#| "            "
 msgid ""
 "\n"
 "# /usr/sbin/useradd -c \"<placeholder-1/> user\" -d /var/sabayon -g nogroup -s /sbin/nologin sabayon\n"
@@ -398,9 +384,8 @@ msgstr ""
 "            "
 
 #: C/sabayon.xml:149(para)
-#| msgid "Create the directory /var/sabayon :"
 msgid "Create the directory <filename>/var/sabayon</filename> :"
-msgstr "Cree el directorio <filename>/var/sabayon</filename>:"
+msgstr "Cree la carpeta <filename>/var/sabayon</filename>:"
 
 #: C/sabayon.xml:152(screen)
 #, no-wrap
@@ -435,10 +420,6 @@ msgid "Installing your distributions package"
 msgstr "Instalar el paquete de su distribución"
 
 #: C/sabayon.xml:165(para)
-#| msgid ""
-#| "Your distribution probably contains a pre-packaged version of Sabayon "
-#| "which will be supported directly by your distribution. Search for the "
-#| "package 'sabayon' in your distribution's package management tools."
 msgid ""
 "Your distribution probably contains a pre-packaged version of "
 "<application>Sabayon</application> which will be supported directly by your "
@@ -455,9 +436,6 @@ msgid "Installing from the git repository"
 msgstr "Instalar desde el repositorio git"
 
 #: C/sabayon.xml:174(para)
-#| msgid ""
-#| "For those who wish to be on the bleeding edge, you can install Sabayon "
-#| "from GNOME's git repository."
 msgid ""
 "For those who wish to be on the bleeding edge, you can install "
 "<application>Sabayon</application> from GNOME's git repository."
@@ -563,12 +541,10 @@ msgid "Main Window"
 msgstr "Ventana principal"
 
 #: C/sabayon.xml:231(phrase)
-#| msgid "Main window for Sabayon"
 msgid "Main window for <placeholder-1/>"
 msgstr "Ventana principal de <placeholder-1/>"
 
 #: C/sabayon.xml:234(para)
-#| msgid "Sabayon's main window for creating, and applying profiles."
 msgid ""
 "<application>Sabayon</application>'s main window for creating, and applying "
 "profiles."
@@ -593,12 +569,10 @@ msgid "Add Profile"
 msgstr "Añadir perfil"
 
 #: C/sabayon.xml:255(phrase)
-#| msgid "Add Profile window for Sabayon"
 msgid "Add Profile window for <placeholder-1/>"
 msgstr "Ventana de adición de perfil de <placeholder-1/>"
 
 #: C/sabayon.xml:258(para)
-#| msgid "Add Profile window for Sabayon."
 msgid "Add Profile window for <application>Sabayon</application>."
 msgstr "Ventana de adición de perfil de <application>Sabayon</application>."
 
