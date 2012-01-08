@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: sabayon master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=sabayon&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-05-13 22:41+0000\n"
-"PO-Revision-Date: 2011-08-26 22:49+0900\n"
-"Last-Translator: OKANO Takayoshi <kano@na.rim.or.jp>\n"
+"POT-Creation-Date: 2011-10-10 17:47+0000\n"
+"PO-Revision-Date: 2012-01-08 13:01+0900\n"
+"Last-Translator: Jiro Matsuzawa <jmatsuzawa@src.gnome.org>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../admin-tool/aboutdialog.py:66
 msgid "Program to establish and edit profiles for users"
-msgstr "ユーザのプロファイルを確定したり編集するプログラムです"
+msgstr "ユーザーのプロファイルを確定したり編集するプログラムです"
 
 #: ../admin-tool/aboutdialog.py:69
 msgid "translator-credits"
@@ -206,8 +206,8 @@ msgstr "%s (%s)"
 msgid ""
 "Your account does not have permissions to run the Desktop User Profiles tool"
 msgstr ""
-"お使いのアカウントでは \"デスクトップ・ユーザ・プロファイル\" ツールを実行で"
-"きません"
+"お使いのアカウントでは \"デスクトップ・ユーザー・プロファイル\" ツールを実行"
+"できません"
 
 #: ../admin-tool/sabayon:78
 msgid ""
@@ -219,20 +219,20 @@ msgstr ""
 
 #: ../admin-tool/sabayon:83
 msgid "Desktop User Profiles tool is already running"
-msgstr "既に \"デスクトップ・ユーザ・プロファイル\" ツールを実行しています"
+msgstr "既に \"デスクトップ・ユーザー・プロファイル\" ツールを実行しています"
 
 #: ../admin-tool/sabayon:84
 msgid ""
 "You may not use Desktop User Profiles tool from within a profile editing "
 "session"
 msgstr ""
-"プロファイル編集セッションの中から \"デスクトップ・ユーザ・プロファイル\" "
+"プロファイル編集セッションの中から \"デスクトップ・ユーザー・プロファイル\" "
 "ツールは利用できません。"
 
 #: ../admin-tool/sabayon:91
 #, c-format
 msgid "User account '%s' was not found"
-msgstr "ユーザ・アカウント '%s' が見つかりませんでした"
+msgstr "ユーザー・アカウント '%s' が見つかりませんでした"
 
 #: ../admin-tool/sabayon:92
 #, c-format
@@ -270,7 +270,7 @@ msgstr "オプションの使い方は -h を指定してください"
 #: ../admin-tool/sabayon-apply:148
 #, c-format
 msgid "No profile for user '%s' found\n"
-msgstr "ユーザ '%s' のプロファイルが見つかりませんでした\n"
+msgstr "ユーザー '%s' のプロファイルが見つかりませんでした\n"
 
 #: ../admin-tool/sabayon-session:67
 #, c-format
@@ -279,11 +279,11 @@ msgstr "用法: %s <プロファイル名> <プロファイルのパス名> <デ
 
 #: ../admin-tool/sabayon.desktop.in.in.h:1
 msgid "Establish and Edit Profiles for Users"
-msgstr "ユーザ向けのプロファイルを設定したり編集します"
+msgstr "ユーザー向けのプロファイルを設定したり編集します"
 
 #: ../admin-tool/sabayon.desktop.in.in.h:2 ../admin-tool/sabayon.ui.h:4
 msgid "User Profile Editor"
-msgstr "プロファイル・エディタ"
+msgstr "プロファイル・エディター"
 
 #: ../admin-tool/sabayon.ui.h:1
 msgid "Add Profile"
@@ -295,7 +295,7 @@ msgstr "プロファイル名(_N):"
 
 #: ../admin-tool/sabayon.ui.h:3
 msgid "Use this profile for _all users"
-msgstr "このプロファイルをすべてのユーザで使用する(_A)"
+msgstr "このプロファイルをすべてのユーザーで使用する(_A)"
 
 #: ../admin-tool/sabayon.ui.h:5
 msgid "_Base on:"
@@ -319,11 +319,11 @@ msgstr "プロファイルの一覧(_P):"
 
 #: ../admin-tool/sabayon.ui.h:10
 msgid "_Users"
-msgstr "ユーザの一覧(_U)"
+msgstr "ユーザーの一覧(_U)"
 
 #: ../admin-tool/sabayon.ui.h:11
 msgid "_Users:"
-msgstr "ユーザ(_U):"
+msgstr "ユーザー(_U):"
 
 #: ../admin-tool/saveconfirm.py:34
 msgid "Close _Without Saving"
@@ -382,8 +382,9 @@ msgid ""
 "There was a recoverable error while applying the user profile '%s'.  You can "
 "report this error now or try to continue editing the user profile."
 msgstr ""
-"ユーザ・プロファイルの '%s' を適用している最中に復旧可能なエラーが発生しまし"
-"た。このエラーを報告するか、またはユーザ・プロファイルの編集を続行できます。"
+"ユーザー・プロファイルの '%s' を適用している最中に復旧可能なエラーが発生しま"
+"した。このエラーを報告するか、またはユーザー・プロファイルの編集を続行できま"
+"す。"
 
 #: ../admin-tool/sessionwindow.py:348
 msgid "_Report this error"
@@ -396,7 +397,7 @@ msgstr "編集を続行する(_C)"
 #: ../admin-tool/usersdialog.py:72
 #, python-format
 msgid "Users for profile %s"
-msgstr "プロファイル %s のユーザ"
+msgstr "プロファイル %s のユーザー"
 
 #: ../lib/protosession.py:119
 msgid "Unable to find a free X display"
@@ -419,7 +420,7 @@ msgstr "Xephyr の起動エラー: 起動した後すぐに強制終了しまし
 msgid ""
 "There was a recoverable error while applying the user profile from file '%s'."
 msgstr ""
-"'%s' というファイルからユーザ・プロファイルを適用している最中に復旧可能なエ"
+"'%s' というファイルからユーザー・プロファイルを適用している最中に復旧可能なエ"
 "ラーが発生しました。"
 
 #. mprint ("========== BEGIN SABAYON-APPLY LOG (FATAL) ==========\n"
@@ -430,7 +431,7 @@ msgstr ""
 #, python-format
 msgid "There was a fatal error while applying the user profile from '%s'."
 msgstr ""
-"ユーザ・プロファイルの '%s' を適用している最中に致命的なエラーが発生しまし"
+"ユーザー・プロファイルの '%s' を適用している最中に致命的なエラーが発生しまし"
 "た。"
 
 #: ../lib/sources/filessource.py:69
@@ -470,7 +471,7 @@ msgstr "設定メニュー"
 
 #: ../lib/sources/filessource.py:109
 msgid "Server Settings menu"
-msgstr "サーバ設定メニュー"
+msgstr "サーバー設定メニュー"
 
 #: ../lib/sources/filessource.py:111
 msgid "System Settings menu"
@@ -550,15 +551,15 @@ msgstr "Mozilla キーの '%s' を '%s' に変更しました"
 
 #: ../lib/sources/mozillasource.py:169 ../lib/sources/mozillasource.py:179
 msgid "Web browser preferences"
-msgstr "ウェブ・ブラウザの設定"
+msgstr "ウェブ・ブラウザーの設定"
 
 #: ../lib/sources/mozillasource.py:171 ../lib/sources/mozillasource.py:181
 msgid "Web browser bookmarks"
-msgstr "ウェブ・ブラウザのブックマーク"
+msgstr "ウェブ・ブラウザーのブックマーク"
 
 #: ../lib/sources/mozillasource.py:173
 msgid "Web browser profile list"
-msgstr "ウェブ・ブラウザのプロファイル一覧"
+msgstr "ウェブ・ブラウザーのプロファイル一覧"
 
 #: ../lib/sources/mozillasource.py:550
 #, python-format
@@ -587,7 +588,7 @@ msgstr "Mozilla のブックマークを生成しました: '%s' -> '%s'"
 #: ../lib/sources/mozillasource.py:982
 #, python-format
 msgid "Mozilla bookmark folder created '%s'"
-msgstr "Mozilla のブックマーク・フォルダ '%s' を生成しました"
+msgstr "Mozilla のブックマーク・フォルダー '%s' を生成しました"
 
 #: ../lib/sources/mozillasource.py:985
 #, python-format
@@ -597,7 +598,7 @@ msgstr "Mozilla のブックマーク '%s' を削除しました"
 #: ../lib/sources/mozillasource.py:987
 #, python-format
 msgid "Mozilla bookmark folder deleted '%s'"
-msgstr "Mozilla のブックマーク・フォルダ '%s' を削除しました"
+msgstr "Mozilla のブックマーク・フォルダー '%s' を削除しました"
 
 #: ../lib/sources/mozillasource.py:990
 #, python-format
@@ -607,7 +608,7 @@ msgstr "Mozilla のブックマーク '%s' '%s' を変更しました"
 #: ../lib/sources/mozillasource.py:992
 #, python-format
 msgid "Mozilla bookmark folder changed '%s'"
-msgstr "Mozilla のブックマーク・フォルダ '%s' を変更しました"
+msgstr "Mozilla のブックマーク・フォルダー '%s' を変更しました"
 
 #: ../lib/sources/paneldelegate.py:65
 #, python-format
@@ -651,7 +652,7 @@ msgstr "メイン・メニュー"
 #: ../lib/sources/paneldelegate.py:253
 #, python-format
 msgid "%s launcher"
-msgstr "%s のランチャ"
+msgstr "%s のランチャー"
 
 #: ../lib/sources/paneldelegate.py:257
 msgid "Lock Screen button"
@@ -675,7 +676,7 @@ msgstr "強制終了のボタン"
 
 #: ../lib/sources/paneldelegate.py:267
 msgid "Connect to Server button"
-msgstr "サーバへ接続するボタン"
+msgstr "サーバーへ接続するボタン"
 
 #: ../lib/sources/paneldelegate.py:269
 msgid "Shutdown button"
@@ -754,7 +755,7 @@ msgstr "%s に LDAP 検索開始位置が指定されていません"
 #: ../lib/systemdb.py:256
 #, python-format
 msgid "No LDAP query filter specified for %s"
-msgstr "%s に LDAP クエリ・フィルタが指定されていません"
+msgstr "%s に LDAP クエリ・フィルターが指定されていません"
 
 #: ../lib/systemdb.py:259
 #, python-format
@@ -792,11 +793,11 @@ msgstr "デフォルトのプロファイル %s を設定に追加できませ�
 #: ../lib/systemdb.py:464
 #, python-format
 msgid "Failed to add user %s to profile configuration"
-msgstr "%s というユーザをプロファイルの設定に追加できませんでした"
+msgstr "%s というユーザーをプロファイルの設定に追加できませんでした"
 
 #: ../lib/systemdb.py:536
 msgid "Failed to get the user list"
-msgstr "ユーザの一覧を取得できませんでした"
+msgstr "ユーザーの一覧を取得できませんでした"
 
 #: ../lib/systemdb.py:586
 msgid "Failed to get the group list"
@@ -825,7 +826,7 @@ msgid ""
 "Cannot find home directory: not set in /etc/passwd and no value for $HOME in "
 "environment"
 msgstr ""
-"ホーム・フォルダが見つかりません: /etc/passwd で設定されていないか環境変数 "
+"ホーム・フォルダーが見つかりません: /etc/passwd で設定されていないか環境変数 "
 "$HOME がセットされていません"
 
 #: ../lib/util.py:110 ../lib/util.py:137
@@ -833,7 +834,7 @@ msgid ""
 "Cannot find username: not set in /etc/passwd and no value for $USER in "
 "environment"
 msgstr ""
-"ユーザ名が見つかりません: /etc/passwd で設定されていないか環境変数 $USER が"
+"ユーザー名が見つかりません: /etc/passwd で設定されていないか環境変数 $USER が"
 "セットされていません"
 
 #~ msgid "Click to make this setting not mandatory"
